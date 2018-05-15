@@ -21,4 +21,12 @@ env:
 
 exclude: [vendor]
 
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: master
+
 sudo: false # route your build to the container-based infrastructure for a faster build
