@@ -1,0 +1,48 @@
+<!--
+<!doctype html>
+-->
+<html lang="en-CA">
+<head>
+	<!-- Responsive -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	<!-- Links -->
+	<link rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
+ 		integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw=" 
+		crossorigin="anonymous"
+	/>
+	<link rel="stylesheet" href="/assets/open-iconic/font/css/open-iconic-bootstrap.css" />
+	<link rel="stylesheet" href="/assets/css/dhhepting.css" />
+	
+	<link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+	<div class="card card-body bg-light">
+
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="{{ site.baseurl }}/">D. H. Hepting</a></li>
+{% capture page_url_without_index_html %}{{ page.url | remove: "/index.html" }}{% endcapture %}
+{% assign splitted_url_parts = page_url_without_index_html | split: '/' %}
+{% capture forLoopMaxInt %}{{ splitted_url_parts.size | minus:1 }}{% endcapture %}
+{% for i in (1..forLoopMaxInt) %}
+    {% capture current_breadcrumb_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}/index.html{% endcapture %}
+    {% capture current_breadcrumb_md_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}/{% endcapture %}
+    {% capture next_prepender %}{{next_prepender}}/{{ splitted_url_parts[i] }}{% endcapture %}
+    {% for breadcrumb_page in site.pages %}
+        {% if current_breadcrumb_url == breadcrumb_page.url or current_breadcrumb_md_url == breadcrumb_page.url  %}
+        {% assign j = forLoopMaxInt | plus: 0 %}
+            <li {% if i == j %}class="breadcrumb-item active" aria-current="page" {% endif %}>
+				{{breadcrumb_page.breadcrumb}}
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+		</ol>
+	</nav>
+			
