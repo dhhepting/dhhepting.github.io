@@ -12,16 +12,10 @@
  		integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw=" 
 		crossorigin="anonymous"
 	/>
-<!--
-	<link rel="stylesheet" 
-		href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap-grid.min.css" 	
-		integrity="sha256-Q8nNKcntju0t1uAHHUxonugW0axeUnGCDzYut4AdH3c=" crossorigin="anonymous" 
-	/>
--->
 	<link rel="stylesheet" href="/assets/open-iconic/font/css/open-iconic-bootstrap.css" />
 	<link rel="stylesheet" href="/assets/css/dhhepting.css" />
 	
-	<link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 	
 
@@ -95,17 +89,18 @@
 	</script>
 </head>
 
-<body class="bg" style="color: white;">
-	<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
-		<a class="navbar-brand disabled">&nbsp;</a>
-  		<button class="navbar-toggler" type="button" 
-  		data-toggle="collapse" data-target="#navbarNavAltMarkup" 
-  		aria-controls="navbarNavAltMarkup" aria-expanded="false" 
-  		aria-label="Toggle navigation">
-  			<span class="navbar-toggler-icon"></span>
-  		</button>
-  		<div class="collapse navbar-collapse collapse" 
-	  	id="navbarNavAltMarkup">
+<!-- body with background image, use white for text -->
+<body class="splash">
+	<!-- 
+		navigation bar, fixed at top 
+	-->
+	<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+		<button class="navbar-toggler" type="button" 
+		data-toggle="collapse" data-target="#nav-content" 
+		aria-controls="nav-content" aria-expanded="false" aria-label="toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+  		<div class="collapse navbar-collapse collapse" id="nav-content">
   			<div class="navbar-nav">
 	  			<a class="nav-item nav-link active" href="./">Home
 		  			<span class="sr-only">
@@ -127,22 +122,23 @@
 			</div>
 		</div>
 	</nav>
-
- 	<div id="dhhblock" class="container-fluid h-100">
+	<!-- 
+		main content of web page 
+	-->
+ 	<div class="container-fluid h-100">
 		<div class="row h-100">
-			<div class="col vertical-align">
+			<div class="col">
 				&nbsp;
 			</div>
 			<div class="col-xs-8 align-self-center">
-				<div class="vertical-align" style="padding: 16px; 
-				background-color: rgba(32, 32, 32, 0.75); color: white;">
+				<div class="vertical-align" id="dhhblock">
 					<h1>D. H. Hepting</h1>
 					<strong>Ph.D. &bull; Simon Fraser University</strong>
 					<strong>M.Sc. &bull; University of Regina</strong>
 					<strong>B.Sc. (Hons.) &bull; University of Regina</strong>
 				</div>
 			</div>
-			<div class="col vertical-align">
+			<div class="col">
 				&nbsp;
     		</div>
 		</div>
@@ -171,6 +167,5 @@
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->
-	</div>
 </body>
 </html>
