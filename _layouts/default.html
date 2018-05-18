@@ -1,0 +1,58 @@
+<html lang="en-CA">
+<head>
+	<!-- Responsive -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	<!-- Links -->
+	<link rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
+ 		integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw=" 
+		crossorigin="anonymous"
+	/>
+	<link rel="stylesheet" href={{ "/assets/open-iconic/font/css/open-iconic-bootstrap.css" | relative_url }} />
+	<link rel="stylesheet" href={{ "/assets/css/dhhepting.css" | relative_url }} />
+	
+	<link rel="icon" href={{"/assets/favicon.ico" | relative_url }} type="image/x-icon" />
+	<link rel="shortcut icon" href={{"/assets/favicon.ico" | relative_url }} type="image/x-icon" />
+</head>
+<body>
+	<div class="card bg-light">
+	{% include breadcrumb-nav.html %}
+
+	<div class="card-body">
+	{{ content }}
+	</div>
+
+<div class="card-footer text-muted">
+	Page last modified: 
+	{{ page.last_modified_at | date: "%Y-%m-%d" }}
+  </div>
+
+	</div>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" 
+		integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" 
+		crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+		crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" 
+		integrity="sha256-xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8=" 
+		crossorigin="anonymous">
+	</script>
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-4427429-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+</body>
+</html>

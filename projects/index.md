@@ -1,9 +1,10 @@
 ---
 title: Projects * D. H. Hepting
 breadcrumb: Projects
+layout: default
 ---
-{% include header.html %}
-<h1>
-	Projects
-</h1>
-{% include footer.html %}
+# Projects
+
+- one
+- two
+- three
