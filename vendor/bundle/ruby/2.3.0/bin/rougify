@@ -19,9 +19,4 @@ if ARGV.first
   end
 end
 
-if Gem.respond_to?(:activate_bin_path)
-load Gem.activate_bin_path('rouge', 'rougify', version)
-else
-gem "rouge", version
-load Gem.bin_path("rouge", "rougify", version)
-end
+load Gem.bin_path('rouge', 'rougify', version)

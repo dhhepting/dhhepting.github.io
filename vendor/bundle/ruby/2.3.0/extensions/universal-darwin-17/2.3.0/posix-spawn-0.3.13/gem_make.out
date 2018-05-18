@@ -1,0 +1,24 @@
+current directory: /Users/hepting/Sites/dhhepting.github.io/vendor/bundle/ruby/2.3.0/gems/posix-spawn-0.3.13/ext
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20180518-17788-1m3i92j.rb extconf.rb
+Ignoring ffi-1.9.23 because its extensions are not built.  Try: gem pristine ffi --version 1.9.23
+creating Makefile
+
+current directory: /Users/hepting/Sites/dhhepting.github.io/vendor/bundle/ruby/2.3.0/gems/posix-spawn-0.3.13/ext
+make "DESTDIR=" clean
+
+current directory: /Users/hepting/Sites/dhhepting.github.io/vendor/bundle/ruby/2.3.0/gems/posix-spawn-0.3.13/ext
+make "DESTDIR="
+compiling posix-spawn.c
+posix-spawn.c:64:14: warning: implicit declaration of function 'rb_fix2int' is invalid in C99 [-Wimplicit-function-declaration]
+                        fd = (int)rb_fix2int(obj);
+                                  ^
+1 warning generated.
+linking shared-object posix_spawn_ext.bundle
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/libressl/lib'
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/lib'
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/libressl/lib'
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/lib'
+
+current directory: /Users/hepting/Sites/dhhepting.github.io/vendor/bundle/ruby/2.3.0/gems/posix-spawn-0.3.13/ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 posix_spawn_ext.bundle ./.gem.20180518-17788-b4ln5t

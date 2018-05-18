@@ -18,8 +18,8 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT".freeze, "BSD-2-Clause".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.0".freeze)
   s.rubyforge_project = "rouge".freeze
-  s.rubygems_version = "2.7.7".freeze
+  s.rubygems_version = "2.5.2".freeze
   s.summary = "A pure-ruby colorizer based on pygments".freeze
 
-  s.installed_by_version = "2.7.7" if s.respond_to? :installed_by_version
+  s.installed_by_version = "2.5.2" if s.respond_to? :installed_by_version
 end
