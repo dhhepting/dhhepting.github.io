@@ -1,9 +1,6 @@
 ---
 title: Search * D. H. Hepting
 breadcrumb: Search
+layout: default
 ---
-{% include header.html %}
-<h1>
-	Search
-</h1>
-{% include footer.html %}
+# Search
