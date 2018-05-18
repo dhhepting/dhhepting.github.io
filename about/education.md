@@ -3,6 +3,7 @@ title: Education * D. H. Hepting
 breadcrumb: Education
 ---
 {% include header.html %}
+{% include breadcrumb-nav.html %}
 
 <h1>
 	Education

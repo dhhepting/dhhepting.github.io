@@ -1,0 +1,34 @@
+{% comment %}
+    Updated for boostrap 4 (https://getbootstrap.com/docs/4.0/components/breadcrumb/) and
+    does not create a link for the last (active) item
+{% endcomment %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">D. H. Hepting</a></li>
+{% capture bc_url_without_index_html %}{{ page.url | remove: "/index.html" }}{% endcapture %}
+{% assign bc_url_parts = bc_url_without_index_html | split: '/' %}
+{% capture forLoopMaxInt %}{{ bc_url_parts.size | minus:1 }}{% endcapture %}
+{% assign j = forLoopMaxInt | plus: 0 %}
+{% assign parent_path = "" %}
+{% for i in (1..forLoopMaxInt) %}
+    {% capture current_bc_url_dir %}{{parent_path}}/{{bc_url_parts[i]}}/{% endcapture %}
+    {% capture current_bc_url_file %}{{parent_path}}/{{bc_url_parts[i]}}{% endcapture %}
+    {% capture parent_path %}{{parent_path}}/{{bc_url_parts[i]}}{% endcapture %}
+    {% for sp in site.pages %}
+        {% if current_bc_url_dir == sp.url or current_bc_url_file == sp.url %}
+            {% if i < j %}
+                <li class="breadcrumb-item">
+                    {% capture sp_url_without_index_html %}{{ sp.url | remove: "index.html" }}{% endcapture %}
+                    <a href="{{ site.baseurl }}{{sp_url_without_index_html}}">{{sp.breadcrumb}}</a>
+                </li>
+            {% elsif i == j %}
+                <li class="breadcrumb-item active">
+                    {{sp.breadcrumb}}
+                </li>
+            {% endif %}
+	    {% continue %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+    </ol>
+</nav>
