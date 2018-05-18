@@ -4,3 +4,5 @@ breadcrumb: Research
 layout: default
 ---
 # Research
+
+- [Collected Works](./works/)
