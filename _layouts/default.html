@@ -11,70 +11,23 @@
  		integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw=" 
 		crossorigin="anonymous"
 	/>
-	<link rel="stylesheet" href=/assets/open-iconic/font/css/open-iconic-bootstrap.css />
-	<link rel="stylesheet" href=/assets/css/dhhepting.css />
+	<link rel="stylesheet" href={{ "/assets/open-iconic/font/css/open-iconic-bootstrap.css" | relative_url }} />
+	<link rel="stylesheet" href={{ "/assets/css/dhhepting.css" | relative_url }} />
 	
-	<link rel="icon" href=/assets/favicon.ico type="image/x-icon" />
-	<link rel="shortcut icon" href=/assets/favicon.ico type="image/x-icon" />
+	<link rel="icon" href={{"/assets/favicon.ico" | relative_url }} type="image/x-icon" />
+	<link rel="shortcut icon" href={{"/assets/favicon.ico" | relative_url }} type="image/x-icon" />
 </head>
 <body>
 	<div class="card bg-light">
-	
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb card-header">
-        <li class="breadcrumb-item"><a href="/">D. H. Hepting</a></li>
-
-
-
-
-
-
-    
-    
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-            
-                <li class="breadcrumb-item active">
-                    Projects
-                </li>
-            
-	    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </ol>
-</nav>
-
+	{% include breadcrumb-nav.html %}
 
 	<div class="card-body">
-	<h1 id="projects">Projects</h1>
-
-<ul>
-  <li>one</li>
-  <li>two</li>
-  <li>three</li>
-</ul>
-
+	{{ content }}
 	</div>
 
 <div class="card-footer text-muted">
 	Page last modified: 
-	2018-05-18
+	{{ page.last_modified_at | date: "%Y-%m-%d" }}
   </div>
 
 	</div>
