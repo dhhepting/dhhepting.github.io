@@ -22,26 +22,48 @@
 </head>
 
 <body>
-	<div class="card card-body bg-light">
+	<div class="card card-body bg-light" >
 
 <nav aria-label="breadcrumb">
-<ol class="breadcrumb">
-<li class="breadcrumb-item"><a href="{{ site.baseurl }}/">D. H. Hepting</a></li>
-{% capture page_url_without_index_html %}{{ page.url | remove: "/index.html" }}{% endcapture %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">D. H. Hepting</a></li>
+{% capture page_url_without_index_html %}
+	{{ page.url | remove: "/index.html" }}
+{% endcapture %}
 {% assign splitted_url_parts = page_url_without_index_html | split: '/' %}
-{% capture forLoopMaxInt %}{{ splitted_url_parts.size | minus:1 }}{% endcapture %}
+{% capture forLoopMaxInt %}
+	{{ splitted_url_parts.size | minus:1 }}
+{% endcapture %}
 {% for i in (1..forLoopMaxInt) %}
-    {% capture current_breadcrumb_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}/index.html{% endcapture %}
-    {% capture current_breadcrumb_md_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}/{% endcapture %}
-    {% capture next_prepender %}{{next_prepender}}/{{ splitted_url_parts[i] }}{% endcapture %}
-    {% for breadcrumb_page in site.pages %}
-        {% if current_breadcrumb_url == breadcrumb_page.url or current_breadcrumb_md_url == breadcrumb_page.url  %}
-        {% assign j = forLoopMaxInt | plus: 0 %}
-            <li {% if i == j %}class="breadcrumb-item active" aria-current="page" {% endif %}>
-                {{breadcrumb_page.breadcrumb}}
-            </li>
-        {% endif %}
-    {% endfor %}
+	{% capture current_breadcrumb_url %}
+		{{next_prepender}}/{{ splitted_url_parts[i] }}/index.html
+	{% endcapture %}
+	{% capture current_breadcrumb_md_url %}
+		{{next_prepender}}/{{ splitted_url_parts[i] }}/
+	{% endcapture %}
+    	{% capture next_prepender %}
+		{{next_prepender}}/{{ splitted_url_parts[i] }}
+	{% endcapture %}
+    	{% for breadcrumb_page in site.pages %}
+        	{% if current_breadcrumb_url == breadcrumb_page.url or 
+		current_breadcrumb_md_url == breadcrumb_page.url  %}
+            		{% assign j = forLoopMaxInt | plus: 0 %}
+            		{% if i < j %}
+                		<li class="breadcrumb-item">
+                    		{% capture breadcrumb_page_page_url_without_index_html %}
+					{{ breadcrumb_page.url | remove: "index.html" }}
+				{% endcapture %}
+                    		<a href="{{ site.baseurl }}{{breadcrumb_page_page_url_without_index_html}}">
+					{{breadcrumb_page.breadcrumb}}
+				</a>
+                		</li>
+            		{% elsif i == j %}
+                		<li class="breadcrumb-item active">
+                    			{{breadcrumb_page.breadcrumb}}
+                		</li>
+            		{% endif %}
+        	{% endif %}
+    	{% endfor %}
 {% endfor %}
-</ol>
+    </ol>
 </nav>
