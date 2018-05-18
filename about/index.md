@@ -67,7 +67,7 @@ breadcrumb: About
 			</a>
 			) 
 			<br />
-			<a id="semlink" href="#">
+			<a id="semlink" href="/index.html">
 				Semester Schedule
 			</a>
 			<script>
