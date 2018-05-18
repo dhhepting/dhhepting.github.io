@@ -1,12 +1,10 @@
 ---
 title: About * D. H. Hepting
 breadcrumb: About
+layout: default
 ---
-{% include header.html %}
+# About
 
-<h1>
-	About
-</h1>
 <div class="card card-body bg-light">
 	<div class="row">
 		<div class="col-xs-12 col-sm-4">
@@ -97,4 +95,4 @@ breadcrumb: About
 	</a>
 </div>
 
-{% include footer.html %}
+[![Build Status](https://travis-ci.org/dhhepting/dhhepting.github.io.svg?branch=master)](https://travis-ci.org/dhhepting/dhhepting.github.io)
