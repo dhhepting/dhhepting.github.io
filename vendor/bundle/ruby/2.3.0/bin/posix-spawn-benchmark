@@ -19,9 +19,4 @@ if ARGV.first
   end
 end
 
-if Gem.respond_to?(:activate_bin_path)
-load Gem.activate_bin_path('posix-spawn', 'posix-spawn-benchmark', version)
-else
-gem "posix-spawn", version
-load Gem.bin_path("posix-spawn", "posix-spawn-benchmark", version)
-end
+load Gem.bin_path('posix-spawn', 'posix-spawn-benchmark', version)

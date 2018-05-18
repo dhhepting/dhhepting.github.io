@@ -11,4 +11,3 @@ gem "jekyll", "~> 3.8"
 gem "ffi", "=1.9.21"
 
 gem 'html-proofer'
-gem 'jekyll-last-modified-at'
