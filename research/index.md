@@ -1,9 +1,6 @@
 ---
 title: Research * D. H. Hepting
 breadcrumb: Research
+layout: default
 ---
-{% include header.html %}
-<h1>
-	Research
-</h1>
-{% include footer.html %}
+# Research
