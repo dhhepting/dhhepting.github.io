@@ -5,5 +5,5 @@ layout: default
 ---
 # Collected Works
 
-- [Sample Work](./sample)
+- [Sample Work](./sample.html)
 
