@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>bundler-1.16.2 Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <div id="classindex-section" class="nav-section">
+  <h3>Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Bundler.html">Bundler</a>
+  
+    <li><a href="./Bundler/APIResponseMismatchError.html">Bundler::APIResponseMismatchError</a>
+  
+    <li><a href="./Bundler/BuildMetadata.html">Bundler::BuildMetadata</a>
+  
+    <li><a href="./Bundler/BundlerError.html">Bundler::BundlerError</a>
+  
+    <li><a href="./Bundler/CLI.html">Bundler::CLI</a>
+  
+    <li><a href="./Bundler/CLI/Add.html">Bundler::CLI::Add</a>
+  
+    <li><a href="./Bundler/CLI/Binstubs.html">Bundler::CLI::Binstubs</a>
+  
+    <li><a href="./Bundler/CLI/Cache.html">Bundler::CLI::Cache</a>
+  
+    <li><a href="./Bundler/CLI/Check.html">Bundler::CLI::Check</a>
+  
+    <li><a href="./Bundler/CLI/Clean.html">Bundler::CLI::Clean</a>
+  
+    <li><a href="./Bundler/CLI/Common.html">Bundler::CLI::Common</a>
+  
+    <li><a href="./Bundler/CLI/Config.html">Bundler::CLI::Config</a>
+  
+    <li><a href="./Bundler/CLI/Console.html">Bundler::CLI::Console</a>
+  
+    <li><a href="./Bundler/CLI/Doctor.html">Bundler::CLI::Doctor</a>
+  
+    <li><a href="./Bundler/CLI/Exec.html">Bundler::CLI::Exec</a>
+  
+    <li><a href="./Bundler/CLI/Gem.html">Bundler::CLI::Gem</a>
+  
+    <li><a href="./Bundler/CLI/Info.html">Bundler::CLI::Info</a>
+  
+    <li><a href="./Bundler/CLI/Init.html">Bundler::CLI::Init</a>
+  
+    <li><a href="./Bundler/CLI/Inject.html">Bundler::CLI::Inject</a>
+  
+    <li><a href="./Bundler/CLI/Install.html">Bundler::CLI::Install</a>
+  
+    <li><a href="./Bundler/CLI/Issue.html">Bundler::CLI::Issue</a>
+  
+    <li><a href="./Bundler/CLI/List.html">Bundler::CLI::List</a>
+  
+    <li><a href="./Bundler/CLI/Lock.html">Bundler::CLI::Lock</a>
+  
+    <li><a href="./Bundler/CLI/Open.html">Bundler::CLI::Open</a>
+  
+    <li><a href="./Bundler/CLI/Outdated.html">Bundler::CLI::Outdated</a>
+  
+    <li><a href="./Bundler/CLI/Package.html">Bundler::CLI::Package</a>
+  
+    <li><a href="./Bundler/CLI/Platform.html">Bundler::CLI::Platform</a>
+  
+    <li><a href="./Bundler/CLI/Plugin.html">Bundler::CLI::Plugin</a>
+  
+    <li><a href="./Bundler/CLI/Pristine.html">Bundler::CLI::Pristine</a>
+  
+    <li><a href="./Bundler/CLI/Show.html">Bundler::CLI::Show</a>
+  
+    <li><a href="./Bundler/CLI/Update.html">Bundler::CLI::Update</a>
+  
+    <li><a href="./Bundler/CLI/Viz.html">Bundler::CLI::Viz</a>
+  
+    <li><a href="./Bundler/CompactIndexClient.html">Bundler::CompactIndexClient</a>
+  
+    <li><a href="./Bundler/CompactIndexClient/Cache.html">Bundler::CompactIndexClient::Cache</a>
+  
+    <li><a href="./Bundler/CompactIndexClient/Error.html">Bundler::CompactIndexClient::Error</a>
+  
+    <li><a href="./Bundler/CompactIndexClient/Updater.html">Bundler::CompactIndexClient::Updater</a>
+  
+    <li><a href="./Bundler/CompactIndexClient/Updater/MisMatchedChecksumError.html">Bundler::CompactIndexClient::Updater::MisMatchedChecksumError</a>
+  
+    <li><a href="./Bundler/CurrentRuby.html">Bundler::CurrentRuby</a>
+  
+    <li><a href="./Bundler/CyclicDependencyError.html">Bundler::CyclicDependencyError</a>
+  
+    <li><a href="./Bundler/Definition.html">Bundler::Definition</a>
+  
+    <li><a href="./Bundler/DepProxy.html">Bundler::DepProxy</a>
+  
+    <li><a href="./Bundler/Dependency.html">Bundler::Dependency</a>
+  
+    <li><a href="./Bundler/Deployment.html">Bundler::Deployment</a>
+  
+    <li><a href="./Bundler/Deprecate.html">Bundler::Deprecate</a>
+  
+    <li><a href="./Bundler/DeprecatedError.html">Bundler::DeprecatedError</a>
+  
+    <li><a href="./Bundler/Dsl.html">Bundler::Dsl</a>
+  
+    <li><a href="./Bundler/Dsl/DSLError.html">Bundler::Dsl::DSLError</a>
+  
+    <li><a href="./Bundler/EndpointSpecification.html">Bundler::EndpointSpecification</a>
+  
+    <li><a href="./Bundler/Env.html">Bundler::Env</a>
+  
+    <li><a href="./Bundler/EnvironmentPreserver.html">Bundler::EnvironmentPreserver</a>
+  
+    <li><a href="./Bundler/FeatureFlag.html">Bundler::FeatureFlag</a>
+  
+    <li><a href="./Bundler/Fetcher.html">Bundler::Fetcher</a>
+  
+    <li><a href="./Bundler/Fetcher/AuthenticationRequiredError.html">Bundler::Fetcher::AuthenticationRequiredError</a>
+  
+    <li><a href="./Bundler/Fetcher/BadAuthenticationError.html">Bundler::Fetcher::BadAuthenticationError</a>
+  
+    <li><a href="./Bundler/Fetcher/Base.html">Bundler::Fetcher::Base</a>
+  
+    <li><a href="./Bundler/Fetcher/CertificateFailureError.html">Bundler::Fetcher::CertificateFailureError</a>
+  
+    <li><a href="./Bundler/Fetcher/CompactIndex.html">Bundler::Fetcher::CompactIndex</a>
+  
+    <li><a href="./Bundler/Fetcher/Dependency.html">Bundler::Fetcher::Dependency</a>
+  
+    <li><a href="./Bundler/Fetcher/Downloader.html">Bundler::Fetcher::Downloader</a>
+  
+    <li><a href="./Bundler/Fetcher/FallbackError.html">Bundler::Fetcher::FallbackError</a>
+  
+    <li><a href="./Bundler/Fetcher/Index.html">Bundler::Fetcher::Index</a>
+  
+    <li><a href="./Bundler/Fetcher/NetworkDownError.html">Bundler::Fetcher::NetworkDownError</a>
+  
+    <li><a href="./Bundler/Fetcher/SSLError.html">Bundler::Fetcher::SSLError</a>
+  
+    <li><a href="./Bundler/FileUtils.html">Bundler::FileUtils</a>
+  
+    <li><a href="./Bundler/FileUtils/DryRun.html">Bundler::FileUtils::DryRun</a>
+  
+    <li><a href="./Bundler/FileUtils/Entry_.html">Bundler::FileUtils::Entry_</a>
+  
+    <li><a href="./Bundler/FileUtils/Entry_/File.html">Bundler::FileUtils::Entry_::File</a>
+  
+    <li><a href="./Bundler/FileUtils/LowMethods.html">Bundler::FileUtils::LowMethods</a>
+  
+    <li><a href="./Bundler/FileUtils/NoWrite.html">Bundler::FileUtils::NoWrite</a>
+  
+    <li><a href="./Bundler/FileUtils/StreamUtils_.html">Bundler::FileUtils::StreamUtils_</a>
+  
+    <li><a href="./Bundler/FileUtils/Verbose.html">Bundler::FileUtils::Verbose</a>
+  
+    <li><a href="./Bundler/FriendlyErrors.html">Bundler::FriendlyErrors</a>
+  
+    <li><a href="./Bundler/GemHelper.html">Bundler::GemHelper</a>
+  
+    <li><a href="./Bundler/GemHelper/Rake.html">Bundler::GemHelper::Rake</a>
+  
+    <li><a href="./Bundler/GemHelpers.html">Bundler::GemHelpers</a>
+  
+    <li><a href="./Bundler/GemHelpers/PlatformMatch.html">Bundler::GemHelpers::PlatformMatch</a>
+  
+    <li><a href="./Bundler/GemInstaller.html">Bundler::GemInstaller</a>
+  
+    <li><a href="./Bundler/GemNotFound.html">Bundler::GemNotFound</a>
+  
+    <li><a href="./Bundler/GemRemoteFetcher.html">Bundler::GemRemoteFetcher</a>
+  
+    <li><a href="./Bundler/GemRequireError.html">Bundler::GemRequireError</a>
+  
+    <li><a href="./Bundler/GemVersionPromoter.html">Bundler::GemVersionPromoter</a>
+  
+    <li><a href="./Bundler/Gemdeps.html">Bundler::Gemdeps</a>
+  
+    <li><a href="./Bundler/GemfileError.html">Bundler::GemfileError</a>
+  
+    <li><a href="./Bundler/GemfileEvalError.html">Bundler::GemfileEvalError</a>
+  
+    <li><a href="./Bundler/GemfileLockNotFound.html">Bundler::GemfileLockNotFound</a>
+  
+    <li><a href="./Bundler/GemfileNotFound.html">Bundler::GemfileNotFound</a>
+  
+    <li><a href="./Bundler/GemspecError.html">Bundler::GemspecError</a>
+  
+    <li><a href="./Bundler/GenericSystemCallError.html">Bundler::GenericSystemCallError</a>
+  
+    <li><a href="./Bundler/GitError.html">Bundler::GitError</a>
+  
+    <li><a href="./Bundler/Graph.html">Bundler::Graph</a>
+  
+    <li><a href="./Bundler/Graph/GraphVizClient.html">Bundler::Graph::GraphVizClient</a>
+  
+    <li><a href="./Bundler/HTTPError.html">Bundler::HTTPError</a>
+  
+    <li><a href="./Bundler/Index.html">Bundler::Index</a>
+  
+    <li><a href="./Bundler/Injector.html">Bundler::Injector</a>
+  
+    <li><a href="./Bundler/InstallError.html">Bundler::InstallError</a>
+  
+    <li><a href="./Bundler/InstallHookError.html">Bundler::InstallHookError</a>
+  
+    <li><a href="./Bundler/Installer.html">Bundler::Installer</a>
+  
+    <li><a href="./Bundler/InvalidOption.html">Bundler::InvalidOption</a>
+  
+    <li><a href="./Bundler/LazySpecification.html">Bundler::LazySpecification</a>
+  
+    <li><a href="./Bundler/LazySpecification/Identifier.html">Bundler::LazySpecification::Identifier</a>
+  
+    <li><a href="./Bundler/LockfileError.html">Bundler::LockfileError</a>
+  
+    <li><a href="./Bundler/LockfileGenerator.html">Bundler::LockfileGenerator</a>
+  
+    <li><a href="./Bundler/LockfileParser.html">Bundler::LockfileParser</a>
+  
+    <li><a href="./Bundler/MarshalError.html">Bundler::MarshalError</a>
+  
+    <li><a href="./Bundler/MatchPlatform.html">Bundler::MatchPlatform</a>
+  
+    <li><a href="./Bundler/MirrorSockets.html">Bundler::MirrorSockets</a>
+  
+    <li><a href="./Bundler/Molinillo.html">Bundler::Molinillo</a>
+  
+    <li><a href="./Bundler/Molinillo/CircularDependencyError.html">Bundler::Molinillo::CircularDependencyError</a>
+  
+    <li><a href="./Bundler/Molinillo/Compatibility.html">Bundler::Molinillo::Compatibility</a>
+  
+    <li><a href="./Bundler/Molinillo/Delegates.html">Bundler::Molinillo::Delegates</a>
+  
+    <li><a href="./Bundler/Molinillo/Delegates/ResolutionState.html">Bundler::Molinillo::Delegates::ResolutionState</a>
+  
+    <li><a href="./Bundler/Molinillo/Delegates/SpecificationProvider.html">Bundler::Molinillo::Delegates::SpecificationProvider</a>
+  
+    <li><a href="./Bundler/Molinillo/DependencyGraph.html">Bundler::Molinillo::DependencyGraph</a>
+  
+    <li><a href="./Bundler/Molinillo/DependencyGraph/Action.html">Bundler::Molinillo::DependencyGraph::Action</a>
+  
+    <li><a href="./Bundler/Molinillo/DependencyGraph/AddEdgeNoCircular.html">Bundler::Molinillo::DependencyGraph::AddEdgeNoCircular</a>
+  
+    <li><a href="./Bundler/Molinillo/DependencyGraph/AddVertex.html">Bundler::Molinillo::DependencyGraph::AddVertex</a>
+  
+    <li><a href="./Bundler/Molinillo/DependencyGraph/DeleteEdge.html">Bundler::Molinillo::DependencyGraph::DeleteEdge</a>
+  
+    <li><a href="./Bundler/Molinillo/DependencyGraph/DetachVertexNamed.html">Bundler::Molinillo::DependencyGraph::DetachVertexNamed</a>
+  
+    <li><a href="./Bundler/Molinillo/DependencyGraph/Log.html">Bundler::Molinillo::DependencyGraph::Log</a>
+  
+    <li><a href="./Bundler/Molinillo/DependencyGraph/SetPayload.html">Bundler::Molinillo::DependencyGraph::SetPayload</a>
+  
+    <li><a href="./Bundler/Molinillo/DependencyGraph/Tag.html">Bundler::Molinillo::DependencyGraph::Tag</a>
+  
+    <li><a href="./Bundler/Molinillo/DependencyGraph/Vertex.html">Bundler::Molinillo::DependencyGraph::Vertex</a>
+  
+    <li><a href="./Bundler/Molinillo/DependencyState.html">Bundler::Molinillo::DependencyState</a>
+  
+    <li><a href="./Bundler/Molinillo/NoSuchDependencyError.html">Bundler::Molinillo::NoSuchDependencyError</a>
+  
+    <li><a href="./Bundler/Molinillo/PossibilityState.html">Bundler::Molinillo::PossibilityState</a>
+  
+    <li><a href="./Bundler/Molinillo/ResolutionState.html">Bundler::Molinillo::ResolutionState</a>
+  
+    <li><a href="./Bundler/Molinillo/Resolver.html">Bundler::Molinillo::Resolver</a>
+  
+    <li><a href="./Bundler/Molinillo/Resolver/Resolution.html">Bundler::Molinillo::Resolver::Resolution</a>
+  
+    <li><a href="./Bundler/Molinillo/Resolver/Resolution/Conflict.html">Bundler::Molinillo::Resolver::Resolution::Conflict</a>
+  
+    <li><a href="./Bundler/Molinillo/Resolver/Resolution/PossibilitySet.html">Bundler::Molinillo::Resolver::Resolution::PossibilitySet</a>
+  
+    <li><a href="./Bundler/Molinillo/Resolver/Resolution/UnwindDetails.html">Bundler::Molinillo::Resolver::Resolution::UnwindDetails</a>
+  
+    <li><a href="./Bundler/Molinillo/ResolverError.html">Bundler::Molinillo::ResolverError</a>
+  
+    <li><a href="./Bundler/Molinillo/SpecificationProvider.html">Bundler::Molinillo::SpecificationProvider</a>
+  
+    <li><a href="./Bundler/Molinillo/UI.html">Bundler::Molinillo::UI</a>
+  
+    <li><a href="./Bundler/Molinillo/VersionConflict.html">Bundler::Molinillo::VersionConflict</a>
+  
+    <li><a href="./Bundler/NoSpaceOnDeviceError.html">Bundler::NoSpaceOnDeviceError</a>
+  
+    <li><a href="./Bundler/OperationNotSupportedError.html">Bundler::OperationNotSupportedError</a>
+  
+    <li><a href="./Bundler/ParallelInstaller.html">Bundler::ParallelInstaller</a>
+  
+    <li><a href="./Bundler/ParallelInstaller/SpecInstallation.html">Bundler::ParallelInstaller::SpecInstallation</a>
+  
+    <li><a href="./Bundler/PathError.html">Bundler::PathError</a>
+  
+    <li><a href="./Bundler/PermissionError.html">Bundler::PermissionError</a>
+  
+    <li><a href="./Bundler/Persistent.html">Bundler::Persistent</a>
+  
+    <li><a href="./Bundler/Persistent/Net.html">Bundler::Persistent::Net</a>
+  
+    <li><a href="./Bundler/Persistent/Net/HTTP.html">Bundler::Persistent::Net::HTTP</a>
+  
+    <li><a href="./Bundler/Persistent/Net/HTTP/Persistent.html">Bundler::Persistent::Net::HTTP::Persistent</a>
+  
+    <li><a href="./Bundler/Persistent/Net/HTTP/Persistent/Error.html">Bundler::Persistent::Net::HTTP::Persistent::Error</a>
+  
+    <li><a href="./Bundler/Persistent/Net/HTTP/Persistent/SSLReuse.html">Bundler::Persistent::Net::HTTP::Persistent::SSLReuse</a>
+  
+    <li><a href="./Bundler/PersistentHTTP.html">Bundler::PersistentHTTP</a>
+  
+    <li><a href="./Bundler/Plugin.html">Bundler::Plugin</a>
+  
+    <li><a href="./Bundler/Plugin/API.html">Bundler::Plugin::API</a>
+  
+    <li><a href="./Bundler/Plugin/API/Source.html">Bundler::Plugin::API::Source</a>
+  
+    <li><a href="./Bundler/Plugin/DSL.html">Bundler::Plugin::DSL</a>
+  
+    <li><a href="./Bundler/Plugin/DSL/PluginGemfileError.html">Bundler::Plugin::DSL::PluginGemfileError</a>
+  
+    <li><a href="./Bundler/Plugin/Index.html">Bundler::Plugin::Index</a>
+  
+    <li><a href="./Bundler/Plugin/Index/CommandConflict.html">Bundler::Plugin::Index::CommandConflict</a>
+  
+    <li><a href="./Bundler/Plugin/Index/SourceConflict.html">Bundler::Plugin::Index::SourceConflict</a>
+  
+    <li><a href="./Bundler/Plugin/Installer.html">Bundler::Plugin::Installer</a>
+  
+    <li><a href="./Bundler/Plugin/Installer/Git.html">Bundler::Plugin::Installer::Git</a>
+  
+    <li><a href="./Bundler/Plugin/Installer/Rubygems.html">Bundler::Plugin::Installer::Rubygems</a>
+  
+    <li><a href="./Bundler/Plugin/MalformattedPlugin.html">Bundler::Plugin::MalformattedPlugin</a>
+  
+    <li><a href="./Bundler/Plugin/SourceList.html">Bundler::Plugin::SourceList</a>
+  
+    <li><a href="./Bundler/Plugin/UndefinedCommandError.html">Bundler::Plugin::UndefinedCommandError</a>
+  
+    <li><a href="./Bundler/Plugin/UnknownSourceError.html">Bundler::Plugin::UnknownSourceError</a>
+  
+    <li><a href="./Bundler/PluginError.html">Bundler::PluginError</a>
+  
+    <li><a href="./Bundler/ProcessLock.html">Bundler::ProcessLock</a>
+  
+    <li><a href="./Bundler/ProductionError.html">Bundler::ProductionError</a>
+  
+    <li><a href="./Bundler/Psych.html">Bundler::Psych</a>
+  
+    <li><a href="./Bundler/RemoteSpecification.html">Bundler::RemoteSpecification</a>
+  
+    <li><a href="./Bundler/Resolver.html">Bundler::Resolver</a>
+  
+    <li><a href="./Bundler/Resolver/SpecGroup.html">Bundler::Resolver::SpecGroup</a>
+  
+    <li><a href="./Bundler/Retry.html">Bundler::Retry</a>
+  
+    <li><a href="./Bundler/RubyDsl.html">Bundler::RubyDsl</a>
+  
+    <li><a href="./Bundler/RubyGemsGemInstaller.html">Bundler::RubyGemsGemInstaller</a>
+  
+    <li><a href="./Bundler/RubyVersion.html">Bundler::RubyVersion</a>
+  
+    <li><a href="./Bundler/RubyVersionMismatch.html">Bundler::RubyVersionMismatch</a>
+  
+    <li><a href="./Bundler/RubygemsIntegration.html">Bundler::RubygemsIntegration</a>
+  
+    <li><a href="./Bundler/RubygemsIntegration/AlmostModern.html">Bundler::RubygemsIntegration::AlmostModern</a>
+  
+    <li><a href="./Bundler/RubygemsIntegration/Ancient.html">Bundler::RubygemsIntegration::Ancient</a>
+  
+    <li><a href="./Bundler/RubygemsIntegration/Future.html">Bundler::RubygemsIntegration::Future</a>
+  
+    <li><a href="./Bundler/RubygemsIntegration/Future/Gem.html">Bundler::RubygemsIntegration::Future::Gem</a>
+  
+    <li><a href="./Bundler/RubygemsIntegration/Gem.html">Bundler::RubygemsIntegration::Gem</a>
+  
+    <li><a href="./Bundler/RubygemsIntegration/Legacy.html">Bundler::RubygemsIntegration::Legacy</a>
+  
+    <li><a href="./Bundler/RubygemsIntegration/Legacy/Gem/SourceIndex.html">Bundler::RubygemsIntegration::Legacy::Gem::SourceIndex</a>
+  
+    <li><a href="./Bundler/RubygemsIntegration/Modern.html">Bundler::RubygemsIntegration::Modern</a>
+  
+    <li><a href="./Bundler/RubygemsIntegration/MoreFuture.html">Bundler::RubygemsIntegration::MoreFuture</a>
+  
+    <li><a href="./Bundler/RubygemsIntegration/MoreModern.html">Bundler::RubygemsIntegration::MoreModern</a>
+  
+    <li><a href="./Bundler/RubygemsIntegration/Transitional.html">Bundler::RubygemsIntegration::Transitional</a>
+  
+    <li><a href="./Bundler/Runtime.html">Bundler::Runtime</a>
+  
+    <li><a href="./Bundler/SecurityError.html">Bundler::SecurityError</a>
+  
+    <li><a href="./Bundler/Settings.html">Bundler::Settings</a>
+  
+    <li><a href="./Bundler/Settings/Mirror.html">Bundler::Settings::Mirror</a>
+  
+    <li><a href="./Bundler/Settings/MirrorConfig.html">Bundler::Settings::MirrorConfig</a>
+  
+    <li><a href="./Bundler/Settings/Mirrors.html">Bundler::Settings::Mirrors</a>
+  
+    <li><a href="./Bundler/Settings/TCPSocketProbe.html">Bundler::Settings::TCPSocketProbe</a>
+  
+    <li><a href="./Bundler/Settings/Validator.html">Bundler::Settings::Validator</a>
+  
+    <li><a href="./Bundler/Settings/Validator/Rule.html">Bundler::Settings::Validator::Rule</a>
+  
+    <li><a href="./Bundler/SharedHelpers.html">Bundler::SharedHelpers</a>
+  
+    <li><a href="./Bundler/SimilarityDetector.html">Bundler::SimilarityDetector</a>
+  
+    <li><a href="./Bundler/SocketAddress.html">Bundler::SocketAddress</a>
+  
+    <li><a href="./Bundler/Source.html">Bundler::Source</a>
+  
+    <li><a href="./Bundler/Source/Gemspec.html">Bundler::Source::Gemspec</a>
+  
+    <li><a href="./Bundler/Source/Git.html">Bundler::Source::Git</a>
+  
+    <li><a href="./Bundler/Source/Git/GitCommandError.html">Bundler::Source::Git::GitCommandError</a>
+  
+    <li><a href="./Bundler/Source/Git/GitNotAllowedError.html">Bundler::Source::Git::GitNotAllowedError</a>
+  
+    <li><a href="./Bundler/Source/Git/GitNotInstalledError.html">Bundler::Source::Git::GitNotInstalledError</a>
+  
+    <li><a href="./Bundler/Source/Git/GitProxy.html">Bundler::Source::Git::GitProxy</a>
+  
+    <li><a href="./Bundler/Source/Git/MissingGitRevisionError.html">Bundler::Source::Git::MissingGitRevisionError</a>
+  
+    <li><a href="./Bundler/Source/Metadata.html">Bundler::Source::Metadata</a>
+  
+    <li><a href="./Bundler/Source/Path.html">Bundler::Source::Path</a>
+  
+    <li><a href="./Bundler/Source/Path/Installer.html">Bundler::Source::Path::Installer</a>
+  
+    <li><a href="./Bundler/Source/Rubygems.html">Bundler::Source::Rubygems</a>
+  
+    <li><a href="./Bundler/Source/Rubygems/Remote.html">Bundler::Source::Rubygems::Remote</a>
+  
+    <li><a href="./Bundler/SourceList.html">Bundler::SourceList</a>
+  
+    <li><a href="./Bundler/SpecSet.html">Bundler::SpecSet</a>
+  
+    <li><a href="./Bundler/Standalone.html">Bundler::Standalone</a>
+  
+    <li><a href="./Bundler/StubSpecification.html">Bundler::StubSpecification</a>
+  
+    <li><a href="./Bundler/SudoNotPermittedError.html">Bundler::SudoNotPermittedError</a>
+  
+    <li><a href="./Bundler/TemporaryResourceError.html">Bundler::TemporaryResourceError</a>
+  
+    <li><a href="./Bundler/Thor/Actions.html">Bundler::Thor::Actions</a>
+  
+    <li><a href="./Bundler/Thor/Actions/CapturableERB.html">Bundler::Thor::Actions::CapturableERB</a>
+  
+    <li><a href="./Bundler/Thor/Actions/ClassMethods.html">Bundler::Thor::Actions::ClassMethods</a>
+  
+    <li><a href="./Bundler/Thor/Actions/CreateFile.html">Bundler::Thor::Actions::CreateFile</a>
+  
+    <li><a href="./Bundler/Thor/Actions/CreateLink.html">Bundler::Thor::Actions::CreateLink</a>
+  
+    <li><a href="./Bundler/Thor/Actions/Directory.html">Bundler::Thor::Actions::Directory</a>
+  
+    <li><a href="./Bundler/Thor/Actions/EmptyDirectory.html">Bundler::Thor::Actions::EmptyDirectory</a>
+  
+    <li><a href="./Bundler/Thor/Actions/InjectIntoFile.html">Bundler::Thor::Actions::InjectIntoFile</a>
+  
+    <li><a href="./Bundler/Thor/AmbiguousCommandError.html">Bundler::Thor::AmbiguousCommandError</a>
+  
+    <li><a href="./Bundler/Thor/AmbiguousTaskError.html">Bundler::Thor::AmbiguousTaskError</a>
+  
+    <li><a href="./Bundler/Thor/Argument.html">Bundler::Thor::Argument</a>
+  
+    <li><a href="./Bundler/Thor/Arguments.html">Bundler::Thor::Arguments</a>
+  
+    <li><a href="./Bundler/Thor/Base.html">Bundler::Thor::Base</a>
+  
+    <li><a href="./Bundler/Thor/Base/ClassMethods.html">Bundler::Thor::Base::ClassMethods</a>
+  
+    <li><a href="./Bundler/Thor/Command.html">Bundler::Thor::Command</a>
+  
+    <li><a href="./Bundler/Thor/CoreExt.html">Bundler::Thor::CoreExt</a>
+  
+    <li><a href="./Bundler/Thor/CoreExt/HashWithIndifferentAccess.html">Bundler::Thor::CoreExt::HashWithIndifferentAccess</a>
+  
+    <li><a href="./Bundler/Thor/CoreExt/OrderedHash.html">Bundler::Thor::CoreExt::OrderedHash</a>
+  
+    <li><a href="./Bundler/Thor/DynamicCommand.html">Bundler::Thor::DynamicCommand</a>
+  
+    <li><a href="./Bundler/Thor/DynamicTask.html">Bundler::Thor::DynamicTask</a>
+  
+    <li><a href="./Bundler/Thor/Error.html">Bundler::Thor::Error</a>
+  
+    <li><a href="./Bundler/Thor/Group.html">Bundler::Thor::Group</a>
+  
+    <li><a href="./Bundler/Thor/HiddenCommand.html">Bundler::Thor::HiddenCommand</a>
+  
+    <li><a href="./Bundler/Thor/HiddenTask.html">Bundler::Thor::HiddenTask</a>
+  
+    <li><a href="./Bundler/Thor/Invocation.html">Bundler::Thor::Invocation</a>
+  
+    <li><a href="./Bundler/Thor/Invocation/ClassMethods.html">Bundler::Thor::Invocation::ClassMethods</a>
+  
+    <li><a href="./Bundler/Thor/InvocationError.html">Bundler::Thor::InvocationError</a>
+  
+    <li><a href="./Bundler/Thor/LineEditor.html">Bundler::Thor::LineEditor</a>
+  
+    <li><a href="./Bundler/Thor/LineEditor/Basic.html">Bundler::Thor::LineEditor::Basic</a>
+  
+    <li><a href="./Bundler/Thor/LineEditor/Readline.html">Bundler::Thor::LineEditor::Readline</a>
+  
+    <li><a href="./Bundler/Thor/LineEditor/Readline/PathCompletion.html">Bundler::Thor::LineEditor::Readline::PathCompletion</a>
+  
+    <li><a href="./Bundler/Thor/MalformattedArgumentError.html">Bundler::Thor::MalformattedArgumentError</a>
+  
+    <li><a href="./Bundler/Thor/Option.html">Bundler::Thor::Option</a>
+  
+    <li><a href="./Bundler/Thor/Options.html">Bundler::Thor::Options</a>
+  
+    <li><a href="./Bundler/Thor/RakeCompat.html">Bundler::Thor::RakeCompat</a>
+  
+    <li><a href="./Bundler/Thor/RakeCompat/Rake.html">Bundler::Thor::RakeCompat::Rake</a>
+  
+    <li><a href="./Bundler/Thor/RequiredArgumentMissingError.html">Bundler::Thor::RequiredArgumentMissingError</a>
+  
+    <li><a href="./Bundler/Thor/Runner.html">Bundler::Thor::Runner</a>
+  
+    <li><a href="./Bundler/Thor/Sandbox.html">Bundler::Thor::Sandbox</a>
+  
+    <li><a href="./Bundler/Thor/Shell.html">Bundler::Thor::Shell</a>
+  
+    <li><a href="./Bundler/Thor/Shell/Basic.html">Bundler::Thor::Shell::Basic</a>
+  
+    <li><a href="./Bundler/Thor/Shell/Color.html">Bundler::Thor::Shell::Color</a>
+  
+    <li><a href="./Bundler/Thor/Shell/HTML.html">Bundler::Thor::Shell::HTML</a>
+  
+    <li><a href="./Bundler/Thor/Task.html">Bundler::Thor::Task</a>
+  
+    <li><a href="./Bundler/Thor/UndefinedCommandError.html">Bundler::Thor::UndefinedCommandError</a>
+  
+    <li><a href="./Bundler/Thor/UndefinedTaskError.html">Bundler::Thor::UndefinedTaskError</a>
+  
+    <li><a href="./Bundler/Thor/UnknownArgumentError.html">Bundler::Thor::UnknownArgumentError</a>
+  
+    <li><a href="./Bundler/Thor/Util.html">Bundler::Thor::Util</a>
+  
+    <li><a href="./Bundler/ThreadCreationError.html">Bundler::ThreadCreationError</a>
+  
+    <li><a href="./Bundler/UI.html">Bundler::UI</a>
+  
+    <li><a href="./Bundler/UI/RGProxy.html">Bundler::UI::RGProxy</a>
+  
+    <li><a href="./Bundler/UI/Shell.html">Bundler::UI::Shell</a>
+  
+    <li><a href="./Bundler/UI/Silent.html">Bundler::UI::Silent</a>
+  
+    <li><a href="./Bundler/URICredentialsFilter.html">Bundler::URICredentialsFilter</a>
+  
+    <li><a href="./Bundler/VersionConflict.html">Bundler::VersionConflict</a>
+  
+    <li><a href="./Bundler/VersionRanges.html">Bundler::VersionRanges</a>
+  
+    <li><a href="./Bundler/VersionRanges/ReqR.html">Bundler::VersionRanges::ReqR</a>
+  
+    <li><a href="./Bundler/VirtualProtocolError.html">Bundler::VirtualProtocolError</a>
+  
+    <li><a href="./Bundler/Worker.html">Bundler::Worker</a>
+  
+    <li><a href="./Bundler/Worker/WrappedException.html">Bundler::Worker::WrappedException</a>
+  
+    <li><a href="./Bundler/YAMLSerializer.html">Bundler::YAMLSerializer</a>
+  
+    <li><a href="./Bundler/YamlSyntaxError.html">Bundler::YamlSyntaxError</a>
+  
+    <li><a href="./Capistrano.html">Capistrano</a>
+  
+    <li><a href="./Gem.html">Gem</a>
+  
+    <li><a href="./Gem/Dependency.html">Gem::Dependency</a>
+  
+    <li><a href="./Gem/Ext.html">Gem::Ext</a>
+  
+    <li><a href="./Gem/Ext/Builder.html">Gem::Ext::Builder</a>
+  
+    <li><a href="./Gem/Platform.html">Gem::Platform</a>
+  
+    <li><a href="./Gem/Requirement.html">Gem::Requirement</a>
+  
+    <li><a href="./Gem/Specification.html">Gem::Specification</a>
+  
+    <li><a href="./IO.html">IO</a>
+  
+    <li><a href="./Kernel.html">Kernel</a>
+  
+    <li><a href="./Net/BufferedIO.html">Net::BufferedIO</a>
+  
+    <li><a href="./Net/HTTP.html">Net::HTTP</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Rake.html">Rake</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main">
+<p>This is the API documentation for bundler-1.16.2 Documentation.
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
