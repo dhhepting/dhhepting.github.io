@@ -11,3 +11,7 @@ gem "jekyll", "~> 3.8"
 gem "ffi", "=1.9.21"
 
 gem 'html-proofer'
+
+group :jekyll_plugins do
+    gem 'jekyll-contentblocks'
+end
