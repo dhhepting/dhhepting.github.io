@@ -1,6 +1,6 @@
 ---
-title: Sample Work * D. H. Hepting
-breadcrumb: Sample Work
+title: Operationalizing Ethics in Food Choice Decisions (2014) * D. H. Hepting
+breadcrumb: Operationalizing Ethics in Food Choice Decisions (2014)
 layout: default
 ---
 # Operational&shy;izing Ethics in Food Choice Decisions
@@ -70,51 +70,23 @@ We then present an overview of opportunities for design of a new software tool.
 Finally, we offer some points for discussion and future work.
 					
 ### Download
+
 - [This Site](/research/)
+- [oURspace &mdash; University of Regina Institutional Repository](http://hdl.handle.net/10294/6892)
+- [Springer Nature SharedIt](http://rdcu.be/mFXP)
+- [springerlink](http://link.springer.com/article/10.1007/s10806-013-9473-8)
+- [academia.edu](https://www.academia.edu/27543837/Operationalizing_ethics_in_food_choice_decisions)
+- [researchgate.net](https://www.researchgate.net/publication/257408603_Operationalizing_Ethics_in_Food_Choice_Decisions)
+- [philpapers.org](http://philpapers.org/rec/HEPOEI)
+- [Food and Agriculture Organization of the United Nations](http://agris.fao.org/agris-search/search.do?recordID=US201400172844)
+- [USDA National Agricultural Library](https://pubag.nal.usda.gov/catalog/357701)
+
 {% comment %}
 <a href="/~hepting/assets/pdfs/works/2014-06-HepJafMac.pdf">this site</a>
-					</li>
-					<li>
-						<a href="http://hdl.handle.net/10294/6892">
-							oURspace &mdash; University of Regina Institutional Repository
-						</a>
-					</li>
-					<li>
-						<a href="http://rdcu.be/mFXP">Springer Nature SharedIt</a>
-					</li>
-					<li>
-						<a href="http://link.springer.com/article/10.1007/s10806-013-9473-8">
-							springerlink
-						</a>
-					</li>
-					<li>
-						<a href="https://www.academia.edu/27543837/Operationalizing_ethics_in_food_choice_decisions">
-							academia.edu
-						</a>
-					</li>
-					<li>
-						<a href="https://www.researchgate.net/publication/257408603_Operationalizing_Ethics_in_Food_Choice_Decisions">
-							researchgate.net
-						</a>
-					</li>
-					<li>
-						<a href="http://philpapers.org/rec/HEPOEI">
-							philpapers.org
-						</a>
-					</li>
-					<li>
-						<a href="http://agris.fao.org/agris-search/search.do?recordID=US201400172844">
-							Food and Agriculture Organization of the United Nations
-						</a>
-					</li>
-					<li>
-						<a href="https://pubag.nal.usda.gov/catalog/357701">
-							USDA National Agricultural Library
-						</a>
-				</ul>
-			</div>
 {% endcomment %}
+
 ### BiBTeX
+
 ````
 @article{2014-06-HepJafMac,
 	Title = {Operationalizing Ethics in Food Choice Decisions},

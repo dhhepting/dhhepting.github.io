@@ -1,0 +1,19 @@
+{% comment %}
+    Updated for boostrap 4 (https://getbootstrap.com/docs/4.0/components/breadcrumb/) and
+    does not create a link for the last (active) item
+{% endcomment %}
+<ul>
+{% capture indexdirurl %}{{ page.url | remove: "/index.html" }}{% endcapture %}
+{% assign idu_parts = indexdirurl | split: '/' %}
+{% assign target_size = idu_parts.size | plus: 1 %}
+{% for sp in site.pages %}
+    {% if sp.url contains indexdirurl and sp.url > indexdirurl %}
+	{% assign sp_parts = sp.url | split: '/' %}
+        {% if sp_parts.size == target_size %}
+            <li>
+                <a href="{{ site.baseurl }}{{sp.url}}">{{sp.breadcrumb}}</a>
+            </li>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+</ul>
