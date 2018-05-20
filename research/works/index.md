@@ -6,4 +6,3 @@ layout: default
 # Collected Works
 
 - [Sample Work](./sample.html)
-
