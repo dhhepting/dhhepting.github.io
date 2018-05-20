@@ -6,38 +6,39 @@ layout: default
 # Operational&shy;izing Ethics in Food Choice Decisions
 
 * * *
-<div class="btn-toolbar" role="toolbar" aria-label="Related-project buttons">
+<span >
 	<!-- Projects -->
-	<a href="../../projects/" role="button" aria-label="Enviromatics"
-	class="btn btn-primary" title="Go to Enviromatics project page">
-		Enviromatics
-	</a>
+	<a class="btn btn-primary px-2" href="../../projects/" role="button" aria-label="Enviromatics">Enviromatics</a>
+</span>
+<span >
 	<a href="../../projects/" role="button" aria-label="Food"
-	class="btn btn-primary" title="Go to Food project page">
+	class="btn btn-primary px-2" title="Go to Food project page">
 		Food
 	</a>
-</div>
-- - -
-<div class="btn-toolbar"  role="toolbar" aria-label="Social media buttons">
+</span>
+<br />
+<div class="btn-toolbar bg-dark">
 	<!-- Share on LinkedIn -->
+<span>
 	<a class="btn btn-default" aria-label="Share on LinkedIn"
 	href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwww2.cs.uregina.ca%2F%7Ehepting%2Fresearch%2Fworks%2F2014-06-Operationalizing-Ethics-in-Food-Choice-Decisions.html&title=Operationalizing%20Ethics%20in%20Food%20Choice%20Decisions&summary=There%20is%20a%20large%20gap%20between%20attitude%20and%20action%20when%20it%20comes%20to%20consumer%20purchases%20of%20ethical%20food.%20Amongst%20the%20various%20aspects%20of%20this%20gap,%20this%20paper%20focuses%20on%20the%20difficulty%20in%20knowing%20enough%20about%20the%20various%20dimensions%20of%20food%20production,%20distribution%20and%20consumption%20to%20make%20an%20ethical%20food%20purchasing%20decision.&source=cs.uregina.ca">
-		<i class="fab fa-linkedin" title="Share on LinkedIn"></i> 
+		<i class="fab fa-linkedin fa-2x" title="Share on LinkedIn"></i> 
 	</a>
+</span>
 	<!-- Share on Facebook -->
 	<a class="btn btn-default" aria-label="Share on Facebook"
 	href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww2.cs.uregina.ca%2F%7Ehepting%2Fresearch%2Fworks%2F2014-06-Operationalizing-Ethics-in-Food-Choice-Decisions.html">
-		<i class="fab fa-facebook" title="Share on Facebook"></i>
+		<i class="fab fa-facebook fa-2x" title="Share on Facebook"></i>
 	</a>
 	<!-- Share on Google+ -->
 	<a  class="btn btn-default" aria-label="Share on Google+"
-	href="https://plus.google.com/share?url=http%3A%2F%2Fwww2.cs.uregina.ca%2F%7Ehepting%2Fresearch%2Fworks%2F2014-06-Operationalizing-Ethics-in-Food-Choice-Decisions.html">
-		<i class="fab fab fa-google-plus-square" title="Share on Google+"></i>
+	href="https://plus.google.com/share?url=http%3A%2F% `2Fwww2.cs.uregina.ca%2F%7Ehepting%2Fresearch%2Fworks%2F2014-06-Operationalizing-Ethics-in-Food-Choice-Decisions.html">
+		<span class="fab fa-google-plus-square fa-2x m-0 p-0" title="Share on Google+"></span>
 	</a>
 	<!-- Share on twitter -->
 	<a  class="btn btn-default" aria-label="Share on Twitter"
 	href="https://twitter.com/intent/tweet?text=http%3A%2F%2Fwww2.cs.uregina.ca%2F%7Ehepting%2Fresearch%2Fworks%2F2014-06-Operationalizing-Ethics-in-Food-Choice-Decisions.html">
-		<i class="fab fa-twitter-square" title="Share on Twitter"></i>
+		<i class="fab fa-twitter-square fa-2x" title="Share on Twitter"></i>
 	</a>
 </div>
 * * *
