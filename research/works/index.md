@@ -5,4 +5,4 @@ layout: default
 ---
 # Collected Works
 
-- [Sample Work](./sample.html)
+{% include indexdir.html %}
