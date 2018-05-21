@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<h1>
+	Collected Works
+</h1>
+
+<ul>
+{% for item in site.works %}
+  <li><a href="{{ item.url }}">{{ item.breadcrumb }}</a></li>
+{% endfor %}
+</ul>
