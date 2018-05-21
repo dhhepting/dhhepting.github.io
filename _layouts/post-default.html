@@ -21,116 +21,22 @@
 		integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" 
 		crossorigin="anonymous" 
 	/>
-	<link rel="stylesheet" href=/assets/css/dhhepting.css />
+	<link rel="stylesheet" href={{ "/assets/css/dhhepting.css" | relative_url }} />
 	
-	<link rel="icon" href=/assets/favicon.ico type="image/x-icon" />
-	<link rel="shortcut icon" href=/assets/favicon.ico type="image/x-icon" />
+	<link rel="icon" href={{"/assets/favicon.ico" | relative_url }} type="image/x-icon" />
+	<link rel="shortcut icon" href={{"/assets/favicon.ico" | relative_url }} type="image/x-icon" />
 </head>
 <body>
 	<div class="card bg-light">
-	
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb card-header">
-        <li class="breadcrumb-item"><a href="/">D. H. Hepting</a></li>
-
-
-
-
-
-
-    
-    
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-            
-                <li class="breadcrumb-item active">
-                    Projects
-                </li>
-            
-	    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </ol>
-</nav>
-
+	{% include bn.html %}
 
 	<div class="card-body">
-	<h1 id="projects">Projects</h1>
-
-<div class="card">
-	<div class="card-header">
-		<a href="one/">
-			<h3>
-				One
-			</h3>
-		</a>
-	</div>
-	<div class="card-body">
-		Description of Project One
-	</div>
-</div>
-
-<p>&nbsp;</p>
-
-<div class="card">
-	<div class="card-header">
-		<a href="two/">
-			<h3>
-				Two
-			</h3>
-		</a>
-	</div>
-	<div class="card-body">
-		Description of Project Two
-	</div>
-</div>
-
-<p>&nbsp;</p>
-
-<div class="card">
-	<div class="card-header">
-		<a href="three/">
-			<h3>
-				Three		
-			</h3>
-		</a>
-	</div>
-	<div class="card-body">
-		Description of Project Three
-	</div>
-</div>
-
+	{{ content }}
 	</div>
 
 <div class="card-footer text-muted">
 	Site last updated: 
-	2018-05-21 12:53
+	{{ site.time | date: "%Y-%m-%d %H:%M" }}
   </div>
 
 	</div>

@@ -1,7 +1,9 @@
 ---
 title: Operationalizing Ethics in Food Choice Decisions (2014) * D. H. Hepting
 breadcrumb: Operationalizing Ethics in Food Choice Decisions (2014)
+wdate: 2014-06
 layout: default
+wproj: enviromatics, food
 ---
 # Operational&shy;izing Ethics in Food Choice Decisions
 
