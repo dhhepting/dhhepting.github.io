@@ -5,5 +5,5 @@ layout: default
 ---
 # Research
 
-{% include indexdir.html %}
+{% include index-dir.html %}
 

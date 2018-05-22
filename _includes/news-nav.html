@@ -2,6 +2,14 @@
     Updated for boostrap 4 (https://getbootstrap.com/docs/4.0/components/breadcrumb/) and
     does not create a link for the last (active) item
 {% endcomment %}
+{% if page.url == "/news/" %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">D. H. Hepting</a></li>
+        <li class="breadcrumb-item active">News</li>
+    </ol>
+</nav>
+{% else %}
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">D. H. Hepting</a></li>
@@ -9,3 +17,4 @@
         <li class="breadcrumb-item active">{{page.breadcrumb}}</li>
     </ol>
 </nav>
+{% endif %}
