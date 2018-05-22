@@ -1,0 +1,8 @@
+<div class="btn-toolbar bg-light">
+{% for proj in page.wproj %}
+<span>
+        <a class="btn btn-primary mx-1" href="{{ baseurl }}/projects/{{proj}}"
+        role="button" aria-label="{{proj | capitalize}}">{{proj | capitalize}}</a>
+</span>
+{% endfor %}
+</div>
