@@ -1,0 +1,31 @@
+<div class="btn-toolbar bg-light">
+<!-- Share on LinkedIn -->
+        <a class="btn btn-primary mx-1" aria-label="Share on LinkedIn"
+        href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}{{site.baseurl}}{{page.url}}&title={{page.breadcrumb}}&summary={{page.description | truncate: 256 | url_encode}}&source={{site.url}}{{site.baseurl}}"
+	target="_blank">
+                <span class="fab fa-linkedin" title="Share on LinkedIn"></span>
+        </a>
+<!-- Share on Facebook -->
+        <a class="btn btn-primary mx-1" aria-label="Share on Facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+	target="_blank">
+                <span class="fab fa-facebook" title="Share on Facebook"></span>
+        </a>
+<!-- Share on Google+ -->
+        <a class="btn btn-primary mx-1" aria-label="Share on Google+"
+	href="https://plus.google.com/share?url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+	target="_blank">
+                <span class="fab fa-google-plus-square" title="Share on Google+"></span>
+        </a>
+<!-- Share on twitter -->
+        <a class="btn btn-primary mx-1" aria-label="Share on Twitter"
+	href="https://twitter.com/intent/tweet?text={{page.breadcrumb}}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+	target="_blank">
+                <span class="fab fa-twitter-square" title="Share on Twitter"></span>
+        </a>
+<!-- Share via email -->
+        <a class="btn btn-primary mx-1" aria-label="Share via Email"
+	href="mailto:?subject={{page.breadcrumb}}&amp;body=Check out this page: {{site.url}}{{site.baseurl}}{{page.url}}">
+		<span class="fas fa-envelope" title="Share via Email"></span>
+        </a>
+</div>
