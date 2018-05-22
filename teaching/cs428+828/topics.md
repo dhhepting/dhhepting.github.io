@@ -1,28 +1,8 @@
-<!doctype html>
-<html lang="en-CA">
-<head>
-	<title>Topics and Learning Outcomes: CS 428 + 828</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Bootstrap core CSS -->
-    <link href="/~hepting/assets/common/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/~hepting/assets/common/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link rel="shortcut icon" href="/~hepting/assets/images/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/~hepting/assets/images/favicon.ico" type="image/x-icon">
-
-</head>
-<body>
-	<div class="well">
-		<ol class="breadcrumb">
-			<li><a href="../../">D. H. Hepting</a></li>
-			<li><a href="../">Teaching</a></li>
-			<li><a href="./">CS 428 + 828</a></li>
-			<li class="active">Topics &amp; Learning Outcomes</li>
-		</ol>
-	
-		<h1>Topics &amp; Learning Outcomes</h1> 
+---
+layout: default
+breadcrumb: Topics &amp; Learning Outcomes
+---
+# Topics &amp; Learning Outcomes
 		<p>
 			Topics and Learning Outcomes for this course are based on 
 			<a href="https://www.acm.org/education/CS2013-final-report.pdf">
@@ -560,8 +540,3 @@
 			</div>
 		</div>
 	</div>
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="/~hepting/assets/common/jquery/jquery-1.12.0.min.js"></script>
-	<script src="/~hepting/assets/common/bootstrap/js/bootstrap.min.js"></script>
-</body>
-</html>
