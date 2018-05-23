@@ -1,5 +1,5 @@
 ---
-title: Projects * D. H. Hepting
+title: Projects 
 breadcrumb: Projects
 layout: default
 ---

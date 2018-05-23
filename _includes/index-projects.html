@@ -19,9 +19,8 @@
 {% for i in (1..numprojs) %}
     {% assign sp = sortedprojs[i] | split: '#' %}
 <div class="card">
-    {{ pp[0] }}
     <div class="card-header" style="background-color: cyan;">
-        <a href="{{sp[0]}}"><h3>{{sp[1]}}</h3></a>
+        <a href="{{sp[0] | relative_url}}"><h3>{{sp[1]}}</h3></a>
     </div>
     <div class="card-body">
         {{sp[2]}}
