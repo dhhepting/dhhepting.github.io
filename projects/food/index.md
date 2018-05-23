@@ -1,9 +1,14 @@
 ---
-title: Projects * D. H. Hepting
-breadcrumb: Food Project
+title: Food Project
+breadcrumb: Food 
 description: Description of Food Project!
+project: food
 layout: default
 ---
-# Food Project
+# {{ page.breadcrumb }}
 
-{% include index-dir.html %}
+{{ page.description }}
+
+### Related Works
+
+{% include works-related-to-project.html %}

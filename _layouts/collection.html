@@ -1,12 +1,17 @@
 ---
 layout: default
+group:
+- category
+- project
 ---
 <h1>
 	Collected Works
 </h1>
 
 <ul>
-{% for item in site.works %}
-  <li><a href="{{ item.url }}">{{ item.breadcrumb }}</a></li>
+{% for item in site.works reversed %}
+  <li><a href="{{ item.url | relative_url }}">{{ item.breadcrumb }}</a>
+      <span class="badge badge-info badge-sm">{{item.category}}</span>
+  </li>
 {% endfor %}
 </ul>

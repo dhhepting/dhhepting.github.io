@@ -1,5 +1,5 @@
 ---
-title: Operationalizing Ethics in Food Choice Decisions (2014) * D. H. Hepting
+title: Operationalizing Ethics in Food Choice Decisions (2014) 
 breadcrumb: Operationalizing Ethics in Food Choice Decisions (2014)
 category: journal
 authors:
@@ -8,7 +8,7 @@ authors:
 - Timothy Maciag
 wdate: 2014-06
 layout: works-default
-wproj: 
+project: 
 - enviromatics
 - food
 description: >-
@@ -26,7 +26,7 @@ description: >-
   We then present an overview of opportunities for design of a new software tool.
   Finally, we offer some points for discussion and future work.
 ---
-# Operational&shy;izing Ethics in Food Choice Decisions
+# {{ page.breadcrumb }}
 
 * * *
 
@@ -54,11 +54,11 @@ description: >-
 			
 ### Abstract
 
-{{page.description}}
+{{ page.description }}
 
 ### Download
 
-- [this site](/research/)
+- [this site]({{"/assets/works/pdf/2014-06-HepJafMac.pdf" | relative_url}})
 - [oURspace &mdash; University of Regina Institutional Repository](http://hdl.handle.net/10294/6892)
 - [Springer Nature SharedIt](http://rdcu.be/mFXP)
 - [springerlink](http://link.springer.com/article/10.1007/s10806-013-9473-8)
