@@ -9,7 +9,7 @@ layout: home
 		used this example:
 		https://www.quackit.com/html/html_editors/scratchpad/?example=/bootstrap/bootstrap_4/tutorial/bootstrap_4_navbars_fixed_top
 	-->
-	<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+	<nav class="navbar fixed-top navbar-expand-sm navbar-dark" style="background-color: rgba(32, 32, 32, 0.75);">
 		<button class="navbar-toggler" type="button" 
 		data-toggle="collapse" data-target="#nav-content" 
 		aria-controls="nav-content" aria-expanded="false" aria-label="toggle navigation">
