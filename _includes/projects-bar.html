@@ -1,7 +1,8 @@
 <div class="btn-toolbar bg-light">
-{% for proj in page.wproj %}
+{% for proj in page.project %}
 <span>
-        <a class="btn btn-primary mx-1" href="{{ baseurl }}/projects/{{proj}}"
+	{%capture project_url %}/projects/{{proj}}{% endcapture %}
+        <a class="btn btn-primary mx-1" href="{{project_url | relative_url}}"
         role="button" aria-label="{{proj | capitalize}}">{{proj | capitalize}}</a>
 </span>
 {% endfor %}
