@@ -12,5 +12,6 @@ gem "ffi", "=1.9.21"
 gem 'html-proofer'
 group :jekyll_plugins do
    gem "jekyll-seo-tag"
+   gem "jekyll-sitemap"
 end
 
