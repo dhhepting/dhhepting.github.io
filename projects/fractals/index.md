@@ -19,8 +19,8 @@ layout: default
 	(Fracchia at Yale as a postdoc, me at IBM TJ Watson Research Centre), 
 	beginning in the summer of 1991.
 		<p>
-			<img class="img-responsive" 
-			src="/~hepting/assets/images/fractals/grand-slammer.jpg">
+			<img class="img-responsive" alt="Sing Sing: the Grand Slammer"
+			src={{"/assets/images/fractals/grand-slammer.jpg" | relative_url}}>
 		</p>
 		<p>
 			During my contract with IBM, I lived in Ossining, New York 
