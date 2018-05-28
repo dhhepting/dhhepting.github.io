@@ -1,8 +1,8 @@
 ---
 layout: works-default
 citekey: 1995-10-HepFraDil
-title: A Personal Paradigm for Computer-Aided Visualization (1996)
-breadcrumb: A Personal Paradigm for Computer-Aided Visualization (1996)
+title: A Personal Paradigm for Computer Aided Visualization (1996)
+breadcrumb: A Personal Paradigm for Computer Aided Visualization (1996)
 projects: test
 authors:
  - Daryl H. Hepting 

@@ -1,8 +1,8 @@
 ---
 layout: works-default
 citekey: 2017-10-HepBinYao
-title: Three-Way Analysis of Facial Similarity Judgments (2017)
-breadcrumb: Three-Way Analysis of Facial Similarity Judgments (2017)
+title: Three Way Analysis of Facial Similarity Judgments (2017)
+breadcrumb: Three Way Analysis of Facial Similarity Judgments (2017)
 projects: test
 authors:
  - Daryl H. Hepting 

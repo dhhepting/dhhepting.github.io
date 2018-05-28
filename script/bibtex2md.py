@@ -13,12 +13,14 @@ bibtex_path = "../_works/bibtex/"
 for entry in bib_data.entries.values():
 	entry_data = BibliographyData()
 	titlestr = entry.fields['Title']
-	urlstr = entry.fields['Url']
-	print (urlstr)
+	titlestr = re.sub(r'[^\w]', ' ', titlestr)
+	#urlstr = entry.fields['Url']
+	#print (urlstr)
 	entrytimestr = entry.fields['Date-Modified']
 	entrytime = datetime.strptime(entrytimestr,"%Y-%m-%d %H:%M:%S %z")
 	mdnamestr = entry.key + " " + titlestr + ".md"
 	mdnamestr = re.sub(r"\s+", '-', mdnamestr)
+	#mdnamestr = re.sub(r"[^\w]", '', mdnamestr)
 	mdfilepath = Path(bibtex_path + mdnamestr)
 	recreate = False
 	if mdfilepath.is_file():
@@ -47,7 +49,7 @@ for entry in bib_data.entries.values():
 			mdf.write(keystr)
 			mdf.write(pagestr)
 			mdf.write(breadstr)
-			mdf.write("projects: "+projectstr+ "\n")
+			mdf.write("projects: " + projectstr + "\n")
 			mdf.write("authors:\n")
 			auths = entry.persons['author']
 			for aa in range(len(auths)):

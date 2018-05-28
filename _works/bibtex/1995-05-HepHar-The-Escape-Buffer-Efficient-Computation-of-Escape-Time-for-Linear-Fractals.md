@@ -1,8 +1,8 @@
 ---
 layout: works-default
 citekey: 1995-05-HepHar
-title: The Escape Buffer: Efficient Computation of Escape Time for Linear Fractals (1995)
-breadcrumb: The Escape Buffer: Efficient Computation of Escape Time for Linear Fractals (1995)
+title: The Escape Buffer  Efficient Computation of Escape Time for Linear Fractals (1995)
+breadcrumb: The Escape Buffer  Efficient Computation of Escape Time for Linear Fractals (1995)
 projects: test
 authors:
  - Daryl H. Hepting 

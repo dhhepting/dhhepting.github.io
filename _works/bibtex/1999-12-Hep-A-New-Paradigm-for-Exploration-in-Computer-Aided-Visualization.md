@@ -1,8 +1,8 @@
 ---
 layout: works-default
 citekey: 1999-12-Hep
-title: A New Paradigm for Exploration in Computer-Aided Visualization (1999)
-breadcrumb: A New Paradigm for Exploration in Computer-Aided Visualization (1999)
+title: A New Paradigm for Exploration in Computer Aided Visualization (1999)
+breadcrumb: A New Paradigm for Exploration in Computer Aided Visualization (1999)
 projects: test
 authors:
  - Daryl H. Hepting 

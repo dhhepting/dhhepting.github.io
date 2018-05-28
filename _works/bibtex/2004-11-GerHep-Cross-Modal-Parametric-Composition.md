@@ -1,8 +1,8 @@
 ---
 layout: works-default
 citekey: 2004-11-GerHep
-title: Cross-Modal Parametric Composition (2004)
-breadcrumb: Cross-Modal Parametric Composition (2004)
+title: Cross Modal Parametric Composition (2004)
+breadcrumb: Cross Modal Parametric Composition (2004)
 projects: test
 authors:
  - David Gerhard 
