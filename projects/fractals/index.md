@@ -6,8 +6,7 @@ layout: default
 ---
 # {{ page.breadcrumb }}
 
-<p>
-	Supervisor for my Master of Science degree was 
+ Supervisor for my Master of Science degree was 
 	<a href="https://en.wikipedia.org/wiki/Przemys%C5%82aw_Prusinkiewicz">
 		Przemyslaw Prusinkiewicz
 	</a>.
@@ -19,7 +18,6 @@ layout: default
 	and me to secure term employment with Mandelbrot's Fractals Project 
 	(Fracchia at Yale as a postdoc, me at IBM TJ Watson Research Centre), 
 	beginning in the summer of 1991.
-</p>
 		<p>
 			<img class="img-responsive" 
 			src="/~hepting/assets/images/fractals/grand-slammer.jpg">
