@@ -1,8 +1,8 @@
 ---
 layout: works-default
 citekey: 1995-11-HepHuaRus
-title: Case Study: A Visual Tool for Moving Mesh Numerical Methods (1995)
-breadcrumb: Case Study: A Visual Tool for Moving Mesh Numerical Methods (1995)
+title: Case Study  A Visual Tool for Moving Mesh Numerical Methods (1995)
+breadcrumb: Case Study  A Visual Tool for Moving Mesh Numerical Methods (1995)
 projects: test
 authors:
  - Daryl H. Hepting 

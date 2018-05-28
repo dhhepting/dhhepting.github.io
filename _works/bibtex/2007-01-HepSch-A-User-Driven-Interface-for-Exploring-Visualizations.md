@@ -1,8 +1,8 @@
 ---
 layout: works-default
 citekey: 2007-01-HepSch
-title: A User-Driven Interface for Exploring Visualizations (2007)
-breadcrumb: A User-Driven Interface for Exploring Visualizations (2007)
+title: A User Driven Interface for Exploring Visualizations (2007)
+breadcrumb: A User Driven Interface for Exploring Visualizations (2007)
 projects: test
 authors:
  - Daryl H. Hepting 
