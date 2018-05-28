@@ -1,17 +1,14 @@
 ---
-title: CS 428 + 828 * D. H. Hepting
+title: 201830
 layout: default
 ---
-# CS 428 + 828
+# CS 428 + 828 &bull; 201830
 
 ### Human Computer Communications
 
 {% include index-dir.html %}
 
-<p>
-	Prior to 2016, CS 428 was known as CS 305.
-</p>
-<p>
-	I have taught both CS 305 and CS 828, separately and together, 
-	going back to the fall semester of 2001.
-</p>
+[CS 428 on UR Self-Service](https://banner.uregina.ca/prod/sct/bwckschd.p_disp_detail_sched?term_in=201830&crn_in=30728)
+
+[CS 828 on UR Self-Service](https://banner.uregina.ca/prod/sct/bwckschd.p_disp_detail_sched?term_in=201830&crn_in=30742)
+
