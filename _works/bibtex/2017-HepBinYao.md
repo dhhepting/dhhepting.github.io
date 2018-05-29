@@ -3,15 +3,8 @@ layout: works-default
 citekey: 2017-10-HepBinYao
 title: Three Way Analysis of Facial Similarity Judgments (2017)
 breadcrumb: Three Way Analysis of Facial Similarity Judgments (2017)
-projects: test
-authors:
- - Daryl H. Hepting 
- - Hadeel Hatim Bin Amer 
- - Yiyu Yao 
----
-{% capture bibtexdat %}
-````
-@conference{2017-10-HepBinYao,
+bibtex: |+
+  @conference{2017-10-HepBinYao,
     Author = "Hepting, Daryl H. and {Bin Amer}, Hadeel Hatim and Yao, Yiyu",
     Booktitle = "Proceedings of ISFUROS 2017: 2nd International Symposium on Fuzzy and Rough Sets",
     Date-Added = "2017-10-28 06:49:20 +0000",
@@ -23,8 +16,12 @@ authors:
     W-Projects = "faces",
     W-Type = "conference",
     Year = "2017"
-}
+  }
+projects: test
+authors:
+ - Daryl H. Hepting 
+ - Hadeel Hatim Bin Amer 
+ - Yiyu Yao 
+---
+{{ page.bibtex }}
 
-````
-{% endcapture %}
-{{ bibtexdat }}
