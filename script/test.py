@@ -14,6 +14,8 @@ ed = {}
 for entry in bib_data.entries.values():
 	entry_data = BibliographyData()
 	entry_data.entries[entry.key] = entry
+	if 'Booktitle' in entry.fields:
+		print("Has booktitle")
 	edstr = entry_data.to_string('bibtex')
 	lines = edstr.split("\n")
 	lc = 0
