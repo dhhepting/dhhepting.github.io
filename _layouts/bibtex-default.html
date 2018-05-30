@@ -12,11 +12,36 @@
 	<hr />
 
 	<h3>{{page.category | capitalize }}</h3>
+	<ul>
+		<li>{{page.venue | strip}}</li>
+	</ul>
+
 			
-	<h3>Authors</h3>
+	{% capture author_count %}{{ page.authors.size | minus:0 }}{% endcapture %}
+	{% assign ac = author_count | plus: 0 %}
+	{% if ac == 1 %}
+		<h3>Author</h3>
+	{% else %}
+		<h3>Authors</h3>
+	{% endif %}
+	<ul>
+	{% for author in page.authors %}
+   		<li>{{author}}</li> 
+	{% endfor %}
+	</ul>
 
 	<h3>Abstract</h3>
-	{{ description }}
+	<p>{{ page.abstract }}</p>
+
+	<h3>Download</h3>
+	{% capture work_url %}/assets/works/pdf/{{page.citekey}}.pdf{% endcapture %}
+	<ul>
+		<li><a href="{{ work_url | absolute_url }}">this site</a></li>
+	{% assign links = site.data.dlw[page.citekey] %}
+	{% for ll in links %}
+		<li><a href="{{ ll.lu }}">{{ ll.lt }}</a></li>
+	{% endfor %}
+	</ul>
 
 	<h3>BibTeX</h3>
 	<!-- Target -->
