@@ -77,7 +77,9 @@ for entry in bib_data.entries.values():
 			entry_data.entries[entry.key] = entry
 			mdf.write("{% capture bibtexdat %}\n")
 			mdf.write("````\n")
-			mdf.write(entry_data.to_string('bibtex') + "\n")
+			mdf.write(entry_data.to_string('bibtex'))
+			edstr = entry_data.to_string('bibtex')
 			mdf.write("````\n")
 			mdf.write("{% endcapture %}\n")
 			mdf.write("{{ bibtexdat }}\n")
+			print(edstr)
