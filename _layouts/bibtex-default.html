@@ -26,7 +26,7 @@
 	{% endif %}
 	<ul>
 	{% for author in page.authors %}
-   		<li>{{author}}</li> 
+   		<li>{{author | strip}}</li> 
 	{% endfor %}
 	</ul>
 

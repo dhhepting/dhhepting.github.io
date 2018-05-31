@@ -20,7 +20,7 @@ authors:
  - Heather Morrison 
  - Claire Polster 
  - Arthur Schafer 
- - Marian Zon 
+ - Marian van der Zon 
  - Roberto Verzola 
  - Joel Westheimer 
  - Gregory Younging 
