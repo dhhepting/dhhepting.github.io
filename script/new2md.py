@@ -83,13 +83,19 @@ for entry in bib_data.entries.values():
 				for mm in range(len(middlename)):
 					middlenamestr += middlename[mm].render_as('text')
 					middlenamestr += " "
+				# get pre-last name(s) in unicode
+				prelastnamestr = ""
+				prelastname = auths[aa].rich_prelast_names
+				for pl in range(len(prelastname)):
+					prelastnamestr += prelastname[pl].render_as('text')
+					prelastnamestr += " "
 				# get last name(s) in unicode
 				lastnamestr = ""
 				lastname = auths[aa].rich_last_names
 				for ll in range(len(lastname)):
 					lastnamestr += lastname[ll].render_as('text')
 					lastnamestr += " "
-				authstr = " - " + firstnamestr + middlenamestr + lastnamestr
+				authstr = " - " + firstnamestr + middlenamestr + prelastnamestr + lastnamestr
 				mdf.write(authstr + "\n")
 			mdf.write("---\n")
 
