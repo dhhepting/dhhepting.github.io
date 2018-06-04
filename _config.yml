@@ -9,20 +9,23 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 timezone: America/Regina
-title: D. H, Hepting, Ph.D.
-email: your-email@example.com
+title: D. H. Hepting, Ph.D.
+lang: "en-CA"
+email: hepting@cs.uregina.ca
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Associate Professor of Computer Science, University of Regina. 
+  Ph.D. from Simon Fraser University. Augmenting human abilities to embrace diversity.
 baseurl: 
 url: https://dhhepting.github.io
 github_username:  dhhepting
+
+webmaster_verifications:
+  google: "x1yg5SYk5hD2RE32QX-otdPrCyHgJfRhnidrzYgjONs"
+  bing:   "F1CCB2E1C91FDC5B8A82937F80B46C0A"
+#  alexa: 1234
+#  yandex: 1234
+#  baidu: 1234
 
 # Build settings
 markdown: kramdown
@@ -33,14 +36,6 @@ plugins:
 
 
 sass:
-#    sass_dir: node_modules/bootstrap-sass/assets/stylesheets
-#    sass_dir: ./_scss
-# style : nested (default), compact, compressed, expanded
-#         :nested, :compact, :compressed, :expanded also works
-# see http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-# on a typical twitter bootstrap stats are :
-# nested 138,7kB, compact 129,1kB, expanded 135,9 kB, compressed 122,4 kB
-#style: compressed
 
 # Exclude from processing.
 exclude:
@@ -53,8 +48,10 @@ exclude:
   - Gemfile.lock
   - yarn.lock
   - teaching/0_nonweb
+  - research/0_nonweb
   - teaching/1_offweb
 
+# Keep from being clobbered on each build
 keep_files:
   - assets/works
 

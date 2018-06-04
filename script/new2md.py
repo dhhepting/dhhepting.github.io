@@ -68,36 +68,37 @@ for entry in bib_data.entries.values():
 				mdf.write("category: " + typestr + "\n")
 			else:
 				mdf.write("category: paper\n")
-			mdf.write("authors:\n")
-			auths = entry.persons['author']
-			for aa in range(len(auths)):
-				# get first name(s) in unicode
-				firstnamestr = ""
-				firstname = auths[aa].rich_first_names
-				for ff in range(len(firstname)):
-					firstnamestr += firstname[ff].render_as('text')
-					firstnamestr += " "
-				# get middle name(s) in unicode
-				middlenamestr = ""
-				middlename = auths[aa].rich_middle_names
-				for mm in range(len(middlename)):
-					middlenamestr += middlename[mm].render_as('text')
-					middlenamestr += " "
-				# get pre-last name(s) in unicode
-				prelastnamestr = ""
-				prelastname = auths[aa].rich_prelast_names
-				for pl in range(len(prelastname)):
-					prelastnamestr += prelastname[pl].render_as('text')
-					prelastnamestr += " "
-				# get last name(s) in unicode
-				lastnamestr = ""
-				lastname = auths[aa].rich_last_names
-				for ll in range(len(lastname)):
-					lastnamestr += lastname[ll].render_as('text')
-					lastnamestr += " "
-				authstr = " - " + firstnamestr + middlenamestr + prelastnamestr + lastnamestr
-				mdf.write(authstr + "\n")
-			mdf.write("---\n")
+			if 'author' in entry.persons:
+				auths = entry.persons['author']
+				mdf.write("authors:\n")
+				for aa in range(len(auths)):
+					# get first name(s) in unicode
+					firstnamestr = ""
+					firstname = auths[aa].rich_first_names
+					for ff in range(len(firstname)):
+						firstnamestr += firstname[ff].render_as('text')
+						firstnamestr += " "
+					# get middle name(s) in unicode
+					middlenamestr = ""
+					middlename = auths[aa].rich_middle_names
+					for mm in range(len(middlename)):
+						middlenamestr += middlename[mm].render_as('text')
+						middlenamestr += " "
+					# get pre-last name(s) in unicode
+					prelastnamestr = ""
+					prelastname = auths[aa].rich_prelast_names
+					for pl in range(len(prelastname)):
+						prelastnamestr += prelastname[pl].render_as('text')
+						prelastnamestr += " "
+					# get last name(s) in unicode
+					lastnamestr = ""
+					lastname = auths[aa].rich_last_names
+					for ll in range(len(lastname)):
+						lastnamestr += lastname[ll].render_as('text')
+						lastnamestr += " "
+					authstr = " - " + firstnamestr + middlenamestr + prelastnamestr + lastnamestr
+					mdf.write(authstr + "\n")
+				mdf.write("---\n")
 
 			edstr = entry_data.to_string('bibtex')
 			# output selected fields of BibTex entry
@@ -116,8 +117,9 @@ for entry in bib_data.entries.values():
 			# now to format them properly
 			mdf.write(ed[0] + "\n")
 			ed.pop(0, None)
-			mdf.write("\tAuthor = " + ed["Author"] + "\n")
-			ed.pop("Author", None)
+			if "Author" in ed:
+				mdf.write("\tAuthor = " + ed["Author"] + "\n")
+				ed.pop("Author", None)
 			mdf.write("\tTitle = " + ed["Title"]+"\n")
 			ed.pop("Title", None)
 			#if 'Url' in entry.fields:

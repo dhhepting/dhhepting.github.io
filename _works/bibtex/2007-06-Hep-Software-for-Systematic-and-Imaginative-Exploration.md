@@ -5,7 +5,8 @@ venue: Proceedings of the 6th ACM SIGCHI Conference on Creativity   Cognition
 title: Software for Systematic and Imaginative Exploration (2007)
 breadcrumb: Software for Systematic and Imaginative Exploration (2007)
 projects:
-category: paper
+ - creativity
+category: poster
 authors:
  - Daryl H. Hepting 
 ---

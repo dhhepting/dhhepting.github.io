@@ -4,7 +4,8 @@ citekey: 2003-11-HepArb
 title: The Implications of Verbal Overshadowing for Computer Interface Design (2003)
 breadcrumb: The Implications of Verbal Overshadowing for Computer Interface Design (2003)
 projects:
-category: paper
+ - faces
+category: techreport
 authors:
  - Daryl H. Hepting 
  - Katherine D. Arbuthnott 

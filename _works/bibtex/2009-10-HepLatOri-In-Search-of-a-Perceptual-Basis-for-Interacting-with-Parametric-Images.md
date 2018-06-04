@@ -5,7 +5,8 @@ venue: Proceedings of the 7th ACM conference on Creativity and Cognition
 title: In Search of a Perceptual Basis for Interacting with Parametric Images (2009)
 breadcrumb: In Search of a Perceptual Basis for Interacting with Parametric Images (2009)
 projects:
-category: paper
+ - fractals
+category: poster
 authors:
  - Daryl H. Hepting 
  - Leila Latifi 

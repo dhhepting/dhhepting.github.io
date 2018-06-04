@@ -1,7 +1,7 @@
 ---
 layout: bibtex-default
 citekey: 1991-06-HepPruSau
-venue: Fractals in the Fundamental and Applied Sciences   Proceedings of the First IFIP Conference on Fractals in the Fundamental and Applied Sciences  Lisbon  Portugal  6 8 June  1990
+venue: Fractals in the Fundamental and Applied Sciences  Proceedings of the First IFIP Conference on Fractals in the Fundamental and Applied Sciences  Lisbon  Portugal  6 8 June  1990
 title: Rendering Methods for Iterated Function Systems (1991)
 breadcrumb: Rendering Methods for Iterated Function Systems (1991)
 projects:
@@ -17,9 +17,9 @@ authors:
 	Url = \"{{"/assets/works/pdf/1991-06-HepPruSau.pdf" | absolute_url }}\",
 	Editor =  "Peitgen, Heinz-Otto and Henriques, Jos\'e Marques and Penedo, Lu\'is Filipe",
 	Address =  "New York",
-	Booktitle =  "Fractals in the Fundamental and Applied Sciences : Proceedings of the First IFIP Conference on Fractals in the Fundamental and Applied Sciences, Lisbon, Portugal, 6-8 June, 1990",
+	Booktitle =  "Fractals in the Fundamental and Applied Sciences: Proceedings of the First IFIP Conference on Fractals in the Fundamental and Applied Sciences, Lisbon, Portugal, 6-8 June, 1990",
 	Keywords =  "IFS, fractals, rendering methods",
-	Month =  "6",
+	Month =  "June",
 	Organization =  "IFIP",
 	Pages =  "183--224",
 	Publisher =  "North-Holland",

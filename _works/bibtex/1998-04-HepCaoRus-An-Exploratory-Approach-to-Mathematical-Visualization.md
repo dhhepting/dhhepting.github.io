@@ -5,7 +5,8 @@ venue: Western Computer Graphics Symposium
 title: An Exploratory Approach to Mathematical Visualization (1998)
 breadcrumb: An Exploratory Approach to Mathematical Visualization (1998)
 projects:
-category: paper
+ - visualization
+category: conference
 authors:
  - Daryl H. Hepting 
  - Weiming Cao 
