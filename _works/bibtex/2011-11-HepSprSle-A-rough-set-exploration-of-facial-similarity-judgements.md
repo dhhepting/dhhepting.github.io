@@ -5,7 +5,8 @@ venue: Transactions on Rough Sets XIV
 title: A rough set exploration of facial similarity judgements (2011)
 breadcrumb: A rough set exploration of facial similarity judgements (2011)
 projects:
-category: paper
+ - faces
+category: journal
 authors:
  - Daryl H. Hepting 
  - Richard Spring 
