@@ -15,11 +15,10 @@ authors:
 @inproceedings{2002-07-Hep,
 	Author =  "Hepting, Daryl H.",
 	Title =  "Towards a visual interface for information visualization",
-	Url = \"{{"/assets/works/pdf/2002-07-Hep.pdf" | absolute_url }}\",
 	Booktitle =  "Proceedings of Sixth International Conference on Information Visualisation 2002",
 	Doi =  "10.1109/IV.2002.1028791",
 	Month =  "July",
 	Pages =  "295--302",
 	Publisher =  "IEEE",
-	Year =  "2002"
+	Year =  "2002",
 }

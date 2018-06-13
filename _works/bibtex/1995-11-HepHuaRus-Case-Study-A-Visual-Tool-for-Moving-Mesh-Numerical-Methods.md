@@ -13,7 +13,6 @@ authors:
 @techreport{1995-11-HepHuaRus,
 	Author =  "Hepting, Daryl H. and Huang, Weizhang and Russell, Robert D.",
 	Title =  "Case Study: A Visual Tool for Moving Mesh Numerical Methods",
-	Url = \"{{"/assets/works/pdf/1995-11-HepHuaRus.pdf" | absolute_url }}\",
 	Address =  "Burnaby, BC, Canada",
 	Institution =  "Simon Fraser University",
 	Month =  "11",
