@@ -13,7 +13,6 @@ authors:
 @inproceedings{2003-11-Hep,
 	Author =  "Hepting, Daryl H.",
 	Title =  "Interactive Evolution for Systematic Exploration of a Parameter Space",
-	Url = \"{{"/assets/works/pdf/2003-11-Hep.pdf" | absolute_url }}\",
 	Editor =  "Dagli, Cihan H.",
 	Booktitle =  "Intelligent Engineering Systems through Artificial Neural Networks",
 	Month =  "November",

@@ -20,5 +20,5 @@ authors:
 	Doi =  "10.1145/1979742.1979568",
 	Month =  "May",
 	Note =  "Workshop website: http://staceyk.org/chi11workshop/submissions/index.html",
-	Year =  "2011"
+	Year =  "2011",
 }

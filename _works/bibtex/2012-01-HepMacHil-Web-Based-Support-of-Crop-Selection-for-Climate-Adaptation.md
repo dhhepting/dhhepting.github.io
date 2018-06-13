@@ -24,5 +24,5 @@ authors:
 	Keywords =  "Internet;crops;farming;Web-based support;climate adaptation;crop selection;growing condition;prototype tool;Adaptation models;Agriculture;Databases;Heating;Measurement;Meteorology;Prototypes;climate adaptation;crop selection;crowdsourcing;web-based support systems",
 	Month =  "January",
 	Pages =  "1227-1236",
-	Year =  "2012"
+	Year =  "2012",
 }

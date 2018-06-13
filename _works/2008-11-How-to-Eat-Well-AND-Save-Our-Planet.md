@@ -1,5 +1,5 @@
 ---
-title: Operationalizing Ethics in Food Choice Decisions (2014) * D. H. Hepting
+title: How to Eat Well AND Save Our Planet (2008)
 breadcrumb: How to Eat Well AND Save Our Planet (2008)
 category: event
 keynote: Joel Salatin

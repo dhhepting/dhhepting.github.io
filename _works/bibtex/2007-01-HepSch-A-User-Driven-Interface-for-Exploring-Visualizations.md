@@ -16,7 +16,6 @@ authors:
 @inproceedings{2007-01-HepSch,
 	Author =  "Hepting, Daryl H. and Schmiedge, Paul",
 	Title =  "A User-Driven Interface for Exploring Visualizations",
-	Url = \"{{"/assets/works/pdf/2007-01-HepSch.pdf" | absolute_url }}\",
 	Editor =  {Erbacher, Robert F. and Roberts, Jonathan C. and Gr{\"o}hn, Matti T. and B{\"o}rner, Katy},
 	Booktitle =  "SPIE Proceedings, Visualization and Data Analysis 2007",
 	Doi =  "10.1117/12.703654",

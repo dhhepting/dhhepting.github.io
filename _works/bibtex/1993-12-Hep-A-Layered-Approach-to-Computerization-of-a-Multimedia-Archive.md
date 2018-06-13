@@ -4,7 +4,8 @@ citekey: 1993-12-Hep
 title: A Layered Approach to Computerization of a Multimedia Archive (1993)
 breadcrumb: A Layered Approach to Computerization of a Multimedia Archive (1993)
 projects:
-category: paper
+ - multimedia
+category: techreport
 authors:
  - Daryl H. Hepting 
 ---
