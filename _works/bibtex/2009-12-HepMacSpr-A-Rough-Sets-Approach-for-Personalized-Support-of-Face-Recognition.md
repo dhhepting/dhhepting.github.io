@@ -19,7 +19,6 @@ authors:
 @inproceedings{2009-12-HepMacSpr,
 	Author =  "Hepting, Daryl H. and Maciag, Timothy and Spring, Richard and Arbuthnott, Katherine and \'{S}l\k{e}zak, Dominik",
 	Title =  "A Rough Sets Approach for Personalized Support of Face Recognition",
-	Url = \"{{"/assets/works/pdf/2009-12-HepMacSpr.pdf" | absolute_url }}\",
 	Editor =  "Sakai, Hiroshi and Chakraborty, Mihir Kumar and Hassanien, Aboul Ella and \'{S}l\k{e}zak, Dominik and Zhu, William",
 	Address =  "Berlin, Heidelberg",
 	Booktitle =  "Rough Sets, Fuzzy Sets, Data Mining and Granular Computing RSFDGrC 2009",

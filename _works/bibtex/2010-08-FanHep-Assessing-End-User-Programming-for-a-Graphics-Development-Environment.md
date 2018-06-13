@@ -24,5 +24,5 @@ authors:
 	Publisher =  "Springer Berlin Heidelberg",
 	Series =  "Lecture Notes in Computer Science",
 	Volume =  "6335",
-	Year =  "2010"
+	Year =  "2010",
 }

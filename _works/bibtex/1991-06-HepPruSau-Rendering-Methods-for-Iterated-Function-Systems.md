@@ -5,7 +5,8 @@ venue: Fractals in the Fundamental and Applied Sciences  Proceedings of the Firs
 title: Rendering Methods for Iterated Function Systems (1991)
 breadcrumb: Rendering Methods for Iterated Function Systems (1991)
 projects:
-category: paper
+ - fractals
+category: conference
 authors:
  - Daryl H. Hepting 
  - Przemyslaw Prusinkiewicz 
