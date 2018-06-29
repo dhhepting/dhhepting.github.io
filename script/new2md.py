@@ -11,6 +11,9 @@ bib_data = parse_file('../research/works/works.bib')
 
 bibtex_path = "../_works/bibtex/"
 
+#
+# return field value string, if keystr is a key (otherwise exit)
+#
 def getValueStr(keystr):
 	try:
 		return entry.fields[keystr]
@@ -18,8 +21,64 @@ def getValueStr(keystr):
 		print("Cannot proceed without a " + keystr + " (" + entry.key + ")")
 		sys.exit()
 
-def output_bibtex_content(mdf):
+def format_people(people,kind,mdf):
+	if kind in people:
+		ppl = people[kind]
+		if kind == "author":
+			mdf.write("authors:\n")
+		elif kind == "editor":
+			mdf.write("editors:\n")
+		for pp in range(len(ppl)):
+			# get first name(s) in unicode
+			fnamestr = ""
+			firstname = ppl[pp].rich_first_names
+			for ff in range(len(firstname)):
+				fnamestr += firstname[ff].render_as('text')
+				fnamestr += " "
+			# get middle name(s) in unicode
+			mnamestr = ""
+			middlename = ppl[pp].rich_middle_names
+			for mm in range(len(middlename)):
+				mnamestr += middlename[mm].render_as('text')
+				mnamestr += " "
+			# get pre-last name(s) in unicode
+			plnamestr = ""
+			prelastname = ppl[pp].rich_prelast_names
+			for pl in range(len(prelastname)):
+				plnamestr += prelastname[pl].render_as('text')
+				plnamestr += " "
+			# get last name(s) in unicode
+			lnamestr = ""
+			lastname = ppl[pp].rich_last_names
+			for ll in range(len(lastname)):
+				lnamestr += lastname[ll].render_as('text')
+				#lnamestr += " "
+			perstr = " - " + fnamestr + mnamestr + plnamestr + lnamestr
+			mdf.write(perstr + "\n")
+
+
+def format_article(entry,mdf):
+	format_people(entry.persons,"author",mdf)
+	mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Journal'])+"\n")
+
+def format_inproceedings(entry,mdf):
+	format_people(entry.persons,"author",mdf)
+	mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Booktitle'])+"\n") 
+	format_people(entry.persons,"editor",mdf)
+
+def format_incollection(entry,mdf):
+	format_people(entry.persons,"author",mdf)
+	format_people(entry.persons,"editor",mdf)
+
+def format_techreport(entry,mdf):
+	format_people(entry.persons,"author",mdf)
+
+def format_book(entry,mdf):
+	format_people(entry.persons,"editor",mdf)
+#
 # output selected fields of BibTex entry
+#
+def output_bibtex_content(mdf):
 	ed = {}
 	edstr = entry_data.to_string('bibtex')
 	lines = edstr.split("\n")
@@ -37,16 +96,22 @@ def output_bibtex_content(mdf):
 	# now to format them properly
 	mdf.write(ed[0] + "\n")
 	ed.pop(0, None)
+	#
 	# Author goes first
+	#
 	if "Author" in ed:
 		mdf.write("\tAuthor = " + ed["Author"] + "\n")
 	ed.pop("Author", None)
-	# Then Title
+	#
+	# then Title
+	#
 	if "Title" in ed:
 		mdf.write("\tTitle = " + ed["Title"]+"\n")
 	ed.pop("Title", None)
-	# if there is a pdf for the entry, add Url
-	# replace URL, if pdf file exists
+	#
+	# the URL: if there is a pdf for the entry, 
+	# create or replace Url indicated in bibtex file
+	#
 	newurlstr = "/assets/works/pdf/" + entry.key + ".pdf"
 	newurlpath = Path(".." + newurlstr)
 	if newurlpath.is_file():
@@ -69,6 +134,9 @@ def output_bibtex_content(mdf):
 			mdf.write("\t"+k+" = "+ed[k]+"\n")
 	mdf.write(ed[1]+"\n")
 
+#
+# Main loop
+#
 for entry in bib_data.entries.values():
 	# create a separate structure for each entry
 	entry_data = BibliographyData()
@@ -95,7 +163,6 @@ for entry in bib_data.entries.values():
 		mdnamestr = re.sub(r"\s+", '-', mdnamestr)
 		mdfilepath = Path(bibtex_path + mdnamestr)
 		matches = [f for f in os.listdir(bibtex_path) if f.startswith(entry.key+"-")]
-		print(matches)
 		for m in matches:
 			if m != mdnamestr:
 				try:
@@ -111,71 +178,61 @@ for entry in bib_data.entries.values():
 				recreate = True
 		else:
 			recreate = True
-	if recreate:
+	#if recreate:
+	if True:
 		print ("(re)create: ", entry.key)
 		with open(bibtex_path+mdnamestr,"w") as mdf:
 			mdf.write("---\n")
+			mdf.write("layout: bibtex-default\n")
+			mdf.write("citekey: " + entry.key + "\n")
 			yearstr = getValueStr("Year")
 			pagestr = "title: " + titlestr + " (" + yearstr + ")\n"
-			#breadstr = "breadcrumb: >-\n  " + titlestr + " (" + yearstr + ")\n"
-			breadstr = "breadcrumb: " + titlestr + " (" + yearstr + ")\n"
-			mdf.write("layout: bibtex-default\n")
-			keystr = "citekey: " + entry.key + "\n"
-			mdf.write(keystr)
-			if 'Journal' in entry.fields:
-				venuestr = "venue: " + re.sub(r'[^\w]', ' ', entry.fields['Journal'])
-				mdf.write(venuestr + "\n")
-			elif 'Booktitle' in entry.fields:
-				venuestr = "venue: " + re.sub(r'[^\w]', ' ', entry.fields['Booktitle'])
-				mdf.write(venuestr + "\n")
 			mdf.write(pagestr)
-			if 'Abstract' in entry.fields:
-				abstractstr = entry.fields['Abstract']
-				mdf.write("abstract: >-\n")
-				mdf.write("  " + abstractstr + "\n")
+			breadstr = "breadcrumb: " + titlestr + " (" + yearstr + ")\n"
 			mdf.write(breadstr)
-			mdf.write("projects:\n")
-			if 'W-Projects' in entry.fields:
-				projectstr = entry.fields['W-Projects']
-				projectarr = projectstr.split(",")
-				for pp in range(len(projectarr)):
-					ppstr = " - " + projectarr[pp]
-					mdf.write(ppstr + "\n")
 			if 'W-Type' in entry.fields:
 				typestr = entry.fields['W-Type']
 				mdf.write("category: " + typestr + "\n")
 			else:
 				mdf.write("category: paper\n")
-			if 'author' in entry.persons:
-				auths = entry.persons['author']
-				mdf.write("authors:\n")
-				for aa in range(len(auths)):
-					# get first name(s) in unicode
-					firstnamestr = ""
-					firstname = auths[aa].rich_first_names
-					for ff in range(len(firstname)):
-						firstnamestr += firstname[ff].render_as('text')
-						firstnamestr += " "
-					# get middle name(s) in unicode
-					middlenamestr = ""
-					middlename = auths[aa].rich_middle_names
-					for mm in range(len(middlename)):
-						middlenamestr += middlename[mm].render_as('text')
-						middlenamestr += " "
-					# get pre-last name(s) in unicode
-					prelastnamestr = ""
-					prelastname = auths[aa].rich_prelast_names
-					for pl in range(len(prelastname)):
-						prelastnamestr += prelastname[pl].render_as('text')
-						prelastnamestr += " "
-					# get last name(s) in unicode
-					lastnamestr = ""
-					lastname = auths[aa].rich_last_names
-					for ll in range(len(lastname)):
-						lastnamestr += lastname[ll].render_as('text')
-						lastnamestr += " "
-					authstr = " - " + firstnamestr + middlenamestr + prelastnamestr + lastnamestr
-					mdf.write(authstr + "\n")
+			#
+			# projects
+			#
+			if 'W-Projects' in entry.fields:
+				mdf.write("projects:\n")
+				projectstr = entry.fields['W-Projects']
+				projectarr = projectstr.split(",")
+				for pp in range(len(projectarr)):
+					ppstr = " - " + projectarr[pp]
+					mdf.write(ppstr + "\n")
+			#
+			# Abstract
+			#
+			if 'Abstract' in entry.fields:
+				abstractstr = entry.fields['Abstract']
+				mdf.write("abstract: >-\n")
+				mdf.write("  " + abstractstr + "\n")
+			#
+			# Type-specific
+			#
+			if entry.type == "article":
+				format_article(entry,mdf)
+			elif entry.type == "inproceedings":
+				format_inproceedings(entry,mdf)
+			elif entry.type == "incollection":
+				format_incollection(entry,mdf)
+			elif entry.type == "techreport":
+				format_techreport(entry,mdf)
+			elif entry.type == "book":
+				format_book(entry,mdf)
+			else:
+				print("MISSING TYPE: ", entry.type)
+			#
+			# end front-matter
+			#
 			mdf.write("---\n")
 
+			#
+			# bibtex entry as "content"
+			#
 			output_bibtex_content(mdf)

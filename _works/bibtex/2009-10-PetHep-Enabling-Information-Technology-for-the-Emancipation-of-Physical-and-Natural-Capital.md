@@ -1,15 +1,17 @@
 ---
 layout: bibtex-default
 citekey: 2009-10-PetHep
-venue: Environmental Software Systems
 title: Enabling Information Technology for the Emancipation of Physical and Natural Capital (2009)
 breadcrumb: Enabling Information Technology for the Emancipation of Physical and Natural Capital (2009)
+category: conference
 projects:
  - enviromatics
-category: conference
 authors:
- - Roger A. Petry 
- - Daryl H. Hepting 
+ - Roger A. Petry
+ - Daryl H. Hepting
+venue: Environmental Software Systems
+editors:
+ - Ralf Denzer
 ---
 @inproceedings{2009-10-PetHep,
 	Author =  "Petry, Roger A. and Hepting, Daryl H.",

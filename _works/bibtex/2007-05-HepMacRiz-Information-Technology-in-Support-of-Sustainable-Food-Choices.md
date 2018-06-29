@@ -1,16 +1,16 @@
 ---
 layout: bibtex-default
 citekey: 2007-05-HepMacRiz
-venue: Environmental Software Systems
 title: Information Technology in Support of Sustainable Food Choices (2007)
 breadcrumb: Information Technology in Support of Sustainable Food Choices (2007)
+category: conference
 projects:
  - food
-category: conference
 authors:
- - Daryl H. Hepting 
- - Timothy Maciag 
- - S. A. A. Rizvi 
+ - Daryl H. Hepting
+ - Timothy Maciag
+ - S. A. A. Rizvi
+venue: Environmental Software Systems
 ---
 @inproceedings{2007-05-HepMacRiz,
 	Author =  "Hepting, Daryl H. and Maciag, Timothy and Rizvi, S. A. A.",

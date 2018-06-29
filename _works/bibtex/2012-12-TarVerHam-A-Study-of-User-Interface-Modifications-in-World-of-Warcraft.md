@@ -1,17 +1,17 @@
 ---
 layout: bibtex-default
 citekey: 2012-12-TarVerHam
-venue: Game Studies  the international journal of computer game research
 title: A Study of User Interface Modifications in World of Warcraft (2012)
 breadcrumb: A Study of User Interface Modifications in World of Warcraft (2012)
+category: journal
 projects:
  - games
-category: journal
 authors:
- - Sean Targett 
- - Victoria Verlysdonk 
- - Howard J. Hamilton 
- - Daryl H. Hepting 
+ - Sean Targett
+ - Victoria Verlysdonk
+ - Howard J. Hamilton
+ - Daryl H. Hepting
+venue: Game Studies  the international journal of computer game research
 ---
 @article{2012-12-TarVerHam,
 	Author =  "Targett, Sean and Verlysdonk, Victoria and Hamilton, Howard J. and Hepting, Daryl H.",

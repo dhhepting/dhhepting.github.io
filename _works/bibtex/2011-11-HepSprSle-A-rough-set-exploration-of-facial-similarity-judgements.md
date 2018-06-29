@@ -1,16 +1,23 @@
 ---
 layout: bibtex-default
 citekey: 2011-11-HepSprSle
-venue: Transactions on Rough Sets XIV
 title: A rough set exploration of facial similarity judgements (2011)
 breadcrumb: A rough set exploration of facial similarity judgements (2011)
+category: journal
 projects:
  - faces
-category: journal
 authors:
- - Daryl H. Hepting 
- - Richard Spring 
- - Dominik Ślęzak 
+ - Daryl H. Hepting
+ - Richard Spring
+ - Dominik Ślęzak
+editors:
+ - James F. Peters
+ - Andrzej Skowron
+ - Sakai Hiroshi
+ - Mihir Kumar Chakraborty
+ - Dominik Ślęzak
+ - Aboul Ella Hassanien
+ - William Zhu
 ---
 @incollection{2011-11-HepSprSle,
 	Author =  "Hepting, Daryl H. and Spring, Richard and \'{S}l\k{e}zak, Dominik",

@@ -1,14 +1,16 @@
 ---
 layout: bibtex-default
 citekey: 2005-12-Hep
-venue: Computational and Cognitive Models of Creative Design VI
 title: Computational Support for P Creative Solutions (2005)
 breadcrumb: Computational Support for P Creative Solutions (2005)
+category: conference
 projects:
  - creativity
-category: conference
 authors:
- - Daryl H. Hepting 
+ - Daryl H. Hepting
+editors:
+ - John Steven Gero
+ - Mary Lou Maher
 ---
 @incollection{2005-12-Hep,
 	Author =  "Hepting, Daryl H.",
