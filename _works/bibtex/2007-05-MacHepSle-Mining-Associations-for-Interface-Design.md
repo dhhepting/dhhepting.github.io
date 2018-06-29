@@ -1,16 +1,22 @@
 ---
 layout: bibtex-default
 citekey: 2007-05-MacHepSle
-venue: RSKT 2007  Rough Sets and Knowledge Technology
 title: Mining Associations for Interface Design (2007)
 breadcrumb: Mining Associations for Interface Design (2007)
-projects:
 category: conference
 authors:
- - Timothy Maciag 
- - Daryl H. Hepting 
- - Dominik Ślęzak 
- - Robert J. Hilderman 
+ - Timothy Maciag
+ - Daryl H. Hepting
+ - Dominik Ślęzak
+ - Robert J. Hilderman
+venue: RSKT 2007  Rough Sets and Knowledge Technology
+editors:
+ - JingTao Yao
+ - Pawan Lingras
+ - Wei-Zhi Wu
+ - Marcin Szczuka
+ - Nick J. Cercone
+ - Dominik Ślęzak
 ---
 @inproceedings{2007-05-MacHepSle,
 	Author =  "Maciag, Timothy and Hepting, Daryl H. and \'{S}l\k{e}zak, Dominik and Hilderman, Robert J.",

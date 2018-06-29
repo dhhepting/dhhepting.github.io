@@ -1,16 +1,15 @@
 ---
 layout: bibtex-default
 citekey: 2006-01-CarLonHep
-venue: The Delta Kappa Gamma Bulletin
 title: Respectful Actions in Research  Aboriginal Adolescents Speaking Their Future (2006)
 breadcrumb: Respectful Actions in Research  Aboriginal Adolescents Speaking Their Future (2006)
-projects:
 category: journal
 authors:
- - Laurie Carlson Berg 
- - Sarah Longman 
- - Daryl H. Hepting 
- - Edward Doolittle 
+ - Laurie CarlsonBerg
+ - Sarah Longman
+ - Daryl H. Hepting
+ - Edward Doolittle
+venue: The Delta Kappa Gamma Bulletin
 ---
 @article{2006-01-CarLonHep,
 	Author =  "Carlson Berg, Laurie and Longman, Sarah and Hepting, Daryl H. and Doolittle, Edward",

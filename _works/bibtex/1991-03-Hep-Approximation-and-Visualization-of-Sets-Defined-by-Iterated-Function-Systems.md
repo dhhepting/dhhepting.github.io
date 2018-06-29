@@ -3,11 +3,9 @@ layout: bibtex-default
 citekey: 1991-03-Hep
 title: Approximation and Visualization of Sets Defined by Iterated Function Systems (1991)
 breadcrumb: Approximation and Visualization of Sets Defined by Iterated Function Systems (1991)
+category: MSc
 projects:
  - fractals
-category: MSc
-authors:
- - Daryl H. Hepting 
 ---
 @mastersthesis{1991-03-Hep,
 	Author =  "Hepting, Daryl H.",

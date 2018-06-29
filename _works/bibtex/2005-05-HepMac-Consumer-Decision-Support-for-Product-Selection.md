@@ -1,15 +1,17 @@
 ---
 layout: bibtex-default
 citekey: 2005-05-HepMac
-venue: Proceedings of the 6th International Symposium on Environmental Software Systems 2005  ISESS 2005 
 title: Consumer Decision Support for Product Selection (2005)
 breadcrumb: Consumer Decision Support for Product Selection (2005)
+category: conference
 projects:
  - enviromatics
-category: conference
 authors:
- - Daryl H. Hepting 
- - Timothy Maciag 
+ - Daryl H. Hepting
+ - Timothy Maciag
+venue: Proceedings of the 6th International Symposium on Environmental Software Systems 2005  ISESS 2005 
+editors:
+ - Ralf Denzer
 ---
 @inproceedings{2005-05-HepMac,
 	Author =  "Hepting, Daryl H. and Maciag, Timothy",

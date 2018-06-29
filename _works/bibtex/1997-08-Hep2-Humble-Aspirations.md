@@ -3,11 +3,9 @@ layout: bibtex-default
 citekey: 1997-08-Hep2
 title: Humble Aspirations (1997)
 breadcrumb: Humble Aspirations (1997)
+category: image
 projects:
  - fractals
-category: image
-authors:
- - Daryl H. Hepting 
 ---
 @misc{1997-08-Hep2,
 	Author =  "Hepting, Daryl H.",

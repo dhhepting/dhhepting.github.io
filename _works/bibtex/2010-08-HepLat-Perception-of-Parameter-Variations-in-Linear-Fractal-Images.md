@@ -1,17 +1,22 @@
 ---
 layout: bibtex-default
 citekey: 2010-08-HepLat
-venue: Active Media Technology  AMT 2010
 title: Perception of Parameter Variations in Linear Fractal Images (2010)
-abstract: >-
-  Parametric images, defined by a small number of parameters, may help to democratize access to image creation because simple parameter manipulations can yield interesting variations. Foe example, many people appreciate the aesthetics of fractal images, but few are inclined to engage in the mathematics needed to create them. A perception-driven interface for fractal image creation could find a wide audience as people could use it as an outlet for their own creative expression. This paper discusses some first steps along that path, with a study and analysis of how participants perceived changes between smoothly varying images. Further steps towards a perception-driven interface are then laid out.
 breadcrumb: Perception of Parameter Variations in Linear Fractal Images (2010)
+category: conference
 projects:
  - fractals
-category: conference
+abstract: >-
+  Parametric images, defined by a small number of parameters, may help to democratize access to image creation because simple parameter manipulations can yield interesting variations. Foe example, many people appreciate the aesthetics of fractal images, but few are inclined to engage in the mathematics needed to create them. A perception-driven interface for fractal image creation could find a wide audience as people could use it as an outlet for their own creative expression. This paper discusses some first steps along that path, with a study and analysis of how participants perceived changes between smoothly varying images. Further steps towards a perception-driven interface are then laid out.
 authors:
- - Daryl H. Hepting 
- - Leila Latifi 
+ - Daryl H. Hepting
+ - Leila Latifi
+venue: Active Media Technology  AMT 2010
+editors:
+ - Aijun An
+ - Pawan Lingras
+ - Sheila Petty
+ - Runhe Huang
 ---
 @inproceedings{2010-08-HepLat,
 	Author =  "Hepting, Daryl H. and Latifi, Leila",
