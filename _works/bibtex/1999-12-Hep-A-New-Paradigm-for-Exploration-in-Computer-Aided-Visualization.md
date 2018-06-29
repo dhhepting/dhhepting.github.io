@@ -3,12 +3,10 @@ layout: bibtex-default
 citekey: 1999-12-Hep
 title: A New Paradigm for Exploration in Computer Aided Visualization (1999)
 breadcrumb: A New Paradigm for Exploration in Computer Aided Visualization (1999)
+category: PhD
 projects:
  - creativity
  -  visualization
-category: PhD
-authors:
- - Daryl H. Hepting 
 ---
 @phdthesis{1999-12-Hep,
 	Author =  "Hepting, Daryl H.",

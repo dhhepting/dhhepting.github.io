@@ -1,16 +1,11 @@
 ---
 layout: bibtex-default
 citekey: 2011-05-MacHepPet
-venue: HCI  politics and the city  engaging with urban grassroots movements for reflection and action
 title: Mobilizing Shared Capital for Grassroots Action (2011)
 breadcrumb: Mobilizing Shared Capital for Grassroots Action (2011)
+category: workshop
 projects:
  - enviromatics
-category: workshop
-authors:
- - Timothy Maciag 
- - Daryl H. Hepting 
- - Roger A. Petry 
 ---
 @unpublished{2011-05-MacHepPet,
 	Author =  "Maciag, Timothy and Hepting, Daryl H. and Petry, Roger A.",

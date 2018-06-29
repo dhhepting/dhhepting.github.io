@@ -1,15 +1,20 @@
 ---
 layout: bibtex-default
 citekey: 2010-04-TarHep
-venue: CHI 2010 Workshop  Video Games as Research Instruments
 title: Study of User Created Interfaces in Video Games (2010)
 breadcrumb: Study of User Created Interfaces in Video Games (2010)
+category: workshop
 projects:
  - games
-category: workshop
 authors:
- - Sean Targett 
- - Daryl H. Hepting 
+ - Sean Targett
+ - Daryl H. Hepting
+editors:
+ - Eduardo H. Calvillo Gámez
+ - Jeremy Gow
+ - Paul Cairns
+ - Jonathan Back
+ - Eddie Capstick
 ---
 @incollection{2010-04-TarHep,
 	Author =  "Targett, Sean and Hepting, Daryl H.",

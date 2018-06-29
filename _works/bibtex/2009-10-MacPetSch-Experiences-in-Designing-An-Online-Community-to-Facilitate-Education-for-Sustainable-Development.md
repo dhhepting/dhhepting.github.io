@@ -1,17 +1,19 @@
 ---
 layout: bibtex-default
 citekey: 2009-10-MacPetSch
-venue: Environmental Software Systems
 title: Experiences in Designing An Online Community to Facilitate Education for Sustainable Development (2009)
 breadcrumb: Experiences in Designing An Online Community to Facilitate Education for Sustainable Development (2009)
+category: conference
 projects:
  - enviromatics
-category: conference
 authors:
- - Timothy Maciag 
- - Roger A. Petry 
- - Curt Schroeder 
- - Daryl H. Hepting 
+ - Timothy Maciag
+ - Roger A. Petry
+ - Curt Schroeder
+ - Daryl H. Hepting
+venue: Environmental Software Systems
+editors:
+ - Ralf Denzer
 ---
 @inproceedings{2009-10-MacPetSch,
 	Author =  "Maciag, Timothy and Petry, Roger A. and Schroeder, Curt and Hepting, Daryl H.",

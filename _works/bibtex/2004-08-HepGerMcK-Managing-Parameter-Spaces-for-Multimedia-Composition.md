@@ -1,17 +1,17 @@
 ---
 layout: bibtex-default
 citekey: 2004-08-HepGerMcK
-venue: ACM SIGGRAPH 2004 Posters
 title: Managing Parameter Spaces for Multimedia Composition (2004)
 breadcrumb: Managing Parameter Spaces for Multimedia Composition (2004)
+category: poster
 projects:
  - multimedia
-category: poster
 authors:
- - Daryl H. Hepting 
- - David Gerhard 
- - Matthew McKague 
- - Paul Schmiedge 
+ - Daryl H. Hepting
+ - David Gerhard
+ - Matthew McKague
+ - Paul Schmiedge
+venue: ACM SIGGRAPH 2004 Posters
 ---
 @inproceedings{2004-08-HepGerMcK,
 	Author =  "Hepting, Daryl H. and Gerhard, David and McKague, Matthew and Schmiedge, Paul",

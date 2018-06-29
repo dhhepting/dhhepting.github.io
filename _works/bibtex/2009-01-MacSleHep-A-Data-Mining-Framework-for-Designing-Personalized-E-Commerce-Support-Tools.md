@@ -3,14 +3,9 @@ layout: bibtex-default
 citekey: 2009-01-MacSleHep
 title: A Data Mining Framework for Designing Personalized E Commerce Support Tools (2009)
 breadcrumb: A Data Mining Framework for Designing Personalized E Commerce Support Tools (2009)
+category: chapter
 projects:
  - food
-category: chapter
-authors:
- - Timothy Maciag 
- - Dominik Ślęzak 
- - Daryl H. Hepting 
- - Robert Hilderman 
 ---
 @inbook{2009-01-MacSleHep,
 	Author =  "Maciag, Timothy and \'{S}l\k{e}zak, Dominik and Hepting, Daryl H. and Hilderman, Robert",

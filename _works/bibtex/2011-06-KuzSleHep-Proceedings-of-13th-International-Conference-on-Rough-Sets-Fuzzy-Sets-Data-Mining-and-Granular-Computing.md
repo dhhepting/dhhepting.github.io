@@ -1,12 +1,16 @@
 ---
 layout: bibtex-default
 citekey: 2011-06-KuzSleHep
-venue: Proceedings of 13th International Conference on Rough Sets  Fuzzy Sets  Data Mining and Granular Computing
 title: Proceedings of 13th International Conference on Rough Sets  Fuzzy Sets  Data Mining and Granular Computing (2011)
 breadcrumb: Proceedings of 13th International Conference on Rough Sets  Fuzzy Sets  Data Mining and Granular Computing (2011)
+category: proceedings
 projects:
  - rough-sets
-category: proceedings
+editors:
+ - Sergei O. Kuznetsov
+ - Dominik Ślęzak
+ - Daryl H. Hepting
+ - Boris G. Mirkin
 ---
 @book{2011-06-KuzSleHep,
 	Title =  "Proceedings of 13th International Conference on Rough Sets, Fuzzy Sets, Data Mining and Granular Computing",

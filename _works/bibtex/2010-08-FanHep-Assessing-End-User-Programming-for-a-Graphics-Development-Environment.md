@@ -1,15 +1,20 @@
 ---
 layout: bibtex-default
 citekey: 2010-08-FanHep
-venue: Active Media Technology  AMT 2010
 title: Assessing End User Programming for a Graphics Development Environment (2010)
 breadcrumb: Assessing End User Programming for a Graphics Development Environment (2010)
+category: conference
 projects:
  - creativity
-category: conference
 authors:
- - Lizao Fang 
- - Daryl H. Hepting 
+ - Lizao Fang
+ - Daryl H. Hepting
+venue: Active Media Technology  AMT 2010
+editors:
+ - Aijun An
+ - Pawan Lingras
+ - Sheila Petty
+ - Runhe Huang
 ---
 @inproceedings{2010-08-FanHep,
 	Author =  "Fang, Lizao and Hepting, Daryl H.",

@@ -1,14 +1,14 @@
 ---
 layout: bibtex-default
 citekey: 2010-07-Hep
-venue: Proceedings of the 2010 International Congress on Environmental Modelling and Software
 title: Design of S O L E  Software (2010)
 breadcrumb: Design of S O L E  Software (2010)
+category: conference
 projects:
  - enviromatics
-category: conference
 authors:
- - Daryl H. Hepting 
+ - Daryl H. Hepting
+venue: Proceedings of the 2010 International Congress on Environmental Modelling and Software
 ---
 @inproceedings{2010-07-Hep,
 	Author =  "Hepting, Daryl H.",

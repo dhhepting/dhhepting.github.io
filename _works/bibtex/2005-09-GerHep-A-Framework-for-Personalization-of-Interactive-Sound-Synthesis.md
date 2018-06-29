@@ -1,15 +1,15 @@
 ---
 layout: bibtex-default
 citekey: 2005-09-GerHep
-venue: Proceedings of the 2005 International Computer Music Conference  ICMC05   Barcelona  Spain 
 title: A Framework for Personalization of Interactive Sound Synthesis (2005)
 breadcrumb: A Framework for Personalization of Interactive Sound Synthesis (2005)
+category: conference
 projects:
  - multimedia
-category: conference
 authors:
- - David Gerhard 
- - Daryl H. Hepting 
+ - David Gerhard
+ - Daryl H. Hepting
+venue: Proceedings of the 2005 International Computer Music Conference  ICMC05   Barcelona  Spain 
 ---
 @inproceedings{2005-09-GerHep,
 	Author =  "Gerhard, David and Hepting, Daryl H.",

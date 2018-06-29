@@ -1,17 +1,11 @@
 ---
 layout: bibtex-default
 citekey: 2011-05-MacHepHil
-venue: CHI 2011 Workshop  Visible Actionable Sustainable  Sustainable Interaction Design in Professional Domain
 title: Computer Aided Support for Understanding Climate Variability (2011)
 breadcrumb: Computer Aided Support for Understanding Climate Variability (2011)
+category: workshop
 projects:
  - food
-category: workshop
-authors:
- - Timothy Maciag 
- - Daryl H. Hepting 
- - Harvey Hill 
- - Robert Armstrong 
 ---
 @unpublished{2011-05-MacHepHil,
 	Author =  "Maciag, Timothy and Hepting, Daryl H. and Hill, Harvey and Armstrong, Robert",

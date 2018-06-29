@@ -1,17 +1,17 @@
 ---
 layout: bibtex-default
 citekey: 2012-10-HepDonKin
-venue: SIGITE  12  Proceedings of the 13th annual conference on Information technology education
 title: CS IT Outreach from a Canadian Perspective (2012)
 breadcrumb: CS IT Outreach from a Canadian Perspective (2012)
+category: panel
 projects:
  - csed
-category: panel
 authors:
- - Daryl H. Hepting 
- - Gerry Donaldson 
- - Peter R. King 
- - Danny Silver 
+ - Daryl H. Hepting
+ - Gerry Donaldson
+ - Peter R. King
+ - Danny Silver
+venue: SIGITE  12  Proceedings of the 13th annual conference on Information technology education
 ---
 @inproceedings{2012-10-HepDonKin,
 	Author =  "Hepting, Daryl H. and Donaldson, Gerry and King, Peter R. and Silver, Danny",

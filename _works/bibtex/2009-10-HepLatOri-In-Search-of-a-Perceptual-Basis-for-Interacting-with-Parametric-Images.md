@@ -1,16 +1,22 @@
 ---
 layout: bibtex-default
 citekey: 2009-10-HepLatOri
-venue: Proceedings of the 7th ACM conference on Creativity and Cognition
 title: In Search of a Perceptual Basis for Interacting with Parametric Images (2009)
 breadcrumb: In Search of a Perceptual Basis for Interacting with Parametric Images (2009)
+category: poster
 projects:
  - fractals
-category: poster
 authors:
- - Daryl H. Hepting 
- - Leila Latifi 
- - Chris Oriet 
+ - Daryl H. Hepting
+ - Leila Latifi
+ - Chris Oriet
+venue: Proceedings of the 7th ACM conference on Creativity and Cognition
+editors:
+ - Nick Bryan-Kinns
+ - Mark D. Gross
+ - Hilary Johnson
+ - Jack Ox
+ - Ron Wakkary
 ---
 @inproceedings{2009-10-HepLatOri,
 	Author =  "Hepting, Daryl H. and Latifi, Leila and Oriet, Chris",

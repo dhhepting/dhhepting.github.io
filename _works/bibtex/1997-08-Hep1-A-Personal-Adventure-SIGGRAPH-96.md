@@ -1,13 +1,12 @@
 ---
 layout: bibtex-default
 citekey: 1997-08-Hep1
-venue: Computer Graphics
 title: A Personal Adventure  SIGGRAPH 96 (1997)
 breadcrumb: A Personal Adventure  SIGGRAPH 96 (1997)
-projects:
 category: article
 authors:
- - Daryl H. Hepting 
+ - Daryl H. Hepting
+venue: Computer Graphics
 ---
 @article{1997-08-Hep1,
 	Author =  "Hepting, Daryl H.",
