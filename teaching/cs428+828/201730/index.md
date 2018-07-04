@@ -1,5 +1,6 @@
 ---
-title: CS 428 + 828 * D. H. Hepting
+title: CS 428 + 828 
+breadcrumb: CS 428 + 828 
 layout: default
 ---
 # CS 428 + 828
