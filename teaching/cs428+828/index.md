@@ -1,13 +1,13 @@
 ---
-title: CS 428 + 828 * D. H. Hepting
-breadcrumb: CS 428 + 828
+crs_nbr: CS 428+828
+crs_name: Human Computer Communication
+breadcrumb: CS 428+828
 layout: default
+description: Theory and practice related to the design and implementation of usable software and easy-to-learn interfaces. Specific topics will include user-centered design and task analysis; prototyping and the iterative design cycle; interface design and methods of evaluation. 
 ---
-# CS 428 + 828
+# {{ page.crs_nbr }} : {{ page.crs_name }}
 
-### Human Computer Communications
-
-{% include index-dir.html %}
+{% include index-course.html %}
 
 <p>
 	Prior to 2016, CS 428 was known as CS 305.
