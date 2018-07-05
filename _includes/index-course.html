@@ -1,0 +1,42 @@
+{% comment %}
+    Updated for boostrap 4 (https://getbootstrap.com/docs/4.0/components/breadcrumb/) and
+    does not create a link for the last (active) item
+{% endcomment %}
+{% capture indexdirurl %}{{ page.url | remove: "/index.html" }}{% endcapture %}
+{% assign idu_parts = indexdirurl | split: '/' %}
+{% assign sem_size = idu_parts.size | plus: 1 %}
+{% assign semnbr = sem_size | minus: 1 %}
+{% assign sems = "" %}
+{% assign dircons = "" %}
+{% for sp in site.pages %}
+    {% if sp.url contains indexdirurl and sp.url > indexdirurl %}
+	{% assign sp_parts = sp.url | split: '/' %}
+        {% if sp_parts.size == sem_size %}
+	    {% if sp_parts[semnbr] contains "2" %}
+	      {% capture sems %}{{sems}}|{{sp.url}}#{{sp_parts[semnbr]}}{% endcapture %}
+	    {% else %}
+	      {% capture dircons %}{{dircons}}|{{sp.url}}#{{sp.breadcrumb}}{% endcapture %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{% assign sortedsems = sems | split: '|' | sort %}
+{% capture numsems %}{{ sortedsems.size | minus:1 }}{% endcapture %}
+<h3>Semesters</h3>
+<ul>
+{% for j in (1..numsems) %}
+    {% assign ss = sortedsems[j] | split: '#' %}
+    <li><a href="{{ss[0]}}">{{ss[1]}}</a></li>
+{% endfor %}
+</ul>
+
+{% assign sorteddc = dircons | split: '|' | sort %}
+{% capture numcons %}{{ sorteddc.size | minus:1 }}{% endcapture %}
+<h3>General Information</h3>
+<ul>
+{% for i in (1..numcons) %}
+    {% assign sdc = sorteddc[i] | split: '#' %}
+    <li><a href="{{site.baseurl}}{{sdc[0]}}">{{sdc[1]}}</a></li>
+{% endfor %}
+</ul>
