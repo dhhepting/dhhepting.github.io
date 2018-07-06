@@ -10,6 +10,8 @@ My personal website, built with Jekyll.
 
 ### /research/
 
+* works: generated from BibTeX file
+
 ### /teaching/
 
 ### /rss/
