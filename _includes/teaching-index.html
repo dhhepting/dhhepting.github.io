@@ -21,9 +21,9 @@
         {% endif %}
     {% endif %}
 {% endfor %}
-{% assign sortedcourses = courses | split: '|' | sort %}
+{% assign sortedcourses = courses | split: '|' | sort | reverse %}
 {% capture numcourses %}{{ sortedcourses.size | minus:1 }}{% endcapture %}
-{% assign sortedsems = sems | split: '|' | sort  %}
+{% assign sortedsems = sems | split: '|' | sort | reverse  %}
 {% capture numsems %}{{ sortedsems.size | minus:1 }}{% endcapture %}
 {% for i in (1..numcourses) %}
     {% assign cc = sortedcourses[i] | split: '#' %}

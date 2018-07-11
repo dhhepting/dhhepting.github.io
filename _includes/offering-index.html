@@ -1,0 +1,12 @@
+{% include offering-url.html %}
+# {{ crs_sbj }} {{ crs_nbr }} &bull; {{ crs_sem }}
+
+{% comment %}
+maybe get the course name from a data file
+{% endcomment %}
+### {{ page.crs_name }}
+
+{% capture surl %}/assets/teaching/pdf/syllabus-{{crs_sbj}}-{{crs_nbr}}-{{crs_sem}}.pdf{% endcapture %}
+* [Syllabus]({{ surl | absolute_url}})
+
+{% include index-dir.html %}
