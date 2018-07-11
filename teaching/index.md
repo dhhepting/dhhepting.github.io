@@ -5,4 +5,4 @@ layout: default
 ---
 # Teaching
 
-{% include index-teaching.html %}
+{% include teaching-index.html %}
