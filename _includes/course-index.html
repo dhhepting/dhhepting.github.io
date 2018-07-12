@@ -1,0 +1,40 @@
+{% comment %}
+{% endcomment %}
+{% assign sem_len = sem_idx | plus: 1 %}
+{% assign sems = "" %}
+{% assign dircons = "" %}
+{% for sp in site.pages %}
+  {% assign url_parts = sp.url | split: '/' %}
+  {% if crs_dir == url_parts[crs_idx] %} 
+    {% if url_parts.size == sem_len %}
+      {% if url_parts[sem_idx] contains "2" %}
+	{% if sems contains url_parts[sem_idx] %}
+	{% else %}
+	  {% capture sems %}{{sems}}|{{sp.url}}#{{url_parts[sem_idx]}}{% endcapture %}
+	{%endif %}
+      {% else %}
+	{% capture dircons %}{{dircons}}|{{sp.url}}#{{sp.breadcrumb}}{% endcapture %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% assign sortedsems = sems | split: '|' | sort | reverse %}
+{% assign numsems = sortedsems.size | minus:2 %}
+<h3>Semesters</h3>
+<ul>
+{% for j in (0..numsems) %}
+    {% assign ss = sortedsems[j] | split: '#' %}
+    <li><a href="{{ss[0]}}">{{ss[1]}}</a></li>
+{% endfor %}
+</ul>
+
+{% assign sorteddc = dircons | split: '|' | sort %}
+{% assign numcons = sorteddc.size | minus:1 %}
+<h3>General Information</h3>
+<ul>
+{% for i in (1..numcons) %}
+    {% assign sdc = sorteddc[i] | split: '#' %}
+    <li><a href="{{site.baseurl}}{{sdc[0]}}">{{sdc[1]}}</a></li>
+{% endfor %}
+</ul>
