@@ -19,22 +19,51 @@
   {% endif %}
 {% endfor %}
 
-{% assign sortedsems = sems | split: '|' | sort | reverse %}
-{% assign numsems = sortedsems.size | minus:2 %}
-<h3>Semesters</h3>
-<ul>
-{% for j in (0..numsems) %}
-    {% assign ss = sortedsems[j] | split: '#' %}
-    <li><a href="{{ss[0]}}">{{ss[1]}}</a></li>
-{% endfor %}
-</ul>
+<div class="card">
+  <div class="card-header" style="background-color: cyan;">
+        <h3>Calendar Description</h3>
+  </div>
+  <div class="card-body">
+        <p>
+        {{ page.description }}
+        </p>
+  </div>
+</div>
+<span>
+  &nbsp;
+</span>
 
 {% assign sorteddc = dircons | split: '|' | sort %}
 {% assign numcons = sorteddc.size | minus:1 %}
-<h3>General Information</h3>
-<ul>
-{% for i in (1..numcons) %}
-    {% assign sdc = sorteddc[i] | split: '#' %}
-    <li><a href="{{site.baseurl}}{{sdc[0]}}">{{sdc[1]}}</a></li>
-{% endfor %}
-</ul>
+<div class="card">
+  <div class="card-header" style="background-color: cyan;">
+        <h3>General Information</h3>
+  </div>
+  <div class="card-body">
+        <ul>
+	{% for i in (1..numcons) %}
+     	  {% assign sdc = sorteddc[i] | split: '#' %}
+    	  <li><a href="{{site.baseurl}}{{sdc[0]}}">{{sdc[1]}}</a></li>
+	{% endfor %}
+        </ul>
+  </div>
+</div>
+<span>
+  &nbsp;
+</span>
+
+{% assign sortedsems = sems | split: '|' | sort | reverse %}
+{% assign numsems = sortedsems.size | minus:2 %}
+<div class="card">
+  <div class="card-header" style="background-color: cyan;">
+        <h3>Semesters</h3>
+  </div>
+  <div class="card-body">
+        <ul>
+	{% for j in (0..numsems) %}
+          {% assign ss = sortedsems[j] | split: '#' %}
+          <li><a href="{{ss[0]}}">{{ss[1]}}</a></li>
+        {% endfor %}
+        </ul>
+  </div>
+</div>
