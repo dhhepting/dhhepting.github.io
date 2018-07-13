@@ -6,6 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	 
 	<!-- Links -->
+<link rel="stylesheet" href="/assets/tipuesearch/css/normalize.css">
+<link rel="stylesheet" href="/assets/tipuesearch/css/tipuesearch.css">
+
 	<link rel="stylesheet" 
 		href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
  		integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw=" 
@@ -32,14 +35,15 @@
 		href="/assets/favicon.ico"
 		type="image/x-icon" 
 	/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Search * D. H. Hepting | D. H. Hepting, Ph.D.</title>
+<title>Search | D. H. Hepting, Ph.D.</title>
 <meta name="generator" content="Jekyll v3.8.3" />
-<meta property="og:title" content="Search * D. H. Hepting" />
+<meta property="og:title" content="Search" />
 <meta name="author" content="Daryl H. Hepting" />
 <meta property="og:locale" content="en_CA" />
-<meta name="description" content="Associate Professor of Computer Science, University of Regina. Ph.D. from Simon Fraser University. Augmenting human abilities to embrace diversity." />
-<meta property="og:description" content="Associate Professor of Computer Science, University of Regina. Ph.D. from Simon Fraser University. Augmenting human abilities to embrace diversity." />
+<meta name="description" content="Search this site" />
+<meta property="og:description" content="Search this site" />
 <link rel="canonical" href="https://dhhepting.github.io/search/" />
 <meta property="og:url" content="https://dhhepting.github.io/search/" />
 <meta property="og:site_name" content="D. H. Hepting, Ph.D." />
@@ -47,7 +51,7 @@
 <meta name="msvalidate.01" content="F1CCB2E1C91FDC5B8A82937F80B46C0A" />
 <meta name="yandex-verification" content="624aa53b50cad90a" />
 <script type="application/ld+json">
-{"description":"Associate Professor of Computer Science, University of Regina. Ph.D. from Simon Fraser University. Augmenting human abilities to embrace diversity.","author":{"@type":"Person","name":"Daryl H. Hepting"},"@type":"WebPage","url":"https://dhhepting.github.io/search/","headline":"Search * D. H. Hepting","@context":"http://schema.org"}</script>
+{"description":"Search this site","author":{"@type":"Person","name":"Daryl H. Hepting"},"@type":"WebPage","url":"https://dhhepting.github.io/search/","headline":"Search","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -252,43 +256,66 @@
     
         
     
+        
+    
 
     </ol>
 </nav>
 
 
 	<div class="card-body">
-	<h1 id="search">Search</h1>
+	<h1>Search</h1>
+<p>
+<a href="http://www.tipue.com/" target="blank">
+	Tipue
+</a> 
+Search is a site search jQuery plugin. It's free, open source, responsive and fast.
+</p>
+<form action="/search/">
+	<div class="tipue_search_left">
+		<img src="/assets/tipuesearch/search.png" alt="Tipue Search Icon" class="tipue_search_icon" />
+	</div>
+  	<div class="tipue_search_right">
+		<input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required="" />
+	</div>
+	<div style="clear: both;">
+	</div>
+</form>
+
+<div id="tipue_search_content">
+</div>
+
+<script>
+	$(document).ready(function() {
+		$('#tipue_search_input').tipuesearch();
+	});
+</script>
+
 
 	</div>
 
 	<div class="card-footer text-muted">
     Site built: 
-    2018-07-12 11:39 -0600
+    2018-07-13 02:37 -0600
 </div>
 
 </div>
     </div>
 	</div>
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" 
-		integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" 
-		crossorigin="anonymous">
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.2.1/lunr.min.js" 
-		integrity="sha256-KM7uVQ5UZX3nOnVtCqAyWmLKtAs6lY8L0cTZI9cYybY=" 
-		crossorigin="anonymous">
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" 
-		integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" 
-		crossorigin="anonymous">
-	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
 		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
 		crossorigin="anonymous">
 	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" 
 		integrity="sha256-xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8=" 
+		crossorigin="anonymous">
+	</script>
+<script src="/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/assets/tipuesearch/tipuesearch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" 
+		integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" 
 		crossorigin="anonymous">
 	</script>
 	<script>

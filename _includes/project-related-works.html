@@ -1,5 +1,6 @@
+<h3>Related Works</h3>
 <ul>
-{% for item in site.works reversed %}
+{% for item in site.works | sort | reverse %}
   {% if item.project contains page.project %}
     <li><a href="{{item.url | relative_url}}">{{ item.breadcrumb }}</a>
 	<span class="badge badge-info badge-sm">{{item.category}}</span>

@@ -22,8 +22,8 @@ for m in range(nbr_meetings):
 	with open(mfilestr,"w") as mtgfile:
 		mtgfile.write("---\n")
 		mtgfile.write("title: CS 428+828 (201830) Meetings\n")
-		mtgfile.write("breadcrumb: XX\n")
-		mtgfile.write("total_meet: 37\n")
+		mtgfile.write("breadcrumb: "+str(m+1)+"\n")
+		mtgfile.write("total_meet: "+str(nbr_meetings)+"\n")
 		mtgfile.write("---\n")
 		mtgfile.write("{% include meeting.html %}\n")
 		mtgfile.write("{% include meeting-media.html mtg_media=off_med mtg=crs_mps %}\n")

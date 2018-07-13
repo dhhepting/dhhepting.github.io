@@ -11,6 +11,4 @@ layout: default
 
 {% include index-dir.html %}
 
-### Related Works
-
-{% include works-related-to-project.html %}
+{% include project-related-works.html %}
