@@ -5,4 +5,4 @@ layout: default
 ---
 # Projects
 
-{% include index-projects.html %}
+{% include projects-index.html %}

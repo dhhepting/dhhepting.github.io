@@ -9,6 +9,4 @@ layout: default
 
 {{ page.description }}
 
-### Related Works
-
-{% include works-related-to-project.html %}
+{% include project-related-works.html %}
