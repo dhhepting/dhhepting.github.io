@@ -1,0 +1,29 @@
+{%- comment -%}
+{%- endcomment -%}
+{%- assign avoid_ext = ".txt, .xml" | split: ", " -%}
+{%- assign sitemap = "" -%}
+{%- for sp in site.pages -%}
+  {%- assign url_parts = sp.url | split: '/' -%}
+  {%- if url_parts.size >= 2 and url_parts.size <= 4 -%}
+    {%- unless url_parts contains "assets" -%} 
+      {%- if sp.breadcrumb -%}
+        {% capture sitemap %}{{sitemap}}|{{sp.url}}#{{sp.breadcrumb}}#{{url_parts.size}}{% endcapture %}
+      {% endif -%}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign sortedmap = sitemap | split: '|' | sort -%}
+{%- assign nbr_urls = sortedmap.size | minus:1 -%}
+{%- for i in (1..nbr_urls) -%}
+  {%- assign list_elem = "" -%} 
+  {%- assign sml = sortedmap[i] | split: '#' -%}
+  {%- for j in (3..sml[2]) -%}
+    {% capture list_elem %}{{list_elem}}   {% endcapture %}
+  {%- endfor -%}
+  {% if page.url == sml[0] %}
+    {% capture list_elem %}{{list_elem}}* {{sml[1]}}{% endcapture %}
+  {% else %}
+    {% capture list_elem %}{{list_elem}}* [{{sml[1]}}]({{sml[0] | relative_url}}){% endcapture %}
+  {% endif %}
+  {{ list_elem }}
+{%- endfor -%}
