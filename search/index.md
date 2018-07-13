@@ -8,12 +8,15 @@ tipue_search_active: true
 exclude_from_search: true
 ---
 <h1>Search</h1>
-<p>
+<ul>
+<li>Browse the <a href="sitemap/">sitemap</a></li>
+<li>Search using
 <a href="http://www.tipue.com/" target="blank">
 	Tipue
 </a> 
-Search is a site search jQuery plugin. It's free, open source, responsive and fast.
-</p>
+Search: a site search jQuery plugin. "It's free, open source, responsive and fast."
+</li>
+</ul>
 <form action="{{ page.url | relative_url }}">
 	<div class="tipue_search_left">
 		<img src="{{ "/assets/tipuesearch/search.png" | relative_url }}" 
