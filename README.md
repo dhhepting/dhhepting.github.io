@@ -25,6 +25,6 @@ My personal website, built with Jekyll.
 
 ### /search/
 * HTML sitemap generated with liquid (see [sitemap-index.html](https://github.com/dhhepting/dhhepting.github.io/blob/master/_includes/sitemap-index.html)
-* site search with Tipue Search: 
+* site search with Tipue Search: https://github.com/jekylltools/jekyll-tipue-search
 
 ### /news/
