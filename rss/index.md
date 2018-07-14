@@ -4,3 +4,5 @@ breadcrumb: RSS Feeds
 layout: default
 ---
 # RSS Feeds
+
+- [News](news.xml)
