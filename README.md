@@ -13,9 +13,13 @@ My personal website, built with Jekyll.
 * works: generated from BibTeX file
 
 ### /teaching/
-* each course has a directory named by crs_subj-crs_nbr
-* in this course directory are directories and files related to the specific course and then there are subdirectories for each semester that the course was offered by me (previous offerings will not have too much detailed content)
-* each semester has meetings and media directories:
+* each course has a directory, named by crs_subj-crs_nbr (such as CS-110), which contains:
+    * general information about the course (in files and directories) that remains valid across course offerings
+    * a directory for each offering of the course, named by the semester (such as 201810), which may contain:
+        * meetings
+        * media
+        * syllabus
+        * feedback from students
 
 ### /rss/
 
