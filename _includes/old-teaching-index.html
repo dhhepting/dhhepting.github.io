@@ -1,0 +1,50 @@
+{% comment %}
+{% endcomment %}
+{% assign url_parts = turl | split: '/' %}
+{% assign crs_size = 3 %}
+{% assign cwo_size = 4 %}
+{% assign courses = "" %}
+{% assign sems = "" %}
+{% for sp in site.pages %}
+  {% if sp.url contains "teaching" %}
+    {% assign url_parts = sp.url | split: '/' %}
+    {% if url_parts.size == crs_size %}
+      {% capture courses %}{{courses}}|{{sp.url}}#{{sp.breadcrumb}}#{{sp.crs_name}}#{{sp.description}}{% endcapture %}
+    {% elsif url_parts.size == cwo_size %}
+      {% if url_parts[3] contains "2" %}
+	      {% capture sems %}{{sems}}|{{sp.url}}#{{url_parts[3]}}{% endcapture %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+{% assign sortedcourses = courses | split: '|' | sort %}
+{% capture numcourses %}{{ sortedcourses.size | minus:1 }}{% endcapture %}
+{% assign sortedsems = sems | split: '|' | sort | reverse  %}
+{% capture numsems %}{{ sortedsems.size | minus:1 }}{% endcapture %}
+{% for i in (1..numcourses) %}
+    {% assign cc = sortedcourses[i] | split: '#' %}
+    {% assign cc_parts = cc[0] | split: '/' %}
+<div class="card">
+  <div class="card-header" style="background-color: cyan;">
+        <a href="{{cc[0]}}"><h3>{{cc[1]}} : {{cc[2]}}</h3></a>
+  </div>
+  <div class="card-body">
+	<h5>Calendar Description</h5>
+	<p>
+	{{ cc[3] }}
+	</p>
+	<h5>Semesters</h5>
+	<ul>
+	{% for j in (0..numsems) %}
+    	  {% assign ss = sortedsems[j] | split: '#' %}
+	  {% if ss[0] contains cc_parts[2] %}
+            <li><a href="{{ss[0]}}">{{ss[1]}}</a></li>
+	  {% endif %}
+	{% endfor %}
+	</ul>
+  </div>
+</div>
+<span>
+  &nbsp;
+</span>
+{% endfor %}

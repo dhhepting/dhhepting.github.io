@@ -1,6 +1,6 @@
 ---
 layout: default
-breadcrumb: Individual or Group
+breadcrumb: Individual
 ---
 # {{ page.breadcrumb }}
 

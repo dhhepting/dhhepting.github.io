@@ -1,7 +1,8 @@
 ---
+crs_id: CS205
 crs_subj: CS
 crs_nbr: 205
-crs_name: PIntroduction to Multimedia Systems
+crs_name: Introduction to Multimedia Systems
 crs_sem: 201910
 breadcrumb: 201910
 layout: default

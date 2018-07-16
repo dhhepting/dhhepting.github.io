@@ -2,8 +2,6 @@
 layout: default
 breadcrumb: Assignments
 ---
-# Assignments
+# {{ page.breadcrumb }}
 
-* [Individual](individual/)
-* [Group](group/)
-* [Individual or Group](i-or-g/)
+{% include index-dir.html %}
