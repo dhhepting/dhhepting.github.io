@@ -1,4 +1,5 @@
 ---
+crs_id: CS280
 crs_nbr: CS 280
 crs_name: Risk and Reward in the Information Society
 sem: 201910
