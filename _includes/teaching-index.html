@@ -2,73 +2,76 @@
 {% endcomment %}
 {% assign url_parts = turl | split: '/' %}
 {% assign sem_size = 4 %}
-{% assign courses = "" %}
-{% assign semoffs = "" %}
-{% assign crs_id = "" %}
-{% assign sems = "" %}
+{% assign crsoffs = "" %}
+{% assign crs_ids = "" %}
 {% for sp in site.pages %}
   {% if sp.url contains "teaching" %}
     {% assign url_parts = sp.url | split: '/' %}
     {% if url_parts.size == sem_size %}
-	{% comment %}
-      {% assign crsoff = url_parts[2] | replace: '-', ' ' %}
-	{% endcomment %}
-      {% assign crsoff = url_parts[2] %}
-      {% assign crs_part = url_parts[2] | split: '-' %}
+      {% assign crs_id = url_parts[2] %}
+      {% assign crs_part = crs_id | split: '-' %}
       {% if crs_part.size == 2 %}
-        {% assign semoff = url_parts | last %}
-        {% capture  semoffurl %}{{semoff}}/{%endcapture%}
-        {% if semoff contains "2" %}
-          {% capture crsurl  %}{{ sp.url | remove: semoffurl }}{%endcapture%}
-          {% capture courses %}{{courses}}|{{crsurl}}#{{sp.crs_id}}#{{sp.crs_name}}#{{sp.description}}{% endcapture %}
-          {% capture crs_id %}{{crs_id}}{{crsoff}},{% endcapture %}
-          {% capture semoffs %}{{semoffs}}|{{crsoff}}#{{semoff}}{% endcapture %}
+        {% assign crsoff = url_parts | last %}
+        {% if crsoff contains "2" %}
+          {% capture crsoff_url %}{{crsoff}}/{%endcapture%}
+          {% capture crs_url  %}{{ sp.url | remove: crsoff_url }}{%endcapture%}
+          {% capture crs_ids %}{{crs_ids}}|{{crs_url}}#{{crs_id}}{% endcapture %}
+          {% capture crsoffs %}{{crsoffs}}|{{crs_id}}#{{crsoff}}{% endcapture %}
         {% endif %}
       {% endif %}
     {% endif %}
   {% endif %}
 {% endfor %}
 
-{% assign sortedcourses = courses | split: '|' | uniq | sort %}
-{% assign sortedcrs_id = crs_id | split: ',' | uniq | sort %}
-{% capture numcourses %}{{ sortedcourses.size | minus:1 }}{% endcapture %}
-{% assign sortedsemoffs = semoffs | split: '|' | sort %}
+{% assign sortedcrsoffs = crsoffs | split: '|' | sort %}
+{% assign sortedcrs_ids = crs_ids | split: '|' | uniq | sort %}
+{% capture numcourses %}{{ sortedcrs_ids.size | minus:1 }}{% endcapture %}
 
 ### Jump to a Course Offering
 
 <!-- Jump to a class and semester -->
-<form class="form-inline">
-  <div class="form-group">
-    <select id = "tcourse" class="form-control" onchange="CourseChange()">
-      <option value="tc_title">Course</option>
-      {% for cid in sortedcrs_id %}
-        <option value="{{ cid  | replace: " ","-"}}">{{ cid }}</option>
+<form class="align-items-center bg-secondary px-3 pt-3" >
+  <div class="form-row align-items-center">
+    <div class="form-group col-md-5">
+      <select id = "tcourse" class="form-control" onchange="CourseChange()">
+        <option value="tc_title">Course</option>
+      {% for i in (1..numcourses) %}
+        {%- assign cc = sortedcrs_ids[i] | split: '#' -%}
+        <option value="{{cc[1]}}">{{cc[1] | replace: "-"," "}}</option>
       {% endfor %}
     </select>
   </div>
-  &nbsp; / &nbsp;
-  <div class="form-group">
+
+    <div class="form-group col-md-5">
     <select id="tsem" disabled class="form-control" onchange="SemesterChange()">
       <option value="ts_title">Semester</option>
     </select>
   </div>
-  &nbsp; / &nbsp;
+    <div class="form-group col-md-2">
   <a id="jumplink" href="#" target="_self" class="btn btn-primary" role="button">
     Go
   </a>
+  </div>
+</div>
 </form>
 
 ### Courses
 
 {% for i in (1..numcourses) %}
-    {%- assign cc = sortedcourses[i] | split: '#' -%}
-  * [{{cc[1]}} : {{cc[2]}}]({{cc[0]}})
-{% endfor %}
+    {%- assign cc = sortedcrs_ids[i] | split: '#' -%}
+    {%- assign crs_name = "" -%}
+    {%- for crs in site.data.courses -%}
+      {%- if crs.id == cc[1] -%}
+	{%- assign crs_name = crs.name -%}
+      {%- endif -%}
+    {%- endfor -%}
+  * [{{cc[1] | replace: "-"," "}} : {{crs_name}}]({{cc[0]}})
+{%  endfor  %}
 
 <script>
     var jmpurl = document.getElementById("jumplink");
     var semsel = document.getElementById("tsem");
-    var liqsems = {{ sortedsemoffs | jsonify }}
+    var liqsems = {{ sortedcrsoffs | jsonify }}
     
     var t_course = "tc_title";
     var t_sem = "ts_title";

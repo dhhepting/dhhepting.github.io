@@ -10,6 +10,7 @@
   {% endif %}
 {% endfor %}
 {% assign crs_dir = url_parts[crs_idx] %}
+{% assign crs_id = url_parts[crs_idx] %}
 {% assign crs_parts = url_parts[crs_idx] | split: '-' %}
 {% assign crs_sbj = crs_parts[0] %}
 {% assign crs_nbr = crs_parts[1] %}
