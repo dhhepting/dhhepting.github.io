@@ -238,6 +238,16 @@
         
     
         
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
             
                 <li class="breadcrumb-item active">
                     Teaching
@@ -268,198 +278,115 @@
 	<div class="card-body">
 	<h1 id="teaching">Teaching</h1>
 
-<div class="card">
-  <div class="card-header" style="background-color: cyan;">
-        <a href="/teaching/CS-110/"><h3>CS 110 : Programming and Problem Solving</h3></a>
-  </div>
-  <div class="card-body">
-	<h5>Calendar Description</h5>
-	<p>
-	An introduction to problem-solving techniques, the fundamental concepts of programming, and the software design process. Topics will include data types, control structures, scope rules, functions, files, and the mechanics of running, testing and debugging. Problems will be drawn from various science disciplines.
-	</p>
-	<h5>Semesters</h5>
-	<ul>
-	
-    	  
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-            <li><a href="/teaching/CS-110/201810/">201810</a></li>
-	  
-	
-    	  
-	  
-            <li><a href="/teaching/CS-110/201510/">201510</a></li>
-	  
-	
-    	  
-	  
-	
-	</ul>
-  </div>
-</div>
-<p><span>
-   
-</span></p>
+<h3 id="jump-to-a-course-offering">Jump to a Course Offering</h3>
 
-<div class="card">
-  <div class="card-header" style="background-color: cyan;">
-        <a href="/teaching/CS-205/"><h3>CS 205 : Introduction to Multimedia Systems</h3></a>
+<!-- Jump to a class and semester -->
+<form class="align-items-center bg-secondary px-3 pt-3">
+  <div class="form-row align-items-center">
+    <div class="form-group col-md-5">
+      <select id="tcourse" class="form-control" onchange="CourseChange()">
+        <option value="tc_title">Course</option>
+      <option value="CS-110">CS 110</option>
+      <option value="CS-205">CS 205</option>
+      <option value="CS-280">CS 280</option>
+      <option value="CS-428+828">CS 428+828</option>
+      <option value="CS-499+900">CS 499+900</option>
+      
+    </select>
   </div>
-  <div class="card-body">
-	<h5>Calendar Description</h5>
-	<p>
-	Multimedia is the use of computers to integrate texts, graphics, video, animation, and sound in an interactive experience. The course introduces these elements of multimedia and their associated technologies. Students will gain an appreciation of each element and be able to combine them into a finished work.
-	</p>
-	<h5>Semesters</h5>
-	<ul>
-	
-    	  
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-            <li><a href="/teaching/CS-205/201910/">201910</a></li>
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-	
-	</ul>
-  </div>
-</div>
-<p><span>
-   
-</span></p>
 
-<div class="card">
-  <div class="card-header" style="background-color: cyan;">
-        <a href="/teaching/CS-280/"><h3>CS 280 : Risk and Reward in the Information Society</h3></a>
+    <div class="form-group col-md-5">
+    <select id="tsem" disabled="" class="form-control" onchange="SemesterChange()">
+      <option value="ts_title">Semester</option>
+    </select>
   </div>
-  <div class="card-body">
-	<h5>Calendar Description</h5>
-	<p>
-	Social context of computing. Case study of human-computer interfaces and their evaluation. Methods and tools of analysis. Professional and ethical responsibilities. Risks and liabilities of computer-based systems. Intellectual property, privacy and civil liberties. Professional communication. Sustainability. Cybercrime.
-	</p>
-	<h5>Semesters</h5>
-	<ul>
-	
-    	  
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-            <li><a href="/teaching/CS-280/201910/">201910</a></li>
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-	
-	</ul>
+    <div class="form-group col-md-2">
+  <a id="jumplink" href="#" target="_self" class="btn btn-primary" role="button">
+    Go
+  </a>
   </div>
 </div>
-<p><span>
-   
-</span></p>
+</form>
 
-<div class="card">
-  <div class="card-header" style="background-color: cyan;">
-        <a href="/teaching/CS-428+828/"><h3>CS 428+828 : Human Computer Communication</h3></a>
-  </div>
-  <div class="card-body">
-	<h5>Calendar Description</h5>
-	<p>
-	Theory and practice related to the design and implementation of usable software and easy-to-learn interfaces. Specific topics will include user-centered design and task analysis; prototyping and the iterative design cycle; interface design and methods of evaluation.
-	</p>
-	<h5>Semesters</h5>
-	<ul>
-	
-    	  
-	  
-            <li><a href="/teaching/CS-428+828/201830/">201830</a></li>
-	  
-	
-    	  
-	  
-            <li><a href="/teaching/CS-428+828/201730/">201730</a></li>
-	  
-	
-    	  
-	  
-            <li><a href="/teaching/CS-428+828/201630/">201630</a></li>
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-	
-    	  
-	  
-	
-	</ul>
-  </div>
-</div>
-<p><span>
-   
-</span></p>
+<h3 id="courses">Courses</h3>
+
+<ul>
+  <li><a href="/teaching/CS-110/">CS 110 : Programming and Problem Solving</a></li>
+  <li><a href="/teaching/CS-205/">CS 205 : Introduction to Multimedia Systems</a></li>
+  <li><a href="/teaching/CS-280/">CS 280 : Risk and Reward in the Information Society</a></li>
+  <li><a href="/teaching/CS-428+828/">CS 428+828 : Human Computer Communication</a></li>
+  <li><a href="/teaching/CS-499+900/">CS 499+900 : </a></li>
+</ul>
+
+<script>
+    var jmpurl = document.getElementById("jumplink");
+    var semsel = document.getElementById("tsem");
+    var liqsems = ["","CS-110#201510","CS-110#201810","CS-205#201810","CS-205#201910","CS-280#201910","CS-428+828#201630","CS-428+828#201730","CS-428+828#201830","CS-499+900#201810"]
+    
+    var t_course = "tc_title";
+    var t_sem = "ts_title";
+		
+    function SetJump() 
+    {
+        if (t_course != "tc_title" && t_sem != "ts_title") 
+	{
+	    jmpurl.setAttribute("href","/teaching/" + t_course + "/" + t_sem + "/");
+	    jmpurl.setAttribute("target","_blank");
+	}
+	else 
+	{
+	    jmpurl.setAttribute("href","#");
+	    jmpurl.setAttribute("target","_self");
+	}
+    }
+
+    function removeOptions(selectbox) 
+    {
+	// remove everything but the 1st option
+	for (var i = selectbox.options.length - 1 ; i >= 1 ; i--) 
+	{
+	    selectbox.remove(i);
+    	}
+    	selectbox.options[0].selected = true;
+    }
+
+    function CourseChange() 
+    {
+    	// clear out the current contents of the semester select
+	var e = document.getElementById("tcourse");
+	removeOptions(semsel);
+	t_sem = "ts_title";
+	t_course = e.options[e.selectedIndex].value;
+	SetJump();
+	// find the course in the array
+	if (t_course != "tc_title") {
+	    document.getElementById("tsem").disabled=false;
+	    // build new contents
+	    for (var i = 1; i < liqsems.length; i++) {
+		var res = liqsems[i].split("#");
+		if (t_course == res[0]) {
+		    semsel.options.add(new Option(res[1],res[1],false));
+		}
+	    }
+	}
+	else {
+	    document.getElementById("tsem").disabled=true;
+	}
+    }
+		
+    function SemesterChange() {
+        var e = document.getElementById("tsem");
+	t_sem = e.options[e.selectedIndex].value;
+	SetJump();
+    }
+</script>
 
 
 	</div>
 
 	<div class="card-footer text-muted">
     Site built: 
-    2018-07-14 01:31 -0600
+    2018-07-16 16:19 -0600
 </div>
 
 </div>

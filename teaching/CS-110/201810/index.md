@@ -1,4 +1,5 @@
 ---
+crs_id: CS110
 crs_subj: CS
 crs_nbr: 110
 crs_name: Programming and Problem Solving

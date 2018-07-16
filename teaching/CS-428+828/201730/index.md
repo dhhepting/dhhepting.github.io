@@ -1,4 +1,5 @@
 ---
+crs_id: CS428+828
 crs_subj: CS
 crs_nbr: 428+828
 crs_name: Human Computer Communication

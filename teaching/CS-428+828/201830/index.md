@@ -1,4 +1,5 @@
 ---
+crs_id: CS428+828
 crs_name: Human Computer Communication
 breadcrumb: 201830
 layout: default

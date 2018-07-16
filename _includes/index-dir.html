@@ -20,7 +20,7 @@
 {% for i in (1..numcons) %}
     {% assign sdc = sorteddircons[i] | split: '#' %}
     <li>
-        <a href="{{site.baseurl}}{{sdc[0]}}">{{sdc[1]}}</a>
+        <a href="{{sdc[0]}}">{{sdc[1]}}</a>
     </li>
 {% endfor %}
 </ul>
