@@ -1,10 +1,10 @@
 ---
 breadcrumb: Inspirations
-layout: default
+layout: research-landing
 ---
 # Inspirations
 		
-<div class="card">
+<div class="card" id="dhhblock">
    <div class="card-body">
 	<blockquote class="blockquote">
 	<p>
@@ -34,7 +34,7 @@ layout: default
 
 <p>&nbsp;</p>
 
-<div class="card">
+<div class="card" id="dhhblock">
    <div class="card-body">
 	<blockquote class="blockquote">
 	<p>
