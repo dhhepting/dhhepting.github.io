@@ -1,8 +1,7 @@
 ---
-title: Teaching 
-breadcrumb: Teaching
+title: CS 499+900 
+breadcrumb: CS 499+900
 layout: default
 ---
-# Teaching
+# {{ page.breadcrumb }}
 
-{% include teaching-index.html %}
