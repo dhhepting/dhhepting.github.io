@@ -64,10 +64,10 @@
 
 <body>
 
-<div class="card bg-light">
+<div class="card teaching-landing" >
 	
 <nav aria-label="breadcrumb">
-    <ol class="breadcrumb card-header">
+    <ol class="breadcrumb card-header" id="dhhblock">
         <li class="breadcrumb-item"><a href="/">D. H. Hepting</a></li>
 
 
@@ -274,9 +274,29 @@
     </ol>
 </nav>
 
+	<div class="card-body container-fluid h-100" >
+		<!-- <div class="row h-100"> -->
+		<div class="row align-top" id="dhhblock"> 
+			<div class="col">
+				<h1 id="teaching">Teaching</h1>
 
-	<div class="card-body">
-	<h1 id="teaching">Teaching</h1>
+<h3 id="check-schedule">Check Schedule</h3>
+
+<!-- Jump to a class and semester -->
+<form class="align-items-center bg-secondary px-3 pt-3">
+  <div class="form-row align-items-center">
+    <div class="form-group col-md-5">
+      <select id="schedsem" class="form-control" onchange="CourseChange()">
+        <option value="tc_schedsem">201810</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+  <a id="schedlink" href="schedule/201810.html" target="_self" class="btn btn-primary" role="button">
+    Go
+  </a>
+  </div>
+</div>
+</form>
 
 <h3 id="jump-to-a-course-offering">Jump to a Course Offering</h3>
 
@@ -308,7 +328,7 @@
 </div>
 </form>
 
-<h3 id="courses">Courses</h3>
+<h3 id="courses-taught">Courses Taught</h3>
 
 <ul>
   <li><a href="/teaching/CS-110/">CS 110 : Programming and Problem Solving</a></li>
@@ -317,6 +337,8 @@
   <li><a href="/teaching/CS-428+828/">CS 428+828 : Human Computer Communication</a></li>
   <li><a href="/teaching/CS-499+900/">CS 499+900 : </a></li>
 </ul>
+
+<h3 id="general-information">General Information</h3>
 
 <script>
     var jmpurl = document.getElementById("jumplink");
@@ -382,11 +404,18 @@
 </script>
 
 
+			</div>
+		</div>
+		<div class="row align-bottom"> 
+			<div class="col">
+				&nbsp;
+			</div>
+		</div>
 	</div>
 
-	<div class="card-footer text-muted">
+	<div class="card-footer text-muted" id="dhhblock">
     Site built: 
-    2018-07-16 16:19 -0600
+    2018-07-17 16:27 -0600
 </div>
 
 </div>

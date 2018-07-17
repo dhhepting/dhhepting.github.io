@@ -3,152 +3,121 @@ layout: default
 breadcrumb: Topics &amp; Learning Outcomes
 ---
 # Topics &amp; Learning Outcomes
-		<p>
-			Topics and Learning Outcomes for this course are based on 
-			<a href="https://www.acm.org/education/CS2013-final-report.pdf">
-				ACM/IEEE Curriculum Guidelines for Undergraduate Degree Programs 
-				in Computer Science (2013)
-			</a>.  
-			This document associates one of three
-			levels of mastery with each Learning Outcome.  
-			The mastery levels are defined as:
-		</p>
-		<ul>
-			<li>
-				Familiarity: The student understands what a concept is or 
-				what it means. 
-				This level of
-				mastery concerns a basic awareness of a concept as opposed to 
-				expecting real facility with its application. 
-				It provides an answer to the question “What do you know about this?”
-			</li>
-			<li>
-				Usage: The student is able to use or apply a concept in a 
-				concrete way. 
-				Using a concept may include, for example, 
-				appropriately using a specific concept in a program, 
-				using a particular proof technique, 
-				or performing a particular analysis. 
-				It provides an answer to the question “What do you know how to do?”
-			</li>
-			<li>
-				Assessment: The student is able to consider a concept from 
-				multiple viewpoints and/or justify the selection of a 
-				particular approach to solve a problem.
-				This level of mastery implies more than using a concept; 
-				it involves the ability to select an appropriate
-				approach from understood alternatives. 
-				It provides an answer to the question “Why would you do that?”
-			</li>
-		</ul>
-		<p>
-			This course explores Human Computer Interaction (HCI), 
-			with the following knowledge areas (click on one to jump to details): 
-			<a href="#know1">HCI/Foundations</a>,
-			<a href="#know2">HCI/Designing Interaction</a>,
-			<a href="#know3">HCI/Programming Interactive Systems</a>,
-			<a href="#know4">HCI/User-Centered Design & Testing</a>, 
-			<a href="#know5">HCI/New Interactive Technologies</a>,
-			<a href="#know6">HCI/Collaboration and Communication</a>,
-			<a href="#know7">HCI/Statistical Methods for HCI</a>, and
-			<a href="#know8">HCI/Design-Oriented HCI</a>.
-		</p>
+
+{% include topics2013.html %}
+
+This course explores Human Computer Interaction (HCI), 
+with the following knowledge areas (click on one to jump to details): 
+<a href="#know1">HCI/Foundations</a>,
+<a href="#know2">HCI/Designing Interaction</a>,
+<a href="#know3">HCI/Programming Interactive Systems</a>,
+<a href="#know4">HCI/User-Centered Design & Testing</a>, 
+<a href="#know5">HCI/New Interactive Technologies</a>,
+<a href="#know6">HCI/Collaboration and Communication</a>,
+<a href="#know7">HCI/Statistical Methods for HCI</a>, and
+<a href="#know8">HCI/Design-Oriented HCI</a>.
 		
-		<h2>Full List of Topics &amp; Learning Outcomes</h2>
-		
-		<div id="know1" class="well">
-			<h3>HCI/Foundations</h3>
+<div id="know1" class="card">
+	<div class="card-header">
+		<h3>HCI/Foundations</h3>
+	</div>
+	<div class="card-body">
+		<div class="row mx-1">
+			<h5>Motivation</h5>
 			<p>
-				<strong>Motivation:</strong>
-				For end-users, the interface is the system. 
-				So design in this domain must be interaction-focused and human-centered. 
-				Students need a different repertoire of techniques to address this 
-				than is provided elsewhere in the curriculum.
+For end-users, the interface is the system. 
+So design in this domain must be interaction-focused and human-centered. 
+Students need a different repertoire of techniques to address this 
+than is provided elsewhere in the curriculum.
 			</p>
-		
-			<div class="row">
-				<div class="col-xs-6">
-					<strong>Topics</strong>
-					<ul>
-						<li>
-							Contexts for HCI (anything with a user interface, 
-							e.g., webpage, business applications, mobile applications, and games)
-						</li>
-						<li>
-							Processes for user-centred development, 
-							e.g., early focus on users, empirical testing, iterative design
-						</li>
-						<li>
-							Different measures for evaluation, 
-							e.g., utility, efficiency, learnability, user satisfaction
-						</li>
-						<li>
-							Usability heuristics and the principles of usability testing
-						</li>
-						<li>
-							Physical capabilities that inform interaction design, 
-							e.g., colour perception, ergonomics
-						</li>
-						<li>
-							Cognitive models that inform interaction design, 
-							e.g., attention, perception and recognition, movement, and memory; 
-							gulfs of expectation and execution
-						</li>
-						<li>
-							Social models that inform interaction design, 
-							e.g., culture, communication, networks and organizations
-						</li>
-						<li>
-							Principles of good design and good designers; engineering tradeoffs
-						</li>
-						<li>
-							Accessibility, e.g., interfaces for differently-abled populations 
-							(e.g., blind, motion-impaired)
-						</li>
-						<li>
-							Interfaces for differently-aged population groups 
-							(e.g., children, 80+)
-						</li>
-					</ul>
-				</div>
-				<div class="col-xs-6">
-					<strong>Learning Outcomes</strong>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<h5>Topics</h5>
+				<ul>
+					<li>
+Contexts for HCI (anything with a user interface, 
+e.g., webpage, business applications, mobile applications, and games)
+					</li>
+					<li>
+Processes for user-centred development, 
+e.g., early focus on users, empirical testing, iterative design
+					</li>
+					<li>
+Different measures for evaluation, 
+e.g., utility, efficiency, learnability, user satisfaction
+					</li>
+					<li>
+Usability heuristics and the principles of usability testing
+					</li>
+					<li>
+Physical capabilities that inform interaction design, 
+e.g., colour perception, ergonomics
+					</li>
+					<li>
+Cognitive models that inform interaction design, 
+e.g., attention, perception and recognition, movement, and memory; 
+gulfs of expectation and execution
+					</li>
+					<li>
+Social models that inform interaction design, 
+e.g., culture, communication, networks and organizations
+					</li>
+					<li>
+Principles of good design and good designers; engineering tradeoffs
+					</li>
+					<li>
+Accessibility, e.g., interfaces for differently-abled populations 
+(e.g., blind, motion-impaired)
+					</li>
+					<li>
+Interfaces for differently-aged population groups 
+(e.g., children, 80+)
+					</li>
+				</ul>
+			</div>
+				<div class="col-md-6">
+					<h5>Learning Outcomes</h5>
 					<ol>
 						<li>
-							Discuss why human-centred software development is important.
-							[Familiarity]
+Discuss why human-centred software development is important.
+[Familiarity]
 						</li>
 						<li>
-							Summarize the basic precepts of psychological and social interaction. 
-							[Familiarity]
+Summarize the basic precepts of psychological and social interaction. 
+[Familiarity]
 						</li>
 						<li>
-							Develop and use a conceptual vocabulary for analyzing human interaction with software:
-							affordance, conceptual model, feedback, and so forth. [Usage]
+Develop and use a conceptual vocabulary for analyzing human interaction with 
+software: affordance, conceptual model, feedback, and so forth. [Usage]
 						</li>
 						<li>
-							Define a user-centred design process that explicitly takes account of 
-							the fact that the user is not like the developer or their acquaintances. [Usage]
+Define a user-centred design process that explicitly takes account of 
+the fact that the user is not like the developer or their acquaintances. [Usage]
 						</li>
 						<li>
-							Create and conduct a simple usability test for an existing 
-							software application. [Assessment]	
+Create and conduct a simple usability test for an existing 
+software application. [Assessment]	
 						</li>
 					</ol>
 				</div>
 			</div>
 		</div>
-		
-		<div id="know2" class="well">
-			<h3>HCI/Designing Interaction</h3>
-			<p>
-				<strong>Motivation:</strong> 
-				CS students need a minimal set of well-established 
-				methods and tools to bring to interface construction.
-			</p>
-			<div class="row">
-				<div class="col-xs-6">
-					<strong>Topics</strong>
+		</div>
+&nbsp;
+<div id="know2" class="card">
+	<div class="card-header">
+		<h3>HCI/Designing Interaction</h3>
+	</div>
+	<div class="card-body">
+		<div class="row mx-1">
+			<h5>Motivation</h5>
+<p>CS students need a minimal set of well-established methods and tools 
+to bring to interface construction.</p>
+		</div>
+		<div class="row">
+				<div class="col-md-6">
+					<h5>Topics</h5>
 					<ul>
 						<li>Elements of visual design (layout, colour, fonts, labeling)</li>
 						<li>Task analysis, including qualitative aspects of generating task analytic models</li>
@@ -157,8 +126,8 @@ breadcrumb: Topics &amp; Learning Outcomes
 						<li>User interface standards</li>
 					</ul>
 				</div>
-				<div class="col-xs-6">
-					<strong>Learning Outcomes</strong>
+				<div class="col-md-6">
+					<h5>Learning Outcomes</h5>
 					<ol>
 						<li>
 							For an identified user group,

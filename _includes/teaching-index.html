@@ -27,6 +27,24 @@
 {% assign sortedcrs_ids = crs_ids | split: '|' | uniq | sort %}
 {% capture numcourses %}{{ sortedcrs_ids.size | minus:1 }}{% endcapture %}
 
+### Check Schedule
+
+<!-- Jump to a class and semester -->
+<form class="align-items-center bg-secondary px-3 pt-3" >
+  <div class="form-row align-items-center">
+    <div class="form-group col-md-5">
+      <select id = "schedsem" class="form-control" onchange="CourseChange()">
+        <option value="tc_schedsem">201810</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+  <a id="schedlink" href="schedule/201810.html" target="_self" class="btn btn-primary" role="button">
+    Go
+  </a>
+  </div>
+</div>
+</form>
+
 ### Jump to a Course Offering
 
 <!-- Jump to a class and semester -->
@@ -55,7 +73,7 @@
 </div>
 </form>
 
-### Courses
+### Courses Taught
 
 {% for i in (1..numcourses) %}
     {%- assign cc = sortedcrs_ids[i] | split: '#' -%}
@@ -67,6 +85,9 @@
     {%- endfor -%}
   * [{{cc[1] | replace: "-"," "}} : {{crs_name}}]({{cc[0]}})
 {%  endfor  %}
+
+### General Information
+
 
 <script>
     var jmpurl = document.getElementById("jumplink");
