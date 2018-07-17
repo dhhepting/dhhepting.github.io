@@ -1,7 +1,7 @@
 ---
-title: Research * D. H. Hepting
+title: Research
 breadcrumb: Research
-layout: default
+layout: research-landing
 ---
 # Research
 
