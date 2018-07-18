@@ -1,7 +1,7 @@
 ---
-title: RSS Feeds * D. H. Hepting
+title: RSS Feeds
 breadcrumb: RSS Feeds
-layout: default
+layout: rss
 ---
 # RSS Feeds
 

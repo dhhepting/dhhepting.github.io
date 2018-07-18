@@ -1,7 +1,7 @@
 ---
 title: Research
 breadcrumb: Research
-layout: research-landing
+layout: research
 ---
 # Research
 

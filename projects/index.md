@@ -1,7 +1,7 @@
 ---
 title: Projects 
 breadcrumb: Projects
-layout: default
+layout: projects
 ---
 # Projects
 
