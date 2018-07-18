@@ -1,7 +1,7 @@
 ---
 title: Teaching 
 breadcrumb: Teaching
-layout: teaching-landing
+layout: teaching
 ---
 # Teaching
 

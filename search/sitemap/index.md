@@ -1,7 +1,7 @@
 ---
 title: Sitemap 
 breadcrumb: Sitemap
-layout: default
+layout: search
 ---
 # Sitemap
 

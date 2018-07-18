@@ -1,7 +1,7 @@
 ---
 title: About * D. H. Hepting
 breadcrumb: About
-layout: default
+layout: about
 ---
 # About
 
