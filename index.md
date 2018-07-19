@@ -5,11 +5,12 @@ layout: home
 <!-- body with background image, use white for text -->
 <body class="splash">
 	<!-- 
-		navigation bar, fixed at top
-		used this example:
-		https://www.quackit.com/html/html_editors/scratchpad/?example=/bootstrap/bootstrap_4/tutorial/bootstrap_4_navbars_fixed_top
+	navigation bar, fixed at top
+	used this example:
+	https://www.quackit.com/html/html_editors/scratchpad/?example=/bootstrap/bootstrap_4/tutorial/bootstrap_4_navbars_fixed_top
 	-->
-	<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgba(32, 32, 32, 0.75);">
+<div class="container-fluid h-100" >
+	<nav class="navbar navbar-expand-sm navbar-dark " style="background-color: rgba(32, 32, 32, 0.75);">
 		<button class="navbar-toggler" type="button" 
 		data-toggle="collapse" data-target="#nav-content" 
 		aria-controls="nav-content" aria-expanded="false" aria-label="toggle navigation">
@@ -40,12 +41,13 @@ layout: home
 	</nav>
 	<!-- 
 		main content of web page 
-	-->
  	<div class="container-fluid h-100">
 		<div class="row h-100">
-			<div class="col">
-				&nbsp;
-			</div>
+	-->
+ 	<div class="container-f luid">
+		<div class="row h-25">&nbsp;</div>
+		<div class="row">
+			<div class="col">&nbsp;</div>
 			<div class="col-8 align-self-center"> 
 				<div style="align-items: center;" id="dhhblock">
 					<h1>D. H. Hepting</h1>
@@ -54,8 +56,8 @@ layout: home
 					<h5>BSc (Hons) &bull; University of Regina</h5>
 				</div>
 			</div>
-			<div class="col">
-				&nbsp;
-    			</div>
-		</div>
+			<div class="col">&nbsp;</div>
+		</div> 
+		<div class="row">&nbsp;</div>
 	</div>
+</div>
