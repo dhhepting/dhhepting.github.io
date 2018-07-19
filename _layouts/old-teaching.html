@@ -1,0 +1,26 @@
+{% include header.html %}
+<!--
+<div class="card teaching" >
+	{% include breadcrumb-nav-transp.html %}
+	<div class="card-body container-fluid d-flex" style="min-height:100%" >
+		<!-- <div class="row "> -->
+		<div class="row align-top" id="dhhblock"> 
+			<div class="col">
+				{{ content }}
+			</div>
+		</div>
+	</div>
+
+	{% include site-date-transp.html %}
+</div>
+-->
+<div class="card teaching container-fluid" style="min-height:100%" >
+	{% include breadcrumb-nav-transp.html %}
+	<div class="card-body container-fluid" >
+			<div class="col-8" id="dhhblock">
+				{{ content }}
+			</div>
+	</div>
+	{% include site-date-transp.html %}
+</div>
+{% include footer.html %}
