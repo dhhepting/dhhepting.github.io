@@ -1,6 +1,6 @@
 ---
 breadcrumb: Inspirations
-layout: research-landing
+layout: research
 ---
 # Inspirations
 		
