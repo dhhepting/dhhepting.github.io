@@ -1,12 +1,16 @@
 {% include header.html %}
 {% assign url_parts = page.url | split: "/" %}
 <div class="card {{url_parts[1]}} container-fluid" style="min-height:100%" >
-	{% include breadcrumb-nav-transp.html %}
-	<div class="card-body container-fluid" >
-			<div class="col-8" id="dhhblock">
-				{{ content }}
-			</div>
-	</div>
-	{% include site-date-transp.html %}
+  {% include breadcrumb-nav-transp.html %}
+  <div class="card-body container-fluid lightcthru" >
+    <div class="row">
+      <div class="col">&nbsp;</div>
+      <div class="col-11" id="dhhblock">
+        {{ content }}
+      </div>
+      <div class="col">&nbsp;</div>
+    </div>
+  </div>
+  {% include site-date-transp.html %}
 </div>
 {% include footer.html %}
