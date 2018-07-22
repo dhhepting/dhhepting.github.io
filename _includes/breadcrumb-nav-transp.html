@@ -4,8 +4,8 @@
 	and does not create a link for the last (active) item
 {% endcomment %}
 <div class="card-header lightcthru">
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
+<nav class="bg-dark" aria-label="breadcrumb">
+    <ol class="breadcrumb bg-transparent">
         <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">D. H. Hepting</a></li>
 {% capture bc_url_without_index_html %}{{ page.url | remove: "/index.html" }}{% endcapture %}
 {% assign bc_url_parts = bc_url_without_index_html | split: '/' %}
