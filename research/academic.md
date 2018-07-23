@@ -1,7 +1,7 @@
 ---
 breadcrumb: Academic Networks
 title: Academic Networks
-layout: default
+layout: research
 ---
 # {{ page.breadcrumb }}
 
