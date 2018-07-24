@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: bg-image
 breadcrumb: Map Redesign
 ---
 # Original Map

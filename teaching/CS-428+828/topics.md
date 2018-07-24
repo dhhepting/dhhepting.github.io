@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: bg-image
 breadcrumb: Topics &amp; Learning Outcomes
 intro: "This course explores Human Computer Interaction (HCI), with the following knowledge areas (click on one to jump to details):"
 tlouts:

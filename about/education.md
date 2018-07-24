@@ -1,25 +1,24 @@
 ---
-title: Education * D. H. Hepting
+title: Education
 breadcrumb: Education
-layout: default
+layout: bg-image
 ---
 # Education
 <ul>
-	<li>
-		Ph.D. in Computer Science from Simon Fraser University, 
-		Burnaby, British Columbia, Canada.<br />
-		Dissertation: 
-		<!--
-		<a href="../research/scholarly.html#1999-12-T-NewParadigm">
-			A New Paradigm for Exploration in Computer-aided Visualization
-		</a>-->, 
-		defended September, 1999.<br />
-		<ul>
-			<li>Supervisor: Dr. Robert D. Russell</li>
-			<li>Committee: Dr. John C. Dill and Dr. F. David Fracchia</li>
-			<li>External examiner: Dr. Joe Marks</li>
-		</ul>
-	</li>
+  <li>
+    Ph.D. in Computer Science from Simon Fraser University, 
+    Burnaby, British Columbia, Canada.<br />
+    Dissertation: 
+    <a href={{"/research/works/1999-12-hep-a-new-paradigm-for-exploration-in-computer-aided-visualization.html" | relative_url }}>
+      A New Paradigm for Exploration in Computer-aided Visualization
+    </a>, 
+    defended September, 1999.<br />
+    <ul>
+      <li>Supervisor: Dr. Robert D. Russell</li>
+      <li>Committee: Dr. John C. Dill and Dr. F. David Fracchia</li>
+      <li>External examiner: Dr. Joe Marks</li>
+    </ul>
+  </li>
 	<li>
 		M.Sc. in Computer Science from the University of Regina,
 		Regina, Saskatchewan, Canada.<br />
