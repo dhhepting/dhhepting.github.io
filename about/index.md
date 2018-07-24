@@ -1,7 +1,7 @@
 ---
-title: About * D. H. Hepting
+title: About
 breadcrumb: About
-layout: research
+layout: bg-image
 ---
 # About
 

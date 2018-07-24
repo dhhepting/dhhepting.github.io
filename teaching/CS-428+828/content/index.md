@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: bg-image
+title: Content - CS 428+828 
 breadcrumb: Content
 ---
 # Content

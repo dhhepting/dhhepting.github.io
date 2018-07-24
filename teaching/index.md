@@ -1,7 +1,7 @@
 ---
 title: Teaching 
 breadcrumb: Teaching
-layout: teaching
+layout: bg-image
 ---
 # Teaching
 

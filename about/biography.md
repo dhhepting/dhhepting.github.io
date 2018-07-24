@@ -1,7 +1,7 @@
 ---
-title: Biography * D. H. Hepting
+title: Biography
 breadcrumb: Biography
-layout: default
+layout: bg-image
 ---
 # Biography
 
