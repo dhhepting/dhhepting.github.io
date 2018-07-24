@@ -1,8 +1,9 @@
 ---
 crs_id: CS428+828
 crs_name: Human Computer Communication
+title: CS 428+828 in 201830
 breadcrumb: 201830
-layout: default
+layout: bg-image
 ---
 {% include offering-url.html %}
 {% include offering-index.html %}

@@ -1,7 +1,7 @@
 ---
 title: Schedule
 breadcrumb: Schedule
-layout: default
+layout: bg-image
 ---
 # {{ page.breadcrumb }}
 
