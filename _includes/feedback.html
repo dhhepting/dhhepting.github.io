@@ -1,34 +1,16 @@
 {% include feedback-url.html %}
 
-# {{ crs_fbk | capitalize | replace: "-"," "}}
-
+# {{ crs_fbk | capitalize | replace: "-"," "}} {% assign questions = "" %}
+{% for q in site.data.feedback.questions %}
+  {% capture questions %}{{ questions }}|{{q}}{% endcapture %}
+{% endfor %}
+{% assign qa = questions | split: "|" %}
 {% if site.data.feedback[fbk_dat] %}
-<div class="container-fluid">
-<table class="table table-responsive table-striped table-bordered">
-<thead>
-  <tr>
-    <th>Response</th>
-    <th>Q1</th>
-    <th>Q2</th>
-    <th>Q3</th>
-    <th>Q4</th>
-    <th>Q5</th>
-    <th>Q6</th>
-    <th>Q7</th>
-    <th>Q8</th>
-    <th>Q9</th>
-    <th>Avg</th>
-    <th>SD</th>
-    <th>Mode</th>
-    <th>Median</th>
-  </tr>
-</thead>
-<tbody>
-{% assign summ = "" %}
-{% assign stop_it = false %}
-{% assign header_done = false %}
-{% for r in site.data.feedback[fbk_dat] %}
-  <tr>
+  {% assign detail = "" %}
+  {% assign summary = "" %}
+  {% assign stop_it = false %}
+  {% assign header_done = false %}
+  {% for r in site.data.feedback[fbk_dat] %}
     {% assign rqs = "" %}
     {% capture rqs %}{{rqs}}{{r.response}},{% endcapture %}
     {% capture rqs %}{{rqs}}{{r.q1}},{% endcapture %}
@@ -44,93 +26,160 @@
     {% capture rqs %}{{rqs}}{{r.SD}},{% endcapture %}
     {% capture rqs %}{{rqs}}{{r.mode}},{% endcapture %}
     {% capture rqs %}{{rqs}}{{r.median}},{% endcapture %}
-    {% assign rqa = rqs | split: "," %}
     {% if stop_it == false %}
-    {% for rq in rqa %}
-      {% if rq == "0" %}
-        <td>&mdash;</td>	
-      {% else %}
-        <td>{{rq}}</td>	
-      {% endif %}
-    {% endfor %}
+      {% capture detail %}{{detail}}#{{rqs}}{% endcapture %}
+    {% else %}
+      {% capture summary %}{{summary}}#{{rqs}}{% endcapture %}
     {% endif %}
-    {% if rqa[0] == "Median" %}
+    {% if rqs contains "Median" %}
       {% assign stop_it = true %}
     {% endif %}
-    </tr>
-    {% if stop_it %}
-      {% if header_done == false %}
+  {% endfor %}
+    
+<div class="container-fluid">
+  <table class="table table-responsive table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>5 (Always)</th>
+        <th>4 [Mostly]</th>
+        <th>3 [Sometimes]</th>
+        <th>2 [Rarely]</th>
+        <th>1 (Never)</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% assign summq = summary | split: "#" %}
+      {% for q in (1..9) %}
+        <tr>
+          <td>{{qa[q]}}</td>
+          {% for sq in summq %}
+            {% assign sqa = sq | split: "," %}
+            {% if sqa[q] %}
+              <td>{{sqa[q]}}</td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+      {% endfor %}
+      <tr>
+        <td>Total</td>
+        {% for sq in summq %}
+          {% assign sqa = sq | split: "," %}
+          {% if sqa[10] %}
+            <td>{{sqa[10]}}</td>
+          {% endif %}
+        {% endfor %}
+      </tr>
+    </tbody>
+  </table> 
+</div>
+{% comment %}
+	Table of Detail Data
+
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Collapsible Group Item #1
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </button>
+      </h5>
+    </div>
+{% endcomment %}
+
+<div class="container-fluid">
+  <table class="table table-responsive table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Response</th>
+        <th>Q1</th>
+        <th>Q2</th>
+        <th>Q3</th>
+        <th>Q4</th>
+        <th>Q5</th>
+        <th>Q6</th>
+        <th>Q7</th>
+        <th>Q8</th>
+        <th>Q9</th>
+        <th>Avg</th>
+        <th>SD</th>
+        <th>Mode</th>
+        <th>Median</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% assign detaild = detail | split: "#" %}
+      {% for row in detaild %}
+        {% assign rowa = row | split: "," %}
+        <tr>
+	{% for dd in rowa %}
+          {% if dd == "0" %}
+            <td>&mdash;</td>	
+          {% else %}
+            <td>{{dd}}</td>	
+          {% endif %}
+        {% endfor %}
+        </tr>
+    {% endfor %}
 </tbody>
 </table>
 </div>
-<div class="container-fluid">
-<table class="table table-responsive table-striped table-bordered">
-<thead>
-<tr>
-<th>Question</th>
-<th>5 (Always)</th>
-<th>4 [Mostly]</th>
-<th>3 [Sometimes]</th>
-<th>2 [Rarely]</th>
-<th>1 (Never)</th>
-<th>Total</th>
-</tr>
-</thead>
-<tbody>
-      {% assign header_done = true %}
-    {% endif %}
-    {% if rqa[0] != "Median" %}
-      {% capture summ %}{{summ}}#{{rqs}}{% endcapture %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-{% comment %}
-Q1. The instructor is well-prepared for class	8	18	23	11	7	67
-Q2. The instructor clearly communicates his expectations for student preparation and participation	6	19	28	8	6	67
-Q3. The instructor uses class time effectively	7	8	27	14	11	67
-Q4. The instructor has clear expectations for assigned work	9	23	22	6	6	66
-Q5. The instructor encourages student participation	24	23	15	3	2	67
-Q6. The instructor clearly answers questions	8	16	22	12	9	67
-Q7. The instructor treats students with respect	35	19	7	3	3	67
-Q8. The instructor effectively directs and stimulates discussion	14	13	25	12	3	67
-Q9. The instructor effectively encourages students to ask questions and give answers	22	20	15	8	2	67
-{% endcomment %}
-{% assign summq = summ | split: "#" %}
-{% for q in (1..9) %}
-  <tr>
-    <td>{{q}}</td>
-  {% for sq in summq %}
-    {% assign sqa = sq | split: "," %}
-    {% if sqa[q] %}
-      <td>{{sqa[q]}}</td>
-    {% endif %}
-  {% endfor %}
-  </tr>
-{% endfor %}
-  <tr>
-    <td>Total</td>
-  {% for sq in summq %}
-    {% assign sqa = sq | split: "," %}
-    {% if sqa[10] %}
-      <td>{{sqa[10]}}</td>
-    {% endif %}
-  {% endfor %}
-  </tr>
-</tbody></table> </div>
 {% capture fbk_com %}{{fbk_dat}}-comm{% endcapture %}
 <h3>What do you like best about this course?</h3>
+{% capture fli_url %}/assets/teaching/img/{{fbk_dat}}-like.svg{% endcapture %}
+<div class="container-fluid bg-info">
+<img class="img-responsive" alt="Wordcloud of likes" src="{{fli_url | relative_url}}" />
+</div>
 <ol>
 {% for l in site.data.feedback[fbk_com]like %}
   <li>{{l}}</li>
 {% endfor %}
 </ol>
 <h3>What would you like to change about this course?</h3>
+{% capture fci_url %}/assets/teaching/img/{{fbk_dat}}-change.svg{% endcapture %}
+<div class="container-fluid bg-info">
+<img class="img-responsive" alt="Wordcloud of changes" src="{{fci_url | relative_url}}" />
+</div>
 <ol>
 {% for c in site.data.feedback[fbk_com]change %}
   <li>{{c}}</li>
 {% endfor %}
 </ol>
 <h3>What do think are the instructor's greatest strengths?</h3>
+{% capture fsi_url %}/assets/teaching/img/{{fbk_dat}}-strengths.svg{% endcapture %}
+<div class="container-fluid bg-info">
+<img class="img-responsive" alt="Wordcloud of strengths" src="{{fsi_url | relative_url}}" />
+</div>
 <ol>
 {% for s in site.data.feedback[fbk_com]strengths %}
   <li>{{s}}</li>
