@@ -158,7 +158,7 @@
 <h3>What do you like best about this course?</h3>
 {% capture fli_url %}/assets/teaching/img/{{fbk_dat}}-like.svg{% endcapture %}
 <div class="container-fluid bg-info">
-<img class="img-responsive" src="{{fli_url | relative_url}}" />
+<img class="img-responsive" alt="Wordcloud of likes" src="{{fli_url | relative_url}}" />
 </div>
 <ol>
 {% for l in site.data.feedback[fbk_com]like %}
@@ -168,7 +168,7 @@
 <h3>What would you like to change about this course?</h3>
 {% capture fci_url %}/assets/teaching/img/{{fbk_dat}}-change.svg{% endcapture %}
 <div class="container-fluid bg-info">
-<img class="img-responsive" src="{{fci_url | relative_url}}" />
+<img class="img-responsive" alt="Wordcloud of changes" src="{{fci_url | relative_url}}" />
 </div>
 <ol>
 {% for c in site.data.feedback[fbk_com]change %}
@@ -178,7 +178,7 @@
 <h3>What do think are the instructor's greatest strengths?</h3>
 {% capture fsi_url %}/assets/teaching/img/{{fbk_dat}}-strengths.svg{% endcapture %}
 <div class="container-fluid bg-info">
-<img class="img-responsive" src="{{fsi_url | relative_url}}" />
+<img class="img-responsive" alt="Wordcloud of strengths" src="{{fsi_url | relative_url}}" />
 </div>
 <ol>
 {% for s in site.data.feedback[fbk_com]strengths %}
