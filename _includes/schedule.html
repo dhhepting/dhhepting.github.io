@@ -1,0 +1,84 @@
+# Schedule
+
+{% if site.data.schedule.schedule %}
+  {% assign sched = "" %}
+  {% for r in site.data.schedule.schedule %}
+    {% assign rts = "" %}
+    {% capture rts %}{{rts}}{{r.Times}},{% endcapture %}
+    {% capture rts %}{{rts}}{{r.Monday}},{% endcapture %}
+    {% capture rts %}{{rts}}{{r.Tuesday}},{% endcapture %}
+    {% capture rts %}{{rts}}{{r.Wednesday}},{% endcapture %}
+    {% capture rts %}{{rts}}{{r.Thursday}},{% endcapture %}
+    {% capture rts %}{{rts}}{{r.Friday}},{% endcapture %}
+    {% capture sched %}{{sched}}#{{rts}}{% endcapture %}
+  {% endfor %}
+    
+<div class="container-fluid">
+  <table class="table table-responsive table-striped table-bordered">
+    <thead>
+      <tr>
+        <th><em>Times</em></th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% comment %}
+	Initialize and process 1st time slot in schedule
+      {% endcomment %}
+      {% assign schedslot = sched | split: "#" %}
+      {% assign days = ",1,1,1,1,1" %}
+      {% assign ssa = schedslot[1] | split: "," %}
+      {% assign M = ssa[1] %}
+      {% assign T = ssa[2] %}
+      {% assign W = ssa[3] %}
+      {% assign R = ssa[4] %}
+      {% assign F = ssa[5] %}
+      {% comment %}
+	Loop over remaining time slots in schedule
+      {% endcomment %}
+      {% for s in (2..17) %}
+        {% assign daysa = days | split: "," %}
+        {% assign ssa = schedslot[s] | split: "," %}
+        {% for d in (1..5) %}
+	  {% case d %}
+	    {% when 1 %}
+		{% assign newM = ssa[1] %}
+		{% if newM == M %}
+		  {% assign Midx = s %}
+		  repeat
+		{% else %}
+                  {% assign done = true %}
+		{% endif %}
+	        {% assign M = newM %}
+		{% if done == true %}
+		  Midx = {{ Midx }}
+		  {% continue %}
+		{% endif %}
+	    {% when 2 %}
+	    {% when 3 %}
+	    {% when 4 %}
+	    {% when 5 %}
+	    {% else %}
+	  {% endcase %}
+	  {% capture days %},{{Midx}},{{Tidx}},{{Widx}},{{Ridx}},{{Fidx}}{% endcapture %}
+	{% endfor %}
+  	  
+        <tr>
+            <td rowspan="1">{{ssa[0]}}</td>
+	    {% for d in (1..5) %}
+	      {% if daysa[d] | plus: 0 <= s %}
+                {% if ssa[d] %}
+                  <td rowspan="{{daysa[1]}}">{{d}}--{{ssa[d]}}--{{daysa[d]}}</td>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table> 
+</div>
+{% endif %}

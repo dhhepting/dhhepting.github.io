@@ -74,50 +74,18 @@
     </tbody>
   </table> 
 </div>
+
 {% comment %}
 	Table of Detail Data
-
-<div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Collapsible Group Item #1
-        </button>
-      </h5>
-    </div>
-
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
-        </button>
-      </h5>
-    </div>
 {% endcomment %}
+<p>
+  <a href="#likert-detail" class="btn btn-default" data-toggle="collapse">
+    CLICK HERE
+  </a> 
+  to toggle details
+</p>
 
-<div class="container">
+<div id="likert-detail" class="container collapse">
   <table class="table table-responsive table-striped table-bordered">
     <thead>
       <tr>
@@ -160,29 +128,59 @@
 <div class="container-fluid bg-info">
 <img class="img-responsive" alt="Wordcloud of likes" src="{{fli_url | relative_url}}" />
 </div>
+<p>
+  <a href="#like-detail" class="btn btn-default" data-toggle="collapse">
+    CLICK HERE          
+  </a> 
+  to toggle details
+</p>    
+
+<div id="like-detail" class="container collapse">
+
 <ol>
 {% for l in site.data.feedback[fbk_com]like %}
   <li>{{l}}</li>
 {% endfor %}
 </ol>
+</div>
 <h3>What would you like to change about this course?</h3>
 {% capture fci_url %}/assets/teaching/img/{{fbk_dat}}-change.svg{% endcapture %}
 <div class="container-fluid bg-info">
 <img class="img-responsive" alt="Wordcloud of changes" src="{{fci_url | relative_url}}" />
 </div>
+<p>
+  <a href="#change-detail" class="btn btn-default" data-toggle="collapse">
+    CLICK HERE          
+  </a> 
+  to toggle details
+</p>    
+
+<div id="change-detail" class="container collapse">
 <ol>
 {% for c in site.data.feedback[fbk_com]change %}
   <li>{{c}}</li>
 {% endfor %}
 </ol>
+</div>
 <h3>What do think are the instructor's greatest strengths?</h3>
 {% capture fsi_url %}/assets/teaching/img/{{fbk_dat}}-strengths.svg{% endcapture %}
 <div class="container-fluid bg-info">
 <img class="img-responsive" alt="Wordcloud of strengths" src="{{fsi_url | relative_url}}" />
 </div>
+<p></p>
+<p>
+  <a href="#strength-detail" class="btn btn-info" data-toggle="collapse">
+    CLICK HERE          
+  </a> 
+  to toggle details
+</p>    
+
+<div id="strength-detail" class="container collapse">
+
 <ol>
 {% for s in site.data.feedback[fbk_com]strengths %}
   <li>{{s}}</li>
 {% endfor %}
 </ol>
+</div>
 {% endif %}
