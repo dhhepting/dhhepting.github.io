@@ -27,10 +27,9 @@
     </thead>
     <tbody>
       {% comment %}
-	Initialize and process 1st time slot in schedule
       {% endcomment %}
       {% assign schedslot = sched | split: "#" %}
-      {% assign days = ",1,1,1,1,1" %}
+      {% assign spans = ",1,1,1,1,1" %}
       {% assign ssa = schedslot[1] | split: "," %}
       {% assign M = ssa[1] %}
       {% assign T = ssa[2] %}
@@ -38,34 +37,59 @@
       {% assign R = ssa[4] %}
       {% assign F = ssa[5] %}
       {% comment %}
-	Loop over remaining time slots in schedule
       {% endcomment %}
-      {% for s in (2..17) %}
-        {% assign daysa = days | split: "," %}
-        {% assign ssa = schedslot[s] | split: "," %}
-        {% for d in (1..5) %}
+      {% assign spansa = spans | split: "," %}
+      {% assign Mspan = 0 %}
+      {% assign Tspan = 0 %}
+      {% for d in (1..5) %}
+	  {% assign sd = spansa[d] | plus: 0 %}
+	  sd = {{ sd }}
+	  {% assign Mdone = false %}
+	  {% assign Tdone = false %}
+	  {% assign Wdone = false %}
+	  {% assign Rdone = false %}
+	  {% assign Fdone = false %}
+          {% for s in (sd..17) %}
+            {% assign ssa = schedslot[s] | split: "," %}
 	  {% case d %}
 	    {% when 1 %}
 		{% assign newM = ssa[1] %}
+		IF {{newM}} == {{M}} [{{s}}]
 		{% if newM == M %}
-		  {% assign Midx = s %}
-		  repeat
+		  {% assign Mspan = Mspan | plus: 1 %}
+		  --> Mspan = {{ Mspan}}
 		{% else %}
-                  {% assign done = true %}
+                  {% assign Mdone = true %}
+		  --> Mdone = {{Mdone}}
+		  {% break %}
 		{% endif %}
 	        {% assign M = newM %}
-		{% if done == true %}
-		  Midx = {{ Midx }}
+	    {% when 2 %}
+		{% assign newT = ssa[1] %}
+		{% if newT == T %}
+		  {% assign Tspan = Tspan | plus: 1 %}
+		{% else %}
+                  {% assign Tdone = true %}
+		{% endif %}
+	        {% assign T = newT %}
+		{% if Tdone == true %}
+		  Tspan = {{ Tspan }}
 		  {% continue %}
 		{% endif %}
-	    {% when 2 %}
 	    {% when 3 %}
+		  Wspan = {{ Wspan }}
 	    {% when 4 %}
+		  Rspan = {{ Rspan }}
 	    {% when 5 %}
+		  Fspan = {{ Fspan }}
 	    {% else %}
 	  {% endcase %}
-	  {% capture days %},{{Midx}},{{Tidx}},{{Widx}},{{Ridx}},{{Fidx}}{% endcapture %}
+	  {% capture spans %},{{Mspan}},{{Tspan}},{{Widx}},{{Ridx}},{{Fidx}}{% endcapture %}
 	{% endfor %}
+	{% if Mdone == true %}
+	  Mspan = {{ Mspan }} ({{Mdone}})
+	  {% continue %}
+	{% endif %}
   	  
         <tr>
             <td rowspan="1">{{ssa[0]}}</td>
