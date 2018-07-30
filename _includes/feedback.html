@@ -79,7 +79,7 @@
 	Table of Detail Data
 {% endcomment %}
 <p>
-  <a href="#likert-detail" class="btn btn-default" data-toggle="collapse">
+  <a href="#likert-detail" class="btn btn-info" data-toggle="collapse">
     CLICK HERE
   </a> 
   to toggle details
@@ -123,13 +123,17 @@
 </table>
 </div>
 {% capture fbk_com %}{{fbk_dat}}-comm{% endcapture %}
+{% if site.static_files contains fbk_com %}
 <h3>What do you like best about this course?</h3>
 {% capture fli_url %}/assets/teaching/img/{{fbk_dat}}-like.svg{% endcapture %}
-<div class="container-fluid bg-info">
-<img class="img-responsive" alt="Wordcloud of likes" src="{{fli_url | relative_url}}" />
-</div>
+{% if site.static_files contains fli_url %}
+  <div class="container-fluid bg-info">
+    <img class="img-responsive" alt="Wordcloud of likes" 
+    src="{{fli_url | relative_url}}" />
+  </div>
+{% endif %}
 <p>
-  <a href="#like-detail" class="btn btn-default" data-toggle="collapse">
+  <a href="#like-detail" class="btn btn-info" data-toggle="collapse">
     CLICK HERE          
   </a> 
   to toggle details
@@ -145,11 +149,13 @@
 </div>
 <h3>What would you like to change about this course?</h3>
 {% capture fci_url %}/assets/teaching/img/{{fbk_dat}}-change.svg{% endcapture %}
+{% if site.static_files contains fci_url %}
 <div class="container-fluid bg-info">
 <img class="img-responsive" alt="Wordcloud of changes" src="{{fci_url | relative_url}}" />
 </div>
+{% endif %}
 <p>
-  <a href="#change-detail" class="btn btn-default" data-toggle="collapse">
+  <a href="#change-detail" class="btn btn-info" data-toggle="collapse">
     CLICK HERE          
   </a> 
   to toggle details
@@ -164,9 +170,11 @@
 </div>
 <h3>What do think are the instructor's greatest strengths?</h3>
 {% capture fsi_url %}/assets/teaching/img/{{fbk_dat}}-strengths.svg{% endcapture %}
+{% if site.static_files contains fsi_url %}
 <div class="container-fluid bg-info">
 <img class="img-responsive" alt="Wordcloud of strengths" src="{{fsi_url | relative_url}}" />
 </div>
+{% endif %}
 <p></p>
 <p>
   <a href="#strength-detail" class="btn btn-info" data-toggle="collapse">
@@ -183,4 +191,5 @@
 {% endfor %}
 </ol>
 </div>
+{% endif %}
 {% endif %}

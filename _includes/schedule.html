@@ -56,7 +56,6 @@
   {% comment %}
 	go through day columns and find the span and the next starting row
   {% endcomment %}
-  TR = {{ tr }}, rowsa = {{ rowsa }}
   {% for d in (1..5) %}
     {% assign rd = rowsa[d] | plus: 0 %}
     {% assign same = true %}
@@ -113,42 +112,36 @@
         {% endcase %}
 	{% endif %}
 	{% if same == false or lastrow >= 17 %}
-	  Same: {{ same}}, Lastrow: {{ lastrow }}
 	  {% case d %}
  	    {% when 1 %}
 	      {% if lastrow >= 17 %}
 	        {% assign Ms = 17 | plus: 0 %}
 	      {% endif %}
 	      {% assign Mr = lastrow | plus: 1 %}
-	      Mr assigned {{ Mr }}
 	      {% continue %}
  	    {% when 2 %}
 	      {% if lastrow >= 17 %}
 	        {% assign Ts = 17 | plus: 0 %}
 	      {% endif %}
 	      {% assign Tr = lastrow | plus: 1 %}
-	      Tr assigned {{ Tr }}
 	      {% continue %}
  	    {% when 3 %}
 	      {% if lastrow >= 17 %}
 	        {% assign Ws = 17 | plus: 0 %}
 	      {% endif %}
 	      {% assign Wr = lastrow | plus: 1 %}
-	      Wr assigned {{ Wr }}
 	      {% continue %}
  	    {% when 4 %}
 	      {% if lastrow >= 17 %}
 	        {% assign Rs = 17 | plus: 0 %}
 	      {% endif %}
 	      {% assign Rr = lastrow | plus: 1 %}
-	      Rr assigned {{ Rr }}
 	      {% continue %}
  	    {% when 5 %}
 	      {% if lastrow >= 17 %}
 	        {% assign Fs = 17 | plus: 0 %}
 	      {% endif %}
 	      {% assign Fr = lastrow | plus: 1 %}
-	      Fr assigned {{ Fr }}
 	      {% continue %}
 	  {% endcase %}
 	{% endif %}
@@ -158,8 +151,6 @@
    {%endif%}
     {% endfor %}
     {% assign spansa = spans | split: "," %}
-    Spans : {{ spans }}
-    Rows : {{ rows }}
   	  
             <tr>
               <td rowspan="1">{{trslot[0]}}</td>
