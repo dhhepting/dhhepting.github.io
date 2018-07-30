@@ -123,15 +123,22 @@
 </table>
 </div>
 {% capture fbk_com %}{{fbk_dat}}-comm{% endcapture %}
-{% if site.static_files contains fbk_com %}
+{% if site.data.feedback[fbk_com] %}
 <h3>What do you like best about this course?</h3>
 {% capture fli_url %}/assets/teaching/img/{{fbk_dat}}-like.svg{% endcapture %}
-{% if site.static_files contains fli_url %}
+{% assign fli_url_tf = false %}
+{% for static_file in site.static_files %}
+    {% if static_file.path == fli_url %}
+        {% assign fli_url_tf = true %}
+    {% endif %}
+{% endfor %}
+{% if fli_url_tf %}
   <div class="container-fluid bg-info">
     <img class="img-responsive" alt="Wordcloud of likes" 
     src="{{fli_url | relative_url}}" />
   </div>
 {% endif %}
+<p></p>
 <p>
   <a href="#like-detail" class="btn btn-info" data-toggle="collapse">
     CLICK HERE          
@@ -149,11 +156,18 @@
 </div>
 <h3>What would you like to change about this course?</h3>
 {% capture fci_url %}/assets/teaching/img/{{fbk_dat}}-change.svg{% endcapture %}
-{% if site.static_files contains fci_url %}
+{% assign fci_url_tf = false %}
+{% for static_file in site.static_files %}
+    {% if static_file.path == fci_url %}
+        {% assign fci_url_tf = true %}
+    {% endif %}
+{% endfor %}
+{% if fci_url_tf %}
 <div class="container-fluid bg-info">
 <img class="img-responsive" alt="Wordcloud of changes" src="{{fci_url | relative_url}}" />
 </div>
 {% endif %}
+<p></p>
 <p>
   <a href="#change-detail" class="btn btn-info" data-toggle="collapse">
     CLICK HERE          
@@ -170,7 +184,13 @@
 </div>
 <h3>What do think are the instructor's greatest strengths?</h3>
 {% capture fsi_url %}/assets/teaching/img/{{fbk_dat}}-strengths.svg{% endcapture %}
-{% if site.static_files contains fsi_url %}
+{% assign fsi_url_tf = false %}
+{% for static_file in site.static_files %}
+    {% if static_file.path == fsi_url %}
+        {% assign fsi_url_tf = true %}
+    {% endif %}
+{% endfor %}
+{% if fsi_url_tf %}
 <div class="container-fluid bg-info">
 <img class="img-responsive" alt="Wordcloud of strengths" src="{{fsi_url | relative_url}}" />
 </div>
