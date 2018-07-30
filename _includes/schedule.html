@@ -1,0 +1,181 @@
+# Schedule
+
+{% if site.data.schedule.schedule %}
+  {% assign sched = "" %}
+  {% for r in site.data.schedule.schedule %}
+    {% assign rts = "" %}
+    {% capture rts %}{{rts}}{{r.Times}},{% endcapture %}
+    {% capture rts %}{{rts}}{{r.Monday}},{% endcapture %}
+    {% capture rts %}{{rts}}{{r.Tuesday}},{% endcapture %}
+    {% capture rts %}{{rts}}{{r.Wednesday}},{% endcapture %}
+    {% capture rts %}{{rts}}{{r.Thursday}},{% endcapture %}
+    {% capture rts %}{{rts}}{{r.Friday}},{% endcapture %}
+    {% capture sched %}{{sched}}#{{rts}}{% endcapture %}
+  {% endfor %}
+    
+<div class="container-fluid">
+  <table class="table table-responsive table-striped table-bordered">
+    <thead>
+      <tr>
+        <th><em>Times</em></th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+      </tr>
+    </thead>
+<tbody>
+{% comment %}
+{% endcomment %}
+{% assign schedslot = sched | split: "#" %}
+{% assign spans = ",0,0,0,0,0" %}
+{% assign rows = ",1,1,1,1,1" %}
+{% comment %}
+	go over the table rows
+{% endcomment %}
+{% for tr in (1..17) %}
+  {% assign trslot = schedslot[tr] | split: "," %}
+  {% assign M = trslot[1] %}
+  {% assign T = trslot[2] %} 
+  {% assign W = trslot[3] %}
+  {% assign R = trslot[4] %}
+  {% assign F = trslot[5] %}
+  {% assign spansa = spans | split: "," %}
+  {% assign Ms = spansa[1] | plus: 0 %}
+  {% assign Ts = spansa[2] | plus: 0 %} 
+  {% assign Ws = spansa[3] | plus: 0 %}
+  {% assign Rs = spansa[4] | plus: 0 %}
+  {% assign Fs = spansa[5] | plus: 0 %}
+  {% assign rowsa = rows | split: "," %}
+  {% assign Mr = rowsa[1] | plus: 0 %}
+  {% assign Tr = rowsa[2] | plus: 0 %}
+  {% assign Wr = rowsa[3] | plus: 0 %}
+  {% assign Rr = rowsa[4] | plus: 0 %}
+  {% assign Fr = rowsa[5] | plus: 0 %}
+  {% comment %}
+	go through day columns and find the span and the next starting row
+  {% endcomment %}
+  {% for d in (1..5) %}
+    {% assign rd = rowsa[d] | plus: 0 %}
+    {% assign same = true %}
+    {% if tr == rd %}
+      {% for dr in (rd..17) %}
+        {% assign ssa = schedslot[dr] | split: "," %}
+	{% if same == true %}
+	{% case d %}
+	  {% when 1 %}
+	    {% assign newM = ssa[d] %}
+	    {% if newM == M %}
+ 	      {% assign Ms = Ms | plus: 1 %}
+              {% assign lastrow = dr %}
+	    {% else %}
+              {% assign same = false %}
+	    {% endif %}
+	    {% assign M = newM %}
+	  {% when 2 %}
+	    {% assign newT = ssa[d] %}
+	    {% if newT == T %}
+ 	      {% assign Ts = Ts | plus: 1 %}
+              {% assign lastrow = dr %}
+	    {% else %}
+              {% assign same = false %}
+	    {% endif %}
+	    {% assign T = newT %}
+	  {% when 3 %}
+	    {% assign newW = ssa[d] %}
+	    {% if newW == W %}
+ 	      {% assign Ws = Ws | plus: 1 %}
+              {% assign lastrow = dr %}
+	    {% else %}
+              {% assign same = false %}
+	    {% endif %}
+	    {% assign W = newW %}
+	  {% when 4 %}
+	    {% assign newR = ssa[d] %}
+	    {% if newR == R %}
+ 	      {% assign Rs = Rs | plus: 1 %}
+              {% assign lastrow = dr %}
+	    {% else %}
+              {% assign same = false %}
+	    {% endif %}
+	    {% assign R = newR %}
+	  {% when 5 %}
+	    {% assign newF = ssa[d] %}
+	    {% if newF == F %}
+ 	      {% assign Fs = Fs | plus: 1 %}
+              {% assign lastrow = dr %}
+	    {% else %}
+              {% assign same = false %}
+	    {% endif %}
+	    {% assign F = newF %}
+        {% endcase %}
+	{% endif %}
+	{% if same == false or lastrow >= 17 %}
+	  {% case d %}
+ 	    {% when 1 %}
+	      {% if lastrow >= 17 %}
+	        {% assign Ms = 17 | plus: 0 %}
+	      {% endif %}
+	      {% assign Mr = lastrow | plus: 1 %}
+	      {% continue %}
+ 	    {% when 2 %}
+	      {% if lastrow >= 17 %}
+	        {% assign Ts = 17 | plus: 0 %}
+	      {% endif %}
+	      {% assign Tr = lastrow | plus: 1 %}
+	      {% continue %}
+ 	    {% when 3 %}
+	      {% if lastrow >= 17 %}
+	        {% assign Ws = 17 | plus: 0 %}
+	      {% endif %}
+	      {% assign Wr = lastrow | plus: 1 %}
+	      {% continue %}
+ 	    {% when 4 %}
+	      {% if lastrow >= 17 %}
+	        {% assign Rs = 17 | plus: 0 %}
+	      {% endif %}
+	      {% assign Rr = lastrow | plus: 1 %}
+	      {% continue %}
+ 	    {% when 5 %}
+	      {% if lastrow >= 17 %}
+	        {% assign Fs = 17 | plus: 0 %}
+	      {% endif %}
+	      {% assign Fr = lastrow | plus: 1 %}
+	      {% continue %}
+	  {% endcase %}
+	{% endif %}
+      {% endfor %}
+      {% capture spans %},{{Ms}},{{Ts}},{{Ws}},{{Rs}},{{Fs}}{% endcapture %}
+      {% capture rows %},{{Mr}},{{Tr}},{{Wr}},{{Rr}},{{Fr}}{% endcapture %}
+   {%endif%}
+    {% endfor %}
+    {% assign spansa = spans | split: "," %}
+  	  
+            <tr>
+              <td rowspan="1">{{trslot[0]}}</td>
+	      {% for d in (1..5) %}
+	        {% assign sd = spansa[d] | plus: 0 %}
+	        {% if sd != 0 %}
+                  <td rowspan="{{sd}}">{{trslot[d]}}</td>
+                {% endif %}
+	        {% case d %}
+	          {% when 1 %}
+		    {% assign Ms = 0 %}
+	          {% when 2 %}
+		    {% assign Ts = 0 %}
+	          {% when 3 %}
+		    {% assign Ws = 0 %}
+	          {% when 4 %}
+		    {% assign Rs = 0 %}
+	          {% when 5 %}
+		    {% assign Fs = 0 %}
+		{% endcase %}
+              {% endfor %}
+	      {% capture spans %},{{Ms}},{{Ts}},{{Ws}},{{Rs}},{{Fs}}{% endcapture %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table> 
+</div>
+{% endif %}
