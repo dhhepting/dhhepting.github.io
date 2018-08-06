@@ -1,18 +1,28 @@
 {% comment %}
-    Updated for boostrap 4 (https://getbootstrap.com/docs/4.0/components/breadcrumb/) and
+    Updated for boostrap 4 
+    (https://getbootstrap.com/docs/4.0/components/breadcrumb/) and
     does not create a link for the last (active) item
 {% endcomment %}
-{% capture indexdirurl %}{{ page.url | remove: "/index.html" }}{% endcapture %}
-{% assign idu_parts = indexdirurl | split: '/' %}
-{% assign target_size = idu_parts.size | plus: 1 %}
+{% assign url_parts = page.url | split: '/' %}
+{% assign filesize = url_parts.size %}
+{% assign dirsize = filesize | plus: 1 %}
 {% assign dircons = "" %}
 {% for sp in site.pages %}
-    {% if sp.url contains indexdirurl and sp.url > indexdirurl %}
+    {% if sp.url contains page.url and sp.url != page.url %}
 	{% assign sp_parts = sp.url | split: '/' %}
-        {% if sp_parts.size == target_size %}
-	    {% capture dircons %}{{dircons}}|{{sp.url}}#{{sp.breadcrumb}}{% endcapture %}
+        {% if sp_parts.size == filesize or sp_parts.size == dirsize %} 
+	    {% capture dircons %}{{dircons}}|{{sp.url}}#{{sp_parts | last}}{% endcapture %}
         {% endif %}
     {% endif %}
+{% endfor %}
+{% assign code_files = site.static_files %}
+{% for mycode in code_files %}
+  {% if mycode.path contains page.url %}
+	{% assign sf_parts = mycode.path | split: '/' %}
+        {% if sf_parts.size == dirsize %} 
+          {% capture dircons %}{{dircons}}|{{mycode.path}}#{{sf_parts | last}}{% endcapture %}
+        {% endif %}
+  {% endif %}
 {% endfor %}
 {% assign sorteddircons = dircons | split: '|' | sort %}
 {% capture numcons %}{{ sorteddircons.size | minus:1 }}{% endcapture %}
