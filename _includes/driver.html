@@ -1,0 +1,153 @@
+{% comment %}
+{% endcomment %}
+{% assign url_parts = turl | split: '/' %}
+{% assign sem_size = 4 %}
+{% assign crsoffs = "" %}
+{% assign crs_ids = "" %}
+{% for sf in static.files %}
+  {% if sp.url contains "teaching" %}
+    {% assign url_parts = sp.url | split: '/' %}
+    {% if url_parts.size == sem_size %}
+      {% assign crs_id = url_parts[2] %}
+      {% assign crs_part = crs_id | split: '-' %}
+      {% if crs_part.size == 2 %}
+        {% assign crsoff = url_parts | last %}
+        {% if crsoff contains "2" %}
+          {% capture crsoff_url %}{{crsoff}}/{%endcapture%}
+          {% capture crs_url  %}{{ sp.url | remove: crsoff_url }}{%endcapture%}
+          {% capture crs_ids %}{{crs_ids}}|{{crs_url}}#{{crs_id}}{% endcapture %}
+          {% capture crsoffs %}{{crsoffs}}|{{crs_id}}#{{crsoff}}{% endcapture %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% assign sortedcrsoffs = crsoffs | split: '|' | sort %}
+{% assign sortedcrs_ids = crs_ids | split: '|' | uniq | sort %}
+{% capture numcourses %}{{ sortedcrs_ids.size | minus:1 }}{% endcapture %}
+
+### Check Schedule
+
+<!-- Jump to a class and semester -->
+<form class="align-items-center bg-secondary px-3 pt-3" >
+  <div class="form-row align-items-center">
+    <div class="form-group col-md-5">
+      <select id = "schedsem" class="form-control" onchange="CourseChange()">
+        <option value="tc_schedsem">201810</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+  <a id="schedlink" href="schedule/201810.html" target="_self" class="btn btn-primary" role="button">
+    Go
+  </a>
+  </div>
+</div>
+</form>
+
+### Jump to a Course Offering
+
+<!-- Jump to a class and semester -->
+<form class="align-items-center bg-secondary px-3 pt-3" >
+  <div class="form-row align-items-center">
+    <div class="form-group col-md-5">
+      <select id = "tcourse" class="form-control" onchange="CourseChange()">
+        <option value="tc_title">Course</option>
+      {% for i in (1..numcourses) %}
+        {%- assign cc = sortedcrs_ids[i] | split: '#' -%}
+        <option value="{{cc[1]}}">{{cc[1] | replace: "-"," "}}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+    <div class="form-group col-md-5">
+    <select id="tsem" disabled class="form-control" onchange="SemesterChange()">
+      <option value="ts_title">Semester</option>
+    </select>
+  </div>
+    <div class="form-group col-md-2">
+  <a id="jumplink" href="#" target="_self" class="btn btn-primary" role="button">
+    Go
+  </a>
+  </div>
+</div>
+</form>
+
+### Courses Taught
+
+{% for i in (1..numcourses) %}
+    {%- assign cc = sortedcrs_ids[i] | split: '#' -%}
+    {%- assign crs_name = "" -%}
+    {%- for crs in site.data.courses -%}
+      {%- if crs.id == cc[1] -%}
+	{%- assign crs_name = crs.name -%}
+      {%- endif -%}
+    {%- endfor -%}
+  * [{{cc[1] | replace: "-"," "}} : {{crs_name}}]({{cc[0]}})
+{%  endfor  %}
+
+### General Information
+
+
+<script>
+    var jmpurl = document.getElementById("jumplink");
+    var semsel = document.getElementById("tsem");
+    var liqsems = {{ sortedcrsoffs | jsonify }}
+    
+    var t_course = "tc_title";
+    var t_sem = "ts_title";
+		
+    function SetJump() 
+    {
+        if (t_course != "tc_title" && t_sem != "ts_title") 
+	{
+	    jmpurl.setAttribute("href","/teaching/" + t_course + "/" + t_sem + "/");
+	    jmpurl.setAttribute("target","_blank");
+	}
+	else 
+	{
+	    jmpurl.setAttribute("href","#");
+	    jmpurl.setAttribute("target","_self");
+	}
+    }
+
+    function removeOptions(selectbox) 
+    {
+	// remove everything but the 1st option
+	for (var i = selectbox.options.length - 1 ; i >= 1 ; i--) 
+	{
+	    selectbox.remove(i);
+    	}
+    	selectbox.options[0].selected = true;
+    }
+
+    function CourseChange() 
+    {
+    	// clear out the current contents of the semester select
+	var e = document.getElementById("tcourse");
+	removeOptions(semsel);
+	t_sem = "ts_title";
+	t_course = e.options[e.selectedIndex].value;
+	SetJump();
+	// find the course in the array
+	if (t_course != "tc_title") {
+	    document.getElementById("tsem").disabled=false;
+	    // build new contents
+	    for (var i = 1; i < liqsems.length; i++) {
+		var res = liqsems[i].split("#");
+		if (t_course == res[0]) {
+		    semsel.options.add(new Option(res[1],res[1],false));
+		}
+	    }
+	}
+	else {
+	    document.getElementById("tsem").disabled=true;
+	}
+    }
+		
+    function SemesterChange() {
+        var e = document.getElementById("tsem");
+	t_sem = e.options[e.selectedIndex].value;
+	SetJump();
+    }
+</script>

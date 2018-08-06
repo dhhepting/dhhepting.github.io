@@ -62,7 +62,7 @@ layout: bg-image
 			</a>
 			) 
 			<br />
-			<a id="semlink" href="/index.html">
+			<a id="semlink" href="/teaching/schedule/index.html">
 				Semester Schedule
 			</a>
 			<script>
@@ -78,7 +78,7 @@ layout: bg-image
 					semnum = "30"
 				}    
 				var semurl = document.getElementById("semlink")
-				semurl.setAttribute("href","/teaching/"+today.getFullYear() + semnum + ".html");
+				semurl.setAttribute("href","/teaching/schedule/"+today.getFullYear() + semnum + ".html");
 			</script>
 			<br />
 		</div>

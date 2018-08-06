@@ -1,8 +1,8 @@
-# Schedule
-
-{% if site.data.schedule.schedule %}
+{{ page.sem }}
+{% if site.data.schedule[page.sem]%}
+  Data file exists: {{ page.sem }}
   {% assign sched = "" %}
-  {% for r in site.data.schedule.schedule %}
+  {% for r in site.data.schedule[page.sem]%}
     {% assign rts = "" %}
     {% capture rts %}{{rts}}{{r.Times}},{% endcapture %}
     {% capture rts %}{{rts}}{{r.Monday}},{% endcapture %}

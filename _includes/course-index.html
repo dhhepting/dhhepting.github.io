@@ -20,7 +20,7 @@
 {% endfor %}
 
 <div class="card">
-  <div class="card-header" style="background-color: cyan;">
+  <div class="card-header bg-info">
         <h3>Calendar Description</h3>
   </div>
   <div class="card-body">
@@ -36,7 +36,7 @@
 {% assign sorteddc = dircons | split: '|' | sort %}
 {% assign numcons = sorteddc.size | minus:1 %}
 <div class="card">
-  <div class="card-header" style="background-color: cyan;">
+  <div class="card-header bg-info">
         <h3>General Information</h3>
   </div>
   <div class="card-body">
@@ -55,7 +55,7 @@
 {% assign sortedsems = sems | split: '|' | sort | reverse %}
 {% assign numsems = sortedsems.size | minus:2 %}
 <div class="card">
-  <div class="card-header" style="background-color: cyan;">
+  <div class="card-header bg-info">
         <h3>Semesters</h3>
   </div>
   <div class="card-body">
