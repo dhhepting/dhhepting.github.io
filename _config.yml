@@ -64,7 +64,7 @@ keep_files:
 tipue_search:
   include:
     pages: true
-    collections: [works]
+    collections: [works, gallery]
   exclude:
     files: [search.html]
     tags: 
@@ -74,6 +74,7 @@ tipue_search:
 
 collections:
   - works
+  - gallery
 
 collections:
   posts:
@@ -82,6 +83,9 @@ collections:
   works:
     output: true
     permalink: /research/:collection/:name:output_ext
+  gallery:
+    output: true
+    permalink: /projects/fractals/:collection/:name:output_ext
 
 defaults:
   -

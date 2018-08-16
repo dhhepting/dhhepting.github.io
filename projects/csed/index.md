@@ -1,8 +1,8 @@
 ---
-title: Faces Project
-breadcrumb: Faces 
-description: Description of Faces Project!
-project: faces
+title: CS Education
+breadcrumb: CS Education 
+description: Description of CS Education
+project: csed
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

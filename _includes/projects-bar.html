@@ -1,5 +1,5 @@
-<div class="btn-toolbar bg-light">
-{% for proj in page.project %}
+<div class="btn-toolbar bg-transp">
+{% for proj in page.projects %}
 <span>
 	{%capture project_url %}/projects/{{proj}}{% endcapture %}
         <a class="btn btn-primary mx-1" href="{{project_url | relative_url}}"
