@@ -8,12 +8,22 @@ group:
 	Gallery 
 </h1>
 
-<ul>
+<div class="container">
 {% for item in site.gallery reversed %}
-  <li>
-    <a href="{{ item.url | relative_url }}">{{ item.breadcrumb }}
-      <img src="{{item.thumbnail}}" alt="{{item.thumbnail}}" />
-    </a>
-  </li>
+  <div class="row align-middle">
+    <div class="col-2 justify-content-end">
+      <a href="{{ item.url | relative_url }}">
+      <img src="{{item.thumbnail}}" class="rounded float-right" alt="{{item.thumbnail}}" />
+      </a>
+    </div>
+    <div class="col-10 justify-content-start align-middle">
+      <a href="{{ item.url | relative_url }}">
+      {{ item.breadcrumb }}
+      </a>
+    </div>
+  </div>
+  <div class="row">
+  &nbsp;
+  </div>
 {% endfor %}
-</ul>
+</div>
