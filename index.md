@@ -1,4 +1,5 @@
 ---
+breadcrumb: D. H. Hepting
 title: Homepage
 layout: home
 ---

@@ -1,0 +1,43 @@
+{%- comment -%}
+  Updated for boostrap 4 
+  -- https://getbootstrap.com/docs/4.0/components/breadcrumb/ --
+  and does not create a link for the last (active) item
+{%- endcomment -%}
+{%- assign url_parts = page.url | split: '/' -%}
+{%- capture loop_max -%}{{ url_parts.size | minus: 1 }}{%- endcapture -%}
+{%- assign j = loop_max | plus: 0 -%}
+{%- assign bc_path = "/" -%}
+{%- assign bc_page = site.pages | where: "url", bc_path -%}
+<div class="card-header lightcthru">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb card-header lightcthru">
+      <li class="breadcrumb-item">
+        <a href="{{ bc_path | relative_url }}">
+          {{ bc_page[0].breadcrumb }}
+        </a>
+      </li>
+{%- for i in (1..loop_max) -%}
+  {%- capture bc_path -%}{{bc_path}}{{url_parts[i]}}{%- endcapture -%}
+  {%- unless bc_path contains ".html" -%}
+    {%- capture bc_path -%}{{bc_path}}/{%- endcapture -%}
+  {%- endunless -%}
+  {%- assign bc_page = site.pages | where: "url", bc_path -%}
+  {% if bc_page[0] %}
+  {% else %}
+    {%- assign bc_page = site.works | where: "url", bc_path -%}
+  {% endif %}
+  {% if bc_page and i < j %}
+      <li class="breadcrumb-item">
+        <a href="{{ bc_path | relative_url }}">
+          {{ bc_page[0].breadcrumb }}
+        </a>
+      </li>
+  {% elsif bc_page and i == j %}
+      <li class="breadcrumb-item active">
+        {{ bc_page[0].breadcrumb }}
+      </li>
+  {% endif %}
+{%- endfor -%}
+    </ol>
+  </nav>
+</div>

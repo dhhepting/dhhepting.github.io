@@ -1,40 +1,39 @@
-{% comment %}
-	Updated for boostrap 4 
-	-- https://getbootstrap.com/docs/4.0/components/breadcrumb/ --
-	and does not create a link for the last (active) item
-{% endcomment %}
-<!--
-<nav class="card-header lightcthru" aria-label="breadcrumb">
-<nav aria-label="breadcrumb lightcthru">
-  <div class="card-header nav lightcthru" aria-label="breadcrumb">
--->
+{%- comment -%}
+  Updated for boostrap 4 
+  -- https://getbootstrap.com/docs/4.0/components/breadcrumb/ --
+  and does not create a link for the last (active) item
+{%- endcomment -%}
+{%- assign url_parts = page.url | split: '/' -%}
+{%- capture loop_max -%}{{ url_parts.size | minus: 1 }}{%- endcapture -%}
+{%- assign j = loop_max | plus: 0 -%}
+{%- assign bc_path = "/" -%}
+{%- assign bc_page = site.pages | where: "url", bc_path -%}
 <div class="card-header lightcthru">
-<nav aria-label="breadcrumb">
+  <nav aria-label="breadcrumb">
     <ol class="breadcrumb card-header lightcthru">
-    <li class="breadcrumb-item">
-      <a href="{{ site.baseurl }}/">
-        D. H. Hepting
-      </a>
-    </li>
-    {% assign url_parts = page.url | split: '/' %}
-    {% assign n = url_parts.size | minus: 2 %}
-    {% assign j = n | plus: 0 %}
-    {% assign parent_path = "" %}
-    {% for i in (1..n) %}
-      {% capture part_dir %}{{parent_path}}/{{url_parts[i]}}/{% endcapture %}
-      {% capture part_file %}{{parent_path}}/{{url_parts[i]}}{% endcapture %}
-      {% capture parent_path %}{{parent_path}}/{{url_parts[i]}}{% endcapture %}
-      {% for sp in site.pages %}
-        {% if part_dir == sp.url of part_file == sp.url %}
-          <li class="breadcrumb-item">
-            <a href="{{ site.baseurl }}{{sp.url}}">{{sp.breadcrumb}}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
-    <li class="breadcrumb-item active">
-      {{page.breadcrumb}}
-    </li>
-  </ol>
-</nav>
+      <li class="breadcrumb-item">
+        <a href="{{ bc_path | relative_url }}">
+          {{ bc_page[0].breadcrumb }}
+        </a>
+      </li>
+{%- for i in (1..loop_max) -%}
+  {%- capture bc_path -%}{{bc_path}}{{url_parts[i]}}{%- endcapture -%}
+  {%- unless bc_path contains ".html" -%}
+    {%- capture bc_path -%}{{bc_path}}/{%- endcapture -%}
+  {%- endunless -%}
+  {%- assign bc_page = site.pages | where: "url", bc_path -%}
+  {% if bc_page and i < j %}
+      <li class="breadcrumb-item">
+        <a href="{{ bc_path | relative_url }}">
+          {{ bc_page[0].breadcrumb }}
+        </a>
+      </li>
+  {% elsif bc_page and i == j %}
+      <li class="breadcrumb-item active">
+        {{ bc_page[0].breadcrumb }}
+      </li>
+  {% endif %}
+{%- endfor -%}
+    </ol>
+  </nav>
 </div>

@@ -1,7 +1,6 @@
 ---
+layout: gallery
 title: Gallery
 breadcrumb: Gallery
-description: Fractals Gallery
-layout: default
+collection: gallery
 ---
-# {{ page.breadcrumb }}
