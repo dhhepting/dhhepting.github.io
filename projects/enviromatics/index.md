@@ -3,7 +3,7 @@ title: Enviromatics Project
 breadcrumb: Enviromatics
 description: Description of Enviromatics Project!
 project: enviromatics
-layout: research
+layout: bg-image
 ---
 # {{page.breadcrumb}}
 

@@ -1,8 +1,8 @@
 ---
-title: Faces Project
-breadcrumb: Faces 
-description: Description of Faces Project!
-project: faces
+title: Open Source
+breadcrumb: Open Source 
+description: Description of Open Source Project!
+project: open_source
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

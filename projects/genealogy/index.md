@@ -1,8 +1,8 @@
 ---
-title: Faces Project
-breadcrumb: Faces 
-description: Description of Faces Project!
-project: faces
+title: Genealogy
+breadcrumb: Genealogy
+description: Description of Genealogy
+project: genealogy
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

@@ -1,0 +1,17 @@
+{% include header.html %}
+{% assign url_parts = page.url | split: "/" %}
+<div class="card {{url_parts[1]}} w-100 lightcthru" style="min-height:100%" >
+  {% include gallery-nav-transp.html %}
+  <div class="card-body lightcthru" >
+    <h1>
+      {{ page.breadcrumb }}
+    </h1>
+    <hr />	
+    <!-- Social Share Buttons -->
+    {% include share-bar.html %}
+    <hr />
+    <img src="{{page.image}}" alt="{{page.image}}" />
+  </div>
+  {% include site-date-transp.html %}
+</div>
+{% include footer.html %}

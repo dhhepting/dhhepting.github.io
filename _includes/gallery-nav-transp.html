@@ -22,6 +22,10 @@
     {%- capture bc_path -%}{{bc_path}}/{%- endcapture -%}
   {%- endunless -%}
   {%- assign bc_page = site.pages | where: "url", bc_path -%}
+  {% if bc_page[0] %}
+  {% else %}
+    {%- assign bc_page = site.gallery | where: "url", bc_path -%}
+  {% endif %}
   {% if bc_page and i < j %}
       <li class="breadcrumb-item">
         <a href="{{ bc_path | relative_url }}">

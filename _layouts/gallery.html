@@ -1,0 +1,19 @@
+---
+layout: bg-image
+group:
+- category
+- project
+---
+<h1>
+	Gallery 
+</h1>
+
+<ul>
+{% for item in site.gallery reversed %}
+  <li>
+    <a href="{{ item.url | relative_url }}">{{ item.breadcrumb }}
+      <img src="{{item.thumbnail}}" alt="{{item.thumbnail}}" />
+    </a>
+  </li>
+{% endfor %}
+</ul>

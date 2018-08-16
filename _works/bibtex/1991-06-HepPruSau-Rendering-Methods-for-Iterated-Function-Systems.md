@@ -6,6 +6,7 @@ breadcrumb: Rendering Methods for Iterated Function Systems (1991)
 category: conference
 projects:
  - fractals
+ - other
 authors:
  - Daryl H. Hepting
  - Przemyslaw Prusinkiewicz

@@ -1,61 +1,68 @@
 {% include header.html %}
+{% assign url_parts = page.url | split: "/" %}
+<div class="card {{url_parts[1]}} w-100 lightcthru" style="min-height:100%" >
+  {% include works-nav-transp.html %}
+  <div class="card-body lightcthru" >
+    <h1>
+      {{ page.title }}
+    </h1>
+    <hr />	
+    <!-- Projects -->
+    {% include projects-bar.html %}
+    <hr />	
+    <!-- Social Share Buttons -->
+    {% include share-bar.html %}
+    <hr />
 
-<div class="card bg-light">
-    {% include works-nav.html %}
-    <div class="card-body">
-	<h1>{{ page.title }}</h1>
-	<hr>	
-	<!-- Projects -->
-	{% include projects-bar.html %}
-	<hr>	
-	<!-- Social Share Buttons -->
-	{% include share-bar.html %}
-	<hr />
+    <h3>
+      {{page.category | capitalize }}
+    </h3>
+    <ul>
+      <li>{{page.venue | strip}}</li>
+    </ul>
 
-	<h3>{{page.category | capitalize }}</h3>
-	<ul>
-		<li>{{page.venue | strip}}</li>
-	</ul>
+    {% capture author_count %}{{ page.authors.size | minus:0 }}{% endcapture %}
+    {% assign ac = author_count | plus: 0 %}
+    <h3>
+    {% if ac == 1 %}
+      Author
+    {% else %}
+      Authors
+    {% endif %}
+    </h3>
+    <ul>
+    {% for author in page.authors %}
+      <li>
+        {{author | strip}}
+      </li> 
+    {% endfor %}
+    </ul>
 
-			
-	{% capture author_count %}{{ page.authors.size | minus:0 }}{% endcapture %}
-	{% assign ac = author_count | plus: 0 %}
-	{% if ac == 1 %}
-		<h3>Author</h3>
-	{% else %}
-		<h3>Authors</h3>
-	{% endif %}
-	<ul>
-	{% for author in page.authors %}
-   		<li>{{author | strip}}</li> 
-	{% endfor %}
-	</ul>
+    <h3>Abstract</h3>
+    <p>{{ page.abstract }}</p>
 
-	<h3>Abstract</h3>
-	<p>{{ page.abstract }}</p>
+    <h3>Download</h3>
+    {% capture work_url %}/assets/works/pdf/{{page.citekey}}.pdf{% endcapture %}
+    <ul>
+      <li><a href="{{ work_url | absolute_url }}">this site</a></li>
+    {% assign links = site.data.works[page.citekey].links %}
+    {% for ll in links %}
+      <li><a href="{{ ll.lu }}">{{ ll.lt }}</a></li>
+    {% endfor %}
+    </ul>
 
-	<h3>Download</h3>
-	{% capture work_url %}/assets/works/pdf/{{page.citekey}}.pdf{% endcapture %}
-	<ul>
-		<li><a href="{{ work_url | absolute_url }}">this site</a></li>
-	{% assign links = site.data.works[page.citekey].links %}
-	{% for ll in links %}
-		<li><a href="{{ ll.lu }}">{{ ll.lt }}</a></li>
-	{% endfor %}
-	</ul>
-
-	<h3>BibTeX</h3>
-	<!-- Target -->
-	<div class="border border-primary rounded flex-row flex-nowrap">
-	<a id="clipboard" href="#clipboard" 
-	class="btn btn-primary" aria-label="Copy BibTeX entry" 
-	data-clipboard-action="copy" data-clipboard-target="#bibtex">
-                <span class="far fa-clipboard fa-inverse" title="Copy BibTeX entry"></span>
-        </a>
-	<code><pre id="bibtex">{{ content | remove: '<p>' | remove: '</p>' | strip }}</pre></code>
-	</div>
+    <h3>BibTeX</h3>
+    <!-- Target -->
+    <div class="border border-primary rounded flex-row flex-nowrap">
+      <a id="clipboard" href="#clipboard" 
+      class="btn btn-primary" aria-label="Copy BibTeX entry" 
+      data-clipboard-action="copy" data-clipboard-target="#bibtex">
+        <span class="far fa-clipboard fa-inverse" title="Copy BibTeX entry">
+        </span>
+      </a>
+      <code><pre id="bibtex">{{ content | remove: '<p>' | remove: '</p>' | strip }}</pre></code>
     </div>
-
-    {% include site-date.html %}
+  </div>
+  {% include site-date-transp.html %}
 </div>
 {% include footer.html %}

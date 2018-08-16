@@ -1,8 +1,8 @@
 ---
-title: Faces Project
-breadcrumb: Faces 
-description: Description of Faces Project!
-project: faces
+title: Robots
+breadcrumb: Robots 
+description: Description of Robots
+project: robots
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

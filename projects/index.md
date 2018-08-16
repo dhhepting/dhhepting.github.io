@@ -1,8 +1,11 @@
 ---
 title: Projects 
 breadcrumb: Projects
-layout: projects
+layout: bg-image
 ---
 # Projects
 
-{% include projects-index.html %}
+Collected here are the various projects that I have undertaken over the years,
+in collaboration with many wonderful people.
+
+{% include index-dir.html %}

@@ -1,10 +1,20 @@
-<h3>Related Works</h3>
+<h3>
+  Related Works
+</h3>
 <ul>
-{% for item in site.works | sort | reverse %}
-  {% if item.project contains page.project %}
-    <li><a href="{{item.url | relative_url}}">{{ item.breadcrumb }}</a>
-	<span class="badge badge-info badge-sm">{{item.category}}</span>
-    </li>
-  {% endif %}
+{% assign revworks = site.works | sort | reverse %}
+{% for item in revworks %}
+  {% for ip in item.projects %}
+    {% if ip contains page.project %}
+      <li>
+        <a href="{{ item.url | relative_url }}">
+          {{ item.breadcrumb }}
+        </a>
+	<span class="badge badge-info badge-sm">
+          {{ item.category }}
+        </span>
+      </li>
+    {% endif %}
+  {% endfor %}
 {% endfor %}
 </ul>

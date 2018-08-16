@@ -2,7 +2,8 @@
 title: Fractals Project
 breadcrumb: Fractals
 description: Description of Fractals
-layout: default
+project: fractals
+layout: bg-image
 ---
 # {{ page.breadcrumb }}
 
@@ -11,15 +12,14 @@ My M.Sc. thesis,
 (from 1991) dealt with linear fractals.
 That got me started and I am still hooked.
 
-Supervisor for my Master of Science degree was 
+My supervisor for my Master of Science degree was 
 [Przemyslaw Prusinkiewicz](https://en.wikipedia.org/wiki/Przemys%C5%82aw_Prusinkiewicz){:target="blank"}.
 During my studies, Prusinkiewicz took a sabbatical and visited 
 [Benoit Mandelbrot](https://en.wikipedia.org/wiki/Benoit_Mandelbrot){:target="blank"}.
 Upon completion of my studies, 
-the Mandelbrot connection helped F. David Fracchia
+that Mandelbrot connection helped F. David Fracchia
 (who had just completed his Ph.D. with Prusinkiewicz) 
-and me 
-to secure term employment with Mandelbrot's Fractals Project 
+and me to secure term employment with Mandelbrot's Fractals Project 
 (Fracchia at Yale as a postdoc, me at IBM TJ Watson Research Centre), 
 beginning in the summer of 1991.
 
@@ -34,7 +34,5 @@ The New York Times printed a story about travelling to Ossining in
 - [Fractals Calendars (1994-96)](calendars/)
 - [Exhibitions &mdash; in which I participated or helped to curate](exhibits/)
 - [A Math of Art &mdash; exploring mathematics and art on the web](math-of-art.html)
-
-{% include index-dir.html %}
 
 {% include project-related-works.html %}
