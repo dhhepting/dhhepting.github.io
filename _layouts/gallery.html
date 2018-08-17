@@ -10,7 +10,7 @@ group:
 
 <div class="container">
 {% for item in site.gallery reversed %}
-  <div class="row align-middle">
+  <div class="row mb-2">
     <div class="col">
       <a href="{{ item.url | relative_url }}">
       <img src="{{item.thumbnail}}" class="rounded float-right" alt="{{item.thumbnail}}" />
@@ -21,9 +21,6 @@ group:
       {{ item.breadcrumb }}
       </a>
     </div>
-  </div>
-  <div class="row">
-  &nbsp;
   </div>
 {% endfor %}
 </div>
