@@ -1,0 +1,18 @@
+{% for m in page.months %}
+<div class="card my-2 lightcthru">
+  <div class="card-header">
+    <h3>{{ m.month }}: {{m.name}}</h3>
+  </div>
+  <div class="card-body bg-transp">
+  <figure>
+    <img class="img-responsive" src="{{ m.path | relative_url }}" />
+    <figcaption>
+      by {{ m.by }}
+    </figcaption>
+  </figure>
+  <p>
+     {{m.desc}}
+  </p>
+</div>
+</div>
+{% endfor %}
