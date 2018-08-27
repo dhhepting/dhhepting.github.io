@@ -159,9 +159,11 @@ If this distance is <em>d</em>,
 then a disk of radius <em>d</em> can be
 drawn about the point <em>P</em> and all points inside that disk are known
 not to belong to the fractal.  
+<!--
 Click 
 <a href="{{ "/assets/projects/videos/teck-dragondisks.mov" | relative_url}}">
 here</a> to see a movie which illustrates this process at work.
+-->
 
 Like many of my other works, I've used 
 <a href="http://graphics.stanford.edu/~cek/rayshade/info.html">
@@ -398,10 +400,13 @@ I've assigned an initial point to each of the two transformations and I apply
 the transformations to their respective points and then to the results, over
 and over again.  As I compose the transformations into longer and longer
 strings, the contractivity of each composite transformation increases.  These
-"stronger" transformations capture more and more of the plane.  I've 
+"stronger" transformations capture more and more of the plane.  
+<!-- I've 
 illustrated this process in a 
 <a href="/~hepting/assets/videos/fractals/ex/teck-rhythmcones.mov">movie</a>, 
-using cones to show the effect of the transformations.  As the strength of a 
+using cones to show the effect of the transformations.  
+-->
+As the strength of a 
 transformation increases, a cone under that transformation gets wider and 
 shorter.
 
@@ -503,11 +508,11 @@ Brownian motion texture and added an outline of the fractal.
 <div class="container m-2">
   <figure>
     <img src="{{"/assets/projects/img/teck-rice.jpg" | relative_url }}" 
-    class="img-responsive m-2"/>
+    class="img-responsive m-2" alt="Hibiscus" />
     <img src="{{"/assets/projects/img/teck-mce42.jpg" | relative_url }}" 
-    class="img-responsive m-2"/>
+    class="img-responsive m-2" alt="Escher No. 42"/>
     <img src="{{"/assets/projects/img/teck-mce20.jpg" | relative_url }}" 
-    class="img-responsive m-2"/>
+    class="img-responsive m-2" alt="Escher No. 20"/>
     <figcaption class="mb-2">
       Left to right: 
       <em>Hibiscus</em> by Marjorie Rice, 

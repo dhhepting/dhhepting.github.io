@@ -23,7 +23,7 @@ images are grouped within two general themes:
   <div class="row">
     <figure>
       <img class="img-fluid rounded m-1" style="height: 128px"
-      src="{{ "/assets/gallery/img/1989-Hep-Gasket-in-Bubbles.png" | relative_url }}"
+      src="{{ "/assets/gallery/img/1989-Hep-Gasket-in-Bubbles.jpg" | relative_url }}"
       alt="Gasket in Bubbles" />
       <img class="img-fluid rounded m-1" style="height: 128px"
       src="{{ "/assets/gallery/img/1990-HepSni-Desktop-Tetrahedron.png" | relative_url }}"

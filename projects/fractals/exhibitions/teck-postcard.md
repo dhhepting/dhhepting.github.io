@@ -56,7 +56,7 @@ and the British Columbia Ministry of Employment and Investment.
 </p>
 
 <p>
-The fractal on this postcard is <a href="#fiery">
+The fractal on this postcard is <a href="1995-MATH-ART-at-SFU-Teck-Gallery.html#fiery">
 <em>Fiery Dragon</em></a> (1990), by Daryl H. Hepting.
 </p>
 </div>
