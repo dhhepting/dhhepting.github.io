@@ -8,7 +8,7 @@ layout: bg-image
 <div class="container">
   <figure>
   <img src="{{"/assets/projects/img/sfu-poster.jpg" | relative_url}}" 
-  class="img-fluid"/>
+  class="img-fluid" alt="poster" />
   <figcaption>
     Image from poster for exhibit
   </figcaption>
