@@ -10,7 +10,28 @@
     <!-- Social Share Buttons -->
     {% include share-bar.html %}
     <hr />
-    <img src="{{page.image}}" alt="{{page.image}}" />
+    <figure>
+      <img src="{{page.image}}" alt="{{page.image}}" />
+      <figcaption>
+        {{ page.breadcrumb }} &mdash; by
+    {% assign pac = page.authors.size %}
+    {% assign curpa = 1 %}
+    {% for pa in page.authors %}
+      {{ pa | strip }}
+      {% if pac == 2 and curpa < 2 %}
+         and
+      {% elsif pac > 2 %}
+        {% assign pacm1 = pac | minus: 1 %}
+        {% if curpa == pacm1 %}
+          {{ ", and" | strip }}
+        {% elsif curpa < pacm1 %}
+          {{ "," | strip }}
+        {% endif %}
+      {% endif %}
+      {% assign curpa = curpa | plus: 1 %}
+    {% endfor %}
+     </figcaption>
+    </figure>
   </div>
   {% include site-date-transp.html %}
 </div>
