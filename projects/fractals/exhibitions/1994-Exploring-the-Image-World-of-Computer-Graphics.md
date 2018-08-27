@@ -23,29 +23,37 @@ images are grouped within two general themes:
   <div class="row">
     <figure>
       <img class="img-fluid rounded m-1" style="height: 128px"
-      src="{{ "/assets/gallery/img/1989-Hep-Gasket-in-Bubbles.png" | relative_url }}"/>
-    <img class="img-fluid rounded m-1" style="height: 128px"
-    src="{{ "/assets/gallery/img/1990-HepSni-Desktop-Tetrahedron.png" | relative_url }}"/>
-    <img class="img-fluid rounded m-1" style="height: 128px"
-    src="{{ "/assets/gallery/img/1990-Hep-Butte-Manhattan.png" | relative_url }}"/>
-    <img class="img-fluid rounded m-1" style="height: 128px"
-    src="{{ "/assets/gallery/img/1990-Hep-Fiery-Dragon.png"| relative_url }}"/>
-  <figcaption>
-    Left to right: <em>Gasket in Bubbles</em>,<em>Desktop Tetrahedron</em> (with
-Allan Snider), <em>Butte Manhattan</em>, and <em>Fiery Dragon</em>
+      src="{{ "/assets/gallery/img/1989-Hep-Gasket-in-Bubbles.png" | relative_url }}"
+      alt="Gasket in Bubbles" />
+      <img class="img-fluid rounded m-1" style="height: 128px"
+      src="{{ "/assets/gallery/img/1990-HepSni-Desktop-Tetrahedron.png" | relative_url }}"
+      alt="Desktop Tetrahedron" />
+      <img class="img-fluid rounded m-1" style="height: 128px"
+      src="{{ "/assets/gallery/img/1990-Hep-Butte-Manhattan.png" | relative_url }}"
+      alt="Butte Manhattan" />
+      <img class="img-fluid rounded m-1" style="height: 128px"
+      src="{{ "/assets/gallery/img/1990-Hep-Fiery-Dragon.png"| relative_url }}"
+      alt="Fiery Dragon" />
+      <figcaption>
+        Left to right: <em>Gasket in Bubbles</em>,<em>Desktop Tetrahedron</em> (with
+        Allan Snider), <em>Butte Manhattan</em>, and <em>Fiery Dragon</em>
   </figcaption>
   </figure>
   </div>
   <div class="row">
   <figure>
     <img class="img-fluid rounded m-1" style="height: 128px"
-    src="{{ "/assets/gallery/img/1990-HepSni-Reflecting-Fern.png" | relative_url }}"/>
+    src="{{ "/assets/gallery/img/1990-HepSni-Reflecting-Fern.png" | relative_url }}"
+      alt="Reflecting Fern" />
     <img class="img-fluid rounded m-1" style="height: 128px"
-    src="{{ "/assets/gallery/img/1991-HepPru-Carrot-in-Blue.png" | relative_url }}"/>
+    src="{{ "/assets/gallery/img/1991-HepPru-Carrot-in-Blue.png" | relative_url }}"
+      alt="Carrot in Blue" />
     <img class="img-fluid rounded m-1" style="height: 128px"
-    src="{{ "/assets/gallery/img/1990-HepPruSni-The-Great-Fern-Dune-of-Goron-III.jpg" | relative_url }}"/>
+    src="{{ "/assets/gallery/img/1990-HepPruSni-The-Great-Fern-Dune-of-Goron-III.jpg" | relative_url }}"
+      alt="The Great Fern Dune of Goron III" />
     <img class="img-fluid rounded m-1" style="height: 128px"
-    src="{{ "/assets/gallery/img/1989-PruSauHep-Dragon-Mesa.png" | relative_url }}"/>
+    src="{{ "/assets/gallery/img/1989-PruSauHep-Dragon-Mesa.png" | relative_url }}"
+      alt="Dragon Mesa" />
   <figcaption>
 Left to right: 
 <em>Reflecting Fern</em> (with Allan Snider),
@@ -70,7 +78,8 @@ Not shown is <em>Cartwheels</em> by Armin Bruderlin.
   <div class="row">
   <figure>
     <img class="img-fluid rounded m-1" 
-    src="{{ "/assets/projects/img/eiw-speech.jpg" | relative_url }}"/>
+    src="{{ "/assets/projects/img/eiw-speech.jpg" | relative_url }}"
+    alt="The First Political Speech"/>
   <figcaption>
     Still from <em>The First Political Speech</em>
   </figcaption>
@@ -79,11 +88,14 @@ Not shown is <em>Cartwheels</em> by Armin Bruderlin.
   <div class="row">
   <figure>
     <img class="img-fluid rounded m-1" 
-    src="{{ "/assets/projects/img/eiw-gasp1.jpg" | relative_url }}"/>
+    src="{{ "/assets/projects/img/eiw-gasp1.jpg" | relative_url }}"
+    alt="Gasping for Air"/>
     <img class="img-fluid rounded m-1"
-    src="{{ "/assets/projects/img/eiw-gasp2.jpg" | relative_url }}"/>
+    src="{{ "/assets/projects/img/eiw-gasp2.jpg" | relative_url }}"
+    alt="Gasping for Air"/>
     <img class="img-fluid rounded m-1" 
-    src="{{ "/assets/projects/img/eiw-gasp3.jpg" | relative_url }}"/>
+    src="{{ "/assets/projects/img/eiw-gasp3.jpg" | relative_url }}"
+    alt="Gasping for Air"/>
   <figcaption>
     Stills from <em>Gasping for Air</em>
   </figcaption>
@@ -92,11 +104,14 @@ Not shown is <em>Cartwheels</em> by Armin Bruderlin.
   <div class="row">
   <figure>
     <img class="img-fluid rounded m-1"
-    src="{{ "/assets/projects/img/eiw-shape.jpg" | relative_url }}"/>
+    src="{{ "/assets/projects/img/eiw-shape.jpg" | relative_url }}"
+    alt="A Shape Out of Water"/>
     <img class="img-fluid rounded m-1" 
-    src="{{ "/assets/projects/img/eiw-house7.jpg" | relative_url }}"/>
+    src="{{ "/assets/projects/img/eiw-house7.jpg" | relative_url }}"
+    alt="House #7"/>
     <img class="img-fluid rounded m-1" 
-    src="{{ "/assets/projects/img/eiw-simon.jpg" | relative_url }}"/>
+    src="{{ "/assets/projects/img/eiw-simon.jpg" | relative_url }}"
+    alt="Sliding Simon"/>
   <figcaption>
     Left to right: <em>A Shape Out of Water</em> by John Dill,
     <em>House #7</em> by Philip Peterson, and

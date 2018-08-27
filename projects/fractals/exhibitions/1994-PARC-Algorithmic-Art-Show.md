@@ -9,7 +9,8 @@ layout: bg-image
 <div class="container">
   <figure>
     <img class="img-fluid rounded" style="height: 472px"
-    src="{{ "/assets/projects/img/parc-mmjfk.jpg" | relative_url }}" />
+    src="{{ "/assets/projects/img/parc-mmjfk.jpg" | relative_url }}" 
+    alt="JFK-MM" />
     <figcaption>
       <em>Adam Finkelstein and Sandy Farrier</em>, 
       <strong>JFK-MM</strong>
@@ -53,7 +54,7 @@ R, G, and B values by a modulus.
 <div class="container">
   <figure>
     <img class="img-fluid rounded" style="height: 306px"
-    src="{{ "/assets/projects/img/parc-ls51.jpg" | relative_url }}" />
+    src="{{ "/assets/projects/img/parc-ls51.jpg" | relative_url }}" alt="LS-51" />
     <figcaption>
       <em>Yoshiyuki Abe</em>, <strong>LS-51</strong>
     </figcaption>
@@ -84,7 +85,7 @@ and the calligraphed text below gives pseudocode.
 <div class="container">
   <figure>
     <img class="img-fluid rounded" style="height: 364px"
-    src="{{ "/assets/projects/img/parc-golf.jpg" | relative_url }}" />
+    src="{{ "/assets/projects/img/parc-golf.jpg" | relative_url }}" alt="Portrait of TKM />
     <figcaption>
       <em>Kerny  McLaughlin</em>, <strong>Portrait of TKM</strong>
     </figcaption>
