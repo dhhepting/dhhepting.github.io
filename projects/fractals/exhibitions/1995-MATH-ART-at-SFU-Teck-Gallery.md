@@ -11,7 +11,7 @@ Simon Fraser University presents:
 
 <div class="container">
   <img src="{{ "/assets/projects/img/teck-map.jpg" | relative_url }}" 
-  alt="map" class="img-fluid" />
+  alt="poster" class="img-fluid" />
 </div>
 				
 Scroll down for more information about the exhibit 
@@ -350,7 +350,7 @@ And the final image once again...
 	
 <div class="card m-2">
   <div class="card-header">
-    <h3>Blessed State (1988)</h3>
+    <h3 id="blessed">Blessed State (1988)</h3>
     by F. Kenton Musgrave
   </div>
   <div class="card-body">
