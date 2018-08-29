@@ -2,7 +2,7 @@
 title: Search
 breadcrumb: Search
 description: Search this site
-layout: research
+layout: bg-image
 permalink: /search/
 tipue_search_active: true
 exclude_from_search: true

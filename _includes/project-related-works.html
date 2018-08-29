@@ -1,8 +1,20 @@
+{% assign revworks = site.works | sort | reverse %}
+
+{% assign relwrk = false %}
+{% for item in revworks %}
+  {% for ip in item.projects %}
+    {% if ip contains page.project %}
+      {% assign relwrk = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% if relwrk == true %}
 <h3>
   Related Works
 </h3>
 <ul>
-{% assign revworks = site.works | sort | reverse %}
 {% for item in revworks %}
   {% for ip in item.projects %}
     {% if ip contains page.project %}
@@ -18,3 +30,4 @@
   {% endfor %}
 {% endfor %}
 </ul>
+{%endif %}
