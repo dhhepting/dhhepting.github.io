@@ -12,7 +12,8 @@ advertising executive or an ancient sage?
 
 I embarked on an exploration into the origins of <em>this</em> phrase in 1999
 as part of my doctoral work 
-(<a href="{{ "/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html" | relative_url }}">A New Paradigm for Exploration in Computer-Aided Visualization</a>). 
+(<a href="{{ "/research/works/1999-12-hep-a-new-paradigm-for-exploration-in-computer-aided-visualization.html" | relative_url }}">A New Paradigm for Exploration in Computer-Aided Visualization</a>). 
+
 It was important to use the phrase correctly and so
 I wanted to know whether a picture was worth 1,000 or 10,000 words. 
 
@@ -47,16 +48,16 @@ called <em>Printers' Ink</em> (now known as <em>Marketing/Communications</em>).
     though perhaps Barnard hoped it would be more compelling
     as a Chinese proverb. <br />
     <a href="1927-mar-10.html">
-      <img class="img-responsive" height="128px" src="{{"/assets/projects/img/pw-printers-ink-1927.jpg" | relative_url}}" />
+      <img class="img-responsive" height="128px" src="{{"/assets/projects/img/pw-printers-ink-1927.jpg" | relative_url}}" alt="1927 advertisement" /> 
     </a>
   </li>
   <li>
-    <a href="1921-dec-8.html">December 8, 1921 (pp. 96-97)</a>
+    <a href="1921-dec-08.html">December 8, 1921 (pp. 96-97)</a>
     &ldquo;One Look is Worth A Thousand Words&rdquo;.  
     This advertisement talks generally about the benefits about advertising with
     pictures on street cars.<br />
-    <a href="1921-dec-8.html">
-      <img class="img-responsive" height="128px" src="{{ "/assets/projects/img/pw-printers-ink-1921.jpg" | relative_url}}"/>
+    <a href="1921-dec-08.html">
+      <img class="img-responsive" height="128px" src="{{ "/assets/projects/img/pw-printers-ink-1921.jpg" | relative_url}}" alt="1921 advertisement"/>
     </a>
   </li>
 </ul>
