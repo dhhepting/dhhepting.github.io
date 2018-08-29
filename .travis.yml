@@ -35,9 +35,8 @@ sudo: false # route your build to the container-based infrastructure for a faste
 
 after_success:
 - echo "UREGINA"
-- bundle exec jekyll build --config _config_uregina.yml
+- bundle exec jekyll build --config "_config.yml,_config_uregina.yml"
 - echo "${SFTP_KEY}" | base64 --decode >/tmp/sftp_rsa
 - curl --ftp-create-dirs
-       -T filename
-       --key /tmp/sftp_rsa
+       -T --key /tmp/sftp_rsa
        sftp://${SFTP_USER}:${SFTP_PASSWORD}@venus.cs.uregina.ca/public_html/filename
