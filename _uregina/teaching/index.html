@@ -1,0 +1,235 @@
+<html lang="en-CA">
+<head>
+	<!-- Responsive -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	<!-- Links -->
+<link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/normalize.css">
+<link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+
+	<link rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
+ 		integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw=" 
+		crossorigin="anonymous"
+	/>
+	<link rel="stylesheet" 
+		href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" 
+		integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" 
+		crossorigin="anonymous"
+	/>
+	<link rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" 
+		integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" 
+		crossorigin="anonymous" 
+	/>
+	<link rel="stylesheet" 
+		href="/~hepting/assets/css/dhhepting.css" 
+	/>
+	<link rel="icon" 
+		href="/~hepting/assets/favicon.ico"
+		type="image/x-icon" 
+	/>
+	<link rel="shortcut icon" 
+		href="/~hepting/assets/favicon.ico"
+		type="image/x-icon" 
+	/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+
+
+	
+
+	
+
+
+</head>
+
+<body>
+
+
+<div class="card teaching w-100 lightcthru" style="min-height:100%" >
+  <div class="card-header lightcthru">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb card-header lightcthru">
+      <li class="breadcrumb-item">
+        <a href="/~hepting/">
+          D. H. Hepting
+        </a>
+      </li>
+      <li class="breadcrumb-item active">
+        Teaching
+      </li>
+  </ol>
+  </nav>
+</div>
+
+  <div class="card-body lightcthru" >
+    <h1 id="teaching">Teaching</h1>
+
+<h3 id="check-schedule">Check Schedule</h3>
+
+<!-- Jump to a class and semester -->
+<form class="align-items-center bg-secondary px-3 pt-3">
+  <div class="form-row align-items-center">
+    <div class="form-group col-md-5">
+      <select id="schedsem" class="form-control" onchange="CourseChange()">
+        <option value="tc_schedsem">201810</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+  <a id="schedlink" href="schedule/201810.html" target="_self" class="btn btn-primary" role="button">
+    Go
+  </a>
+  </div>
+</div>
+</form>
+
+<h3 id="jump-to-a-course-offering">Jump to a Course Offering</h3>
+
+<!-- Jump to a class and semester -->
+<form class="align-items-center bg-secondary px-3 pt-3">
+  <div class="form-row align-items-center">
+    <div class="form-group col-md-5">
+      <select id="tcourse" class="form-control" onchange="CourseChange()">
+        <option value="tc_title">Course</option>
+      <option value="CS-110">CS 110</option>
+      <option value="CS-205">CS 205</option>
+      <option value="CS-280">CS 280</option>
+      <option value="CS-428+828">CS 428+828</option>
+      <option value="CS-499+900">CS 499+900</option>
+      
+    </select>
+  </div>
+
+    <div class="form-group col-md-5">
+    <select id="tsem" disabled="" class="form-control" onchange="SemesterChange()">
+      <option value="ts_title">Semester</option>
+    </select>
+  </div>
+    <div class="form-group col-md-2">
+  <a id="jumplink" href="#" target="_self" class="btn btn-primary" role="button">
+    Go
+  </a>
+  </div>
+</div>
+</form>
+
+<h3 id="courses-taught">Courses Taught</h3>
+
+<ul>
+  <li><a href="/teaching/CS-110/">CS 110 : Programming and Problem Solving</a></li>
+  <li><a href="/teaching/CS-205/">CS 205 : Introduction to Multimedia Systems</a></li>
+  <li><a href="/teaching/CS-280/">CS 280 : Risk and Reward in the Information Society</a></li>
+  <li><a href="/teaching/CS-428+828/">CS 428+828 : Human Computer Communication</a></li>
+  <li><a href="/teaching/CS-499+900/">CS 499+900 : </a></li>
+</ul>
+
+<h3 id="general-information">General Information</h3>
+
+<script>
+    var jmpurl = document.getElementById("jumplink");
+    var semsel = document.getElementById("tsem");
+    var liqsems = ["","CS-110#201510","CS-110#201810","CS-205#201810","CS-205#201910","CS-280#201910","CS-428+828#201630","CS-428+828#201730","CS-428+828#201830","CS-499+900#201810"]
+    
+    var t_course = "tc_title";
+    var t_sem = "ts_title";
+		
+    function SetJump() 
+    {
+        if (t_course != "tc_title" && t_sem != "ts_title") 
+	{
+	    jmpurl.setAttribute("href","/teaching/" + t_course + "/" + t_sem + "/");
+	    jmpurl.setAttribute("target","_blank");
+	}
+	else 
+	{
+	    jmpurl.setAttribute("href","#");
+	    jmpurl.setAttribute("target","_self");
+	}
+    }
+
+    function removeOptions(selectbox) 
+    {
+	// remove everything but the 1st option
+	for (var i = selectbox.options.length - 1 ; i >= 1 ; i--) 
+	{
+	    selectbox.remove(i);
+    	}
+    	selectbox.options[0].selected = true;
+    }
+
+    function CourseChange() 
+    {
+    	// clear out the current contents of the semester select
+	var e = document.getElementById("tcourse");
+	removeOptions(semsel);
+	t_sem = "ts_title";
+	t_course = e.options[e.selectedIndex].value;
+	SetJump();
+	// find the course in the array
+	if (t_course != "tc_title") {
+	    document.getElementById("tsem").disabled=false;
+	    // build new contents
+	    for (var i = 1; i < liqsems.length; i++) {
+		var res = liqsems[i].split("#");
+		if (t_course == res[0]) {
+		    semsel.options.add(new Option(res[1],res[1],false));
+		}
+	    }
+	}
+	else {
+	    document.getElementById("tsem").disabled=true;
+	}
+    }
+		
+    function SemesterChange() {
+        var e = document.getElementById("tsem");
+	t_sem = e.options[e.selectedIndex].value;
+	SetJump();
+    }
+</script>
+
+
+  </div>
+  <div class="card-footer text-muted lightcthru">
+    Site built: 
+    2018-08-30 15:55 -0600
+</div>
+
+</div>
+    </div>
+	</div>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+		crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" 
+		integrity="sha256-xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8=" 
+		crossorigin="anonymous">
+	</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" 
+		integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" 
+		crossorigin="anonymous">
+	</script>
+	<script>
+		var clipboard = new ClipboardJS('.btn');
+	</script>
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-4427429-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+</body>
+</html>
+
+

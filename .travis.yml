@@ -1,38 +1,33 @@
 language: ruby
 rvm:
 - 2.3.3
-
-before_script:
- - chmod +x ./script/cibuild # or do this locally and commit
-
-# Assume bundler is being used, therefore
-# the `install` step will run `bundle install` by default.
-script: ./script/cibuild
-
-# branch whitelist, only for GitHub Pages
-#branches:
-#  only:
-#  - gh-pages     # test the gh-pages branch
-#  - /pages-(.*)/ # test every branch which starts with "pages-"
-
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-  - 'SFTP_USER=hepting'
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - SFTP_USER=hepting
+exclude:
+- vendor
+addons:
+  ssh_known_hosts: venus.cs.uregina.ca
 
-exclude: [vendor]
-
+before_script:
+- chmod +x ./script/cibuild
+script: "./script/cibuild"
+before_deploy:
+- openssl aes-256-cbc -K $encrypted_51a517831301_key -iv $encrypted_51a517831301_iv
+  -in deploy_rsa.enc -out deploy_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 deploy_rsa
+#- ssh-add deploy_rsa
 deploy:
-  provider: pages
+- provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  github-token: "$GITHUB_TOKEN"
   keep-history: true
   on:
     branch: master
-
-sudo: false # route your build to the container-based infrastructure for a faster build
-
-after_success:
-- bundle exec jekyll build --config "_config.yml,_config_uregina.yml"
-- echo "${SFTP_KEY}" | base64 --decode >/tmp/sftp_rsa
-- curl --ftp-create-dirs -T --key /tmp/sftp_rsa sftp://${SFTP_USER}:${SFTP_PASSWORD}@venus.cs.uregina.ca/public_html/
+- provider: script
+  skip_cleanup: true
+  script: rsync -e 'sshpass -p $PASSPHRASE ssh' -r --delete-after --quiet $TRAVIS_BUILD_DIR/_uregina/> hepting@venus.cs.uregina.ca:_uregina
+  on:
+    branch: master
