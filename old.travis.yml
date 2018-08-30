@@ -19,6 +19,7 @@ env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
   - 'SFTP_USER=hepting'
+  - 'SFTP_KEY=AAAAB3NzaC1yc2EAAAABIwAAAQEAz7TZ4vXhv5jyXeAX/IADb4elhY8kftbX6ESyTQdoFyBsuhF8is3FKi+tWH6b/vWOdMoZkdklIqrItUYG5OUkoJAn6GjQJQoiFDcwT0sYeRnaQbE1c/XHeBbznT90bIvefCwIwT1YU1pYzNGT2kTnyaeHdXQ4h8jReJ6ygwT1jy1PSiQoindITwgn0Xrqfnekj+9pnREf4Le9uYU0oNweKOap3tRn6mpeO8M1zxfMC1cNpEyn2k1aKsNyAzX8EtdKUZvqIekwBOIF8crKL/FXRxd9RxM/TD2hSJFpzJcA9cLwZiBFK+/q0vY18XRckSIlq2awHzFzM8+eYxgg1AE5lQ=='
 
 exclude: [vendor]
 
@@ -33,6 +34,8 @@ deploy:
 sudo: false # route your build to the container-based infrastructure for a faster build
 
 after_success:
+- echo "UREGINA"
 - bundle exec jekyll build --config "_config.yml,_config_uregina.yml"
 - echo "${SFTP_KEY}" | base64 --decode >/tmp/sftp_rsa
-- curl --ftp-create-dirs -T --key /tmp/sftp_rsa sftp://${SFTP_USER}:${SFTP_PASSWORD}@venus.cs.uregina.ca/public_html/
+- curl --ftp-create-dirs
+       -T --key /tmp/sftp_rsa sftp://${SFTP_USER}:${SFTP_PASSWORD}@venus.cs.uregina.ca/public_html/filename
