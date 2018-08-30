@@ -28,6 +28,6 @@ deploy:
     branch: master
 - provider: script
   skip_cleanup: true
-  script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/_uregina/> hepting@venus.cs.uregina.ca:_uregina
+  script: rsync -e 'sshpass -p $PASSPHRASE ssh' -r --delete-after --quiet $TRAVIS_BUILD_DIR/_uregina/> hepting@venus.cs.uregina.ca:_uregina
   on:
     branch: master
