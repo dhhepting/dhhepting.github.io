@@ -10,6 +10,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 gem "jekyll"
 gem "ffi", "=1.9.21"
 gem 'html-proofer'
+gem 'travis'
 group :jekyll_plugins do
    gem "jekyll-seo-tag"
    gem "jekyll-sitemap"
