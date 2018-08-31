@@ -14,8 +14,7 @@ before_script:
 - chmod +x ./script/cibuild
 script: "./script/cibuild"
 before_install:
-- openssl aes-256-cbc -K $encrypted_51a517831301_key -iv $encrypted_51a517831301_iv
-  -in deploy_rsa.enc -out deploy_rsa -d
+- openssl aes-256-cbc -K $encrypted_51a517831301_key -iv $encrypted_51a517831301_iv -in deploy_rsa.enc -out deploy_rsa -d
 - eval "$(ssh-agent -s)"
 - chmod 600 deploy_rsa
 #- ssh-add deploy_rsa
@@ -28,6 +27,6 @@ deploy:
     branch: master
 - provider: script
   skip_cleanup: true
-  script: rsync -v -e 'sshpass -p $PASSPHRASE ssh' -r --delete-after --quiet $TRAVIS_BUILD_DIR/_uregina/> hepting@venus.cs.uregina.ca:_uregina
+  script: rsync --verbose -e 'sshpass -p $PASSPHRASE ssh' -r --delete-after $TRAVIS_BUILD_DIR/_uregina/ hepting@venus.cs.uregina.ca:_uregina
   on:
     branch: master
