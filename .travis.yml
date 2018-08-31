@@ -21,7 +21,7 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_51a517831301_key -iv $encrypted_51a517831301_iv -in deploy_rsa.enc -out deploy_rsa -d
 - chmod 600 deploy_rsa
 - eval "$(ssh-agent -s)"
-- sshpass -p $PASSPHRASE ssh' 
+- sshpass -p $PASSPHRASE ssh
 - ssh-add deploy_rsa
 #- echo 'venus.cs.uregina.ca ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA0MDNrotgbUk4JBkzwhTxNSyVYY81TQVGt/QmTRmjoyB8Lv1/3IKcDR2htfoY+XtlMdkx7gEzG2FmZV7H4phwi32AtmoVJXphU3nFff2gwN/h7X66qWqnsrIsNYUvF2qC5OCX2gv+/osXvtu5wPMwYzEynXA7FI6QnFHuI+o+nC542ZeJXTZS30cpTnXDhB6+dc5K+uma2eruX5v1WC98EM9Q4PCXxMzP0Vi5blWbYNr4NoMSm31cfSytI3bLhSsINUu6cyR5HGNfd/LZhks4lHrbBnYRITjBUfOAzr3AQ9TAF7mkIzEIJIhRfw+6a98tCkMnEsA4hPEhN4q6HNtMCQ==' >> $HOME/.ssh/known_hosts
 deploy:
