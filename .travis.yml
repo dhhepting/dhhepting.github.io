@@ -5,25 +5,20 @@ env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - SFTP_USER=hepting
+  - secure: Ksjscb2W+EZ8E09o4QQ34BzG1oEESBPB6L0PGv4YrVthkqHj9xWfNIlvXm5Yjq6ufkn9mVI4WFeNEM4PGZn1BdmASXRm2LyuexYWGWBI0mY5G3ib2C1S9AynJ89TZaXKLQo1zSpcylGxsMmRx3Rp1EukLixUzYiNoczYRp8hm9tnl481te7fCnCvMRUbTXunqp+K6f++bzwvNnoDNSTD5jyYJyyNUdfGBzstCE0MRi9fDLNr58DwbXQvsxNyKfYT81Hdd1MUa0tm8shQHnRCPyjPb9lzd4OvkteqZxL4GGryKLtpk3DWNHp+7BVhri+XRn5T3qr6VBiR5JnBIMfKl/iSAW+rnLGLEr9FAmG+1rhBMR5IhIFy6opQNbdS0MciilYCGiga4wJzI0smUwmKvg3zS6RTFgRsqQPd4iTeJEl0umlm7Bf8fJ3L/IXhja4AnyA3ctLJoEYcWfGYJogBT1sMsSovqfVemfyGANuBFXfWbBMeULj3aYC6OewNknNhA2DP0no5OsiEpaA9DHq7j0vR9rTIgKYFjFpzDbIh+IujQeeV0wQgwVa4D6LjMO+G3/MZdrEobvXDcUalRYTBgQNTBo+5e5mwIHt3M0QQVO9t6OBw0J6q6Ci3V3ZLAlVzWZS61L9109Kq+0ZNz5iVVT7rqTvoR65898j9v7e/FqY=
 exclude:
 - vendor
-addons:
-  ssh_known_hosts: 
-    venus.cs.uregina.ca
-  apt:
-    packages:
-    - sshpass
-
 before_script:
 - chmod +x ./script/cibuild
 script: "./script/cibuild"
 before_install:
-- openssl aes-256-cbc -K $encrypted_51a517831301_key -iv $encrypted_51a517831301_iv -in deploy_rsa.enc -out deploy_rsa -d
-- chmod 600 deploy_rsa
+- openssl aes-256-cbc -K $encrypted_51a517831301_key -iv $encrypted_51a517831301_iv
+  -in deploy_rsa.enc -out deploy_rsa -d
 - eval "$(ssh-agent -s)"
-- sshpass -p "$PASSPHRASE"
+- chmod 600 deploy_rsa
 - ssh-add deploy_rsa
-#- echo 'venus.cs.uregina.ca ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA0MDNrotgbUk4JBkzwhTxNSyVYY81TQVGt/QmTRmjoyB8Lv1/3IKcDR2htfoY+XtlMdkx7gEzG2FmZV7H4phwi32AtmoVJXphU3nFff2gwN/h7X66qWqnsrIsNYUvF2qC5OCX2gv+/osXvtu5wPMwYzEynXA7FI6QnFHuI+o+nC542ZeJXTZS30cpTnXDhB6+dc5K+uma2eruX5v1WC98EM9Q4PCXxMzP0Vi5blWbYNr4NoMSm31cfSytI3bLhSsINUu6cyR5HGNfd/LZhks4lHrbBnYRITjBUfOAzr3AQ9TAF7mkIzEIJIhRfw+6a98tCkMnEsA4hPEhN4q6HNtMCQ==' >> $HOME/.ssh/known_hosts
+- echo -e
+  "Host $DEPLOY_HOST\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 deploy:
 - provider: pages
   skip-cleanup: true
@@ -33,7 +28,6 @@ deploy:
     branch: master
 - provider: script
   skip_cleanup: true
-#  script: rsync --verbose -e 'sshpass -p $PASSPHRASE ssh' -r --delete-after $TRAVIS_BUILD_DIR/_uregina/ hepting@venus.cs.uregina.ca:_uregina
-  script: rsync --verbose -r --delete-after $TRAVIS_BUILD_DIR/_uregina/ hepting@venus.cs.uregina.ca:_uregina
+  script: rsync --verbose -r --delete-after $TRAVIS_BUILD_DIR/_uregina/ hepting@$DEPLOY_HOST:_uregina
   on:
     branch: master
