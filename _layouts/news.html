@@ -1,18 +1,10 @@
 {% include header.html %}
-<div class="card news w-100" style="min-height:100%" >
-    {% include news-nav.html %}
-	<div class="card-body container-fluid d-flex w-100" >
-		<div class="row w-100"> 
-			<div class="col" id="dhhblock" style="min-width:50%; max-width: 100%">
-				{{ content }}
-			</div>
-			<!--
-			<div class="col" style="max-width:50%">
-			</div>
-			-->
-		</div>
-	</div>
-
-	{% include site-date-transp.html %}
-</div>
+{% assign url_parts = page.url | split: "/" %}
+<div class="card {{url_parts[1]}} w-100 lightcthru" style="min-height:100%" >
+  {% include news-nav-transp.html %}
+  <div class="card-body lightcthru" >
+    {{ content }}       
+  </div>                        
+  {% include site-date-transp.html %}
+</div>                  
 {% include footer.html %}
