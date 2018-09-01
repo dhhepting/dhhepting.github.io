@@ -1,7 +1,7 @@
 ---
 title: RSS Feeds
 breadcrumb: RSS Feeds
-layout: rss
+layout: bg-image
 ---
 # RSS Feeds
 
