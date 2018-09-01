@@ -31,3 +31,5 @@ deploy:
   script: rsync --verbose -r --delete-after $TRAVIS_BUILD_DIR/_uregina/ hepting@$DEPLOY_HOST:_uregina
   on:
     branch: master
+after_success:
+- ssh hepting@$DEPLOY_HOST 'rm _uregina/deploy_rsa*'
