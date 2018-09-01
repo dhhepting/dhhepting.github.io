@@ -28,6 +28,6 @@ deploy:
     branch: master
 - provider: script
   skip_cleanup: true
-  script: rsync --verbose -r --delete-after $TRAVIS_BUILD_DIR/_deploy/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIR
+  script: rsync --verbose -p -r --delete-after $TRAVIS_BUILD_DIR/_deploy/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIR
   on:
     branch: master
