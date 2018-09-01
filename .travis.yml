@@ -32,4 +32,4 @@ deploy:
   on:
     branch: master
 after_success:
-- ssh hepting@$DEPLOY_HOST 'rm _uregina/deploy_rsa*'
+- ssh hepting@$DEPLOY_HOST 'rm -v _uregina/deploy_rsa'
