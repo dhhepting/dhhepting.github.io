@@ -1,7 +1,7 @@
 ---
 title: Research
 breadcrumb: Research
-layout: research
+layout: bg-image
 ---
 # Research
 
