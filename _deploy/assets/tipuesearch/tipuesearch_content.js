@@ -450,7 +450,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/research/"
   },{
     "title": "RSS Feeds",
-    "text": "RSS Feeds News",
+    "text": "RSS Feeds News (Atom)",
     "tags": "",
     "url": "/~hepting/rss/"
   },{
