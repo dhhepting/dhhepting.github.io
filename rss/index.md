@@ -5,4 +5,4 @@ layout: bg-image
 ---
 # RSS Feeds
 
-- [News](news.xml)
+- [News (Atom)](news.xml)
