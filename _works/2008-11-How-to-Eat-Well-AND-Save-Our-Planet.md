@@ -5,7 +5,7 @@ category: event
 keynote: Joel Salatin
 organizer: Daryl H. Hepting
 wdate: 2008-11
-layout: works-default
+layout: bibtex-default
 project: 
 - food
 description: >-
