@@ -5,7 +5,7 @@ category: event
 keynote: Gerhard Fischer
 organizer: Daryl H. Hepting
 wdate: 2006-09
-layout: works-default
+layout: bibtex-default
 project: 
 - food
 description: >-
