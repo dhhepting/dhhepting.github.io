@@ -78,7 +78,7 @@ layout: bg-image
 					semnum = "30"
 				}    
 				var semurl = document.getElementById("semlink")
-				semurl.setAttribute("href","/teaching/schedule/"+today.getFullYear() + semnum + ".html");
+				semurl.setAttribute("href","{{ "/teaching/schedule/" | relative_url}}"+today.getFullYear() + semnum + ".html");
 			</script>
 			<br />
 		</div>
