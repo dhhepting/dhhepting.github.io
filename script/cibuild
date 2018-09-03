@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
-bundle exec jekyll build --config "_config.yml,_config_uregina.yml" --destination $TRAVIS_BUILD_DIR/_deploy
-bundle exec htmlproofer $TRAVIS_BUILD_DIR/_deploy --disable-external --allow-hash-href
 bundle exec jekyll build
+bundle exec htmlproofer $TRAVIS_BUILD_DIR/_site --disable-external --allow-hash-href
+bundle exec jekyll build --config "_config.yml,_config_uregina.yml" --destination $TRAVIS_BUILD_DIR/_deploy
