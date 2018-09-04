@@ -3,8 +3,13 @@ title: RSS Feeds
 breadcrumb: RSS Feeds
 layout: bg-image
 ---
-# RSS Feeds
+<h1>{{ page.breadcrumb }}</h1>
 
-- [News (Atom)](news.xml)
+<ul>
+  <li>
+    <a rel="alternate" type="application/rss+xml" 
+      href="{{ "/rss/news.xml" | absolute_url }}">News (Atom)</a> 
+  </li>
+</ul>
 
 {% include index-dir.html %}
