@@ -6,3 +6,5 @@ layout: bg-image
 # RSS Feeds
 
 - [News (Atom)](news.xml)
+
+{% include index-dir.html %}

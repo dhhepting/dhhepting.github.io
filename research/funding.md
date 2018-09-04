@@ -8,7 +8,7 @@ layout: default
 ### NSERC Discovery Grants
 
 <div class="card">
-  <div class="card-header" style="background-color: cyan">
+  <div class="card-header bg-info">
 	<h5>Personalization of interaction based on discovered constructs (2012-2016)</h5>
   </div>
   <div class="card-body">
@@ -60,7 +60,7 @@ layout: default
 </div>
 <p>&nbsp;</p>
 <div class="card">
-  <div class="card-header" style="background-color: cyan">
+  <div class="card-header bg-info">
 	<h5>Democratization and personalization for information access (2006-2010)</h5>
   </div>
   <div class="card-body">
@@ -107,7 +107,7 @@ layout: default
 </div>
 <p>&nbsp;</p>
 <div class="card">
-  <div class="card-header" style="background-color: cyan">
+  <div class="card-header bg-info">
 	<h5>Conceptual spaces: theory and tools (2002-2005)</h5>
   </div>
   <div class="card-body">
