@@ -1,41 +1,55 @@
 #!/usr/bin/env python
 
-# for now, directory path must contain 'teach'
-import sys, os, datetime
+import sys, os, datetime, re
 from rss2producer import RSS2Feed
-from bs4 import BeautifulSoup
 
-### expect that teach_rss.py is invoked from teach directory
-### and that rss file will be named as course-semester.xml
-### in the rss directory, at the same level as teach
+# the 'teaching' website directory will have subdirectories
+# for courses and those course subdirectories will have 
+# subdirectories for semesters.
 
-# specify the root from which the rss file is to be created, 
-# convert to absolute path
-if (len(sys.argv) != 2):
-  print sys.argv[0],"must be invoked with \"<course>/<semester>\""
+# the rss feed for a course includes the course directory
+# level, non-semester subdirectories, and the current semester
+# subdirectory
+
+# arguments to this script:
+# - the absolute path to the website's root directory
+# - the course/semester (in that form): i.e. CS-428+828/201830
+if (len(sys.argv) != 3):
+  print sys.argv[0],"must be invoked with \"<path-to-site-directory> <course>/<semester>\""
   sys.exit()
 
-reldir = (sys.argv[1]).split('/')
-if (len(reldir) != 2):
-  print sys.argv[0],"must be invoked with <course>/<semester>" 
+# get site directory, make sure it ends with "/"
+sitedir = (sys.argv[1])
+if (not sitedir.endswith("/")):
+  sitedir += "/"
+
+# determine the index (depth) of the semester subdirectory
+semdiridx = len(sitedir.split("/")) + 1
+
+# get the offering details: course/semester
+offdir = (sys.argv[2]).split('/')
+if (len(offdir) != 2):
+  print sys.argv[0],"must be invoked with \"<path-to-site-directory> <course>/<semester>\""
   sys.exit()
+off_crs = offdir[0]
+off_sem = offdir[1]
+off_id = off_crs + "-" + off_sem
 
 # file extensions to record
-extensions = [ 'html', 'svg', 'cpp', 'py' ]
+#extensions = [ 'md', 'html', 'svg', 'cpp', 'py' ]
 
-outfile = reldir[0] + "-" + reldir[1] + ".rss"
-out_dir = "/Users/hepting/Sites/dhhepting.github.io/rss"
-out_dir = os.path.join(os.path.abspath(out_dir),"")
+rss_fname = off_id + ".rss"
+rss_dir = os.path.join(os.path.abspath(sitedir + "rss"),"")
 
-rss_root_dir = "/Users/hepting/Sites/dhhepting.github.io/teaching/"
-rss_root_dir = os.path.join(os.path.abspath(rss_root_dir),sys.argv[1])
+html_dir = os.path.join(os.path.abspath(sitedir + "teaching"),off_crs)
+assets_dir = os.path.join(os.path.abspath(sitedir + "assets/teaching"),"")
 
-preweb = "http://www2.cs.uregina.ca/~hepting/teaching"
-from_teach = rss_root_dir[rss_root_dir.rfind('teaching')+len('teaching'):]
+web_prefix = "/teaching/"
+off_rel_path = off_crs + "/" + off_sem
 
 # test if an update should be done based on semester
-sem_year = int((reldir[1])[:4])
-sem_sel =  int((reldir[1])[4:])
+sem_year = int((offdir[1])[:4])
+sem_sel =  int((offdir[1])[4:])
 if (sem_sel == 10):
   earliest = datetime.datetime(year=sem_year, month=1, day=1)
   latest = datetime.datetime(year=sem_year, month=4, day=30)
@@ -46,16 +60,18 @@ elif (sem_sel == 30):
   earliest = datetime.datetime(year=sem_year, month=9, day=1)
   latest = datetime.datetime(year=sem_year, month=12, day=31)
 
-if (datetime.datetime.now() >= earliest and datetime.datetime.now() <= latest):
+#if (datetime.datetime.now() >= earliest and datetime.datetime.now() <= latest):
+if (datetime.datetime.now() <= latest):
   # configure header for feed
   feed = RSS2Feed(
-    title="D. H. Hepting: Updates to " + from_teach[1:],
-    link= preweb + from_teach,
-    description="Updates to " + from_teach[1:] 
-      + " as of " + datetime.datetime.now().strftime("%A, %d %B %Y %H:%M")
+    title="D. H. Hepting: Updates to " + off_rel_path,
+    link= '{{ "' + web_prefix + off_rel_path + '" | absolute_url }}',
+    description="Updates to " + off_rel_path + 
+      " as of " + datetime.datetime.now().strftime("%A, %d %B %Y %H:%M")
   )
   filedict = {}
-  for root, subdirs, files in os.walk(rss_root_dir):
+  # first get markdown (html) files within course directory
+  for root, subdirs, files in os.walk(html_dir):
     for filename in files:
       file_path = os.path.join(root, filename)
       # test if the file and path is meant to be included
@@ -64,19 +80,67 @@ if (datetime.datetime.now() >= earliest and datetime.datetime.now() <= latest):
         "1_offweb" not in file_path) and (
         len(file_parts) == 2): 
         # test if file should be included
-        if (file_parts[1] in extensions):
-          dt = datetime.datetime.fromtimestamp( os.path.getmtime(file_path))
-          if file_path.startswith(rss_root_dir):
-            file_path = file_path[len(rss_root_dir):]  
+        if (file_parts[1] == "md"):
+          dt = datetime.datetime.fromtimestamp(os.path.getmtime(file_path))
+          path_parts = file_path.split("/")
+          path_len = len(path_parts)
+	  if (path_len > semdiridx):
+            if (path_parts[semdiridx] >= off_sem):
+              file_path = file_path[len(html_dir):]  
+              filedict[str(dt)] = file_path.replace(".md", ".html")
+  # then get any asset files within /assets/teaching that match course+semester
+  for root, subdirs, files in os.walk(assets_dir):
+    for filename in files:
+      file_path = os.path.join(root, filename)
+      # test if the file and path is meant to be included
+      file_parts = filename.split(".")
+      if ("0_nonweb" not in file_path) and (
+        "1_offweb" not in file_path) and (
+        len(file_parts) == 2): 
+        # test if file should be included
+        # (leave out test for extensions for now)
+        if (file_parts[1]):
+          if (off_id in file_path):
+            dt = datetime.datetime.fromtimestamp(os.path.getmtime(file_path))
+            file_path = file_path[len(sitedir):]  
             filedict[str(dt)] = file_path
-  # write out feed to the file rss in the directory 
+  # format information for feed 
   for k in sorted(filedict.keys(), reverse=True):
     try:
       update = datetime.datetime.strptime(k,"%Y-%m-%d %H:%M:%S.%f")
     except ValueError:
       update = datetime.datetime.strptime(k,"%Y-%m-%d %H:%M:%S")
-    if update > earliest and update < latest:
-      feed.append_item(title=filedict[k],
-        link=preweb+from_teach+filedict[k], description="Updated: " + update.strftime("%A, %d %B %Y %H:%M"), pub_date=update)
-  with open(out_dir + outfile, 'w') as rss_file:
-    rss_file.write(feed.get_xml())
+    #if update > earliest and update < latest:
+    if update < latest:
+      if (filedict[k].startswith("/assets/teaching")):
+        feed.append_item(title=filedict[k],
+          link='{{ "' + filedict[k] + '" | absolute_url }}',
+          description="Updated: " + update.strftime("%A, %d %B %Y %H:%M"), pub_date=update)
+      else:
+        feed.append_item(title=filedict[k],
+          link='{{ "' + web_prefix + off_rel_path + filedict[k] + '" | absolute_url }}',
+          description="Updated: " + update.strftime("%A, %d %B %Y %H:%M"), pub_date=update)
+  # make a temporary file 
+  tmpfilepath = rss_dir + "tmp-" + rss_fname
+  rssfilepath = rss_dir + rss_fname
+  with open(tmpfilepath, 'w') as tmp_file:
+    tmp_file.write(feed.get_xml())
+  # write out final version with YAML frontmatter and appropriate edits
+  with open(tmpfilepath, 'r') as xml_file, open(rssfilepath, 'w') as rss_file:
+    # front matter
+    rss_file.write("---\n")
+    rss_file.write("layout: rss\n")
+    rss_file.write("---\n")
+    # define desired edits 
+    rep = {"&quot;": "\"", "em><it": "em>\n<it"} 
+    rep = dict((re.escape(k), v) for k, v in rep.iteritems())
+    pattern = re.compile("|".join(rep.keys()))
+    # apply edits
+    for line in xml_file:
+      line = pattern.sub(lambda m: rep[re.escape(m.group(0))], line)
+      rss_file.write(line)
+  # clean up temporary file
+  try:
+    os.remove(tmpfilepath)
+  except OSError:
+    pass
