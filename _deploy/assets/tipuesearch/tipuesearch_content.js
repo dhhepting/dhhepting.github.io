@@ -445,12 +445,12 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/research/works/"
   },{
     "title": "Research",
-    "text": "Research academic.html funding.html inspirations.html students works",
+    "text": "Research academic.html dhhepting.bib funding.html inspirations.html students works",
     "tags": "",
     "url": "/~hepting/research/"
   },{
     "title": "RSS Feeds",
-    "text": "RSS Feeds News (Atom)",
+    "text": "RSS Feeds News (Atom) CS-428+828-201830.rss dhhepting.rss news.rss news.xml",
     "tags": "",
     "url": "/~hepting/rss/"
   },{
