@@ -1,7 +1,9 @@
 ---
-layout: default
+layout: bg-image
 breadcrumb: Assignments
 ---
 # {{ page.breadcrumb }}
 
-{% include index-dir.html %}
+- [Individual](i)
+- [Group](g)
+- [Individual or Group](i-or-g)
