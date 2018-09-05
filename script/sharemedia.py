@@ -5,6 +5,8 @@ import dropbox
 from dropbox.files import WriteMode
 from dropbox.exceptions import ApiError, AuthError
 
+print(datetime.datetime.now())
+print(datetime.datetime.now(),file=sys.stderr)
 # arguments to this script:
 # - the absolute path to the website's local root directory
 # - the course/semester (in that form): i.e. CS-428+828/201830
