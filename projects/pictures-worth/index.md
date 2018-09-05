@@ -12,7 +12,7 @@ advertising executive or an ancient sage?
 
 I embarked on an exploration into the origins of <em>this</em> phrase in 1999
 as part of my doctoral work 
-(<a href="{{ "/research/works/1999-12-hep-a-new-paradigm-for-exploration-in-computer-aided-visualization.html" | relative_url }}">A New Paradigm for Exploration in Computer-Aided Visualization</a>). 
+(<a href="{{ "/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html" | relative_url }}">A New Paradigm for Exploration in Computer-Aided Visualization</a>). 
 
 It was important to use the phrase correctly and so
 I wanted to know whether a picture was worth 1,000 or 10,000 words. 
