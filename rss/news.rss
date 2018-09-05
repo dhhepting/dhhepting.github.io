@@ -22,6 +22,7 @@ layout: rss
     {% endfor %}
   </lastBuildDate>
   {% for post in site.posts %}
+    {{ post }}
     {% if post.link %}
       <item>
         <title>{{ post.title | xml_escape }}</title>

@@ -1,106 +1,111 @@
 var tipuesearch = {"pages": [{
+    "title": "how-to-make-jekyll-site-blog",
+    "text": "how-to-Make-Jekyll-Site-Blog how-to-make-jekyll-site-blog how-to-make-jekyll-site-blog",
+    "tags": "news",
+    "url": "/~hepting/news/how-to-Make-Jekyll-Site-Blog.html"
+  },{
     "title": "New News!",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium dapibus ultrices. Nullam sed leo vitae est lacinia porta a et turpis. Aliquam sodales quis libero eget elementum. Donec sodales mollis pretium. Sed lacinia quis orci et finibus. Integer accumsan volutpat felis, placerat faucibus tortor tempor eget. Nulla non elementum quam, euismod ullamcorper metus. Aenean lacinia eget enim et blandit. Vestibulum et quam posuere, luctus magna ac, euismod dui. Mauris ut nisi id nulla tristique tincidunt. Integer ut tortor maximus, auctor eros vitae, suscipit libero. Praesent vehicula aliquam urna, id molestie velit rhoncus id. In ex purus, gravida id eleifend sed, volutpat gravida ante. Vivamus lacus mi, porta nec neque vel, rutrum euismod arcu. Ut vulputate quam et est luctus, non interdum metus blandit. Fusce euismod erat dignissim lacinia vulputate. Nulla facilisi. Phasellus eros mi, euismod at libero quis, vulputate fringilla lacus. Sed rutrum semper elit, eu euismod turpis eleifend eget. Praesent posuere faucibus dolor, ac posuere sem aliquam vitae. Etiam blandit metus vel tincidunt cursus. Vestibulum quis lorem felis. Suspendisse vitae sem ante. Sed quis turpis malesuada arcu venenatis dapibus. Curabitur sollicitudin diam vitae viverra rhoncus. Donec purus purus, malesuada id eros vitae, elementum dictum diam. Duis non feugiat arcu. Pellentesque semper ullamcorper nibh. Fusce ac vehicula justo. Suspendisse rhoncus blandit aliquam. Nunc ante purus, gravida sed tempus id, tempor vitae elit. Aenean quis libero elit. Sed consequat sapien id quam maximus porta. Etiam elementum quis justo ut blandit. Donec vitae metus eget augue semper efficitur. In nec ipsum a tortor ornare porttitor eu in odio. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed pretium lorem quis quam sollicitudin auctor et at purus. Praesent tristique mauris a venenatis tristique. Quisque semper dolor nulla, eu ornare enim scelerisque sed. Sed posuere, ligula et sagittis accumsan, elit ipsum volutpat quam, ut maximus neque massa pellentesque justo. Mauris malesuada consectetur tincidunt. Mauris ut quam orci. Sed sagittis pharetra augue molestie hendrerit. Sed quis ornare purus. Integer nisl diam, rhoncus ac pellentesque et, lacinia sit amet libero. Aliquam porta nulla eget libero elementum tristique. Vivamus elit sem, semper nec efficitur a, congue a mauris. Nunc euismod orci quis arcu scelerisque, in euismod nulla tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin libero nisl, efficitur vel tellus id, venenatis viverra enim. Donec gravida viverra massa. Aliquam eros nisl, semper at pharetra vel, molestie vel neque. In vehicula pellentesque scelerisque. Integer ultrices massa justo, in molestie neque fringilla vel.",
     "tags": "news",
-    "url": "/~hepting/news/2018-05-21-new-news.html"
+    "url": "/~hepting/news/new-news.html"
   },{
     "title": "Other Other!",
     "text": "",
     "tags": "news",
-    "url": "/~hepting/news/2018-05-20-other.html"
+    "url": "/~hepting/news/other.html"
   },{
-    "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 1 / 37",
+    "title": "Mtg 01 - CS 428+828 (201830)",
+    "text": "Meeting 1 / 37 Outline for Today Inspirations Tent Cards Syllabus Video: How to Build Your Creative Confidence Media from Meeting 01 - 1.jpg 01 - 2.jpg",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/01.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 2 / 37 Questions from Last Meeting?",
+    "text": "Meeting 2 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 02",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/02.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 3 / 37 Questions from Last Meeting?",
+    "text": "Meeting 3 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 03",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/03.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 4 / 37 Questions from Last Meeting?",
+    "text": "Meeting 4 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 04",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/04.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 5 / 37 Questions from Last Meeting?",
+    "text": "Meeting 5 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 05",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/05.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 6 / 37 Questions from Last Meeting?",
+    "text": "Meeting 6 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 06",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/06.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 7 / 37 Questions from Last Meeting?",
+    "text": "Meeting 7 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 07",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/07.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 8 / 37 Questions from Last Meeting?",
+    "text": "Meeting 8 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 08",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/08.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 9 / 37 Questions from Last Meeting?",
+    "text": "Meeting 9 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 09",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/09.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 10 / 37 Questions from Last Meeting?",
+    "text": "Meeting 10 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 10",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/10.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 11 / 37 Questions from Last Meeting?",
+    "text": "Meeting 11 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 11",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/11.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 12 / 37 Questions from Last Meeting?",
+    "text": "Meeting 12 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 12",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/12.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 13 / 37 Questions from Last Meeting?",
+    "text": "Meeting 13 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 13",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/13.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 14 / 37 Questions from Last Meeting?",
+    "text": "Meeting 14 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 14",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/14.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 15 / 37 Questions from Last Meeting?",
+    "text": "Meeting 15 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 15",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/15.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 16 / 37 Questions from Last Meeting?",
+    "text": "Meeting 16 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 16",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/16.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 17 / 37 Questions from Last Meeting?",
+    "text": "Meeting 17 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 17",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/17.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 18 / 37 Questions from Last Meeting?",
+    "text": "Meeting 18 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 18",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/18.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 19 / 37 Questions from Last Meeting?",
+    "text": "Meeting 19 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 19",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/19.html"
   },{
@@ -150,7 +155,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/projects/fractals/calendars/1996.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 20 / 37 Questions from Last Meeting?",
+    "text": "Meeting 20 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 20",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/20.html"
   },{
@@ -165,87 +170,87 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/schedule/201820.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 21 / 37 Questions from Last Meeting?",
+    "text": "Meeting 21 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 21",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/21.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 22 / 37 Questions from Last Meeting?",
+    "text": "Meeting 22 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 22",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/22.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 23 / 37 Questions from Last Meeting?",
+    "text": "Meeting 23 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 23",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/23.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 24 / 37 Questions from Last Meeting?",
+    "text": "Meeting 24 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 24",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/24.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 25 / 37 Questions from Last Meeting?",
+    "text": "Meeting 25 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 25",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/25.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 26 / 37 Questions from Last Meeting?",
+    "text": "Meeting 26 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 26",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/26.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 27 / 37 Questions from Last Meeting?",
+    "text": "Meeting 27 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 27",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/27.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 28 / 37 Questions from Last Meeting?",
+    "text": "Meeting 28 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 28",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/28.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 29 / 37 Questions from Last Meeting?",
+    "text": "Meeting 29 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 29",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/29.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 30 / 37 Questions from Last Meeting?",
+    "text": "Meeting 30 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 30",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/30.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 31 / 37 Questions from Last Meeting?",
+    "text": "Meeting 31 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 31",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/31.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 32 / 37 Questions from Last Meeting?",
+    "text": "Meeting 32 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 32",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/32.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 33 / 37 Questions from Last Meeting?",
+    "text": "Meeting 33 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 33",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/33.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 34 / 37 Questions from Last Meeting?",
+    "text": "Meeting 34 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 34",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/34.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 35 / 37 Questions from Last Meeting?",
+    "text": "Meeting 35 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 35",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/35.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 36 / 37 Questions from Last Meeting?",
+    "text": "Meeting 36 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 36",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/36.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 37 / 37 Questions from Last Meeting?",
+    "text": "Meeting 37 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 37",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/37.html"
   },{
@@ -275,7 +280,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/about/education.html"
   },{
     "title": "",
-    "text": "Final Question 5 (Always) 4 [Mostly] 3 [Sometimes] 2 [Rarely] 1 (Never) Total Q1. The instructor is well-prepared for class 29 16 8 0 0 53 Q2. The instructor clearly communicates his expectations for student preparation and participation 33 15 4 1 0 53 Q3. The instructor uses class time effectively 26 18 7 2 0 53 Q4. The instructor has clear expectations for assigned work 34 10 8 1 0 53 Q5. The instructor encourages student participation 45 6 2 0 0 53 Q6. The instructor clearly answers questions 31 16 5 1 0 53 Q7. The instructor treats students with respect 49 3 1 0 0 53 Q8. The instructor effectively directs and stimulates discussion 38 10 4 1 0 53 Q9. The instructor effectively encourages students to ask questions and give answers 43 8 2 0 0 53 Total 328 102 41 6 0 477 CLICK HERE to toggle details Response Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Avg SD Mode Median 1 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 2 4 3 3 2 3 4 5 3 4 3.44 0.88 3 3 3 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 4 5 5 4 5 5 5 5 5 5 4.89 0.33 5 5 5 5 5 4 5 5 5 5 4 5 4.78 0.44 5 5 6 3 4 4 3 5 4 5 5 5 4.22 0.83 5 4 7 3 4 4 4 4 4 5 3 3 3.78 0.67 4 4 8 4 4 4 4 5 5 5 5 5 4.56 0.53 5 5 9 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 10 4 5 4 5 5 5 4 4 5 4.56 0.53 5 5 11 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 12 5 5 5 4 5 4 5 5 5 4.78 0.44 5 5 13 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 14 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 15 4 5 4 4 5 5 5 5 5 4.67 0.50 5 5 16 5 5 4 5 5 5 5 5 5 4.89 0.33 5 5 17 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 18 3 4 5 3 3 2 3 4 4 3.44 0.88 3 3 19 3 3 3 3 5 3 5 4 5 3.78 0.97 3 3 20 4 4 4 5 5 5 5 5 5 4.67 0.50 5 5 21 4 4 3 5 5 4 5 5 5 4.44 0.73 5 5 22 3 3 3 3 5 3 5 4 5 3.78 0.97 3 3 23 4 4 4 3 5 4 5 5 5 4.33 0.71 4 4 24 4 4 5 5 5 4 5 5 5 4.67 0.50 5 5 25 3 2 2 3 4 3 5 3 4 3.22 0.97 3 3 26 3 3 2 3 4 3 4 2 3 3.00 0.71 3 3 27 5 5 4 5 5 5 5 4 4 4.67 0.50 5 5 28 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 29 4 4 4 3 5 4 5 5 4 4.22 0.67 4 4 30 4 5 4 5 5 4 5 5 4 4.56 0.53 5 5 31 5 5 5 5 5 4 5 5 5 4.89 0.33 5 5 32 5 5 5 5 4 5 5 4 5 4.78 0.44 5 5 33 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 34 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 35 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 36 4 4 3 4 5 5 5 5 5 4.44 0.73 5 5 37 5 5 5 5 5 5 5 4 5 4.89 0.33 5 5 38 4 4 3 4 5 3 5 4 5 4.11 0.78 4 4 39 5 5 5 4 5 4 5 5 4 4.67 0.50 5 5 40 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 41 5 4 5 5 5 5 5 5 5 4.89 0.33 5 5 42 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 43 4 5 4 5 5 5 5 5 5 4.78 0.44 5 5 44 4 5 4 5 4 4 5 4 5 4.44 0.53 4 4 45 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 46 3 4 4 4 4 4 5 3 4 3.89 0.60 4 4 47 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 48 4 4 4 5 5 4 4 5 5 4.44 0.53 4 4 49 4 4 3 4 5 5 5 5 5 4.44 0.73 5 5 50 5 5 4 4 5 4 5 5 5 4.67 0.50 5 5 51 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 52 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 53 5 5 5 5 5 4 5 5 5 4.89 0.33 5 5 Avg 4.40 4.51 4.28 4.45 4.81 4.45 4.91 4.60 4.77 4.58 0.21 SD 0.74 0.72 0.84 0.82 0.48 0.75 0.35 0.72 0.51 Mode 5 5 5 5 5 5 5 5 5 Median 5 5 4 5 5 5 5 5 5",
+    "text": "Final Question 5 (Always) 4 [Mostly] 3 [Sometimes] 2 [Rarely] 1 (Never) Total Q1. The instructor is well-prepared for class 29 16 8 0 0 53 Q2. The instructor clearly communicates his expectations for student preparation and participation 33 15 4 1 0 53 Q3. The instructor uses class time effectively 26 18 7 2 0 53 Q4. The instructor has clear expectations for assigned work 34 10 8 1 0 53 Q5. The instructor encourages student participation 45 6 2 0 0 53 Q6. The instructor clearly answers questions 31 16 5 1 0 53 Q7. The instructor treats students with respect 49 3 1 0 0 53 Q8. The instructor effectively directs and stimulates discussion 38 10 4 1 0 53 Q9. The instructor effectively encourages students to ask questions and give answers 43 8 2 0 0 53 Total 328 102 41 6 0 477 CLICK HERE to toggle details Response Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Avg SD Mode Median 1 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 2 4 3 3 2 3 4 5 3 4 3.44 0.88 3 3 3 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 4 5 5 4 5 5 5 5 5 5 4.89 0.33 5 5 5 5 5 4 5 5 5 5 4 5 4.78 0.44 5 5 6 3 4 4 3 5 4 5 5 5 4.22 0.83 5 4 7 3 4 4 4 4 4 5 3 3 3.78 0.67 4 4 8 4 4 4 4 5 5 5 5 5 4.56 0.53 5 5 9 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 10 4 5 4 5 5 5 4 4 5 4.56 0.53 5 5 11 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 12 5 5 5 4 5 4 5 5 5 4.78 0.44 5 5 13 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 14 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 15 4 5 4 4 5 5 5 5 5 4.67 0.50 5 5 16 5 5 4 5 5 5 5 5 5 4.89 0.33 5 5 17 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 18 3 4 5 3 3 2 3 4 4 3.44 0.88 3 3 19 3 3 3 3 5 3 5 4 5 3.78 0.97 3 3 20 4 4 4 5 5 5 5 5 5 4.67 0.50 5 5 21 4 4 3 5 5 4 5 5 5 4.44 0.73 5 5 22 3 3 3 3 5 3 5 4 5 3.78 0.97 3 3 23 4 4 4 3 5 4 5 5 5 4.33 0.71 4 4 24 4 4 5 5 5 4 5 5 5 4.67 0.50 5 5 25 3 2 2 3 4 3 5 3 4 3.22 0.97 3 3 26 3 3 2 3 4 3 4 2 3 3.00 0.71 3 3 27 5 5 4 5 5 5 5 4 4 4.67 0.50 5 5 28 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 29 4 4 4 3 5 4 5 5 4 4.22 0.67 4 4 30 4 5 4 5 5 4 5 5 4 4.56 0.53 5 5 31 5 5 5 5 5 4 5 5 5 4.89 0.33 5 5 32 5 5 5 5 4 5 5 4 5 4.78 0.44 5 5 33 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 34 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 35 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 36 4 4 3 4 5 5 5 5 5 4.44 0.73 5 5 37 5 5 5 5 5 5 5 4 5 4.89 0.33 5 5 38 4 4 3 4 5 3 5 4 5 4.11 0.78 4 4 39 5 5 5 4 5 4 5 5 4 4.67 0.50 5 5 40 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 41 5 4 5 5 5 5 5 5 5 4.89 0.33 5 5 42 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 43 4 5 4 5 5 5 5 5 5 4.78 0.44 5 5 44 4 5 4 5 4 4 5 4 5 4.44 0.53 4 4 45 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 46 3 4 4 4 4 4 5 3 4 3.89 0.60 4 4 47 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 48 4 4 4 5 5 4 4 5 5 4.44 0.53 4 4 49 4 4 3 4 5 5 5 5 5 4.44 0.73 5 5 50 5 5 4 4 5 4 5 5 5 4.67 0.50 5 5 51 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 52 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 53 5 5 5 5 5 4 5 5 5 4.89 0.33 5 5 Avg 4.40 4.51 4.28 4.45 4.81 4.45 4.91 4.60 4.77 4.58 0.21 SD 0.74 0.72 0.84 0.82 0.48 0.75 0.35 0.72 0.51 Mode 5 5 5 5 5 5 5 5 5 Median 5 5 4 5 5 5 5 5 5 What do you like best about this course? CLICK HERE to toggle details the course work because they covered all the aspects of the course topics and discusssions almost everything the way the lectures are planned makes them interesting and fun I like this course because instructor teaching style and mostly like how he understand the students slow-paced activities with no rush or pain; respectful professor Hepting classes in general are always interesting in-class discussions this course has helped in improving my creative side; the course is carefully planned content, project I enjoyed the course discussions and content; the videos we watched were very thought-provoking the interactive nature in class, ability to work on a semester long project to have a hands-on experience with design What would you like to change about this course? CLICK HERE to toggle details false the assignments maybe (some of them) nothing nothing comes to mind I would like to change about this course if professor give any assignment like scenarios writing it should be helpful it is good as it is, but marks were slow to be returned better management of group work NA I am quite satisified by it nothing this course does not need improvement, but URcourses and moodle does! URcourses should automatically reset dates to 2017, but oh well NA What do think are the instructor's greatest strengths? CLICK HERE to toggle details he is kind and willing to help the students organization he was really friendly, a very organized person communication and encoruaging students to participate instructors greatest strengths are he understand students properly respectful; knowledgeable; listens to student input; able to make changes in himself/course if needed; cool and good! he's very respectful of students stimulating discussion and encouraging participation his teaching skills relevant knowledge about the course the instructor is always open to discussion and has a great sense of humour! he encourages student participation",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201730/feedback/final.html"
   },{
@@ -450,12 +455,12 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/research/"
   },{
     "title": "RSS Feeds",
-    "text": "RSS Feeds News (Atom) CS-428+828-201830.rss dhhepting.rss news.rss news.xml",
+    "text": "RSS Feeds News (Atom) CS-428+828-201830.rss links.rss news.rss news.xml",
     "tags": "",
     "url": "/~hepting/rss/"
   },{
     "title": "Sitemap",
-    "text": "Sitemap About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Schedule Winter 2018 Winter 2018 Test",
+    "text": "Sitemap About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Philosophy Schedule Winter 2018 Winter 2018 Test",
     "tags": "",
     "url": "/~hepting/search/sitemap/"
   },{
@@ -560,7 +565,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201730/"
   },{
     "title": "",
-    "text": "Media None available",
+    "text": "Media 01 - 1.jpg 01 - 2.jpg",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/media/"
   },{
@@ -585,12 +590,12 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/assignments/i-or-g/"
   },{
     "title": "",
-    "text": "Individual",
+    "text": "Individual test.html",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/assignments/i/"
   },{
     "title": "",
-    "text": "Assignments g i-or-g i",
+    "text": "Assignments Individual Group Individual or Group",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/assignments/"
   },{
@@ -654,10 +659,20 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201730/feedback/midterm.html"
   },{
+    "title": "Teaching Philosophy",
+    "text": "Philosophy Short version Challenge my students to think deeply and behave ethically. ( inspired by the story of Martina Fitzgerald’s recollections about Gord Downey and their high school English teacher)",
+    "tags": "",
+    "url": "/~hepting/teaching/philosophy.html"
+  },{
     "title": "MATH-ART Postcard",
     "text": "Three public events take place on December 9 at Simon Fraser University at Harbour Centre, 515 West Hastings Street. For more information or to reserve seats at the lecture, call 291-5100. An exhibition of art based on mathematical principles and ideas. Fractals, more so than other areas of mathematics, are visually exciting in a very real way. Fractals are a language with which to describe the geometry of nature. Images of fractals can be an important access to mathematics and surrounding philosophical questions. Noon &dash; 5 pm in the Teck Gallery (Room 1305). Interactive computer displays for visitors to experiment with making their own fractal designs; investigate E-Gems, a project to design math and science electronic games (Counting on Frank, one of their products, was chosen by PC Magazine as one of the top 100 CD-ROMs for 1995); and check out the math education and art resources available on the Internet. Noon &dash; 5 pm in the Segal Centre (Room 1430). Ingenious mathematical amateurs. It is possible for someone without formal credentials to make contributions to mathematics. Well-known artist M.C. Escher and unknown homemaker Marjorie Rice both tackled mathematical problems, developing unorthodox notation that was essential to their methodical investigations. Each worked alone, essentially in secret, rewarded by the exhilaration of finding answers to a large puzzle. Lecture by Dr. Doris Schattschneider, Professor (Emerita) of Mathematics, Moravian College. 5 &dash; 6 pm in the Fletcher Challenge Canada Theatre (Room 1900). We'd like to thank our sponsors, Simon Fraser University, the Canadian Mathematical Society, and the British Columbia Ministry of Employment and Investment. The fractal on this postcard is Fiery Dragon (1990), by Daryl H. Hepting.",
     "tags": "",
     "url": "/~hepting/projects/fractals/exhibitions/teck-postcard.html"
+  },{
+    "title": "how-to-make-jekyll-site-blog",
+    "text": "how-to-make-jekyll-site-blog how-to-make-jekyll-site-blog how-to-make-jekyll-site-blog",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/assignments/i/test.html"
   },{
     "title": "Test Schedule",
     "text": "Test schedule Data file exists: schedule Times Monday Tuesday Wednesday Thursday Friday 8:30 m tc a c c 9:00 9:30 10:00 c 10:30 11:00 11:30 b 12:00 12:30 13:00 d d d 13:30 14:00 e e e 14:30 f f f 15:00 15:30 16:00 16:30",
@@ -672,445 +687,445 @@ var tipuesearch = {"pages": [{
     "title": "Creativity",
     "text": "Creativity (2006) Event Presentation by Joel Salatin Tuesday, November 18, 2008 Education Auditorium, University of Regina Organized by Description Media",
     "tags": "event",
-    "url": "/~hepting/research/works/2006-09-creativity.html"
+    "url": "/~hepting/research/works/2006-09-Creativity.html"
   },{
     "title": "How to Eat Well AND Save Our Planet (2008)",
     "text": "# Event Presentation by Joel Salatin Tuesday, November 18, 2008 Education Auditorium, University of Regina Organized by Description Media",
     "tags": "event",
-    "url": "/~hepting/research/works/2008-11-how-to-eat-well-and-save-our-planet.html"
+    "url": "/~hepting/research/works/2008-11-How-to-Eat-Well-AND-Save-Our-Planet.html"
   },{
     "title": "Approximation and Visualization of Sets Defined by Iterated Function Systems (1991)",
     "text": "@mastersthesis{1991-03-Hep, Author = “Hepting, Daryl H.”, Title = “Approximation and Visualization of Sets Defined by Iterated Function Systems”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/1991-03-Hep.pdf\", Address = “Regina, Saskatchewan, Canada”, Doi = “10.13140/RG.2.2.34414.82244”, Keywords = “iterated function systems”, Month = “March”, School = “University of Regina”, Year = “1991”, }",
     "tags": "MSc",
-    "url": "/~hepting/research/works/1991-03-hep-approximation-and-visualization-of-sets-defined-by-iterated-function-systems.html"
+    "url": "/~hepting/research/works/1991-03-Hep-Approximation-and-Visualization-of-Sets-Defined-by-Iterated-Function-Systems.html"
   },{
     "title": "Rendering Methods for Iterated Function Systems (1991)",
     "text": "@inproceedings{1991-06-HepPruSau, Author = “Hepting, Daryl H. and Prusinkiewicz, Przemyslaw and Saupe, Dietmar”, Title = “Rendering Methods for Iterated Function Systems”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/1991-06-HepPruSau.pdf\", Editor = “Peitgen, Heinz-Otto and Henriques, Jos'e Marques and Penedo, Lu'is Filipe”, Address = “New York”, Booktitle = “Fractals in the Fundamental and Applied Sciences: Proceedings of the First IFIP Conference on Fractals in the Fundamental and Applied Sciences, Lisbon, Portugal, 6-8 June, 1990”, Keywords = “IFS, fractals, rendering methods”, Month = “June”, Organization = “IFIP”, Pages = “183–224”, Publisher = “North-Holland”, Year = “1991”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/1991-06-hepprusau-rendering-methods-for-iterated-function-systems.html"
+    "url": "/~hepting/research/works/1991-06-HepPruSau-Rendering-Methods-for-Iterated-Function-Systems.html"
   },{
     "title": "A Layered Approach to Computerization of a Multimedia Archive (1993)",
     "text": "@techreport{1993-12-Hep, Author = “Hepting, Daryl H.”, Title = “A Layered Approach to Computerization of a Multimedia Archive”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/1993-12-Hep.pdf\", Address = “Burnaby, BC, Canada”, Institution = “Simon Fraser University”, Month = “December”, Number = “CMPT TR 93-14”, Year = “1993”, }",
     "tags": "techreport",
-    "url": "/~hepting/research/works/1993-12-hep-a-layered-approach-to-computerization-of-a-multimedia-archive.html"
+    "url": "/~hepting/research/works/1993-12-Hep-A-Layered-Approach-to-Computerization-of-a-Multimedia-Archive.html"
   },{
     "title": "A Visual Analysis of Invariant Tori (1995)",
     "text": "@conference{1995-03-HepDerEdo, Author = “Hepting, Daryl H. and Derks, Gianne and Edoh, Kossi D. and Russell, Robert D.”, Title = “A Visual Analysis of Invariant Tori”, Address = “Banff, AB, Canada”, Month = “March”, Organization = “Western Computer Graphics Symposium”, Year = “1995” }",
     "tags": "paper",
-    "url": "/~hepting/research/works/1995-03-hepderedo-a-visual-analysis-of-invariant-tori.html"
+    "url": "/~hepting/research/works/1995-03-HepDerEdo-A-Visual-Analysis-of-Invariant-Tori.html"
   },{
     "title": "Visualization as a Qualitative Tool for the Computation of Invariant Tori (1995)",
     "text": "@conference{1995-05-HepEdoDer, Author = “Hepting, Daryl H. and Edoh, Kossi D. and Derks, Gianne and Russell, Robert D.”, Title = “Visualization as a Qualitative Tool for the Computation of Invariant Tori”, Address = “Snowbird, Utah”, Booktitle = “3rd SIAM Conference on Applications of Dynamical Systems”, Month = “May”, Year = “1995” }",
     "tags": "paper",
-    "url": "/~hepting/research/works/1995-05-hepedoder-visualization-as-a-qualitative-tool-for-the-computation-of-invariant-tori.html"
+    "url": "/~hepting/research/works/1995-05-HepEdoDer-Visualization-as-a-Qualitative-Tool-for-the-Computation-of-Invariant-Tori.html"
   },{
     "title": "The Escape Buffer Efficient Computation of Escape Time for Linear Fractals (1995)",
     "text": "@inproceedings{1995-05-HepHar, Author = “Hepting, Daryl H. and Hart, John C.”, Title = “The Escape Buffer: Efficient Computation of Escape Time for Linear Fractals”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/1995-05-HepHar.pdf\", Editor = “Davis, Wayne A. and Prusinkiewicz, Przemyslaw”, Booktitle = “Proceedings of Graphics Interface ‘95”, Doi = “10.20380/GI1995.24”, Month = “May”, Pages = “204–214”, Publisher = “Canadian Information Processing Society”, Year = “1995”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/1995-05-hephar-the-escape-buffer-efficient-computation-of-escape-time-for-linear-fractals.html"
+    "url": "/~hepting/research/works/1995-05-HepHar-The-Escape-Buffer-Efficient-Computation-of-Escape-Time-for-Linear-Fractals.html"
   },{
     "title": "Qualitative Analysis of Invariant Tori in a Dynamical System (1995)",
     "text": "@inproceedings{1995-10-HepDerEdo, Author = “Hepting, Daryl H. and Derks, Gianne and Edoh, Kossi D. and Russell, Robert D.”, Title = “Qualitative Analysis of Invariant Tori in a Dynamical System”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/1995-10-HepDerEdo.pdf\", Booktitle = “Proceedings of Visualization ‘95, IEEE Conference on Visualization”, Doi = “10.1109/VISUAL.1995.485148”, Month = “October”, Pages = “342–345, 471”, Year = “1995”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/1995-10-hepderedo-qualitative-analysis-of-invariant-tori-in-a-dynamical-system.html"
+    "url": "/~hepting/research/works/1995-10-HepDerEdo-Qualitative-Analysis-of-Invariant-Tori-in-a-Dynamical-System.html"
   },{
     "title": "Case Study A Visual Tool for Moving Mesh Numerical Methods (1995)",
     "text": "@techreport{1995-11-HepHuaRus, Author = “Hepting, Daryl H. and Huang, Weizhang and Russell, Robert D.”, Title = “Case Study: A Visual Tool for Moving Mesh Numerical Methods”, Address = “Burnaby, BC, Canada”, Institution = “Simon Fraser University”, Month = “11”, Number = “95-09”, Year = “1995” }",
     "tags": "paper",
-    "url": "/~hepting/research/works/1995-11-hephuarus-case-study-a-visual-tool-for-moving-mesh-numerical-methods.html"
+    "url": "/~hepting/research/works/1995-11-HepHuaRus-Case-Study-A-Visual-Tool-for-Moving-Mesh-Numerical-Methods.html"
   },{
     "title": "Cogito a system for computer aided visualization (1996)",
     "text": "@techreport{1996-08-HepFraDil, Author = “Hepting, Daryl H. and Fracchia, F. David and Dill, John C. and Russell, Robert D.”, Title = “Cogito: a system for computer-aided visualization”, Institution = “Simon Fraser University”, Month = “August”, Number = “CMPT-TR-96-02”, Year = “1996”, }",
     "tags": "sketch",
-    "url": "/~hepting/research/works/1996-08-hepfradil-cogito-a-system-for-computer-aided-visualization.html"
+    "url": "/~hepting/research/works/1996-08-HepFraDil-Cogito-a-system-for-computer-aided-visualization.html"
   },{
     "title": "A Personal Paradigm for Computer Aided Visualization (1996)",
     "text": "@inproceedings{1996-11-HepFraDil, Author = “Hepting, Daryl H. and Fracchia, F. David and Dill, John C. and Russell, Robert D.”, Title = “A Personal Paradigm for Computer-Aided Visualization”, Booktitle = “Workshop on New Paradigms in Information Visualization and Manipulation”, Month = “November”, Organization = “ACM Conference on Information and Knowledge Management”, Year = “1996” }",
     "tags": "workshop",
-    "url": "/~hepting/research/works/1996-11-hepfradil-a-personal-paradigm-for-computer-aided-visualization.html"
+    "url": "/~hepting/research/works/1996-11-HepFraDil-A-Personal-Paradigm-for-Computer-Aided-Visualization.html"
   },{
     "title": "A Personal Adventure SIGGRAPH 96 (1997)",
     "text": "@article{1997-08-Hep1, Author = “Hepting, Daryl H.”, Title = “A Personal Adventure: SIGGRAPH 96”, Journal = “Computer Graphics”, Month = “August”, Number = “3”, Pages = “22–23”, Volume = “31”, Year = “1997” }",
     "tags": "article",
-    "url": "/~hepting/research/works/1997-08-hep1-a-personal-adventure-siggraph-96.html"
+    "url": "/~hepting/research/works/1997-08-Hep1-A-Personal-Adventure-SIGGRAPH-96.html"
   },{
     "title": "Humble Aspirations (1997)",
     "text": "@misc{1997-08-Hep2, Author = “Hepting, Daryl H.”, Title = “Humble Aspirations”, Howpublished = “Technical Slide Set, SIGGRAPH 97: 24th Annual Conference on Computer Graphics and Interactive Techniques”, Month = “August”, Year = “1997” }",
     "tags": "image",
-    "url": "/~hepting/research/works/1997-08-hep2-humble-aspirations.html"
+    "url": "/~hepting/research/works/1997-08-Hep2-Humble-Aspirations.html"
   },{
     "title": "An Exploratory Approach to Mathematical Visualization (1998)",
     "text": "@inproceedings{1998-04-HepCaoRus, Author = “Hepting, Daryl H. and Cao, Weiming and Russell, Robert D.”, Title = “An Exploratory Approach to Mathematical Visualization”, Booktitle = “Western Computer Graphics Symposium”, Month = “April”, Year = “1998” }",
     "tags": "conference",
-    "url": "/~hepting/research/works/1998-04-hepcaorus-an-exploratory-approach-to-mathematical-visualization.html"
+    "url": "/~hepting/research/works/1998-04-HepCaoRus-An-Exploratory-Approach-to-Mathematical-Visualization.html"
   },{
     "title": "A New Paradigm for Exploration in Computer Aided Visualization (1999)",
     "text": "@phdthesis{1999-12-Hep, Author = “Hepting, Daryl H.”, Title = “A New Paradigm for Exploration in Computer-Aided Visualization”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/1999-12-Hep.pdf\", Address = “Burnaby, Canada”, Doi = “10.13140/RG.2.1.3716.9362”, Keywords = “computer-aided vlsualization”, Month = “December”, School = “Simon Fraser University”, Year = “1999”, }",
     "tags": "PhD",
-    "url": "/~hepting/research/works/1999-12-hep-a-new-paradigm-for-exploration-in-computer-aided-visualization.html"
+    "url": "/~hepting/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html"
   },{
     "title": "Towards a visual interface for information visualization (2002)",
     "text": "@inproceedings{2002-07-Hep, Author = “Hepting, Daryl H.”, Title = “Towards a visual interface for information visualization”, Booktitle = “Proceedings of Sixth International Conference on Information Visualisation 2002”, Doi = “10.1109/IV.2002.1028791”, Month = “July”, Pages = “295–302”, Publisher = “IEEE”, Year = “2002”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2002-07-hep-towards-a-visual-interface-for-information-visualization.html"
+    "url": "/~hepting/research/works/2002-07-Hep-Towards-a-visual-interface-for-information-visualization.html"
   },{
     "title": "Interactive Evolution for Systematic Exploration of a Parameter Space (2003)",
     "text": "@inproceedings{2003-11-Hep, Author = “Hepting, Daryl H.”, Title = “Interactive Evolution for Systematic Exploration of a Parameter Space”, Editor = “Dagli, Cihan H.”, Booktitle = “Intelligent Engineering Systems through Artificial Neural Networks”, Month = “November”, Pages = “125–131”, Publisher = “ASME Press”, Volume = “13”, Year = “2003” }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2003-11-hep-interactive-evolution-for-systematic-exploration-of-a-parameter-space.html"
+    "url": "/~hepting/research/works/2003-11-Hep-Interactive-Evolution-for-Systematic-Exploration-of-a-Parameter-Space.html"
   },{
     "title": "The Implications of Verbal Overshadowing for Computer Interface Design (2003)",
     "text": "@techreport{2003-11-HepArb, Author = “Hepting, Daryl H. and Arbuthnott, Katherine D.”, Title = “The Implications of Verbal Overshadowing for Computer Interface Design”, Institution = “University of Regina, Department of Computer Science”, Month = “November”, Number = “2003-10”, Year = “2003” }",
     "tags": "techreport",
-    "url": "/~hepting/research/works/2003-11-heparb-the-implications-of-verbal-overshadowing-for-computer-interface-design.html"
+    "url": "/~hepting/research/works/2003-11-HepArb-The-Implications-of-Verbal-Overshadowing-for-Computer-Interface-Design.html"
   },{
     "title": "A Unified Framework for the Presentation of Environmental Risk Information (2004)",
     "text": "@techreport{2004-05-HepHoeBer, Author = “Hepting, Daryl H. and Hoeber, Orland and Berg, Marlin”, Title = “A Unified Framework for the Presentation of Environmental Risk Information”, Institution = “University of Regina”, Month = “May”, Number = “CS2004-11”, Year = “2004” }",
     "tags": "techreport",
-    "url": "/~hepting/research/works/2004-05-hephoeber-a-unified-framework-for-the-presentation-of-environmental-risk-information.html"
+    "url": "/~hepting/research/works/2004-05-HepHoeBer-A-Unified-Framework-for-the-Presentation-of-Environmental-Risk-Information.html"
   },{
     "title": "Managing Parameter Spaces for Multimedia Composition (2004)",
     "text": "@inproceedings{2004-08-HepGerMcK, Author = “Hepting, Daryl H. and Gerhard, David and McKague, Matthew and Schmiedge, Paul”, Title = “Managing Parameter Spaces for Multimedia Composition”, Address = “New York”, Booktitle = “ACM SIGGRAPH 2004 Posters”, Doi = “10.1145/1186415.1186505”, Month = “August”, Pages = “78”, Publisher = “ACM”, Series = “SIGGRAPH ‘04”, Year = “2004”, }",
     "tags": "poster",
-    "url": "/~hepting/research/works/2004-08-hepgermck-managing-parameter-spaces-for-multimedia-composition.html"
+    "url": "/~hepting/research/works/2004-08-HepGerMcK-Managing-Parameter-Spaces-for-Multimedia-Composition.html"
   },{
     "title": "Symbol Mall (2004)",
     "text": "@inproceedings{2004-08-UttHepPet, Author = “Uttaranakorn, Jirayu and Hepting, Daryl H. and Petty, Sheila”, Title = “Symbol Mall”, Editor = “Barzel, Ronen”, Address = “New York”, Booktitle = “SIGGRAPH ‘04: ACM SIGGRAPH 2004 Sketches”, Doi = “10.1145/1186223.1186248”, Month = “August”, Pages = “20”, Publisher = “ACM”, Year = “2004”, }",
     "tags": "sketch",
-    "url": "/~hepting/research/works/2004-08-uttheppet-symbol-mall.html"
+    "url": "/~hepting/research/works/2004-08-UttHepPet-Symbol-Mall.html"
   },{
     "title": "An Integrated Approach to Discovery in Complex Information Spaces (2004)",
     "text": "@inproceedings{2004-09-HepBut, Author = “Hepting, Daryl H. and Butz, Cory J.”, Title = “An Integrated Approach to Discovery in Complex Information Spaces”, Editor = “Yao, J. T. and Raghavan, V. V. and Wang, G.Y.”, Booktitle = “Second International Workshop on Web-based Support Systems, edited by , 2004, pages”, Month = “September”, Pages = “67–74”, Year = “2004” }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2004-09-hepbut-an-integrated-approach-to-discovery-in-complex-information-spaces.html"
+    "url": "/~hepting/research/works/2004-09-HepBut-An-Integrated-Approach-to-Discovery-in-Complex-Information-Spaces.html"
   },{
     "title": "Cross Modal Parametric Composition (2004)",
     "text": "@inproceedings{2004-11-GerHep, Author = “Gerhard, David and Hepting, Daryl H.”, Title = “Cross-Modal Parametric Composition”, Booktitle = “Proceedings of the 2004 International Computer Music Conference”, Month = “November”, Pages = “505–512”, Publisher = “IEEE”, Year = “2004” }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2004-11-gerhep-cross-modal-parametric-composition.html"
+    "url": "/~hepting/research/works/2004-11-GerHep-Cross-Modal-Parametric-Composition.html"
   },{
     "title": "Intellectual Capital Open Source and Sustainable Development Implications for the Success of Canadian Firms in the New Economy (2005)",
     "text": "@inproceedings{2005-02-PetHep, Author = “Petry, Roger A. and Hepting, Daryl H.”, Title = “Intellectual Capital, Open Source, and Sustainable Development: Implications for the Success of Canadian Firms in the New Economy”, Booktitle = “Proceedings of the 26th McMaster World Congress, Hamilton, Ontario”, Month = “February”, Year = “2005” }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2005-02-pethep-intellectual-capital-open-source-and-sustainable-development-implications-for-the-success-of-canadian-firms-in-the-new-economy.html"
+    "url": "/~hepting/research/works/2005-02-PetHep-Intellectual-Capital-Open-Source-and-Sustainable-Development-Implications-for-the-Success-of-Canadian-Firms-in-the-New-Economy.html"
   },{
     "title": "Collaborative Computer Aided Parameter Exploration for Music and Animation (2005)",
     "text": "@inproceedings{2005-05-HepGer, Author = “Hepting, Daryl H. and Gerhard, David”, Title = “Collaborative Computer-Aided Parameter Exploration for Music and Animation”, Booktitle = “Proceedings of the Second International Conference on Computer Music Modelling and Retrieval 2004”, Doi = “10.1007/978-3-540-31807-1_13”, Month = “May”, Pages = “158–172”, Series = “Lecture Notes in Computer Science”, Volume = “3310”, Year = “2005”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2005-05-hepger-collaborative-computer-aided-parameter-exploration-for-music-and-animation.html"
+    "url": "/~hepting/research/works/2005-05-HepGer-Collaborative-Computer-Aided-Parameter-Exploration-for-Music-and-Animation.html"
   },{
     "title": "Consumer Decision Support for Product Selection (2005)",
     "text": "@inproceedings{2005-05-HepMac, Author = “Hepting, Daryl H. and Maciag, Timothy”, Title = “Consumer Decision Support for Product Selection”, Editor = “Denzer, Ralf”, Booktitle = “Proceedings of the 6th International Symposium on Environmental Software Systems 2005 (ISESS 2005)”, Month = “May”, Organization = “IFIP”, Pages = “95–106”, Year = “2005” }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2005-05-hepmac-consumer-decision-support-for-product-selection.html"
+    "url": "/~hepting/research/works/2005-05-HepMac-Consumer-Decision-Support-for-Product-Selection.html"
   },{
     "title": "A Framework for Personalization of Interactive Sound Synthesis (2005)",
     "text": "@inproceedings{2005-09-GerHep, Author = “Gerhard, David and Hepting, Daryl H.”, Title = “A Framework for Personalization of Interactive Sound Synthesis”, Booktitle = “Proceedings of the 2005 International Computer Music Conference (ICMC05), Barcelona, Spain.”, Month = “September”, Organization = “International Computer Music Association”, Publisher = “IEEE”, Year = “2005” }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2005-09-gerhep-a-framework-for-personalization-of-interactive-sound-synthesis.html"
+    "url": "/~hepting/research/works/2005-09-GerHep-A-Framework-for-Personalization-of-Interactive-Sound-Synthesis.html"
   },{
     "title": "Personalizing User Interfaces for Environmental Decision Support Systems (2005)",
     "text": "@inproceedings{2005-09-MacHepSle, Author = “Maciag, Timothy and Hepting, Daryl H. and '{S}l\\k{e}zak, Dominik”, Title = “Personalizing User Interfaces for Environmental Decision Support Systems”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2005-09-MacHepSle.pdf\", Editor = “'{S}l\\k{e}zak, D. and Menasalvas-Ruiz, E. and Liau, C. J. and Szczuka, M.”, Booktitle = “Proceedings of International Workshop on Rough Sets and Soft Computing in Intelligent Agent and Web Technologies”, Month = “September”, Pages = “49–55”, Year = “2005” }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2005-09-machepsle-personalizing-user-interfaces-for-environmental-decision-support-systems.html"
+    "url": "/~hepting/research/works/2005-09-MacHepSle-Personalizing-User-Interfaces-for-Environmental-Decision-Support-Systems.html"
   },{
     "title": "Analysis of User Classifiers for Personalization of Environmental Decision Support System Interfaces (2005)",
     "text": "@inproceedings{2005-11-MacHep, Author = “Maciag, Timothy and Hepting, Daryl H.”, Title = “Analysis of User Classifiers for Personalization of Environmental Decision Support System Interfaces”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2005-11-MacHep.pdf\", Editor = “Dagli, Cihan H. and Buczak, Anna L. and Enke, David L.”, Booktitle = “Intelligent Engineering Systems through Artificial Neural Networks”, Month = “November”, Publisher = “ASME Press”, Volume = “15”, Year = “2005” }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2005-11-machep-analysis-of-user-classifiers-for-personalization-of-environmental-decision-support-system-interfaces.html"
+    "url": "/~hepting/research/works/2005-11-MacHep-Analysis-of-User-Classifiers-for-Personalization-of-Environmental-Decision-Support-System-Interfaces.html"
   },{
     "title": "Computational Support for P Creative Solutions (2005)",
     "text": "@incollection{2005-12-Hep, Author = “Hepting, Daryl H.”, Title = “Computational Support for P-Creative Solutions”, Editor = “Gero, John Steven and Maher, Mary Lou”, Booktitle = “Computational and Cognitive Models of Creative Design VI”, Month = “December”, Pages = “333–348”, Publisher = “Key Centre of Design Computing and Cognition, University of Sydney”, Year = “2005” }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2005-12-hep-computational-support-for-p-creative-solutions.html"
+    "url": "/~hepting/research/works/2005-12-Hep-Computational-Support-for-P-Creative-Solutions.html"
   },{
     "title": "Respectful Actions in Research Aboriginal Adolescents Speaking Their Future (2006)",
     "text": "@article{2006-01-CarLonHep, Author = “Carlson Berg, Laurie and Longman, Sarah and Hepting, Daryl H. and Doolittle, Edward”, Title = “Respectful Actions in Research: Aboriginal Adolescents Speaking Their Future”, Journal = “The Delta Kappa Gamma Bulletin”, Month = “January”, Number = “3”, Pages = “23–29”, Volume = “72”, Year = “2006” }",
     "tags": "journal",
-    "url": "/~hepting/research/works/2006-01-carlonhep-respectful-actions-in-research-aboriginal-adolescents-speaking-their-future.html"
+    "url": "/~hepting/research/works/2006-01-CarLonHep-Respectful-Actions-in-Research-Aboriginal-Adolescents-Speaking-Their-Future.html"
   },{
     "title": "Ethics and Usability Testing in Computer Science Education (2006)",
     "text": "@article{2006-06-Hep, Author = “Hepting, Daryl H.”, Title = “Ethics and Usability Testing in Computer Science Education”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2006-06-Hep.pdf\", Booktitle = “ACM SIGCSE”, Doi = “10.1145/1138403.1138438”, Journal = “ACM SIGCSE Bulletin”, Month = “June”, Number = “2”, Pages = “76–80”, Volume = “38”, Year = “2006”, }",
     "tags": "journal",
-    "url": "/~hepting/research/works/2006-06-hep-ethics-and-usability-testing-in-computer-science-education.html"
+    "url": "/~hepting/research/works/2006-06-Hep-Ethics-and-Usability-Testing-in-Computer-Science-Education.html"
   },{
     "title": "Opening Access to Environmental Software Systems (2006)",
     "text": "@conference{2006-07-HepMac, Author = “Hepting, Daryl H. and Maciag, Timothy”, Title = “Opening Access to Environmental Software Systems”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2006-07-HepMac.pdf\", Editor = “Voinov, A. and Jakeman, A. and Rizzolli, A.”, Booktitle = “3rd International Congress on Environmental Modelling and Software”, Month = “July”, Organization = “iEMSs”, Pages = “420–425”, Year = “2006” }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2006-07-hepmac-opening-access-to-environmental-software-systems.html"
+    "url": "/~hepting/research/works/2006-07-HepMac-Opening-Access-to-Environmental-Software-Systems.html"
   },{
     "title": "Consumer Modelling in Support of Interface Design (2006)",
     "text": "@inproceedings{2006-11-MacSleHep, Author = “Maciag, Timothy and '{S}l\\k{e}zak, Dominik and Hepting, Daryl H.”, Title = “Consumer Modelling in Support of Interface Design”, Booktitle = “2006 International Conference on Hybrid Information Technology”, Doi = “10.1109/ICHIT.2006.253605”, Month = “November”, Pages = “153–160”, Volume = “2”, Year = “2006”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2006-11-macslehep-consumer-modelling-in-support-of-interface-design.html"
+    "url": "/~hepting/research/works/2006-11-MacSleHep-Consumer-Modelling-in-Support-of-Interface-Design.html"
   },{
     "title": "A User Driven Interface for Exploring Visualizations (2007)",
     "text": "@inproceedings{2007-01-HepSch, Author = “Hepting, Daryl H. and Schmiedge, Paul”, Title = “A User-Driven Interface for Exploring Visualizations”, Editor = {Erbacher, Robert F. and Roberts, Jonathan C. and Gr{\"o}hn, Matti T. and B{\"o}rner, Katy}, Booktitle = “SPIE Proceedings, Visualization and Data Analysis 2007”, Doi = “10.1117/12.703654”, Month = “January”, Pages = “64950R”, Volume = “6495”, Year = “2007”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2007-01-hepsch-a-user-driven-interface-for-exploring-visualizations.html"
+    "url": "/~hepting/research/works/2007-01-HepSch-A-User-Driven-Interface-for-Exploring-Visualizations.html"
   },{
     "title": "Decision Support for Local Environmental Impact Assessment (2007)",
     "text": "@article{2007-04-Hep, Author = “Hepting, Daryl H.”, Title = “Decision Support for Local Environmental Impact Assessment”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2007-04-Hep.pdf\", Doi = “10.1016/j.envsoft.2005.12.010”, Journal = “Journal of Environmental Modelling and Software”, Month = “April”, Number = “4”, Pages = “436–441”, Volume = “22”, Year = “2007”, }",
     "tags": "journal",
-    "url": "/~hepting/research/works/2007-04-hep-decision-support-for-local-environmental-impact-assessment.html"
+    "url": "/~hepting/research/works/2007-04-Hep-Decision-Support-for-Local-Environmental-Impact-Assessment.html"
   },{
     "title": "Information Technology in Support of Sustainable Food Choices (2007)",
     "text": "@inproceedings{2007-05-HepMacRiz, Author = “Hepting, Daryl H. and Maciag, Timothy and Rizvi, S. A. A.”, Title = “Information Technology in Support of Sustainable Food Choices”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2007-05-HepMacRiz.pdf\", Booktitle = “Environmental Software Systems”, Doi = “10.13140/2.1.3773.6001”, Month = “May”, Organization = “International Symposium on Environmental Software Systems”, Pages = “560–571”, Series = “IFIP Conference Series”, Volume = “7”, Year = “2007”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2007-05-hepmacriz-information-technology-in-support-of-sustainable-food-choices.html"
+    "url": "/~hepting/research/works/2007-05-HepMacRiz-Information-Technology-in-Support-of-Sustainable-Food-Choices.html"
   },{
     "title": "Discovery of Usability Patterns in Support of Green Purchasing (2007)",
     "text": "@inproceedings{2007-05-MacHep, Author = “Maciag, Timothy and Hepting, Daryl H.”, Title = “Discovery of Usability Patterns in Support of Green Purchasing”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2007-05-MacHep.pdf\", Editor = “Denzer, Ralf”, Booktitle = “Environmental Software Systems”, Doi = “10.13140/2.1.3773.6001”, Month = “May”, Organization = “International Symposium on Environmental Software Systems”, Pages = “550–559”, Series = “IFIP Conference Series”, Volume = “7”, Year = “2007”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2007-05-machep-discovery-of-usability-patterns-in-support-of-green-purchasing.html"
+    "url": "/~hepting/research/works/2007-05-MacHep-Discovery-of-Usability-Patterns-in-Support-of-Green-Purchasing.html"
   },{
     "title": "Mining Associations for Interface Design (2007)",
     "text": "@inproceedings{2007-05-MacHepSle, Author = “Maciag, Timothy and Hepting, Daryl H. and '{S}l\\k{e}zak, Dominik and Hilderman, Robert J.”, Title = “Mining Associations for Interface Design”, Editor = “Yao, Jing{T}ao and Lingras, Pawan and Wu, Wei-Zhi and Szczuka, Marcin and Cercone, Nick J. and '{S}l\\k{e}zak, Dominik”, Address = “Berlin, Heidelberg”, Booktitle = “RSKT 2007: Rough Sets and Knowledge Technology”, Doi = “10.1007/978-3-540-72458-2_13”, Month = “May”, Pages = “109–117”, Publisher = “Springer”, Series = “Lecture Notes in Computer Science”, Volume = “4481”, Year = “2007”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2007-05-machepsle-mining-associations-for-interface-design.html"
+    "url": "/~hepting/research/works/2007-05-MacHepSle-Mining-Associations-for-Interface-Design.html"
   },{
     "title": "Software for Systematic and Imaginative Exploration (2007)",
     "text": "@inproceedings{2007-06-Hep, Author = “Hepting, Daryl H.”, Title = “Software for Systematic and Imaginative Exploration”, Editor = “Shneiderman, Ben and Fischer, Gerhard and Giaccardi, Elisa and Eisenberg, Mike”, Booktitle = “Proceedings of the 6th ACM SIGCHI Conference on Creativity \\&amp; Cognition”, Doi = “10.1145/1254960.1254999”, Keywords = “Interaction, training, creativity, software design”, Month = “June”, Pages = “253–254”, Publisher = “ACM”, Year = “2007”, }",
     "tags": "poster",
-    "url": "/~hepting/research/works/2007-06-hep-software-for-systematic-and-imaginative-exploration.html"
+    "url": "/~hepting/research/works/2007-06-Hep-Software-for-Systematic-and-Imaginative-Exploration.html"
   },{
     "title": "Evaluating the Utility of Web Based Consumer Support Tools Using Rough Sets (2007)",
     "text": "@inproceedings{2007-07-MacHepSle, Author = “Maciag, Timothy and Hepting, Daryl H. and '{S}l\\k{e}zak, Dominik and Hilderman, Robert J.”, Title = “Evaluating the Utility of Web-Based Consumer Support Tools Using Rough Sets”, Editor = “Akhgar, Babak”, Address = “London”, Booktitle = “ICCS 2007: Proceedings of the 15th International Workshops on Conceptual Structures”, Doi = “10.1007/978-1-84628-992-7_13”, Month = “July”, Pages = “94–101”, Publisher = “Springer”, Year = “2007”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2007-07-machepsle-evaluating-the-utility-of-web-based-consumer-support-tools-using-rough-sets.html"
+    "url": "/~hepting/research/works/2007-07-MacHepSle-Evaluating-the-Utility-of-Web-Based-Consumer-Support-Tools-Using-Rough-Sets.html"
   },{
     "title": "Evaluation of a Dominance Based Rough Set Approach to Interface Design (2007)",
     "text": "@inproceedings{2007-10-MacHepHil, Author = “Maciag, Timothy and Hepting, Daryl H. and Hilderman, Robert J. and '{S}l\\k{e}zak, Dominik”, Title = “Evaluation of a Dominance-Based Rough Set Approach to Interface Design”, Booktitle = “2007 Frontiers in the Convergence of Bioscience and Information Technologies”, Doi = “10.1109/FBIT.2007.54”, Month = “October”, Pages = “409-416”, Publisher = “IEEE”, Year = “2007”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2007-10-machephil-evaluation-of-a-dominance-based-rough-set-approach-to-interface-design.html"
+    "url": "/~hepting/research/works/2007-10-MacHepHil-Evaluation-of-a-Dominance-Based-Rough-Set-Approach-to-Interface-Design.html"
   },{
     "title": "Creating synergy between usability courses and open source software projects (2008)",
     "text": "@article{2008-06-HepPenMac, Author = “Hepting, Daryl H. and Peng, Lijuan and Maciag, Timothy and Gerhard, David and Maguire, Brien”, Title = “Creating synergy between usability courses and open source software projects”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2008-06-HepPenMac.pdf\", Doi = “10.1145/1383602.1383649”, Journal = “ACM SIGCSE Bulletin”, Month = “June”, Number = “2”, Pages = “120–123”, Volume = “49”, Year = “2008”, }",
     "tags": "journal",
-    "url": "/~hepting/research/works/2008-06-heppenmac-creating-synergy-between-usability-courses-and-open-source-software-projects.html"
+    "url": "/~hepting/research/works/2008-06-HepPenMac-Creating-synergy-between-usability-courses-and-open-source-software-projects.html"
   },{
     "title": "An Analysis of Interface Quality for Decision Support (2008)",
     "text": "@inproceedings{2008-07-MacHep1, Author = “Maciag, Timothy and Hepting, Daryl H.”, Title = “An Analysis of Interface Quality for Decision Support”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2008-07-MacHep1.pdf\", Editor = “Sanchez-Marr{`e}, M. and B{`e}jar, J. and Comas, J. and Rizzoli, A. and Guariso, G.”, Booktitle = “iEMSs 2008: International Congress on Environmental Modelling and Software”, Month = “July”, Organization = “International Environmental Modelling and Software Society (iEMSs)”, Pages = “1694-1700”, Volume = “3”, Year = “2008” }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2008-07-machep1-an-analysis-of-interface-quality-for-decision-support.html"
+    "url": "/~hepting/research/works/2008-07-MacHep1-An-Analysis-of-Interface-Quality-for-Decision-Support.html"
   },{
     "title": "On the Role of Reflection and Representation in Environmental Decision Support Systems (2008)",
     "text": "@inproceedings{2008-07-MacHep2, Author = “Maciag, Timothy and Hepting, Daryl H.”, Title = “On the Role of Reflection and Representation in Environmental Decision Support Systems”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2008-07-MacHep2.pdf\", Editor = “Sanchez-Marr{`e}, M. and B{`e}jar, J. and Comas, J. and Rizzoli, A. and Guariso, G.”, Booktitle = “iEMSs 2008: International Congress on Environmental Modelling and Software”, Month = “July”, Organization = “International Environmental Modelling and Software Society (iEMSs)”, Pages = “1701–1707”, Volume = “3”, Year = “2008” }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2008-07-machep2-on-the-role-of-reflection-and-representation-in-environmental-decision-support-systems.html"
+    "url": "/~hepting/research/works/2008-07-MacHep2-On-the-Role-of-Reflection-and-Representation-in-Environmental-Decision-Support-Systems.html"
   },{
     "title": "Bridging the Gaps Between Design and Use Developing Tools to Support Environmental Management and Policy (2008)",
     "text": "@inbook{2008-10-McIGiuVoi, Author = “McIntosh, B.S. and Giupponi, C. and Voinov, A.A. and Smith, C. and Matthews, K.B. and Monticino, M. and Kolkman, M.J. and Crossman, N. and van Ittersum, M. and Haase, D. and Haase, A. and Mysiak, J. and Groot, J.C.J. and Sieber, S. and Verweij, P. and Quinn, N. and Waeger, P. and Gaber, N. and Hepting, D. and Scholten, H. and Sulis, A. and van Delden, H. and Gaddis, E. and Assaf, H.”, Title = “Bridging the Gaps Between Design and Use: Developing Tools to Support Environmental Management and Policy”, Editor = “Jakeman, A.J. and Voinov, A.A. and Rizzoli, A.E. and Chen, S.H.”, Booktitle = “Environmental Modelling, Software and Decision Support”, Chapter = “3”, Doi = “10.1016/S1574-101X(08)00603-0”, Issn = “1574-101X”, Keywords = “decision support, information support, environmental management, environmental policy, decision support tools”, Month = “October”, Pages = “33–48”, Publisher = “Elsevier”, Series = “Developments in Integrated Environmental Assessment”, Volume = “3”, Year = “2008”, }",
     "tags": "chapter",
-    "url": "/~hepting/research/works/2008-10-mcigiuvoi-bridging-the-gaps-between-design-and-use-developing-tools-to-support-environmental-management-and-policy.html"
+    "url": "/~hepting/research/works/2008-10-McIGiuVoi-Bridging-the-Gaps-Between-Design-and-Use-Developing-Tools-to-Support-Environmental-Management-and-Policy.html"
   },{
     "title": "A Data Mining Framework for Designing Personalized E Commerce Support Tools (2009)",
     "text": "@inbook{2009-01-MacSleHep, Author = “Maciag, Timothy and '{S}l\\k{e}zak, Dominik and Hepting, Daryl H. and Hilderman, Robert”, Title = “A Data-Mining Framework for Designing Personalized E-Commerce Support Tools”, Editor = “Ohsawa, Yukio and Yada, Katsutoshi”, Chapter = “Data Mining for Design and Marketing”, Doi = “10.1201/9781420070224.ch15”, Edition = “1st”, Month = “January”, Pages = “235–250”, Publisher = “Chapman and Hall/CRC”, Year = “2009”, }",
     "tags": "chapter",
-    "url": "/~hepting/research/works/2009-01-macslehep-a-data-mining-framework-for-designing-personalized-e-commerce-support-tools.html"
+    "url": "/~hepting/research/works/2009-01-MacSleHep-A-Data-Mining-Framework-for-Designing-Personalized-E-Commerce-Support-Tools.html"
   },{
     "title": "In Search of a Perceptual Basis for Interacting with Parametric Images (2009)",
     "text": "@inproceedings{2009-10-HepLatOri, Author = “Hepting, Daryl H. and Latifi, Leila and Oriet, Chris”, Title = “In Search of a Perceptual Basis for Interacting with Parametric Images”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2009-10-HepLatOri.pdf\", Editor = “Bryan-Kinns, Nick and Gross, Mark D. and Johnson, Hilary and Ox, Jack and Wakkary, Ron”, Booktitle = “Proceedings of the 7th ACM conference on Creativity and Cognition”, Doi = “10.1145/1640233.1640309”, Keywords = “human factors, design, perception, democratization, creativity”, Month = “October”, Pages = “377–378”, Publisher = “ACM”, Year = “2009”, }",
     "tags": "poster",
-    "url": "/~hepting/research/works/2009-10-heplatori-in-search-of-a-perceptual-basis-for-interacting-with-parametric-images.html"
+    "url": "/~hepting/research/works/2009-10-HepLatOri-In-Search-of-a-Perceptual-Basis-for-Interacting-with-Parametric-Images.html"
   },{
     "title": "Experiences in Designing An Online Community to Facilitate Education for Sustainable Development (2009)",
     "text": "@inproceedings{2009-10-MacPetSch, Author = “Maciag, Timothy and Petry, Roger A. and Schroeder, Curt and Hepting, Daryl H.”, Title = “Experiences in Designing An Online Community to Facilitate Education for Sustainable Development”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2009-10-MacPetSch.pdf\", Editor = “Denzer, Ralf”, Booktitle = “Environmental Software Systems”, Doi = “10.13140/RG.2.1.3561.8888/1”, Month = “October”, Pages = “64–77”, Volume = “8”, Year = “2009”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2009-10-macpetsch-experiences-in-designing-an-online-community-to-facilitate-education-for-sustainable-development.html"
+    "url": "/~hepting/research/works/2009-10-MacPetSch-Experiences-in-Designing-An-Online-Community-to-Facilitate-Education-for-Sustainable-Development.html"
   },{
     "title": "Enabling Information Technology for the Emancipation of Physical and Natural Capital (2009)",
     "text": "@inproceedings{2009-10-PetHep, Author = “Petry, Roger A. and Hepting, Daryl H.”, Title = “Enabling Information Technology for the Emancipation of Physical and Natural Capital”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2009-10-PetHep.pdf\", Editor = “Denzer, Ralf”, Booktitle = “Environmental Software Systems”, Doi = “10.13140/RG.2.1.3561.8888/1”, Month = “October”, Pages = “233–245”, Series = “IFIP Conference Series”, Year = “2009”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2009-10-pethep-enabling-information-technology-for-the-emancipation-of-physical-and-natural-capital.html"
+    "url": "/~hepting/research/works/2009-10-PetHep-Enabling-Information-Technology-for-the-Emancipation-of-Physical-and-Natural-Capital.html"
   },{
     "title": "A Rough Sets Approach for Personalized Support of Face Recognition (2009)",
     "text": "@inproceedings{2009-12-HepMacSpr, Author = “Hepting, Daryl H. and Maciag, Timothy and Spring, Richard and Arbuthnott, Katherine and '{S}l\\k{e}zak, Dominik”, Title = “A Rough Sets Approach for Personalized Support of Face Recognition”, Editor = “Sakai, Hiroshi and Chakraborty, Mihir Kumar and Hassanien, Aboul Ella and '{S}l\\k{e}zak, Dominik and Zhu, William”, Address = “Berlin, Heidelberg”, Booktitle = “Rough Sets, Fuzzy Sets, Data Mining and Granular Computing RSFDGrC 2009”, Doi = “10.1007/978-3-642-10646-0_24”, Isbn = “978-3-642-10646-0”, Month = “December”, Pages = “201–208”, Publisher = “Springer Berlin Heidelberg”, Series = “Lecture Notes in Computer Science”, Volume = “5908”, Year = “2009”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2009-12-hepmacspr-a-rough-sets-approach-for-personalized-support-of-face-recognition.html"
+    "url": "/~hepting/research/works/2009-12-HepMacSpr-A-Rough-Sets-Approach-for-Personalized-Support-of-Face-Recognition.html"
   },{
     "title": "Study of User Created Interfaces in Video Games (2010)",
     "text": "@incollection{2010-04-TarHep, Author = “Targett, Sean and Hepting, Daryl H.”, Title = “Study of User-Created Interfaces in Video Games”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2010-04-TarHep.pdf\", Editor = “G{'a}mez, Eduardo H. Calvillo and Gow, Jeremy and Cairns, Paul and Back, Jonathan and Capstick, Eddie”, Booktitle = “CHI 2010 Workshop: Video Games as Research Instruments”, Month = “April”, Year = “2010” }",
     "tags": "workshop",
-    "url": "/~hepting/research/works/2010-04-tarhep-study-of-user-created-interfaces-in-video-games.html"
+    "url": "/~hepting/research/works/2010-04-TarHep-Study-of-User-Created-Interfaces-in-Video-Games.html"
   },{
     "title": "Design of S O L E Software (2010)",
     "text": "@inproceedings{2010-07-Hep, Author = “Hepting, Daryl H.”, Title = “Design of S.O.L.E. Software”, Booktitle = “Proceedings of the 2010 International Congress on Environmental Modelling and Software”, Month = “July”, Organization = “International Environmental Modelling and Software Society (iEMSs)”, Year = “2010” }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2010-07-hep-design-of-s-o-l-e-software.html"
+    "url": "/~hepting/research/works/2010-07-Hep-Design-of-S-O-L-E-Software.html"
   },{
     "title": "Social Shopping Using Food Spimes (2010)",
     "text": "@inproceedings{2010-07-MacHepJaf, Author = “Maciag, Timothy and Hepting, Daryl H. and Jaffe, JoAnn and Arbuthnott, Katherine D. and Dormuth, Darryl”, Title = “Social Shopping Using Food Spimes”, Booktitle = “Proceedings of the 2010 International Congress on Environmental Modelling and Software”, Month = “July”, Organization = “International Environmental Modelling and Software Society (iEMSs)”, Year = “2010” }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2010-07-machepjaf-social-shopping-using-food-spimes.html"
+    "url": "/~hepting/research/works/2010-07-MacHepJaf-Social-Shopping-Using-Food-Spimes.html"
   },{
     "title": "Assessing End User Programming for a Graphics Development Environment (2010)",
     "text": "@inproceedings{2010-08-FanHep, Author = “Fang, Lizao and Hepting, Daryl H.”, Title = “Assessing End-User Programming for a Graphics Development Environment”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2010-08-FanHep.pdf\", Editor = “An, Aijun and Lingras, Pawan and Petty, Sheila and Huang, Runhe”, Address = “Berlin, Heidelberg”, Booktitle = “Active Media Technology. AMT 2010”, Doi = “10.1007/978-3-642-15470-6_43”, Month = “August”, Pages = “411–423”, Publisher = “Springer Berlin Heidelberg”, Series = “Lecture Notes in Computer Science”, Volume = “6335”, Year = “2010”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2010-08-fanhep-assessing-end-user-programming-for-a-graphics-development-environment.html"
+    "url": "/~hepting/research/works/2010-08-FanHep-Assessing-End-User-Programming-for-a-Graphics-Development-Environment.html"
   },{
     "title": "Perception of Parameter Variations in Linear Fractal Images (2010)",
     "text": "@inproceedings{2010-08-HepLat, Author = “Hepting, Daryl H. and Latifi, Leila”, Title = “Perception of Parameter Variations in Linear Fractal Images”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2010-08-HepLat.pdf\", Editor = “An, Aijun and Lingras, Pawan and Petty, Sheila and Huang, Runhe”, Address = “Berlin, Heidelberg”, Booktitle = “Active Media Technology. AMT 2010”, Doi = “10.1007/978-3-642-15470-6_22”, Month = “August”, Pages = “200–211”, Publisher = “Springer Berlin Heidelberg”, Series = “Lecture Notes in Computer Science”, Volume = “6335”, Year = “2010”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2010-08-heplat-perception-of-parameter-variations-in-linear-fractal-images.html"
+    "url": "/~hepting/research/works/2010-08-HepLat-Perception-of-Parameter-Variations-in-Linear-Fractal-Images.html"
   },{
     "title": "Constructing Collaborative Online Communities for Visualizing Spimes (2010)",
     "text": "@inproceedings{2010-08-MacHep, Author = “Maciag, Timothy and Hepting, Daryl H.”, Title = “Constructing Collaborative Online Communities for Visualizing Spimes”, Booktitle = “2010 IEEE/WIC/ACM International Conference on Web Intelligence and Intelligent Agent Technology”, Doi = “10.1109/WI-IAT.2010.297”, Keywords = “data visualisation;food products;groupware;mobile computing;public domain software;social networking (online);user interfaces;collaborative online communities;food quality;food spimes visualization;mobile user interfaces;open source software projects;socially driven activities;Biological system modeling;Collaboration;Communities;Electronic publishing;Encyclopedias;Internet;Interaction design;Modelling;Online collaboration;Social shopping;Visualization;Web-based support systems”, Month = “August”, Pages = “436–439”, Volume = “3”, Year = “2010”, }",
     "tags": "workshop",
-    "url": "/~hepting/research/works/2010-08-machep-constructing-collaborative-online-communities-for-visualizing-spimes.html"
+    "url": "/~hepting/research/works/2010-08-MacHep-Constructing-Collaborative-Online-Communities-for-Visualizing-Spimes.html"
   },{
     "title": "Computer Aided Support for Understanding Climate Variability (2011)",
     "text": "@unpublished{2011-05-MacHepHil, Author = “Maciag, Timothy and Hepting, Daryl H. and Hill, Harvey and Armstrong, Robert”, Title = “Computer-Aided Support for Understanding Climate Variability”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2011-05-MacHepHil.pdf\", Booktitle = “CHI 2011 Workshop: Visible-Actionable-Sustainable: Sustainable Interaction Design in Professional Domain”, Month = “May”, Note = “Workshop website: https://sustainablehci.wordpress.com/”, Year = “2011” }",
     "tags": "workshop",
-    "url": "/~hepting/research/works/2011-05-machephil-computer-aided-support-for-understanding-climate-variability.html"
+    "url": "/~hepting/research/works/2011-05-MacHepHil-Computer-Aided-Support-for-Understanding-Climate-Variability.html"
   },{
     "title": "Mobilizing Shared Capital for Grassroots Action (2011)",
     "text": "@unpublished{2011-05-MacHepPet, Author = “Maciag, Timothy and Hepting, Daryl H. and Petry, Roger A.”, Title = “Mobilizing Shared Capital for Grassroots Action”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2011-05-MacHepPet.pdf\", Booktitle = “HCI, politics and the city: engaging with urban grassroots movements for reflection and action”, Doi = “10.1145/1979742.1979568”, Month = “May”, Note = “Workshop website: http://staceyk.org/chi11workshop/submissions/index.html”, Year = “2011”, }",
     "tags": "workshop",
-    "url": "/~hepting/research/works/2011-05-macheppet-mobilizing-shared-capital-for-grassroots-action.html"
+    "url": "/~hepting/research/works/2011-05-MacHepPet-Mobilizing-Shared-Capital-for-Grassroots-Action.html"
   },{
     "title": "Proceedings of 13th International Conference on Rough Sets Fuzzy Sets Data Mining and Granular Computing (2011)",
     "text": "@book{2011-06-KuzSleHep, Title = “Proceedings of 13th International Conference on Rough Sets, Fuzzy Sets, Data Mining and Granular Computing”, Editor = “Kuznetsov, Sergei O. and '{S}l\\k{e}zak, Dominik and Hepting, Daryl H. and Mirkin, Boris G.”, Booktitle = “Proceedings of 13th International Conference on Rough Sets, Fuzzy Sets, Data Mining and Granular Computing”, Doi = “10.1007/978-3-642-21881-1”, Month = “June”, Publisher = “Springer-Verlag Berlin Heidelberg”, Series = “Lecture Notes in Artificial Intelligence”, Volume = “6743”, Year = “2011”, }",
     "tags": "proceedings",
-    "url": "/~hepting/research/works/2011-06-kuzslehep-proceedings-of-13th-international-conference-on-rough-sets-fuzzy-sets-data-mining-and-granular-computing.html"
+    "url": "/~hepting/research/works/2011-06-KuzSleHep-Proceedings-of-13th-International-Conference-on-Rough-Sets-Fuzzy-Sets-Data-Mining-and-Granular-Computing.html"
   },{
     "title": "A rough set exploration of facial similarity judgements (2011)",
     "text": "@incollection{2011-11-HepSprSle, Author = “Hepting, Daryl H. and Spring, Richard and '{S}l\\k{e}zak, Dominik”, Title = “A rough set exploration of facial similarity judgements”, Editor = “Peters, James F. and Skowron, Andrzej and Hiroshi, Sakai and Chakraborty, Mihir Kumar and '{S}l\\k{e}zak, Dominik and Hassanien, Aboul Ella and Zhu, William”, Booktitle = “Transactions on Rough Sets XIV”, Doi = “10.1007/978-3-642-21563-6_5”, Pages = “81–99”, Publisher = “Springer”, Series = “Lecture Notes in Computer Science”, Volume = “6600”, Year = “2011”, }",
     "tags": "journal",
-    "url": "/~hepting/research/works/2011-11-hepsprsle-a-rough-set-exploration-of-facial-similarity-judgements.html"
+    "url": "/~hepting/research/works/2011-11-HepSprSle-A-rough-set-exploration-of-facial-similarity-judgements.html"
   },{
     "title": "Environmental decision support systems EDSS development Challenges and best practices (2011)",
     "text": "@article{2011-12-McIAscTwe, Author = “McIntosh, B.S. and Ascough, J.C. and Twery, M. and Chew, J. and Elmahdi, A. and Haase, D. and Harou, J.J. and Hepting, D. and Cuddy, S. and Jakeman, A.J. and Chen, S. and Kassahun, A. and Lautenbach, S. and Matthews, K. and Merritt, W. and Quinn, N.W.T. and Rodriguez-Roda, I. and Sieber, S. and Stavenga, M. and Sulis, A. and Ticehurst, J. and Volk, M. and Wrobel, M. and van Delden, H. and El-Sawah, S. and Rizzoli, A. and Voinov, A.”, Title = “Environmental decision support systems (EDSS) development - Challenges and best practices”, Doi = “https://doi.org/10.1016/j.envsoft.2011.09.009”, Issn = “1364-8152”, Journal = “Environmental Modelling \\&amp; Software”, Keywords = “Environmental decision support systems, EDSS, Information systems, Decision-making, Software development, Adoption, Use”, Month = “December”, Number = “12”, Pages = “1389–1402”, Volume = “26”, Year = “2011”, }",
     "tags": "journal",
-    "url": "/~hepting/research/works/2011-12-mciasctwe-environmental-decision-support-systems-edss-development-challenges-and-best-practices.html"
+    "url": "/~hepting/research/works/2011-12-McIAscTwe-Environmental-decision-support-systems-EDSS-development-Challenges-and-best-practices.html"
   },{
     "title": "Web Based Support of Crop Selection for Climate Adaptation (2012)",
     "text": "@inproceedings{2012-01-HepMacHil, Author = “Hepting, Daryl H. and Maciag, Timothy and Hill, Harvey”, Title = “Web-Based Support of Crop Selection for Climate Adaptation”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2012-01-HepMacHil.pdf\", Booktitle = “2012 45th Hawaii International Conference on System Sciences”, Doi = “10.1109/HICSS.2012.640”, Issn = “1530-1605”, Keywords = “Internet;crops;farming;Web-based support;climate adaptation;crop selection;growing condition;prototype tool;Adaptation models;Agriculture;Databases;Heating;Measurement;Meteorology;Prototypes;climate adaptation;crop selection;crowdsourcing;web-based support systems”, Month = “January”, Pages = “1227-1236”, Year = “2012”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2012-01-hepmachil-web-based-support-of-crop-selection-for-climate-adaptation.html"
+    "url": "/~hepting/research/works/2012-01-HepMacHil-Web-Based-Support-of-Crop-Selection-for-Climate-Adaptation.html"
   },{
     "title": "RCE Saskatchewan Advancing Sustainable Livelihoods Through Equipment Centred Learning and Sharing (2012)",
     "text": "@incollection{2012-09-PetPicHep, Author = “Petry, Roger A. and Pickard, Garth and Hepting, Daryl H.”, Title = “RCE Saskatchewan: Advancing Sustainable Livelihoods Through Equipment-Centred Learning and Sharing”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2012-09-PetPicHep.pdf\", Editor = “Fadeeva, Zinaida and Payyappallimana, Unnikrishnan and Petry, Roger A.”, Booktitle = “Towards More Sustainable Consumption and Production Systems and Sustainable Livelihoods – Learning Contributions of the Regional Centres of Expertise on Education for Sustainable Development”, Chapter = “9”, Month = “September”, Pages = “72–78”, Publisher = “United Nations University Institute of Advanced Studies”, Year = “2012”, }",
     "tags": "report",
-    "url": "/~hepting/research/works/2012-09-petpichep-rce-saskatchewan-advancing-sustainable-livelihoods-through-equipment-centred-learning-and-sharing.html"
+    "url": "/~hepting/research/works/2012-09-PetPicHep-RCE-Saskatchewan-Advancing-Sustainable-Livelihoods-Through-Equipment-Centred-Learning-and-Sharing.html"
   },{
     "title": "CS IT Outreach from a Canadian Perspective (2012)",
     "text": "@inproceedings{2012-10-HepDonKin, Author = “Hepting, Daryl H. and Donaldson, Gerry and King, Peter R. and Silver, Danny”, Title = “CS/IT Outreach from a Canadian Perspective”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2012-10-HepDonKin.pdf\", Booktitle = “SIGITE ‘12: Proceedings of the 13th annual conference on Information technology education”, Doi = “10.1145/2380552.2380623”, Month = “October”, Pages = “251–252”, Publisher = “ACM”, Year = “2012”, }",
     "tags": "panel",
-    "url": "/~hepting/research/works/2012-10-hepdonkin-cs-it-outreach-from-a-canadian-perspective.html"
+    "url": "/~hepting/research/works/2012-10-HepDonKin-CS-IT-Outreach-from-a-Canadian-Perspective.html"
   },{
     "title": "A Study of User Interface Modifications in World of Warcraft (2012)",
     "text": "@article{2012-12-TarVerHam, Author = “Targett, Sean and Verlysdonk, Victoria and Hamilton, Howard J. and Hepting, Daryl H.”, Title = “A Study of User Interface Modifications in World of Warcraft”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2012-12-TarVerHam.pdf\", Journal = “Game Studies: the international journal of computer game research”, Keywords = “World of Warcraft, massively multiplayer online game, statistical survey, user interface, human-computer interaction, user interface modification, user interface add-ons, modding, UI mods”, Month = “December”, Number = “2”, Volume = “12”, Year = “2012”, }",
     "tags": "journal",
-    "url": "/~hepting/research/works/2012-12-tarverham-a-study-of-user-interface-modifications-in-world-of-warcraft.html"
+    "url": "/~hepting/research/works/2012-12-TarVerHam-A-Study-of-User-Interface-Modifications-in-World-of-Warcraft.html"
   },{
     "title": "Discernibility in the Analysis of Binary Card Sort Data (2013)",
     "text": "@inproceedings{2013-10-HepAlm, Author = “Hepting, Daryl H. and Almestadi, Emad H.”, Title = “Discernibility in the Analysis of Binary Card Sort Data”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2013-10-HepAlm.pdf\", Editor = “Ciucci, D. and Inuiguchi, M. and Yao, Y. and {'S}l{\\k e}zak, D. and Wang, G.”, Address = “Berlin”, Booktitle = “Rough Sets, Fuzzy Sets, Data Mining, and Granular Computing. RSFDGrC 2013”, Doi = “10.1007/978-3-642-41218-9_41”, Month = “October”, Pages = “380–387”, Publisher = “Springer”, Series = “Lecture Notes in Computer Science”, Volume = “8170”, Year = “2013”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2013-10-hepalm-discernibility-in-the-analysis-of-binary-card-sort-data.html"
+    "url": "/~hepting/research/works/2013-10-HepAlm-Discernibility-in-the-Analysis-of-Binary-Card-Sort-Data.html"
   },{
     "title": "Operationalizing Ethics in Food Choice Decisions (2014)",
     "text": "@article{2014-06-HepJafMac, Author = “Hepting, Daryl H. and Jaffe, JoAnn and Maciag, Timothy”, Title = “Operationalizing Ethics in Food Choice Decisions”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2014-06-HepJafMac.pdf\", Doi = “10.1007/s10806-013-9473-8”, Journal = “Journal of Agricultural and Environmental Ethics”, Keywords = “food, ethics, ICT, spime, citizen consumer, democracy”, Month = “June”, Number = “3”, Pages = “453–469”, Rss-Description = {&lt;?xml version Volume = “27”, Year = “2014”, }",
     "tags": "journal",
-    "url": "/~hepting/research/works/2014-06-hepjafmac-operationalizing-ethics-in-food-choice-decisions.html"
+    "url": "/~hepting/research/works/2014-06-HepJafMac-Operationalizing-Ethics-in-Food-Choice-Decisions.html"
   },{
     "title": "DIY Game Console Development (2014)",
     "text": "@inproceedings{2014-10-TomHep, Author = “Tomesh, Trevor M. and Hepting, Daryl H.”, Title = “DIY Game Console Development”, Address = “New York”, Booktitle = “CHI PLAY ‘14 Proceedings of the first ACM SIGCHI annual symposium on Computer-human interaction in play”, Doi = “10.1145/2658537.2662411”, Month = “October”, Pages = “471–473”, Publisher = “ACM”, Year = “2014”, }",
     "tags": "course",
-    "url": "/~hepting/research/works/2014-10-tomhep-diy-game-console-development.html"
+    "url": "/~hepting/research/works/2014-10-TomHep-DIY-Game-Console-Development.html"
   },{
     "title": "Free Knowledge Confronting the Commodification of Human Discovery (2015)",
     "text": "@book{2015-04-EllHep, Author = “Anderson, Jane and Barreno, Leonzo and Bone, Doug and Diamantopoulos, Mitch and Elliott, Patricia and Farley, Joshua and Hepting, Daryl and Kneen, Brewster and Kubiszewski, Ida and Mahood, Sally and Morrison, Heather and Polster, Claire and Schafer, Arthur and van der Zon, Marian and Verzola, Roberto and Westheimer, Joel and Younging, Gregory”, Title = “Free Knowledge: Confronting the Commodification of Human Discovery”, Editor = “Elliott, Patricia W. and Hepting, Daryl H.”, Month = “April”, Publisher = “University of Regina Press”, Year = “2015”, }",
     "tags": "book",
-    "url": "/~hepting/research/works/2015-04-ellhep-free-knowledge-confronting-the-commodification-of-human-discovery.html"
+    "url": "/~hepting/research/works/2015-04-EllHep-Free-Knowledge-Confronting-the-Commodification-of-Human-Discovery.html"
   },{
     "title": "Three Way Analysis of Facial Similarity Judgments (2017)",
     "text": "@conference{2017-10-HepBinYao, Author = “Hepting, Daryl H. and {Bin Amer}, Hadeel Hatim and Yao, Yiyu”, Title = “Three-Way Analysis of Facial Similarity Judgments”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2017-10-HepBinYao.pdf\", Booktitle = “Proceedings of ISFUROS 2017: 2nd International Symposium on Fuzzy and Rough Sets”, Keywords = “facial photograph, card sorting, three-way decision, probability”, Month = “October”, Year = “2017”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2017-10-hepbinyao-three-way-analysis-of-facial-similarity-judgments.html"
+    "url": "/~hepting/research/works/2017-10-HepBinYao-Three-Way-Analysis-of-Facial-Similarity-Judgments.html"
   },{
     "title": "Environmental Sensing with Recycled Materials (2018)",
     "text": "@incollection{2018-04-TomHep, Author = “Tomesh, Trevor M. and Hepting, Daryl H.”, Title = “Environmental Sensing with Recycled Materials”, Url = \"http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2018-04-TomHep.pdf\", Editor = “Loukides, Mike and DiPrimio, Nina”, Booktitle = “BioCoder: Bio Newsletter”, Month = “April”, Number = “13”, Pages = “47–58”, Publisher = “O’Reilly”, Year = “2018”, }",
     "tags": "article",
-    "url": "/~hepting/research/works/2018-04-tomhep-environmental-sensing-with-recycled-materials.html"
+    "url": "/~hepting/research/works/2018-04-TomHep-Environmental-Sensing-with-Recycled-Materials.html"
   },{
     "title": "A Linear Model for Three Way Analysis of Facial Similarity (2018)",
     "text": "@incollection{2018-06-HepBinYao, Author = “Hepting, Daryl H. and {Bin Amer}, Hadeel Hatim and Yao, Yiyu”, Title = “A Linear Model for Three-Way Analysis of Facial Similarity”, Booktitle = “Communications in Computer and Information Science”, Doi = “10.1007/978-3-319-91476-3_44”, Month = “June”, Publisher = “Springer”, Year = “2018”, }",
     "tags": "conference",
-    "url": "/~hepting/research/works/2018-06-hepbinyao-a-linear-model-for-three-way-analysis-of-facial-similarity.html"
+    "url": "/~hepting/research/works/2018-06-HepBinYao-A-Linear-Model-for-Three-Way-Analysis-of-Facial-Similarity.html"
   },{
     "title": "1989 Hep Gasket In Bubbles",
     "text": "",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/1989-hep-gasket-in-bubbles.html"
+    "url": "/~hepting/projects/fractals/gallery/1989-Hep-Gasket-in-Bubbles.html"
   },{
     "title": "1989 Heppru Dragon Curve Escape",
     "text": "",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/1989-heppru-dragon-curve-escape.html"
+    "url": "/~hepting/projects/fractals/gallery/1989-HepPru-Dragon-Curve-Escape.html"
   },{
     "title": "1989 Heppru Fractal Carrot Leaf",
     "text": "",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/1989-heppru-fractal-carrot-leaf.html"
+    "url": "/~hepting/projects/fractals/gallery/1989-HepPru-Fractal-Carrot-Leaf.html"
   },{
     "title": "1989 Hepsni Sierpinskis Ashtray",
     "text": "",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/1989-hepsni-sierpinskis-ashtray.html"
+    "url": "/~hepting/projects/fractals/gallery/1989-HepSni-Sierpinskis-Ashtray.html"
   },{
     "title": "1989 Prusauhep Dragon Mesa",
     "text": "",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/1989-prusauhep-dragon-mesa.html"
+    "url": "/~hepting/projects/fractals/gallery/1989-PruSauHep-Dragon-Mesa.html"
   },{
     "title": "1990 Hep Dragon Curl",
     "text": "",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/1990-hep-dragon-curl.html"
+    "url": "/~hepting/projects/fractals/gallery/1990-Hep-Dragon-Curl.html"
   },{
     "title": "1990 Hep Fiery Dragon",
     "text": "",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/1990-hep-fiery-dragon.html"
+    "url": "/~hepting/projects/fractals/gallery/1990-Hep-Fiery-Dragon.html"
   },{
     "title": "1990 Hepsni Desktop Tetrahedron",
     "text": "",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/1990-hepsni-desktop-tetrahedron.html"
+    "url": "/~hepting/projects/fractals/gallery/1990-HepSni-Desktop-Tetrahedron.html"
   },{
     "title": "1990 Hepsni Lawn Ornament",
     "text": "",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/1990-hepsni-lawn-ornament.html"
+    "url": "/~hepting/projects/fractals/gallery/1990-HepSni-Lawn-Ornament.html"
   },{
     "title": "1991 Heppru Carrot In Blue",
     "text": "",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/1991-heppru-carrot-in-blue.html"
+    "url": "/~hepting/projects/fractals/gallery/1991-HepPru-Carrot-in-Blue.html"
   },{
     "title": "1994 Hep Dragons Lair",
     "text": "",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/1994-hep-dragons-lair.html"
+    "url": "/~hepting/projects/fractals/gallery/1994-Hep-Dragons-Lair.html"
   },{
     "title": "1994 Hep Tangled Necklace",
     "text": "",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/1994-hep-tangled-necklace.html"
+    "url": "/~hepting/projects/fractals/gallery/1994-Hep-Tangled-Necklace.html"
   },{
     "title": "1994 Hepmus Steps To Infinity",
     "text": "",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/1994-hepmus-steps-to-infinity.html"
+    "url": "/~hepting/projects/fractals/gallery/1994-HepMus-Steps-to-Infinity.html"
   },{
     "title": "1995 Harhep Gisland",
     "text": "",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/1995-harhep-gisland.html"
+    "url": "/~hepting/projects/fractals/gallery/1995-HarHep-GIsland.html"
   },{
     "title": "1997 Hep My Life",
     "text": "",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/1997-hep-my-life.html"
+    "url": "/~hepting/projects/fractals/gallery/1997-Hep-My-Life.html"
   }]};
