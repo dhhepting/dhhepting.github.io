@@ -40,12 +40,12 @@
         <h3>General Information</h3>
   </div>
   <div class="card-body">
-        <ul>
-	{% for i in (1..numcons) %}
-     	  {% assign sdc = sorteddc[i] | split: '#' %}
-    	  <li><a href="{{site.baseurl}}{{sdc[0]}}">{{sdc[1]}}</a></li>
-	{% endfor %}
-        </ul>
+    <ul>
+    {% for i in (1..numcons) %}
+      {% assign sdc = sorteddc[i] | split: '#' %}
+      <li><a href="{{ sdc[0] | relative_url }}">{{sdc[1]}}</a></li>
+    {% endfor %}
+    </ul>
   </div>
 </div>
 <span>
@@ -62,7 +62,7 @@
         <ul>
 	{% for j in (0..numsems) %}
           {% assign ss = sortedsems[j] | split: '#' %}
-          <li><a href="{{ss[0]}}">{{ss[1]}}</a></li>
+          <li><a href="{{ ss[0] | relative_url }}">{{ss[1]}}</a></li>
         {% endfor %}
         </ul>
   </div>

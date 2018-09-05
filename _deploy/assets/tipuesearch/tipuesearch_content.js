@@ -15,7 +15,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/news/other.html"
   },{
     "title": "Mtg 01 - CS 428+828 (201830)",
-    "text": "Meeting 1 / 37 Outline for Today Inspirations Tent Cards Syllabus Video: How to Build Your Creative Confidence Media from Meeting 01 - 1.jpg 01 - 2.jpg",
+    "text": "Meeting 1 / 37 Outline for Today Inspirations Tent Cards Syllabus Video: How to Build Your Creative Confidence To Do Media from Meeting 01 - 1.jpg 01.m4a 01 - 2.jpg",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/01.html"
   },{
@@ -565,7 +565,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201730/"
   },{
     "title": "",
-    "text": "Media 01 - 1.jpg 01 - 2.jpg",
+    "text": "Media 01 - 1.jpg 01 - 2.jpg 01.m4a",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/media/"
   },{
