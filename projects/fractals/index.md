@@ -8,7 +8,7 @@ layout: bg-image
 # {{ page.breadcrumb }}
 
 My M.Sc. thesis, 
-[Approximation and Visualization of Sets Defined by Iterated Function Systems]({{"/research/works/1991-03-hep-approximation-and-visualization-of-sets-defined-by-iterated-function-systems.html" | relative_url }})
+[Approximation and Visualization of Sets Defined by Iterated Function Systems]({{"/research/works/1991-03-Hep-Approximation-and-Visualization-of-Sets-Defined-by-Iterated-Function-Systems.html" | relative_url }})
 (from 1991) dealt with linear fractals.
 That got me started and I am still hooked.
 
