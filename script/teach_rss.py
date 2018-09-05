@@ -34,6 +34,7 @@ if (len(offdir) != 2):
 off_crs = offdir[0]
 off_sem = offdir[1]
 off_id = off_crs + "-" + off_sem
+off_gc = off_crs + "_"
 
 # file extensions to record
 #extensions = [ 'md', 'html', 'svg', 'cpp', 'py' ]
@@ -86,7 +87,8 @@ if (datetime.datetime.now() <= latest):
           path_len = len(path_parts)
 	  if (path_len > semdiridx):
             if (path_parts[semdiridx] >= off_sem):
-              file_path = file_path[len(html_dir):]  
+              #file_path = file_path[len(html_dir):]  
+              file_path = file_path[len(sitedir)-1:]  
               filedict[str(dt)] = file_path.replace(".md", ".html")
   # then get any asset files within /assets/teaching that match course+semester
   for root, subdirs, files in os.walk(assets_dir):
@@ -100,9 +102,10 @@ if (datetime.datetime.now() <= latest):
         # test if file should be included
         # (leave out test for extensions for now)
         if (file_parts[1]):
-          if (off_id in file_path):
+          if (off_id in file_path or off_gc in file_path):
             dt = datetime.datetime.fromtimestamp(os.path.getmtime(file_path))
-            file_path = file_path[len(sitedir):]  
+            #file_path = file_path[len(sitedir):]  
+            file_path = file_path[len(sitedir)-1:]  
             filedict[str(dt)] = file_path
   # format information for feed 
   for k in sorted(filedict.keys(), reverse=True):
@@ -111,15 +114,19 @@ if (datetime.datetime.now() <= latest):
     except ValueError:
       update = datetime.datetime.strptime(k,"%Y-%m-%d %H:%M:%S")
     #if update > earliest and update < latest:
-    if update < latest:
-      if (filedict[k].startswith("/assets/teaching")):
-        feed.append_item(title=filedict[k],
-          link='{{ "' + filedict[k] + '" | absolute_url }}',
-          description="Updated: " + update.strftime("%A, %d %B %Y %H:%M"), pub_date=update)
-      else:
-        feed.append_item(title=filedict[k],
-          link='{{ "' + web_prefix + off_rel_path + filedict[k] + '" | absolute_url }}',
-          description="Updated: " + update.strftime("%A, %d %B %Y %H:%M"), pub_date=update)
+    #if update < latest:
+    # (don't need to repeat this test, above, for date)
+    # format item for asset
+    print filedict[k]
+    if (filedict[k].startswith("/assets/teaching")):
+      feed.append_item(title=(filedict[k])[len("/assets/teaching/"):],
+        link='{{ "' + filedict[k] + '" | absolute_url }}',
+        description="Updated: " + update.strftime("%A, %d %B %Y %H:%M"), pub_date=update)
+    # format item for html
+    else:
+      feed.append_item(title=(filedict[k])[len("/teaching/"):],
+        link='{{ "' + filedict[k] + '" | absolute_url }}',
+        description="Updated: " + update.strftime("%A, %d %B %Y %H:%M"), pub_date=update)
   # make a temporary file 
   tmpfilepath = rss_dir + "tmp-" + rss_fname
   rssfilepath = rss_dir + rss_fname

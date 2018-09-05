@@ -1,8 +1,8 @@
 <h1>Media</h1>
 
-{% if site.data[include.media_dat] %}
+{% if site.data.media[include.media_dat] %}
   <ul>
-    {% assign sortedMedia = site.data[include.media_dat] | sort: 'file' %}
+    {% assign sortedMedia = site.data.media[include.media_dat] | sort: 'file' %}
     {% for mediafile in sortedMedia %}
       <li><a href="{{mediafile.URL}}">{{mediafile.file}}</a></li>
     {% endfor %}

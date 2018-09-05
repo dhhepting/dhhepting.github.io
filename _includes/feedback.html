@@ -1,6 +1,7 @@
 {% include feedback-url.html %}
 
-# {{ crs_fbk | capitalize | replace: "-"," "}} {% assign questions = "" %}
+# {{ crs_fbk | capitalize | replace: "-"," "}} 
+{% assign questions = "" %}
 {% for q in site.data.feedback.questions %}
   {% capture questions %}{{ questions }}|{{q}}{% endcapture %}
 {% endfor %}

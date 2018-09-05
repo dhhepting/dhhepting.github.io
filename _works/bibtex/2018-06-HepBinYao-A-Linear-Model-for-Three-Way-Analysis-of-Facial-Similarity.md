@@ -1,6 +1,7 @@
 ---
 layout: bibtex-default
 citekey: 2018-06-HepBinYao
+slug: 2018-06-HepBinYao-A-Linear-Model-for-Three-Way-Analysis-of-Facial-Similarity
 title: A Linear Model for Three Way Analysis of Facial Similarity (2018)
 breadcrumb: A Linear Model for Three Way Analysis of Facial Similarity (2018)
 category: conference

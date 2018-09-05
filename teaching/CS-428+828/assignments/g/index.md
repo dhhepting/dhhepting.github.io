@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: bg-image
 breadcrumb: Group
 ---
 # {{ page.breadcrumb }}
