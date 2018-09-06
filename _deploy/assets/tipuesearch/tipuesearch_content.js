@@ -15,7 +15,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/news/other.html"
   },{
     "title": "Mtg 01 - CS 428+828 (201830)",
-    "text": "Meeting 1 / 37 Outline for Today Inspirations Tent Cards Syllabus Video: How to Build Your Creative Confidence To Do Media from Meeting 01 - 1.jpg 01.m4a 01 - 2.jpg",
+    "text": "Meeting 1 / 37 Outline for Today Inspirations Tent Cards Syllabus Video: How to Build Your Creative Confidence To Do Think about what makes a good or a bad interface Media from Meeting 01 - 1.jpg 01.m4a 01 - 2.jpg",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/01.html"
   },{
@@ -455,7 +455,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/research/"
   },{
     "title": "RSS Feeds",
-    "text": "RSS Feeds News (Atom) CS-428+828-201830.rss links.rss news.rss news.xml",
+    "text": "RSS Feeds News (Atom) CS-428+828-201830.rss links.rss news.rss news.xml tmp-CS-428+828-201830.rss",
     "tags": "",
     "url": "/~hepting/rss/"
   },{
@@ -575,7 +575,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/"
   },{
     "title": "CS 428+828 in 201830",
-    "text": "CS 428+828 • 201830 Human Computer Communication Syllabus media meetings Calendar UR Self-Service: CS 428 (CRN 30728) CS 828 (CRN 30742)",
+    "text": "CS 428+828 • 201830 Human Computer Communication media meetings Calendar RSS UR Self-Service: CS 428 (CRN 30728) CS 828 (CRN 30742)",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/"
   },{
@@ -590,7 +590,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/assignments/i-or-g/"
   },{
     "title": "",
-    "text": "Individual test.html",
+    "text": "Individual",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/assignments/i/"
   },{
@@ -604,8 +604,8 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/content/"
   },{
-    "title": "",
-    "text": "Resources Type 1 Type 2 Type 3",
+    "title": "Resources",
+    "text": "Resources Links Tools Videos",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/resources/"
   },{
@@ -644,6 +644,11 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/research/inspirations.html"
   },{
+    "title": "Links",
+    "text": "Links http://www.id-book.com http://interactions.acm.org/ http://www.cooper.com/journal/ http://www.amanda.com/ama-blog/ http://designthinking.ideo.com/ http://patterns.ideo.com/ http://www.nngroup.com/articles/ http://www.jnd.org/dn.pubs.html http://interaction-design.org/ http://www.ted.com/talks",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/resources/links.html"
+  },{
     "title": "",
     "text": "Original Map There are 3 levels at the school. The main one, at ground level, has the gym and student commons. Here is the",
     "tags": "",
@@ -669,20 +674,25 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/projects/fractals/exhibitions/teck-postcard.html"
   },{
-    "title": "how-to-make-jekyll-site-blog",
-    "text": "how-to-make-jekyll-site-blog how-to-make-jekyll-site-blog how-to-make-jekyll-site-blog",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/assignments/i/test.html"
-  },{
     "title": "Test Schedule",
     "text": "Test schedule Data file exists: schedule Times Monday Tuesday Wednesday Thursday Friday 8:30 m tc a c c 9:00 9:30 10:00 c 10:30 11:00 11:30 b 12:00 12:30 13:00 d d d 13:30 14:00 e e e 14:30 f f f 15:00 15:30 16:00 16:30",
     "tags": "",
     "url": "/~hepting/teaching/schedule/test.html"
   },{
+    "title": "Tools",
+    "text": "{{ page.breadcrumb }} * [http://www.id-book.com](http://www.id-book.com) * [http://interactions.acm.org/](http://interactions.acm.org/) * [http://www.cooper.com/journal/](http://www.cooper.com/journal/) * [http://www.amanda.com/ama-blog/](http://www.amanda.com/ama-blog/) * [http://designthinking.ideo.com/](http://designthinking.ideo.com/) * [http://patterns.ideo.com/](http://patterns.ideo.com/) * [http://www.nngroup.com/articles/](http://www.nngroup.com/articles/) * [http://www.jnd.org/dn.pubs.html](http://www.jnd.org/dn.pubs.html) * [http://interaction-design.org/](http://interaction-design.org/) * [http://www.ted.com/talks](http://www.ted.com/talks)",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/resources/tools.html"
+  },{
     "title": "",
     "text": "# Topics &amp; Learning Outcomes {% include topics2013.html %} {{ page.intro }} {% assign ctr = 1 %} {%- for tlo in page.tlouts -%} {{tlo | replace: \"-\",\" \" | replace: \"_\",\"-\"}} {%- assign ctr = ctr | plus: 1 -%} {% endfor %} {%- assign ctr = 1 -%} {%- for tlo in page.tlouts -%} {%- assign tlo_parts = tlo | split: \"/\" -%} {% assign var1 = tlo_parts[0] %} {% assign var2 = tlo_parts[1] %} {%- assign tlo_dat = site.data.CC2013[var1][var2] -%} {%- if tlo_dat -%} {{tlo | replace: \"-\",\" \" | replace: \"_\",\"-\"}} Motivation {{ tlo_dat.Motivation }} Topics {%- for top in tlo_dat.Topics -%} {{top}} {%- endfor -%} Learning Outcomes {%- for lo in tlo_dat.Learning-Outcomes -%} {{lo}} {%- endfor -%} {%- assign ctr = ctr | plus: 1 -%} {%- endif -%} {%- endfor -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/topics.html"
+  },{
+    "title": "Videos",
+    "text": "{{ page.breadcrumb }} * [http://www.id-book.com](http://www.id-book.com) * [http://interactions.acm.org/](http://interactions.acm.org/) * [http://www.cooper.com/journal/](http://www.cooper.com/journal/) * [http://www.amanda.com/ama-blog/](http://www.amanda.com/ama-blog/) * [http://designthinking.ideo.com/](http://designthinking.ideo.com/) * [http://patterns.ideo.com/](http://patterns.ideo.com/) * [http://www.nngroup.com/articles/](http://www.nngroup.com/articles/) * [http://www.jnd.org/dn.pubs.html](http://www.jnd.org/dn.pubs.html) * [http://interaction-design.org/](http://interaction-design.org/) * [http://www.ted.com/talks](http://www.ted.com/talks)",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/resources/videos.html"
   },{
     "title": "Creativity",
     "text": "Creativity (2006) Event Presentation by Joel Salatin Tuesday, November 18, 2008 Education Auditorium, University of Regina Organized by Description Media",

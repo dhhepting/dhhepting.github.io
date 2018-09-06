@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: bg-image
 breadcrumb: Resources
+title: Resources
 ---
-# Resources
+# {{ page.breadcrumb }}
 
-* Type 1
-* Type 2
-* Type 3
+* [Links](links.html)
+* [Tools](tools.html)
+* [Videos](videos.html)

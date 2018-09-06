@@ -9,8 +9,9 @@ layout: bg-image
 {% include offering-index.html %}
 
 * [Calendar](https://urcourses.uregina.ca/calendar/view.php?view=month&course=2084)
+* [RSS]({{ "/rss/CS-428+828-201830.rss" | relative_url }})
+
 ##### UR Self-Service:  
 
 * [CS 428 (CRN 30728)](https://banner.uregina.ca/prod/sct/bwckschd.p_disp_detail_sched?term_in=201830&crn_in=30728)
 * [CS 828 (CRN 30742)](https://banner.uregina.ca/prod/sct/bwckschd.p_disp_detail_sched?term_in=201830&crn_in=30742)
-
