@@ -76,7 +76,7 @@ if (local_now <= latest):
     fc_lang = "en-CA"
     fc_wm = "hepting@cs.uregina.ca (Daryl Hepting)"
     fc_lb = '{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}'
-    fc_atom = '{{ "/rss/' + rss_fname + '" | absolute_url }}'
+    fc_atom = '{{ "/rss/' + rss_fname + '" | absolute_url | replace: "~", "%7E" | replace: "+", "%2B"}}'
 
     filedict = {}
     # get updated markdown (to become html) files within course directory
