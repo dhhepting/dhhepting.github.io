@@ -1,8 +1,8 @@
 ---
-title: Teaching 
+title: Teaching
 breadcrumb: Teaching
 layout: bg-image
 ---
-# Teaching
+# {{ page.breadcrumb }}
 
 {% include teaching-index.html %}
