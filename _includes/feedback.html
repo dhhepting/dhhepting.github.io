@@ -1,6 +1,21 @@
 {% include feedback-url.html %}
 
-# {{ crs_fbk | capitalize | replace: "-"," "}} 
+# {{ crs_fbk | capitalize | replace: "-"," "}}
+
+<p>
+  This page presents data obtained from my own feedback instrument that I give to students in my classes at their midterm and final exams.
+  I look at midterm feedback when it is received because I consider it to be a formative evaluation of the class in progress.
+  I do not see the final feedback until <em>after</em> the final grades are posted.  The numbers that precede each response are
+  present to permit matching between the
+  <a href="#likert-button">
+    data table (click button to toggle expanded view)
+  </a>
+  and the opened ended questions.  A response with a &mdash; or NA
+  indicates that no answer was given.
+  Open-ended question responses have been transcribed as faithfully as possible,
+  with minor edits and formatting changes sometimes required.
+</p>
+
 {% assign questions = "" %}
 {% for q in site.data.feedback.questions %}
   {% capture questions %}{{ questions }}|{{q}}{% endcapture %}
@@ -36,7 +51,7 @@
       {% assign stop_it = true %}
     {% endif %}
   {% endfor %}
-    
+
 <div class="container-fluid">
   <table class="table table-responsive table-striped table-bordered">
     <thead>
@@ -73,16 +88,16 @@
         {% endfor %}
       </tr>
     </tbody>
-  </table> 
+  </table>
 </div>
 
 {% comment %}
 	Table of Detail Data
 {% endcomment %}
 <p>
-  <a href="#likert-detail" class="btn btn-info" data-toggle="collapse">
+  <a id="likert-button" href="#likert-detail" class="btn btn-info" data-toggle="collapse">
     CLICK HERE
-  </a> 
+  </a>
   to toggle details
 </p>
 
@@ -113,9 +128,9 @@
         <tr>
 	{% for dd in rowa %}
           {% if dd == "0" %}
-            <td>&mdash;</td>	
+            <td>&mdash;</td>
           {% else %}
-            <td>{{dd}}</td>	
+            <td>{{dd}}</td>
           {% endif %}
         {% endfor %}
         </tr>
@@ -126,7 +141,7 @@
 {% capture fbk_com %}{{fbk_dat}}-comm{% endcapture %}
 {% if site.data.feedback[fbk_com] %}
 <h3>What do you like best about this course?</h3>
-{% capture fli_url %}/assets/teaching/img/{{fbk_dat}}-like.svg{% endcapture %}
+{% capture fli_url %}/assets/teaching/img/{{fbk_dat}}-1l.svg{% endcapture %}
 {% assign fli_url_tf = false %}
 {% for static_file in site.static_files %}
     {% if static_file.path == fli_url %}
@@ -135,20 +150,23 @@
 {% endfor %}
 {% if fli_url_tf %}
   <div class="container-fluid bg-info">
-    <img class="img-responsive" alt="Wordcloud of likes" 
+    <img class="img-responsive" alt="Wordcloud of likes"
     src="{{fli_url | relative_url}}" />
   </div>
 {% endif %}
 <p></p>
 <p>
   <a href="#like-detail" class="btn btn-info" data-toggle="collapse">
-    CLICK HERE          
-  </a> 
+    CLICK HERE
+  </a>
   to toggle details
-</p>    
+</p>
 
-<div id="like-detail" class="container collapse">
-
+{% if fli_url_tf %}
+  <div id="like-detail" class="container collapse">
+{% else %}
+  <div id="like-detail" class="container">
+{% endif  %}
 <ol>
 {% for l in site.data.feedback[fbk_com]like %}
   <li>{{l}}</li>
@@ -156,7 +174,7 @@
 </ol>
 </div>
 <h3>What would you like to change about this course?</h3>
-{% capture fci_url %}/assets/teaching/img/{{fbk_dat}}-change.svg{% endcapture %}
+{% capture fci_url %}/assets/teaching/img/{{fbk_dat}}-2c.svg{% endcapture %}
 {% assign fci_url_tf = false %}
 {% for static_file in site.static_files %}
     {% if static_file.path == fci_url %}
@@ -171,12 +189,15 @@
 <p></p>
 <p>
   <a href="#change-detail" class="btn btn-info" data-toggle="collapse">
-    CLICK HERE          
-  </a> 
+    CLICK HERE
+  </a>
   to toggle details
-</p>    
-
-<div id="change-detail" class="container collapse">
+</p>
+{% if fci_url_tf %}
+  <div id="change-detail" class="container collapse">
+{% else %}
+  <div id="change-detail" class="container">
+{% endif  %}
 <ol>
 {% for c in site.data.feedback[fbk_com]change %}
   <li>{{c}}</li>
@@ -184,7 +205,7 @@
 </ol>
 </div>
 <h3>What do think are the instructor's greatest strengths?</h3>
-{% capture fsi_url %}/assets/teaching/img/{{fbk_dat}}-strengths.svg{% endcapture %}
+{% capture fsi_url %}/assets/teaching/img/{{fbk_dat}}-3s.svg{% endcapture %}
 {% assign fsi_url_tf = false %}
 {% for static_file in site.static_files %}
     {% if static_file.path == fsi_url %}
@@ -199,12 +220,16 @@
 <p></p>
 <p>
   <a href="#strength-detail" class="btn btn-info" data-toggle="collapse">
-    CLICK HERE          
-  </a> 
+    CLICK HERE
+  </a>
   to toggle details
-</p>    
+</p>
 
-<div id="strength-detail" class="container collapse">
+{% if fsi_url_tf %}
+  <div id="strength-detail" class="container collapse">
+{% else %}
+  <div id="strength-detail" class="container">
+{% endif  %}
 
 <ol>
 {% for s in site.data.feedback[fbk_com]strengths %}
