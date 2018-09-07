@@ -20,7 +20,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/01.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 2 / 37 Questions from Last Meeting? Outline for Today Tent Cards Syllabus Video: How to Build Your Creative Confidence Thinking outside the box activity To make payments go to the Log in to UR Self Service button on the University of Regina main webpage at http://www.uregina.ca and click on the Authorized User link. To Do Think about what makes a good or a bad interface Media from Meeting Nothing available for 02",
+    "text": "Meeting 2 / 37 Questions from Last Meeting? Outline for Today Tent Cards Syllabus Video: How to Build Your Creative Confidence Thinking outside the box activity To make payments go to the Log in to UR Self Service button on the University of Regina main webpage at http://www.uregina.ca and click on the Authorized User link. To Do Think about what makes a good or a bad interface Media from Meeting 02 - 1.jpg 02 - 2.jpg 02.m4a",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/02.html"
   },{
@@ -565,7 +565,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201730/"
   },{
     "title": "",
-    "text": "Media 01 - 1.jpg 01 - 2.jpg 01.m4a",
+    "text": "Media 01 - 1.jpg 01 - 2.jpg 01.m4a 02 - 1.jpg 02 - 2.jpg 02.m4a",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/media/"
   },{
