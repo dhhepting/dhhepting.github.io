@@ -38,11 +38,12 @@
       </select>
     </div>
     <div class="form-group col-md-2">
-  <a id="schedlink" href="schedule/201810.html" target="_self" class="btn btn-primary" role="button">
-    Go
-  </a>
+      <a id="schedlink" href="schedule/201810.html" target="_self"
+      class="btn btn-primary" role="button">
+        Go
+      </a>
+    </div>
   </div>
-</div>
 </form>
 
 ### Jump to a Course Offering
@@ -53,24 +54,23 @@
     <div class="form-group col-md-5">
       <select id = "tcourse" class="form-control" onchange="CourseChange()">
         <option value="tc_title">Course</option>
-      {% for i in (1..numcourses) %}
-        {%- assign cc = sortedcrs_ids[i] | split: '#' -%}
-        <option value="{{cc[1]}}">{{cc[1] | replace: "-"," "}}</option>
-      {% endfor %}
-    </select>
-  </div>
-
+        {% for i in (1..numcourses) %}
+          {%- assign cc = sortedcrs_ids[i] | split: '#' -%}
+          <option value="{{cc[1]}}">{{cc[1] | replace: "-"," "}}</option>
+        {% endfor %}
+      </select>
+    </div>
     <div class="form-group col-md-5">
-    <select id="tsem" disabled class="form-control" onchange="SemesterChange()">
-      <option value="ts_title">Semester</option>
-    </select>
-  </div>
+      <select id="tsem" disabled class="form-control" onchange="SemesterChange()">
+        <option value="ts_title">Semester</option>
+      </select>
+    </div>
     <div class="form-group col-md-2">
-  <a id="jumplink" href="#" target="_self" class="btn btn-primary" role="button">
-    Go
-  </a>
+      <a id="jumplink" href="#" target="_self" class="btn btn-primary" role="button">
+        Go
+      </a>
+    </div>
   </div>
-</div>
 </form>
 
 ### Courses Taught
@@ -88,40 +88,41 @@
 
 ### General Information
 
+* [Teaching Philosophy](philosophy.html)
 
 <script>
     var jmpurl = document.getElementById("jumplink");
     var semsel = document.getElementById("tsem");
     var liqsems = {{ sortedcrsoffs | jsonify }}
-    
+
     var t_course = "tc_title";
     var t_sem = "ts_title";
-		
-    function SetJump() 
+
+    function SetJump()
     {
-        if (t_course != "tc_title" && t_sem != "ts_title") 
+        if (t_course != "tc_title" && t_sem != "ts_title")
 	{
 	    jmpurl.setAttribute("href","/teaching/" + t_course + "/" + t_sem + "/");
 	    jmpurl.setAttribute("target","_blank");
 	}
-	else 
+	else
 	{
 	    jmpurl.setAttribute("href","#");
 	    jmpurl.setAttribute("target","_self");
 	}
     }
 
-    function removeOptions(selectbox) 
+    function removeOptions(selectbox)
     {
 	// remove everything but the 1st option
-	for (var i = selectbox.options.length - 1 ; i >= 1 ; i--) 
+	for (var i = selectbox.options.length - 1 ; i >= 1 ; i--)
 	{
 	    selectbox.remove(i);
     	}
     	selectbox.options[0].selected = true;
     }
 
-    function CourseChange() 
+    function CourseChange()
     {
     	// clear out the current contents of the semester select
 	var e = document.getElementById("tcourse");
@@ -144,7 +145,7 @@
 	    document.getElementById("tsem").disabled=true;
 	}
     }
-		
+
     function SemesterChange() {
         var e = document.getElementById("tsem");
 	t_sem = e.options[e.selectedIndex].value;
