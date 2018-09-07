@@ -1,6 +1,7 @@
-{{ page.sem }}
+{% comment %}
+data file can't seem to start with a number -- prepend s (for example)
+{% endcomment %}
 {% if site.data.schedule[page.sem]%}
-  Data file exists: {{ page.sem }}
   {% assign sched = "" %}
   {% for r in site.data.schedule[page.sem]%}
     {% assign rts = "" %}
@@ -12,20 +13,20 @@
     {% capture rts %}{{rts}}{{r.Friday}},{% endcapture %}
     {% capture sched %}{{sched}}#{{rts}}{% endcapture %}
   {% endfor %}
-    
-<div class="container-fluid">
-  <table class="table table-responsive table-striped table-bordered">
-    <thead>
-      <tr>
-        <th><em>Times</em></th>
-        <th>Monday</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-        <th>Thursday</th>
-        <th>Friday</th>
-      </tr>
-    </thead>
-<tbody>
+
+  <div class="container-fluid">
+    <table class="table table-responsive table-striped table-bordered">
+      <thead>
+        <tr>
+          <th><em>Times</em></th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+      </thead>
+    <tbody>
 {% comment %}
 {% endcomment %}
 {% assign schedslot = sched | split: "#" %}
@@ -37,13 +38,13 @@
 {% for tr in (1..17) %}
   {% assign trslot = schedslot[tr] | split: "," %}
   {% assign M = trslot[1] %}
-  {% assign T = trslot[2] %} 
+  {% assign T = trslot[2] %}
   {% assign W = trslot[3] %}
   {% assign R = trslot[4] %}
   {% assign F = trslot[5] %}
   {% assign spansa = spans | split: "," %}
   {% assign Ms = spansa[1] | plus: 0 %}
-  {% assign Ts = spansa[2] | plus: 0 %} 
+  {% assign Ts = spansa[2] | plus: 0 %}
   {% assign Ws = spansa[3] | plus: 0 %}
   {% assign Rs = spansa[4] | plus: 0 %}
   {% assign Fs = spansa[5] | plus: 0 %}
@@ -151,7 +152,7 @@
    {%endif%}
     {% endfor %}
     {% assign spansa = spans | split: "," %}
-  	  
+
             <tr>
               <td rowspan="1">{{trslot[0]}}</td>
 	      {% for d in (1..5) %}
@@ -176,6 +177,6 @@
         </tr>
       {% endfor %}
     </tbody>
-  </table> 
+  </table>
 </div>
 {% endif %}
