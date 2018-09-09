@@ -10,7 +10,7 @@
 {% endif %}
 <h1>
 <a href="{{prv_mtg | prepend: '00' | slice: -2, 2}}.html"><span class="fas fa-arrow-left"></span></a>
-Meeting {{crs_mtg}} / {{ page.total_meet }}
+Mtg {{crs_mtg}} / {{ page.total_meet }}
 <a href="{{nxt_mtg | prepend: '00' | slice: -2, 2}}.html"><span class="fas fa-arrow-right"></span></a>
 </h1>
 {% if crs_mtg > 1 %}
