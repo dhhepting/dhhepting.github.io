@@ -17,7 +17,7 @@
 </p>
 
 {% assign questions = "" %}
-{% for q in site.data.feedback.questions %}
+{% for q in site.data.feedback.mf_questions %}
   {% capture questions %}{{ questions }}|{{q}}{% endcapture %}
 {% endfor %}
 {% assign qa = questions | split: "|" %}
