@@ -1,16 +1,27 @@
 {% if site.data.media[include.mtg_media] %}
-  <h3>Media from Meeting</h3>
-  <ul>
+### Media from Meeting
+
+<div class="container-fluid">
   {% assign media_ctr = 0 %}
   {% assign mtgstr = include.mtg | prepend: '00' | slice: -2, 2 %}
-  {% for media in site.data.media[include.mtg_media] %}
+  {%- for media in site.data.media[include.mtg_media] -%}
     {% if media.meet == mtgstr %}
-    	<li><a href="{{media.URL}}">{{media.file}}</a></li>
-          {% assign media_ctr = media_ctr | plus: 1 %}
-    {% endif %}
-  {% endfor %}
+      {%if media.URL contains "jpg" %}
+      <a href="{{media.URL}}">
+        <img src="{{media.URL}}" alt="{{media.URL}}" height="100" class="m-1 img-responsive"/>
+      </a>
+      {% endif %}
+      {%if media.URL contains "m4a" %}
+      <a href="{{media.URL}}">
+        <span class="far fa-file-audio fa-6x align-middle m-1"></span>
+      </a>
+      {% endif %}
+{% comment %}* [{{media.file}}]({{media.URL}}) {% endcomment %}
+      {%- assign media_ctr = media_ctr | plus: 1 -%}
+    {%- endif -%}
+  {%- endfor -%}
   {% if media_ctr == 0 %}
-    <li>Nothing available for {{include.mtg}}</li>
+  {% comment %}* Nothing available for {{include.mtg}}{% endcomment %}
   {% endif %}
-  </ul>
+</div>
 {% endif %}

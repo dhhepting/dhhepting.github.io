@@ -15,97 +15,97 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/news/other.html"
   },{
     "title": "Mtg 01 - CS 428+828 (201830)",
-    "text": "Meeting 1 / 37 Outline for Today Inspirations Tent Cards Syllabus Video: How to Build Your Creative Confidence To Do Think about what makes a good or a bad interface Media from Meeting 01 - 1.jpg 01.m4a 01 - 2.jpg",
+    "text": "Mtg 1 / 37 Outline for Today Inspirations Syllabus To Do Think about what makes a good or a bad interface Media from Meeting Annotations and Afterthoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/01.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 2 / 37 Questions from Last Meeting? Outline for Today Tent Cards Syllabus Video: How to Build Your Creative Confidence Thinking outside the box activity To make payments go to the Log in to UR Self Service button on the University of Regina main webpage at http://www.uregina.ca and click on the Authorized User link. To Do Think about what makes a good or a bad interface Media from Meeting 02 - 1.jpg 02 - 2.jpg 02.m4a",
+    "text": "Mtg 2 / 37 Questions from Last Meeting? Outline for Today Tent Cards Syllabus Video: How to Build Your Creative Confidence Thinking outside the box activity “‘To make payments go to the Log in to UR Self Service button on the University of Regina main webpage at http://www.uregina.ca and click on the Authorized User link.’” To Do Think about what makes a good or a bad interface Media from Meeting Annotations and Afterthoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/02.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 3 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 03",
+    "text": "Mtg 3 / 37 Questions from Last Meeting? Administration Sorting out class list URcourses Outline for Today Do you feel qualified to determine whether an interface design is good or bad? How would you describe good and bad design? What are some examples of good and bad design? Can you articulate any principles of design from your experience? What does it mean to think outside of the box? A “growth mindset” embraces challenges whereas a “fixed mindset” avoids them ( illustration and video (“The power of believing that you can improve”)) IDEO at work To Do Read Chapter 1 of textbook Media from Meeting Annotations and Afterthoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/03.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 4 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 04",
+    "text": "Mtg 4 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/04.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 5 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 05",
+    "text": "Mtg 5 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/05.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 6 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 06",
+    "text": "Mtg 6 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/06.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 7 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 07",
+    "text": "Mtg 7 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/07.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 8 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 08",
+    "text": "Mtg 8 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/08.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 9 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 09",
+    "text": "Mtg 9 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/09.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 10 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 10",
+    "text": "Mtg 10 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/10.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 11 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 11",
+    "text": "Mtg 11 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/11.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 12 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 12",
+    "text": "Mtg 12 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/12.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 13 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 13",
+    "text": "Mtg 13 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/13.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 14 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 14",
+    "text": "Mtg 14 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/14.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 15 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 15",
+    "text": "Mtg 15 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/15.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 16 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 16",
+    "text": "Mtg 16 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/16.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 17 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 17",
+    "text": "Mtg 17 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/17.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 18 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 18",
+    "text": "Mtg 18 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/18.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 19 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 19",
+    "text": "Mtg 19 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/19.html"
   },{
@@ -155,7 +155,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/projects/fractals/calendars/1996.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 20 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 20",
+    "text": "Mtg 20 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/20.html"
   },{
@@ -170,87 +170,87 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/schedule/201830.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 21 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 21",
+    "text": "Mtg 21 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/21.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 22 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 22",
+    "text": "Mtg 22 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/22.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 23 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 23",
+    "text": "Mtg 23 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/23.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 24 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 24",
+    "text": "Mtg 24 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/24.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 25 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 25",
+    "text": "Mtg 25 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/25.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 26 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 26",
+    "text": "Mtg 26 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/26.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 27 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 27",
+    "text": "Mtg 27 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/27.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 28 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 28",
+    "text": "Mtg 28 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/28.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 29 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 29",
+    "text": "Mtg 29 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/29.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 30 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 30",
+    "text": "Mtg 30 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/30.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 31 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 31",
+    "text": "Mtg 31 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/31.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 32 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 32",
+    "text": "Mtg 32 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/32.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 33 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 33",
+    "text": "Mtg 33 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/33.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 34 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 34",
+    "text": "Mtg 34 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/34.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 35 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 35",
+    "text": "Mtg 35 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/35.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 36 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 36",
+    "text": "Mtg 36 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/36.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Meeting 37 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 37",
+    "text": "Mtg 37 / 37 Questions from Last Meeting? Media from Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/37.html"
   },{
@@ -278,6 +278,11 @@ var tipuesearch = {"pages": [{
     "text": "Education Ph.D. in Computer Science from Simon Fraser University, Burnaby, British Columbia, Canada. Dissertation: &lt;a href=/~hepting/research/works/1999-12-hep-a-new-paradigm-for-exploration-in-computer-aided-visualization.html&gt; A New Paradigm for Exploration in Computer-aided Visualization &lt;/a&gt;, defended September, 1999. Supervisor: Dr. Robert D. Russell Committee: Dr. John C. Dill and Dr. F. David Fracchia External examiner: Dr. Joe Marks M.Sc. in Computer Science from the University of Regina, Regina, Saskatchewan, Canada. Thesis: , defended March, 1991. Supervisor: Dr. Przemyslaw W. Prusinkiewicz Committee: Dr. Alan G. Law and Dr. J. Chris Fisher External examiner: Dr. Harley Weston B.Sc. in Computer Science (Honours) and Mathematics, convocated May, 1988.",
     "tags": "",
     "url": "/~hepting/about/education.html"
+  },{
+    "title": "",
+    "text": "Faculty of Science Course Evaluation This page presents data obtained through the Faculty of Science course evaluation, which is administered online. Students complete it outside of class, during the last few weeks of class meetings for the semester. I receive a summary report sometime during the following semester. Information from the Faculty of Science course evalation summary report is limited. Most open-ended responses appear in full. Question 4 (Strongly Agree) 3 (Agree) 2 (Disagree) 1 (Strongly Disagree) Total Q7. The course is well organized 7,2,2,2,1,7 722217 2 2 2 1 7 Q8. The methods of evaluation are fair 8,1,3,1,2,7 813127 1 3 1 2 7 Q9. The instructor explains ideas and concepts in a clear, logical manner 9,2,1,1,2,6 921126 2 1 1 2 6 Q10. The instructor is readily available for out-of-class consultation 10,2,3,0,0,5 1023005 2 3 0 0 5 Q11. The instructor shows mastery of the subject 11,2,3,0,1,6 1123016 2 3 0 1 6 Q12. The instructor treats students fairly and with respect 12,6,0,1,0,7 1260107 6 0 1 0 7 Q13. The instructor stimulates critical thinking and independent learning 13,4,0,2,0,6 1340206 4 0 2 0 6 Q14. I would recommend this instructor to others 14,3,2,1,1,7 1432117 3 2 1 1 7 Total 22 14 8 7 51 Identify what you perceive to be the main strengths and weaknesses of the course. No strengths. This is a super weak course, there is little to no content. We mostly watching ted talks and videos from the 90's. Discussion is frequent but instructor is not good at dealing with off-topic or derailing conversation. Several class members do not understand social cues or appropriate ways to discuss things and frequently interjected and derailed things or dominated the class with what should have been 1-on-1 conversation. The course usually deals with the interface between users and computers, As well as it mainly focuses on behavioral science, computer science and other fields of study in sciences. The course’s group project assignments are a great opportunity to apply class material and get to know other students. This course is fine as it is. There are insignificant drawbacks, but they mainly come from Dr. Hepting's nature, so I find criticising the course pointless. It is appreciated by the absolute majority of students, I hereby guarantee that. Identify what you perceive to be the main strengths and weaknesses of the instructor. Instructor explains every chapter with real-time examples where it would be easy for every student to understand and gives more space to work as a group. None. Putting on ted-talks and talking about elevators or your trip to IKEA for several classes is not very stimulating or informative. He also has allowed the marker to completely stop marking things. We have only gotten 1 assignment marked and it is the end of the semester tomorrow! We haven't even gotten the midterm back. PRO: Dr. Hepting has significantly improved his communication with students in past years. Removal of Piazza as useless and janky interaction platform and shift to URCourses as the unified course action platform is a remarkable improvement. I appreciate the &hellip; CON: Lack of clarity, his undecisiveness and huge pauses between phrases in lecture performance are still an issue. Please work on decision-making and presentation performance. I am strongly convinced that Dr. Hepting possesses a lot of useful knowledge, it is just his communication bottleneck that scares people off at times. The instructor has creative assignment ideas and is always willing to help students in need. Comment on the value of the textbooks and the assignments in the course. If there was a textbook for this class I didn't buy it. It would have been useless. The assignments are filler junk that do not reaffirm learning nor teach anything new. Individual/group Assignments given by instructor are very useful for every student to work as a team and information given in textbooks are very keen to understand. Meh, whatever. Not really much to say here. Students were encouraged to resort to external sources that they find useful. And I think that is correct. Please keep it that way, it works for everyone. That is fine. The length of time it takes to have an assignment marked and returned to us was unacceptable. Here we are in the last week and the midterm has not been marked. Most of the assignments have also not been marked. This is unacceptable. The textbook and assignments help apply class concepts and the instructor’s lecture material. Any other relevant suggestions? No Teach this class in a room without a projector and let someone else make the instructor's syllabus",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201730/feedback/fac-eval.html"
   },{
     "title": "",
     "text": "Final This page presents data obtained from my own feedback instrument that I give to students in my classes at their midterm and final exams. I look at midterm feedback when it is received because I consider it to be a formative evaluation of the class in progress. I do not see the final feedback until after the final grades are posted. The numbers that precede each response are present to permit matching between the data table (click button to toggle expanded view) and the opened ended questions. A response with a &mdash; or NA indicates that no answer was given. Open-ended question responses have been transcribed as faithfully as possible, with minor edits and formatting changes sometimes required. Question 5 (Always) 4 [Mostly] 3 [Sometimes] 2 [Rarely] 1 (Never) Total Q1. The instructor is well-prepared for class 29 16 8 0 0 53 Q2. The instructor clearly communicates his expectations for student preparation and participation 33 15 4 1 0 53 Q3. The instructor uses class time effectively 26 18 7 2 0 53 Q4. The instructor has clear expectations for assigned work 34 10 8 1 0 53 Q5. The instructor encourages student participation 45 6 2 0 0 53 Q6. The instructor clearly answers questions 31 16 5 1 0 53 Q7. The instructor treats students with respect 49 3 1 0 0 53 Q8. The instructor effectively directs and stimulates discussion 38 10 4 1 0 53 Q9. The instructor effectively encourages students to ask questions and give answers 43 8 2 0 0 53 Total 328 102 41 6 0 477 CLICK HERE to toggle details Response Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Avg SD Mode Median 1 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 2 4 3 3 2 3 4 5 3 4 3.44 0.88 3 3 3 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 4 5 5 4 5 5 5 5 5 5 4.89 0.33 5 5 5 5 5 4 5 5 5 5 4 5 4.78 0.44 5 5 6 3 4 4 3 5 4 5 5 5 4.22 0.83 5 4 7 3 4 4 4 4 4 5 3 3 3.78 0.67 4 4 8 4 4 4 4 5 5 5 5 5 4.56 0.53 5 5 9 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 10 4 5 4 5 5 5 4 4 5 4.56 0.53 5 5 11 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 12 5 5 5 4 5 4 5 5 5 4.78 0.44 5 5 13 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 14 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 15 4 5 4 4 5 5 5 5 5 4.67 0.50 5 5 16 5 5 4 5 5 5 5 5 5 4.89 0.33 5 5 17 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 18 3 4 5 3 3 2 3 4 4 3.44 0.88 3 3 19 3 3 3 3 5 3 5 4 5 3.78 0.97 3 3 20 4 4 4 5 5 5 5 5 5 4.67 0.50 5 5 21 4 4 3 5 5 4 5 5 5 4.44 0.73 5 5 22 3 3 3 3 5 3 5 4 5 3.78 0.97 3 3 23 4 4 4 3 5 4 5 5 5 4.33 0.71 4 4 24 4 4 5 5 5 4 5 5 5 4.67 0.50 5 5 25 3 2 2 3 4 3 5 3 4 3.22 0.97 3 3 26 3 3 2 3 4 3 4 2 3 3.00 0.71 3 3 27 5 5 4 5 5 5 5 4 4 4.67 0.50 5 5 28 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 29 4 4 4 3 5 4 5 5 4 4.22 0.67 4 4 30 4 5 4 5 5 4 5 5 4 4.56 0.53 5 5 31 5 5 5 5 5 4 5 5 5 4.89 0.33 5 5 32 5 5 5 5 4 5 5 4 5 4.78 0.44 5 5 33 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 34 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 35 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 36 4 4 3 4 5 5 5 5 5 4.44 0.73 5 5 37 5 5 5 5 5 5 5 4 5 4.89 0.33 5 5 38 4 4 3 4 5 3 5 4 5 4.11 0.78 4 4 39 5 5 5 4 5 4 5 5 4 4.67 0.50 5 5 40 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 41 5 4 5 5 5 5 5 5 5 4.89 0.33 5 5 42 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 43 4 5 4 5 5 5 5 5 5 4.78 0.44 5 5 44 4 5 4 5 4 4 5 4 5 4.44 0.53 4 4 45 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 46 3 4 4 4 4 4 5 3 4 3.89 0.60 4 4 47 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 48 4 4 4 5 5 4 4 5 5 4.44 0.53 4 4 49 4 4 3 4 5 5 5 5 5 4.44 0.73 5 5 50 5 5 4 4 5 4 5 5 5 4.67 0.50 5 5 51 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 52 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 53 5 5 5 5 5 4 5 5 5 4.89 0.33 5 5 Avg 4.40 4.51 4.28 4.45 4.81 4.45 4.91 4.60 4.77 4.58 0.21 SD 0.74 0.72 0.84 0.82 0.48 0.75 0.35 0.72 0.51 Mode 5 5 5 5 5 5 5 5 5 Median 5 5 4 5 5 5 5 5 5 What do you like best about this course? CLICK HERE to toggle details the course work because they covered all the aspects of the course topics and discussions almost everything the way the lectures are planned makes them interesting and fun I like this course because instructor teaching style and mostly like how he understand the students slow-paced activities with no rush or pain; respectful professor Hepting classes in general are always interesting in-class discussions this course has helped in improving my creative side; the course is carefully planned content, project I enjoyed the course discussions and content; the videos we watched were very thought-provoking the interactive nature in class, ability to work on a semester long project to have a hands-on experience with design the instructor made the course attractive for us; we never felt bored in the class; he interacted with everyone the pace and the lessons the course is broadly done by group interactions and discussions the course content and perspectives on designing is practical this course teach me more for design and how to do it the material was interesting; the design project was neat the discussion and interaction is next to none it helped me to understand design principles class discussion the class directly relates to real world and is able to be used in many applications; allows us to look at many things from a different perspective discussions it was different from most other CS classes and opened my eyes to different ways of thinking about software spaghetti video, so true; personally thin with no visible solids the project work helped a lot to understand some class concepts NA interesting and applicable subject matter this course helped me to learn how to do a better design for any system this is one of the useful course; there must be more practical assignments than a theoretical paper submission NA the topics are clearly discussed and explained about how to design interactive classes interactive and group work flexibility of writing final exam with alternatives provided by instructor the simplicity and clarity with which Dr. Hepting explained difficult concepts NA getting different ideas in class by discussion and instructor way of teaching the focus on the practical situations and real world problems; the class was fun and the videos were awesome and encouraging interesting class with high level concepts the course does not force the students to follow a single path to learn something; students have a platform to think and express ideas about the things they learn it was an excellent opportunity to thoroughly engage with and explore design methodologies videos and it was a very interesting class it involves thinking effectively encouragement of students to ask questions and have discussions dealing with the various interfaces; thinking both creatively and logically gave ability to see things differently; realized how many opportunities out there for redesign; design thinking learning new things is fun in this class freedom on the project interaction and exposure to user design; the TED talk videos student engagement and interactive nature of the instructor What would you like to change about this course? CLICK HERE to toggle details false the assignments maybe (some of them) nothing nothing comes to mind I would like to change about this course if professor give any assignment like scenarios writing it should be helpful it is good as it is, but marks were slow to be returned better management of group work NA I am quite satisified by it nothing this course does not need improvement, but URcourses and moodle does! URcourses should automatically reset dates to 2017, but oh well NA I don't find any drawback about this course more workshops, learn how to ask the right questions to stakeholders and users and apply it to a project NIL nothing nothing major the final exam should be design an interface more guidelines and clearer explanations; better use of class time how off-topic it seems to get sometimes NA nothing don't know if it should be changed but it is a good opportunity to redesign a real application in the school as a class or in groups; great real world experience nothing less groupwork assign group topics; don't make us choose something have more support materials (class notes, power points); less assignments (was 1 every Monday); exams more practical and less writing NA more specific requirements on assignments (vs. your choice) NA there must be more practical assignments; marks should be given early if possible NA nothing NA nothing more course content should be presented like ppt and pdf NIL please include a ppt for better understanding NA NA there should be some field work included in this course NA the time (class should have been kept at some time in the morning) a formative evaluation and timely marking of assignments would be very helpful; there was no opportunity to receive feedback and improve over the semester nothing excessively long writing in exams NA getting the marks in a timely fashion more clear understanding of course at the beginning because it was vague at the start nothing for now nothing nothing I would like to learn more with a practical aspect of building a prototype What do think are the instructor's greatest strengths? CLICK HERE to toggle details he is kind and willing to help the students organization he was really friendly, a very organized person communication and encoruaging students to participate instructors greatest strengths are he understand students properly respectful; knowledgeable; listens to student input; able to make changes in himself/course if needed; cool and good! he's very respectful of students stimulating discussion and encouraging participation his teaching skills relevant knowledge about the course the instructor is always open to discussion and has a great sense of humour! he encourages student participation instructor's greatest strength is the feedback from us; he has provided discussion forum for all the meeting in order to solve the problems which we are facing; he helped us in all best possible ways calm, easy, good instructor, enjoyed this class he is a cool guy ability to engage students by giving out maps to redesign and show videos of design implementations his teaching philosophy NA good at starting conversation about topics; good at thinking outside of the box his rapport with students and the respect that he gives them; makes class discussion actually feel like a discussion and not an interrogation stays up-to-date, provides real-world examples engaging the class in discussion strong vocabulary that can remove confusion (sometimes make it though) NA encouraging students to think outside the box NA ??? and always try to understand the students and help; great knowledge NA engaging but not intimidating the instructor has more knowledge about the subject one of the best instructors, he is very polite and calm and understand students situation and very co-ooperative with his students NA the friendly and joyful nature and clarity of thoughts clear expectations relating real life design problem with what is taught in course and discussions in class ease to present and make course easy to learn and score his patience while explaining every silly question and tough question asked by students simplicity and clarity NA experience, way of teaching, and encouraging nature the way he presents his thoughts through videos, etc.; treat students kindly and encourages discussions informative, knowledgeable, and helpful the instructor allows the students to express their view and ideas about a topic and does not try to force his view on students his knowledge of design methodology and ability to critique interfaces of all kinds giving respect to student opinions about everything listening to and respecting students NA smart; available outside of class; kind he broadens our perception without making us realize that we are broadening it and being creative. I never knew when I step out of my comfort zone until very end. It was like a Christopher Nolan movie where you make all the sense in the end; ability to reach, encourage students; empathy he encourages students to implement their own ideas. He supports student ideas communicate with students carry students along and make students to think deeply thought process and conveying ideas subtly; the ability to engage students in discovering their own creativity and potential",
@@ -555,7 +560,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201630/"
   },{
     "title": "",
-    "text": "Feedback final.html midterm.html",
+    "text": "Feedback fac-eval.html final.html midterm.html",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201730/feedback/"
   },{
@@ -565,7 +570,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201730/"
   },{
     "title": "",
-    "text": "Media 01 - 1.jpg 01 - 2.jpg 01.m4a 02 - 1.jpg 02 - 2.jpg 02.m4a",
+    "text": "Media",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/media/"
   },{
@@ -575,7 +580,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/"
   },{
     "title": "CS 428+828 in 201830",
-    "text": "CS 428+828 • 201830 Human Computer Communication media meetings Calendar RSS UR Self-Service: CS 428 (CRN 30728) CS 828 (CRN 30742)",
+    "text": "CS 428+828 • 201830 Human Computer Communication Syllabus Calendar RSS Dr. Hepting’s schedule Meetings Media Assignments Content Resources Topics &amp; Learning Outcomes UR Self-Service: CS 428 (CRN 30728) CS 828 (CRN 30742)",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/"
   },{
@@ -585,7 +590,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/assignments/g/"
   },{
     "title": "",
-    "text": "Individual or Group",
+    "text": "Individual or Group Propose Requirements Design 2 Lo-Fi Evaluate Prototye 1 Hi-Fi Present",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/assignments/i-or-g/"
   },{

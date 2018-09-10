@@ -6,10 +6,24 @@ breadcrumb: 201830
 layout: bg-image
 ---
 {% include offering-url.html %}
-{% include offering-index.html %}
+{% comment %}{% include offering-index.html %}{%endcomment%}
 
+# {{ crs_sbj }} {{ crs_nbr }} &bull; {{ crs_sem }}
+### {{ page.crs_name }}
+
+* [Syllabus]({{ "/assets/teaching/pdf/CS-428+828-201830_syllabus.pdf" | relative_url}})
 * [Calendar](https://urcourses.uregina.ca/calendar/view.php?view=month&course=2084)
 * [RSS]({{ "/rss/CS-428+828-201830.rss" | relative_url }})
+
+* [Dr. Hepting's schedule](../../schedule/201830.html)
+
+* [Meetings](meetings/)
+* [Media](media/)
+
+* [Assignments](../assignments)
+* [Content](../content)
+* [Resources](../resources/)
+* [Topics & Learning Outcomes](../topics.html)
 
 ##### UR Self-Service:  
 
