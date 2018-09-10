@@ -14,3 +14,5 @@
 {% assign crs_fbk = url_parts[fbk_idx] %}
 {% capture fbk_dat %}{{crs_sbj}}-{{crs_nbr}}-{{crs_sem}}-{{crs_fbk}}{% endcapture %}
 {% capture fbk_dat %}{{fbk_dat | replace: "+", "_"}}{% endcapture %}
+{% capture fse_dat %}{{crs_sbj}}-{{crs_nbr}}-{{crs_sem}}-ufse{% endcapture %}
+{% capture fse_dat %}{{fse_dat | replace: "+", "_"}}{% endcapture %}

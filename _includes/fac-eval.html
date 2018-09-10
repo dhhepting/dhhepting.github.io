@@ -1,0 +1,105 @@
+{% include feedback-url.html %}
+
+# {{ page.breadcrumb }}
+
+<p>
+  This page presents data obtained through the Faculty of Science course evaluation,
+  which is administered online.  Students complete it outside of class, during the last
+  few weeks of class meetings for the semester.  I receive a summary report sometime during
+  the following semester. Information from the Faculty of Science course evalation summary report
+  is limited. Most open-ended responses appear in full.
+</p>
+
+{% assign questions = "" %}
+{% for q in site.data.feedback.fe_questions %}
+  {% capture questions %}{{ questions }}|{{q}}{% endcapture %}
+{% endfor %}
+{% assign qa = questions | split: "|" %}
+{% if site.data.feedback[fse_dat] %}
+  {% assign summary = "" %}
+  {% for r in site.data.feedback[fse_dat] %}
+    {% assign rqs = "" %}
+    {% capture rqs %}{{rqs}}{{r.question}},{% endcapture %}
+    {% capture rqs %}{{rqs}}{{r.SA}},{% endcapture %}
+    {% capture rqs %}{{rqs}}{{r.A}},{% endcapture %}
+    {% capture rqs %}{{rqs}}{{r.D}},{% endcapture %}
+    {% capture rqs %}{{rqs}}{{r.SD}},{% endcapture %}
+    {% capture rqs %}{{rqs}}{{r.nresp}}{% endcapture %}
+    {% capture summary %}{{summary}}#{{rqs}}{% endcapture %}
+  {% endfor %}
+
+<div class="container-fluid">
+  <table class="table table-responsive table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>4 (Strongly Agree)</th>
+        <th>3 (Agree)</th>
+        <th>2 (Disagree)</th>
+        <th>1 (Strongly Disagree)</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+  {% assign summq = summary | split: "#" %}
+  {% for q in (1..8) %}
+    {% if summq[q] %}
+      {% assign sqa = summq[q] | split: "," %}
+      <tr>
+        <td>{{qa[q]}}</td>
+      {{ summq[q] }}
+      {{ sqa }}
+      {% for d in (1..5) %}
+        <td>{{sqa[d]}}</td>
+      {% endfor %}
+    {% endif %}
+      </tr>
+  {% endfor %}
+      <tr>
+        <td>Total</td>
+  {% if summq[9] %}
+    {% assign sqa = summq[9] | split: "," %}
+    {% for d in (1..5) %}
+        <td>{{sqa[d]}}</td>
+    {% endfor %}
+  {% endif %}
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endif %}
+
+{% capture fse_com %}{{fse_dat}}-comm{% endcapture %}
+{% if site.data.feedback[fse_com] %}
+<h3>Identify what you perceive to be the main strengths and weaknesses of the course.</h3>
+
+<ol>
+  {% for swc in site.data.feedback[fse_com]sw_course %}
+  <li>{{swc}}</li>
+  {% endfor %}
+</ol>
+
+<h3>Identify what you perceive to be the main strengths and weaknesses of the instructor.</h3>
+
+<ol>
+  {% for swi in site.data.feedback[fse_com]sw_instructor %}
+  <li>{{swi}}</li>
+  {% endfor %}
+</ol>
+
+<h3>Comment on the value of the textbooks and the assignments in the course.</h3>
+
+<ol>
+  {% for t in site.data.feedback[fse_com]textbook %}
+  <li>{{t}}</li>
+  {% endfor %}
+</ol>
+
+<h3>Any other relevant suggestions?</h3>
+
+<ol>
+  {% for s in site.data.feedback[fse_com]suggestions %}
+  <li>{{s}}</li>
+  {% endfor %}
+</ol>
+{% endif %}
