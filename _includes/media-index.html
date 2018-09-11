@@ -1,23 +1,17 @@
 <h1>Media</h1>
 
-{% if site.data.media[include.media_dat] %}
+{%- if site.data.media[include.media_dat] -%}
 <div class="container-fluid">
-    {% assign sortedMedia = site.data.media[include.media_dat] | sort: 'file' %}
-    {% for media in sortedMedia %}
-      {%comment%}<ul><li><a href="{{mediafile.URL}}">{{mediafile.file}}</a></li></ul>{%endcomment%}
-      {%if media.URL contains "jpg" %}
-      <a href="{{media.URL}}">
-        <img src="{{media.URL}}" alt="{{media.URL}}" height="100" class="m-1 img-responsive"/>
-      </a>
-      {% endif %}
-      {%if media.URL contains "m4a" %}
-      <a href="{{media.URL}}">
-        <span class="far fa-file-audio fa-6x align-middle m-1"></span>
-      </a>
-      {% endif %}
-    {% endfor %}
-</div>
-
-{% else %}
+  {%- assign sortedMedia = site.data.media[include.media_dat] | sort: 'file' -%}
+  {%- for media in sortedMedia -%}
+    {%- if media.URL contains "jpg" -%}
+  <a href="{{media.URL}}"><img src="{{media.URL}}" alt="{{media.file}}" height="100" class="m-1 img-responsive"/></a>
+    {%- endif -%}
+    {%- if media.URL contains "m4a" -%}
+  <a href="{{media.URL}}"><span class="far fa-file-audio fa-6x align-middle m-1"></span></a>
+    {%- endif -%}
+  {%- endfor -%}
+{%- else -%}
   <p>None available</p>
-{% endif %}
+{%- endif -%}
+</div>
