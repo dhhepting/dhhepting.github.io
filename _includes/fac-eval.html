@@ -47,8 +47,6 @@
       {% assign sqa = summq[q] | split: "," %}
       <tr>
         <td>{{qa[q]}}</td>
-      {{ summq[q] }}
-      {{ sqa }}
       {% for d in (1..5) %}
         <td>{{sqa[d]}}</td>
       {% endfor %}
@@ -73,33 +71,33 @@
 {% if site.data.feedback[fse_com] %}
 <h3>Identify what you perceive to be the main strengths and weaknesses of the course.</h3>
 
-<ol>
+<ul>
   {% for swc in site.data.feedback[fse_com]sw_course %}
   <li>{{swc}}</li>
   {% endfor %}
-</ol>
+</ul>
 
 <h3>Identify what you perceive to be the main strengths and weaknesses of the instructor.</h3>
 
-<ol>
+<ul>
   {% for swi in site.data.feedback[fse_com]sw_instructor %}
   <li>{{swi}}</li>
   {% endfor %}
-</ol>
+</ul>
 
 <h3>Comment on the value of the textbooks and the assignments in the course.</h3>
 
-<ol>
+<ul>
   {% for t in site.data.feedback[fse_com]textbook %}
   <li>{{t}}</li>
   {% endfor %}
-</ol>
+</ul>
 
 <h3>Any other relevant suggestions?</h3>
 
-<ol>
+<ul>
   {% for s in site.data.feedback[fse_com]suggestions %}
   <li>{{s}}</li>
   {% endfor %}
-</ol>
+</ul>
 {% endif %}

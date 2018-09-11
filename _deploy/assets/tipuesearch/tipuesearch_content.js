@@ -30,82 +30,82 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/03.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 4 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 4 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 04",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/04.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 5 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 5 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 05",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/05.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 6 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 6 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 06",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/06.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 7 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 7 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 07",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/07.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 8 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 8 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 08",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/08.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 9 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 9 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 09",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/09.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 10 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 10 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 10",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/10.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 11 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 11 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 11",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/11.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 12 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 12 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 12",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/12.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 13 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 13 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 13",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/13.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 14 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 14 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 14",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/14.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 15 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 15 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 15",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/15.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 16 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 16 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 16",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/16.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 17 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 17 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 17",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/17.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 18 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 18 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 18",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/18.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 19 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 19 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 19",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/19.html"
   },{
@@ -155,7 +155,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/projects/fractals/calendars/1996.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 20 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 20 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 20",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/20.html"
   },{
@@ -165,92 +165,92 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/schedule/201810.html"
   },{
     "title": "Fall 2018",
-    "text": "Fall 2018 First day of classes: September 5, 2018 Last day of classes: December 6, 2018 Courses taught: CS 428+828: Human Computer Communication Times Monday Tuesday Wednesday Thursday Friday 08:30 B B B M B 09:00 09:30 10:00 O 10:30 11:00 11:30 12:00 B 12:30 13:00 13:30 C C C 14:00 14:30 O B B 15:00 15:30 16:00 B 16:30",
+    "text": "Fall 2018 First day of classes: September 5, 2018 Last day of classes: December 6, 2018 Courses taught: CS 428+828: Human Computer Communication Times Monday Tuesday Wednesday Thursday Friday 08:30 Busy Busy Busy Meetings Busy 09:00 09:30 10:00 Office 10:30 11:00 11:30 12:00 Busy 12:30 13:00 13:30 CS-428+828 CS-428+828 CS-428+828 14:00 14:30 Office Busy Busy 15:00 15:30 16:00 Busy 16:30",
     "tags": "",
     "url": "/~hepting/teaching/schedule/201830.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 21 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 21 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 21",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/21.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 22 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 22 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 22",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/22.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 23 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 23 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 23",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/23.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 24 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 24 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 24",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/24.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 25 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 25 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 25",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/25.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 26 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 26 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 26",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/26.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 27 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 27 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 27",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/27.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 28 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 28 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 28",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/28.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 29 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 29 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 29",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/29.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 30 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 30 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 30",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/30.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 31 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 31 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 31",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/31.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 32 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 32 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 32",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/32.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 33 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 33 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 33",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/33.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 34 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 34 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 34",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/34.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 35 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 35 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 35",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/35.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 36 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 36 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 36",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/36.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 37 / 37 Questions from Last Meeting? Media from Meeting",
+    "text": "Mtg 37 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 37",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/37.html"
   },{
@@ -280,7 +280,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/about/education.html"
   },{
     "title": "",
-    "text": "Faculty of Science Course Evaluation This page presents data obtained through the Faculty of Science course evaluation, which is administered online. Students complete it outside of class, during the last few weeks of class meetings for the semester. I receive a summary report sometime during the following semester. Information from the Faculty of Science course evalation summary report is limited. Most open-ended responses appear in full. Question 4 (Strongly Agree) 3 (Agree) 2 (Disagree) 1 (Strongly Disagree) Total Q7. The course is well organized 7,2,2,2,1,7 722217 2 2 2 1 7 Q8. The methods of evaluation are fair 8,1,3,1,2,7 813127 1 3 1 2 7 Q9. The instructor explains ideas and concepts in a clear, logical manner 9,2,1,1,2,6 921126 2 1 1 2 6 Q10. The instructor is readily available for out-of-class consultation 10,2,3,0,0,5 1023005 2 3 0 0 5 Q11. The instructor shows mastery of the subject 11,2,3,0,1,6 1123016 2 3 0 1 6 Q12. The instructor treats students fairly and with respect 12,6,0,1,0,7 1260107 6 0 1 0 7 Q13. The instructor stimulates critical thinking and independent learning 13,4,0,2,0,6 1340206 4 0 2 0 6 Q14. I would recommend this instructor to others 14,3,2,1,1,7 1432117 3 2 1 1 7 Total 22 14 8 7 51 Identify what you perceive to be the main strengths and weaknesses of the course. No strengths. This is a super weak course, there is little to no content. We mostly watching ted talks and videos from the 90's. Discussion is frequent but instructor is not good at dealing with off-topic or derailing conversation. Several class members do not understand social cues or appropriate ways to discuss things and frequently interjected and derailed things or dominated the class with what should have been 1-on-1 conversation. The course usually deals with the interface between users and computers, As well as it mainly focuses on behavioral science, computer science and other fields of study in sciences. The course’s group project assignments are a great opportunity to apply class material and get to know other students. This course is fine as it is. There are insignificant drawbacks, but they mainly come from Dr. Hepting's nature, so I find criticising the course pointless. It is appreciated by the absolute majority of students, I hereby guarantee that. Identify what you perceive to be the main strengths and weaknesses of the instructor. Instructor explains every chapter with real-time examples where it would be easy for every student to understand and gives more space to work as a group. None. Putting on ted-talks and talking about elevators or your trip to IKEA for several classes is not very stimulating or informative. He also has allowed the marker to completely stop marking things. We have only gotten 1 assignment marked and it is the end of the semester tomorrow! We haven't even gotten the midterm back. PRO: Dr. Hepting has significantly improved his communication with students in past years. Removal of Piazza as useless and janky interaction platform and shift to URCourses as the unified course action platform is a remarkable improvement. I appreciate the &hellip; CON: Lack of clarity, his undecisiveness and huge pauses between phrases in lecture performance are still an issue. Please work on decision-making and presentation performance. I am strongly convinced that Dr. Hepting possesses a lot of useful knowledge, it is just his communication bottleneck that scares people off at times. The instructor has creative assignment ideas and is always willing to help students in need. Comment on the value of the textbooks and the assignments in the course. If there was a textbook for this class I didn't buy it. It would have been useless. The assignments are filler junk that do not reaffirm learning nor teach anything new. Individual/group Assignments given by instructor are very useful for every student to work as a team and information given in textbooks are very keen to understand. Meh, whatever. Not really much to say here. Students were encouraged to resort to external sources that they find useful. And I think that is correct. Please keep it that way, it works for everyone. That is fine. The length of time it takes to have an assignment marked and returned to us was unacceptable. Here we are in the last week and the midterm has not been marked. Most of the assignments have also not been marked. This is unacceptable. The textbook and assignments help apply class concepts and the instructor’s lecture material. Any other relevant suggestions? No Teach this class in a room without a projector and let someone else make the instructor's syllabus",
+    "text": "Faculty of Science Course Evaluation This page presents data obtained through the Faculty of Science course evaluation, which is administered online. Students complete it outside of class, during the last few weeks of class meetings for the semester. I receive a summary report sometime during the following semester. Information from the Faculty of Science course evalation summary report is limited. Most open-ended responses appear in full. Question 4 (Strongly Agree) 3 (Agree) 2 (Disagree) 1 (Strongly Disagree) Total Q7. The course is well organized 2 2 2 1 7 Q8. The methods of evaluation are fair 1 3 1 2 7 Q9. The instructor explains ideas and concepts in a clear, logical manner 2 1 1 2 6 Q10. The instructor is readily available for out-of-class consultation 2 3 0 0 5 Q11. The instructor shows mastery of the subject 2 3 0 1 6 Q12. The instructor treats students fairly and with respect 6 0 1 0 7 Q13. The instructor stimulates critical thinking and independent learning 4 0 2 0 6 Q14. I would recommend this instructor to others 3 2 1 1 7 Total 22 14 8 7 51 Identify what you perceive to be the main strengths and weaknesses of the course. No strengths. This is a super weak course, there is little to no content. We mostly watching ted talks and videos from the 90's. Discussion is frequent but instructor is not good at dealing with off-topic or derailing conversation. Several class members do not understand social cues or appropriate ways to discuss things and frequently interjected and derailed things or dominated the class with what should have been 1-on-1 conversation. The course usually deals with the interface between users and computers, As well as it mainly focuses on behavioral science, computer science and other fields of study in sciences. The course’s group project assignments are a great opportunity to apply class material and get to know other students. This course is fine as it is. There are insignificant drawbacks, but they mainly come from Dr. Hepting's nature, so I find criticising the course pointless. It is appreciated by the absolute majority of students, I hereby guarantee that. Identify what you perceive to be the main strengths and weaknesses of the instructor. Instructor explains every chapter with real-time examples where it would be easy for every student to understand and gives more space to work as a group. None. Putting on ted-talks and talking about elevators or your trip to IKEA for several classes is not very stimulating or informative. He also has allowed the marker to completely stop marking things. We have only gotten 1 assignment marked and it is the end of the semester tomorrow! We haven't even gotten the midterm back. PRO: Dr. Hepting has significantly improved his communication with students in past years. Removal of Piazza as useless and janky interaction platform and shift to URCourses as the unified course action platform is a remarkable improvement. I appreciate the &hellip; CON: Lack of clarity, his undecisiveness and huge pauses between phrases in lecture performance are still an issue. Please work on decision-making and presentation performance. I am strongly convinced that Dr. Hepting possesses a lot of useful knowledge, it is just his communication bottleneck that scares people off at times. The instructor has creative assignment ideas and is always willing to help students in need. Comment on the value of the textbooks and the assignments in the course. If there was a textbook for this class I didn't buy it. It would have been useless. The assignments are filler junk that do not reaffirm learning nor teach anything new. Individual/group Assignments given by instructor are very useful for every student to work as a team and information given in textbooks are very keen to understand. Meh, whatever. Not really much to say here. Students were encouraged to resort to external sources that they find useful. And I think that is correct. Please keep it that way, it works for everyone. That is fine. The length of time it takes to have an assignment marked and returned to us was unacceptable. Here we are in the last week and the midterm has not been marked. Most of the assignments have also not been marked. This is unacceptable. The textbook and assignments help apply class concepts and the instructor’s lecture material. Any other relevant suggestions? No Teach this class in a room without a projector and let someone else make the instructor's syllabus",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201730/feedback/fac-eval.html"
   },{
@@ -480,7 +480,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-110/201810/feedback/"
   },{
     "title": "",
-    "text": "Media None available",
+    "text": "Media None available &lt;/div&gt;",
     "tags": "",
     "url": "/~hepting/teaching/CS-110/201810/media/"
   },{
@@ -560,7 +560,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201630/"
   },{
     "title": "",
-    "text": "Feedback fac-eval.html final.html midterm.html",
+    "text": "Feedback Instructor’s Feedback Instrument: Midterm Final Faculty of Science Course Evaluation: CS 428 End-of-Semester Weighted Rating: 90% Instrument Ratings Average Respondents 5 4 3 2 1 Written, from Instructor 69% 21% 16% 14% 0% 92% 53 Online, from Faculty of Science &mdash; 43% 27% 16% 14% 75% 7 Weighted rating calculation: (0.92 * 53) + (0.75 * 7) = 54.01 / 60 = 90%",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201730/feedback/"
   },{
@@ -635,7 +635,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/schedule/"
   },{
     "title": "Teaching",
-    "text": "Teaching Check Schedule 201810 Go Jump to a Course Offering Course CS 110 CS 205 CS 280 CS 428+828 CS 499+900 Semester Go Courses Taught CS 110 : Programming and Problem Solving CS 205 : Introduction to Multimedia Systems CS 280 : Risk and Reward in the Information Society CS 428+828 : Human Computer Communication CS 499+900 : General Information Teaching Philosophy",
+    "text": "Teaching Check Schedule 201830 Go Jump to a Course Offering Course CS 110 CS 205 CS 280 CS 428+828 CS 499+900 Semester Go Courses Taught CS 110 : Programming and Problem Solving CS 205 : Introduction to Multimedia Systems CS 280 : Risk and Reward in the Information Society CS 428+828 : Human Computer Communication CS 499+900 : General Information Teaching Philosophy",
     "tags": "",
     "url": "/~hepting/teaching/"
   },{
@@ -680,7 +680,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/projects/fractals/exhibitions/teck-postcard.html"
   },{
     "title": "Test Schedule",
-    "text": "Test Times Monday Tuesday Wednesday Thursday Friday 8:30 m tc a c c 9:00 9:30 10:00 c 10:30 11:00 11:30 b 12:00 12:30 13:00 d d d 13:30 14:00 e e e 14:30 f f f 15:00 15:30 16:00 16:30",
+    "text": "Test",
     "tags": "",
     "url": "/~hepting/teaching/schedule/test.html"
   },{
