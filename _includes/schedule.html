@@ -15,16 +15,16 @@ data file can't seem to start with a number -- prepend s (for example)
     {% capture sched %}{{sched}}#{{rts}}{% endcapture %}
   {% endfor %}
 
-<div class="container">
-  <table class="table table-responsive table-striped table-bordered">
+<div class="table-responsive">
+  <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th class="col"><em>Times</em></th>
-        <th class="col">Monday</th>
-        <th class="col">Tuesday</th>
-        <th class="col">Wednesday</th>
-        <th class="col">Thursday</th>
-        <th class="col">Friday</th>
+        <th><em>Times</em></th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
       </tr>
     </thead>
     <tbody>
@@ -155,7 +155,7 @@ data file can't seem to start with a number -- prepend s (for example)
     {% assign spansa = spans | split: "," %}
       <tr>
         <!-- time -->
-        <td rowspan="1" class="col">{{trslot[0]}}</td>
+        <td rowspan="1">{{trslot[0]}}</td>
     {% for d in (1..5) %}
       {% assign sd = spansa[d] | plus: 0 %}
       {% if sd != 0 %}
@@ -163,14 +163,14 @@ data file can't seem to start with a number -- prepend s (for example)
         {% assign clslab = trslot[d] | split: "_" %}
         {% if clslab[0] == "C" %}
           {% capture clsurl %}/teaching/{{clslab[1]}}/{{page.sem}}/{% endcapture %}
-        <td rowspan="{{sd}}" class="col {{clslab[0]}}">
+        <td rowspan="{{sd}}" class="{{clslab[0]}}">
           <a href="{{ clsurl | relative_url }}" class="btn btn-info btn-md"
           role="button" target="_blank">
             {{clslab[1]}}
           </a>
         </td>
         {% else %}
-        <td rowspan="{{sd}}" class="col {{clslab[0]}}">{{clslab[1]}}</td>
+        <td rowspan="{{sd}}" class="{{clslab[0]}}">{{clslab[1]}}</td>
         {% endif %}
       {% endif %}
       {% case d %}
