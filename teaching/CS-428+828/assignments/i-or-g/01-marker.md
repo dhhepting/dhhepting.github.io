@@ -85,6 +85,18 @@ Grade: <span id="grade"></span> Percentage: <span id="percent"></span>
 
 Comments: <span id="comments"></span>
 
+<h3>Comments</h3>
+<!-- Target -->
+<div class="border border-primary rounded flex-row flex-nowrap">
+  <a id="clipboard" href="#clipboard"
+  class="btn btn-primary" aria-label="Copy BibTeX entry"
+  data-clipboard-action="copy" data-clipboard-target="#comments">
+    <span class="far fa-clipboard fa-inverse" title="Copy comments to clipboard">
+    </span>
+  </a>
+  <code><pre id="bibtex">{{ content | remove: '<p>' | remove: '</p>' | strip }}</pre></code>
+</div>
+
 <script>
   function process()
   {
