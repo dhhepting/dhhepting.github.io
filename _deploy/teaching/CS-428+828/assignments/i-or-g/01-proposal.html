@@ -124,84 +124,294 @@ on forums, social media, and other sources.</li>
 
 <h3 id="grading">Grading</h3>
 
-<p>This assignment is worth 3 marks, according to the following rubric.
-(<a href="01-marker.html">See marker’s calculator</a>.)</p>
-<ul>
-  <li>an assignment that is submitted late (but within 48 hours of the due date and time) or
-that does not follow the instructions as written will receive only 90% of the assigned grade for the work (a 10% penalty)</li>
-  <li>an assignment that is submitted more than 48 hours after the due date and time will receive only 50% of the assigned grade for the work (a 50% penalty)</li>
-</ul>
+<p>This assignment is worth 3 marks, according to the following rubric:</p>
+
+<h5 id="rubric">Rubric</h5>
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
     <thead>
 		  <tr>
-        <th>Criterion and Weight</th>
-        <th>(E)xcellent</th>
-        <th>(S)atisfactory</th>
-        <th>(P)oor</th>
-        <th>(U)nacceptable</th>
+        <th><em>Criterion and Weight</em></th>
+        <th>Excellent</th>
+        <th>Satisfactory</th>
+        <th>Poor</th>
+        <th>Unacceptable</th>
       </tr>
     </thead>
     <tbody>
+
       <tr>
         <th>
-          Coverage of elements (Y)
+          First (1)
         </th>
         <td>
-          All elements considered thoughtfully.
-          The potential for redesign is clearly presented.
-          (Y.y)
+          <ul>
+            <li>(+) Excellent plus</li>
+            <li>(o) Excellent regular</li>
+            <li>(-) Excellent minus</li>
+          </ul>
         </td>
         <td>
-          All elements considered.
-          The potential for redesign is identified.
-          (Y.y)
+          <ul>
+            <li>(+) Satisfactory plus</li>
+            <li>(o) Satisfactory regular</li>
+            <li>(-) Satisfactory minus</li>
+          </ul>
         </td>
         <td>
-          Not all elements considered.
-          The potential for redesign is not clearly stated.
-          (Y.y)
+          <ul>
+            <li>(+) Poor plus</li>
+            <li>(o) Poor regular</li>
+            <li>(-) Poor minus</li>
+          </ul>
         </td>
         <td>
-          Elements not considered.
-					The potential for redesign is not apparent.
-					(Y.y)
+          <ul>
+            <li>(+) Unacceptable plus</li>
+            <li>(o) Unacceptable regular</li>
+          </ul>
         </td>
-      </tr>
-			<tr>
-        <th>
-          Writing (Y)
-        </th>
-				<td>
-          Shows a good command of Standard English.
-          No problems for your audience.
-          (Y.y)
-        </td>
-        <td>
-          Demonstrates some evidence of correct spelling, grammar, punctuation, etc.
-          Audience will have little trouble reading your work.
-          (Y.y)
-				</td>
-				<td>
-          Demonstrates evidence of correct spelling, grammar, punctuation, etc.
-					Audience will have some trouble reading your work.
-					(Y.y)
-        </td>
-        <td>
-          Uses incorrect grammar, spelling, and syntax consistently,
-          making it difficult for others to follow.
-					(Y.y)
-				</td>
 			</tr>
+
+      <tr>
+        <th>
+          Second (1)
+        </th>
+        <td>
+          <ul>
+            <li>(+) Excellent plus</li>
+            <li>(o) Excellent regular</li>
+            <li>(-) Excellent minus</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>(+) Satisfactory plus</li>
+            <li>(o) Satisfactory regular</li>
+            <li>(-) Satisfactory minus</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>(+) Poor plus</li>
+            <li>(o) Poor regular</li>
+            <li>(-) Poor minus</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>(+) Unacceptable plus</li>
+            <li>(o) Unacceptable regular</li>
+          </ul>
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Third (1)
+        </th>
+        <td>
+          <ul>
+            <li>(+) Excellent plus</li>
+            <li>(o) Excellent regular</li>
+            <li>(-) Excellent minus</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>(+) Satisfactory plus</li>
+            <li>(o) Satisfactory regular</li>
+            <li>(-) Satisfactory minus</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>(+) Poor plus</li>
+            <li>(o) Poor regular</li>
+            <li>(-) Poor minus</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>(+) Unacceptable plus</li>
+            <li>(o) Unacceptable regular</li>
+          </ul>
+        </td>
+			</tr>
+
 		</tbody>
 	</table>
 </div>
 
+<p>Grade penalties will be applied in the following situations for assignment submissions:</p>
+<ul>
+  <li>on time but the written instructions for the submission were not followed:
+deduct 10% of the earned grade</li>
+  <li>late (but within 48 hours of the due date and time):
+deduct 10% of the earned grade</li>
+  <li>late by more than 48 hours:
+deduct 50% of the earned grade</li>
+</ul>
+
+<h5 id="calculator">Calculator</h5>
+
+<form>
+  <!-- penalties -->
+  <div class="form-group border bg-info m-2 p-4" id="pen">
+    <strong>Penalties</strong>
+    <div class="form-check" id="p0">
+      <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties">No penalty: on-time and followed instructions</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="penalties" id="penalty-1" value="10" />
+      <label class="form-check-label" for="penalty-1">
+        Instructions not followed
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="penalties" id="penalty-2" value="10" />
+      <label class="form-check-label" for="penalty-2">
+        Assignment submitted late, but within 48 hours
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="penalties" id="penalty-3" value="50" />
+      <label class="form-check-label" for="penalty-3">
+        Assignment submitted more than 48 hours late
+      </label>
+    </div>
+  </div>
+
+  <!-- rubric criteria -->
+  <div class="border bg-info m-2 p-4">
+    <strong>Rubric Criteria</strong>
+
+
+
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-3 col-form-label text-right" for="rcriterion1">First (1)</label>
+      <select class="col-9 form-control" name="criteria" id="rcriterion1">
+        <option selected="" disabled="">Choose...</option>
+        <option value="10">Excellent (+): Excellent plus</option>
+        <option value="9">Excellent: Excellent regular</option>
+        <option value="8">Excellent (-): Excellent minus</option>
+        <option value="7">Satisfactory (+): Satisfactory plus</option>
+        <option value="6">Satisfactory: Satisfactory regular</option>
+        <option value="5">Satisfactory (-): Satisfactory minus</option>
+        <option value="4">Poor (+): Poor plus</option>
+        <option value="3">Poor: Poor regular</option>
+        <option value="2">Poor (-): Poor minus</option>
+        <option value="1">Unacceptable (+): Unacceptable plus</option>
+        <option value="0">Unacceptable: Unacceptable regular</option>
+      </select>
+    </div>
+
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-3 col-form-label text-right" for="rcriterion2">Second (1)</label>
+      <select class="col-9 form-control" name="criteria" id="rcriterion2">
+        <option selected="" disabled="">Choose...</option>
+        <option value="10">Excellent (+): Excellent plus</option>
+        <option value="9">Excellent: Excellent regular</option>
+        <option value="8">Excellent (-): Excellent minus</option>
+        <option value="7">Satisfactory (+): Satisfactory plus</option>
+        <option value="6">Satisfactory: Satisfactory regular</option>
+        <option value="5">Satisfactory (-): Satisfactory minus</option>
+        <option value="4">Poor (+): Poor plus</option>
+        <option value="3">Poor: Poor regular</option>
+        <option value="2">Poor (-): Poor minus</option>
+        <option value="1">Unacceptable (+): Unacceptable plus</option>
+        <option value="0">Unacceptable: Unacceptable regular</option>
+      </select>
+    </div>
+
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-3 col-form-label text-right" for="rcriterion3">Third (1)</label>
+      <select class="col-9 form-control" name="criteria" id="rcriterion3">
+        <option selected="" disabled="">Choose...</option>
+        <option value="10">Excellent (+): Excellent plus</option>
+        <option value="9">Excellent: Excellent regular</option>
+        <option value="8">Excellent (-): Excellent minus</option>
+        <option value="7">Satisfactory (+): Satisfactory plus</option>
+        <option value="6">Satisfactory: Satisfactory regular</option>
+        <option value="5">Satisfactory (-): Satisfactory minus</option>
+        <option value="4">Poor (+): Poor plus</option>
+        <option value="3">Poor: Poor regular</option>
+        <option value="2">Poor (-): Poor minus</option>
+        <option value="1">Unacceptable (+): Unacceptable plus</option>
+        <option value="0">Unacceptable: Unacceptable regular</option>
+      </select>
+    </div>
+
+  </div>
+</form>
+
+<p><button class="btn btn-primary" onclick="process()">Process</button></p>
+
+<p><strong>Grade</strong> <span id="grade"></span></p>
+
+<p><strong>Comments</strong>
+<!-- Target --></p>
+<div class="border border-primary rounded flex-row flex-nowrap">
+  <a id="clipboard" href="#clipboard" class="btn btn-primary" aria-label="Copy comments" data-clipboard-action="copy" data-clipboard-target="#comments">
+    <span class="far fa-clipboard fa-inverse" title="Copy comments to clipboard">
+    </span>
+  </a>
+  <code><pre id="comments"></pre></code>
+</div>
+
+<script>
+  function process()
+  {
+    <!-- get multiplier from penalty radio buttons -->
+    //var penalty = document.getElementById("pen");
+    //var checked = penalty.querySelector("input[name=penalties]:checked");
+    var checked = document.querySelector("input[name=penalties]:checked");
+    var mult = (100.0 - checked.value)/100.0;
+    console.log(checked.value);
+    console.log(checked.parentNode.querySelector("label").textContent);
+
+    var crits = document.getElementsByName("criteria");
+    for (var i = 0, length = crits.length; i < length; i++)
+    {
+      console.log(crits[i].value);
+      console.log(crits[i].id);
+      console.log(crits[i].options[crits[i].selectedIndex].text);
+    }
+    <!-- get weight from C1 selector, multiply by weight -->
+    // var c1 = document.getElementById("rubric_c1");
+    // var c1_v = (c1.value / 10.0) * 3.0;
+    // var mg = Math.round(mult * c1_v * 10) / 10;
+    //
+    // var c1_t = c1.options[c1.selectedIndex].text;
+    //
+    // var gradespan = document.getElementById("grade");
+    // gradespan.textContent = mg.toString();
+    //
+    // var gp = Math.round(mg / 3.0 * 100);
+    // var percentspan = document.getElementById("percent");
+    // percentspan.textContent = gp.toString();
+
+    var commentspan = document.getElementById("comments");
+    commentspan.textContent = checked.parentNode.querySelector("label").textContent;
+  }
+</script>
+
+
   </div>
   <div class="card-footer text-muted lightcthru">
     Site built: 
-    2018-09-12 08:02 -0600
+    2018-09-12 13:29 -0600
 </div>
 
 </div>
