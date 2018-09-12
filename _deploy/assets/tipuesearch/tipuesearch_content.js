@@ -14,6 +14,16 @@ var tipuesearch = {"pages": [{
     "tags": "news",
     "url": "/~hepting/news/other.html"
   },{
+    "title": "Proposal Marker",
+    "text": "Proposal Marker Compute grade and generate comments to paste into URcourses grading worksheet Penalties No penalty: on-time and followed instructions Instructions not followed Assignment submitted late, but within 48 hours Assignment submitted more than 48 hours late Rubric Criteria Criterion 1 Choose... Excellent (+) Excellent Excellent (-) Satisfactory (+) Satisfactory Satisfactory (-) Poor (+) Poor Poor (-) Unacceptable (+) Unacceptable Criterion 2 Choose... Excellent (+) Excellent Excellent (-) Satisfactory (+) Satisfactory Satisfactory (-) Poor (+) Poor Poor (-) Unacceptable (+) Unacceptable Process Grade: Percentage: Comments:",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/assignments/i-or-g/01-marker.html"
+  },{
+    "title": "Project Proposal",
+    "text": "Project Proposal Description Choose an existing and active software application or website where you can identify opportunities for improvement and redesign. Consider the following elements in creating your proposal: background: what is the history of the software/website that you have chosen and why is it compelling to you? users: who is using this software, or who is the intended audience? perceived issues: what opportunities for redesign have you identified and supported? support: describe your own experiences, augmented with user comments on forums, social media, and other sources. Submission submit a pdf document (1 per group) on URcourses target length: 1-2 pages Grading This assignment is worth 3 marks, according to the following rubric. (See marker’s calculator.) an assignment that is submitted late (but within 48 hours of the due date and time) or that does not follow the instructions as written will receive only 90% of the assigned grade for the work (a 10% penalty) an assignment that is submitted more than 48 hours after the due date and time will receive only 50% of the assigned grade for the work (a 50% penalty) Criterion and Weight (E)xcellent (S)atisfactory (P)oor (U)nacceptable Coverage of elements (Y) All elements considered thoughtfully. The potential for redesign is clearly presented. (Y.y) All elements considered. The potential for redesign is identified. (Y.y) Not all elements considered. The potential for redesign is not clearly stated. (Y.y) Elements not considered. The potential for redesign is not apparent. (Y.y) Writing (Y) Shows a good command of Standard English. No problems for your audience. (Y.y) Demonstrates some evidence of correct spelling, grammar, punctuation, etc. Audience will have little trouble reading your work. (Y.y) Demonstrates evidence of correct spelling, grammar, punctuation, etc. Audience will have some trouble reading your work. (Y.y) Uses incorrect grammar, spelling, and syntax consistently, making it difficult for others to follow. (Y.y)",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/assignments/i-or-g/01-proposal.html"
+  },{
     "title": "Mtg 01 - CS 428+828 (201830)",
     "text": "Mtg 1 / 37 Outline for Today Inspirations Syllabus To Do Think about what makes a good or a bad interface Media from Meeting Annotations and Afterthoughts",
     "tags": "",
@@ -595,7 +605,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/assignments/g/"
   },{
     "title": "",
-    "text": "Individual or Group Propose Requirements Design 2 Lo-Fi Evaluate Prototye 1 Hi-Fi Present",
+    "text": "Individual or Group These assignments make up the project. All the assignments will be done by the same group of 3-4 students. The only exception doing the project in a group is for a graduate student in CS 828 who would like to define a project related to their own research. Proposal (3 marks) Requirements (6 marks) Design 2 Lo-Fi (6 marks) Evaluate (6 marks) Prototye 1 Hi-Fi (6 marks) Present (3 marks)",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/assignments/i-or-g/"
   },{
