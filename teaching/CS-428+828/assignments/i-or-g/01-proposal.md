@@ -31,7 +31,7 @@ rubric:
   up: Unacceptable plus
   ur: Unacceptable regular
 - crit: Third
-  wt: 1
+  wt: 1.5
   ep: Excellent plus
   er: Excellent regular
   em: Excellent minus
