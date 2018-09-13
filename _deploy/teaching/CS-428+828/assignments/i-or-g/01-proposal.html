@@ -209,7 +209,7 @@ on forums, social media, and other sources.</li>
 
       <tr>
         <th>
-          Third (1)
+          Third (1.5)
         </th>
         <td>
           <ul>
@@ -256,31 +256,25 @@ deduct 50% of the earned grade</li>
 
 <h5 id="calculator">Calculator</h5>
 
-<form>
+<form name="calculator">
   <!-- penalties -->
   <div class="form-group border bg-info m-2 p-4" id="pen">
     <strong>Penalties</strong>
     <div class="form-check" id="p0">
       <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
-      <label class="form-check-label" for="penalties">No penalty: on-time and followed instructions</label>
+      <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
     </div>
     <div class="form-check">
       <input class="form-check-input" type="radio" name="penalties" id="penalty-1" value="10" />
-      <label class="form-check-label" for="penalty-1">
-        Instructions not followed
-      </label>
+      <label class="form-check-label" for="penalty-1">Instructions not followed</label>
     </div>
     <div class="form-check">
       <input class="form-check-input" type="radio" name="penalties" id="penalty-2" value="10" />
-      <label class="form-check-label" for="penalty-2">
-        Assignment submitted late, but within 48 hours
-      </label>
+      <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
     </div>
     <div class="form-check">
       <input class="form-check-input" type="radio" name="penalties" id="penalty-3" value="50" />
-      <label class="form-check-label" for="penalty-3">
-        Assignment submitted more than 48 hours late
-      </label>
+      <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
     </div>
   </div>
 
@@ -290,6 +284,8 @@ deduct 50% of the earned grade</li>
 
 
 
+
+  
   
   
   
@@ -314,6 +310,7 @@ deduct 50% of the earned grade</li>
   
   
   
+  
     <div class="form-group row">
       <label class="col-3 col-form-label text-right" for="rcriterion2">Second (1)</label>
       <select class="col-9 form-control" name="criteria" id="rcriterion2">
@@ -335,8 +332,9 @@ deduct 50% of the earned grade</li>
   
   
   
+  
     <div class="form-group row">
-      <label class="col-3 col-form-label text-right" for="rcriterion3">Third (1)</label>
+      <label class="col-3 col-form-label text-right" for="rcriterion3">Third (1.5)</label>
       <select class="col-9 form-control" name="criteria" id="rcriterion3">
         <option selected="" disabled="">Choose...</option>
         <option value="10">Excellent (+): Excellent plus</option>
@@ -353,57 +351,81 @@ deduct 50% of the earned grade</li>
       </select>
     </div>
 
+
+  </div>
+  <div class="border bg-info m-2 p-4">
+    <div class="form-group row">
+      <label class="col-3 col-form-label text-right" for="commentstext">Output</label>
+
+
+      <textarea class="col-9 form-control" id="comments" rows="5" placeholder="Criteria Weights Not Equal to Total Marks"></textarea>
+  
+    </div>
+    <div class="form-group row">
+      <div class="col-3">
+      </div>
+      <div class="col-9">
+        <button class="btn btn-primary" onclick="process(); return false;">Evaluate</button>
+        <a id="clipboard" href="#clipboard" class="m-2 btn btn-primary" aria-label="Copy comments" data-clipboard-action="copy" data-clipboard-target="#comments">
+          Copy Output to Clipboard
+        </a>
+        <button class="btn btn-primary" onclick="clearform(); return false;">Clear Form</button>
+      </div>
+    </div>
   </div>
 </form>
 
-<p><button class="btn btn-primary" onclick="process()">Process</button></p>
-
-<p><strong>Grade</strong> <span id="grade"></span></p>
-
-<p><strong>Comments</strong>
-<!-- Target --></p>
-<div class="border border-primary rounded flex-row flex-nowrap">
-  <a id="clipboard" href="#clipboard" class="btn btn-primary" aria-label="Copy comments" data-clipboard-action="copy" data-clipboard-target="#comments">
-    <span class="far fa-clipboard fa-inverse" title="Copy comments to clipboard">
-    </span>
-  </a>
-  <code><pre id="comments"></pre></code>
-</div>
-
 <script>
+  var weights = ["","1","1","1.5"]
   function process()
   {
-    <!-- get multiplier from penalty radio buttons -->
-    //var penalty = document.getElementById("pen");
-    //var checked = penalty.querySelector("input[name=penalties]:checked");
-    var checked = document.querySelector("input[name=penalties]:checked");
-    var mult = (100.0 - checked.value)/100.0;
-    console.log(checked.value);
-    console.log(checked.parentNode.querySelector("label").textContent);
+    // get multiplier from penalty radio buttons
+    var penalty = document.querySelector("input[name=penalties]:checked");
+    var mult = (100.0 - penalty.value)/100.0;
 
+    // output penalty information
+    var commentspan = document.getElementById("comments");
+    commentspan.textContent = "Penalty:\n";
+    commentspan.textContent = commentspan.textContent +
+      "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
+
+    // get grades for each rubric criterion
+    var sumgrade = 0;
     var crits = document.getElementsByName("criteria");
     for (var i = 0, length = crits.length; i < length; i++)
     {
-      console.log(crits[i].value);
-      console.log(crits[i].id);
-      console.log(crits[i].options[crits[i].selectedIndex].text);
+      // output information for each criterion
+      commentspan.textContent = commentspan.textContent +
+        crits[i].parentNode.querySelector("label").textContent + ":\n";
+      if (crits[i].value >= 0 && crits[i].value <= 10)
+      {
+        var cv = (crits[i].value / 10.0) * weights[i+1];
+        sumgrade += cv;
+        commentspan.textContent = commentspan.textContent +
+          "\t (" + cv + ") " + crits[i].options[crits[i].selectedIndex].text + "\n";
+      }
+      else
+      {
+        commentspan.textContent = commentspan.textContent +
+          "\tNOT GRADED\n";
+      }
     }
-    <!-- get weight from C1 selector, multiply by weight -->
-    // var c1 = document.getElementById("rubric_c1");
-    // var c1_v = (c1.value / 10.0) * 3.0;
-    // var mg = Math.round(mult * c1_v * 10) / 10;
-    //
-    // var c1_t = c1.options[c1.selectedIndex].text;
-    //
-    // var gradespan = document.getElementById("grade");
-    // gradespan.textContent = mg.toString();
-    //
-    // var gp = Math.round(mg / 3.0 * 100);
-    // var percentspan = document.getElementById("percent");
-    // percentspan.textContent = gp.toString();
+    // output earned grade and the grade after penalty, if there is one
+    var eg = Math.round(sumgrade * 10) / 10;
+    var pg = Math.round(mult * sumgrade * 10) / 10;
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    if (mult < 1.0)
+    {
+      commentspan.textContent = commentspan.textContent +
+        "After Penalty: " + pg + "\n";
+    }
+  }
 
+  function clearform()
+  {
+    document.forms["calculator"].reset();
     var commentspan = document.getElementById("comments");
-    commentspan.textContent = checked.parentNode.querySelector("label").textContent;
+    commentspan.textContent = "";
   }
 </script>
 
@@ -411,7 +433,7 @@ deduct 50% of the earned grade</li>
   </div>
   <div class="card-footer text-muted lightcthru">
     Site built: 
-    2018-09-12 13:29 -0600
+    2018-09-12 19:16 -0600
 </div>
 
 </div>
