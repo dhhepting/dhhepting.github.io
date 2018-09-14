@@ -232,7 +232,7 @@ The value available there corresponds to the
 					<td>24</td>
 					<td>25</td>
 					<td>25</td>
-					<td>77</td>
+					<td>75</td>
 					<td>75/150 = 0.5 <strong>(0.50)</strong></td>
 				</tr>
 				<tr>

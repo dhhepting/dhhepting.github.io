@@ -4,45 +4,71 @@ breadcrumb: Project Proposal
 layout: bg-image
 marks: 3
 rubric:
-- crit: First
+- crit: Background
+  wt: 0.5
+  ep:
+  er:
+  em:
+  sp:
+  sr:
+  sm:
+  pp:
+  pr:
+  pm:
+  up:
+  ur:
+- crit: Users
+  wt: 0.5
+  ep:
+  er:
+  em:
+  sp:
+  sr:
+  sm:
+  pp:
+  pr:
+  pm:
+  up:
+  ur:
+- crit: Identification of Opportunities for Redesign
   wt: 1
-  ep: Excellent plus
-  er: Excellent regular
-  em: Excellent minus
-  sp: Satisfactory plus
-  sr: Satisfactory regular
-  sm: Satisfactory minus
-  pp: Poor plus
-  pr: Poor regular
-  pm: Poor minus
-  up: Unacceptable plus
-  ur: Unacceptable regular
-- crit: Second
-  wt: 1
-  ep: Excellent plus
-  er: Excellent regular
-  em: Excellent minus
-  sp: Satisfactory plus
-  sr: Satisfactory regular
-  sm: Satisfactory minus
-  pp: Poor plus
-  pr: Poor regular
-  pm: Poor minus
-  up: Unacceptable plus
-  ur: Unacceptable regular
-- crit: Third
-  wt: 1
-  ep: Excellent plus
-  er: Excellent regular
-  em: Excellent minus
-  sp: Satisfactory plus
-  sr: Satisfactory regular
-  sm: Satisfactory minus
-  pp: Poor plus
-  pr: Poor regular
-  pm: Poor minus
-  up: Unacceptable plus
-  ur: Unacceptable regular
+  ep:
+  er:
+  em:
+  sp:
+  sr:
+  sm:
+  pp:
+  pr:
+  pm:
+  up:
+  ur:
+- crit: Support
+  wt: 0.5
+  ep:
+  er:
+  em:
+  sp:
+  sr:
+  sm:
+  pp:
+  pr:
+  pm:
+  up:
+  ur: 
+- crit: Writing
+  wt: 0.5
+  ep: Shows an exceptional command of Standard English. A pleasure for your audience to read
+  er: Shows a very good command of Standard English. No problems for your audience
+  em: Shows a good command of Standard English. No problems for your audience
+  sp: Demonstrates good evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work
+  sr: Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work
+  sm: Demonstrates some evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work
+  pp: Few errors, but audience may have some trouble reading your work
+  pr: Some errors, audience may have some trouble reading your work
+  pm: Errors apparent, audience likely to have some trouble reading your work
+  up: Frequently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow
+  ur: Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow
 ---
 # {{ page.breadcrumb }}
 
