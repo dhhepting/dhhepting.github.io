@@ -11,13 +11,13 @@ layout: bg-image
 
 What does the phrase &ldquo;A picture is worth ten thousand words&rdquo; mean to you?
 Does it become more or less meaningful if it was written by an
-advertising executive or an ancient sage?
+advertising executive, a newspaper publisher, or an ancient sage?
 
 I embarked on an exploration into the origins of <em>this</em> phrase in 1999
 as part of my doctoral work
 (<a href="{{ "/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html" | relative_url }}">A New Paradigm for Exploration in Computer-Aided Visualization</a>).
 
-It was important to use the phrase correctly and so
+It was important for me to use the phrase correctly and so
 I wanted to know whether a picture was worth 1,000 or 10,000 words.
 
 Various versions of the phrase, and stories about its origin, are in circulation.
@@ -151,7 +151,11 @@ for the New York Times Magazine. <a href="http://www.nytimes.com/1996/04/07/maga
 
 If you have more information about the origins of this quotation
 (or the stories that surround it),
-please send me <a href="mailto:daryl.hepting@uregina.ca">e-mail</a>
+please send me <a href="mailto:{{site.email}}">e-mail</a>
 and I will update this page accordingly.
+
+### Sources
+
+* [Newspaper Copy That People <em>Must</em> Read]({{"/assets/projects/pdf/Printers-Ink-1911-apr-20.pdf" | relative_url}})
 
 {% include project-related-works.html %}
