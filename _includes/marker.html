@@ -21,16 +21,18 @@ This assignment is worth {{ page.marks}} marks, according to the following rubri
         </th>
         <td>
           <ul>
-            <li>(+) {{r.ep}}</li>
+            <!-- <li>(+) {{r.ep}}</li>
             <li>(o) {{r.er}}</li>
-            <li>(-) {{r.em}}</li>
+            <li>(-) {{r.em}}</li> -->
+            <li>{{r.er}}</li>
           </ul>
         </td>
         <td>
           <ul>
-            <li>(+) {{r.sp}}</li>
+            <!-- <li>(+) {{r.sp}}</li>
             <li>(o) {{r.sr}}</li>
-            <li>(-) {{r.sm}}</li>
+            <li>(-) {{r.sm}}</li> -->
+            <li>{{r.sr}}</li>
           </ul>
         </td>
         <td>
@@ -103,12 +105,12 @@ deduct 50% of the earned grade
       <label class="col-3 col-form-label text-right" for="{{critid}}">{{r.crit}} ({{r.wt}})</label>
       <select class="col-9 form-control" name="criteria" id="{{critid}}">
         <option selected disabled>Choose...</option>
-        <option value="10">Excellent (+): {{r.ep}}</option>
+        <option value="10">Excellent (+): {{r.er}}</option>
         <option value="9">Excellent: {{r.er}}</option>
-        <option value="8">Excellent (-): {{r.em}}</option>
-        <option value="7">Satisfactory (+): {{r.sp}}</option>
+        <option value="8">Excellent (-): {{r.er}}</option>
+        <option value="7">Satisfactory (+): {{r.sr}}</option>
         <option value="6">Satisfactory: {{r.sr}}</option>
-        <option value="5">Satisfactory (-): {{r.sm}}</option>
+        <option value="5">Satisfactory (-): {{r.sr}}</option>
         <option value="4">Poor (+): {{r.pp}}</option>
         <option value="3">Poor: {{r.pr}}</option>
         <option value="2">Poor (-): {{r.pm}}</option>
