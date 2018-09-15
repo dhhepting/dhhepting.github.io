@@ -40,7 +40,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/04.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 5 / 37 Questions from Last Meeting? Administration Sorting out class list: complete! every one who put their name on the list on Monday has a place URcourses Assignments: “Group”: tentative due dates: 28 Sep (Proposal), 12 Oct (Requirements), 26 Oct (Design), 6 Nov (Evaluate Lo-Fi), 23 Nov (Prototype Hi-Fi), 30 Nov (Present) Draft Assignment. Comments? Group Work Outline for Today Chapter 1 (selected slides) Answering machine discussion: Could the marble answering machine be good for us in 2018? What changes might be warranted? Any SaskTel subscribers? To Do Read Chapter 2 of textbook Media from Meeting Nothing available for 05 Annotations and Afterthoughts",
+    "text": "Mtg 5 / 37 Questions from Last Meeting? Administration Sorting out class list: complete! every one who put their name on the list on Monday has a place URcourses Assignments: “Group”: tentative due dates: 28 Sep (Proposal), 12 Oct (Requirements), 26 Oct (Design), 6 Nov (Evaluate Lo-Fi), 23 Nov (Prototype Hi-Fi), 30 Nov (Present) Draft Assignment. Comments? Group Work Outline for Today Chapter 1 (selected slides) Answering machine discussion: Could the marble answering machine be good for us in 2018? What changes might be warranted? Any SaskTel subscribers? To Do Read Chapter 2 of textbook Media from Meeting Annotations and Afterthoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/05.html"
   },{
@@ -470,7 +470,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/research/works/"
   },{
     "title": "Research",
-    "text": "Research academic.html dhhepting.bib funding.html inspirations.html students works",
+    "text": "Research academic.html dhhepting.bib funding.html inspirations.html students works.html works",
     "tags": "",
     "url": "/~hepting/research/"
   },{
@@ -723,6 +723,11 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/research/web/words/index.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/works.html"
   },{
     "title": "Creativity",
     "text": "Creativity (2006) Event Presentation by Joel Salatin Tuesday, November 18, 2008 Education Auditorium, University of Regina Organized by Description Media",
