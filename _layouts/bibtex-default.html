@@ -6,10 +6,10 @@
     <h1>
       {{ page.title }}
     </h1>
-    <hr />	
+    <hr />
     <!-- Projects -->
     {% include projects-bar.html %}
-    <hr />	
+    <hr />
     <!-- Social Share Buttons -->
     {% include share-bar.html %}
     <hr />
@@ -34,28 +34,44 @@
     {% for author in page.authors %}
       <li>
         {{author | strip}}
-      </li> 
+      </li>
     {% endfor %}
     </ul>
 
     <h3>Abstract</h3>
     <p>{{ page.abstract }}</p>
 
-    <h3>Download</h3>
+    {% assign download_open = false %}
     {% capture work_url %}/assets/works/pdf/{{page.citekey}}.pdf{% endcapture %}
+    {% for s in site.static_files %}
+      {% if s.path == work_url %}
+        {% assign download_open = true %}
+    <h3>Download</h3>
     <ul>
       <li><a href="{{ work_url | absolute_url }}">this site</a></li>
-    {% assign links = site.data.works[page.citekey].links %}
-    {% for ll in links %}
-      <li><a href="{{ ll.lu }}">{{ ll.lt }}</a></li>
+        {% break %}
+      {% endif %}
     {% endfor %}
+
+    {% assign links = site.data.works[page.citekey].links %}
+    {% if links %}
+      {% unless download_open %}
+    <h3>Download</h3>
+    <ul>
+      {% endunless %}
+      {% for ll in links %}
+        <li><a href="{{ ll.lu }}">{{ ll.lt }}</a></li>
+      {% endfor %}
+    {% endif %}
+    {% if download_open %}
     </ul>
+    {% endif %}
 
     <h3>BibTeX</h3>
     <!-- Target -->
     <div class="border border-primary rounded flex-row flex-nowrap">
-      <a id="clipboard" href="#clipboard" 
-      class="btn btn-primary" aria-label="Copy BibTeX entry" 
+      <a id="clipboard" href="#clipboard"
+      class="btn btn-primary" aria-label="Copy BibTeX entry"
       data-clipboard-action="copy" data-clipboard-target="#bibtex">
         <span class="far fa-clipboard fa-inverse" title="Copy BibTeX entry">
         </span>

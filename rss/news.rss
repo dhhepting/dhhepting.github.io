@@ -7,13 +7,13 @@ layout: rss
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
 >
 <channel>
-  <feed>My Feed</feed>
-  <title>{{ site.name | xml_escape }} - Links</title>
+  <feed>News Feed for D. H. Hepting</feed>
+  <title>News Feed for {{ site.name | xml_escape }}</title>
   <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
   <sy:updatePeriod>{{ site.feed_update_period | default: "daily" | xml_escape }}</sy:updatePeriod>
   <sy:updateFrequency>{{ site.feed_update_frequency | default: 1 | xml_escape }}</sy:updateFrequency>
   <link>{{ site.url }}</link>
-  <atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
+  <atom:link href="{{ page.path  | absolute_url }}" rel="self" type="application/rss+xml" />
   <lastBuildDate>
     {% for post in site.posts limit:1 %}
       {% if post.link %}
@@ -33,7 +33,7 @@ layout: rss
 	{% endif %}
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
 	<link>{{ post.link | escape }}</link>
-	<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+	<guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
       </item>
     {% endif %}
   {% endfor %}
