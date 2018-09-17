@@ -16,3 +16,4 @@ layout: bg-image
 * [Interaction Design Foundation](https://interaction-design.org/)
 * [TED Talks (Design, Technology) ](https://www.ted.com/talks?sort=newest&topics%5B%5D=Technology&topics%5B%5D=Design)
 * [Designing Interactions](http://www.designinginteractions.com/)
+* [Design Thinking](https://www.nngroup.com/articles/design-thinking/)
