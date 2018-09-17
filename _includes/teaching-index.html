@@ -87,64 +87,65 @@
 {%  endfor  %}
 
 <script>
-    var jmpurl = document.getElementById("jumplink");
-    var semsel = document.getElementById("tsem");
-    var liqsems = {{ sortedcrsoffs | jsonify }}
+  var jmpurl = document.getElementById("jumplink");
+  var semsel = document.getElementById("tsem");
+  var liqsems = {{ sortedcrsoffs | jsonify }}
 
-    var t_course = "tc_title";
-    var t_sem = "ts_title";
+  var t_course = "tc_title";
+  var t_sem = "ts_title";
 
-    function SetJump()
-    {
-        if (t_course != "tc_title" && t_sem != "ts_title")
-	{
-	    jmpurl.setAttribute("href",{{ "/teaching/" | relative_url }} + t_course + "/" + t_sem + "/");
-	    jmpurl.setAttribute("target","_blank");
-	}
-	else
-	{
-	    jmpurl.setAttribute("href","#");
-	    jmpurl.setAttribute("target","_self");
-	}
+  function SetJump()
+  {
+    if (t_course != "tc_title" && t_sem != "ts_title")
+	  {
+      jmpurl.setAttribute("href","{{ "/teaching/" | relative_url }}" + t_course + "/" + t_sem + "/");
+      jmpurl.setAttribute("target","_blank");
     }
-
-    function removeOptions(selectbox)
+    else
     {
-	// remove everything but the 1st option
-	for (var i = selectbox.options.length - 1 ; i >= 1 ; i--)
-	{
-	    selectbox.remove(i);
-    	}
-    	selectbox.options[0].selected = true;
+      jmpurl.setAttribute("href","#");
+      jmpurl.setAttribute("target","_self");
     }
+  }
 
-    function CourseChange()
-    {
-    	// clear out the current contents of the semester select
-	var e = document.getElementById("tcourse");
-	removeOptions(semsel);
-	t_sem = "ts_title";
-	t_course = e.options[e.selectedIndex].value;
-	SetJump();
-	// find the course in the array
-	if (t_course != "tc_title") {
-	    document.getElementById("tsem").disabled=false;
+  function removeOptions(selectbox)
+  {
+	   // remove everything but the 1st option
+     for (var i = selectbox.options.length - 1 ; i >= 1 ; i--)
+     {
+       selectbox.remove(i);
+     }
+     selectbox.options[0].selected = true;
+  }
+
+  function CourseChange()
+  {
+    // clear out the current contents of the semester select
+    var e = document.getElementById("tcourse");
+    removeOptions(semsel);
+    t_sem = "ts_title";
+    t_course = e.options[e.selectedIndex].value;
+    SetJump();
+    // find the course in the array
+    if (t_course != "tc_title") {
+      document.getElementById("tsem").disabled=false;
 	    // build new contents
-	    for (var i = 1; i < liqsems.length; i++) {
-		var res = liqsems[i].split("#");
-		if (t_course == res[0]) {
-		    semsel.options.add(new Option(res[1],res[1],false));
-		}
-	    }
-	}
-	else {
-	    document.getElementById("tsem").disabled=true;
-	}
+      for (var i = 1; i < liqsems.length; i++) {
+        var res = liqsems[i].split("#");
+        if (t_course == res[0]) {
+          semsel.options.add(new Option(res[1],res[1],false));
+        }
+      }
     }
+    else {
+      document.getElementById("tsem").disabled=true;
+    }
+  }
 
-    function SemesterChange() {
-        var e = document.getElementById("tsem");
-	t_sem = e.options[e.selectedIndex].value;
-	SetJump();
-    }
+  function SemesterChange()
+  {
+    var e = document.getElementById("tsem");
+    t_sem = e.options[e.selectedIndex].value;
+    SetJump();
+  }
 </script>
