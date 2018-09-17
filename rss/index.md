@@ -8,11 +8,10 @@ layout: bg-image
 <ul>
   <li>
     <a rel="alternate" type="application/rss+xml"
-      href="{{ "/rss/news.xml" | absolute_url }}">News (Atom)</a>
+      href="{{ "/rss/news.rss" | absolute_url }}">News</a>
+  </li>
+  <li>
+    <a rel="alternate" type="application/rss+xml"
+      href="{{ "/rss/CS-428+828-201830.rss" | absolute_url }}">CS-428+828-201830</a>
   </li>
 </ul>
-
-
-{% include index-dir.html %}
-
-<a href="https://validator.w3.org/feed/check.cgi?url="><img src="{{ "/assets/valid-rss-rogers.png" | relative_url }}" alt="[Valid RSS]" title="Validate my RSS feed" /></a>
