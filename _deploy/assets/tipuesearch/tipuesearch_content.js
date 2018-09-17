@@ -45,7 +45,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/05.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 6 / 37 Questions from Last Meeting? Administration No office time today: Faculty of Science Meeting – tomorrow @ 10am to noon URcourses Annotations: please post to blog so that everyone can see and I will add them to meeting notes from there Assignments: “Group”: tentative due dates: 28 Sep (Proposal), 12 Oct (Requirements), 26 Oct (Design), 6 Nov (Evaluate Lo-Fi), 23 Nov (Prototype Hi-Fi), 30 Nov (Present) “Individual”: written (different from CS428 and CS828); as participant for other groups’ “Evaluate” assignment; practical Groups: let get those sorted out today (as much as possible) Outline for Today Chapter 1 (selected slides) Design Thinking Answering machine discussion: Could the marble answering machine be good for us in 2018? What changes might be warranted? Any SaskTel subscribers? To Do Read Chapter 2 of textbook Media from Meeting Nothing available for 06 Annotations and Afterthoughts",
+    "text": "Mtg 6 / 37 Questions from Last Meeting? Administration No office time today: Faculty of Science Meeting – tomorrow @ 10am to noon URcourses Annotations: please post to blog so that everyone can see and I will add them to meeting notes from there Assignments: “Group”: tentative due dates: 28 Sep (Proposal), 12 Oct (Requirements), 26 Oct (Design), 6 Nov (Evaluate Lo-Fi), 23 Nov (Prototype Hi-Fi), 30 Nov (Present) “Individual”: written (different from CS428 and CS828); as participant for other groups’ “Evaluate” assignment; practical Groups: let get those sorted out today (as much as possible) Outline for Today Chapter 1 (selected slides) Design Thinking Answering machine discussion: Could the marble answering machine be good for us in 2018? What changes might be warranted? Any SaskTel subscribers? To Do Read Chapter 2 of textbook Media from Meeting Nothing available for 06 Annotations and Afterthoughts Webpage about Norman Doors Video about Norman Doors",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/06.html"
   },{
@@ -475,7 +475,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/research/"
   },{
     "title": "RSS Feeds",
-    "text": "RSS Feeds News (Atom) CS-428+828-201830.rss news.rss news.xml",
+    "text": "RSS Feeds News CS-428+828-201830",
     "tags": "",
     "url": "/~hepting/rss/"
   },{
