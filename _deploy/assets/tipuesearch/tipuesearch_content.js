@@ -475,7 +475,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/research/"
   },{
     "title": "RSS Feeds",
-    "text": "RSS Feeds News (Atom) CS-428+828-201830.rss links.rss news.rss news.xml tmp-CS-428+828-201830.rss",
+    "text": "RSS Feeds News (Atom) CS-428+828-201830.rss news.rss news.xml",
     "tags": "",
     "url": "/~hepting/rss/"
   },{
@@ -665,7 +665,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/research/inspirations.html"
   },{
     "title": "Links",
-    "text": "Links Interaction Design: Beyond Human-Computer Interaction http://interactions.acm.org/ Cooper Journal Aaron Marcus and Associates Design Thinking: Thoughts by Tim Brown IDEO Patterns Nielsen Norman Group Don Norman: Designing For People Interaction Design Foundation TED Talks (Design, Technology)",
+    "text": "Links Interaction Design: Beyond Human-Computer Interaction http://interactions.acm.org/ Cooper Journal Aaron Marcus and Associates Design Thinking: Thoughts by Tim Brown IDEO Patterns Nielsen Norman Group Don Norman: Designing For People Interaction Design Foundation TED Talks (Design, Technology) Designing Interactions",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/resources/links.html"
   },{
