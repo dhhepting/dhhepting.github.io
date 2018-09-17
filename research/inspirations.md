@@ -1,26 +1,28 @@
 ---
 breadcrumb: Inspirations
-layout: research
+redirect-from:
+  - research/inspiration.html
+layout: bg-image
 ---
 # Inspirations
-		
+
 <div class="card" id="dhhblock">
    <div class="card-body">
 	<blockquote class="blockquote">
 	<p>
 		<i class="fas fa-quote-left fa-2x fa-pull-left fa-border"></i>
-		In short, it seems worthwhile to avoid argument with (other) enthusiasts 
-		for artificial intelligence by conceding dominance in the distant future 
+		In short, it seems worthwhile to avoid argument with (other) enthusiasts
+		for artificial intelligence by conceding dominance in the distant future
 		of cerebration to machines alone.  
-		There will nevertheless be a fairly long interim during which the main 
-		intellectual advances will be made by men and computers working together 
-		in intimate association. 
-		A multidisciplinary study group, examining future research and development 
-		problems of the [United States] Air Force, estimated that it would be 1980 
-		before developments in artificial intelligence make it possible for machines 
-		alone to do much thinking or problem solving of military significance. 
+		There will nevertheless be a fairly long interim during which the main
+		intellectual advances will be made by men and computers working together
+		in intimate association.
+		A multidisciplinary study group, examining future research and development
+		problems of the [United States] Air Force, estimated that it would be 1980
+		before developments in artificial intelligence make it possible for machines
+		alone to do much thinking or problem solving of military significance.
 		That would leave, say, five years to develop man-computer symbiosis
-		and fifteen years to use it. 
+		and fifteen years to use it.
 		The fifteen may be ten or five hundred, but those years should
 		be intellectually the most creative and exciting in the history of mankind.
 	</p>
@@ -39,7 +41,7 @@ layout: research
 	<blockquote class="blockquote">
 	<p>
 		<i class="fas fa-quote-left fa-2x fa-pull-left fa-border"></i>
-		When we try to pick out anything by itself, 
+		When we try to pick out anything by itself,
 		we find it hitched to everything else in the Universe.
 	</p>
 	<p>&nbsp;</p>
@@ -56,11 +58,11 @@ layout: research
 	<blockquote class="blockquote">
 	<p>
 		<i class="fas fa-quote-left fa-2x fa-pull-left fa-border"></i>
-		There are these two young fish swimming along, 
-		and they happen to meet an older fish swimming the other way, 
+		There are these two young fish swimming along,
+		and they happen to meet an older fish swimming the other way,
 		who nods at them and says, &lsquo;Morning, boys, how's the water?&rsquo;
-		And the two young fish swim on for a bit, 
-		and then eventually one of them looks over at the other and goes, 
+		And the two young fish swim on for a bit,
+		and then eventually one of them looks over at the other and goes,
 		&lsquo;What the hell is water?&rsquo;
 	</p>
 	<p>&nbsp;</p>
@@ -78,15 +80,15 @@ layout: research
 	<blockquote class="blockquote">
 	<p>
 		<i class="fas fa-quote-left fa-2x fa-pull-left fa-border"></i>
-		When you grow up you tend to get told the world is the way it is 
-		and you're life is just to live your life inside the world. 
-		Try not to bash into the walls too much. 
+		When you grow up you tend to get told the world is the way it is
+		and you're life is just to live your life inside the world.
+		Try not to bash into the walls too much.
 		Try to have a nice family, have fun, save a little money.
-		That's a very limited life. 
-		Life can be much broader once you discover one simple fact: 
-		Everything around you that you call life was made up by people 
-		that were no smarter than you and you can change it, 
-		you can influence it, you can build your own things that other 
+		That's a very limited life.
+		Life can be much broader once you discover one simple fact:
+		Everything around you that you call life was made up by people
+		that were no smarter than you and you can change it,
+		you can influence it, you can build your own things that other
 		people can use.
 		Once you learn that, you'll never be the same again.
 	</p>
@@ -96,7 +98,7 @@ layout: research
 	</blockquote>
     </div>
 </div>
-		
+
 <p>&nbsp;</p>
 
 <div class="card">
@@ -104,9 +106,9 @@ layout: research
 	<blockquote class="blockquote">
 	<p>
 		<i class="fas fa-quote-left fa-2x fa-pull-left fa-border"></i>
-		In our culture we spend a lot of time with the how. 
-		We've become a culture of technocrats and all we do is become technicians 
-		asking &lsquo;how do we do this?&rsquo;. 
+		In our culture we spend a lot of time with the how.
+		We've become a culture of technocrats and all we do is become technicians
+		asking &lsquo;how do we do this?&rsquo;.
 		Nobody stands back and asks &lsquo;why?&rsquo;.
 	</p>
 	<p>&nbsp;</p>
@@ -115,7 +117,7 @@ layout: research
 	</blockquote>
     </div>
 </div>
-		
+
 <p>&nbsp;</p>
 
 <div class="card">
