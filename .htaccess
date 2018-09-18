@@ -1,0 +1,24 @@
+---
+layout: rss
+---
+ErrorDocument 403    {{ "/HTTPerrors/403.html" | relative_url }}
+ErrorDocument 404    /~hepting/HTTPerrors/404.html
+ErrorDocument 500    /~hepting/HTTPerrors/405.html
+
+# Setup caching for most static assets to expire in 1 month
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+	Header set Cache-Control "max-age=2628000, public"
+</filesMatch>
+
+# Add these three lines to CORSify your server for everyone.
+
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "GET,PUT,POST,DELETE"
+Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+
+# Allow compression for some resources
+<IfModule mod_headers.c>
+	<FilesMatch ".(js|css|xml|gz|html|woff2)$">
+		Header append Vary: Accept-Encoding
+	</FilesMatch>
+</IfModule>
