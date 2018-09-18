@@ -1,6 +1,6 @@
 ---
 breadcrumb: Inspirations
-redirect-from:
+redirect_from:
   - research/inspiration.html
 layout: bg-image
 ---
