@@ -259,6 +259,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/37.html"
   },{
+    "title": "403 Redirect",
+    "text": "403 Redirect The link that was used to reach this site was forbidden access. Please send to me the details of the link that was followed, so that I may correct the problem: e-mail Daryl Hepting Please click here to go back to the referring page.",
+    "tags": "",
+    "url": "/~hepting/HTTPerrors/403.html"
+  },{
+    "title": "404 Redirect",
+    "text": "404 Redirect The link that was used to reach this site was not found, and may not be valid. This site has been redesigned and made mobile-friendly. Please search the site for more information. You may also be able to go back the referring page by clicking here.",
+    "tags": "",
+    "url": "/~hepting/HTTPerrors/404.html"
+  },{
+    "title": "404 Redirect",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/404.html"
+  },{
+    "title": "500 Redirect",
+    "text": "500 Redirect Wikipedia says that this error is returned when “an unexpected condition was encountered and no more specific message is suitable”. You may also be able to go back the referring page by clicking here.",
+    "tags": "",
+    "url": "/~hepting/HTTPerrors/500.html"
+  },{
     "title": "WAI-ARIA",
     "text": "Resources https://www.w3.org/TR/wai-aria-practices/",
     "tags": "",
@@ -313,6 +333,11 @@ var tipuesearch = {"pages": [{
     "text": "Group Work The mark awarded for each group assignment is shared by all group members. However, you have the ability to communicate extra information about your group members’ performance to your group members, to the marker, and to me. For each group assignment, you are encouraged to allocate 100 points amongst your group members (including yourself). The place to do this is a link in URcourses labelled something like “Submit Group Rating”, just below the link for the assignment that you have just submitted. If all group members contribute equally, you would distribute the points equally to each group member. If some group members contribute more or less than others, you would reflect this in the amount of points allocated to each group member. Please undertake this activity responsibly and explain why you have not allocated points equally. The total points that you allocate amongst your group members should equal 100. If a group member does not providing a rating, their allocation of points is taken as equal. However, allocating points for each portion of group work will provide evidence of your participation. The points allocated to each group member are summed. The point sum for each group member is divided by the largest sum, so the group member who was allocated the most points will receive the full mark earned for the assignment. If all group members were allocated the same number of points, all will receive the full mark earned for the assignment. The lowest rating allowed is 0.5, even if the calculated would be lower. You can see your rating from the group in URcourses via the entry labelled “See Your Rating From Group”. The value available there corresponds to the “Computed Rating from Group” in the examples below. Example 1: Equal Allocations Raters Results Thomas Richard Harold Sally Total Rating Computed Rating from Group Thomas 25 25 25 25 100 1.00 (1.00) Richard 25 25 25 25 100 1.00 (1.00) Harold 25 25 25 25 100 1.00 (1.00) Sally 25 25 25 25 100 1.00 (1.00) Total 100 100 100 100 400 Example 2: Unequal Allocations Raters Results Thomas Richard Harold Sally Total Rating Computed Rating from Group Thomas 97 3 1 52 153 153/153 = 1.00 (1.00) Richard 1 50 25 25 101 101/153 = 0.66 (0.66) Harold 1 23 35 13 72 72/153 = 0.47 (0.50) Sally 1 24 39 10 74 74/153 = 0.47 (0.50) Total 100 100 100 100 400 Example 3: Some Equal, Some Unequal Allocations Raters Results Thomas Richard Harold Sally Total Rating Computed Rating from Group Thomas 97 3 25 25 150 150/150 = 1.00 (1.00) Richard 1 50 25 25 101 101/150 = 0.67 (0.67) Harold 1 23 25 25 74 74/150 = 0.49 (0.50) Sally 1 24 25 25 75 75/150 = 0.5 (0.50) Total 100 100 100 100 400",
     "tags": "",
     "url": "/~hepting/teaching/groupwork.html"
+  },{
+    "title": "HTTP Errors",
+    "text": "HTTP Errors Certain HTTP response status codes represent errors. If any of the following response status codes are encountered while attempting to access any of my pages, you will be redirected: 403 (Forbidden) 404 (Not Found) 500 (Internal Server Error)",
+    "tags": "",
+    "url": "/~hepting/HTTPerrors/"
   },{
     "title": "About/Personal * D. H. Hepting",
     "text": "Personal",
@@ -480,7 +505,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/rss/"
   },{
     "title": "Sitemap",
-    "text": "Sitemap About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test",
+    "text": "Sitemap 404 Redirect HTTP Errors 403 Redirect 404 Redirect 500 Redirect About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test",
     "tags": "",
     "url": "/~hepting/search/sitemap/"
   },{
@@ -713,6 +738,21 @@ var tipuesearch = {"pages": [{
     "text": "# {{ page.breadcrumb }} How to Build Your Creative Confidence (TED 2012) &mdash; David Kelley From the TED website: &ldquo;Is your school or workplace divided between the \"creatives\" versus the practical people? Yet surely, David Kelley suggests, creativity is not the domain of only a chosen few. Telling stories from his legendary design career and his own life, he offers ways to build the confidence to create.&rdquo; The power of believing that you can improve (TEDxNorrkoping 2014) &mdash; Carol Dweck From the TED website: &ldquo;Carol Dweck researches &lsquo;growth mindset&rsquo; &mdash; the idea that we can grow our brain&rsquo;s capacity to learn and to solve problems. In this talk, she describes two ways to think about a problem that’s slightly too hard for you to solve. Are you not smart enough to solve it ... or have you just not solved it yet? A great introduction to this influential field.&rdquo;",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/resources/videos.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/403.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/404.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/500.html"
   },{
     "title": "",
     "text": "",
