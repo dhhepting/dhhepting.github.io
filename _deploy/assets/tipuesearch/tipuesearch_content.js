@@ -260,9 +260,14 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/37.html"
   },{
     "title": "403 Redirect",
-    "text": "403 Redirect The link that was used to reach this site was forbidden access. Please send to me the details of the link that was followed, so that I may correct the problem: e-mail Daryl Hepting Please click here to go back to the referring page.",
+    "text": "403 Redirect The link that was used to reach this site was forbidden access. Please send to me the details of the link that was followed, so that I may correct the problem: e-mail Daryl Hepting You may also be able to go back the referring page by clicking here.",
     "tags": "",
     "url": "/~hepting/HTTPerrors/403.html"
+  },{
+    "title": "403 Redirect",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/403.html"
   },{
     "title": "404 Redirect",
     "text": "404 Redirect The link that was used to reach this site was not found, and may not be valid. This site has been redesigned and made mobile-friendly. Please search the site for more information. You may also be able to go back the referring page by clicking here.",
@@ -278,6 +283,11 @@ var tipuesearch = {"pages": [{
     "text": "500 Redirect Wikipedia says that this error is returned when “an unexpected condition was encountered and no more specific message is suitable”. You may also be able to go back the referring page by clicking here.",
     "tags": "",
     "url": "/~hepting/HTTPerrors/500.html"
+  },{
+    "title": "500 Redirect",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/500.html"
   },{
     "title": "WAI-ARIA",
     "text": "Resources https://www.w3.org/TR/wai-aria-practices/",
@@ -495,7 +505,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/research/works/"
   },{
     "title": "Research",
-    "text": "Research academic.html dhhepting.bib funding.html inspirations.html students works.html works",
+    "text": "Research academic.html dhhepting.bib external.html funding.html inspiration.html inspirations.html pubs students works.html works",
     "tags": "",
     "url": "/~hepting/research/"
   },{
@@ -505,7 +515,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/rss/"
   },{
     "title": "Sitemap",
-    "text": "Sitemap 404 Redirect HTTP Errors 403 Redirect 404 Redirect 500 Redirect About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test",
+    "text": "Sitemap 403 Redirect 404 Redirect 500 Redirect HTTP Errors 403 Redirect 404 Redirect 500 Redirect About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test",
     "tags": "",
     "url": "/~hepting/search/sitemap/"
   },{
@@ -757,6 +767,26 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/about/personal/daryls/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/about/personal/heptings/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/math-of-art/index.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/math-of-art/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/research/web/words/history.html"
   },{
     "title": "",
@@ -768,6 +798,31 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/research/works.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/external.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/pubs/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/bysemester.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/201810.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/inspiration.html"
   },{
     "title": "Creativity",
     "text": "Creativity (2006) Event Presentation by Joel Salatin Tuesday, November 18, 2008 Education Auditorium, University of Regina Organized by Description Media",
