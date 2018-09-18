@@ -8,34 +8,33 @@ layout: rss
 >
 <channel>
   <feed>News Feed for D. H. Hepting</feed>
-  <title>News Feed for {{ site.name | xml_escape }}</title>
+  <title>News Feed for {{ site.title | xml_escape }}</title>
   <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
   <sy:updatePeriod>{{ site.feed_update_period | default: "daily" | xml_escape }}</sy:updatePeriod>
   <sy:updateFrequency>{{ site.feed_update_frequency | default: 1 | xml_escape }}</sy:updateFrequency>
-  <link>{{ site.url }}</link>
+  <link>{{ site.url | absolute_url }}</link>
   <atom:link href="{{ page.path  | absolute_url }}" rel="self" type="application/rss+xml" />
   <lastBuildDate>
-    {% for post in site.posts limit:1 %}
-      {% if post.link %}
-        {{ post.date | date_to_rfc822 }}
-      {% endif %}
-    {% endfor %}
+{% for post in site.posts limit:1 %}
+  {% if post.link %}
+    {{ post.date | date_to_rfc822 }}
+  {% endif %}
+{% endfor %}
   </lastBuildDate>
-  {% for post in site.posts %}
-    {{ post }}
-    {% if post.link %}
-      <item>
-        <title>{{ post.title | xml_escape }}</title>
-	{% if post.excerpt %}
-	  <description>{{ post.excerpt | xml_escape }}</description>
-	{% else %}
-	  <description>{{ post.content | xml_escape }}</description>
-	{% endif %}
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-	<link>{{ post.link | escape }}</link>
-	<guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
-      </item>
+{% for sp in site.posts %}
+  {% if sp.url %}
+    <item>
+      <title>{{ sp.title | xml_escape }}</title>
+    {% if sp.excerpt %}
+      <description>{{ sp.excerpt | xml_escape }}</description>
+    {% else %}
+      <description>{{ sp.content | xml_escape }}</description>
     {% endif %}
-  {% endfor %}
+      <pubDate>{{ sp.date | date_to_rfc822 }}</pubDate>
+      <link>{{ sp.url | escape }}</link>
+      <guid isPermaLink="true">{{ sp.url | absolute_url }}</guid>
+    </item>
+  {% endif %}
+{% endfor %}
 </channel>
 </rss>
