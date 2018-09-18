@@ -1,7 +1,7 @@
 ---
 title: About
 breadcrumb: About
-redirect-from:
+redirect_from:
   - /about/personal/daryls/
   - /about/personal/heptings/
 layout: bg-image

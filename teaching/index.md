@@ -1,7 +1,7 @@
 ---
 title: Teaching
 breadcrumb: Teaching
-redirect-from:
+redirect_from:
   - /teaching/bysemester.html
   - /teaching/201810.html
 layout: bg-image

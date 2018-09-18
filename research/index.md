@@ -1,7 +1,7 @@
 ---
 title: Research
 breadcrumb: Research
-redirect-from:
+redirect_from:
   - /research/external.html
   - /research/pubs/
 layout: bg-image
