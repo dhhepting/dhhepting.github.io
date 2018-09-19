@@ -4,71 +4,36 @@ breadcrumb: Project Proposal
 layout: bg-image
 marks: 3
 rubric:
-- crit: Background
+- crit: Background and Motivation
   wt: 0.5
-  ep:
-  er:
-  em:
-  sp:
-  sr:
-  sm:
-  pp:
-  pr:
-  pm:
-  up:
-  ur:
-- crit: Users
+  l3: Clear and compelling
+  l2: Concrete
+  l1: Lacks detail
+  l0: Background missing, motivation unclear
+- crit: Description of Users
   wt: 0.5
-  ep:
-  er:
-  em:
-  sp:
-  sr:
-  sm:
-  pp:
-  pr:
-  pm:
-  up:
-  ur:
+  l3: Easily identifiable
+  l2: Identifiable
+  l1: Somewhat vague
+  l0: Substantially missing
 - crit: Identification of Opportunities for Redesign
   wt: 1
-  ep:
-  er:
-  em:
-  sp:
-  sr:
-  sm:
-  pp:
-  pr:
-  pm:
-  up:
-  ur:
-- crit: Support
+  l3: Clear and compelling
+  l2: Concrete
+  l1: Lacks detail
+  l0: Opportunities not identfied
+- crit: Support for Identified Opportunities
   wt: 0.5
-  ep:
-  er:
-  em:
-  sp:
-  sr:
-  sm:
-  pp:
-  pr:
-  pm:
-  up:
-  ur: 
+  l3: Clear examples from external sources included in context of personal experience
+  l2: Personal experience clear, example from external source referenced
+  l1: Detail lacking in description of personal experience  
+  l0: Substantially missing
 - crit: Writing
   wt: 0.5
-  ep: Shows an exceptional command of Standard English. A pleasure for your audience to read
-  er: Shows a very good command of Standard English. No problems for your audience
-  em: Shows a good command of Standard English. No problems for your audience
-  sp: Demonstrates good evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work
-  sr: Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work
-  sm: Demonstrates some evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work
-  pp: Few errors, but audience may have some trouble reading your work
-  pr: Some errors, audience may have some trouble reading your work
-  pm: Errors apparent, audience likely to have some trouble reading your work
-  up: Frequently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow
-  ur: Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow
+  l3: Shows a good command of Standard English. No problems for your audience
+  l2: Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work
+  l1: Some errors, audience may have some trouble reading your work
+  l0: Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow
 ---
 # {{ page.breadcrumb }}
 

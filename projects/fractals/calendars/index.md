@@ -1,6 +1,8 @@
 ---
 title: Calendars
 breadcrumb: Calendars
+redirect_from:
+  - /art/AoFcals/
 description: Fractals Calendars
 layout: bg-image
 ---
@@ -11,7 +13,7 @@ a calendar of computer-generated images was published
 by Universe Publishing,
 based on the fractal geometry of Benoit B. Mandelbrot.
 
-Before 1997, the calendar was first done as a 
+Before 1997, the calendar was first done as a
 custom edition and then as a trade edition in the following year.
 In 1997, the trade and custom editions were the same.
 

@@ -1,16 +1,22 @@
+{% include criteria-scale.html %}
+
 This assignment is worth {{ page.marks}} marks, according to the following rubric:
 
 ##### Rubric
+
+DePaul Univerity's Center for Teaching and Learning has a useful resource describing the process of
+[creating rubrics](https://resources.depaul.edu/teaching-commons/teaching-guides/feedback-grading/rubrics/Pages/creating-rubrics.aspx).
+Your comments about the following rubric are welcome [via email](mailto:{{site.email}}?subject=Rubric at {{page.url}})
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
     <thead>
 		  <tr>
         <th><em>Criterion and Weight</em></th>
-        <th>Excellent</th>
-        <th>Satisfactory</th>
-        <th>Poor</th>
-        <th>Unacceptable</th>
+        <th>{{cs-level[3]}}</th>
+        <th>{{cs-level[2]}}</th>
+        <th>{{cs-level[1]}}</th>
+        <th>{{cs-level[0]}}</th>
       </tr>
     </thead>
     <tbody>
@@ -20,33 +26,16 @@ This assignment is worth {{ page.marks}} marks, according to the following rubri
           {{r.crit}} ({{r.wt}})
         </th>
         <td>
-          <ul>
-            <!-- <li>(+) {{r.ep}}</li>
-            <li>(o) {{r.er}}</li>
-            <li>(-) {{r.em}}</li> -->
-            <li>{{r.er}}</li>
-          </ul>
+          {{r.l3}}
         </td>
         <td>
-          <ul>
-            <!-- <li>(+) {{r.sp}}</li>
-            <li>(o) {{r.sr}}</li>
-            <li>(-) {{r.sm}}</li> -->
-            <li>{{r.sr}}</li>
-          </ul>
+          {{r.l2}}
         </td>
         <td>
-          <ul>
-            <li>(+) {{r.pp}}</li>
-            <li>(o) {{r.pr}}</li>
-            <li>(-) {{r.pm}}</li>
-          </ul>
+          {{r.l1}}
         </td>
         <td>
-          <ul>
-            <li>(+) {{r.up}}</li>
-            <li>(o) {{r.ur}}</li>
-          </ul>
+          {{r.l0}}
         </td>
 			</tr>
 {% endfor %}
@@ -105,17 +94,17 @@ deduct 50% of the earned grade
       <label class="col-3 col-form-label text-right" for="{{critid}}">{{r.crit}} ({{r.wt}})</label>
       <select class="col-9 form-control" name="criteria" id="{{critid}}">
         <option selected disabled>Choose...</option>
-        <option value="10">Excellent (+): {{r.er}}</option>
-        <option value="9">Excellent: {{r.er}}</option>
-        <option value="8">Excellent (-): {{r.er}}</option>
-        <option value="7">Satisfactory (+): {{r.sr}}</option>
-        <option value="6">Satisfactory: {{r.sr}}</option>
-        <option value="5">Satisfactory (-): {{r.sr}}</option>
-        <option value="4">Poor (+): {{r.pp}}</option>
-        <option value="3">Poor: {{r.pr}}</option>
-        <option value="2">Poor (-): {{r.pm}}</option>
-        <option value="1">Unacceptable (+): {{r.up}}</option>
-        <option value="0">Unacceptable: {{r.ur}}</option>
+        <option value="10">{{cs-level[3]}} (+): {{r.l3}}</option>
+        <option value="9">{{cs-level[3]}}: {{r.l3}}</option>
+        <option value="8">{{cs-level[3]}} (-): {{r.l3}}</option>
+        <option value="7">{{cs-level[2]}} (+): {{r.l2}}</option>
+        <option value="6">{{cs-level[2]}}: {{r.l2}}</option>
+        <option value="5">{{cs-level[2]}} (-): {{r.l2}}</option>
+        <option value="4">{{cs-level[1]}} (+): {{r.l1}}</option>
+        <option value="3">{{cs-level[1]}}: {{r.l1}}</option>
+        <option value="2">{{cs-level[1]}} (-): {{r.l1}}</option>
+        <option value="1">{{cs-level[0]}} (+): {{r.l0}}</option>
+        <option value="0">{{cs-level[0]}}: {{r.l0}}</option>
       </select>
     </div>
 {% endfor %}
