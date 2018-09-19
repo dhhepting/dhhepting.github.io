@@ -16,7 +16,7 @@ layout: bg-image
 
 * M.Sc. in Computer Science from the [University of Regina](https://www.uregina.ca),
   Regina, Saskatchewan, Canada.<br />
-	Thesis: [Approximation and Visualization of Sets Defined by Iterated Function Systems]( {{ "/research/works/1991-03-Hep-Approximation-and-Visualization-of-Sets-Defined-by-Iterated-Function-Systems" | relative_url }}) &mdash;
+	Thesis: [Approximation and Visualization of Sets Defined by Iterated Function Systems]( {{ "/research/works/1991-03-Hep-Approximation-and-Visualization-of-Sets-Defined-by-Iterated-Function-Systems.html" | relative_url }}) &mdash;
   defended March, 1991.
   * Supervisor: [Dr. Przemyslaw W. Prusinkiewicz]( https://en.wikipedia.org/wiki/Przemys%C5%82aw_Prusinkiewicz)
   * Committee: [Dr. J. Chris Fisher]( https://www.tandfonline.com/doi/abs/10.1080/00029890.1985.11971529)
