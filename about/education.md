@@ -7,7 +7,7 @@ layout: bg-image
 
 * Ph.D. in Computer Science from [Simon Fraser University](https://www.sfu.ca/),
   Burnaby, British Columbia, Canada.<br />
-  Dissertation: [A New Paradigm for Exploration in Computer-aided Visualization]( {{"/research/works/1999-12-hep-a-new-paradigm-for-exploration-in-computer-aided-visualization.html" | relative_url }}) &mdash;
+  Dissertation: [A New Paradigm for Exploration in Computer-aided Visualization]( {{"/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html" | relative_url }}) &mdash;
   defended September, 1999.
   * Supervisor: [Dr. Robert D. Russell](https://en.wikipedia.org/wiki/Robert_D._Russell)
   * Committee: [Dr. John C. Dill](https://www.sfu.ca/siat/people/faculty/john-dill.html)
