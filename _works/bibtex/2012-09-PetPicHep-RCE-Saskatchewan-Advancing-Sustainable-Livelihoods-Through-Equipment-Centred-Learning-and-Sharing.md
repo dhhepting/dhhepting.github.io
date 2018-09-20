@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2012-09-PetPicHep
-title: RCE Saskatchewan  Advancing Sustainable Livelihoods Through Equipment Centred Learning and Sharing (2012)
-breadcrumb: RCE Saskatchewan  Advancing Sustainable Livelihoods Through Equipment Centred Learning and Sharing (2012)
+title: RCE Saskatchewan  Advancing Sustainable Livelihoods Through Equipment-Centred Learning and Sharing (2012)
+breadcrumb: RCE Saskatchewan  Advancing Sustainable Livelihoods Through Equipment-Centred Learning and Sharing (2012)
 category: report
 projects:
  - enviromatics
@@ -17,7 +17,7 @@ editors:
 ---
 @incollection{2012-09-PetPicHep,
 	Author =  "Petry, Roger A. and Pickard, Garth and Hepting, Daryl H.",
-	Title =  "RCE Saskatchewan: Advancing Sustainable Livelihoods Through Equipment-Centred Learning and Sharing",
+	Title = " "RCE Saskatchewan: Advancing Sustainable Livelihoods Through Equipment-Centred Learning and Sharing","
 	Url = \"{{"/assets/works/pdf/2012-09-PetPicHep.pdf" | absolute_url }}\",
 	Editor =  "Fadeeva, Zinaida and Payyappallimana, Unnikrishnan and Petry, Roger A.",
 	Booktitle =  "Towards More Sustainable Consumption and Production Systems and Sustainable Livelihoods -- Learning Contributions of the Regional Centres of Expertise on Education for Sustainable Development",

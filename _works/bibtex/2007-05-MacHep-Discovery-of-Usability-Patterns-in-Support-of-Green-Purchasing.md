@@ -15,7 +15,7 @@ editors:
 ---
 @inproceedings{2007-05-MacHep,
 	Author =  "Maciag, Timothy and Hepting, Daryl H.",
-	Title =  "Discovery of Usability Patterns in Support of Green Purchasing",
+	Title = " "Discovery of Usability Patterns in Support of Green Purchasing","
 	Url = \"{{"/assets/works/pdf/2007-05-MacHep.pdf" | absolute_url }}\",
 	Editor =  "Denzer, Ralf",
 	Booktitle =  "Environmental Software Systems",

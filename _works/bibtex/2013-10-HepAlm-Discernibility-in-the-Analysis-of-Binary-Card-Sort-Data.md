@@ -21,7 +21,7 @@ editors:
 ---
 @inproceedings{2013-10-HepAlm,
 	Author =  "Hepting, Daryl H. and Almestadi, Emad H.",
-	Title =  "Discernibility in the Analysis of Binary Card Sort Data",
+	Title = " "Discernibility in the Analysis of Binary Card Sort Data","
 	Url = \"{{"/assets/works/pdf/2013-10-HepAlm.pdf" | absolute_url }}\",
 	Editor =  "Ciucci, D. and Inuiguchi, M. and Yao, Y. and {\'S}l{\k e}zak, D. and Wang, G.",
 	Address =  "Berlin",

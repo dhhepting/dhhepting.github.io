@@ -14,7 +14,7 @@ venue: ACM SIGCSE Bulletin
 ---
 @article{2006-06-Hep,
 	Author =  "Hepting, Daryl H.",
-	Title =  "Ethics and Usability Testing in Computer Science Education",
+	Title = " "Ethics and Usability Testing in Computer Science Education","
 	Url = \"{{"/assets/works/pdf/2006-06-Hep.pdf" | absolute_url }}\",
 	Booktitle =  "ACM SIGCSE",
 	Doi =  "10.1145/1138403.1138438",

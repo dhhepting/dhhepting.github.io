@@ -13,7 +13,7 @@ venue: Proceedings of the 2005 International Computer Music Conference  ICMC05  
 ---
 @inproceedings{2005-09-GerHep,
 	Author =  "Gerhard, David and Hepting, Daryl H.",
-	Title =  "A Framework for Personalization of Interactive Sound Synthesis",
+	Title = " "A Framework for Personalization of Interactive Sound Synthesis","
 	Booktitle =  "Proceedings of the 2005 International Computer Music Conference (ICMC05), Barcelona, Spain.",
 	Month =  "September",
 	Organization =  "International Computer Music Association",
