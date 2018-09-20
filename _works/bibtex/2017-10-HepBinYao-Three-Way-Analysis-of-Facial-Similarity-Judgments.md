@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2017-10-HepBinYao
-title: Three Way Analysis of Facial Similarity Judgments (2017)
-breadcrumb: Three Way Analysis of Facial Similarity Judgments (2017)
+title: Three-Way Analysis of Facial Similarity Judgments (2017)
+breadcrumb: Three-Way Analysis of Facial Similarity Judgments (2017)
 category: conference
 projects:
  - faces
@@ -11,7 +11,7 @@ abstract: >-
 ---
 @conference{2017-10-HepBinYao,
 	Author =  "Hepting, Daryl H. and {Bin Amer}, Hadeel Hatim and Yao, Yiyu",
-	Title =  "Three-Way Analysis of Facial Similarity Judgments",
+	Title = " "Three-Way Analysis of Facial Similarity Judgments","
 	Url = \"{{"/assets/works/pdf/2017-10-HepBinYao.pdf" | absolute_url }}\",
 	Booktitle =  "Proceedings of ISFUROS 2017: 2nd International Symposium on Fuzzy and Rough Sets",
 	Keywords =  "facial photograph, card sorting, three-way decision, probability",

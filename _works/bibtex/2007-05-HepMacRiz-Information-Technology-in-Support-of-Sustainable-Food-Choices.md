@@ -14,7 +14,7 @@ venue: Environmental Software Systems
 ---
 @inproceedings{2007-05-HepMacRiz,
 	Author =  "Hepting, Daryl H. and Maciag, Timothy and Rizvi, S. A. A.",
-	Title =  "Information Technology in Support of Sustainable Food Choices",
+	Title = " "Information Technology in Support of Sustainable Food Choices","
 	Url = \"{{"/assets/works/pdf/2007-05-HepMacRiz.pdf" | absolute_url }}\",
 	Booktitle =  "Environmental Software Systems",
 	Doi =  "10.13140/2.1.3773.6001",

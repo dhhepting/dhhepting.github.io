@@ -9,7 +9,7 @@ projects:
 ---
 @mastersthesis{1991-03-Hep,
 	Author =  "Hepting, Daryl H.",
-	Title =  "Approximation and Visualization of Sets Defined by Iterated Function Systems",
+	Title = " "Approximation and Visualization of Sets Defined by Iterated Function Systems","
 	Url = \"{{"/assets/works/pdf/1991-03-Hep.pdf" | absolute_url }}\",
 	Address =  "Regina, Saskatchewan, Canada",
 	Doi =  "10.13140/RG.2.2.34414.82244",

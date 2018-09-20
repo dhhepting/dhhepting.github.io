@@ -11,7 +11,7 @@ abstract: >-
 ---
 @inbook{2008-10-McIGiuVoi,
 	Author =  "McIntosh, B.S. and Giupponi, C. and Voinov, A.A. and Smith, C. and Matthews, K.B. and Monticino, M. and Kolkman, M.J. and Crossman, N. and van Ittersum, M. and Haase, D. and Haase, A. and Mysiak, J. and Groot, J.C.J. and Sieber, S. and Verweij, P. and Quinn, N. and Waeger, P. and Gaber, N. and Hepting, D. and Scholten, H. and Sulis, A. and van Delden, H. and Gaddis, E. and Assaf, H.",
-	Title =  "Bridging the Gaps Between Design and Use: Developing Tools to Support Environmental Management and Policy",
+	Title = " "Bridging the Gaps Between Design and Use: Developing Tools to Support Environmental Management and Policy","
 	Editor =  "Jakeman, A.J. and Voinov, A.A. and Rizzoli, A.E. and Chen, S.H.",
 	Booktitle =  "Environmental Modelling, Software and Decision Support",
 	Chapter =  "3",

@@ -20,7 +20,7 @@ editors:
 ---
 @inproceedings{2007-05-MacHepSle,
 	Author =  "Maciag, Timothy and Hepting, Daryl H. and \'{S}l\k{e}zak, Dominik and Hilderman, Robert J.",
-	Title =  "Mining Associations for Interface Design",
+	Title = " "Mining Associations for Interface Design","
 	Editor =  "Yao, Jing{T}ao and Lingras, Pawan and Wu, Wei-Zhi and Szczuka, Marcin and Cercone, Nick J. and \'{S}l\k{e}zak, Dominik",
 	Address =  "Berlin, Heidelberg",
 	Booktitle =  "RSKT 2007: Rough Sets and Knowledge Technology",

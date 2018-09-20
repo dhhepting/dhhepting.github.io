@@ -7,7 +7,7 @@ category: paper
 ---
 @conference{1995-03-HepDerEdo,
 	Author =  "Hepting, Daryl H. and Derks, Gianne and Edoh, Kossi D. and Russell, Robert D.",
-	Title =  "A Visual Analysis of Invariant Tori",
+	Title = " "A Visual Analysis of Invariant Tori","
 	Address =  "Banff, AB, Canada",
 	Month =  "March",
 	Organization =  "Western Computer Graphics Symposium",

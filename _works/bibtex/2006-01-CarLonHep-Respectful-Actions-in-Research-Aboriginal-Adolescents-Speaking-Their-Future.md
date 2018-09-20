@@ -13,7 +13,7 @@ venue: The Delta Kappa Gamma Bulletin
 ---
 @article{2006-01-CarLonHep,
 	Author =  "Carlson Berg, Laurie and Longman, Sarah and Hepting, Daryl H. and Doolittle, Edward",
-	Title =  "Respectful Actions in Research: Aboriginal Adolescents Speaking Their Future",
+	Title = " "Respectful Actions in Research: Aboriginal Adolescents Speaking Their Future","
 	Journal =  "The Delta Kappa Gamma Bulletin",
 	Month =  "January",
 	Number =  "3",

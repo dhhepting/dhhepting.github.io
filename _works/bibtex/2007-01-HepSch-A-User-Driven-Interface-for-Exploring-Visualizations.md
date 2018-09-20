@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2007-01-HepSch
-title: A User Driven Interface for Exploring Visualizations (2007)
-breadcrumb: A User Driven Interface for Exploring Visualizations (2007)
+title: A User-Driven Interface for Exploring Visualizations (2007)
+breadcrumb: A User-Driven Interface for Exploring Visualizations (2007)
 category: conference
 projects:
  - visualization
@@ -20,7 +20,7 @@ editors:
 ---
 @inproceedings{2007-01-HepSch,
 	Author =  "Hepting, Daryl H. and Schmiedge, Paul",
-	Title =  "A User-Driven Interface for Exploring Visualizations",
+	Title = " "A User-Driven Interface for Exploring Visualizations","
 	Editor =  {Erbacher, Robert F. and Roberts, Jonathan C. and Gr{\"o}hn, Matti T. and B{\"o}rner, Katy},
 	Booktitle =  "SPIE Proceedings, Visualization and Data Analysis 2007",
 	Doi =  "10.1117/12.703654",

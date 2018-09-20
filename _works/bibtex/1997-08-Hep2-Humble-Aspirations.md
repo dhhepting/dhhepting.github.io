@@ -9,7 +9,7 @@ projects:
 ---
 @misc{1997-08-Hep2,
 	Author =  "Hepting, Daryl H.",
-	Title =  "Humble Aspirations",
+	Title = " "Humble Aspirations","
 	Howpublished =  "Technical Slide Set, SIGGRAPH 97: 24th Annual Conference on Computer Graphics and Interactive Techniques",
 	Month =  "August",
 	Year =  "1997"
