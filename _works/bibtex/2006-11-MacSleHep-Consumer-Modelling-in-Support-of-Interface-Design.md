@@ -14,7 +14,7 @@ venue: 2006 International Conference on Hybrid Information Technology
 ---
 @inproceedings{2006-11-MacSleHep,
 	Author =  "Maciag, Timothy and \'{S}l\k{e}zak, Dominik and Hepting, Daryl H.",
-	Title =  "Consumer Modelling in Support of Interface Design",
+	Title = " "Consumer Modelling in Support of Interface Design","
 	Booktitle =  "2006 International Conference on Hybrid Information Technology",
 	Doi =  "10.1109/ICHIT.2006.253605",
 	Month =  "November",

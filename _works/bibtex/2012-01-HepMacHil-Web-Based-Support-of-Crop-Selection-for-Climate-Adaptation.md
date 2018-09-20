@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2012-01-HepMacHil
-title: Web Based Support of Crop Selection for Climate Adaptation (2012)
-breadcrumb: Web Based Support of Crop Selection for Climate Adaptation (2012)
+title: Web-Based Support of Crop Selection for Climate Adaptation (2012)
+breadcrumb: Web-Based Support of Crop Selection for Climate Adaptation (2012)
 category: conference
 projects:
  - food
@@ -16,7 +16,7 @@ venue: 2012 45th Hawaii International Conference on System Sciences
 ---
 @inproceedings{2012-01-HepMacHil,
 	Author =  "Hepting, Daryl H. and Maciag, Timothy and Hill, Harvey",
-	Title =  "Web-Based Support of Crop Selection for Climate Adaptation",
+	Title = " "Web-Based Support of Crop Selection for Climate Adaptation","
 	Url = \"{{"/assets/works/pdf/2012-01-HepMacHil.pdf" | absolute_url }}\",
 	Booktitle =  "2012 45th Hawaii International Conference on System Sciences",
 	Doi =  "10.1109/HICSS.2012.640",

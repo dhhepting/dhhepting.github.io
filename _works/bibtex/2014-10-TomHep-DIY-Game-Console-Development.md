@@ -15,7 +15,7 @@ venue: CHI PLAY  14 Proceedings of the first ACM SIGCHI annual symposium on Comp
 ---
 @inproceedings{2014-10-TomHep,
 	Author =  "Tomesh, Trevor M. and Hepting, Daryl H.",
-	Title =  "DIY Game Console Development",
+	Title = " "DIY Game Console Development","
 	Address =  "New York",
 	Booktitle =  "CHI PLAY '14 Proceedings of the first ACM SIGCHI annual symposium on Computer-human interaction in play",
 	Doi =  "10.1145/2658537.2662411",

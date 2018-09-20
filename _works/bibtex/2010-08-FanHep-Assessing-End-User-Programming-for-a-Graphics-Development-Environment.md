@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2010-08-FanHep
-title: Assessing End User Programming for a Graphics Development Environment (2010)
-breadcrumb: Assessing End User Programming for a Graphics Development Environment (2010)
+title: Assessing End-User Programming for a Graphics Development Environment (2010)
+breadcrumb: Assessing End-User Programming for a Graphics Development Environment (2010)
 category: conference
 projects:
  - creativity
@@ -18,7 +18,7 @@ editors:
 ---
 @inproceedings{2010-08-FanHep,
 	Author =  "Fang, Lizao and Hepting, Daryl H.",
-	Title =  "Assessing End-User Programming for a Graphics Development Environment",
+	Title = " "Assessing End-User Programming for a Graphics Development Environment","
 	Url = \"{{"/assets/works/pdf/2010-08-FanHep.pdf" | absolute_url }}\",
 	Editor =  "An, Aijun and Lingras, Pawan and Petty, Sheila and Huang, Runhe",
 	Address =  "Berlin, Heidelberg",

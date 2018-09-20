@@ -1,9 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2018-06-HepBinYao
-slug: 2018-06-HepBinYao-A-Linear-Model-for-Three-Way-Analysis-of-Facial-Similarity
-title: A Linear Model for Three Way Analysis of Facial Similarity (2018)
-breadcrumb: A Linear Model for Three Way Analysis of Facial Similarity (2018)
+title: A Linear Model for Three-Way Analysis of Facial Similarity (2018)
+breadcrumb: A Linear Model for Three-Way Analysis of Facial Similarity (2018)
 category: conference
 projects:
  - faces
@@ -16,7 +15,7 @@ authors:
 ---
 @incollection{2018-06-HepBinYao,
 	Author =  "Hepting, Daryl H. and {Bin Amer}, Hadeel Hatim and Yao, Yiyu",
-	Title =  "A Linear Model for Three-Way Analysis of Facial Similarity",
+	Title = " "A Linear Model for Three-Way Analysis of Facial Similarity","
 	Booktitle =  "Communications in Computer and Information Science",
 	Doi =  "10.1007/978-3-319-91476-3\_44",
 	Month =  "June",

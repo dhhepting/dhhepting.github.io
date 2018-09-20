@@ -15,7 +15,7 @@ editors:
 ---
 @inproceedings{2005-05-HepMac,
 	Author =  "Hepting, Daryl H. and Maciag, Timothy",
-	Title =  "Consumer Decision Support for Product Selection",
+	Title = " "Consumer Decision Support for Product Selection","
 	Editor =  "Denzer, Ralf",
 	Booktitle =  "Proceedings of the 6th International Symposium on Environmental Software Systems 2005 (ISESS 2005)",
 	Month =  "May",
