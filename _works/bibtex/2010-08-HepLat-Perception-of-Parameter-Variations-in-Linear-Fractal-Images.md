@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2010-08-HepLat
-title: Perception of Parameter Variations in Linear Fractal Images (2010)
-breadcrumb: Perception of Parameter Variations in Linear Fractal Images (2010)
+title: "Perception of Parameter Variations in Linear Fractal Images (2010)"
+breadcrumb: "Perception of Parameter Variations in Linear Fractal Images (2010)"
 category: conference
 projects:
  - fractals
@@ -20,7 +20,7 @@ editors:
 ---
 @inproceedings{2010-08-HepLat,
 	Author =  "Hepting, Daryl H. and Latifi, Leila",
-	Title = " "Perception of Parameter Variations in Linear Fractal Images","
+	Title =  "Perception of Parameter Variations in Linear Fractal Images",
 	Url = \"{{"/assets/works/pdf/2010-08-HepLat.pdf" | absolute_url }}\",
 	Editor =  "An, Aijun and Lingras, Pawan and Petty, Sheila and Huang, Runhe",
 	Address =  "Berlin, Heidelberg",

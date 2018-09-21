@@ -45,8 +45,9 @@
     integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7"
     crossorigin="anonymous">
   </script>
-{% seo %} 
+{% include seo-schema-org.html %}
 {% comment %}
+{% seo %}
 {% for ldx in site.data.schema %}
   {% if ldx.citekey == page.citekey %}
     <script type="application/ld+json">

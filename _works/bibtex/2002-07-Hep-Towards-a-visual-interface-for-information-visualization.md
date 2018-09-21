@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2002-07-Hep
-title: Towards a visual interface for information visualization (2002)
-breadcrumb: Towards a visual interface for information visualization (2002)
+title: "Towards a visual interface for information visualization (2002)"
+breadcrumb: "Towards a visual interface for information visualization (2002)"
 category: conference
 projects:
  - visualization
@@ -14,7 +14,7 @@ venue: Proceedings of Sixth International Conference on Information Visualisatio
 ---
 @inproceedings{2002-07-Hep,
 	Author =  "Hepting, Daryl H.",
-	Title = " "Towards a visual interface for information visualization","
+	Title =  "Towards a visual interface for information visualization",
 	Booktitle =  "Proceedings of Sixth International Conference on Information Visualisation 2002",
 	Doi =  "10.1109/IV.2002.1028791",
 	Month =  "July",

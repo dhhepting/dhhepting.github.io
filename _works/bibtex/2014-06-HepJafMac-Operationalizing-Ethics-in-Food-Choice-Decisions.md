@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2014-06-HepJafMac
-title: Operationalizing Ethics in Food Choice Decisions (2014)
-breadcrumb: Operationalizing Ethics in Food Choice Decisions (2014)
+title: "Operationalizing Ethics in Food Choice Decisions (2014)"
+breadcrumb: "Operationalizing Ethics in Food Choice Decisions (2014)"
 category: journal
 projects:
  - food
@@ -17,7 +17,7 @@ venue: Journal of Agricultural and Environmental Ethics
 ---
 @article{2014-06-HepJafMac,
 	Author =  "Hepting, Daryl H. and Jaffe, JoAnn and Maciag, Timothy",
-	Title = " "Operationalizing Ethics in Food Choice Decisions","
+	Title =  "Operationalizing Ethics in Food Choice Decisions",
 	Url = \"{{"/assets/works/pdf/2014-06-HepJafMac.pdf" | absolute_url }}\",
 	Doi =  "10.1007/s10806-013-9473-8",
 	Journal =  "Journal of Agricultural and Environmental Ethics",

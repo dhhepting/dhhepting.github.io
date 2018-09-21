@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2010-08-MacHep
-title: Constructing Collaborative Online Communities for Visualizing Spimes (2010)
-breadcrumb: Constructing Collaborative Online Communities for Visualizing Spimes (2010)
+title: "Constructing Collaborative Online Communities for Visualizing Spimes (2010)"
+breadcrumb: "Constructing Collaborative Online Communities for Visualizing Spimes (2010)"
 category: workshop
 projects:
  - food
@@ -15,7 +15,7 @@ venue: 2010 IEEE WIC ACM International Conference on Web Intelligence and Intell
 ---
 @inproceedings{2010-08-MacHep,
 	Author =  "Maciag, Timothy and Hepting, Daryl H.",
-	Title = " "Constructing Collaborative Online Communities for Visualizing Spimes","
+	Title =  "Constructing Collaborative Online Communities for Visualizing Spimes",
 	Booktitle =  "2010 IEEE/WIC/ACM International Conference on Web Intelligence and Intelligent Agent Technology",
 	Doi =  "10.1109/WI-IAT.2010.297",
 	Keywords =  "data visualisation;food products;groupware;mobile computing;public domain software;social networking (online);user interfaces;collaborative online communities;food quality;food spimes visualization;mobile user interfaces;open source software projects;socially driven activities;Biological system modeling;Collaboration;Communities;Electronic publishing;Encyclopedias;Internet;Interaction design;Modelling;Online collaboration;Social shopping;Visualization;Web-based support systems",

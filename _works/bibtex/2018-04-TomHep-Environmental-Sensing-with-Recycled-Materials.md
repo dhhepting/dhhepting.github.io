@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2018-04-TomHep
-title: Environmental Sensing with Recycled Materials (2018)
-breadcrumb: Environmental Sensing with Recycled Materials (2018)
+title: "Environmental Sensing with Recycled Materials (2018)"
+breadcrumb: "Environmental Sensing with Recycled Materials (2018)"
 category: article
 projects:
  - enviromatics
@@ -17,7 +17,7 @@ editors:
 ---
 @incollection{2018-04-TomHep,
 	Author =  "Tomesh, Trevor M. and Hepting, Daryl H.",
-	Title = " "Environmental Sensing with Recycled Materials","
+	Title =  "Environmental Sensing with Recycled Materials",
 	Url = \"{{"/assets/works/pdf/2018-04-TomHep.pdf" | absolute_url }}\",
 	Editor =  "Loukides, Mike and DiPrimio, Nina",
 	Booktitle =  "BioCoder: Bio Newsletter",

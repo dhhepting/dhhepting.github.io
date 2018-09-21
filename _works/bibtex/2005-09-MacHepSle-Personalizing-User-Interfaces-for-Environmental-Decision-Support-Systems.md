@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2005-09-MacHepSle
-title: Personalizing User Interfaces for Environmental Decision Support Systems (2005)
-breadcrumb: Personalizing User Interfaces for Environmental Decision Support Systems (2005)
+title: "Personalizing User Interfaces for Environmental Decision Support Systems (2005)"
+breadcrumb: "Personalizing User Interfaces for Environmental Decision Support Systems (2005)"
 category: conference
 projects:
  - enviromatics
@@ -21,7 +21,7 @@ editors:
 ---
 @inproceedings{2005-09-MacHepSle,
 	Author =  "Maciag, Timothy and Hepting, Daryl H. and \'{S}l\k{e}zak, Dominik",
-	Title = " "Personalizing User Interfaces for Environmental Decision Support Systems","
+	Title =  "Personalizing User Interfaces for Environmental Decision Support Systems",
 	Url = \"{{"/assets/works/pdf/2005-09-MacHepSle.pdf" | absolute_url }}\",
 	Editor =  "\'{S}l\k{e}zak, D. and Menasalvas-Ruiz, E. and Liau, C. J. and Szczuka, M.",
 	Booktitle =  "Proceedings of International Workshop on Rough Sets and Soft Computing in Intelligent Agent and Web Technologies",

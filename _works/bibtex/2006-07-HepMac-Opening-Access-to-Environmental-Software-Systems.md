@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2006-07-HepMac
-title: Opening Access to Environmental Software Systems (2006)
-breadcrumb: Opening Access to Environmental Software Systems (2006)
+title: "Opening Access to Environmental Software Systems (2006)"
+breadcrumb: "Opening Access to Environmental Software Systems (2006)"
 category: conference
 projects:
  - enviromatics
@@ -11,7 +11,7 @@ abstract: >-
 ---
 @conference{2006-07-HepMac,
 	Author =  "Hepting, Daryl H. and Maciag, Timothy",
-	Title = " "Opening Access to Environmental Software Systems","
+	Title =  "Opening Access to Environmental Software Systems",
 	Url = \"{{"/assets/works/pdf/2006-07-HepMac.pdf" | absolute_url }}\",
 	Editor =  "Voinov, A. and Jakeman, A. and Rizzolli, A.",
 	Booktitle =  "3rd International Congress on Environmental Modelling and Software",

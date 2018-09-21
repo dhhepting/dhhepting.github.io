@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2008-07-MacHep2
-title: On the Role of Reflection and Representation in Environmental Decision Support Systems (2008)
-breadcrumb: On the Role of Reflection and Representation in Environmental Decision Support Systems (2008)
+title: "On the Role of Reflection and Representation in Environmental Decision Support Systems (2008)"
+breadcrumb: "On the Role of Reflection and Representation in Environmental Decision Support Systems (2008)"
 category: conference
 projects:
  - enviromatics
@@ -21,7 +21,7 @@ editors:
 ---
 @inproceedings{2008-07-MacHep2,
 	Author =  "Maciag, Timothy and Hepting, Daryl H.",
-	Title = " "On the Role of Reflection and Representation in Environmental Decision Support Systems","
+	Title =  "On the Role of Reflection and Representation in Environmental Decision Support Systems",
 	Url = \"{{"/assets/works/pdf/2008-07-MacHep2.pdf" | absolute_url }}\",
 	Editor =  "Sanchez-Marr{\`e}, M. and B{\`e}jar, J. and Comas, J. and Rizzoli, A. and Guariso, G.",
 	Booktitle =  "iEMSs 2008: International Congress on Environmental Modelling and Software",
