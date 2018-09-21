@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2007-04-Hep
-title: Decision Support for Local Environmental Impact Assessment (2007)
-breadcrumb: Decision Support for Local Environmental Impact Assessment (2007)
+title: "Decision Support for Local Environmental Impact Assessment (2007)"
+breadcrumb: "Decision Support for Local Environmental Impact Assessment (2007)"
 category: journal
 projects:
  - enviromatics
@@ -12,7 +12,7 @@ venue: Journal of Environmental Modelling and Software
 ---
 @article{2007-04-Hep,
 	Author =  "Hepting, Daryl H.",
-	Title = " "Decision Support for Local Environmental Impact Assessment","
+	Title =  "Decision Support for Local Environmental Impact Assessment",
 	Url = \"{{"/assets/works/pdf/2007-04-Hep.pdf" | absolute_url }}\",
 	Doi =  "10.1016/j.envsoft.2005.12.010",
 	Journal =  "Journal of Environmental Modelling and Software",

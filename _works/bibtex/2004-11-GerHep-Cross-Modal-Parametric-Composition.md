@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2004-11-GerHep
-title: Cross-Modal Parametric Composition (2004)
-breadcrumb: Cross-Modal Parametric Composition (2004)
+title: "Cross-Modal Parametric Composition (2004)"
+breadcrumb: "Cross-Modal Parametric Composition (2004)"
 category: conference
 projects:
  - multimedia
@@ -15,7 +15,7 @@ venue: Proceedings of the 2004 International Computer Music Conference
 ---
 @inproceedings{2004-11-GerHep,
 	Author =  "Gerhard, David and Hepting, Daryl H.",
-	Title = " "Cross-Modal Parametric Composition","
+	Title =  "Cross-Modal Parametric Composition",
 	Booktitle =  "Proceedings of the 2004 International Computer Music Conference",
 	Month =  "November",
 	Pages =  "505--512",

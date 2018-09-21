@@ -72,7 +72,8 @@ def format_incollection(entry,mdf):
 
 def format_techreport(entry,mdf):
     format_people(entry.persons,"author",mdf)
-    mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Institution'])+"\n")
+    #mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Institution'])+"\n")
+    mdf.write("venue: "+re.sub(r':',' ',entry.fields['Institution'])+"\n")
 
 def format_book(entry,mdf):
 	format_people(entry.persons,"editor",mdf)
@@ -107,7 +108,7 @@ def output_bibtex_content(mdf):
 	# then Title
 	#
 	if "Title" in ed:
-		mdf.write("\tTitle = \"" + ed["Title"]+"\"\n")
+		mdf.write("\tTitle = " + ed["Title"] + "\n")
 	ed.pop("Title", None)
 	#
 	# the URL: if there is a pdf for the entry,
@@ -189,9 +190,9 @@ for entry in bib_data.entries.values():
             mdf.write("layout: bibtex-default\n")
             mdf.write("citekey: " + entry.key + "\n")
             yearstr = getValueStr("Year")
-            pagestr = "title: " + titlestr + " (" + yearstr + ")\n"
+            pagestr = "title: \"" + titlestr + " (" + yearstr + ")\"\n"
             mdf.write(pagestr)
-            breadstr = "breadcrumb: " + titlestr + " (" + yearstr + ")\n"
+            breadstr = "breadcrumb: \"" + titlestr + " (" + yearstr + ")\"\n"
             mdf.write(breadstr)
             if 'W-Type' in entry.fields:
                 typestr = entry.fields['W-Type']

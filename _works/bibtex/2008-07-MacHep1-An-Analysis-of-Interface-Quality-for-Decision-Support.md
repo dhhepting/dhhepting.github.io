@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2008-07-MacHep1
-title: An Analysis of Interface Quality for Decision Support (2008)
-breadcrumb: An Analysis of Interface Quality for Decision Support (2008)
+title: "An Analysis of Interface Quality for Decision Support (2008)"
+breadcrumb: "An Analysis of Interface Quality for Decision Support (2008)"
 category: conference
 projects:
  - enviromatics
@@ -21,7 +21,7 @@ editors:
 ---
 @inproceedings{2008-07-MacHep1,
 	Author =  "Maciag, Timothy and Hepting, Daryl H.",
-	Title = " "An Analysis of Interface Quality for Decision Support","
+	Title =  "An Analysis of Interface Quality for Decision Support",
 	Url = \"{{"/assets/works/pdf/2008-07-MacHep1.pdf" | absolute_url }}\",
 	Editor =  "Sanchez-Marr{\`e}, M. and B{\`e}jar, J. and Comas, J. and Rizzoli, A. and Guariso, G.",
 	Booktitle =  "iEMSs 2008: International Congress on Environmental Modelling and Software",

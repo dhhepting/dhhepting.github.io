@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2005-05-HepGer
-title: Collaborative Computer-Aided Parameter Exploration for Music and Animation (2005)
-breadcrumb: Collaborative Computer-Aided Parameter Exploration for Music and Animation (2005)
+title: "Collaborative Computer-Aided Parameter Exploration for Music and Animation (2005)"
+breadcrumb: "Collaborative Computer-Aided Parameter Exploration for Music and Animation (2005)"
 category: conference
 projects:
  - multimedia
@@ -13,7 +13,7 @@ venue: Proceedings of the Second International Conference on Computer Music Mode
 ---
 @inproceedings{2005-05-HepGer,
 	Author =  "Hepting, Daryl H. and Gerhard, David",
-	Title = " "Collaborative Computer-Aided Parameter Exploration for Music and Animation","
+	Title =  "Collaborative Computer-Aided Parameter Exploration for Music and Animation",
 	Booktitle =  "Proceedings of the Second International Conference on Computer Music Modelling and Retrieval 2004",
 	Doi =  "10.1007/978-3-540-31807-1\_13",
 	Month =  "May",

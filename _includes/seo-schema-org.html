@@ -1,0 +1,14 @@
+{% comment %}{{ ldx.linkeddata | replace: '=>', ':' }}
+{% assign json_tag = false %}
+{% for ldx in site.data.schema %}
+  {% if ldx.citekey == page.url %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  {% include schema-org-breadcrumbs.html %}
+}
+</script>

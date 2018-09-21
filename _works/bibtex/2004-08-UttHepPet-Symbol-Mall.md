@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2004-08-UttHepPet
-title: Symbol Mall (2004)
-breadcrumb: Symbol Mall (2004)
+title: "Symbol Mall (2004)"
+breadcrumb: "Symbol Mall (2004)"
 category: sketch
 projects:
  - multimedia
@@ -16,7 +16,7 @@ editors:
 ---
 @inproceedings{2004-08-UttHepPet,
 	Author =  "Uttaranakorn, Jirayu and Hepting, Daryl H. and Petty, Sheila",
-	Title = " "Symbol Mall","
+	Title =  "Symbol Mall",
 	Editor =  "Barzel, Ronen",
 	Address =  "New York",
 	Booktitle =  "SIGGRAPH '04: ACM SIGGRAPH 2004 Sketches",
