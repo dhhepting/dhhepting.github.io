@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2008-06-HepPenMac
-title: Creating synergy between usability courses and open source software projects (2008)
-breadcrumb: Creating synergy between usability courses and open source software projects (2008)
+title: "Creating synergy between usability courses and open source software projects (2008)"
+breadcrumb: "Creating synergy between usability courses and open source software projects (2008)"
 category: journal
 projects:
  - csed
@@ -18,7 +18,7 @@ venue: ACM SIGCSE Bulletin
 ---
 @article{2008-06-HepPenMac,
 	Author =  "Hepting, Daryl H. and Peng, Lijuan and Maciag, Timothy and Gerhard, David and Maguire, Brien",
-	Title = " "Creating synergy between usability courses and open source software projects","
+	Title =  "Creating synergy between usability courses and open source software projects",
 	Url = \"{{"/assets/works/pdf/2008-06-HepPenMac.pdf" | absolute_url }}\",
 	Doi =  "10.1145/1383602.1383649",
 	Journal =  "ACM SIGCSE Bulletin",

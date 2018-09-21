@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 1991-06-HepPruSau
-title: Rendering Methods for Iterated Function Systems (1991)
-breadcrumb: Rendering Methods for Iterated Function Systems (1991)
+title: "Rendering Methods for Iterated Function Systems (1991)"
+breadcrumb: "Rendering Methods for Iterated Function Systems (1991)"
 category: conference
 projects:
  - fractals
@@ -18,7 +18,7 @@ editors:
 ---
 @inproceedings{1991-06-HepPruSau,
 	Author =  "Hepting, Daryl H. and Prusinkiewicz, Przemyslaw and Saupe, Dietmar",
-	Title = " "Rendering Methods for Iterated Function Systems","
+	Title =  "Rendering Methods for Iterated Function Systems",
 	Url = \"{{"/assets/works/pdf/1991-06-HepPruSau.pdf" | absolute_url }}\",
 	Editor =  "Peitgen, Heinz-Otto and Henriques, Jos\'e Marques and Penedo, Lu\'is Filipe",
 	Address =  "New York",

@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2010-07-MacHepJaf
-title: Social Shopping Using Food Spimes (2010)
-breadcrumb: Social Shopping Using Food Spimes (2010)
+title: "Social Shopping Using Food Spimes (2010)"
+breadcrumb: "Social Shopping Using Food Spimes (2010)"
 category: conference
 projects:
  - food
@@ -18,7 +18,7 @@ venue: Proceedings of the 2010 International Congress on Environmental Modelling
 ---
 @inproceedings{2010-07-MacHepJaf,
 	Author =  "Maciag, Timothy and Hepting, Daryl H. and Jaffe, JoAnn and Arbuthnott, Katherine D. and Dormuth, Darryl",
-	Title = " "Social Shopping Using Food Spimes","
+	Title =  "Social Shopping Using Food Spimes",
 	Booktitle =  "Proceedings of the 2010 International Congress on Environmental Modelling and Software",
 	Month =  "July",
 	Organization =  "International Environmental Modelling and Software Society (iEMSs)",

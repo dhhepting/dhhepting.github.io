@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2009-10-HepLatOri
-title: In Search of a Perceptual Basis for Interacting with Parametric Images (2009)
-breadcrumb: In Search of a Perceptual Basis for Interacting with Parametric Images (2009)
+title: "In Search of a Perceptual Basis for Interacting with Parametric Images (2009)"
+breadcrumb: "In Search of a Perceptual Basis for Interacting with Parametric Images (2009)"
 category: poster
 projects:
  - fractals
@@ -20,7 +20,7 @@ editors:
 ---
 @inproceedings{2009-10-HepLatOri,
 	Author =  "Hepting, Daryl H. and Latifi, Leila and Oriet, Chris",
-	Title = " "In Search of a Perceptual Basis for Interacting with Parametric Images","
+	Title =  "In Search of a Perceptual Basis for Interacting with Parametric Images",
 	Url = \"{{"/assets/works/pdf/2009-10-HepLatOri.pdf" | absolute_url }}\",
 	Editor =  "Bryan-Kinns, Nick and Gross, Mark D. and Johnson, Hilary and Ox, Jack and Wakkary, Ron",
 	Booktitle =  "Proceedings of the 7th ACM conference on Creativity and Cognition",

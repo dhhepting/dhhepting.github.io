@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2009-12-HepMacSpr
-title: A Rough Sets Approach for Personalized Support of Face Recognition (2009)
-breadcrumb: A Rough Sets Approach for Personalized Support of Face Recognition (2009)
+title: "A Rough Sets Approach for Personalized Support of Face Recognition (2009)"
+breadcrumb: "A Rough Sets Approach for Personalized Support of Face Recognition (2009)"
 category: conference
 projects:
  - faces
@@ -24,7 +24,7 @@ editors:
 ---
 @inproceedings{2009-12-HepMacSpr,
 	Author =  "Hepting, Daryl H. and Maciag, Timothy and Spring, Richard and Arbuthnott, Katherine and \'{S}l\k{e}zak, Dominik",
-	Title = " "A Rough Sets Approach for Personalized Support of Face Recognition","
+	Title =  "A Rough Sets Approach for Personalized Support of Face Recognition",
 	Editor =  "Sakai, Hiroshi and Chakraborty, Mihir Kumar and Hassanien, Aboul Ella and \'{S}l\k{e}zak, Dominik and Zhu, William",
 	Address =  "Berlin, Heidelberg",
 	Booktitle =  "Rough Sets, Fuzzy Sets, Data Mining and Granular Computing RSFDGrC 2009",

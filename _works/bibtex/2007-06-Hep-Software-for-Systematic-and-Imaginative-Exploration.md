@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2007-06-Hep
-title: Software for Systematic and Imaginative Exploration (2007)
-breadcrumb: Software for Systematic and Imaginative Exploration (2007)
+title: "Software for Systematic and Imaginative Exploration (2007)"
+breadcrumb: "Software for Systematic and Imaginative Exploration (2007)"
 category: poster
 projects:
  - creativity
@@ -17,7 +17,7 @@ editors:
 ---
 @inproceedings{2007-06-Hep,
 	Author =  "Hepting, Daryl H.",
-	Title = " "Software for Systematic and Imaginative Exploration","
+	Title =  "Software for Systematic and Imaginative Exploration",
 	Editor =  "Shneiderman, Ben and Fischer, Gerhard and Giaccardi, Elisa and Eisenberg, Mike",
 	Booktitle =  "Proceedings of the 6th ACM SIGCHI Conference on Creativity \& Cognition",
 	Doi =  "10.1145/1254960.1254999",

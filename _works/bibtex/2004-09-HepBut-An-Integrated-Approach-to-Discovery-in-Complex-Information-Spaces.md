@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2004-09-HepBut
-title: An Integrated Approach to Discovery in Complex Information Spaces (2004)
-breadcrumb: An Integrated Approach to Discovery in Complex Information Spaces (2004)
+title: "An Integrated Approach to Discovery in Complex Information Spaces (2004)"
+breadcrumb: "An Integrated Approach to Discovery in Complex Information Spaces (2004)"
 category: conference
 projects:
  - creativity
@@ -17,7 +17,7 @@ editors:
 ---
 @inproceedings{2004-09-HepBut,
 	Author =  "Hepting, Daryl H. and Butz, Cory J.",
-	Title = " "An Integrated Approach to Discovery in Complex Information Spaces","
+	Title =  "An Integrated Approach to Discovery in Complex Information Spaces",
 	Editor =  "Yao, J. T. and Raghavan, V. V. and Wang, G.Y.",
 	Booktitle =  "Second International Workshop on Web-based Support Systems, edited by , 2004, pages",
 	Month =  "September",
