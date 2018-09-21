@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en-CA">
 <head>
   <!-- Responsive -->
@@ -45,7 +46,14 @@
     integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7"
     crossorigin="anonymous">
   </script>
-{% include seo-schema-org.html %}
+  <title>{{page.title}}</title>
+
+{% if page.url == "/" %}
+  {% include schema-org-website.html %}
+  {% comment %}{% include seo-schema-org.html %}{% endcomment %}
+{% else %}
+  {% include seo-schema-org.html %}
+{% endif %}
 {% comment %}
 {% seo %}
 {% for ldx in site.data.schema %}
