@@ -14,7 +14,7 @@
         "@id": "{{ bc_path | absolute_url }}",
         "name": "{{ bc_page[0].breadcrumb }}"
       }
-    {% if j > 1 %}
+    {% if j >= 1 %}
     },
     {% else %}
     }
