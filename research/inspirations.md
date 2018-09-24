@@ -1,7 +1,8 @@
 ---
-breadcrumb: Inspirations
+title: Research Inspirations
 redirect_from:
   - research/inspiration.html
+breadcrumb: Inspirations
 layout: bg-image
 ---
 # Inspirations

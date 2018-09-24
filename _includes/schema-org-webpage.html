@@ -1,0 +1,15 @@
+  "@type": "WebPage",
+  "breadcrumb":
+  {% include schema-org-breadcrumbs.html %}
+  ,
+  "mainEntity":
+  {
+    {% assign url_str = page.url %}
+    {% assign strend = url_str | size | minus: 1 %}
+    {% if url_str | slice: strend, 1 == "/" %}
+      "@context": "https://schema.org",
+      {% include schema-org-itemlist.html %}
+    {% else %}
+      "@context": "https://schema.org"
+    {% endif %}
+	}
