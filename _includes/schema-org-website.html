@@ -5,6 +5,8 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "url": "{{ "/" | absolute_url }}",
+  "about": { "@id": "{{ "/about/" | absolute_url }}#DHHepting" },
+  "description": "{{ site.title }} : {{ site.description }}",
   "potentialAction": {
     "@type": "SearchAction",
 {%- assign search_url = "/search/" | absolute_url -%}
