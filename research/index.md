@@ -15,5 +15,6 @@ files:
 layout: bg-image
 ---
 # Research
+{% comment %}use type=text/plain for bib file {%endcomment%}
 
 {% include index-dir.html %}

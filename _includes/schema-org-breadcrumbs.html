@@ -12,6 +12,7 @@
         "position": 1,
         "item":
         {
+          "@type": "WebSite",
           "@id": "{{ bc_path | absolute_url }}",
           "name": "{{ bc_page[0].breadcrumb }}"
         }
@@ -19,7 +20,7 @@
       },
       {% else %}
       }
-      {% endif %}
+      {%- endif -%}
       {%- for i in (1..loop_max) -%}
         {%- capture bc_path -%}{{bc_path}}{{url_parts[i]}}{%- endcapture -%}
         {%- unless bc_path contains ".html" -%}
@@ -31,6 +32,7 @@
         "position": {{ i | plus: 1 }},
         "item":
         {
+          "@type": "WebPage",
           "@id": "{{ bc_path | absolute_url }}",
         {% if bc_page and i < j %}
           "name": "{{ bc_page[0].breadcrumb }}"
