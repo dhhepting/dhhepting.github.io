@@ -40,7 +40,7 @@
     type="image/x-icon"
   />
   <link rel="alternate" type="application/rss+xml"
-    href="{{ "/rss/news.xml" | absolute_url }}"
+    href="{{ "/rss/news.rss" | absolute_url }}"
   />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
     integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7"
@@ -50,7 +50,6 @@
 
 {% if page.url == "/" %}
   {% include schema-org-website.html %}
-  {% comment %}{% include seo-schema-org.html %}{% endcomment %}
 {% else %}
   {% include seo-schema-org.html %}
 {% endif %}
