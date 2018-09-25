@@ -5,6 +5,7 @@ redirect_from:
   - /teaching/bysemester.html
   - /teaching/201810.html
   - /teaching/201320.html
+  - /teaching/cs215/
 layout: bg-image
 ---
 # {{ page.breadcrumb }}
