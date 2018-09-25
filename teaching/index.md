@@ -4,6 +4,7 @@ breadcrumb: Teaching
 redirect_from:
   - /teaching/bysemester.html
   - /teaching/201810.html
+  - /teaching/201320.html
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

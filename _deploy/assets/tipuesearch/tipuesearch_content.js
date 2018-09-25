@@ -742,12 +742,22 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/art/exhibits/parc1994algoart.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/art/exhibits/teck1995mathart/"
   },{
     "title": "",
     "text": "",
     "tags": "",
     "url": "/~hepting/art/exhibits/teck1995mathart/index.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/art/exhibits/teck1995mathart/fiery.html"
   },{
     "title": "",
     "text": "",
@@ -867,7 +877,17 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/teaching/201320.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/research/inspiration.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teach/philosophy.html"
   },{
     "title": "Creativity",
     "text": "Creativity (2006) Event Presentation by Joel Salatin Tuesday, November 18, 2008 Education Auditorium, University of Regina Organized by Description Media",
