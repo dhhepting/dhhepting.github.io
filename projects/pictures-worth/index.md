@@ -4,6 +4,7 @@ breadcrumb: A Picture's Worth
 redirect_from:
     - /research/web/words/history.html
     - /research/web/words/index.html
+    - /proverbial/history.html
 project: pictures-worth
 layout: bg-image
 ---

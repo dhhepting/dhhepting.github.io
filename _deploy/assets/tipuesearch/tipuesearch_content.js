@@ -742,6 +742,21 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/art/exhibits/teck1995mathart/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/art/exhibits/teck1995mathart/index.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/art/AoFcals/1995/aug.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/403.html"
   },{
     "title": "",
@@ -797,6 +812,11 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/proverbial/history.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/research/works.html"
   },{
     "title": "",
@@ -813,6 +833,21 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/teaching/cs280/201510/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teach/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teach/resources/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teach/resources/scenarios.html"
   },{
     "title": "",
     "text": "",
