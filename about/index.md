@@ -4,6 +4,7 @@ breadcrumb: About
 redirect_from:
   - /about/personal/daryls/
   - /about/personal/heptings/
+  - /personal/index.html
 layout: bg-image
 ---
 # About
