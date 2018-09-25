@@ -1,10 +1,11 @@
 ---
 title: Teaching Philosophy
 breadcrumb: Philosophy
+redirect_from:
+  - /teach/philosophy.html
 layout: bg-image
 ---
 # {{ page.breadcrumb }}
-
 
 ### Short version
 
