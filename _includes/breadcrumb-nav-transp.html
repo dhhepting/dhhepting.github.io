@@ -1,5 +1,5 @@
 {%- comment -%}
-  Updated for boostrap 4 
+  Updated for boostrap 4
   -- https://getbootstrap.com/docs/4.0/components/breadcrumb/ --
   and does not create a link for the last (active) item
 {%- endcomment -%}
@@ -27,6 +27,21 @@
         <a href="{{ bc_path | relative_url }}">
           {{ bc_page[0].breadcrumb }}
         </a>
+{% comment %}    
+      <!-- Example single danger button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+{% endcomment %}
       </li>
   {% elsif bc_page and i == j %}
       <li class="breadcrumb-item active">
