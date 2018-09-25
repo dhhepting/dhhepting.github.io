@@ -3,6 +3,7 @@ title: Fractals Project
 breadcrumb: Fractals
 description: Description of Fractals
 redirect_from:
+  - /art/
   - /research/web/math-of-art/index.html
   - /research/web/math-of-art/
 project: fractals
