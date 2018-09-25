@@ -2,6 +2,10 @@
 crs_id: CS428+828
 crs_name: Human Computer Communication
 title: CS 428+828 in 201830
+redirect_from:
+  - /teach/
+  - /teach/resources/
+  - /teach/resources/scenarios.html
 breadcrumb: 201830
 layout: bg-image
 ---
