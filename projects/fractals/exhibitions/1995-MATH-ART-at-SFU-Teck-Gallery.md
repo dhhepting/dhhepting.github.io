@@ -4,6 +4,7 @@ breadcrumb: MATH-ART at SFU Teck Gallery (1995)
 redirect_from:
   - /art/exhibits/teck1995mathart/
   - /art/exhibits/teck1995mathart/index.html
+  - /art/exhibits/teck1995mathart/fiery.html
 layout: bg-image
 ---
 
