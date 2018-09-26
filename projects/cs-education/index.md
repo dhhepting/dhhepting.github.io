@@ -1,8 +1,10 @@
 ---
 title: CS Education
-breadcrumb: CS Education 
+breadcrumb: CS Education
 description: Description of CS Education
-project: csed
+project: cs-education
+redirect_from:
+  - /teach/outreach/
 layout: bg-image
 ---
 # {{ page.breadcrumb }}
