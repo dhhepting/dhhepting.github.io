@@ -464,8 +464,8 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/projects/pictures-worth/"
   },{
-    "title": "Robots",
-    "text": "Robots Description of Robots",
+    "title": "Robot Library",
+    "text": "Library EV3 Educational Kit",
     "tags": "",
     "url": "/~hepting/projects/robots/library/"
   },{
@@ -515,7 +515,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/rss/"
   },{
     "title": "Sitemap",
-    "text": "Sitemap 403 Redirect 404 Redirect 500 Redirect HTTP Errors 403 Redirect 404 Redirect 500 Redirect About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Robots Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test",
+    "text": "Sitemap 403 Redirect 404 Redirect 500 Redirect HTTP Errors 403 Redirect 404 Redirect 500 Redirect About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Library Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test",
     "tags": "",
     "url": "/~hepting/search/sitemap/"
   },{
@@ -832,6 +832,11 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/projects/fractals/calendars/1994.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/research/web/words/history.html"
   },{
     "title": "",
@@ -848,6 +853,11 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/research/works.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/works/2007-06-hep-software-for-systematic-and-imaginative-exploration.html"
   },{
     "title": "",
     "text": "",
