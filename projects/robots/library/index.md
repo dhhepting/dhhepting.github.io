@@ -1,12 +1,8 @@
 ---
-title: Robots
-breadcrumb: Robots 
-description: Description of Robots
-project: robots
+title: Robot Library
+breadcrumb: Library 
 layout: bg-image
 ---
 # {{ page.breadcrumb }}
 
-{{ page.description }}
-
-{% include project-related-works.html %}
+* [EV3 Educational Kit](ev3educ.html)
