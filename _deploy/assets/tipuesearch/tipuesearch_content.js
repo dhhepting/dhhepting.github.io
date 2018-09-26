@@ -762,6 +762,11 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/research/web/lfgallery/ferns/chrome.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/art/exhibits/parc1994algoart.html"
   },{
     "title": "",
@@ -987,7 +992,17 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/teach/resources/scenarios.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/cs305-428-828/201630/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teach/cs428+828/201630/practical/grad.html"
   },{
     "title": "",
     "text": "",
