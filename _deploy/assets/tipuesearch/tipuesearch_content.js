@@ -892,7 +892,52 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/assets/pdfs/works/2006-00-C-CMiSoID.pdf.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/research/works/2007-06-hep-software-for-systematic-and-imaginative-exploration.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/dwnld/sfu1995vismvm.pdf.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/dwnld/sfu1999PhD.pdf.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/dwnld/iv2002visint.pdf.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/dwnld/cc2007systematic.pdf.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/assets/pdfs/works/2007-06-Hep.pdf.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/dwnld/wss2004intdisc.pdf.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/dwnld/sfu1993mmdb.pdf.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/dwnld/annie2003interactevo.pdf.html"
   },{
     "title": "",
     "text": "",
