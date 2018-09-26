@@ -1,5 +1,7 @@
 ---
 layout: rss
+redirect_from:
+  - /rss/news.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
@@ -14,13 +16,7 @@ layout: rss
   <sy:updateFrequency>{{ site.feed_update_frequency | default: 1 | xml_escape }}</sy:updateFrequency>
   <link>{{ site.url | absolute_url }}</link>
   <atom:link href="{{ page.path  | absolute_url }}" rel="self" type="application/rss+xml" />
-  <lastBuildDate>
-{% for post in site.posts limit:1 %}
-  {% if post.link %}
-    {{ post.date | date_to_rfc822 }}
-  {% endif %}
-{% endfor %}
-  </lastBuildDate>
+  <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
 {% for sp in site.posts %}
   {% if sp.url %}
     <item>
