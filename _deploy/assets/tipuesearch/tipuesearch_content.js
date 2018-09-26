@@ -827,6 +827,11 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/research/works/2007-06-hep-software-for-systematic-and-imaginative-exploration.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/teach/outreach/"
   },{
     "title": "",
