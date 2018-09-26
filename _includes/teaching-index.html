@@ -10,7 +10,7 @@
     {% if url_parts.size == sem_size %}
       {% assign crs_id = url_parts[2] %}
       {% assign crs_part = crs_id | split: '-' %}
-      {% if crs_part.size == 2 %}
+      {% if crs_part.size == 2 and crs_part[0] == "CS" %}
         {% assign crsoff = url_parts | last %}
         {% if crsoff contains "2" %}
           {% capture crsoff_url %}{{crsoff}}/{%endcapture%}
