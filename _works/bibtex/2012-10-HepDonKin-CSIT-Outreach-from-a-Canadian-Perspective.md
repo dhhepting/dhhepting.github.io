@@ -5,7 +5,7 @@ title: "CSIT Outreach from a Canadian Perspective (2012)"
 breadcrumb: "CSIT Outreach from a Canadian Perspective (2012)"
 category: panel
 projects:
- - csed
+ - cs-education
 authors:
  - Daryl H. Hepting
  - Gerry Donaldson

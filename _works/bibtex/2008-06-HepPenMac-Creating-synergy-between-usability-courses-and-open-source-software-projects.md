@@ -5,7 +5,7 @@ title: "Creating synergy between usability courses and open source software proj
 breadcrumb: "Creating synergy between usability courses and open source software projects (2008)"
 category: journal
 projects:
- - csed
+ - cs-education
 abstract: >-
   In this paper, we discuss our experience in offering a usability course with projects taken from an active open source software development project. We describe what was done in the class inside the larger context of the usability of open source software. We conclude with an invitation for others to adopt this model and use it for their own purposes.
 authors:
