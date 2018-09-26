@@ -9,6 +9,7 @@ redirect_from:
   - /teach/
   - /teach/resources/
   - /teach/resources/scenarios.html
+  - /teaching/byKA.html
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

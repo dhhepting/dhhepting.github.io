@@ -515,7 +515,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/rss/"
   },{
     "title": "Sitemap",
-    "text": "Sitemap 403 Redirect 404 Redirect 500 Redirect HTTP Errors 403 Redirect 404 Redirect 500 Redirect About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Library Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test",
+    "text": "Sitemap 403 Redirect 404 Redirect 500 Redirect HTTP Errors 403 Redirect 404 Redirect 500 Redirect About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Math of Art Nature’s Numbers Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Library Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test",
     "tags": "",
     "url": "/~hepting/search/sitemap/"
   },{
@@ -709,6 +709,11 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/map.html"
   },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/projects/fractals/math-of-art.html"
+  },{
     "title": "Feedback after CS-110 201810 Midterm 1",
     "text": "",
     "tags": "",
@@ -718,6 +723,11 @@ var tipuesearch = {"pages": [{
     "text": "Midterm This page presents data obtained from my own feedback instrument that I give to students in my classes at their midterm and final exams. I look at midterm feedback when it is received because I consider it to be a formative evaluation of the class in progress. I do not see the final feedback until after the final grades are posted. The numbers that precede each response are present to permit matching between the data table (click button to toggle expanded view) and the opened ended questions. A response with a &mdash; or NA indicates that no answer was given. Open-ended question responses have been transcribed as faithfully as possible, with minor edits and formatting changes sometimes required. Question 5 (Always) 4 [Mostly] 3 [Sometimes] 2 [Rarely] 1 (Never) Total Q1. The instructor is well-prepared for class 24 22 3 0 1 50 Q2. The instructor clearly communicates his expectations for student preparation and participation 32 9 8 1 0 50 Q3. The instructor uses class time effectively 27 13 9 1 0 50 Q4. The instructor has clear expectations for assigned work 32 10 7 1 0 50 Q5. The instructor encourages student participation 41 9 0 0 0 50 Q6. The instructor clearly answers questions 34 11 5 0 0 50 Q7. The instructor treats students with respect 44 6 0 0 0 50 Q8. The instructor effectively directs and stimulates discussion 31 12 6 1 0 50 Q9. The instructor effectively encourages students to ask questions and give answers 35 10 3 1 0 49 Total 300 102 41 5 1 449 CLICK HERE to toggle details Response Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Avg SD Mode Median 1 1 3 2 3 5 3 4 3 5 3.22 1.30 3 3 2 5 5 4 5 5 4 5 4 4 4.56 0.53 5 5 3 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 4 5 5 5 5 5 4 5 5 5 4.89 0.33 5 5 5 4 5 4 5 5 5 5 5 4 4.67 0.50 5 5 6 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 7 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 8 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 9 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 10 4 5 4 3 5 5 4 4 3 4.11 0.78 4 4 11 3 2 5 3 4 3 4 3 3 3.33 0.87 3 3 12 4 3 4 5 5 4 5 5 4 4.33 0.71 4 4 13 4 5 5 5 5 3 5 4 5 4.56 0.73 5 5 14 4 5 3 3 5 5 5 4 5 4.33 0.87 5 5 15 3 4 5 4 5 5 5 4 5 4.44 0.73 5 5 16 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 17 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 18 4 5 5 5 5 5 5 5 5 4.89 0.33 5 5 19 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 20 4 4 3 5 4 4 5 4 5 4.22 0.67 4 4 21 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 22 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 23 4 4 4 4 5 5 4 4 4 4.22 0.44 4 4 24 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 25 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 26 4 5 4 5 5 5 5 5 5 4.78 0.44 5 5 27 5 4 5 5 5 5 5 5 &mdash; 4.33 1.66 5 5 28 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 29 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 30 4 5 4 5 5 4 5 5 5 4.67 0.50 5 5 31 4 3 3 3 4 4 4 3 3 3.44 0.53 3 3 32 3 3 4 4 4 5 5 2 4 3.78 0.97 4 4 33 4 3 3 2 4 4 5 4 5 3.78 0.97 4 4 34 4 4 3 5 5 5 5 4 4 4.33 0.71 4 4 35 4 3 3 3 5 3 5 5 5 4.00 1.00 3 4 36 4 4 4 4 5 4 5 4 4 4.22 0.44 4 4 37 4 3 3 3 5 3 5 5 5 4.00 1.00 3 4 38 4 5 3 5 5 5 5 3 5 4.44 0.88 5 5 39 5 5 5 5 4 5 5 5 5 4.89 0.33 5 5 40 5 4 5 5 5 4 5 5 5 4.78 0.44 5 5 41 4 4 4 4 5 5 5 5 5 4.56 0.53 5 5 42 4 5 4 4 5 4 5 3 4 4.22 0.67 4 4 43 5 5 5 4 5 5 4 4 5 4.67 0.50 5 5 44 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 45 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 46 4 4 4 4 4 4 5 4 4 4.11 0.33 4 4 47 4 3 3 4 4 5 5 3 2 3.67 1.00 4 4 48 5 5 5 5 5 5 5 5 5 5.00 0.00 5 5 49 4 5 5 4 4 5 5 5 4 4.56 0.53 5 5 50 5 5 4 5 5 5 5 5 5 4.89 0.33 5 5 Avg 4.36 4.44 4.32 4.46 4.82 4.58 4.88 4.46 4.52 4.54 0.19 SD 0.78 0.84 0.84 0.81 0.39 0.67 0.33 0.79 0.95 Mode 5 5 5 5 5 5 5 5 5 Median 4 5 5 5 5 5 5 5 5 What do you like best about this course? CLICK HERE to toggle details finding flaws in terrible designs professor's way about explaining topics with fun and informative examples the student involvement level and the nature of the course the class is more interactive and we can gain more knowledge about the course interactivity this course is more interactive. So it leads to involvement of many people and which in turn makes other students to open up the class is interesting best is the way instructor make it interesting for the student by providing some activities. Instructor doesn't make the course boring the instructor give practical example of design and videos I like to this course because professor show us some related video to help to understand topic NA the TED talks and other videos it is interactive this course lets me breathe. It is a highly relevant and important topic and still is presented in a simple and pleasing manner. Does not put limits and restrictions on thoughts and allows the students to interact with each other and the professor helping everyone to learn and understand everything required, together interactive classes, discussions, opinions are asked the interactive nature of the course. There are always topics and scenarios to discuss in class everything providing the practical example interaction on different topics during class the discussions and participation this course not focuses only on software or computer and also focus on other devices and machine or can be applied to practical things except technology the ability to think outside the box, creatively evaluate different situations and think up scenarios NA is practical more than theory-oriented videos, discussions, and professor's way of teaching understanding the different approaches of design; how to be more creative and why it is interesting and practical it is not theory-oriented but it is practical the materials and instructor guidance discussions NA learning about design is fun the hands on experience on real services it is very free form. I like the discussion and the use of different teaching aids good discussions happen; interesting content it really gives perspective on what good design is and how to create it the class discussion NA the occasional video demonstration. Impossible to comprehend interaction design ideas without watching a video of the ideas the class discussion and the online forum no piazza. That is amazing. No, really! That is hilarious. We use URcourses and your site. That's it! I like it! the subject matter is interesting and relevant content it enhances our creative thinking and makes us aware of the bad designs and ways to improve them NA incorporates real-world examples of design some aspects can be fun / interesting it correlates to the real time technology which makes interesting and easy to understand this course gives an insight into interface design the class is interactive, real world examples help understand problem better. Asks for our opinion is good. What would you like to change about this course? CLICK HERE to toggle details no group work; clearer instructions and requirements for assignments NA NA NA NA nothing none I found nothing to be changed till now topic should be given a day before lecture so student can prepare I need to change when we are writing in the exam paper, please remove this box format NA more notes on the board please more scenarios the instructor could ask the students to read about something relevant to topic that is to be discussed in class, before coming to the class so that everyone will be able to relate to the discussions happening in class and contribute more chapter-oriented lecture is needed NA NA nothing nothing, it's perfect (just kidding). I think the course lacks a proper format on what is to be taught in every lecture rather than just discussing different topics (that doesn't mean that I don't like discussions) more info about the group project (e.g. past projects) nothing nothing for now NA don't feel any necessity of modification to class nothing more discussion for cognitive pyschology; more recent example and studies rather than old nothing don't feel any changes for this course nothing be more clear and concise on materials the online is full of outdated things such as dates NA nothing pertinent allowing less off-topic discussion. Allowing comedians to have the floor instead of trying to keep everyone on track more clear assignments with more explanation, especially with marking schemes more modern examples nothing have class end on time more often nothing nothing it is just as good as it is. Just don't break it, okay?? more time on subject matter, less time going over assignments and evaluation; going through more design from 'scratch' rather than always critiquing assignments it could have been more practical based NA NA more involved activities / smaller classes there would be no changes that can be done for the course presentation or slide show could be included weight of midterm should be more than 10% What do think are the instructor's greatest strengths? CLICK HERE to toggle details asking thought provoking questions ability to communicate with his students well prepared and high teaching skills and abilities; respects students the instructor is more knowledgeable and taught the course in a way the students can understand this course NA the smile and interactive nature treats students with respect. The instructor clearly communicates his expectations for student preparation instuctor's greatest strength is the students' feedback and how we interact in the class experience of his life instructor's greatest strength is he always teach us well and also helping to the student and find out our comments NA his energy, his calm demeanor, and his preparedness listening and encourage students to participate the instructor encourages students to actively participate in class and discuss on topics. The instructor listens to the views of all students and does not undermine their ideas but provides a better way of thinking that the students might not have thought about he is cool drives participation of students in class as well as online his capability to connect people communicating with students to force students to think rather than just learning course material humour; thought-provoking; aware of the `dank memes' best utilization of URcourses by providing forums for student. Also keeping all lectures recorded with images on URcourses knowledge about several fields NA his teaching philosophy of challenging students to think out-of-the-box and develop his perspective encourages for a good discussion/brainstorm; calmly listen to the student question and help him to deeply assess it he is awesome he explains the topic clearly and have discussions at the end he explains thoroughly each point fostering discussion NA respectful, relays the material well, generous. He tries to stimulate discussion but loses the room easily interaction with students dedication to the topic and respect for the students. Never unwilling to have a discussion starting discussions; thinking differently to give different perspectives provides interesting thoughts and topics stimulating class discussion and involving students in class good vocabulary the ability to maintain the grasp on students' attention starting a good discussion; caring for the students passion in HCI; critique of interfaces good at finding flaws in designs and encouraging critique. Knowledgeable on the subject clear understanding of the course content he encourages participation not only in class but also on UR Self Serve / URcourses NA fun environment for discussion of the material NA the level of patience in elaborating the every single question asked by student and has a great knowledge about updating technology the instructor is clear in his way of teaching and he backs it up with real life examples makes the class participate in lecture and examination questions",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201730/feedback/midterm.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/projects/fractals/nat-num.html"
   },{
     "title": "Teaching Philosophy",
     "text": "Philosophy Short version Challenge my students to think deeply and behave ethically. ( inspired by the story of Martina Fitzgerald’s recollections about Gord Downey and their high school English teacher)",
@@ -817,6 +827,16 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/research/web/lfgallery/ferns/reflecting.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/lfgallery/gaskets/mt_esc_gasket.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/art/"
   },{
     "title": "",
@@ -832,7 +852,22 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/research/web/math-of-art/fractals1.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/projects/fractals/calendars/1994.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/nat-num/dynamics.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/admin/ppool.html"
   },{
     "title": "",
     "text": "",
@@ -897,6 +932,11 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/teaching/cs428+828/201730/meetings/05.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/cs305-428-828/201630/"
   },{
     "title": "",
@@ -957,7 +997,17 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/teaching/byKA.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/research/inspiration.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/nat-num/"
   },{
     "title": "",
     "text": "",
