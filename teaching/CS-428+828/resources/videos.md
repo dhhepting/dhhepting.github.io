@@ -28,4 +28,10 @@ layout: bg-image
     &ldquo;Carol Dweck researches &lsquo;growth mindset&rsquo; &mdash; the idea that we can grow our brain&rsquo;s capacity to learn and to solve problems. In this talk, she describes two ways to think about a problem that’s slightly too hard for you to solve. Are you not smart enough to solve it ... or have you just not solved it yet? A great introduction to this influential field.&rdquo;
     </blockquote>
   </dd>
+  <dt id="cooltown2000">
+    <a href="https://www.youtube.com/watch?v=U2AkkuIVV-I">The future of technology as predicted by HP back in 2000</a>
+  </dt>
+  <dt id="knownav1987">
+    <a href="https://www.youtube.com/watch?v=-jiBLQyUi38">Apple's Knowledge Navigator concept video from 1987</a>
+  </dt>
 </dl>

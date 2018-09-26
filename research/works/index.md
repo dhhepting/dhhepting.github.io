@@ -13,7 +13,6 @@ redirect_from:
   - /research/dwnld/wss2004intdisc.pdf.html
   - /research/dwnld/sfu1993mmdb.pdf.html
   - /research/dwnld/annie2003interactevo.pdf.html
-  -
 breadcrumb: Collected Works
 collection: works
 ---
