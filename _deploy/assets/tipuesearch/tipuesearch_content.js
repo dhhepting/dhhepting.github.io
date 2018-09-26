@@ -55,7 +55,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/09.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 10 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 10",
+    "text": "Mtg 10 / 37 Questions from Last Meeting? Administration Groups done – are groups working out so far? Individual assignments: Use URcourses to do something as instructor - 6 marks Critique the work from a group (not your own) - 6 marks Report about being a participant in the “Evaluation” group assignment - 6 marks Written submission (different for CS428 and CS828) - 12 marks, due end of semester Outline for Today 10 Usability Heuristics What might make some good opportunities for redesign? What are some questions to ask? Video: Cool Town (2000) Video: Knowledge Navigator (1987) What do you say about the predictions made in these videos? What works and what does not? To Do Read Chapter 3 Media from Meeting Nothing available for 10 Annotations and Afterthoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/10.html"
   },{
@@ -250,7 +250,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/37.html"
   },{
     "title": "403 Redirect",
-    "text": "403 Redirect The link that was used to reach this site was forbidden access. Please send to me the details of the link that was followed, so that I may correct the problem: e-mail Daryl Hepting You may also be able to go back the referring page by clicking here.",
+    "text": "403 Redirect The link that was used to reach this site was forbidden access. Referring URL: Please send to me the details of the link that was followed, so that I may correct the problem: e-mail Daryl Hepting You may also be able to go back the referring page by clicking here.",
     "tags": "",
     "url": "/~hepting/HTTPerrors/403.html"
   },{
@@ -260,7 +260,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/403.html"
   },{
     "title": "404 Redirect",
-    "text": "404 Redirect The link that was used to reach this site was not found, and may not be valid. This site has been redesigned and made mobile-friendly. Please search the site for more information. You may also be able to go back the referring page by clicking here.",
+    "text": "404 Redirect The link that was used to reach this site was not found, and may not be valid. Referring URL: This site has been redesigned and made mobile-friendly. Please search the site for more information. You may also be able to go back the referring page by clicking here.",
     "tags": "",
     "url": "/~hepting/HTTPerrors/404.html"
   },{
@@ -387,7 +387,7 @@ var tipuesearch = {"pages": [{
     "title": "CS Education",
     "text": "CS Education Description of CS Education Related Works CSIT Outreach from a Canadian Perspective (2012) panel Creating synergy between usability courses and open source software projects (2008) journal Ethics and Usability Testing in Computer Science Education (2006) journal",
     "tags": "",
-    "url": "/~hepting/projects/csed/"
+    "url": "/~hepting/projects/cs-education/"
   },{
     "title": "Enviromatics Project",
     "text": "Enviromatics Description of Enviromatics Project! Related Works Environmental Sensing with Recycled Materials (2018) article Operationalizing Ethics in Food Choice Decisions (2014) journal RCE Saskatchewan Advancing Sustainable Livelihoods Through Equipment-Centred Learning and Sharing (2012) report Environmental decision support systems (EDSS) development - Challenges and best practices (2011) journal Mobilizing Shared Capital for Grassroots Action (2011) workshop Design of S.O.L.E. Software (2010) conference Enabling Information Technology for the Emancipation of Physical and Natural Capital (2009) conference Experiences in Designing An Online Community to Facilitate Education for Sustainable Development (2009) conference Bridging the Gaps Between Design and Use Developing Tools to Support Environmental Management and Policy (2008) chapter On the Role of Reflection and Representation in Environmental Decision Support Systems (2008) conference An Analysis of Interface Quality for Decision Support (2008) conference Discovery of Usability Patterns in Support of Green Purchasing (2007) conference Decision Support for Local Environmental Impact Assessment (2007) journal Opening Access to Environmental Software Systems (2006) conference Analysis of User Classifiers for Personalization of Environmental Decision Support System Interfaces (2005) conference Personalizing User Interfaces for Environmental Decision Support Systems (2005) conference Consumer Decision Support for Product Selection (2005) conference A Unified Framework for the Presentation of Environmental Risk Information (2004) techreport",
@@ -490,7 +490,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/projects/visualization/"
   },{
     "title": "Projects",
-    "text": "Projects Collected here are the various projects that I have undertaken over the years, in collaboration with many wonderful people. blogging bus challenging-bodies cogito creativity csed enviromatics faces food fractals free-knowledge games genealogy interaction-design multimedia open-source participant-pool pictures-worth robots rough-sets ur50cs visualization",
+    "text": "Projects Collected here are the various projects that I have undertaken over the years, in collaboration with many wonderful people. blogging bus challenging-bodies cogito creativity cs-education enviromatics faces food fractals free-knowledge games genealogy interaction-design multimedia open-source participant-pool pictures-worth robots rough-sets ur50cs visualization",
     "tags": "",
     "url": "/~hepting/projects/"
   },{
@@ -755,7 +755,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/topics.html"
   },{
     "title": "Videos",
-    "text": "# {{ page.breadcrumb }} How to Build Your Creative Confidence (TED 2012) &mdash; David Kelley From the TED website: &ldquo;Is your school or workplace divided between the \"creatives\" versus the practical people? Yet surely, David Kelley suggests, creativity is not the domain of only a chosen few. Telling stories from his legendary design career and his own life, he offers ways to build the confidence to create.&rdquo; The power of believing that you can improve (TEDxNorrkoping 2014) &mdash; Carol Dweck From the TED website: &ldquo;Carol Dweck researches &lsquo;growth mindset&rsquo; &mdash; the idea that we can grow our brain&rsquo;s capacity to learn and to solve problems. In this talk, she describes two ways to think about a problem that’s slightly too hard for you to solve. Are you not smart enough to solve it ... or have you just not solved it yet? A great introduction to this influential field.&rdquo;",
+    "text": "# {{ page.breadcrumb }} How to Build Your Creative Confidence (TED 2012) &mdash; David Kelley From the TED website: &ldquo;Is your school or workplace divided between the \"creatives\" versus the practical people? Yet surely, David Kelley suggests, creativity is not the domain of only a chosen few. Telling stories from his legendary design career and his own life, he offers ways to build the confidence to create.&rdquo; The power of believing that you can improve (TEDxNorrkoping 2014) &mdash; Carol Dweck From the TED website: &ldquo;Carol Dweck researches &lsquo;growth mindset&rsquo; &mdash; the idea that we can grow our brain&rsquo;s capacity to learn and to solve problems. In this talk, she describes two ways to think about a problem that’s slightly too hard for you to solve. Are you not smart enough to solve it ... or have you just not solved it yet? A great introduction to this influential field.&rdquo; The future of technology as predicted by HP back in 2000 Apple's Knowledge Navigator concept video from 1987",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/resources/videos.html"
   },{
@@ -818,6 +818,11 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/personal/index.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teach/outreach/"
   },{
     "title": "",
     "text": "",

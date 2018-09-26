@@ -156,8 +156,15 @@
   <div class="card-body lightcthru" >
     <h1 id="403-redirect">403 Redirect</h1>
 
-<p>The link that was used to reach this site was forbidden access.
-Please send to me the details of the link that was followed, so
+<p>The link that was used to reach this site was forbidden access.</p>
+
+<p>Referring URL: <span id="ref403"></span>
+<script>
+  var dst = document.getElementById("ref403");
+  dst.textContent = document.referrer;
+</script></p>
+
+<p>Please send to me the details of the link that was followed, so
 that I may correct the problem:
 <a href="mailto:hepting@cs.uregina.ca?subject=403 error encountered on website">
   e-mail Daryl Hepting
@@ -169,7 +176,7 @@ that I may correct the problem:
   </div>
   <div class="card-footer text-muted lightcthru">
     Site built: 
-    2018-09-25 23:55 -0600
+    2018-09-26 12:12 -0600
 </div>
 
 </div>
