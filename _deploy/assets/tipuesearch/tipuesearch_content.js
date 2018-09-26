@@ -304,6 +304,11 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/about/education.html"
   },{
+    "title": "Robot Library",
+    "text": "EV3 Educational Kit This set combines the Educational Core Set (45544) and the Expansion Set (45560). Some of the part numbers in the inventory below have been changed or superseded in newer offerings of these Sets. Images are representative of what is included in the kit. Download LEGO’s inventory of parts for the EV3 Educational Kit Click on the buttons below to reveal a detailed list of parts for that heading.",
+    "tags": "",
+    "url": "/~hepting/projects/robots/library/ev3educ.html"
+  },{
     "title": "Teaching Evaluation",
     "text": "Evaluation I take my teaching seriously and I am always willing to hear from students about ways that I can improve. As a sign of this commitment, I provide a link to my reviews on ratemyprofessors.com. If you are interested in my teaching, please also look at the other sources described here. I give my students the opportunity to provide their written feedback to me at exam times (midterm and final). Midterm feedback is formative (I will look at these results immediately and discuss them with my students) and final feedback is summative (I will not look at these until my grades have been submitted). Feedback Instrument The Faculty of Science also collects summative feedback about my teaching. Whereas this was once done on paper during class time, it is now done online during the students’ own time. I am undertaking the posting to the web of the feedback that I receive. I provide a numerical summary of each data set and word cloud summaries of the responses to each of the open-ended questions on my feedback instrument. I understand why “word clouds considered harmful” by some, in some cases. I think that they are appropriate here because they are engaging and allow a different way to look at the text. I use https://www.jasondavies.com/wordcloud/ to generate the word clouds and save them in SVG for the web. I don’t do any processing on the text that I create while transcribing the responses. My instrument and the one from the Faculty of Science have mostly different questions and different scales. My scale has 5 points (Always — Never) and the Faculty of Science scale has 4 points (Strongly Agree — Strongly Disagree). For both, higher scores are better. I compute the Weighted Rating for a course offering by multiplying each of the two summative scores by the number of respondents who determined that score, summing the results and dividing by the total number of respondents. The result is expressed as a percentage.",
     "tags": "",
@@ -462,6 +467,11 @@ var tipuesearch = {"pages": [{
     "title": "Robots",
     "text": "Robots Description of Robots",
     "tags": "",
+    "url": "/~hepting/projects/robots/library/"
+  },{
+    "title": "Robots",
+    "text": "Robots Description of Robots",
+    "tags": "",
     "url": "/~hepting/projects/robots/"
   },{
     "title": "Rough Sets",
@@ -505,7 +515,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/rss/"
   },{
     "title": "Sitemap",
-    "text": "Sitemap 403 Redirect 404 Redirect 500 Redirect HTTP Errors 403 Redirect 404 Redirect 500 Redirect About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test",
+    "text": "Sitemap 403 Redirect 404 Redirect 500 Redirect HTTP Errors 403 Redirect 404 Redirect 500 Redirect About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Robots Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test",
     "tags": "",
     "url": "/~hepting/search/sitemap/"
   },{
@@ -767,6 +777,11 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/teaching/201810/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/403.html"
   },{
     "title": "",
@@ -788,6 +803,11 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/about/personal/heptings/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/personal/index.html"
   },{
     "title": "",
     "text": "",
@@ -842,27 +862,52 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/teaching/cs205-325/201610/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/teaching/cs280/201510/"
   },{
     "title": "",
     "text": "",
     "tags": "",
-    "url": "/~hepting/teach/"
+    "url": "/~hepting/teaching/cs280/201610/"
   },{
     "title": "",
     "text": "",
     "tags": "",
-    "url": "/~hepting/teach/resources/"
+    "url": "/~hepting/teaching/cs280/201710/"
   },{
     "title": "",
     "text": "",
     "tags": "",
-    "url": "/~hepting/teach/resources/scenarios.html"
+    "url": "/~hepting/cs280/201610/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/cs305-428-828/201630/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/cs499+900/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/cs499+900/"
   },{
     "title": "",
     "text": "",
     "tags": "",
     "url": "/~hepting/teaching/201320.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/sem/"
   },{
     "title": "",
     "text": "",
@@ -878,6 +923,26 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/teaching/201320.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/cs215/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teach/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teach/resources/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teach/resources/scenarios.html"
   },{
     "title": "",
     "text": "",

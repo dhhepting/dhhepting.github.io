@@ -157,6 +157,6 @@ and I will update this page accordingly.
 
 ### Sources
 
-* [Newspaper Copy That People <em>Must</em> Read]({{"/assets/projects/pdf/Printers-Ink-1911-apr-20.pdf" | relative_url}})
+* [Newspaper Copy That People <em>Must</em> Read]({{"/assets/projects/pdf/pw-printers-ink-1911-apr-20.pdf" | relative_url}})
 
 {% include project-related-works.html %}
