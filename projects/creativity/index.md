@@ -2,6 +2,8 @@
 title: Creativity
 breadcrumb: Creativity
 description: Description of Creativity
+redirect_from:
+  - /research/works/2007-06-hep-software-for-systematic-and-imaginative-exploration.html
 project: creativity
 layout: bg-image
 ---
