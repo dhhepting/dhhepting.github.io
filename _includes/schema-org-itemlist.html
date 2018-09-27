@@ -30,6 +30,7 @@ name, value pairs name for file, value for breadcrumb if plain file
       "position": {{ pfi }},
       "item":
       {
+        "@type": "WebPage",
         "@id": "{{ pfurl | absolute_url }}",
         "name": "{{ pfb }}"
       }
@@ -58,6 +59,7 @@ name, value pairs name for file, value for breadcrumb if plain file
         "position": {{ i }},
         "item":
         {
+          "@type": "WebPage",
           "@id": "{{ sdc[0] | absolute_url }}",
           "name": {{ sdc[1] }}
         }
