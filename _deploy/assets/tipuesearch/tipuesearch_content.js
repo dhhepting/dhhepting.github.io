@@ -160,7 +160,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/schedule/201810.html"
   },{
     "title": "Fall 2018",
-    "text": "Fall 2018 First day of classes: September 5, 2018 Last day of classes: December 6, 2018 Courses taught: CS 428+828: Human Computer Communication Times Monday Tuesday Wednesday Thursday Friday 08:30 Busy Busy Busy Meetings Busy 09:00 09:30 10:00 Office 10:30 11:00 11:30 12:00 Busy 12:30 13:00 13:30 CS-428+828 CS-428+828 CS-428+828 14:00 14:30 Office Busy Busy 15:00 15:30 16:00 Busy 16:30",
+    "text": "Fall 2018 First day of classes: September 5, 2018 Last day of classes: December 6, 2018 Courses taught: CS 428+828: Human Computer Communication Times Monday Tuesday Wednesday Thursday Friday 08:30BusyBusyBusyMeetingsBusy09:0009:3010:00Office10:3011:0011:3012:00Busy12:3013:0013:30 CS-428+828 CS-428+828 CS-428+828 14:0014:30OfficeBusyBusy15:0015:3016:00Busy16:30",
     "tags": "",
     "url": "/~hepting/teaching/schedule/201830.html"
   },{
