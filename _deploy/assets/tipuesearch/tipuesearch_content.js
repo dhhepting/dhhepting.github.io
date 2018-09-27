@@ -882,6 +882,11 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/art/math+art/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/admin/ppool.html"
   },{
     "title": "",
@@ -1028,6 +1033,11 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/teaching/sem/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/201820.html"
   },{
     "title": "",
     "text": "",
