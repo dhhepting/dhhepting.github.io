@@ -10,6 +10,7 @@ redirect_from:
   - /projects/fractals/calendars/1994.html
   - /research/web/nat-num/dynamics.html
   - /art/math+art/
+  - /projects/math-art/
 project: fractals
 layout: bg-image
 ---
