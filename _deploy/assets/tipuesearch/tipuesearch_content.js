@@ -490,7 +490,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/projects/visualization/"
   },{
     "title": "Projects",
-    "text": "Projects Collected here are the various projects that I have undertaken over the years, in collaboration with many wonderful people. blogging bus challenging-bodies cogito creativity cs-education enviromatics faces food fractals free-knowledge games genealogy interaction-design multimedia open-source participant-pool pictures-worth robots rough-sets ur50cs visualization",
+    "text": "Projects Collected here are the various projects that I have undertaken over the years, in collaboration with many wonderful people. blogging bus challenging-bodies cogito creativity cs-education enviromatics faces food fractals free-knowledge games genealogy interaction-design math-art multimedia open-source participant-pool pictures-worth robots rough-sets ur50cs visualization",
     "tags": "",
     "url": "/~hepting/projects/"
   },{
@@ -883,6 +883,11 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/art/math+art/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/projects/math-art/"
   },{
     "title": "",
     "text": "",
