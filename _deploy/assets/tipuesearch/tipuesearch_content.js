@@ -55,7 +55,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/09.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 10 / 37 Questions from Last Meeting? Administration Groups done – are groups working out so far? Individual assignments: Use URcourses to do something as instructor - 6 marks Critique the work from a group (not your own) - 6 marks Report about being a participant in the “Evaluation” group assignment - 6 marks Written submission (different for CS428 and CS828) - 12 marks, due end of semester Outline for Today 10 Usability Heuristics What might make some good opportunities for redesign? What are some questions to ask? Video: Cool Town (2000) Video: Knowledge Navigator (1987) What do you say about the predictions made in these videos? What works and what does not? To Do Read Chapter 3 Media from Meeting Nothing available for 10 Annotations and Afterthoughts",
+    "text": "Mtg 10 / 37 Questions from Last Meeting? Administration Groups done – are groups working out so far? Individual assignments: Use URcourses to do something as instructor - 6 marks Critique the work from a group (not your own) - 6 marks Report about being a participant in the “Evaluation” group assignment - 6 marks Written submission (different for CS428 and CS828) - 12 marks, due end of semester Outline for Today 10 Usability Heuristics What might make some good opportunities for redesign? What are some questions to ask? Video: Cool Town (2000) Video: Knowledge Navigator (1987) What do you say about the predictions made in these videos? What works and what does not? To Do Read Chapter 3 Media from Meeting Annotations and Afterthoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/10.html"
   },{
@@ -997,6 +997,21 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/teach/cs280/201510/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teach/cs280/201610/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teach/cs280/201710/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/teaching/cs428+828/201730/meetings/05.html"
   },{
     "title": "",
@@ -1038,6 +1053,11 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/teaching/201820.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/cs280/201610/"
   },{
     "title": "",
     "text": "",
