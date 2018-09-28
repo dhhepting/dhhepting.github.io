@@ -5,7 +5,7 @@ layout: bg-image
 marks: 6
 rubric:
 - crit: Task Completed
-  wt: 0.5
+  wt: 2.0
   l3: Everything done as requested
   l2: Mostly done as requested
   l1: Not done as requested
@@ -32,11 +32,10 @@ You are asked to complete a task as a means to experiencing the interface as an 
 
 1. Perform a task within URcourses:
   * claim 1 topic by changing the label to your own name (there are enough blank topics for everyone - so be nice and don't claim someone else's topic!)
-  * add to your topic:
-    * 1 resource
-    * 1 activity that can be assigned a grade
+  * add to your topic: 1 resource and 1 activity that can be assigned a grade
 
-1. Create an empathy map as you complete this task.
+1. Create an [empathy map](https://www.nngroup.com/articles/empathy-mapping/)
+as you complete this task.
 
 1. Describe the opportunities for redesign, if any, that you find.
 
