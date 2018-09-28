@@ -3,6 +3,7 @@
 {%- assign j = loop_max | plus: 0 -%}
 {%- assign bc_path = "/" -%}
 {%- assign bc_page = site.pages | where: "url", bc_path -%}
+  "breadcrumb":
   {
     "@type": "BreadcrumbList",
     "itemListElement":
