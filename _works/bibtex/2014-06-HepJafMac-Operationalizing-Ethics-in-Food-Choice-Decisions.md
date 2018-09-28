@@ -4,6 +4,7 @@ citekey: 2014-06-HepJafMac
 title: "Operationalizing Ethics in Food Choice Decisions (2014)"
 breadcrumb: "Operationalizing Ethics in Food Choice Decisions (2014)"
 category: journal
+main_entity: ScholarlyArticle
 projects:
  - food
  -  enviromatics
