@@ -2,6 +2,7 @@
 create a whitelist for files to be indexed:
 name, value pairs name for file, value for breadcrumb if plain file
 {% endcomment %}
+{
   "@type": "ItemList",
   "itemListElement":
   [
@@ -12,7 +13,6 @@ name, value pairs name for file, value for breadcrumb if plain file
 {% if page.files %}
   {% assign pfs = page.files.size %}
   {% assign pfi = 1 | plus: 0 %}
-
   {% for pf in page.files %}
     {% assign pfn = pf.n %}
     {% unless pfn contains "." %}
