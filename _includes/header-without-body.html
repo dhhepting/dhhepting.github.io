@@ -42,12 +42,15 @@
   <link rel="alternate" type="application/rss+xml"
     href="{{ "/rss/news.rss" | absolute_url }}"
   />
-  <link rel="canonical" href="{{ page.url | absolute_url }}" />
-  <title>{{page.title}}</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
     integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7"
     crossorigin="anonymous">
   </script>
+  <link rel="canonical" href="{{ page.url | absolute_url }}" />
+  {% assign pqtitle = page.title | append: ' | ' | append: site.title %}
+  <title>{{pqtitle}}</title>
+  <meta property="og:title" content="{{pqtitle}}" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
 {% if page.url == "/" %}
   {% include schema-org-website.html %}
 {% else %}
