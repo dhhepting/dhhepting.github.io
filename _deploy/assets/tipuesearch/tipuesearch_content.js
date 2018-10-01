@@ -5,7 +5,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/news/website-deployed.html"
   },{
     "title": "Empathy Assignment",
-    "text": "Empathize Description You have been given instructor access to a course on URcourses. You are asked to complete a task as a means to experiencing the interface as an instructor, and then reflect on your experience with interface. You are asked to do 3 things in this assignment: Perform a task within URcourses: claim 1 topic by changing the label to your own name (there are enough blank topics for everyone - so be nice and don’t claim someone else’s topic!) add to your topic: 1 resource and 1 activity that can be assigned a grade Create an empathy map as you complete this task. Describe the opportunities for redesign, if any, that you find. Submission submit a pdf document on URcourses Grading This assignment is worth 6 marks, according to the following rubric: Rubric DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of creating rubrics. Your comments about the following rubric are welcome via email Criterion and Weight Exemplary Sufficient Developing Needs Improvement Task Completed (2.0) Everything done as requested Mostly done as requested Not done as requested Not completed Empathy Map (2.0) All quadrants done well Entries in all quadrants Few entries, lacking detail Substantially incomplete Opportunities for Redesign (2.0) Thoroughly explored Complete Lacks detail Opportunities not identified Grade penalties will be applied in the following situations for assignment submissions: on time but the written instructions for the submission were not followed: deduct 10% of the earned grade late (but within 48 hours of the due date and time): deduct 10% of the earned grade late by more than 48 hours: deduct 50% of the earned grade Calculator Penalties None (on-time and followed instructions) Instructions not followed Assignment submitted late, but within 48 hours Assignment submitted more than 48 hours late Rubric Criteria Task Completed (2.0) Choose... Exemplary (+): Everything done as requested Exemplary: Everything done as requested Exemplary (-): Everything done as requested Sufficient (+): Mostly done as requested Sufficient: Mostly done as requested Sufficient (-): Mostly done as requested Developing (+): Not done as requested Developing: Not done as requested Developing (-): Not done as requested Needs Improvement: Not completed Empathy Map (2.0) Choose... Exemplary (+): All quadrants done well Exemplary: All quadrants done well Exemplary (-): All quadrants done well Sufficient (+): Entries in all quadrants Sufficient: Entries in all quadrants Sufficient (-): Entries in all quadrants Developing (+): Few entries, lacking detail Developing: Few entries, lacking detail Developing (-): Few entries, lacking detail Needs Improvement: Substantially incomplete Opportunities for Redesign (2.0) Choose... Exemplary (+): Thoroughly explored Exemplary: Thoroughly explored Exemplary (-): Thoroughly explored Sufficient (+): Complete Sufficient: Complete Sufficient (-): Complete Developing (+): Lacks detail Developing: Lacks detail Developing (-): Lacks detail Needs Improvement: Opportunities not identified Output Evaluate Copy Output to Clipboard Clear Form",
+    "text": "Empathize Description This is an INDIVIDUAL assignment. You have been given instructor access to a course on URcourses. You are asked to complete a task as a means to experiencing the interface as an instructor, and then reflect on your experience with interface. You are asked to do 3 things in this assignment: Perform a task within URcourses: claim 1 topic by changing the label to your own name (there are enough blank topics for everyone - so be nice and don’t claim someone else’s topic!) add to your topic: 1 resource and 1 activity that can be assigned a grade Create an empathy map as you complete this task. Describe the opportunities for redesign, if any, that you find. Submission submit a pdf document on URcourses Grading This assignment is worth 6 marks, according to the following rubric: Rubric DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of creating rubrics. Your comments about the following rubric are welcome via email Criterion and Weight Exemplary Sufficient Developing Needs Improvement Task Completed (2.0) Everything done as requested Mostly done as requested Not done as requested Not completed Empathy Map (2.0) All quadrants done well Entries in all quadrants Few entries, lacking detail Substantially incomplete Opportunities for Redesign (2.0) Thoroughly explored Complete Lacks detail Opportunities not identified Grade penalties will be applied in the following situations for assignment submissions: on time but the written instructions for the submission were not followed: deduct 10% of the earned grade late (but within 48 hours of the due date and time): deduct 10% of the earned grade late by more than 48 hours: deduct 50% of the earned grade Calculator Penalties None (on-time and followed instructions) Instructions not followed Assignment submitted late, but within 48 hours Assignment submitted more than 48 hours late Rubric Criteria Task Completed (2.0) Choose... Exemplary (+): Everything done as requested Exemplary: Everything done as requested Exemplary (-): Everything done as requested Sufficient (+): Mostly done as requested Sufficient: Mostly done as requested Sufficient (-): Mostly done as requested Developing (+): Not done as requested Developing: Not done as requested Developing (-): Not done as requested Needs Improvement: Not completed Empathy Map (2.0) Choose... Exemplary (+): All quadrants done well Exemplary: All quadrants done well Exemplary (-): All quadrants done well Sufficient (+): Entries in all quadrants Sufficient: Entries in all quadrants Sufficient (-): Entries in all quadrants Developing (+): Few entries, lacking detail Developing: Few entries, lacking detail Developing (-): Few entries, lacking detail Needs Improvement: Substantially incomplete Opportunities for Redesign (2.0) Choose... Exemplary (+): Thoroughly explored Exemplary: Thoroughly explored Exemplary (-): Thoroughly explored Sufficient (+): Complete Sufficient: Complete Sufficient (-): Complete Developing (+): Lacks detail Developing: Lacks detail Developing (-): Lacks detail Needs Improvement: Opportunities not identified Output Evaluate Copy Output to Clipboard Clear Form",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/assignments/i/01-empathize.html"
   },{
@@ -19,6 +19,11 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/01.html"
   },{
+    "title": "Project Requirements",
+    "text": "Project Requirements Description Establish requirements for your redesign effort by considering user issues around one feature or activity that users may perform with the application or website. Do this by first creating an empathy map and then identifying speicific features that a new design will have. Remember that this phase is still concerned with articulating the problem. No solutions should appear here. That will come later. ( More to come before next meeting. ) Submission submit a pdf document (1 per group) on URcourses Grading This assignment is worth marks, according to the following rubric: Rubric DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of creating rubrics. Your comments about the following rubric are welcome via email Criterion and Weight Exemplary Sufficient Developing Needs Improvement Grade penalties will be applied in the following situations for assignment submissions: on time but the written instructions for the submission were not followed: deduct 10% of the earned grade late (but within 48 hours of the due date and time): deduct 10% of the earned grade late by more than 48 hours: deduct 50% of the earned grade Calculator Penalties None (on-time and followed instructions) Instructions not followed Assignment submitted late, but within 48 hours Assignment submitted more than 48 hours late Rubric Criteria Output Evaluate Copy Output to Clipboard Clear Form",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/assignments/i-or-g/02-requirements.html"
+  },{
     "title": "CS 428+828 (201830) Meetings",
     "text": "Mtg 2 / 37 Questions from Last Meeting? Outline for Today Tent Cards Syllabus Video: How to Build Your Creative Confidence Thinking outside the box activity “‘To make payments go to the Log in to UR Self Service button on the University of Regina main webpage at http://www.uregina.ca and click on the Authorized User link.’” To Do Think about what makes a good or a bad interface Media from Meeting Annotations and Afterthoughts",
     "tags": "",
@@ -30,27 +35,27 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/03.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 4 / 37 Questions from Last Meeting? Administration Sorting out class list: in progress URcourses Assignments: “Group”: tentative due dates: 21 Sep, 5 Oct, 19 Oct, 2 Nov, 16 Nov, 30 Nov Draft Assignment Outline for Today Design Thinking (video) Chapter 1 (selected slides) Answering machine video To Do Read Chapter 1 of textbook Could the marble answering machine be good for us in 2018? What changes might be warranted? Media from Meeting Annotations and Afterthoughts",
+    "text": "Mtg 4 / 37 Questions from Last Meeting? Administration Sorting out class list: in progress URcourses Assignments: “Group”: tentative due dates: 21 Sep, 5 Oct, 19 Oct, 2 Nov, 16 Nov, 30 Nov Draft Assignment Outline for Today Design Thinking (video) Chapter 1 Slides) Answering machine video To Do Read Chapter 1 of textbook Could the marble answering machine be good for us in 2018? What changes might be warranted? Media from Meeting Annotations and Afterthoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/04.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 5 / 37 Questions from Last Meeting? Administration Sorting out class list: complete! every one who put their name on the list on Monday has a place URcourses Assignments: “Group”: tentative due dates: 28 Sep (Proposal), 12 Oct (Requirements), 26 Oct (Design), 6 Nov (Evaluate Lo-Fi), 23 Nov (Prototype Hi-Fi), 30 Nov (Present) Draft Assignment. Comments? Group Work Outline for Today Chapter 1 (selected slides) Answering machine discussion: Could the marble answering machine be good for us in 2018? What changes might be warranted? Any SaskTel subscribers? To Do Read Chapter 2 of textbook Media from Meeting Annotations and Afterthoughts",
+    "text": "Mtg 5 / 37 Questions from Last Meeting? Administration Sorting out class list: complete! every one who put their name on the list on Monday has a place URcourses Assignments: “Group”: tentative due dates: 28 Sep (Proposal), 12 Oct (Requirements), 26 Oct (Design), 6 Nov (Evaluate Lo-Fi), 23 Nov (Prototype Hi-Fi), 30 Nov (Present) Draft Assignment. Comments? Group Work Outline for Today Chapter 1 Slides) Answering machine discussion: Could the marble answering machine be good for us in 2018? What changes might be warranted? Any SaskTel subscribers? To Do Read Chapter 2 of textbook Media from Meeting Annotations and Afterthoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/05.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 6 / 37 Questions from Last Meeting? Administration No office time today: Faculty of Science Meeting – tomorrow @ 10am to noon URcourses Annotations: please post to blog so that everyone can see and I will add them to meeting notes from there Assignments: “Group”: tentative due dates: 28 Sep (Proposal), 12 Oct (Requirements), 26 Oct (Design), 6 Nov (Evaluate Lo-Fi), 23 Nov (Prototype Hi-Fi), 30 Nov (Present) “Individual”: written (different from CS428 and CS828); as participant for other groups’ “Evaluate” assignment; practical Groups: let get those sorted out today (as much as possible) Outline for Today Chapter 1 (selected slides) Design Thinking Answering machine discussion: Could the marble answering machine be good for us in 2018? What changes might be warranted? Any SaskTel subscribers? To Do Read Chapter 2 of textbook Media from Meeting Annotations and Afterthoughts Webpage about Norman Doors Video about Norman Doors",
+    "text": "Mtg 6 / 37 Questions from Last Meeting? Administration No office time today: Faculty of Science Meeting – tomorrow @ 10am to noon URcourses Annotations: please post to blog so that everyone can see and I will add them to meeting notes from there Assignments: “Group”: tentative due dates: 28 Sep (Proposal), 12 Oct (Requirements), 26 Oct (Design), 6 Nov (Evaluate Lo-Fi), 23 Nov (Prototype Hi-Fi), 30 Nov (Present) “Individual”: written (different from CS428 and CS828); as participant for other groups’ “Evaluate” assignment; practical Groups: let get those sorted out today (as much as possible) Outline for Today Chapter 1 Slides) Design Thinking Answering machine discussion: Could the marble answering machine be good for us in 2018? What changes might be warranted? Any SaskTel subscribers? To Do Read Chapter 2 of textbook Media from Meeting Annotations and Afterthoughts Webpage about Norman Doors Video about Norman Doors",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/06.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 7 / 37 Questions from Last Meeting? Administration URcourses Annotations: please post to blog so that everyone can see and I will add them to meeting notes from there Assignments: “Group”: tentative due dates: 28 Sep (Proposal), 12 Oct (Requirements), 26 Oct (Design), 6 Nov (Evaluate Lo-Fi), 23 Nov (Prototype Hi-Fi), 30 Nov (Present) “Individual”: written (different from CS428 and CS828); as participant for other groups’ “Evaluate” assignment; practical Groups: still groups to be made (prefer groups of 4) Outline for Today Design Thinking Empathy Mapping Answering machine discussion: Could the marble answering machine be good for us in 2018? What changes might be warranted? Any SaskTel subscribers? Chapter 2 (selected slides) To Do Read Chapter 2 of textbook Media from Meeting Annotations and Afterthoughts Design ideas to keep people from walking across a green space: Ha-ha Google search: designing paths around a greenspace Something interesting that I found: How to Start a Design School",
+    "text": "Mtg 7 / 37 Questions from Last Meeting? Administration URcourses Annotations: please post to blog so that everyone can see and I will add them to meeting notes from there Assignments: “Group”: tentative due dates: 28 Sep (Proposal), 12 Oct (Requirements), 26 Oct (Design), 6 Nov (Evaluate Lo-Fi), 23 Nov (Prototype Hi-Fi), 30 Nov (Present) “Individual”: written (different from CS428 and CS828); as participant for other groups’ “Evaluate” assignment; practical Groups: still groups to be made (prefer groups of 4) Outline for Today Design Thinking Empathy Mapping Answering machine discussion: Could the marble answering machine be good for us in 2018? What changes might be warranted? Any SaskTel subscribers? Chapter 2 Slides) To Do Read Chapter 2 of textbook Media from Meeting Annotations and Afterthoughts Design ideas to keep people from walking across a green space: Ha-ha Google search: designing paths around a greenspace Something interesting that I found: How to Start a Design School",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/07.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 8 / 37 Questions from Last Meeting? Administration Careers Day 2018 - MONDAY, September 24th 10:00 AM - 3:00 PM Centre for Kinesiology, Health and Sport (CKHS) Gym 3, University of Regina Everyone welcome to attend! Open to all! Call for TAs in Winter 2019. Undergrads and grads can apply. Application Deadline for applications is Monday, October 22. Annotations: please post to blog so that everyone can see and I will add them to meeting notes from there Groups done, with very minor changes NO changes to meetings MWF @ 13:30 :-) Initiative is appreciated but there will be times where students outside your group will have the chance for input to your project Outline for Today Tradeoffs any more ideas about: keeping people from using the green space as a pathway; keeping people on the sidewalks; letting people enjoy the green space? Empathy Design Thinking Empathy Mapping Answering machine discussion: Could the marble answering machine be good for us in 2018? What changes might be warranted? Any SaskTel subscribers? Chapter 2 (selected slides) To Do Pick an interface and think about its usability and the metaphors it invokes. Does it have any room for improvement? Media from Meeting Annotations and Afterthoughts Words that end in -pathy",
+    "text": "Mtg 8 / 37 Questions from Last Meeting? Administration Careers Day 2018 - MONDAY, September 24th 10:00 AM - 3:00 PM Centre for Kinesiology, Health and Sport (CKHS) Gym 3, University of Regina Everyone welcome to attend! Open to all! Call for TAs in Winter 2019. Undergrads and grads can apply. Application Deadline for applications is Monday, October 22. Annotations: please post to blog so that everyone can see and I will add them to meeting notes from there Groups done, with very minor changes NO changes to meetings MWF @ 13:30 :-) Initiative is appreciated but there will be times where students outside your group will have the chance for input to your project Outline for Today Tradeoffs any more ideas about: keeping people from using the green space as a pathway; keeping people on the sidewalks; letting people enjoy the green space? Empathy Design Thinking Empathy Mapping Answering machine discussion: Could the marble answering machine be good for us in 2018? What changes might be warranted? Any SaskTel subscribers? Chapter 2 Slides) To Do Pick an interface and think about its usability and the metaphors it invokes. Does it have any room for improvement? Media from Meeting Annotations and Afterthoughts Words that end in -pathy",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/08.html"
   },{
@@ -70,7 +75,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/11.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 12 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 12",
+    "text": "Mtg 12 / 37 Questions from Last Meeting? Administration Assignments Outline for Today Health, Safety, Wellness what potential problems can you notice? an you identify some requirements for this kind of information sheet? Chapter 3 Slides To Do Read Chapter 9, 10 Media from Meeting Nothing available for 12 Annotations and Afterthoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/12.html"
   },{
@@ -349,180 +354,130 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/HTTPerrors/"
   },{
-    "title": "About/Personal * D. H. Hepting",
-    "text": "Personal",
-    "tags": "",
-    "url": "/~hepting/about/personal/"
-  },{
-    "title": "About",
-    "text": "About Education Biography Personal Interests Daryl H. Hepting, Ph.D. Associate Professor Department of Computer Science University of Regina Regina, Saskatchewan, S4S 0A2 CANADA Cell: 306-596-6312 ( voice &nbsp;&bull;&nbsp;SMS ) E-Mail: hepting@cs.uregina.ca , daryl.hepting@uregina.ca Office: College West 308.22 ( map ) Semester Schedule",
-    "tags": "",
-    "url": "/~hepting/about/"
-  },{
     "title": "News",
     "text": "",
     "tags": "",
     "url": "/~hepting/news/"
   },{
-    "title": "Blogging",
-    "text": "Blogging Description of Blogging",
+    "title": "Sitemap",
+    "text": "Sitemap 403 Redirect 404 Redirect 500 Redirect HTTP Errors 403 Redirect 404 Redirect 500 Redirect About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Math of Art Nature’s Numbers Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Library Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test Wikipedia",
     "tags": "",
-    "url": "/~hepting/projects/blogging/"
-  },{
-    "title": "Bus Project",
-    "text": "Bus Description of Bus Project",
-    "tags": "",
-    "url": "/~hepting/projects/bus/"
-  },{
-    "title": "Challenging Bodies",
-    "text": "Challenging Bodies Description of Challenging Bodies Project",
-    "tags": "",
-    "url": "/~hepting/projects/challenging-bodies/"
-  },{
-    "title": "cogito",
-    "text": "cogito Description of cogito Related Works Interactive Evolution for Systematic Exploration of a Parameter Space (2003) conference",
-    "tags": "",
-    "url": "/~hepting/projects/cogito/"
-  },{
-    "title": "Creativity",
-    "text": "Creativity Related Works Assessing End-User Programming for a Graphics Development Environment (2010) conference Software for Systematic and Imaginative Exploration (2007) poster Computational Support for P-Creative Solutions (2005) conference An Integrated Approach to Discovery in Complex Information Spaces (2004) conference A New Paradigm for Exploration in Computer-Aided Visualization (1999) PhD Cogito a system for computer-aided visualization (1996) sketch",
-    "tags": "",
-    "url": "/~hepting/projects/creativity/"
-  },{
-    "title": "CS Education",
-    "text": "CS Education Description of CS Education Related Works CSIT Outreach from a Canadian Perspective (2012) panel Creating synergy between usability courses and open source software projects (2008) journal Ethics and Usability Testing in Computer Science Education (2006) journal",
-    "tags": "",
-    "url": "/~hepting/projects/cs-education/"
-  },{
-    "title": "Enviromatics Project",
-    "text": "Enviromatics Description of Enviromatics Project! Related Works Environmental Sensing with Recycled Materials (2018) article Operationalizing Ethics in Food Choice Decisions (2014) journal RCE Saskatchewan Advancing Sustainable Livelihoods Through Equipment-Centred Learning and Sharing (2012) report Environmental decision support systems (EDSS) development - Challenges and best practices (2011) journal Mobilizing Shared Capital for Grassroots Action (2011) workshop Design of S.O.L.E. Software (2010) conference Enabling Information Technology for the Emancipation of Physical and Natural Capital (2009) conference Experiences in Designing An Online Community to Facilitate Education for Sustainable Development (2009) conference Bridging the Gaps Between Design and Use Developing Tools to Support Environmental Management and Policy (2008) chapter On the Role of Reflection and Representation in Environmental Decision Support Systems (2008) conference An Analysis of Interface Quality for Decision Support (2008) conference Discovery of Usability Patterns in Support of Green Purchasing (2007) conference Decision Support for Local Environmental Impact Assessment (2007) journal Opening Access to Environmental Software Systems (2006) conference Analysis of User Classifiers for Personalization of Environmental Decision Support System Interfaces (2005) conference Personalizing User Interfaces for Environmental Decision Support Systems (2005) conference Consumer Decision Support for Product Selection (2005) conference A Unified Framework for the Presentation of Environmental Risk Information (2004) techreport",
-    "tags": "",
-    "url": "/~hepting/projects/enviromatics/"
-  },{
-    "title": "Faces Project",
-    "text": "Faces Description of Faces Project! Related Works A Linear Model for Three-Way Analysis of Facial Similarity (2018) conference Three-Way Analysis of Facial Similarity Judgments (2017) conference Discernibility in the Analysis of Binary Card Sort Data (2013) conference A rough set exploration of facial similarity judgements (2011) journal A Rough Sets Approach for Personalized Support of Face Recognition (2009) conference",
-    "tags": "",
-    "url": "/~hepting/projects/faces/"
-  },{
-    "title": "Food Project",
-    "text": "Food Description of Food Project! Related Works Operationalizing Ethics in Food Choice Decisions (2014) journal Web-Based Support of Crop Selection for Climate Adaptation (2012) conference Computer-Aided Support for Understanding Climate Variability (2011) workshop Constructing Collaborative Online Communities for Visualizing Spimes (2010) workshop Social Shopping Using Food Spimes (2010) conference A Data-Mining Framework for Designing Personalized E-Commerce Support Tools (2009) chapter Information Technology in Support of Sustainable Food Choices (2007) conference",
-    "tags": "",
-    "url": "/~hepting/projects/food/"
-  },{
-    "title": "Calendars",
-    "text": "Calendars Each year between 1991 and 1997, a calendar of computer-generated images was published by Universe Publishing, based on the fractal geometry of Benoit B. Mandelbrot. Before 1997, the calendar was first done as a custom edition and then as a trade edition in the following year. In 1997, the trade and custom editions were the same. Richard F. Voss edited the calendars for 1991 and 1992 F. Kenton Musgrave edited the calendars for 1993 and 1994 Daryl H. Hepting edited the calendars for 1995 and 1996, and both included the essay A Path to Fractals F. Kenton Musgrave edited the calendar for 1997: it featured his work alone",
-    "tags": "",
-    "url": "/~hepting/projects/fractals/calendars/"
-  },{
-    "title": "Exhibitions",
-    "text": "Exhibitions 1994-Exploring-the-Image-World-of-Computer-Graphics.html 1994-PARC-Algorithmic-Art-Show.html 1995-MATH-ART-at-SFU-Teck-Gallery.html 1996-SFU-Faculty-Staff-Student-Show.html teck-postcard.html",
-    "tags": "",
-    "url": "/~hepting/projects/fractals/exhibitions/"
-  },{
-    "title": "Gallery",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/"
-  },{
-    "title": "Fractals Project",
-    "text": "Fractals My M.Sc. thesis, Approximation and Visualization of Sets Defined by Iterated Function Systems (from 1991) dealt with linear fractals. That got me started and I am still hooked. Gallery of Images Fractals Calendars from Universe Publishing Exhibitions — in which I participated or helped to curate A Math of Art — exploring mathematics and art on the web My supervisor for my Master of Science degree was Przemyslaw Prusinkiewicz. During my studies, Prusinkiewicz took a sabbatical and visited Benoit Mandelbrot. Upon completion of my studies, that Mandelbrot connection helped F. David Fracchia (who had just completed his Ph.D. with Prusinkiewicz) and me to secure term employment with Mandelbrot’s Fractals Project (Fracchia at Yale as a postdoc, me at IBM TJ Watson Research Centre), beginning in the summer of 1991. During my contract with IBM, I lived in Ossining, New York (Home of the Grand Slammer: Sing Sing Prison). The New York Times printed a story about travelling to Ossining in Going Up the River, for a Visit. Related Works Perception of Parameter Variations in Linear Fractal Images (2010) conference In Search of a Perceptual Basis for Interacting with Parametric Images (2009) poster Humble Aspirations (1997) image The Escape Buffer Efficient Computation of Escape Time for Linear Fractals (1995) conference Rendering Methods for Iterated Function Systems (1991) conference Approximation and Visualization of Sets Defined by Iterated Function Systems (1991) MSc",
-    "tags": "",
-    "url": "/~hepting/projects/fractals/"
-  },{
-    "title": "Free Knowledge",
-    "text": "Free Knowledge Description of Free Knowledge Related Works Free Knowledge Confronting the Commodification of Human Discovery (2015) book",
-    "tags": "",
-    "url": "/~hepting/projects/free-knowledge/"
-  },{
-    "title": "Games",
-    "text": "Games Description of Games Related Works DIY Game Console Development (2014) course A Study of User Interface Modifications in World of Warcraft (2012) journal Study of User-Created Interfaces in Video Games (2010) workshop",
-    "tags": "",
-    "url": "/~hepting/projects/games/"
-  },{
-    "title": "Genealogy",
-    "text": "Genealogy Description of Genealogy",
-    "tags": "",
-    "url": "/~hepting/projects/genealogy/"
-  },{
-    "title": "Interaction Design",
-    "text": "Interaction Design Description of Interaction Design",
-    "tags": "",
-    "url": "/~hepting/projects/interaction-design/"
-  },{
-    "title": "Multimedia",
-    "text": "Multimedia Related Works A Framework for Personalization of Interactive Sound Synthesis (2005) conference Collaborative Computer-Aided Parameter Exploration for Music and Animation (2005) conference Cross-Modal Parametric Composition (2004) conference Symbol Mall (2004) sketch Managing Parameter Spaces for Multimedia Composition (2004) poster A Layered Approach to Computerization of a Multimedia Archive (1993) techreport",
-    "tags": "",
-    "url": "/~hepting/projects/multimedia/"
-  },{
-    "title": "Open Source",
-    "text": "Open Source Description of Open Source Project!",
-    "tags": "",
-    "url": "/~hepting/projects/open-source/"
-  },{
-    "title": "Participant Pool",
-    "text": "Participant Pool Description of Participant Pool",
-    "tags": "",
-    "url": "/~hepting/projects/participant-pool/"
-  },{
-    "title": "A Picture’s Worth",
-    "text": "A Picture’s Worth What does the phrase “A picture is worth ten thousand words” mean to you? Does it become more or less meaningful if it was written by an advertising executive, a newspaper publisher, or an ancient sage? I embarked on an exploration into the origins of this phrase in 1999 as part of my doctoral work (A New Paradigm for Exploration in Computer-Aided Visualization). It was important for me to use the phrase correctly and so I wanted to know whether a picture was worth 1,000 or 10,000 words. Various versions of the phrase, and stories about its origin, are in circulation. This page seeks to trace its history. For their help with the original version of the page, I thank Dona Bubelis of the Seattle Public Library, Ellen Chamberlain of the University of South Carolina, and Dr. Paul Lester of California State University Fullerton ( A Picture’s Worth a Thousand Words?). In 1999, credit for the phrase seemed to belong to Frederick R. Barnard, National Advertising Manager for the Street Railways Advertising Company (offices then in New York, Chicago, and San Francisco). The maxim which is popular today seemed to originate as “One look is worth a thousand words”, and appeared in a 1921 advertisement by Barnard. He chose to modify the saying for a 1927 advertisement, where it took on its more famous form. The two advertisements appeared in the advertising trade journal called Printers’ Ink (now known as Marketing/Communications). March 10, 1927 (pp. 114-115) &ldquo;One Picture is Worth Ten Thousand Words&rdquo;. This advertisement uses the specific example of a baking soda ad campaign seemingly done by Barnard's firm. The basic message is the same as the earlier ad, though perhaps Barnard hoped it would be more compelling as a Chinese proverb. December 8, 1921 (pp. 96-97) &ldquo;One Look is Worth A Thousand Words&rdquo;. This advertisement talks generally about the benefits about advertising with pictures on street cars. Confusion between whether a picture is worth 1,000 or 10,000 words may stem from a 1948 entry in The MacMillan Book of Proverbs, Maxims and Famous Phrases ( formerly known as the The Home Book of Proverbs, Maxims, and Familiar Phrases ) is an early and very informative source about the phrase. Editor Burton Egbert Stevenson made the following entry on page 2611 of that volume: One look is worth a thousand words. Fred R. Barnard, in Printers' Ink, 8 Dec., 1921, p. 96. He changed it to &ldquo;One picture is worth a thousand words&rdquo; in Printers' Ink, 10 March 1927, p. 114, and called it &ldquo;a Chinese proverb&rdquo;, so that people would take it seriously. It was immediately credited to Confucious. This entry establishes the link between the two advertisements, but this source misquotes the 1927 advertisement and thereby creates “One picture is worth a thousand words”. Familiar Quotations: a collection of passages, phrases, and proverbs traced to their sources in ancient and modern literature by John Bartlett also provides information. Stevenson’s error is repeated on page 782 of the 16th edition (edited by Justin Kaplan and published by Little, Brown in 1992) where it credits “One picture is worth a thousand words” as a misattributed “Chinese proverb” and references part of the entry from the 1948 edition edited by Stevenson. “Nice guys finish seventh”: false phrases, spurious sayings, and familiar misquotations by Ralph Keyes and published in 1992 by HarperCollins has a similar account to that of Stephenson. Keyes, however, adds his own twists to the story because the phrase “One picture is worth a thousand words” does not appear anywhere in the 1921 ad: Calling an orphan saying a Chinese proverb gives it a cachet with very little risk that its actual source will be discovered. A deliberate exploitation of this syndrome involved the proverb `One picture is worth a thousand words.' This saying first appeared in a 1921 ad in Printer's Ink [sic] which was written by publicist Frederick Barnard. Barnard headlined his ad `One look is worth a thousand words.' He attributed this maxim to `a famous Japanese philosopher.' Six years later, Barnard revised the saying to read `One picture is worth ten thousand words,' and then republished it in the same magazine as a `Chinese proverb.' Barnard thought his ploy would give his words added weight. He was right. For a time, Bartlett's identified Barnard's line as `a Chinese proverb.' Other sources attributed his proverb to Confucius. The Macmillan Dictionary of Quotations had it both ways. They cited Barnard as the maxim's author, adding `Ascribed to Chinese origin.' Keyes’ book identified several rules of misquotation and the one of which he and several others have been guilty he calls numbernesia: getting the words right but the numbers wrong. The Oxford Dictionary of Phrase, Saying, and Quotation is one reference which has the correct attribution (but without any of the story). The phrase has endured to become an American proverb, appearing on page 465 of A Dictionary of American Proverbs, edited by Mieder, Kingsbury, and Harder and published by the Oxford University Press in 1992. Current opinion would remove Mr. Barnard from the picture (pun intended). There is now a wikipedia article entitled “A picture is worth a thousand words” that is focused much more broadly than this page. In updating this page, I came across a wonderful account of the history of this expression written by William Safire for his column On Language for the New York Times Magazine. Worth a Thousand Words was published on 7 April 1996. If you have more information about the origins of this quotation (or the stories that surround it), please send me e-mail and I will update this page accordingly. Sources Newspaper Copy That People Must Read",
-    "tags": "",
-    "url": "/~hepting/projects/pictures-worth/"
-  },{
-    "title": "Robot Library",
-    "text": "Library EV3 Educational Kit",
-    "tags": "",
-    "url": "/~hepting/projects/robots/library/"
-  },{
-    "title": "Robots",
-    "text": "Robots Description of Robots",
-    "tags": "",
-    "url": "/~hepting/projects/robots/"
-  },{
-    "title": "Rough Sets",
-    "text": "Rough Sets Description of Rough Sets",
-    "tags": "",
-    "url": "/~hepting/projects/rough-sets/"
-  },{
-    "title": "UR50CS",
-    "text": "UR50CS Description of UR50CS",
-    "tags": "",
-    "url": "/~hepting/projects/ur50cs/"
-  },{
-    "title": "Visualization",
-    "text": "Visualization Description of Visualization Related Works A User-Driven Interface for Exploring Visualizations (2007) conference The Implications of Verbal Overshadowing for Computer Interface Design (2003) techreport Towards a visual interface for information visualization (2002) conference A New Paradigm for Exploration in Computer-Aided Visualization (1999) PhD An Exploratory Approach to Mathematical Visualization (1998) conference A Personal Paradigm for Computer-Aided Visualization (1996) workshop Cogito a system for computer-aided visualization (1996) sketch",
-    "tags": "",
-    "url": "/~hepting/projects/visualization/"
-  },{
-    "title": "Projects",
-    "text": "Projects Collected here are the various projects that I have undertaken over the years, in collaboration with many wonderful people. blogging bus challenging-bodies cogito creativity cs-education enviromatics faces food fractals free-knowledge games genealogy interaction-design math-art multimedia open-source participant-pool pictures-worth robots rough-sets ur50cs visualization",
-    "tags": "",
-    "url": "/~hepting/projects/"
-  },{
-    "title": "",
-    "text": "Students Academia.edu",
-    "tags": "",
-    "url": "/~hepting/research/students/"
+    "url": "/~hepting/search/sitemap/"
   },{
     "title": "Collected Works",
     "text": "",
     "tags": "",
     "url": "/~hepting/research/works/"
   },{
+    "title": "",
+    "text": "Students Academia.edu",
+    "tags": "",
+    "url": "/~hepting/research/students/"
+  },{
     "title": "Research",
     "text": "Research academic.html dhhepting.bib external.html funding.html inspiration.html inspirations.html pubs students works.html works",
     "tags": "",
     "url": "/~hepting/research/"
   },{
-    "title": "RSS Feeds",
-    "text": "RSS Feeds News CS-428+828-201830",
+    "title": "Schedule",
+    "text": "Schedule 201810.html 201830.html test.html",
     "tags": "",
-    "url": "/~hepting/rss/"
+    "url": "/~hepting/teaching/schedule/"
   },{
-    "title": "Sitemap",
-    "text": "Sitemap 403 Redirect 404 Redirect 500 Redirect HTTP Errors 403 Redirect 404 Redirect 500 Redirect About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Math of Art Nature’s Numbers Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Library Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test",
+    "title": "",
+    "text": "CS 280 • 201910 Risk and Reward in the Information Society",
     "tags": "",
-    "url": "/~hepting/search/sitemap/"
+    "url": "/~hepting/teaching/CS-280/201910/"
+  },{
+    "title": "",
+    "text": "CS 280 Risk and Reward in the Information Society Calendar Description Social context of computing. Case study of human-computer interfaces and their evaluation. Methods and tools of analysis. Professional and ethical responsibilities. Risks and liabilities of computer-based systems. Intellectual property, privacy and civil liberties. Professional communication. Sustainability. Cybercrime.   General Information   Semesters 201910",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/"
+  },{
+    "title": "CS 499+900",
+    "text": "CS 499+900",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/201810/"
+  },{
+    "title": "CS 499+900",
+    "text": "CS 499+900",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/"
+  },{
+    "title": "CS 428 + 828",
+    "text": "CS 428+828 Human Computer Communication",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201630/"
+  },{
+    "title": "",
+    "text": "Feedback Instructor’s Feedback Instrument: Midterm Final Faculty of Science Course Evaluation: CS 428 End-of-Semester Weighted Rating: 90% Instrument Ratings Average Respondents 5 4 3 2 1 Written, from Instructor 69% 21% 16% 14% 0% 92% 53 Online, from Faculty of Science &mdash; 43% 27% 16% 14% 75% 7 Weighted rating calculation: (0.92 * 53) + (0.75 * 7) = 54.01 / 60 = 90%",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201730/feedback/"
+  },{
+    "title": "",
+    "text": "CS428+828 • 201730 Human Computer Communication feedback",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201730/"
+  },{
+    "title": "Resources",
+    "text": "Resources Links Tools Videos",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/resources/"
+  },{
+    "title": "",
+    "text": "Group",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/assignments/g/"
+  },{
+    "title": "CS 428 Individual Assignments",
+    "text": "CS 428 Research and Write about a Topic that You Choose",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/assignments/i/u/"
+  },{
+    "title": "CS 828 Individual Assignments",
+    "text": "CS 828 Research Paper Review",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/assignments/i/g/"
+  },{
+    "title": "",
+    "text": "Individual For everyone: Empathize For CS 428 For CS 828",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/assignments/i/"
+  },{
+    "title": "",
+    "text": "Individual or Group These assignments make up the project. All the assignments will be done by the same group of 3-4 students. The only exception doing the project in a group is for a graduate student in CS 828 who would like to define a project related to their own research. Proposal (3 marks) Requirements Gathering (6 marks) Design 2 Lo-Fi (6 marks) Evaluate (6 marks) Prototye 1 Hi-Fi (6 marks) Present (3 marks)",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/assignments/i-or-g/"
+  },{
+    "title": "",
+    "text": "Assignments Individual Group Individual or Group",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/assignments/"
+  },{
+    "title": "Content - CS 428+828",
+    "text": "Content Topic 1 Topic 2 Topic 3",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/content/"
+  },{
+    "title": "CS 428+828 (201830) Meetings",
+    "text": "Meetings Week Wed Fri Mon 1 01 : 05 Sep 02 : 07 Sep 03 : 10 Sep 2 04 : 12 Sep 05 : 14 Sep 06 : 17 Sep 3 07 : 19 Sep 08 : 21 Sep 09 : 24 Sep 4 10 : 26 Sep 11 : 28 Sep 12 : 01 Oct 5 13 : 03 Oct 14 : 05 Oct &mdash; 6 15 : 10 Oct 16 : 12 Oct 17 : 15 Oct 7 18 : 17 Oct 19 : 19 Oct 20 : 22 Oct 8 21 : 24 Oct 22 : 26 Oct 23 : 29 Oct 9 24 : 31 Oct 25 : 02 Nov 26 : 05 Nov 10 &mdash; &mdash; 27 : 12 Nov 11 28 : 14 Nov 29 : 16 Nov 30 : 19 Nov 12 31 : 21 Nov 32 : 23 Nov 33 : 26 Nov 13 34 : 28 Nov 35 : 30 Nov 36 : 03 Dec 14 37 : 05 Dec &mdash; &mdash; Total meetings this semester: 37",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201830/meetings/"
+  },{
+    "title": "",
+    "text": "Media",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201830/media/"
+  },{
+    "title": "CS 428+828 in 201830",
+    "text": "CS 428+828 • 201830 Human Computer Communication Syllabus Calendar RSS Dr. Hepting’s schedule Meetings Media Assignments Content Resources Topics &amp; Learning Outcomes UR Self-Service: CS 428 (CRN 30728) CS 828 (CRN 30742)",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201830/"
+  },{
+    "title": "CS 428+828",
+    "text": "CS 428+828 Human Computer Communication Calendar Description Theory and practice related to the design and implementation of usable software and easy-to-learn interfaces. Specific topics will include user-centered design and task analysis; prototyping and the iterative design cycle; interface design and methods of evaluation.   General Information Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes   Semesters 201830 201730 201630",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/"
   },{
     "title": "",
     "text": "CS110 • 201510 Programming and Problem Solving",
@@ -530,14 +485,14 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-110/201510/"
   },{
     "title": "",
-    "text": "Feedback midterm-1.html",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-110/201810/feedback/"
-  },{
-    "title": "",
     "text": "Media None available &lt;/div&gt;",
     "tags": "",
     "url": "/~hepting/teaching/CS-110/201810/media/"
+  },{
+    "title": "",
+    "text": "Feedback midterm-1.html",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-110/201810/feedback/"
   },{
     "title": "",
     "text": "CS110 • 201810 Programming and Problem Solving feedback media",
@@ -550,24 +505,14 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-110/"
   },{
     "title": "",
-    "text": "205 : Introduction to Multimedia Systems",
+    "text": "chapter-3 example-3-1.html example-3-1.js example-3-9.html example-3-9.js",
     "tags": "",
-    "url": "/~hepting/teaching/CS-205/201810/"
-  },{
-    "title": "",
-    "text": "205 : Introduction to Multimedia Systems",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/201910/"
+    "url": "/~hepting/teaching/CS-205/code/make-book/chapter-3/"
   },{
     "title": "",
     "text": "chapter-2 example-2-1.html example-2-1.js example-2-2.html example-2-2.js",
     "tags": "",
     "url": "/~hepting/teaching/CS-205/code/make-book/chapter-2/"
-  },{
-    "title": "",
-    "text": "chapter-3 example-3-1.html example-3-1.js example-3-9.html example-3-9.js",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/code/make-book/chapter-3/"
   },{
     "title": "",
     "text": "make-book chapter-2 chapter-3",
@@ -590,109 +535,179 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-205/code/"
   },{
     "title": "",
+    "text": "205 : Introduction to Multimedia Systems",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/201910/"
+  },{
+    "title": "",
     "text": "Resources Processing Forum",
     "tags": "",
     "url": "/~hepting/teaching/CS-205/resources/"
+  },{
+    "title": "",
+    "text": "205 : Introduction to Multimedia Systems",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/201810/"
   },{
     "title": "",
     "text": "CS 205 Introduction to Multimedia Systems Calendar Description Multimedia is the use of computers to integrate texts, graphics, video, animation, and sound in an interactive experience. The course introduces these elements of multimedia and their associated technologies. Students will gain an appreciation of each element and be able to combine them into a finished work.   General Information code Resources   Semesters 201910 201810",
     "tags": "",
     "url": "/~hepting/teaching/CS-205/"
   },{
-    "title": "",
-    "text": "CS 280 • 201910 Risk and Reward in the Information Society",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-280/201910/"
-  },{
-    "title": "",
-    "text": "CS 280 Risk and Reward in the Information Society Calendar Description Social context of computing. Case study of human-computer interfaces and their evaluation. Methods and tools of analysis. Professional and ethical responsibilities. Risks and liabilities of computer-based systems. Intellectual property, privacy and civil liberties. Professional communication. Sustainability. Cybercrime.   General Information   Semesters 201910",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-280/"
-  },{
-    "title": "CS 428 + 828",
-    "text": "CS 428+828 Human Computer Communication",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/201630/"
-  },{
-    "title": "",
-    "text": "Feedback Instructor’s Feedback Instrument: Midterm Final Faculty of Science Course Evaluation: CS 428 End-of-Semester Weighted Rating: 90% Instrument Ratings Average Respondents 5 4 3 2 1 Written, from Instructor 69% 21% 16% 14% 0% 92% 53 Online, from Faculty of Science &mdash; 43% 27% 16% 14% 75% 7 Weighted rating calculation: (0.92 * 53) + (0.75 * 7) = 54.01 / 60 = 90%",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/201730/feedback/"
-  },{
-    "title": "",
-    "text": "CS428+828 • 201730 Human Computer Communication feedback",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/201730/"
-  },{
-    "title": "",
-    "text": "Media",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/201830/media/"
-  },{
-    "title": "CS 428+828 (201830) Meetings",
-    "text": "Meetings Week Wed Fri Mon 1 01 : 05 Sep 02 : 07 Sep 03 : 10 Sep 2 04 : 12 Sep 05 : 14 Sep 06 : 17 Sep 3 07 : 19 Sep 08 : 21 Sep 09 : 24 Sep 4 10 : 26 Sep 11 : 28 Sep 12 : 01 Oct 5 13 : 03 Oct 14 : 05 Oct &mdash; 6 15 : 10 Oct 16 : 12 Oct 17 : 15 Oct 7 18 : 17 Oct 19 : 19 Oct 20 : 22 Oct 8 21 : 24 Oct 22 : 26 Oct 23 : 29 Oct 9 24 : 31 Oct 25 : 02 Nov 26 : 05 Nov 10 &mdash; &mdash; 27 : 12 Nov 11 28 : 14 Nov 29 : 16 Nov 30 : 19 Nov 12 31 : 21 Nov 32 : 23 Nov 33 : 26 Nov 13 34 : 28 Nov 35 : 30 Nov 36 : 03 Dec 14 37 : 05 Dec &mdash; &mdash; Total meetings this semester: 37",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/201830/meetings/"
-  },{
-    "title": "CS 428+828 in 201830",
-    "text": "CS 428+828 • 201830 Human Computer Communication Syllabus Calendar RSS Dr. Hepting’s schedule Meetings Media Assignments Content Resources Topics &amp; Learning Outcomes UR Self-Service: CS 428 (CRN 30728) CS 828 (CRN 30742)",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/201830/"
-  },{
-    "title": "",
-    "text": "Group",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/assignments/g/"
-  },{
-    "title": "",
-    "text": "Individual or Group These assignments make up the project. All the assignments will be done by the same group of 3-4 students. The only exception doing the project in a group is for a graduate student in CS 828 who would like to define a project related to their own research. Proposal (3 marks) Requirements Gathering (6 marks) Design 2 Lo-Fi (6 marks) Evaluate (6 marks) Prototye 1 Hi-Fi (6 marks) Present (3 marks)",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/assignments/i-or-g/"
-  },{
-    "title": "",
-    "text": "Individual 01-empathize.html",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/assignments/i/"
-  },{
-    "title": "",
-    "text": "Assignments Individual Group Individual or Group",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/assignments/"
-  },{
-    "title": "Content - CS 428+828",
-    "text": "Content Topic 1 Topic 2 Topic 3",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/content/"
-  },{
-    "title": "Resources",
-    "text": "Resources Links Tools Videos",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/resources/"
-  },{
-    "title": "CS 428+828",
-    "text": "CS 428+828 Human Computer Communication Calendar Description Theory and practice related to the design and implementation of usable software and easy-to-learn interfaces. Specific topics will include user-centered design and task analysis; prototyping and the iterative design cycle; interface design and methods of evaluation.   General Information Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes   Semesters 201830 201730 201630",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/"
-  },{
-    "title": "CS 499+900",
-    "text": "CS 499+900",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-499+900/201810/"
-  },{
-    "title": "CS 499+900",
-    "text": "CS 499+900",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-499+900/"
-  },{
-    "title": "Schedule",
-    "text": "Schedule 201810.html 201830.html test.html",
-    "tags": "",
-    "url": "/~hepting/teaching/schedule/"
-  },{
     "title": "Teaching",
     "text": "Teaching Check Schedule 201830 Go Jump to a Course Offering Course CS 110 CS 205 CS 280 CS 428+828 CS 499+900 Semester Go Courses Taught CS 110 : Programming and Problem Solving CS 205 : Introduction to Multimedia Systems CS 280 : Risk and Reward in the Information Society CS 428+828 : Human Computer Communication CS 499+900 : General Information Teaching Philosophy Evaluation of Teaching Groupwork",
     "tags": "",
     "url": "/~hepting/teaching/"
+  },{
+    "title": "About/Personal * D. H. Hepting",
+    "text": "Personal",
+    "tags": "",
+    "url": "/~hepting/about/personal/"
+  },{
+    "title": "About",
+    "text": "About Education Biography Personal Interests Daryl H. Hepting, Ph.D. Associate Professor Department of Computer Science University of Regina Regina, Saskatchewan, S4S 0A2 CANADA Cell: 306-596-6312 ( voice &nbsp;&bull;&nbsp;SMS ) E-Mail: hepting@cs.uregina.ca , daryl.hepting@uregina.ca Office: College West 308.22 ( map ) Semester Schedule",
+    "tags": "",
+    "url": "/~hepting/about/"
+  },{
+    "title": "Food Project",
+    "text": "Food Description of Food Project! Related Works Operationalizing Ethics in Food Choice Decisions (2014) journal Web-Based Support of Crop Selection for Climate Adaptation (2012) conference Computer-Aided Support for Understanding Climate Variability (2011) workshop Constructing Collaborative Online Communities for Visualizing Spimes (2010) workshop Social Shopping Using Food Spimes (2010) conference A Data-Mining Framework for Designing Personalized E-Commerce Support Tools (2009) chapter Information Technology in Support of Sustainable Food Choices (2007) conference",
+    "tags": "",
+    "url": "/~hepting/projects/food/"
+  },{
+    "title": "Rough Sets",
+    "text": "Rough Sets Description of Rough Sets",
+    "tags": "",
+    "url": "/~hepting/projects/rough-sets/"
+  },{
+    "title": "UR50CS",
+    "text": "UR50CS Description of UR50CS",
+    "tags": "",
+    "url": "/~hepting/projects/ur50cs/"
+  },{
+    "title": "Interaction Design",
+    "text": "Interaction Design Description of Interaction Design",
+    "tags": "",
+    "url": "/~hepting/projects/interaction-design/"
+  },{
+    "title": "Bus Project",
+    "text": "Bus Description of Bus Project",
+    "tags": "",
+    "url": "/~hepting/projects/bus/"
+  },{
+    "title": "Enviromatics Project",
+    "text": "Enviromatics Description of Enviromatics Project! Related Works Environmental Sensing with Recycled Materials (2018) article Operationalizing Ethics in Food Choice Decisions (2014) journal RCE Saskatchewan Advancing Sustainable Livelihoods Through Equipment-Centred Learning and Sharing (2012) report Environmental decision support systems (EDSS) development - Challenges and best practices (2011) journal Mobilizing Shared Capital for Grassroots Action (2011) workshop Design of S.O.L.E. Software (2010) conference Enabling Information Technology for the Emancipation of Physical and Natural Capital (2009) conference Experiences in Designing An Online Community to Facilitate Education for Sustainable Development (2009) conference Bridging the Gaps Between Design and Use Developing Tools to Support Environmental Management and Policy (2008) chapter On the Role of Reflection and Representation in Environmental Decision Support Systems (2008) conference An Analysis of Interface Quality for Decision Support (2008) conference Discovery of Usability Patterns in Support of Green Purchasing (2007) conference Decision Support for Local Environmental Impact Assessment (2007) journal Opening Access to Environmental Software Systems (2006) conference Analysis of User Classifiers for Personalization of Environmental Decision Support System Interfaces (2005) conference Personalizing User Interfaces for Environmental Decision Support Systems (2005) conference Consumer Decision Support for Product Selection (2005) conference A Unified Framework for the Presentation of Environmental Risk Information (2004) techreport",
+    "tags": "",
+    "url": "/~hepting/projects/enviromatics/"
+  },{
+    "title": "A Picture’s Worth",
+    "text": "A Picture’s Worth What does the phrase “A picture is worth ten thousand words” mean to you? Does it become more or less meaningful if it was written by an advertising executive, a newspaper publisher, or an ancient sage? I embarked on an exploration into the origins of this phrase in 1999 as part of my doctoral work (A New Paradigm for Exploration in Computer-Aided Visualization). It was important for me to use the phrase correctly and so I wanted to know whether a picture was worth 1,000 or 10,000 words. Various versions of the phrase, and stories about its origin, are in circulation. This page seeks to trace its history. For their help with the original version of the page, I thank Dona Bubelis of the Seattle Public Library, Ellen Chamberlain of the University of South Carolina, and Dr. Paul Lester of California State University Fullerton ( A Picture’s Worth a Thousand Words?). In 1999, credit for the phrase seemed to belong to Frederick R. Barnard, National Advertising Manager for the Street Railways Advertising Company (offices then in New York, Chicago, and San Francisco). The maxim which is popular today seemed to originate as “One look is worth a thousand words”, and appeared in a 1921 advertisement by Barnard. He chose to modify the saying for a 1927 advertisement, where it took on its more famous form. The two advertisements appeared in the advertising trade journal called Printers’ Ink (now known as Marketing/Communications). March 10, 1927 (pp. 114-115) &ldquo;One Picture is Worth Ten Thousand Words&rdquo;. This advertisement uses the specific example of a baking soda ad campaign seemingly done by Barnard's firm. The basic message is the same as the earlier ad, though perhaps Barnard hoped it would be more compelling as a Chinese proverb. December 8, 1921 (pp. 96-97) &ldquo;One Look is Worth A Thousand Words&rdquo;. This advertisement talks generally about the benefits about advertising with pictures on street cars. Confusion between whether a picture is worth 1,000 or 10,000 words may stem from a 1948 entry in The MacMillan Book of Proverbs, Maxims and Famous Phrases ( formerly known as the The Home Book of Proverbs, Maxims, and Familiar Phrases ) is an early and very informative source about the phrase. Editor Burton Egbert Stevenson made the following entry on page 2611 of that volume: One look is worth a thousand words. Fred R. Barnard, in Printers' Ink, 8 Dec., 1921, p. 96. He changed it to &ldquo;One picture is worth a thousand words&rdquo; in Printers' Ink, 10 March 1927, p. 114, and called it &ldquo;a Chinese proverb&rdquo;, so that people would take it seriously. It was immediately credited to Confucious. This entry establishes the link between the two advertisements, but this source misquotes the 1927 advertisement and thereby creates “One picture is worth a thousand words”. Familiar Quotations: a collection of passages, phrases, and proverbs traced to their sources in ancient and modern literature by John Bartlett also provides information. Stevenson’s error is repeated on page 782 of the 16th edition (edited by Justin Kaplan and published by Little, Brown in 1992) where it credits “One picture is worth a thousand words” as a misattributed “Chinese proverb” and references part of the entry from the 1948 edition edited by Stevenson. “Nice guys finish seventh”: false phrases, spurious sayings, and familiar misquotations by Ralph Keyes and published in 1992 by HarperCollins has a similar account to that of Stephenson. Keyes, however, adds his own twists to the story because the phrase “One picture is worth a thousand words” does not appear anywhere in the 1921 ad: Calling an orphan saying a Chinese proverb gives it a cachet with very little risk that its actual source will be discovered. A deliberate exploitation of this syndrome involved the proverb `One picture is worth a thousand words.' This saying first appeared in a 1921 ad in Printer's Ink [sic] which was written by publicist Frederick Barnard. Barnard headlined his ad `One look is worth a thousand words.' He attributed this maxim to `a famous Japanese philosopher.' Six years later, Barnard revised the saying to read `One picture is worth ten thousand words,' and then republished it in the same magazine as a `Chinese proverb.' Barnard thought his ploy would give his words added weight. He was right. For a time, Bartlett's identified Barnard's line as `a Chinese proverb.' Other sources attributed his proverb to Confucius. The Macmillan Dictionary of Quotations had it both ways. They cited Barnard as the maxim's author, adding `Ascribed to Chinese origin.' Keyes’ book identified several rules of misquotation and the one of which he and several others have been guilty he calls numbernesia: getting the words right but the numbers wrong. The Oxford Dictionary of Phrase, Saying, and Quotation is one reference which has the correct attribution (but without any of the story). The phrase has endured to become an American proverb, appearing on page 465 of A Dictionary of American Proverbs, edited by Mieder, Kingsbury, and Harder and published by the Oxford University Press in 1992. Current opinion would remove Mr. Barnard from the picture (pun intended). There is now a wikipedia article entitled “A picture is worth a thousand words” that is focused much more broadly than this page. In updating this page, I came across a wonderful account of the history of this expression written by William Safire for his column On Language for the New York Times Magazine. Worth a Thousand Words was published on 7 April 1996. If you have more information about the origins of this quotation (or the stories that surround it), please send me e-mail and I will update this page accordingly. Sources Newspaper Copy That People Must Read",
+    "tags": "",
+    "url": "/~hepting/projects/pictures-worth/"
+  },{
+    "title": "Free Knowledge",
+    "text": "Free Knowledge Description of Free Knowledge Related Works Free Knowledge Confronting the Commodification of Human Discovery (2015) book",
+    "tags": "",
+    "url": "/~hepting/projects/free-knowledge/"
+  },{
+    "title": "CS Education",
+    "text": "CS Education Description of CS Education Related Works CSIT Outreach from a Canadian Perspective (2012) panel Creating synergy between usability courses and open source software projects (2008) journal Ethics and Usability Testing in Computer Science Education (2006) journal",
+    "tags": "",
+    "url": "/~hepting/projects/cs-education/"
+  },{
+    "title": "Calendars",
+    "text": "Calendars Each year between 1991 and 1997, a calendar of computer-generated images was published by Universe Publishing, based on the fractal geometry of Benoit B. Mandelbrot. Before 1997, the calendar was first done as a custom edition and then as a trade edition in the following year. In 1997, the trade and custom editions were the same. Richard F. Voss edited the calendars for 1991 and 1992 F. Kenton Musgrave edited the calendars for 1993 and 1994 Daryl H. Hepting edited the calendars for 1995 and 1996, and both included the essay A Path to Fractals F. Kenton Musgrave edited the calendar for 1997: it featured his work alone",
+    "tags": "",
+    "url": "/~hepting/projects/fractals/calendars/"
+  },{
+    "title": "Gallery",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/projects/fractals/gallery/"
+  },{
+    "title": "Exhibitions",
+    "text": "Exhibitions 1994-Exploring-the-Image-World-of-Computer-Graphics.html 1994-PARC-Algorithmic-Art-Show.html 1995-MATH-ART-at-SFU-Teck-Gallery.html 1996-SFU-Faculty-Staff-Student-Show.html teck-postcard.html",
+    "tags": "",
+    "url": "/~hepting/projects/fractals/exhibitions/"
+  },{
+    "title": "Fractals Project",
+    "text": "Fractals My M.Sc. thesis, Approximation and Visualization of Sets Defined by Iterated Function Systems (from 1991) dealt with linear fractals. That got me started and I am still hooked. Gallery of Images Fractals Calendars from Universe Publishing Exhibitions — in which I participated or helped to curate A Math of Art — exploring mathematics and art on the web My supervisor for my Master of Science degree was Przemyslaw Prusinkiewicz. During my studies, Prusinkiewicz took a sabbatical and visited Benoit Mandelbrot. Upon completion of my studies, that Mandelbrot connection helped F. David Fracchia (who had just completed his Ph.D. with Prusinkiewicz) and me to secure term employment with Mandelbrot’s Fractals Project (Fracchia at Yale as a postdoc, me at IBM TJ Watson Research Centre), beginning in the summer of 1991. During my contract with IBM, I lived in Ossining, New York (Home of the Grand Slammer: Sing Sing Prison). The New York Times printed a story about travelling to Ossining in Going Up the River, for a Visit. Related Works Perception of Parameter Variations in Linear Fractal Images (2010) conference In Search of a Perceptual Basis for Interacting with Parametric Images (2009) poster Humble Aspirations (1997) image The Escape Buffer Efficient Computation of Escape Time for Linear Fractals (1995) conference Rendering Methods for Iterated Function Systems (1991) conference Approximation and Visualization of Sets Defined by Iterated Function Systems (1991) MSc",
+    "tags": "",
+    "url": "/~hepting/projects/fractals/"
+  },{
+    "title": "Multimedia",
+    "text": "Multimedia Related Works A Framework for Personalization of Interactive Sound Synthesis (2005) conference Collaborative Computer-Aided Parameter Exploration for Music and Animation (2005) conference Cross-Modal Parametric Composition (2004) conference Symbol Mall (2004) sketch Managing Parameter Spaces for Multimedia Composition (2004) poster A Layered Approach to Computerization of a Multimedia Archive (1993) techreport",
+    "tags": "",
+    "url": "/~hepting/projects/multimedia/"
+  },{
+    "title": "Games",
+    "text": "Games Description of Games Related Works DIY Game Console Development (2014) course A Study of User Interface Modifications in World of Warcraft (2012) journal Study of User-Created Interfaces in Video Games (2010) workshop",
+    "tags": "",
+    "url": "/~hepting/projects/games/"
+  },{
+    "title": "Faces Project",
+    "text": "Faces Description of Faces Project! Related Works A Linear Model for Three-Way Analysis of Facial Similarity (2018) conference Three-Way Analysis of Facial Similarity Judgments (2017) conference Discernibility in the Analysis of Binary Card Sort Data (2013) conference A rough set exploration of facial similarity judgements (2011) journal A Rough Sets Approach for Personalized Support of Face Recognition (2009) conference",
+    "tags": "",
+    "url": "/~hepting/projects/faces/"
+  },{
+    "title": "Participant Pool",
+    "text": "Participant Pool Description of Participant Pool",
+    "tags": "",
+    "url": "/~hepting/projects/participant-pool/"
+  },{
+    "title": "Open Source",
+    "text": "Open Source Description of Open Source Project!",
+    "tags": "",
+    "url": "/~hepting/projects/open-source/"
+  },{
+    "title": "cogito",
+    "text": "cogito Description of cogito Related Works Interactive Evolution for Systematic Exploration of a Parameter Space (2003) conference",
+    "tags": "",
+    "url": "/~hepting/projects/cogito/"
+  },{
+    "title": "Blogging",
+    "text": "Blogging Description of Blogging",
+    "tags": "",
+    "url": "/~hepting/projects/blogging/"
+  },{
+    "title": "Visualization",
+    "text": "Visualization Description of Visualization Related Works A User-Driven Interface for Exploring Visualizations (2007) conference The Implications of Verbal Overshadowing for Computer Interface Design (2003) techreport Towards a visual interface for information visualization (2002) conference A New Paradigm for Exploration in Computer-Aided Visualization (1999) PhD An Exploratory Approach to Mathematical Visualization (1998) conference A Personal Paradigm for Computer-Aided Visualization (1996) workshop Cogito a system for computer-aided visualization (1996) sketch",
+    "tags": "",
+    "url": "/~hepting/projects/visualization/"
+  },{
+    "title": "Creativity",
+    "text": "Creativity Related Works Assessing End-User Programming for a Graphics Development Environment (2010) conference Software for Systematic and Imaginative Exploration (2007) poster Computational Support for P-Creative Solutions (2005) conference An Integrated Approach to Discovery in Complex Information Spaces (2004) conference A New Paradigm for Exploration in Computer-Aided Visualization (1999) PhD Cogito a system for computer-aided visualization (1996) sketch",
+    "tags": "",
+    "url": "/~hepting/projects/creativity/"
+  },{
+    "title": "Robot Library",
+    "text": "Library EV3 Educational Kit",
+    "tags": "",
+    "url": "/~hepting/projects/robots/library/"
+  },{
+    "title": "Robots",
+    "text": "Robots Description of Robots",
+    "tags": "",
+    "url": "/~hepting/projects/robots/"
+  },{
+    "title": "Challenging Bodies",
+    "text": "Challenging Bodies Description of Challenging Bodies Project",
+    "tags": "",
+    "url": "/~hepting/projects/challenging-bodies/"
+  },{
+    "title": "Genealogy",
+    "text": "Genealogy Description of Genealogy",
+    "tags": "",
+    "url": "/~hepting/projects/genealogy/"
+  },{
+    "title": "Projects",
+    "text": "Projects Collected here are the various projects that I have undertaken over the years, in collaboration with many wonderful people. blogging bus challenging-bodies cogito creativity cs-education enviromatics faces food fractals free-knowledge games genealogy interaction-design math-art multimedia open-source participant-pool pictures-worth robots rough-sets ur50cs visualization",
+    "tags": "",
+    "url": "/~hepting/projects/"
+  },{
+    "title": "RSS Feeds",
+    "text": "RSS Feeds News CS-428+828-201830",
+    "tags": "",
+    "url": "/~hepting/rss/"
   },{
     "title": "Homepage",
     "text": "Home (current) About Projects Research Teaching RSS Search News &nbsp; D. H. Hepting PhD &bull; Simon Fraser University MSc &bull; University of Regina BSc (Hons) &bull; University of Regina &nbsp;",
@@ -734,6 +749,11 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/projects/fractals/nat-num.html"
   },{
+    "title": "CS 828 Research Paper Review",
+    "text": "Research Paper Review Description This is an INDIVIDUAL assignment. Choose a recent (within the last 3 years) conference paper (with at least 8 pages) that is new to you, from ACM SIGCHI conferences (including CHIPLAY). Critically read the paper and write a summary of it, according to Fong’s alternative method for reviewing papers: What is the purpose of the work? How do the authors achieve their purpose? Why did they adopt their particular approach? Do you think their purpose has been achieved? What insights have you gained from reading this work? Finally, include an explanation of why you chose this paper. Your summary should be approximately 1000 words. Submission submit a pdf document on URcourses Grading This assignment is worth marks, according to the following rubric: Rubric DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of creating rubrics. Your comments about the following rubric are welcome via email Criterion and Weight Exemplary Sufficient Developing Needs Improvement Grade penalties will be applied in the following situations for assignment submissions: on time but the written instructions for the submission were not followed: deduct 10% of the earned grade late (but within 48 hours of the due date and time): deduct 10% of the earned grade late by more than 48 hours: deduct 50% of the earned grade Calculator Penalties None (on-time and followed instructions) Instructions not followed Assignment submitted late, but within 48 hours Assignment submitted more than 48 hours late Rubric Criteria Output Evaluate Copy Output to Clipboard Clear Form",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/assignments/i/g/paper-review.html"
+  },{
     "title": "Teaching Philosophy",
     "text": "Philosophy Short version Challenge my students to think deeply and behave ethically. ( inspired by the story of Martina Fitzgerald’s recollections about Gord Downey and their high school English teacher)",
     "tags": "",
@@ -763,6 +783,16 @@ var tipuesearch = {"pages": [{
     "text": "# {{ page.breadcrumb }} How to Build Your Creative Confidence (TED 2012) &mdash; David Kelley From the TED website: &ldquo;Is your school or workplace divided between the \"creatives\" versus the practical people? Yet surely, David Kelley suggests, creativity is not the domain of only a chosen few. Telling stories from his legendary design career and his own life, he offers ways to build the confidence to create.&rdquo; The power of believing that you can improve (TEDxNorrkoping 2014) &mdash; Carol Dweck From the TED website: &ldquo;Carol Dweck researches &lsquo;growth mindset&rsquo; &mdash; the idea that we can grow our brain&rsquo;s capacity to learn and to solve problems. In this talk, she describes two ways to think about a problem that’s slightly too hard for you to solve. Are you not smart enough to solve it ... or have you just not solved it yet? A great introduction to this influential field.&rdquo; The future of technology as predicted by HP back in 2000 Apple's Knowledge Navigator concept video from 1987",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/resources/videos.html"
+  },{
+    "title": "Wikipedia",
+    "text": "# {{ page.breadcrumb }} [Wikipedia](https://en.wikipedia.org/wiki/Main_Page) is a great place to start your research, but your it should not end there. Citing wikipedia as a source in any assignment is not permitted.",
+    "tags": "",
+    "url": "/~hepting/teaching/wikipedia.html"
+  },{
+    "title": "You Choose Assignment",
+    "text": "# {{ page.breadcrumb }} ### Description This is an INDIVIDUAL assignment. Consider the class themes that we have discussed and will consider. Please see the page of [Topic and Learning Outcomes]({{ \"/teaching/CS-428+828/topics.html\" | relative_url }}) for a guide. You may choose to write approximately 1000 words about your chosen topic, but you are welcome to consider other forms of deliverable that are more meaningful to you. Your submission should include between 2 and 4 external references ( [NOT wikipedia]({{ \"/teaching/wikipedia.html\" | relative_url }})). ### Submission * submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084) ### Grading {% include marker.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/assignments/i/u/you-choose.html"
   },{
     "title": "",
     "text": "",
@@ -813,106 +843,6 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/500.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/about/personal/daryls/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/about/personal/heptings/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/personal/index.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/works/2007-06-hep-software-for-systematic-and-imaginative-exploration.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/teach/outreach/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/art/AoFcals/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/lfgallery/ferns/reflecting.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/lfgallery/gaskets/mt_esc_gasket.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/art/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/math-of-art/index.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/math-of-art/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/math-of-art/fractals1.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/projects/fractals/calendars/1994.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/nat-num/dynamics.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/art/math+art/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/projects/math-art/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/admin/ppool.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/words/history.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/words/index.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/proverbial/history.html"
   },{
     "title": "",
     "text": "",
@@ -982,7 +912,17 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
-    "url": "/~hepting/teaching/cs205-325/201610/"
+    "url": "/~hepting/teaching/201320.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/sem/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/201820.html"
   },{
     "title": "",
     "text": "",
@@ -1022,6 +962,16 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/teaching/cs499+900/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/cs499+900/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/teaching/cs428+828/201730/meetings/05.html"
   },{
     "title": "",
@@ -1042,27 +992,7 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
-    "url": "/~hepting/teaching/cs499+900/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/teaching/cs499+900/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/teaching/201320.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/teaching/sem/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/teaching/201820.html"
+    "url": "/~hepting/teaching/cs205-325/201610/"
   },{
     "title": "",
     "text": "",
@@ -1103,6 +1033,106 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/teaching/byKA.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/about/personal/daryls/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/about/personal/heptings/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/personal/index.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/words/history.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/words/index.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/proverbial/history.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teach/outreach/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/art/AoFcals/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/lfgallery/ferns/reflecting.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/lfgallery/gaskets/mt_esc_gasket.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/art/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/math-of-art/index.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/math-of-art/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/math-of-art/fractals1.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/projects/fractals/calendars/1994.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/nat-num/dynamics.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/art/math+art/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/projects/math-art/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/admin/ppool.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/works/2007-06-hep-software-for-systematic-and-imaginative-exploration.html"
   },{
     "title": "",
     "text": "",
