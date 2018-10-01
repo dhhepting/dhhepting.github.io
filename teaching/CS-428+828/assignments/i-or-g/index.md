@@ -10,7 +10,7 @@ The only exception doing the project in a group is for a graduate student
 in CS 828 who would like to define a project related to their own research.
 
 1. [Proposal (3 marks)](01-proposal.html)
-1. Requirements Gathering (6 marks)
+1. [Requirements Gathering (6 marks)](02-requirements.html)
 1. Design 2 Lo-Fi (6 marks)
 1. Evaluate (6 marks)
 1. Prototye 1 Hi-Fi (6 marks)
