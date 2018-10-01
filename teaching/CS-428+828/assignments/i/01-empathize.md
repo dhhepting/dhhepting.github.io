@@ -27,6 +27,8 @@ rubric:
 
 ### Description
 
+This is an INDIVIDUAL assignment.
+
 You have been given instructor access to a [course on URcourses]( https://urcourses.uregina.ca/course/view.php?id=2168).
 You are asked to complete a task as a means to experiencing the interface as an instructor, and then reflect on your experience with interface. You are asked to do 3 things in this assignment:
 
