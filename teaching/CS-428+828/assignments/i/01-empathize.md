@@ -30,7 +30,7 @@ rubric:
 This is an INDIVIDUAL assignment.
 
 You have been given instructor access to a [course on URcourses]( https://urcourses.uregina.ca/course/view.php?id=2168).
-You are asked to complete a task as a means to experiencing the interface as an instructor, and then reflect on your experience with interface. You are asked to do 3 things in this assignment:
+You are asked to complete a task as a means to experience the URcourses interface as an instructor, and then reflect on your experience with interface. You are asked to do 3 things in this assignment:
 
 1. Perform a task within URcourses:
   * claim 1 topic by changing the label to your own name (there are enough blank topics for everyone - so be nice and don't claim someone else's topic!)
@@ -42,6 +42,7 @@ as you complete this task.
 ### Submission
 
 * submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
+* target: 1 page for the empathy map and 1-2 pages for the opportunities for redesign
 
 ### Grading
 
