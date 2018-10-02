@@ -1,0 +1,49 @@
+<div class="btn-toolbar bg-transp">
+  <!-- Share on LinkedIn -->
+  <a class="btn btn-primary mx-1" aria-label="Share on LinkedIn"
+  href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}{{site.baseurl}}{{page.url}}&title={{page.breadcrumb}}&summary={{page.description | truncate: 256 | url_encode}}&source={{site.url}}{{site.baseurl}}"
+	target="_blank">
+    <span class="fab fa-linkedin" title="Share on LinkedIn"></span>
+  </a>
+  <!-- Share on Facebook -->
+  <a class="btn btn-primary mx-1" aria-label="Share on Facebook"
+  href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+	target="_blank">
+    <span class="fab fa-facebook" title="Share on Facebook"></span>
+  </a>
+  <!-- Share on Google+ -->
+  <a class="btn btn-primary mx-1" aria-label="Share on Google+"
+	href="https://plus.google.com/share?url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+	target="_blank">
+    <span class="fab fa-google-plus-square" title="Share on Google+"></span>
+  </a>
+  <!-- Share on twitter -->
+  <a class="btn btn-primary mx-1" aria-label="Share on Twitter"
+  href="https://twitter.com/intent/tweet?text={{page.breadcrumb}}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+	target="_blank">
+    <span class="fab fa-twitter-square" title="Share on Twitter"></span>
+  </a>
+  <!-- Share via email -->
+  <a class="btn btn-primary mx-1" aria-label="Share via Email"
+	href="mailto:someone@example.com?subject={{page.breadcrumb}}&amp;body=Check out this page: {{page.url | absolute_url}}">
+	 <span class="fas fa-envelope" title="Share via Email"></span>
+  </a>
+  <!-- Search on google -->
+  <a class="btn btn-primary mx-1" aria-label="Search on google"
+  href="https://www.google.ca/search?q={{page.title}}"
+  target="_blank">
+    google
+  </a>
+  <!-- Search on bing -->
+  <a class="btn btn-primary mx-1" aria-label="Search on bing"
+  href="https://www.bing.com/search?q={{ page.title }}"
+  target="_blank">
+    bing
+  </a>
+  <!-- Search on yahoo -->
+  <a class="btn btn-primary mx-1" aria-label="Search on yahoo"
+  href="https://ca.search.yahoo.com/search?q={{ page.title }}"
+  target="_blank">
+    yahoo
+  </a>
+</div>
