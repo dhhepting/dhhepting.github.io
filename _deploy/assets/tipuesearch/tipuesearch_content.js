@@ -75,7 +75,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/11.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 12 / 37 Questions from Last Meeting? Administration Assignments Outline for Today Health, Safety, Wellness what potential problems can you notice? an you identify some requirements for this kind of information sheet? Chapter 3 Slides To Do Read Chapter 9, 10 Media from Meeting Nothing available for 12 Annotations and Afterthoughts",
+    "text": "Mtg 12 / 37 Questions from Last Meeting? Administration Assignments Outline for Today Health, Safety, Wellness what potential problems can you notice? an you identify some requirements for this kind of information sheet? Chapter 3 Slides To Do Read Chapter 9, 10 Media from Meeting Annotations and Afterthoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/12.html"
   },{
@@ -439,8 +439,8 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/assignments/i/g/"
   },{
-    "title": "",
-    "text": "Individual For everyone: Empathize For CS 428 For CS 828",
+    "title": "Individual",
+    "text": "Individual For all students in CS 428+828: Empathize Critique work from another group Report on your experience evaluating other interfaces Only for students in CS 428 Only for students in CS 828",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/assignments/i/"
   },{
@@ -902,6 +902,16 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/research/works/2013-10-Discernibility-in-the-Analysis-of-Binary-Card-Sort-Data.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/works/2014-06-Operationalizing-Ethics-in-Food-Choice-Decisions.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/research/external.html"
   },{
     "title": "",
@@ -1150,12 +1160,12 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teach/philosophy.html"
   },{
     "title": "Creativity",
-    "text": "Creativity (2006) Event Presentation by Joel Salatin Tuesday, November 18, 2008 Education Auditorium, University of Regina Organized by Description Media",
+    "text": "Creativity (2006) google bing yahoo Event Presentation by Joel Salatin Tuesday, November 18, 2008 Education Auditorium, University of Regina Organized by Description Media",
     "tags": "event",
     "url": "/~hepting/research/works/2006-09-Creativity.html"
   },{
     "title": "How to Eat Well AND Save Our Planet (2008)",
-    "text": "# Event Presentation by Joel Salatin Tuesday, November 18, 2008 Education Auditorium, University of Regina Organized by Description Media",
+    "text": "# google bing yahoo Event Presentation by Joel Salatin Tuesday, November 18, 2008 Education Auditorium, University of Regina Organized by Description Media",
     "tags": "event",
     "url": "/~hepting/research/works/2008-11-How-to-Eat-Well-AND-Save-Our-Planet.html"
   },{
