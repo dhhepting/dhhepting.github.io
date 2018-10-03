@@ -16,7 +16,7 @@ comprising empathize and define steps, is the focus of this assignment. You shou
 well-defined activities that users are trying to perform.
 
 1. empathize: do this by first creating one or more empathy maps for the activities
-1. define: identify specific aspects of the current interface that cause problems for the users and create requirements (see the [Volere Snow Card](http://www.volere.co.uk/snowcard.pdf) [and notes](http://www.volere.co.uk/pdf%20files/06%20Atomic%20Requirements.pdf), illusrated in the textbook, for an idea about the kinds of details to capture)
+1. define: identify specific aspects of the current interface that cause problems for the users and create requirements (see the [Volere Snow Card](http://www.volere.co.uk/snowcard.pdf) and [notes](http://www.volere.co.uk/pdf%20files/06%20Atomic%20Requirements.pdf), illustrated in the textbook, for an idea about the kinds of details to capture)
 
 Remember that this phase is still concerned with articulating the problem.
 No solutions should appear here. That will come later.
