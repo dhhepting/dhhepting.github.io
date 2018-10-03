@@ -10,11 +10,16 @@ breadcrumb: Project Requirements
 Establish requirements for your redesign effort by considering user issues around
 one feature or activity that users may perform with the application or website.
 
-Do this by first creating an empathy map and then identifying speicific features that a new
-design will have. Remember that this phase is still concerned with articulating the
-problem.  No solutions should appear here. That will come later.
+Recall the diagram that [illustrated the article about Design Thinking](https://www.nngroup.com/articles/design-thinking/) from the Nielsen Norman Group.
+There are 3 phases depicted: understand, explore, and materialize. The understand phase,
+comprising empathize and define steps, is the focus of this assignment. You should focus on
+well-defined activities that users are trying to perform.
 
-( More to come before next meeting. )
+1. empathize: do this by first creating one or more empathy maps for the activities
+1. define: identify specific aspects of the current interface that cause problems for the users and create requirements (see the [Volere Snow Card](http://www.volere.co.uk/snowcard.pdf) [and notes](http://www.volere.co.uk/pdf%20files/06%20Atomic%20Requirements.pdf), illusrated in the textbook, for an idea about the kinds of details to capture)
+
+Remember that this phase is still concerned with articulating the problem.
+No solutions should appear here. That will come later.
 
 ### Submission
 
