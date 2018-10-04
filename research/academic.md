@@ -8,6 +8,7 @@ layout: research
 - [Academia.edu](https://uregina.academia.edu/DarylHepting){: target="blank" }
 - [AMiner](https://aminer.org/profile/53f45b6bdabfaedd74e4095c){: target="blank" }
 - [Collection of CS Bibliographies](http://liinwww.ira.uka.de/csbib?query=%2Bau:HeptingDH){: target="blank" }
+- [csauthors.net](https://www.csauthors.net/daryl-h-hepting/){: target="blank" }
 - [DBLP](http://dblp.uni-trier.de/pers/hd/h/Hepting:Daryl_H=.html){: target="blank" }
 - [Google Scholar](https://scholar.google.ca/citations?user=iXVS1CAAAAAJ&hl=en){: target="blank" }
 - [Impactstory](https://impactstory.org/u/0000-0002-3138-3521){: target="blank" }

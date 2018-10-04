@@ -80,7 +80,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/12.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 13 / 37 Questions from Last Meeting? Administration Assignments: marks and feedback for Proposal should be posted today Requirements has been updated Outline for Today Health, Safety, Wellness what potential problems can you notice? can you identify some requirements for this kind of information sheet? What do you think about this page Given this starting point, what would you do to send a complaint by email? Chapter 3 Slides Chapter 9 Slides Chapter 10 Slides To Do Read Chapter 9, 10 Media from Meeting Nothing available for 13 Annotations and Afterthoughts",
+    "text": "Mtg 13 / 37 Questions from Last Meeting? Administration Assignments: marks and feedback for Proposal should be posted today Requirements has been updated Outline for Today Health, Safety, Wellness what potential problems can you notice? can you identify some requirements for this kind of information sheet? What do you think about this page Given this starting point, what would you do to send a complaint by email? Chapter 3 Slides Chapter 9 Slides Chapter 10 Slides To Do Read Chapter 9, 10 Media from Meeting Annotations and Afterthoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/13.html"
   },{
@@ -300,7 +300,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/projects/fractals/calendars/a-path-to-fractals.html"
   },{
     "title": "Academic Networks",
-    "text": "Academic Networks Academia.edu AMiner Collection of CS Bibliographies DBLP Google Scholar Impactstory Interaction Design Foundation Mendeley Microsoft Academic ORCID (Open Researcher and Contributor ID) oURspace: University of Regina institutional repository philpapers ResearcherID ResearchGate researchr SemanticScholar",
+    "text": "Academic Networks Academia.edu AMiner Collection of CS Bibliographies csauthors.net DBLP Google Scholar Impactstory Interaction Design Foundation Mendeley Microsoft Academic ORCID (Open Researcher and Contributor ID) oURspace: University of Regina institutional repository philpapers ResearcherID ResearchGate researchr SemanticScholar",
     "tags": "",
     "url": "/~hepting/research/academic.html"
   },{
