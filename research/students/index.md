@@ -1,12 +1,14 @@
 ---
 breadcrumb: Students
-layout: default
+title: Student Supervision
+layout: bg-image
 ---
 # {{ page.breadcrumb }}
 
-- [Academia.edu](https://uregina.academia.edu/DarylHepting)
-					
+
+
 {% comment %}
+- [Academia.edu](https://uregina.academia.edu/DarylHepting)
 			<li>
 				<a href="https://aminer.org/profile/53f45b6bdabfaedd74e4095c">
 					AMiner

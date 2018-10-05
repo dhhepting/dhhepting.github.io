@@ -360,7 +360,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/news/"
   },{
     "title": "Sitemap",
-    "text": "Sitemap 403 Redirect 404 Redirect 500 Redirect HTTP Errors 403 Redirect 404 Redirect 500 Redirect About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Math of Art Nature’s Numbers Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Library Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test Wikipedia",
+    "text": "Sitemap 403 Redirect 404 Redirect 500 Redirect HTTP Errors 403 Redirect 404 Redirect 500 Redirect About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Math of Art Nature’s Numbers Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Library Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Research Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test Wikipedia",
     "tags": "",
     "url": "/~hepting/search/sitemap/"
   },{
@@ -369,13 +369,13 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/research/works/"
   },{
-    "title": "",
-    "text": "Students Academia.edu",
+    "title": "Student Supervision",
+    "text": "Students",
     "tags": "",
     "url": "/~hepting/research/students/"
   },{
     "title": "Research",
-    "text": "Research academic.html dhhepting.bib external.html funding.html inspiration.html inspirations.html pubs students works.html works",
+    "text": "Research { \"@type\": \"ListItem\", \"position\": 1, \"item\": { \"@type\": \"WebPage\", \"@id\": \"http://www2.cs.uregina.ca/~hepting/research/academic.html\", \"name\": \"Academic Networks\" } }, { \"@type\": \"ListItem\", \"position\": 2, \"item\": { \"@type\": \"WebPage\", \"@id\": \"http://www2.cs.uregina.ca/~hepting/research/dhhepting.bib\", \"name\": \"BibTeX-formatted file of collected works\" } }, { \"@type\": \"ListItem\", \"position\": 3, \"item\": { \"@type\": \"WebPage\", \"@id\": \"http://www2.cs.uregina.ca/~hepting/research/funding.html\", \"name\": \"Funding\" } }, { \"@type\": \"ListItem\", \"position\": 4, \"item\": { \"@type\": \"WebPage\", \"@id\": \"http://www2.cs.uregina.ca/~hepting/research/inspirations.html\", \"name\": \"Inspirations\" } }, { \"@type\": \"ListItem\", \"position\": 5, \"item\": { \"@type\": \"WebPage\", \"@id\": \"http://www2.cs.uregina.ca/~hepting/research/students/\", \"name\": \"Students\" } }, { \"@type\": \"ListItem\", \"position\": 6, \"item\": { \"@type\": \"WebPage\", \"@id\": \"http://www2.cs.uregina.ca/~hepting/research/works/\", \"name\": \"Collected Works\" } }",
     "tags": "",
     "url": "/~hepting/research/"
   },{
@@ -764,6 +764,11 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/projects/fractals/exhibitions/teck-postcard.html"
   },{
+    "title": "Research",
+    "text": "Research Loading publications...",
+    "tags": "",
+    "url": "/~hepting/research/test.html"
+  },{
     "title": "Test Schedule",
     "text": "Test",
     "tags": "",
@@ -1128,6 +1133,11 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/proverbial/history.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/proverbial/"
   },{
     "title": "",
     "text": "",
