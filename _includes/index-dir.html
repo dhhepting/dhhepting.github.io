@@ -1,5 +1,5 @@
 {% comment %}
-    Updated for boostrap 4 
+    Updated for boostrap 4
     (https://getbootstrap.com/docs/4.0/components/breadcrumb/) and
     does not create a link for the last (active) item
 {% endcomment %}
@@ -7,23 +7,57 @@
 {% assign filesize = url_parts.size %}
 {% assign dirsize = filesize | plus: 1 %}
 {% assign dircons = "" %}
-{% for sp in site.pages %}
-    {% if sp.url contains page.url and sp.url != page.url %}
-	{% assign sp_parts = sp.url | split: '/' %}
-        {% if sp_parts.size == filesize or sp_parts.size == dirsize %} 
-	    {% capture dircons %}{{dircons}}|{{sp.url}}#{{sp_parts | last}}{% endcapture %}
-        {% endif %}
+{% if page.files %}
+  {% assign pfs = page.files.size %}
+  {% assign pfi = 1 | plus: 0 %}
+  {% for pf in page.files %}
+    {% assign pfn = pf.n %}
+    {% unless pfn contains "." %}
+      {% assign pfn = pfn | append: "/" %}
+    {% endunless %}
+    {% assign pfurl = page.url | append: pfn %}
+    {%- assign bc_page = site.pages | where: "url", pfurl -%}
+    {% if bc_page[0].breadcrumb %}
+      {% assign pfb = bc_page[0].breadcrumb %}
+    {% else %}
+      {% assign pfb = pf.b %}
     {% endif %}
-{% endfor %}
-{% assign code_files = site.static_files %}
-{% for mycode in code_files %}
-  {% if mycode.path contains page.url %}
-	{% assign sf_parts = mycode.path | split: '/' %}
-        {% if sf_parts.size == dirsize %} 
-          {% capture dircons %}{{dircons}}|{{mycode.path}}#{{sf_parts | last}}{% endcapture %}
-        {% endif %}
-  {% endif %}
-{% endfor %}
+    {
+      "@type": "ListItem",
+      "position": {{ pfi }},
+      "item":
+      {
+        "@type": "WebPage",
+        "@id": "{{ pfurl | absolute_url }}",
+        "name": "{{ pfb }}"
+      }
+      {% if pfi < pfs %}
+    },
+      {% else %}
+    }
+      {% endif %}
+    {% assign pfi = pfi | plus: 1 %}
+  {% endfor %}
+{% else %}
+
+  {% for sp in site.pages %}
+      {% if sp.url contains page.url and sp.url != page.url %}
+  	{% assign sp_parts = sp.url | split: '/' %}
+          {% if sp_parts.size == filesize or sp_parts.size == dirsize %}
+  	    {% capture dircons %}{{dircons}}|{{sp.url}}#{{sp_parts | last}}{% endcapture %}
+          {% endif %}
+      {% endif %}
+  {% endfor %}
+  {% assign code_files = site.static_files %}
+  {% for mycode in code_files %}
+    {% if mycode.path contains page.url %}
+  	{% assign sf_parts = mycode.path | split: '/' %}
+          {% if sf_parts.size == dirsize %}
+            {% capture dircons %}{{dircons}}|{{mycode.path}}#{{sf_parts | last}}{% endcapture %}
+          {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 {% assign sorteddircons = dircons | split: '|' | sort %}
 {% capture numcons %}{{ sorteddircons.size | minus:1 }}{% endcapture %}
 <ul>
