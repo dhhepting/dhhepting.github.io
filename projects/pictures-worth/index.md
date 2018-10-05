@@ -5,6 +5,7 @@ redirect_from:
     - /research/web/words/history.html
     - /research/web/words/index.html
     - /proverbial/history.html
+    - /proverbial/
 project: pictures-worth
 layout: bg-image
 ---

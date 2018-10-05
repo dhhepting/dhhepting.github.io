@@ -9,12 +9,13 @@ files:
   - n: dhhepting.bib
     b: BibTeX-formatted file of collected works
   - n: funding.html
+    b: Funding
   - n: inspirations.html
   - n: students
   - n: works
 layout: bg-image
 ---
-# Research
+# {{ page.breadcrumb }}
 {% comment %}use type=text/plain for bib file {%endcomment%}
 
 {% include index-dir.html %}
