@@ -13,8 +13,9 @@ one feature or activity that users may perform with the application or website.
 Recall the diagram that [illustrated the article about Design Thinking](https://www.nngroup.com/articles/design-thinking/) from the Nielsen Norman Group.
 There are 3 phases depicted: understand, explore, and materialize. The understand phase,
 comprising empathize and define steps, is the focus of this assignment. You should focus on
-well-defined activities that users are trying to perform.
+well-defined activities that well-defined users are trying to perform.
 
+1. describe the activity/activities and the user(s) with sufficient detail to be relatable
 1. empathize: do this by first creating one or more empathy maps for the activities
 1. define: identify specific aspects of the current interface that cause problems for the users and create requirements (see the [Volere Snow Card](http://www.volere.co.uk/snowcard.pdf) and [notes](http://www.volere.co.uk/pdf%20files/06%20Atomic%20Requirements.pdf), illustrated in the textbook, for an idea about the kinds of details to capture)
 
@@ -24,6 +25,7 @@ No solutions should appear here. That will come later.
 ### Submission
 
 * submit a [pdf](https://en.wikipedia.org/wiki/PDF) document (1 per group) on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
+* target: 10 requirements
 
 ### Grading
 
