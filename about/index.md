@@ -33,8 +33,16 @@ layout: bg-image
 			</ul>
 		</div>
 		<div class="col-xs-12 col-sm-8">
-			Daryl H. Hepting, Ph.D.<br />
-			Associate Professor<br />
+			Daryl H. Hepting, Ph.D.
+      <br />
+			Associate Professor
+      <br />
+      College West 308.22 (
+  			<a href="http://maps.google.com/?q=50.41772003105197,-104.59164619445801">
+  				map
+  			</a>
+  		)
+      <br />
 			<a href="http://www.cs.uregina.ca/">
 				Department of Computer Science
 			</a>
@@ -47,8 +55,7 @@ layout: bg-image
 			<br />
 			CANADA
 			<br /><br />
-			Cell: 306-596-6312 ( <a href="tel:306-596-6312">voice</a>
-				&nbsp;&bull;&nbsp;<a href="sms:306-596-6312">SMS</a> )
+			Cell: 306-596-6312 ( <a href="tel:306-596-6312">voice</a>&nbsp;&bull;&nbsp;<a href="sms:306-596-6312">SMS</a> )
 			<br />
 			E-Mail:
 			<a href="mailto:hepting@cs.uregina.ca">
@@ -58,17 +65,14 @@ layout: bg-image
 			<a href="mailto:daryl.hepting@uregina.ca">
 				daryl.hepting@uregina.ca
 			</a>
-			<br />
-						<br />
-			Office: College West 308.22 (
-			<a href="http://maps.google.com/?q=50.41772003105197,-104.59164619445801">
-				map
-			</a>
-			)
-			<br />
+			<br /><br />
 			<a id="semlink" href="{{ "/teaching/schedule/" | relative_url }}">
 				Semester Schedule
 			</a>
+      <br /><br />
+      <a href="elsewhere.html">
+        Find me elsewhere on the web
+      </a>
 			<script>
 				var today = new Date();
 				var semnum = "";
@@ -84,7 +88,6 @@ layout: bg-image
 				var semurl = document.getElementById("semlink")
 				semurl.setAttribute("href","{{ "/teaching/schedule/" | relative_url}}"+today.getFullYear() + semnum + ".html");
 			</script>
-			<br />
 		</div>
 	</div>
 </div>
