@@ -1,7 +1,9 @@
 ---
-breadcrumb: Academic Networks
-title: Academic Networks
-layout: research
+breadcrumb: Elsewhere on the Web
+title: Elsewhere on the Web
+redirect_from:
+  - /research/academic.html
+layout: bg-image
 ---
 # {{ page.breadcrumb }}
 
