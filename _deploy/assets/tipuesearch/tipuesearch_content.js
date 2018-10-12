@@ -19,6 +19,11 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/01.html"
   },{
+    "title": "HCC Critique Assignment",
+    "text": "Critique Description This is an INDIVIDUAL assignment. You have been placed into a “Critique” group, the members of which will receive the submission from a “Project” group (in a message posted here). In order to keep the projects on track, please complete your critique within a week. Review the submission and provide constructive feedback based on what was requested in the Requirements Gathering assignment. Share your observations and ideas that you have for the group’s project and ask any questions. Submission submit a pdf document on URcourses target: 1 page for the review and 1-2 pages for the sharing Grading This assignment is worth 6 marks, according to the following rubric: Rubric DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of creating rubrics. Your comments about the following rubric are welcome via email Criterion and Weight Exemplary Sufficient Developing Needs Improvement Review (2.75) Thoughtful and thorough Reasonably thorough Somewhat complete Substantially incomplete Sharing (2.75) Thoughtful and thorough Reasonably thorough Somewhat complete Substantially incomplete Writing (0.5) Shows a good command of Standard English. No problems for your audience Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work Some errors, audience may have some trouble reading your work Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow Grade penalties will be applied in the following situations for assignment submissions: on time but the written instructions for the submission were not followed: deduct 10% of the earned grade late (but within 48 hours of the due date and time): deduct 10% of the earned grade late by more than 48 hours: deduct 50% of the earned grade Calculator Penalties None (on-time and followed instructions) Instructions not followed Assignment submitted late, but within 48 hours Assignment submitted more than 48 hours late Rubric Criteria Review (2.75) Choose... Exemplary (+): Thoughtful and thorough Exemplary: Thoughtful and thorough Exemplary (-): Thoughtful and thorough Sufficient (+): Reasonably thorough Sufficient: Reasonably thorough Sufficient (-): Reasonably thorough Developing (+): Somewhat complete Developing: Somewhat complete Developing (-): Somewhat complete Needs Improvement: Substantially incomplete Sharing (2.75) Choose... Exemplary (+): Thoughtful and thorough Exemplary: Thoughtful and thorough Exemplary (-): Thoughtful and thorough Sufficient (+): Reasonably thorough Sufficient: Reasonably thorough Sufficient (-): Reasonably thorough Developing (+): Somewhat complete Developing: Somewhat complete Developing (-): Somewhat complete Needs Improvement: Substantially incomplete Writing (0.5) Choose... Exemplary (+): Shows a good command of Standard English. No problems for your audience Exemplary: Shows a good command of Standard English. No problems for your audience Exemplary (-): Shows a good command of Standard English. No problems for your audience Sufficient (+): Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work Sufficient: Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work Sufficient (-): Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work Developing (+): Some errors, audience may have some trouble reading your work Developing: Some errors, audience may have some trouble reading your work Developing (-): Some errors, audience may have some trouble reading your work Needs Improvement: Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow Output Evaluate Copy Output to Clipboard Clear Form",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/assignments/i/02-critique.html"
+  },{
     "title": "Project Requirements",
     "text": "Project Requirements Description Establish requirements for your redesign effort by considering user issues around one feature or activity that users may perform with the application or website. Recall the diagram that illustrated the article about Design Thinking from the Nielsen Norman Group. There are 3 phases depicted: understand, explore, and materialize. The understand phase, comprising empathize and define steps, is the focus of this assignment. You should focus on well-defined activities that well-defined users are trying to perform. describe the activity/activities and the user(s) with sufficient detail to be relatable empathize: do this by first creating one or more empathy maps for the activities define: identify specific aspects of the current interface that cause problems for the users and create requirements (see the Volere Snow Card and notes, illustrated in the textbook, for an idea about the kinds of details to capture) Remember that this phase is still concerned with articulating the problem. No solutions should appear here. That will come later. Submission submit a pdf document (1 per group) on URcourses target: 10 requirements Grading This assignment is worth 6 marks, according to the following rubric: Rubric DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of creating rubrics. Your comments about the following rubric are welcome via email Criterion and Weight Exemplary Sufficient Developing Needs Improvement Description of User(s) (0.75) Clear and compelling Concrete Lacks detail Substantially missing Description of Task(s) (0.75) Clear and compelling Concrete Lacks detail Substantially missing Empathy Map(s) (2.0) All quadrants done well Entries in all quadrants Few entries, lacking detail Substantially incomplete Requirements (2.0) Thoroughly explored and documented (without indicating solutions) Quite complete Not enough requirements or detail Missing requirements and detail Writing (0.5) Shows a good command of Standard English. No problems for your audience Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work Some errors, audience may have some trouble reading your work Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow Grade penalties will be applied in the following situations for assignment submissions: on time but the written instructions for the submission were not followed: deduct 10% of the earned grade late (but within 48 hours of the due date and time): deduct 10% of the earned grade late by more than 48 hours: deduct 50% of the earned grade Calculator Penalties None (on-time and followed instructions) Instructions not followed Assignment submitted late, but within 48 hours Assignment submitted more than 48 hours late Rubric Criteria Description of User(s) (0.75) Choose... Exemplary (+): Clear and compelling Exemplary: Clear and compelling Exemplary (-): Clear and compelling Sufficient (+): Concrete Sufficient: Concrete Sufficient (-): Concrete Developing (+): Lacks detail Developing: Lacks detail Developing (-): Lacks detail Needs Improvement: Substantially missing Description of Task(s) (0.75) Choose... Exemplary (+): Clear and compelling Exemplary: Clear and compelling Exemplary (-): Clear and compelling Sufficient (+): Concrete Sufficient: Concrete Sufficient (-): Concrete Developing (+): Lacks detail Developing: Lacks detail Developing (-): Lacks detail Needs Improvement: Substantially missing Empathy Map(s) (2.0) Choose... Exemplary (+): All quadrants done well Exemplary: All quadrants done well Exemplary (-): All quadrants done well Sufficient (+): Entries in all quadrants Sufficient: Entries in all quadrants Sufficient (-): Entries in all quadrants Developing (+): Few entries, lacking detail Developing: Few entries, lacking detail Developing (-): Few entries, lacking detail Needs Improvement: Substantially incomplete Requirements (2.0) Choose... Exemplary (+): Thoroughly explored and documented (without indicating solutions) Exemplary: Thoroughly explored and documented (without indicating solutions) Exemplary (-): Thoroughly explored and documented (without indicating solutions) Sufficient (+): Quite complete Sufficient: Quite complete Sufficient (-): Quite complete Developing (+): Not enough requirements or detail Developing: Not enough requirements or detail Developing (-): Not enough requirements or detail Needs Improvement: Missing requirements and detail Writing (0.5) Choose... Exemplary (+): Shows a good command of Standard English. No problems for your audience Exemplary: Shows a good command of Standard English. No problems for your audience Exemplary (-): Shows a good command of Standard English. No problems for your audience Sufficient (+): Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work Sufficient: Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work Sufficient (-): Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work Developing (+): Some errors, audience may have some trouble reading your work Developing: Some errors, audience may have some trouble reading your work Developing (-): Some errors, audience may have some trouble reading your work Needs Improvement: Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow Output Evaluate Copy Output to Clipboard Clear Form",
     "tags": "",
@@ -90,12 +95,12 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/14.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 15 / 37 Questions from Last Meeting? Administration Assignments: Requirements has been updated Wikipedia Contribution Month in Canada What topics would you like to hear about, from whom? [Bringing alumni to campus] Outline for Today What are the gulfs of execution and evaluation? Chapter 10 Slides different kinds of requirements To Do Read Chapter 9, 10 Finish individual assignment: Empathize and project assignment: Requirements Gathering Media from Meeting Nothing available for 15 Annotations and Afterthoughts",
+    "text": "Mtg 15 / 37 Questions from Last Meeting? Administration Midterm will cover up to the end of Meeting 17 Assignments: Requirements has been updated Wikipedia Contribution Month in Canada What topics would you like to hear about, from whom? [Bringing alumni to campus] Outline for Today What are the gulfs of execution and evaluation? Chapter 10 Slides different kinds of requirements To Do Read Chapter 9, 10 Finish individual assignment: Empathize and project assignment: Requirements Gathering Media from Meeting Nothing available for 15 Annotations and Afterthoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/15.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 16 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 16",
+    "text": "Administration Midterm will cover up to the end of Meeting 17 Project requirements due today Individual Critique assignment based on Project (Group) Requirements Critique Outline for Today Video: IDEO does Cubicles Parking meters downtown To Do Read Chapter 9, 10 Finish project assignment: Requirements Gathering Annotations and Afterthoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/16.html"
   },{
@@ -299,11 +304,6 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/projects/fractals/calendars/a-path-to-fractals.html"
   },{
-    "title": "Academic Networks",
-    "text": "Academic Networks Academia.edu AMiner Collection of CS Bibliographies csauthors.net DBLP Google Scholar Impactstory Interaction Design Foundation Mendeley Microsoft Academic ORCID (Open Researcher and Contributor ID) oURspace: University of Regina institutional repository philpapers ResearcherID ResearchGate researchr SemanticScholar",
-    "tags": "",
-    "url": "/~hepting/research/academic.html"
-  },{
     "title": "Biography",
     "text": "Biography Daryl Hepting is an Associate Professor in the Department of Computer Science and an associate member of the Department of Film at the University of Regina. His research is focused on the development of tools to help people deal with and navigate complex information spaces, in application areas as diverse as environmental decision support, eyewitness identification, and multimedia composition. He completed his Ph.D. at Simon Fraser University in Burnaby, Canada in 1999 with the dissertation entitled “A New Paradigm for Exploration in Computer-Aided Visualization.” Before beginning his doctoral studies, he worked on Benoit Mandlebrot’s Fractals project at the IBM T. J. Watson Research Centre and Yale University.",
     "tags": "",
@@ -313,6 +313,11 @@ var tipuesearch = {"pages": [{
     "text": "Education Ph.D. in Computer Science from Simon Fraser University, Burnaby, British Columbia, Canada. Dissertation: A New Paradigm for Exploration in Computer-aided Visualization — defended September, 1999. Supervisor: Dr. Robert D. Russell Committee: Dr. John C. Dill and Dr. F. David Fracchia External examiner: Dr. Joe Marks M.Sc. in Computer Science from the University of Regina, Regina, Saskatchewan, Canada. Thesis: Approximation and Visualization of Sets Defined by Iterated Function Systems — defended March, 1991. Supervisor: Dr. Przemyslaw W. Prusinkiewicz Committee: Dr. J. Chris Fisher and Dr. Alan G. Law External examiner: Dr. Harley Weston B.Sc. in Computer Science (Honours) and Mathematics from the University of Regina, Regina, Saskatchewan, Canada — convocated May, 1988.",
     "tags": "",
     "url": "/~hepting/about/education.html"
+  },{
+    "title": "Elsewhere on the Web",
+    "text": "Elsewhere on the Web Academia.edu AMiner Collection of CS Bibliographies csauthors.net DBLP Google Scholar Impactstory Interaction Design Foundation Mendeley Microsoft Academic ORCID (Open Researcher and Contributor ID) oURspace: University of Regina institutional repository philpapers ResearcherID ResearchGate researchr SemanticScholar",
+    "tags": "",
+    "url": "/~hepting/about/elsewhere.html"
   },{
     "title": "Robot Library",
     "text": "EV3 Educational Kit This set combines the Educational Core Set (45544) and the Expansion Set (45560). Some of the part numbers in the inventory below have been changed or superseded in newer offerings of these Sets. Images are representative of what is included in the kit. Download LEGO’s inventory of parts for the EV3 Educational Kit Click on the buttons below to reveal a detailed list of parts for that heading.",
@@ -360,7 +365,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/news/"
   },{
     "title": "Sitemap",
-    "text": "Sitemap 403 Redirect 404 Redirect 500 Redirect HTTP Errors 403 Redirect 404 Redirect 500 Redirect About Biography Education Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Math of Art Nature’s Numbers Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Library Rough Sets UR50CS Visualization Research Academic Networks Funding Inspirations Students Research Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test Wikipedia",
+    "text": "Sitemap 403 Redirect 404 Redirect 500 Redirect HTTP Errors 403 Redirect 404 Redirect 500 Redirect About Biography Education Elsewhere on the Web Personal News Projects Blogging Bus Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Math of Art Nature’s Numbers Free Knowledge Games Genealogy Interaction Design Multimedia Open Source Participant Pool A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Library Rough Sets UR50CS Visualization Research Funding Inspirations Students Research Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201910 201910 code Resources CS 280 201910 CS 428+828 201630 201730 201830 Assignments Content Map Redesign Resources Topics &amp; Learning Outcomes CS 499+900 CS 499+900 Evaluation Group Work Philosophy Schedule Winter 2018 Fall 2018 Test Wikipedia",
     "tags": "",
     "url": "/~hepting/search/sitemap/"
   },{
@@ -375,7 +380,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/research/students/"
   },{
     "title": "Research",
-    "text": "Research { \"@type\": \"ListItem\", \"position\": 1, \"item\": { \"@type\": \"WebPage\", \"@id\": \"http://www2.cs.uregina.ca/~hepting/research/academic.html\", \"name\": \"Academic Networks\" } }, { \"@type\": \"ListItem\", \"position\": 2, \"item\": { \"@type\": \"WebPage\", \"@id\": \"http://www2.cs.uregina.ca/~hepting/research/dhhepting.bib\", \"name\": \"BibTeX-formatted file of collected works\" } }, { \"@type\": \"ListItem\", \"position\": 3, \"item\": { \"@type\": \"WebPage\", \"@id\": \"http://www2.cs.uregina.ca/~hepting/research/funding.html\", \"name\": \"Funding\" } }, { \"@type\": \"ListItem\", \"position\": 4, \"item\": { \"@type\": \"WebPage\", \"@id\": \"http://www2.cs.uregina.ca/~hepting/research/inspirations.html\", \"name\": \"Inspirations\" } }, { \"@type\": \"ListItem\", \"position\": 5, \"item\": { \"@type\": \"WebPage\", \"@id\": \"http://www2.cs.uregina.ca/~hepting/research/students/\", \"name\": \"Students\" } }, { \"@type\": \"ListItem\", \"position\": 6, \"item\": { \"@type\": \"WebPage\", \"@id\": \"http://www2.cs.uregina.ca/~hepting/research/works/\", \"name\": \"Collected Works\" } }",
+    "text": "Research Funding Inspirations Students Collected Works BibTeX-formatted file of collected works",
     "tags": "",
     "url": "/~hepting/research/"
   },{
@@ -565,7 +570,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/about/personal/"
   },{
     "title": "About",
-    "text": "About Education Biography Personal Interests Daryl H. Hepting, Ph.D. Associate Professor Department of Computer Science University of Regina Regina, Saskatchewan, S4S 0A2 CANADA Cell: 306-596-6312 ( voice &nbsp;&bull;&nbsp;SMS ) E-Mail: hepting@cs.uregina.ca , daryl.hepting@uregina.ca Office: College West 308.22 ( map ) Semester Schedule",
+    "text": "About Education Biography Personal Interests Daryl H. Hepting, Ph.D. Associate Professor College West 308.22 ( map ) Department of Computer Science University of Regina Regina, Saskatchewan, S4S 0A2 CANADA Cell: 306-596-6312 ( voice&nbsp;&bull;&nbsp;SMS ) E-Mail: hepting@cs.uregina.ca , daryl.hepting@uregina.ca Semester Schedule Find me elsewhere on the web",
     "tags": "",
     "url": "/~hepting/about/"
   },{
@@ -674,7 +679,7 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/projects/visualization/"
   },{
-    "title": "Creativity",
+    "title": "Creativity Project",
     "text": "Creativity Related Works Assessing End-User Programming for a Graphics Development Environment (2010) conference Software for Systematic and Imaginative Exploration (2007) poster Computational Support for P-Creative Solutions (2005) conference An Integrated Approach to Discovery in Complex Information Spaces (2004) conference A New Paradigm for Exploration in Computer-Aided Visualization (1999) PhD Cogito a system for computer-aided visualization (1996) sketch",
     "tags": "",
     "url": "/~hepting/projects/creativity/"
@@ -903,6 +908,11 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/500.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/academic.html"
   },{
     "title": "",
     "text": "",
@@ -1225,12 +1235,12 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teach/philosophy.html"
   },{
     "title": "Creativity",
-    "text": "Creativity (2006) google bing yahoo Event Presentation by Joel Salatin Tuesday, November 18, 2008 Education Auditorium, University of Regina Organized by Description Media",
+    "text": "Creativity (2006) google bing Event Presentation by Joel Salatin Tuesday, November 18, 2008 Education Auditorium, University of Regina Organized by Description Media",
     "tags": "event",
     "url": "/~hepting/research/works/2006-09-Creativity.html"
   },{
     "title": "How to Eat Well AND Save Our Planet (2008)",
-    "text": "# google bing yahoo Event Presentation by Joel Salatin Tuesday, November 18, 2008 Education Auditorium, University of Regina Organized by Description Media",
+    "text": "# google bing Event Presentation by Joel Salatin Tuesday, November 18, 2008 Education Auditorium, University of Regina Organized by Description Media",
     "tags": "event",
     "url": "/~hepting/research/works/2008-11-How-to-Eat-Well-AND-Save-Our-Planet.html"
   },{
