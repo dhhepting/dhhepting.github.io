@@ -45,9 +45,9 @@
     {% for s in site.static_files %}
       {% if s.path == work_url %}
         {% assign download_open = true %}
-    <h3>Download</h3>
+    <h3>Links</h3>
     <ul>
-      <li><a href="{{ work_url | absolute_url }}">this site</a></li>
+      <li><a href="{{ work_url | absolute_url }}">download from this site</a></li>
         {% break %}
       {% endif %}
     {% endfor %}
@@ -55,7 +55,7 @@
     {% assign links = site.data.works[page.citekey].links %}
     {% if links %}
       {% unless download_open %}
-    <h3>Download</h3>
+    <h3>Links</h3>
     <ul>
       {% endunless %}
       {% for ll in links %}
