@@ -46,7 +46,7 @@
     integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7"
     crossorigin="anonymous">
   </script>
-  <link rel="canonical" href="{{ page.url | absolute_url }}" />
+  <link rel="canonical" href="{{site.canonical}}{{page.url}}" />
   {% assign pqtitle = page.title | append: ' | ' | append: site.title %}
   <title>{{pqtitle}}</title>
   <meta property="og:title" content="{{pqtitle}}" />
