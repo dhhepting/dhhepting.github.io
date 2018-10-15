@@ -16,7 +16,7 @@ venue: Proceedings of Visualization  95  IEEE Conference on Visualization
 @inproceedings{1995-10-HepDerEdo,
 	Author =  "Hepting, Daryl H. and Derks, Gianne and Edoh, Kossi D. and Russell, Robert D.",
 	Title =  "Qualitative Analysis of Invariant Tori in a Dynamical System",
-	Url = \"{{"/assets/works/pdf/1995-10-HepDerEdo.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/1995-10-HepDerEdo-Qualitative-Analysis-of-Invariant-Tori-in-a-Dynamical-System.html\",
 	Booktitle =  "Proceedings of Visualization '95, IEEE Conference on Visualization",
 	Doi =  "10.1109/VISUAL.1995.485148",
 	Month =  "October",

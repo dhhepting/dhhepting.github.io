@@ -41,6 +41,7 @@ venue: Environmental Modelling   Software
 @article{2011-12-McIAscTwe,
 	Author =  "McIntosh, B.S. and Ascough, J.C. and Twery, M. and Chew, J. and Elmahdi, A. and Haase, D. and Harou, J.J. and Hepting, D. and Cuddy, S. and Jakeman, A.J. and Chen, S. and Kassahun, A. and Lautenbach, S. and Matthews, K. and Merritt, W. and Quinn, N.W.T. and Rodriguez-Roda, I. and Sieber, S. and Stavenga, M. and Sulis, A. and Ticehurst, J. and Volk, M. and Wrobel, M. and van Delden, H. and El-Sawah, S. and Rizzoli, A. and Voinov, A.",
 	Title =  "Environmental decision support systems (EDSS) development - Challenges and best practices",
+	Url = \"{{site.canonical}}/research/works/2011-12-McIAscTwe-Environmental-decision-support-systems-(EDSS)-development---Challenges-and-best-practices.html\",
 	Doi =  "https://doi.org/10.1016/j.envsoft.2011.09.009",
 	Issn =  "1364-8152",
 	Journal =  "Environmental Modelling \& Software",

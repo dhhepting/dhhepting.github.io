@@ -19,7 +19,7 @@ editors:
 @inproceedings{1995-05-HepHar,
 	Author =  "Hepting, Daryl H. and Hart, John C.",
 	Title =  "The Escape Buffer: Efficient Computation of Escape Time for Linear Fractals",
-	Url = \"{{"/assets/works/pdf/1995-05-HepHar.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/1995-05-HepHar-The-Escape-Buffer-Efficient-Computation-of-Escape-Time-for-Linear-Fractals.html\",
 	Editor =  "Davis, Wayne A. and Prusinkiewicz, Przemyslaw",
 	Booktitle =  "Proceedings of Graphics Interface '95",
 	Doi =  "10.20380/GI1995.24",

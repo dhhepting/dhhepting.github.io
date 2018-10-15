@@ -15,6 +15,7 @@ venue: University of Regina
 @techreport{2004-05-HepHoeBer,
 	Author =  "Hepting, Daryl H. and Hoeber, Orland and Berg, Marlin",
 	Title =  "A Unified Framework for the Presentation of Environmental Risk Information",
+	Url = \"{{site.canonical}}/research/works/2004-05-HepHoeBer-A-Unified-Framework-for-the-Presentation-of-Environmental-Risk-Information.html\",
 	Institution =  "University of Regina",
 	Month =  "May",
 	Number =  "CS2004-11",

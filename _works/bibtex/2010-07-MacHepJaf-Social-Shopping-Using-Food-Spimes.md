@@ -19,6 +19,7 @@ venue: Proceedings of the 2010 International Congress on Environmental Modelling
 @inproceedings{2010-07-MacHepJaf,
 	Author =  "Maciag, Timothy and Hepting, Daryl H. and Jaffe, JoAnn and Arbuthnott, Katherine D. and Dormuth, Darryl",
 	Title =  "Social Shopping Using Food Spimes",
+	Url = \"{{site.canonical}}/research/works/2010-07-MacHepJaf-Social-Shopping-Using-Food-Spimes.html\",
 	Booktitle =  "Proceedings of the 2010 International Congress on Environmental Modelling and Software",
 	Month =  "July",
 	Organization =  "International Environmental Modelling and Software Society (iEMSs)",

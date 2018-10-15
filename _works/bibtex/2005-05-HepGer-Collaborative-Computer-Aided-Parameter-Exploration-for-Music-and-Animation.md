@@ -14,6 +14,7 @@ venue: Proceedings of the Second International Conference on Computer Music Mode
 @inproceedings{2005-05-HepGer,
 	Author =  "Hepting, Daryl H. and Gerhard, David",
 	Title =  "Collaborative Computer-Aided Parameter Exploration for Music and Animation",
+	Url = \"{{site.canonical}}/research/works/2005-05-HepGer-Collaborative-Computer-Aided-Parameter-Exploration-for-Music-and-Animation.html\",
 	Booktitle =  "Proceedings of the Second International Conference on Computer Music Modelling and Retrieval 2004",
 	Doi =  "10.1007/978-3-540-31807-1\_13",
 	Month =  "May",

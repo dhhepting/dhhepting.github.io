@@ -18,7 +18,7 @@ editors:
 @inproceedings{2005-11-MacHep,
 	Author =  "Maciag, Timothy and Hepting, Daryl H.",
 	Title =  "Analysis of User Classifiers for Personalization of Environmental Decision Support System Interfaces",
-	Url = \"{{"/assets/works/pdf/2005-11-MacHep.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/2005-11-MacHep-Analysis-of-User-Classifiers-for-Personalization-of-Environmental-Decision-Support-System-Interfaces.html\",
 	Editor =  "Dagli, Cihan H. and Buczak, Anna L. and Enke, David L.",
 	Booktitle =  "Intelligent Engineering Systems through Artificial Neural Networks",
 	Month =  "November",
