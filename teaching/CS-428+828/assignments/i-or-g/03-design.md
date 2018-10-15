@@ -11,8 +11,6 @@ rubric:
 
 Based on your requirements, design!
 
-Write a scenario, based on your requirements, that describes WHAT your new interactive activity will provide to the user. Then, work to create two different designs for HOW the interaction will be accomplished.
-
 Recall the diagram that [illustrated the article about Design Thinking](https://www.nngroup.com/articles/design-thinking/) from the Nielsen Norman Group. We are now moving to the explore phase.
 
 The focus now shifts from understanding the problem to proposing solutions.
