@@ -1,7 +1,7 @@
 ---
 layout: bg-image
-title: Project Requirements
-breadcrumb: Project Requirements
+title: Project Design
+breadcrumb: Project Design
 marks: 6
 rubric:
 ---
