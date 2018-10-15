@@ -8,6 +8,7 @@ category: paper
 @misc{2011-11-Sal,
 	Author =  "Salatin, Joel",
 	Title =  "How to Eat Well AND Save Our Planet",
+	Url = \"{{site.canonical}}/research/works/2011-11-Sal-How-to-Eat-Well-AND-Save-Our-Planet.html\",
 	Month =  "November",
 	Urldate =  "November 18, 2011",
 	Year =  "2011"

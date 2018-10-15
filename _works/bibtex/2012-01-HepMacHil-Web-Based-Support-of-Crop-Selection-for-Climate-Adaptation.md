@@ -17,7 +17,7 @@ venue: 2012 45th Hawaii International Conference on System Sciences
 @inproceedings{2012-01-HepMacHil,
 	Author =  "Hepting, Daryl H. and Maciag, Timothy and Hill, Harvey",
 	Title =  "Web-Based Support of Crop Selection for Climate Adaptation",
-	Url = \"{{"/assets/works/pdf/2012-01-HepMacHil.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/2012-01-HepMacHil-Web-Based-Support-of-Crop-Selection-for-Climate-Adaptation.html\",
 	Booktitle =  "2012 45th Hawaii International Conference on System Sciences",
 	Doi =  "10.1109/HICSS.2012.640",
 	Issn =  "1530-1605",

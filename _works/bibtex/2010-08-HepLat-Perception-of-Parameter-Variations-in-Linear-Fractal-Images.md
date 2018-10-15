@@ -21,7 +21,7 @@ editors:
 @inproceedings{2010-08-HepLat,
 	Author =  "Hepting, Daryl H. and Latifi, Leila",
 	Title =  "Perception of Parameter Variations in Linear Fractal Images",
-	Url = \"{{"/assets/works/pdf/2010-08-HepLat.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/2010-08-HepLat-Perception-of-Parameter-Variations-in-Linear-Fractal-Images.html\",
 	Editor =  "An, Aijun and Lingras, Pawan and Petty, Sheila and Huang, Runhe",
 	Address =  "Berlin, Heidelberg",
 	Booktitle =  "Active Media Technology. AMT 2010",

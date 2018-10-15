@@ -19,7 +19,7 @@ editors:
 @incollection{2010-04-TarHep,
 	Author =  "Targett, Sean and Hepting, Daryl H.",
 	Title =  "Study of User-Created Interfaces in Video Games",
-	Url = \"{{"/assets/works/pdf/2010-04-TarHep.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/2010-04-TarHep-Study-of-User-Created-Interfaces-in-Video-Games.html\",
 	Editor =  "G{\'a}mez, Eduardo H. Calvillo and Gow, Jeremy and Cairns, Paul and Back, Jonathan and Capstick, Eddie",
 	Booktitle =  "CHI 2010 Workshop: Video Games as Research Instruments",
 	Month =  "April",

@@ -18,6 +18,7 @@ editors:
 @inproceedings{2007-07-MacHepSle,
 	Author =  "Maciag, Timothy and Hepting, Daryl H. and \'{S}l\k{e}zak, Dominik and Hilderman, Robert J.",
 	Title =  "Evaluating the Utility of Web-Based Consumer Support Tools Using Rough Sets",
+	Url = \"{{site.canonical}}/research/works/2007-07-MacHepSle-Evaluating-the-Utility-of-Web-Based-Consumer-Support-Tools-Using-Rough-Sets.html\",
 	Editor =  "Akhgar, Babak",
 	Address =  "London",
 	Booktitle =  "ICCS 2007: Proceedings of the 15th International Workshops on Conceptual Structures",

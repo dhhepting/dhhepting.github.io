@@ -15,6 +15,7 @@ venue: Proceedings of Sixth International Conference on Information Visualisatio
 @inproceedings{2002-07-Hep,
 	Author =  "Hepting, Daryl H.",
 	Title =  "Towards a visual interface for information visualization",
+	Url = \"{{site.canonical}}/research/works/2002-07-Hep-Towards-a-visual-interface-for-information-visualization.html\",
 	Booktitle =  "Proceedings of Sixth International Conference on Information Visualisation 2002",
 	Doi =  "10.1109/IV.2002.1028791",
 	Month =  "July",

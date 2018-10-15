@@ -16,7 +16,7 @@ venue: SIGITE  12  Proceedings of the 13th annual conference on Information tech
 @inproceedings{2012-10-HepDonKin,
 	Author =  "Hepting, Daryl H. and Donaldson, Gerry and King, Peter R. and Silver, Danny",
 	Title =  "CS/IT Outreach from a Canadian Perspective",
-	Url = \"{{"/assets/works/pdf/2012-10-HepDonKin.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/2012-10-HepDonKin-CSIT-Outreach-from-a-Canadian-Perspective.html\",
 	Booktitle =  "SIGITE '12: Proceedings of the 13th annual conference on Information technology education",
 	Doi =  "10.1145/2380552.2380623",
 	Month =  "October",

@@ -17,6 +17,7 @@ editors:
 @inproceedings{2004-08-UttHepPet,
 	Author =  "Uttaranakorn, Jirayu and Hepting, Daryl H. and Petty, Sheila",
 	Title =  "Symbol Mall",
+	Url = \"{{site.canonical}}/research/works/2004-08-UttHepPet-Symbol-Mall.html\",
 	Editor =  "Barzel, Ronen",
 	Address =  "New York",
 	Booktitle =  "SIGGRAPH '04: ACM SIGGRAPH 2004 Sketches",

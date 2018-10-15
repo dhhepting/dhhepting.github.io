@@ -15,6 +15,7 @@ venue: Western Computer Graphics Symposium
 @inproceedings{1998-04-HepCaoRus,
 	Author =  "Hepting, Daryl H. and Cao, Weiming and Russell, Robert D.",
 	Title =  "An Exploratory Approach to Mathematical Visualization",
+	Url = \"{{site.canonical}}/research/works/1998-04-HepCaoRus-An-Exploratory-Approach-to-Mathematical-Visualization.html\",
 	Booktitle =  "Western Computer Graphics Symposium",
 	Month =  "April",
 	Year =  "1998"

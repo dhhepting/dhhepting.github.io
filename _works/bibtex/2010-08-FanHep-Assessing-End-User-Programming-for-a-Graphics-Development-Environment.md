@@ -19,7 +19,7 @@ editors:
 @inproceedings{2010-08-FanHep,
 	Author =  "Fang, Lizao and Hepting, Daryl H.",
 	Title =  "Assessing End-User Programming for a Graphics Development Environment",
-	Url = \"{{"/assets/works/pdf/2010-08-FanHep.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/2010-08-FanHep-Assessing-End-User-Programming-for-a-Graphics-Development-Environment.html\",
 	Editor =  "An, Aijun and Lingras, Pawan and Petty, Sheila and Huang, Runhe",
 	Address =  "Berlin, Heidelberg",
 	Booktitle =  "Active Media Technology. AMT 2010",

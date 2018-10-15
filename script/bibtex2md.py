@@ -110,16 +110,27 @@ def output_bibtex_content(mdf):
 	if "Title" in ed:
 		mdf.write("\tTitle = " + ed["Title"] + "\n")
 	ed.pop("Title", None)
-	#
+	# OLD --
 	# the URL: if there is a pdf for the entry,
 	# create or replace Url indicated in bibtex file
 	#
-	newurlstr = "/assets/works/pdf/" + entry.key + ".pdf"
+	#newurlstr = "/assets/works/pdf/" + entry.key + ".pdf"
+
+	#
+	# the URL: set it to the canonical webpage for this item
+	# create or replace Url indicated in bibtex file
+	#
+	newurlstr = "/research/works/" + htmlnamestr
+	print(newurlstr)
 	newurlpath = Path(".." + newurlstr)
-	if newurlpath.is_file():
-		mdf.write("\tUrl = " + "\\\"{{\"" +  newurlstr + "\" | absolute_url }}\\\",\n")
-	else:
-		print("MISSING PDF: ", newurlstr)
+	#teststr = "\\\"{{site.canonical}} +  newurlstr + "\\\"",\n")
+	teststr = "\\\"{{site.canonical}}" +  newurlstr + "\\\",\n"
+	print(teststr)
+	mdf.write("\tUrl = " + teststr)
+	#if newurlpath.is_file():
+	#	mdf.write("\tUrl = " + "\\\"{{ {{site.canonical}}\"" +  newurlstr + "\" | absolute_url }}\\\",\n")
+	#else:
+	#	print("MISSING PDF: ", newurlstr)
 	ed.pop("Url", None)
 	# don't output the following fields:
 	ed.pop("Abstract", None)
@@ -165,6 +176,7 @@ for entry in bib_data.entries.values():
     if (recreate == False):
         mdnamestr = entry.key + " " + titlestr + ".md"
         mdnamestr = re.sub(r"\s+", '-', mdnamestr)
+        htmlnamestr = mdnamestr.replace('.md', '.html')
         mdfilepath = Path(bibtex_path + mdnamestr)
         matches = [f for f in os.listdir(bibtex_path) if f.startswith(entry.key+"-")]
         for m in matches:

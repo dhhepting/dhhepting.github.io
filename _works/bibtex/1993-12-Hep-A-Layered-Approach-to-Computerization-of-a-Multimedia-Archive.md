@@ -13,7 +13,7 @@ venue: Simon Fraser University
 @techreport{1993-12-Hep,
 	Author =  "Hepting, Daryl H.",
 	Title =  "A Layered Approach to Computerization of a Multimedia Archive",
-	Url = \"{{"/assets/works/pdf/1993-12-Hep.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/1993-12-Hep-A-Layered-Approach-to-Computerization-of-a-Multimedia-Archive.html\",
 	Address =  "Burnaby, BC, Canada",
 	Institution =  "Simon Fraser University",
 	Month =  "December",

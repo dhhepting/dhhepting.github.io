@@ -18,7 +18,7 @@ editors:
 @incollection{2018-04-TomHep,
 	Author =  "Tomesh, Trevor M. and Hepting, Daryl H.",
 	Title =  "Environmental Sensing with Recycled Materials",
-	Url = \"{{"/assets/works/pdf/2018-04-TomHep.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/2018-04-TomHep-Environmental-Sensing-with-Recycled-Materials.html\",
 	Editor =  "Loukides, Mike and DiPrimio, Nina",
 	Booktitle =  "BioCoder: Bio Newsletter",
 	Month =  "April",

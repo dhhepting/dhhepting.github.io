@@ -15,6 +15,7 @@ editors:
 @incollection{2005-12-Hep,
 	Author =  "Hepting, Daryl H.",
 	Title =  "Computational Support for P-Creative Solutions",
+	Url = \"{{site.canonical}}/research/works/2005-12-Hep-Computational-Support-for-P-Creative-Solutions.html\",
 	Editor =  "Gero, John Steven and Maher, Mary Lou",
 	Booktitle =  "Computational and Cognitive Models of Creative Design VI",
 	Month =  "December",

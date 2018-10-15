@@ -22,7 +22,7 @@ editors:
 @inproceedings{2013-10-HepAlm,
 	Author =  "Hepting, Daryl H. and Almestadi, Emad H.",
 	Title =  "Discernibility in the Analysis of Binary Card Sort Data",
-	Url = \"{{"/assets/works/pdf/2013-10-HepAlm.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/2013-10-HepAlm-Discernibility-in-the-Analysis-of-Binary-Card-Sort-Data.html\",
 	Editor =  "Ciucci, D. and Inuiguchi, M. and Yao, Y. and {\'S}l{\k e}zak, D. and Wang, G.",
 	Address =  "Berlin",
 	Booktitle =  "Rough Sets, Fuzzy Sets, Data Mining, and Granular Computing. RSFDGrC 2013",

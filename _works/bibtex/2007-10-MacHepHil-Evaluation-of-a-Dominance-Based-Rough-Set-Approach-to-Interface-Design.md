@@ -16,6 +16,7 @@ venue: 2007 Frontiers in the Convergence of Bioscience and Information Technolog
 @inproceedings{2007-10-MacHepHil,
 	Author =  "Maciag, Timothy and Hepting, Daryl H. and Hilderman, Robert J. and \'{S}l\k{e}zak, Dominik",
 	Title =  "Evaluation of a Dominance-Based Rough Set Approach to Interface Design",
+	Url = \"{{site.canonical}}/research/works/2007-10-MacHepHil-Evaluation-of-a-Dominance-Based-Rough-Set-Approach-to-Interface-Design.html\",
 	Booktitle =  "2007 Frontiers in the Convergence of Bioscience and Information Technologies",
 	Doi =  "10.1109/FBIT.2007.54",
 	Month =  "October",
