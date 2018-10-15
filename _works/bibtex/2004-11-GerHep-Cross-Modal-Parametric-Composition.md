@@ -16,6 +16,7 @@ venue: Proceedings of the 2004 International Computer Music Conference
 @inproceedings{2004-11-GerHep,
 	Author =  "Gerhard, David and Hepting, Daryl H.",
 	Title =  "Cross-Modal Parametric Composition",
+	Url = \"{{site.canonical}}/research/works/2004-11-GerHep-Cross-Modal-Parametric-Composition.html\",
 	Booktitle =  "Proceedings of the 2004 International Computer Music Conference",
 	Month =  "November",
 	Pages =  "505--512",

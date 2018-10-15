@@ -22,7 +22,7 @@ editors:
 @inproceedings{2008-07-MacHep1,
 	Author =  "Maciag, Timothy and Hepting, Daryl H.",
 	Title =  "An Analysis of Interface Quality for Decision Support",
-	Url = \"{{"/assets/works/pdf/2008-07-MacHep1.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/2008-07-MacHep1-An-Analysis-of-Interface-Quality-for-Decision-Support.html\",
 	Editor =  "Sanchez-Marr{\`e}, M. and B{\`e}jar, J. and Comas, J. and Rizzoli, A. and Guariso, G.",
 	Booktitle =  "iEMSs 2008: International Congress on Environmental Modelling and Software",
 	Month =  "July",

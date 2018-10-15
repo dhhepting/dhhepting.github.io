@@ -14,6 +14,7 @@ editors:
 ---
 @book{2011-06-KuzSleHep,
 	Title =  "Proceedings of 13th International Conference on Rough Sets, Fuzzy Sets, Data Mining and Granular Computing",
+	Url = \"{{site.canonical}}/research/works/2011-06-KuzSleHep-Proceedings-of-13th-International-Conference-on-Rough-Sets,-Fuzzy-Sets,-Data-Mining-and-Granular-Computing.html\",
 	Editor =  "Kuznetsov, Sergei O. and \'{S}l\k{e}zak, Dominik and Hepting, Daryl H. and Mirkin, Boris G.",
 	Booktitle =  "Proceedings of 13th International Conference on Rough Sets, Fuzzy Sets, Data Mining and Granular Computing",
 	Doi =  "10.1007/978-3-642-21881-1",

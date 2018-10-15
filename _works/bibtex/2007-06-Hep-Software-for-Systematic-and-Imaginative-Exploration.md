@@ -18,6 +18,7 @@ editors:
 @inproceedings{2007-06-Hep,
 	Author =  "Hepting, Daryl H.",
 	Title =  "Software for Systematic and Imaginative Exploration",
+	Url = \"{{site.canonical}}/research/works/2007-06-Hep-Software-for-Systematic-and-Imaginative-Exploration.html\",
 	Editor =  "Shneiderman, Ben and Fischer, Gerhard and Giaccardi, Elisa and Eisenberg, Mike",
 	Booktitle =  "Proceedings of the 6th ACM SIGCHI Conference on Creativity \& Cognition",
 	Doi =  "10.1145/1254960.1254999",

@@ -13,7 +13,7 @@ venue: Journal of Environmental Modelling and Software
 @article{2007-04-Hep,
 	Author =  "Hepting, Daryl H.",
 	Title =  "Decision Support for Local Environmental Impact Assessment",
-	Url = \"{{"/assets/works/pdf/2007-04-Hep.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/2007-04-Hep-Decision-Support-for-Local-Environmental-Impact-Assessment.html\",
 	Doi =  "10.1016/j.envsoft.2005.12.010",
 	Journal =  "Journal of Environmental Modelling and Software",
 	Month =  "April",

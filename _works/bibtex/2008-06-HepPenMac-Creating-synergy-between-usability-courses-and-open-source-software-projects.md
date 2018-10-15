@@ -19,7 +19,7 @@ venue: ACM SIGCSE Bulletin
 @article{2008-06-HepPenMac,
 	Author =  "Hepting, Daryl H. and Peng, Lijuan and Maciag, Timothy and Gerhard, David and Maguire, Brien",
 	Title =  "Creating synergy between usability courses and open source software projects",
-	Url = \"{{"/assets/works/pdf/2008-06-HepPenMac.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/2008-06-HepPenMac-Creating-synergy-between-usability-courses-and-open-source-software-projects.html\",
 	Doi =  "10.1145/1383602.1383649",
 	Journal =  "ACM SIGCSE Bulletin",
 	Month =  "June",

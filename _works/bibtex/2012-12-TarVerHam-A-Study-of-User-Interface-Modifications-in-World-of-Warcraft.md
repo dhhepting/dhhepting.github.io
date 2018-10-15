@@ -18,7 +18,7 @@ venue: Game Studies  the international journal of computer game research
 @article{2012-12-TarVerHam,
 	Author =  "Targett, Sean and Verlysdonk, Victoria and Hamilton, Howard J. and Hepting, Daryl H.",
 	Title =  "A Study of User Interface Modifications in World of Warcraft",
-	Url = \"{{"/assets/works/pdf/2012-12-TarVerHam.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/2012-12-TarVerHam-A-Study-of-User-Interface-Modifications-in-World-of-Warcraft.html\",
 	Journal =  "Game Studies: the international journal of computer game research",
 	Keywords =  "World of Warcraft, massively multiplayer online game, statistical survey, user interface, human-computer interaction, user interface modification, user interface add-ons, modding, UI mods",
 	Month =  "December",

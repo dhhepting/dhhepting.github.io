@@ -18,6 +18,7 @@ editors:
 @inproceedings{2004-09-HepBut,
 	Author =  "Hepting, Daryl H. and Butz, Cory J.",
 	Title =  "An Integrated Approach to Discovery in Complex Information Spaces",
+	Url = \"{{site.canonical}}/research/works/2004-09-HepBut-An-Integrated-Approach-to-Discovery-in-Complex-Information-Spaces.html\",
 	Editor =  "Yao, J. T. and Raghavan, V. V. and Wang, G.Y.",
 	Booktitle =  "Second International Workshop on Web-based Support Systems, edited by , 2004, pages",
 	Month =  "September",

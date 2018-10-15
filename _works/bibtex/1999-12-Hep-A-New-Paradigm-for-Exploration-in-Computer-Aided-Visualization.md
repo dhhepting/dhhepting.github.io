@@ -11,7 +11,7 @@ projects:
 @phdthesis{1999-12-Hep,
 	Author =  "Hepting, Daryl H.",
 	Title =  "A New Paradigm for Exploration in Computer-Aided Visualization",
-	Url = \"{{"/assets/works/pdf/1999-12-Hep.pdf" | absolute_url }}\",
+	Url = \"{{site.canonical}}/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html\",
 	Address =  "Burnaby, Canada",
 	Doi =  "10.13140/RG.2.1.3716.9362",
 	Keywords =  "computer-aided vlsualization",
