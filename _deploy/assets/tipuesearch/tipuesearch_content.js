@@ -630,7 +630,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/projects/cs-education/"
   },{
     "title": "Calendars",
-    "text": "Calendars Each year between 1991 and 1997, a calendar of computer-generated images was published by Universe Publishing, based on the fractal geometry of Benoit B. Mandelbrot. Before 1997, the calendar was first done as a custom edition and then as a trade edition in the following year. In 1997, the trade and custom editions were the same. Richard F. Voss edited the calendars for 1991 and 1992 F. Kenton Musgrave edited the calendars for 1993 and 1994 Daryl H. Hepting edited the calendars for 1995 and 1996, and both included the essay A Path to Fractals F. Kenton Musgrave edited the calendar for 1997: it featured his work alone",
+    "text": "Calendars Each year between 1991 and 1997, a calendar of computer-generated images was published by Universe Publishing, based on the fractal geometry of Benoit B. Mandelbrot. Before 1997, the calendar was first done as a custom edition and then as a trade edition in the following year. In 1997, the trade and custom editions were the same. Richard F. Voss edited the calendars for 1991 and 1992 F. Kenton Musgrave edited the calendars for 1993 and 1994 Daryl H. Hepting edited the calendars for 1995 and 1996, and both included the essay A Path to Fractals F. Kenton Musgrave edited the calendar for 1997: it featured his work alone Links The Math Forum at NCTM",
     "tags": "",
     "url": "/~hepting/projects/fractals/calendars/"
   },{
@@ -760,7 +760,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201730/feedback/midterm.html"
   },{
     "title": "",
-    "text": "",
+    "text": "Nature’s Numbers Links Math Forum at NCTM",
     "tags": "",
     "url": "/~hepting/projects/fractals/nat-num.html"
   },{
@@ -822,6 +822,11 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
+    "url": "/~hepting/research/works/2010-08-Perception-of-Parameter-Variations-in-Linear-Fractal-Images.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
     "url": "/~hepting/research/web/lfgallery/ferns/chrome.html"
   },{
     "title": "",
@@ -843,6 +848,11 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/art/exhibits/teck1995mathart/fiery.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/projects/fractals/exhibits/teck1995.html"
   },{
     "title": "",
     "text": "",
@@ -1003,6 +1013,11 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/research/pubs/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/scholarly.html"
   },{
     "title": "",
     "text": "",
