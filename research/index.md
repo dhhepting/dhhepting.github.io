@@ -4,6 +4,7 @@ breadcrumb: Research
 redirect_from:
   - /research/external.html
   - /research/pubs/
+  - /research/scholarly.html
 files:
   - n: funding.html
     b: Funding
