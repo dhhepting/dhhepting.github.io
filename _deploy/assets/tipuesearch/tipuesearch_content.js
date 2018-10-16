@@ -115,7 +115,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/16.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 17 / 37 Questions from Last Meeting? Administration Midterm will cover up to the end of Meeting 17 Annotations: failing experiment? you sign up for a meeting you take notes and create annotation for meeting you post your annotation to the “Annotation Blog” I will put a checkmark beside your name in the schedule Design assignment Outline for Today Video: 6 Blind Men and an Elephant To the customer, the interface is the product – Jef Raskin (who helped to design the Macintosh computer from Apple) Metaphors and Mental Models: consider an online bookstore To Do Read Chapter 6, 11 Media from Meeting Nothing available for 17 Annotations and Afterthoughts",
+    "text": "Mtg 17 / 37 Questions from Last Meeting? Administration Midterm will cover up to the end of Meeting 17 Annotations: failing experiment? you sign up for a meeting you take notes and create annotation for meeting you post your annotation to the “Annotation Blog” I will put a checkmark beside your name in the schedule Design assignment Outline for Today Video: 6 Blind Men and an Elephant To the customer, the interface is the product – Jef Raskin (who helped to design the Macintosh computer from Apple) Metaphors and Mental Models: consider an online bookstore To Do Read Chapter 6, 11 Media from Meeting Nothing available for 17 Annotations and Afterthoughts Annotation by Shivani",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/17.html"
   },{
