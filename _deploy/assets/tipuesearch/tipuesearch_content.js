@@ -120,7 +120,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/17.html"
   },{
     "title": "CS 428+828 (201830) Meetings",
-    "text": "Mtg 18 / 37 Questions from Last Meeting? Media from Meeting Nothing available for 18",
+    "text": "% include meeting.html %} Administration Midterm will be discussed on Friday: please continue to submit question ideas Annotations: you sign up for a meeting you take notes and create annotation for meeting you post your annotation to the “Annotation Blog” I will link to it from the meeting page and I will put a checkmark beside your name in the schedule Why (or why not) arrange books in your textbook list by last names of authors? Outline for Today Video: 6 Blind Men and an Elephant To the customer, the interface is the product – Jef Raskin (who helped to design the Macintosh computer from Apple) Metaphors and Mental Models: consider an online bookstore Chapter 6 Slides Chapter 11 Slides To Do Read Chapter 6, 11 Annotations and Afterthoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/meetings/18.html"
   },{
