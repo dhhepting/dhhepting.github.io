@@ -12,7 +12,7 @@ Some of the part numbers in the inventory below	have been changed or superseded
 
 in newer offerings of these Sets.
 Images are representative of what is included in the kit.
-			
+
 
 * [Download LEGO's inventory of parts for the EV3 Educational Kit]({{"/assets/projects/pdf/robots-EV3-educational-kit.pdf" | relative_url}})
 
@@ -20,7 +20,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 
 {%comment %}
 <h3>Box 1: 819 pieces</h3>
-			
+
 <!-- 		
 			---- Intelligent Brick, Motors, and Sensors: 10 pieces
 			--->
@@ -34,7 +34,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
   </button>
 
 </p>
-			
+
 <div id="collapse-ibms" class="collapse out">
   <table class="table table-bordered table-striped">
     <thead>
@@ -92,7 +92,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 						</tr>
 						<tr>
 							<td>2</td>
-							<td><img src="http://mi-od-live-s.legocdn.com/media/bricks/5/2/6138404.jpg" 
+							<td><img src="http://mi-od-live-s.legocdn.com/media/bricks/5/2/6138404.jpg"
 							height="100" /></td>
 							<td>Medium Stone Grey</td><td>6008472</td><td>95648</td>
 						</tr>
@@ -117,7 +117,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 					</tbody>
 				</table>
 			</div>
-			
+
 			<!--		
 			---- Connectors, Cables, Charger: 9 pieces
 			--->		
@@ -157,7 +157,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 					</tbody>
 				</table>
 			</div>
-			
+
 			<!-- 		
 			  -- Tires and Rims: 43 pieces
 			  -->
@@ -215,7 +215,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 											</tbody>
 				</table>
 			</div>
-				
+
 				<p>
 				<button type="button" class="btn btn-responsive" data-toggle="collapse" data-target="#collapse-trb">
 					Tires and Rims: 27 pieces (Bag 1-1)
@@ -264,7 +264,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 						<tr><td>4</td><td><img src="http://cache.lego.com/media/bricks/5/1/6028041.jpg" height="100" /></td><td>Black</td><td>6028041</td><td>2815</td></tr>
 
 						<tr><td>4</td><td><img src="http://cache.lego.com/media/bricks/5/1/4587275.jpg" height="100" /></td><td>Dark Stone Grey</td><td>4587275</td><td>4185</td></tr>
-						
+
 						<tr><td>6</td><td><img src="http://cache.lego.com/media/bricks/5/1/4582792.jpg" height="100" /></td><td>Black, Sprocket Wheel 40.4</td><td>4582792</td><td>57519</td></tr>
 
 						<tr><td>1</td><td><img src="http://cache.lego.com/media/bricks/5/1/6044729.jpg" height="100" /></td><td>Medium Stone Grey, 18 x 7</td><td>6044729</td><td>13971</td></tr>
@@ -272,7 +272,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 				</table>
 
 			</div>			
-							
+
 			<!-- 		
 			  -- Track/Tread: 87 pieces 			  -->
 			<p>
@@ -298,7 +298,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 					</tbody>
 				</table>
 			</div>
-			
+
 			<!-- 		
 			  -- Black Connectors
 			  -->
@@ -329,7 +329,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 					</tbody>
 				</table>
 			</div>
-			
+
 			<!-- 		
 			  -- Blue and Yellow Connectors
 			  -->
@@ -363,7 +363,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 				</table>
 			</div>
 
-		
+
 			<!-- 		
 			  -- Connectors
 			  -->
@@ -390,10 +390,10 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 						<tr><td>4</td><td><img src="http://cache.lego.com/media/bricks/5/1/4107082.jpg" height="100" /></td><td>Black (no. 3)</td><td>4107082</td><td>32016</td></tr>
 						<tr><td>3</td><td><img src="http://cache.lego.com/media/bricks/5/1/4107084.jpg" height="100" /></td><td>Black (no. 5)</td><td>4107084</td><td>32015</td></tr>
 						<tr><td>4</td><td><img src="http://cache.lego.com/media/bricks/5/1/4107767.jpg" height="100" /></td><td>Black (no. 6)</td><td>4107767</td><td>32014</td></tr>
-						
+
 						<tr><td>2</td><td><img src="http://cache.lego.com/media/bricks/5/1/6005331.jpg" height="100" /></td><td>Dark Stone Grey</td><td>6005331</td><td>10197</td></tr>
 						<tr><td>22</td><td><img src="http://cache.lego.com/media/bricks/5/1/4107081.jpg" height="100" /></td><td>Black</td><td>4107081</td><td>32039</td></tr>
-						
+
 						<tr><td>4</td><td><img src="http://cache.lego.com/media/bricks/5/1/4119589.jpg" height="100" /></td><td>Black</td><td>4119589</td><td>32138</td></tr>
 
 						<tr><td>22</td><td><img src="http://cache.lego.com/media/bricks/5/1/4140806.jpg" height="100" /></td><td>Bright Red</td><td>4140806</td><td>32054</td></tr>
@@ -420,14 +420,14 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 
 
 
-						
+
 						<tr><td>2</td><td><img src="http://cache.lego.com/media/bricks/5/1/4502595.jpg" height="100" /></td><td>Medium Stone Grey</td><td>4502595</td><td>57585</td></tr>
 						<tr><td>5</td><td><img src="http://cache.lego.com/media/bricks/5/1/6005755.jpg" height="100" /></td><td>Dark Brown</td><td>6005755</td><td>10288</td></tr>
 
 					</tbody>
 				</table>
 			</div>
-			
+
 			<!--		
 			---- Decorations, Tubes, and Transparents
 			--->
@@ -519,8 +519,8 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 		</div>
 		<div class="well">
 			<h2>Box 2: 576 pieces</h2>
-		
-		
+
+
 		<!-- 		
 		  -- Straight Beams
 		  -->
@@ -560,7 +560,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 				</tbody>
 			</table>
 		</div>
-		
+
 		<!-- 		
 		  -- Special Beams
 		  -->
@@ -896,7 +896,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 				</tbody>
 			</table>
 		</div>
-		
+
 
 		<!-- 		
 		  -- Plates, Special Circles and Angle Beams
@@ -937,7 +937,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 					</tr>
 					<tr><td>6</td><td><img src="http://cache.lego.com/media/bricks/5/1/4552347.jpg" height="100" /></td><td>Black</td><td>4552347</td><td>60484</td></tr>
 					<tr><td>4</td><td><img src="http://cache.lego.com/media/bricks/5/1/4585040.jpg" height="100" /></td><td>White</td><td>4585040</td><td>32526</td></tr>
-						
+
 						<tr><td>4</td><td><img src="http://cache.lego.com/media/bricks/5/1/4234240.jpg" height="100" /></td><td>Medium Stone Grey</td><td>4234240</td><td>32009</td></tr>
 					<tr><td>6</td><td><img src="http://cache.lego.com/media/bricks/5/1/4495412.jpg" height="100" /></td><td>White</td><td>4495412</td><td>32009</td></tr>
 					</tr>
@@ -971,7 +971,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 					<tr><td>3</td><td><img src="http://cache.lego.com/media/bricks/5/1/370726.jpg" height="100" /></td><td>Black, 8M</td><td>370726</td><td>3707</td></tr>
 					<tr><td>3</td><td><img src="http://cache.lego.com/media/bricks/5/1/373726.jpg" height="100" /></td><td>Black, 10M</td><td>373726</td><td>3737</td></tr>
 					<tr><td>3</td><td><img src="http://cache.lego.com/media/bricks/5/1/370826.jpg" height="100" /></td><td>Black, 12M</td><td>370826</td><td>3708</td></tr>
-					
+
 					<tr><td>26</td><td><img src="http://cache.lego.com/media/bricks/5/1/4211815.jpg" height="100" /></td><td>Medium Stone Grey, 3M</td><td>4211815</td><td>4519</td></tr>
 					<tr><td>14</td><td><img src="http://cache.lego.com/media/bricks/5/1/4211639.jpg" height="100" /></td><td>Medium Stone Grey, 5M</td><td>4211639</td><td>32073</td></tr>
 					<tr><td>7</td><td><img src="http://cache.lego.com/media/bricks/5/1/4211805.jpg" height="100" /></td><td>Medium Stone Grey, 7M</td><td>4211805</td><td>44294</td></tr>
@@ -983,14 +983,14 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 
 					<tr><td>4</td><td><img src="http://cache.lego.com/media/bricks/5/1/4508553.jpg" height="100" /></td><td>Dark Stone Grey, 5.5M</td><td>4508553</td><td>59426</td></tr>
 					<tr><td>8</td><td><img src="http://cache.lego.com/media/bricks/5/1/4499858.jpg" height="100" /></td><td>Dark Stone Grey, 8M</td><td>4499858</td><td>55013</td></tr>
-					
-					
+
+
 
 				</tbody>
 			</table>
 		</div>
 
-		
+
 
 
 		<!-- 		
@@ -1041,6 +1041,7 @@ Click on the buttons below to reveal a detailed list of parts for that heading.
 		</div>
 		</
 div>	</div>
-          {% endcomment %}
+
 <img src="http://www.lego.com/service/bricks/5/2/4211622" height="100" />
 
+          {% endcomment %}
