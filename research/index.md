@@ -6,7 +6,7 @@ redirect_from:
   - /research/pubs/
   - /research/scholarly.html
 files:
-  - n: funding.html
+  - n: funding
     b: Funding
   - n: inspirations.html
   - n: students
