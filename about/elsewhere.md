@@ -17,6 +17,7 @@ layout: bg-image
 - [Interaction Design Foundation](https://www.interaction-design.org/literature/author/daryl-h-hepting){: target="blank" }
 - [Mendeley](https://www.mendeley.com/profiles/daryl-hepting/){: target="blank" }
 - [Microsoft Academic](https://academic.microsoft.com/#/detail/226149746){: target="blank" }
+- [Loop](https://loop.frontiersin.org/people/632723/overview){: target="blank" }
 - [ORCID (Open Researcher and Contributor ID)](http://orcid.org/0000-0002-3138-3521){: target="blank" }
 - [oURspace: University of Regina institutional repository](http://ourspace.uregina.ca/handle/10294/6891){: target="blank" }
 - [philpapers](http://philpapers.org/profile/255774){: target="blank" }

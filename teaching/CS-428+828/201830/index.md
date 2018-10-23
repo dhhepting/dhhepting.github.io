@@ -3,7 +3,7 @@ crs_id: CS428+828
 crs_name: Human Computer Communication
 title: CS 428+828 in 201830
 redirect_from:
-  
+
 breadcrumb: 201830
 layout: bg-image
 ---
@@ -21,6 +21,8 @@ layout: bg-image
 
 * [Meetings](meetings/)
 * [Media](media/)
+
+* [Feedback](feedback/)
 
 * [Assignments](../assignments)
 * [Content](../content)
