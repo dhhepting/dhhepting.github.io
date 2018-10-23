@@ -23,11 +23,7 @@ he worked on Benoit Mandlebrot's Fractals project at the IBM T. J. Watson
 Research Centre and Yale University.
 
 <!--
-		</p>
-		<p>
 			I am founding President of the Canada Saskatchewan chapter of the Computer Science Teachers Association.
-		</p>
-		<p>
+
 			FLL Partner
-		</p>
 -->
