@@ -21,6 +21,7 @@ layout: bg-image
 
 * [Meetings](meetings/)
 * [Media](media/)
+* [Textbook](textbook/)
 
 * [Feedback](feedback/)
 
