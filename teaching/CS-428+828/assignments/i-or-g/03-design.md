@@ -4,6 +4,12 @@ title: Project Design
 breadcrumb: Project Design
 marks: 6
 rubric:
+- crit: Writing
+  wt: 0.5
+  l3: Shows a good command of Standard English. No problems for your audience
+  l2: Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work
+  l1: Some errors, audience may have some trouble reading your work
+  l0: Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow
 ---
 # {{ page.breadcrumb }}
 
