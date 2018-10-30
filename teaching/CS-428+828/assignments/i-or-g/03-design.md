@@ -4,12 +4,43 @@ title: Project Design
 breadcrumb: Project Design
 marks: 6
 rubric:
-- crit: Writing
+- crit: Interface 1 Low-Fidelity Prototype (Sketch)
+  wt: 1.5
+  l3:
+  l2:
+  l1:
+  l0:
+- crit: Interface 1 Scenario
+  wt: 1.0
+  l3:
+  l2:
+  l1:
+  l0:
+- crit: Interface 1 Iteration Process Description
   wt: 0.5
-  l3: Shows a good command of Standard English. No problems for your audience
-  l2: Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your work
-  l1: Some errors, audience may have some trouble reading your work
-  l0: Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow
+  l3:
+  l2:
+  l1:
+  l0:
+- crit: Interface 2 Low-Fidelity Prototype (Sketch)
+  wt: 1.5
+  l3:
+  l2:
+  l1:
+  l0:
+- crit: Interface 2 Scenario
+  wt: 1.0
+  l3:
+  l2:
+  l1:
+  l0:
+- crit: Interface 2 Iteration Process Description
+  wt: 0.5
+  l3:
+  l2:
+  l1:
+  l0:
+
 ---
 # {{ page.breadcrumb }}
 
