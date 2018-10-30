@@ -60,7 +60,7 @@ Then consider how the user will do it:
 
 Design 2 alternative interfaces from 2 different metaphors:
 * Create a low-fidelity prototype (see Section 11.2.3)
-* Write a scenario (see Section 11.5) that includes details of "HOW" (information design and interaction design)
+* Write a scenario (see Textbook Sections 10.6.1 and 11.5; Slide [10.28]({{ "/assets/teaching/ppt/CS-428+828_id4ed-chap10.pptx" | relative_url}})) that includes details of "HOW" (information design and interaction design)
 * Analyze each scenario for positives and negatives
 * Iterate your low-fidelity prototypes and scenarios to minimize the negatives and maximize the positives
 
