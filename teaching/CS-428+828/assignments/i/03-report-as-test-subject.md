@@ -13,21 +13,16 @@ rubric:
 This is an INDIVIDUAL assignment.
 
 You have been placed into an "Eval" group.
+You are to coordinate, as has been discussed in class meetings, with the other members of your "Eval" group so that you will each conduct 1 test of your "A" interface and 1 test of your "B" interface (with 2 different people). In turn, you will be the test subject for 2 others from your "Eval" group.  You are to complete this assignment from the perspective of test subject.
 
-{% comment %}
-the members of which will receive the submission from a "Project" group ([in a message posted here](https://urcourses.uregina.ca/mod/forum/view.php?id=860265)). In order to keep the projects on track, please
-complete your critique within a week.
-
-Review the submission and provide constructive feedback based on what was requested in the [Requirements Gathering](../i-or-g/02-requirements.html) assignment.
-
-Share your observations and ideas that you have for the group's project and ask any questions.
+What did you notice about your 2 experiences as test subject?
+Was there anything different between them? Was anything especially easy or hard about shifting between running the tests of your interfaces and being a test subject for someone else? Do you have any comments or constructive criticisms for your peers who ran the tests when you were the subject?
 
 {% endcomment %}
 
 ### Submission
 
 * submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
-* target: 1 page for the review and 1-2 pages for the sharing
 
 ### Grading
 
