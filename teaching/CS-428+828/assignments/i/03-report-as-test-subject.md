@@ -18,8 +18,6 @@ You are to coordinate, as has been discussed in class meetings, with the other m
 What did you notice about your 2 experiences as test subject?
 Was there anything different between them? Was anything especially easy or hard about shifting between running the tests of your interfaces and being a test subject for someone else? Do you have any comments or constructive criticisms for your peers who ran the tests when you were the subject?
 
-{% endcomment %}
-
 ### Submission
 
 * submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
