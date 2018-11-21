@@ -26,3 +26,4 @@ layout: bg-image
 - [ResearchGate](https://www.researchgate.net/profile/Daryl_Hepting){: target="blank" }
 - [researchr](http://researchr.org/profile/darylhepting){: target="blank" }
 - [SemanticScholar](https://www.semanticscholar.org/author/Daryl-H-Hepting/2926392){: target="blank" }
+- [WorldCat Identities](https://worldcat.org/identities/lccn-no2015051738/)

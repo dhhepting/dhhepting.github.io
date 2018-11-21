@@ -15,12 +15,12 @@ rubric:
   wt: 6
 - crit: Presentation
   wt: 3
-  {% comment %}
+---
+{% comment %}
 Topic (3)			Topic somewhat engages an important issue related to class.	Topic does not engage an important issue related to class.
 Deliverable and Realization (3.5)	Deliverable is used appropriately and imaginatively. Realization of approach is clear and well-formed	Deliverable is used appropriately. Realization of approach is reasonable	Deliverable is used somewhat appropriately. Realization of approach is mostly unclear and not well-formed	Deliverable is not used appropriately. Realization of approach is not clear
 Completed Plan (3.5)	Ambitious and thorough	Reasonably thorough	Somewhat thorough	Not thorough
 {% endcomment %}
----
 # {{ page.breadcrumb }}		
 
 ### Description

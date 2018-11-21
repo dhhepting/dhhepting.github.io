@@ -6,7 +6,7 @@ tlouts:
 - HCI/Foundations
 - HCI/Designing-Interaction
 - HCI/Programming-Interactive-Systems
-- HCI/User_Centered-Design-and-Testing 
+- HCI/User_Centered-Design-and-Testing
 - HCI/New-Interactive-Technologies
 - HCI/Collaboration-and-Communication
 - HCI/Statistical-Methods-for-HCI
@@ -31,7 +31,7 @@ tlouts:
   {%- assign tlo_parts = tlo | split: "/" -%}
   {% assign var1 = tlo_parts[0] %}
   {% assign var2 = tlo_parts[1] %}
-  {%- assign tlo_dat = site.data.CC2013[var1][var2] -%}
+  {%- assign tlo_dat = site.data.teaching.CC2013[var1][var2] -%}
   {%- if tlo_dat -%}
 	<div class="card" id="know{{ctr}}">
 	<div class="card-header">
