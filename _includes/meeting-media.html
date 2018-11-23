@@ -1,10 +1,10 @@
-{% if site.data.media[include.mtg_media] %}
+{% if site.data.teaching.media[include.mtg_media] %}
 ### Media from Meeting
 
 <div class="container-fluid">
   {% assign media_ctr = 0 %}
   {% assign mtgstr = include.mtg | prepend: '00' | slice: -2, 2 %}
-  {%- for media in site.data.media[include.mtg_media] -%}
+  {%- for media in site.data.teaching.media[include.mtg_media] -%}
     {%- if media.meet == mtgstr -%}
       {%- if media.URL contains "jpg" -%}
   <a href="{{media.URL}}"><img src="{{media.URL}}" alt="{{media.file}}" height="100" class="m-1 img-responsive"/></a>

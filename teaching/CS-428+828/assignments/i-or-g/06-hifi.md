@@ -1,47 +1,47 @@
 ---
 layout: bg-image
-title: Project Evaluate Low Fidelity Protoptypes
-breadcrumb: Project Evaluate Low Fidelity Protoptypes
+title: Project High Fidelity Protoptype
+breadcrumb: Project High Fidelity Protoptype
 marks: 6
 rubric:
-- crit: Script
-  wt: 1.0
+- crit:
+  wt:
   l3:
   l2:
   l1:
   l0:
-- crit: Low Fidelity Prototypes (A and B)
-  wt: 1.0
+- crit:
+  wt:
   l3:
   l2:
   l1:
   l0:
-- crit: Data Collection Summary
-  wt: 0.5
+- crit:
+  wt:
   l3:
   l2:
   l1:
   l0:
-- crit: Qualitative Data and Notes from Testers
-  wt: 1.5
+- crit:
+  wt:
   l3:
   l2:
   l1:
   l0:
-- crit: Quantitative Data
-  wt: 1
+- crit:
+  wt:
   l3:
   l2:
   l1:
   l0:
-- crit: Analysis of Data
-  wt: 0.5
+- crit:
+  wt:
   l3:
   l2:
   l1:
   l0:
-- crit: Reflection on Data and Process
-  wt: 0.5
+- crit:
+  wt:
   l3:
   l2:
   l1:
