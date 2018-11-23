@@ -2,8 +2,11 @@
 Idea: create 2 data files -- one for semester (for start date, end date,
 no meeting dates) and the other for courses (for meeting days, times, room,
 final exam date)
-delta (seconds) per day = 86400 
+delta (seconds) per day = 86400
 {% endcomment %}
+{%- if site.data.teaching.offerings -%}
+  OFFERINGS!
+{%- endif -%}
 {% assign days = "Mon, Wed, Fri" | split: ", " %}
 {}
 {% assign deltas = "172800, 172800, 259200" | split: ", " %}

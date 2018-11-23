@@ -2,9 +2,9 @@
 data file can't seem to start with a number -- prepend s (for example)
 {%- endcomment -%}
 {%- capture semfile -%}s{{page.sem}}{%- endcapture -%}
-{%- if site.data.schedule[semfile]-%}
+{%- if site.data.teaching.schedule[semfile]-%}
   {%- assign sched = "" -%}
-  {%- for r in site.data.schedule[semfile]-%}
+  {%- for r in site.data.teaching.schedule[semfile]-%}
     {%- assign rts = "" -%}
     {%- capture rts -%}{{rts}}{{r.Times}},{%- endcapture -%}
     {%- capture rts -%}{{rts}}{{r.Monday}},{%- endcapture -%}
