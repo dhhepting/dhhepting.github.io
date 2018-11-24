@@ -11,15 +11,18 @@ print(datetime.datetime.now(),file=sys.stderr)
 # - the absolute path to the website's local root directory
 # - the course/semester (in that form): i.e. CS-428+828/201830
 # - the absolute path to the local Dropbox directory
+print("ARGS: ", sys.argv)
 if (len(sys.argv) != 3):
   print (sys.argv[0],"must be invoked with \"<path-to-site-directory> <course>/<semester>\"")
   sys.exit()
 
 # get site directory, make sure it ends with "/"
 sitedir = (sys.argv[1])
+print("SITE DIR: ", sitedir)
 if (not sitedir.endswith("/")):
   sitedir += "/"
-datadir = sitedir + "_data/media/"
+datadir = sitedir + "_data/teaching/media/"
+print("DATA DIR: ", datadir)
 
 # get the offering details: course/semester
 offdir = (sys.argv[2]).split('/')
@@ -61,15 +64,12 @@ dbmedia_dir = "/Users/hepting/Dropbox/teaching/" + off_id + "/"
 filedict = {}
 for root, subdirs, files in os.walk(dbmedia_dir):
   for filename in files:
+    print("sharing: ", filename)
     file_path = os.path.join(root, filename)
     db_path = os.path.join(dbmedia_dir, filename)
     dbp = db_path[len("Users/hepting/Dropbox/"):]
-    print("dbmedia path", db_path)
-    print("dbp", dbp)
     try:
       share = dbx.sharing_create_shared_link(dbp)
-      #share = dbx.sharing_create_shared_link(dbp).url
-      #print(share)
       shared_url = (share.url).replace('www.dropbox','dl.dropboxusercontent')
       filedict[filename] = shared_url
     except ApiError as err:
@@ -78,6 +78,7 @@ for root, subdirs, files in os.walk(dbmedia_dir):
 
 # write sharing link details to csv file in _data directory of site
 dbmedia_csv = datadir + off_id.replace("+","_") + ".csv"
+print("DBMEDIA_CSV FILE: ", dbmedia_csv)
 with open(dbmedia_csv,"w") as data_file:
   data_file.write("meet,file,URL\n")	
   for w in sorted(filedict, key=filedict.get, reverse=True):
