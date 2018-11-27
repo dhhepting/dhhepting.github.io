@@ -4,44 +4,26 @@ title: Project Presentation
 breadcrumb: Project Presentation
 marks: 3
 rubric:
-- crit:
-  wt:
+- crit: Identify Project and Opportunity for Redesign
+  wt: 0.5
   l3:
   l2:
   l1:
   l0:
-- crit:
-  wt:
+- crit: Discuss your 2 lo-fi designs (and metaphors)
+  wt: 1.0
   l3:
   l2:
   l1:
   l0:
-- crit:
-  wt:
+- crit: Describe what you learned from your evaluations
+  wt: 1.0
   l3:
   l2:
   l1:
   l0:
-- crit:
-  wt:
-  l3:
-  l2:
-  l1:
-  l0:
-- crit:
-  wt:
-  l3:
-  l2:
-  l1:
-  l0:
-- crit:
-  wt:
-  l3:
-  l2:
-  l1:
-  l0:
-- crit:
-  wt:
+- crit: Discuss how your hi-fi prototype will incorporate what you have learned
+  wt: 0.5
   l3:
   l2:
   l1:
@@ -51,30 +33,21 @@ rubric:
 
 ### Description
 
-Based on your designs, test!
+Create a 5-10 minute video to present your project,
+[as discussed in class meeting 30](https://dl.dropboxusercontent.com/s/pjwkcy1tbetctxl/30%20-%201.jpg?dl=0)
 
-Recall the diagram that [illustrated the article about Design Thinking](https://www.nngroup.com/articles/design-thinking/) from the Nielsen Norman Group. We are now moving to the materialize phase.
+* Identify your project and your opportunity for redesign
+* Discuss your 2 low-fidelity designs (and metaphors)
+* Describe what you learned from your evaluations
+* Discuss how your high-fidelity prototype will incorporate what you have learned
 
-The focus now shifts to testing your low-fidelity prototypes.
-Each member of your group will conduct 1 test with each of your
-group's 2 low-fidelity interface prototypes).  The tests will be
-arranged from within your evaluation (Eval) groups.  
+Although it would be preferable to have all group members involved in creating the presentation, this is not required.
 
-IMPORTANT: If you find that your evaluation group includes someone from your project group, please let me know so that I can adjust the evaluation groups.
-
-In your tests, you are asking someone to take on a role as your user and then complete the task for which you are redesigning the interface.  Explain the task and ask your participant to perform the task, without giving instructions about how to do it.  This information will be recorded in a script, that all group members will use to run their tests.  Writing, and testing, the script is a group effort. Once you start testing with your participants, do not make any changes to your script.  You may note, in your reflection about the process, things that you might change if you do this again.
-
-During your tests, you will collect both quantitative and qualitative data.  You may also have notes that you take during the test.
-
-You should submit all of your raw data and submit a summary of how
-it was collected: by whom, from whom, when, and where.  If your group has 3 members, you should have 3 sets of data about your Interface A and 3 sets of data about your Interface B.
-
-Provide an analysis of your data.  Did the participants seeing your interfaces agree amongst themselves? Were the results surprising in
-any way?
+You may choose the privacy setting for your youtube video [(public, unlisted, and private)](https://support.google.com/youtube/answer/157177). If you choose private, please ensure that the instructor and marker are granted access.
 
 ### Submission
 
-* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document (1 per group) on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
+* submit a link to your video on youtube (1 per group) using [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
 
 ### Grading
 
