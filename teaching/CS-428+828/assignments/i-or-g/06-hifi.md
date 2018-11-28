@@ -1,7 +1,7 @@
 ---
 layout: bg-image
-title: Project High Fidelity Protoptype
-breadcrumb: Project High Fidelity Protoptype
+title: Project High Fidelity Prototype
+breadcrumb: Project High Fidelity Prototype
 marks: 6
 rubric:
 - crit:
@@ -53,24 +53,16 @@ rubric:
 
 Based on your designs, test!
 
-Recall the diagram that [illustrated the article about Design Thinking](https://www.nngroup.com/articles/design-thinking/) from the Nielsen Norman Group. We are now moving to the materialize phase.
+Recall the diagram that [illustrated the article about Design Thinking](https://www.nngroup.com/articles/design-thinking/) from the Nielsen Norman Group. We are in the materialize phase.
 
-The focus now shifts to testing your low-fidelity prototypes.
-Each member of your group will conduct 1 test with each of your
-group's 2 low-fidelity interface prototypes).  The tests will be
-arranged from within your evaluation (Eval) groups.  
+Based on your experience with your project and your testing of your low-fidelity prototypes, create a single high-fidelity design of your interface that combines the best features from your two low-fidelity prototypes.  This high-fidelity prototype should
+be executable on a computer and create an interactive simulation of your interface to perform your task.
 
-IMPORTANT: If you find that your evaluation group includes someone from your project group, please let me know so that I can adjust the evaluation groups.
+There are 2 parts to this assignment, as [discussed in class meeting 31](https://dl.dropboxusercontent.com/s/tqs9ysy2l5bi4hf/31%20-%201.jpg?dl=0):
+* present the choices you made, along with your rationale, in deciding on the interface you designed following your low-fidelity prototypes A and B.
+* provide the means for the instructor and marker to view and interact with your high-fidelity prototype.
 
-In your tests, you are asking someone to take on a role as your user and then complete the task for which you are redesigning the interface.  Explain the task and ask your participant to perform the task, without giving instructions about how to do it.  This information will be recorded in a script, that all group members will use to run their tests.  Writing, and testing, the script is a group effort. Once you start testing with your participants, do not make any changes to your script.  You may note, in your reflection about the process, things that you might change if you do this again.
-
-During your tests, you will collect both quantitative and qualitative data.  You may also have notes that you take during the test.
-
-You should submit all of your raw data and submit a summary of how
-it was collected: by whom, from whom, when, and where.  If your group has 3 members, you should have 3 sets of data about your Interface A and 3 sets of data about your Interface B.
-
-Provide an analysis of your data.  Did the participants seeing your interfaces agree amongst themselves? Were the results surprising in
-any way?
+Include directions for viewing your work in the document that describes your design choices.
 
 ### Submission
 
