@@ -13,27 +13,17 @@
   "name": "{{ page.title | strip }}",
   "headline": "{{ page.title | strip }}",
   "datePublished": "2014-06",
-  "mainEntityOfPage": "{{ "/research/works/2014-06-HepJafMac-Operationalizing-Ethics-in-Food-Choice-Decisions.html" | absolute_url }}",
+  "mainEntityOfPage": "{{ page.url | absolute_url }}",
 
   "image": "{{ "/assets/works/img/2014-06-HepJafMac.jpg" | absolute_url }}",
   "author":
   [
+  {% for pa in page.authors %}
     {
       "@type": "Person",
-      "@id": "{{ "/about/" | absolute_url }}#DHHepting"
+      "@name": "{{ pa }}"
     },
-         {
-           "@type": "Person",
-           "familyName": "Jaffe",
-           "givenName": "JoAnn",
-           "name": "JoAnn Jaffe"
-         },
-         {
-           "@type": "Person",
-           "familyName": "Maciag",
-           "givenName": "Timothy",
-           "name": "Timothy Maciag"
-         }
+  {% endfor %}
   ],
   "description": "There is a large gap between attitude and action when it comes to consumer purchases of ethical food. Amongst the various aspects of this gap, this paper focuses on the difficulty in knowing enough about the various dimensions of food production, distribution and consumption to make an ethical food purchasing decision.",
   "sameAs": "http://dx.doi.org/10.1007/s10806-013-9473-8",
