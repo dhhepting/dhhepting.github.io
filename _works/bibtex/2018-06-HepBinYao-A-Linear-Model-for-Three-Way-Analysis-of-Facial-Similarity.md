@@ -13,7 +13,7 @@ authors:
  - Daryl H. Hepting
  - Hadeel Hatim Bin Amer
  - Yiyu Yao
-venue: Information Processing and Management of Uncertainty in Knowledge Based Systems  Theory and Foundations
+venue: Information Processing and Management of Uncertainty in Knowledge Based Systems Theory and Foundations
 editors:
  - Jesús Medina
  - Manuel Ojeda-Aciego
