@@ -4,6 +4,7 @@ citekey: 2018-06-HepBinYao
 title: "A Linear Model for Three-Way Analysis of Facial Similarity (2018)"
 breadcrumb: "A Linear Model for Three-Way Analysis of Facial Similarity (2018)"
 category: conference
+main_entity: ScholarlyArticle
 projects:
  - faces
 abstract: >-
