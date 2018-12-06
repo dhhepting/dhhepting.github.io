@@ -10,6 +10,7 @@ name, value pairs name for file, value for breadcrumb if plain file
 {% assign filesize = url_parts.size %}
 {% assign dirsize = filesize | plus: 1 %}
 {% assign dircons = "" %}
+PAGE FILES {{ page.files }}
 {% if page.files %}
   {% assign pfs = page.files.size %}
   {% assign pfi = 1 | plus: 0 %}
