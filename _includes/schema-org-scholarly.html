@@ -18,7 +18,7 @@
   "image": "{{ "/assets/works/img/2014-06-HepJafMac.jpg" | absolute_url }}",
   {% assign pas = page.authors.size %}
   {% assign pai = 1 | plus: 0 %}
-  {{"author": | strip}}
+  "author":
   [
   {%- for pa in page.authors %}
     {
@@ -26,7 +26,7 @@
     {%- if pa == "Daryl H. Hepting" %}
       "@id": "{{ "/about/" | absolute_url }}#DHHepting"
     {%- else %}
-      "@name": "{{ pa }}"
+      "name": "{{ pa }}"
     {%- endif %}
     {%- if pai < pas %}
     },
