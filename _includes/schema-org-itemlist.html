@@ -10,7 +10,6 @@ name, value pairs name for file, value for breadcrumb if plain file
 {% assign filesize = url_parts.size %}
 {% assign dirsize = filesize | plus: 1 %}
 {% assign dircons = "" %}
-PAGE FILES {{ page.files }}
 {% if page.files %}
   {% assign pfs = page.files.size %}
   {% assign pfi = 1 | plus: 0 %}
@@ -42,6 +41,15 @@ PAGE FILES {{ page.files }}
       {% endif %}
     {% assign pfi = pfi | plus: 1 %}
   {% endfor %}
+{% elsif url_parts contains "works" %}
+  {%- for sp in site.works -%}
+    {%- if sp.url contains page.url and sp.url != page.url -%}
+      {%- assign sp_parts = sp.url | split: '/' -%}
+      {%- if sp_parts.size == filesize or sp_parts.size == dirsize -%}
+        {%- capture dircons -%}{{dircons}}|{{sp.url}}#{{sp.breadcrumb}}{%- endcapture -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
 {% else %}
   {%- for sp in site.pages -%}
     {%- if sp.url contains page.url and sp.url != page.url -%}
@@ -51,10 +59,11 @@ PAGE FILES {{ page.files }}
       {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
-  {%- assign sorteddircons = dircons | split: '|' | sort -%}
-  {%- assign numcons = sorteddircons.size | minus:1 -%}
-  {%- for i in (1..numcons) -%}
-    {% assign sdc = sorteddircons[i] | split: '#' %}
+{% endif %}
+{%- assign sorteddircons = dircons | split: '|' | sort -%}
+{%- assign numcons = sorteddircons.size | minus:1 -%}
+{%- for i in (1..numcons) -%}
+  {% assign sdc = sorteddircons[i] | split: '#' %}
       {
         "@type": "ListItem",
         "position": {{ i }},
@@ -62,14 +71,13 @@ PAGE FILES {{ page.files }}
         {
           "@type": "WebPage",
           "@id": "{{ sdc[0] | absolute_url }}",
-          "name": {{ sdc[1] }}
+          "name": "{{ sdc[1] }}"
         }
         {% if i < numcons %}
       },
         {% else %}
       }
         {% endif %}
-      {%- endfor -%}
-    {% endif %}
+{%- endfor -%}
   ]
 }
