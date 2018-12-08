@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2007-07-MacHepSle
 title: "Evaluating the Utility of Web-Based Consumer Support Tools Using Rough Sets (2007)"

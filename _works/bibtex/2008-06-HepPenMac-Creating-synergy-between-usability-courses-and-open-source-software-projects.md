@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2008-06-HepPenMac
 title: "Creating synergy between usability courses and open source software projects (2008)"

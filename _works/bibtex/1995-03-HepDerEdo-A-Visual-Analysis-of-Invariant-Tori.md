@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1995-03-HepDerEdo
 title: "A Visual Analysis of Invariant Tori (1995)"

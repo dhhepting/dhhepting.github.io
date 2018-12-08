@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1995-10-HepDerEdo
 title: "Qualitative Analysis of Invariant Tori in a Dynamical System (1995)"

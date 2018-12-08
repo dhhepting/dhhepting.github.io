@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2013-10-HepAlm
 title: "Discernibility in the Analysis of Binary Card Sort Data (2013)"

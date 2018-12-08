@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2011-06-KuzSleHep
 title: "Proceedings of 13th International Conference on Rough Sets, Fuzzy Sets, Data Mining and Granular Computing (2011)"

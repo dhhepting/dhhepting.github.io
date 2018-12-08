@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2010-07-MacHepJaf
 title: "Social Shopping Using Food Spimes (2010)"

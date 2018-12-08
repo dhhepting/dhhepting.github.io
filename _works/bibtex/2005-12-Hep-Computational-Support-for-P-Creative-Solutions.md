@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2005-12-Hep
 title: "Computational Support for P-Creative Solutions (2005)"

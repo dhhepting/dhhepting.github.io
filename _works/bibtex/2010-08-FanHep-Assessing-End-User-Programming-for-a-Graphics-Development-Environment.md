@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2010-08-FanHep
 title: "Assessing End-User Programming for a Graphics Development Environment (2010)"

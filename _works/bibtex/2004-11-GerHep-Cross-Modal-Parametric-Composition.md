@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2004-11-GerHep
 title: "Cross-Modal Parametric Composition (2004)"

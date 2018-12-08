@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2009-01-MacSleHep
 title: "A Data-Mining Framework for Designing Personalized E-Commerce Support Tools (2009)"

@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2007-04-Hep
 title: "Decision Support for Local Environmental Impact Assessment (2007)"

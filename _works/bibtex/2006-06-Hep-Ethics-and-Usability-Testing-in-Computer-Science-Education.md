@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2006-06-Hep
 title: "Ethics and Usability Testing in Computer Science Education (2006)"

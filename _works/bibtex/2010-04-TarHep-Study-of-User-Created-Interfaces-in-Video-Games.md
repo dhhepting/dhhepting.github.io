@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2010-04-TarHep
 title: "Study of User-Created Interfaces in Video Games (2010)"

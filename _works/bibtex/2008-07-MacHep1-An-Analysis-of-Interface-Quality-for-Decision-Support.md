@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2008-07-MacHep1
 title: "An Analysis of Interface Quality for Decision Support (2008)"

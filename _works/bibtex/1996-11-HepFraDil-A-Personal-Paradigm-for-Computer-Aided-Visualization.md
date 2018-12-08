@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1996-11-HepFraDil
 title: "A Personal Paradigm for Computer-Aided Visualization (1996)"

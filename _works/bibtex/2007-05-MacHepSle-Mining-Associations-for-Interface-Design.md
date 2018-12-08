@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2007-05-MacHepSle
 title: "Mining Associations for Interface Design (2007)"

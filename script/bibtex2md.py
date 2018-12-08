@@ -199,6 +199,7 @@ for entry in bib_data.entries.values():
         print ("(re)create: ", entry.key)
         with open(bibtex_path+mdnamestr,"w") as mdf:
             mdf.write("---\n")
+            mdf.write("main_entity: ScholarlyArticle\n")
             mdf.write("layout: bibtex-default\n")
             mdf.write("citekey: " + entry.key + "\n")
             yearstr = getValueStr("Year")

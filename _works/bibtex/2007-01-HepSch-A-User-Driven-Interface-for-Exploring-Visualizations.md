@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2007-01-HepSch
 title: "A User-Driven Interface for Exploring Visualizations (2007)"

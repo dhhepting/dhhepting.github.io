@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2006-11-MacSleHep
 title: "Consumer Modelling in Support of Interface Design (2006)"

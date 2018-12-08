@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1997-08-Hep2
 title: "Humble Aspirations (1997)"

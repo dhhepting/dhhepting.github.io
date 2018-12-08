@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2012-10-HepDonKin
 title: "CSIT Outreach from a Canadian Perspective (2012)"

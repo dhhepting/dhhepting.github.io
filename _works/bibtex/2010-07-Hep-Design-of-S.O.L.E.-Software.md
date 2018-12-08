@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2010-07-Hep
 title: "Design of S.O.L.E. Software (2010)"

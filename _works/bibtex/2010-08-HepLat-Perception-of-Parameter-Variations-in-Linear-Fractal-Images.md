@@ -1,10 +1,9 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2010-08-HepLat
 title: "Perception of Parameter Variations in Linear Fractal Images (2010)"
 breadcrumb: "Perception of Parameter Variations in Linear Fractal Images (2010)"
-redirect_from:
-  - /research/works/2010-08-Perception-of-Parameter-Variations-in-Linear-Fractal-Images.html
 category: conference
 projects:
  - fractals

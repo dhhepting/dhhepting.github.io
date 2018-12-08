@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2011-11-Sal
 title: "How to Eat Well AND Save Our Planet (2011)"

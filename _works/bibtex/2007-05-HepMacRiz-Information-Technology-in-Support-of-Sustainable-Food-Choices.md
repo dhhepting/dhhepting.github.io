@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2007-05-HepMacRiz
 title: "Information Technology in Support of Sustainable Food Choices (2007)"

@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2010-08-MacHep
 title: "Constructing Collaborative Online Communities for Visualizing Spimes (2010)"

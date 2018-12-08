@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2011-12-McIAscTwe
 title: "Environmental decision support systems (EDSS) development - Challenges and best practices (2011)"

@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2002-07-Hep
 title: "Towards a visual interface for information visualization (2002)"

@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2017-10-HepBinYao
 title: "Three-Way Analysis of Facial Similarity Judgments (2017)"

@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2005-09-GerHep
 title: "A Framework for Personalization of Interactive Sound Synthesis (2005)"
