@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2005-11-MacHep
 title: "Analysis of User Classifiers for Personalization of Environmental Decision Support System Interfaces (2005)"

@@ -1,9 +1,12 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1995-11-HepHuaRus
 title: "Case Study  A Visual Tool for Moving Mesh Numerical Methods (1995)"
 breadcrumb: "Case Study  A Visual Tool for Moving Mesh Numerical Methods (1995)"
-category: paper
+category: techreport
+projects:
+ - visualization
 authors:
  - Daryl H. Hepting
  - Weizhang Huang

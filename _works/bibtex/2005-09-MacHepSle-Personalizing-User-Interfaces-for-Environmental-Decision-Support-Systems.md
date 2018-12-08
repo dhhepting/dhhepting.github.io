@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2005-09-MacHepSle
 title: "Personalizing User Interfaces for Environmental Decision Support Systems (2005)"

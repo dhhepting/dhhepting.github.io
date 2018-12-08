@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2006-01-CarLonHep
 title: "Respectful Actions in Research  Aboriginal Adolescents Speaking Their Future (2006)"

@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2005-05-HepMac
 title: "Consumer Decision Support for Product Selection (2005)"

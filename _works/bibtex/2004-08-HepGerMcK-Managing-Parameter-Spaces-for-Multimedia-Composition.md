@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2004-08-HepGerMcK
 title: "Managing Parameter Spaces for Multimedia Composition (2004)"

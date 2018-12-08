@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2007-10-MacHepHil
 title: "Evaluation of a Dominance-Based Rough Set Approach to Interface Design (2007)"

@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2012-01-HepMacHil
 title: "Web-Based Support of Crop Selection for Climate Adaptation (2012)"

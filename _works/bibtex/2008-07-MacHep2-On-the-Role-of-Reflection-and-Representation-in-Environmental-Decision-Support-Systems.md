@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2008-07-MacHep2
 title: "On the Role of Reflection and Representation in Environmental Decision Support Systems (2008)"

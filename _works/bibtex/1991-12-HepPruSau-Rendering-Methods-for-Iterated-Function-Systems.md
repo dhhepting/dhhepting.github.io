@@ -1,9 +1,8 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1991-12-HepPruSau
 title: "Rendering Methods for Iterated Function Systems (1991)"
-redirect_from:
-  - /research/works/1991-06-HepPruSau-Rendering-Methods-for-Iterated-Function-Systems.html
 breadcrumb: "Rendering Methods for Iterated Function Systems (1991)"
 category: conference
 projects:

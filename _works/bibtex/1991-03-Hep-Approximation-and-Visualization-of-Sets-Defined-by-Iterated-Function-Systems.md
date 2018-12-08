@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1991-03-Hep
 title: "Approximation and Visualization of Sets Defined by Iterated Function Systems (1991)"

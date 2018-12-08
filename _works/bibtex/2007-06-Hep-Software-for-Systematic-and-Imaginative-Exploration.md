@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2007-06-Hep
 title: "Software for Systematic and Imaginative Exploration (2007)"

@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2014-10-TomHep
 title: "DIY Game Console Development (2014)"

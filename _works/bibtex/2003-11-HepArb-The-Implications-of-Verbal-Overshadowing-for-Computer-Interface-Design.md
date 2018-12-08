@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2003-11-HepArb
 title: "The Implications of Verbal Overshadowing for Computer Interface Design (2003)"

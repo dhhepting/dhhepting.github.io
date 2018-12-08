@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2004-05-HepHoeBer
 title: "A Unified Framework for the Presentation of Environmental Risk Information (2004)"

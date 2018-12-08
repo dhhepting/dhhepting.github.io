@@ -1,9 +1,9 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2014-06-HepJafMac
 title: "Operationalizing Ethics in Food Choice Decisions (2014)"
 breadcrumb: "Operationalizing Ethics in Food Choice Decisions (2014)"
-main_entity: ScholarlyArticle
 category: journal
 projects:
  - food

@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2005-05-HepGer
 title: "Collaborative Computer-Aided Parameter Exploration for Music and Animation (2005)"

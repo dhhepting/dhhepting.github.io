@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2004-08-UttHepPet
 title: "Symbol Mall (2004)"

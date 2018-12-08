@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2005-02-PetHep
 title: "Intellectual Capital, Open Source, and Sustainable Development  Implications for the Success of Canadian Firms in the New Economy (2005)"

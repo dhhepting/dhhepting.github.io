@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2011-11-HepSprSle
 title: "A rough set exploration of facial similarity judgements (2011)"

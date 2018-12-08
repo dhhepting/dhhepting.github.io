@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2009-12-HepMacSpr
 title: "A Rough Sets Approach for Personalized Support of Face Recognition (2009)"

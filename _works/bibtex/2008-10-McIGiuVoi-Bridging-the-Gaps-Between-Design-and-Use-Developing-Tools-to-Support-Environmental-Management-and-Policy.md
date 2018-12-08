@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2008-10-McIGiuVoi
 title: "Bridging the Gaps Between Design and Use  Developing Tools to Support Environmental Management and Policy (2008)"

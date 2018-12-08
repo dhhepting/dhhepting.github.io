@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2012-12-TarVerHam
 title: "A Study of User Interface Modifications in World of Warcraft (2012)"

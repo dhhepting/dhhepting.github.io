@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2004-09-HepBut
 title: "An Integrated Approach to Discovery in Complex Information Spaces (2004)"

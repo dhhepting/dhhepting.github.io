@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2006-07-HepMac
 title: "Opening Access to Environmental Software Systems (2006)"

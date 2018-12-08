@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1998-04-HepCaoRus
 title: "An Exploratory Approach to Mathematical Visualization (1998)"

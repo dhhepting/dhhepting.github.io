@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1995-05-HepHar
 title: "The Escape Buffer  Efficient Computation of Escape Time for Linear Fractals (1995)"
