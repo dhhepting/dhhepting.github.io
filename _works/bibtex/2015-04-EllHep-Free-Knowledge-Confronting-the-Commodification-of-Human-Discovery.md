@@ -2,8 +2,8 @@
 main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2015-04-EllHep
-title: "Free Knowledge  Confronting the Commodification of Human Discovery (2015)"
-breadcrumb: "Free Knowledge  Confronting the Commodification of Human Discovery (2015)"
+title: "Free Knowledge: Confronting the Commodification of Human Discovery (2015)"
+breadcrumb: "Free Knowledge: Confronting the Commodification of Human Discovery (2015)"
 category: book
 projects:
  - free-knowledge
