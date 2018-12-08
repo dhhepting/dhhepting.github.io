@@ -1,8 +1,8 @@
 ---
 layout: bibtex-default
 citekey: 2011-12-Hep
-title: "Review of ``The Beauty of Fractals  Six Different Views'' (2011)"
-breadcrumb: "Review of ``The Beauty of Fractals  Six Different Views'' (2011)"
+title: "Review of ``The Beauty of Fractals: Six Different Views'' (2011)"
+breadcrumb: "Review of ``The Beauty of Fractals: Six Different Views'' (2011)"
 category: review
 projects:
  - fractals
