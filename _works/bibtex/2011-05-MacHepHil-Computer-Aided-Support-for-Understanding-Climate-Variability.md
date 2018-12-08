@@ -1,5 +1,4 @@
 ---
-main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2011-05-MacHepHil
 title: "Computer-Aided Support for Understanding Climate Variability (2011)"

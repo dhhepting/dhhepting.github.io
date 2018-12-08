@@ -1,5 +1,4 @@
 ---
-main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2011-12-Hep
 title: "Review of ``The Beauty of Fractals  Six Different Views'' (2011)"

@@ -1,5 +1,4 @@
 ---
-main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2011-05-MacHepPet
 title: "Mobilizing Shared Capital for Grassroots Action (2011)"
