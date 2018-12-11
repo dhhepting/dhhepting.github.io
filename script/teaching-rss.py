@@ -39,6 +39,7 @@ off_sem = offdir[1]
 off_yr = int((offdir[1])[:4])
 off_ss = int((offdir[1])[4:])
 off_id = off_crs + "-" + off_sem
+doff_id = off_id.replace("+","_")
 off_gc = off_crs + "_"
 off_rel_path = off_crs + "/" + off_sem
 
@@ -65,6 +66,7 @@ rss_dir = os.path.join(os.path.abspath(sitedir + "rss"),"")
 # setup paths to directories to be checked for updates
 html_dir = os.path.join(os.path.abspath(sitedir + "teaching"),off_crs)
 assets_dir = os.path.join(os.path.abspath(sitedir + "assets/teaching"),"")
+data_dir = os.path.join(os.path.abspath(sitedir + "_data/teaching"),"")
 
 # don't create updates past the latest date for the offering
 local_now = local_tz.localize(datetime.datetime.now())
@@ -114,6 +116,16 @@ if (local_now <= latest):
                 file_path = file_path[len(sitedir)-1:]
                 filedict[str(dt)] = file_path
 
+    # get any data files within /assets/teaching that match offering
+    # e.g. name includes either CS-428_828-201830
+    for root, subdirs, files in os.walk(data_dir):
+        for filename in files:
+            file_path = os.path.join(root, filename)
+            if (doff_id in file_path):
+                mts = os.path.getmtime(file_path)
+                dt = local_tz.localize(datetime.datetime.fromtimestamp(mts)).strftime(tfmt)
+                file_path = file_path[len(sitedir)-1:]
+                filedict[str(dt)] = file_path
     # updated files now in filedict, ready for output
     rssfilepath = rss_dir + rss_fname
     with open(rssfilepath, 'w') as rss_file:
@@ -143,7 +155,10 @@ if (local_now <= latest):
             # collect and format feed item (fi_...) information
             #fi_pubdate = update.strftime("%Y-%m-%d %H:%M %z")
             fi_pubdate = update.strftime("%a, %d %b %Y %H:%M:%S %Z")
-            if (filedict[k].startswith("/assets/teaching")):
+            if (filedict[k].startswith("/_data/teaching")):
+                # set feed item title for asset
+                fi_title = (filedict[k])[len("/_data/teaching/"):]
+            elif (filedict[k].startswith("/assets/teaching")):
                 # set feed item title for asset
                 fi_title = (filedict[k])[len("/assets/teaching/"):]
             else:
@@ -157,10 +172,11 @@ if (local_now <= latest):
             # print(st,fi_link)
             rss_file.write(st+st+"<item>\n")
             rss_file.write(st+st+st+"<title>" + fi_title + "</title>\n")
-            rss_file.write(st+st+st+"<link>" + fi_link + "</link>\n")
+            if ("_data" not in fi_link):
+                rss_file.write(st+st+st+"<link>" + fi_link + "</link>\n")
+                rss_file.write(st+st+st+"<guid>" + fi_link + "</guid>\n")
             rss_file.write(st+st+st+"<description>" + fi_desc + "</description>\n")
             rss_file.write(st+st+st+"<pubDate>" + fi_pubdate + "</pubDate>\n")
-            rss_file.write(st+st+st+"<guid>" + fi_link + "</guid>\n")
             rss_file.write(st+st+"</item>\n")
         # closing tags for feed
         rss_file.write(st+"</channel>\n")
