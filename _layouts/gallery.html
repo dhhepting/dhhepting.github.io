@@ -5,7 +5,7 @@ group:
 - project
 ---
 <h1>
-	Gallery 
+	Gallery
 </h1>
 
 <div class="container">
@@ -13,7 +13,7 @@ group:
   <div class="row mb-2">
     <div class="col">
       <a href="{{ item.url | relative_url }}">
-      <img src="{{item.thumbnail}}" class="rounded float-right" alt="{{item.thumbnail}}" />
+      <img src="{{ item.thumbnail | relative_url }}" class="rounded float-right" alt="{{item.thumbnail}}" />
       </a>
     </div>
     <div class="col justify-content-start">
