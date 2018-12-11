@@ -41,6 +41,24 @@ name, value pairs name for file, value for breadcrumb if plain file
       {% endif %}
     {% assign pfi = pfi | plus: 1 %}
   {% endfor %}
+{% elsif url_parts contains "gallery" %}
+  {%- for sp in site.gallery -%}
+    {%- if sp.url contains page.url and sp.url != page.url -%}
+      {%- assign sp_parts = sp.url | split: '/' -%}
+      {%- if sp_parts.size == filesize or sp_parts.size == dirsize -%}
+        {%- capture dircons -%}{{dircons}}|{{sp.url}}#{{sp.breadcrumb}}{%- endcapture -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{% elsif url_parts contains "posts" %}
+  {%- for sp in site.posts -%}
+    {%- if sp.url contains page.url and sp.url != page.url -%}
+      {%- assign sp_parts = sp.url | split: '/' -%}
+      {%- if sp_parts.size == filesize or sp_parts.size == dirsize -%}
+        {%- capture dircons -%}{{dircons}}|{{sp.url}}#{{sp.breadcrumb}}{%- endcapture -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
 {% elsif url_parts contains "works" %}
   {%- for sp in site.works -%}
     {%- if sp.url contains page.url and sp.url != page.url -%}
