@@ -187,7 +187,7 @@ camera inside the computer.
   <div class="card-body">
     <div class="container">
     <img class="img-responsive" alt="Dragon Mesa"
-    src="{{"/assets/gallery/img/1989-PruSauHep-Dragon-Mesa.png" | relative_url }}" />
+    src="{{"/assets/gallery/img/1989-PruSauHep-Dragon-Mesa.jpg" | relative_url }}" />
     </div>
 </div>
 </div>
