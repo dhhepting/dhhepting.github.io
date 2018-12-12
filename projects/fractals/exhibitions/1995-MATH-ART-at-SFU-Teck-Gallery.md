@@ -6,6 +6,7 @@ redirect_from:
   - /art/exhibits/teck1995mathart/index.html
   - /art/exhibits/teck1995mathart/fiery.html
   - /projects/fractals/exhibits/teck1995.html
+  - /projects/math-art/exhibits/teck1995.html
 layout: bg-image
 ---
 
