@@ -70,6 +70,8 @@ layout: bg-image
 				Semester Schedule
 			</a>
       <br /><br />
+      <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-3138-3521" href="https://orcid.org/0000-0002-3138-3521" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0002-3138-3521</a></div>
+      <br />
       <a href="elsewhere.html">
         Find me elsewhere on the web
       </a>
