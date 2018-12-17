@@ -2,6 +2,8 @@
 title: Exploring the Image World of Computer Graphics (1994)
 breadcrumb: Exploring the Image World of Computer Graphics (1994)
 layout: bg-image
+redirect_from:
+  - /projects/fractals/exhibits/eiw1994.html
 ---
 # {{page.breadcrumb}}
 <h3>
