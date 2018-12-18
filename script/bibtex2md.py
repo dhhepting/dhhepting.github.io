@@ -56,10 +56,20 @@ def format_people(people,kind,mdf):
 			perstr = " - " + fnamestr + mnamestr + plnamestr + lnamestr
 			mdf.write(perstr + "\n")
 
-
 def format_article(entry,mdf):
 	format_people(entry.persons,"author",mdf)
 	mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Journal'])+"\n")
+	### the following may be split out into its own function...
+	try:
+        	kwstr = entry.fields['Keywords']
+	except KeyError:
+        	kwstr = ""
+	if (kwstr != ""):
+		mdf.write("keywords:\n")
+		keywords = kwstr.split(",")
+		for kk in range(len(keywords)):
+			kwordstr = " - " + "\"" + keywords[kk].strip() + "\""
+			mdf.write(kwordstr + "\n")
 
 def format_inproceedings(entry,mdf):
     format_people(entry.persons,"author",mdf)
@@ -199,7 +209,9 @@ for entry in bib_data.entries.values():
         print ("(re)create: ", entry.key)
         with open(bibtex_path+mdnamestr,"w") as mdf:
             mdf.write("---\n")
-            mdf.write("main_entity: ScholarlyArticle\n")
+            yearstr = getValueStr("Year")
+            if (yearstr != "2011"):
+                mdf.write("main_entity: ScholarlyArticle\n")
             mdf.write("layout: bibtex-default\n")
             mdf.write("citekey: " + entry.key + "\n")
             yearstr = getValueStr("Year")

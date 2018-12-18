@@ -15,6 +15,16 @@ authors:
  - Howard J. Hamilton
  - Daryl H. Hepting
 venue: Game Studies  the international journal of computer game research
+keywords:
+ - "World of Warcraft"
+ - "massively multiplayer online game"
+ - "statistical survey"
+ - "user interface"
+ - "human-computer interaction"
+ - "user interface modification"
+ - "user interface add-ons"
+ - "modding"
+ - "UI mods"
 ---
 @article{2012-12-TarVerHam,
 	Author =  "Targett, Sean and Verlysdonk, Victoria and Hamilton, Howard J. and Hepting, Daryl H.",
