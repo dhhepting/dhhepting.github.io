@@ -15,6 +15,13 @@ authors:
  - JoAnn Jaffe
  - Timothy Maciag
 venue: Journal of Agricultural and Environmental Ethics
+keywords:
+ - "food"
+ - "ethics"
+ - "ICT"
+ - "spime"
+ - "citizen consumer"
+ - "democracy"
 ---
 @article{2014-06-HepJafMac,
 	Author =  "Hepting, Daryl H. and Jaffe, JoAnn and Maciag, Timothy",

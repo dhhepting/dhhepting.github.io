@@ -37,6 +37,14 @@ authors:
  - A. Rizzoli
  - A. Voinov
 venue: Environmental Modelling   Software
+keywords:
+ - "Environmental decision support systems"
+ - "EDSS"
+ - "Information systems"
+ - "Decision-making"
+ - "Software development"
+ - "Adoption"
+ - "Use"
 ---
 @article{2011-12-McIAscTwe,
 	Author =  "McIntosh, B.S. and Ascough, J.C. and Twery, M. and Chew, J. and Elmahdi, A. and Haase, D. and Harou, J.J. and Hepting, D. and Cuddy, S. and Jakeman, A.J. and Chen, S. and Kassahun, A. and Lautenbach, S. and Matthews, K. and Merritt, W. and Quinn, N.W.T. and Rodriguez-Roda, I. and Sieber, S. and Stavenga, M. and Sulis, A. and Ticehurst, J. and Volk, M. and Wrobel, M. and van Delden, H. and El-Sawah, S. and Rizzoli, A. and Voinov, A.",

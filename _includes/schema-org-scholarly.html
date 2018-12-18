@@ -38,9 +38,17 @@
 ],
   "description": "{{ page.abstract }}",
   "sameAs": "https://doi.org/{{ page.doi }}",
+  {% if page.keywords %}
+    {% assign pks = page.keywords.size %}
+    {% assign pki = 1 | plus: 0 %}
   "keywords":
-  [
-  ],
+  [ "
+  {%- for pk in page.keywords -%}
+    {{- pk -}}{%- if pki < pks %} , {% endif -%}
+    {%- assign pki = pki | plus: 1 -%}
+  {%- endfor -%}
+  " ],
+  {% endif %}
   "pageStart": "{{ page.pagestart }}",
   "pageEnd": "{{ page.pageend }}",
   "url": "{{ site.canonical }}{{ page.url }}",
