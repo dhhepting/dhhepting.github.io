@@ -10,6 +10,10 @@ projects:
 authors:
  - Daryl H. Hepting
 venue: Journal of Environmental Modelling and Software
+pagestart: 436
+pageend: 441
+doi: 10.1016/j.envsoft.2005.12.010
+datemod: 2018-06-06 19:21:15 +0000
 ---
 @article{2007-04-Hep,
 	Author =  "Hepting, Daryl H.",

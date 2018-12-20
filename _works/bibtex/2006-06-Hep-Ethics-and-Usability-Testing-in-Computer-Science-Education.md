@@ -12,6 +12,10 @@ abstract: >-
 authors:
  - Daryl H. Hepting
 venue: ACM SIGCSE Bulletin
+pagestart: 76
+pageend: 80
+doi: 10.1145/1138403.1138438
+datemod: 2018-09-26 12:00:10 -0600
 ---
 @article{2006-06-Hep,
 	Author =  "Hepting, Daryl H.",

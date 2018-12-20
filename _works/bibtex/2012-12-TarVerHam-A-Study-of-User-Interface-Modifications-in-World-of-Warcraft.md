@@ -25,6 +25,7 @@ keywords:
  - "user interface add-ons"
  - "modding"
  - "UI mods"
+datemod: 2018-09-03 17:50:55 +0000
 ---
 @article{2012-12-TarVerHam,
 	Author =  "Targett, Sean and Verlysdonk, Victoria and Hamilton, Howard J. and Hepting, Daryl H.",

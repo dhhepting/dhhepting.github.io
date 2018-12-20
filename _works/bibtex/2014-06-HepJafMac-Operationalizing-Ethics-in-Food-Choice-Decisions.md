@@ -22,6 +22,10 @@ keywords:
  - "spime"
  - "citizen consumer"
  - "democracy"
+pagestart: 453
+pageend: 469
+doi: 10.1007/s10806-013-9473-8
+datemod: 2018-09-27 14:55:15 -0600
 ---
 @article{2014-06-HepJafMac,
 	Author =  "Hepting, Daryl H. and Jaffe, JoAnn and Maciag, Timothy",
