@@ -16,6 +16,10 @@ authors:
  - David Gerhard
  - Brien Maguire
 venue: ACM SIGCSE Bulletin
+pagestart: 120
+pageend: 123
+doi: 10.1145/1383602.1383649
+datemod: 2018-09-26 12:00:34 -0600
 ---
 @article{2008-06-HepPenMac,
 	Author =  "Hepting, Daryl H. and Peng, Lijuan and Maciag, Timothy and Gerhard, David and Maguire, Brien",

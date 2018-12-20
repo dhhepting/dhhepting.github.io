@@ -9,6 +9,7 @@ projects:
 authors:
  - Daryl H. Hepting
 venue: Crux Mathematicorum
+datemod: 2018-10-20 20:30:33 -0600
 ---
 @article{2011-12-Hep,
 	Author =  "Hepting, Daryl H.",

@@ -13,6 +13,7 @@
   "name": "{{ page.title | strip }}",
   "headline": "{{ page.title | strip }}",
   "datePublished": "2014-06",
+  "dateModified": "{{ page.datemod }}"
   "mainEntityOfPage": "{{ page.url | absolute_url }}",
 
   "image": "{{ "/assets/works/img/2014-06-HepJafMac.jpg" | absolute_url }}",
@@ -41,13 +42,12 @@
   {% if page.keywords %}
     {% assign pks = page.keywords.size %}
     {% assign pki = 1 | plus: 0 %}
-  "keywords":
-  [ "
+  "keywords": "
   {%- for pk in page.keywords -%}
     {{- pk -}}{%- if pki < pks %} , {% endif -%}
     {%- assign pki = pki | plus: 1 -%}
   {%- endfor -%}
-  " ],
+  ",
   {% endif %}
   "pageStart": "{{ page.pagestart }}",
   "pageEnd": "{{ page.pageend }}",

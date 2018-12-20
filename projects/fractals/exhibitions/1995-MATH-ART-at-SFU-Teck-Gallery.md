@@ -52,9 +52,7 @@ May 30 to July 26, 1994.
 
 Daryl Hepting, a Ph.D. Candidate in the School of Computing Science and one
 of the four curators of this exhibition, knows the connections between
-computers and aesthetics as few in Simon Fraser University can.  
-He takes us on a short course on math art in the notes on these
-digital graphics.
+computers and aesthetics as few in Simon Fraser University can. He takes us on a short course on math art in the notes on these digital graphics.
 
 Other members of Simon Fraser University who joined me in curating this
 exhibition were Dr. Katherine Heinrich, Chair of Mathematics &amp; Statistics
@@ -68,33 +66,33 @@ available from three sources on the WORLD WIDE WEB (internet): computer art
 exhibits, pioneer publications,
 and computer images created by Daryl Hepting of Simon Fraser University.
 
-Simon Fraser Gallery is grateful for the assistance of Gallery staff, Daryl
-Hepting and the other curators for making this exhibition possible.  
-It is also grateful to the Graphics and Mulimedia Research Lab for production
-assistance.  The Teck and Simon Fraser Galleries are honoured to support
-the Department of Mathematics &amp; Statistics in hosting the Canadian
-Mathematical Society 1995 Winter Meeting.
+Simon Fraser Gallery is grateful for the assistance of Gallery
+staff, Daryl Hepting and the other curators for making this
+exhibition possible. It is also grateful to the Graphics and
+Multimedia Research Lab for production assistance. The Teck
+and Simon Fraser Galleries are honoured to support
+the Department of Mathematics &amp; Statistics in hosting the
+Canadian Mathematical Society 1995 Winter Meeting.
 
 Dr. Edward Gibson, Director, December 1995.
 
 ### Notes on Exhibition
 
 The majority of works in this exhibition represent a collection
-which rely on the computer for their existence.  
-And the computer involves mathematics
-to describe, manipulate, and translate even the simplest scenes
-into the forms we see here.  
-The involvement of mathematics plays a greater role in these works &mdash;
-it provides the inspiration and the foundation upon which they are constructed.
+which rely on the computer for their existence. And the
+computer involves mathematics to describe, manipulate, and
+translate even the simplest scenes into the forms we
+see here. The involvement of mathematics plays a greater role
+in these works &mdash; it provides the inspiration and the
+foundation upon which they are constructed.
 
 A prominent feature of the exhibit is its display of fractals, objects from
 a non-Euclidean geometry. Fractals &mdash; sharing a root with fracture and
 fraction &dash; have been called the geometry of nature by Mandelbrot, who
 discovered their capability to describe the non-smooth world in which we
-live.  Fractal geometry, which is new to us, has shed light on old things
+live. Fractal geometry, which is new to us, has shed light on old things
 &mdash; things like the historical record of water levels in the Nile river for
-instance.  And in its turn the computer has shed light on fractals,
-allowing the underlying beauty of what may seem to be dry-as-dust
+instance. And in its turn the computer has shed light on fractals, allowing the underlying beauty of what may seem to be dry-as-dust
 mathematics to shine through.
 Works like <a href="#blessed"><strong>Blessed State</strong></a>
 or
@@ -102,23 +100,27 @@ or
 provide evidence of the profound connection that
 seems to exist between fractals and the natural world.
 
-It is fitting that this collection of computer-related art comes to us
-in large part through the internet (the World Wide Web). Although Daryl
-Hepting is now at SFU, his works are distributed widely across the
-internet. In addition to Hepting's collaborations with Musgrave (George
-Washington University), Prusinkiewicz (University of Calgary), Saupe
-(University of Freiburg), and Snider (University of Regina), the
+It is fitting that this collection of computer-related art
+comes to us in large part through the internet
+(the World Wide Web). Although Daryl Hepting is now at
+SFU, his works are distributed widely across the
+internet. In addition to Hepting's collaborations with
+Musgrave (George Washington University), Prusinkiewicz
+(University of Calgary), Saupe (University of Freiburg),
+and Snider (University of Regina), the
 computer-based works come from:
 
 - Contours of the Mind: A Celebration of Fractals, Feedback and Chaos
 - SITO: the operative term is "stimulate"
 - <a href="../calendars/">The Fractals Calendar</a>
 
-The other pieces in this exhibit remind the viewer that the computer is
-responsible for only a portion of all mathematical art. The works of M. C.
-Escher and Marjorie Rice offer a beautiful expression of this fact.
+The other pieces in this exhibit remind the viewer that the
+computer is responsible for only a portion of all mathematical
+art. The works of M. C. Escher and Marjorie Rice offer a
+beautiful expression of this fact.
 
-Partial financial support for the exhibit at Harbour Centre was provided by the
+Partial financial support for the exhibit at Harbour Centre
+was provided by the
 British Columbia Ministry for Employment and Investment.
 
 <div class="card m-2">
@@ -135,7 +137,7 @@ British Columbia Ministry for Employment and Investment.
 Martin Gardener tells the story of how this curve,
 first discovered by John E. Heighway, used by William G. Harter as a
 decoration symbolic of cryptic structure, and later analysed by them and
-another colleague, Bruce A. Banks.  Though its final structure is complex,
+another colleague, Bruce A. Banks. Though its final structure is complex,
 its description is not.  The following two transformations are required to
 generate this shape:
 
@@ -182,7 +184,7 @@ camera inside the computer.
 
 <div class="card m-2">
   <div class="card-header">
-    <h3>Dragon Mesa</h3>
+    <h3>Dragon Mesa (1989)</h3>
     by Przemyslaw Prusinkiewicz, Dietmar Saupe, and Daryl H. Hepting
   </div>
   <div class="card-body">
@@ -511,53 +513,53 @@ Brownian motion texture and added an outline of the fractal.
     A talk by Dr. Doris Schattschneider
   </div>
   <div class="card-body">
-<div class="container m-2">
-  <figure>
-    <img src="{{"/assets/projects/img/teck-rice.jpg" | relative_url }}"
-    class="img-responsive m-2" alt="Hibiscus" />
-    <img src="{{"/assets/projects/img/teck-mce42.jpg" | relative_url }}"
-    class="img-responsive m-2" alt="Escher No. 42"/>
-    <img src="{{"/assets/projects/img/teck-mce20.jpg" | relative_url }}"
-    class="img-responsive m-2" alt="Escher No. 20"/>
-    <figcaption class="mb-2">
-      Left to right:
-      <em>Hibiscus</em> by Marjorie Rice,
-      <em>Escher No. 42</em> by M. C. Escher, and
-      <em>Escher No. 20</em> by M. C. Escher.
-    </figcaption>
-  <figure>
-</div>
-  <p>
-    It is possible for someone without formal
-    credentials to make contributions to mathematics.
-    Well-known artist M.C. Escher and unknown homemaker Marjorie Rice both
-    tackled mathematical problems, developing unorthodox notation that was
-    essential to their methodical investigations.
-    Each worked alone, essentially in secret,
-    rewarded by the exhilaration of finding answers to a large puzzle.
-  </p>
-  <p>
-    Lecture by Dr. Doris Schattschneider,
-    Professor of Mathematics, Moravian College.<br />
-    5 - 6 pm, 9 December 1995,
-    Fletcher Challenge Canada Theatre (Room 1900), SFU Harbour Centre Campus.
-  </p>
-  <p>
-    These images will be on display as part of the MATH-ART exhibit.
-  </p>
-  <p>
-    References:
-  </p>
+    <div class="container m-2">
+      <figure>
+        <img src="{{"/assets/projects/img/teck-rice.jpg" | relative_url }}"
+        class="img-responsive m-2" alt="Hibiscus" />
+        <img src="{{"/assets/projects/img/teck-mce42.jpg" | relative_url }}"
+        class="img-responsive m-2" alt="Escher No. 42"/>
+        <img src="{{"/assets/projects/img/teck-mce20.jpg" | relative_url }}"
+        class="img-responsive m-2" alt="Escher No. 20"/>
+        <figcaption class="mb-2">
+          Left to right:
+          <em>Hibiscus</em> by Marjorie Rice,
+          <em>Escher No. 42</em> by M. C. Escher, and
+          <em>Escher No. 20</em> by M. C. Escher.
+        </figcaption>
+      </figure>
+    </div>
+    <p>
+      It is possible for someone without formal
+      credentials to make contributions to mathematics.
+      Well-known artist M.C. Escher and unknown homemaker Marjorie Rice both
+      tackled mathematical problems, developing unorthodox notation that was
+      essential to their methodical investigations.
+      Each worked alone, essentially in secret,
+      rewarded by the exhilaration of finding answers to a large puzzle.
+    </p>
+    <p>
+      Lecture by Dr. Doris Schattschneider,
+      Professor of Mathematics, Moravian College.<br />
+      5 - 6 pm, 9 December 1995,
+      Fletcher Challenge Canada Theatre (Room 1900), SFU Harbour Centre Campus.
+    </p>
+    <p>
+      These images will be on display as part of the MATH-ART exhibit.
+    </p>
+    <p>
+      References:
+    </p>
     <ul>
       <li>
-	Schattschneider, Doris.
-	<em>M.C. Escher: Visions of Symmetry</em>,
-	W. H. Freeman Company, 1990.
+      	Schattschneider, Doris.
+      	<em>M.C. Escher: Visions of Symmetry</em>,
+      	W. H. Freeman Company, 1990.
       </li>
       <li>
-	Klarner, David A. (editor).
-	<em>The Mathematical Gardener</em>,
-	Wadsworth International, 1981.
+      	Klarner, David A. (editor).
+      	<em>The Mathematical Gardener</em>,
+      	Wadsworth International, 1981.
       </li>
     </ul>
-</div>
+  </div>

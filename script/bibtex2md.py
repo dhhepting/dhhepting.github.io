@@ -57,19 +57,41 @@ def format_people(people,kind,mdf):
 			mdf.write(perstr + "\n")
 
 def format_article(entry,mdf):
-	format_people(entry.persons,"author",mdf)
-	mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Journal'])+"\n")
+    format_people(entry.persons,"author",mdf)
+    mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Journal'])+"\n")
 	### the following may be split out into its own function...
-	try:
-        	kwstr = entry.fields['Keywords']
-	except KeyError:
-        	kwstr = ""
-	if (kwstr != ""):
-		mdf.write("keywords:\n")
-		keywords = kwstr.split(",")
-		for kk in range(len(keywords)):
-			kwordstr = " - " + "\"" + keywords[kk].strip() + "\""
-			mdf.write(kwordstr + "\n")
+    try:
+        kwstr = entry.fields['Keywords']
+    except KeyError:
+        kwstr = ""
+    if (kwstr != ""):
+        mdf.write("keywords:\n")
+        keywords = kwstr.split(",")
+        for kk in range(len(keywords)):
+            kwordstr = " - " + "\"" + keywords[kk].strip() + "\""
+            mdf.write(kwordstr + "\n")
+    try:
+        pgstr = entry.fields['Pages']
+    except KeyError:
+        pgstr = ""
+    if (pgstr != ""):
+        pagerange = pgstr.split("--")
+        if len(pagerange) == 2:
+            mdf.write("pagestart: " + pagerange[0] + "\n")
+            mdf.write("pageend: " + pagerange[1] + "\n")
+    try:
+        doistr = entry.fields['Doi']
+    except KeyError:
+        doistr = ""
+    if (doistr != ""):
+        mdf.write("doi: " + doistr + "\n")
+    try:
+        modstr = entry.fields['Date-Modified']
+        #entrytime = datetime.strptime(entrytimestr,"%Y-%m-%d %H:%M:%S %z")
+    except KeyError:
+        modstr = ""
+    if (modstr != ""):
+        mdf.write("datemod: " + modstr + "\n")
 
 def format_inproceedings(entry,mdf):
     format_people(entry.persons,"author",mdf)
@@ -131,11 +153,11 @@ def output_bibtex_content(mdf):
 	# create or replace Url indicated in bibtex file
 	#
 	newurlstr = "/research/works/" + htmlnamestr
-	print(newurlstr)
+	# print(newurlstr)
 	newurlpath = Path(".." + newurlstr)
 	#teststr = "\\\"{{site.canonical}} +  newurlstr + "\\\"",\n")
 	teststr = "\\\"{{site.canonical}}" +  newurlstr + "\\\",\n"
-	print(teststr)
+	# print(teststr)
 	mdf.write("\tUrl = " + teststr)
 	#if newurlpath.is_file():
 	#	mdf.write("\tUrl = " + "\\\"{{ {{site.canonical}}\"" +  newurlstr + "\" | absolute_url }}\\\",\n")

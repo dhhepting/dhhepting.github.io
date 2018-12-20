@@ -8,6 +8,9 @@ category: article
 authors:
  - Daryl H. Hepting
 venue: Computer Graphics
+pagestart: 22
+pageend: 23
+datemod: 2018-06-06 20:45:36 +0000
 ---
 @article{1997-08-Hep1,
 	Author =  "Hepting, Daryl H.",
