@@ -1,0 +1,73 @@
+{% if page.url == "/about/" %}
+<a class="nav-item nav-link" disabled active >
+  <span class="sr-only">
+    (current)
+  </span>
+{% else %}
+<a class="nav-item nav-link" href="/about/">
+{% endif %}
+  About
+</a>
+{% if page.url == "/projects/" %}
+<a class="nav-item nav-link" active >
+  <span class="sr-only">
+    (current)
+  </span>
+{% else %}
+<a class="nav-item nav-link" href="{{ site.baseurl }}/projects/">
+  {% endif %}
+  Projects
+</a>
+{% if page.url == "/research/" %}
+<a class="nav-item nav-link" active >
+  <span class="sr-only">
+    (current)
+  </span>
+{% else %}
+<a class="nav-item nav-link" href="{{ site.baseurl }}/research/">
+{% endif %}
+  Research
+</a>
+{% if page.url == "/teaching/" %}
+<a class="nav-item nav-link" active >
+  <span class="sr-only">
+    (current)
+  </span>
+{% else %}
+<a class="nav-item nav-link" href="{{ site.baseurl }}/teaching/">
+{% endif %}
+  Teaching
+</a>
+{% if page.url == "/rss/" %}
+<a class="nav-item nav-link" active >
+  <span class="sr-only">
+    (current)
+  </span>
+{% else %}
+<a class="nav-item nav-link" href="{{ site.baseurl }}/rss/">
+{% endif %}
+  RSS
+  <span class="oi oi-rss"></span>
+</a>
+{% if page.url == "/search/" %}
+<a class="nav-item nav-link" active >
+  <span class="sr-only">
+    (current)
+  </span>
+{% else %}
+<a class="nav-item nav-link" href="{{ site.baseurl }}/search/">
+{% endif %}
+  Search
+  <span class="oi oi-magnifying-glass"></span>
+</a>
+{% if page.url == "/news/" %}
+<a class="nav-item nav-link" active >
+  <span class="sr-only">
+    (current)
+  </span>
+{% else %}
+<a class="nav-item nav-link" href="{{ site.baseurl }}/news/">
+{% endif %}
+  News
+</a>
+</div>
