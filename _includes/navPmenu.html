@@ -1,30 +1,16 @@
-<nav class="navbar navbar-expand-sm navbar-dark"
+<div class="navbar-expand" role="navigation">
+<nav class="navbar navbar-dark"
 style="background-color: rgba(32, 32, 32, 0.75)">
-  <button class="navbar-toggler" type="button"
-  data-toggle="collapse" data-target="#nav-content"
-  aria-controls="nav-content" aria-expanded="false"
-  aria-label="toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse collapse" id="nav-content">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="{{ site.baseurl }}/">
-          Home
-          <span class="sr-only">
-            (current)
-          </span>
-        </a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Site
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" navbar-dark
-        style="background-color: rgba(32, 32, 32, 0.75)">
-        {% include sitenav.html %}
-        </ul>
-      </li>
-    </ul>
-  </div>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item dropdown">
+      <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Site
+      </a>
+      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown" navbar-dark
+      style="background-color: rgba(32, 32, 32, 0.75)">
+      {% include sitenav.html %}
+      </ul>
+    </li>
+  </ul>
 </nav>
+</div>
