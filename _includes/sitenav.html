@@ -1,0 +1,19 @@
+{% assign links = site.data.sitenav %}
+{% for l in links %}
+  {% if page.url == l.url %}
+<li class="nav-item">
+  <a class="nav-link active">
+  <span class="sr-only">
+    (current)
+  </span>
+  {% else %}
+<li class="nav-item">
+  <a class="nav-link" href="{{ l.url | relative_url }}">
+  {% endif %}
+    {{ l.title }}
+  {% if l.icon %}
+    <span class="{{ l.icon }}"></span>
+  {% endif %}
+  </a>
+</li>
+{% endfor %}
