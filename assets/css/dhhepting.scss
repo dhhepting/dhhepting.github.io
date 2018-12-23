@@ -28,6 +28,13 @@ body {
 	background-color: rgba(245,245,220,0.75);
 }
 /*
+ * suggestion from https://stackoverflow.com/questions/34092774/bootstrap-navbar-collapse-dropdown-menu
+ * to fix ios nav collapse button data-toggle
+ */
+.navbar-static-top .navbar-collapse.in {
+    overflow-y: visible; /* Bootstrap default is "auto" */
+}
+/*
  * style for home page
  */
 .splash {
