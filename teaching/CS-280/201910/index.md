@@ -1,14 +1,10 @@
 ---
-crs_id: CS280
-crs_nbr: CS 280
-crs_name: Risk and Reward in the Information Society
-sem: 201910
+title: CS 280 in Winter 2019
 breadcrumb: 201910
-layout: default
+layout: bg-image
 ---
-# {{ page.crs_nbr }} &bull; {{ page.sem  }}
+{% include teaching-url.html %}
 
-### {{ page.crs_name }}
+# {{ crs_nbr }} : {{ crs_sem }}
 
-{% include index-dir.html %}
-
+{% include off-cal-card.html %}

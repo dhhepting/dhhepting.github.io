@@ -4,14 +4,12 @@
   {% if url_parts[u] == "teaching" %}
     {% assign crs_idx = u | plus: 1 %}
     {% assign sem_idx = u | plus: 2 %}
-    {% assign mtg_idx = u | plus: 4 %}
+    {% break %}
   {% endif %}
 {% endfor %}
 {% assign crs_parts = url_parts[crs_idx] | split: '-' %}
 {% assign crs_sbj = crs_parts[0] %}
 {% assign crs_nbr = crs_parts[1] %}
 {% assign crs_sem = url_parts[sem_idx] %}
-{% assign crs_mtg = url_parts[mtg_idx] | plus: 0 %}
-{% assign crs_mps = crs_mtg | prepend: '00' | slice: -2, 2 %}
 {% capture off_med %}{{crs_sbj}}-{{crs_nbr}}-{{crs_sem}}{% endcapture %}
 {% capture off_med %}{{off_med | replace: "+", "_"}}{% endcapture %}

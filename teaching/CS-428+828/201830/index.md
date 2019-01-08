@@ -1,5 +1,4 @@
 ---
-crs_id: CS428+828
 crs_name: Human Computer Communication
 title: CS 428+828 in 201830
 redirect_from:
@@ -7,8 +6,7 @@ redirect_from:
 breadcrumb: 201830
 layout: bg-image
 ---
-{% include offering-url.html %}
-{% comment %}{% include offering-index.html %}{%endcomment%}
+{% include teaching-url.html %}
 
 # {{ crs_sbj }} {{ crs_nbr }} &bull; {{ crs_sem }}
 ### {{ page.crs_name }}
