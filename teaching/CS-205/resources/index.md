@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: bg-image
 breadcrumb: Resources
+title: CS 205 Resources
 ---
 # Resources
 
