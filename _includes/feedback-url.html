@@ -5,6 +5,7 @@
     {% assign crs_idx = u | plus: 1 %}
     {% assign sem_idx = u | plus: 2 %}
     {% assign fbk_idx = u | plus: 4 %}
+    {% break %}
   {% endif %}
 {% endfor %}
 {% assign crs_parts = url_parts[crs_idx] | split: '-' %}

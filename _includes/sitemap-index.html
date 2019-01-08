@@ -1,11 +1,16 @@
 {%- comment -%}
-{%- endcomment -%}
 {%- assign avoid_ext = ".txt, .xml" | split: ", " -%}
+{%- endcomment -%}
+{%- assign DNL = "403.html, 404.html, 500.html"| split: ", " -%}
 {%- assign sitemap = "" -%}
 {%- for sp in site.pages -%}
+  {%- assign do_not_list = "" -%}
   {%- assign url_parts = sp.url | split: '/' -%}
+  {%- if DNL contains url_parts[1] -%}
+    {%- assign do_not_list = "true" -%}
+  {%- endif -%}
   {%- if url_parts.size >= 2 and url_parts.size <= 4 -%}
-    {%- unless url_parts contains "assets" -%} 
+    {%- unless url_parts contains "assets" or do_not_list == "true" -%}
       {%- if sp.breadcrumb -%}
         {% capture sitemap %}{{sitemap}}|{{sp.url}}#{{sp.breadcrumb}}#{{url_parts.size}}{% endcapture %}
       {% endif -%}
@@ -15,7 +20,7 @@
 {%- assign sortedmap = sitemap | split: '|' | sort -%}
 {%- assign nbr_urls = sortedmap.size | minus:1 -%}
 {%- for i in (1..nbr_urls) -%}
-  {%- assign list_elem = "" -%} 
+  {%- assign list_elem = "" -%}
   {%- assign sml = sortedmap[i] | split: '#' -%}
   {%- for j in (3..sml[2]) -%}
     {% capture list_elem %}{{list_elem}}   {% endcapture %}

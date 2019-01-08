@@ -1,22 +1,61 @@
-{% if site.data.teaching.media[include.mtg_media] %}
-### Media from Meeting
+{% assign jpglist = "" %}
+{% assign has_media = "false" %}
+{% assign media_ctr = 0 %}
+{% assign mtgstr = include.mtg | prepend: '00' | slice: -2, 2 %}
 
-<div class="container-fluid">
-  {% assign media_ctr = 0 %}
-  {% assign mtgstr = include.mtg | prepend: '00' | slice: -2, 2 %}
-  {%- for media in site.data.teaching.media[include.mtg_media] -%}
-    {%- if media.meet == mtgstr -%}
-      {%- if media.URL contains "jpg" -%}
-  <a href="{{media.URL}}"><img src="{{media.URL}}" alt="{{media.file}}" height="100" class="m-1 img-responsive"/></a>
+{% if site.data.teaching.media[include.mtg_media] %}
+  {%- for m in site.data.teaching.media[include.mtg_media] -%}
+    {%- if m.meet == mtgstr -%}
+      {% assign has_media = "true" %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% if has_media == "true" %}
+
+  <div class="card">
+    <h3 class="card-header text-center">Media from Meeting</h3>
+    <div class="card-body">
+    {%- for m in site.data.teaching.media[include.mtg_media] -%}
+      {%- if m.meet == mtgstr -%}
+        {%- if m.file contains "jpg" -%}
+          {%- capture jpglist-%}{{jpglist}}|{{m.file}}#{{m.URL}}{%- endcapture-%}
+        {%- endif -%}
+        {%- if m.file contains "m4a" -%}
+          {% assign audio_url = m.URL %}
+        {%- endif -%}
       {%- endif -%}
-      {%- if media.URL contains "m4a" -%}
-  <a href="{{media.URL}}" aria-label="{{media.file}}"><span class="far fa-file-audio fa-6x align-middle m-1"></span></a>
+    {%- endfor -%}
+    {%- assign sortedjpgs = jpglist | split: '|' | sort -%}
+    {%- assign numjpgs = sortedjpgs.size | minus:1 -%}
+      <div id="mtg_jpgs" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+    {%- for i in (1..numjpgs) -%}
+      {%- if i == 1 %}
+          <li data-target="#mtg_jpgs" data-slide-to="0" class="active"></li>
+      {%- else %}
+          <li data-target="#mtg_jpgs" data-slide-to="{{ i | minus: 1}}" class="active"></li>
+      {%- endif %}
+    {%- endfor -%}
+        </ol>
+        <div class="carousel-inner">
+    {%- for i in (1..numjpgs) -%}
+      {%- if i == 1 %}
+          <div class="carousel-item active">
+      {%- else %}
+          <div class="carousel-item">
       {%- endif -%}
-      {%- assign media_ctr = media_ctr | plus: 1 -%}
-    {%- endif -%}
-  {%- endfor -%}
-  {%- if media_ctr == 0 -%}
-  <p>Nothing available for {{include.mtg}}</p>
-  {%- endif -%}
+      {% assign sj = sortedjpgs[i] | split: '#' %}
+            <img class="img-fluid" src="{{ sj[1] }}" alt="{{ sj[0] }}">
+          </div>
+    {% endfor %}
+        </div>
+      </div>
+  <div class="card-footer text-center">
+    <audio controls="true" src="{{ audio_url }}" type="audio/mp4">
+      Your browser does not support the <code>audio</code> element.
+    </audio>
+  </div>
 </div>
+  {%- endif -%}
 {%- endif -%}

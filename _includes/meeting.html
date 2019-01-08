@@ -1,18 +1,61 @@
-{% include offering-url.html %}
+{% include teaching-url.html %}
 {% assign totmeet = page.total_meet | plus: 1 %}
-{% assign prv_mtg = crs_mtg | minus: 1 | modulo: totmeet %}
+{% assign cur_mtg = page.mtg_nbr | minus: 0  %}
+{% assign prv_mtg = cur_mtg | minus: 1 | modulo: totmeet %}
 {% if prv_mtg == 0 %}
   {% assign prv_mtg = page.total_meet %}
 {% endif %}
-{% assign nxt_mtg = crs_mtg | plus: 1 | modulo: totmeet %}
+{% assign nxt_mtg = cur_mtg | plus: 1 | modulo: totmeet %}
 {% if nxt_mtg == 0 %}
   {% assign nxt_mtg = 1 %}
 {% endif %}
-<h1>
-<a href="{{prv_mtg | prepend: '00' | slice: -2, 2}}.html"><span class="fas fa-arrow-left"></span></a>
-Mtg {{crs_mtg}} / {{ page.total_meet }}
-<a href="{{nxt_mtg | prepend: '00' | slice: -2, 2}}.html"><span class="fas fa-arrow-right"></span></a>
-</h1>
-{% if crs_mtg > 1 %}
-  <h3><a href="{{prv_mtg | prepend: '00' | slice: -2, 2}}.html">Questions from Last Meeting?</a></h3>
+{% assign prv_lnk = "" %}
+{% assign nxt_lnk = "" %}
+{%- if site.data.teaching.meetings[off_med] -%}
+  {% for m in site.data.teaching.meetings[off_med] %}
+  {% assign mm = m.meeting | plus: 0 %}
+    {% if mm == prv_mtg %}
+      {% assign prv_lnk = m.file %}
+    {% endif %}
+    {% if mm == nxt_mtg %}
+      {% assign nxt_lnk = m.file %}
+    {% endif %}
+  {% endfor %}
+{%- endif -%}
+
+<nav aria-label="mtg">
+  <ul class="pagination pagination-sm">
+    <li class="page-item">
+      <a class="page-link" href="{{ prv_lnk }}" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+{% for m in site.data.teaching.meetings[off_med] %}
+  {% assign mm = m.meeting | plus: 0 %}
+  {% if mm == cur_mtg %}
+    <li class="page-item active">
+      <span class="page-link">
+        {{ mm }}
+        <span class="sr-only">(current)</span>
+      </span>
+    </li>
+  {% else %}
+    <li class="page-item">
+      <a class="page-link" href="{{ m.file }}">
+        {{ mm }}
+      </a>
+    </li>
+  {% endif %}
+{% endfor %}
+    <li class="page-item">
+      <a class="page-link" href="{{ nxt_lnk }}" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+{% if cur_mtg > 1 %}
+  <h3><a href="{{ prv_lnk }}">Questions from Last Meeting?</a></h3>
 {% endif %}
