@@ -1,7 +1,8 @@
 ---
-title: CS 428+828 (201830) Meetings
+title: CS-428+828 (201830) Meetings
 breadcrumb: Meetings
 layout: bg-image
 ---
-{% include teaching-url.html %}
-{% include off-cal-card.html %}
+# CS-428+828 (201830) Meetings
+
+{% include index-dir.html %}
