@@ -42,7 +42,6 @@
         <thead>
           <tr class="d-flex bg-info">
             <th class="col">
-              <span class="d-inline d-md-none">Wk</span>
               <span class="d-none d-md-inline">Week</span>
             </th>
 {% for di in (0..6) %}
@@ -67,9 +66,9 @@
         <tbody>
 {% for week in (1..26) %}
           <tr class="d-flex">
-            <td class="col">
+            <th class="col bg-info">
               {{ week }}
-            </td>
+            </th>
   {% for di in (0..6) %}
     {% if day >= dayone and day <= eoc %}
       {% assign nmc = "false" %}

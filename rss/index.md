@@ -25,16 +25,21 @@ layout: bg-image
       {% assign off_year = off_parts[2] | slice: 0,4 %}
       {% assign now_year = "now" | date: "%Y" %}
       {% if off_year == now_year %}
+        {% assign off_months = "" %}
         {% assign off_sem = off_parts[2] | slice: 4,2 %}
         {% assign now_month = "now" | date: "%b" %}
         {% if off_sem == "10" %}
           {% assign off_months = "Jan,Feb,Mar,Apr" | split: "," %}
-          {% if off_months contains now_month %}
+        {% elsif off_sem == "20" %}
+          {% assign off_months = "May,Jun,Jul,Aug" | split: "," %}
+        {% elsif off_sem == "30" %}
+          {% assign off_months = "Sep,Oct,Nov,Dec" | split: "," %}
+        {% endif %}
+        {% if off_months contains now_month %}
   <li>
     <a rel="alternate" type="application/rss+xml"
     href="{{ sp.url }}">{{url_parts[off_idx]}}</a>
   </li>
-          {% endif %}
         {% endif %}
       {% endif %}
     {% endif %}
