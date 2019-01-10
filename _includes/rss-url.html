@@ -1,0 +1,13 @@
+{% capture purl %}{{ page.url | remove: ".html" }}{% endcapture %}
+{% assign url_parts = purl | split: '/' %}
+{% for u in (0..url_parts.size) %}
+  {% if url_parts[u] == "rss" %}
+    {% assign off_idx = u | plus: 1 %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% assign off_parts = url_parts[crs_idx] | split: '-' %}
+{% assign crs_sbj = crs_parts[0] %}
+{% assign crs_nbr = crs_parts[1] %}
+{% assign crs_sem = crs_parts[2] %}
+{{ crs_sem }}

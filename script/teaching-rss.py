@@ -155,29 +155,32 @@ if (local_now <= latest):
             # collect and format feed item (fi_...) information
             #fi_pubdate = update.strftime("%Y-%m-%d %H:%M %z")
             fi_pubdate = update.strftime("%a, %d %b %Y %H:%M:%S %Z")
-            if (filedict[k].startswith("/_data/teaching")):
-                # set feed item title for asset
-                fi_title = (filedict[k])[len("/_data/teaching/"):]
-            elif (filedict[k].startswith("/assets/teaching")):
-                # set feed item title for asset
-                fi_title = (filedict[k])[len("/assets/teaching/"):]
+            if (update > earliest):
+                if (filedict[k].startswith("/_data/teaching")):
+                    # set feed item title for asset
+                    fi_title = (filedict[k])[len("/_data/teaching/"):]
+                elif (filedict[k].startswith("/assets/teaching")):
+                    # set feed item title for asset
+                    fi_title = (filedict[k])[len("/assets/teaching/"):]
+                else:
+                    # set feed item title for html
+                    fi_title = (filedict[k])[len("/teaching/"):]
+                fi_link = '{{ "' + filedict[k] + '" | absolute_url }}'
+                fi_desc = 'Updated: ' + update.strftime("%A, %d %B %Y %H:%M %Z")
+                # print(fi_title)
+                # print(st,fi_pubdate)
+                # print(st,fi_desc)
+                # print(st,fi_link)
+                rss_file.write(st+st+"<item>\n")
+                rss_file.write(st+st+st+"<title>" + fi_title + "</title>\n")
+                if ("_data" not in fi_link):
+                    rss_file.write(st+st+st+"<link>" + fi_link + "</link>\n")
+                    rss_file.write(st+st+st+"<guid>" + fi_link + "</guid>\n")
+                rss_file.write(st+st+st+"<description>" + fi_desc + "</description>\n")
+                rss_file.write(st+st+st+"<pubDate>" + fi_pubdate + "</pubDate>\n")
+                rss_file.write(st+st+"</item>\n")
             else:
-                # set feed item title for html
-                fi_title = (filedict[k])[len("/teaching/"):]
-            fi_link = '{{ "' + filedict[k] + '" | absolute_url }}'
-            fi_desc = 'Updated: ' + update.strftime("%A, %d %B %Y %H:%M %Z")
-            # print(fi_title)
-            # print(st,fi_pubdate)
-            # print(st,fi_desc)
-            # print(st,fi_link)
-            rss_file.write(st+st+"<item>\n")
-            rss_file.write(st+st+st+"<title>" + fi_title + "</title>\n")
-            if ("_data" not in fi_link):
-                rss_file.write(st+st+st+"<link>" + fi_link + "</link>\n")
-                rss_file.write(st+st+st+"<guid>" + fi_link + "</guid>\n")
-            rss_file.write(st+st+st+"<description>" + fi_desc + "</description>\n")
-            rss_file.write(st+st+st+"<pubDate>" + fi_pubdate + "</pubDate>\n")
-            rss_file.write(st+st+"</item>\n")
+                break
         # closing tags for feed
         rss_file.write(st+"</channel>\n")
         rss_file.write("</rss>\n")
