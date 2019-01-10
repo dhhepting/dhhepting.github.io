@@ -1,7 +1,4 @@
-2019-01-09 14:15:51.944348
-2019-01-10 12:46:18.416300
-2019-01-10 12:49:49.399874
-2019-01-10 12:54:25.051163
+2019-01-10 12:54:25.057202
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
     (self.host, self.port), self.timeout, **extra_kw)
@@ -24,7 +21,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
     self, "Failed to establish a new connection: %s" % e)
-urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x10e64b7f0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x10e67d470>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
 
 During handling of the above exception, another exception occurred:
 
@@ -35,7 +32,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10e64b7f0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10e67d470>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
 
 During handling of the above exception, another exception occurred:
 
@@ -58,5 +55,4 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10e64b7f0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
-2019-01-10 12:56:14.839163
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10e67d470>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
