@@ -24,14 +24,14 @@
 {%- endif -%}
 
 <div class="container-fluid">
-<nav aria-label="mtg">
-  <ul class="pagination pagination-sm justify-content-center">
-    <li class="page-item">
-      <a class="page-link" href="{{ prv_lnk }}" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
+  <nav aria-label="mtg">
+    <ul class="pagination pagination-sm justify-content-center">
+      <li class="page-item">
+        <a class="page-link" href="{{ prv_lnk }}" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
 {% assign xs_lb = cur_mtg | minus: 3 %}
 {% assign sm_lb = cur_mtg | minus: 6 %}
 {% assign md_lb = cur_mtg | minus: 9 %}
@@ -47,36 +47,36 @@
 {% for m in site.data.teaching.meetings[off_med] %}
   {% assign mm = m.meeting | plus: 0 %}
   {% if mm == cur_mtg %}
-    <li class="page-item active">
-      <span class="page-link">
-        {{ mm }}
-        <span class="sr-only">(current)</span>
-      </span>
-    </li>
+      <li class="page-item active">
+        <span class="page-link">
+          {{ mm }}
+          <span class="sr-only">(current)</span>
+        </span>
+      </li>
   {% else %}
     {% if (mm < lg_lb or mm > lg_ub) %}
-    <li class="page-item d-none d-xl-inline">
+      <li class="page-item d-none d-xl-inline">
     {% elsif (mm >= lg_lb and mm < md_lb) or (mm > md_ub and mm <= lg_ub) %}
-    <li class="page-item d-none d-xl-inline d-lg-inline">
+      <li class="page-item d-none d-xl-inline d-lg-inline">
     {% elsif (mm >= md_lb and mm < sm_lb) or (mm > sm_ub and mm <= md_ub) %}
-    <li class="page-item d-none d-xl-inline d-lg-inline d-md-inline">
+      <li class="page-item d-none d-xl-inline d-lg-inline d-md-inline">
     {% elsif (mm >= sm_lb and mm < xs_lb) or (mm > xs_ub and mm <= sm_ub) %}
-    <li class="page-item d-none d-xl-inline d-lg-inline d-md-inline d-sm-inline">
+      <li class="page-item d-none d-xl-inline d-lg-inline d-md-inline d-sm-inline">
     {% elsif (mm >= xs_lb and mm <= xs_ub) %}
-    <li class="page-item d-inline">
+      <li class="page-item d-inline">
     {% endif %}
-      <a class="page-link" href="{{ m.file }}">
-        {{ mm }}
-      </a>
-    </li>
+        <a class="page-link" href="{{ m.file }}">
+          {{ mm }}
+        </a>
+      </li>
   {% endif %}
 {% endfor %}
-    <li class="page-item">
-      <a class="page-link" href="{{ nxt_lnk }}" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+      <li class="page-item">
+        <a class="page-link" href="{{ nxt_lnk }}" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>

@@ -13,9 +13,9 @@
 
   {% if has_media == "true" %}
 
-  <div class="card">
-    <h3 class="card-header text-center">Media from Meeting</h3>
-    <div class="card-body">
+<div class="card">
+  <h3 class="card-header text-center">Media from Meeting</h3>
+  <div class="card-body">
     {%- for m in site.data.teaching.media[include.mtg_media] -%}
       {%- if m.meet == mtgstr -%}
         {%- if m.file contains "jpg" -%}
@@ -28,29 +28,30 @@
     {%- endfor -%}
     {%- assign sortedjpgs = jpglist | split: '|' | sort -%}
     {%- assign numjpgs = sortedjpgs.size | minus:1 -%}
-      <div id="mtg_jpgs" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
+    <div id="mtg_jpgs" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
     {%- for i in (1..numjpgs) -%}
       {%- if i == 1 %}
-          <li data-target="#mtg_jpgs" data-slide-to="0" class="active"></li>
+        <li data-target="#mtg_jpgs" data-slide-to="0" class="active"></li>
       {%- else %}
-          <li data-target="#mtg_jpgs" data-slide-to="{{ i | minus: 1}}" class="active"></li>
+        <li data-target="#mtg_jpgs" data-slide-to="{{ i | minus: 1}}" class="active"></li>
       {%- endif %}
     {%- endfor -%}
-        </ol>
-        <div class="carousel-inner">
+      </ol>
+      <div class="carousel-inner">
     {%- for i in (1..numjpgs) -%}
       {%- if i == 1 %}
-          <div class="carousel-item active">
+        <div class="carousel-item active">
       {%- else %}
-          <div class="carousel-item">
+        <div class="carousel-item">
       {%- endif -%}
       {% assign sj = sortedjpgs[i] | split: '#' %}
-            <img class="img-fluid" src="{{ sj[1] }}" alt="{{ sj[0] }}">
-          </div>
-    {% endfor %}
+          <img class="img-fluid" src="{{ sj[1] }}" alt="{{ sj[0] }}">
         </div>
+    {% endfor %}
       </div>
+    </div>
+  </div>
   <div class="card-footer text-center">
     <audio controls="true" src="{{ audio_url }}" type="audio/mp4">
       Your browser does not support the <code>audio</code> element.
