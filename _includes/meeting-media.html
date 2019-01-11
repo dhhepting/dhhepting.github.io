@@ -14,7 +14,7 @@
   {% if has_media == "true" %}
 
 <div class="card">
-  <h3 class="card-header text-center">Media from Meeting</h3>
+  <h3 class="card-header text-center">{{include.mtg_title}}</h3>
   <div class="card-body">
     {%- for m in site.data.teaching.media[include.mtg_media] -%}
       {%- if m.meet == mtgstr -%}
