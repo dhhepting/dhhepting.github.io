@@ -9,3 +9,5 @@ description: Multimedia is the use of computers to integrate texts, graphics, vi
 # {{ crs_nbr }} : {{ crs_sem }}
 
 {% include off-cal-card.html %}
+
+{% include off-media-card.html %}
