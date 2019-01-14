@@ -21,4 +21,4 @@ layout: bg-image
 * [Teaching Philosophy](philosophy.html)
 * [Evaluation of Teaching](evaluation.html)
 * [Groupwork](groupwork.html)
-* [Use of Wikipedia](wikipedia)
+* [Use of Wikipedia](wikipedia.html)
