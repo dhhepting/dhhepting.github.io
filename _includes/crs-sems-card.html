@@ -1,29 +1,23 @@
 {% comment %}
 {% endcomment %}
-{% assign sem_len = sem_idx | plus: 1 %}
+{% assign page_parts = page.url | split: '/' %}
+{% assign sem_url_size = page_parts.size | plus: 1 %}
 {% assign sems = "" %}
-{% assign dircons = "" %}
 {% for sp in site.pages %}
-  {% assign url_parts = sp.url | split: '/' %}
-  {% if crs_dir == url_parts[crs_idx] %}
-    {% if url_parts.size == sem_len %}
-      {% if url_parts[sem_idx] contains "2" %}
-	{% if sems contains url_parts[sem_idx] %}
-	{% else %}
-	  {% capture sems %}{{sems}}|{{sp.url}}#{{url_parts[sem_idx]}}{% endcapture %}
-	{%endif %}
-      {% else %}
-	{% capture dircons %}{{dircons}}|{{sp.url}}#{{sp.breadcrumb}}{% endcapture %}
+  {% if sp.url contains page.url and sp.url > page.url %}
+    {% assign url_parts = sp.url | split: '/' %}
+    {% assign url_parts_size = url_parts.size | plus: 0 %}
+    {% if url_parts_size  == sem_url_size %}
+      {% assign semid = url_parts | last %}
+      {% if semid contains "20" %}
+        {% capture sems %}{{sems}}|{{semid}}{% endcapture %}
       {% endif %}
     {% endif %}
   {% endif %}
 {% endfor %}
 
-<span>
-  &nbsp;
-</span>
 {% assign sortedsems = sems | split: '|' | sort | reverse %}
-{% assign numsems = sortedsems.size | minus:2 %}
+{% assign numsems = sortedsems.size | minus: 2 %}
 <div class="card">
   <div class="card-header bg-info">
         <h3>Semesters</h3>
@@ -31,8 +25,7 @@
   <div class="card-body">
         <ul>
 	{% for j in (0..numsems) %}
-          {% assign ss = sortedsems[j] | split: '#' %}
-          <li><a href="{{ ss[0] | relative_url }}">{{ss[1]}}</a></li>
+          <li><a href="{{ sortedsems[j] }}">{{ sortedsems[j] }}</a></li>
         {% endfor %}
         </ul>
   </div>
