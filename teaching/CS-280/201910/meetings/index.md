@@ -1,8 +1,8 @@
 ---
-title: CS-280 (201910) Meetings
+title: CS 280 (201910) Meetings
 breadcrumb: Meetings
 layout: bg-image
 ---
-# CS-280 (201910) Meetings
+# {{ page.breadcrumb }}
 
 {% include index-dir.html %}

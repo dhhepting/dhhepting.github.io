@@ -13,4 +13,5 @@ description: An introduction to problem-solving techniques, the fundamental conc
   {% endif %}
 {% endfor %}
 
-{% include course-index.html %}
+{% include crs-caldesc-card.html %}
+{% include crs-sems-card.html %}

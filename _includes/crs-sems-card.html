@@ -5,7 +5,7 @@
 {% assign dircons = "" %}
 {% for sp in site.pages %}
   {% assign url_parts = sp.url | split: '/' %}
-  {% if crs_dir == url_parts[crs_idx] %} 
+  {% if crs_dir == url_parts[crs_idx] %}
     {% if url_parts.size == sem_len %}
       {% if url_parts[sem_idx] contains "2" %}
 	{% if sems contains url_parts[sem_idx] %}
@@ -19,39 +19,9 @@
   {% endif %}
 {% endfor %}
 
-<div class="card">
-  <div class="card-header bg-info">
-        <h3>Calendar Description</h3>
-  </div>
-  <div class="card-body">
-        <p>
-        {{ page.description }}
-        </p>
-  </div>
-</div>
 <span>
   &nbsp;
 </span>
-
-{% assign sorteddc = dircons | split: '|' | sort %}
-{% assign numcons = sorteddc.size | minus:1 %}
-<div class="card">
-  <div class="card-header bg-info">
-        <h3>General Information</h3>
-  </div>
-  <div class="card-body">
-    <ul>
-    {% for i in (1..numcons) %}
-      {% assign sdc = sorteddc[i] | split: '#' %}
-      <li><a href="{{ sdc[0] | relative_url }}">{{sdc[1]}}</a></li>
-    {% endfor %}
-    </ul>
-  </div>
-</div>
-<span>
-  &nbsp;
-</span>
-
 {% assign sortedsems = sems | split: '|' | sort | reverse %}
 {% assign numsems = sortedsems.size | minus:2 %}
 <div class="card">

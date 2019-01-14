@@ -1,5 +1,5 @@
 ---
-title: Test Assignment
+title: Another Test Assignment
 categories: blah
 course: MM
 layout: bg-image

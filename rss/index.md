@@ -8,7 +8,7 @@ layout: bg-image
 <ul>
   <li>
     <a rel="alternate" type="application/rss+xml"
-      href="{{ "/rss/news.rss" }}">News</a>
+      href="{{ "/rss/news.rss" | relative_url }}">News</a>
   </li>
 
 {% for sp in site.pages %}
@@ -38,7 +38,7 @@ layout: bg-image
         {% if off_months contains now_month %}
   <li>
     <a rel="alternate" type="application/rss+xml"
-    href="{{ sp.url }}">{{url_parts[off_idx]}}</a>
+    href="{{ sp.url }}">{{ url_parts[off_idx] | relative_url }}</a>
   </li>
         {% endif %}
       {% endif %}
