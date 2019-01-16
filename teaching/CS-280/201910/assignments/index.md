@@ -1,8 +1,10 @@
 ---
-title: Assignments for CS-205 in Winter 201910
+title: Assignments for CS 280 in Winter 201910
 breadcrumb: Assignments
 layout: bg-image
 ---
+# {{ page.breadcrumb }}
+
 {% include teaching-url.html %}
 {% if site.data.teaching.assignments[off_med] %}
 <ul>
