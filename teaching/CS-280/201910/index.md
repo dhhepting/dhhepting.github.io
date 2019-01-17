@@ -8,3 +8,7 @@ layout: bg-image
 # {{ crs_nbr }} : {{ crs_sem }}
 
 {% include off-cal-card.html %}
+
+{% include off-assignments-card.html %}
+
+{% include off-media-card.html %}

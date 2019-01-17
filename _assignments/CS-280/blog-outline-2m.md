@@ -1,0 +1,37 @@
+---
+title: Blog Outline Assignment
+breadcrumb: Blog Outline
+layout: bg-image
+marks: 2
+rubric:
+- crit: Topic
+  wt: 1.0
+  l3: Clearly demonstrates engagement with an important issue connected to course topics, with more than 1 excellent reference
+  l2: Demonstrates some engagement with an important issue connected to course topics, with more than 1 good reference
+  l1: Some engagement with an issue connected to course topics, with 1 good reference
+  l0: Not connected to course topics, no good reference
+- crit: Outline
+  wt: 1.0
+  l3: Well-defined plan to deal with topic, including clear personal response to concepts
+  l2: Plan is clear, but personal connection could be more clear
+  l1: Plan and personal connection are unclear
+  l0: No plan and no personal connection		
+---
+### Description
+{% assign curr_sem = "201910" %}
+{% capture topic_url %}/teaching/CS-280/{{ curr_sem }}/topics.html{% endcapture %}
+
+Prepare and submit an outline (pdf, not more than 1 page) for a blog post that deals with a course-related [topic]({{ topic_url | relative_url }}) that is currently, or was recently, in the news.
+
+The list of topics also includes learning outcomes associated with the topics. If it is helpful, you may consider those learning outcomes as suggestions about how to approach the indicated topics.
+
+Find a personal connection to the topic. You may, for example, evaluate the (consideration of) ethical and social tradeoffs in a technical decision or analyse the role of computer professionals in a global computing issue.
+
+### Submission
+
+* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on URcourses
+* target length: 1 page
+
+### Grading
+
+{% include marker.html %}
