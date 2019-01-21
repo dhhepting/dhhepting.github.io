@@ -18,5 +18,5 @@ category: chapter
 	Pages =  "371--386",
 	Publisher =  "Springer",
 	Series =  "Advanced Information and Knowledge Processing",
-	Year =  "2010"
+	Year =  "2010",
 }
