@@ -85,7 +85,7 @@
       {%- endif -%}
     {%- endfor -%}
     {% if crs_name %}
-* [{{cc[1] | replace: "-"," "}} : {{crs_name}}]( {{ cc[0] }} )
+* [{{cc[1] | replace: "-"," "}} : {{crs_name}}]( {{ cc[0] | relative_url }} )
     {%- endif -%}
 {% endfor %}
 

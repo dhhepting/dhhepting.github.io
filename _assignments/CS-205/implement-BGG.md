@@ -2,7 +2,7 @@
 title: Implement the Binary Guessing Game
 breadcrumb: Implement the Binary Guessing Game
 layout: bg-image
-marks: 5
+marks: 4
 ---
 # {{ page.title }}
 
