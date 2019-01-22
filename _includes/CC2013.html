@@ -27,7 +27,7 @@ It provides an answer to the question “Why would you do that?”
 
 <hr />
 
-This course explores the following knowledge areas, topics, and learning outcomes (click on one of the links below to jump to details):
+This course explores the following (alphabetically-listed) knowledge areas, topics, and learning outcomes (click on one of the links below to jump to details):
 
 {% assign ctr = 1 %}
 <ul>
@@ -44,26 +44,31 @@ This course explores the following knowledge areas, topics, and learning outcome
   {% assign var2 = tlo_parts[1] %}
   {%- assign tlo_dat = site.data.teaching.CC2013[var1][var2] -%}
   {%- if tlo_dat -%}
-	<div class="card" id="know{{ctr}}">
-	<div class="card-header">
-	  <h3>{{tlo.ka | replace: "--",", " | replace: "-"," " | replace: "_","-"}}</h3>
+<div class="card" id="know{{ctr}}">
+  <div class="card-header">
+    <h3>{{tlo.ka | replace: "--",", " | replace: "-"," " | replace: "_","-"}}</h3>
 	</div>
 	<div class="card-body">
     {% if tlo_dat.Introduction %}
     <div class="row mx-1">
-      <h5>Introduction</h5>
-      <br/>
+      <h5>Introduction</h5><br />
       <p>
-    {{ tlo_dat.Introduction }}
+        {{ tlo_dat.Introduction }}
       </p>
     </div>
     {% endif %}
     {% if tlo_dat.Motivation %}
 	  <div class="row mx-1">
-	    <h5>Motivation</h5>
-	    <br/>
+	    <h5>Motivation</h5><br />
 	    <p>
-		{{ tlo_dat.Motivation }}
+		      {{ tlo_dat.Motivation }}
+	    </p>
+	  </div>
+    {% endif %}
+    {% if tlo_dat.Preamble %}
+	  <div class="row mx-1">
+	    <p>
+        {{ tlo_dat.Preamble | markdownify }}
 	    </p>
 	  </div>
     {% endif %}
