@@ -14,8 +14,10 @@ tlouts:
   - l02
   - l05
 - ka: CN/Data--Information--and-Knowledge
-- ka: GV/Fundamental-Concepts
 - ka: GV/Basic-Rendering
+- ka: GV/Fundamental-Concepts
+- ka: HCI/Designing-Interaction
+- ka: IM/Multimedia-Systems
 
 ---
 {% include CC2013.html %}
