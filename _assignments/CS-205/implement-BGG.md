@@ -3,10 +3,18 @@ title: Implement the Binary Guessing Game
 breadcrumb: Implement the Binary Guessing Game
 layout: bg-image
 marks: 4
+rubric:
+- crit: Basic implementation
+  wt: 2.0
+- crit: Comments
+  wt: 1.0
+- crit: Advanced features
+  wt: 1.0
 ---
 # {{ page.title }}
 
-Use p5.js
+Use p5.js to implement the binary guessing game that was discussed in class.
+See the [Start-BGG](https://editor.p5js.org/dhhepting/sketches/qx5Y7-W2V) sketch for a starting point.
 
 ### Assets
 
