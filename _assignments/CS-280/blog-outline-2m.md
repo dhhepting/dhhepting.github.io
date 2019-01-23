@@ -1,5 +1,5 @@
 ---
-title: Blog Outline Assignment
+title: Blog Outline
 breadcrumb: Blog Outline
 layout: bg-image
 marks: 2

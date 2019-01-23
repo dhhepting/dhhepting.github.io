@@ -5,16 +5,16 @@ layout: bg-image
 marks: 4
 rubric:
 - crit: Basic implementation
-  wt: 2.0
+  wt: 2.25
 - crit: Comments
   wt: 1.0
 - crit: Advanced features
-  wt: 1.0
+  wt: 0.75
 ---
-# {{ page.title }}
+### Description
 
 Use p5.js to implement the binary guessing game that was discussed in class.
-See the [Start-BGG](https://editor.p5js.org/dhhepting/sketches/qx5Y7-W2V) sketch for a starting point.
+See the [Start-BGG](https://editor.p5js.org/dhhepting/sketches/qx5Y7-W2V) sketch for a starting point. You may also like to see a version done in [Scratch](https://scratch.mit.edu/projects/281439014/).
 
 ### Assets
 
@@ -24,3 +24,7 @@ See the [Start-BGG](https://editor.p5js.org/dhhepting/sketches/qx5Y7-W2V) sketch
 * [Card4]({{ "/assets/teaching/img/BGG/Card4.jpg" | relative_url }})
 * [Card8]({{ "/assets/teaching/img/BGG/Card8.jpg" | relative_url }})
 * [Guess]({{ "/assets/teaching/img/BGG/Guess.jpg" | relative_url }})
+
+### Grading
+
+{% include marker.html %}

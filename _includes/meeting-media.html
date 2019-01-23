@@ -28,13 +28,14 @@
     {%- endfor -%}
     {%- assign sortedjpgs = jpglist | split: '|' | sort -%}
     {%- assign numjpgs = sortedjpgs.size | minus:1 -%}
-    <div id="mtg_jpgs" class="carousel slide" data-ride="carousel">
+    {%- capture carid -%}mtg_jpgs_{{ mtgstr }}{% endcapture %}
+    <div id="{{carid}}" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
     {%- for i in (1..numjpgs) -%}
       {%- if i == 1 %}
-        <li data-target="#mtg_jpgs" data-slide-to="0" class="active"></li>
+        <li data-target="#{{carid}}" data-slide-to="0" class="active"></li>
       {%- else %}
-        <li data-target="#mtg_jpgs" data-slide-to="{{ i | minus: 1}}" class="active"></li>
+        <li data-target="#{{carid}}" data-slide-to="{{ i | minus: 1}}" class="active"></li>
       {%- endif %}
     {%- endfor -%}
       </ol>
@@ -50,11 +51,11 @@
         </div>
     {% endfor %}
       </div>
-      <a class="carousel-control-prev" href="#mtg_jpgs" role="button" data-slide="prev">
+      <a class="carousel-control-prev" href="#{{carid}}" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#mtg_jpgs" role="button" data-slide="next">
+      <a class="carousel-control-next" href="#{{carid}}" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
