@@ -29,9 +29,9 @@ The [list of topics]({{ topic_url | relative_url }}) also includes learning outc
 
 Find a personal connection to the topic. You may, for example, evaluate the (consideration of) ethical and social tradeoffs in a technical decision or analyse the role of computer professionals in a global computing issue.
 
-Find 2 reputable online sources to reference in support of your topic.
+Identify 2 reputable online sources to reference in support of your topic.
 
-I have prepared [a sample]({{ "/assets/teaching/pdf/CS-280_blog-outline-sample.pdf" | relative_url }}) that you may use as a guide for preparing your submission. 
+I have prepared [a sample]({{ "/assets/teaching/pdf/CS-280_blog-outline-sample.pdf" | relative_url }}) that you may use as a guide for preparing your submission.
 
 ### Submission
 
