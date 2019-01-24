@@ -6,7 +6,13 @@ description: Multimedia is the use of computers to integrate texts, graphics, vi
 ---
 {% include teaching-url.html %}
 
-# {{ crs_nbr }} : {{ crs_sem }}
+# {{ crs_sbj }} {{ crs_nbr }} : {{ crs_sem }}
+
+{% capture syll_url %}/assets/teaching/pdf/{{ off_med }}_syllabus.pdf{% endcapture %}
+{% capture sched_url %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
+
+* [Syllabus]({{ syll_url | relative_url }})
+* [Semester Schedule]({{ sched_url | relative_url }})
 
 {% include off-cal-card.html %}
 
