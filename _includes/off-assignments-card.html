@@ -7,12 +7,11 @@
       <table class="table table-striped table-bordered">
         <thead>
           <tr class="d-flex bg-info">
-            <th class="col">
+            <th class="col-6">
               Name
             </th>
-            <th class="col">Marks</th>
-            <th class="col">Due Date</th>
-            <th class="col">URcourses</th>
+            <th class="col-3">Marks</th>
+            <th class="col-3">Due Date</th>
           </tr>
         </thead>
         <tbody>
@@ -23,21 +22,14 @@
               {% assign oam = sdta.marks | plus: 0 %}
               {% if cm == oam %}
           <tr class="d-flex">
-            <td class="col">
-              <a href="assignments/">{{ sdta.title }}</a>
+            <td class="col-6">
+              <a href="assignments.html#{{ sdta.id }}">{{ sdta.title }}</a>
             </td>
-            <td class="col">
+            <td class="col-3">
               {{ sdta.marks }}
             </td>
-            <td class="col">
+            <td class="col-3">
               {{ sdta.duedate }}
-            </td>
-            <td class="col">
-              <a href="{{sdta.lms_discuss}}" role="button" class="btn btn-primary">
-                Discuss
-              </a>&nbsp;<a href="{{sdta.lms_submit}}" role="button" class="btn btn-primary">
-                Submit
-              </a>
             </td>
           </tr>
           {% endif %}

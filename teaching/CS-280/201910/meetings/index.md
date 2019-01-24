@@ -5,4 +5,4 @@ layout: bg-image
 ---
 # {{ page.breadcrumb }}
 
-{% include index-dir.html %}
+{% include mtgs-index.html %}
