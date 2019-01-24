@@ -38,7 +38,7 @@ layout: bg-image
         {% if off_months contains now_month %}
   <li>
     <a rel="alternate" type="application/rss+xml"
-    href="{{ sp.url }}">{{ url_parts[off_idx] | relative_url }}</a>
+    href="{{ sp.url | relative_url }}">{{ url_parts[off_idx] }}</a>
   </li>
         {% endif %}
       {% endif %}
