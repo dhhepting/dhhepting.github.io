@@ -10,6 +10,8 @@ description: Multimedia is the use of computers to integrate texts, graphics, vi
 
 {% include off-cal-card.html %}
 
+{% include off-topics-card.html %}
+
 {% include off-assignments-card.html %}
 
 {% include off-media-card.html %}

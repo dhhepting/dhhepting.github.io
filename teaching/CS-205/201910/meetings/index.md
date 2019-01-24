@@ -1,8 +1,8 @@
 ---
-title: CS-205 (201910) Meetings
+title: CS 205 (201910) Meetings
 breadcrumb: Meetings
 layout: bg-image
 ---
-# CS-205 (201910) Meetings
+# CS 205 (201910) Meetings
 
-{% include index-dir.html %}
+{% include mtgs-index.html %}

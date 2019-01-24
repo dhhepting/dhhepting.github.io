@@ -1,11 +1,11 @@
-<h1>Media</h1>
-
-<div class="container-fluid">
 {%- if site.data.teaching.media[off_med] -%}
+<div class="card my-2">
+  <h3 class="card-header text-center">Media</h3>
+  <div class="card-body">
   {% for m in site.data.teaching.meetings[off_med] %}
     {% assign mdate = m.file | slice: 3,9 %}
     {% include meeting-media.html mtg_media=off_med mtg=m.meeting mtg_title=mdate %}
   {% endfor %}
-{%- endif -%}
-
+  </div>
 </div>
+{%- endif -%}
