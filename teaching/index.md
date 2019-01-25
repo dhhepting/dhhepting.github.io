@@ -54,7 +54,7 @@ if (cu_params.get("course"))
   let semid = today.getFullYear().toString() + sem.toString();
   let cu_str = curr_url.origin + curr_url.pathname;
   let nu_str = cu_str + cu_params.get("course") + "/" +
-    semid + "/assignments/";
+    semid + "/assignments.html";
   console.log(nu_str);
   window.location.replace(nu_str);
 }
