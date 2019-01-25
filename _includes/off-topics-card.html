@@ -11,9 +11,9 @@
   <h3 class="card-header text-center">Topics</h3>
   <div class="card-body">
     {% assign ctr = 1 %}
-    <ul>
+    <ul class="list-group list-group-flush">
     {%- for tlo in topp.tlouts -%}
-    	<li><a href="topics.html#know{{ctr}}">{{tlo.ka | replace: "--", ", " | replace: "-"," " | replace: "_","-"}}</a></li>
+    	<li class="list-group-item"><a href="topics.html#know{{ctr}}">{{tlo.ka | replace: "--", ", " | replace: "-"," " | replace: "_","-"}}</a></li>
     	{%- assign ctr  = ctr | plus: 1 -%}
     {% endfor %}
     </ul>

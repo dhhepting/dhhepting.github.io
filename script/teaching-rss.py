@@ -72,7 +72,7 @@ data_dir = os.path.join(os.path.abspath(sitedir + "_data/teaching"),"")
 local_now = local_tz.localize(datetime.datetime.now())
 if (local_now <= latest):
     # variables for RSS channel-level tags
-    fc_title = "RSS 2.0 Feed for " + '{{ page.title }}'
+    fc_title = "RSS Feed for " + '{{ page.title }}'
     fc_link = '{{ "/teaching/' + off_rel_path + '" | absolute_url }}'
     fc_desc = "Updates to " + off_rel_path + " as of " + local_now.strftime("%A, %d %B %Y %H:%M %Z")
     fc_lang = "en-CA"

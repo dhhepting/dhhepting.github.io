@@ -1,11 +1,39 @@
 {%- if site.data.teaching.media[off_med] -%}
-<div class="card my-2">
+<div class="card my-2" id="media-card">
   <h3 class="card-header text-center">Media</h3>
   <div class="card-body">
+  {% assign ctr = 0 | plus: 0 %}
   {% for m in site.data.teaching.meetings[off_med] %}
-    {% assign mdate = m.file | slice: 3,9 %}
-    {% include meeting-media.html mtg_media=off_med mtg=m.meeting mtg_title=mdate %}
+    {% assign hasMedia = "" %}
+    {% for r in site.data.teaching.media[off_med] %}
+      {% if m.meeting == r.meet %}
+        {% assign hasMedia = "true" %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% if hasMedia == "true" %}
+      {% assign mdate = m.file | slice: 3,9 %}
+      {% assign ctr = ctr | modulo: 3 %}
+      {% if ctr == 0 %}
+      <div class="card-deck">
+      {% endif %}
+
+          {% include meeting-media.html mtg_media=off_med mtg=m.meeting mtg_title=mdate %}
+
+      {% if ctr == 2 %}
+      </div>
+      {% endif %}
+      {% assign ctr = ctr | plus: 1 %}
+    {% endif %}
   {% endfor %}
+  {% if ctr == 1 %}
+        <div class="card"></div>
+    {% assign ctr = ctr | plus: 1 %}
+  {% endif %}
+  {% if ctr == 2 %}
+        <div class="card"></div>
+    {% assign ctr = ctr | plus: 1 %}
+  {% endif %}
   </div>
 </div>
 {%- endif -%}

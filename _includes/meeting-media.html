@@ -29,7 +29,7 @@
     {%- assign sortedjpgs = jpglist | split: '|' | sort -%}
     {%- assign numjpgs = sortedjpgs.size | minus:1 -%}
     {%- capture carid -%}mtg_jpgs_{{ mtgstr }}{% endcapture %}
-    <div id="{{carid}}" class="carousel slide" data-ride="carousel">
+    <div id="{{carid}}" class="carousel slide" data-ride="carousel" data-interval="false">
       <ol class="carousel-indicators">
     {%- for i in (1..numjpgs) -%}
       {%- if i == 1 %}
