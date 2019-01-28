@@ -14,14 +14,36 @@ layout: bg-image
 ---
 # {{ page.breadcrumb }}
 
-{% include teaching-index.html %}
-
-### General Information
-
-* [Teaching Philosophy](philosophy.html)
-* [Evaluation of Teaching](evaluation.html)
-* [Groupwork](groupwork.html)
-* [Use of Wikipedia](wikipedia.html)
+<div class="card-deck">
+  <div class="card my-2" id="teach-info-card">
+    <h3 class="card-header text-center">General Information</h3>
+    <div class="card-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <a href="philosophy.html">
+            Teaching Philosophy
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="evaluation.html">
+            Evaluation of Teaching
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="groupwork.html">
+            Groupwork
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="wikipedia.html">
+            Use of Wikipedia
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  {% include tch-courses-card.html %}
+</div>
 
 <script>
 let curr_url = new URL(document.location);

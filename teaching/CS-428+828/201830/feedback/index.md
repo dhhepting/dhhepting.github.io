@@ -1,14 +1,14 @@
 ---
 breadcrumb: Feedback
-title: Feedback for CS-428+828-201830
+title: Feedback for CS 428+828 201830
 layout: bg-image
 ---
 # Feedback
 
 * Instructor's Feedback Instrument:
   * [Midterm](midterm.html)
-  {% comment %}
   * [Final](final.html)
+  {% comment %}
 * Faculty of Science Course Evaluation:
   * [CS 428](fac-eval.html)
 
