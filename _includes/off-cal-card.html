@@ -86,6 +86,7 @@
           {% assign mdby = day | date: "%d-%b-%y" %}
           {% assign mctr = mctr | plus: 1 %}
           {% assign mctrstr = mctr | prepend: '00' | slice: -2, 2 %}
+          {% comment %} read the title from the page and change text if Midterm{% endcomment %}
           {% capture tabdat %}<a href="meetings/{{mctrstr}}-{{mdby}}.html">{{mctrstr}}<span class="d-none d-md-inline"> : {{odate}}</span></a>{% endcapture %}
         {% else %}
           {% assign nxtday = day | plus: odd %}
