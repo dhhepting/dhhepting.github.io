@@ -40,7 +40,7 @@
           {% comment %}<tr class="d-flex" id="headingOne">{% endcomment %}
           <tr class="d-flex" id="{{ sdta.id }}">
               <td class="col-4 d-none d-sm-inline">
-                <button data-toggle="collapse" data-target="#collapseOne" class="accordion-toggle" role="button" aria-expanded="false" aria-controls="collapseOne">
+                <button data-toggle="collapse" data-target="#collapse{{sdta.id}}" class="accordion-toggle" role="button" aria-expanded="false" aria-controls="collapse{{sdta.id}}">
                   {{ sdta.title }}
                 </button>
               </td>
@@ -63,7 +63,7 @@
               </td>
           </tr>
           <tr class="d-flex">
-              <td colspan="5" class="col-12 accordian-body collapse" id="collapseOne" aria-labelledby="headingOne">
+              <td colspan="5" class="col-12 accordian-body collapse" id="collapse{{sdta.id}}" aria-labelledby="{{ sdta.id }}">
                 {{ sa.content | markdownify }}
               </td>
           </tr>
