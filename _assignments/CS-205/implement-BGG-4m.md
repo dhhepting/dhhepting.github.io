@@ -43,6 +43,12 @@ See the [Start-BGG](https://editor.p5js.org/dhhepting/sketches/qx5Y7-W2V) sketch
 * [Card8]({{ "/assets/teaching/img/BGG/Card8.jpg" | relative_url }})
 * [Guess]({{ "/assets/teaching/img/BGG/Guess.jpg" | relative_url }})
 
+### Submission
+
+You may submit your assignment on URcourses in 1 of 2 ways:
+* as a link to a project on the editor.p5js.org website
+* as a zip file containing your javascript and an HTML file to run it
+
 ### Grading
 
 {% include marker.html %}
