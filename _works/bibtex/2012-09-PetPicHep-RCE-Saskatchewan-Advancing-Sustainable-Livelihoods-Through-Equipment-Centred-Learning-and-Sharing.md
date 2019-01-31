@@ -2,8 +2,8 @@
 main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2012-09-PetPicHep
-title: "RCE Saskatchewan  Advancing Sustainable Livelihoods Through Equipment-Centred Learning and Sharing (2012)"
-breadcrumb: "RCE Saskatchewan  Advancing Sustainable Livelihoods Through Equipment-Centred Learning and Sharing (2012)"
+title: "RCE Saskatchewan: Advancing Sustainable Livelihoods Through Equipment-Centred Learning and Sharing (2012)"
+breadcrumb: "RCE Saskatchewan: Advancing Sustainable Livelihoods Through Equipment-Centred Learning and Sharing (2012)"
 category: report
 projects:
  - enviromatics

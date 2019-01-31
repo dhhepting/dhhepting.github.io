@@ -12,7 +12,7 @@ abstract: >-
 authors:
  - Timothy Maciag
  - Daryl H. Hepting
-venue: 2010 IEEE WIC ACM International Conference on Web Intelligence and Intelligent Agent Technology
+venue: "2010 IEEE/WIC/ACM International Conference on Web Intelligence and Intelligent Agent Technology"
 ---
 @inproceedings{2010-08-MacHep,
 	Author =  "Maciag, Timothy and Hepting, Daryl H.",

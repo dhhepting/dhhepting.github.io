@@ -12,7 +12,7 @@ abstract: >-
 authors:
  - Trevor M. Tomesh
  - Daryl H. Hepting
-venue: CHI PLAY  14 Proceedings of the first ACM SIGCHI annual symposium on Computer human interaction in play
+venue: "CHI PLAY '14 Proceedings of the first ACM SIGCHI annual symposium on Computer-human interaction in play"
 ---
 @inproceedings{2014-10-TomHep,
 	Author =  "Tomesh, Trevor M. and Hepting, Daryl H.",

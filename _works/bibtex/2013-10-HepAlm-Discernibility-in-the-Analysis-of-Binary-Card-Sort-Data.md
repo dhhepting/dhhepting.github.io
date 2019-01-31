@@ -12,7 +12,7 @@ abstract: >-
 authors:
  - Daryl H. Hepting
  - Emad H. Almestadi
-venue: Rough Sets  Fuzzy Sets  Data Mining  and Granular Computing  RSFDGrC 2013
+venue: "Rough Sets, Fuzzy Sets, Data Mining, and Granular Computing. RSFDGrC 2013"
 editors:
  - D. Ciucci
  - M. Inuiguchi

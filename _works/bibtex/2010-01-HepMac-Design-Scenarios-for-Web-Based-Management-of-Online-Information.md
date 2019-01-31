@@ -2,14 +2,20 @@
 main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2010-01-HepMac
-title: "Web-based Support Systems (2010)"
-breadcrumb: "Web-based Support Systems (2010)"
+title: "Design Scenarios for Web-Based Management of Online Information (2010)"
+breadcrumb: "Design Scenarios for Web-Based Management of Online Information (2010)"
 category: chapter
+authors:
+ - Daryl H. Hepting
+ - Timothy Maciag
+venue: "Web-based Support Systems"
+editors:
+ - JingTao Yao
 ---
 @inbook{2010-01-HepMac,
 	Author =  "Hepting, Daryl H. and Maciag, Timothy",
 	Title =  "Web-based Support Systems",
-	Url = \"{{site.canonical}}/research/works/2010-01-HepMac-Web-based-Support-Systems.html\",
+	Url = \"{{site.canonical}}/research/works/2010-01-HepMac-Design-Scenarios-for-Web-Based-Management-of-Online-Information.html\",
 	Editor =  "Yao, Jing{T}ao",
 	Address =  "London",
 	Chapter =  "Design Scenarios for Web-Based Management of Online Information",

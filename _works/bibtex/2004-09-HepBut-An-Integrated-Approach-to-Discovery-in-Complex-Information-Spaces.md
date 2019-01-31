@@ -10,7 +10,7 @@ projects:
 authors:
  - Daryl H. Hepting
  - Cory J. Butz
-venue: Second International Workshop on Web based Support Systems  edited by   2004  pages
+venue: "Second International Workshop on Web-based Support Systems, edited by , 2004, pages"
 editors:
  - J. T. Yao
  - V. V. Raghavan

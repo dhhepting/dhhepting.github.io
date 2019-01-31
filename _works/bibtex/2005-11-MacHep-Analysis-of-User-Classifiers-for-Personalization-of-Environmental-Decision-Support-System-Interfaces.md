@@ -10,7 +10,7 @@ projects:
 authors:
  - Timothy Maciag
  - Daryl H. Hepting
-venue: Intelligent Engineering Systems through Artificial Neural Networks
+venue: "Intelligent Engineering Systems through Artificial Neural Networks"
 editors:
  - Cihan H. Dagli
  - Anna L. Buczak

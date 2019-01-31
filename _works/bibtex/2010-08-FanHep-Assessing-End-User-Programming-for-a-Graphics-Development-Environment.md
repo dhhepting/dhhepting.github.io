@@ -10,7 +10,7 @@ projects:
 authors:
  - Lizao Fang
  - Daryl H. Hepting
-venue: Active Media Technology  AMT 2010
+venue: "Active Media Technology. AMT 2010"
 editors:
  - Aijun An
  - Pawan Lingras

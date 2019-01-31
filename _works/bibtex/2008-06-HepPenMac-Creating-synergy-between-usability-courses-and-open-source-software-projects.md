@@ -15,7 +15,7 @@ authors:
  - Timothy Maciag
  - David Gerhard
  - Brien Maguire
-venue: ACM SIGCSE Bulletin
+venue: "ACM SIGCSE Bulletin"
 pagestart: 120
 pageend: 123
 doi: 10.1145/1383602.1383649

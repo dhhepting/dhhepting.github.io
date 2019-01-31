@@ -12,7 +12,7 @@ authors:
  - Daryl H. Hepting
  - Robert J. Hilderman
  - Dominik Ślęzak
-venue: 2007 Frontiers in the Convergence of Bioscience and Information Technologies
+venue: "2007 Frontiers in the Convergence of Bioscience and Information Technologies"
 ---
 @inproceedings{2007-10-MacHepHil,
 	Author =  "Maciag, Timothy and Hepting, Daryl H. and Hilderman, Robert J. and \'{S}l\k{e}zak, Dominik",

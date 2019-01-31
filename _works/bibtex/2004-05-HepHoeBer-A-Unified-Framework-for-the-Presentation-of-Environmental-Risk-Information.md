@@ -11,7 +11,7 @@ authors:
  - Daryl H. Hepting
  - Orland Hoeber
  - Marlin Berg
-venue: University of Regina
+venue: "University of Regina"
 ---
 @techreport{2004-05-HepHoeBer,
 	Author =  "Hepting, Daryl H. and Hoeber, Orland and Berg, Marlin",

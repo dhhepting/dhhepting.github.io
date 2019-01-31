@@ -11,7 +11,7 @@ authors:
  - Daryl H. Hepting
  - Timothy Maciag
  - S. A. A. Rizvi
-venue: Environmental Software Systems
+venue: "Environmental Software Systems"
 ---
 @inproceedings{2007-05-HepMacRiz,
 	Author =  "Hepting, Daryl H. and Maciag, Timothy and Rizvi, S. A. A.",

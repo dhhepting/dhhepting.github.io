@@ -13,7 +13,7 @@ authors:
  - Timothy Maciag
  - Daryl H. Hepting
  - Dominik Ślęzak
-venue: Proceedings of International Workshop on Rough Sets and Soft Computing in Intelligent Agent and Web Technologies
+venue: "Proceedings of International Workshop on Rough Sets and Soft Computing in Intelligent Agent and Web Technologies"
 editors:
  - D. Ślęzak
  - E. Menasalvas-Ruiz

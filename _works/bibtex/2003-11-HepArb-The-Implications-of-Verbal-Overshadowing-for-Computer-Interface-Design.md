@@ -12,7 +12,7 @@ abstract: >-
 authors:
  - Daryl H. Hepting
  - Katherine D. Arbuthnott
-venue: University of Regina, Department of Computer Science
+venue: "University of Regina, Department of Computer Science"
 ---
 @techreport{2003-11-HepArb,
 	Author =  "Hepting, Daryl H. and Arbuthnott, Katherine D.",

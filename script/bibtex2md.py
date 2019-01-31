@@ -6,8 +6,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 from pytz import timezone
 from pybtex.database import BibliographyData, Entry, parse_file
+from slugify import slugify
 
+force = False
 bib_data = parse_file('../research/dhhepting.bib')
+# allow regeneration to be forced with "-f"
+if len(sys.argv) == 2:
+    if sys.argv[1] == "-f":
+        force = True
 
 bibtex_path = "../_works/bibtex/"
 
@@ -58,7 +64,8 @@ def format_people(people,kind,mdf):
 
 def format_article(entry,mdf):
     format_people(entry.persons,"author",mdf)
-    mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Journal'])+"\n")
+    venuestr = "venue: \"" + entry.fields['Journal'] + "\"\n"
+    mdf.write(venuestr)
 	### the following may be split out into its own function...
     try:
         kwstr = entry.fields['Keywords']
@@ -95,7 +102,9 @@ def format_article(entry,mdf):
 
 def format_inproceedings(entry,mdf):
     format_people(entry.persons,"author",mdf)
-    mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Booktitle'])+"\n")
+    venuestr = "venue: \"" + entry.fields['Booktitle'] + "\"\n"
+    mdf.write(venuestr)
+    #mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Booktitle'])+"\n")
     format_people(entry.persons,"editor",mdf)
 
 def format_incollection(entry,mdf):
@@ -105,10 +114,20 @@ def format_incollection(entry,mdf):
 def format_techreport(entry,mdf):
     format_people(entry.persons,"author",mdf)
     #mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Institution'])+"\n")
-    mdf.write("venue: "+re.sub(r':',' ',entry.fields['Institution'])+"\n")
+    venuestr = "venue: \"" + entry.fields['Institution'] + "\"\n"
+    mdf.write(venuestr)
+    #mdf.write("venue: "+re.sub(r':',' ',entry.fields['Institution'])+"\n")
 
 def format_book(entry,mdf):
+	format_people(entry.persons,"author",mdf)
 	format_people(entry.persons,"editor",mdf)
+
+def format_inbook(entry,mdf):
+    format_people(entry.persons,"author",mdf)
+    #mdf.write("venue: " + re.sub(r'[^\w]',' ',entry.fields['Title'])+"\n")
+    venuestr = "venue: \"" + entry.fields['Title'] + "\"\n"
+    mdf.write(venuestr)
+    format_people(entry.persons,"editor",mdf)
 #
 # output selected fields of BibTex entry
 #
@@ -187,10 +206,12 @@ for entry in bib_data.entries.values():
     entry_data = BibliographyData()
     entry_data.entries[entry.key] = entry
     # get title of entry
-    btitlestr = getValueStr("Title")
-    #titlestr = re.sub(r'[^\w]', ' ', btitlestr)
-    titlestr = re.sub(r':', ' ', btitlestr)
-    titlestr = re.sub(r'/', '', titlestr)
+    if entry.type == "inbook":
+        btitlestr = getValueStr("Chapter")
+    else:
+        btitlestr = getValueStr("Title")
+    titlestr = slugify(btitlestr, lowercase=False)
+
     # get date-modified for bibtex entry if it exists, if it doesn't
     # exist, recreate the markdown file
     recreate = False
@@ -226,8 +247,9 @@ for entry in bib_data.entries.values():
                 recreate = True
         else:
             recreate = True
-    #if recreate:
-    if True:
+    # above is decision about whether to recreate file
+    if force or recreate:
+    #if True:
         print ("(re)create: ", entry.key)
         with open(bibtex_path+mdnamestr,"w") as mdf:
             mdf.write("---\n")
@@ -237,9 +259,11 @@ for entry in bib_data.entries.values():
             mdf.write("layout: bibtex-default\n")
             mdf.write("citekey: " + entry.key + "\n")
             yearstr = getValueStr("Year")
-            pagestr = "title: \"" + titlestr + " (" + yearstr + ")\"\n"
+            btitlestr = btitlestr.replace('``', '&ldquo;')
+            btitlestr = btitlestr.replace('\'\'', '&rdquo;')
+            pagestr = "title: \"" + btitlestr + " (" + yearstr + ")\"\n"
             mdf.write(pagestr)
-            breadstr = "breadcrumb: \"" + titlestr + " (" + yearstr + ")\"\n"
+            breadstr = "breadcrumb: \"" + btitlestr + " (" + yearstr + ")\"\n"
             mdf.write(breadstr)
             if 'W-Type' in entry.fields:
                 typestr = entry.fields['W-Type']
@@ -276,6 +300,8 @@ for entry in bib_data.entries.values():
                 format_techreport(entry,mdf)
             elif entry.type == "book":
                 format_book(entry,mdf)
+            elif entry.type == "inbook":
+                format_inbook(entry,mdf)
             else:
                 print("MISSING TYPE: ", entry.type)
 			#
