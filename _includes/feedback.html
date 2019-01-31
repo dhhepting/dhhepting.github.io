@@ -127,7 +127,7 @@
         {% assign rowa = row | split: "," %}
         <tr>
 	{% for dd in rowa %}
-          {% if dd == "0" %}
+          {% if dd == "0" or dd == "#N/A" %}
             <td>&mdash;</td>
           {% else %}
             <td>{{dd}}</td>
