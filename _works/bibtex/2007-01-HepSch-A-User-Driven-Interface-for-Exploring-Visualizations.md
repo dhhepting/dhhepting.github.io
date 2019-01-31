@@ -12,7 +12,7 @@ abstract: >-
 authors:
  - Daryl H. Hepting
  - Paul Schmiedge
-venue: SPIE Proceedings  Visualization and Data Analysis 2007
+venue: "SPIE Proceedings, Visualization and Data Analysis 2007"
 editors:
  - Robert F. Erbacher
  - Jonathan C. Roberts

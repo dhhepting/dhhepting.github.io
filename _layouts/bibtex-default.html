@@ -37,9 +37,11 @@
     {% endfor %}
     </ul>
 
+    {% if page.abstract %}
     <h3>Abstract</h3>
     <p>{{ page.abstract }}</p>
-
+    {% endif %}
+    
     {% assign download_open = false %}
     {% capture work_url %}/assets/works/pdf/{{page.citekey}}.pdf{% endcapture %}
     {% for s in site.static_files %}

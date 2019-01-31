@@ -10,7 +10,7 @@ authors:
  - Daryl H. Hepting
  - Dominik Ślęzak
  - Robert J. Hilderman
-venue: RSKT 2007  Rough Sets and Knowledge Technology
+venue: "RSKT 2007: Rough Sets and Knowledge Technology"
 editors:
  - JingTao Yao
  - Pawan Lingras

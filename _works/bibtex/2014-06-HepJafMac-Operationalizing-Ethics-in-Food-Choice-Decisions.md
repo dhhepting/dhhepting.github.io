@@ -14,7 +14,7 @@ authors:
  - Daryl H. Hepting
  - JoAnn Jaffe
  - Timothy Maciag
-venue: Journal of Agricultural and Environmental Ethics
+venue: "Journal of Agricultural and Environmental Ethics"
 keywords:
  - "food"
  - "ethics"

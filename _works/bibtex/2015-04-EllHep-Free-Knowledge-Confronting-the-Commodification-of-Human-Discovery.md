@@ -2,11 +2,29 @@
 main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2015-04-EllHep
-title: "Free Knowledge  Confronting the Commodification of Human Discovery (2015)"
-breadcrumb: "Free Knowledge  Confronting the Commodification of Human Discovery (2015)"
+title: "Free Knowledge: Confronting the Commodification of Human Discovery (2015)"
+breadcrumb: "Free Knowledge: Confronting the Commodification of Human Discovery (2015)"
 category: book
 projects:
  - free-knowledge
+authors:
+ - Jane Anderson
+ - Leonzo Barreno
+ - Doug Bone
+ - Mitch Diamantopoulos
+ - Patricia Elliott
+ - Joshua Farley
+ - Daryl Hepting
+ - Brewster Kneen
+ - Ida Kubiszewski
+ - Sally Mahood
+ - Heather Morrison
+ - Claire Polster
+ - Arthur Schafer
+ - Marian van der Zon
+ - Roberto Verzola
+ - Joel Westheimer
+ - Gregory Younging
 editors:
  - Patricia W. Elliott
  - Daryl H. Hepting

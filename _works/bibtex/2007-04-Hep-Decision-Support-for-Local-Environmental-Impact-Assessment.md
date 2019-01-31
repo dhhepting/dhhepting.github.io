@@ -9,7 +9,7 @@ projects:
  - enviromatics
 authors:
  - Daryl H. Hepting
-venue: Journal of Environmental Modelling and Software
+venue: "Journal of Environmental Modelling and Software"
 pagestart: 436
 pageend: 441
 doi: 10.1016/j.envsoft.2005.12.010

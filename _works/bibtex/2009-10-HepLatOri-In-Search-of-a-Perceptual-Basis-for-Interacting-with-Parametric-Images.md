@@ -11,7 +11,7 @@ authors:
  - Daryl H. Hepting
  - Leila Latifi
  - Chris Oriet
-venue: Proceedings of the 7th ACM conference on Creativity and Cognition
+venue: "Proceedings of the 7th ACM conference on Creativity and Cognition"
 editors:
  - Nick Bryan-Kinns
  - Mark D. Gross

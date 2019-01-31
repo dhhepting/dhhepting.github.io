@@ -11,7 +11,7 @@ authors:
  - Daryl H. Hepting
  - Weiming Cao
  - Robert D. Russell
-venue: Western Computer Graphics Symposium
+venue: "Western Computer Graphics Symposium"
 ---
 @inproceedings{1998-04-HepCaoRus,
 	Author =  "Hepting, Daryl H. and Cao, Weiming and Russell, Robert D.",

@@ -10,7 +10,7 @@ projects:
 authors:
  - Timothy Maciag
  - Daryl H. Hepting
-venue: Environmental Software Systems
+venue: "Environmental Software Systems"
 editors:
  - Ralf Denzer
 ---

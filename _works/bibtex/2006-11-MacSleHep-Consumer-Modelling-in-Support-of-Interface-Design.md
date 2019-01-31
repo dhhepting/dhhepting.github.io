@@ -11,7 +11,7 @@ authors:
  - Timothy Maciag
  - Dominik Ślęzak
  - Daryl H. Hepting
-venue: 2006 International Conference on Hybrid Information Technology
+venue: "2006 International Conference on Hybrid Information Technology"
 ---
 @inproceedings{2006-11-MacSleHep,
 	Author =  "Maciag, Timothy and \'{S}l\k{e}zak, Dominik and Hepting, Daryl H.",

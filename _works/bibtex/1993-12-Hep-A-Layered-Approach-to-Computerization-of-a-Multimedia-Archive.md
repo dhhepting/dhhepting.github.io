@@ -9,7 +9,7 @@ projects:
  - multimedia
 authors:
  - Daryl H. Hepting
-venue: Simon Fraser University
+venue: "Simon Fraser University"
 ---
 @techreport{1993-12-Hep,
 	Author =  "Hepting, Daryl H.",

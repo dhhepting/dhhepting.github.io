@@ -12,7 +12,7 @@ authors:
  - Roger A. Petry
  - Curt Schroeder
  - Daryl H. Hepting
-venue: Environmental Software Systems
+venue: "Environmental Software Systems"
 editors:
  - Ralf Denzer
 ---

@@ -9,7 +9,7 @@ projects:
  - creativity
 authors:
  - Daryl H. Hepting
-venue: Proceedings of the 6th ACM SIGCHI Conference on Creativity   Cognition
+venue: "Proceedings of the 6th ACM SIGCHI Conference on Creativity & Cognition"
 editors:
  - Ben Shneiderman
  - Gerhard Fischer

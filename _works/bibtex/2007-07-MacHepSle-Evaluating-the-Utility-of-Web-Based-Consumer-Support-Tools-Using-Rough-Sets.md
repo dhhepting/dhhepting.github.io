@@ -12,7 +12,7 @@ authors:
  - Daryl H. Hepting
  - Dominik Ślęzak
  - Robert J. Hilderman
-venue: ICCS 2007  Proceedings of the 15th International Workshops on Conceptual Structures
+venue: "ICCS 2007: Proceedings of the 15th International Workshops on Conceptual Structures"
 editors:
  - Babak Akhgar
 ---

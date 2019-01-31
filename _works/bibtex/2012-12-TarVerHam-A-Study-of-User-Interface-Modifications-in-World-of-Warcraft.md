@@ -14,7 +14,7 @@ authors:
  - Victoria Verlysdonk
  - Howard J. Hamilton
  - Daryl H. Hepting
-venue: Game Studies  the international journal of computer game research
+venue: "Game Studies: the international journal of computer game research"
 keywords:
  - "World of Warcraft"
  - "massively multiplayer online game"

@@ -13,7 +13,7 @@ authors:
  - Daryl H. Hepting
  - Przemyslaw Prusinkiewicz
  - Dietmar Saupe
-venue: Fractals in the Fundamental and Applied Sciences  Proceedings of the First IFIP Conference on Fractals in the Fundamental and Applied Sciences  Lisbon  Portugal  6 8 June  1990
+venue: "Fractals in the Fundamental and Applied Sciences: Proceedings of the First IFIP Conference on Fractals in the Fundamental and Applied Sciences, Lisbon, Portugal, 6-8 June, 1990"
 editors:
  - Heinz-Otto Peitgen
  - José Marques Henriques

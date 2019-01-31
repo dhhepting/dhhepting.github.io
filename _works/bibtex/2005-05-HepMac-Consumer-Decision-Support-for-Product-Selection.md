@@ -10,7 +10,7 @@ projects:
 authors:
  - Daryl H. Hepting
  - Timothy Maciag
-venue: Proceedings of the 6th International Symposium on Environmental Software Systems 2005  ISESS 2005 
+venue: "Proceedings of the 6th International Symposium on Environmental Software Systems 2005 (ISESS 2005)"
 editors:
  - Ralf Denzer
 ---

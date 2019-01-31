@@ -15,7 +15,7 @@ authors:
  - Richard Spring
  - Katherine Arbuthnott
  - Dominik Ślęzak
-venue: Rough Sets  Fuzzy Sets  Data Mining and Granular Computing RSFDGrC 2009
+venue: "Rough Sets, Fuzzy Sets, Data Mining and Granular Computing RSFDGrC 2009"
 editors:
  - Hiroshi Sakai
  - Mihir Kumar Chakraborty

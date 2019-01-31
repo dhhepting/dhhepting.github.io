@@ -15,7 +15,7 @@ authors:
  - JoAnn Jaffe
  - Katherine D. Arbuthnott
  - Darryl Dormuth
-venue: Proceedings of the 2010 International Congress on Environmental Modelling and Software
+venue: "Proceedings of the 2010 International Congress on Environmental Modelling and Software"
 ---
 @inproceedings{2010-07-MacHepJaf,
 	Author =  "Maciag, Timothy and Hepting, Daryl H. and Jaffe, JoAnn and Arbuthnott, Katherine D. and Dormuth, Darryl",

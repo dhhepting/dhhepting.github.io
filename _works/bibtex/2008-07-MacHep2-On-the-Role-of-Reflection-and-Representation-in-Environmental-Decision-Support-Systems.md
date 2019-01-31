@@ -12,7 +12,7 @@ abstract: >-
 authors:
  - Timothy Maciag
  - Daryl H. Hepting
-venue: iEMSs 2008  International Congress on Environmental Modelling and Software
+venue: "iEMSs 2008: International Congress on Environmental Modelling and Software"
 editors:
  - M. Sanchez-Marrè
  - J. Bèjar

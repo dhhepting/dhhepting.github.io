@@ -11,7 +11,7 @@ abstract: >-
   Ethics and usability testing are increasingly important parts of a modern computer science education, given the changing profile of computer science employment and the increased focus on privacy. This paper introduces the concept of a participant pool, a means to recruit participants for research, which can be a valuable tool in teaching usability testing and ethics. It has a role in an overall emphasis on software quality and the importance of research. It can also help to increase the profile of this research and the desirability of a Computer Science degree to the larger population.
 authors:
  - Daryl H. Hepting
-venue: ACM SIGCSE Bulletin
+venue: "ACM SIGCSE Bulletin"
 pagestart: 76
 pageend: 80
 doi: 10.1145/1138403.1138438

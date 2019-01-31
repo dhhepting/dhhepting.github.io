@@ -12,7 +12,7 @@ abstract: >-
 authors:
  - Daryl H. Hepting
  - Leila Latifi
-venue: Active Media Technology  AMT 2010
+venue: "Active Media Technology. AMT 2010"
 editors:
  - Aijun An
  - Pawan Lingras
