@@ -260,7 +260,7 @@ for entry in bib_data.entries.values():
             if yamlfilepath.is_file():
                 with open(yamlfilepath, 'r') as yamf:
                     try:
-                        print(yaml.safe_load(stream))
+                        print(yaml.safe_load(yamf))
                     except yaml.YAMLError as exc:
                         print(exc)
             else:
