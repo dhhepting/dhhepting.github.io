@@ -254,13 +254,19 @@ for entry in bib_data.entries.values():
     #if True:
         print ("(re)create: ", entry.key)
         with open(bibtex_path+mdnamestr,"w") as mdf:
+            # check if there are any redirects to be added to markdown file
             yamlnamestr = entry.key + ".yml"
             yamlfilepath = Path(yaml_path + yamlnamestr)
             matches = [f for f in os.listdir(bibtex_path) if f.startswith(entry.key+"-")]
             if yamlfilepath.is_file():
                 with open(yamlfilepath, 'r') as yamf:
                     try:
-                        print(yaml.safe_load(yamf))
+                        yamldict = yaml.safe_load(yamf)
+                        if 'redirects' in yamldict and yamldict['redirects']:
+                            #print('>> redirect_from:')
+                            for yr in yamldict['redirects']:
+                                pass
+                                #print(yr)
                     except yaml.YAMLError as exc:
                         print(exc)
             else:
