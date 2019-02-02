@@ -7,6 +7,7 @@ from pathlib import Path
 from pytz import timezone
 from pybtex.database import BibliographyData, Entry, parse_file
 from slugify import slugify
+import yaml
 
 force = False
 bib_data = parse_file('../research/dhhepting.bib')
@@ -16,6 +17,7 @@ if len(sys.argv) == 2:
         force = True
 
 bibtex_path = "../_works/bibtex/"
+yaml_path = "../_data/research/works/"
 
 #
 # return field value string, if keystr is a key (otherwise exit)
@@ -252,6 +254,22 @@ for entry in bib_data.entries.values():
     #if True:
         print ("(re)create: ", entry.key)
         with open(bibtex_path+mdnamestr,"w") as mdf:
+            yamlnamestr = entry.key + ".yml"
+            yamlfilepath = Path(yaml_path + yamlnamestr)
+            matches = [f for f in os.listdir(bibtex_path) if f.startswith(entry.key+"-")]
+            if yamlfilepath.is_file():
+                with open(yamlfilepath, 'r') as yamf:
+                    try:
+                        print(yaml.safe_load(stream))
+                    except yaml.YAMLError as exc:
+                        print(exc)
+            else:
+                with open(yamlfilepath, 'w') as yamf:
+                    try:
+                        yamf.write("redirects:\n")
+                        yamf.write("links:\n")
+                    except yaml.YAMLError as exc:
+                        print(exc)
             mdf.write("---\n")
             yearstr = getValueStr("Year")
             if (yearstr != "2011"):
