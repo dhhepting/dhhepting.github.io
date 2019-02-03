@@ -249,24 +249,33 @@ for entry in bib_data.entries.values():
                 recreate = True
         else:
             recreate = True
+        # check if there are any redirects to be added to markdown file
+        yamlnamestr = entry.key + ".yml"
+        yamlfilepath = Path(yaml_path + yamlnamestr)
+        if yamlfilepath.is_file():
+            #print(yamlfilepath)
+            yamltimestr = time.ctime(os.path.getmtime(yamlfilepath))
+            yamltime = datetime.strptime(yamltimestr,"%a %b %d %H:%M:%S %Y")
+            localtz = timezone('America/Regina')
+            yamltime = localtz.localize(yamltime)
+            #print(yamltime)
+            if (filetime < yamltime):
+                recreate = True
+
     # above is decision about whether to recreate file
     if force or recreate:
     #if True:
         print ("(re)create: ", entry.key)
         with open(bibtex_path+mdnamestr,"w") as mdf:
-            # check if there are any redirects to be added to markdown file
-            yamlnamestr = entry.key + ".yml"
-            yamlfilepath = Path(yaml_path + yamlnamestr)
-            matches = [f for f in os.listdir(bibtex_path) if f.startswith(entry.key+"-")]
+            mdf.write("---\n")
             if yamlfilepath.is_file():
                 with open(yamlfilepath, 'r') as yamf:
                     try:
                         yamldict = yaml.safe_load(yamf)
                         if 'redirects' in yamldict and yamldict['redirects']:
-                            #print('>> redirect_from:')
+                            mdf.write("redirect_from:\n")
                             for yr in yamldict['redirects']:
-                                pass
-                                #print(yr)
+                                mdf.write("  - " + yr + "\n")
                     except yaml.YAMLError as exc:
                         print(exc)
             else:
@@ -276,7 +285,7 @@ for entry in bib_data.entries.values():
                         yamf.write("links:\n")
                     except yaml.YAMLError as exc:
                         print(exc)
-            mdf.write("---\n")
+
             yearstr = getValueStr("Year")
             if (yearstr != "2011"):
                 mdf.write("main_entity: ScholarlyArticle\n")
