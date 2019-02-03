@@ -1,8 +1,6 @@
 ---
 redirect_from:
-  - http://www2.cs.uregina.ca/%7Ehepting/research/dwnld/uregina1991MSc.pdf
-  - /research/dwnld/uregina1991MSc
-  - /research/dwnld/uregina1991MSc.pdf
+  - /research/dwnld/uregina1991MSc.pdf/
 main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1991-03-Hep
