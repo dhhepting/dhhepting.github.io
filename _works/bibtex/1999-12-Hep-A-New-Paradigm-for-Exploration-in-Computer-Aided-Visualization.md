@@ -8,6 +8,9 @@ category: PhD
 projects:
  - creativity
  -  visualization
+authors:
+ - Daryl H. Hepting
+venue: "Simon Fraser University"
 ---
 @phdthesis{1999-12-Hep,
 	Author =  "Hepting, Daryl H.",

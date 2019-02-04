@@ -109,6 +109,11 @@ def format_inproceedings(entry,mdf):
     #mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Booktitle'])+"\n")
     format_people(entry.persons,"editor",mdf)
 
+def format_conference(entry,mdf):
+    format_people(entry.persons,"author",mdf)
+    venuestr = "venue: \"" + entry.fields['Booktitle'] + "\"\n"
+    mdf.write(venuestr)
+
 def format_incollection(entry,mdf):
     format_people(entry.persons,"author",mdf)
     format_people(entry.persons,"editor",mdf)
@@ -130,6 +135,12 @@ def format_inbook(entry,mdf):
     venuestr = "venue: \"" + entry.fields['Title'] + "\"\n"
     mdf.write(venuestr)
     format_people(entry.persons,"editor",mdf)
+
+def format_mscphd(entry,mdf):
+    format_people(entry.persons,"author",mdf)
+    venuestr = "venue: \"" + entry.fields['School'] + "\"\n"
+    mdf.write(venuestr)
+
 #
 # output selected fields of BibTex entry
 #
@@ -327,6 +338,8 @@ for entry in bib_data.entries.values():
                 format_article(entry,mdf)
             elif entry.type == "inproceedings":
                 format_inproceedings(entry,mdf)
+            elif entry.type == "conference":
+                format_conference(entry,mdf)
             elif entry.type == "incollection":
                 format_incollection(entry,mdf)
             elif entry.type == "techreport":
@@ -335,6 +348,8 @@ for entry in bib_data.entries.values():
                 format_book(entry,mdf)
             elif entry.type == "inbook":
                 format_inbook(entry,mdf)
+            elif entry.type == "mastersthesis" or entry.type == "phdthesis":
+                format_mscphd(entry,mdf)
             else:
                 print("MISSING TYPE: ", entry.type)
 			#
