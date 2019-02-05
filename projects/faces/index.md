@@ -2,7 +2,8 @@
 title: Faces Project
 breadcrumb: Faces 
 description: Description of Faces Project!
-project: faces
+projects: 
+  - faces
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

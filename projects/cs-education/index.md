@@ -2,7 +2,8 @@
 title: CS Education
 breadcrumb: CS Education
 description: Description of CS Education
-project: cs-education
+projects: 
+  - cs-education
 redirect_from:
   - /teach/outreach/
 layout: bg-image

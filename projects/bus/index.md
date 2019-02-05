@@ -2,7 +2,8 @@
 title: Bus Project
 breadcrumb: Bus 
 description: Description of Bus Project
-project: bus
+projects: 
+  - bus
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

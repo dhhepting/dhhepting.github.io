@@ -1,7 +1,8 @@
 ---
 title: Blogging
 breadcrumb: Blogging
-project: blogging
+projects:
+  - blogging
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

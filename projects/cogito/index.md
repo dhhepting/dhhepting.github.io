@@ -2,7 +2,8 @@
 title: cogito
 breadcrumb: cogito
 description: Description of cogito
-project: cogito
+projects: 
+  - cogito
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

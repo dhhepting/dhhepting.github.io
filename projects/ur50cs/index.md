@@ -2,7 +2,8 @@
 title: 50th Birthday Party for CS @ U of R
 breadcrumb: UR50CS
 description: November 1, 2018 is the 50th birthday of the Department of Computer Science at the University of Regina.
-project: ur50cs
+projects: 
+  - ur50cs
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

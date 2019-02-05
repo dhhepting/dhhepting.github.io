@@ -2,7 +2,8 @@
 title: Visualization
 breadcrumb: Visualization 
 description: Description of Visualization
-project: visualization
+projects: 
+  - visualization
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

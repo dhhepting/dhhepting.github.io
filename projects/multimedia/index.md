@@ -2,7 +2,8 @@
 title: Multimedia
 breadcrumb: Multimedia
 description: Description of Multimedia
-project: multimedia
+projects: 
+  - multimedia
 layout: bg-image
 ---
 # {{ page.breadcrumb }}
