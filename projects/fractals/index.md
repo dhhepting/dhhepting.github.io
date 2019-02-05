@@ -11,7 +11,8 @@ redirect_from:
   - /research/web/nat-num/dynamics.html
   - /art/math+art/
   - /projects/math-art/
-project: fractals
+projects:
+  - fractals
 layout: bg-image
 ---
 # {{ page.breadcrumb }}
