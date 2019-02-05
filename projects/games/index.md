@@ -2,7 +2,8 @@
 title: Games
 breadcrumb: Games
 description: Description of Games
-project: games
+project: 
+  - games
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

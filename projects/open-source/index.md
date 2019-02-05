@@ -2,7 +2,8 @@
 title: Open Source
 breadcrumb: Open Source 
 description: Description of Open Source Project!
-project: open_source
+projects: 
+  - open-source
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

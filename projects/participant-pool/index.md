@@ -2,7 +2,8 @@
 title: Participant Pool
 breadcrumb: Participant Pool
 description: Description of Participant Pool
-project: participant-pool
+projects: 
+  - participant-pool
 redirect_from:
   - /admin/ppool.html
 

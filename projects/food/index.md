@@ -2,7 +2,8 @@
 title: Food Project
 breadcrumb: Food 
 description: Description of Food Project!
-project: food
+projects: 
+  - food
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

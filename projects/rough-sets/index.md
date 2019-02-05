@@ -2,7 +2,8 @@
 title: Rough Sets
 breadcrumb: Rough Sets 
 description: Description of Rough Sets
-project: rough_sets
+projects:
+  - rough_sets
 layout: bg-image
 ---
 # {{ page.breadcrumb }}
