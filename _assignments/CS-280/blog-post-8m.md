@@ -29,12 +29,33 @@ Your blog post is to be posted in the [blog on URcourses](https://urcourses.ureg
 
 ### Submission
 Post the blog and then submit only the hyperlink to your blog post.
+The link to your post will end with <code>viewpost.php?post=</code>, including a number after the "=". You can see a [demonstration post](https://urcourses.uregina.ca/mod/oublog/viewpost.php?post=32130), which is then used as the example in  the following instructions (<code>https://urcourses.uregina.ca/mod/oublog/viewpost.php?post=32130</code>):
+* start your submission and you will see this window:<br />
+<img class="img-fluid rounded" src="{{"/assets/teaching/img/link-1-start.png" | relative_url }}" />
+<p>&nbsp;</p>
+* paste the link into this window:<br />
+<img class="img-fluid rounded" src="{{"/assets/teaching/img/link-2-paste.png" | relative_url }}" />
+<p>&nbsp;</p>
+* select the text of the link just pasted into this window:<br />
+<img class="img-fluid rounded" src="{{"/assets/teaching/img/link-3-select.png" | relative_url }}" />
+<p>&nbsp;</p>
+* click on the "Insert/edit link" button, as shown:<br />
+<img class="img-fluid rounded" src="{{"/assets/teaching/img/link-4-hover.png" | relative_url }}" />
+<p>&nbsp;</p>
+* paste the link into the "Link URL" field and set the "Target" to be "Open in new window (\_blank)" (as shown) and click "Insert" at the bottom left of the window:<br />
+<img class="img-fluid rounded" src="{{"/assets/teaching/img/link-5-insert.png" | relative_url }}" />
+<p>&nbsp;</p>
+* the window should look as follows after inserting the link, then click "Save changes":<br />
+<img class="img-fluid rounded" src="{{"/assets/teaching/img/link-6-save.png" | relative_url }}" />
+<p>&nbsp;</p>
+* your saved submission will look this way:<br />
+<img class="img-fluid rounded" src="{{"/assets/teaching/img/link-7-submit.png" | relative_url }}" />
+<p>&nbsp;</p>
 
-The target length is 600-800 words. Please check your that your word count falls within these limits because if it does not, you will be penalized.
+The target length is 600-800 words.
+
+Please follow these instructions because you will be penalized if the instructions are not followed.
 
 ### Grading
-
-There are 8 marks for this assignment, according to the following
-rubric (adapted from <http://edweb.sdsu.edu/courses/edtec296/assignments/blog_rubric.html>)
 
 {% include marker.html %}
