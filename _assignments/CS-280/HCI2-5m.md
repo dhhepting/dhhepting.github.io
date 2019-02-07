@@ -1,30 +1,9 @@
-<!doctype html>
-<html lang="en-CA">
-<head>
-	<title>HCI Results Assignment: CS 280 &bull;201610</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Bootstrap core CSS -->
-    <link href="/~hepting/assets/common/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/~hepting/assets/common/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-</head>
+---
+title: HCI2
+---
 
-<body>
-	<div class="well">
-
-		<ol class="breadcrumb">
-			<li><a href="../../../../">D. H. Hepting</a></li>
-			<li><a href="../../../">Teaching</a></li>
-		  	<li><a href="../../">CS 280</a></li>
-		  	<li><a href="../">201710</a></li>
-		  	<li><a href="index.html">Assignments</a></li>
-		  	<li class="active">Human Computer Interaction: Results</li>
-		</ol>
-		
 		<h1>HCI Results</h1>
-				
+
 		<p>
 		This is a GROUP assignment. It cannot be done individually.
 		</p>
@@ -38,7 +17,7 @@
 			other.
 		</p>
 		<p>
-			Please see post 
+			Please see post
 			<a href="https://piazza.com/class/ixhxqi40qyy4rr?cid=114">
 				@114
 			</a>
@@ -47,7 +26,7 @@
 		<p>
 			Incorporate any feedback that you have received from Part 1 and print
 			the script that everyone in your group will use the same script to administer the test.
-			Make sure that you mark the name of the tester and the participant on 
+			Make sure that you mark the name of the tester and the participant on
 			each sheet.  When your group has finished all the tests, scan the sheets
 			as part of your submission to URcourses.
 		</p>
@@ -55,23 +34,23 @@
 			Summarize the data from your tests (from 6 - 8 participants).
 		</p>
 		<p>
-			Reflect on this process of usability testing and discuss any insights 
+			Reflect on this process of usability testing and discuss any insights
 			that you have gained.
 		</p>
 		<h3>Rubric (6 marks total)</h3>
 		<p>
 		</p>
-		<div class=table-responsive> 
-			<table class="table table-bordered table-striped"> 
-			<thead> 
+		<div class=table-responsive>
+			<table class="table table-bordered table-striped">
+			<thead>
 				<tr>
 					<th>Criterion and Weight</th>
-					<th>(E)xcellent (3/3)</th> 
-					<th>(S)atisfactory (2/3)</th> 
+					<th>(E)xcellent (3/3)</th>
+					<th>(S)atisfactory (2/3)</th>
 					<th>(P)oor (1/3)</th>
-					<th>(U)nacceptable (0/3)</th> 
+					<th>(U)nacceptable (0/3)</th>
 				</tr>
-			</thead> 
+			</thead>
 			<tbody>
 				<tr>
 					<th>Incorporated feedback (1)</th>
