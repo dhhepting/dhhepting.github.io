@@ -1,5 +1,6 @@
 ---
 title: HCI2
+nid: GW2
 ---
 
 		<h1>HCI Results</h1>

@@ -2,6 +2,7 @@
 title: Blog Post
 breadcrumb: Blog Post
 layout: bg-image
+nid: BP
 marks: 8
 rubric:
   - crit: Intellectual Engagement with Key Theme-Related Concepts

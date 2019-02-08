@@ -2,6 +2,7 @@
 title: Essay Proposal
 breadcrumb: Essay Proposal
 marks: 3
+nid: EP
 rubric:
   - crit: Topic
     wt: 1.0

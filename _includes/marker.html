@@ -88,11 +88,12 @@ deduct 50% of the earned grade
 {% for r in page.rubric %}
   {% assign critctr = critctr | plus: 1 %}
   {% capture critid %}rcriterion{{critctr}}{% endcapture %}
+  {% capture critname %}criteria_{{ page.nid }}{% endcapture %}
   {% assign sumwt = sumwt | plus: r.wt %}
   {% capture weights %}{{weights}},{{r.wt}}{% endcapture %}
     <div class="form-group row">
       <label class="col-sm-3 col-form-label text-right" for="{{critid}}">{{r.crit}} ({{r.wt}})</label>
-      <select class="col-sm-9 form-control" name="criteria" id="{{critid}}">
+      <select class="col-sm-9 form-control" name="{{ critname }}" id="{{ critid }}">
         <option selected disabled>Choose...</option>
         <option value="10">{{cs-level[3]}} (+): {{r.l3}}</option>
         <option value="9">{{cs-level[3]}}: {{r.l3}}</option>
@@ -114,44 +115,45 @@ deduct 50% of the earned grade
       <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
 {% assign totmarks = page.marks | plus: 0 %}
 {% if sumwt != totmarks %}
-      <textarea class="col-sm-9 form-control" id="comments" rows="5" placeholder="Criteria Weights Not Equal to Total Marks"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_{{page.nid}}" rows="5" placeholder="Criteria Weights Not Equal to Total Marks"></textarea>
   {% else %}
-      <textarea class="col-sm-9 form-control" id="comments" rows="5"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_{{page.nid}}" rows="5"></textarea>
   {% endif %}
     </div>
     <div class="form-group row">
       <div class="col-sm-3">
       </div>
       <div class="col-sm-9">
-        <button class="btn btn-primary" onclick="process(); return false;">Evaluate</button>
-        <a id="clipboard" href="#clipboard"
+        <button class="btn btn-primary" onclick="process_{{page.nid}}(); return false;">Evaluate</button>
+        <a id="clipboard" href="#clipboard-{{page.nid}}"
         class="m-2 btn btn-primary" aria-label="Copy comments"
-        data-clipboard-action="copy" data-clipboard-target="#comments">
+        data-clipboard-action="copy" data-clipboard-target="#comments_{{page.nid}}">
           Copy Output to Clipboard
         </a>
-        <button class="btn btn-primary" onclick="clearform(); return false;">Clear Form</button>
+        <button class="btn btn-primary" onclick="clearform_{{page.nid}}(); return false;">Clear Form</button>
       </div>
     </div>
   </div>
 </form>
 
 <script>
-  var weights = {{ weightsa | jsonify }}
-  function process()
+  function process_{{page.nid}}()
   {
+    var weights = {{ weightsa | jsonify }}
     // get multiplier from penalty radio buttons
     var penalty = document.querySelector("input[name=penalties]:checked");
     var mult = (100.0 - penalty.value)/100.0;
 
     // output penalty information
-    var commentspan = document.getElementById("comments");
+    var commentspan = document.getElementById("comments_{{page.nid}}");
     commentspan.textContent = "Penalty:\n";
     commentspan.textContent = commentspan.textContent +
       "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
 
     // get grades for each rubric criterion
     var sumgrade = 0;
-    var crits = document.getElementsByName("criteria");
+    var critname = "criteria" + "_" + "{{ page.nid }}";
+    var crits = document.getElementsByName(critname);
     for (var i = 0, length = crits.length; i < length; i++)
     {
       // output information for each criterion
@@ -181,10 +183,10 @@ deduct 50% of the earned grade
     }
   }
 
-  function clearform()
+  function clearform_{{page.nid}}()
   {
     document.forms["calculator"].reset();
-    var commentspan = document.getElementById("comments");
+    var commentspan = document.getElementById("comments_{{page.nid}}");
     commentspan.textContent = "";
   }
 </script>
