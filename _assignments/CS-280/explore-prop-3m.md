@@ -2,6 +2,7 @@
 title: Exploration Proposal
 breadcrumb: Exploration Proposal
 marks: 3
+nid: XP
 rubric:
   - crit: Topic
     wt: 1

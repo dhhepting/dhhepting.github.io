@@ -2,6 +2,7 @@
 title: Essay Final
 breadcrumb: Essay Final
 marks: 12
+nid: EF
 rubric:
   - crit: Position Development
     wt: 3

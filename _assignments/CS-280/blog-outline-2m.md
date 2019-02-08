@@ -2,6 +2,7 @@
 title: Blog Outline
 breadcrumb: Blog Outline
 layout: bg-image
+nid: BO
 marks: 2
 rubric:
 - crit: Topic

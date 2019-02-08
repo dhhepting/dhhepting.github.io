@@ -2,6 +2,7 @@
 title: Exploration Final
 breadcrumb: Exploration Final
 marks: 12
+nid: XF
 rubric:
   - crit: Topic
     wt: 4

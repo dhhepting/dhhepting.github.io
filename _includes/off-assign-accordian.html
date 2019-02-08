@@ -7,28 +7,20 @@
     <table class="table table-striped table-bordered">
       <thead>
         <tr class="d-flex bg-info">
-          <span class="d-md-inline">
           <th class="col-3">
             <span>Title</span>
           </th>
-          </span>
-          <span class="d-md-none">
-          <th class="col-6">
-            <span>Title</span>
-          </th>
-          </span>
-          <th class="col-2 d-none d-md-inline">
+          <th class="col-2">
             <span>Type</span>
           </th>
-          <th class="col-2 d-none d-md-inline">
+          <th class="col-2">
             <span>Marks</span>
           </th>
-          <th class="col-2 d-none d-md-inline">
+          <th class="col-2">
             <span>Due Date</span>
           </th>
           <th class="col-3">
-            <span class="d-inline d-md-none">URC</span>
-            <span class="d-none d-md-inline">URcourses</span>
+            <span>URcourses</span>
           </th>
         </tr>
       </thead>
@@ -41,24 +33,21 @@
         {% if cm == oam %}
 
           <tr class="d-flex" id="{{ sdta.id }}">
-            <span class="d-md-none">
-              <td class="col-6 d-flex">
-                <button data-toggle="collapse" data-target="#collapse{{sdta.id}}" class="accordion-toggle" role="button" aria-expanded="false" aria-controls="collapse{{sdta.id}}">
+            <td class="col-3">
+                <button data-toggle="collapse" data-target="#collapse_{{sdta.id}}" class="accordion-toggle" role="button" aria-expanded="false" aria-controls="collapse_{{sdta.id}}">
                   {{ sdta.title }}
                 </button>
               </td>
-            </span>
-              <td class="col-2 d-none d-md-flex">
+              <td class="col-2">
                 <span>{{ sdta.type }}</span>
               </td>
-              <td class="col-2 d-none d-md-flex">
+              <td class="col-2">
                 <span>{{ sdta.marks }}</span>
               </td>
-              <td class="col-2 d-none d-md-flex">
+              <td class="col-2">
                 <span>{{ sdta.duedate }}</span>
               </td>
-              <span class="d-md-none">
-              <td class="col-6 d-flex">
+              <td class="col-3">
                 <div class="btn-group my-1" role="group" aria-label="URcourses links">
                   <a class="btn btn-primary mx-1" aria-label="Discuss"
                   href="{{ sdta.lms_discuss }}"
@@ -74,19 +63,11 @@
                   </a>
                 </div>
               </td>
-              </span>
           </tr>
           <tr class="d-flex">
-            <span class="d-none d-md-flex">
-              <td colspan="5" class="col-12 accordian-body collapse" id="collapse{{sdta.id}}" aria-labelledby="{{ sdta.id }}">
+              <td colspan="5" class="col-12 accordian-body collapse" id="collapse_{{sdta.id}}" aria-labelledby="{{ sdta.id }}">
                 {{ sa.content | markdownify }}
               </td>
-            </span>
-            <span class="d-md-none">
-              <td colspan="2" class="col-12 accordian-body collapse" id="collapse{{sdta.id}}" aria-labelledby="{{ sdta.id }}">
-                {{ sa.content | markdownify }}
-              </td>
-            </span>
           </tr>
 
           {% endif %}
