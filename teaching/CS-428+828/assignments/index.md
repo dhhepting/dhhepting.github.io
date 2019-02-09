@@ -1,9 +1,6 @@
 ---
 layout: bg-image
+title: Assignments
 breadcrumb: Assignments
 ---
 # {{ page.breadcrumb }}
-
-- [Individual](i)
-- [Group](g)
-- [Individual or Group](i-or-g)
