@@ -1,17 +1,16 @@
 ---
-title: HCI2
+title: Evaluate
 nid: GW2
+marks: 5
 ---
+# {{ page.title }}
 
-		<h1>HCI Results</h1>
+This is a GROUP assignment. It cannot be done individually.
 
-		<p>
-		This is a GROUP assignment. It cannot be done individually.
-		</p>
-		<p>
-			The purpose of this part of the assignment is to run the test
-			that you developed during the 1st part of the assignment.  
-		</p>
+The purpose of this part of the assignment is to run the test
+that you developed during the 1st part of the assignment.  
+
+    {% comment %}
 		<p>
 			Each member of your group find 2 people (in class) from 2 different groups.
 			Each person will act as tester for his or her own study and participant for the
@@ -86,8 +85,4 @@ nid: GW2
 		</div>
 
 	</div>
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="/~hepting/assets/common/jquery/jquery-1.12.0.min.js"></script>
-	<script src="/~hepting/assets/common/bootstrap/js/bootstrap.min.js"></script>
-</body>
-</html>
+  {% endcomment %}

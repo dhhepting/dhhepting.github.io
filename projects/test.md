@@ -1,7 +1,7 @@
+---
+---
 # Assignments
 
-{% include teaching-url.html %}
-{% if site.data.teaching.assignments[off_med] %}
 <div class="accordion" id="accordionExample">
   <div class="table-responsive">
     <table class="table table-striped table-bordered">
@@ -25,39 +25,33 @@
         </tr>
       </thead>
       <tbody>
-  {% for sdta in site.data.teaching.assignments[off_med] %}
-    {% for sa in site.assignments %}
-      {% if sa.title == sdta.title %}
-        {% assign cm = sa.marks | plus: 0 %}
-        {% assign oam = sdta.marks | plus: 0 %}
-        {% if cm == oam %}
         <tr class="d-flex" id="{{ sdta.id }}">
           <td class="col-6 col-md-3">
             <button data-toggle="collapse" data-target="#collapse_{{sdta.id}}" class="accordion-toggle" role="button" aria-expanded="false" aria-controls="collapse_{{sdta.id}}">
-            {{ sdta.title }}
+              {{ sdta.title }}
             </button>
           </td>
-          <td class="d-none d-md-inline col-md-2">
+          <td class="d-none d-md-inline col-2">
             <span>{{ sdta.type }}</span>
           </td>
-          <td class="d-none d-md-inline col-md-2">
+          <td class="d-none d-md-inline col-2">
             <span>{{ sdta.marks }}</span>
           </td>
-          <td class="d-none d-md-inline col-md-2">
+          <td class="d-none d-md-inline col-2">
             <span>{{ sdta.duedate }}</span>
           </td>
           <td class="col-6 col-md-3">
             <div class="btn-group my-1" role="group" aria-label="URcourses links">
               <a class="btn btn-primary mx-1" aria-label="Discuss"
               href="{{ sdta.lms_discuss }}"
-              role="button" target="_blank">
+              role="button" target="\_blank">
                 Discuss
               </a>
             </div>
             <div class="btn-group my-1" role="group" aria-label="URcourses links">
               <a class="btn btn-primary mx-1" aria-label="Submit"
               href="{{ sdta.lms_submit }}"
-              role="button" target="_blank">
+              role="button" target="\_blank">
                 Submit
               </a>
             </div>
@@ -66,14 +60,10 @@
         <tr class="d-flex">
           <td class="col-12 accordian-body collapse" id="collapse_{{sdta.id}}" aria-labelledby="{{ sdta.id }}">
             {{ sa.content | markdownify }}
+            Stuff
           </td>
         </tr>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
       </tbody>
     </table>
   </div>
 </div>
-{% endif %}
