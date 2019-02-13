@@ -1,4 +1,5 @@
 ---
+title: CS 280 (Risk and Reward in the Information Society)
 crs_nbr: CS 280
 crs_name: Risk and Reward in the Information Society
 breadcrumb: CS 280

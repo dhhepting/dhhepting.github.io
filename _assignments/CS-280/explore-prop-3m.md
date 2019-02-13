@@ -37,7 +37,7 @@ You may choose what you will do for this assignment. It must deal with class the
 
 ### Submission
 
-* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on URcourses
+* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on URcourses: indicate whether you will be doing this assignment individually or in a group (indicate who is in your group and only 1 submission per group is needed)
 * target length: 1 page
 
 ### Grading
