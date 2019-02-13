@@ -11,5 +11,6 @@
 {% assign crs_sbj = crs_parts[0] %}
 {% assign crs_nbr = crs_parts[1] %}
 {% assign crs_sem = url_parts[sem_idx] %}
+{% capture crs_id %}{{crs_sbj}}-{{crs_nbr}}{% endcapture %}
 {% capture off_med %}{{crs_sbj}}-{{crs_nbr}}-{{crs_sem}}{% endcapture %}
 {% capture off_med %}{{off_med | replace: "+", "_"}}{% endcapture %}
