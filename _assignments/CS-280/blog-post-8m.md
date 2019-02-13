@@ -28,6 +28,8 @@ rubric:
 
 Your blog post is to be posted in the [blog on URcourses](https://urcourses.uregina.ca/mod/oublog/view.php?id=909814). References are to be included as hyperlinks within the post, close to the text that makes the reference.
 
+Please see [this resource for information about writing for the web](<https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/>).
+
 ### Submission
 Post the blog and then submit only the hyperlink to your blog post.
 The link to your post will end with <code>viewpost.php?post=</code>, including a number after the "=". You can see a [demonstration post](https://urcourses.uregina.ca/mod/oublog/viewpost.php?post=32130), which is then used as the example in  the following instructions (<code>https://urcourses.uregina.ca/mod/oublog/viewpost.php?post=32130</code>):

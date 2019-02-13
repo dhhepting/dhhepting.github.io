@@ -3,6 +3,7 @@
   <div class="card-body">
     {% capture syll_url %}/assets/teaching/pdf/{{ off_med }}_syllabus.pdf{% endcapture %}
     {% capture sched_url %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
+    {% capture fbk_url %}/teaching/{{ crs_id }}/{{ crs_sem }}/feedback/{% endcapture %}
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
         <a href="{{ syll_url | relative_url }}">
@@ -12,6 +13,11 @@
       <li class="list-group-item">
         <a href="{{ sched_url | relative_url }}">
           Semester Schedule (including Office Hours)
+        </a>
+      </li>
+      <li class="list-group-item">
+        <a href="{{ fbk_url | relative_url }}">
+          Feedback
         </a>
       </li>
     </ul>
