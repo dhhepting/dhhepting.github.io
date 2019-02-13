@@ -1,4 +1,5 @@
 ---
+title: CS 205 (Introduction to Multimedia Systems)
 crs_nbr: CS 205
 crs_name: Introduction to Multimedia Systems
 breadcrumb: CS 205
