@@ -6,8 +6,9 @@ layout: bg-image
 # Feedback
 
 * [Instructor's Feedback Instrument]({{"/assets/teaching/pdf/feedback-instrument.pdf" | relative_url}}):
-  * [Midterm](midterm.html)
   {% comment %}
+  * [Midterm](midterm.html)
+
   * [Final](final.html)
 
 * Faculty of Science Course Evaluation:
