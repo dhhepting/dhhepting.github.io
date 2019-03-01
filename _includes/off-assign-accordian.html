@@ -48,16 +48,26 @@
           </td>
           <td class="col-6 col-md-3">
             <div class="btn-group my-1" role="group" aria-label="URcourses links">
+              {% if sdta.lms_discuss %}
               <a class="btn btn-primary mx-1" aria-label="Discuss"
-              href="{{ sdta.lms_discuss }}"
+              href="https://urcourses.uregina.ca/mod/forum/discuss.php?d={{ sdta.lms_discuss }}"
               role="button" target="_blank">
+              {% else %}
+              <a class="btn btn-primary mx-1 disabled" aria-label="Discuss" aria-disabled="true"
+              href="https://urcourses.uregina.ca/" role="button" target="_blank">
+              {% endif %}
                 Discuss
               </a>
             </div>
             <div class="btn-group my-1" role="group" aria-label="URcourses links">
+              {% if sdta.lms_discuss %}
               <a class="btn btn-primary mx-1" aria-label="Submit"
-              href="{{ sdta.lms_submit }}"
+              href="https://urcourses.uregina.ca/mod/assign/view.php?id={{ sdta.lms_submit }}"
               role="button" target="_blank">
+              {% else %}
+              <a class="btn btn-primary mx-1 disabled" aria-label="Submit" aria-disabled="true"
+              href="https://urcourses.uregina.ca/" role="button" target="_blank">
+              {% endif %}
                 Submit
               </a>
             </div>

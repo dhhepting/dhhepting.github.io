@@ -18,14 +18,13 @@ rubric:
 ---
 ### Project Proposal
 
-The project will be a web-based presentation on a topic of your choosing. You will decide the mix of writing and coding (using p5.js) [or, research and implementation]. The project can be done either individually or in small
-groups. Identify how (with whom) you will complete the project in
-your submission.
+The project will be a web-based presentation on a topic of your choosing. You will decide on the mix of writing and coding (using p5.js) [or, research and implementation]. The project can be done either individually or in small
+groups. Identify how (and, optionally, with whom) you will complete the project in your submission.
 
-Your proposal will begin with the title of your proposed project. You will then include each of the following headings, followed with a paragraph of descriptive text.
+Your proposal will begin with the title of your proposed project. You will then include each of the following headings, accompanied by some descriptive text.
 
 #### Overview
-A summary description of the project, in a couple of sentences
+A summary description of the project, in a couple of sentences.
 
 #### Vision and Goals
 What you want to accomplish with this project: what is your vision, what are your goals? How will you assess if you've met your goals?

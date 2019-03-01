@@ -1,63 +1,43 @@
 ---
 title: Image to Sound
+breadcrumb: Image to Sound
+layout: bg-image
 marks: 4
+rubric:
+- crit: Basic implementation
+  wt: 2
+  l3: Code functions as required and code is easily readable
+  l2: Code functions as required but code is not so easily readable
+  l1: Completed but code does not function as required
+  l0: Not completed
+- crit: Advanced feature
+  wt: 1
+  l3: Advanced feature well done and clearly written
+  l2: Advanced feature well done but not so clearly written
+  l1: Completed but feature does not function as indicated
+  l0: Not completed
+- crit: Comments
+  wt: 1
+  l3: Comments well written and explain rationale
+  l2: Comments well written but do not fully explain rationale
+  l1: Comments not consistently done
+  l0: Little to no comments in code
 ---
+### Description
 
-		<h1>Assignment 3 - Image to Sound</h1>
+Use p5.js to read an image and use it as input for
+creation of a sounds. Explore different ways to use the input
+data to create sounds.
+Use different formats for the image as input
+(including <a href="http://www.freeformatter.com/base64-encoder.html">base64</a>).
 
-		<p>
-			Take an image that you created in the "Text to Image" assignment and use it as input for
-			creation of a sound file using processing.  Use different variations of the parameters to
-			create an output wave file.  Use different formats for the image as input
-			(including <a href="http://www.freeformatter.com/base64-encoder.html">base64</a>).  
-			Examine the results using audacity (or other program).  Comment on the results.
-		</p>
-		<p>
-			As part of your submissions,
-			please submit <em>all</em> the files required to run your code,
-			as well as all input and output files.
-		</p>		
-		<div class=table-responsive>
-			<table class="table table-bordered table-striped">
-			<thead>
-				<tr>
-					<th>Criterion and Weight</th>
-					<th>Excellent (3/3)</th>
-					<th>Satisfactory (2/3)</th>
-					<th>Poor (1/3)</th>
-					<th>Unacceptable (0/3)</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th>Functionality (2)</th>
-					<td>Clear code that produces audible sounds</td>
-					<td>Clear code that produces sounds files that play</td>
-					<td>Unclear code that produces sound files that may not play</td>
-					<td>Unclear code that does not work</td>
-				</tr>
-				<tr>
-					<th>Exploration (1)</th>
-					<td>Explored various image formats to produce different sounds</td>
-					<td>Used 2 image formats to produce sounds</td>
-					<td>Used more than 1 image format but sounds inaudible</td>
-					<td>No extra image formats were attempted</td>
-				</tr>
-				<tr>
-					<th>Reflection (1)</th>
-					<td>Thoughtfully and thoroughly considered implications of reinterpreting
-						images as sound, and what is required to create audible sound files</td>
-					<td>Thoroughly considered implications of reinterpreting images as sound</td>
-					<td>Some implications considered</td>
-					<td>Implications not considered</td>
-				</tr>
-			</tbody>
-			</table>
-		</div>
-		<p>Submit your work electronically, in a single file, via URCourses.</p>
-	</div>
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="/~hepting/assets/common/jquery/jquery-1.12.0.min.js"></script>
-	<script src="/~hepting/assets/common/bootstrap/js/bootstrap.min.js"></script>
-</body>
-</html>
+### Submission
+
+You may submit your assignment on URcourses in 1 of 3 ways:
+* as a link to a project on the editor.p5js.org website
+* as a link to a page on your cs.uregina.ca website
+* as a zip file containing your javascript and an HTML file to run it
+
+### Grading
+
+{% include marker.html %}
