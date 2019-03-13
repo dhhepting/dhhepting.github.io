@@ -7,12 +7,28 @@ nid: GW1
 rubric:
   - crit: Define Task
     wt: 1
+    l3: Clearly defined
+    l2: Somewhat clearly defined
+    l1: Somewhat clear, but questions remain
+    l0: Lacks necessary specificity
   - crit: Describe User
     wt: 1
+    l3: Clearly defined
+    l2: Somewhat clearly defined
+    l1: Somewhat clear, but questions remain
+    l0: Lacks necessary specificity
   - crit: Create Empathy Map
     wt: 2
+    l3: Consolidated map clearly completed with detailed entries in all quadrants
+    l2: Consolidated map completed with entries in all quadrants
+    l1: Consolidated map completed with entries in most quadrants
+    l0: Consolidated map incomplete
   - crit: Identify Metrics
     wt: 1
+    l3: Good rationale for chosen qualitative and quantitative metrics provided
+    l2: Rationale for chosen metrics provided
+    l1: Metrics chosen, but little rationale provided
+    l0: Metrics not identified
 ---
 ### Description
 
