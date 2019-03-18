@@ -33,7 +33,11 @@ rubric:
 
 This is an INDIVIDUAL assignment.  It cannot be done in a group.
 
+The goal is to write a persuasive essay that explores a topic from class, presents appropriate support, and makes a clear argument for your position in 1200 - 1500 words.
+
 ### Submission
+
+* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on URcourses
 
 ### Grading
 
