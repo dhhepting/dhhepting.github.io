@@ -44,3 +44,7 @@ The goal of this assignment is to consider interaction with your chosen software
   * [Empathy Mapping: The First Step in Design Thinking](https://www.nngroup.com/articles/empathy-mapping/) (includes template)
   * VIDEO: [How to Empathy Map](https://www.nngroup.com/videos/empathy-map/)
 * identifying qualitative and quantitative measures that would indicate success with the task.
+
+### Grading
+
+{% include marker.html %}

@@ -1,65 +1,31 @@
 ---
-title: Sound to Text and Image
+title: Sound to Something Else
 marks: 4
+rubric:
+- crit: Basic implementation
+  wt: 2
+  l3: Code functions as required and code is easily readable
+  l2: Code functions as required but code is not so easily readable
+  l1: Completed but code does not function as required
+  l0: Not completed
+- crit: Advanced feature
+  wt: 1
+  l3: Advanced feature well done and clearly written
+  l2: Advanced feature well done but not so clearly written
+  l1: Completed but feature does not function as indicated
+  l0: Not completed
+- crit: Comments
+  wt: 1
+  l3: Comments well written and explain rationale
+  l2: Comments well written but do not fully explain rationale
+  l1: Comments not consistently done
+  l0: Little to no comments in code
 ---
-		<h1>
-			Assignment 4 -  Sound to Text and Image
-		</h1>
+### Description
 
-		<p>
-			Take the sound that you created in the previous assignment
-			(or a different sound, if you prefer)
-			and use it as input for creation of an image and a text file.  
-			Try different ways to performing the transformation from sound to image and to text.  
-			The unix <a href="http://en.wikipedia.org/wiki/Strings_(Unix)">strings command</a>
-			may give you some ideas (for example, trying to interpret the data in the sound file
-			in terms of different encodings). Describe the transformations that you used.
-			Comment on the results.  Hand in the source sound file, the various outputs,
-			and your reflection.
-		</p>
+Take the sound file that you created in the previous assignment
+(or a different sound, if you prefer)
+and use it as input to a p5.js sketch for creation of an animation,
+an image, or text.
 
-		<div class=table-responsive>
-			<table class="table table-bordered table-striped">
-			<thead>
-				<tr>
-					<th>Criterion and Weight</th>
-					<th>Excellent (3/3)</th>
-					<th>Satisfactory (2/3)</th>
-					<th>Poor (1/3)</th>
-					<th>Unacceptable (0/3)</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th>To Image (1.5)</th>
-					<td>Completed more than 1 transformation</td>
-					<td>Completed 1, attempted more than 1 transformation</td>
-					<td>Completed 1 transformation, did not attempt others</td>
-					<td>Did not complete 1 transformation</td>
-				</tr>
-				<tr>
-					<th>To Text (1.5)</th>
-					<td>Completed more than 1 transformation</td>
-					<td>Completed 1, attempted more than 1 transformation</td>
-					<td>Completed 1 transformation, did not attempt others</td>
-					<td>Did not complete 1 transformation</td>
-				</tr>
-				<tr>
-					<th>Reflection (1)</th>
-					<td>Thoughtfully and thoroughly considered implications of reinterpreting
-						sounds as images and text, and what is required</td>
-					<td>Thoroughly considered implications of reinterpreting sounds as
-						images and text</td>
-					<td>Some implications considered</td>
-					<td>Implications not considered</td>
-				</tr>
-			</tbody>
-			</table>
-		</div>
-		<p>Submit your work electronically, in a single file, via URCourses.</p>
-	</div>
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="/~hepting/assets/common/jquery/jquery-1.12.0.min.js"></script>
-	<script src="/~hepting/assets/common/bootstrap/js/bootstrap.min.js"></script>
-</body>
-</html>
+{% include marker.html %}
