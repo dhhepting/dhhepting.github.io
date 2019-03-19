@@ -133,14 +133,35 @@ You may choose what you will do for this assignment. It must deal with class the
       </div>
     </div>
   </li>
+  <li>
+    Research Paper (900 - 1100 words)
+  </li>
+  <li>
+    Wikipedia article (create new or add to existing)
+  </li>
+  <li>
+    <div class="card bg-light">
+      <h5 class="card-header">
+        Picture Yourself as a Computing Professional
+      </h5>
+      <div class="card-body">
+        <p>
+          Research 3 professional role models (from the present or past) and write about each one.
+          Include a picture of each, if possible.
+        </p>
+        <p>
+          Reflect on how they inspire you with respect to the Code of Ethics that we have examined in class.
+        </p>
+      </div>
+    </div>
+  </li>
+  <li>
+    Discuss your contributions to an open source project (on github, for example)
+  </li>
+  <li>
+    Write some code to test an idea
+  </li>
 </ul>
-
-
-* Research Paper (900 - 1100 words)
-* Wikipedia article (create new or add to existing)
-* "Picture Yourself as a Computing Professional"
-* discussion of contributing to an open source project (on github, for example)
-* writing some code to test an idea
 
 ### Submission
 
