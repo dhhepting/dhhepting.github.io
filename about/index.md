@@ -30,6 +30,11 @@ layout: bg-image
 						Personal Interests
 					</a>
 				</li>
+        <li>
+					<a href="website.html">
+						Website
+					</a>
+				</li>
 			</ul>
 		</div>
 		<div class="col-xs-12 col-sm-8">
