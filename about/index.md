@@ -90,6 +90,17 @@ layout: bg-image
 				var semurl = document.getElementById("semlink")
 				semurl.setAttribute("href","{{ "/teaching/schedule/" | relative_url}}"+today.getFullYear() + semnum + ".html");
 			</script>
+      <script>
+        window.onload = function() {
+          if (window.jQuery) {  
+              // jQuery is loaded  
+              console.log($.fn.button.Constructor.VERSION)
+          } else {
+              // jQuery is not loaded
+              console.log("Not loaded")
+          }
+        }  
+      </script>
 		</div>
 	</div>
 </div>
