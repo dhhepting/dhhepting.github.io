@@ -35,9 +35,9 @@
       {%- if i == 1 %}
         <li data-target="#{{carid}}" data-slide-to="0" class="active"></li>
       {%- else %}
-        <li data-target="#{{carid}}" data-slide-to="{{ i | minus: 1}}" class="active"></li>
+        <li data-target="#{{carid}}" data-slide-to="{{ i | minus: 1}}"></li>
       {%- endif %}
-    {%- endfor -%}
+    {%- endfor %}
       </ol>
       <div class="carousel-inner">
     {%- for i in (1..numjpgs) -%}
@@ -47,7 +47,7 @@
         <div class="carousel-item">
       {%- endif -%}
       {% assign sj = sortedjpgs[i] | split: '#' %}
-          <img class="img-fluid" src="{{ sj[1] }}" alt="{{ sj[0] }}">
+          <img class="img-fluid d-block w-100" src="{{ sj[1] }}" alt="{{ sj[0] }}">
         </div>
     {% endfor %}
       </div>
