@@ -3,7 +3,7 @@ title: Empathize
 breadcrumb: Empathize
 layout: bg-image
 marks: 5
-nid: GW1
+nid: GM
 rubric:
   - crit: Define Task
     wt: 1
