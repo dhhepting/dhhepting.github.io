@@ -1,10 +1,8 @@
 ---
 title: Evaluate
 breadcrumb: Evaluate
-nid: GW2
+nid: GV
 marks: 5
-marks: 5
-nid: GW1
 rubric:
   - crit: Script
     wt: 1
