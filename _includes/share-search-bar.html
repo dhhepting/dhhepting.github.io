@@ -31,22 +31,24 @@
      <span class="fas fa-envelope" title="Share via Email"></span>
     </a>
   </div>
+  {% capture yearstr %}{{ page.title | split: " " | last }}{% endcapture %}
+  {% capture searchstr %}"{{ page.title | remove: yearstr | strip }}"{% endcapture %}
   <div class="btn-group my-1" role="group" aria-label="Search group">
     <!-- Search on google -->
     <a class="btn btn-info mx-1" aria-label="Search google"
-    href="https://www.google.ca/search?q={{page.title}}"
+    href="https://www.google.ca/search?q={{ searchstr | url_encode }}"
     role="button" target="_blank">
       google
     </a>
     <!-- Search on bing -->
     <a class="btn btn-info mx-1" aria-label="Search bing"
-    href="https://www.bing.com/search?q={{ page.title }}"
+    href="https://www.bing.com/search?q={{ searchstr | url_encode }}"
     role="button" target="_blank">
       bing
     </a>
     <!-- Search on google scholar -->
     <a class="btn btn-info mx-1" aria-label="Search google scholar"
-    href="https://scholar.google.ca/scholar?hl=en&as_sdt=0%2C5&q={{page.title}}&btnG="
+    href="https://scholar.google.ca/scholar?hl=en&as_sdt=0%2C5&q={{ searchstr | url_encode }}&btnG="
     role="button" target="_blank">
       google scholar
     </a>
