@@ -13,6 +13,7 @@ rubric:
   - crit: Summarize Data
     wt: 1
   - crit: Reflection
+    wt: 1
 ---
 ### Description
 
