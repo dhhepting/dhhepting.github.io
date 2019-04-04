@@ -11,7 +11,7 @@ print(datetime.datetime.now(),file=sys.stderr)
 # - the absolute path to the website's local root directory
 # - the course/semester (in that form): i.e. CS-428+828/201830
 # - the absolute path to the local Dropbox directory
-print("ARGS: ", sys.argv)
+print("OFFERING: ", sys.argv[2])
 if (len(sys.argv) != 3):
   print (sys.argv[0],"must be invoked with \"<path-to-site-directory> <course>/<semester>\"")
   sys.exit()
@@ -81,6 +81,7 @@ with open(dbmedia_csv,"w") as data_file:
     data_file.write("meet,file,URL\n")
     for w in sorted(filedict, key=filedict.get, reverse=True):
         meetstr = str(w).split(".")
+        # print (meetstr)
         if " " in meetstr[0]:
             meetstr = meetstr[0].split(" ")
         data_str = str(meetstr[0])+ "," + str(w) + "," + str(filedict[w]+"\n")
