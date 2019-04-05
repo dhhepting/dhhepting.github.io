@@ -5,7 +5,7 @@ let param = 2;
 
 function setup() {
   let cnv = createCanvas(320, 240)
-  cnv.parent('sketch-holder-c1')
+  cnv.parent('sketch-holder')
   background(128);
   capture = createCapture(VIDEO);
   capture.size(320, 240);
@@ -13,7 +13,7 @@ function setup() {
   fname = THRESHOLD;
 
   sel = createSelect();
-  sel.parent('sketch-holder-c2')
+  sel.parent('sketch-holder')
   sel.position(10, 10);
   sel.option(THRESHOLD);
   sel.option(GRAY);
