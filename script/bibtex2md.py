@@ -10,14 +10,14 @@ from slugify import slugify
 import yaml
 
 force = False
-bib_data = parse_file('../research/dhhepting.bib')
+bib_data = parse_file('/Users/hepting/Sites/dhhepting.github.io/research/dhhepting.bib')
 # allow regeneration to be forced with "-f"
 if len(sys.argv) == 2:
     if sys.argv[1] == "-f":
         force = True
 
-bibtex_path = "../_works/bibtex/"
-yaml_path = "../_data/research/works/"
+bibtex_path = "/Users/hepting/Sites/dhhepting.github.io/_works/bibtex/"
+yaml_path = "/Users/hepting/Sites/dhhepting.github.io/_data/research/works/"
 
 #
 # return field value string, if keystr is a key (otherwise exit)
