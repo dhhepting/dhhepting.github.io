@@ -8,6 +8,7 @@ layout: bg-image
 # {{ page.breadcrumb }}
 
 - [Academia.edu](https://uregina.academia.edu/DarylHepting){: target="blank" }
+- [Association for Computing Machinery](http://member.acm.org/~dhepting){: target="blank" }
 - [AMiner](https://aminer.org/profile/53f45b6bdabfaedd74e4095c){: target="blank" }
 - [Collection of CS Bibliographies](http://liinwww.ira.uka.de/csbib?query=%2Bau:HeptingDH){: target="blank" }
 - [csauthors.net](https://www.csauthors.net/daryl-h-hepting/){: target="blank" }
@@ -27,3 +28,4 @@ layout: bg-image
 - [researchr](http://researchr.org/profile/darylhepting){: target="blank" }
 - [SemanticScholar](https://www.semanticscholar.org/author/Daryl-H-Hepting/2926392){: target="blank" }
 - [WorldCat Identities](https://worldcat.org/identities/lccn-no2015051738/)
+- [Zotero](https://www.zotero.org/dhhepting/)

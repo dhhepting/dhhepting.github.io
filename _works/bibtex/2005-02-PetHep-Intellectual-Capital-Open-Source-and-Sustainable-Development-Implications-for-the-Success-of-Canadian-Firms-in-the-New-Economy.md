@@ -5,6 +5,8 @@ citekey: 2005-02-PetHep
 title: "Intellectual Capital, Open Source, and Sustainable Development: Implications for the Success of Canadian Firms in the New Economy (2005)"
 breadcrumb: "Intellectual Capital, Open Source, and Sustainable Development: Implications for the Success of Canadian Firms in the New Economy (2005)"
 category: conference
+projects:
+ - open-source
 authors:
  - Roger A. Petry
  - Daryl H. Hepting

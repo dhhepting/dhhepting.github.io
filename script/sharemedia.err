@@ -877,3 +877,92 @@ NameError: name 'meeetstr' is not defined
 2019-04-05 15:54:56.040565
 2019-04-05 16:05:36.881447
 2019-04-05 16:12:38.524170
+2019-04-06 15:11:14.915121
+2019-04-07 16:48:09.151833
+2019-04-08 14:00:08.094474
+2019-04-09 14:53:33.596645
+2019-04-10 13:56:02.643196
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py", line 296, in recv_into
+    return self.recv_into(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py", line 285, in recv_into
+    raise SocketError(str(e))
+OSError: (60, 'ETIMEDOUT')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py", line 296, in recv_into
+    return self.recv_into(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py", line 285, in recv_into
+    raise SocketError(str(e))
+urllib3.exceptions.ProtocolError: ('Connection aborted.', OSError("(60, 'ETIMEDOUT')",))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Sites/dhhepting.github.io/script/sharemedia.py", line 71, in <module>
+    share = dbx.sharing_create_shared_link(dbp)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/base.py", line 3095, in sharing_create_shared_link
+    None,
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 272, in request
+    timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 363, in request_json_string_with_retry
+    timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 447, in request_json_string
+    timeout=timeout,
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/sessions.py", line 555, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/adapters.py", line 490, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', OSError("(60, 'ETIMEDOUT')",))
+2019-04-10 14:26:42.200568
+2019-04-10 14:29:53.292278
+2019-04-11 14:00:08.374037
+2019-04-12 14:00:05.179215
+2019-04-13 14:00:13.285752
+2019-04-14 14:00:06.791652
+2019-04-14 14:48:17.644343
+2019-04-15 14:00:07.433225

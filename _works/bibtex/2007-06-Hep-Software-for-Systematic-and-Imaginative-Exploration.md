@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /research/dwnld/cc2007systematic.pdf
 main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2007-06-Hep
