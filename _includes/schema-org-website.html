@@ -3,12 +3,14 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "url": "{{ "/" | absolute_url }}",
+  {% comment %}
   "about":
   {
     "@type": "Person",
     "@id": "{{ "/about/" | absolute_url }}#DHHepting"
   },
   "description": "{{ site.title }} : {{ site.description }}",
+  {% endcomment %}
   "potentialAction": [{
     "@type": "SearchAction",
 {%- assign search_url = "/search/" | absolute_url -%}
