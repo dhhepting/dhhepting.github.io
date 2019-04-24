@@ -15,6 +15,7 @@ layout: bg-image
 - [DBLP](http://dblp.uni-trier.de/pers/hd/h/Hepting:Daryl_H=.html){: target="blank" }
 - [Google Scholar](https://scholar.google.ca/citations?user=iXVS1CAAAAAJ&hl=en){: target="blank" }
 - [Impactstory](https://impactstory.org/u/0000-0002-3138-3521){: target="blank" }
+- [ISNI](http://www.isni.org/isni/0000000075888754){: target="blank" }
 - [Interaction Design Foundation](https://www.interaction-design.org/literature/author/daryl-h-hepting){: target="blank" }
 - [Mendeley](https://www.mendeley.com/profiles/daryl-hepting/){: target="blank" }
 - [Microsoft Academic](https://academic.microsoft.com/#/detail/226149746){: target="blank" }
