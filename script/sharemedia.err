@@ -974,3 +974,244 @@ requests.exceptions.ConnectionError: ('Connection aborted.', OSError("(60, 'ETIM
 2019-04-21 15:28:54.346008
 2019-04-22 14:00:05.362111
 2019-04-23 14:00:04.625447
+2019-04-24 14:00:04.807946
+2019-04-25 14:00:05.643988
+2019-04-26 14:28:46.542137
+2019-04-27 14:00:05.535051
+2019-04-28 14:00:08.177901
+2019-04-29 03:03:16.637618
+2019-04-29 03:40:58.996534
+2019-04-29 14:00:03.882566
+2019-04-30 14:00:03.873845
+2019-05-01 14:00:03.620604
+2019-05-02 14:22:17.486162
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py", line 296, in recv_into
+    return self.recv_into(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py", line 285, in recv_into
+    raise SocketError(str(e))
+OSError: (54, 'ECONNRESET')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py", line 296, in recv_into
+    return self.recv_into(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py", line 285, in recv_into
+    raise SocketError(str(e))
+urllib3.exceptions.ProtocolError: ('Connection aborted.', OSError("(54, 'ECONNRESET')",))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Sites/dhhepting.github.io/script/sharemedia.py", line 71, in <module>
+    share = dbx.sharing_create_shared_link(dbp)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/base.py", line 3095, in sharing_create_shared_link
+    None,
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 272, in request
+    timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 363, in request_json_string_with_retry
+    timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 447, in request_json_string
+    timeout=timeout,
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/sessions.py", line 555, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/adapters.py", line 490, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', OSError("(54, 'ECONNRESET')",))
+2019-05-03 13:15:15.510761
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x10f22f550>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10f22f550>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Sites/dhhepting.github.io/script/sharemedia.py", line 53, in <module>
+    dbx.users_get_current_account()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/base.py", line 4301, in users_get_current_account
+    None,
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 272, in request
+    timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 363, in request_json_string_with_retry
+    timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 447, in request_json_string
+    timeout=timeout,
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/sessions.py", line 555, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10f22f550>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+2019-05-03 14:00:02.891091
+2019-05-04 14:00:09.164362
+2019-05-05 14:00:02.264264
+2019-05-06 14:48:28.668107
+2019-05-07 14:44:57.220199
+2019-05-08 14:00:04.952067
+2019-05-09 14:01:23.080120
+2019-05-10 14:01:26.836331
+2019-05-11 14:23:11.983081
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py", line 296, in recv_into
+    return self.recv_into(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py", line 285, in recv_into
+    raise SocketError(str(e))
+OSError: (54, 'ECONNRESET')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py", line 296, in recv_into
+    return self.recv_into(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py", line 285, in recv_into
+    raise SocketError(str(e))
+urllib3.exceptions.ProtocolError: ('Connection aborted.', OSError("(54, 'ECONNRESET')",))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Sites/dhhepting.github.io/script/sharemedia.py", line 71, in <module>
+    share = dbx.sharing_create_shared_link(dbp)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/base.py", line 3095, in sharing_create_shared_link
+    None,
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 272, in request
+    timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 363, in request_json_string_with_retry
+    timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 447, in request_json_string
+    timeout=timeout,
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/sessions.py", line 555, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests/adapters.py", line 490, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', OSError("(54, 'ECONNRESET')",))
+2019-05-12 14:00:03.530665
+2019-05-13 14:00:05.318307
+2019-05-14 14:08:48.915100
+2019-05-15 14:00:05.578624
+2019-05-16 14:00:04.699711
+2019-05-17 14:00:04.740448
+2019-05-18 14:00:03.929341
+2019-05-19 17:52:59.292591
+2019-05-20 14:00:03.722883
+2019-05-21 14:00:03.757171
+2019-05-22 14:00:06.423608
