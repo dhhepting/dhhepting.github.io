@@ -1,6 +1,6 @@
 ---
-title: CS 499+900
-breadcrumb: CS 499+900
+title: CS 499+900 in Spring/Summer 2019
+breadcrumb: 201920
 layout: bg-image
 ---
-# {{ page.breadcrumb }}
+{% include offering-index.html %}
