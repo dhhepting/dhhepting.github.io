@@ -60,20 +60,22 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="{{ "/assets/bg/about.jpg" | relative_url }}" />
 
+{% comment %}
 {% if page.url == "/" %}
   {% include schema-org-website.html %}
 {% else %}
   {% include seo-schema-org.html %}
 {% endif %}
-{% comment %}
+
 {% seo %}
-{% for ldx in site.data.schema %}
-  {% if ldx.citekey == page.citekey %}
+{% endcomment %}
+{% for ldx in site.data.download %}
+  {% if ldx.citeKey == page.citekey %}
     <script type="application/ld+json">
       {{ ldx.linkeddata | replace: '=>', ':' }}
     </script>
   {% endif %}
 {% endfor %}
-{% endcomment %}
+
 
 </head>
