@@ -14,7 +14,7 @@
         {% assign crsoff = url_parts | last %}
         {% if crsoff contains "2" %}
           {% capture crsoff_url %}{{crsoff}}/{%endcapture%}
-          {% capture crs_url  %}{{ sp.url | remove: crsoff_url }}{%endcapture%}
+          {% capture crs_url %}{{ sp.url | remove: crsoff_url }}{%endcapture%}
           {% capture crs_ids %}{{crs_ids}}|{{crs_url}}#{{crs_id}}{% endcapture %}
           {% capture crsoffs %}{{crsoffs}}|{{crs_id}}#{{crsoff}}{% endcapture %}
         {% endif %}
@@ -23,8 +23,8 @@
   {% endif %}
 {% endfor %}
 
-{% assign sortedcrsoffs = crsoffs | split: '|' | sort %}
 {% assign sortedcrs_ids = crs_ids | split: '|' | uniq | sort %}
+{% assign sortedcrsoffs = crsoffs | split: '|' | sort | reverse %}
 {% capture numcourses %}{{ sortedcrs_ids.size | minus:1 }}{% endcapture %}
 {% capture numoffs %}{{ sortedcrsoffs.size | minus:1 }}{% endcapture %}
 
@@ -32,31 +32,57 @@
   <h3 class="card-header text-center">Courses Taught</h3>
   <div class="card-body">
     <ul class="list-group list-group-flush">
-      {% for i in (1..numcourses) %}
-          {%- assign cc = sortedcrs_ids[i] | split: '#' -%}
-          {%- assign crs_name = "" -%}
-          {%- for crs in site.data.teaching.courses -%}
-            {%- if crs.id == cc[1] -%}
-      	      {%- assign crs_name = crs.name -%}
-              {% break %}
-            {%- endif -%}
-          {%- endfor -%}
-          {% if crs_name %}
       <li class="list-group-item">
-        <a href="{{ cc[0] | relative_url }}">
-          {{cc[1] | replace: "-"," "}} : {{crs_name}}
-        </a>
-        ( &nbsp;
-        {% for j in (1..numoffs) %}
+        <div class="row align-items-center justify-content-between">
+        <div class="col-9 d-inline">
+          Course
+        </div>
+        <div class="col-3 d-inline">
+          Semesters
+        </div>
+        </div>
+      </li>
+    {% for i in (1..numcourses) %}
+      {%- assign crs_name = "" -%}
+      {%- assign cc = sortedcrs_ids[i] | split: '#' -%}
+      {%- for crs in site.data.teaching.courses -%}
+        {%- if crs.id == cc[1] -%}
+          {%- assign crs_name = crs.name -%}
+          {% break %}
+        {%- endif -%}
+      {%- endfor -%}
+      <li class="list-group-item">
+        <div class="row align-items-center justify-content-between">
+        <div class="col-9 d-inline">
+          <a href="{{ cc[0] | relative_url }}">
+            {{cc[1] | replace: "-"," "}} : {{crs_name}}
+          </a>
+        </div>
+        {%- assign sems = "" -%}
+        {% for j in (0..numoffs) %}
           {%- assign co = sortedcrsoffs[j] | split: '#' -%}
           {%- if cc[1] == co[0] -%}
-            {{ co[1] }} &nbsp;
+            {% capture sems %}{{sems}}|{{co[1]}}{% endcapture %}
           {%- endif -%}
-        {%- endfor -%}
-        )
+        {% endfor %}
+        {% assign semlist = sems | split: '|' | sort | reverse %}
+        <div class="dropdown d-inline col-3">
+          <button class="btn btn-secondary button-right dropdown-toggle" type="button"
+          id="ddSems{{cc[1]}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ semlist[0] }}
+          </button>
+          <div class="dropdown-menu" aria-labelledby="ddSems{{cc[1]}}">
+            {%- assign sls = semlist.size | minus: 2 -%}
+            {% for k in (0..sls) %}
+            <a class="dropdown-item" href="{{cc[0]}}/{{semlist[k]}}">
+              {{ semlist[k] }}
+            </a>
+            {%- endfor -%}
+          </div>
+      </div>
+      </div>
       </li>
-      {%- endif -%}
-  {% endfor %}
+    {%- endfor -%}
     </ul>
   </div>
 </div>
