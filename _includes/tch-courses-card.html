@@ -74,7 +74,7 @@
           <div class="dropdown-menu" aria-labelledby="ddSems{{cc[1]}}">
             {%- assign sls = semlist.size | minus: 2 -%}
             {% for k in (0..sls) %}
-            <a class="dropdown-item" href="{{cc[0]}}/{{semlist[k]}}">
+            <a class="dropdown-item" href="{{ cc[0] | relative_url }}/{{ semlist[k] }}">
               {{ semlist[k] }}
             </a>
             {%- endfor -%}
