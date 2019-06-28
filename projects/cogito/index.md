@@ -1,8 +1,10 @@
 ---
 title: cogito
 breadcrumb: cogito
-description: Description of cogito
-projects: 
+description: Software developed during my doctoral studies
+redirect_from:
+  - /cogito/
+projects:
   - cogito
 layout: bg-image
 ---
