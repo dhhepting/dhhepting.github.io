@@ -3,6 +3,7 @@ title: Seminar Presentation
 breadcrumb: Presentation
 layout: bg-image
 marks: 1
+nid: PS
 rubric:
 - crit: Organization
   wt: 0.25
