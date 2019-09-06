@@ -1,0 +1,65 @@
+{% comment %}{% endcomment %}
+{% assign kaaa = page.url | split: "/" | last | remove: ".html" %}
+{% assign fili = "" %}
+{%- for tlo in site.data.teaching.CC2013[kaaa] -%}
+    {% capture fili %}{{ fili }},{{ tlo[0] }}{% endcapture %}
+{%- endfor -%}
+{% assign sfil = fili | split: "," | sort %}
+
+{%- for sf in sfil offset: 2 -%}
+  {%- assign tlo_dat = site.data.teaching.CC2013[kaaa][sf] -%}
+  {%- if tlo_dat -%}
+<div class="card" id="{{ sf }}">
+  <div class="card-header">
+    <h3>{{ sf | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, sf.size }}</h3>
+	</div>
+	<div class="card-body">
+    {% if tlo_dat.preamble %}
+      {%- for pre in tlo_dat.preamble -%}
+    <div class="row">
+      <div class="col-md-12">
+        <h5>{{ pre.label }}</h5>
+        <p>{{ pre.desc }}</p>
+      </div>
+    </div>
+      {% endfor %}
+    {% endif %}
+
+	  <div class="row">
+	    <div class="col-md-6">
+	      <h5>Topics</h5>
+	      <ol>
+          {%- for top in tlo_dat.topics -%}
+          <li id="{{ sf }}-{{ top.label }}">{{ top.desc }}
+            {%- if top.details -%}
+            <ul>
+              {%- for td in top.details -%}
+              <li>{{ td }}</li>
+              {%- endfor -%}
+            </ul>
+            {%- endif -%}
+          </li>
+          {%- endfor -%} {%comment%}for top {%endcomment%}
+	      </ol>
+	    </div>
+	    <div class="col-md-6">
+	      <h5>Learning Outcomes</h5>
+	      <ol>
+          {%- for lout in tlo_dat.outcomes -%}
+          <li id="{{ sf }}-{{ lout.label }}">{{ lout.desc }}
+            {%- if lout.details -%}
+            <ul>
+              {%- for lod in lout.details -%}
+              <li>{{ lod }}</li>
+              {%- endfor -%}
+            </ul>
+            {%- endif -%}
+          </li>
+          {%- endfor -%} {%comment%}for lout {%endcomment%}
+	      </ol>
+	    </div>
+    </div>
+	</div>
+</div>
+  {%- endif -%}
+{%- endfor -%}

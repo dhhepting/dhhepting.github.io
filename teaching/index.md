@@ -20,6 +20,16 @@ layout: bg-image
     <div class="card-body">
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
+          <a href="schedule/">
+            Semester Schedule
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="curriculum">
+            Computer Science Curriculum
+          </a>
+        </li>
+        <li class="list-group-item">
           <a href="philosophy.html">
             Teaching Philosophy
           </a>

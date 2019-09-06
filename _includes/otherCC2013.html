@@ -1,0 +1,157 @@
+# Knowledge Areas, Topics, and Learning Outcomes
+
+<hr />
+
+Topics and Learning Outcomes for the Knowledge Areas explored in this course are based on the
+[ACM/IEEE Curriculum Guidelines for Undergraduate Degree Programs in Computer Science (2013)](https://www.acm.org/binaries/content/assets/education/cs2013_web_final.pdf).
+That report associates one of three levels of mastery with each Learning Outcome. The mastery levels are defined as:
+
+* Familiarity: The student understands what a concept is or what it means.
+This level of mastery concerns a basic awareness of a concept as opposed to
+expecting real facility with its application.
+It provides an answer to the question “What do you know about this?”
+* Usage: The student is able to use or apply a concept in a
+concrete way.
+Using a concept may include, for example,
+appropriately using a specific concept in a program,
+using a particular proof technique,
+or performing a particular analysis.
+It provides an answer to the question “What do you know how to do?”
+* Assessment: The student is able to consider a concept from
+multiple viewpoints and/or justify the selection of a
+particular approach to solve a problem.
+This level of mastery implies more than using a concept;
+it involves the ability to select an appropriate
+approach from understood alternatives.
+It provides an answer to the question “Why would you do that?”
+
+<hr />
+
+This course explores the following (alphabetically-listed) knowledge areas, topics, and learning outcomes (click on one of the links below to jump to details):
+
+{% assign ctr = 1 %}
+<ul>
+{%- for tlo in page.tlouts -%}
+	<li><a href="#know{{ctr}}">{{tlo.ka | replace: "--", ", " | replace: "-"," " | replace: "_","-"}}</a></li>
+	{%- assign ctr  = ctr | plus: 1 -%}
+{% endfor %}
+</ul>
+
+{%- assign ctr = 1 -%}
+{%- for tlo in page.tlouts -%}
+  {%- assign tlo_parts = tlo.ka | split: "/" -%}
+  {% assign var1 = tlo_parts[0] %}
+  {% assign var2 = tlo_parts[1] %}
+  {%- assign tlo_dat = site.data.teaching.CC2013[var1][var2] -%}
+  {%- if tlo_dat -%}
+<div class="card" id="know{{ctr}}">
+  <div class="card-header">
+    <h3>{{tlo.ka | replace: "--",", " | replace: "-"," " | replace: "_","-"}}</h3>
+	</div>
+	<div class="card-body">
+    {% if tlo_dat.Introduction %}
+    <div class="row mx-1">
+      <h5>Introduction</h5><br />
+      <p>
+        {{ tlo_dat.Introduction }}
+      </p>
+    </div>
+    {% endif %}
+    {% if tlo_dat.Motivation %}
+	  <div class="row mx-1">
+	    <h5>Motivation</h5><br />
+	    <p>
+		      {{ tlo_dat.Motivation }}
+	    </p>
+	  </div>
+    {% endif %}
+    {% if tlo_dat.Preamble %}
+	  <div class="row mx-1">
+	    <p>
+        {{ tlo_dat.Preamble | markdownify }}
+	    </p>
+	  </div>
+    {% endif %}
+	  <div class="row">
+	    <div class="col-md-6">
+	      <h5>Topics</h5>
+	      <ul>
+        {% if tlo.spectop %}
+          {% for st in tlo.spectop %}
+            {%- for top in tlo_dat.Topics -%}
+              {%- if st == top.label -%}
+                {%- if top.details -%}
+                  <li>{{ top.desc }}
+                    <ul>
+                      {%- for td in top.details -%}
+                        <li>{{ td }}</li>
+                      {%- endfor -%}
+                    </ul>
+                  </li>
+                {%- else -%}
+                  <li>{{ top.desc }}</li>
+                {%- endif -%} {%comment%}top.details {%endcomment%}
+              {%- endif -%} {%comment%}st == top.label {%endcomment%}
+            {%- endfor -%} {%comment%}for top {%endcomment%}
+          {%- endfor -%}{%comment%}for spectop {%endcomment%}
+        {%- else -%}
+          {%- for top in tlo_dat.Topics -%}
+              {%- if top.details -%}
+                <li>{{ top.desc }}
+                  <ul>
+                    {%- for td in top.details -%}
+                      <li>{{ td }}</li>
+                    {%- endfor -%}
+                  </ul>
+                </li>
+              {%- else -%}
+                <li>{{ top.desc }}</li>
+              {%- endif -%} {%comment%}top.details {%endcomment%}
+          {%- endfor -%} {%comment%}for top {%endcomment%}
+        {%- endif -%}
+	      </ul>
+	    </div>
+	    <div class="col-md-6">
+	      <h5>Learning Outcomes</h5>
+	      <ul>
+        {% if tlo.speclo %}
+          {% for slo in tlo.speclo %}
+            {%- for lout in tlo_dat.Learning-Outcomes -%}
+              {%- if slo == lout.label -%}
+                {%- if lout.details -%}
+                  <li>{{ lout.desc }}
+                    <ul>
+                      {%- for lod in lout.details -%}
+                        <li>{{ lod }}</li>
+                      {%- endfor -%}
+                    </ul>
+                  </li>
+                {%- else -%}
+                  <li>{{ lout.desc }}</li>
+                {%- endif -%} {%comment%}lout.details {%endcomment%}
+              {%- endif -%} {%comment%}slo == lout.label {%endcomment%}
+            {%- endfor -%} {%comment%}for lout {%endcomment%}
+          {%- endfor -%}{%comment%}for speclo {%endcomment%}
+          {%- else -%}
+            {%- for lout in tlo_dat.Learning-Outcomes -%}
+                {%- if lout.details -%}
+                  <li>{{ lout.desc }}
+                    <ul>
+                      {%- for lod in lout.details -%}
+                        <li>{{ lod }}</li>
+                      {%- endfor -%}
+                    </ul>
+                  </li>
+                {%- else -%}
+                  <li>{{ lout.desc }}</li>
+                {%- endif -%} {%comment%}lout.details {%endcomment%}
+            {%- endfor -%} {%comment%}for lout {%endcomment%}
+          {%- endif -%}
+	      </ul>
+	    </div>
+	</div>
+	</div>
+	</div>
+	{%- assign ctr  = ctr | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
