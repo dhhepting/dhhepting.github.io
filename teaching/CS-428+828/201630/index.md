@@ -1,15 +1,7 @@
 ---
-crs_id: CS428+828
-crs_nbr: 428+828
-crs_subj: CS
-title: CS 428 + 828 
-crs_name: Human Computer Communication
+title: CS 428+828 in Fall 2016
 breadcrumb: 201630
-layout: default
+layout: bg-image
 ---
-# {{ page.crs_subj }} {{ page.crs_nbr }}
 
-### Human Computer Communication
-
-{% include index-dir.html %}
-
+{% include offering/main.html %}
