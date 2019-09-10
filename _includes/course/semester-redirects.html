@@ -28,7 +28,8 @@ if (typ || asgn) {
       sem = 30;
   }
   let semid = today.getFullYear().toString() + sem.toString();
-  console.log(typ)
+  const crs = String(cu.pathname).split('/')[2]
+  // test that there is an offering in current semester
   let cu_str = cu.origin + cu.pathname
   if (typ == 'current') {
     let cu_str = cu.origin + cu.pathname + semid + '/'
