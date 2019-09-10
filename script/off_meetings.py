@@ -48,7 +48,7 @@ with open(SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings/index.md","w") as mtgidx
     mtgidx.write("layout: bg-image\n")
     mtgidx.write("---\n")
     mtgidx.write("#" + reldir[0] + " (" + reldir[1] + ") Meetings\n")
-    mtgidx.write("{% include index-dir.html %}\n")
+    mtgidx.write("{% include meetings/index-table.html %}\n")
 with open(mtgdatafile,"w") as mtgdata:
     mtgdata.write("meeting,file\n")
     for line in utfout:
@@ -72,9 +72,30 @@ with open(mtgdatafile,"w") as mtgdata:
                     mtgfile.write("total_meet: " + str(nbr_meetings) + "\n")
                     mtgfile.write("mtg_date: " + mtg_dt.strftime('%d-%b-%y') + "\n")
                     mtgfile.write("layout: bg-image\n")
+                    mtgfile.write("focus:\n")
+                    mtgfile.write("- ka: HCI\n")
+                    mtgfile.write("  ku: 01-Foundations\n")
+                    mtgfile.write("  topic: t01\n")
+                    mtgfile.write("  outcome: l01\n")
                     mtgfile.write("---\n")
-                    mtgfile.write("{% include mtg-pagination.html %}\n")
+                    mtgfile.write("{% include meetings/pagination.html %}\n")
                     mtgfile.write("<h1 class=\"text-center\">{{ page.mtg_date }}</h1>\n<hr />\n")
-                    mtgfile.write("{% include meeting-media.html mtg_media=off_med mtg=page.mtg_nbr %}\n")
+                    mtgfile.write("### Administration\n")
+                    mtgfile.write("\n")
+                    mtgfile.write("### Questions?\n")
+                    mtgfile.write("\n")
+                    mtgfile.write("### Outline for Today\n")
+                    mtgfile.write("\n")
+                    mtgfile.write("{% include meetings/topics.html %}\n")
+                    mtgfile.write("\n")
+                    mtgfile.write("{% include meetings/outcomes.html %}\n")
+                    mtgfile.write("\n")
+                    mtgfile.write("### To Do\n")
+                    mtgfile.write("\n")
+                    mtgfile.write("<hr />\n")
+                    mtgfile.write("{% include meetings/media.html mtg_media=off_med mtg=page.mtg_nbr %}\n")
+
+
+                    #mtgfile.write("{% include meeting-media.html mtg_media=off_med mtg=page.mtg_nbr %}\n")
             except:
                 pass
