@@ -1,25 +1,12 @@
----
-title: Schedule
-breadcrumb: Schedule
-redirect_from:
-  - /teaching/201320.html
-  - /teaching/sem/
-  - /teaching/201820.html
-layout: bg-image
----
-# {{ page.breadcrumb }}
-
-{% include index-dir.html %}
-
 <script>
 let cu = new URL(document.location)
 const params = new URLSearchParams(location.search)
 let typ = params.get("type")
-// let asgn = params.get("asgn")
+let asgn = params.get("asgn")
 // get current semester
 let today = new Date();
 let sem = 0;
-if (typ) {
+if (typ || asgn) {
   switch (today.getMonth())
   {
     case 0:
@@ -47,4 +34,19 @@ if (typ) {
     let cu_str = cu.origin + cu.pathname + semid + '/'
     window.location.replace(cu_str)
   }
+  if (typ == 'meetings') {
+    let cu_str = cu.origin + cu.pathname + semid + '/meetings/'
+    window.location.replace(cu_str)
+  }
+  if (typ == 'media') {
+    let cu_str = cu.origin + cu.pathname + semid + '/media/'
+    window.location.replace(cu_str)
+  }
+  if (asgn) {
+    let cu_str = cu.origin + cu.pathname + semid + '/assignments.html' + '?asgn=' + asgn
+    window.location.replace(cu_str)
+  }
 }
+  // let cu_str = cu.origin + cu.pathname + crs + "/" + semid + "/assignments.html" + "?asgn=" + asgn
+
+</script>

@@ -1,0 +1,34 @@
+# Assignments
+
+{% include teaching/url.html %}
+
+{% if site.data.teaching.assignments[joff_id] %}
+  <div class="accordion" id="assign-accord">
+  {% for sdta in site.data.teaching.assignments[joff_id] %}
+    <div class="card">
+      <div class="card-header" id="{{ sdta.id }}-head">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed accordion-toggle" data-toggle="collapse" data-target="#collapse-{{sdta.id}}" role="button" aria-expanded="false" aria-controls="collapse_{{sdta.id}}">
+          {{ sdta.title }}
+          </button>
+        </h2>
+      </div>
+      <div id="collapse-{{ sdta.id }}" class="collapse" aria-labelledby="{{ sdta.id }}-head" data-parent="#assign-accord">
+        <div class="card-body">
+          {% for sa in site.assignments %}
+            {% if sa.title == sdta.title %}
+              {{ sa.content | markdownify }}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+{% endif %}
+<script>
+const params = new URLSearchParams(location.search)
+let asgn = params.get('asgn')
+document.getElementById('collapse-' + asgn).classList.toggle('show')
+</script>

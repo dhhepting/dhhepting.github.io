@@ -1,0 +1,22 @@
+{%- capture know_url -%}/teaching/{{crs_sbj}}-{{crs_nbr}}/{{crs_sem}}/topics.html{%- endcapture -%}
+{%- for sp in site.pages -%}
+  {%- if sp.url == know_url -%}
+    {%- assign topp = sp -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if topp -%}
+<div class="card my-2">
+  <h3 class="card-header text-center">Knowledge Units</h3>
+  <div class="card-body h-50 scrollable">
+    {% assign ctr = 1 %}
+    <ul class="list-group list-group-flush">
+    {%- for tlo in topp.tlouts -%}
+    	<li class="list-group-item"><a href="topics.html#know{{ctr}}">{{tlo.ka | replace: "--", ", " | replace: "-"," " | replace: "_","-"}}</a></li>
+    	{%- assign ctr  = ctr | plus: 1 -%}
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+{%- endif -%}
