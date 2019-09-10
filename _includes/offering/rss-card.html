@@ -1,0 +1,55 @@
+<div class="card my-2">
+  <h3 class="card-header text-center">Updates</h3>
+  <div id="update-div" class="card-body h-50 scrollable">
+    <ul class="list-group list-group-flush">
+    </ul>
+  </div>
+</div>
+
+{% capture rss_url %}/rss/{{ off_id }}.rss{% endcapture %}
+<script>
+/* global $ */
+$.get('{{ rss_url | relative_url }}', function (data) {
+  var $XML = $(data)
+  $XML.find('item').each(function () {
+    var $this = $(this),
+        item = {
+        title:       $this.find('title').text(),
+        link:        $this.find('link').text(),
+        description: $this.find('description').text(),
+        pubDate:     $this.find('pubDate').text(),
+        author:      $this.find('author').text()
+        }
+
+    /* console.log(item.title) */
+    if (item.link) {
+      var linktext = item.title.split('/').pop()
+      if (linktext !== 'index.html') {
+        $('#update-div ul').append(
+          $('<li>').append(
+            $('<a>').attr('href', item.link).append(
+              linktext
+            )).addClass('list-group-item'))
+      }
+    } else {
+      var redirecttext = 'Nowhere'
+      var redirectlink = '#'
+      if (item.title.startsWith('assignments')) {
+        redirecttext = 'Assignments'
+        redirectlink = '#assign-card'
+      }
+      if (item.title.startsWith('media')) {
+        redirecttext = 'Media'
+        redirectlink = '#media-card'
+      }
+      if (redirecttext !== 'Nowhere') {
+        $('#update-div ul').append(
+          $('<li>').append(
+            $('<a>').attr('href', redirectlink).append(
+              redirecttext
+            )).addClass('list-group-item'))
+      }
+    }
+  })
+})
+</script>

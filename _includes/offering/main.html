@@ -1,0 +1,18 @@
+{% comment %}
+{% endcomment %}
+
+{% include teaching/url.html %}
+
+# {{ crs_sbj }} {{ crs_nbr }} in {{ crs_sem }}
+
+{% include offering/calendar-card.html %}
+
+<div class="card-deck">
+  {% include offering/syllabus-card.html %}
+  {% include offering/rss-card.html %}
+  {% include offering/knowledge-card.html %}
+</div>
+
+{% include offering/assignments-card.html %}
+
+{% include offering/media-card.html %}
