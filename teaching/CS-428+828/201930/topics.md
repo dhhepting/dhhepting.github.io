@@ -1,7 +1,7 @@
 ---
 layout: bg-image
-title: Topics and Learning Outcomes for CS 428+828
-breadcrumb: Topics &amp; Learning Outcomes
+title: Topics and Outcomes for CS 428+828 in 201930
+breadcrumb: Topics &amp; Outcomes
 tlouts:
 - ka: HCI/Foundations
 - ka: HCI/Designing-Interaction
