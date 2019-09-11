@@ -18,7 +18,6 @@
         <tbody>
         {% for sdta in site.data.teaching.assignments[joff_id] %}
           {% for sa in site.assignments %}
-            {{ sa.aid }}
             {% if sa.aid == sdta.aid %}
               {% if sa.marks | plus: 0 == sdta.marks | plus: 0 %}
           <tr class="d-flex">

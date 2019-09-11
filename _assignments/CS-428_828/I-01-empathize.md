@@ -46,6 +46,4 @@ as you complete this task.
 * submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
 * target: 1 page for the empathy map and 1-2 pages for the opportunities for redesign
 
-### Grading
-
-{% include marker.html %}
+{% include grading/main.html %}
