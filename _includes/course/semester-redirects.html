@@ -30,18 +30,23 @@ if (typ || asgn) {
   const semid = today.getFullYear().toString() + sem.toString();
   const crs = String(cu.pathname).split('/')[2]
   // test that there is an offering in current semester
-  let cu_str = cu.origin + cu.pathname
-  if (typ === 'current') {
-    let cu_str = cu.origin + cu.pathname + semid + '/'
+  // let cu_str = cu.origin + cu.pathname
+  let cu_str = 'Zero!'
+  if (typ == 'current') {
+    cu_str = cu.origin + cu.pathname + semid + '/'
+    console.log('current: ' + cu_str)
   }
-  if (typ == 'meetings') {
-    let cu_str = cu.origin + cu.pathname + semid + '/meetings/'
+  else if (typ == 'meetings') {
+    cu_str = cu.origin + cu.pathname + semid + '/meetings/'
   }
-  if (typ == 'media') {
-    let cu_str = cu.origin + cu.pathname + semid + '/media/'
+  else if (typ == 'media') {
+    cu_str = cu.origin + cu.pathname + semid + '/media/'
   }
-  if (asgn) {
-    let cu_str = cu.origin + cu.pathname + semid + '/assignments.html' + '?asgn=' + asgn
+  else if (asgn) {
+    cu_str = cu.origin + cu.pathname + semid + '/assignments.html' + '?asgn=' + asgn
+  }
+  else {
+    cu_str = 'Nothing!'
   }
   $.get(cu_str).done(
   function () {
