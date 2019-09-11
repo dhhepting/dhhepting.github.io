@@ -58,7 +58,7 @@ Recall the diagram that [illustrated the article about Design Thinking](https://
 The focus now shifts to testing your low-fidelity prototypes.
 Each member of your group will conduct 1 test with each of your
 group's 2 low-fidelity interface prototypes).  The tests will be
-arranged from within your evaluation (Eval) groups.  
+arranged from within your evaluation (Eval) groups.
 
 IMPORTANT: If you find that your evaluation group includes someone from your project group, please let me know so that I can adjust the evaluation groups.
 

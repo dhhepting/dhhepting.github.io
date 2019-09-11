@@ -21,7 +21,7 @@ Topic (3)			Topic somewhat engages an important issue related to class.	Topic do
 Deliverable and Realization (3.5)	Deliverable is used appropriately and imaginatively. Realization of approach is clear and well-formed	Deliverable is used appropriately. Realization of approach is reasonable	Deliverable is used somewhat appropriately. Realization of approach is mostly unclear and not well-formed	Deliverable is not used appropriately. Realization of approach is not clear
 Completed Plan (3.5)	Ambitious and thorough	Reasonably thorough	Somewhat thorough	Not thorough
 {% endcomment %}
-# {{ page.breadcrumb }}		
+# {{ page.breadcrumb }}
 
 ### Description
 

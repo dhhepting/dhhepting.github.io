@@ -2,8 +2,9 @@
 title: Empathy Assignment
 breadcrumb: Empathize
 layout: bg-image
+moddate: 11-Sep-2019
 marks: 6
-nid: EA
+aid: I-EMP
 rubric:
 - crit: Task Completed
   wt: 2.0

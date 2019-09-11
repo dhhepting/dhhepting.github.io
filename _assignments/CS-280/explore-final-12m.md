@@ -25,7 +25,7 @@ rubric:
 ---
 ### Description
 
-As discussed, your exploration could involve (for example): a book review, a wikipedia entry, researching smaller assessment/why questions, discussion of contributing to an open source project (on github, for example), writing some code to test an idea, and so forth.  
+As discussed, your exploration could involve (for example): a book review, a wikipedia entry, researching smaller assessment/why questions, discussion of contributing to an open source project (on github, for example), writing some code to test an idea, and so forth.
 
 It is to deal with class themes in some way, and your ideas about how to do that were important.
 

@@ -18,13 +18,13 @@ rubric:
     l0: Unimportant issue, not developed
   - crit: Tentative Plan
     wt: 1.0
-    l3: Ambitious and thorough   
+    l3: Ambitious and thorough
     l2: Reasonably thorough
     l1: Somewhat thorough
     l0: Not thorough
   - crit: References
     wt: 0.5
-    l3: TWO (or more) quality sources, properly cited    
+    l3: TWO (or more) quality sources, properly cited
     l2: Reasonable sources, reasonably cited
     l1: Sources or citations not reasonable
     l0: Neither sources nor citations are reasonable

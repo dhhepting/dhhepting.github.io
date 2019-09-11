@@ -27,27 +27,27 @@ if (typ || asgn) {
     case 11:
       sem = 30;
   }
-  let semid = today.getFullYear().toString() + sem.toString();
+  const semid = today.getFullYear().toString() + sem.toString();
   const crs = String(cu.pathname).split('/')[2]
   // test that there is an offering in current semester
   let cu_str = cu.origin + cu.pathname
-  if (typ == 'current') {
+  if (typ === 'current') {
     let cu_str = cu.origin + cu.pathname + semid + '/'
-    window.location.replace(cu_str)
   }
   if (typ == 'meetings') {
     let cu_str = cu.origin + cu.pathname + semid + '/meetings/'
-    window.location.replace(cu_str)
   }
   if (typ == 'media') {
     let cu_str = cu.origin + cu.pathname + semid + '/media/'
-    window.location.replace(cu_str)
   }
   if (asgn) {
     let cu_str = cu.origin + cu.pathname + semid + '/assignments.html' + '?asgn=' + asgn
-    window.location.replace(cu_str)
   }
+  $.get(cu_str).done(
+  function () {
+    window.location.replace(cu_str)
+  }).fail(function () {
+    window.alert(crs + ' not offered in ' + semid)
+  })
 }
-  // let cu_str = cu.origin + cu.pathname + crs + "/" + semid + "/assignments.html" + "?asgn=" + asgn
-
 </script>

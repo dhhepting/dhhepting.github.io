@@ -24,7 +24,7 @@ $.get('{{ rss_url | relative_url }}', function (data) {
     /* console.log(item.title) */
     if (item.link) {
       var linktext = item.title.split('/').pop()
-      if (linktext !== 'index.html') {
+      if (linktext !== 'index.html' && linktext !== 'assignments.html') {
         $('#update-div ul').append(
           $('<li>').append(
             $('<a>').attr('href', item.link).append(

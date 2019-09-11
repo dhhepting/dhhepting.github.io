@@ -1,11 +1,11 @@
-{%- if site.data.teaching.media[off_med] -%}
+{%- if site.data.teaching.media[joff_id] -%}
 <div class="card my-2" id="media-card">
   <h3 class="card-header text-center">Media</h3>
   <div class="card-body">
   {% assign ctr = 0 | plus: 0 %}
-  {% for m in site.data.teaching.meetings[off_med] %}
+  {% for m in site.data.teaching.meetings[joff_id] %}
     {% assign hasMedia = "" %}
-    {% for r in site.data.teaching.media[off_med] %}
+    {% for r in site.data.teaching.media[joff_id] %}
       {% if m.meeting == r.meet %}
         {% assign hasMedia = "true" %}
         {% break %}
@@ -18,7 +18,7 @@
       <div class="card-deck">
       {% endif %}
 
-      {% include meeting-media.html mtg_media=off_med mtg=m.meeting mtg_title=mdate %}
+      {% include meetings/media.html mtg_media=joff_id mtg=m.meeting mtg_title=mdate %}
 
       {% if ctr == 2 %}
       </div>

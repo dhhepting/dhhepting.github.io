@@ -2,6 +2,7 @@
 title: Blog Outline
 breadcrumb: Blog Outline
 layout: bg-image
+moddate: 11-Sep-2019
 nid: BO
 marks: 2
 rubric:
@@ -16,7 +17,7 @@ rubric:
   l3: Well-defined plan to deal with topic, including clear personal response to concepts
   l2: Plan is clear, but personal connection could be more clear
   l1: Plan and personal connection are unclear
-  l0: No plan and no personal connection		
+  l0: No plan and no personal connection
 ---
 ### Description
 {% assign curr_sem = "201910" %}

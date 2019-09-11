@@ -26,7 +26,7 @@ rubric:
   wt: 0.5
   l3: Clear examples from external sources included in context of personal experience
   l2: Personal experience clear, example from external source referenced
-  l1: Detail lacking in description of personal experience  
+  l1: Detail lacking in description of personal experience
   l0: Substantially missing
 - crit: Writing
   wt: 0.5
