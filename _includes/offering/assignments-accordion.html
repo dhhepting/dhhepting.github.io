@@ -6,23 +6,29 @@
   <div class="accordion" id="assign-accord">
   {% for sdta in site.data.teaching.assignments[joff_id] %}
     <div class="card">
-      <div class="card-header" id="{{ sdta.id }}-head">
+      <div class="card-header" id="{{ sdta.aid }}-head">
         <h2 class="mb-0">
-          <button class="btn btn-link collapsed accordion-toggle" data-toggle="collapse" data-target="#collapse-{{sdta.id}}" role="button" aria-expanded="false" aria-controls="collapse_{{sdta.id}}">
+        {% if off_now == 1 %}
+          <button class="btn btn-link collapsed accordion-toggle" data-toggle="collapse" data-target="#collapse-{{sdta.aid}}" role="button" aria-expanded="false" aria-controls="collapse_{{sdta.aid}}">
+        {% else %}
+          <button class="btn btn-link collapsed accordion-toggle disabled">
+        {% endif %}
           {{ sdta.title }}
           </button>
         </h2>
       </div>
-      <div id="collapse-{{ sdta.id }}" class="collapse" aria-labelledby="{{ sdta.id }}-head" data-parent="#assign-accord">
+      {% if off_now == 1 %}
+      <div id="collapse-{{ sdta.aid }}" class="collapse" aria-labelledby="{{ sdta.aid }}-head" data-parent="#assign-accord">
         <div class="card-body">
           {% for sa in site.assignments %}
-            {% if sa.title == sdta.title %}
+            {% if sa.aid == sdta.aid %}
               {{ sa.content | markdownify }}
               {% break %}
             {% endif %}
           {% endfor %}
         </div>
       </div>
+      {% endif %}
     </div>
   {% endfor %}
   </div>

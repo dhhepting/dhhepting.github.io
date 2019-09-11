@@ -14,3 +14,23 @@
 {% capture crs_id %}{{crs_sbj}}-{{crs_nbr}}{% endcapture %}
 {% capture off_id %}{{crs_sbj}}-{{crs_nbr}}-{{crs_sem}}{% endcapture %}
 {% capture joff_id %}{{off_id | replace: "+", "_"}}{% endcapture %}
+
+{% capture today%}{{ "now" | date: "%Y-%m-%d" }}{% endcapture %}
+{% assign tdate = today | split: '-' %}
+{% assign sss = 0 %}
+{% assign month = tdate[1] | plus: 0 %}
+{% if month >= 1 and month <= 4 %}
+  {% assign sss = 10 %}
+{% endif %}
+{% if month >= 5 and month <= 8 %}
+  {% assign sss = 20 %}
+{% endif %}
+{% if month >= 9 and month <= 12 %}
+  {% assign sss = 30 %}
+{% endif %}
+{% capture now_sem %}{{ tdate[0] }}{{ sss }}{% endcapture %}
+{% if now_sem == crs_sem %}
+  {% assign off_now = 1 %}
+{% else %}
+  {% assign off_now = 0 %}
+{% endif %}
