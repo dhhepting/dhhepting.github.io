@@ -20,7 +20,7 @@ rubric:
 This is a GROUP assignment. It cannot be done individually.
 
 The purpose of this part of the assignment is to run the test
-that you developed during the 1st part of the assignment.  
+that you developed during the 1st part of the assignment.
 
 Have your group pair up with one other group, with the same number
 of people ([list of groups and group members](https://urcourses.uregina.ca/mod/page/view.php?id=923074)). Each member of your group should then be paired someone from the other, matched, group.

@@ -12,13 +12,13 @@ rubric:
     l0: Topic does not engage an important issue related to class
   - crit: Deliverable and Rationale
     wt: 1
-    l3: Intended deliverable is appropriate and imaginative. Rationale for approach is clear and well-formed    
+    l3: Intended deliverable is appropriate and imaginative. Rationale for approach is clear and well-formed
     l2: Intended deliverable is appropriate. Rationale for approach is reasonable
     l1: Intended deliverable is somewhat appropriate. Rationale for approach is mostly unclear and not well-formed
-    l0: Intended deliverable is not appropriate. Rationale for approach is not clear 		
+    l0: Intended deliverable is not appropriate. Rationale for approach is not clear
   - crit: Tentative Plan
     wt: 1
-    l3: Ambitious and thorough    
+    l3: Ambitious and thorough
     l2: Reasonably thorough
     l1: Somewhat thorough
     l0: Not thorough
