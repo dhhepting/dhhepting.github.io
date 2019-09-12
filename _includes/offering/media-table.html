@@ -1,0 +1,44 @@
+<h1>Media</h1>
+
+{%- if site.data.teaching.media[include.media_dat] -%}
+<div class="container-fluid">
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr class="d-flex bg-info">
+          <th class="col-2">
+            Meeting
+          </th>
+          <th class="col-10">
+            Media
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+  {%- assign sortedMedia = site.data.teaching.media[include.media_dat] | sort: 'file' -%}
+  {% assign mtg_nbr = 0 %}
+  {%- for media in sortedMedia -%}
+    {% assign new_nbr = media.file | slice: 0, 2 } | plus: 0 %}
+    {% if mtg_nbr != new_nbr %}
+      {% if mtg_nbr > 0 %}
+    </td>
+  </tr>
+      {% endif %}
+      {% assign mtg_nbr = new_nbr %}
+    <tr class="d-flex">
+      <th class="col-2">
+    {{ mtg_nbr }}
+      </th>
+      <td class="col-10">
+    {% endif %}
+    {%- if media.URL contains "jpg" -%}
+  <a href="{{media.URL}}"><img src="{{media.URL}}" alt="{{media.file}}" height="100" class="m-1 img-responsive"/></a>
+    {%- endif -%}
+    {%- if media.URL contains "m4a" -%}
+  <a href="{{media.URL}}"><span class="far fa-file-audio fa-6x align-middle m-1"></span></a>
+    {%- endif -%}
+  {%- endfor -%}
+{%- else -%}
+  <p>None available</p>
+</div>
+{%- endif -%}

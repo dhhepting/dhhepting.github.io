@@ -27,6 +27,17 @@
             {% endif %}
           {% endfor %}
         </div>
+        <div class="card-footer">
+          <span>Due Date: {{ sdta.duedate }} @ 23:55</span>
+          <a href="https://urcourses.uregina.ca/mod/forum/discuss.php?d={{sdta.lms_discuss}}"
+          role="button" class="btn btn-primary">
+            Discuss
+          </a>
+          <a href="https://urcourses.uregina.ca/mod/assign/view.php?id={{sdta.lms_submit}}&action=editsubmission"
+          role="button" class="btn btn-primary">
+            Submit
+          </a>
+        </div>
       </div>
       {% endif %}
     </div>

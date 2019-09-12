@@ -3,6 +3,8 @@ title: Project Proposal
 breadcrumb: Project Proposal
 layout: bg-image
 marks: 3
+aid: P-PROP
+moddate: 12-Sep-2019
 rubric:
 - crit: Background and Motivation
   wt: 0.5
@@ -55,6 +57,4 @@ on forums, social media, and other sources.
 * submit a [pdf](https://en.wikipedia.org/wiki/PDF) document (1 per group) on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
 * target length: 1-2 pages
 
-### Grading
-
-{% include marker.html %}
+{% include grading/main.html %}
