@@ -44,7 +44,7 @@ if (typ) {
   console.log(typ)
   let cu_str = cu.origin + cu.pathname
   if (typ == 'current') {
-    let cu_str = cu.origin + cu.pathname + semid + '/'
+    let cu_str = cu.origin + cu.pathname + semid + '.html'
     window.location.replace(cu_str)
   }
 }

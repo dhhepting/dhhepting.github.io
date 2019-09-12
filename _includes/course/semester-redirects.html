@@ -42,6 +42,9 @@ if (typ || asgn) {
   else if (typ == 'media') {
     cu_str = cu.origin + cu.pathname + semid + '/media/'
   }
+  else if (typ == 'textbook') {
+    cu_str = cu.origin + cu.pathname + semid + '/textbook.html'
+  }
   else if (asgn) {
     cu_str = cu.origin + cu.pathname + semid + '/assignments.html' + '?asgn=' + asgn
   }

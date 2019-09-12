@@ -1,8 +1,8 @@
 ---
-title: Empathy Assignment
+title: Empathize
 breadcrumb: Empathize
 layout: bg-image
-moddate: 11-Sep-2019
+moddate: 12-Sep-2019
 marks: 6
 aid: I-EMP
 rubric:
@@ -43,7 +43,7 @@ as you complete this task.
 
 ### Submission
 
-* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
+* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on URcourses
 * target: 1 page for the empathy map and 1-2 pages for the opportunities for redesign
 
 {% include grading/main.html %}
