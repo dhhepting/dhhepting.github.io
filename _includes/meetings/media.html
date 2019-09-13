@@ -47,7 +47,7 @@
         <div class="carousel-item">
       {%- endif -%}
       {% assign sj = sortedjpgs[i] | split: '#' %}
-          <img class="img-fluid d-block w-100" width="800" src="{{ sj[1] }}" alt="{{ sj[0] }}">
+          <img class="img-fluid d-block w-100" style="object-fit: contain;" src="{{ sj[1] }}" alt="{{ sj[0] }}">
         </div>
     {% endfor %}
       </div>
