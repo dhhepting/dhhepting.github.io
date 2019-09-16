@@ -32,7 +32,7 @@
   <h3 class="card-header text-center">Courses Taught</h3>
   <div class="card-body">
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">
+      <!-- <li class="list-group-item d-none d-md-inline">
         <div class="row align-items-center justify-content-between">
         <div class="col-9 d-inline">
           Course
@@ -41,7 +41,7 @@
           Semesters
         </div>
         </div>
-      </li>
+      </li> -->
     {% for i in (1..numcourses) %}
       {%- assign crs_name = "" -%}
       {%- assign cc = sortedcrs_ids[i] | split: '#' -%}
@@ -53,9 +53,10 @@
       {%- endfor -%}
       <li class="list-group-item">
         <div class="row align-items-center justify-content-between">
-        <div class="col-9 d-inline">
+        <div class="col-auto mr-auto d-inline">
           <a href="{{ cc[0] | relative_url }}">
-            {{cc[1] | replace: "-"," "}} : {{crs_name}}
+            {{cc[1] | replace: "-"," "}}
+            <span class="d-none d-sm-inline">: {{crs_name}}</span>
           </a>
         </div>
         {%- assign sems = "" -%}
@@ -66,8 +67,8 @@
           {%- endif -%}
         {% endfor %}
         {% assign semlist = sems | split: '|' | sort | reverse %}
-        <div class="dropdown d-inline col-3">
-          <button class="btn btn-secondary button-right dropdown-toggle" type="button"
+        <div class="col-auto ml-auto d-inline">
+          <button class="btn btn-secondary button-right dropdown-toggle ml-auto" type="button"
           id="ddSems{{cc[1]}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             {{ semlist[0] }}
           </button>
