@@ -2,7 +2,7 @@
 title: Blog Outline
 breadcrumb: Blog Outline
 layout: bg-image
-moddate: 13-Sep-2019
+moddate: 15-Sep-2019
 nid: BO
 marks: 2
 rubric:
