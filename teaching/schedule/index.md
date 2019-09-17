@@ -9,7 +9,23 @@ layout: bg-image
 ---
 # {{ page.breadcrumb }}
 
-{% include index-dir.html %}
+{%- assign url_parts = page.url | split: '/' -%}
+
+{% assign semdirs =  "" %}
+{%- for sp in site.pages -%}
+  {%- if sp.url contains page.url and sp.url.size > page.url.size %}
+    {% capture semdirs %}{{semdirs}}#{{ sp.url | split: "/" | last | remove: ".html" }}{% endcapture %}
+  {% endif %}
+{% endfor %}
+{%- assign rssemdirs = semdirs | split: "#" | sort | reverse %}
+<ul>
+{% for sd in rssemdirs %}
+  {% if sd != "" %}
+    {% capture sd_url %}{{page.url}}{{sd}}.html{% endcapture %}
+    <li><a href="{{ sd_url | relative_url }}">{{sd}}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
 
 <script>
 let cu = new URL(document.location)
