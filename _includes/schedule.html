@@ -36,7 +36,8 @@ data file can't seem to start with a number -- prepend s (for example)
   {%- comment -%}
     go over the table rows
   {%- endcomment -%}
-  {%- for tr in (1..17) -%}
+  {% assign tri = schedslot.size | minus: 1 %}
+  {%- for tr in (1..tri) -%}
     {%- assign trslot = schedslot[tr] | split: "," -%}
     {%- assign M = trslot[1] -%}
     {%- assign T = trslot[2] -%}
@@ -62,7 +63,7 @@ data file can't seem to start with a number -- prepend s (for example)
       {%- assign rd = rowsa[d] | plus: 0 -%}
       {%- assign same = true -%}
       {%- if tr == rd -%}
-        {%- for dr in (rd..17) -%}
+        {%- for dr in (rd..tri) -%}
           {%- assign ssa = schedslot[dr] | split: "," -%}
 	        {%- if same == true -%}
             {%- case d -%}
@@ -113,33 +114,33 @@ data file can't seem to start with a number -- prepend s (for example)
                 {%- assign F = newF -%}
             {%- endcase -%}
           {%- endif -%}
-          {%- if same == false or lastrow >= 17 -%}
+          {%- if same == false or lastrow >= tri -%}
             {%- case d -%}
               {%- when 1 -%}
-                {%- if lastrow >= 17 -%}
+                {%- if lastrow >= tri -%}
                   {%- comment -%}
-                  {%- assign Ms = 17 | plus: 0 -%}
+                  {%- assign Ms = tri | plus: 0 -%}
                   {%- endcomment -%}
                 {%- endif -%}
                 {%- assign Mr = lastrow | plus: 1 -%}
                 {%- continue -%}
               {%- when 2 -%}
-                {%- if lastrow >= 17 -%}
+                {%- if lastrow >= tri -%}
                 {%- endif -%}
                 {%- assign Tr = lastrow | plus: 1 -%}
                 {%- continue -%}
               {%- when 3 -%}
-                {%- if lastrow >= 17 -%}
+                {%- if lastrow >= tri -%}
                 {%- endif -%}
                 {%- assign Wr = lastrow | plus: 1 -%}
                 {%- continue -%}
               {%- when 4 -%}
-                {%- if lastrow >= 17 -%}
+                {%- if lastrow >= tri -%}
                 {%- endif -%}
                 {%- assign Rr = lastrow | plus: 1 -%}
                 {%- continue -%}
               {%- when 5 -%}
-                {%- if lastrow >= 17 -%}
+                {%- if lastrow >= tri -%}
                 {%- endif -%}
                 {%- assign Fr = lastrow | plus: 1 -%}
                 {%- continue -%}
