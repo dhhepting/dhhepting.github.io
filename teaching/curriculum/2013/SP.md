@@ -2,4 +2,4 @@
 breadcrumb: SP
 layout: bg-image
 ---
-{% include whole-KA.html %}
+{% include curriculum/KA.html %}
