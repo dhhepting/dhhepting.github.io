@@ -13,8 +13,14 @@
     {% assign ctr = 1 %}
     <ul class="list-group list-group-flush">
     {%- for tlo in topp.tlouts -%}
-    	<li class="list-group-item"><a href="topics.html#know{{ctr}}">{{tlo.ka | replace: "--", ", " | replace: "-"," " | replace: "_","-"}}</a></li>
+    {%- assign kaku = tlo.ka | split: "/" -%}
+    {%- assign kaaa = kaku[0] -%}
+    {%- assign kuuu = kaku[1] -%}
+    {%- assign tlo_dat = site.data.teaching.CC2013[kaaa][kuuu] -%}
+    {%- if tlo_dat -%}
+    	<li class="list-group-item"><a href="topics.html">{{ kaaa }} / {{ kuuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kuuu.size }}</a></li>
     	{%- assign ctr  = ctr | plus: 1 -%}
+    {% endif %}
     {% endfor %}
     </ul>
   </div>

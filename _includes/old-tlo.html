@@ -1,5 +1,6 @@
-
+{{ page.url }}
 {% assign kaaa = page.url | split: "/" | last | remove: ".html" %}
+{{ kaaa}}
 {% assign fili = "" %}
 {%- for tlo in site.data.teaching.CC2013[kaaa] -%}
     {% capture fili %}{{ fili }},{{ tlo[0] }}{% endcapture %}
