@@ -1,31 +1,21 @@
-{% assign links = site.data.sitenav %}
-{% assign classpre = "dropdown" %}
-{% if page.url == "/" %}
-  {% assign classpre = "nav" %}
-{% endif %}
-{% for l in links %}
-  {% if page.url == l.url %}
-<li class="{{classpre}}-item">
-    {% if classpre == "nav" %}
-  <a class="nav-link active" href="#">
-    {% else %}
-  <a class="active" href="#">
-    {% endif %}
+{%- assign clsprfx = "dropdown" -%}
+{%- if page.url == "/" -%}
+  {%- assign clsprfx = "nav" -%}
+{%- endif -%}
+{%- for l in site.data.sitenav -%}
+<li class="{{ clsprfx }}-item">
+  {%- if page.url == l.url -%}
+  <a class="{{ clsprfx }}-link active" href="#">
     <span class="sr-only">
       (current)
     </span>
-  {% else %}
-<li class="{{classpre}}-item">
-    {% if classpre == "nav" %}
-  <a class="nav-link" href="{{ l.url | relative_url }}">
-    {% else %}
-  <a href="{{ l.url | relative_url }}">
-    {% endif %}
+  {%- else -%}
+  <a class="{{ clsprfx }}-link" href="{{ l.url | relative_url }}">
   {% endif %}
     {{ l.title }}
-  {% if l.icon %}
-    <span class="{{ l.icon }}"></span>
-  {% endif %}
+  {%- if l.icon -%}
+    &nbsp;<span class="{{ l.icon }}"></span>
+  {%- endif -%}
   </a>
 </li>
 {% endfor %}
