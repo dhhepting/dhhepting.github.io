@@ -5,7 +5,8 @@
 {%- for l in site.data.sitenav -%}
 <li class="{{ clsprfx }}-item">
   {%- if page.url == l.url -%}
-  <a class="{{ clsprfx }}-link active" href="#">
+  <!-- <a class="{{ clsprfx }}-link active" href="#"> -->
+    <span class="{{ clsprfx }}-link active"></span>
     <span class="sr-only">
       (current)
     </span>
