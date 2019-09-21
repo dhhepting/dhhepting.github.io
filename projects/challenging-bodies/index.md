@@ -1,8 +1,8 @@
 ---
-title: Challenging Bodies 
-breadcrumb: Challenging Bodies 
+title: Challenging Bodies
+breadcrumb: Challenging Bodies
 description: Description of Challenging Bodies Project
-projects: 
+projects:
   - challenging_bodies
 layout: bg-image
 ---
@@ -10,4 +10,4 @@ layout: bg-image
 
 {{ page.description }}
 
-{% include project-related-works.html %}
+{%comment%}{% include project-related-works.html %}{% endcomment %}

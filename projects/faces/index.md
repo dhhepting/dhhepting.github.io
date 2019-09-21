@@ -1,8 +1,8 @@
 ---
 title: Faces Project
-breadcrumb: Faces 
+breadcrumb: Faces
 description: Description of Faces Project!
-projects: 
+projects:
   - faces
 layout: bg-image
 ---
@@ -10,4 +10,4 @@ layout: bg-image
 
 {{ page.description }}
 
-{% include project-related-works.html %}
+{%comment%}{% include project-related-works.html %}{% endcomment %}
