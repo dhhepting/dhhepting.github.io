@@ -1,8 +1,8 @@
 ---
 title: Free Knowledge
-breadcrumb: Free Knowledge 
+breadcrumb: Free Knowledge
 description: Description of Free Knowledge
-projects: 
+projects:
   - free-knowledge
 layout: bg-image
 ---
@@ -10,4 +10,4 @@ layout: bg-image
 
 {{ page.description }}
 
-{% include project-related-works.html %}
+{%comment%}{% include project-related-works.html %}{% endcomment %}
