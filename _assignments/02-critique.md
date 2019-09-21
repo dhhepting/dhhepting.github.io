@@ -3,6 +3,7 @@ title: HCC Critique Assignment
 breadcrumb: Critique
 layout: bg-image
 marks: 6
+moddate:
 nid: CA
 rubric:
 - crit: Review
