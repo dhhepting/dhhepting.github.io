@@ -11,11 +11,11 @@ print(datetime.datetime.now(),file=sys.stderr)
 # - the absolute path to the website's local root directory
 # - the course/semester (in that form): i.e. CS-428+828/201830
 # - the absolute path to the local Dropbox directory
-print("OFFERING: ", sys.argv[2])
 if (len(sys.argv) != 3):
   print (sys.argv[0],"must be invoked with \"<path-to-site-directory> <course>/<semester>\"")
   sys.exit()
 
+print("OFFERING: ", sys.argv[2])
 # get site directory, make sure it ends with "/"
 sitedir = (sys.argv[1])
 print("SITE DIR: ", sitedir)
