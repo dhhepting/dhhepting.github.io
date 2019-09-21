@@ -8,7 +8,7 @@
     </h1>
     <hr />
     <!-- Projects -->
-    {% include projects-bar.html %}
+    {%comment%}{% include projects-bar.html %}{%endcomment%}
     <hr />
     <!-- Social Share + Search Buttons -->
     {% include share-search-bar.html %}
@@ -87,7 +87,7 @@
       </a>
       <code><pre id="bibtex">{{ content | remove: '<p>' | remove: '</p>' | strip }}</pre></code>
     </div>
-    {% include project-related-works.html %}
+    {%comment%}{% include project-related-works.html %}{% endcomment %}
   </div>
   {% include site-date-transp.html %}
 </div>

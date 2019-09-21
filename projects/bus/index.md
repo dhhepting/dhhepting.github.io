@@ -1,8 +1,8 @@
 ---
 title: Bus Project
-breadcrumb: Bus 
+breadcrumb: Bus
 description: Description of Bus Project
-projects: 
+projects:
   - bus
 layout: bg-image
 ---
@@ -10,4 +10,4 @@ layout: bg-image
 
 {{ page.description }}
 
-{% include project-related-works.html %}
+{%comment%}{% include project-related-works.html %}{% endcomment %}
