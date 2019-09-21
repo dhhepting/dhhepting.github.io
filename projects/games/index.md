@@ -2,7 +2,7 @@
 title: Games
 breadcrumb: Games
 description: Description of Games
-project: 
+project:
   - games
 layout: bg-image
 ---
@@ -10,4 +10,4 @@ layout: bg-image
 
 {{ page.description }}
 
-{% include project-related-works.html %}
+{%comment%}{% include project-related-works.html %}{% endcomment %}
