@@ -27,10 +27,26 @@ for root, subdirs, files in os.walk(assign_root):
             file_path = os.path.join(root, filename)
             fp_modtime = time.ctime(os.path.getmtime(file_path))
             fp_dt = datetime.strptime(fp_modtime,'%a %b %d %H:%M:%S %Y')
-            fp_moddate = fp_dt.strftime('%d-%b-%Y')
-            with FileInput(files=[file_path], inplace=True) as f:
+            cur_moddate = fp_dt.strftime('%d-%b-%Y')
+            #
+            #print (fp_modtime)
+            update = 0
+            with open(file_path,'r') as f:
+                file_moddate = ""
                 for line in f:
-                    line = line.rstrip()
-                    if "moddate:" in line:
-                        line = "moddate: " + fp_moddate
-                    print(line)
+                    line = line.rstrip().split()
+                    if len(line) > 0 and "moddate:" in line[0]:
+                        if len(line) >= 2:
+                            file_moddate = line[1]
+                            if file_moddate != cur_moddate:
+                                print ("update",file_moddate,cur_moddate)
+                                update = 1
+            if (update):
+                with FileInput(files=[file_path], inplace=True) as f:
+                    for line in f:
+                        line = line.rstrip()
+                        if "moddate:" in line:
+                            print("moddate:",cur_moddate)
+                        else:
+                            print(line)
+            print(time.ctime(os.path.getmtime(file_path)))
