@@ -1,0 +1,34 @@
+{% comment %}
+    Updated for boostrap 4 (https://getbootstrap.com/docs/4.0/components/breadcrumb/) and
+    does not create a link for the last (active) item
+{% endcomment %}
+{% assign url_parts = page.url | split: '/' %}
+{% assign target_size = url_parts.size | plus: 1 %}
+{% assign projs = "" %}
+{% for sp in site.pages %}
+    {% if sp.url contains page.url and sp.url > page.url %}
+      {% assign sp_parts = sp.url | split: '/' %}
+        {% if sp_parts.size == target_size %}
+          {% capture projs %}{{ projs }}{{ sp_parts | last }}#{% endcapture %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+{% assign sortedprojs = projs | split: '#' | sort %}
+{% assign numprojs = sortedprojs.size | minus: 1 %}
+{% for i in (1..numprojs) %}
+  {% capture sortedprojs[i] %}{{ sortedprojs[i] }}!a!b!c{% endcapture %}
+    ++ {{ sortedprojs[i] }} --
+{% endfor %}
+{{ sortedprojs }}
+
+<div class="card">
+    <div class="card-header" style="background-color: cyan;">
+        <a href="{{sp[0] | relative_url}}"><h3>{{sortedprojs[1]}}</h3></a>
+    </div>
+    <div class="card-body">
+        {{sortedprojs[2]}}
+    </div>
+</div>
+<span>
+    &nbsp;
+</span>
