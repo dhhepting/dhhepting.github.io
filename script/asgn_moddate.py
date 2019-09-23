@@ -15,11 +15,11 @@ if (len(sys.argv) != 2):
 
 # get site directory, make sure it ends with "/"
 sitedir = (sys.argv[1])
-print("SITE DIR: ", sitedir)
+# print("SITE DIR: ", sitedir)
 if (not sitedir.endswith("/")):
   sitedir += "/"
 assign_root = sitedir + "_assignments"
-print("ASSIGNMENTS ROOT: ", assign_root)
+#print("ASSIGNMENTS ROOT: ", assign_root)
 
 for root, subdirs, files in os.walk(assign_root):
     for filename in files:
@@ -39,7 +39,7 @@ for root, subdirs, files in os.walk(assign_root):
                         if len(line) >= 2:
                             file_moddate = line[1]
                             if file_moddate != cur_moddate:
-                                print ("update",file_moddate,cur_moddate)
+                                print ("Update ",file_path," : ",file_moddate,cur_moddate)
                                 update = 1
             if (update):
                 with FileInput(files=[file_path], inplace=True) as f:
@@ -49,4 +49,4 @@ for root, subdirs, files in os.walk(assign_root):
                             print("moddate:",cur_moddate)
                         else:
                             print(line)
-            print(time.ctime(os.path.getmtime(file_path)))
+            #print(time.ctime(os.path.getmtime(file_path)))
