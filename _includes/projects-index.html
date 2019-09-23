@@ -18,6 +18,7 @@
 {% capture numprojs %}{{ sortedprojs.size | minus:1 }}{% endcapture %}
 {% for i in (1..numprojs) %}
     {% assign sp = sortedprojs[i] | split: '#' %}
+    {{ sp[0] }}
 <div class="card">
     <div class="card-header" style="background-color: cyan;">
         <a href="{{sp[0] | relative_url}}"><h3>{{sp[1]}}</h3></a>
