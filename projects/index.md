@@ -1,5 +1,5 @@
 ---
-title: Projects 
+title: Projects
 breadcrumb: Projects
 layout: bg-image
 ---
@@ -8,4 +8,5 @@ layout: bg-image
 Collected here are the various projects that I have undertaken over the years,
 in collaboration with many wonderful people.
 
+{% include projects-list.html %}
 {% include index-dir.html %}

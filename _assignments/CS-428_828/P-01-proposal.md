@@ -4,7 +4,7 @@ breadcrumb: Project Proposal
 layout: bg-image
 marks: 3
 aid: P-PROP
-moddate: 20-Sep-2019
+moddate: 23-Sep-2019
 rubric:
 - crit: Background and Motivation
   wt: 0.5
@@ -43,18 +43,36 @@ rubric:
 
 Choose an existing and active software application or website where
 you can identify opportunities for improvement and redesign.
+
+Please, BE SPECIFIC!
+
 Consider the following elements in creating your proposal:
 
-* background: what is the history of the software/website that you have chosen
-and why is it compelling to you?
-* users: who is using this software, or who is the intended audience?
-* perceived issues: what opportunities for redesign have you identified and supported?
-* support: describe your own experiences, augmented with user comments
-on forums, social media, and other sources.
+* background:
+  - why have you picked this application/website?
+  - why is it important to you?
+  - what is the history of this application/website?
+  - are there similar, or competitive, applications or websites?
+  - how do you use this application/website?
+
+* users:
+  - who (besides you?) is using this software?
+  - which (common) characteristics of these users are important for you to understand their use of the application/website?
+  - are the users of the application/website the intended audience?
+
+* perceived issues:
+  - what opportunities for redesign have you identified?
+  - have you described specific problems with specific tasks that a user wants to perform?
+  - have you resisted the urge to propose fixes to the problems you have found?
+
+* support:
+  - have you supported your identification of issues?
+  - have you described your own experiences with regards to the problem task?
+  - have you included relevant support, as applicable, from user comments on forums, social media, and other sources?
 
 ### Submission
 
-* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document (1 per group) on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
+* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document (1 per group)
 * target length: 1-2 pages
 
 {% include grading/main.html %}
