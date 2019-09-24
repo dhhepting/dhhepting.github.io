@@ -1,4 +1,4 @@
-{%- capture know_url -%}/teaching/{{crs_sbj}}-{{crs_nbr}}/{{crs_sem}}/topics.html{%- endcapture -%}
+{%- capture know_url -%}/teaching/{{crs_sbj}}-{{crs_nbr}}/{{crs_sem}}/tlo.html{%- endcapture -%}
 {%- for sp in site.pages -%}
   {%- if sp.url == know_url -%}
     {%- assign topp = sp -%}
@@ -18,7 +18,7 @@
     {%- assign kuuu = kaku[1] -%}
     {%- assign tlo_dat = site.data.teaching.CC2013[kaaa][kuuu] -%}
     {%- if tlo_dat -%}
-    	<li class="list-group-item"><a href="topics.html">{{ kaaa }} / {{ kuuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kuuu.size }}</a></li>
+    	<li class="list-group-item"><a href="tlo.html">{{ kaaa }} / {{ kuuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kuuu.size }}</a></li>
     	{%- assign ctr  = ctr | plus: 1 -%}
     {% endif %}
     {% endfor %}
