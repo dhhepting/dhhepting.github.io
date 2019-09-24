@@ -45,6 +45,9 @@ if (typ || asgn) {
   else if (typ == 'textbook') {
     cu_str = cu.origin + cu.pathname + semid + '/textbook.html'
   }
+  else if (typ == 'tlo') {
+    cu_str = cu.origin + cu.pathname + semid + '/tlo.html'
+  }
   else if (asgn) {
     cu_str = cu.origin + cu.pathname + semid + '/assignments.html' + '?asgn=' + asgn
   }
@@ -55,6 +58,7 @@ if (typ || asgn) {
   function () {
     window.location.replace(cu_str)
   }).fail(function () {
+    console.log(cu.pathname)
     window.alert(crs + ' not offered in ' + semid)
   })
 }
