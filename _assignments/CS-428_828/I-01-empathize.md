@@ -2,7 +2,7 @@
 title: Empathize
 breadcrumb: Empathize
 layout: bg-image
-moddate: 23-Sep-2019
+moddate: 24-Sep-2019
 marks: 6
 aid: I_EMP
 rubric:
@@ -31,15 +31,17 @@ rubric:
 
 This is an INDIVIDUAL assignment.
 
-You have been given instructor access to a [course on URcourses]( https://urcourses.uregina.ca/course/view.php?id=2168).
-You are asked to complete a task as a means to experience the URcourses interface as an instructor, and then reflect on your experience with interface. You are asked to do 3 things in this assignment:
+You have been made a TEACHER in a [course on URcourses]( https://urcourses.uregina.ca/course/view.php?id=2168), so that you can gain a different perspective on URcourses.
 
-1. Perform a task within URcourses:
-  * claim 1 topic by changing the label to your own name (there are enough blank topics for everyone - so be nice and don't claim someone else's topic!)
-  * add to your topic: 1 resource and 1 activity that can be assigned a grade
-1. Create an [empathy map](https://www.nngroup.com/articles/empathy-mapping/)
-as you complete this task.
-1. Describe the opportunities for redesign, if any, that you find.
+For this assignment, please complete the task described below and then reflect on your experience with the interface.
+
+Specifically, you are asked to do 3 things in this assignment:
+
+1. Perform THIS task within URcourses:
+  * claim 1 topic section by changing the label to your own name (there are enough blank topics for everyone - so be nice and don't claim someone else's topic!)
+  * add to your topic: 1 resource and 1 activity that can both be assigned a grade
+1. Create an [empathy map](https://www.nngroup.com/articles/empathy-mapping/) while you complete the task.
+1. Describe whatever opportunities for redesign that you find.
 
 ### Submission
 

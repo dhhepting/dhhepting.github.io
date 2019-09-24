@@ -2,7 +2,7 @@
 layout: bg-image
 title: You Choose Assignment
 breadcrumb: You Choose
-nid: YCA
+aid: IU_CHOICE
 marks: 12
 rubric:
 - crit: Topic
@@ -25,11 +25,11 @@ Completed Plan (3.5)	Ambitious and thorough	Reasonably thorough	Somewhat thoroug
 
 ### Description
 
-This is an INDIVIDUAL assignment.
+This is an INDIVIDUAL assignment for undergraduates.
 
 Consider the class themes that we have discussed and will consider.
 Please see the page of
-[Topic and Learning Outcomes]({{ "/teaching/CS-428+828/topics.html" | relative_url }})
+[Topic and Learning Outcomes]({{ "/teaching/CS-428+828/?type=tlo" | relative_url }})
 for a guide.
 
 Write approximately 1000 words (or equivalent)
@@ -37,7 +37,7 @@ about your chosen topic as an essay or
 you are welcome to consider other forms of deliverable that are more meaningful to you &mdash; such as a book report or a wikipedia posting.
 It must deal with class themes in some way,
 and your idea about that connection are important.
-You might focus your efforts on researching smaller assessment questions (from [Topic and Learning Outcomes]({{ "/teaching/CS-428+828/topics.html" | relative_url }})),
+You might focus your efforts on researching smaller assessment questions (from [Topic and Learning Outcomes]({{ "/teaching/CS-428+828/?type=tlo" | relative_url }})),
 examining the usability of software that you use,
 writing some code to test an idea, and so forth.
 
@@ -46,8 +46,6 @@ Your submission should include between 2 and 4 external references (
 
 ### Submission
 
-* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
-
-### Grading
+* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document
 
 {% include marker.html %}
