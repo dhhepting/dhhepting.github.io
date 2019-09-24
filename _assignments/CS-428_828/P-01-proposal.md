@@ -3,7 +3,7 @@ title: Project Proposal
 breadcrumb: Project Proposal
 layout: bg-image
 marks: 3
-aid: P-PROP
+aid: P_PROP
 moddate: 23-Sep-2019
 rubric:
 - crit: Background and Motivation
