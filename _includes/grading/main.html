@@ -56,6 +56,40 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
 ##### Calculator
 
 <form name="calculator_{{page.aid}}">
+
+  <!-- rubric criteria -->
+  <div class="border bg-info m-2 p-4">
+    <strong>Rubric Criteria</strong>
+{% assign critctr = 0 %}
+{% assign sumwt = 0 %}
+{% assign weights = "" %}
+{% for r in page.rubric %}
+  {% assign critctr = critctr | plus: 1 %}
+  {% capture critid %}rcriterion{{critctr}}{% endcapture %}
+  <!--{% capture critname %}criteria_{{critctr}}_{{ page.aid }}{% endcapture %}-->
+  {% capture critname %}criteria_{{ page.aid }}{% endcapture %}
+  {% assign sumwt = sumwt | plus: r.wt %}
+  {% capture weights %}{{weights}},{{r.wt}}{% endcapture %}
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="{{critid}}">{{r.crit}} ({{r.wt}})</label>
+      <select class="col-sm-9 form-control" name="{{ critname }}" id="{{ critid }}">
+        {{ critname }}
+        <option selected disabled>Choose...</option>
+        <option value="10">{{cs-level[3]}} (+): {{r.l3}}</option>
+        <option value="9">{{cs-level[3]}}: {{r.l3}}</option>
+        <option value="8">{{cs-level[3]}} (-): {{r.l3}}</option>
+        <option value="7">{{cs-level[2]}} (+): {{r.l2}}</option>
+        <option value="6">{{cs-level[2]}}: {{r.l2}}</option>
+        <option value="5">{{cs-level[2]}} (-): {{r.l2}}</option>
+        <option value="4">{{cs-level[1]}} (+): {{r.l1}}</option>
+        <option value="3">{{cs-level[1]}}: {{r.l1}}</option>
+        <option value="2">{{cs-level[1]}} (-): {{r.l1}}</option>
+        <option value="1">{{cs-level[0]}}: {{r.l0}}</option>
+      </select>
+    </div>
+{% endfor %}
+{% assign weightsa =  weights | split: "," %}
+  </div>
   <!-- penalties -->
   <div class="form-group border bg-info m-2 p-4" id="pen">
     <strong>Penalties</strong>
@@ -79,38 +113,6 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
       id="penalty-3" value="50">
       <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
     </div>
-  </div>
-
-  <!-- rubric criteria -->
-  <div class="border bg-info m-2 p-4">
-    <strong>Rubric Criteria</strong>
-{% assign critctr = 0 %}
-{% assign sumwt = 0 %}
-{% assign weights = "" %}
-{% for r in page.rubric %}
-  {% assign critctr = critctr | plus: 1 %}
-  {% capture critid %}rcriterion{{critctr}}{% endcapture %}
-  {% capture critname %}criteria_{{ page.aid }}{% endcapture %}
-  {% assign sumwt = sumwt | plus: r.wt %}
-  {% capture weights %}{{weights}},{{r.wt}}{% endcapture %}
-    <div class="form-group row">
-      <label class="col-sm-3 col-form-label text-right" for="{{critid}}">{{r.crit}} ({{r.wt}})</label>
-      <select class="col-sm-9 form-control" name="{{ critname }}" id="{{ critid }}">
-        <option selected disabled>Choose...</option>
-        <option value="10">{{cs-level[3]}} (+): {{r.l3}}</option>
-        <option value="9">{{cs-level[3]}}: {{r.l3}}</option>
-        <option value="8">{{cs-level[3]}} (-): {{r.l3}}</option>
-        <option value="7">{{cs-level[2]}} (+): {{r.l2}}</option>
-        <option value="6">{{cs-level[2]}}: {{r.l2}}</option>
-        <option value="5">{{cs-level[2]}} (-): {{r.l2}}</option>
-        <option value="4">{{cs-level[1]}} (+): {{r.l1}}</option>
-        <option value="3">{{cs-level[1]}}: {{r.l1}}</option>
-        <option value="2">{{cs-level[1]}} (-): {{r.l1}}</option>
-        <option value="1">{{cs-level[0]}}: {{r.l0}}</option>
-      </select>
-    </div>
-{% endfor %}
-{% assign weightsa =  weights | split: "," %}
   </div>
   <div class="border bg-info m-2 p-4">
     <div class="form-group row">
@@ -142,15 +144,15 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
   function process_{{page.aid}}()
   {
     var weights = {{ weightsa | jsonify }}
+    console.log(weights)
     // get multiplier from penalty radio buttons
     var penalty = document.querySelector("input[name=penalties]:checked");
     var mult = (100.0 - penalty.value)/100.0;
+    console.log("penalty: ",mult)
 
-    // output penalty information
+    // find comment span
+    // BETTER: find the end of the text area content
     var commentspan = document.getElementById("comments_{{page.aid}}");
-    commentspan.textContent = "Penalty:\n";
-    commentspan.textContent = commentspan.textContent +
-      "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
 
     // get grades for each rubric criterion
     var sumgrade = 0;
@@ -163,10 +165,12 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
         crits[i].parentNode.querySelector("label").textContent + ":\n";
       if (crits[i].value >= 0 && crits[i].value <= 10)
       {
-        var cv = (crits[i].value / 10.0) * weights[i+1];
+        var cw = weights[i+1];
+        var cv = (crits[i].value / 10.0) * cw;
         sumgrade += cv;
         commentspan.textContent = commentspan.textContent +
-          "\t (" + cv + ") " + crits[i].options[crits[i].selectedIndex].text + "\n";
+          "\t (" + cv + "/" + cw + ") " +
+          crits[i].options[crits[i].selectedIndex].text + "\n";
       }
       else
       {
@@ -178,8 +182,12 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
     var eg = Math.round(sumgrade * 10) / 10;
     var pg = Math.round(mult * sumgrade * 10) / 10;
     commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    // output penalty information
     if (mult < 1.0)
     {
+      commentspan.textContent = "Penalty:\n";
+      commentspan.textContent = commentspan.textContent +
+        "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
         "After Penalty: " + pg + "\n";
     }
