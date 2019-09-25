@@ -2,15 +2,16 @@
 
 {% include grading/criteria-scale.html %}
 
-This assignment is worth {{ page.marks }} marks, according to the following rubric:
+<div class="border text-light px-4 pt-3 mx-4 mt-3 bg-dark border-primary">
+  Grade penalties will be applied in the following situations for assignment submissions:
+  <ul>
+    <li>on time but the written instructions for the submission were not followed: deduct 10% of the earned grade</li>
+    <li>late (but within 48 hours of the due date and time): deduct 10% of the earned grade</li>
+    <li>late by more than 48 hours: deduct 50% of the earned grade</li>
+  </ul>
+</div>
 
-Grade penalties will be applied in the following situations for assignment submissions:
-* on time but the written instructions for the submission were not followed:
-deduct 10% of the earned grade
-* late (but within 48 hours of the due date and time):
-deduct 10% of the earned grade
-* late by more than 48 hours:
-deduct 50% of the earned grade
+This assignment is worth {{ page.marks }} marks, according to the following rubric:
 
 ##### Rubric
 

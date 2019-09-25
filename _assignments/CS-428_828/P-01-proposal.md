@@ -4,7 +4,7 @@ breadcrumb: Project Proposal
 layout: bg-image
 marks: 3
 aid: P_PROP
-moddate: 23-Sep-2019
+moddate: 24-Sep-2019
 rubric:
 - crit: Background and Motivation
   wt: 0.5
@@ -48,31 +48,31 @@ Please, BE SPECIFIC!
 
 Consider the following elements in creating your proposal:
 
-* background:
+* Background and Motivation:
   - why have you picked this application/website?
   - why is it important to you?
   - what is the history of this application/website?
   - are there similar, or competitive, applications or websites?
   - how do you use this application/website?
 
-* users:
+* Description of Users:
   - who (besides you?) is using this software?
   - which (common) characteristics of these users are important for you to understand their use of the application/website?
   - are the users of the application/website the intended audience?
 
-* perceived issues:
-  - what opportunities for redesign have you identified?
+* Identification of Opportunities for Redesign:
+  - have you explored specific, perhaps common, tasks?
   - have you described specific problems with specific tasks that a user wants to perform?
   - have you resisted the urge to propose fixes to the problems you have found?
 
-* support:
+* Support for Identified Opportunities:
   - have you supported your identification of issues?
   - have you described your own experiences with regards to the problem task?
   - have you included relevant support, as applicable, from user comments on forums, social media, and other sources?
 
 ### Submission
 
-* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document (1 per group)
+* submit a single [pdf](https://en.wikipedia.org/wiki/PDF) document for your group and only 1 group member needs to submit it
 * target length: 1-2 pages
 
 {% include grading/main.html %}
