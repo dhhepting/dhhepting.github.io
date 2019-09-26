@@ -2,7 +2,7 @@
 title: Empathize
 breadcrumb: Empathize
 layout: bg-image
-moddate: 24-Sep-2019
+moddate: 25-Sep-2019
 marks: 6
 aid: I_EMP
 rubric:
@@ -25,7 +25,7 @@ rubric:
   l1: Lacks detail
   l0: Opportunities not identified
 ---
-# {{ page.breadcrumb }}
+{% comment %}# {{ page.breadcrumb }}{% endcomment %}
 
 ### Description
 
@@ -40,7 +40,7 @@ Specifically, you are asked to:
 1. Create an [empathy map](https://www.nngroup.com/articles/empathy-mapping/) while you complete the following task within
 [your course on URcourses](https://urcourses.uregina.ca/course/view.php?id=2168):
   * claim 1 topic section by changing the label to your own name (there are enough blank topics for everyone - so be nice and don't claim someone else's topic!)
-  * add to your topic: 1 resource and 1 activity that can both be assigned a grade
+  * add to your topic: 1 resource and 1 activity that can both be assigned a grade.
 
 1. Describe whatever opportunities for redesign that you find by describing it (or them) in terms of your personal experience of completing the above task
 
