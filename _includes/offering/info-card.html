@@ -4,8 +4,11 @@
     {% capture syll_url %}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{% endcapture %}
     {% capture sched_url %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
     {% capture fbk_url %}/teaching/{{ crs_id }}/{{ crs_sem }}/feedback/{% endcapture %}
-    {% assign fbk_dir = 0 %}
+    {% capture rss_url %}/rss/{{ crs_id }}-{{ crs_sem }}.rss{% endcapture %}
+    {% capture exam_url %}/teaching/{{ crs_id }}/{{ crs_sem }}/exams.html{% endcapture %}{% assign fbk_dir = 0 %}
+    {% assign rss_feed = 0 %}
     {% assign sched_dir = 0 %}
+    {% assign exams_file = 0 %}
     {% for sp in site.pages %}
       {% if sp.url contains fbk_url %}
         {% assign fbk_dir = 1 %}
@@ -15,6 +18,9 @@
       {% endif %}
       {% if sp.url contains sched_url %}
         {% assign sched_dir = 1 %}
+      {% endif %}
+      {% if sp.url contains rss_url %}
+        {% assign rss_feed = 1 %}
       {% endif %}
       {% if fbk_dir == 1 and sched_dir == 1 %}
         {% break %}
@@ -48,6 +54,20 @@
           Feedback
         </a>
       </li>
+      {% endif %}
+      {% if exams_file == 1 %}
+      <li class="list-group-item">
+        <a href="{{ rss_url | relative_url }}">
+          Exams
+        </a>
+      </li>
+      {% if rss_feed == 1 %}
+      <li class="list-group-item">
+        <a href="{{ rss_url | relative_url }}">
+          RSS feed for {{ crs_id }}-{{ crs_sem }}
+        </a>
+      </li>
+
       {% endif %}
     </ul>
   </div>

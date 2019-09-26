@@ -4,7 +4,7 @@ breadcrumb: Project Proposal
 layout: bg-image
 marks: 3
 aid: P_PROP
-moddate: 24-Sep-2019
+moddate: 25-Sep-2019
 rubric:
 - crit: Background and Motivation
   wt: 0.5
@@ -37,7 +37,6 @@ rubric:
   l1: Some errors, audience may have some trouble reading your work
   l0: Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow
 ---
-# {{ page.breadcrumb }}
 
 ### Description
 
