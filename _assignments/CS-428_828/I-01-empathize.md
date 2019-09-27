@@ -39,14 +39,14 @@ Specifically, you are asked to:
 
 1. Create an [empathy map](https://www.nngroup.com/articles/empathy-mapping/) while you complete the following task within
 [your course on URcourses](https://urcourses.uregina.ca/course/view.php?id=2168):
-  * claim 1 "Section" by changing the label to your own name (there are enough blank section for everyone - so be nice and don't claim someone else's section!)
-  * add to your section: 1 resource and 1 activity that can both be assigned a grade.
+  * claim 1 "Section" by changing the label to your own name (there are enough blank sections for everyone - so be nice and don't claim someone else's section!)
+  * add to your section: 1 resource and 1 activity that can both allow you to assign a grade upon completion.
 
 1. Describe whatever opportunities for redesign that you find by describing it (or them) in terms of your personal experience of completing the above task
 
 ### Submission
 
-* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on URcourses
+* submit a single [pdf](https://en.wikipedia.org/wiki/PDF) document on URcourses
 * target: 1 page for the empathy map and 1-2 pages for the opportunities for redesign
 
 {% include grading/main.html %}
