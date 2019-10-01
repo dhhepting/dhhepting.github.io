@@ -16,7 +16,7 @@ layout: bg-image
 <h3>Past Offerings</h3>
 {% capture exam_url %}/assets/teaching/pdf/{{ crs_id }}{% endcapture %}
 <ul>
-{% for sp in site.static_files %}
+{% for sp in site.static_files reversed %}
   {% if sp.path contains exam_url %}
     {% if sp.path contains "exam" %}
       <li><a href="{{ sp.path | relative_url }}">{{ sp.path | split: "/" | last }}</a></li>
