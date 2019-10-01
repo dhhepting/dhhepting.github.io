@@ -131,7 +131,7 @@ British Columbia Ministry for Employment and Investment.
   <div class="card-body">
     <div class="container">
     <img class="img-responsive" alt="Fiery Dragon"
-    src="{{"/assets/gallery/img/1990-Hep-Fiery-Dragon.png" | relative_url }}" />
+    src="{{"/assets/gallery/img/1990-Hep-Fiery-Dragon.jpg" | relative_url }}" />
     </div>
 
 Martin Gardener tells the story of how this curve,
@@ -203,7 +203,7 @@ camera inside the computer.
   <div class="card-body">
     <div class="container">
       <img class="img-responsive" alt="Steps to Infinity (1994)"
-      src="{{"/assets/gallery/img/1994-HepMus-Steps-to-Infinity.png" | relative_url }}" />
+      src="{{"/assets/gallery/img/1994-HepMus-Steps-to-Infinity.jpg" | relative_url }}" />
     </div>
 
 <p>
@@ -288,7 +288,7 @@ And the final image once again...
 
     <div class="container">
       <img class="img-responsive" alt="Steps to Infinity (1994)"
-      src="{{"/assets/gallery/img/1994-HepMus-Steps-to-Infinity.png" | relative_url }}" />
+      src="{{"/assets/gallery/img/1994-HepMus-Steps-to-Infinity.jpg" | relative_url }}" />
     </div>
    </div>
   </div>
@@ -301,7 +301,7 @@ And the final image once again...
   <div class="card-body">
     <div class="container">
       <img class="img-responsive" alt="Desktop Tetrahedron (1990)"
-      src="{{"/assets/gallery/img/1990-HepSni-Desktop-Tetrahedron.png" | relative_url }}" />
+      src="{{"/assets/gallery/img/1990-HepSni-Desktop-Tetrahedron.jpg" | relative_url }}" />
     </div>
   </div>
 </div>
@@ -314,7 +314,7 @@ And the final image once again...
   <div class="card-body">
     <div class="container">
       <img class="img-responsive" alt="Carrot in Blue (1991)"
-      src="{{"/assets/gallery/img/1991-HepPru-Carrot-in-Blue.png" | relative_url }}" />
+      src="{{"/assets/gallery/img/1991-HepPru-Carrot-in-Blue.jpg" | relative_url }}" />
     </div>
   </div>
 </div>
@@ -327,7 +327,7 @@ And the final image once again...
   <div class="card-body">
     <div class="container">
       <img class="img-responsive" alt="Fractal Emblem (1992)"
-      src="{{"/assets/gallery/img/1992-Hep-Fractal-Emblem.png" | relative_url }}" />
+      src="{{"/assets/gallery/img/1992-Hep-Fractal-Emblem.jpg" | relative_url }}" />
     </div>
   </div>
 </div>
@@ -353,7 +353,7 @@ And the final image once again...
   <div class="card-body">
     <div class="container">
       <img class="img-responsive" alt="The Great Fern Dune (1994)"
-      src="{{"/assets/gallery/img/1994-Hep-The-Great-Fern-Dune.png" | relative_url }}" />
+      src="{{"/assets/gallery/img/1994-Hep-The-Great-Fern-Dune.jpg" | relative_url }}" />
     </div>
   </div>
 </div>
@@ -379,7 +379,7 @@ And the final image once again...
   <div class="card-body">
     <div class="container">
       <img class="img-responsive" alt="Captivating Rhythm (1995)"
-      src="{{"/assets/gallery/img/1995-Hep-Captivating-Rhythm.png" | relative_url }}" />
+      src="{{"/assets/gallery/img/1995-Hep-Captivating-Rhythm.jpg" | relative_url }}" />
     </div>
 
 This image is based on a fractal which is similar to the one used to
