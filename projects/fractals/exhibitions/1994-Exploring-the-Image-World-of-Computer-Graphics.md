@@ -28,13 +28,13 @@ images are grouped within two general themes:
       src="{{ "/assets/gallery/img/1989-Hep-Gasket-in-Bubbles.jpg" | relative_url }}"
       alt="Gasket in Bubbles" />
       <img class="img-fluid rounded m-1" style="height: 128px"
-      src="{{ "/assets/gallery/img/1990-HepSni-Desktop-Tetrahedron.png" | relative_url }}"
+      src="{{ "/assets/gallery/img/1990-HepSni-Desktop-Tetrahedron.jpg" | relative_url }}"
       alt="Desktop Tetrahedron" />
       <img class="img-fluid rounded m-1" style="height: 128px"
-      src="{{ "/assets/gallery/img/1990-Hep-Butte-Manhattan.png" | relative_url }}"
+      src="{{ "/assets/gallery/img/1990-Hep-Butte-Manhattan.jpg" | relative_url }}"
       alt="Butte Manhattan" />
       <img class="img-fluid rounded m-1" style="height: 128px"
-      src="{{ "/assets/gallery/img/1990-Hep-Fiery-Dragon.png"| relative_url }}"
+      src="{{ "/assets/gallery/img/1990-Hep-Fiery-Dragon.jpg"| relative_url }}"
       alt="Fiery Dragon" />
       <figcaption>
         Left to right: <em>Gasket in Bubbles</em>,<em>Desktop Tetrahedron</em> (with
@@ -45,10 +45,10 @@ images are grouped within two general themes:
   <div class="row">
   <figure>
     <img class="img-fluid rounded m-1" style="height: 128px"
-    src="{{ "/assets/gallery/img/1990-HepSni-Reflecting-Fern.png" | relative_url }}"
+    src="{{ "/assets/gallery/img/1990-HepSni-Reflecting-Fern.jpg" | relative_url }}"
       alt="Reflecting Fern" />
     <img class="img-fluid rounded m-1" style="height: 128px"
-    src="{{ "/assets/gallery/img/1991-HepPru-Carrot-in-Blue.png" | relative_url }}"
+    src="{{ "/assets/gallery/img/1991-HepPru-Carrot-in-Blue.jpg" | relative_url }}"
       alt="Carrot in Blue" />
     <img class="img-fluid rounded m-1" style="height: 128px"
     src="{{ "/assets/gallery/img/1990-HepPruSni-The-Great-Fern-Dune-of-Goron-III.jpg" | relative_url }}"
