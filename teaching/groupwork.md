@@ -252,81 +252,75 @@ Following the examples, a <a href="#calculator">calculator</a> form is provided.
 
 <h3 id="calculator">Calculator</h3>
 <p>
-Here is a calculator for group ratings. Select either 3 or 4 group members. Each group member doing the rating must allocate 100 points. If the total of points allocated a group member is not equal to 100 (or 99), the background colour for the sum will be changed to red.
+Here are 2 calculators for group ratings. The first is for an individual rater, and the second is for the group. For either calculator, choose your group size: 3, 4, or 5 members).
 </p>
-
-<form>
-  <div class="form-check">
+<form class="p-2 m-2 bg-light align-middle">
+  <label for="groupRadios">
+    Number of Group Members:
+  </label>
+  <div class="form-check-inline">
     <input class="form-check-input" type="radio" name="groupRadios" id="groupRadio3" onclick="grpsize()" value="3">
     <label class="form-check-label" for="groupRadios">
-      3 Group Members
+      3
     </label>
   </div>
-  <div class="form-check">
+  <div class="form-check-inline">
     <input class="form-check-input" type="radio" name="groupRadios" id="groupRadio4" onclick="grpsize()" value="4" checked>
     <label class="form-check-label" for="groupRadios">
-      4 Group Members
+      4
     </label>
   </div>
-  <div class="form-check">
+  <div class="form-check-inline">
     <input class="form-check-input" type="radio" name="groupRadios" id="groupRadio4" onclick="grpsize()" value="5" checked>
     <label class="form-check-label" for="groupRadios">
-      5 Group Members
+      5
     </label>
   </div>
+</form>
+
+<h5>Individual</h5>
+
+<h5>Group</h5>
+<p>
+Each group member doing the rating must allocate 100 points. If the total of points allocated a group member is not equal to 100 (or 99), the background colour for the sum will be changed to red.
+</p>
+
+
+<form>
   <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col" id="namescol">
       <label for="ratees">Ratees</label>
-      <input type="text" class="form-control" name="ratees" id="ratee1" oninput="rate('1')" placeholder="Ratee 1">
-      <input type="text" class="form-control" name="ratees" id="ratee2" oninput="rate('2')" placeholder="Ratee 2">
-      <input type="text" class="form-control" name="ratees" id="ratee3" oninput="rate('3')" placeholder="Ratee 3">
-      <input type="text" class="form-control" name="ratees" id="ratee4" oninput="rate('4')" placeholder="Ratee 4">
+    {% for r in (1..5) %}
+      <input type="text" class="form-control" name="ratees" id="ratee{{r}}" oninput="rate('{{ r }}')" placeholder="Ratee {{ r }}">
+    {% endfor %}
     </div>
-    <div class="form-group col-md-2">
-      <label id="rater1" for="raters1">Rater 1</label>
-      <input type="number" step="1" class="form-control" id="1b1" onchange="sumby('1')" placeholder="rating of self">
-      <input type="number" step="1" class="form-control" id="2b1" onchange="sumby('1')" placeholder="rating of 2">
-      <input type="number" step="1" class="form-control" id="3b1" onchange="sumby('1')" placeholder="rating of 3">
-      <input type="number" step="1" class="form-control" id="4b1" onchange="sumby('1')" placeholder="rating of 4">
-      <input type="number" step="1" disabled class="form-control" id="sb1" placeholder="Sum">
+    {% for c in (1..5) %}
+    <div class="form-group col" id="r{{c}}col">
+      <label id="rater{{ c }}" for="raters{{ c }}">Rater {{ c }}</label>
+      {% for r in (1..5) %}
+        <input type="number" step="1" class="form-control"
+        id="{{ r }}b{{ c }}" onchange="sumby('{{c}}')"
+        {% if r == c %}
+        placeholder="rating of self">
+        {% else %}
+        placeholder="{{ r }}b{{ c }}">
+        {% endif %}
+      {% endfor %}
+      <input type="number" step="1" disabled class="form-control" id="sb{{c}}" placeholder="Sum">
     </div>
-    <div class="form-group col-md-2">
-      <label id="rater2" for="raters2">Rater 2</label>
-      <input type="number" step="1" class="form-control" id="1b2" onchange="sumby('2')" placeholder="rating of 1">
-      <input type="number" step="1" class="form-control" id="2b2" onchange="sumby('2')" placeholder="rating of self">
-      <input type="number" step="1" class="form-control" id="3b2" onchange="sumby('2')" placeholder="rating of 3">
-      <input type="number" step="1" class="form-control" id="4b2" onchange="sumby('2')" placeholder="rating of 4">
-      <input type="number" step="1" disabled class="form-control" id="sb2" placeholder="Sum">
-    </div>
-    <div class="form-group col-md-2">
-      <label id="rater3" for="raters3">Rater 3</label>
-      <input type="number" step="1" class="form-control" id="1b3" onchange="sumby('3')" placeholder="rating of 1">
-      <input type="number" step="1" class="form-control" id="2b3" onchange="sumby('3')" placeholder="rating of 2">
-      <input type="number" step="1" class="form-control" id="3b3" onchange="sumby('3')" placeholder="rating of self">
-      <input type="number" step="1" class="form-control" id="4b3" onchange="sumby('3')" placeholder="rating of 4">
-      <input type="number" step="1" disabled class="form-control" id="sb3" placeholder="Sum">
-    </div>
-    <div class="form-group col-md-2">
-      <label id="rater4" for="raters4">Rater 4</label>
-      <input type="number" step="1" class="form-control" id="1b4" onchange="sumby('4')" placeholder="rating of 1">
-      <input type="number" step="1" class="form-control" id="2b4" onchange="sumby('4')" placeholder="rating of 2">
-      <input type="number" step="1" class="form-control" id="3b4" onchange="sumby('4')" placeholder="rating of 3">
-      <input type="number" step="1" class="form-control" id="4b4" onchange="sumby('4')" placeholder="rating of self">
-      <input type="number" step="1" disabled class="form-control" id="sb4" placeholder="Sum">
-    </div>
-    <div class="form-group col-md-1">
+    {% endfor %}
+
+    <div class="form-group col" id="sumcol">
       <label for="">Sum</label>
-      <input type="number" step="1" disabled class="form-control" id="r1s" placeholder="Sum">
-      <input type="number" step="1" disabled class="form-control" id="r2s" placeholder="Sum">
-      <input type="number" step="1" disabled class="form-control" id="r3s" placeholder="Sum">
-      <input type="number" step="1" disabled class="form-control" id="r4s" placeholder="Sum">
+      {% for r in (1..5) %}
+      <input type="number" step="1" disabled class="form-control" id="r{{r}}s" placeholder="Sum">
+      {% endfor %}
     </div>
-    <div class="form-group col-md-1">
+    <div class="form-group col" id="wtcol">
       <label for="">Weight</label>
-      <input type="number" step="0.1" disabled class="form-control" id="r1w" placeholder="Weight">
-      <input type="number" step="0.1" disabled class="form-control" id="r2w" placeholder="Weight">
-      <input type="number" step="0.1" disabled class="form-control" id="r3w" placeholder="Weight">
-      <input type="number" step="0.1" disabled class="form-control" id="r4w" placeholder="Weight">
+      {% for r in (1..5) %}
+      <input type="number" step="0.1" disabled class="form-control" id="r{{r}}w" placeholder="Weight">
+      {% endfor %}
     </div>
   </div>
 </form>
@@ -337,44 +331,19 @@ var groupsize = 4;
 
 function grpsize()
 {
+  console.log("groupsize:", document.getElementById('5b2'))
   var gsrad = document.querySelector("input[name=groupRadios]:checked");
-  var dabc = document.getElementById("r1w").style.backgroundColor;
   groupsize = parseInt(gsrad.value);
-  console.log(groupsize);
-  if (groupsize == 3)
+  console.log('groupsize:',groupsize)
+  for (var i = groupsize+1; i <=5; i++)
   {
-    document.getElementById("ratee4").disabled = true;
-    document.getElementById("ratee4").style.backgroundColor = "black";
-    document.getElementById("r4s").style.backgroundColor = "black";
-    document.getElementById("r4w").style.backgroundColor = "black";
-    document.getElementById("sb4").style.backgroundColor = "black";
-    var idstr = "";
-    for (var i = 1; i <=4; i++)
+    document.getElementById('r' + i.toString() + 'col').style.display = 'none';
+    document.getElementById('ratee' + i.toString()).style.display = 'none';
+    document.getElementById('r' + i.toString() + 's').style.display = 'none';
+    document.getElementById('r' + i.toString() + 'w').style.display = 'none';
+    for (var j = 1; j <= groupsize; j++)
     {
-      idstr = "4b" + i.toString();
-      document.getElementById(idstr).disabled = true;
-      document.getElementById(idstr).style.backgroundColor = "black";
-      idstr = i.toString() + "b4";
-      document.getElementById(idstr).disabled = true;
-      document.getElementById(idstr).style.backgroundColor = "black";
-    }
-  }
-  else
-  {
-    document.getElementById("ratee4").disabled = false;
-    document.getElementById("ratee4").style.backgroundColor = "white";
-    document.getElementById("r4s").style.backgroundColor = dabc;
-    document.getElementById("r4w").style.backgroundColor = dabc;
-    document.getElementById("sb4").style.backgroundColor = dabc;
-    var idstr = "";
-    for (var i = 1; i <=4; i++)
-    {
-      idstr = "4b" + i.toString();
-      document.getElementById(idstr).disabled = false;
-      document.getElementById(idstr).style.backgroundColor = "white";
-      idstr = i.toString() + "b4";
-      document.getElementById(idstr).disabled = false;
-      document.getElementById(idstr).style.backgroundColor = "white";
+      document.getElementById(i.toString() + 'b' + j.toString()).style.display = 'none';
     }
   }
 }
@@ -409,7 +378,7 @@ function weight()
       var sbox = document.getElementById(sid);
       var wbox = document.getElementById(wid);
       var val = parseInt(sbox.value);
-      var wval = ((val*1.0)/(maxsum * 1.0)).toFixed(1);
+      var wval = ((val*1.0)/(maxsum * 1.0)).toFixed(2);
       console.log(wid);
       console.log(wval);
       if (wval < 0.5)
@@ -436,7 +405,7 @@ function sumfor(rr) {
       var val = parseInt(rrbox.value);
       if (!isNaN(val))
       {
-        rrbox.style.backgroundColor = "silver";
+        rrbox.style.backgroundColor = "red";
       }
       rowsum = rowsum + val;
     }
@@ -445,7 +414,7 @@ function sumfor(rr) {
     if (!isNaN(rowsum))
     {
       tt.valueAsNumber = rowsum;
-      tt.style.backgroundColor = "silver";
+      tt.style.backgroundColor = "red";
     }
     weight();
 }
