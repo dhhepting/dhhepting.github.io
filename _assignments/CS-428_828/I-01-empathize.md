@@ -2,7 +2,7 @@
 title: Empathize
 breadcrumb: Empathize
 layout: bg-image
-moddate: 26-Sep-2019
+moddate: 02-Oct-2019
 marks: 6
 aid: I_EMP
 rubric:
@@ -39,8 +39,10 @@ Specifically, you are asked to:
 
 1. Create an [empathy map](https://www.nngroup.com/articles/empathy-mapping/) while you complete the following task within
 [your course on URcourses](https://urcourses.uregina.ca/course/view.php?id=2168):
-  * claim 1 "Section" by changing the label to your own name (there are enough blank sections for everyone - so be nice and don't claim someone else's section!)
-  * add to your section: 1 resource and 1 activity that can both allow you to assign a grade upon completion.
+   1. claim 1 "Section" by changing the label to your own name (there are enough blank sections for everyone - so be nice and don't claim someone else's section!)
+   1. add to your section:
+      1. One activity that allows you to assign a grade upon completion
+      1. One resource whose access is restricted based on the grade earned from your activity (NOTE: this represents a change in the assignment, necessitated by the lack of capability to assign a grade or record activity completion in the current version of URcourses)
 
 1. Describe whatever opportunities for redesign that you find by describing it (or them) in terms of your personal experience of completing the above task
 
