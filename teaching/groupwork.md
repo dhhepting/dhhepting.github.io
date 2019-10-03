@@ -6,7 +6,7 @@ layout: bg-image
 # {{ page.breadcrumb }}
 
 The mark awarded for each group assignment is shared by all group members. However, you have the ability to communicate extra information about
-your group members' performance to your group members,
+your the performance of your group members to your group members,
 to the marker, and to me.
 
 For each group assignment,
@@ -240,7 +240,7 @@ The ratings are suggestions to me and information to you about your involvement 
   <li>Enter the names of your group members in the left column, with your name first</li>
   <li>Enter your point allocations in the middle column</li>
   <li>When your total allocated points is equal to 99 or 100, you will be able to click on the "Format" button to see your formatted submission</li>
-  <li>Click "Copy" to copy your submission to the clipboard so that it can be pasted at the URcourses link (described earlier)</li>
+  <li>When you are satisfied with your submission, click "Copy" to make a copy of it that can be pasted at the URcourses link (described earlier)</li>
   </ol>
 </p>
 
@@ -397,7 +397,7 @@ function weight()
       {
         wval = 0.5;
       }
-      else if (wval <= 1.0)
+      if (wval <= 1.0)
       {
         wbox.valueAsNumber = wval;
         wbox.style.backgroundColor = "silver";
