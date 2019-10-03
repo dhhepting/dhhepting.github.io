@@ -284,14 +284,14 @@ Here are 2 calculators for group ratings. The first is for an individual rater, 
 <form>
   <div class="form-row">
     <div class="form-group col" id="i-namescol">
-      <label for="i-namescol">Group Members</label>
-      <input type="text" class="form-control" id="i-ratee1" oninput="irate('1')" value = "" placeholder="Your name">
+      <label for="ratees">Group Members</label>
+      <input type="text" class="form-control" name="ratees" id="i-ratee1" oninput="irate('1')" value = "" placeholder="Your name">
       {% for r in (2..5) %}
         <input type="text" class="form-control" name="ratees" id="i-ratee{{r}}" oninput="irate('{{ r }}')" value="" placeholder="Other group member name">
       {% endfor %}
     </div>
-    <div class="form-group col" id="ir-col">
-      <label id="i-rater" for="ir-col">You rate:</label>
+    <div class="form-group col" name="iratees" id="ir-col">
+      <label id="i-rater" for="iratees">You rate:</label>
       {% for r in (1..5) %}
         <input type="number" step="1" class="form-control"
         id="i-{{ r }}bi" onchange="isumby()"
@@ -303,12 +303,63 @@ Here are 2 calculators for group ratings. The first is for an individual rater, 
       {% endfor %}
       <input type="number" step="1" disabled class="form-control" id="sbi" placeholder="Sum">
     </div>
-    <div class="form-group col border bg-info m-2 p-4">
-      <label class="col col-form-label text-right" for="ratings_text">Output</label>
-      <textarea class="col form-control" id="ratings_text" rows="6" placeholder="Your rating of all your group members"></textarea>
-      <button id="eval" class="btn btn-primary" disabled onclick="format_ratings(); return false;">
-        Evaluate
-      </button>
+  </div>
+  <div class="border bg-info m-2 p-4">
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="ratings_text">Output</label>
+      <textarea class="col-sm-9 form-control" id="ratings_text" rows="6" placeholder="Your rating of all your group members"></textarea>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-9">
+        <button class="btn btn-primary" onclick="format_ratings()">Evaluate</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<h5>Group</h5>
+<p>
+Each group member doing the rating must allocate 100 points. If the total of points allocated a group member is not equal to 100 (or 99), the background colour for the sum will be changed to red.
+</p>
+
+
+<form>
+  <div class="form-row">
+    <div class="form-group col" id="namescol">
+      <label for="ratees">Group Members</label>
+    {% for r in (1..5) %}
+      <input type="text" class="form-control" name="ratees" id="ratee{{r}}" oninput="rate('{{ r }}')" placeholder="GM {{ r }}">
+    {% endfor %}
+    </div>
+    {% for c in (1..5) %}
+    <div class="form-group col" id="r{{c}}col">
+      <label id="rater{{ c }}" for="raters{{ c }}">GM {{ c }} rates</label>
+      {% for r in (1..5) %}
+        <input type="number" step="1" class="form-control"
+        id="{{ r }}b{{ c }}" onchange="sumby('{{c}}')"
+        {% if r == c %}
+        placeholder="self">
+        {% else %}
+        placeholder="GM {{r}}">
+        {% endif %}
+      {% endfor %}
+      <input type="number" step="1" disabled class="form-control" id="sb{{c}}" placeholder="Sum">
+    </div>
+    {% endfor %}
+
+    <div class="form-group col" id="sumcol">
+      <label for="">Sum</label>
+      {% for r in (1..5) %}
+      <input type="number" step="1" disabled class="form-control" id="r{{r}}s" placeholder="Sum">
+      {% endfor %}
+    </div>
+    <div class="form-group col" id="wtcol">
+      <label for="">Weight</label>
+      {% for r in (1..5) %}
+      <input type="number" step="0.1" disabled class="form-control" id="r{{r}}w" placeholder="Weight">
+      {% endfor %}
     </div>
   </div>
 </form>
@@ -321,19 +372,16 @@ function grpsize()
 {
   var gsrad = document.querySelector("input[name=groupRadios]:checked");
   groupsize = parseInt(gsrad.value);
-  for (var i = 4; i <= groupsize; i++)
-  {
-    document.getElementById('i-ratee' + i.toString()).style.display = 'block';
-    document.getElementById('i-' + i.toString() + 'bi').style.display = 'block';
-  }
   for (var i = groupsize+1; i <=5; i++)
   {
-    // document.getElementById('r' + i.toString() + 'col').style.display = 'none';
-    //document.getElementById('ratee' + i.toString()).style.display = 'none';
-    //document.getElementById('r' + i.toString() + 's').style.display = 'none';
-    //document.getElementById('r' + i.toString() + 'w').style.display = 'none';
-    document.getElementById('i-ratee' + i.toString()).style.display = 'none';
-    document.getElementById('i-' + i.toString() + 'bi').style.display = 'none';
+    document.getElementById('r' + i.toString() + 'col').style.display = 'none';
+    document.getElementById('ratee' + i.toString()).style.display = 'none';
+    document.getElementById('r' + i.toString() + 's').style.display = 'none';
+    document.getElementById('r' + i.toString() + 'w').style.display = 'none';
+    for (var j = 1; j <= groupsize; j++)
+    {
+      document.getElementById(i.toString() + 'b' + j.toString()).style.display = 'none';
+    }
   }
 }
 
@@ -449,13 +497,10 @@ function isumby()
       if (sum < 99 || sum > 100)
       {
         tt.style.backgroundColor = "red";
-        document.getElementById('eval').disabled = true;
-
       }
       else
       {
         tt.style.backgroundColor = "silver";
-        document.getElementById('eval').disabled = false;
       }
     }
 }
@@ -489,7 +534,6 @@ function sumby(rr)
       else
       {
         tt.style.backgroundColor = "silver";
-        format_ratings()
       }
     }
 }
@@ -498,13 +542,13 @@ function format_ratings()
 {
   var ratingsspan = document.getElementById("ratings_text");
 
-  ratingsspan.textContent = "Ratings by: "
+  ratingsspan.textContent = "\t\t"
   + document.getElementById("i-ratee1").value + "\n";
   for (var i = 1; i <= groupsize; i++)
   {
     // output information for each criterion
-    ratingsspan.textContent = ratingsspan.textContent + '\t' + document.getElementById('i-ratee' + i.toString()).value +
-    ': ' + document.getElementById('i-' + i.toString() + 'bi').value + '\n'
+    ratingsspan.textContent = ratingsspan.textContent + document.getElementById('i-ratee' + i.toString()).value +
+    '\t' + document.getElementById('i-' + i.toString() + 'bi').value + '\n'
   }
 }
 
