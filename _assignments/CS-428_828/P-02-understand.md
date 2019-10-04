@@ -1,9 +1,9 @@
 ---
 layout: bg-image
-title: Project Requirements
-breadcrumb: Project Requirements
-aid: P_REQ
-moddate: 23-Sep-2019
+title: Understand
+breadcrumb: Understand
+aid: P_UND
+moddate: 03-Oct-2019
 marks: 6
 rubric:
 - crit: Description of User(s)
@@ -20,11 +20,11 @@ rubric:
   l0: Substantially missing
 - crit: Empathy Map(s)
   wt: 2.0
-  l3: All quadrants done well
+  l3: All quadrants done well by all
   l2: Entries in all quadrants
   l1: Few entries, lacking detail
   l0: Substantially incomplete
-- crit: Requirements
+- crit: Problems and Unmet Needs
   wt: 2.0
   l3: Thoroughly explored and documented (without indicating solutions)
   l2: Quite complete
@@ -41,17 +41,19 @@ rubric:
 
 ### Description
 
-Establish requirements for your redesign effort by considering user issues around
-one feature or activity that users may perform with the application or website.
+Understand the important issues in your redesign effort by identifying specific user issues with a feature or task that you have selected in your
+proposal.
 
-Recall the diagram that [illustrated the article about Design Thinking](https://www.nngroup.com/articles/design-thinking/) from the Nielsen Norman Group.
+Recall the diagram that illustrated the article about Design Thinking (from the Nielsen Norman Group):
+
+<img src="https://media.nngroup.com/media/editor/2016/07/29/designthinking_illustration_final-01-01.png" class="responsive" alt="Stages of Design Thinking" width="600" /> <br />
 There are 3 phases depicted: understand, explore, and materialize. The understand phase,
 comprising empathize and define steps, is the focus of this assignment. You should focus on
 well-defined activities that well-defined users are trying to perform.
 
 1. describe the activity/activities and the user(s) with sufficient detail to be relatable
-1. empathize: do this by first creating one or more empathy maps for the activities
-1. define: identify specific aspects of the current interface that cause problems for the users and create requirements (see the [Volere Snow Card](http://www.volere.co.uk/snowcard.pdf) and [notes](http://www.volere.co.uk/pdf%20files/06%20Atomic%20Requirements.pdf), illustrated in the textbook, for an idea about the kinds of details to capture)
+1. empathize: each member of your group will do this by creating one or more empathy maps for the activitie(s)
+1. define: identify specific aspects of the current interface that cause problems for the users and explore the roots of those problems. Identify whatever user needs may be unmet
 
 Remember that this phase is still concerned with articulating the problem.
 No solutions should appear here. That will come later.
@@ -59,8 +61,6 @@ No solutions should appear here. That will come later.
 ### Submission
 
 * submit a [pdf](https://en.wikipedia.org/wiki/PDF) document (1 per group) on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
-* target: 10 requirements
+* target: 6 - 10 problems or unmet needs (about 2 per group member)
 
-### Grading
-
-{% include marker.html %}
+{% include grading/main.html %}
