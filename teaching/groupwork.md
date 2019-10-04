@@ -27,7 +27,7 @@ The group member who was allocated the most points will receive a rating of 1, w
 
 The ratings are suggestions to me and information to you about your involvement in your group.
 
-* Use the "Submit Group Rating" link on URcourses, for the appropriate assignment, and use the <a href="#calculator">form</a> provided here to help you to format your submission.
+* Use the "Rate your group on..." link on URcourses, for the appropriate assignment, and use the <a href="#calculator">form</a> provided here to help you to format your submission.
 
 * You can see your rating from the group in URcourses via the link labelled
 "See Your Rating From Group".  
@@ -307,6 +307,10 @@ The ratings are suggestions to me and information to you about your involvement 
   </div>
 </form>
 
+<a id="gw-marking" href="gw-marking.html" class="m-2 btn btn-link">
+  GWM
+</a>
+
 <script>
 
 var groupsize = 5;
@@ -315,6 +319,7 @@ function grpsize()
 {
   var gsrad = document.querySelector("input[name=groupRadios]:checked");
   groupsize = parseInt(gsrad.value);
+  // display things that need it
   for (var i = 4; i <= groupsize; i++)
   {
     document.getElementById('i-ratee' + i.toString()).style.display = 'block';
@@ -322,10 +327,6 @@ function grpsize()
   }
   for (var i = groupsize+1; i <=5; i++)
   {
-    // document.getElementById('r' + i.toString() + 'col').style.display = 'none';
-    //document.getElementById('ratee' + i.toString()).style.display = 'none';
-    //document.getElementById('r' + i.toString() + 's').style.display = 'none';
-    //document.getElementById('r' + i.toString() + 'w').style.display = 'none';
     document.getElementById('i-ratee' + i.toString()).style.display = 'none';
     document.getElementById('i-' + i.toString() + 'bi').style.display = 'none';
   }
@@ -334,114 +335,36 @@ function grpsize()
   document.getElementById("ratings_text").readonly = true
 }
 
-function rate(rr)
-{
-    var src = "ratee" + rr;
-    var dst = "rater" + rr;
-    document.getElementById(dst).textContent = document.getElementById(src).value + ' rates:';
-    for (var i = 1; i <= groupsize; i++)
-    {
-      if (rr == i.toString())
-      {
-        document.getElementById(rr + 'b' + i.toString()).placeholder = 'self';
-      }
-      else
-      {
-        document.getElementById(rr + 'b' + i.toString()).placeholder = document.getElementById(src).value;
-      }
-    }
-}
-
 function irate(rr)
 {
     var src = 'i-ratee' + rr
-    for (var i = 1; i <= groupsize; i++)
-    {
-      document.getElementById('i-' + rr + 'bi').placeholder = document.getElementById(src).value;
-    }
     if (rr == '1')
     {
+      document.getElementById('i-' + rr + 'bi').placeholder = 'Yourself'
       document.getElementById("ratings_text").textContent =
       "Allocations by: " + document.getElementById("i-ratee1").value + "\n";
       document.getElementById("ratings_text").readonly = true
     }
-}
-
-function weight()
-{
-  var sum = 0;
-  var maxsum = 0;
-  for (var i = 1; i <= groupsize; i++)
-  {
-    var sid = "r" + i.toString() + "s";
-    var sbox = document.getElementById(sid);
-    var val = parseInt(sbox.value);
-    if (val > maxsum)
+    else
     {
-      maxsum=val;
+      document.getElementById('i-' + rr + 'bi').placeholder = document.getElementById(src).value;
     }
-  }
-  if (!isNaN(maxsum))
-  {
-    for (var i = 1; i <= groupsize; i++)
-    {
-      var sid = "r" + i.toString() + "s";
-      var wid = "r" + i.toString() + "w";
-      var sbox = document.getElementById(sid);
-      var wbox = document.getElementById(wid);
-      var val = parseInt(sbox.value);
-      var wval = ((val*1.0)/(maxsum * 1.0)).toFixed(2);
-      console.log(wid);
-      console.log(wval);
-      if (wval < 0.5)
-      {
-        wval = 0.5;
-      }
-      if (wval <= 1.0)
-      {
-        wbox.valueAsNumber = wval;
-        wbox.style.backgroundColor = "silver";
-      }
-    }
-  }
-}
-
-function sumfor(rr)
-{
-    var rowsum = 0;
-    for (var i = 1; i <= groupsize; i++)
-    {
-      var rrid = rr + "b" + i.toString();
-      console.log(rrid);
-      var rrbox = document.getElementById(rrid);
-      var val = parseInt(rrbox.value);
-      if (!isNaN(val))
-      {
-        rrbox.style.backgroundColor = "silver";
-      }
-      rowsum = rowsum + val;
-    }
-    var rrsum = "r" + rr + "s";
-    var tt = document.getElementById(rrsum);
-    if (!isNaN(rowsum))
-    {
-      tt.valueAsNumber = rowsum;
-      tt.style.backgroundColor = "silver";
-    }
-    weight();
 }
 
 function isumby()
 {
-
-    var sum = 0;
-    for (var i = 1; i <= groupsize; i++)
+  var sum = 0;
+  for (var i = 1; i <= groupsize; i++)
     {
       var rbox = document.getElementById('i-' + i.toString() + 'bi');
-      var val = parseInt(rbox.value);
+      var val = parseInt(rbox.value, 10);
       if (!isNaN(val))
       {
-        rbox.style.backgroundColor = "silver";
+        rbox.style.backgroundColor = "white";
+      }
+      else
+      {
+        rbox.style.backgroundColor = "yellow";
       }
       sum = sum + val;
     }
@@ -457,42 +380,8 @@ function isumby()
       }
       else
       {
-        tt.style.backgroundColor = "silver";
+        tt.style.backgroundColor = "white";
         document.getElementById('format_btn').disabled = false;
-      }
-    }
-}
-
-function sumby(rr)
-{
-
-    var sum = 0;
-    console.log(sum);
-    for (var i = 1; i <= groupsize; i++)
-    {
-      var rid = i.toString() + "b" + rr;
-      var rbox = document.getElementById(rid);
-      var val = parseInt(rbox.value);
-      if (!isNaN(val))
-      {
-        rbox.style.backgroundColor = "silver";
-      }
-      sum = sum + val;
-      sumfor(i.toString());
-    }
-    var rsum = "sb" + rr;
-    var tt = document.getElementById(rsum);
-    if (!isNaN(sum))
-    {
-      tt.valueAsNumber = sum;
-      if (sum < 99 || sum > 100)
-      {
-        tt.style.backgroundColor = "red";
-      }
-      else
-      {
-        tt.style.backgroundColor = "silver";
-        format_ratings()
       }
     }
 }
@@ -510,9 +399,5 @@ function format_ratings()
     ': ' + document.getElementById('i-' + i.toString() + 'bi').value + '\n'
   }
   document.getElementById('clipboard_gr').disabled = false;
-}
-
-function reset_grpsize()
-{
 }
 </script>
