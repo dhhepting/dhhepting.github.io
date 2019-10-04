@@ -5,41 +5,17 @@ layout: bg-image
 ---
 # {{ page.breadcrumb }}
 
-<form class="p-2 m-2 bg-light align-middle">
-  <label for="groupRadios">
-    Number of Group Members:
-  </label>
-  <div class="form-check-inline">
-    <input class="form-check-input" type="radio" name="groupRadios" id="groupRadio3" onclick="grpsize()" value="3">
-    <label class="form-check-label" for="groupRadios">
-      3
-    </label>
-  </div>
-  <div class="form-check-inline">
-    <input class="form-check-input" type="radio" name="groupRadios" id="groupRadio4" onclick="grpsize()" value="4" checked>
-    <label class="form-check-label" for="groupRadios">
-      4
-    </label>
-  </div>
-  <div class="form-check-inline">
-    <input class="form-check-input" type="radio" name="groupRadios" id="groupRadio4" onclick="grpsize()" value="5" checked>
-    <label class="form-check-label" for="groupRadios">
-      5
-    </label>
-  </div>
-  <button class="btn btn-primary" onclick="reset_grpsize(); return false;">Reset</button>
-</form>
 
 <form>
   <div class="border bg-info m-2 p-4">
     <div class="form-group row">
-      <label class="col col-form-label text-right" for="ratings_text">Output</label>
-      <textarea class="col form-control" id="ratings_text" rows="6" placeholder="Input"></textarea>
+      <label class="col-2 col-form-label text-right" for="group_input">Input</label>
+      <textarea class="col-10 form-control" id="group_input" rows="1" placeholder="Input"></textarea>
     </div>
     <div class="form-group row">
-      <div class="col-sm-3">
+      <div class="col-2">
       </div>
-      <div class="col-sm-9">
+      <div class="col-10">
         <button class="btn btn-primary" onclick="input_parse(); return false">Evaluate</button>
       </div>
     </div>
@@ -51,7 +27,7 @@ layout: bg-image
     <div class="form-group col" id="namescol">
       <label for="ratees">Group Members</label>
     {% for r in (1..5) %}
-      <input type="text" class="form-control" name="ratees" id="ratee{{r}}" oninput="rate('{{ r }}')" placeholder="GM {{ r }}">
+      <input type="text" class="form-control" name="ratees" id="ratee{{r}}">
     {% endfor %}
     </div>
     {% for c in (1..5) %}
@@ -59,7 +35,7 @@ layout: bg-image
       <label id="rater{{ c }}" for="raters{{ c }}">GM {{ c }} rates</label>
       {% for r in (1..5) %}
         <input type="number" step="1" class="form-control"
-        id="{{ r }}b{{ c }}" onchange="sumby('{{c}}')"
+        id="{{ r }}b{{ c }}"
         {% if r == c %}
         placeholder="self">
         {% else %}
@@ -69,7 +45,6 @@ layout: bg-image
       <input type="number" step="1" disabled class="form-control" id="sb{{c}}" placeholder="Sum">
     </div>
     {% endfor %}
-
     <div class="form-group col" id="sumcol">
       <label for="">Sum</label>
       {% for r in (1..5) %}
@@ -77,7 +52,7 @@ layout: bg-image
       {% endfor %}
     </div>
     <div class="form-group col" id="wtcol">
-      <label for="">Weight</label>
+      <label for="">Rating</label>
       {% for r in (1..5) %}
       <input type="number" step="0.1" disabled class="form-control" id="r{{r}}w" placeholder="Weight">
       {% endfor %}
@@ -88,22 +63,33 @@ layout: bg-image
 <script>
 
 var groupsize = 5;
+var csepv = [];
 
 function input_parse()
 {
-  var textArea = document.getElementById('ratings_text');
-  var lines = textArea.value.split('\n');    // lines is an array of strings
+  var textArea = document.getElementById('group_input');
+  csepv = textArea.value.split(',');    // lines is an array of strings
 
   // Loop through all lines
-  for (var j = 0; j < lines.length; j++) {
-    console.log('Line ' + j + ' is ' + lines[j])
+  console.log('Group: ' + csepv[0])
+  if (csepv[csepv.length - 1] == csepv.length - 2)
+  {
+    grpsize(csepv[csepv.length - 1])
+    console.log(groupsize)
+    //for (var j = 1; j < csepv.length - 1 ; j++) {
+    //  console.log('Group Member ' + j + ' is ' + csepv[j])
+    //}
+    namefill(csepv)
+  }
+  else
+  {
+    alert("Group size: doesn't match")
   }
 }
 
-function grpsize()
+function grpsize(gs)
 {
-  var gsrad = document.querySelector("input[name=groupRadios]:checked");
-  groupsize = parseInt(gsrad.value);
+  groupsize = parseInt(gs,10);
   for (var i = groupsize+1; i <=5; i++)
   {
     document.getElementById('r' + i.toString() + 'col').style.display = 'none';
@@ -117,32 +103,31 @@ function grpsize()
   }
 }
 
-function rate(rr)
+function namefill(names)
 {
-    var src = "ratee" + rr;
-    var dst = "rater" + rr;
-    document.getElementById(dst).textContent = document.getElementById(src).value + ' rates:';
-    for (var i = 1; i <= groupsize; i++)
+  for (var i = 1; i <= groupsize; i++)
+  {
+    //console.log("ratee" + i.toString())
+    //console.log("rater" + i.toString())
+    //console.log(csepv)
+    //console.log(names)
+    //console.log(document.getElementById("ratee" + i.toString()))
+    document.getElementById("ratee" + i.toString()).placeholder = names[i].toString()
+    document.getElementById("rater" + i.toString()).textContent = names[i].toString()
+    for (var j = 1; j <= groupsize; j++)
     {
-      if (rr == i.toString())
+      if (i == j)
       {
-        document.getElementById(rr + 'b' + i.toString()).placeholder = 'self';
+        document.getElementById(i.toString() + 'b' + j.toString()).placeholder = 'Self'
       }
       else
       {
-        document.getElementById(rr + 'b' + i.toString()).placeholder = document.getElementById(src).value;
+        document.getElementById(i.toString() + 'b' + j.toString()).placeholder = names[i]
       }
     }
+  }
 }
 
-function irate(rr)
-{
-    var src = 'i-ratee' + rr
-    for (var i = 1; i <= groupsize; i++)
-    {
-      document.getElementById('i-' + rr + 'bi').placeholder = document.getElementById(src).value;
-    }
-}
 
 function weight()
 {
