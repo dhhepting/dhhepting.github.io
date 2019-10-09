@@ -9,15 +9,15 @@ layout: bg-image
 <form>
   <div class="border bg-info m-2 p-4">
     <div class="form-group row">
-      <label class="col-2 col-form-label text-right" for="group_input">Input</label>
+      <label class="col-1 col-form-label text-right" for="group_input">Group</label>
       <textarea class="col-10 form-control" id="group_input" rows="1" placeholder="Input"></textarea>
+      <button class="col-1 btn btn-primary" onclick="group_parse(); return false">Evaluate</button>
     </div>
     <div class="form-group row">
-      <div class="col-2">
-      </div>
-      <div class="col-10">
-        <button class="btn btn-primary" onclick="input_parse(); return false">Evaluate</button>
-      </div>
+      <label class="col-1 col-form-label text-right" for="group_input">Group</label>
+      <textarea class="col-5 form-control" id="rate_input" rows="6" placeholder="Input"></textarea>
+      <textarea class="col-5 form-control" id="rate_output" rows="6" placeholder="Input"></textarea>
+      <button class="col-1 btn btn-primary" onclick="rate_parse(); return false">Evaluate</button>
     </div>
   </div>
 </form>
@@ -64,8 +64,9 @@ layout: bg-image
 
 var groupsize = 5;
 var csepv = [];
+var csrat = [];
 
-function input_parse()
+function group_parse()
 {
   var textArea = document.getElementById('group_input');
   csepv = textArea.value.split(',');    // lines is an array of strings
@@ -76,14 +77,70 @@ function input_parse()
   {
     grpsize(csepv[csepv.length - 1])
     console.log(groupsize)
-    //for (var j = 1; j < csepv.length - 1 ; j++) {
-    //  console.log('Group Member ' + j + ' is ' + csepv[j])
-    //}
+    for (var j = 1; j < csepv.length - 1 ; j++) {
+      console.log('Group Member ' + j + ' is ' + csepv[j])
+    }
     namefill(csepv)
   }
   else
   {
     alert("Group size: doesn't match")
+  }
+}
+
+function rate_parse()
+{
+  var inArea = document.getElementById('rate_input');
+  var outArea = document.getElementById('rate_output');
+  csrat = inArea.value.split('\n');    // lines is an array of strings
+
+  // Loop through all lines
+  for (var i = 0; i < csrat.length; i++)
+  {
+    if (csrat[i].length > 0)
+    {
+      outstr = ''
+      var words = csrat[i].split(/,| |-|:|=/);
+      var wmatches = 0;
+      for (var j = 0; j < words.length; j++)
+      {
+        if (words[j].length > 0)
+        {
+          //wcount = wcount + 1;
+          var pival = parseInt(words[j],10)
+          if (isNaN(pival))
+          {
+            // match name
+            if (wmatches == 0)
+            {
+              for (var n = 0; n < csepv.length; n++)
+              {
+                if (csepv[n].includes(words[j]))
+                {
+                  wmatches = 1
+                  outstr = outstr + '( Matched: ' + csepv[n] + ') '
+                  break;
+                }
+              }
+              outstr = outstr + words[j] + ' '
+            }
+          }
+          else if (j == words.length - 1)
+          {
+            outstr = outstr + pival.toString()
+          }
+          else
+          {
+            outstr = ''
+            wmatches = 0
+          }
+        }
+      }
+      if (wmatches == 1)
+      {
+        outArea.textContent = outArea.textContent + '\n' + ' ' + outstr;
+      }
+    }
   }
 }
 
