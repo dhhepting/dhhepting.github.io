@@ -1,11 +1,11 @@
 {% include header.html %}
 {% assign url_parts = page.url | split: "/" %}
 <div class="card {{ url_parts[1] }} w-100 lightcthru" style="min-height:100%" >
-  {% include navPmenu.html %}
-  {% include breadcrumb-nav-transp.html %}
+{% include navPmenu.html %}
+{% include breadcrumb-nav-transp.html %}
   <div class="card-body lightcthru" >
     {{ content }}
   </div>
-  {% include site-date-transp.html %}
+{% include site-date-transp.html %}
 </div>
 {% include footer.html %}

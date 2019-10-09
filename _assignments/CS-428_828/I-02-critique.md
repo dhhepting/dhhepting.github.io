@@ -1,10 +1,10 @@
 ---
-title: Critique Assignment
+title: Critique
 breadcrumb: Critique
 layout: bg-image
 marks: 6
 moddate:
-nid: CA
+aid: I_CU
 rubric:
 - crit: Review
   wt: 2.75
@@ -25,24 +25,19 @@ rubric:
   l1: Some errors, audience may have some trouble reading your work
   l0: Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow
 ---
-# {{ page.breadcrumb }}
-
 ### Description
 
 This is an INDIVIDUAL assignment.
 
-You have been placed into a "Critique" group, the members of which will receive the submission from a "Project" group ([in a message posted here](https://urcourses.uregina.ca/mod/forum/view.php?id=860265)). In order to keep the projects on track, please
-complete your critique within a week.
+You have been placed into a "Critique" group, the members of which will receive the submission from a "Project" group ([in a message posted here](https://urcourses.uregina.ca/mod/forum/view.php?id=860265)). In order to keep the projects on track, please complete your critique on time.
 
-Review the submission and provide constructive feedback based on what was requested in the [Requirements Gathering](../i-or-g/02-requirements.html) assignment.
+Review the submission sent to you and provide constructive feedback based on what was requested in the [Understand Project]({{ "/teaching/CS-428+828/?asgn=P_UND" | relative_url }}) assignment.
 
-Share your observations and ideas that you have for the group's project and ask any questions.
+Share your observations, ideas, and questions that you have for the group. Please remember to be constructive, and specific.
 
 ### Submission
 
-* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
+* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document
 * target: 1 page for the review and 1-2 pages for the sharing
 
-### Grading
-
-{% include marker.html %}
+{% include grading/main.html %}
