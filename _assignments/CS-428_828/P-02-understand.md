@@ -3,7 +3,7 @@ layout: bg-image
 title: Understand
 breadcrumb: Understand
 aid: P_UND
-moddate: 03-Oct-2019
+moddate: 11-Oct-2019
 marks: 6
 rubric:
 - crit: Description of User(s)
@@ -37,16 +37,13 @@ rubric:
   l1: Some errors, audience may have some trouble reading your work
   l0: Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow
 ---
-# {{ page.breadcrumb }}
-
 ### Description
 
-Understand the important issues in your redesign effort by identifying specific user issues with a feature or task that you have selected in your
-proposal.
+Understand the important issues in your redesign effort by identifying specific user issues with a feature or task that you have selected in your proposal.
 
 Recall the diagram that illustrated the article about Design Thinking (from the Nielsen Norman Group):
 
-<img src="https://media.nngroup.com/media/editor/2016/07/29/designthinking_illustration_final-01-01.png" class="responsive" alt="Stages of Design Thinking" width="600" /> <br />
+<img src="https://media.nngroup.com/media/editor/2016/07/29/designthinking_illustration_final-01-01.png" class="img-fluid" alt="Stages of Design Thinking" width="600" /> <br />
 There are 3 phases depicted: understand, explore, and materialize. The understand phase,
 comprising empathize and define steps, is the focus of this assignment. You should focus on
 well-defined activities that well-defined users are trying to perform.
