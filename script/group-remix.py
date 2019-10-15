@@ -2,10 +2,8 @@
 
 import sys, os, datetime, subprocess
 from fileinput import FileInput
-import os.path, time
-from datetime import datetime, timezone
+import os.path
 from pathlib import Path
-from pytz import timezone
 
 # arguments to this script:
 # - the absolute path to the website's local root directory
@@ -15,9 +13,31 @@ if (len(sys.argv) != 2):
 
 # get site directory, make sure it ends with "/"
 groupfilepath = sys.argv[1]
-    with open(groupfilepath,'r') as gf:
-        for line in gf:
-            print(line.split(,))
+og = []
+ng = {}
+with open(groupfilepath,'r') as gf:
+    for line in gf:
+        og.append(line.split(','))
+for l in og:
+    ng[l[0]] = []
+    ng[l[0]].append(l[len(l)-1].strip())
+for l in og:
+    mm = 1
+    for m in range(1,len(l)-1):
+        nk = chr((ord(l[0])-ord('A')+mm)%len(og)+ord('A'))
+        #print(l[0],nk,len(ng[nk]),int(ng[nk][0]))
+        while (len(ng[nk]) > int(ng[nk][0])):
+            mm = mm % len(og) + 1
+            nk = chr((ord(l[0])-ord('A')+mm)%len(og)+ord('A'))
+            if (nk == l[0]):
+                mm = mm % len(og) + 1
+                nk = chr((ord(l[0])-ord('A')+mm)%len(og)+ord('A'))
+        ng[nk].append(l[m].strip() + '( ' + l[0] + ' )')
+        mm = mm % len(og) + 1
+        #print(m,mm)
+
+for x in ng:
+    print(x,ng[x])
 sys.exit()
 for root, subdirs, files in os.walk(assign_root):
     for filename in files:
