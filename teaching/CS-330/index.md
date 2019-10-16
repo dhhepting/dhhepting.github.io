@@ -1,8 +1,8 @@
 ---
-title: CS 205 (Introduction to Multimedia Systems)
-crs_nbr: CS 205
+title: CS 325 (Introduction to Multimedia Systems)
+crs_nbr: CS 325
 crs_name: Introduction to Multimedia Systems
-breadcrumb: CS 205
+breadcrumb: CS 325
 redirect_from:
   - /teaching/cs205/201610/docs/final_cs325_201410.pdf
 layout: bg-image
