@@ -3,7 +3,7 @@ layout: bg-image
 title: Understand
 breadcrumb: Understand
 aid: P_UND
-moddate: 11-Oct-2019
+moddate: 15-Oct-2019
 marks: 6
 rubric:
 - crit: Description of User(s)
@@ -48,8 +48,8 @@ There are 3 phases depicted: understand, explore, and materialize. The understan
 comprising empathize and define steps, is the focus of this assignment. You should focus on
 well-defined activities that well-defined users are trying to perform.
 
-1. describe the activity/activities and the user(s) with sufficient detail to be relatable
-1. empathize: each member of your group will do this by creating one or more empathy maps for the activitie(s)
+1. describe: describe the activity/activities and the user(s) with sufficient detail to be relatable
+1. <mark>empathize: each member of your group will do this by creating one <del>or more</del> empathy map<del>s</del> for <del>the</del> <ins>each</ins> activit<del>ie(s)</del><ins>y</ins></mark>
 1. define: identify specific aspects of the current interface that cause problems for the users and explore the roots of those problems. Identify whatever user needs may be unmet
 
 Remember that this phase is still concerned with articulating the problem.
@@ -57,7 +57,7 @@ No solutions should appear here. That will come later.
 
 ### Submission
 
-* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document (1 per group) on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
+* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document (1 per group) on URcourses <mark><ins>that includes all three parts (describe, empathize, and define)</ins></mark>
 * target: 6 - 10 problems or unmet needs (about 2 per group member)
 
 {% include grading/main.html %}
