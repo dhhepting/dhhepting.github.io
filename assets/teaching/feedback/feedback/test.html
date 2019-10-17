@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+	<title>SVG test</title>
+</head>
+<body style="background-color: blue">
+	<svg version="1.1" width="600" height="600" viewbox="-200 -200 1200 1200" preserveAspectRatio = "xMinYMin meet" 
+		xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink">
+			
+		<rect x="-200" y="-200" width="1200" height="1200" stroke="black" fill="white" stroke-width="1"/>
+		<!-- generating square -->
+		<rect x="-100" y="-100" width="200" height="200" stroke="black" fill="transparent" stroke-width="1"/>
+
+		<defs>
+	
+			<clipPath id="clip-cell">
+				<rect x="-100" y="-100" width="200" height="200" />
+			</clipPath>
+ 
+			<g id="original">
+				<title>
+					Original
+				</title>
+				<desc>
+					Original element of wallpaper design
+				</desc>
+				<circle cx="25" cy="75" r="20" stroke="red" fill="transparent" stroke-width="5"/>
+				<ellipse cx="75" cy="75" rx="20" ry="5" stroke="red" fill="transparent" stroke-width="5"/>
+				<circle cx="-125" cy="25" r="30" stroke="yellow" fill="transparent" stroke-width="15"/>
+			</g>
+			
+			<g id="cell">
+				<use xlink:href="#original" clip-path="url(#clip-cell)"/>
+				<use xlink:href="#original" transform="rotate(180)" clip-path="url(#clip-cell)" />
+			</g>
+			
+			<g id="row">
+				<use xlink:href="#cell" />
+				<use xlink:href="#cell" transform="translate(200,0)" />
+				<use xlink:href="#cell" transform="translate(400,0)" />
+				<use xlink:href="#cell" transform="translate(600,0)" />
+				<use xlink:href="#cell" transform="translate(800,0)" />
+			</g>
+			
+		</defs>
+			
+			<use xlink:href="#row" />
+			<use xlink:href="#row" transform="translate(0,200)" />
+			<use xlink:href="#row" transform="translate(0,400)" />
+			<use xlink:href="#row" transform="translate(0,600)" />
+			<use xlink:href="#row" transform="translate(0,800)" />
+
+		
+	</svg>
+</body>
