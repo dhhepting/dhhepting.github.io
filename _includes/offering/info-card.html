@@ -1,0 +1,84 @@
+<div class="card my-2" id="syll-card">
+  <h3 class="card-header text-center">Information</h3>
+  <div class="card-body h-50 scrollable">
+    {% capture syll_url %}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{% endcapture %}
+    {% capture sched_url %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
+    {% capture fbk_url %}/teaching/{{ crs_id }}/{{ crs_sem }}/feedback/{% endcapture %}
+    {% capture rss_url %}/rss/{{ crs_id }}-{{ crs_sem }}.rss{% endcapture %}
+    {% capture exam_url %}/teaching/{{ crs_id }}/{{ crs_sem }}/exams.html{% endcapture %}{% assign fbk_dir = 0 %}
+    {% assign rss_feed = 0 %}
+    {% assign sched_dir = 0 %}
+    {% assign exams_file = 0 %}
+    {% for sp in site.pages %}
+      {% if sp.url contains fbk_url %}
+        {% assign fbk_dir = 1 %}
+      {% endif %}
+      {% if sp.url contains syll_url %}
+        {% assign syll = 1 %}
+      {% endif %}
+      {% if sp.url contains sched_url %}
+        {% assign sched_dir = 1 %}
+      {% endif %}
+      {% if sp.url contains rss_url %}
+        {% assign rss_feed = 1 %}
+      {% endif %}
+      {% if sp.url contains exam_url %}
+        {% assign exams_file = 1 %}
+      {% endif %}
+      {% comment %}
+      {% if fbk_dir == 1 and sched_dir == 1 %}
+        {% break %}
+      {% endif %}
+      {% endcomment %}
+    {% endfor %}
+    {% assign syll = 0 %}
+    {% for ssf in site.static_files %}
+      {% if ssf.path contains syll_url %}
+        {% assign syll = 1 %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    <ul class="list-group list-group-flush">
+      {% if syll == 1 %}
+      <li class="list-group-item">
+        <a href="{{ syll_url | relative_url }}">
+          Syllabus
+        </a>
+      </li>
+      {% endif %}
+      {% if sched_dir == 1 %}
+      <li class="list-group-item">
+        <a href="{{ sched_url | relative_url }}">
+          Semester Schedule (including Office Hours)
+        </a>
+      </li>
+      <li class="list-group-item">
+        <a href="https://urcourses.uregina.ca/course/view.php?id=2084" target="_blank">
+          {{ crs_id }} Homepage on URcourses
+        </a>
+      </li>
+      {% endif %}
+      {% if fbk_dir == 1 %}
+      <li class="list-group-item">
+        <a href="{{ fbk_url | relative_url }}">
+          Feedback
+        </a>
+      </li>
+      {% endif %}
+      {% if exams_file == 1 %}
+      <li class="list-group-item">
+        <a href="{{ exam_url | relative_url }}">
+          Exams
+        </a>
+      </li>
+      {% endif %}
+      {% if rss_feed == 1 %}
+      <li class="list-group-item">
+        <a href="{{ rss_url | relative_url }}">
+          RSS feed for {{ crs_id }}-{{ crs_sem }}
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2004-05-HepHoeBer
 title: "A Unified Framework for the Presentation of Environmental Risk Information (2004)"
@@ -10,7 +11,7 @@ authors:
  - Daryl H. Hepting
  - Orland Hoeber
  - Marlin Berg
-venue: University of Regina
+venue: "University of Regina"
 ---
 @techreport{2004-05-HepHoeBer,
 	Author =  "Hepting, Daryl H. and Hoeber, Orland and Berg, Marlin",

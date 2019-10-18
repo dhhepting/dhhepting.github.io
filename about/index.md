@@ -30,6 +30,11 @@ layout: bg-image
 						Personal Interests
 					</a>
 				</li>
+        <li>
+					<a href="website.html">
+						Website
+					</a>
+				</li>
 			</ul>
 		</div>
 		<div class="col-xs-12 col-sm-8">
@@ -70,6 +75,8 @@ layout: bg-image
 				Semester Schedule
 			</a>
       <br /><br />
+      <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-3138-3521" href="https://orcid.org/0000-0002-3138-3521" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0002-3138-3521</a></div>
+      <br />
       <a href="elsewhere.html">
         Find me elsewhere on the web
       </a>
@@ -88,6 +95,17 @@ layout: bg-image
 				var semurl = document.getElementById("semlink")
 				semurl.setAttribute("href","{{ "/teaching/schedule/" | relative_url}}"+today.getFullYear() + semnum + ".html");
 			</script>
+      <script>
+        window.onload = function() {
+          if (window.jQuery) {  
+              // jQuery is loaded  
+              console.log($.fn.button.Constructor.VERSION)
+          } else {
+              // jQuery is not loaded
+              console.log("Not loaded")
+          }
+        }  
+      </script>
 		</div>
 	</div>
 </div>

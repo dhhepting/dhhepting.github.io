@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2004-09-HepBut
 title: "An Integrated Approach to Discovery in Complex Information Spaces (2004)"
@@ -9,7 +10,7 @@ projects:
 authors:
  - Daryl H. Hepting
  - Cory J. Butz
-venue: Second International Workshop on Web based Support Systems  edited by   2004  pages
+venue: "Second International Workshop on Web-based Support Systems, edited by , 2004, pages"
 editors:
  - J. T. Yao
  - V. V. Raghavan

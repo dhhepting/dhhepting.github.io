@@ -15,11 +15,14 @@ if (len(sys.argv) != 3):
   print (sys.argv[0],"must be invoked with \"<path-to-site-directory> <course>/<semester>\"")
   sys.exit()
 
+print("OFFERING: ", sys.argv[2])
 # get site directory, make sure it ends with "/"
 sitedir = (sys.argv[1])
+print("SITE DIR: ", sitedir)
 if (not sitedir.endswith("/")):
   sitedir += "/"
-datadir = sitedir + "_data/media/"
+datadir = sitedir + "_data/teaching/media/"
+print("DATA DIR: ", datadir)
 
 # get the offering details: course/semester
 offdir = (sys.argv[2]).split('/')
@@ -39,7 +42,6 @@ for line in proc.stdout:
   kvs = line.decode("utf-8").strip().split("=")
   os.environ[kvs[0]] = kvs[1]
 TOKEN = os.environ['DB_ACCESS_TOKEN']
-print(TOKEN)
 # Check that access token is valid
 if (len(TOKEN) == 0):
   sys.exit("ERROR: Access token not found.")
@@ -60,30 +62,27 @@ else:
 dbmedia_dir = "/Users/hepting/Dropbox/teaching/" + off_id + "/"
 filedict = {}
 for root, subdirs, files in os.walk(dbmedia_dir):
-  for filename in files:
-    file_path = os.path.join(root, filename)
-    db_path = os.path.join(dbmedia_dir, filename)
-    dbp = db_path[len("Users/hepting/Dropbox/"):]
-    print("dbmedia path", db_path)
-    print("dbp", dbp)
-    try:
-      share = dbx.sharing_create_shared_link(dbp)
-      #share = dbx.sharing_create_shared_link(dbp).url
-      #print(share)
-      shared_url = (share.url).replace('www.dropbox','dl.dropboxusercontent')
-      filedict[filename] = shared_url
-    except ApiError as err:
-      print(err)
+    for filename in files:
+        if (filename != ".DS_Store"):
+            file_path = os.path.join(root, filename)
+            db_path = os.path.join(dbmedia_dir, filename)
+            dbp = db_path[len("Users/hepting/Dropbox/"):]
+            try:
+                share = dbx.sharing_create_shared_link(dbp)
+                shared_url = (share.url).replace('www.dropbox','dl.dropboxusercontent')
+                filedict[filename] = shared_url
+            except ApiError as err:
+                print(err)
 
 
 # write sharing link details to csv file in _data directory of site
 dbmedia_csv = datadir + off_id.replace("+","_") + ".csv"
 with open(dbmedia_csv,"w") as data_file:
-  data_file.write("meet,file,URL\n")	
-  for w in sorted(filedict, key=filedict.get, reverse=True):
-    meetstr = str(w).split(".")
-    if " " in meetstr[0]:
-      meetstr = meetstr[0].split(" ")
-    data_str = str(meetstr[0])+","+str(w) + "," + str(filedict[w]+"\n")	
-    data_file.write(data_str)	
-    print(data_str)
+    data_file.write("meet,file,URL\n")
+    for w in sorted(filedict, key=filedict.get, reverse=True):
+        meetstr = str(w).split(".")
+        # print (meetstr)
+        if " " in meetstr[0]:
+            meetstr = meetstr[0].split(" ")
+        data_str = str(meetstr[0])+ "," + str(w) + "," + str(filedict[w]+"\n")
+        data_file.write(data_str)

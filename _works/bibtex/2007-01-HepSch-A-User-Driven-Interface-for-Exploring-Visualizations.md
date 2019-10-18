@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2007-01-HepSch
 title: "A User-Driven Interface for Exploring Visualizations (2007)"
@@ -11,7 +12,7 @@ abstract: >-
 authors:
  - Daryl H. Hepting
  - Paul Schmiedge
-venue: SPIE Proceedings  Visualization and Data Analysis 2007
+venue: "SPIE Proceedings, Visualization and Data Analysis 2007"
 editors:
  - Robert F. Erbacher
  - Jonathan C. Roberts

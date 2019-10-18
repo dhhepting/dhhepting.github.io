@@ -9,9 +9,13 @@
   {% include schema-org-itemlist.html %}
 {% elsif page.main_entity == "Service" %}
   {% include schema-org-service.html %}
+{% elsif page.main_entity == "ImageObject" %}
+  {% include schema-org-imageobject.html %}
 {% elsif page.main_entity == "ScholarlyArticle" %}
   {% include schema-org-scholarly.html %}
+{% elsif page.main_entity == "Event" %}
+  {% include schema-org-event.html %}
 {% else %}
-  {
+  {  
   }
 {% endif %}

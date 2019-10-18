@@ -1,12 +1,13 @@
 ---
 title: Faces Project
-breadcrumb: Faces 
+breadcrumb: Faces
 description: Description of Faces Project!
-project: faces
+projects:
+  - faces
 layout: bg-image
 ---
 # {{ page.breadcrumb }}
 
 {{ page.description }}
 
-{% include project-related-works.html %}
+{%comment%}{% include project-related-works.html %}{% endcomment %}

@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2009-10-HepLatOri
 title: "In Search of a Perceptual Basis for Interacting with Parametric Images (2009)"
@@ -10,7 +11,7 @@ authors:
  - Daryl H. Hepting
  - Leila Latifi
  - Chris Oriet
-venue: Proceedings of the 7th ACM conference on Creativity and Cognition
+venue: "Proceedings of the 7th ACM conference on Creativity and Cognition"
 editors:
  - Nick Bryan-Kinns
  - Mark D. Gross

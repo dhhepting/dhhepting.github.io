@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2010-08-FanHep
 title: "Assessing End-User Programming for a Graphics Development Environment (2010)"
@@ -9,7 +10,7 @@ projects:
 authors:
  - Lizao Fang
  - Daryl H. Hepting
-venue: Active Media Technology  AMT 2010
+venue: "Active Media Technology. AMT 2010"
 editors:
  - Aijun An
  - Pawan Lingras

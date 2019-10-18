@@ -1,4 +1,7 @@
 ---
+redirect_from:
+  - /research/dwnld/cc2007systematic.pdf
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2007-06-Hep
 title: "Software for Systematic and Imaginative Exploration (2007)"
@@ -8,7 +11,7 @@ projects:
  - creativity
 authors:
  - Daryl H. Hepting
-venue: Proceedings of the 6th ACM SIGCHI Conference on Creativity   Cognition
+venue: "Proceedings of the 6th ACM SIGCHI Conference on Creativity & Cognition"
 editors:
  - Ben Shneiderman
  - Gerhard Fischer

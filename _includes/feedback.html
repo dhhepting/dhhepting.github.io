@@ -17,16 +17,16 @@
 </p>
 
 {% assign questions = "" %}
-{% for q in site.data.feedback.mf_questions %}
+{% for q in site.data.teaching.feedback.mf_questions %}
   {% capture questions %}{{ questions }}|{{q}}{% endcapture %}
 {% endfor %}
 {% assign qa = questions | split: "|" %}
-{% if site.data.feedback[fbk_dat] %}
+{% if site.data.teaching.feedback[fbk_dat] %}
   {% assign detail = "" %}
   {% assign summary = "" %}
   {% assign stop_it = false %}
   {% assign header_done = false %}
-  {% for r in site.data.feedback[fbk_dat] %}
+  {% for r in site.data.teaching.feedback[fbk_dat] %}
     {% assign rqs = "" %}
     {% capture rqs %}{{rqs}}{{r.response}},{% endcapture %}
     {% capture rqs %}{{rqs}}{{r.q1}},{% endcapture %}
@@ -127,7 +127,7 @@
         {% assign rowa = row | split: "," %}
         <tr>
 	{% for dd in rowa %}
-          {% if dd == "0" %}
+          {% if dd == "0" or dd == "#N/A" %}
             <td>&mdash;</td>
           {% else %}
             <td>{{dd}}</td>
@@ -139,7 +139,7 @@
 </table>
 </div>
 {% capture fbk_com %}{{fbk_dat}}-comm{% endcapture %}
-{% if site.data.feedback[fbk_com] %}
+{% if site.data.teaching.feedback[fbk_com] %}
 <h3>What do you like best about this course?</h3>
 {% capture fli_url %}/assets/teaching/img/{{fbk_dat}}-1l.svg{% endcapture %}
 {% assign fli_url_tf = false %}
@@ -168,7 +168,7 @@
   <div id="like-detail" class="container">
 {% endif  %}
 <ol>
-{% for l in site.data.feedback[fbk_com]like %}
+{% for l in site.data.teaching.feedback[fbk_com]like %}
   <li>{{l}}</li>
 {% endfor %}
 </ol>
@@ -199,7 +199,7 @@
   <div id="change-detail" class="container">
 {% endif  %}
 <ol>
-{% for c in site.data.feedback[fbk_com]change %}
+{% for c in site.data.teaching.feedback[fbk_com]change %}
   <li>{{c}}</li>
 {% endfor %}
 </ol>
@@ -232,7 +232,7 @@
 {% endif  %}
 
 <ol>
-{% for s in site.data.feedback[fbk_com]strengths %}
+{% for s in site.data.teaching.feedback[fbk_com]strengths %}
   <li>{{s}}</li>
 {% endfor %}
 </ol>

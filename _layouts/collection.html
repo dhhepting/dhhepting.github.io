@@ -8,6 +8,30 @@ group:
 	Collected Works
 </h1>
 
+{% assign proj_wrks = "" %}
+{% assign proj_list = "" %}
+{% for item in site.works reversed %}
+  {% for ip in item.projects %}
+    {% capture proj_wrks %}{{ proj_wrks }}#{{ item.citekey }}!{{ ip }}{% endcapture %}
+    {% capture proj_list %}{{ proj_list }}#{{ip}}{% endcapture %}
+  {% endfor %}
+{% endfor %}
+{% assign wrks_prjlist = proj_wrks | split: "#" | reverse %}
+{% assign plist = proj_list | split: "#" | sort | uniq %}
+<ul>
+  {% for ip in plist %}
+    {% assign wrks = "" %}
+    {% if ip != "" %}
+      {% for wp in wrks_prjlist %}
+        {% assign wppp = wp | split: "!" %}
+        {% if ip == wppp[1] %}
+          {% capture wrks %}{{ wrks }}#{{ wppp[0] }}{% endcapture %}
+        {% endif %}
+      {% endfor %}
+  <!-- <li>{{ ip }}: {{ wrks }}</li> -->
+    {% endif %}
+  {% endfor %}
+</ul>
 <ul>
 {% for item in site.works reversed %}
   <li><a href="{{ item.url | relative_url }}">{{ item.breadcrumb }}</a>

@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2004-08-UttHepPet
 title: "Symbol Mall (2004)"
@@ -10,7 +11,7 @@ authors:
  - Jirayu Uttaranakorn
  - Daryl H. Hepting
  - Sheila Petty
-venue: SIGGRAPH  04  ACM SIGGRAPH 2004 Sketches
+venue: "SIGGRAPH '04: ACM SIGGRAPH 2004 Sketches"
 editors:
  - Ronen Barzel
 ---

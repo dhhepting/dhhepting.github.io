@@ -14,8 +14,8 @@
     href="{{ "/assets/tipuesearch/css/tipuesearch.css" | relative_url }}"
   />
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
-    integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw="
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous"
   />
   <link rel="stylesheet"
@@ -28,6 +28,11 @@
     integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ="
     crossorigin="anonymous"
   />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+-->
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
   <link rel="stylesheet"
     href="{{"/assets/css/dhhepting.css" | relative_url}}"
   />
@@ -42,8 +47,9 @@
   <link rel="alternate" type="application/rss+xml"
     href="{{ "/rss/news.rss" | absolute_url }}"
   />
-  <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
-    integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7"
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous">
   </script>
   <link rel="canonical" href="{{site.canonical}}{{page.url}}" />
@@ -54,20 +60,22 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="{{ "/assets/bg/about.jpg" | relative_url }}" />
 
+{% comment %}
 {% if page.url == "/" %}
   {% include schema-org-website.html %}
 {% else %}
   {% include seo-schema-org.html %}
 {% endif %}
-{% comment %}
+
 {% seo %}
-{% for ldx in site.data.schema %}
-  {% if ldx.citekey == page.citekey %}
+{% endcomment %}
+{% for ldx in site.data.download %}
+  {% if ldx.citeKey == page.citekey %}
     <script type="application/ld+json">
       {{ ldx.linkeddata | replace: '=>', ':' }}
     </script>
   {% endif %}
 {% endfor %}
-{% endcomment %}
+
 
 </head>

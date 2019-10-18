@@ -1,7 +1,6 @@
 ---
-title: CS 499+900 
+title: CS 499+900
 breadcrumb: CS 499+900
-layout: default
+layout: bg-image
 ---
 # {{ page.breadcrumb }}
-

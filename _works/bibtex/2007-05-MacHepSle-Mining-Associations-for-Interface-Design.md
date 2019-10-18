@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2007-05-MacHepSle
 title: "Mining Associations for Interface Design (2007)"
@@ -9,7 +10,7 @@ authors:
  - Daryl H. Hepting
  - Dominik Ślęzak
  - Robert J. Hilderman
-venue: RSKT 2007  Rough Sets and Knowledge Technology
+venue: "RSKT 2007: Rough Sets and Knowledge Technology"
 editors:
  - JingTao Yao
  - Pawan Lingras

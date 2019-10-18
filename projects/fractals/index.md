@@ -11,7 +11,8 @@ redirect_from:
   - /research/web/nat-num/dynamics.html
   - /art/math+art/
   - /projects/math-art/
-project: fractals
+projects:
+  - fractals
 layout: bg-image
 ---
 # {{ page.breadcrumb }}
@@ -45,4 +46,4 @@ The New York Times printed a story about travelling to Ossining in
 [Going Up the River, for a Visit](http://www.nytimes.com/2005/01/21/travel/escapes/going-up-the-river-for-a-visit.html){:target="blank"}.
 
 
-{% include project-related-works.html %}
+{%comment%}{% include project-related-works.html %}{% endcomment %}

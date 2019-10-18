@@ -1,12 +1,13 @@
 ---
 title: Food Project
-breadcrumb: Food 
+breadcrumb: Food
 description: Description of Food Project!
-project: food
+projects:
+  - food
 layout: bg-image
 ---
 # {{ page.breadcrumb }}
 
 {{ page.description }}
 
-{% include project-related-works.html %}
+{%comment%}{% include project-related-works.html %}{% endcomment %}

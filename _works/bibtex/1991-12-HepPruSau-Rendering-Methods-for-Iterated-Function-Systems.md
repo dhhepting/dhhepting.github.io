@@ -1,9 +1,12 @@
 ---
+redirect_from:
+  - another Url
+  - still another
+  - just one more
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1991-12-HepPruSau
 title: "Rendering Methods for Iterated Function Systems (1991)"
-redirect_from:
-  - /research/works/1991-06-HepPruSau-Rendering-Methods-for-Iterated-Function-Systems.html
 breadcrumb: "Rendering Methods for Iterated Function Systems (1991)"
 category: conference
 projects:
@@ -14,7 +17,7 @@ authors:
  - Daryl H. Hepting
  - Przemyslaw Prusinkiewicz
  - Dietmar Saupe
-venue: Fractals in the Fundamental and Applied Sciences  Proceedings of the First IFIP Conference on Fractals in the Fundamental and Applied Sciences  Lisbon  Portugal  6 8 June  1990
+venue: "Fractals in the Fundamental and Applied Sciences: Proceedings of the First IFIP Conference on Fractals in the Fundamental and Applied Sciences, Lisbon, Portugal, 6-8 June, 1990"
 editors:
  - Heinz-Otto Peitgen
  - José Marques Henriques

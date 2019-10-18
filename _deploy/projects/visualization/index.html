@@ -14,8 +14,8 @@
     href="/~hepting/assets/tipuesearch/css/tipuesearch.css"
   />
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
-    integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw="
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous"
   />
   <link rel="stylesheet"
@@ -28,6 +28,11 @@
     integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ="
     crossorigin="anonymous"
   />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+-->
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
   <link rel="stylesheet"
     href="/~hepting/assets/css/dhhepting.css"
   />
@@ -42,8 +47,9 @@
   <link rel="alternate" type="application/rss+xml"
     href="http://www2.cs.uregina.ca/~hepting/rss/news.rss"
   />
-  <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
-    integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7"
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous">
   </script>
   <link rel="canonical" href="http://www2.cs.uregina.ca/~hepting/projects/visualization/" />
@@ -55,78 +61,26 @@
   <meta property="og:image" content="/~hepting/assets/bg/about.jpg" />
 
 
-  
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  
-      "@type": "WebPage",
-"breadcrumb":
-  {
-    "@type": "BreadcrumbList",
-    "itemListElement":
-    [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item":
-        {
-          "@type": "WebSite",
-          "@id": "http://www2.cs.uregina.ca/~hepting/",
-          "name": "D. H. Hepting"
-        }
-      
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item":
-        {
-          "@type": "WebPage",
-          "@id": "http://www2.cs.uregina.ca/~hepting/projects/",
-        
-          "name": "Projects"
-        }
-      },
-        {
-        "@type": "ListItem",
-        "position": 3,
-        "item":
-        {
-          "@type": "WebPage",
-          "@id": "http://www2.cs.uregina.ca/~hepting/projects/visualization/",
-        
-          "name": "Visualization"
-        }
-      }
-        ]
-  }
-
-  ,
-  "mainEntity":
-
-
-
 
   
-{
-  "@type": "ItemList",
-  "itemListElement":
-  [
-
-
-
-
-
-  ]
-}
-
-
 
   
-}
-</script>
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
 
@@ -136,7 +90,61 @@
 
 
 <div class="card projects w-100 lightcthru" style="min-height:100%" >
-  <div class="card-header lightcthru">
+<nav class="navbar navbar-expand navbar-dark"
+style="background-color: rgba(32, 32, 32, 0.75)">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle clickable" href="#"
+      id="nav-menu" role="button" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+        Site
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="nav-menu"
+      style="background-color: rgba(224,224, 224, 1.0)">
+      <li class="dropdown-item"><a class="dropdown-link" href="/~hepting/">
+  
+    Home</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/about/">
+  
+    About</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/projects/">
+  
+    Projects</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/research/">
+  
+    Research</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/teaching/">
+  
+    Teaching</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/rss/">
+  
+    RSS&nbsp;<span class="oi oi-rss"></span></a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/search/">
+  
+    Search&nbsp;<span class="oi oi-magnifying-glass"></span></a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/news/">
+  
+    News</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/trouble/">
+  
+    Trouble</a>
+</li>
+
+
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<div class="card-header lightcthru">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb card-header lightcthru">
       <li class="breadcrumb-item">
@@ -191,33 +199,11 @@
   
     
   
-    
-  
 
   
     
   
-
-  
     
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
   
 
   
@@ -252,8 +238,6 @@
     
   
 
-  
-    
   
 
   
@@ -299,6 +283,44 @@
   
 
   
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
 
   
     
@@ -320,6 +342,1411 @@
 
   
     
+      <!-- <!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Links -->
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/normalize.css" />
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/tipuesearch.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+-->
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <link rel="stylesheet" href="/~hepting/assets/css/dhhepting.css" />
+  <link rel="icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" href="http://www2.cs.uregina.ca/~hepting/rss/news.rss" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <link rel="canonical" href="http://www2.cs.uregina.ca/~hepting/research/works/2007-01-HepSch-A-User-Driven-Interface-for-Exploring-Visualizations.html" />
+  
+  <title>A User-Driven Interface for Exploring Visualizations (2007) | D. H. Hepting, Ph.D.</title>
+  <meta property="og:title" content="A User-Driven Interface for Exploring Visualizations (2007) | D. H. Hepting, Ph.D." />
+  <meta property="og:url" content="http://www2.cs.uregina.ca/~hepting/research/works/2007-01-HepSch-A-User-Driven-Interface-for-Exploring-Visualizations.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/~hepting/assets/bg/about.jpg" />
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+&lt;/head&gt;
+
+<body>
+
+
+<div class="card research w-100 lightcthru" style="min-height:100%">
+  <div class="card-header lightcthru">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb card-header lightcthru">
+      <li class="breadcrumb-item">
+        <a href="/~hepting/">
+          D. H. Hepting
+        </a>
+      </li>
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/">
+          Research
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/works/">
+          Collected Works
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item active">
+        A User-Driven Interface for Exploring Visualizations (2007)
+      </li>
+  </ol>
+  </nav>
+</div>
+
+  <div class="card-body lightcthru">
+    <h1>
+      A User-Driven Interface for Exploring Visualizations (2007)
+    </h1>
+    <hr />
+    <!-- Projects -->
+    
+    <hr />
+    <!-- Social Share + Search Buttons -->
+    <div class="btn-toolbar bg-transp" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group my-1" role="group" aria-label="Share group">
+    <!-- Share on LinkedIn -->
+    <a class="btn btn-primary mx-1" aria-label="Share on LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/2007-01-HepSch-A-User-Driven-Interface-for-Exploring-Visualizations.html&amp;title=A User-Driven Interface for Exploring Visualizations (2007)&amp;summary=&amp;source=http://www2.cs.uregina.ca/~hepting" role="button" target="_blank">
+      <span class="fab fa-linkedin" title="Share on LinkedIn"></span>
+    </a>
+    <!-- Share on Facebook -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www2.cs.uregina.ca/~hepting/research/works/2007-01-HepSch-A-User-Driven-Interface-for-Exploring-Visualizations.html" role="button" target="_blank">
+      <span class="fab fa-facebook" title="Share on Facebook"></span>
+    </a>
+    <!-- Share on Google+ -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Google+" href="https://plus.google.com/share?url=http://www2.cs.uregina.ca/~hepting/research/works/2007-01-HepSch-A-User-Driven-Interface-for-Exploring-Visualizations.html" role="button" target="_blank">
+      <span class="fab fa-google-plus-square" title="Share on Google+"></span>
+    </a>
+    <!-- Share on twitter -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=A User-Driven Interface for Exploring Visualizations (2007)&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/2007-01-HepSch-A-User-Driven-Interface-for-Exploring-Visualizations.html" role="button" target="_blank">
+      <span class="fab fa-twitter-square" title="Share on Twitter"></span>
+    </a>
+    <!-- Share via email -->
+    <a class="btn btn-primary mx-1" aria-label="Share via Email" href="mailto:someone@example.com?subject=A User-Driven Interface for Exploring Visualizations (2007)&amp;body=Check out this page: http://www2.cs.uregina.ca/~hepting/research/works/2007-01-HepSch-A-User-Driven-Interface-for-Exploring-Visualizations.html" role="button">
+     <span class="fas fa-envelope" title="Share via Email"></span>
+    </a>
+  </div>
+  
+  
+  <div class="btn-group my-1" role="group" aria-label="Search group">
+    <!-- Search on google -->
+    <a class="btn btn-info mx-1" aria-label="Search google" href="https://www.google.ca/search?q=%22A+User-Driven+Interface+for+Exploring+Visualizations%22" role="button" target="_blank">
+      google
+    </a>
+    <!-- Search on bing -->
+    <a class="btn btn-info mx-1" aria-label="Search bing" href="https://www.bing.com/search?q=%22A+User-Driven+Interface+for+Exploring+Visualizations%22" role="button" target="_blank">
+      bing
+    </a>
+    <!-- Search on google scholar -->
+    <a class="btn btn-info mx-1" aria-label="Search google scholar" href="https://scholar.google.ca/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=%22A+User-Driven+Interface+for+Exploring+Visualizations%22&amp;btnG=" role="button" target="_blank">
+      google scholar
+    </a>
+  </div>
+</div>
+
+    <hr />
+    <h3>
+      Conference
+    </h3>
+    <ul>
+      <li>SPIE Proceedings, Visualization and Data Analysis 2007</li>
+    </ul>
+
+    
+    
+    <h3>
+    
+      Authors
+    
+    </h3>
+    <ul>
+    
+      <li>
+        Daryl H. Hepting
+      </li>
+    
+      <li>
+        Paul Schmiedge
+      </li>
+    
+    </ul>
+
+    
+    <h3>Abstract</h3>
+    <p>There is presently a variety of methods by which to create visualizations, and many of these require a great deal of manual intervention. Even with those methods by which it is easy to create a single visual representation, understanding the range of possible visual representations and exploring amongst them is difficult. We present a generalized interface, called cogito, that permits the user to control exploration of the visualization output of various manual tools, all without the requirement to modify the original tool. Programming within the cogito API is required to connect to each tool, but it is not onerous. We consider that the exploratory experience or activity is valuable, and that it is possible to easily create this experience for standard tools that do not normally permit exploration. We illustrate this approach with several examples from different kinds of manual interfaces and discuss the requirements of each.</p>
+    
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+    
+    
+
+    <h3>BibTeX</h3>
+    <!-- Target -->
+    <div class="border border-primary rounded flex-row flex-nowrap">
+      <a id="clipboard" href="#clipboard" class="btn btn-primary" aria-label="Copy BibTeX entry" data-clipboard-action="copy" data-clipboard-target="#bibtex">
+        <span class="far fa-clipboard fa-inverse" title="Copy BibTeX entry">
+        </span>
+      </a>
+      <code><pre id="bibtex">@inproceedings{2007-01-HepSch,
+	Author =  “Hepting, Daryl H. and Schmiedge, Paul”,
+	Title =  “A User-Driven Interface for Exploring Visualizations”,
+	Url = "http://www2.cs.uregina.ca/~hepting/research/works/2007-01-HepSch-A-User-Driven-Interface-for-Exploring-Visualizations.html",
+	Editor =  {Erbacher, Robert F. and Roberts, Jonathan C. and Gr{"o}hn, Matti T. and B{"o}rner, Katy},
+	Booktitle =  “SPIE Proceedings, Visualization and Data Analysis 2007”,
+	Doi =  “10.1117/12.703654”,
+	Month =  “January”,
+	Pages =  “64950R”,
+	Volume =  “6495”,
+	Year =  “2007”,
+}</pre></code>
+    </div>
+    
+  </div>
+  <div class="card-footer text-muted lightcthru">
+  Site built: 2019-10-18 11:40 -0600
+</div>
+
+</div>
+<!-- </div> -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous">
+  </script>
+  
+	<script>
+		var clipboard = new ClipboardJS('.btn')
+	</script>
+  
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+		ga('create', 'UA-4427429-2', 'auto')
+		ga('send', 'pageview')
+	</script>
+	<!-- End Google Analytics -->
+</body>
+&lt;/html&gt;
+
+
+--&gt;
       <li>
         <a href="/~hepting/research/works/2007-01-HepSch-A-User-Driven-Interface-for-Exploring-Visualizations.html">
           A User-Driven Interface for Exploring Visualizations (2007)
@@ -360,14 +1787,6 @@
   
 
   
-    
-  
-
-  
-    
-  
-
-  
 
   
     
@@ -391,6 +1810,1278 @@
 
   
     
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+      <!-- <!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Links -->
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/normalize.css" />
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/tipuesearch.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+-->
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <link rel="stylesheet" href="/~hepting/assets/css/dhhepting.css" />
+  <link rel="icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" href="http://www2.cs.uregina.ca/~hepting/rss/news.rss" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <link rel="canonical" href="http://www2.cs.uregina.ca/~hepting/research/works/2003-11-HepArb-The-Implications-of-Verbal-Overshadowing-for-Computer-Interface-Design.html" />
+  
+  <title>The Implications of Verbal Overshadowing for Computer Interface Design (2003) | D. H. Hepting, Ph.D.</title>
+  <meta property="og:title" content="The Implications of Verbal Overshadowing for Computer Interface Design (2003) | D. H. Hepting, Ph.D." />
+  <meta property="og:url" content="http://www2.cs.uregina.ca/~hepting/research/works/2003-11-HepArb-The-Implications-of-Verbal-Overshadowing-for-Computer-Interface-Design.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/~hepting/assets/bg/about.jpg" />
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+&lt;/head&gt;
+
+<body>
+
+
+<div class="card research w-100 lightcthru" style="min-height:100%">
+  <div class="card-header lightcthru">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb card-header lightcthru">
+      <li class="breadcrumb-item">
+        <a href="/~hepting/">
+          D. H. Hepting
+        </a>
+      </li>
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/">
+          Research
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/works/">
+          Collected Works
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item active">
+        The Implications of Verbal Overshadowing for Computer Interface Design (2003)
+      </li>
+  </ol>
+  </nav>
+</div>
+
+  <div class="card-body lightcthru">
+    <h1>
+      The Implications of Verbal Overshadowing for Computer Interface Design (2003)
+    </h1>
+    <hr />
+    <!-- Projects -->
+    
+    <hr />
+    <!-- Social Share + Search Buttons -->
+    <div class="btn-toolbar bg-transp" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group my-1" role="group" aria-label="Share group">
+    <!-- Share on LinkedIn -->
+    <a class="btn btn-primary mx-1" aria-label="Share on LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/2003-11-HepArb-The-Implications-of-Verbal-Overshadowing-for-Computer-Interface-Design.html&amp;title=The Implications of Verbal Overshadowing for Computer Interface Design (2003)&amp;summary=&amp;source=http://www2.cs.uregina.ca/~hepting" role="button" target="_blank">
+      <span class="fab fa-linkedin" title="Share on LinkedIn"></span>
+    </a>
+    <!-- Share on Facebook -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www2.cs.uregina.ca/~hepting/research/works/2003-11-HepArb-The-Implications-of-Verbal-Overshadowing-for-Computer-Interface-Design.html" role="button" target="_blank">
+      <span class="fab fa-facebook" title="Share on Facebook"></span>
+    </a>
+    <!-- Share on Google+ -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Google+" href="https://plus.google.com/share?url=http://www2.cs.uregina.ca/~hepting/research/works/2003-11-HepArb-The-Implications-of-Verbal-Overshadowing-for-Computer-Interface-Design.html" role="button" target="_blank">
+      <span class="fab fa-google-plus-square" title="Share on Google+"></span>
+    </a>
+    <!-- Share on twitter -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=The Implications of Verbal Overshadowing for Computer Interface Design (2003)&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/2003-11-HepArb-The-Implications-of-Verbal-Overshadowing-for-Computer-Interface-Design.html" role="button" target="_blank">
+      <span class="fab fa-twitter-square" title="Share on Twitter"></span>
+    </a>
+    <!-- Share via email -->
+    <a class="btn btn-primary mx-1" aria-label="Share via Email" href="mailto:someone@example.com?subject=The Implications of Verbal Overshadowing for Computer Interface Design (2003)&amp;body=Check out this page: http://www2.cs.uregina.ca/~hepting/research/works/2003-11-HepArb-The-Implications-of-Verbal-Overshadowing-for-Computer-Interface-Design.html" role="button">
+     <span class="fas fa-envelope" title="Share via Email"></span>
+    </a>
+  </div>
+  
+  
+  <div class="btn-group my-1" role="group" aria-label="Search group">
+    <!-- Search on google -->
+    <a class="btn btn-info mx-1" aria-label="Search google" href="https://www.google.ca/search?q=%22The+Implications+of+Verbal+Overshadowing+for+Computer+Interface+Design%22" role="button" target="_blank">
+      google
+    </a>
+    <!-- Search on bing -->
+    <a class="btn btn-info mx-1" aria-label="Search bing" href="https://www.bing.com/search?q=%22The+Implications+of+Verbal+Overshadowing+for+Computer+Interface+Design%22" role="button" target="_blank">
+      bing
+    </a>
+    <!-- Search on google scholar -->
+    <a class="btn btn-info mx-1" aria-label="Search google scholar" href="https://scholar.google.ca/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=%22The+Implications+of+Verbal+Overshadowing+for+Computer+Interface+Design%22&amp;btnG=" role="button" target="_blank">
+      google scholar
+    </a>
+  </div>
+</div>
+
+    <hr />
+    <h3>
+      Techreport
+    </h3>
+    <ul>
+      <li>University of Regina, Department of Computer Science</li>
+    </ul>
+
+    
+    
+    <h3>
+    
+      Authors
+    
+    </h3>
+    <ul>
+    
+      <li>
+        Daryl H. Hepting
+      </li>
+    
+      <li>
+        Katherine D. Arbuthnott
+      </li>
+    
+    </ul>
+
+    
+    <h3>Abstract</h3>
+    <p>We examined whether performance using scientific visualization software is influenced by verbal or pictoral format of the interface, as predicted if verbal overshadowing generalizes to the domain of computer software. With a pictoral interface, participants showed more complete coverage of the graphical search space, as well as more efficient performance.</p>
+    
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+    <h3>Links</h3>
+    <ul>
+      <li><a href="http://www2.cs.uregina.ca/~hepting/assets/works/pdf/2003-11-HepArb.pdf">download from this site</a></li>
+        
+
+    
+    
+    
+    </ul>
+    
+
+    <h3>BibTeX</h3>
+    <!-- Target -->
+    <div class="border border-primary rounded flex-row flex-nowrap">
+      <a id="clipboard" href="#clipboard" class="btn btn-primary" aria-label="Copy BibTeX entry" data-clipboard-action="copy" data-clipboard-target="#bibtex">
+        <span class="far fa-clipboard fa-inverse" title="Copy BibTeX entry">
+        </span>
+      </a>
+      <code><pre id="bibtex">@techreport{2003-11-HepArb,
+	Author =  “Hepting, Daryl H. and Arbuthnott, Katherine D.”,
+	Title =  “The Implications of Verbal Overshadowing for Computer Interface Design”,
+	Url = "http://www2.cs.uregina.ca/~hepting/research/works/2003-11-HepArb-The-Implications-of-Verbal-Overshadowing-for-Computer-Interface-Design.html",
+	Institution =  “University of Regina, Department of Computer Science”,
+	Month =  “November”,
+	Number =  “2003-10”,
+	Year =  “2003”
+}</pre></code>
+    </div>
+    
+  </div>
+  <div class="card-footer text-muted lightcthru">
+  Site built: 2019-10-18 11:40 -0600
+</div>
+
+</div>
+<!-- </div> -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous">
+  </script>
+  
+	<script>
+		var clipboard = new ClipboardJS('.btn')
+	</script>
+  
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+		ga('create', 'UA-4427429-2', 'auto')
+		ga('send', 'pageview')
+	</script>
+	<!-- End Google Analytics -->
+</body>
+&lt;/html&gt;
+
+
+--&gt;
       <li>
         <a href="/~hepting/research/works/2003-11-HepArb-The-Implications-of-Verbal-Overshadowing-for-Computer-Interface-Design.html">
           The Implications of Verbal Overshadowing for Computer Interface Design (2003)
@@ -408,6 +3099,1406 @@
 
   
     
+      <!-- <!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Links -->
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/normalize.css" />
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/tipuesearch.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+-->
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <link rel="stylesheet" href="/~hepting/assets/css/dhhepting.css" />
+  <link rel="icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" href="http://www2.cs.uregina.ca/~hepting/rss/news.rss" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <link rel="canonical" href="http://www2.cs.uregina.ca/~hepting/research/works/2002-07-Hep-Towards-a-visual-interface-for-information-visualization.html" />
+  
+  <title>Towards a visual interface for information visualization (2002) | D. H. Hepting, Ph.D.</title>
+  <meta property="og:title" content="Towards a visual interface for information visualization (2002) | D. H. Hepting, Ph.D." />
+  <meta property="og:url" content="http://www2.cs.uregina.ca/~hepting/research/works/2002-07-Hep-Towards-a-visual-interface-for-information-visualization.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/~hepting/assets/bg/about.jpg" />
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+&lt;/head&gt;
+
+<body>
+
+
+<div class="card research w-100 lightcthru" style="min-height:100%">
+  <div class="card-header lightcthru">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb card-header lightcthru">
+      <li class="breadcrumb-item">
+        <a href="/~hepting/">
+          D. H. Hepting
+        </a>
+      </li>
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/">
+          Research
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/works/">
+          Collected Works
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item active">
+        Towards a visual interface for information visualization (2002)
+      </li>
+  </ol>
+  </nav>
+</div>
+
+  <div class="card-body lightcthru">
+    <h1>
+      Towards a visual interface for information visualization (2002)
+    </h1>
+    <hr />
+    <!-- Projects -->
+    
+    <hr />
+    <!-- Social Share + Search Buttons -->
+    <div class="btn-toolbar bg-transp" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group my-1" role="group" aria-label="Share group">
+    <!-- Share on LinkedIn -->
+    <a class="btn btn-primary mx-1" aria-label="Share on LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/2002-07-Hep-Towards-a-visual-interface-for-information-visualization.html&amp;title=Towards a visual interface for information visualization (2002)&amp;summary=&amp;source=http://www2.cs.uregina.ca/~hepting" role="button" target="_blank">
+      <span class="fab fa-linkedin" title="Share on LinkedIn"></span>
+    </a>
+    <!-- Share on Facebook -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www2.cs.uregina.ca/~hepting/research/works/2002-07-Hep-Towards-a-visual-interface-for-information-visualization.html" role="button" target="_blank">
+      <span class="fab fa-facebook" title="Share on Facebook"></span>
+    </a>
+    <!-- Share on Google+ -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Google+" href="https://plus.google.com/share?url=http://www2.cs.uregina.ca/~hepting/research/works/2002-07-Hep-Towards-a-visual-interface-for-information-visualization.html" role="button" target="_blank">
+      <span class="fab fa-google-plus-square" title="Share on Google+"></span>
+    </a>
+    <!-- Share on twitter -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=Towards a visual interface for information visualization (2002)&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/2002-07-Hep-Towards-a-visual-interface-for-information-visualization.html" role="button" target="_blank">
+      <span class="fab fa-twitter-square" title="Share on Twitter"></span>
+    </a>
+    <!-- Share via email -->
+    <a class="btn btn-primary mx-1" aria-label="Share via Email" href="mailto:someone@example.com?subject=Towards a visual interface for information visualization (2002)&amp;body=Check out this page: http://www2.cs.uregina.ca/~hepting/research/works/2002-07-Hep-Towards-a-visual-interface-for-information-visualization.html" role="button">
+     <span class="fas fa-envelope" title="Share via Email"></span>
+    </a>
+  </div>
+  
+  
+  <div class="btn-group my-1" role="group" aria-label="Search group">
+    <!-- Search on google -->
+    <a class="btn btn-info mx-1" aria-label="Search google" href="https://www.google.ca/search?q=%22Towards+a+visual+interface+for+information+visualization%22" role="button" target="_blank">
+      google
+    </a>
+    <!-- Search on bing -->
+    <a class="btn btn-info mx-1" aria-label="Search bing" href="https://www.bing.com/search?q=%22Towards+a+visual+interface+for+information+visualization%22" role="button" target="_blank">
+      bing
+    </a>
+    <!-- Search on google scholar -->
+    <a class="btn btn-info mx-1" aria-label="Search google scholar" href="https://scholar.google.ca/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=%22Towards+a+visual+interface+for+information+visualization%22&amp;btnG=" role="button" target="_blank">
+      google scholar
+    </a>
+  </div>
+</div>
+
+    <hr />
+    <h3>
+      Conference
+    </h3>
+    <ul>
+      <li>Proceedings of Sixth International Conference on Information Visualisation 2002</li>
+    </ul>
+
+    
+    
+    <h3>
+    
+      Author
+    
+    </h3>
+    <ul>
+    
+      <li>
+        Daryl H. Hepting
+      </li>
+    
+    </ul>
+
+    
+    <h3>Abstract</h3>
+    <p>Information visualization, aided by ever more accessible computational resources, continues to grow in popularity and significance. The capability to generate complex imagery by computer is often necessary but not always sufficient to gain the desired insight. The success of a visual representation in a given context may be affected by many variables, not the least of which is the individual user's experience. Even if a precise relationship could be found between context and "best" visual representation, the complete articulation of a context is practically impossible. In other fields, this is known as sensitive dependence to initial conditions. A more feasible alternative is to begin with an incomplete articulation of a context and allow the user to interactively develop and refine it. Although most computer interfaces for information visualization tools are predominantly verbal, a predominantly visual interface can have significant advantages. Such an interface allows users to avoid the usual translations between visual and verbal modes and it removes users' need for a specialized visualization vocabulary. A visual interface can also shift the focus of the visualization process from the data towards the user These ideas are discussed in the context of a prototype tool, the design of which is illustrated with an example, and the evaluation of which has provided many positive results.</p>
+    
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+    
+    
+
+    <h3>BibTeX</h3>
+    <!-- Target -->
+    <div class="border border-primary rounded flex-row flex-nowrap">
+      <a id="clipboard" href="#clipboard" class="btn btn-primary" aria-label="Copy BibTeX entry" data-clipboard-action="copy" data-clipboard-target="#bibtex">
+        <span class="far fa-clipboard fa-inverse" title="Copy BibTeX entry">
+        </span>
+      </a>
+      <code><pre id="bibtex">@inproceedings{2002-07-Hep,
+	Author =  “Hepting, Daryl H.”,
+	Title =  “Towards a visual interface for information visualization”,
+	Url = "http://www2.cs.uregina.ca/~hepting/research/works/2002-07-Hep-Towards-a-visual-interface-for-information-visualization.html",
+	Booktitle =  “Proceedings of Sixth International Conference on Information Visualisation 2002”,
+	Doi =  “10.1109/IV.2002.1028791”,
+	Month =  “July”,
+	Pages =  “295–302”,
+	Publisher =  “IEEE”,
+	Year =  “2002”,
+}</pre></code>
+    </div>
+    
+  </div>
+  <div class="card-footer text-muted lightcthru">
+  Site built: 2019-10-18 11:40 -0600
+</div>
+
+</div>
+<!-- </div> -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous">
+  </script>
+  
+	<script>
+		var clipboard = new ClipboardJS('.btn')
+	</script>
+  
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+		ga('create', 'UA-4427429-2', 'auto')
+		ga('send', 'pageview')
+	</script>
+	<!-- End Google Analytics -->
+</body>
+&lt;/html&gt;
+
+
+--&gt;
       <li>
         <a href="/~hepting/research/works/2002-07-Hep-Towards-a-visual-interface-for-information-visualization.html">
           Towards a visual interface for information visualization (2002)
@@ -423,6 +4514,1260 @@
     
   
     
+      <!-- <!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Links -->
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/normalize.css" />
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/tipuesearch.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+-->
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <link rel="stylesheet" href="/~hepting/assets/css/dhhepting.css" />
+  <link rel="icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" href="http://www2.cs.uregina.ca/~hepting/rss/news.rss" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <link rel="canonical" href="http://www2.cs.uregina.ca/~hepting/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html" />
+  
+  <title>A New Paradigm for Exploration in Computer-Aided Visualization (1999) | D. H. Hepting, Ph.D.</title>
+  <meta property="og:title" content="A New Paradigm for Exploration in Computer-Aided Visualization (1999) | D. H. Hepting, Ph.D." />
+  <meta property="og:url" content="http://www2.cs.uregina.ca/~hepting/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/~hepting/assets/bg/about.jpg" />
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+&lt;/head&gt;
+
+<body>
+
+
+<div class="card research w-100 lightcthru" style="min-height:100%">
+  <div class="card-header lightcthru">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb card-header lightcthru">
+      <li class="breadcrumb-item">
+        <a href="/~hepting/">
+          D. H. Hepting
+        </a>
+      </li>
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/">
+          Research
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/works/">
+          Collected Works
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item active">
+        A New Paradigm for Exploration in Computer-Aided Visualization (1999)
+      </li>
+  </ol>
+  </nav>
+</div>
+
+  <div class="card-body lightcthru">
+    <h1>
+      A New Paradigm for Exploration in Computer-Aided Visualization (1999)
+    </h1>
+    <hr />
+    <!-- Projects -->
+    
+    <hr />
+    <!-- Social Share + Search Buttons -->
+    <div class="btn-toolbar bg-transp" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group my-1" role="group" aria-label="Share group">
+    <!-- Share on LinkedIn -->
+    <a class="btn btn-primary mx-1" aria-label="Share on LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html&amp;title=A New Paradigm for Exploration in Computer-Aided Visualization (1999)&amp;summary=&amp;source=http://www2.cs.uregina.ca/~hepting" role="button" target="_blank">
+      <span class="fab fa-linkedin" title="Share on LinkedIn"></span>
+    </a>
+    <!-- Share on Facebook -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www2.cs.uregina.ca/~hepting/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html" role="button" target="_blank">
+      <span class="fab fa-facebook" title="Share on Facebook"></span>
+    </a>
+    <!-- Share on Google+ -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Google+" href="https://plus.google.com/share?url=http://www2.cs.uregina.ca/~hepting/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html" role="button" target="_blank">
+      <span class="fab fa-google-plus-square" title="Share on Google+"></span>
+    </a>
+    <!-- Share on twitter -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=A New Paradigm for Exploration in Computer-Aided Visualization (1999)&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html" role="button" target="_blank">
+      <span class="fab fa-twitter-square" title="Share on Twitter"></span>
+    </a>
+    <!-- Share via email -->
+    <a class="btn btn-primary mx-1" aria-label="Share via Email" href="mailto:someone@example.com?subject=A New Paradigm for Exploration in Computer-Aided Visualization (1999)&amp;body=Check out this page: http://www2.cs.uregina.ca/~hepting/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html" role="button">
+     <span class="fas fa-envelope" title="Share via Email"></span>
+    </a>
+  </div>
+  
+  
+  <div class="btn-group my-1" role="group" aria-label="Search group">
+    <!-- Search on google -->
+    <a class="btn btn-info mx-1" aria-label="Search google" href="https://www.google.ca/search?q=%22A+New+Paradigm+for+Exploration+in+Computer-Aided+Visualization%22" role="button" target="_blank">
+      google
+    </a>
+    <!-- Search on bing -->
+    <a class="btn btn-info mx-1" aria-label="Search bing" href="https://www.bing.com/search?q=%22A+New+Paradigm+for+Exploration+in+Computer-Aided+Visualization%22" role="button" target="_blank">
+      bing
+    </a>
+    <!-- Search on google scholar -->
+    <a class="btn btn-info mx-1" aria-label="Search google scholar" href="https://scholar.google.ca/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=%22A+New+Paradigm+for+Exploration+in+Computer-Aided+Visualization%22&amp;btnG=" role="button" target="_blank">
+      google scholar
+    </a>
+  </div>
+</div>
+
+    <hr />
+    <h3>
+      Phd
+    </h3>
+    <ul>
+      <li>Simon Fraser University</li>
+    </ul>
+
+    
+    
+    <h3>
+    
+      Author
+    
+    </h3>
+    <ul>
+    
+      <li>
+        Daryl H. Hepting
+      </li>
+    
+    </ul>
+
+    
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+    <h3>Links</h3>
+    <ul>
+      <li><a href="http://www2.cs.uregina.ca/~hepting/assets/works/pdf/1999-12-Hep.pdf">download from this site</a></li>
+        
+
+    
+    
+        
+        
+      
+      
+      
+        
+        <li><a href="http://amicus.collectionscanada.gc.ca/s4-bin/Main/ItemDisplay?l=0&amp;l_ef_l=-1&amp;id=268664.50643&amp;v=1&amp;lvl=1&amp;coll=18&amp;rt=1&amp;itm=25078851&amp;rsn=S_WWWhgaddvZcf&amp;all=1&amp;dt=NW+|Hepting|&amp;spi=-&amp;rp=1&amp;v=1">Libraries and Archives Canada</a></li>
+      
+    
+    
+    </ul>
+    
+
+    <h3>BibTeX</h3>
+    <!-- Target -->
+    <div class="border border-primary rounded flex-row flex-nowrap">
+      <a id="clipboard" href="#clipboard" class="btn btn-primary" aria-label="Copy BibTeX entry" data-clipboard-action="copy" data-clipboard-target="#bibtex">
+        <span class="far fa-clipboard fa-inverse" title="Copy BibTeX entry">
+        </span>
+      </a>
+      <code><pre id="bibtex">@phdthesis{1999-12-Hep,
+	Author =  “Hepting, Daryl H.”,
+	Title =  “A New Paradigm for Exploration in Computer-Aided Visualization”,
+	Url = "http://www2.cs.uregina.ca/~hepting/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html",
+	Address =  “Burnaby, Canada”,
+	Doi =  “10.13140/RG.2.1.3716.9362”,
+	Keywords =  “computer-aided vlsualization”,
+	Month =  “December”,
+	School =  “Simon Fraser University”,
+	Year =  “1999”,
+}</pre></code>
+    </div>
+    
+  </div>
+  <div class="card-footer text-muted lightcthru">
+  Site built: 2019-10-18 11:40 -0600
+</div>
+
+</div>
+<!-- </div> -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous">
+  </script>
+  
+	<script>
+		var clipboard = new ClipboardJS('.btn')
+	</script>
+  
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+		ga('create', 'UA-4427429-2', 'auto')
+		ga('send', 'pageview')
+	</script>
+	<!-- End Google Analytics -->
+</body>
+&lt;/html&gt;
+
+
+--&gt;
       <li>
         <a href="/~hepting/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html">
           A New Paradigm for Exploration in Computer-Aided Visualization (1999)
@@ -436,6 +5781,1408 @@
 
   
     
+      <!-- <!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Links -->
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/normalize.css" />
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/tipuesearch.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+-->
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <link rel="stylesheet" href="/~hepting/assets/css/dhhepting.css" />
+  <link rel="icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" href="http://www2.cs.uregina.ca/~hepting/rss/news.rss" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <link rel="canonical" href="http://www2.cs.uregina.ca/~hepting/research/works/1998-04-HepCaoRus-An-Exploratory-Approach-to-Mathematical-Visualization.html" />
+  
+  <title>An Exploratory Approach to Mathematical Visualization (1998) | D. H. Hepting, Ph.D.</title>
+  <meta property="og:title" content="An Exploratory Approach to Mathematical Visualization (1998) | D. H. Hepting, Ph.D." />
+  <meta property="og:url" content="http://www2.cs.uregina.ca/~hepting/research/works/1998-04-HepCaoRus-An-Exploratory-Approach-to-Mathematical-Visualization.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/~hepting/assets/bg/about.jpg" />
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+&lt;/head&gt;
+
+<body>
+
+
+<div class="card research w-100 lightcthru" style="min-height:100%">
+  <div class="card-header lightcthru">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb card-header lightcthru">
+      <li class="breadcrumb-item">
+        <a href="/~hepting/">
+          D. H. Hepting
+        </a>
+      </li>
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/">
+          Research
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/works/">
+          Collected Works
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item active">
+        An Exploratory Approach to Mathematical Visualization (1998)
+      </li>
+  </ol>
+  </nav>
+</div>
+
+  <div class="card-body lightcthru">
+    <h1>
+      An Exploratory Approach to Mathematical Visualization (1998)
+    </h1>
+    <hr />
+    <!-- Projects -->
+    
+    <hr />
+    <!-- Social Share + Search Buttons -->
+    <div class="btn-toolbar bg-transp" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group my-1" role="group" aria-label="Share group">
+    <!-- Share on LinkedIn -->
+    <a class="btn btn-primary mx-1" aria-label="Share on LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/1998-04-HepCaoRus-An-Exploratory-Approach-to-Mathematical-Visualization.html&amp;title=An Exploratory Approach to Mathematical Visualization (1998)&amp;summary=&amp;source=http://www2.cs.uregina.ca/~hepting" role="button" target="_blank">
+      <span class="fab fa-linkedin" title="Share on LinkedIn"></span>
+    </a>
+    <!-- Share on Facebook -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www2.cs.uregina.ca/~hepting/research/works/1998-04-HepCaoRus-An-Exploratory-Approach-to-Mathematical-Visualization.html" role="button" target="_blank">
+      <span class="fab fa-facebook" title="Share on Facebook"></span>
+    </a>
+    <!-- Share on Google+ -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Google+" href="https://plus.google.com/share?url=http://www2.cs.uregina.ca/~hepting/research/works/1998-04-HepCaoRus-An-Exploratory-Approach-to-Mathematical-Visualization.html" role="button" target="_blank">
+      <span class="fab fa-google-plus-square" title="Share on Google+"></span>
+    </a>
+    <!-- Share on twitter -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=An Exploratory Approach to Mathematical Visualization (1998)&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/1998-04-HepCaoRus-An-Exploratory-Approach-to-Mathematical-Visualization.html" role="button" target="_blank">
+      <span class="fab fa-twitter-square" title="Share on Twitter"></span>
+    </a>
+    <!-- Share via email -->
+    <a class="btn btn-primary mx-1" aria-label="Share via Email" href="mailto:someone@example.com?subject=An Exploratory Approach to Mathematical Visualization (1998)&amp;body=Check out this page: http://www2.cs.uregina.ca/~hepting/research/works/1998-04-HepCaoRus-An-Exploratory-Approach-to-Mathematical-Visualization.html" role="button">
+     <span class="fas fa-envelope" title="Share via Email"></span>
+    </a>
+  </div>
+  
+  
+  <div class="btn-group my-1" role="group" aria-label="Search group">
+    <!-- Search on google -->
+    <a class="btn btn-info mx-1" aria-label="Search google" href="https://www.google.ca/search?q=%22An+Exploratory+Approach+to+Mathematical+Visualization%22" role="button" target="_blank">
+      google
+    </a>
+    <!-- Search on bing -->
+    <a class="btn btn-info mx-1" aria-label="Search bing" href="https://www.bing.com/search?q=%22An+Exploratory+Approach+to+Mathematical+Visualization%22" role="button" target="_blank">
+      bing
+    </a>
+    <!-- Search on google scholar -->
+    <a class="btn btn-info mx-1" aria-label="Search google scholar" href="https://scholar.google.ca/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=%22An+Exploratory+Approach+to+Mathematical+Visualization%22&amp;btnG=" role="button" target="_blank">
+      google scholar
+    </a>
+  </div>
+</div>
+
+    <hr />
+    <h3>
+      Conference
+    </h3>
+    <ul>
+      <li>Western Computer Graphics Symposium</li>
+    </ul>
+
+    
+    
+    <h3>
+    
+      Authors
+    
+    </h3>
+    <ul>
+    
+      <li>
+        Daryl H. Hepting
+      </li>
+    
+      <li>
+        Weiming Cao
+      </li>
+    
+      <li>
+        Robert D. Russell
+      </li>
+    
+    </ul>
+
+    
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+    
+    
+
+    <h3>BibTeX</h3>
+    <!-- Target -->
+    <div class="border border-primary rounded flex-row flex-nowrap">
+      <a id="clipboard" href="#clipboard" class="btn btn-primary" aria-label="Copy BibTeX entry" data-clipboard-action="copy" data-clipboard-target="#bibtex">
+        <span class="far fa-clipboard fa-inverse" title="Copy BibTeX entry">
+        </span>
+      </a>
+      <code><pre id="bibtex">@inproceedings{1998-04-HepCaoRus,
+	Author =  “Hepting, Daryl H. and Cao, Weiming and Russell, Robert D.”,
+	Title =  “An Exploratory Approach to Mathematical Visualization”,
+	Url = "http://www2.cs.uregina.ca/~hepting/research/works/1998-04-HepCaoRus-An-Exploratory-Approach-to-Mathematical-Visualization.html",
+	Booktitle =  “Western Computer Graphics Symposium”,
+	Month =  “April”,
+	Year =  “1998”
+}</pre></code>
+    </div>
+    
+  </div>
+  <div class="card-footer text-muted lightcthru">
+  Site built: 2019-10-18 11:40 -0600
+</div>
+
+</div>
+<!-- </div> -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous">
+  </script>
+  
+	<script>
+		var clipboard = new ClipboardJS('.btn')
+	</script>
+  
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+		ga('create', 'UA-4427429-2', 'auto')
+		ga('send', 'pageview')
+	</script>
+	<!-- End Google Analytics -->
+</body>
+&lt;/html&gt;
+
+
+--&gt;
       <li>
         <a href="/~hepting/research/works/1998-04-HepCaoRus-An-Exploratory-Approach-to-Mathematical-Visualization.html">
           An Exploratory Approach to Mathematical Visualization (1998)
@@ -455,6 +7202,1413 @@
 
   
     
+      <!-- <!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Links -->
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/normalize.css" />
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/tipuesearch.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+-->
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <link rel="stylesheet" href="/~hepting/assets/css/dhhepting.css" />
+  <link rel="icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" href="http://www2.cs.uregina.ca/~hepting/rss/news.rss" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <link rel="canonical" href="http://www2.cs.uregina.ca/~hepting/research/works/1996-11-HepFraDil-A-Personal-Paradigm-for-Computer-Aided-Visualization.html" />
+  
+  <title>A Personal Paradigm for Computer-Aided Visualization (1996) | D. H. Hepting, Ph.D.</title>
+  <meta property="og:title" content="A Personal Paradigm for Computer-Aided Visualization (1996) | D. H. Hepting, Ph.D." />
+  <meta property="og:url" content="http://www2.cs.uregina.ca/~hepting/research/works/1996-11-HepFraDil-A-Personal-Paradigm-for-Computer-Aided-Visualization.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/~hepting/assets/bg/about.jpg" />
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+&lt;/head&gt;
+
+<body>
+
+
+<div class="card research w-100 lightcthru" style="min-height:100%">
+  <div class="card-header lightcthru">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb card-header lightcthru">
+      <li class="breadcrumb-item">
+        <a href="/~hepting/">
+          D. H. Hepting
+        </a>
+      </li>
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/">
+          Research
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/works/">
+          Collected Works
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item active">
+        A Personal Paradigm for Computer-Aided Visualization (1996)
+      </li>
+  </ol>
+  </nav>
+</div>
+
+  <div class="card-body lightcthru">
+    <h1>
+      A Personal Paradigm for Computer-Aided Visualization (1996)
+    </h1>
+    <hr />
+    <!-- Projects -->
+    
+    <hr />
+    <!-- Social Share + Search Buttons -->
+    <div class="btn-toolbar bg-transp" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group my-1" role="group" aria-label="Share group">
+    <!-- Share on LinkedIn -->
+    <a class="btn btn-primary mx-1" aria-label="Share on LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/1996-11-HepFraDil-A-Personal-Paradigm-for-Computer-Aided-Visualization.html&amp;title=A Personal Paradigm for Computer-Aided Visualization (1996)&amp;summary=&amp;source=http://www2.cs.uregina.ca/~hepting" role="button" target="_blank">
+      <span class="fab fa-linkedin" title="Share on LinkedIn"></span>
+    </a>
+    <!-- Share on Facebook -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www2.cs.uregina.ca/~hepting/research/works/1996-11-HepFraDil-A-Personal-Paradigm-for-Computer-Aided-Visualization.html" role="button" target="_blank">
+      <span class="fab fa-facebook" title="Share on Facebook"></span>
+    </a>
+    <!-- Share on Google+ -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Google+" href="https://plus.google.com/share?url=http://www2.cs.uregina.ca/~hepting/research/works/1996-11-HepFraDil-A-Personal-Paradigm-for-Computer-Aided-Visualization.html" role="button" target="_blank">
+      <span class="fab fa-google-plus-square" title="Share on Google+"></span>
+    </a>
+    <!-- Share on twitter -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=A Personal Paradigm for Computer-Aided Visualization (1996)&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/1996-11-HepFraDil-A-Personal-Paradigm-for-Computer-Aided-Visualization.html" role="button" target="_blank">
+      <span class="fab fa-twitter-square" title="Share on Twitter"></span>
+    </a>
+    <!-- Share via email -->
+    <a class="btn btn-primary mx-1" aria-label="Share via Email" href="mailto:someone@example.com?subject=A Personal Paradigm for Computer-Aided Visualization (1996)&amp;body=Check out this page: http://www2.cs.uregina.ca/~hepting/research/works/1996-11-HepFraDil-A-Personal-Paradigm-for-Computer-Aided-Visualization.html" role="button">
+     <span class="fas fa-envelope" title="Share via Email"></span>
+    </a>
+  </div>
+  
+  
+  <div class="btn-group my-1" role="group" aria-label="Search group">
+    <!-- Search on google -->
+    <a class="btn btn-info mx-1" aria-label="Search google" href="https://www.google.ca/search?q=%22A+Personal+Paradigm+for+Computer-Aided+Visualization%22" role="button" target="_blank">
+      google
+    </a>
+    <!-- Search on bing -->
+    <a class="btn btn-info mx-1" aria-label="Search bing" href="https://www.bing.com/search?q=%22A+Personal+Paradigm+for+Computer-Aided+Visualization%22" role="button" target="_blank">
+      bing
+    </a>
+    <!-- Search on google scholar -->
+    <a class="btn btn-info mx-1" aria-label="Search google scholar" href="https://scholar.google.ca/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=%22A+Personal+Paradigm+for+Computer-Aided+Visualization%22&amp;btnG=" role="button" target="_blank">
+      google scholar
+    </a>
+  </div>
+</div>
+
+    <hr />
+    <h3>
+      Workshop
+    </h3>
+    <ul>
+      <li>Workshop on New Paradigms in Information Visualization and Manipulation</li>
+    </ul>
+
+    
+    
+    <h3>
+    
+      Authors
+    
+    </h3>
+    <ul>
+    
+      <li>
+        Daryl H. Hepting
+      </li>
+    
+      <li>
+        F. David Fracchia
+      </li>
+    
+      <li>
+        John C. Dill
+      </li>
+    
+      <li>
+        Robert D. Russell
+      </li>
+    
+    </ul>
+
+    
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+    
+    
+
+    <h3>BibTeX</h3>
+    <!-- Target -->
+    <div class="border border-primary rounded flex-row flex-nowrap">
+      <a id="clipboard" href="#clipboard" class="btn btn-primary" aria-label="Copy BibTeX entry" data-clipboard-action="copy" data-clipboard-target="#bibtex">
+        <span class="far fa-clipboard fa-inverse" title="Copy BibTeX entry">
+        </span>
+      </a>
+      <code><pre id="bibtex">@inproceedings{1996-11-HepFraDil,
+	Author =  “Hepting, Daryl H. and Fracchia, F. David and Dill, John C. and Russell, Robert D.”,
+	Title =  “A Personal Paradigm for Computer-Aided Visualization”,
+	Url = "http://www2.cs.uregina.ca/~hepting/research/works/1996-11-HepFraDil-A-Personal-Paradigm-for-Computer-Aided-Visualization.html",
+	Booktitle =  “Workshop on New Paradigms in Information Visualization and Manipulation”,
+	Month =  “November”,
+	Organization =  “ACM Conference on Information and Knowledge Management”,
+	Year =  “1996”
+}</pre></code>
+    </div>
+    
+  </div>
+  <div class="card-footer text-muted lightcthru">
+  Site built: 2019-10-18 11:40 -0600
+</div>
+
+</div>
+<!-- </div> -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous">
+  </script>
+  
+	<script>
+		var clipboard = new ClipboardJS('.btn')
+	</script>
+  
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+		ga('create', 'UA-4427429-2', 'auto')
+		ga('send', 'pageview')
+	</script>
+	<!-- End Google Analytics -->
+</body>
+&lt;/html&gt;
+
+
+--&gt;
       <li>
         <a href="/~hepting/research/works/1996-11-HepFraDil-A-Personal-Paradigm-for-Computer-Aided-Visualization.html">
           A Personal Paradigm for Computer-Aided Visualization (1996)
@@ -468,6 +8622,1412 @@
 
   
     
+      <!-- <!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Links -->
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/normalize.css" />
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/tipuesearch.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+-->
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <link rel="stylesheet" href="/~hepting/assets/css/dhhepting.css" />
+  <link rel="icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" href="http://www2.cs.uregina.ca/~hepting/rss/news.rss" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <link rel="canonical" href="http://www2.cs.uregina.ca/~hepting/research/works/1996-08-HepFraDil-Cogito-a-system-for-computer-aided-visualization.html" />
+  
+  <title>Cogito  a system for computer-aided visualization (1996) | D. H. Hepting, Ph.D.</title>
+  <meta property="og:title" content="Cogito  a system for computer-aided visualization (1996) | D. H. Hepting, Ph.D." />
+  <meta property="og:url" content="http://www2.cs.uregina.ca/~hepting/research/works/1996-08-HepFraDil-Cogito-a-system-for-computer-aided-visualization.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/~hepting/assets/bg/about.jpg" />
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+&lt;/head&gt;
+
+<body>
+
+
+<div class="card research w-100 lightcthru" style="min-height:100%">
+  <div class="card-header lightcthru">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb card-header lightcthru">
+      <li class="breadcrumb-item">
+        <a href="/~hepting/">
+          D. H. Hepting
+        </a>
+      </li>
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/">
+          Research
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/works/">
+          Collected Works
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item active">
+        Cogito  a system for computer-aided visualization (1996)
+      </li>
+  </ol>
+  </nav>
+</div>
+
+  <div class="card-body lightcthru">
+    <h1>
+      Cogito  a system for computer-aided visualization (1996)
+    </h1>
+    <hr />
+    <!-- Projects -->
+    
+    <hr />
+    <!-- Social Share + Search Buttons -->
+    <div class="btn-toolbar bg-transp" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group my-1" role="group" aria-label="Share group">
+    <!-- Share on LinkedIn -->
+    <a class="btn btn-primary mx-1" aria-label="Share on LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/1996-08-HepFraDil-Cogito-a-system-for-computer-aided-visualization.html&amp;title=Cogito  a system for computer-aided visualization (1996)&amp;summary=&amp;source=http://www2.cs.uregina.ca/~hepting" role="button" target="_blank">
+      <span class="fab fa-linkedin" title="Share on LinkedIn"></span>
+    </a>
+    <!-- Share on Facebook -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www2.cs.uregina.ca/~hepting/research/works/1996-08-HepFraDil-Cogito-a-system-for-computer-aided-visualization.html" role="button" target="_blank">
+      <span class="fab fa-facebook" title="Share on Facebook"></span>
+    </a>
+    <!-- Share on Google+ -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Google+" href="https://plus.google.com/share?url=http://www2.cs.uregina.ca/~hepting/research/works/1996-08-HepFraDil-Cogito-a-system-for-computer-aided-visualization.html" role="button" target="_blank">
+      <span class="fab fa-google-plus-square" title="Share on Google+"></span>
+    </a>
+    <!-- Share on twitter -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=Cogito  a system for computer-aided visualization (1996)&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/1996-08-HepFraDil-Cogito-a-system-for-computer-aided-visualization.html" role="button" target="_blank">
+      <span class="fab fa-twitter-square" title="Share on Twitter"></span>
+    </a>
+    <!-- Share via email -->
+    <a class="btn btn-primary mx-1" aria-label="Share via Email" href="mailto:someone@example.com?subject=Cogito  a system for computer-aided visualization (1996)&amp;body=Check out this page: http://www2.cs.uregina.ca/~hepting/research/works/1996-08-HepFraDil-Cogito-a-system-for-computer-aided-visualization.html" role="button">
+     <span class="fas fa-envelope" title="Share via Email"></span>
+    </a>
+  </div>
+  
+  
+  <div class="btn-group my-1" role="group" aria-label="Search group">
+    <!-- Search on google -->
+    <a class="btn btn-info mx-1" aria-label="Search google" href="https://www.google.ca/search?q=%22Cogito++a+system+for+computer-aided+visualization%22" role="button" target="_blank">
+      google
+    </a>
+    <!-- Search on bing -->
+    <a class="btn btn-info mx-1" aria-label="Search bing" href="https://www.bing.com/search?q=%22Cogito++a+system+for+computer-aided+visualization%22" role="button" target="_blank">
+      bing
+    </a>
+    <!-- Search on google scholar -->
+    <a class="btn btn-info mx-1" aria-label="Search google scholar" href="https://scholar.google.ca/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=%22Cogito++a+system+for+computer-aided+visualization%22&amp;btnG=" role="button" target="_blank">
+      google scholar
+    </a>
+  </div>
+</div>
+
+    <hr />
+    <h3>
+      Sketch
+    </h3>
+    <ul>
+      <li>Simon Fraser University</li>
+    </ul>
+
+    
+    
+    <h3>
+    
+      Authors
+    
+    </h3>
+    <ul>
+    
+      <li>
+        Daryl H. Hepting
+      </li>
+    
+      <li>
+        F. David Fracchia
+      </li>
+    
+      <li>
+        John C. Dill
+      </li>
+    
+      <li>
+        Robert D. Russell
+      </li>
+    
+    </ul>
+
+    
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+    
+    
+
+    <h3>BibTeX</h3>
+    <!-- Target -->
+    <div class="border border-primary rounded flex-row flex-nowrap">
+      <a id="clipboard" href="#clipboard" class="btn btn-primary" aria-label="Copy BibTeX entry" data-clipboard-action="copy" data-clipboard-target="#bibtex">
+        <span class="far fa-clipboard fa-inverse" title="Copy BibTeX entry">
+        </span>
+      </a>
+      <code><pre id="bibtex">@techreport{1996-08-HepFraDil,
+	Author =  “Hepting, Daryl H. and Fracchia, F. David and Dill, John C. and Russell, Robert D.”,
+	Title =  “Cogito: a system for computer-aided visualization”,
+	Institution =  “Simon Fraser University”,
+	Month =  “August”,
+	Number =  “CMPT-TR-96-02”,
+	Year =  “1996”,
+}</pre></code>
+    </div>
+    
+  </div>
+  <div class="card-footer text-muted lightcthru">
+  Site built: 2019-10-18 11:40 -0600
+</div>
+
+</div>
+<!-- </div> -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous">
+  </script>
+  
+	<script>
+		var clipboard = new ClipboardJS('.btn')
+	</script>
+  
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+		ga('create', 'UA-4427429-2', 'auto')
+		ga('send', 'pageview')
+	</script>
+	<!-- End Google Analytics -->
+</body>
+&lt;/html&gt;
+
+
+--&gt;
       <li>
         <a href="/~hepting/research/works/1996-08-HepFraDil-Cogito-a-system-for-computer-aided-visualization.html">
           Cogito  a system for computer-aided visualization (1996)
@@ -482,6 +10042,1421 @@
   
 
   
+    
+      <!-- <!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Links -->
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/normalize.css" />
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/tipuesearch.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+-->
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <link rel="stylesheet" href="/~hepting/assets/css/dhhepting.css" />
+  <link rel="icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" href="http://www2.cs.uregina.ca/~hepting/rss/news.rss" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <link rel="canonical" href="http://www2.cs.uregina.ca/~hepting/research/works/1995-11-HepHuaRus-Case-Study-A-Visual-Tool-for-Moving-Mesh-Numerical-Methods.html" />
+  
+  <title>Case Study: A Visual Tool for Moving Mesh Numerical Methods (1995) | D. H. Hepting, Ph.D.</title>
+  <meta property="og:title" content="Case Study: A Visual Tool for Moving Mesh Numerical Methods (1995) | D. H. Hepting, Ph.D." />
+  <meta property="og:url" content="http://www2.cs.uregina.ca/~hepting/research/works/1995-11-HepHuaRus-Case-Study-A-Visual-Tool-for-Moving-Mesh-Numerical-Methods.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/~hepting/assets/bg/about.jpg" />
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+&lt;/head&gt;
+
+<body>
+
+
+<div class="card research w-100 lightcthru" style="min-height:100%">
+  <div class="card-header lightcthru">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb card-header lightcthru">
+      <li class="breadcrumb-item">
+        <a href="/~hepting/">
+          D. H. Hepting
+        </a>
+      </li>
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/">
+          Research
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/works/">
+          Collected Works
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item active">
+        Case Study: A Visual Tool for Moving Mesh Numerical Methods (1995)
+      </li>
+  </ol>
+  </nav>
+</div>
+
+  <div class="card-body lightcthru">
+    <h1>
+      Case Study: A Visual Tool for Moving Mesh Numerical Methods (1995)
+    </h1>
+    <hr />
+    <!-- Projects -->
+    
+    <hr />
+    <!-- Social Share + Search Buttons -->
+    <div class="btn-toolbar bg-transp" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group my-1" role="group" aria-label="Share group">
+    <!-- Share on LinkedIn -->
+    <a class="btn btn-primary mx-1" aria-label="Share on LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/1995-11-HepHuaRus-Case-Study-A-Visual-Tool-for-Moving-Mesh-Numerical-Methods.html&amp;title=Case Study: A Visual Tool for Moving Mesh Numerical Methods (1995)&amp;summary=&amp;source=http://www2.cs.uregina.ca/~hepting" role="button" target="_blank">
+      <span class="fab fa-linkedin" title="Share on LinkedIn"></span>
+    </a>
+    <!-- Share on Facebook -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www2.cs.uregina.ca/~hepting/research/works/1995-11-HepHuaRus-Case-Study-A-Visual-Tool-for-Moving-Mesh-Numerical-Methods.html" role="button" target="_blank">
+      <span class="fab fa-facebook" title="Share on Facebook"></span>
+    </a>
+    <!-- Share on Google+ -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Google+" href="https://plus.google.com/share?url=http://www2.cs.uregina.ca/~hepting/research/works/1995-11-HepHuaRus-Case-Study-A-Visual-Tool-for-Moving-Mesh-Numerical-Methods.html" role="button" target="_blank">
+      <span class="fab fa-google-plus-square" title="Share on Google+"></span>
+    </a>
+    <!-- Share on twitter -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=Case Study: A Visual Tool for Moving Mesh Numerical Methods (1995)&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/1995-11-HepHuaRus-Case-Study-A-Visual-Tool-for-Moving-Mesh-Numerical-Methods.html" role="button" target="_blank">
+      <span class="fab fa-twitter-square" title="Share on Twitter"></span>
+    </a>
+    <!-- Share via email -->
+    <a class="btn btn-primary mx-1" aria-label="Share via Email" href="mailto:someone@example.com?subject=Case Study: A Visual Tool for Moving Mesh Numerical Methods (1995)&amp;body=Check out this page: http://www2.cs.uregina.ca/~hepting/research/works/1995-11-HepHuaRus-Case-Study-A-Visual-Tool-for-Moving-Mesh-Numerical-Methods.html" role="button">
+     <span class="fas fa-envelope" title="Share via Email"></span>
+    </a>
+  </div>
+  
+  
+  <div class="btn-group my-1" role="group" aria-label="Search group">
+    <!-- Search on google -->
+    <a class="btn btn-info mx-1" aria-label="Search google" href="https://www.google.ca/search?q=%22Case+Study%3A+A+Visual+Tool+for+Moving+Mesh+Numerical+Methods%22" role="button" target="_blank">
+      google
+    </a>
+    <!-- Search on bing -->
+    <a class="btn btn-info mx-1" aria-label="Search bing" href="https://www.bing.com/search?q=%22Case+Study%3A+A+Visual+Tool+for+Moving+Mesh+Numerical+Methods%22" role="button" target="_blank">
+      bing
+    </a>
+    <!-- Search on google scholar -->
+    <a class="btn btn-info mx-1" aria-label="Search google scholar" href="https://scholar.google.ca/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=%22Case+Study%3A+A+Visual+Tool+for+Moving+Mesh+Numerical+Methods%22&amp;btnG=" role="button" target="_blank">
+      google scholar
+    </a>
+  </div>
+</div>
+
+    <hr />
+    <h3>
+      Techreport
+    </h3>
+    <ul>
+      <li>Simon Fraser University</li>
+    </ul>
+
+    
+    
+    <h3>
+    
+      Authors
+    
+    </h3>
+    <ul>
+    
+      <li>
+        Daryl H. Hepting
+      </li>
+    
+      <li>
+        Weizhang Huang
+      </li>
+    
+      <li>
+        Robert D. Russell
+      </li>
+    
+    </ul>
+
+    
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+    
+    
+
+    <h3>BibTeX</h3>
+    <!-- Target -->
+    <div class="border border-primary rounded flex-row flex-nowrap">
+      <a id="clipboard" href="#clipboard" class="btn btn-primary" aria-label="Copy BibTeX entry" data-clipboard-action="copy" data-clipboard-target="#bibtex">
+        <span class="far fa-clipboard fa-inverse" title="Copy BibTeX entry">
+        </span>
+      </a>
+      <code><pre id="bibtex">@techreport{1995-11-HepHuaRus,
+	Author =  “Hepting, Daryl H. and Huang, Weizhang and Russell, Robert D.”,
+	Title =  “Case Study: A Visual Tool for Moving Mesh Numerical Methods”,
+	Url = "http://www2.cs.uregina.ca/~hepting/research/works/1995-11-HepHuaRus-Case-Study-A-Visual-Tool-for-Moving-Mesh-Numerical-Methods.html",
+	Address =  “Burnaby, BC, Canada”,
+	Institution =  “Simon Fraser University”,
+	Month =  “11”,
+	Number =  “95-09”,
+	Year =  “1995”
+}</pre></code>
+    </div>
+    
+  </div>
+  <div class="card-footer text-muted lightcthru">
+  Site built: 2019-10-18 11:40 -0600
+</div>
+
+</div>
+<!-- </div> -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous">
+  </script>
+  
+	<script>
+		var clipboard = new ClipboardJS('.btn')
+	</script>
+  
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+		ga('create', 'UA-4427429-2', 'auto')
+		ga('send', 'pageview')
+	</script>
+	<!-- End Google Analytics -->
+</body>
+&lt;/html&gt;
+
+
+--&gt;
+      <li>
+        <a href="/~hepting/research/works/1995-11-HepHuaRus-Case-Study-A-Visual-Tool-for-Moving-Mesh-Numerical-Methods.html">
+          Case Study: A Visual Tool for Moving Mesh Numerical Methods (1995)
+        </a>
+	<span class="badge badge-info badge-sm">
+          techreport
+        </span>
+      </li>
+    
+  
 
   
 
@@ -491,6 +11466,1266 @@
     
   
 
+  
+    
+      <!-- <!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Links -->
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/normalize.css" />
+  <link rel="stylesheet" href="/~hepting/assets/tipuesearch/css/tipuesearch.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+-->
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <link rel="stylesheet" href="/~hepting/assets/css/dhhepting.css" />
+  <link rel="icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/~hepting/assets/favicon.ico" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" href="http://www2.cs.uregina.ca/~hepting/rss/news.rss" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <link rel="canonical" href="http://www2.cs.uregina.ca/~hepting/research/works/1995-05-HepEdoDer-Visualization-as-a-Qualitative-Tool-for-the-Computation-of-Invariant-Tori.html" />
+  
+  <title>Visualization as a Qualitative Tool for the Computation of Invariant Tori (1995) | D. H. Hepting, Ph.D.</title>
+  <meta property="og:title" content="Visualization as a Qualitative Tool for the Computation of Invariant Tori (1995) | D. H. Hepting, Ph.D." />
+  <meta property="og:url" content="http://www2.cs.uregina.ca/~hepting/research/works/1995-05-HepEdoDer-Visualization-as-a-Qualitative-Tool-for-the-Computation-of-Invariant-Tori.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/~hepting/assets/bg/about.jpg" />
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+&lt;/head&gt;
+
+<body>
+
+
+<div class="card research w-100 lightcthru" style="min-height:100%">
+  <div class="card-header lightcthru">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb card-header lightcthru">
+      <li class="breadcrumb-item">
+        <a href="/~hepting/">
+          D. H. Hepting
+        </a>
+      </li>
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/">
+          Research
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/research/works/">
+          Collected Works
+        </a>
+      </li>
+  
+  
+      <li class="breadcrumb-item active">
+        Visualization as a Qualitative Tool for the Computation of Invariant Tori (1995)
+      </li>
+  </ol>
+  </nav>
+</div>
+
+  <div class="card-body lightcthru">
+    <h1>
+      Visualization as a Qualitative Tool for the Computation of Invariant Tori (1995)
+    </h1>
+    <hr />
+    <!-- Projects -->
+    
+    <hr />
+    <!-- Social Share + Search Buttons -->
+    <div class="btn-toolbar bg-transp" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group my-1" role="group" aria-label="Share group">
+    <!-- Share on LinkedIn -->
+    <a class="btn btn-primary mx-1" aria-label="Share on LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/1995-05-HepEdoDer-Visualization-as-a-Qualitative-Tool-for-the-Computation-of-Invariant-Tori.html&amp;title=Visualization as a Qualitative Tool for the Computation of Invariant Tori (1995)&amp;summary=&amp;source=http://www2.cs.uregina.ca/~hepting" role="button" target="_blank">
+      <span class="fab fa-linkedin" title="Share on LinkedIn"></span>
+    </a>
+    <!-- Share on Facebook -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www2.cs.uregina.ca/~hepting/research/works/1995-05-HepEdoDer-Visualization-as-a-Qualitative-Tool-for-the-Computation-of-Invariant-Tori.html" role="button" target="_blank">
+      <span class="fab fa-facebook" title="Share on Facebook"></span>
+    </a>
+    <!-- Share on Google+ -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Google+" href="https://plus.google.com/share?url=http://www2.cs.uregina.ca/~hepting/research/works/1995-05-HepEdoDer-Visualization-as-a-Qualitative-Tool-for-the-Computation-of-Invariant-Tori.html" role="button" target="_blank">
+      <span class="fab fa-google-plus-square" title="Share on Google+"></span>
+    </a>
+    <!-- Share on twitter -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=Visualization as a Qualitative Tool for the Computation of Invariant Tori (1995)&amp;url=http://www2.cs.uregina.ca/~hepting/research/works/1995-05-HepEdoDer-Visualization-as-a-Qualitative-Tool-for-the-Computation-of-Invariant-Tori.html" role="button" target="_blank">
+      <span class="fab fa-twitter-square" title="Share on Twitter"></span>
+    </a>
+    <!-- Share via email -->
+    <a class="btn btn-primary mx-1" aria-label="Share via Email" href="mailto:someone@example.com?subject=Visualization as a Qualitative Tool for the Computation of Invariant Tori (1995)&amp;body=Check out this page: http://www2.cs.uregina.ca/~hepting/research/works/1995-05-HepEdoDer-Visualization-as-a-Qualitative-Tool-for-the-Computation-of-Invariant-Tori.html" role="button">
+     <span class="fas fa-envelope" title="Share via Email"></span>
+    </a>
+  </div>
+  
+  
+  <div class="btn-group my-1" role="group" aria-label="Search group">
+    <!-- Search on google -->
+    <a class="btn btn-info mx-1" aria-label="Search google" href="https://www.google.ca/search?q=%22Visualization+as+a+Qualitative+Tool+for+the+Computation+of+Invariant+Tori%22" role="button" target="_blank">
+      google
+    </a>
+    <!-- Search on bing -->
+    <a class="btn btn-info mx-1" aria-label="Search bing" href="https://www.bing.com/search?q=%22Visualization+as+a+Qualitative+Tool+for+the+Computation+of+Invariant+Tori%22" role="button" target="_blank">
+      bing
+    </a>
+    <!-- Search on google scholar -->
+    <a class="btn btn-info mx-1" aria-label="Search google scholar" href="https://scholar.google.ca/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=%22Visualization+as+a+Qualitative+Tool+for+the+Computation+of+Invariant+Tori%22&amp;btnG=" role="button" target="_blank">
+      google scholar
+    </a>
+  </div>
+</div>
+
+    <hr />
+    <h3>
+      Talk
+    </h3>
+    <ul>
+      <li>3rd SIAM Conference on Applications of Dynamical Systems</li>
+    </ul>
+
+    
+    
+    <h3>
+    
+      Authors
+    
+    </h3>
+    <ul>
+    
+      <li>
+        Daryl H. Hepting
+      </li>
+    
+      <li>
+        Kossi D. Edoh
+      </li>
+    
+      <li>
+        Gianne Derks
+      </li>
+    
+      <li>
+        Robert D. Russell
+      </li>
+    
+    </ul>
+
+    
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+    <h3>Links</h3>
+    <ul>
+      <li><a href="http://www2.cs.uregina.ca/~hepting/assets/works/pdf/1995-05-HepEdoDer.pdf">download from this site</a></li>
+        
+
+    
+    
+    
+    </ul>
+    
+
+    <h3>BibTeX</h3>
+    <!-- Target -->
+    <div class="border border-primary rounded flex-row flex-nowrap">
+      <a id="clipboard" href="#clipboard" class="btn btn-primary" aria-label="Copy BibTeX entry" data-clipboard-action="copy" data-clipboard-target="#bibtex">
+        <span class="far fa-clipboard fa-inverse" title="Copy BibTeX entry">
+        </span>
+      </a>
+      <code><pre id="bibtex">@conference{1995-05-HepEdoDer,
+	Author =  “Hepting, Daryl H. and Edoh, Kossi D. and Derks, Gianne and Russell, Robert D.”,
+	Title =  “Visualization as a Qualitative Tool for the Computation of Invariant Tori”,
+	Url = "http://www2.cs.uregina.ca/~hepting/research/works/1995-05-HepEdoDer-Visualization-as-a-Qualitative-Tool-for-the-Computation-of-Invariant-Tori.html",
+	Address =  “Snowbird, Utah”,
+	Booktitle =  “3rd SIAM Conference on Applications of Dynamical Systems”,
+	Month =  “May”,
+	Year =  “1995”
+}</pre></code>
+    </div>
+    
+  </div>
+  <div class="card-footer text-muted lightcthru">
+  Site built: 2019-10-18 11:40 -0600
+</div>
+
+</div>
+<!-- </div> -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script async="" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous">
+  </script>
+  
+	<script>
+		var clipboard = new ClipboardJS('.btn')
+	</script>
+  
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+		ga('create', 'UA-4427429-2', 'auto')
+		ga('send', 'pageview')
+	</script>
+	<!-- End Google Analytics -->
+</body>
+&lt;/html&gt;
+
+
+--&gt;
+      <li>
+        <a href="/~hepting/research/works/1995-05-HepEdoDer-Visualization-as-a-Qualitative-Tool-for-the-Computation-of-Invariant-Tori.html">
+          Visualization as a Qualitative Tool for the Computation of Invariant Tori (1995)
+        </a>
+	<span class="badge badge-info badge-sm">
+          talk
+        </span>
+      </li>
+    
   
 
   
@@ -515,31 +12750,38 @@
 
 
   </div>
-  <div class="card-footer text-muted lightcthru">
-  Site built: 2018-10-17 19:07 -0600
+<div class="card-footer text-muted lightcthru">
+  Site built: 2019-10-18 11:40 -0600
 </div>
 
 </div>
 <!-- </div> -->
   <!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-		crossorigin="anonymous">
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"
-		integrity="sha256-xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8="
-		crossorigin="anonymous">
-	</script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+  <script async
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous">
+  </script>
+  <script async
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous">
+  </script>
   <script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
   <script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
   <script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js"
-		integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA="
-		crossorigin="anonymous">
-	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+    integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+    crossorigin="anonymous">
+  </script>
   
 	<script>
-		var clipboard = new ClipboardJS('.btn');
+		var clipboard = new ClipboardJS('.btn')
 	</script>
   
 	<!-- Google Analytics -->
@@ -547,9 +12789,9 @@
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-4427429-2', 'auto');
-		ga('send', 'pageview');
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+		ga('create', 'UA-4427429-2', 'auto')
+		ga('send', 'pageview')
 	</script>
 	<!-- End Google Analytics -->
 </body>

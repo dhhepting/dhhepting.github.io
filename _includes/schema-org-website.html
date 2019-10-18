@@ -3,18 +3,20 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "url": "{{ "/" | absolute_url }}",
+  {% comment %}
   "about":
   {
     "@type": "Person",
     "@id": "{{ "/about/" | absolute_url }}#DHHepting"
   },
   "description": "{{ site.title }} : {{ site.description }}",
-  "potentialAction": {
+  {% endcomment %}
+  "potentialAction": [{
     "@type": "SearchAction",
 {%- assign search_url = "/search/" | absolute_url -%}
-{%- capture target -%}{{search_url}}?&q={tipue_search_input}{%- endcapture -%}
+{%- capture target -%}{{search_url}}?q={tipue_search_input}{%- endcapture -%}
     "target": "{{ target }}",
     "query-input": "required name=tipue_search_input"
-  }
+  }]
 }
 </script>

@@ -3,10 +3,12 @@
 {% assign relwrk = false %}
 {% for item in revworks %}
   {% for ip in item.projects %}
-    {% if ip contains page.project %}
-      {% assign relwrk = true %}
-      {% break %}
-    {% endif %}
+    {% for pp in page.projects %}
+      {% if ip == pp %}
+        {% assign relwrk = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
   {% endfor %}
 {% endfor %}
 
@@ -17,7 +19,8 @@
 <ul>
 {% for item in revworks %}
   {% for ip in item.projects %}
-    {% if ip contains page.project %}
+    {% if page.projects contains ip %}
+      <!-- {{ item }}-->
       <li>
         <a href="{{ item.url | relative_url }}">
           {{ item.breadcrumb }}

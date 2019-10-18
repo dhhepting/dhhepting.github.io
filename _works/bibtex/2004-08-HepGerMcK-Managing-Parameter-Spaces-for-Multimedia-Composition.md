@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2004-08-HepGerMcK
 title: "Managing Parameter Spaces for Multimedia Composition (2004)"
@@ -11,7 +12,7 @@ authors:
  - David Gerhard
  - Matthew McKague
  - Paul Schmiedge
-venue: ACM SIGGRAPH 2004 Posters
+venue: "ACM SIGGRAPH 2004 Posters"
 ---
 @inproceedings{2004-08-HepGerMcK,
 	Author =  "Hepting, Daryl H. and Gerhard, David and McKague, Matthew and Schmiedge, Paul",

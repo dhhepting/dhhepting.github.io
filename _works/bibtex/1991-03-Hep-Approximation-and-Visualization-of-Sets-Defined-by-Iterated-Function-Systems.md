@@ -1,11 +1,18 @@
 ---
+redirect_from:
+  - /research/dwnld/uregina1991MSc.pdf/
+  - /assets/pdfs/works/1991-03-Hep.pdf/
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1991-03-Hep
 title: "Approximation and Visualization of Sets Defined by Iterated Function Systems (1991)"
 breadcrumb: "Approximation and Visualization of Sets Defined by Iterated Function Systems (1991)"
-category: MSc
+category: masters thesis
 projects:
  - fractals
+authors:
+ - Daryl H. Hepting
+venue: "University of Regina"
 ---
 @mastersthesis{1991-03-Hep,
 	Author =  "Hepting, Daryl H.",

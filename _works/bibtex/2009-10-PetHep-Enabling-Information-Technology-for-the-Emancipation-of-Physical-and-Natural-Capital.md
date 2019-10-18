@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2009-10-PetHep
 title: "Enabling Information Technology for the Emancipation of Physical and Natural Capital (2009)"
@@ -9,7 +10,7 @@ projects:
 authors:
  - Roger A. Petry
  - Daryl H. Hepting
-venue: Environmental Software Systems
+venue: "Environmental Software Systems"
 editors:
  - Ralf Denzer
 ---

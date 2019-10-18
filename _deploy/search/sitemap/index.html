@@ -14,8 +14,8 @@
     href="/~hepting/assets/tipuesearch/css/tipuesearch.css"
   />
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
-    integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw="
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous"
   />
   <link rel="stylesheet"
@@ -28,6 +28,11 @@
     integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ="
     crossorigin="anonymous"
   />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+-->
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
   <link rel="stylesheet"
     href="/~hepting/assets/css/dhhepting.css"
   />
@@ -42,8 +47,9 @@
   <link rel="alternate" type="application/rss+xml"
     href="http://www2.cs.uregina.ca/~hepting/rss/news.rss"
   />
-  <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
-    integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7"
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous">
   </script>
   <link rel="canonical" href="http://www2.cs.uregina.ca/~hepting/search/sitemap/" />
@@ -55,78 +61,26 @@
   <meta property="og:image" content="/~hepting/assets/bg/about.jpg" />
 
 
-  
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  
-      "@type": "WebPage",
-"breadcrumb":
-  {
-    "@type": "BreadcrumbList",
-    "itemListElement":
-    [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item":
-        {
-          "@type": "WebSite",
-          "@id": "http://www2.cs.uregina.ca/~hepting/",
-          "name": "D. H. Hepting"
-        }
-      
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item":
-        {
-          "@type": "WebPage",
-          "@id": "http://www2.cs.uregina.ca/~hepting/search/",
-        
-          "name": "Search"
-        }
-      },
-        {
-        "@type": "ListItem",
-        "position": 3,
-        "item":
-        {
-          "@type": "WebPage",
-          "@id": "http://www2.cs.uregina.ca/~hepting/search/sitemap/",
-        
-          "name": "Sitemap"
-        }
-      }
-        ]
-  }
-
-  ,
-  "mainEntity":
-
-
-
 
   
-{
-  "@type": "ItemList",
-  "itemListElement":
-  [
-
-
-
-
-
-  ]
-}
-
-
 
   
-}
-</script>
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
 
@@ -136,7 +90,61 @@
 
 
 <div class="card search w-100 lightcthru" style="min-height:100%" >
-  <div class="card-header lightcthru">
+<nav class="navbar navbar-expand navbar-dark"
+style="background-color: rgba(32, 32, 32, 0.75)">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle clickable" href="#"
+      id="nav-menu" role="button" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+        Site
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="nav-menu"
+      style="background-color: rgba(224,224, 224, 1.0)">
+      <li class="dropdown-item"><a class="dropdown-link" href="/~hepting/">
+  
+    Home</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/about/">
+  
+    About</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/projects/">
+  
+    Projects</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/research/">
+  
+    Research</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/teaching/">
+  
+    Teaching</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/rss/">
+  
+    RSS&nbsp;<span class="oi oi-rss"></span></a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/search/">
+  
+    Search&nbsp;<span class="oi oi-magnifying-glass"></span></a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/news/">
+  
+    News</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/trouble/">
+  
+    Trouble</a>
+</li>
+
+
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<div class="card-header lightcthru">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb card-header lightcthru">
       <li class="breadcrumb-item">
@@ -162,22 +170,13 @@
     <h1 id="sitemap">Sitemap</h1>
 
 <ul>
-  <li><a href="/~hepting/403.html">403 Redirect</a></li>
-  <li><a href="/~hepting/404.html">404 Redirect</a></li>
-  <li><a href="/~hepting/500.html">500 Redirect</a></li>
-  <li><a href="/~hepting/HTTPerrors/">HTTP Errors</a>
-    <ul>
-      <li><a href="/~hepting/HTTPerrors/403.html">403 Redirect</a></li>
-      <li><a href="/~hepting/HTTPerrors/404.html">404 Redirect</a></li>
-      <li><a href="/~hepting/HTTPerrors/500.html">500 Redirect</a></li>
-    </ul>
-  </li>
   <li><a href="/~hepting/about/">About</a>
     <ul>
       <li><a href="/~hepting/about/biography.html">Biography</a></li>
       <li><a href="/~hepting/about/education.html">Education</a></li>
       <li><a href="/~hepting/about/elsewhere.html">Elsewhere on the Web</a></li>
       <li><a href="/~hepting/about/personal/">Personal</a></li>
+      <li><a href="/~hepting/about/website.html">Website</a></li>
     </ul>
   </li>
   <li><a href="/~hepting/news/">News</a></li>
@@ -221,16 +220,19 @@
         </ul>
       </li>
       <li><a href="/~hepting/projects/rough-sets/">Rough Sets</a></li>
-      <li><a href="/~hepting/projects/ur50cs/">UR50CS</a></li>
+      <li><a href="/~hepting/projects/ur50cs/">UR50CS</a>
+        <ul>
+          <li><a href="/~hepting/projects/ur50cs/party.html">Party</a></li>
+        </ul>
+      </li>
       <li><a href="/~hepting/projects/visualization/">Visualization</a></li>
     </ul>
   </li>
   <li><a href="/~hepting/research/">Research</a>
     <ul>
-      <li><a href="/~hepting/research/funding.html">Funding</a></li>
+      <li><a href="/~hepting/research/funding/">Funding</a></li>
       <li><a href="/~hepting/research/inspirations.html">Inspirations</a></li>
       <li><a href="/~hepting/research/students/">Students</a></li>
-      <li><a href="/~hepting/research/test.html">Research</a></li>
       <li><a href="/~hepting/research/works/">Collected Works</a></li>
     </ul>
   </li>
@@ -250,75 +252,170 @@
       </li>
       <li><a href="/~hepting/teaching/CS-205/">CS 205</a>
         <ul>
-          <li><a href="/~hepting/teaching/CS-205/201810/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-205/201610/">200710</a></li>
+          <li><a href="/~hepting/teaching/CS-205/201810/">201810</a></li>
           <li><a href="/~hepting/teaching/CS-205/201910/">201910</a></li>
-          <li><a href="/~hepting/teaching/CS-205/code/">code</a></li>
-          <li><a href="/~hepting/teaching/CS-205/resources/">Resources</a></li>
+        </ul>
+      </li>
+      <li><a href="/~hepting/teaching/CS-215/">CS 215</a>
+        <ul>
+          <li><a href="/~hepting/teaching/CS-215/200710/">200710</a></li>
+          <li><a href="/~hepting/teaching/CS-215/200910/">200710</a></li>
+          <li><a href="/~hepting/teaching/CS-215/201110/">200710</a></li>
+          <li><a href="/~hepting/teaching/CS-215/201130/">201130</a></li>
+        </ul>
+      </li>
+      <li><a href="/~hepting/teaching/CS-230/">CS 230</a>
+        <ul>
+          <li><a href="/~hepting/teaching/CS-230/200510/">200510</a></li>
         </ul>
       </li>
       <li><a href="/~hepting/teaching/CS-280/">CS 280</a>
         <ul>
+          <li><a href="/~hepting/teaching/CS-280/201010/">200710</a></li>
+          <li><a href="/~hepting/teaching/CS-280/201210/">200710</a></li>
+          <li><a href="/~hepting/teaching/CS-280/201310/">200710</a></li>
+          <li><a href="/~hepting/teaching/CS-280/201410/">200710</a></li>
+          <li><a href="/~hepting/teaching/CS-280/201510/">200710</a></li>
+          <li><a href="/~hepting/teaching/CS-280/201610/">200710</a></li>
+          <li><a href="/~hepting/teaching/CS-280/201710/">201910</a></li>
           <li><a href="/~hepting/teaching/CS-280/201910/">201910</a></li>
         </ul>
       </li>
+      <li><a href="/~hepting/teaching/CS-305+828/">CS 305+828</a>
+        <ul>
+          <li><a href="/~hepting/teaching/CS-305+828/201210/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-305+828/201330/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-305+828/201430/">201910</a></li>
+        </ul>
+      </li>
+      <li><a href="/~hepting/teaching/CS-305/">CS 305</a>
+        <ul>
+          <li><a href="/~hepting/teaching/CS-305/200130/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-305/200230/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-305/200310/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-305/200630/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-305/200830/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-305/201030/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-305/201230/">201910</a></li>
+        </ul>
+      </li>
+      <li><a href="/~hepting/teaching/CS-325/">CS 325</a>
+        <ul>
+          <li><a href="/~hepting/teaching/CS-325/200230/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-325/200330/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-325/200430/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-325/200530/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-325/200630/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-325/201110/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-325/201230/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-325/201410/">201910</a></li>
+        </ul>
+      </li>
+      <li><a href="/~hepting/teaching/CS-330/">CS 325</a>
+        <ul>
+          <li><a href="/~hepting/teaching/CS-330/200330/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-330/200430/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-330/200610/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-330/200930/">201910</a></li>
+          <li><a href="/~hepting/teaching/CS-330/201010/">201910</a></li>
+        </ul>
+      </li>
+      <li><a href="/~hepting/teaching/CS-390/">CS 325</a></li>
       <li><a href="/~hepting/teaching/CS-428+828/">CS 428+828</a>
         <ul>
           <li><a href="/~hepting/teaching/CS-428+828/201630/">201630</a></li>
           <li><a href="/~hepting/teaching/CS-428+828/201730/">201730</a></li>
           <li><a href="/~hepting/teaching/CS-428+828/201830/">201830</a></li>
-          <li><a href="/~hepting/teaching/CS-428+828/assignments/">Assignments</a></li>
+          <li><a href="/~hepting/teaching/CS-428+828/201930/">201930</a></li>
           <li><a href="/~hepting/teaching/CS-428+828/content/">Content</a></li>
           <li><a href="/~hepting/teaching/CS-428+828/map.html">Map Redesign</a></li>
           <li><a href="/~hepting/teaching/CS-428+828/resources/">Resources</a></li>
-          <li><a href="/~hepting/teaching/CS-428+828/topics.html">Topics &amp; Learning Outcomes</a></li>
         </ul>
       </li>
+      <li><a href="/~hepting/teaching/CS-490/">CS 325</a></li>
       <li><a href="/~hepting/teaching/CS-499+900/">CS 499+900</a>
         <ul>
           <li><a href="/~hepting/teaching/CS-499+900/201810/">CS 499+900</a></li>
+          <li><a href="/~hepting/teaching/CS-499+900/201920/">201920</a></li>
+        </ul>
+      </li>
+      <li><a href="/~hepting/teaching/CS-828/">CS 325</a></li>
+      <li><a href="/~hepting/teaching/CS-890/">CS 325</a></li>
+      <li><a href="/~hepting/teaching/FILM-385AB/">FILM 385AB</a>
+        <ul>
+          <li><a href="/~hepting/teaching/FILM-385AB/200230/">200230</a></li>
+        </ul>
+      </li>
+      <li><a href="/~hepting/teaching/curriculum/">Curriculum</a>
+        <ul>
+          <li><a href="/~hepting/teaching/curriculum/2013/">2013</a></li>
         </ul>
       </li>
       <li><a href="/~hepting/teaching/evaluation.html">Evaluation</a></li>
       <li><a href="/~hepting/teaching/groupwork.html">Group Work</a></li>
+      <li><a href="/~hepting/teaching/gw-marking.html">GWM</a></li>
+      <li><a href="/~hepting/teaching/lod/">LOD Entry</a></li>
+      <li><a href="/~hepting/teaching/new-groupwork.html">Group Work</a></li>
       <li><a href="/~hepting/teaching/philosophy.html">Philosophy</a></li>
       <li><a href="/~hepting/teaching/schedule/">Schedule</a>
         <ul>
           <li><a href="/~hepting/teaching/schedule/201810.html">Winter 2018</a></li>
           <li><a href="/~hepting/teaching/schedule/201830.html">Fall 2018</a></li>
-          <li><a href="/~hepting/teaching/schedule/test.html">Test</a></li>
+          <li><a href="/~hepting/teaching/schedule/201910.html">Winter 2019</a></li>
+          <li><a href="/~hepting/teaching/schedule/201920.html">Spring/Summer 2019</a></li>
+          <li><a href="/~hepting/teaching/schedule/201930.html">Fall 2019</a></li>
         </ul>
       </li>
       <li><a href="/~hepting/teaching/wikipedia.html">Wikipedia</a></li>
     </ul>
   </li>
+  <li><a href="/~hepting/trouble/">Trouble</a>
+    <ul>
+      <li><a href="/~hepting/trouble/HTTPerrors/">HTTP Errors</a>
+        <ul>
+          <li><a href="/~hepting/trouble/HTTPerrors/403.html">Forbidden Access</a></li>
+          <li><a href="/~hepting/trouble/HTTPerrors/404.html">Not Found</a></li>
+          <li><a href="/~hepting/trouble/HTTPerrors/500.html">Unexpected Condition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
 
   </div>
-  <div class="card-footer text-muted lightcthru">
-  Site built: 2018-10-17 19:07 -0600
+<div class="card-footer text-muted lightcthru">
+  Site built: 2019-10-18 11:40 -0600
 </div>
 
 </div>
 <!-- </div> -->
   <!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-		crossorigin="anonymous">
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"
-		integrity="sha256-xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8="
-		crossorigin="anonymous">
-	</script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+  <script async
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous">
+  </script>
+  <script async
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous">
+  </script>
   <script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
   <script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
   <script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js"
-		integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA="
-		crossorigin="anonymous">
-	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+    integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+    crossorigin="anonymous">
+  </script>
   
 	<script>
-		var clipboard = new ClipboardJS('.btn');
+		var clipboard = new ClipboardJS('.btn')
 	</script>
   
 	<!-- Google Analytics -->
@@ -326,9 +423,9 @@
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-4427429-2', 'auto');
-		ga('send', 'pageview');
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+		ga('create', 'UA-4427429-2', 'auto')
+		ga('send', 'pageview')
 	</script>
 	<!-- End Google Analytics -->
 </body>

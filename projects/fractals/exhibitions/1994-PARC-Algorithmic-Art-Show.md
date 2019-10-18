@@ -68,7 +68,7 @@ and Natalie Jeremijenko) tried to avoid fractals
 &mdash; too cliche! &mdash; but we found
 <a href="{{ "/" | absolute_url }}">Daryl Hepting</a>'s
 dragons and Eleanor Kent's fractal knit baby
-blankets irresistable.
+blankets irresistible.
 Similarly, we accepted a number of
 Stewart McSherry's ray-traced pictures, even though we thought his work
 fit the category of computer graphics more closely than algorithmic art.
@@ -87,7 +87,7 @@ and the calligraphed text below gives pseudocode.
 <div class="container">
   <figure>
     <img class="img-fluid rounded" style="height: 364px"
-    src="{{ "/assets/projects/img/parc-golf.jpg" | relative_url }}" alt="Portrait of TKM />
+    src="{{ "/assets/projects/img/parc-golf.jpg" | relative_url }}" alt="Portrait of TKM" />
     <figcaption>
       <em>Kerny  McLaughlin</em>, <strong>Portrait of TKM</strong>
     </figcaption>

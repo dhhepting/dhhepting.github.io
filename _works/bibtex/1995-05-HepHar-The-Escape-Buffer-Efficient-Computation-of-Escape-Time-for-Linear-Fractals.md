@@ -1,8 +1,9 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1995-05-HepHar
-title: "The Escape Buffer  Efficient Computation of Escape Time for Linear Fractals (1995)"
-breadcrumb: "The Escape Buffer  Efficient Computation of Escape Time for Linear Fractals (1995)"
+title: "The Escape Buffer: Efficient Computation of Escape Time for Linear Fractals (1995)"
+breadcrumb: "The Escape Buffer: Efficient Computation of Escape Time for Linear Fractals (1995)"
 category: conference
 projects:
  - fractals
@@ -11,7 +12,7 @@ abstract: >-
 authors:
  - Daryl H. Hepting
  - John C. Hart
-venue: Proceedings of Graphics Interface  95
+venue: "Proceedings of Graphics Interface '95"
 editors:
  - Wayne A. Davis
  - Przemyslaw Prusinkiewicz

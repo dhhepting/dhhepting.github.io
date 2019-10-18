@@ -14,8 +14,8 @@
     href="/~hepting/assets/tipuesearch/css/tipuesearch.css"
   />
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
-    integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw="
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous"
   />
   <link rel="stylesheet"
@@ -28,6 +28,11 @@
     integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ="
     crossorigin="anonymous"
   />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+-->
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
   <link rel="stylesheet"
     href="/~hepting/assets/css/dhhepting.css"
   />
@@ -42,8 +47,9 @@
   <link rel="alternate" type="application/rss+xml"
     href="http://www2.cs.uregina.ca/~hepting/rss/news.rss"
   />
-  <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
-    integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7"
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous">
   </script>
   <link rel="canonical" href="http://www2.cs.uregina.ca/~hepting/projects/fractals/exhibitions/1994-Exploring-the-Image-World-of-Computer-Graphics.html" />
@@ -55,89 +61,26 @@
   <meta property="og:image" content="/~hepting/assets/bg/about.jpg" />
 
 
-  
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  
-      "@type": "WebPage",
-"breadcrumb":
-  {
-    "@type": "BreadcrumbList",
-    "itemListElement":
-    [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item":
-        {
-          "@type": "WebSite",
-          "@id": "http://www2.cs.uregina.ca/~hepting/",
-          "name": "D. H. Hepting"
-        }
-      
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item":
-        {
-          "@type": "WebPage",
-          "@id": "http://www2.cs.uregina.ca/~hepting/projects/",
-        
-          "name": "Projects"
-        }
-      },
-        {
-        "@type": "ListItem",
-        "position": 3,
-        "item":
-        {
-          "@type": "WebPage",
-          "@id": "http://www2.cs.uregina.ca/~hepting/projects/fractals/",
-        
-          "name": "Fractals"
-        }
-      },
-        {
-        "@type": "ListItem",
-        "position": 4,
-        "item":
-        {
-          "@type": "WebPage",
-          "@id": "http://www2.cs.uregina.ca/~hepting/projects/fractals/exhibitions/",
-        
-          "name": "Exhibitions"
-        }
-      },
-        {
-        "@type": "ListItem",
-        "position": 5,
-        "item":
-        {
-          "@type": "WebPage",
-          "@id": "http://www2.cs.uregina.ca/~hepting/projects/fractals/exhibitions/1994-Exploring-the-Image-World-of-Computer-Graphics.html",
-        
-          "name": "Exploring the Image World of Computer Graphics (1994)"
-        }
-      }
-        ]
-  }
-
-  ,
-  "mainEntity":
-
-
-
-
-  {
-  }
-
 
   
-}
-</script>
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
 
@@ -147,7 +90,61 @@
 
 
 <div class="card projects w-100 lightcthru" style="min-height:100%" >
-  <div class="card-header lightcthru">
+<nav class="navbar navbar-expand navbar-dark"
+style="background-color: rgba(32, 32, 32, 0.75)">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle clickable" href="#"
+      id="nav-menu" role="button" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+        Site
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="nav-menu"
+      style="background-color: rgba(224,224, 224, 1.0)">
+      <li class="dropdown-item"><a class="dropdown-link" href="/~hepting/">
+  
+    Home</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/about/">
+  
+    About</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/projects/">
+  
+    Projects</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/research/">
+  
+    Research</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/teaching/">
+  
+    Teaching</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/rss/">
+  
+    RSS&nbsp;<span class="oi oi-rss"></span></a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/search/">
+  
+    Search&nbsp;<span class="oi oi-magnifying-glass"></span></a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/news/">
+  
+    News</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/trouble/">
+  
+    Trouble</a>
+</li>
+
+
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<div class="card-header lightcthru">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb card-header lightcthru">
       <li class="breadcrumb-item">
@@ -195,10 +192,10 @@ graduate students from the Graphics and Multimedia Research Lab, School
 of Computing Science, Simon Fraser University.  The computer-generated
 images are grouped within two general themes:</p>
 <ul>
-  <li>John Dill, Daryl Hepting, Philip Peterson, Przemyslaw Prusinkiewicz, 
-Dietmar Saupe, and Allan Snider explore computer visualization 
+  <li>John Dill, Daryl Hepting, Philip Peterson, Przemyslaw Prusinkiewicz,
+Dietmar Saupe, and Allan Snider explore computer visualization
 as a way to see the unseen</li>
-  <li>Leslie Bishko, Michaela Zambranska, and Armin Bruderlin use computer graphics 
+  <li>Leslie Bishko, Michaela Zambranska, and Armin Bruderlin use computer graphics
 as an artistic tool to produce animation</li>
 </ul>
 
@@ -206,9 +203,9 @@ as an artistic tool to produce animation</li>
   <div class="row">
     <figure>
       <img class="img-fluid rounded m-1" style="height: 128px" src="/~hepting/assets/gallery/img/1989-Hep-Gasket-in-Bubbles.jpg" alt="Gasket in Bubbles" />
-      <img class="img-fluid rounded m-1" style="height: 128px" src="/~hepting/assets/gallery/img/1990-HepSni-Desktop-Tetrahedron.png" alt="Desktop Tetrahedron" />
-      <img class="img-fluid rounded m-1" style="height: 128px" src="/~hepting/assets/gallery/img/1990-Hep-Butte-Manhattan.png" alt="Butte Manhattan" />
-      <img class="img-fluid rounded m-1" style="height: 128px" src="/~hepting/assets/gallery/img/1990-Hep-Fiery-Dragon.png" alt="Fiery Dragon" />
+      <img class="img-fluid rounded m-1" style="height: 128px" src="/~hepting/assets/gallery/img/1990-HepSni-Desktop-Tetrahedron.jpg" alt="Desktop Tetrahedron" />
+      <img class="img-fluid rounded m-1" style="height: 128px" src="/~hepting/assets/gallery/img/1990-Hep-Butte-Manhattan.jpg" alt="Butte Manhattan" />
+      <img class="img-fluid rounded m-1" style="height: 128px" src="/~hepting/assets/gallery/img/1990-Hep-Fiery-Dragon.jpg" alt="Fiery Dragon" />
       <figcaption>
         Left to right: <em>Gasket in Bubbles</em>,<em>Desktop Tetrahedron</em> (with
         Allan Snider), <em>Butte Manhattan</em>, and <em>Fiery Dragon</em>
@@ -217,24 +214,24 @@ as an artistic tool to produce animation</li>
   </div>
   <div class="row">
   <figure>
-    <img class="img-fluid rounded m-1" style="height: 128px" src="/~hepting/assets/gallery/img/1990-HepSni-Reflecting-Fern.png" alt="Reflecting Fern" />
-    <img class="img-fluid rounded m-1" style="height: 128px" src="/~hepting/assets/gallery/img/1991-HepPru-Carrot-in-Blue.png" alt="Carrot in Blue" />
+    <img class="img-fluid rounded m-1" style="height: 128px" src="/~hepting/assets/gallery/img/1990-HepSni-Reflecting-Fern.jpg" alt="Reflecting Fern" />
+    <img class="img-fluid rounded m-1" style="height: 128px" src="/~hepting/assets/gallery/img/1991-HepPru-Carrot-in-Blue.jpg" alt="Carrot in Blue" />
     <img class="img-fluid rounded m-1" style="height: 128px" src="/~hepting/assets/gallery/img/1990-HepPruSni-The-Great-Fern-Dune-of-Goron-III.jpg" alt="The Great Fern Dune of Goron III" />
-    <img class="img-fluid rounded m-1" style="height: 128px" src="/~hepting/assets/gallery/img/1989-PruSauHep-Dragon-Mesa.png" alt="Dragon Mesa" />
+    <img class="img-fluid rounded m-1" style="height: 128px" src="/~hepting/assets/gallery/img/1989-PruSauHep-Dragon-Mesa.jpg" alt="Dragon Mesa" />
   <figcaption>
-Left to right: 
+Left to right:
 <em>Reflecting Fern</em> (with Allan Snider),
 <em>Carrot in Blue</em> (with Przemyslaw Prusinkiewicz),
-<em>The Great Fern Dune of Goron III</em> (with Przemyslaw Prusinkiewicz and 
+<em>The Great Fern Dune of Goron III</em> (with Przemyslaw Prusinkiewicz and
 Allan Snider), and <em>Dragon Mesa</em> (with Przemyslaw Prusinkiewicz and Dietmar Saupe).
   </figcaption>
   </figure>
   </div>
 </div>
 
-<p>The animations, <em>The First Political Speech</em>, 
+<p>The animations, <em>The First Political Speech</em>,
 produced by Zambranska and the Graphics and Multimedia Research Lab, and
-Bishko’s <em>Gasping for Air</em>, 
+Bishko’s <em>Gasping for Air</em>,
 have won international acclaim.
 Peterson’s computer-generated images have been featured in a television
 documentary on the Knowledge Network.</p>
@@ -274,39 +271,46 @@ documentary on the Knowledge Network.</p>
   </div>
 </div>
 
-<p>The exhibition was organized by Daryl Hepting, Ph.D. candidate in the 
-School of Computing Science.  Prior to studies at Simon Fraser University, 
+<p>The exhibition was organized by Daryl Hepting, Ph.D. candidate in the
+School of Computing Science.  Prior to studies at Simon Fraser University,
 Hepting was an assistant to
-Dr. Benoit Mandelbrot at the IBM T. J. Watson Research Center 
-in Yorktown Heights, New York. Dr. Tom Calvert is Director of the Graphics and 
+Dr. Benoit Mandelbrot at the IBM T. J. Watson Research Center
+in Yorktown Heights, New York. Dr. Tom Calvert is Director of the Graphics and
 Multimedia Research Lab.</p>
 
   </div>
-  <div class="card-footer text-muted lightcthru">
-  Site built: 2018-10-17 19:07 -0600
+<div class="card-footer text-muted lightcthru">
+  Site built: 2019-10-18 11:40 -0600
 </div>
 
 </div>
 <!-- </div> -->
   <!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-		crossorigin="anonymous">
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"
-		integrity="sha256-xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8="
-		crossorigin="anonymous">
-	</script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+  <script async
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous">
+  </script>
+  <script async
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous">
+  </script>
   <script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
   <script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
   <script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js"
-		integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA="
-		crossorigin="anonymous">
-	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+    integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+    crossorigin="anonymous">
+  </script>
   
 	<script>
-		var clipboard = new ClipboardJS('.btn');
+		var clipboard = new ClipboardJS('.btn')
 	</script>
   
 	<!-- Google Analytics -->
@@ -314,9 +318,9 @@ Multimedia Research Lab.</p>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-4427429-2', 'auto');
-		ga('send', 'pageview');
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+		ga('create', 'UA-4427429-2', 'auto')
+		ga('send', 'pageview')
 	</script>
 	<!-- End Google Analytics -->
 </body>

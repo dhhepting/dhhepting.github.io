@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1999-12-Hep
 title: "A New Paradigm for Exploration in Computer-Aided Visualization (1999)"
@@ -7,6 +8,9 @@ category: PhD
 projects:
  - creativity
  -  visualization
+authors:
+ - Daryl H. Hepting
+venue: "Simon Fraser University"
 ---
 @phdthesis{1999-12-Hep,
 	Author =  "Hepting, Daryl H.",

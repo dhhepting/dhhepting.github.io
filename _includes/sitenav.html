@@ -1,0 +1,21 @@
+{%- assign clsprfx = "dropdown" -%}
+{%- if page.url == "/" -%}
+  {%- assign clsprfx = "nav" -%}
+{%- endif -%}
+{%- for l in site.data.sitenav -%}
+<li class="{{ clsprfx }}-item">
+  {%- if page.url == l.url -%}
+  <a class="{{ clsprfx }}-link active" href="#">
+    <span class="sr-only">
+      (current)
+    </span>
+  {%- else -%}
+  <a class="{{ clsprfx }}-link" href="{{ l.url | relative_url }}">
+  {% endif %}
+    {{ l.title }}
+  {%- if l.icon -%}
+    &nbsp;<span class="{{ l.icon }}"></span>
+  {%- endif -%}
+  </a>
+</li>
+{% endfor %}

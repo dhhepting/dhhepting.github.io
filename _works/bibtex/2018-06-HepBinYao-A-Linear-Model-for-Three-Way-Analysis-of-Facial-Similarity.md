@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2018-06-HepBinYao
 title: "A Linear Model for Three-Way Analysis of Facial Similarity (2018)"
@@ -12,7 +13,7 @@ authors:
  - Daryl H. Hepting
  - Hadeel Hatim Bin Amer
  - Yiyu Yao
-venue: Information Processing and Management of Uncertainty in Knowledge Based Systems  Theory and Foundations
+venue: "Information Processing and Management of Uncertainty in Knowledge-Based Systems. Theory and Foundations"
 editors:
  - Jesús Medina
  - Manuel Ojeda-Aciego

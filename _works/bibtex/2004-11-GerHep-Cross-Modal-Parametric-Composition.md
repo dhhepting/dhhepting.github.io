@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2004-11-GerHep
 title: "Cross-Modal Parametric Composition (2004)"
@@ -11,7 +12,7 @@ abstract: >-
 authors:
  - David Gerhard
  - Daryl H. Hepting
-venue: Proceedings of the 2004 International Computer Music Conference
+venue: "Proceedings of the 2004 International Computer Music Conference"
 ---
 @inproceedings{2004-11-GerHep,
 	Author =  "Gerhard, David and Hepting, Daryl H.",

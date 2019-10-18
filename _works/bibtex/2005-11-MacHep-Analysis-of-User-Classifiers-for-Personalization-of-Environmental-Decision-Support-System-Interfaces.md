@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2005-11-MacHep
 title: "Analysis of User Classifiers for Personalization of Environmental Decision Support System Interfaces (2005)"
@@ -9,7 +10,7 @@ projects:
 authors:
  - Timothy Maciag
  - Daryl H. Hepting
-venue: Intelligent Engineering Systems through Artificial Neural Networks
+venue: "Intelligent Engineering Systems through Artificial Neural Networks"
 editors:
  - Cihan H. Dagli
  - Anna L. Buczak

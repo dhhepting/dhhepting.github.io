@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2009-12-HepMacSpr
 title: "A Rough Sets Approach for Personalized Support of Face Recognition (2009)"
@@ -14,7 +15,7 @@ authors:
  - Richard Spring
  - Katherine Arbuthnott
  - Dominik Ślęzak
-venue: Rough Sets  Fuzzy Sets  Data Mining and Granular Computing RSFDGrC 2009
+venue: "Rough Sets, Fuzzy Sets, Data Mining and Granular Computing RSFDGrC 2009"
 editors:
  - Hiroshi Sakai
  - Mihir Kumar Chakraborty

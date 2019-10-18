@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2007-07-MacHepSle
 title: "Evaluating the Utility of Web-Based Consumer Support Tools Using Rough Sets (2007)"
@@ -11,7 +12,7 @@ authors:
  - Daryl H. Hepting
  - Dominik Ślęzak
  - Robert J. Hilderman
-venue: ICCS 2007  Proceedings of the 15th International Workshops on Conceptual Structures
+venue: "ICCS 2007: Proceedings of the 15th International Workshops on Conceptual Structures"
 editors:
  - Babak Akhgar
 ---

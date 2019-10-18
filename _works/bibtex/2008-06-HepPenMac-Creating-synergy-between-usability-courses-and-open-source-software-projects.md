@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2008-06-HepPenMac
 title: "Creating synergy between usability courses and open source software projects (2008)"
@@ -14,7 +15,11 @@ authors:
  - Timothy Maciag
  - David Gerhard
  - Brien Maguire
-venue: ACM SIGCSE Bulletin
+venue: "ACM SIGCSE Bulletin"
+pagestart: 120
+pageend: 123
+doi: 10.1145/1383602.1383649
+datemod: 2018-09-26 12:00:34 -0600
 ---
 @article{2008-06-HepPenMac,
 	Author =  "Hepting, Daryl H. and Peng, Lijuan and Maciag, Timothy and Gerhard, David and Maguire, Brien",

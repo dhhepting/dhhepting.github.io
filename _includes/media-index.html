@@ -1,8 +1,8 @@
 <h1>Media</h1>
 
-{%- if site.data.media[include.media_dat] -%}
+{%- if site.data.teaching.media[include.media_dat] -%}
 <div class="container-fluid">
-  {%- assign sortedMedia = site.data.media[include.media_dat] | sort: 'file' -%}
+  {%- assign sortedMedia = site.data.teaching.media[include.media_dat] | sort: 'file' -%}
   {%- for media in sortedMedia -%}
     {%- if media.URL contains "jpg" -%}
   <a href="{{media.URL}}"><img src="{{media.URL}}" alt="{{media.file}}" height="100" class="m-1 img-responsive"/></a>
@@ -13,5 +13,5 @@
   {%- endfor -%}
 {%- else -%}
   <p>None available</p>
-{%- endif -%}
 </div>
+{%- endif -%}

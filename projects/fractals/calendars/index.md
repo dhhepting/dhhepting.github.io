@@ -3,6 +3,7 @@ title: Calendars
 breadcrumb: Calendars
 redirect_from:
   - /art/AoFcals/
+  - /projects/math-art/calendars/
 description: Fractals Calendars
 layout: bg-image
 ---

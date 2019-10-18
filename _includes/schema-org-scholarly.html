@@ -7,66 +7,52 @@
 {% endcomment %}
 {
   "@type": "ScholarlyArticle",
+  {% comment %}
   "dateModified": "2018-06-05 15:36:52 +0000",
-  "name": "Operationalizing Ethics in Food Choice Decisions",
-  "headline": "Operationalizing Ethics in Food Choice Decisions",
+  {% endcomment %}
+  "name": "{{ page.title | strip }}",
+  "headline": "{{ page.title | strip }}",
   "datePublished": "2014-06",
-  "mainEntityOfPage": "{{ "/research/works/2014-06-HepJafMac-Operationalizing-Ethics-in-Food-Choice-Decisions.html" | absolute_url }}",
+  "dateModified": "{{ page.datemod }}",
+  "mainEntityOfPage": "{{ page.url | absolute_url }}",
 
   "image": "{{ "/assets/works/img/2014-06-HepJafMac.jpg" | absolute_url }}",
+  {% assign pas = page.authors.size %}
+  {% assign pai = 1 | plus: 0 %}
   "author":
   [
+  {%- for pa in page.authors %}
     {
       "@type": "Person",
+    {%- if pa == "Daryl H. Hepting" %}
+      "name": "{{ pa }}",
       "@id": "{{ "/about/" | absolute_url }}#DHHepting"
+    {%- else %}
+      "name": "{{ pa }}"
+    {%- endif %}
+    {%- if pai < pas %}
     },
-         {
-           "@type": "Person",
-           "familyName": "Jaffe",
-           "givenName": "JoAnn",
-           "name": "JoAnn Jaffe"
-         },
-         {
-           "@type": "Person",
-           "familyName": "Maciag",
-           "givenName": "Timothy",
-           "name": "Timothy Maciag"
-         }
-  ],
-  "description": "There is a large gap between attitude and action when it comes to consumer purchases of ethical food. Amongst the various aspects of this gap, this paper focuses on the difficulty in knowing enough about the various dimensions of food production, distribution and consumption to make an ethical food purchasing decision.",
-  "sameAs": "http://dx.doi.org/10.1007/s10806-013-9473-8",
-  "about":
-  [
-    "food",
-    "ethics",
-    "ICT",
-    "spime",
-    "citizen consumer",
-    "democracy"
-  ],
-  "keywords":
-  [
-    "food",
-    "ethics",
-    "ICT",
-    "spime",
-    "citizen consumer",
-    "democracy"
-  ],
-  "pageStart": "453",
-  "pageEnd": "469",
-  "url": "{{ "/research/works/2014-06-HepJafMac-Operationalizing-Ethics-in-Food-Choice-Decisions.html" | absolute_url }}",
-  "relatedLink":
-  [
-    "{{ "/assets/works/pdf/2014-06-HepJafMac.pdf" | absolute_url }}",
-    "http://hdl.handle.net/10294/6892",
-    "http://rdcu.be/mFXP",
-    "http://link.springer.com/article/10.1007/s10806-013-9473-8",
-    "https://www.academia.edu/27543837/Operationalizing_ethics_in_food_choice_decisions","https://www.researchgate.net/publication/257408603_Operationalizing_Ethics_in_Food_Choice_Decisions",
-    "http://philpapers.org/rec/HEPOEI",
-    "http://agris.fao.org/agris-search/search.do?recordID=US201400172844",
-    "https://pubag.nal.usda.gov/catalog/357701"
-  ],
+    {%- else -%}
+    }
+    {% endif %}
+    {%- assign pai = pai | plus: 1 -%}
+  {%- endfor -%}
+],
+  "description": "{{ page.abstract }}",
+  "sameAs": "https://doi.org/{{ page.doi }}",
+  {% if page.keywords %}
+    {% assign pks = page.keywords.size %}
+    {% assign pki = 1 | plus: 0 %}
+  "keywords": "
+  {%- for pk in page.keywords -%}
+    {{- pk -}}{%- if pki < pks %} , {% endif -%}
+    {%- assign pki = pki | plus: 1 -%}
+  {%- endfor -%}
+  ",
+  {% endif %}
+  "pageStart": "{{ page.pagestart }}",
+  "pageEnd": "{{ page.pageend }}",
+  "url": "{{ site.canonical }}{{ page.url }}",
   "isPartOf":
   {
     "@type": "PublicationIssue",

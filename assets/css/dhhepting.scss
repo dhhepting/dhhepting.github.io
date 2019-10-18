@@ -10,11 +10,29 @@ html {
 	height:100%;
 }
 
+.scrollable {
+  overflow-y: auto;
+  max-height: 240px;
+}
+
 body {
 	margin:0;
 	padding:0;
 	height:100%;
 }
+/* p5.js style addition */
+canvas {
+  display: block;
+}
+
+li li{
+    list-style-type: lower-alpha;
+}
+
+li li li{
+    list-style-type: lower-roman;
+}
+
 .C {
   background-color: rgba(95,158,160,0.75);
 }
@@ -26,6 +44,13 @@ body {
 }
 .B {
 	background-color: rgba(245,245,220,0.75);
+}
+/*
+ * suggestion from https://stackoverflow.com/questions/34092774/bootstrap-navbar-collapse-dropdown-menu
+ * to fix ios nav collapse button data-toggle
+ */
+.navbar-static-top .navbar-collapse.in .navbar-expand .navbar-expand-sm {
+    overflow-y: visible !important; /* Bootstrap default is "auto" */
 }
 /*
  * style for home page
@@ -124,6 +149,17 @@ body {
 	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
 	*/
 }
+
+/*
+ * style for teaching pages
+ */
+.trouble {
+	background-image: url('{{"/assets/bg/trouble.jpg" | relative_url}}');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+}
 /*
  * style for search pages
  */
@@ -176,6 +212,14 @@ body {
 .lightcthru {
 	/* padding: 8px;
 	margin: 8px; */
-	background-color: rgba(248, 249, 250, 0.75);
+	/*background-color: rgba(248, 249, 250, 0.75);*/
+  background-color: rgba(248, 249, 250, 0.75);
+	color: black
+}
+
+.redcthru {
+	/* padding: 8px;
+	margin: 8px; */
+  background-color: rgba(255,0,0,0.75);
 	color: black
 }

@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2008-07-MacHep1
 title: "An Analysis of Interface Quality for Decision Support (2008)"
@@ -11,7 +12,7 @@ abstract: >-
 authors:
  - Timothy Maciag
  - Daryl H. Hepting
-venue: iEMSs 2008  International Congress on Environmental Modelling and Software
+venue: "iEMSs 2008: International Congress on Environmental Modelling and Software"
 editors:
  - M. Sanchez-Marrè
  - J. Bèjar

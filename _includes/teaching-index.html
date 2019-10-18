@@ -78,13 +78,16 @@
 {% for i in (1..numcourses) %}
     {%- assign cc = sortedcrs_ids[i] | split: '#' -%}
     {%- assign crs_name = "" -%}
-    {%- for crs in site.data.courses -%}
+    {%- for crs in site.data.teaching.courses -%}
       {%- if crs.id == cc[1] -%}
-	{%- assign crs_name = crs.name -%}
+	      {%- assign crs_name = crs.name -%}
+        {% break %}
       {%- endif -%}
     {%- endfor -%}
-  * [{{cc[1] | replace: "-"," "}} : {{crs_name}}]({{cc[0] | relative_url}})
-{%  endfor  %}
+    {% if crs_name %}
+* [{{cc[1] | replace: "-"," "}} : {{crs_name}}]( {{ cc[0] | relative_url }} )
+    {%- endif -%}
+{% endfor %}
 
 <script>
   var jmpurl = document.getElementById("jumplink");

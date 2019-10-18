@@ -14,8 +14,8 @@
     href="/~hepting/assets/tipuesearch/css/tipuesearch.css"
   />
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
-    integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw="
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous"
   />
   <link rel="stylesheet"
@@ -28,6 +28,11 @@
     integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ="
     crossorigin="anonymous"
   />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+-->
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
   <link rel="stylesheet"
     href="/~hepting/assets/css/dhhepting.css"
   />
@@ -42,8 +47,9 @@
   <link rel="alternate" type="application/rss+xml"
     href="http://www2.cs.uregina.ca/~hepting/rss/news.rss"
   />
-  <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
-    integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7"
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous">
   </script>
   <link rel="canonical" href="http://www2.cs.uregina.ca/~hepting/projects/fractals/exhibitions/1995-MATH-ART-at-SFU-Teck-Gallery.html" />
@@ -55,89 +61,26 @@
   <meta property="og:image" content="/~hepting/assets/bg/about.jpg" />
 
 
-  
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  
-      "@type": "WebPage",
-"breadcrumb":
-  {
-    "@type": "BreadcrumbList",
-    "itemListElement":
-    [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item":
-        {
-          "@type": "WebSite",
-          "@id": "http://www2.cs.uregina.ca/~hepting/",
-          "name": "D. H. Hepting"
-        }
-      
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item":
-        {
-          "@type": "WebPage",
-          "@id": "http://www2.cs.uregina.ca/~hepting/projects/",
-        
-          "name": "Projects"
-        }
-      },
-        {
-        "@type": "ListItem",
-        "position": 3,
-        "item":
-        {
-          "@type": "WebPage",
-          "@id": "http://www2.cs.uregina.ca/~hepting/projects/fractals/",
-        
-          "name": "Fractals"
-        }
-      },
-        {
-        "@type": "ListItem",
-        "position": 4,
-        "item":
-        {
-          "@type": "WebPage",
-          "@id": "http://www2.cs.uregina.ca/~hepting/projects/fractals/exhibitions/",
-        
-          "name": "Exhibitions"
-        }
-      },
-        {
-        "@type": "ListItem",
-        "position": 5,
-        "item":
-        {
-          "@type": "WebPage",
-          "@id": "http://www2.cs.uregina.ca/~hepting/projects/fractals/exhibitions/1995-MATH-ART-at-SFU-Teck-Gallery.html",
-        
-          "name": "MATH-ART at SFU Teck Gallery (1995)"
-        }
-      }
-        ]
-  }
-
-  ,
-  "mainEntity":
-
-
-
-
-  {
-  }
-
 
   
-}
-</script>
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
 
@@ -147,7 +90,61 @@
 
 
 <div class="card projects w-100 lightcthru" style="min-height:100%" >
-  <div class="card-header lightcthru">
+<nav class="navbar navbar-expand navbar-dark"
+style="background-color: rgba(32, 32, 32, 0.75)">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle clickable" href="#"
+      id="nav-menu" role="button" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+        Site
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="nav-menu"
+      style="background-color: rgba(224,224, 224, 1.0)">
+      <li class="dropdown-item"><a class="dropdown-link" href="/~hepting/">
+  
+    Home</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/about/">
+  
+    About</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/projects/">
+  
+    Projects</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/research/">
+  
+    Research</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/teaching/">
+  
+    Teaching</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/rss/">
+  
+    RSS&nbsp;<span class="oi oi-rss"></span></a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/search/">
+  
+    Search&nbsp;<span class="oi oi-magnifying-glass"></span></a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/news/">
+  
+    News</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/trouble/">
+  
+    Trouble</a>
+</li>
+
+
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<div class="card-header lightcthru">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb card-header lightcthru">
       <li class="breadcrumb-item">
@@ -224,9 +221,7 @@ May 30 to July 26, 1994.</p>
 
 <p>Daryl Hepting, a Ph.D. Candidate in the School of Computing Science and one
 of the four curators of this exhibition, knows the connections between
-computers and aesthetics as few in Simon Fraser University can.<br />
-He takes us on a short course on math art in the notes on these
-digital graphics.</p>
+computers and aesthetics as few in Simon Fraser University can. He takes us on a short course on math art in the notes on these digital graphics.</p>
 
 <p>Other members of Simon Fraser University who joined me in curating this
 exhibition were Dr. Katherine Heinrich, Chair of Mathematics &amp; Statistics
@@ -240,33 +235,33 @@ available from three sources on the WORLD WIDE WEB (internet): computer art
 exhibits, pioneer publications,
 and computer images created by Daryl Hepting of Simon Fraser University.</p>
 
-<p>Simon Fraser Gallery is grateful for the assistance of Gallery staff, Daryl
-Hepting and the other curators for making this exhibition possible.<br />
-It is also grateful to the Graphics and Mulimedia Research Lab for production
-assistance.  The Teck and Simon Fraser Galleries are honoured to support
-the Department of Mathematics &amp; Statistics in hosting the Canadian
-Mathematical Society 1995 Winter Meeting.</p>
+<p>Simon Fraser Gallery is grateful for the assistance of Gallery
+staff, Daryl Hepting and the other curators for making this
+exhibition possible. It is also grateful to the Graphics and
+Multimedia Research Lab for production assistance. The Teck
+and Simon Fraser Galleries are honoured to support
+the Department of Mathematics &amp; Statistics in hosting the
+Canadian Mathematical Society 1995 Winter Meeting.</p>
 
 <p>Dr. Edward Gibson, Director, December 1995.</p>
 
 <h3 id="notes-on-exhibition">Notes on Exhibition</h3>
 
 <p>The majority of works in this exhibition represent a collection
-which rely on the computer for their existence.<br />
-And the computer involves mathematics
-to describe, manipulate, and translate even the simplest scenes
-into the forms we see here.<br />
-The involvement of mathematics plays a greater role in these works —
-it provides the inspiration and the foundation upon which they are constructed.</p>
+which rely on the computer for their existence. And the
+computer involves mathematics to describe, manipulate, and
+translate even the simplest scenes into the forms we
+see here. The involvement of mathematics plays a greater role
+in these works — it provides the inspiration and the
+foundation upon which they are constructed.</p>
 
 <p>A prominent feature of the exhibit is its display of fractals, objects from
 a non-Euclidean geometry. Fractals — sharing a root with fracture and
 fraction &amp;dash; have been called the geometry of nature by Mandelbrot, who
 discovered their capability to describe the non-smooth world in which we
-live.  Fractal geometry, which is new to us, has shed light on old things
+live. Fractal geometry, which is new to us, has shed light on old things
 — things like the historical record of water levels in the Nile river for
-instance.  And in its turn the computer has shed light on fractals,
-allowing the underlying beauty of what may seem to be dry-as-dust
+instance. And in its turn the computer has shed light on fractals, allowing the underlying beauty of what may seem to be dry-as-dust
 mathematics to shine through.
 Works like <a href="#blessed"><strong>Blessed State</strong></a>
 or
@@ -274,12 +269,14 @@ or
 provide evidence of the profound connection that
 seems to exist between fractals and the natural world.</p>
 
-<p>It is fitting that this collection of computer-related art comes to us
-in large part through the internet (the World Wide Web). Although Daryl
-Hepting is now at SFU, his works are distributed widely across the
-internet. In addition to Hepting’s collaborations with Musgrave (George
-Washington University), Prusinkiewicz (University of Calgary), Saupe
-(University of Freiburg), and Snider (University of Regina), the
+<p>It is fitting that this collection of computer-related art
+comes to us in large part through the internet
+(the World Wide Web). Although Daryl Hepting is now at
+SFU, his works are distributed widely across the
+internet. In addition to Hepting’s collaborations with
+Musgrave (George Washington University), Prusinkiewicz
+(University of Calgary), Saupe (University of Freiburg),
+and Snider (University of Regina), the
 computer-based works come from:</p>
 
 <ul>
@@ -288,11 +285,13 @@ computer-based works come from:</p>
   <li><a href="../calendars/">The Fractals Calendar</a></li>
 </ul>
 
-<p>The other pieces in this exhibit remind the viewer that the computer is
-responsible for only a portion of all mathematical art. The works of M. C.
-Escher and Marjorie Rice offer a beautiful expression of this fact.</p>
+<p>The other pieces in this exhibit remind the viewer that the
+computer is responsible for only a portion of all mathematical
+art. The works of M. C. Escher and Marjorie Rice offer a
+beautiful expression of this fact.</p>
 
-<p>Partial financial support for the exhibit at Harbour Centre was provided by the
+<p>Partial financial support for the exhibit at Harbour Centre
+was provided by the
 British Columbia Ministry for Employment and Investment.</p>
 
 <div class="card m-2">
@@ -302,13 +301,13 @@ British Columbia Ministry for Employment and Investment.</p>
   </div>
   <div class="card-body">
     <div class="container">
-    <img class="img-responsive" alt="Fiery Dragon" src="/~hepting/assets/gallery/img/1990-Hep-Fiery-Dragon.png" />
+    <img class="img-responsive" alt="Fiery Dragon" src="/~hepting/assets/gallery/img/1990-Hep-Fiery-Dragon.jpg" />
     </div>
 
 Martin Gardener tells the story of how this curve,
 first discovered by John E. Heighway, used by William G. Harter as a
 decoration symbolic of cryptic structure, and later analysed by them and
-another colleague, Bruce A. Banks.  Though its final structure is complex,
+another colleague, Bruce A. Banks. Though its final structure is complex,
 its description is not.  The following two transformations are required to
 generate this shape:
 
@@ -355,12 +354,12 @@ camera inside the computer.
 
 <div class="card m-2">
   <div class="card-header">
-    <h3>Dragon Mesa</h3>
+    <h3>Dragon Mesa (1989)</h3>
     by Przemyslaw Prusinkiewicz, Dietmar Saupe, and Daryl H. Hepting
   </div>
   <div class="card-body">
     <div class="container">
-    <img class="img-responsive" alt="Dragon Mesa" src="/~hepting/assets/gallery/img/1989-PruSauHep-Dragon-Mesa.png" />
+    <img class="img-responsive" alt="Dragon Mesa" src="/~hepting/assets/gallery/img/1989-PruSauHep-Dragon-Mesa.jpg" />
     </div>
 </div>
 </div>
@@ -372,7 +371,7 @@ camera inside the computer.
   </div>
   <div class="card-body">
     <div class="container">
-      <img class="img-responsive" alt="Steps to Infinity (1994)" src="/~hepting/assets/gallery/img/1994-HepMus-Steps-to-Infinity.png" />
+      <img class="img-responsive" alt="Steps to Infinity (1994)" src="/~hepting/assets/gallery/img/1994-HepMus-Steps-to-Infinity.jpg" />
     </div>
 
 <p>
@@ -450,7 +449,7 @@ And the final image once again...
 </p>
 
     <div class="container">
-      <img class="img-responsive" alt="Steps to Infinity (1994)" src="/~hepting/assets/gallery/img/1994-HepMus-Steps-to-Infinity.png" />
+      <img class="img-responsive" alt="Steps to Infinity (1994)" src="/~hepting/assets/gallery/img/1994-HepMus-Steps-to-Infinity.jpg" />
     </div>
    </div>
   </div>
@@ -462,7 +461,7 @@ And the final image once again...
   </div>
   <div class="card-body">
     <div class="container">
-      <img class="img-responsive" alt="Desktop Tetrahedron (1990)" src="/~hepting/assets/gallery/img/1990-HepSni-Desktop-Tetrahedron.png" />
+      <img class="img-responsive" alt="Desktop Tetrahedron (1990)" src="/~hepting/assets/gallery/img/1990-HepSni-Desktop-Tetrahedron.jpg" />
     </div>
   </div>
 </div>
@@ -474,7 +473,7 @@ And the final image once again...
   </div>
   <div class="card-body">
     <div class="container">
-      <img class="img-responsive" alt="Carrot in Blue (1991)" src="/~hepting/assets/gallery/img/1991-HepPru-Carrot-in-Blue.png" />
+      <img class="img-responsive" alt="Carrot in Blue (1991)" src="/~hepting/assets/gallery/img/1991-HepPru-Carrot-in-Blue.jpg" />
     </div>
   </div>
 </div>
@@ -486,7 +485,7 @@ And the final image once again...
   </div>
   <div class="card-body">
     <div class="container">
-      <img class="img-responsive" alt="Fractal Emblem (1992)" src="/~hepting/assets/gallery/img/1992-Hep-Fractal-Emblem.png" />
+      <img class="img-responsive" alt="Fractal Emblem (1992)" src="/~hepting/assets/gallery/img/1992-Hep-Fractal-Emblem.jpg" />
     </div>
   </div>
 </div>
@@ -510,7 +509,7 @@ And the final image once again...
   </div>
   <div class="card-body">
     <div class="container">
-      <img class="img-responsive" alt="The Great Fern Dune (1994)" src="/~hepting/assets/gallery/img/1994-Hep-The-Great-Fern-Dune.png" />
+      <img class="img-responsive" alt="The Great Fern Dune (1994)" src="/~hepting/assets/gallery/img/1994-Hep-The-Great-Fern-Dune.jpg" />
     </div>
   </div>
 </div>
@@ -534,7 +533,7 @@ And the final image once again...
   </div>
   <div class="card-body">
     <div class="container">
-      <img class="img-responsive" alt="Captivating Rhythm (1995)" src="/~hepting/assets/gallery/img/1995-Hep-Captivating-Rhythm.png" />
+      <img class="img-responsive" alt="Captivating Rhythm (1995)" src="/~hepting/assets/gallery/img/1995-Hep-Captivating-Rhythm.jpg" />
     </div>
 
 This image is based on a fractal which is similar to the one used to
@@ -661,81 +660,88 @@ Brownian motion texture and added an outline of the fractal.
     A talk by Dr. Doris Schattschneider
   </div>
   <div class="card-body">
-<div class="container m-2">
-  <figure>
-    <img src="/~hepting/assets/projects/img/teck-rice.jpg" class="img-responsive m-2" alt="Hibiscus" />
-    <img src="/~hepting/assets/projects/img/teck-mce42.jpg" class="img-responsive m-2" alt="Escher No. 42" />
-    <img src="/~hepting/assets/projects/img/teck-mce20.jpg" class="img-responsive m-2" alt="Escher No. 20" />
-    <figcaption class="mb-2">
-      Left to right:
-      <em>Hibiscus</em> by Marjorie Rice,
-      <em>Escher No. 42</em> by M. C. Escher, and
-      <em>Escher No. 20</em> by M. C. Escher.
-    </figcaption>
-  <figure>
-&lt;/div&gt;
-  <p>
-    It is possible for someone without formal
-    credentials to make contributions to mathematics.
-    Well-known artist M.C. Escher and unknown homemaker Marjorie Rice both
-    tackled mathematical problems, developing unorthodox notation that was
-    essential to their methodical investigations.
-    Each worked alone, essentially in secret,
-    rewarded by the exhilaration of finding answers to a large puzzle.
-  </p>
-  <p>
-    Lecture by Dr. Doris Schattschneider,
-    Professor of Mathematics, Moravian College.<br />
-    5 - 6 pm, 9 December 1995,
-    Fletcher Challenge Canada Theatre (Room 1900), SFU Harbour Centre Campus.
-  </p>
-  <p>
-    These images will be on display as part of the MATH-ART exhibit.
-  </p>
-  <p>
-    References:
-  </p>
+    <div class="container m-2">
+      <figure>
+        <img src="/~hepting/assets/projects/img/teck-rice.jpg" class="img-responsive m-2" alt="Hibiscus" />
+        <img src="/~hepting/assets/projects/img/teck-mce42.jpg" class="img-responsive m-2" alt="Escher No. 42" />
+        <img src="/~hepting/assets/projects/img/teck-mce20.jpg" class="img-responsive m-2" alt="Escher No. 20" />
+        <figcaption class="mb-2">
+          Left to right:
+          <em>Hibiscus</em> by Marjorie Rice,
+          <em>Escher No. 42</em> by M. C. Escher, and
+          <em>Escher No. 20</em> by M. C. Escher.
+        </figcaption>
+      </figure>
+    </div>
+    <p>
+      It is possible for someone without formal
+      credentials to make contributions to mathematics.
+      Well-known artist M.C. Escher and unknown homemaker Marjorie Rice both
+      tackled mathematical problems, developing unorthodox notation that was
+      essential to their methodical investigations.
+      Each worked alone, essentially in secret,
+      rewarded by the exhilaration of finding answers to a large puzzle.
+    </p>
+    <p>
+      Lecture by Dr. Doris Schattschneider,
+      Professor of Mathematics, Moravian College.<br />
+      5 - 6 pm, 9 December 1995,
+      Fletcher Challenge Canada Theatre (Room 1900), SFU Harbour Centre Campus.
+    </p>
+    <p>
+      These images will be on display as part of the MATH-ART exhibit.
+    </p>
+    <p>
+      References:
+    </p>
     <ul>
       <li>
-	Schattschneider, Doris.
-	<em>M.C. Escher: Visions of Symmetry</em>,
-	W. H. Freeman Company, 1990.
+      	Schattschneider, Doris.
+      	<em>M.C. Escher: Visions of Symmetry</em>,
+      	W. H. Freeman Company, 1990.
       </li>
       <li>
-	Klarner, David A. (editor).
-	<em>The Mathematical Gardener</em>,
-	Wadsworth International, 1981.
+      	Klarner, David A. (editor).
+      	<em>The Mathematical Gardener</em>,
+      	Wadsworth International, 1981.
       </li>
     </ul>
-&lt;/div&gt;
-</figure></figure></div></div></div>
+  </div>
+</div>
 
   </div>
-  <div class="card-footer text-muted lightcthru">
-  Site built: 2018-10-17 19:07 -0600
+<div class="card-footer text-muted lightcthru">
+  Site built: 2019-10-18 11:40 -0600
 </div>
 
 </div>
 <!-- </div> -->
   <!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-		crossorigin="anonymous">
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"
-		integrity="sha256-xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8="
-		crossorigin="anonymous">
-	</script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+  <script async
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous">
+  </script>
+  <script async
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous">
+  </script>
   <script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
   <script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
   <script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js"
-		integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA="
-		crossorigin="anonymous">
-	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+    integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+    crossorigin="anonymous">
+  </script>
   
 	<script>
-		var clipboard = new ClipboardJS('.btn');
+		var clipboard = new ClipboardJS('.btn')
 	</script>
   
 	<!-- Google Analytics -->
@@ -743,9 +749,9 @@ Brownian motion texture and added an outline of the fractal.
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-4427429-2', 'auto');
-		ga('send', 'pageview');
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+		ga('create', 'UA-4427429-2', 'auto')
+		ga('send', 'pageview')
 	</script>
 	<!-- End Google Analytics -->
 </body>

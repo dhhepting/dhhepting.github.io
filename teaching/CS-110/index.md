@@ -5,12 +5,12 @@ redirect-from:
   - /teaching/cs110/
 description: An introduction to problem-solving techniques, the fundamental concepts of programming, and the software design process. Topics will include data types, control structures, scope rules, functions, files, and the mechanics of running, testing and debugging. Problems will be drawn from various science disciplines.
 ---
-{% include course-url.html %}
-# {{crs_sbj}} {{crs_nbr}}
-{% for crs in site.data.courses %}
-  {% if crs.id == crs_id %}
-## {{page.crs_name}}
-  {% endif %}
-{% endfor %}
+{% include teaching/url.html %}
 
-{% include course-index.html %}
+# {{crs_sbj}} {{crs_nbr}}
+## {{page.crs_name}}
+
+{% include course/description-card.html %}
+{% include course/semesters-card.html %}
+
+{% include course/semester-redirects.html %}

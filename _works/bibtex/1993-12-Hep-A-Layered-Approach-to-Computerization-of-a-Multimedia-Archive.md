@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1993-12-Hep
 title: "A Layered Approach to Computerization of a Multimedia Archive (1993)"
@@ -8,7 +9,7 @@ projects:
  - multimedia
 authors:
  - Daryl H. Hepting
-venue: Simon Fraser University
+venue: "Simon Fraser University"
 ---
 @techreport{1993-12-Hep,
 	Author =  "Hepting, Daryl H.",

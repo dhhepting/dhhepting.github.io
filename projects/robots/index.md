@@ -2,7 +2,8 @@
 title: Robots
 breadcrumb: Robots 
 description: Description of Robots
-project: robots
+projects: 
+  - robots
 layout: bg-image
 ---
 # {{ page.breadcrumb }}

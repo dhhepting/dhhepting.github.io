@@ -6,10 +6,18 @@ from datetime import datetime, timezone
 from pathlib import Path
 from pytz import timezone
 from pybtex.database import BibliographyData, Entry, parse_file
+from slugify import slugify
+import yaml
 
-bib_data = parse_file('../research/dhhepting.bib')
+force = False
+bib_data = parse_file('/Users/hepting/Sites/dhhepting.github.io/research/dhhepting.bib')
+# allow regeneration to be forced with "-f"
+if len(sys.argv) == 2:
+    if sys.argv[1] == "-f":
+        force = True
 
-bibtex_path = "../_works/bibtex/"
+bibtex_path = "/Users/hepting/Sites/dhhepting.github.io/_works/bibtex/"
+yaml_path = "/Users/hepting/Sites/dhhepting.github.io/_data/research/works/"
 
 #
 # return field value string, if keystr is a key (otherwise exit)
@@ -56,15 +64,55 @@ def format_people(people,kind,mdf):
 			perstr = " - " + fnamestr + mnamestr + plnamestr + lnamestr
 			mdf.write(perstr + "\n")
 
-
 def format_article(entry,mdf):
-	format_people(entry.persons,"author",mdf)
-	mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Journal'])+"\n")
+    format_people(entry.persons,"author",mdf)
+    venuestr = "venue: \"" + entry.fields['Journal'] + "\"\n"
+    mdf.write(venuestr)
+	### the following may be split out into its own function...
+    try:
+        kwstr = entry.fields['Keywords']
+    except KeyError:
+        kwstr = ""
+    if (kwstr != ""):
+        mdf.write("keywords:\n")
+        keywords = kwstr.split(",")
+        for kk in range(len(keywords)):
+            kwordstr = " - " + "\"" + keywords[kk].strip() + "\""
+            mdf.write(kwordstr + "\n")
+    try:
+        pgstr = entry.fields['Pages']
+    except KeyError:
+        pgstr = ""
+    if (pgstr != ""):
+        pagerange = pgstr.split("--")
+        if len(pagerange) == 2:
+            mdf.write("pagestart: " + pagerange[0] + "\n")
+            mdf.write("pageend: " + pagerange[1] + "\n")
+    try:
+        doistr = entry.fields['Doi']
+    except KeyError:
+        doistr = ""
+    if (doistr != ""):
+        mdf.write("doi: " + doistr + "\n")
+    try:
+        modstr = entry.fields['Date-Modified']
+        #entrytime = datetime.strptime(entrytimestr,"%Y-%m-%d %H:%M:%S %z")
+    except KeyError:
+        modstr = ""
+    if (modstr != ""):
+        mdf.write("datemod: " + modstr + "\n")
 
 def format_inproceedings(entry,mdf):
     format_people(entry.persons,"author",mdf)
-    mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Booktitle'])+"\n")
+    venuestr = "venue: \"" + entry.fields['Booktitle'] + "\"\n"
+    mdf.write(venuestr)
+    #mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Booktitle'])+"\n")
     format_people(entry.persons,"editor",mdf)
+
+def format_conference(entry,mdf):
+    format_people(entry.persons,"author",mdf)
+    venuestr = "venue: \"" + entry.fields['Booktitle'] + "\"\n"
+    mdf.write(venuestr)
 
 def format_incollection(entry,mdf):
     format_people(entry.persons,"author",mdf)
@@ -73,10 +121,26 @@ def format_incollection(entry,mdf):
 def format_techreport(entry,mdf):
     format_people(entry.persons,"author",mdf)
     #mdf.write("venue: "+re.sub(r'[^\w]',' ',entry.fields['Institution'])+"\n")
-    mdf.write("venue: "+re.sub(r':',' ',entry.fields['Institution'])+"\n")
+    venuestr = "venue: \"" + entry.fields['Institution'] + "\"\n"
+    mdf.write(venuestr)
+    #mdf.write("venue: "+re.sub(r':',' ',entry.fields['Institution'])+"\n")
 
 def format_book(entry,mdf):
+	format_people(entry.persons,"author",mdf)
 	format_people(entry.persons,"editor",mdf)
+
+def format_inbook(entry,mdf):
+    format_people(entry.persons,"author",mdf)
+    #mdf.write("venue: " + re.sub(r'[^\w]',' ',entry.fields['Title'])+"\n")
+    venuestr = "venue: \"" + entry.fields['Title'] + "\"\n"
+    mdf.write(venuestr)
+    format_people(entry.persons,"editor",mdf)
+
+def format_mscphd(entry,mdf):
+    format_people(entry.persons,"author",mdf)
+    venuestr = "venue: \"" + entry.fields['School'] + "\"\n"
+    mdf.write(venuestr)
+
 #
 # output selected fields of BibTex entry
 #
@@ -121,11 +185,11 @@ def output_bibtex_content(mdf):
 	# create or replace Url indicated in bibtex file
 	#
 	newurlstr = "/research/works/" + htmlnamestr
-	print(newurlstr)
+	# print(newurlstr)
 	newurlpath = Path(".." + newurlstr)
 	#teststr = "\\\"{{site.canonical}} +  newurlstr + "\\\"",\n")
 	teststr = "\\\"{{site.canonical}}" +  newurlstr + "\\\",\n"
-	print(teststr)
+	# print(teststr)
 	mdf.write("\tUrl = " + teststr)
 	#if newurlpath.is_file():
 	#	mdf.write("\tUrl = " + "\\\"{{ {{site.canonical}}\"" +  newurlstr + "\" | absolute_url }}\\\",\n")
@@ -155,10 +219,12 @@ for entry in bib_data.entries.values():
     entry_data = BibliographyData()
     entry_data.entries[entry.key] = entry
     # get title of entry
-    btitlestr = getValueStr("Title")
-    #titlestr = re.sub(r'[^\w]', ' ', btitlestr)
-    titlestr = re.sub(r':', ' ', btitlestr)
-    titlestr = re.sub(r'/', '', titlestr)
+    if entry.type == "inbook":
+        btitlestr = getValueStr("Chapter")
+    else:
+        btitlestr = getValueStr("Title")
+    titlestr = slugify(btitlestr, lowercase=False)
+
     # get date-modified for bibtex entry if it exists, if it doesn't
     # exist, recreate the markdown file
     recreate = False
@@ -194,17 +260,54 @@ for entry in bib_data.entries.values():
                 recreate = True
         else:
             recreate = True
-    #if recreate:
-    if True:
+        # check if there are any redirects to be added to markdown file
+        yamlnamestr = entry.key + ".yml"
+        yamlfilepath = Path(yaml_path + yamlnamestr)
+        if yamlfilepath.is_file():
+            #print(yamlfilepath)
+            yamltimestr = time.ctime(os.path.getmtime(yamlfilepath))
+            yamltime = datetime.strptime(yamltimestr,"%a %b %d %H:%M:%S %Y")
+            localtz = timezone('America/Regina')
+            yamltime = localtz.localize(yamltime)
+            #print(yamltime)
+            if (filetime < yamltime):
+                recreate = True
+
+    # above is decision about whether to recreate file
+    if force or recreate:
+    #if True:
         print ("(re)create: ", entry.key)
         with open(bibtex_path+mdnamestr,"w") as mdf:
             mdf.write("---\n")
+            if yamlfilepath.is_file():
+                with open(yamlfilepath, 'r') as yamf:
+                    try:
+                        yamldict = yaml.safe_load(yamf)
+                        if 'redirects' in yamldict and yamldict['redirects']:
+                            mdf.write("redirect_from:\n")
+                            for yr in yamldict['redirects']:
+                                mdf.write("  - " + yr + "\n")
+                    except yaml.YAMLError as exc:
+                        print(exc)
+            else:
+                with open(yamlfilepath, 'w') as yamf:
+                    try:
+                        yamf.write("redirects:\n")
+                        yamf.write("links:\n")
+                    except yaml.YAMLError as exc:
+                        print(exc)
+
+            yearstr = getValueStr("Year")
+            if (yearstr != "2011"):
+                mdf.write("main_entity: ScholarlyArticle\n")
             mdf.write("layout: bibtex-default\n")
             mdf.write("citekey: " + entry.key + "\n")
             yearstr = getValueStr("Year")
-            pagestr = "title: \"" + titlestr + " (" + yearstr + ")\"\n"
+            btitlestr = btitlestr.replace('``', '&ldquo;')
+            btitlestr = btitlestr.replace('\'\'', '&rdquo;')
+            pagestr = "title: \"" + btitlestr + " (" + yearstr + ")\"\n"
             mdf.write(pagestr)
-            breadstr = "breadcrumb: \"" + titlestr + " (" + yearstr + ")\"\n"
+            breadstr = "breadcrumb: \"" + btitlestr + " (" + yearstr + ")\"\n"
             mdf.write(breadstr)
             if 'W-Type' in entry.fields:
                 typestr = entry.fields['W-Type']
@@ -235,12 +338,18 @@ for entry in bib_data.entries.values():
                 format_article(entry,mdf)
             elif entry.type == "inproceedings":
                 format_inproceedings(entry,mdf)
+            elif entry.type == "conference":
+                format_conference(entry,mdf)
             elif entry.type == "incollection":
                 format_incollection(entry,mdf)
             elif entry.type == "techreport":
                 format_techreport(entry,mdf)
             elif entry.type == "book":
                 format_book(entry,mdf)
+            elif entry.type == "inbook":
+                format_inbook(entry,mdf)
+            elif entry.type == "mastersthesis" or entry.type == "phdthesis":
+                format_mscphd(entry,mdf)
             else:
                 print("MISSING TYPE: ", entry.type)
 			#

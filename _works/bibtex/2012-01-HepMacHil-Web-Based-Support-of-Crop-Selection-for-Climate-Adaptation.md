@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2012-01-HepMacHil
 title: "Web-Based Support of Crop Selection for Climate Adaptation (2012)"
@@ -12,7 +13,7 @@ authors:
  - Daryl H. Hepting
  - Timothy Maciag
  - Harvey Hill
-venue: 2012 45th Hawaii International Conference on System Sciences
+venue: "2012 45th Hawaii International Conference on System Sciences"
 ---
 @inproceedings{2012-01-HepMacHil,
 	Author =  "Hepting, Daryl H. and Maciag, Timothy and Hill, Harvey",

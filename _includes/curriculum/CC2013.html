@@ -1,0 +1,31 @@
+<h1>
+  Knowledge Areas
+</h1>
+<ul class="list-group list-group-flush">
+{% assign kal = "" %}
+{% for entry in site.data.teaching.CC2013 %}
+  {% assign ki = entry[0] %}
+  {% capture kintro %}00-{{ ki }}{% endcapture %}
+  {% capture kal %}{{ kal }},{{ ki }}#{{ site.data.teaching.CC2013_KA[ki].name }}#{{ kintro }}{% endcapture %}
+{% endfor %}
+{% assign kap = kal | split: "," | sort %}
+{% for kaa in kap offset:1 %}
+  {% assign kk = kaa | split: "#" %}
+    <li class="list-group-item">
+      <div class="card">
+      <h3 class="card-header">
+        {%comment%}{%endcomment%}
+        <a href="{{ kk[0] }}.html">
+          {{ kk[1] }} ({{ kk[0] }})
+          </a>
+        {%comment%}{%endcomment%}
+      </h3>
+      {% assign varr = kk[2] %}
+      {% assign karr = kk[0] %}
+      <div class="card-body">
+      {{ site.data.teaching.CC2013[karr][varr] }}
+      </div>
+      </div>
+    </li>
+{% endfor %}
+</ul>

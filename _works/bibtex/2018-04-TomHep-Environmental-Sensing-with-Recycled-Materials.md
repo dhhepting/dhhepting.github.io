@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2018-04-TomHep
 title: "Environmental Sensing with Recycled Materials (2018)"

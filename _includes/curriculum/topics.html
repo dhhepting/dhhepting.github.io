@@ -1,0 +1,25 @@
+<h3>Topics</h3>
+<ul>
+  {% for pf in page.focus %}
+  <li>
+    {% assign kaku = site.data.teaching.CC2013[pf.ka][pf.ku] %}
+    {% for t in kaku.topics %}
+      {% if t.label == pf.topic %}
+        {% capture topurl %}/teaching/curriculum/2013/{{pf.ka}}.html{% endcapture %}
+        <a href="{{ topurl | relative_url }}#{{ pf.ku }}-{{ t.label}}">
+          {{ t.desc }}
+        </a>
+        ( {{ pf.ka }} {{ pf.ku | slice: 3, pf.ku.size }} )
+        {%- if t.details -%}
+          <ul>
+          {%- for td in t.details -%}
+            <li>{{ td }}</li>
+          {%- endfor -%}
+          </ul>
+        {%- endif -%}
+        {% break %}
+      {%- endif -%}
+    {%- endfor -%}
+  </li>
+  {%- endfor -%}
+</ul>

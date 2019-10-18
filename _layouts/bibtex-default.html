@@ -8,7 +8,7 @@
     </h1>
     <hr />
     <!-- Projects -->
-    {% include projects-bar.html %}
+    {%comment%}{% include projects-bar.html %}{%endcomment%}
     <hr />
     <!-- Social Share + Search Buttons -->
     {% include share-search-bar.html %}
@@ -37,8 +37,10 @@
     {% endfor %}
     </ul>
 
+    {% if page.abstract %}
     <h3>Abstract</h3>
     <p>{{ page.abstract }}</p>
+    {% endif %}
 
     {% assign download_open = false %}
     {% capture work_url %}/assets/works/pdf/{{page.citekey}}.pdf{% endcapture %}
@@ -52,14 +54,22 @@
       {% endif %}
     {% endfor %}
 
-    {% assign links = site.data.works[page.citekey].links %}
+    {% assign links = site.data.research.works[page.citekey].links %}
     {% if links %}
+        {% capture linktitles %}
+          {% for ll in links %}
+            {{ll.lt | slice:0 | capitalize }}#{{ll.lt}}#{{ll.lu}}^
+          {% endfor %}
+        {% endcapture %}
+        {% assign sortedlt = linktitles | split:'^' | sort %}
       {% unless download_open %}
     <h3>Links</h3>
     <ul>
       {% endunless %}
-      {% for ll in links %}
-        <li><a href="{{ ll.lu }}">{{ ll.lt }}</a></li>
+      {% assign ltcount = sortedlt.size | minus: 1 %}
+      {% for ll in (1..ltcount) %}
+        {% assign slt = sortedlt[ll] | split:'#' %}
+        <li><a href="{{ slt[2] }}">{{ slt[1] }}</a></li>
       {% endfor %}
     {% endif %}
     {% if download_open or links %}
@@ -77,6 +87,7 @@
       </a>
       <code><pre id="bibtex">{{ content | remove: '<p>' | remove: '</p>' | strip }}</pre></code>
     </div>
+    {%comment%}{% include project-related-works.html %}{% endcomment %}
   </div>
   {% include site-date-transp.html %}
 </div>

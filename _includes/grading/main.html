@@ -1,0 +1,203 @@
+### Grading
+
+{% include grading/criteria-scale.html %}
+
+<div class="border text-light px-4 pt-3 mx-4 mt-3 bg-dark border-primary">
+  Grade penalties will be applied in the following situations for assignment submissions:
+  <ul>
+    <li>on time but the written instructions for the submission were not followed: deduct 10% of the earned grade</li>
+    <li>late (but within 48 hours of the due date and time): deduct 10% of the earned grade</li>
+    <li>late by more than 48 hours: deduct 50% of the earned grade</li>
+  </ul>
+</div>
+
+This assignment is worth {{ page.marks }} marks, according to the following rubric:
+
+##### Rubric
+
+DePaul Univerity's Center for Teaching and Learning has a useful resource describing the process of
+[creating rubrics](https://resources.depaul.edu/teaching-commons/teaching-guides/feedback-grading/rubrics/Pages/creating-rubrics.aspx).
+Your comments about the following rubric are welcome [via email](mailto:{{site.email}}?subject=Rubric at {{page.url}})
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+		  <tr>
+        <th><em>Criterion and Weight</em></th>
+        <th>{{cs-level[3]}}</th>
+        <th>{{cs-level[2]}}</th>
+        <th>{{cs-level[1]}}</th>
+        <th>{{cs-level[0]}}</th>
+      </tr>
+    </thead>
+    <tbody>
+{% for r in page.rubric %}
+      <tr>
+        <th>
+          {{r.crit}} ({{r.wt}})
+        </th>
+        <td>
+          {{r.l3}}
+        </td>
+        <td>
+          {{r.l2}}
+        </td>
+        <td>
+          {{r.l1}}
+        </td>
+        <td>
+          {{r.l0}}
+        </td>
+			</tr>
+{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+##### Calculator
+
+<form name="calculator_{{page.aid}}">
+
+  <!-- rubric criteria -->
+  <div class="border bg-info m-2 p-4">
+    <strong>Rubric Criteria</strong>
+{% assign critctr = 0 %}
+{% assign sumwt = 0 %}
+{% assign weights = "" %}
+{% for r in page.rubric %}
+  {% assign critctr = critctr | plus: 1 %}
+  {% capture critid %}rcriterion{{critctr}}{% endcapture %}
+  <!--{% capture critname %}criteria_{{critctr}}_{{ page.aid }}{% endcapture %}-->
+  {% capture critname %}criteria_{{ page.aid }}{% endcapture %}
+  {% assign sumwt = sumwt | plus: r.wt %}
+  {% capture weights %}{{weights}},{{r.wt}}{% endcapture %}
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="{{critid}}">{{r.crit}} ({{r.wt}})</label>
+      <select class="col-sm-9 form-control" name="{{ critname }}" id="{{ critid }}">
+        {{ critname }}
+        <option selected disabled>Choose...</option>
+        <option value="10">{{cs-level[3]}} (+): {{r.l3}}</option>
+        <option value="9">{{cs-level[3]}}: {{r.l3}}</option>
+        <option value="8">{{cs-level[3]}} (-): {{r.l3}}</option>
+        <option value="7">{{cs-level[2]}} (+): {{r.l2}}</option>
+        <option value="6">{{cs-level[2]}}: {{r.l2}}</option>
+        <option value="5">{{cs-level[2]}} (-): {{r.l2}}</option>
+        <option value="4">{{cs-level[1]}} (+): {{r.l1}}</option>
+        <option value="3">{{cs-level[1]}}: {{r.l1}}</option>
+        <option value="2">{{cs-level[1]}} (-): {{r.l1}}</option>
+        <option value="1">{{cs-level[0]}}: {{r.l0}}</option>
+      </select>
+    </div>
+{% endfor %}
+{% assign weightsa =  weights | split: "," %}
+  </div>
+  <!-- penalties -->
+  <div class="form-group border bg-info m-2 p-4" id="pen">
+    <strong>Penalties</strong>
+    <div class="form-check" id="p0">
+      <input class="form-check-input" type="radio" name="penalties"
+      id="penalty-0" value="0" checked>
+      <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="penalties"
+      id="penalty-1" value="10">
+      <label class="form-check-label" for="penalty-1">Instructions not followed</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="penalties"
+      id="penalty-2" value="10">
+      <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="penalties"
+      id="penalty-3" value="50">
+      <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
+    </div>
+  </div>
+  <div class="border bg-info m-2 p-4">
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
+{% assign totmarks = page.marks | plus: 0 %}
+{% if sumwt != totmarks %}
+      <textarea class="col-sm-9 form-control" id="comments_{{page.aid}}" rows="5" placeholder="Criteria Weights Not Equal to Total Marks"></textarea>
+  {% else %}
+      <textarea class="col-sm-9 form-control" id="comments_{{page.aid}}" rows="5"></textarea>
+  {% endif %}
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-9">
+        <button class="btn btn-primary" onclick="process_{{page.aid}}(); return false;">Evaluate</button>
+        <a id="clipboard_{{page.aid}}" href="#clipboard_{{page.aid}}"
+        class="m-2 btn btn-primary" aria-label="Copy comments"
+        data-clipboard-action="copy" data-clipboard-target="#comments_{{page.aid}}">
+          Copy Output to Clipboard
+        </a>
+        <button class="btn btn-primary" onclick="clearform_{{page.aid}}(); return false;">Clear Form</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<script>
+  function process_{{page.aid}}()
+  {
+    var weights = {{ weightsa | jsonify }}
+    console.log(weights)
+    // get multiplier from penalty radio buttons
+    var penalty = document.querySelector("input[name=penalties]:checked");
+    var mult = (100.0 - penalty.value)/100.0;
+    console.log("penalty: ",mult)
+
+    // find comment span
+    // BETTER: find the end of the text area content
+    var commentspan = document.getElementById("comments_{{page.aid}}");
+
+    // get grades for each rubric criterion
+    var sumgrade = 0;
+    var critname = "criteria" + "_" + "{{ page.aid }}";
+    var crits = document.getElementsByName(critname);
+    for (var i = 0, length = crits.length; i < length; i++)
+    {
+      // output information for each criterion
+      commentspan.textContent = commentspan.textContent +
+        crits[i].parentNode.querySelector("label").textContent + ":\n";
+      if (crits[i].value >= 0 && crits[i].value <= 10)
+      {
+        var cw = weights[i+1];
+        var cv = (crits[i].value / 10.0) * cw;
+        sumgrade += cv;
+        commentspan.textContent = commentspan.textContent +
+          "\t (" + cv + "/" + cw + ") " +
+          crits[i].options[crits[i].selectedIndex].text + "\n";
+      }
+      else
+      {
+        commentspan.textContent = commentspan.textContent +
+          "\tNOT GRADED\n";
+      }
+    }
+    // output earned grade and the grade after penalty, if there is one
+    var eg = Math.round(sumgrade * 10) / 10;
+    var pg = Math.round(mult * sumgrade * 10) / 10;
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    // output penalty information
+    if (mult < 1.0)
+    {
+      commentspan.textContent = "Penalty:\n";
+      commentspan.textContent = commentspan.textContent +
+        "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
+      commentspan.textContent = commentspan.textContent +
+        "After Penalty: " + pg + "\n";
+    }
+  }
+
+  function clearform_{{page.aid}}()
+  {
+    document.forms["calculator_{{page.aid}}"].reset();
+    var commentspan = document.getElementById("comments_{{page.aid}}");
+    commentspan.textContent = "";
+  }
+</script>

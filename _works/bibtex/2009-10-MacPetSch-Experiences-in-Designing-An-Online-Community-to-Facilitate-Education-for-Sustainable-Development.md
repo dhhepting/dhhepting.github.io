@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2009-10-MacPetSch
 title: "Experiences in Designing An Online Community to Facilitate Education for Sustainable Development (2009)"
@@ -11,7 +12,7 @@ authors:
  - Roger A. Petry
  - Curt Schroeder
  - Daryl H. Hepting
-venue: Environmental Software Systems
+venue: "Environmental Software Systems"
 editors:
  - Ralf Denzer
 ---

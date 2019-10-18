@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2005-09-MacHepSle
 title: "Personalizing User Interfaces for Environmental Decision Support Systems (2005)"
@@ -12,7 +13,7 @@ authors:
  - Timothy Maciag
  - Daryl H. Hepting
  - Dominik Ślęzak
-venue: Proceedings of International Workshop on Rough Sets and Soft Computing in Intelligent Agent and Web Technologies
+venue: "Proceedings of International Workshop on Rough Sets and Soft Computing in Intelligent Agent and Web Technologies"
 editors:
  - D. Ślęzak
  - E. Menasalvas-Ruiz

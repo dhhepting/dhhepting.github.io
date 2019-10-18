@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1995-10-HepDerEdo
 title: "Qualitative Analysis of Invariant Tori in a Dynamical System (1995)"
@@ -11,7 +12,7 @@ authors:
  - Gianne Derks
  - Kossi D. Edoh
  - Robert D. Russell
-venue: Proceedings of Visualization  95  IEEE Conference on Visualization
+venue: "Proceedings of Visualization '95, IEEE Conference on Visualization"
 ---
 @inproceedings{1995-10-HepDerEdo,
 	Author =  "Hepting, Daryl H. and Derks, Gianne and Edoh, Kossi D. and Russell, Robert D.",

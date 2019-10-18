@@ -2,7 +2,8 @@
 title: Enviromatics Project
 breadcrumb: Enviromatics
 description: Description of Enviromatics Project!
-project: enviromatics
+projects:
+  - enviromatics
 layout: bg-image
 ---
 # {{page.breadcrumb}}
@@ -11,4 +12,4 @@ layout: bg-image
 
 {% include index-dir.html %}
 
-{% include project-related-works.html %}
+{%comment%}{% include project-related-works.html %}{% endcomment %}

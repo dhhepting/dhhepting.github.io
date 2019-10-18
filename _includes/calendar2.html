@@ -1,0 +1,80 @@
+{% comment %}
+Idea: create 2 data files -- one for semester (for start date, end date,
+no meeting dates) and the other for courses (for meeting days, times, room,
+final exam date)
+delta (seconds) per day = 86400
+check end of classes and end of term.  11-Apr-19
+%e-%b-%y
+{% endcomment %}
+{%- if site.data.teaching.offerings -%}
+  OFFERINGS!
+{%- endif -%}
+{% assign days = "Sun, Mon, Tue, Wed, Thu, Fri, Sat" | split: ", " %}
+{% assign mdays = "Tue, Thu, Fri" | split: ", " %}
+{% assign odd = 86400 | minus: 0 %}
+{% assign sotts = "8-Jan-19" | date: "%e-%b-%y" | date: "%s"  %}
+{% assign sotd = "8-Jan-19" | date: "%e-%b-%y" | date: "%a"  %}
+{% assign eocts = "11-Apr-19" | date: "%e-%b-%y" | date: "%s"  %}
+{% assign eotts = "29-Apr-19" | date: "%e-%b-%y" | date: "%s"  %}
+{% assign nomeet = "18 Feb, 19 Feb, 20 Feb, 21 Feb, 22 Feb, 23 Feb, 19 Apr" | split: ", "  %}
+{% for di in (0..6) %}
+  {% if days[di] == sotd %}
+    {% assign sotdelta = odd | times: di %}
+    {% assign sotts = sotts | minus: sotdelta %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+<h1>
+Meetings
+</h1>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr class="bg-info">
+        <th>Week</th>
+{% for di in (0..6) %}
+        <th>{{ days[di] }}</th>
+{% endfor %}
+      </tr>
+    </thead>
+{% assign day = sotts | plus: 0 %}
+{% assign eoc = eocts | plus: 0 %}
+{% assign eot = eotts | plus: 0 %}
+{% assign mctr = 0 %}
+    <tbody>
+{% for week in (1..26) %}
+      <tr>
+        <td>{{ week }}</td>
+    {% for di in (0..6) %}
+      {% if mdays contains days[di] %}
+        {% if day > eoc %}
+          {% assign nmc = "true" %}
+        {% endif %}
+        {% assign mdate = day | date: "%d %b" %}
+        {% if nomeet contains mdate %}
+            <td>&mdash;</td>
+        {% else %}
+          {% if nmc != "true" %}
+            {% assign mctr = mctr | plus: 1 %}
+            {% assign mctrstr = mctr | prepend: '00' | slice: -2, 2 %}
+            <td><a href="{{mctrstr}}.html">{{mctrstr}} : {{mdate}}</a></td>
+          {% else %}
+            <td></td>
+          {% endif %}
+        {% endif %}
+      {% else %}
+        <td></td>
+      {% endif %}
+      {% assign day = day | plus: odd %}
+    {% endfor %}
+      </tr>
+    {% if day > eot %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+    </tbody>
+  </table>
+</div>
+<h3>
+Total meetings this semester: {{ mctr }}
+</h3>

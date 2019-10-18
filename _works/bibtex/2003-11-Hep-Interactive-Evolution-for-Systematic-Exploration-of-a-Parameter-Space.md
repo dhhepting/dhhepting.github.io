@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2003-11-Hep
 title: "Interactive Evolution for Systematic Exploration of a Parameter Space (2003)"
@@ -8,7 +9,7 @@ projects:
  - cogito
 authors:
  - Daryl H. Hepting
-venue: Intelligent Engineering Systems through Artificial Neural Networks
+venue: "Intelligent Engineering Systems through Artificial Neural Networks"
 editors:
  - Cihan H. Dagli
 ---

@@ -1,4 +1,5 @@
 ---
+main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 2007-05-MacHep
 title: "Discovery of Usability Patterns in Support of Green Purchasing (2007)"
@@ -9,7 +10,7 @@ projects:
 authors:
  - Timothy Maciag
  - Daryl H. Hepting
-venue: Environmental Software Systems
+venue: "Environmental Software Systems"
 editors:
  - Ralf Denzer
 ---
