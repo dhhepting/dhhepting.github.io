@@ -2,11 +2,10 @@
 title: Projects
 breadcrumb: Projects
 layout: bg-image
+desc:
 ---
-# Projects
+# {{ page.breadcrumb }}
 
-Collected here are the various projects that I have undertaken over the years,
-in collaboration with many wonderful people.
+Collected here are the various projects that I have undertaken over the years, in collaboration with many wonderful people.
 
 {% include projects-list.html %}
-{% include index-dir.html %}

@@ -1,7 +1,7 @@
 ---
 title: Fractals Project
 breadcrumb: Fractals
-description: Description of Fractals
+description:
 redirect_from:
   - /art/
   - /research/web/math-of-art/index.html
@@ -17,10 +17,9 @@ layout: bg-image
 ---
 # {{ page.breadcrumb }}
 
-My M.Sc. thesis,
-[Approximation and Visualization of Sets Defined by Iterated Function Systems]({{"/research/works/1991-03-Hep-Approximation-and-Visualization-of-Sets-Defined-by-Iterated-Function-Systems.html" | relative_url }})
-(from 1991) dealt with linear fractals.
-That got me started and I am still hooked.
+{{ page.description | markdownify }}
+
+My M.Sc. thesis [Approximation and Visualization of Sets Defined by Iterated Function Systems]({{'/research/works/1991-03-Hep-Approximation-and-Visualization-of-Sets-Defined-by-Iterated-Function-Systems.html' | relative_url }}) (from 1991) dealt with linear fractals. That got me started and I am still hooked.
 
 - [Gallery of Images](gallery/)
 - [Fractals Calendars from Universe Publishing](calendars/)
