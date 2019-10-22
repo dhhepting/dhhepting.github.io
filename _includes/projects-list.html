@@ -9,26 +9,49 @@
     {% if sp.url contains page.url and sp.url > page.url %}
       {% assign sp_parts = sp.url | split: '/' %}
         {% if sp_parts.size == target_size %}
-          {% capture projs %}{{ projs }}{{ sp_parts | last }}#{% endcapture %}
+          {% capture projs %}{{ projs }}{{sp.url}}!{{ sp_parts | last }}#{% endcapture %}
         {% endif %}
     {% endif %}
 {% endfor %}
 {% assign sortedprojs = projs | split: '#' | sort %}
 {% assign numprojs = sortedprojs.size | minus: 1 %}
+  <ul class="list-group list-group-flush">
 {% for i in (1..numprojs) %}
-  {% capture sortedprojs[i] %}{{ sortedprojs[i] }}!a!b!c{% endcapture %}
-    ++ {{ sortedprojs[i] }} --
+  {% assign spun = sortedprojs[i] | split: '!' %}
+  {% assign words = spun[1] | replace: "-"," " | split: " " %}
+  {% assign leave = 0 %}
+  {% for word in words %}
+    {% assign leave = 0 %}
+    {% if (word == "bus") %}
+      {% assign words = "The BUS PROJECT" | split: " " %}
+      {% assign leave = 1 %}
+      {% break %}
+    {% endif %}
+    {% if (word == "cogito") %}
+      {% assign leave = 1 %}
+    {% endif %}
+    {% if (word == "cs") %}
+      {% assign words = "CS Education"| split: " " %}
+      {% assign leave = 1 %}
+      {% break %}
+    {% endif %}
+    {% if (word == "ur50cs") %}
+      {% assign words = "UR50CS" | split: " " %}
+      {% assign leave = 1 %}
+    {% endif %}
+    {% if (word == "worth") %}
+      {% assign words = "A Picture's Worth"| split: " " %}
+    {% endif %}
+  {% endfor %}
+  {% if leave == 0 %}
+    {% capture titlecase %}{% for word in words %}{{ word | capitalize }} {% endfor %}{% endcapture %}
+  {% else %}
+    {% capture titlecase %}{% for word in words %}{{ word }} {% endfor %}{% endcapture %}
+  {% endif %}
+      <li class="list-group-item">
+        <a href="{{ spun[0] | relative_url }}">
+          {{ titlecase | strip }}
+        </a>
+      </li>
 {% endfor %}
-{{ sortedprojs }}
-
-<div class="card">
-    <div class="card-header" style="background-color: cyan;">
-        <a href="{{sp[0] | relative_url}}"><h3>{{sortedprojs[1]}}</h3></a>
-    </div>
-    <div class="card-body">
-        {{sortedprojs[2]}}
-    </div>
-</div>
-<span>
-    &nbsp;
-</span>
+    </ul>
