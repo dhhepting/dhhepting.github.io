@@ -1,6 +1,6 @@
 ---
-title: Critique
-breadcrumb: Critique
+title: Critique a Project
+breadcrumb: Critique a Project
 layout: bg-image
 marks: 6
 moddate:
