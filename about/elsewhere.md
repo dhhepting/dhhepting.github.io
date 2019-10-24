@@ -9,6 +9,7 @@ layout: bg-image
 
 - [Academia.edu](https://uregina.academia.edu/DarylHepting){: target="blank" }
 - [Association for Computing Machinery](http://member.acm.org/~dhepting){: target="blank" }
+- [Association for Computing Machinery DL](https://dlnext.acm.org/profile/81100496386)
 - [AMiner](https://aminer.org/profile/53f45b6bdabfaedd74e4095c){: target="blank" }
 - [Collection of CS Bibliographies](http://liinwww.ira.uka.de/csbib?query=%2Bau:HeptingDH){: target="blank" }
 - [csauthors.net](https://www.csauthors.net/daryl-h-hepting/){: target="blank" }
