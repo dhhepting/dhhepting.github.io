@@ -141,6 +141,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
 
       </ul>
     </li>
+    
   </ul>
 </nav>
 
@@ -178,7 +179,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
 <h1 id="cs-428828-in-201930">CS 428+828 in 201930</h1>
 
 <div class="card my-2">
-  <h3 class="card-header text-center">Meetings</h3>
+  <button class="btn d-md-none" type="button" data-toggle="collapse" data-target="#calBody">
+    Meetings<!--<span class="navbar-light"><span class="navbar-toggler-icon"></span></span> -->
+</button>
+<!--
+  <a class="btn btn-primary d-md-none" data-toggle="collapse" href="#calBody" role="button" aria-expanded="false" aria-controls="calBody">
+    <h3 class="card-header text-center">Meetings</h3>
+  </a>-->
+  <!-- <span class="d-inline d-md-none"> -->
+    <div class="collapse d-md-inline" id="calBody"><!-- </span>-->
+<!--  <span class="d-none d-md-inline"> -->
+<!--     <div class="collapse show" id="calBody">-->
+<!--   </span>-->
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-striped table-bordered">
@@ -1614,6 +1626,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
     </div>
   </div>
   <h5 class="card-footer text-center text-muted">Total meetings this semester: 26</h5>
+</div>
 </div>
 
 <div class="card-deck">
@@ -6884,7 +6897,7 @@ $.get('/~hepting/rss/CS-428+828-201930.rss', function (data) {
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2019-10-24 11:30 -0600
+  Site built: 2019-10-29 18:36 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:hepting@cs.uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/201930/">
     Give feedback <span class="d-none d-sm-inline">about page</span>
