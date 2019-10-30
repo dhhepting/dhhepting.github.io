@@ -5,4 +5,4 @@ layout: bg-image
 description:
 ---
 
-{% include offering/main.html %}
+{% include offering/mainB.html %}
