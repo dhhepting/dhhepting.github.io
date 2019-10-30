@@ -1,0 +1,65 @@
+{% include teaching/url.html %}
+{% if site.data.teaching.assignments[joff_id] %}
+<div class="card" id="assign-card">
+  <h3 class="card-header text-center">Assignments</h3>
+  <div class="card-body">
+    <div class="accordion" id="assign-accord">
+    {% for sdta in site.data.teaching.assignments[joff_id] %}
+      <div class="card">
+        <div class="card-header mb-0 btn collapsed accordion-toggle
+        {% assign fla = sdta.aid | slice: 0 %}
+        {% if fla == "P" %}
+          bg-warning text-dark
+        {% else %}
+          bg-success text-white
+        {% endif %}
+        {% if off_now == 0 %}disabled{% endif %}"
+        role="button" id="{{ sdta.aid }}-head"
+        data-toggle="collapse" data-target="#collapse-{{sdta.aid}}"
+        aria-expanded="false"
+        aria-controls="collapse_{{sdta.aid}}">
+        <div class="row text-left">
+          <div class="col-6">
+            {{ sdta.title }}
+          </div>
+          <div class="col-6">
+            Due: {{ sdta.duedate }} @ 23:59
+          </div>
+        </div>
+    <!--  </div> -->
+        {% if off_now == 1 %}
+        <div id="collapse-{{ sdta.aid }}" class="collapse" aria-labelledby="{{ sdta.aid }}-head" data-parent="#assign-accord">
+          <div class="card-body text-left text-dark bg-light">
+            {% for sa in site.assignments %}
+              {% if sa.aid == sdta.aid %}
+                {{ sa.content | markdownify }}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="card-footer">
+            <span>Due Date: {{ sdta.duedate }} @ 23:55</span>
+            <a href="https://urcourses.uregina.ca/mod/forum/discuss.php?d={{sdta.lms_discuss}}"
+            role="button" class="btn btn-primary">
+              Discuss
+            </a>
+            <a href="https://urcourses.uregina.ca/mod/assign/view.php?id={{sdta.lms_submit}}&action=editsubmission"
+            role="button" class="btn btn-primary">
+              Submit
+            </a>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+    </div>
+  {% endif %}
+  </div>
+</div>
+<script>
+const params = new URLSearchParams(location.search)
+let asgn = params.get('asgn')
+document.getElementById('collapse-' + asgn).classList.toggle('show')
+let asgn_elem = document.getElementById('collapse-' + asgn)
+asgn_elem.scrollIntoView()
+</script>
