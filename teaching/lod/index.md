@@ -7,15 +7,19 @@ questions:
   scale: 5
   labels:
   - desc: The instructor is well-prepared for class
-  - desc: bfbfdsgfdgjsdfg
-  - desc: cccgasadfdfdsf
-  - desc: dddsfdafdsfd
-  - desc: eeefadfadsfdsf
-  - desc: fffdsfadfasdfads
-  - desc: gggadsgasgasdgd
-  - desc: hhhasdfhdsfhdssdhf
-  - desc: iiadsifsdifsdiafif
+  - desc: The instructor clearly communicates his expectations for student preparation and participation
+  - desc: The instructor...
+  - desc: The instructor...
+  - desc: The instructor...
+  - desc: The instructor...
+  - desc: The instructor...
+  - desc: The instructor...
+  - desc: The instructor...
 - type: open
+  labels:
+  - desc: What do you like best about this course?
+  - desc: What would you like to change about this course?
+  - desc: What do you think the instructor's greatest strengths are?
 ---
 <form>
   {% for qt in page.questions %}
@@ -47,6 +51,20 @@ questions:
 
     {% else if qt.type contains "open" %}
       <h1>OPEN</h1>
+      {% assign oq = qt.labels.size | minus: 1 %}
+      {% for qo in (0..oq) %}
+
+          <div class="form-group row">
+            <div class="col">
+            <label for="Q{{qo}}TA" class="col-form-label">{{qo | plus: 1 }}. {{ qt.labels[qo].desc }}</label>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col">
+              <textarea class="col-sm-9 form-control" id="open_ans{{qo | plus: 1 }}" rows="5" placeholder=""></textarea>
+            </div>
+          </div>
+      {% endfor %}
   {% endif %}
 {% endfor %}
 </form>
