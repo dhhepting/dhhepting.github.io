@@ -3,9 +3,9 @@
 <div class="card w-100" id="assign-card">
   <h3 class="card-header text-center">Assignments</h3>
   <div class="card-body">
-    <h5 class="card-header text-center">Individual</h5>
-    <div class="card-body">
-      <div class="accordion w-100" id="I-assign-accord">
+      <h5 class="card-header text-center accordion" id="I-assign-accord">Individual</h5>
+    <!-- <div class="card-body">
+      <div class="accordion w-100" id="I-assign-accord"> -->
       {% for sdta in site.data.teaching.assignments[joff_id] %}
         {% assign fla = sdta.aid | slice: 0 %}
         {% if fla == "I" %}
@@ -49,11 +49,11 @@
           </div>
           {% endif %}
         {% endfor %}
-        </div>
-      </div>
-    <h5 class="card-header text-center">Project</h5>
-    <div class="card-body">
-      <div class="accordion" id="P-assign-accord">
+        <!-- </div> -->
+        <!-- </div> -->
+    <h5 class="card-header text-center accordion" id="P-assign-accord">Project</h5>
+    <!-- <div class="card-body"> -->
+      <!-- <div class="card-body accordion" id="P-assign-accord"> -->
       {% for sdta in site.data.teaching.assignments[joff_id] %}
         {% assign fla = sdta.aid | slice: 0 %}
         {% if fla == "P" %}
@@ -97,8 +97,8 @@
         </div>
         {% endif %}
       {% endfor %}
-      </div>
-    </div>
+    <!-- </div> -->
+    <!-- </div> -->
   </div>
 </div>
 {% endif %}
