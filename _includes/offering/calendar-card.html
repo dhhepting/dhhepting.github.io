@@ -48,13 +48,13 @@
   <span class="d-inline d-md-none">
     <span class="btn card-header w-100 text-center" role="button" data-toggle="collapse" data-target="#calBody">
       <h3>
-        Meetings
+        Calendar
       </h3>
     </span>
   </span>
   <span class="d-none d-md-inline">
     <h3 class="card-header text-center">
-      Meetings
+      Calendar
     </h3>
   </span>
   <div class="collapse d-md-inline" id="calBody">
@@ -110,9 +110,9 @@
           {% assign mctrstr = mctr | prepend: '00' | slice: -2, 2 %}
           {% comment %} read the title from the page and change text if Midterm{% endcomment %}
           {% if mtg_dir == 1 %}
-            {% capture tabdat %}<a href="meetings/{{mctrstr}}-{{mdby}}.html">{{mctrstr}}<span class="d-none d-md-inline"> : {{odate}}</span></a>{% endcapture %}
+            {% capture tabdat %}<a href="meetings/{{mctrstr}}-{{mdby}}.html">{{odate}}<span class="d-none d-md-inline"> : {{mctrstr}}</span></a>{% endcapture %}
           {% else %}
-            {% capture tabdat %}{{mctrstr}}<span class="d-none d-md-inline"> : {{odate}}</span>{% endcapture %}
+            {% capture tabdat %}{{mctrstr}}<span class="d-none d-md-inline"> : {{mctrstr}}</span>{% endcapture %}
           {% endif %}
         {% else %}
           {% assign nxtday = day | plus: odd %}

@@ -3,6 +3,7 @@
   <h3 class="card-header text-center">Media</h3>
   <div class="card-body">
   {% assign ctr = 0 | plus: 0 %}
+  {% assign mctr = 0 | plus: 0 %}
   {% for m in site.data.teaching.meetings[joff_id] %}
     {% assign hasMedia = "" %}
     {% for r in site.data.teaching.media[joff_id] %}
@@ -18,7 +19,11 @@
       <div class="card-deck">
       {% endif %}
 
-      {% include meetings/media.html mtg_media=joff_id mtg=m.meeting mtg_title=mdate %}
+      {% assign odate = mdate | date: "%d %b" %}
+      {% assign mctr = mctr | plus: 1 %}
+      {% assign mctrstr = m.meeting | prepend: '00' | slice: -2, 2 %}
+      {% capture mtgt %}{{ odate }} : {{ mctrstr }}{% endcapture %}
+      {% include meetings/media.html mtg_media=joff_id mtg=m.meeting mtg_title=mtgt %}
 
       {% if ctr == 2 %}
       </div>
