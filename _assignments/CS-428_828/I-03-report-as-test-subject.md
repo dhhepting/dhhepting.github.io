@@ -1,18 +1,18 @@
 ---
-title: HCC Assignment -- Report as Test Subject
+title: Report as Test Subject
 breadcrumb: Report as Test Subject
 layout: bg-image
 marks: 6
-nid: RTS
+aid: I_RATS
 rubric:
 - crit: Observations from Both Experiences
-  wt: 3.75
+  wt: 2.75
   l3: Thoughtful and thorough
   l2: Reasonably thorough
   l1: Somewhat complete
   l0: Substantially incomplete
 - crit: Comments and Constructive Criticisms
-  wt: 1.75
+  wt: 2.75
   l3: Thoughtful and thorough
   l2: Reasonably thorough
   l1: Somewhat complete
@@ -24,10 +24,6 @@ rubric:
   l1: Some errors, audience may have some trouble reading your work
   l0: Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow
 ---
-# {{ page.breadcrumb }}
-
-### Description
-
 This is an INDIVIDUAL assignment.
 
 You have been placed into an "Eval" group.
@@ -40,8 +36,6 @@ You are to coordinate, as has been discussed in class meetings, with the other m
 
 ### Submission
 
-* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
+* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document
 
-### Grading
-
-{% include marker.html %}
+{% include grading/main.html %}
