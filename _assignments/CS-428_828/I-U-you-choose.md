@@ -1,29 +1,30 @@
 ---
 layout: bg-image
-title: You Choose Assignment
-breadcrumb: You Choose
-aid: IU_CHOICE
+title: You Choose (Undergrad)
+breadcrumb: You Choose (Undergrad)
+aid: I_YCU
 marks: 12
 rubric:
 - crit: Topic
-  wt: 3
+  wt: 2
   l3: Topic actively engages an important issue related to class
   l2: Topic engages an important issue related to class
   l1: Topic somewhat engages an important issue related to class
   l0: Topic does not engage an important issue related to class
 - crit: Content
   wt: 6
+  l3: Deliverable is used appropriately and imaginatively. Realization of approach is clear and well-formed
+  l2: Deliverable is used appropriately. Realization of approach is reasonable
+  l1: Deliverable is used somewhat appropriately. Realization of approach is mostly unclear and not well-formed
+  l0: Deliverable is not used appropriately. Realization of approach is not clear
 - crit: Presentation
-  wt: 3
+  wt: 4
 ---
 {% comment %}
 Topic (3)			Topic somewhat engages an important issue related to class.	Topic does not engage an important issue related to class.
 Deliverable and Realization (3.5)	Deliverable is used appropriately and imaginatively. Realization of approach is clear and well-formed	Deliverable is used appropriately. Realization of approach is reasonable	Deliverable is used somewhat appropriately. Realization of approach is mostly unclear and not well-formed	Deliverable is not used appropriately. Realization of approach is not clear
 Completed Plan (3.5)	Ambitious and thorough	Reasonably thorough	Somewhat thorough	Not thorough
 {% endcomment %}
-# {{ page.breadcrumb }}
-
-### Description
 
 This is an INDIVIDUAL assignment for undergraduates.
 
@@ -48,4 +49,4 @@ Your submission should include between 2 and 4 external references (
 
 * submit a [pdf](https://en.wikipedia.org/wiki/PDF) document
 
-{% include marker.html %}
+{% include grading/main.html %}
