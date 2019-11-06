@@ -26,9 +26,9 @@
           <div class="card-header w-100 btn collapsed accordion-toggle
           {% if off_now == 0 %}disabled{% endif %}" role="button"
           id="{{ sdta.aid }}-I-head" data-toggle="collapse"
-          data-target="#collapse-I-{{sdta.aid}}"
+          data-target="#collapse-{{sdta.aid}}"
           aria-expanded="false"
-          aria-controls="collapse-I-{{sdta.aid}}">
+          aria-controls="collapse-{{sdta.aid}}">
             <div class="row w-100">
               <div class="col-6 text-left">
                 {{ sdta.title }}
@@ -38,7 +38,7 @@
               </div>
             </div>
             {% if off_now == 1 %}
-            <div id="collapse-I-{{ sdta.aid }}" class="collapse" aria-labelledby="{{ sdta.aid }}-I-head" data-parent="#I-assign-accord">
+            <div id="collapse-{{ sdta.aid }}" class="collapse" aria-labelledby="{{ sdta.aid }}-I-head" data-parent="#I-assign-accord">
               <div class="card-body text-left text-dark bg-light">
                 {% for sa in site.assignments %}
                   {% if sa.aid == sdta.aid %}
@@ -74,9 +74,9 @@
         <div class="card-header w-100 btn collapsed accordion-toggle
         {% if off_now == 0 %}disabled{% endif %}" role="button"
         id="{{ sdta.aid }}-P-head" data-toggle="collapse"
-        data-target="#collapse-P-{{sdta.aid}}"
+        data-target="#collapse-{{sdta.aid}}"
         aria-expanded="false"
-        aria-controls="collapse-P-{{sdta.aid}}">
+        aria-controls="collapse-{{sdta.aid}}">
           <div class="row w-100">
             <div class="col-6 text-left">
               {{ sdta.title }}
@@ -86,7 +86,7 @@
             </div>
           </div>
           {% if off_now == 1 %}
-          <div id="collapse-P-{{ sdta.aid }}" class="collapse" aria-labelledby="{{ sdta.aid }}-P-head" data-parent="#P-assign-accord">
+          <div id="collapse-{{ sdta.aid }}" class="collapse" aria-labelledby="{{ sdta.aid }}-P-head" data-parent="#P-assign-accord">
             <div class="card-body text-left text-dark bg-light">
               {% for sa in site.assignments %}
                 {% if sa.aid == sdta.aid %}
@@ -115,13 +115,16 @@
     <!-- </div> -->
   </div>
 </div>
-<!--</div>
+<!--</div>/* asgn_elem.scrollIntoView() */
 </div>-->
 {% endif %}
+<!-- -->
 <script>
 const params = new URLSearchParams(location.search)
 let asgn = params.get('asgn')
-document.getElementById('collapse-' + asgn).classList.toggle('show')
-let asgn_elem = document.getElementById('collapse-' + asgn)
-asgn_elem.scrollIntoView()
+if (asgn !== null) {
+  document.getElementById('collapse-' + asgn).classList.toggle('show')
+  let asgn_elem = document.getElementById('collapse-' + asgn)
+}
 </script>
+<!-- -->
