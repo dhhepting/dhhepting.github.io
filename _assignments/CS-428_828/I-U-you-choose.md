@@ -26,7 +26,7 @@ Deliverable and Realization (3.5)	Deliverable is used appropriately and imaginat
 Completed Plan (3.5)	Ambitious and thorough	Reasonably thorough	Somewhat thorough	Not thorough
 {% endcomment %}
 
-This is an INDIVIDUAL assignment for undergraduates.
+This is an INDIVIDUAL assignment for undergraduate students.
 
 Consider the class themes that we have discussed and will consider.
 Please see the page of
