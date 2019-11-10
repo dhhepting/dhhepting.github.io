@@ -5,18 +5,6 @@ breadcrumb: Research Paper Review (Grad)
 aid: I_RPRG
 marks: 12
 rubric:
-- crit: Observations from Both Experiences
-  wt: 2.75
-  l3: Thoughtful and thorough
-  l2: Reasonably thorough
-  l1: Somewhat complete
-  l0: Substantially incomplete
-- crit: Comments and Constructive Criticisms
-  wt: 2.75
-  l3: Thoughtful and thorough
-  l2: Reasonably thorough
-  l1: Somewhat complete
-  l0: Substantially incomplete
 - crit: What is the purpose of the work?
   wt: 2.0
   l3: Thoughtful and thorough
@@ -48,6 +36,7 @@ rubric:
   l1: Somewhat complete
   l0: Substantially incomplete
 - crit: Why did you choose this paper?
+  wt: 1.0
   l3: Thoughtful and thorough
   l2: Reasonably thorough
   l1: Somewhat complete
@@ -59,6 +48,8 @@ rubric:
   l1: Some errors, audience may have some trouble reading your work
   l0: Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow
 ---
+This is an INDIVIDUAL assignment for undergraduate students.
+
 Choose a recent (within the last 3 years) conference paper (with at least 8 pages)
 that is new to you, from [ACM SIGCHI conferences](http://dl.acm.org/event.cfm?id=RE151)
 (including [CHIPLAY](http://dl.acm.org/citation.cfm?id=2793107)).
