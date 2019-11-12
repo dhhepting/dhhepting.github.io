@@ -2,6 +2,7 @@
 layout: bg-image
 title: Project Presentation
 breadcrumb: Project Presentation
+aid: P_VID
 marks: 3
 rubric:
 - crit: Identify Project and Opportunity for Redesign
@@ -33,8 +34,7 @@ rubric:
 
 ### Description
 
-Create a 5-10 minute video to present your project,
-[as discussed in class meeting 30](https://dl.dropboxusercontent.com/s/pjwkcy1tbetctxl/30%20-%201.jpg?dl=0)
+Create a 5-10 minute video to present your project.
 
 * Identify your project and your opportunity for redesign
 * Discuss your 2 low-fidelity designs (and metaphors)

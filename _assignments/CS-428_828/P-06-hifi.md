@@ -26,11 +26,9 @@ Recall the diagram that [illustrated the article about Design Thinking](https://
 Based on your experience with your project and your testing of your low-fidelity prototypes, create a single high-fidelity design of your interface that combines the best features from your two low-fidelity prototypes.  This high-fidelity prototype should
 be somehow (using your choice of tool) executable on a computer and create an interactive simulation of your interface to perform only your task (and NOT all functionality). You are not writing code for the application per se, rather you are simulating the operation of the software or website for which you are redesigning the interface.
 
-There are 2 parts to this assignment, as [discussed in class meeting 31](https://dl.dropboxusercontent.com/s/tqs9ysy2l5bi4hf/31%20-%201.jpg?dl=0):
+There are 2 parts to this assignment:
 * present the choices you made, along with your rationale, in deciding on the interface you designed following your low-fidelity prototypes A and B.
 * provide the means for the instructor and marker to view and interact with your high-fidelity prototype, or a demonstration of your simulation with a video as a fallback. Include directions for viewing your work in the document that describes your design choices.
-
-* [Discussion about this assignment](https://urcourses.uregina.ca/mod/forum/discuss.php?d=483497)
 
 --
 
