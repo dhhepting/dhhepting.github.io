@@ -83,3 +83,24 @@ layout: bg-image
     </div>
   </div>
 </div>
+
+<script>
+$(document).ready(function(){
+  const params = new URLSearchParams(location.search)
+  let asgn = params.get('asgn')
+  if (asgn != null)
+  {
+    let asgns = asgn.toString()
+    if (asgns.startsWith('I'))
+    {
+      $('#'+asgns+'-tab').tab('show')
+      $('#Iasgn').collapse('show')
+    }
+    else if (asgns.startsWith('P'))
+    {
+      $('#'+asgns+'-tab').tab('show')
+      $('#Pasgn').collapse('show')
+    }
+  }
+})
+</script>
