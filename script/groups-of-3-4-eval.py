@@ -34,7 +34,8 @@ for l in og:
         nk = (nk + 1 + int(grp/3) + randrange(3)) % (grp + 1)
         if (nk == 0):
             nk = 1
-        fg = '(' + l[0] + ')'
+        # fg = '(' + l[0] + ')'
+        fg = '(' + l[m] + ')'
         for q in range(grp):
             if (len(ng[nk]) < 3 and fg not in ng[nk]):
                 ng[nk].append(fg)
