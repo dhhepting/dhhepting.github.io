@@ -3,6 +3,7 @@ layout: bg-image
 title: Project Evaluate Low Fidelity Protoptypes
 breadcrumb: Project Evaluate Low Fidelity Protoptypes
 marks: 6
+aid: P_LOFI
 rubric:
 - crit: Script
   wt: 1.0
