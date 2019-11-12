@@ -340,75 +340,78 @@ style="background-color: rgba(32, 32, 32, 0.75)">
 </div>
 
 <script>
-let cu = new URL(document.location)
-const params = new URLSearchParams(location.search)
-let typ = params.get("type")
-let asgn = params.get("asgn")
-// get current semester
-let today = new Date();
-let sem = 0;
-if (typ || asgn) {
-  switch (today.getMonth())
-  {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-      sem = 10;
-      break;
-    case 4:
-    case 5:
-    case 6:
-    case 7:
-      sem = 20;
-      break;
-    case 8:
-    case 9:
-    case 10:
-    case 11:
-      sem = 30;
+$(document).ready(function(){
+  let cu = new URL(document.location)
+  const params = new URLSearchParams(location.search)
+  let typ = params.get("type")
+  let asgn = params.get("asgn")
+  // get current semester
+  let today = new Date();
+  let sem = 0;
+  if (typ || asgn) {
+    switch (today.getMonth())
+    {
+      case 0:
+      case 1:
+      case 2:
+      case 3:
+        sem = 10;
+        break;
+      case 4:
+      case 5:
+      case 6:
+      case 7:
+        sem = 20;
+        break;
+      case 8:
+      case 9:
+      case 10:
+      case 11:
+        sem = 30;
+    }
+    const semid = today.getFullYear().toString() + sem.toString();
+    const crs = String(cu.pathname).split('/')[2]
+    // test that there is an offering in current semester
+    // let cu_str = cu.origin + cu.pathname
+    let cu_str = 'Zero!'
+    if (typ == 'current') {
+      cu_str = cu.origin + cu.pathname + semid + '/'
+      console.log('current: ' + cu_str)
+    }
+    else if (typ == 'meetings') {
+      cu_str = cu.origin + cu.pathname + semid + '/meetings/'
+    }
+    else if (typ == 'media') {
+      cu_str = cu.origin + cu.pathname + semid + '/media/'
+    }
+    else if (typ == 'textbook') {
+      cu_str = cu.origin + cu.pathname + semid + '/textbook.html'
+    }
+    else if (typ == 'tlo') {
+      cu_str = cu.origin + cu.pathname + semid + '/tlo.html'
+    }
+    else if (asgn) {
+      cu_str = cu.origin + cu.pathname + semid + '/assignments.html?asgn=' + asgn
+      console.log(cu_str)
+    }
+    else {
+      cu_str = 'Nothing!'
+    }
+    $.get(cu_str).done(
+    function () {
+      window.location.replace(cu_str)
+    }).fail(function () {
+      console.log(cu.pathname)
+      window.alert(crs + ' not offered in ' + semid)
+    })
   }
-  const semid = today.getFullYear().toString() + sem.toString();
-  const crs = String(cu.pathname).split('/')[2]
-  // test that there is an offering in current semester
-  // let cu_str = cu.origin + cu.pathname
-  let cu_str = 'Zero!'
-  if (typ == 'current') {
-    cu_str = cu.origin + cu.pathname + semid + '/'
-    console.log('current: ' + cu_str)
-  }
-  else if (typ == 'meetings') {
-    cu_str = cu.origin + cu.pathname + semid + '/meetings/'
-  }
-  else if (typ == 'media') {
-    cu_str = cu.origin + cu.pathname + semid + '/media/'
-  }
-  else if (typ == 'textbook') {
-    cu_str = cu.origin + cu.pathname + semid + '/textbook.html'
-  }
-  else if (typ == 'tlo') {
-    cu_str = cu.origin + cu.pathname + semid + '/tlo.html'
-  }
-  else if (asgn) {
-    cu_str = cu.origin + cu.pathname + semid + '/assignments.html/' + '?asgn=' + asgn
-  }
-  else {
-    cu_str = 'Nothing!'
-  }
-  $.get(cu_str).done(
-  function () {
-    window.location.replace(cu_str)
-  }).fail(function () {
-    console.log(cu.pathname)
-    window.alert(crs + ' not offered in ' + semid)
-  })
-}
+})
 </script>
 
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2019-11-12 15:06 -0600
+  Site built: 2019-11-12 16:01 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:hepting@cs.uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/">
     Give feedback <span class="d-none d-sm-inline">about page</span>

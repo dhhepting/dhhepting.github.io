@@ -5,53 +5,31 @@ breadcrumb: Project Evaluate Low Fidelity Protoptypes
 marks: 6
 aid: P_LOFI
 rubric:
-- crit: Script
-  wt: 1.0
+- crit: Script and Materials
+  wt: 2.0
   l3:
   l2:
   l1:
   l0:
-- crit: Low Fidelity Prototypes (A and B)
-  wt: 1.0
-  l3:
-  l2:
-  l1:
-  l0:
-- crit: Data Collection Summary
-  wt: 0.5
-  l3:
-  l2:
-  l1:
-  l0:
-- crit: Qualitative Data and Notes from Testers
+- crit: Qualitative Data and Notes from Test Sessions
   wt: 1.5
   l3:
   l2:
   l1:
   l0:
 - crit: Quantitative Data
-  wt: 1
+  wt: 1.5
   l3:
   l2:
   l1:
   l0:
-- crit: Analysis of Data
-  wt: 0.5
-  l3:
-  l2:
-  l1:
-  l0:
-- crit: Reflection on Data and Process
-  wt: 0.5
+- crit: Analysis and Summary of Data
+  wt: 1.0
   l3:
   l2:
   l1:
   l0:
 ---
-# {{ page.breadcrumb }}
-
-### Description
-
 Based on your designs, test!
 
 Recall the diagram that [illustrated the article about Design Thinking](https://www.nngroup.com/articles/design-thinking/) from the Nielsen Norman Group. We are now moving to the materialize phase.
@@ -59,11 +37,25 @@ Recall the diagram that [illustrated the article about Design Thinking](https://
 The focus now shifts to testing your low-fidelity prototypes.
 Each member of your group will conduct 1 test with each of your
 group's 2 low-fidelity interface prototypes).  The tests will be
-arranged from within your evaluation (Eval) groups.
+arranged from within your evaluation (Eval) groups. Each Eval group has 3 members. For illustrative purposes, consider a group with Bob, Fanhua, and Premla. I suggest that you each arrange 2 meetings:
 
-IMPORTANT: If you find that your evaluation group includes someone from your project group, please let me know so that I can adjust the evaluation groups.
+* Bob and Fanhua arrange to meet:
+  * Bob tests his group's Interface A with Fanhua
+  * Fanhua tests his group's Interface B with Bob
 
-In your tests, you are asking someone to take on a role as your user and then complete the task for which you are redesigning the interface.  Explain the task and ask your participant to perform the task, without giving instructions about how to do it.  This information will be recorded in a script, that all group members will use to run their tests.  Writing, and testing, the script is a group effort. Once you start testing with your participants, do not make any changes to your script.  You may note, in your reflection about the process, things that you might change if you do this again.
+* Bob and Premla arrange to meet:
+  * Bob tests his group's Interface B with Premla
+  * Premla tests her group's Interface A with Bob
+
+* Fanhua and Premla arrange to meet:
+  * Fanhua tests his group's Interface A with Premla
+  * Premla tests her group's Interface B with Fanhua
+
+IMPORTANT: Your Eval group should not have any other members from your Project group
+
+In your tests, you are asking someone to take on a role as your user and then complete the task for which you are redesigning the interface.  Explain the task and ask your participant to perform the task, without giving instructions about how to do it.  This information will be recorded in a script, that all group members will use to run their tests.  Writing, and testing, the script is a group effort. Once you start testing with your participants, do not make any changes to your script.
+
+You may find the [downloads related to the ZipCar website test useful](http://sensible.com/downloads-rsme.html)
 
 During your tests, you will collect both quantitative and qualitative data.  You may also have notes that you take during the test.
 
@@ -79,4 +71,4 @@ any way?
 
 ### Grading
 
-{% include marker.html %}
+{% include grading/main.html %}
