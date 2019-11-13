@@ -2,7 +2,7 @@
 title: Empathize
 breadcrumb: Empathize
 layout: bg-image
-moddate: 02-Oct-2019
+moddate: 13-Nov-2019
 marks: 6
 aid: I_EMP
 rubric:
@@ -25,9 +25,7 @@ rubric:
   l1: Lacks detail
   l0: Opportunities not identified
 ---
-{% comment %}# {{ page.breadcrumb }}{% endcomment %}
-
-### Description
+### {{ page.breadcrumb }}
 
 This is an INDIVIDUAL assignment.
 
