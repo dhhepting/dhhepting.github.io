@@ -1,7 +1,9 @@
 ---
 layout: bg-image
 title: Project High Fidelity Prototype
-breadcrumb: Project High Fidelity Prototype
+breadcrumb: High Fidelity Finish
+moddate: 13-Nov-2019
+aid: P_HIFI
 marks: 6
 rubric:
 - crit: Explanation of and rationale for design choices made in the single hi-fi prototype
@@ -17,9 +19,7 @@ rubric:
   l1:
   l0:
 ---
-# {{ page.breadcrumb }}
-
-### Description
+### {{ page.breadcrumb }}
 
 Recall the diagram that [illustrated the article about Design Thinking](https://www.nngroup.com/articles/design-thinking/) from the Nielsen Norman Group. We are in the materialize phase.
 
@@ -30,12 +30,8 @@ There are 2 parts to this assignment:
 * present the choices you made, along with your rationale, in deciding on the interface you designed following your low-fidelity prototypes A and B.
 * provide the means for the instructor and marker to view and interact with your high-fidelity prototype, or a demonstration of your simulation with a video as a fallback. Include directions for viewing your work in the document that describes your design choices.
 
---
-
 ### Submission
 
-* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document (1 per group) on [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084), that deals with both parts of the assignment.
+* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document (1 per group) on URcourses that deals with both parts of the assignment
 
-### Grading
-
-{% include marker.html %}
+{% include grading/main.html %}

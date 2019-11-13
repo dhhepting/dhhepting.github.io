@@ -2,8 +2,9 @@
 layout: bg-image
 title: Research Paper Review (Grad)
 breadcrumb: Research Paper Review (Grad)
-aid: I_RPRG
+aid: I_G_RPR
 marks: 12
+moddate: 13-Nov-2019
 rubric:
 - crit: What is the purpose of the work?
   wt: 2.0
@@ -48,7 +49,9 @@ rubric:
   l1: Some errors, audience may have some trouble reading your work
   l0: Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow
 ---
-This is an INDIVIDUAL assignment for undergraduate students.
+### {{ page.breadcrumb }}
+
+This is an INDIVIDUAL assignment for graduate students.
 
 Choose a recent (within the last 3 years) conference paper (with at least 8 pages)
 that is new to you, from [ACM SIGCHI conferences](http://dl.acm.org/event.cfm?id=RE151)

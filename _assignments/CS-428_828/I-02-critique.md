@@ -3,7 +3,7 @@ title: Critique a Project
 breadcrumb: Critique a Project
 layout: bg-image
 marks: 6
-moddate:
+moddate: 13-Nov-2019
 aid: I_CU
 rubric:
 - crit: Review
@@ -25,7 +25,7 @@ rubric:
   l1: Some errors, audience may have some trouble reading your work
   l0: Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow
 ---
-### Description
+### {{ page.breadcrumb }}
 
 This is an INDIVIDUAL assignment.
 
