@@ -2,6 +2,7 @@
 layout: bg-image
 title: Project Design
 breadcrumb: Project Design
+moddate: 13-Nov-2019
 marks: 6
 aid: P_DES
 rubric:
@@ -42,6 +43,8 @@ rubric:
   l1: mostly complete
   l0: incomplete
 ---
+### {{ page.breadcrumb }}
+
 Based on your understanding, design!
 
 Recall the diagram that [illustrated the article about Design Thinking](https://www.nngroup.com/articles/design-thinking/) from the Nielsen Norman Group. We are now moving to the explore phase.

@@ -8,3 +8,16 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous">
 </script> -->
+
+
+{%comment%}
+countdown(fiveSeconds, {elapse: true})
+.on('update.countdown', function(event) {
+var $this = $(this);
+if (event.elapsed) {
+  $this.html(event.strftime('Past due: <span>%D d %H h %M m</span>'));
+} else {
+
+}
+});
+{% endcomment %}

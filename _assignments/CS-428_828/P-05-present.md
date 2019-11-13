@@ -2,6 +2,7 @@
 layout: bg-image
 title: Project Presentation
 breadcrumb: Project Presentation
+moddate: 13-Nov-2019
 aid: P_VID
 marks: 3
 rubric:
@@ -30,9 +31,7 @@ rubric:
   l1:
   l0:
 ---
-# {{ page.breadcrumb }}
-
-### Description
+### {{ page.breadcrumb }}
 
 Create a 5-10 minute video to present your project.
 
@@ -47,8 +46,6 @@ You may choose the privacy setting for your youtube video [(public, unlisted, an
 
 ### Submission
 
-* submit a link to your video on youtube (1 per group) using [URcourses](https://urcourses.uregina.ca/course/view.php?id=2084)
+* submit a link to your video on youtube (1 per group) using URcourses
 
-### Grading
-
-{% include marker.html %}
+{% include grading/main.html %}

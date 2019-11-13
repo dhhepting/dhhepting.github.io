@@ -4,7 +4,7 @@ breadcrumb: Project Proposal
 layout: bg-image
 marks: 3
 aid: P_PROP
-moddate: 25-Sep-2019
+moddate: 13-Nov-2019
 rubric:
 - crit: Background and Motivation
   wt: 0.5
@@ -38,7 +38,7 @@ rubric:
   l0: Consistently uses incorrect grammar, spelling, and syntax that makes it difficult for others to follow
 ---
 
-### Description
+### {{ page.breadcrumb }}
 
 Choose an existing and active software application or website where
 you can identify opportunities for improvement and redesign.

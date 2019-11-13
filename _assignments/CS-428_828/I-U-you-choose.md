@@ -2,7 +2,8 @@
 layout: bg-image
 title: You Choose (Undergrad)
 breadcrumb: You Choose (Undergrad)
-aid: I_YCU
+aid: I_U_YC
+moddate: 13-Nov-2019
 marks: 12
 rubric:
 - crit: Topic
@@ -20,6 +21,8 @@ rubric:
 - crit: Presentation
   wt: 4
 ---
+### {{ page.breadcrumb }}
+
 {% comment %}
 Topic (3)			Topic somewhat engages an important issue related to class.	Topic does not engage an important issue related to class.
 Deliverable and Realization (3.5)	Deliverable is used appropriately and imaginatively. Realization of approach is clear and well-formed	Deliverable is used appropriately. Realization of approach is reasonable	Deliverable is used somewhat appropriately. Realization of approach is mostly unclear and not well-formed	Deliverable is not used appropriately. Realization of approach is not clear
