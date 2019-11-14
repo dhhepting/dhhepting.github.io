@@ -3,7 +3,7 @@ breadcrumb: LOD Entry
 title: LOD Entry
 layout: bg-image
 questions:
-- type: likert
+- type: "<http://localhost:4000/likert.rdf>"
   scale: 5
   labels:
   - desc: The instructor is well-prepared for class
@@ -21,8 +21,19 @@ questions:
   - desc: What would you like to change about this course?
   - desc: What do you think the instructor's greatest strengths are?
 ---
+{% comment %}
+dataentry: Student Feedback Form
+items:
+  sequence
+  group:
+    type: likert
+    scale
+{% endcomment %}
 <form>
+  <input id="respno" type="number" />
+    Response number
   {% for qt in page.questions %}
+    {{ qt.type }}
     {% if qt.type contains "likert" %}
       <h1>LIKERT</h1>
       {% assign lq = qt.labels.size | minus: 1 %}
