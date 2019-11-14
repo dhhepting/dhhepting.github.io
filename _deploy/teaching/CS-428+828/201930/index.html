@@ -2016,7 +2016,7 @@ if (asgn !== null) {
 <div class="card-deck">
   <div class="card my-2" id="syll-card">
   <h3 class="card-header text-center">Information</h3>
-  <div class="card-body h-50 scrollable">
+  <div class="card-body">
     
     
     
@@ -3011,25 +3011,23 @@ if (asgn !== null) {
         </a>
       </li>
       
+      <li class="list-group-item">
+        <a href="http://www.id-book.com/">
+          Textbook
+        </a>
+      </li>
       
       <li class="list-group-item">
         <a href="/~hepting/teaching/schedule/201930.html">
-          Semester Schedule (including Office Hours)
+          Office Hours
         </a>
       </li>
+      
       <li class="list-group-item">
         <a href="https://urcourses.uregina.ca/course/view.php?id=2084" target="_blank">
-          CS-428+828 Homepage on URcourses
+          CS 428+828 on URcourses
         </a>
       </li>
-      
-      
-      <li class="list-group-item">
-        <a href="/~hepting/teaching/CS-428+828/201930/feedback/">
-          Feedback
-        </a>
-      </li>
-      
       
       <li class="list-group-item">
         <a href="/~hepting/teaching/CS-428+828/201930/exams.html">
@@ -3039,71 +3037,15 @@ if (asgn !== null) {
       
       
       <li class="list-group-item">
-        <a href="/~hepting/rss/CS-428+828-201930.rss">
-          RSS feed for CS-428+828-201930
+        <a href="/~hepting/teaching/CS-428+828/201930/feedback/">
+          Feedback from Students
         </a>
       </li>
+      
       
     </ul>
   </div>
 </div>
-
-  
-    <div class="card my-2">
-  <h3 class="card-header text-center">Updates</h3>
-  <div id="update-div" class="card-body h-50 scrollable">
-    <ul class="list-group list-group-flush">
-    </ul>
-  </div>
-</div>
-
-
-<script>
-/* global $ */
-$.get('/~hepting/rss/CS-428+828-201930.rss', function (data) {
-  var $XML = $(data)
-  $XML.find('item').each(function () {
-    var $this = $(this),
-        item = {
-        title:       $this.find('title').text(),
-        link:        $this.find('link').text(),
-        description: $this.find('description').text(),
-        pubDate:     $this.find('pubDate').text(),
-        author:      $this.find('author').text()
-        }
-
-    /* console.log(item.title) */
-    if (item.link) {
-      var linktext = item.title.split('/').pop()
-      if (linktext !== 'index.html' && linktext !== 'assignments.html') {
-        $('#update-div ul').append(
-          $('<li>').append(
-            $('<a>').attr('href', item.link).append(
-              linktext
-            )).addClass('list-group-item'))
-      }
-    } else {
-      var redirecttext = 'Nowhere'
-      var redirectlink = '#'
-      if (item.title.startsWith('assignments')) {
-        redirecttext = 'Assignments'
-        redirectlink = '#assign-card'
-      }
-      if (item.title.startsWith('media')) {
-        redirecttext = 'Media'
-        redirectlink = '#media-card'
-      }
-      if (redirecttext !== 'Nowhere') {
-        $('#update-div ul').append(
-          $('<li>').append(
-            $('<a>').attr('href', redirectlink).append(
-              redirecttext
-            )).addClass('list-group-item'))
-      }
-    }
-  })
-})
-</script>
 
   
   <div class="card my-2">
@@ -7274,7 +7216,7 @@ $.get('/~hepting/rss/CS-428+828-201930.rss', function (data) {
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2019-11-13 17:29 -0600
+  Site built: 2019-11-13 19:51 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:hepting@cs.uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/201930/">
     Give feedback <span class="d-none d-sm-inline">about page</span>
