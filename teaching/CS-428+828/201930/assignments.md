@@ -42,6 +42,7 @@ layout: bg-image
     </button>
 
     <script>
+    $(document).ready(function(){
       var duedate_{{ sdta.aid }} = '{{ sdta.duedate }}'
       var duetime_{{ sdta.aid }} =
         new Date(duedate_{{ sdta.aid }}).getTime() + 86340000
@@ -49,6 +50,7 @@ layout: bg-image
         function(event) {
           $(this).html(event.strftime('Due in: <span>%D d %H h %M m</span>'))
         })
+    })
     </script>
 
     <div class="collapse navbar-collapse"
@@ -123,6 +125,7 @@ layout: bg-image
     </button>
 
     <script>
+      $(document).ready(function(){
       var duedate_{{ sdta.aid }} = '{{ sdta.duedate }}'
       var duetime_{{ sdta.aid }} =
         new Date(duedate_{{ sdta.aid }}).getTime() + 86340000
@@ -130,6 +133,7 @@ layout: bg-image
         function(event) {
           $(this).html(event.strftime('Due in: <span>%D d %H h %M m</span>'))
         })
+      })
     </script>
 
     <div class="collapse navbar-collapse"
