@@ -690,10 +690,12 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       if (crits[i].value >= 0 && crits[i].value <= 10)
       {
         var cw = weights[i+1];
-        var cv = (crits[i].value / 10.0) * cw;
-        sumgrade += cv;
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(cv,sumgrade)
+
         commentspan.textContent = commentspan.textContent +
-          "\t (" + cv + "/" + cw + ") " +
+          "\t ( " + cv.toPrecision(2) + " / " + cw + " ) " +
           crits[i].options[crits[i].selectedIndex].text + "\n";
       }
       else
@@ -705,7 +707,8 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 10) / 10;
     var pg = Math.round(mult * sumgrade * 10) / 10;
-    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toPrecision(2) +"\n";
     // output penalty information
     if (mult < 1.0)
     {
@@ -713,7 +716,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
-        "After Penalty: " + pg + "\n";
+        "After Penalty: " + pg.toPrecision(2) + "\n";
     }
   }
 
@@ -1080,10 +1083,12 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       if (crits[i].value >= 0 && crits[i].value <= 10)
       {
         var cw = weights[i+1];
-        var cv = (crits[i].value / 10.0) * cw;
-        sumgrade += cv;
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(cv,sumgrade)
+
         commentspan.textContent = commentspan.textContent +
-          "\t (" + cv + "/" + cw + ") " +
+          "\t ( " + cv.toPrecision(2) + " / " + cw + " ) " +
           crits[i].options[crits[i].selectedIndex].text + "\n";
       }
       else
@@ -1095,7 +1100,8 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 10) / 10;
     var pg = Math.round(mult * sumgrade * 10) / 10;
-    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toPrecision(2) +"\n";
     // output penalty information
     if (mult < 1.0)
     {
@@ -1103,7 +1109,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
-        "After Penalty: " + pg + "\n";
+        "After Penalty: " + pg.toPrecision(2) + "\n";
     }
   }
 
@@ -1478,10 +1484,12 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       if (crits[i].value >= 0 && crits[i].value <= 10)
       {
         var cw = weights[i+1];
-        var cv = (crits[i].value / 10.0) * cw;
-        sumgrade += cv;
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(cv,sumgrade)
+
         commentspan.textContent = commentspan.textContent +
-          "\t (" + cv + "/" + cw + ") " +
+          "\t ( " + cv.toPrecision(2) + " / " + cw + " ) " +
           crits[i].options[crits[i].selectedIndex].text + "\n";
       }
       else
@@ -1493,7 +1501,8 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 10) / 10;
     var pg = Math.round(mult * sumgrade * 10) / 10;
-    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toPrecision(2) +"\n";
     // output penalty information
     if (mult < 1.0)
     {
@@ -1501,7 +1510,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
-        "After Penalty: " + pg + "\n";
+        "After Penalty: " + pg.toPrecision(2) + "\n";
     }
   }
 
@@ -1881,10 +1890,12 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       if (crits[i].value >= 0 && crits[i].value <= 10)
       {
         var cw = weights[i+1];
-        var cv = (crits[i].value / 10.0) * cw;
-        sumgrade += cv;
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(cv,sumgrade)
+
         commentspan.textContent = commentspan.textContent +
-          "\t (" + cv + "/" + cw + ") " +
+          "\t ( " + cv.toPrecision(2) + " / " + cw + " ) " +
           crits[i].options[crits[i].selectedIndex].text + "\n";
       }
       else
@@ -1896,7 +1907,8 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 10) / 10;
     var pg = Math.round(mult * sumgrade * 10) / 10;
-    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toPrecision(2) +"\n";
     // output penalty information
     if (mult < 1.0)
     {
@@ -1904,7 +1916,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
-        "After Penalty: " + pg + "\n";
+        "After Penalty: " + pg.toPrecision(2) + "\n";
     }
   }
 
@@ -2452,10 +2464,12 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       if (crits[i].value >= 0 && crits[i].value <= 10)
       {
         var cw = weights[i+1];
-        var cv = (crits[i].value / 10.0) * cw;
-        sumgrade += cv;
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(cv,sumgrade)
+
         commentspan.textContent = commentspan.textContent +
-          "\t (" + cv + "/" + cw + ") " +
+          "\t ( " + cv.toPrecision(2) + " / " + cw + " ) " +
           crits[i].options[crits[i].selectedIndex].text + "\n";
       }
       else
@@ -2467,7 +2481,8 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 10) / 10;
     var pg = Math.round(mult * sumgrade * 10) / 10;
-    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toPrecision(2) +"\n";
     // output penalty information
     if (mult < 1.0)
     {
@@ -2475,7 +2490,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
-        "After Penalty: " + pg + "\n";
+        "After Penalty: " + pg.toPrecision(2) + "\n";
     }
   }
 
@@ -3057,10 +3072,12 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       if (crits[i].value >= 0 && crits[i].value <= 10)
       {
         var cw = weights[i+1];
-        var cv = (crits[i].value / 10.0) * cw;
-        sumgrade += cv;
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(cv,sumgrade)
+
         commentspan.textContent = commentspan.textContent +
-          "\t (" + cv + "/" + cw + ") " +
+          "\t ( " + cv.toPrecision(2) + " / " + cw + " ) " +
           crits[i].options[crits[i].selectedIndex].text + "\n";
       }
       else
@@ -3072,7 +3089,8 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 10) / 10;
     var pg = Math.round(mult * sumgrade * 10) / 10;
-    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toPrecision(2) +"\n";
     // output penalty information
     if (mult < 1.0)
     {
@@ -3080,7 +3098,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
-        "After Penalty: " + pg + "\n";
+        "After Penalty: " + pg.toPrecision(2) + "\n";
     }
   }
 
@@ -3551,10 +3569,12 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       if (crits[i].value >= 0 && crits[i].value <= 10)
       {
         var cw = weights[i+1];
-        var cv = (crits[i].value / 10.0) * cw;
-        sumgrade += cv;
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(cv,sumgrade)
+
         commentspan.textContent = commentspan.textContent +
-          "\t (" + cv + "/" + cw + ") " +
+          "\t ( " + cv.toPrecision(2) + " / " + cw + " ) " +
           crits[i].options[crits[i].selectedIndex].text + "\n";
       }
       else
@@ -3566,7 +3586,8 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 10) / 10;
     var pg = Math.round(mult * sumgrade * 10) / 10;
-    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toPrecision(2) +"\n";
     // output penalty information
     if (mult < 1.0)
     {
@@ -3574,7 +3595,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
-        "After Penalty: " + pg + "\n";
+        "After Penalty: " + pg.toPrecision(2) + "\n";
     }
   }
 
@@ -4090,10 +4111,12 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       if (crits[i].value >= 0 && crits[i].value <= 10)
       {
         var cw = weights[i+1];
-        var cv = (crits[i].value / 10.0) * cw;
-        sumgrade += cv;
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(cv,sumgrade)
+
         commentspan.textContent = commentspan.textContent +
-          "\t (" + cv + "/" + cw + ") " +
+          "\t ( " + cv.toPrecision(2) + " / " + cw + " ) " +
           crits[i].options[crits[i].selectedIndex].text + "\n";
       }
       else
@@ -4105,7 +4128,8 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 10) / 10;
     var pg = Math.round(mult * sumgrade * 10) / 10;
-    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toPrecision(2) +"\n";
     // output penalty information
     if (mult < 1.0)
     {
@@ -4113,7 +4137,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
-        "After Penalty: " + pg + "\n";
+        "After Penalty: " + pg.toPrecision(2) + "\n";
     }
   }
 
@@ -4577,10 +4601,12 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       if (crits[i].value >= 0 && crits[i].value <= 10)
       {
         var cw = weights[i+1];
-        var cv = (crits[i].value / 10.0) * cw;
-        sumgrade += cv;
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(cv,sumgrade)
+
         commentspan.textContent = commentspan.textContent +
-          "\t (" + cv + "/" + cw + ") " +
+          "\t ( " + cv.toPrecision(2) + " / " + cw + " ) " +
           crits[i].options[crits[i].selectedIndex].text + "\n";
       }
       else
@@ -4592,7 +4618,8 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 10) / 10;
     var pg = Math.round(mult * sumgrade * 10) / 10;
-    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toPrecision(2) +"\n";
     // output penalty information
     if (mult < 1.0)
     {
@@ -4600,7 +4627,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
-        "After Penalty: " + pg + "\n";
+        "After Penalty: " + pg.toPrecision(2) + "\n";
     }
   }
 
@@ -5026,10 +5053,12 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       if (crits[i].value >= 0 && crits[i].value <= 10)
       {
         var cw = weights[i+1];
-        var cv = (crits[i].value / 10.0) * cw;
-        sumgrade += cv;
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(cv,sumgrade)
+
         commentspan.textContent = commentspan.textContent +
-          "\t (" + cv + "/" + cw + ") " +
+          "\t ( " + cv.toPrecision(2) + " / " + cw + " ) " +
           crits[i].options[crits[i].selectedIndex].text + "\n";
       }
       else
@@ -5041,7 +5070,8 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 10) / 10;
     var pg = Math.round(mult * sumgrade * 10) / 10;
-    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toPrecision(2) +"\n";
     // output penalty information
     if (mult < 1.0)
     {
@@ -5049,7 +5079,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
-        "After Penalty: " + pg + "\n";
+        "After Penalty: " + pg.toPrecision(2) + "\n";
     }
   }
 
@@ -5391,10 +5421,12 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       if (crits[i].value >= 0 && crits[i].value <= 10)
       {
         var cw = weights[i+1];
-        var cv = (crits[i].value / 10.0) * cw;
-        sumgrade += cv;
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(cv,sumgrade)
+
         commentspan.textContent = commentspan.textContent +
-          "\t (" + cv + "/" + cw + ") " +
+          "\t ( " + cv.toPrecision(2) + " / " + cw + " ) " +
           crits[i].options[crits[i].selectedIndex].text + "\n";
       }
       else
@@ -5406,7 +5438,8 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 10) / 10;
     var pg = Math.round(mult * sumgrade * 10) / 10;
-    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toPrecision(2) +"\n";
     // output penalty information
     if (mult < 1.0)
     {
@@ -5414,7 +5447,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
-        "After Penalty: " + pg + "\n";
+        "After Penalty: " + pg.toPrecision(2) + "\n";
     }
   }
 
@@ -5460,7 +5493,7 @@ $(document).ready(function(){
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2019-11-14 12:48 -0600
+  Site built: 2019-11-14 13:23 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:hepting@cs.uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/201930/assignments.html">
     Give feedback <span class="d-none d-sm-inline">about page</span>
