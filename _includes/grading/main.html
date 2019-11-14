@@ -167,10 +167,12 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
       if (crits[i].value >= 0 && crits[i].value <= 10)
       {
         var cw = weights[i+1];
-        var cv = (crits[i].value / 10.0) * cw;
-        sumgrade += cv;
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(cv,sumgrade)
+
         commentspan.textContent = commentspan.textContent +
-          "\t (" + cv + "/" + cw + ") " +
+          "\t ( " + cv.toPrecision(2) + " / " + cw + " ) " +
           crits[i].options[crits[i].selectedIndex].text + "\n";
       }
       else
@@ -182,7 +184,8 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 10) / 10;
     var pg = Math.round(mult * sumgrade * 10) / 10;
-    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toPrecision(2) +"\n";
     // output penalty information
     if (mult < 1.0)
     {
@@ -190,7 +193,7 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
-        "After Penalty: " + pg + "\n";
+        "After Penalty: " + pg.toPrecision(2) + "\n";
     }
   }
 
