@@ -3,10 +3,10 @@
 </h1>
 <ul class="list-group list-group-flush">
 {% assign kal = "" %}
-{% for entry in site.data.teaching.CC2013 %}
+{% for entry in site.data.teaching.CS2013 %}
   {% assign ki = entry[0] %}
   {% capture kintro %}00-{{ ki }}{% endcapture %}
-  {% capture kal %}{{ kal }},{{ ki }}#{{ site.data.teaching.CC2013_KA[ki].name }}#{{ kintro }}{% endcapture %}
+  {% capture kal %}{{ kal }},{{ ki }}#{{ site.data.teaching.CS2013_KA[ki].name }}#{{ kintro }}{% endcapture %}
 {% endfor %}
 {% assign kap = kal | split: "," | sort %}
 {% for kaa in kap offset:1 %}
@@ -23,7 +23,7 @@
       {% assign varr = kk[2] %}
       {% assign karr = kk[0] %}
       <div class="card-body">
-      {{ site.data.teaching.CC2013[karr][varr] }}
+      {{ site.data.teaching.CS2013[karr][varr] }}
       </div>
       </div>
     </li>
