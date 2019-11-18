@@ -2,7 +2,7 @@
 <ul>
   {% for pf in page.focus %}
   <li>
-    {% assign kaku = site.data.teaching.CC2013[pf.ka][pf.ku] %}
+    {% assign kaku = site.data.teaching.CS2013[pf.ka][pf.ku] %}
     {% for t in kaku.topics %}
       {% if t.label == pf.topic %}
         {% capture topurl %}/teaching/curriculum/2013/{{pf.ka}}.html{% endcapture %}

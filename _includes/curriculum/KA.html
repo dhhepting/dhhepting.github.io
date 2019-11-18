@@ -1,13 +1,13 @@
 {% comment %}{% endcomment %}
 {% assign kaaa = page.url | split: "/" | last | remove: ".html" %}
 {% assign fili = "" %}
-{%- for tlo in site.data.teaching.CC2013[kaaa] -%}
+{%- for tlo in site.data.teaching.CS2013[kaaa] -%}
     {% capture fili %}{{ fili }},{{ tlo[0] }}{% endcapture %}
 {%- endfor -%}
 {% assign sfil = fili | split: "," | sort %}
 
 {%- for sf in sfil offset: 2 -%}
-  {%- assign tlo_dat = site.data.teaching.CC2013[kaaa][sf] -%}
+  {%- assign tlo_dat = site.data.teaching.CS2013[kaaa][sf] -%}
   {%- if tlo_dat -%}
 <div class="card" id="{{ sf }}">
   <div class="card-header">

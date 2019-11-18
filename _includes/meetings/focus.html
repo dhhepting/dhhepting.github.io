@@ -1,0 +1,68 @@
+{% include teaching/url.html %}
+{% if page.focus %}
+  <h3>Focus</h3>
+  <div class="btn-group" role="group" id="focusButtons" aria-label="Focus Buttons">
+  {% for pf in page.focus %}
+    {% capture kakid %}{{ pf.ka }}-{{ pf.ku | slice: 0, 2 }}{% endcapture %}
+    {% capture kuti %}{{ pf.ku | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, pf.ku.size }}{% endcapture %}
+    {% capture kkidx %}{{ pf.ka }}/{{ pf.ku }}{% endcapture %}
+    {% if site.data.teaching.tlo[joff_id][kkidx] %}
+    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#focus-{{kakid}}-collapse" aria-expanded="false" aria-controls="focus-{{kakid}}-collapse">
+      {{ pf.ka }}/{{ kuti }}
+    </button>
+    {% endif %}
+  {%- endfor -%}
+  </div>
+  {% for pf in page.focus %}
+    {% capture kakid %}{{ pf.ka }}-{{ pf.ku | slice: 0, 2 }}{% endcapture %}
+    {% capture kuti %}{{ pf.ku | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, pf.ku.size }}{% endcapture %}
+    {% if site.data.teaching.tlo[joff_id][kkidx] %}
+  <div class="card card-body collapse" id="focus-{{kakid}}-collapse">
+    {% capture kkidx %}{{ pf.ka }}/{{ pf.ku }}{% endcapture %}
+
+    <h5>{{ pf.ka }} / {{ kuti }}</h5>
+      {% assign kaku = site.data.teaching.CS2013[pf.ka][pf.ku] %}
+    <div class="row">
+	    <div class="col-md-6">
+	      <h7>Topics</h7>
+	      <ol>
+        {%- for top in kaku.topics -%}
+          <li>
+            {{ top.desc }}
+          {%- if top.details -%}
+            <ul>
+            {%- for td in top.details -%}
+              <li>
+                {{ td }}
+              </li>
+            {%- endfor -%}
+            </ul>
+          {%- endif -%}
+          </li>
+        {%- endfor -%}
+	      </ol>
+	    </div>
+	    <div class="col-md-6">
+	      <h7>Learning Outcomes</h7>
+	      <ol>
+          {%- for lout in kaku.outcomes -%}
+          <li>
+            {{ lout.desc }}
+            {%- if lout.details -%}
+            <ul>
+              {%- for lod in lout.details -%}
+              <li>
+                {{ lod }}
+              </li>
+              {%- endfor -%}
+            </ul>
+            {%- endif -%}
+          </li>
+          {%- endfor -%}
+	      </ol>
+      </div>
+    </div>
+  </div>
+    {% endif %}
+  {%- endfor -%}
+{% endif %}
