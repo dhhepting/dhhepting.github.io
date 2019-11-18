@@ -1,0 +1,22 @@
+{% include teaching/url.html %}
+{% assign tloo = site.data.teaching.tlo[joff_id] %}
+
+{%- if tloo -%}
+<div class="card my-2">
+  <h3 class="card-header text-center">Knowledge Units</h3>
+  <div class="card-body h-50 scrollable">
+    <ul class="list-group list-group-flush">
+    {%- for tlop in tloo -%}
+    {%- assign kaku = tlo.ka | split: "/" -%}
+    {%- assign kaaa = kaku[0] -%}
+    {%- assign kuuu = kaku[1] -%}
+    {%- assign tlo_dat = site.data.teaching.CS2013[kaaa][kuuu] -%}
+    {%- if 1 == 1 -%}
+    	<li class="list-group-item"><a href="tlo.html">{{ tlop[0] }}</a></li>
+    	{%- assign ctr  = ctr | plus: 1 -%}
+    {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+{%- endif -%}
