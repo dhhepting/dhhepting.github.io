@@ -15,7 +15,7 @@
 
 <div class="card">
   <h3 class="card-header text-center">{{include.mtg_title}}</h3>
-  <div class="card-body">
+  <div class="card-body bg-dark">
     {%- for m in site.data.teaching.media[include.mtg_media] -%}
       {%- if m.meet == mtgstr -%}
         {%- if m.file contains "jpg" -%}
@@ -30,7 +30,7 @@
     {%- assign numjpgs = sortedjpgs.size | minus:1 -%}
     {%- capture carid -%}mtg_jpgs_{{ mtgstr }}{% endcapture %}
     <div id="{{carid}}" class="carousel slide" data-ride="carousel" data-interval="false">
-      <ol class="carousel-indicators">
+      <ol class="carousel-indicators bg-dark">
     {%- for i in (1..numjpgs) -%}
       {%- if i == 1 %}
         <li data-target="#{{carid}}" data-slide-to="0" class="active"></li>
@@ -39,7 +39,7 @@
       {%- endif %}
     {%- endfor %}
       </ol>
-      <div class="carousel-inner">
+      <div class="carousel-inner bg-dark">
     {%- for i in (1..numjpgs) -%}
       {%- if i == 1 %}
         <div class="carousel-item active">
@@ -52,11 +52,11 @@
         </div>
     {% endfor %}
       </div>
-      <a class="carousel-control-prev" href="#{{carid}}" role="button" data-slide="prev">
+      <a class="carousel-control-prev bg-dark" href="#{{carid}}" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#{{carid}}" role="button" data-slide="next">
+      <a class="carousel-control-next bg-dark" href="#{{carid}}" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
