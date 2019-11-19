@@ -5,7 +5,7 @@
     {% capture fili %}{{ fili }},{{ tlo[0] }}{% endcapture %}
 {%- endfor -%}
 {% assign sfil = fili | split: "," | sort %}
-
+<h1>Knowledge Units</h1>
 {%- for sf in sfil offset: 2 -%}
   {%- assign tlo_dat = site.data.teaching.CS2013[kaaa][sf] -%}
   {%- if tlo_dat -%}
