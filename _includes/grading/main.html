@@ -153,8 +153,9 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
 
     // find comment span
     // BETTER: find the end of the text area content
+    // for additional comments?
     var commentspan = document.getElementById("comments_{{page.aid}}");
-
+    commentspan.textContent = "";
     // get grades for each rubric criterion
     var sumgrade = 0;
     var critname = "criteria" + "_" + "{{ page.aid }}";
@@ -172,7 +173,7 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
         console.log(cv,sumgrade)
 
         commentspan.textContent = commentspan.textContent +
-          "\t ( " + cv.toPrecision(2) + " / " + cw + " ) " +
+          "\t ( " + cv.toFixed(2) + " / " + cw + " ) " +
           crits[i].options[crits[i].selectedIndex].text + "\n";
       }
       else
@@ -182,10 +183,10 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
       }
     }
     // output earned grade and the grade after penalty, if there is one
-    var eg = Math.round(sumgrade * 10) / 10;
-    var pg = Math.round(mult * sumgrade * 10) / 10;
+    var eg = Math.round(sumgrade * 100) / 100;
+    var pg = Math.round(mult * sumgrade * 100) / 100;
     console.log(cv,sumgrade,eg,pg)
-    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toPrecision(2) +"\n";
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toFixed(2) +"\n";
     // output penalty information
     if (mult < 1.0)
     {
@@ -193,7 +194,7 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
-        "After Penalty: " + pg.toPrecision(2) + "\n";
+        "After Penalty: " + pg.toFixed(2) + "\n";
     }
   }
 
