@@ -625,6 +625,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   <!-- penalties -->
   <div class="form-group border bg-info m-2 p-4" id="pen">
     <strong>Penalties</strong>
+
     <div class="form-check" id="p0">
       <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
       <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
@@ -669,10 +670,14 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   {
     var weights = ["","2.0","2.0","2.0"]
     console.log(weights)
+    var mult = 1.0
     // get multiplier from penalty radio buttons
-    var penalty = document.querySelector('input[type=radio]:checked')
-    console.log("penalty: ",penalty)
-    var mult = (100.0 - penalty.value)/100.0
+    if (document.querySelector('input[name=penalties]:checked'))
+    {
+      var penalty = document.querySelector('input[name=penalties]:checked')
+      console.log("penalty: ",penalty)
+      mult = (100.0 - penalty.value)/100.0
+    }
     console.log("mult: ",mult)
 
     // find comment span
@@ -714,7 +719,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output penalty information
     if (mult < 1.0)
     {
-      commentspan.textContent = "Penalty:\n";
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
@@ -1020,6 +1025,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   <!-- penalties -->
   <div class="form-group border bg-info m-2 p-4" id="pen">
     <strong>Penalties</strong>
+
     <div class="form-check" id="p0">
       <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
       <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
@@ -1064,10 +1070,14 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   {
     var weights = ["","2.75","2.75","0.5"]
     console.log(weights)
+    var mult = 1.0
     // get multiplier from penalty radio buttons
-    var penalty = document.querySelector('input[type=radio]:checked')
-    console.log("penalty: ",penalty)
-    var mult = (100.0 - penalty.value)/100.0
+    if (document.querySelector('input[name=penalties]:checked'))
+    {
+      var penalty = document.querySelector('input[name=penalties]:checked')
+      console.log("penalty: ",penalty)
+      mult = (100.0 - penalty.value)/100.0
+    }
     console.log("mult: ",mult)
 
     // find comment span
@@ -1109,7 +1119,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output penalty information
     if (mult < 1.0)
     {
-      commentspan.textContent = "Penalty:\n";
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
@@ -1423,6 +1433,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   <!-- penalties -->
   <div class="form-group border bg-info m-2 p-4" id="pen">
     <strong>Penalties</strong>
+
     <div class="form-check" id="p0">
       <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
       <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
@@ -1467,10 +1478,14 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   {
     var weights = ["","2.75","2.75","0.5"]
     console.log(weights)
+    var mult = 1.0
     // get multiplier from penalty radio buttons
-    var penalty = document.querySelector('input[type=radio]:checked')
-    console.log("penalty: ",penalty)
-    var mult = (100.0 - penalty.value)/100.0
+    if (document.querySelector('input[name=penalties]:checked'))
+    {
+      var penalty = document.querySelector('input[name=penalties]:checked')
+      console.log("penalty: ",penalty)
+      mult = (100.0 - penalty.value)/100.0
+    }
     console.log("mult: ",mult)
 
     // find comment span
@@ -1512,7 +1527,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output penalty information
     if (mult < 1.0)
     {
-      commentspan.textContent = "Penalty:\n";
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
@@ -1831,6 +1846,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   <!-- penalties -->
   <div class="form-group border bg-info m-2 p-4" id="pen">
     <strong>Penalties</strong>
+
     <div class="form-check" id="p0">
       <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
       <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
@@ -1875,10 +1891,14 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   {
     var weights = ["","2","6","4"]
     console.log(weights)
+    var mult = 1.0
     // get multiplier from penalty radio buttons
-    var penalty = document.querySelector('input[type=radio]:checked')
-    console.log("penalty: ",penalty)
-    var mult = (100.0 - penalty.value)/100.0
+    if (document.querySelector('input[name=penalties]:checked'))
+    {
+      var penalty = document.querySelector('input[name=penalties]:checked')
+      console.log("penalty: ",penalty)
+      mult = (100.0 - penalty.value)/100.0
+    }
     console.log("mult: ",mult)
 
     // find comment span
@@ -1920,7 +1940,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output penalty information
     if (mult < 1.0)
     {
-      commentspan.textContent = "Penalty:\n";
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
@@ -2407,6 +2427,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   <!-- penalties -->
   <div class="form-group border bg-info m-2 p-4" id="pen">
     <strong>Penalties</strong>
+
     <div class="form-check" id="p0">
       <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
       <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
@@ -2451,10 +2472,14 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   {
     var weights = ["","2.0","2.0","2.0","2.0","2.0","1.0","1.0"]
     console.log(weights)
+    var mult = 1.0
     // get multiplier from penalty radio buttons
-    var penalty = document.querySelector('input[type=radio]:checked')
-    console.log("penalty: ",penalty)
-    var mult = (100.0 - penalty.value)/100.0
+    if (document.querySelector('input[name=penalties]:checked'))
+    {
+      var penalty = document.querySelector('input[name=penalties]:checked')
+      console.log("penalty: ",penalty)
+      mult = (100.0 - penalty.value)/100.0
+    }
     console.log("mult: ",mult)
 
     // find comment span
@@ -2496,7 +2521,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output penalty information
     if (mult < 1.0)
     {
-      commentspan.textContent = "Penalty:\n";
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
@@ -3017,6 +3042,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   <!-- penalties -->
   <div class="form-group border bg-info m-2 p-4" id="pen">
     <strong>Penalties</strong>
+
     <div class="form-check" id="p0">
       <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
       <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
@@ -3061,10 +3087,14 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   {
     var weights = ["","0.5","0.5","1","0.5","0.5"]
     console.log(weights)
+    var mult = 1.0
     // get multiplier from penalty radio buttons
-    var penalty = document.querySelector('input[type=radio]:checked')
-    console.log("penalty: ",penalty)
-    var mult = (100.0 - penalty.value)/100.0
+    if (document.querySelector('input[name=penalties]:checked'))
+    {
+      var penalty = document.querySelector('input[name=penalties]:checked')
+      console.log("penalty: ",penalty)
+      mult = (100.0 - penalty.value)/100.0
+    }
     console.log("mult: ",mult)
 
     // find comment span
@@ -3106,7 +3136,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output penalty information
     if (mult < 1.0)
     {
-      commentspan.textContent = "Penalty:\n";
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
@@ -3516,6 +3546,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   <!-- penalties -->
   <div class="form-group border bg-info m-2 p-4" id="pen">
     <strong>Penalties</strong>
+
     <div class="form-check" id="p0">
       <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
       <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
@@ -3560,10 +3591,14 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   {
     var weights = ["","0.75","0.75","2.0","2.0","0.5"]
     console.log(weights)
+    var mult = 1.0
     // get multiplier from penalty radio buttons
-    var penalty = document.querySelector('input[type=radio]:checked')
-    console.log("penalty: ",penalty)
-    var mult = (100.0 - penalty.value)/100.0
+    if (document.querySelector('input[name=penalties]:checked'))
+    {
+      var penalty = document.querySelector('input[name=penalties]:checked')
+      console.log("penalty: ",penalty)
+      mult = (100.0 - penalty.value)/100.0
+    }
     console.log("mult: ",mult)
 
     // find comment span
@@ -3605,7 +3640,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output penalty information
     if (mult < 1.0)
     {
-      commentspan.textContent = "Penalty:\n";
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
@@ -4060,6 +4095,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   <!-- penalties -->
   <div class="form-group border bg-info m-2 p-4" id="pen">
     <strong>Penalties</strong>
+
     <div class="form-check" id="p0">
       <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
       <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
@@ -4104,10 +4140,14 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   {
     var weights = ["","1.5","1.0","0.5","1.5","1.0","0.5"]
     console.log(weights)
+    var mult = 1.0
     // get multiplier from penalty radio buttons
-    var penalty = document.querySelector('input[type=radio]:checked')
-    console.log("penalty: ",penalty)
-    var mult = (100.0 - penalty.value)/100.0
+    if (document.querySelector('input[name=penalties]:checked'))
+    {
+      var penalty = document.querySelector('input[name=penalties]:checked')
+      console.log("penalty: ",penalty)
+      mult = (100.0 - penalty.value)/100.0
+    }
     console.log("mult: ",mult)
 
     // find comment span
@@ -4149,7 +4189,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output penalty information
     if (mult < 1.0)
     {
-      commentspan.textContent = "Penalty:\n";
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
@@ -4552,6 +4592,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   <!-- penalties -->
   <div class="form-group border bg-info m-2 p-4" id="pen">
     <strong>Penalties</strong>
+
     <div class="form-check" id="p0">
       <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
       <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
@@ -4596,10 +4637,14 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   {
     var weights = ["","2.0","1.5","1.5","1.0"]
     console.log(weights)
+    var mult = 1.0
     // get multiplier from penalty radio buttons
-    var penalty = document.querySelector('input[type=radio]:checked')
-    console.log("penalty: ",penalty)
-    var mult = (100.0 - penalty.value)/100.0
+    if (document.querySelector('input[name=penalties]:checked'))
+    {
+      var penalty = document.querySelector('input[name=penalties]:checked')
+      console.log("penalty: ",penalty)
+      mult = (100.0 - penalty.value)/100.0
+    }
     console.log("mult: ",mult)
 
     // find comment span
@@ -4641,7 +4686,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output penalty information
     if (mult < 1.0)
     {
-      commentspan.textContent = "Penalty:\n";
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
@@ -5006,6 +5051,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   <!-- penalties -->
   <div class="form-group border bg-info m-2 p-4" id="pen">
     <strong>Penalties</strong>
+
     <div class="form-check" id="p0">
       <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
       <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
@@ -5050,10 +5096,14 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   {
     var weights = ["","0.5","1.0","1.0","0.5"]
     console.log(weights)
+    var mult = 1.0
     // get multiplier from penalty radio buttons
-    var penalty = document.querySelector('input[type=radio]:checked')
-    console.log("penalty: ",penalty)
-    var mult = (100.0 - penalty.value)/100.0
+    if (document.querySelector('input[name=penalties]:checked'))
+    {
+      var penalty = document.querySelector('input[name=penalties]:checked')
+      console.log("penalty: ",penalty)
+      mult = (100.0 - penalty.value)/100.0
+    }
     console.log("mult: ",mult)
 
     // find comment span
@@ -5095,7 +5145,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output penalty information
     if (mult < 1.0)
     {
-      commentspan.textContent = "Penalty:\n";
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
@@ -5376,6 +5426,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   <!-- penalties -->
   <div class="form-group border bg-info m-2 p-4" id="pen">
     <strong>Penalties</strong>
+
     <div class="form-check" id="p0">
       <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
       <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
@@ -5420,10 +5471,14 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
   {
     var weights = ["","3","3"]
     console.log(weights)
+    var mult = 1.0
     // get multiplier from penalty radio buttons
-    var penalty = document.querySelector('input[type=radio]:checked')
-    console.log("penalty: ",penalty)
-    var mult = (100.0 - penalty.value)/100.0
+    if (document.querySelector('input[name=penalties]:checked'))
+    {
+      var penalty = document.querySelector('input[name=penalties]:checked')
+      console.log("penalty: ",penalty)
+      mult = (100.0 - penalty.value)/100.0
+    }
     console.log("mult: ",mult)
 
     // find comment span
@@ -5465,7 +5520,7 @@ Your comments about the following rubric are welcome <a href="mailto:hepting@cs.
     // output penalty information
     if (mult < 1.0)
     {
-      commentspan.textContent = "Penalty:\n";
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
       commentspan.textContent = commentspan.textContent +
         "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
       commentspan.textContent = commentspan.textContent +
@@ -5515,7 +5570,7 @@ $(document).ready(function(){
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2019-11-19 21:00 -0600
+  Site built: 2019-11-19 21:46 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:hepting@cs.uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/201930/assignments.html">
     Give feedback <span class="d-none d-sm-inline">about page</span>
