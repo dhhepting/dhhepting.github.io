@@ -3,7 +3,7 @@ layout: bg-image
 title: Project Evaluate Low Fidelity Prototypes
 breadcrumb: Evaluate
 marks: 6
-moddate: 13-Nov-2019
+moddate: 20-Nov-2019
 aid: P_LOFI
 rubric:
 - crit: Script and Materials
@@ -38,9 +38,7 @@ Based on your designs, test!
 Recall the diagram that [illustrated the article about Design Thinking](https://www.nngroup.com/articles/design-thinking/) from the Nielsen Norman Group. We are now moving to the materialize phase.
 
 The focus now shifts to testing your low-fidelity prototypes.
-Each member of your group will conduct 1 test with each of your
-group's 2 low-fidelity interface prototypes).  The tests will be
-arranged from within your evaluation (Eval) groups. Each Eval group has 3 members. Use URcourses to coordinate with your [Eval group members](https://urcourses.uregina.ca/mod/forum/view.php?f=64408). For illustrative purposes, consider a group with Bob, Fanhua, and Premla. Each of them will arrange 2 meetings:
+Each member of your group will conduct 1 test with each of your group's 2 low-fidelity interface prototypes.  The tests will be arranged from within your evaluation (Eval) groups. Each Eval group has 3 members. Use URcourses to coordinate with your [Eval group members](https://urcourses.uregina.ca/mod/forum/view.php?f=64408). For illustrative purposes, consider a group with Bob, Fanhua, and Premla. Each of them will arrange 2 meetings:
 
 * Bob and Fanhua arrange to meet:
   * Bob tests his group's Interface A with Fanhua
@@ -65,8 +63,7 @@ During your tests, you will collect both quantitative and qualitative data.  You
 You should submit all of your raw data and submit a summary of how
 it was collected: by whom, from whom, when, and where. Each of your group members will collect data from 1 test of your Interface A and 1 test of your Interface B. Both tests will use the same script and other materials.
 
-Provide an analysis of your data.  Did the participants seeing your interfaces agree amongst themselves? Were the results surprising in
-any way?
+Provide an analysis of your data.  Did the data that you collected from your participants reveal any agreement or disagreement about your interface designs? Were the results surprising in any way?
 
 ### Submission
 
