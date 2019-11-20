@@ -1,6 +1,3 @@
-{%- comment -%}
-data file can't seem to start with a number -- prepend s (for example)
-{%- endcomment -%}
 {%- capture semfile -%}s{{page.sem}}{%- endcapture -%}
 {%- if site.data.teaching.schedule[semfile]-%}
   {%- assign sched = "" -%}
@@ -13,7 +10,7 @@ data file can't seem to start with a number -- prepend s (for example)
     {%- capture rts -%}{{rts}}{{r.Thursday}},{%- endcapture -%}
     {%- capture rts -%}{{rts}}{{r.Friday}},{%- endcapture -%}
     {%- capture sched -%}{{sched}}#{{rts}}{%- endcapture -%}
-  {%- endfor -%}
+  {%- endfor %}
 
 <div class="table-responsive">
   <table class="table table-striped table-bordered">
