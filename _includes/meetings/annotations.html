@@ -1,0 +1,32 @@
+{% include teaching/url.html %}
+{% assign jpglist = "" %}
+{% assign has_ann = "false" %}
+{% assign media_ctr = 0 %}
+{% assign mtgstr = page.mtg_nbr | prepend: '00' | slice: -2, 2 %}
+
+{% if site.data.teaching.annotations[joff_id] %}
+  {%- for ann in site.data.teaching.annotations[joff_id] -%}
+    {%- if ann.meet == mtgstr -%}
+      {% assign has_ann = "true" %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% if has_ann == "true" %}
+  <hr/>
+
+  <h3>Annotations by:</h3>
+  <ul>
+  {%- for ann in site.data.teaching.annotations[joff_id] -%}
+    {%- if ann.meet == mtgstr -%}
+    <li>
+      <a target="_blank" {%comment%}_{%endcomment%}
+      href="https://urcourses.uregina.ca/mod/oublog/viewpost.php?post={{ ann.perma }}">
+        {{ ann.name }}
+      </a>
+    </li>
+    {%- endif -%}
+  {%- endfor -%}
+  </ul>
+  {%- endif -%}
+{%- endif -%}
