@@ -627,19 +627,19 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     <strong>Penalties</strong>
 
     <div class="form-check" id="p0">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
-      <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
+      <input class="form-check-input" type="radio" name="penalties_I_EMP" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_I_EMP">None (on-time and followed instructions)</label>
     </div>
     <div class="form-check" id="p1">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-1" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_I_EMP" id="penalty-1" value="10" />
       <label class="form-check-label" for="penalty-1">Instructions not followed</label>
     </div>
     <div class="form-check" id="p2">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-2" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_I_EMP" id="penalty-2" value="10" />
       <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
     </div>
     <div class="form-check" id="p3">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-3" value="50" />
+      <input class="form-check-input" type="radio" name="penalties_I_EMP" id="penalty-3" value="50" />
       <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
     </div>
   </div>
@@ -672,12 +672,12 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     console.log(weights)
     var mult = 1.0
     // get multiplier from penalty radio buttons
-    if (document.querySelector('input[name=penalties]:checked'))
-    {
-      var penalty = document.querySelector('input[name=penalties]:checked')
-      console.log("penalty: ",penalty)
-      mult = (100.0 - penalty.value)/100.0
-    }
+    /*if (document.querySelector('input[name=penalties_I_EMP]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_I_EMP]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
     console.log("mult: ",mult)
 
     // find comment span
@@ -1027,19 +1027,19 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     <strong>Penalties</strong>
 
     <div class="form-check" id="p0">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
-      <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
+      <input class="form-check-input" type="radio" name="penalties_I_CU" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_I_CU">None (on-time and followed instructions)</label>
     </div>
     <div class="form-check" id="p1">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-1" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_I_CU" id="penalty-1" value="10" />
       <label class="form-check-label" for="penalty-1">Instructions not followed</label>
     </div>
     <div class="form-check" id="p2">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-2" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_I_CU" id="penalty-2" value="10" />
       <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
     </div>
     <div class="form-check" id="p3">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-3" value="50" />
+      <input class="form-check-input" type="radio" name="penalties_I_CU" id="penalty-3" value="50" />
       <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
     </div>
   </div>
@@ -1072,12 +1072,12 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     console.log(weights)
     var mult = 1.0
     // get multiplier from penalty radio buttons
-    if (document.querySelector('input[name=penalties]:checked'))
-    {
-      var penalty = document.querySelector('input[name=penalties]:checked')
-      console.log("penalty: ",penalty)
-      mult = (100.0 - penalty.value)/100.0
-    }
+    /*if (document.querySelector('input[name=penalties_I_CU]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_I_CU]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
     console.log("mult: ",mult)
 
     // find comment span
@@ -1435,19 +1435,19 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     <strong>Penalties</strong>
 
     <div class="form-check" id="p0">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
-      <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
+      <input class="form-check-input" type="radio" name="penalties_I_RATS" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_I_RATS">None (on-time and followed instructions)</label>
     </div>
     <div class="form-check" id="p1">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-1" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_I_RATS" id="penalty-1" value="10" />
       <label class="form-check-label" for="penalty-1">Instructions not followed</label>
     </div>
     <div class="form-check" id="p2">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-2" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_I_RATS" id="penalty-2" value="10" />
       <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
     </div>
     <div class="form-check" id="p3">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-3" value="50" />
+      <input class="form-check-input" type="radio" name="penalties_I_RATS" id="penalty-3" value="50" />
       <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
     </div>
   </div>
@@ -1480,12 +1480,12 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     console.log(weights)
     var mult = 1.0
     // get multiplier from penalty radio buttons
-    if (document.querySelector('input[name=penalties]:checked'))
-    {
-      var penalty = document.querySelector('input[name=penalties]:checked')
-      console.log("penalty: ",penalty)
-      mult = (100.0 - penalty.value)/100.0
-    }
+    /*if (document.querySelector('input[name=penalties_I_RATS]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_I_RATS]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
     console.log("mult: ",mult)
 
     // find comment span
@@ -1848,19 +1848,19 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     <strong>Penalties</strong>
 
     <div class="form-check" id="p0">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
-      <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
+      <input class="form-check-input" type="radio" name="penalties_I_U_YC" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_I_U_YC">None (on-time and followed instructions)</label>
     </div>
     <div class="form-check" id="p1">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-1" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_I_U_YC" id="penalty-1" value="10" />
       <label class="form-check-label" for="penalty-1">Instructions not followed</label>
     </div>
     <div class="form-check" id="p2">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-2" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_I_U_YC" id="penalty-2" value="10" />
       <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
     </div>
     <div class="form-check" id="p3">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-3" value="50" />
+      <input class="form-check-input" type="radio" name="penalties_I_U_YC" id="penalty-3" value="50" />
       <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
     </div>
   </div>
@@ -1893,12 +1893,12 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     console.log(weights)
     var mult = 1.0
     // get multiplier from penalty radio buttons
-    if (document.querySelector('input[name=penalties]:checked'))
-    {
-      var penalty = document.querySelector('input[name=penalties]:checked')
-      console.log("penalty: ",penalty)
-      mult = (100.0 - penalty.value)/100.0
-    }
+    /*if (document.querySelector('input[name=penalties_I_U_YC]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_I_U_YC]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
     console.log("mult: ",mult)
 
     // find comment span
@@ -2429,19 +2429,19 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     <strong>Penalties</strong>
 
     <div class="form-check" id="p0">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
-      <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
+      <input class="form-check-input" type="radio" name="penalties_I_G_RPR" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_I_G_RPR">None (on-time and followed instructions)</label>
     </div>
     <div class="form-check" id="p1">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-1" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_I_G_RPR" id="penalty-1" value="10" />
       <label class="form-check-label" for="penalty-1">Instructions not followed</label>
     </div>
     <div class="form-check" id="p2">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-2" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_I_G_RPR" id="penalty-2" value="10" />
       <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
     </div>
     <div class="form-check" id="p3">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-3" value="50" />
+      <input class="form-check-input" type="radio" name="penalties_I_G_RPR" id="penalty-3" value="50" />
       <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
     </div>
   </div>
@@ -2474,12 +2474,12 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     console.log(weights)
     var mult = 1.0
     // get multiplier from penalty radio buttons
-    if (document.querySelector('input[name=penalties]:checked'))
-    {
-      var penalty = document.querySelector('input[name=penalties]:checked')
-      console.log("penalty: ",penalty)
-      mult = (100.0 - penalty.value)/100.0
-    }
+    /*if (document.querySelector('input[name=penalties_I_G_RPR]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_I_G_RPR]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
     console.log("mult: ",mult)
 
     // find comment span
@@ -3044,19 +3044,19 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     <strong>Penalties</strong>
 
     <div class="form-check" id="p0">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
-      <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
+      <input class="form-check-input" type="radio" name="penalties_P_PROP" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_P_PROP">None (on-time and followed instructions)</label>
     </div>
     <div class="form-check" id="p1">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-1" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_P_PROP" id="penalty-1" value="10" />
       <label class="form-check-label" for="penalty-1">Instructions not followed</label>
     </div>
     <div class="form-check" id="p2">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-2" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_P_PROP" id="penalty-2" value="10" />
       <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
     </div>
     <div class="form-check" id="p3">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-3" value="50" />
+      <input class="form-check-input" type="radio" name="penalties_P_PROP" id="penalty-3" value="50" />
       <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
     </div>
   </div>
@@ -3089,12 +3089,12 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     console.log(weights)
     var mult = 1.0
     // get multiplier from penalty radio buttons
-    if (document.querySelector('input[name=penalties]:checked'))
-    {
-      var penalty = document.querySelector('input[name=penalties]:checked')
-      console.log("penalty: ",penalty)
-      mult = (100.0 - penalty.value)/100.0
-    }
+    /*if (document.querySelector('input[name=penalties_P_PROP]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_P_PROP]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
     console.log("mult: ",mult)
 
     // find comment span
@@ -3548,19 +3548,19 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     <strong>Penalties</strong>
 
     <div class="form-check" id="p0">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
-      <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
+      <input class="form-check-input" type="radio" name="penalties_P_UND" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_P_UND">None (on-time and followed instructions)</label>
     </div>
     <div class="form-check" id="p1">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-1" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_P_UND" id="penalty-1" value="10" />
       <label class="form-check-label" for="penalty-1">Instructions not followed</label>
     </div>
     <div class="form-check" id="p2">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-2" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_P_UND" id="penalty-2" value="10" />
       <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
     </div>
     <div class="form-check" id="p3">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-3" value="50" />
+      <input class="form-check-input" type="radio" name="penalties_P_UND" id="penalty-3" value="50" />
       <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
     </div>
   </div>
@@ -3593,12 +3593,12 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     console.log(weights)
     var mult = 1.0
     // get multiplier from penalty radio buttons
-    if (document.querySelector('input[name=penalties]:checked'))
-    {
-      var penalty = document.querySelector('input[name=penalties]:checked')
-      console.log("penalty: ",penalty)
-      mult = (100.0 - penalty.value)/100.0
-    }
+    /*if (document.querySelector('input[name=penalties_P_UND]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_P_UND]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
     console.log("mult: ",mult)
 
     // find comment span
@@ -4097,19 +4097,19 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     <strong>Penalties</strong>
 
     <div class="form-check" id="p0">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
-      <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
+      <input class="form-check-input" type="radio" name="penalties_P_DES" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_P_DES">None (on-time and followed instructions)</label>
     </div>
     <div class="form-check" id="p1">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-1" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_P_DES" id="penalty-1" value="10" />
       <label class="form-check-label" for="penalty-1">Instructions not followed</label>
     </div>
     <div class="form-check" id="p2">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-2" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_P_DES" id="penalty-2" value="10" />
       <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
     </div>
     <div class="form-check" id="p3">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-3" value="50" />
+      <input class="form-check-input" type="radio" name="penalties_P_DES" id="penalty-3" value="50" />
       <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
     </div>
   </div>
@@ -4142,12 +4142,12 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     console.log(weights)
     var mult = 1.0
     // get multiplier from penalty radio buttons
-    if (document.querySelector('input[name=penalties]:checked'))
-    {
-      var penalty = document.querySelector('input[name=penalties]:checked')
-      console.log("penalty: ",penalty)
-      mult = (100.0 - penalty.value)/100.0
-    }
+    /*if (document.querySelector('input[name=penalties_P_DES]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_P_DES]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
     console.log("mult: ",mult)
 
     // find comment span
@@ -4591,19 +4591,19 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     <strong>Penalties</strong>
 
     <div class="form-check" id="p0">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
-      <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
+      <input class="form-check-input" type="radio" name="penalties_P_LOFI" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_P_LOFI">None (on-time and followed instructions)</label>
     </div>
     <div class="form-check" id="p1">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-1" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_P_LOFI" id="penalty-1" value="10" />
       <label class="form-check-label" for="penalty-1">Instructions not followed</label>
     </div>
     <div class="form-check" id="p2">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-2" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_P_LOFI" id="penalty-2" value="10" />
       <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
     </div>
     <div class="form-check" id="p3">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-3" value="50" />
+      <input class="form-check-input" type="radio" name="penalties_P_LOFI" id="penalty-3" value="50" />
       <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
     </div>
   </div>
@@ -4636,12 +4636,12 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     console.log(weights)
     var mult = 1.0
     // get multiplier from penalty radio buttons
-    if (document.querySelector('input[name=penalties]:checked'))
-    {
-      var penalty = document.querySelector('input[name=penalties]:checked')
-      console.log("penalty: ",penalty)
-      mult = (100.0 - penalty.value)/100.0
-    }
+    /*if (document.querySelector('input[name=penalties_P_LOFI]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_P_LOFI]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
     console.log("mult: ",mult)
 
     // find comment span
@@ -5050,19 +5050,19 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     <strong>Penalties</strong>
 
     <div class="form-check" id="p0">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
-      <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
+      <input class="form-check-input" type="radio" name="penalties_P_VID" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_P_VID">None (on-time and followed instructions)</label>
     </div>
     <div class="form-check" id="p1">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-1" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_P_VID" id="penalty-1" value="10" />
       <label class="form-check-label" for="penalty-1">Instructions not followed</label>
     </div>
     <div class="form-check" id="p2">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-2" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_P_VID" id="penalty-2" value="10" />
       <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
     </div>
     <div class="form-check" id="p3">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-3" value="50" />
+      <input class="form-check-input" type="radio" name="penalties_P_VID" id="penalty-3" value="50" />
       <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
     </div>
   </div>
@@ -5095,12 +5095,12 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     console.log(weights)
     var mult = 1.0
     // get multiplier from penalty radio buttons
-    if (document.querySelector('input[name=penalties]:checked'))
-    {
-      var penalty = document.querySelector('input[name=penalties]:checked')
-      console.log("penalty: ",penalty)
-      mult = (100.0 - penalty.value)/100.0
-    }
+    /*if (document.querySelector('input[name=penalties_P_VID]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_P_VID]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
     console.log("mult: ",mult)
 
     // find comment span
@@ -5425,19 +5425,19 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     <strong>Penalties</strong>
 
     <div class="form-check" id="p0">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
-      <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
+      <input class="form-check-input" type="radio" name="penalties_P_HIFI" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_P_HIFI">None (on-time and followed instructions)</label>
     </div>
     <div class="form-check" id="p1">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-1" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_P_HIFI" id="penalty-1" value="10" />
       <label class="form-check-label" for="penalty-1">Instructions not followed</label>
     </div>
     <div class="form-check" id="p2">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-2" value="10" />
+      <input class="form-check-input" type="radio" name="penalties_P_HIFI" id="penalty-2" value="10" />
       <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
     </div>
     <div class="form-check" id="p3">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-3" value="50" />
+      <input class="form-check-input" type="radio" name="penalties_P_HIFI" id="penalty-3" value="50" />
       <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
     </div>
   </div>
@@ -5470,12 +5470,12 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     console.log(weights)
     var mult = 1.0
     // get multiplier from penalty radio buttons
-    if (document.querySelector('input[name=penalties]:checked'))
-    {
-      var penalty = document.querySelector('input[name=penalties]:checked')
-      console.log("penalty: ",penalty)
-      mult = (100.0 - penalty.value)/100.0
-    }
+    /*if (document.querySelector('input[name=penalties_P_HIFI]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_P_HIFI]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
     console.log("mult: ",mult)
 
     // find comment span
@@ -5567,7 +5567,7 @@ $(document).ready(function(){
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2019-11-20 16:45 -0600
+  Site built: 2019-11-21 12:21 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/201930/assignments.html">
     Give feedback <span class="d-none d-sm-inline">about page</span>
