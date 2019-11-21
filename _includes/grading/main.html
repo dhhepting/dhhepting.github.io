@@ -96,22 +96,22 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
     <strong>Penalties</strong>
 
     <div class="form-check" id="p0">
-      <input class="form-check-input" type="radio" name="penalties"
+      <input class="form-check-input" type="radio" name="penalties_{{page.aid}}"
       id="penalty-0" value="0" checked>
-      <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
+      <label class="form-check-label" for="penalties_{{page.aid}}">None (on-time and followed instructions)</label>
     </div>
     <div class="form-check" id="p1">
-      <input class="form-check-input" type="radio" name="penalties"
+      <input class="form-check-input" type="radio" name="penalties_{{page.aid}}"
       id="penalty-1" value="10">
       <label class="form-check-label" for="penalty-1">Instructions not followed</label>
     </div>
     <div class="form-check" id="p2">
-      <input class="form-check-input" type="radio" name="penalties"
+      <input class="form-check-input" type="radio" name="penalties_{{page.aid}}"
       id="penalty-2" value="10">
       <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
     </div>
     <div class="form-check" id="p3">
-      <input class="form-check-input" type="radio" name="penalties"
+      <input class="form-check-input" type="radio" name="penalties_{{page.aid}}"
       id="penalty-3" value="50">
       <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
     </div>
@@ -149,12 +149,12 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
     console.log(weights)
     var mult = 1.0
     // get multiplier from penalty radio buttons
-    if (document.querySelector('input[name=penalties]:checked'))
-    {
-      var penalty = document.querySelector('input[name=penalties]:checked')
-      console.log("penalty: ",penalty)
-      mult = (100.0 - penalty.value)/100.0
-    }
+    /*if (document.querySelector('input[name=penalties_{{page.aid}}]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_{{page.aid}}]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
     console.log("mult: ",mult)
 
     // find comment span

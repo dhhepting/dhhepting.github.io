@@ -11,22 +11,22 @@
       {% break %}
     {% endif %}
   {% endfor %}
+{%- endif -%}
 
-  {% if has_ann == "true" %}
-  <hr/>
-
-  <h3>Annotations by:</h3>
-  <ul>
-  {%- for ann in site.data.teaching.annotations[joff_id] -%}
-    {%- if ann.meet == mtgstr -%}
-    <li>
-      <a target="_blank" {%comment%}_{%endcomment%}
-      href="https://urcourses.uregina.ca/mod/oublog/viewpost.php?post={{ ann.perma }}">
-        {{ ann.name }}
-      </a>
-    </li>
-    {%- endif -%}
-  {%- endfor -%}
-  </ul>
+{% if has_ann == "true" %}
+<hr/>
+<h3>Annotations by:</h3>
+<ul>
+{%- for ann in site.data.teaching.annotations[joff_id] -%}
+  {%- if ann.meet == mtgstr -%}
+  <li>
+    <a target="_blank" {%comment%}_{%endcomment%}
+    href="https://urcourses.uregina.ca/mod/oublog/viewpost.php?post={{ ann.perma }}">
+      {{ ann.name }}
+    </a>
+  </li>
   {%- endif -%}
+{%- endfor -%}
+</ul>
+<hr/>
 {%- endif -%}
