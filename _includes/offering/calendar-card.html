@@ -109,8 +109,16 @@
           {% assign mctr = mctr | plus: 1 %}
           {% assign mctrstr = mctr | prepend: '00' | slice: -2, 2 %}
           {% comment %} read the title from the page and change text if Midterm{% endcomment %}
+
           {% if mtg_dir == 1 %}
-            {% capture tabdat %}<a href="meetings/{{mctrstr}}-{{mdby}}.html">{{odate}}<span class="d-none d-md-inline"> : {{mctrstr}}</span></a>{% endcapture %}
+            {% include meetings/mtg-has-media.html mediadat=joff_id mtg=mctr %}
+            {% capture tabdat %}<a href="meetings/{{mctrstr}}-{{mdby}}.html">{{odate}}<span class="d-none d-md-inline"> : {{mctrstr}}</span></a> {% endcapture %}
+            {% if mtg_media contains "pic" %}
+              {% capture tabdat %}{{ tabdat }}<i class="far fa-images"></i>{% endcapture %}
+            {% endif %}
+            {% if mtg_media contains "aud" %}
+              {% capture tabdat %}{{ tabdat }}<i class="far fa-file-audio"></i>{% endcapture %}
+            {% endif %}
           {% else %}
             {% capture tabdat %}{{mctrstr}}<span class="d-none d-md-inline"> : {{mctrstr}}</span>{% endcapture %}
           {% endif %}
