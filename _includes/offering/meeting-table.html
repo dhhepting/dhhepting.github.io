@@ -20,6 +20,14 @@
           {%- for mtg in site.data.teaching.meetings[joff_id] -%}
               {%- assign mtg_parts = mtg.file | split: '-' -%}
               {%- assign mtg_nbr = mtg_parts[0] -%}
+              {% include meetings/mtg-has-media.html mediadat=joff_id mtg=mtg_nbr %}
+              {% capture btnlab %}{{ mtg_nbr }}{% endcapture %}
+              {% if mtg_media contains "pic" %}
+                {% capture btnlab %}{{ btnlab }} <i class="far fa-images"></i> {% endcapture %}
+              {% endif %}
+              {% if mtg_media contains "aud" %}
+                {% capture btnlab %}{{ btnlab }} <i class="far fa-file-audio"></i>{% endcapture %}
+              {% endif %}
               {%- assign mtg_month = mtg_parts[2] -%}
               {%- capture ttdh -%}2019-{{ mtg_parts[2] }}-{{ mtg_parts[1] }}{% endcapture %}
               {%- assign ttd = ttdh | remove: ".html" | date: '%a-%d-%b-%Y' -%}
@@ -30,7 +38,7 @@
                     {{ month }}
                   </th>
                   <td class="col-8">
-                    <a href="{{ mtg.file }}" class="btn btn-primary" role="button" data-toggle="tooltip" title="{{ ttd }}">{{ mtg_nbr }}</a>
+                    <a href="{{ mtg.file }}" class="btn btn-primary m-1 p-1" role="button" data-toggle="tooltip" title="{{ ttd }}">{{ btnlab }}</a>
               {% elsif month != mtg_month %}
                   </td>
                 </tr>
@@ -40,9 +48,9 @@
                     {{ month }}
                   </th>
                   <td class="col-8">
-                    <a href="{{ mtg.file }}" class="btn btn-primary" role="button" data-toggle="tooltip" title="{{ ttd }}">{{ mtg_nbr }}</a>
+                    <a href="{{ mtg.file }}" class="btn btn-primary m-1 p-1" role="button" data-toggle="tooltip" title="{{ ttd }}">{{ btnlab }}</a>
               {% else %}
-                    <a href="{{ mtg.file }}" class="btn btn-primary" role="button" data-toggle="tooltip" title="{{ ttd }}">{{ mtg_nbr }}</a>
+                    <a href="{{ mtg.file }}" class="btn btn-primary m-1 p-1" role="button" data-toggle="tooltip" title="{{ ttd }}">{{ btnlab }}</a>
               {%- endif -%}
           {%- endfor -%}
                   </td>
