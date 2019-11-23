@@ -42,7 +42,8 @@
       <td class="col-10">
     {% endif %}
     {%- if media.URL contains "jpg" -%}
-  <a href="{{media.URL}}"><img src="{{media.URL}}" alt="{{media.file}}" height="100" class="m-1 img-responsive"/></a>
+  {% comment %}<a href="{{media.URL}}"><img src="{{media.URL}}" alt="{{media.file}}" height="100" class="m-1 img-responsive"/></a>{% endcomment %}
+<a href="#" class="pop" role="button"><img src="{{media.URL}}" alt="{{media.file}}" height="100" class="m-1"/></a>
     {%- endif -%}
     {%- if media.URL contains "m4a" -%}
   <a href="{{media.URL}}"><span class="far fa-file-audio fa-6x align-middle m-1"></span></a>
@@ -52,3 +53,27 @@
   <p>None available</p>
 </div>
 {%- endif -%}
+
+<div class="modal fade" id="zoomModal" tabindex="-1" role="dialog" aria-labelledby="zoomModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="zoomModalTitle">Image Zoom</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body bg-primary">
+        <img src="" class="imagepreview" >
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(function() {
+		$('.pop').on('click', function() {
+			$('.imagepreview').attr('src', $(this).find('img').attr('src'));
+			$('#zoomModal').modal('show');
+		});
+});
+</script>
