@@ -42,11 +42,11 @@
       <td class="col-10">
     {% endif %}
     {%- if media.URL contains "jpg" -%}
-  {% comment %}<a href="{{media.URL}}"><img src="{{media.URL}}" alt="{{media.file}}" height="100" class="m-1 img-responsive"/></a>{% endcomment %}
-<a href="#" class="pop" role="button"><img src="{{media.URL}}" alt="{{media.file}}" height="100" class="m-1"/></a>
+  {% comment %}<a href="{{media.URL}}"><img src="{{media.URL}}" alt="{{media.file}}" height="64" class="m-1 img-responsive"/></a>{% endcomment %}
+<a href="#" class="pop" role="button"><img src="{{media.URL}}" alt="{{media.file}}" height="64" class="m-1"/></a>
     {%- endif -%}
     {%- if media.URL contains "m4a" -%}
-  <a href="{{media.URL}}"><span class="far fa-file-audio fa-6x align-middle m-1"></span></a>
+  <a href="{{media.URL}}"><span class="far fa-file-audio fa-4x align-middle m-1"></span></a>
     {%- endif -%}
   {%- endfor -%}
 {%- else -%}
@@ -64,7 +64,7 @@
         </button>
       </div>
       <div class="modal-body bg-primary">
-        <img src="" class="imagepreview" >
+        <img src="/assets/favicon.ico" alt="Zoomed Image" class="imagepreview" >
       </div>
     </div>
   </div>
