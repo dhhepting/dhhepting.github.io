@@ -63,13 +63,17 @@
           {{ crs_id | replace: "-", " " }} on URcourses
         </a>
       </li>
+      {% capture meet_url %}{{ page.url }}meetings/{% endcapture %}
+
       <li class="list-group-item">
-        <a href="meetings/">
+        <a href="{{ meet_url | relative_url }}">
           Meetings
         </a>
       </li>
+      {% capture media_url %}{{ page.url }}media/{% endcapture %}
+
       <li class="list-group-item">
-        <a href="media/">
+        <a href="{{ media_url | relative_url }}">
           Media
         </a>
       </li>
