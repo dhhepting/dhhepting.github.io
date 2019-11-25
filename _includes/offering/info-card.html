@@ -3,11 +3,15 @@
   <div class="card-body">
     {% capture syll_url %}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{% endcapture %}
     {% capture sched_url %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
+    {% capture meet_url %}{{ page.url }}meetings/{% endcapture %}
+    {% capture media_url %}{{ page.url }}media/{% endcapture %}
     {% capture fbk_url %}/teaching/{{ crs_id }}/{{ crs_sem }}/feedback/{% endcapture %}
     {% capture rss_url %}/rss/{{ crs_id }}-{{ crs_sem }}.rss{% endcapture %}
     {% capture exam_url %}/teaching/{{ crs_id }}/{{ crs_sem }}/exams.html{% endcapture %}{% assign fbk_dir = 0 %}
     {% assign rss_feed = 0 %}
     {% assign sched_dir = 0 %}
+    {% assign meet_dir = 0 %}
+    {% assign media_dir = 0 %}
     {% assign exams_file = 0 %}
     {% for sp in site.pages %}
       {% if sp.url contains fbk_url %}
@@ -18,6 +22,12 @@
       {% endif %}
       {% if sp.url contains sched_url %}
         {% assign sched_dir = 1 %}
+      {% endif %}
+      {% if sp.url contains meet_url %}
+        {% assign meet_dir = 1 %}
+      {% endif %}
+      {% if sp.url contains media_url %}
+        {% assign media_dir = 1 %}
       {% endif %}
       {% if sp.url contains rss_url %}
         {% assign rss_feed = 1 %}
@@ -63,6 +73,20 @@
           {{ crs_id | replace: "-", " " }} on URcourses
         </a>
       </li>
+      {% if meet_dir == 1 %}
+      <li class="list-group-item">
+        <a href="{{ meet_url | relative_url }}">
+          Meetings
+        </a>
+      </li>
+      {% endif %}
+      {% if media_dir == 1 %}
+      <li class="list-group-item">
+        <a href="{{ media_url | relative_url }}">
+          Media
+        </a>
+      </li>
+      {% endif %}
       {% if exams_file == 1 %}
       <li class="list-group-item">
         <a href="{{ exam_url | relative_url }}">
