@@ -20,6 +20,25 @@ body {
 	padding:0;
 	height:100%;
 }
+// added from http://holdencreative.com/fixing-bootstraps-known-issue-with-ios-background-scrolling/
+body {
+    width: 100%;
+    max-width: 100%;
+    will-change: position;
+}
+
+// Prevent Bootstrap 4.x iOS issue where user
+// scrolls the body behind the modal when body height > 100vh
+
+body.modal-open {
+    position: fixed;
+    top:    0;
+    right:  0;
+    bottom: 0;
+    left:   0;
+}
+// end addition
+
 /* p5.js style addition */
 canvas {
   display: block;
