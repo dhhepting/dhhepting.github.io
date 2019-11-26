@@ -3,7 +3,7 @@ layout: bg-image
 title: You Choose (Undergrad)
 breadcrumb: You Choose (Undergrad)
 aid: I_U_YC
-moddate: 13-Nov-2019
+moddate: 26-Nov-2019
 marks: 12
 rubric:
 - crit: Topic
@@ -20,6 +20,10 @@ rubric:
   l0: Deliverable is not used appropriately. Realization of approach is not clear
 - crit: Presentation
   wt: 4
+  l3: Ambitious and thorough
+  l2: Reasonably thorough
+  l1: Somewhat thorough
+  l0: Not thorough
 ---
 ### {{ page.breadcrumb }}
 
