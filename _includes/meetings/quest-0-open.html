@@ -1,7 +1,8 @@
 {% assign last_mtg_file = "" %}
 {% assign last_mtg_nbr = page.mtg_nbr | minus: 1 %}
 {% for m in site.data.teaching.meetings[joff_id] %}
-  {% if m.meeting == last_mtg_nbr %}
+  {% assign mfromfile = m.meeting | minus: 0 %}
+  {% if mfromfile == last_mtg_nbr %}
     {% assign last_mtg_file = m.file %}
     {% break %}
   {% endif %}
@@ -12,7 +13,7 @@
     <li>
       Any questions from
       <a target="_blank" {%comment%}_{%endcomment%}
-      href="{{ include.mtgfile }}">
+      href="{{ last_mtg_file }}">
         last meeting
       </a>?
     </li>
