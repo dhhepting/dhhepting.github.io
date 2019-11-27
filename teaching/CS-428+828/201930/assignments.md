@@ -174,21 +174,34 @@ layout: bg-image
 
 <script>
 $(document).ready(function(){
-  const params = new URLSearchParams(location.search)
+  let params = new URLSearchParams(location.search)
   let asgn = params.get('asgn')
   if (asgn != null)
   {
     let asgns = asgn.toString()
     if (asgns.startsWith('I'))
     {
-      $('#'+asgns+'-tab').tab('show')
+      $('#' + asgns + '-tab').tab('show')
       $('#Iasgn').collapse('show')
     }
     else if (asgns.startsWith('P'))
     {
-      $('#'+asgns+'-tab').tab('show')
+      $('#' + asgns + '-tab').tab('show')
       $('#Pasgn').collapse('show')
     }
   }
+})
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  let params = new URLSearchParams(location.search)
+  console.log(params.get('asgn'))
+  params.set('asgn',e.target.id.slice(0, -4))
+  console.log(params.get('asgn'))
+  var stateObj = { foo: "bar" }
+  history.replaceState(stateObj,"" ,location.origin + location.pathname + '?' + params.toString())
+  //if (asgn != null)
+  //{
+  //  let asgns = asgn.toString()
+
+  //console.log(params)
 })
 </script>
