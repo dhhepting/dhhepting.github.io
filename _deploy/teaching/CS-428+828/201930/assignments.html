@@ -650,7 +650,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
       <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
 
 
-      <textarea class="col-sm-9 form-control" id="comments_I_EMP" rows="5"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_I_EMP" rows="5" readonly="true"></textarea>
   
     </div>
     <div class="form-group row">
@@ -686,7 +686,9 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     // BETTER: find the end of the text area content
     // for additional comments?
     var commentspan = document.getElementById("comments_I_EMP");
+    console.log(commentspan)
     commentspan.textContent = "";
+    console.log(commentspan.textContent)
     // get grades for each rubric criterion
     var sumgrade = 0;
     var critname = "criteria" + "_" + "I_EMP";
@@ -701,6 +703,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         var cw = weights[i+1];
         var cv = (crits[i].value / 10.0) * cw
         sumgrade += cv
+        console.log(commentspan.textContent)
         console.log(cv,sumgrade)
 
         commentspan.textContent = commentspan.textContent +
@@ -712,6 +715,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         commentspan.textContent = commentspan.textContent +
           "\tNOT GRADED\n";
       }
+      console.log(commentspan)
     }
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 100) / 100;
@@ -1050,7 +1054,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
       <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
 
 
-      <textarea class="col-sm-9 form-control" id="comments_I_CU" rows="5"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_I_CU" rows="5" readonly="true"></textarea>
   
     </div>
     <div class="form-group row">
@@ -1086,7 +1090,9 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     // BETTER: find the end of the text area content
     // for additional comments?
     var commentspan = document.getElementById("comments_I_CU");
+    console.log(commentspan)
     commentspan.textContent = "";
+    console.log(commentspan.textContent)
     // get grades for each rubric criterion
     var sumgrade = 0;
     var critname = "criteria" + "_" + "I_CU";
@@ -1101,6 +1107,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         var cw = weights[i+1];
         var cv = (crits[i].value / 10.0) * cw
         sumgrade += cv
+        console.log(commentspan.textContent)
         console.log(cv,sumgrade)
 
         commentspan.textContent = commentspan.textContent +
@@ -1112,6 +1119,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         commentspan.textContent = commentspan.textContent +
           "\tNOT GRADED\n";
       }
+      console.log(commentspan)
     }
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 100) / 100;
@@ -1458,7 +1466,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
       <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
 
 
-      <textarea class="col-sm-9 form-control" id="comments_I_RATS" rows="5"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_I_RATS" rows="5" readonly="true"></textarea>
   
     </div>
     <div class="form-group row">
@@ -1494,7 +1502,9 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     // BETTER: find the end of the text area content
     // for additional comments?
     var commentspan = document.getElementById("comments_I_RATS");
+    console.log(commentspan)
     commentspan.textContent = "";
+    console.log(commentspan.textContent)
     // get grades for each rubric criterion
     var sumgrade = 0;
     var critname = "criteria" + "_" + "I_RATS";
@@ -1509,6 +1519,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         var cw = weights[i+1];
         var cv = (crits[i].value / 10.0) * cw
         sumgrade += cv
+        console.log(commentspan.textContent)
         console.log(cv,sumgrade)
 
         commentspan.textContent = commentspan.textContent +
@@ -1520,6 +1531,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         commentspan.textContent = commentspan.textContent +
           "\tNOT GRADED\n";
       }
+      console.log(commentspan)
     }
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 100) / 100;
@@ -1871,7 +1883,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
       <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
 
 
-      <textarea class="col-sm-9 form-control" id="comments_I_U_YC" rows="5"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_I_U_YC" rows="5" readonly="true"></textarea>
   
     </div>
     <div class="form-group row">
@@ -1907,7 +1919,9 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     // BETTER: find the end of the text area content
     // for additional comments?
     var commentspan = document.getElementById("comments_I_U_YC");
+    console.log(commentspan)
     commentspan.textContent = "";
+    console.log(commentspan.textContent)
     // get grades for each rubric criterion
     var sumgrade = 0;
     var critname = "criteria" + "_" + "I_U_YC";
@@ -1922,6 +1936,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         var cw = weights[i+1];
         var cv = (crits[i].value / 10.0) * cw
         sumgrade += cv
+        console.log(commentspan.textContent)
         console.log(cv,sumgrade)
 
         commentspan.textContent = commentspan.textContent +
@@ -1933,6 +1948,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         commentspan.textContent = commentspan.textContent +
           "\tNOT GRADED\n";
       }
+      console.log(commentspan)
     }
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 100) / 100;
@@ -2452,7 +2468,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
       <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
 
 
-      <textarea class="col-sm-9 form-control" id="comments_I_G_RPR" rows="5"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_I_G_RPR" rows="5" readonly="true"></textarea>
   
     </div>
     <div class="form-group row">
@@ -2488,7 +2504,9 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     // BETTER: find the end of the text area content
     // for additional comments?
     var commentspan = document.getElementById("comments_I_G_RPR");
+    console.log(commentspan)
     commentspan.textContent = "";
+    console.log(commentspan.textContent)
     // get grades for each rubric criterion
     var sumgrade = 0;
     var critname = "criteria" + "_" + "I_G_RPR";
@@ -2503,6 +2521,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         var cw = weights[i+1];
         var cv = (crits[i].value / 10.0) * cw
         sumgrade += cv
+        console.log(commentspan.textContent)
         console.log(cv,sumgrade)
 
         commentspan.textContent = commentspan.textContent +
@@ -2514,6 +2533,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         commentspan.textContent = commentspan.textContent +
           "\tNOT GRADED\n";
       }
+      console.log(commentspan)
     }
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 100) / 100;
@@ -3067,7 +3087,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
       <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
 
 
-      <textarea class="col-sm-9 form-control" id="comments_P_PROP" rows="5"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_P_PROP" rows="5" readonly="true"></textarea>
   
     </div>
     <div class="form-group row">
@@ -3103,7 +3123,9 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     // BETTER: find the end of the text area content
     // for additional comments?
     var commentspan = document.getElementById("comments_P_PROP");
+    console.log(commentspan)
     commentspan.textContent = "";
+    console.log(commentspan.textContent)
     // get grades for each rubric criterion
     var sumgrade = 0;
     var critname = "criteria" + "_" + "P_PROP";
@@ -3118,6 +3140,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         var cw = weights[i+1];
         var cv = (crits[i].value / 10.0) * cw
         sumgrade += cv
+        console.log(commentspan.textContent)
         console.log(cv,sumgrade)
 
         commentspan.textContent = commentspan.textContent +
@@ -3129,6 +3152,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         commentspan.textContent = commentspan.textContent +
           "\tNOT GRADED\n";
       }
+      console.log(commentspan)
     }
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 100) / 100;
@@ -3571,7 +3595,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
       <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
 
 
-      <textarea class="col-sm-9 form-control" id="comments_P_UND" rows="5"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_P_UND" rows="5" readonly="true"></textarea>
   
     </div>
     <div class="form-group row">
@@ -3607,7 +3631,9 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     // BETTER: find the end of the text area content
     // for additional comments?
     var commentspan = document.getElementById("comments_P_UND");
+    console.log(commentspan)
     commentspan.textContent = "";
+    console.log(commentspan.textContent)
     // get grades for each rubric criterion
     var sumgrade = 0;
     var critname = "criteria" + "_" + "P_UND";
@@ -3622,6 +3648,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         var cw = weights[i+1];
         var cv = (crits[i].value / 10.0) * cw
         sumgrade += cv
+        console.log(commentspan.textContent)
         console.log(cv,sumgrade)
 
         commentspan.textContent = commentspan.textContent +
@@ -3633,6 +3660,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         commentspan.textContent = commentspan.textContent +
           "\tNOT GRADED\n";
       }
+      console.log(commentspan)
     }
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 100) / 100;
@@ -4120,7 +4148,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
       <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
 
 
-      <textarea class="col-sm-9 form-control" id="comments_P_DES" rows="5"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_P_DES" rows="5" readonly="true"></textarea>
   
     </div>
     <div class="form-group row">
@@ -4156,7 +4184,9 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     // BETTER: find the end of the text area content
     // for additional comments?
     var commentspan = document.getElementById("comments_P_DES");
+    console.log(commentspan)
     commentspan.textContent = "";
+    console.log(commentspan.textContent)
     // get grades for each rubric criterion
     var sumgrade = 0;
     var critname = "criteria" + "_" + "P_DES";
@@ -4171,6 +4201,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         var cw = weights[i+1];
         var cv = (crits[i].value / 10.0) * cw
         sumgrade += cv
+        console.log(commentspan.textContent)
         console.log(cv,sumgrade)
 
         commentspan.textContent = commentspan.textContent +
@@ -4182,6 +4213,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         commentspan.textContent = commentspan.textContent +
           "\tNOT GRADED\n";
       }
+      console.log(commentspan)
     }
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 100) / 100;
@@ -4614,7 +4646,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
       <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
 
 
-      <textarea class="col-sm-9 form-control" id="comments_P_LOFI" rows="5"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_P_LOFI" rows="5" readonly="true"></textarea>
   
     </div>
     <div class="form-group row">
@@ -4650,7 +4682,9 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     // BETTER: find the end of the text area content
     // for additional comments?
     var commentspan = document.getElementById("comments_P_LOFI");
+    console.log(commentspan)
     commentspan.textContent = "";
+    console.log(commentspan.textContent)
     // get grades for each rubric criterion
     var sumgrade = 0;
     var critname = "criteria" + "_" + "P_LOFI";
@@ -4665,6 +4699,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         var cw = weights[i+1];
         var cv = (crits[i].value / 10.0) * cw
         sumgrade += cv
+        console.log(commentspan.textContent)
         console.log(cv,sumgrade)
 
         commentspan.textContent = commentspan.textContent +
@@ -4676,6 +4711,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         commentspan.textContent = commentspan.textContent +
           "\tNOT GRADED\n";
       }
+      console.log(commentspan)
     }
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 100) / 100;
@@ -5073,7 +5109,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
       <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
 
 
-      <textarea class="col-sm-9 form-control" id="comments_P_VID" rows="5"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_P_VID" rows="5" readonly="true"></textarea>
   
     </div>
     <div class="form-group row">
@@ -5109,7 +5145,9 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     // BETTER: find the end of the text area content
     // for additional comments?
     var commentspan = document.getElementById("comments_P_VID");
+    console.log(commentspan)
     commentspan.textContent = "";
+    console.log(commentspan.textContent)
     // get grades for each rubric criterion
     var sumgrade = 0;
     var critname = "criteria" + "_" + "P_VID";
@@ -5124,6 +5162,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         var cw = weights[i+1];
         var cv = (crits[i].value / 10.0) * cw
         sumgrade += cv
+        console.log(commentspan.textContent)
         console.log(cv,sumgrade)
 
         commentspan.textContent = commentspan.textContent +
@@ -5135,6 +5174,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         commentspan.textContent = commentspan.textContent +
           "\tNOT GRADED\n";
       }
+      console.log(commentspan)
     }
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 100) / 100;
@@ -5448,7 +5488,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
       <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
 
 
-      <textarea class="col-sm-9 form-control" id="comments_P_HIFI" rows="5"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_P_HIFI" rows="5" readonly="true"></textarea>
   
     </div>
     <div class="form-group row">
@@ -5484,7 +5524,9 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     // BETTER: find the end of the text area content
     // for additional comments?
     var commentspan = document.getElementById("comments_P_HIFI");
+    console.log(commentspan)
     commentspan.textContent = "";
+    console.log(commentspan.textContent)
     // get grades for each rubric criterion
     var sumgrade = 0;
     var critname = "criteria" + "_" + "P_HIFI";
@@ -5499,6 +5541,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         var cw = weights[i+1];
         var cv = (crits[i].value / 10.0) * cw
         sumgrade += cv
+        console.log(commentspan.textContent)
         console.log(cv,sumgrade)
 
         commentspan.textContent = commentspan.textContent +
@@ -5510,6 +5553,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         commentspan.textContent = commentspan.textContent +
           "\tNOT GRADED\n";
       }
+      console.log(commentspan)
     }
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 100) / 100;
@@ -5569,7 +5613,7 @@ $(document).ready(function(){
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2019-11-26 23:06 -0600
+  Site built: 2019-11-27 12:07 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/201930/assignments.html">
     Give feedback <span class="d-none d-sm-inline">about page</span>
