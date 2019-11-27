@@ -123,7 +123,7 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
 {% if sumwt != totmarks %}
       <textarea class="col-sm-9 form-control" id="comments_{{page.aid}}" rows="5" placeholder="Criteria Weights Not Equal to Total Marks"></textarea>
   {% else %}
-      <textarea class="col-sm-9 form-control" id="comments_{{page.aid}}" rows="5"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_{{page.aid}}" rows="5" readonly="true"></textarea>
   {% endif %}
     </div>
     <div class="form-group row">
@@ -161,7 +161,9 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
     // BETTER: find the end of the text area content
     // for additional comments?
     var commentspan = document.getElementById("comments_{{page.aid}}");
+    console.log(commentspan)
     commentspan.textContent = "";
+    console.log(commentspan.textContent)
     // get grades for each rubric criterion
     var sumgrade = 0;
     var critname = "criteria" + "_" + "{{ page.aid }}";
@@ -176,6 +178,7 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
         var cw = weights[i+1];
         var cv = (crits[i].value / 10.0) * cw
         sumgrade += cv
+        console.log(commentspan.textContent)
         console.log(cv,sumgrade)
 
         commentspan.textContent = commentspan.textContent +
@@ -187,6 +190,7 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
         commentspan.textContent = commentspan.textContent +
           "\tNOT GRADED\n";
       }
+      console.log(commentspan)
     }
     // output earned grade and the grade after penalty, if there is one
     var eg = Math.round(sumgrade * 100) / 100;
