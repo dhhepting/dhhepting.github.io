@@ -1,8 +1,8 @@
 ---
 title: Interaction Design
-breadcrumb: Interaction Design 
+breadcrumb: Interaction Design
 description: Description of Interaction Design
-projects: 
+projects:
   - interaction_design
 layout: bg-image
 ---
@@ -10,4 +10,4 @@ layout: bg-image
 
 {{ page.description }}
 
-{% include project-related-works.html %}
+{%comment%}{% include project-related-works.html %}{% endcomment %}
