@@ -2,7 +2,7 @@
 title: Participant Pool
 breadcrumb: Participant Pool
 description: Description of Participant Pool
-projects: 
+projects:
   - participant-pool
 redirect_from:
   - /admin/ppool.html
@@ -13,4 +13,4 @@ layout: bg-image
 
 {{ page.description }}
 
-{% include project-related-works.html %}
+{%comment%}{% include project-related-works.html %}{% endcomment %}
