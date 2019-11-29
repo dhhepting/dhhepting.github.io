@@ -1,8 +1,8 @@
 ---
 title: Open Source
-breadcrumb: Open Source 
+breadcrumb: Open Source
 description: Description of Open Source Project!
-projects: 
+projects:
   - open-source
 layout: bg-image
 ---
@@ -10,4 +10,4 @@ layout: bg-image
 
 {{ page.description }}
 
-{% include project-related-works.html %}
+{%comment%}{% include project-related-works.html %}{% endcomment %}

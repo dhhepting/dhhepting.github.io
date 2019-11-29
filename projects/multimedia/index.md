@@ -2,7 +2,7 @@
 title: Multimedia
 breadcrumb: Multimedia
 description: Description of Multimedia
-projects: 
+projects:
   - multimedia
 layout: bg-image
 ---
@@ -10,4 +10,4 @@ layout: bg-image
 
 {% include index-dir.html %}
 
-{% include project-related-works.html %}
+{%comment%}{% include project-related-works.html %}{% endcomment %}
