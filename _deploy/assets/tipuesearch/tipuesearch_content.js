@@ -5,7 +5,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/news/website-deployed.html"
   },{
     "title": "CS-428+828 (201930) Mtg 1",
-    "text": "&laquo; Previous 1 (current) 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Thu-05-Sep-2019 Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Inspirations Syllabus Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do Think about what makes a good or a bad interface Previous Next Your browser does not support the audio element.",
+    "text": "&laquo; Previous 1 (current) 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Thu-05-Sep-2019 Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Inspirations Syllabus Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do Think about what makes a good or a bad interface Annotations by: Tanu Nanda Prabhu Previous Next Your browser does not support the audio element.",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/01-05-Sep-19.html"
   },{
@@ -195,7 +195,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/24-28-Nov-19.html"
   },{
     "title": "CS-428+828 (201930) Mtg 25",
-    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 (current) 26 &raquo; Next Tue-03-Dec-2019 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 (current) 26 &raquo; Next Tue-03-Dec-2019 Focus HCI/Foundations HCI / Foundations Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) Processes for user-centered development, e.g., early focus on users, empirical testing, iterative design Different measures for evaluation, e.g., utility, efficiency, learnability, user satisfaction Usability heuristics and the principles of usability testing Physical capabilities that inform interaction design, e.g., color perception, ergonomics Cognitive models that inform interaction design, e.g., attention, perception and recognition, movement, and memory; gulfs of expectation and execution Social models that inform interaction design, e.g., culture, communication, networks and organizations Principles of good design and good designers; engineering tradeoffs Accessibility, e.g., interfaces for differently-abled populations (e.g., blind, motion-impaired) Interfaces for differently-aged population groups (e.g., children, 80+) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] Summarize the basic precepts of psychological and social interaction. [Familiarity] Develop and use a conceptual vocabulary for analyzing human interaction with software: affordance, conceptual model, feedback, and so forth. [Usage] Define a user-centered design process that explicitly takes account of the fact that the user is not like the developer or their acquaintances. [Usage] Create and conduct a simple usability test for an existing software application. [Assessment] Administration URcourses: Attendance URcourses: Calendar Project Assignment Due Today: (Video) Presentation Due in 7 days: Undergrad: You Choose Grad: Research Paper Review Project: High Fidelity Questions? Any questions from last meeting ? Outline for Today Previous Final Exam Six Blind Men and the Elephant Green New Deal: Last Week Tonight with John Oliver (HBO) [May, 2019] [language warning] ALF (television series) Concluding Thoughts Keep up the good work. Last next meeting will have videos from your projects and review. Previous Next Your browser does not support the audio element.",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/25-03-Dec-19.html"
   },{
@@ -875,7 +875,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201930/feedback/"
   },{
     "title": "Media from CS 428+828 Meetings in Fall 2019",
-    "text": "Media Meeting Media 01 02 03 04 05 06 07 08 09 10 11 12 13 14 16 17 18 19 20 21 22 23 24 Image Zoom &times;",
+    "text": "Media Meeting Media 01 02 03 04 05 06 07 08 09 10 11 12 13 14 16 17 18 19 20 21 22 23 24 25 Image Zoom &times;",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/media/"
   },{
