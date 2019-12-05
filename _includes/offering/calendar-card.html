@@ -119,6 +119,12 @@
             {% if mtg_media contains "aud" %}
               {% capture tabdat %}{{ tabdat }}<i class="far fa-file-audio"></i>{% endcapture %}
             {% endif %}
+            {% for aa in site.data.teaching.annotations[joff_id] %}
+              {% if aa.meet == mctrstr %}
+                {% capture tabdat %}{{ tabdat }}<i class="fas fa-user-edit"></i>{% endcapture %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
           {% else %}
             {% capture tabdat %}{{mctrstr}}<span class="d-none d-md-inline"> : {{mctrstr}}</span>{% endcapture %}
           {% endif %}
