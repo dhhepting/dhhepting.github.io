@@ -1,4 +1,6 @@
 ---
+title: Video Presentations
+breadcrumb: Video Presentations
 layout: bg-image
 ---
 {% include teaching/url.html %}
