@@ -23,11 +23,17 @@
               {% include meetings/mtg-has-media.html mediadat=joff_id mtg=mtg_nbr %}
               {% capture btnlab %}{{ mtg_nbr }}{% endcapture %}
               {% if mtg_media contains "pic" %}
-                {% capture btnlab %}{{ btnlab }} <i class="far fa-images"></i> {% endcapture %}
+                {% capture btnlab %}{{ btnlab }} <i class="mx-1 far fa-images"></i> {% endcapture %}
               {% endif %}
               {% if mtg_media contains "aud" %}
-                {% capture btnlab %}{{ btnlab }} <i class="far fa-file-audio"></i>{% endcapture %}
+                {% capture btnlab %}{{ btnlab }} <i class="mx-1 far fa-file-audio"></i>{% endcapture %}
               {% endif %}
+              {% for aa in site.data.teaching.annotations[joff_id] %}
+                {% if aa.meet == mtg_nbr %}
+                  {% capture btnlab %}{{ btnlab }}<i class="mx-1 fas fa-user-edit"></i>{% endcapture %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
               {%- assign mtg_month = mtg_parts[2] -%}
               {%- capture ttdh -%}2019-{{ mtg_parts[2] }}-{{ mtg_parts[1] }}{% endcapture %}
               {%- assign ttd = ttdh | remove: ".html" | date: '%a-%d-%b-%Y' -%}
