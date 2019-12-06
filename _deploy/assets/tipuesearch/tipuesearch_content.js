@@ -200,7 +200,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/25-03-Dec-19.html"
   },{
     "title": "CS-428+828 (201930) Mtg 26",
-    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 (current) &raquo; Next Thu-05-Dec-2019 Administration Questions? Outline for Today Video Presentations Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 (current) &raquo; Next Thu-05-Dec-2019 Administration Questions? Outline for Today Video Presentations Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do Previous Next Your browser does not support the audio element.",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/26-05-Dec-19.html"
   },{
@@ -875,7 +875,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201930/feedback/"
   },{
     "title": "Media from CS 428+828 Meetings in Fall 2019",
-    "text": "Media Meeting Media 01 02 03 04 05 06 07 08 09 10 11 12 13 14 16 17 18 19 20 21 22 23 24 25 Image Zoom &times;",
+    "text": "Media Meeting Media 01 02 03 04 05 06 07 08 09 10 11 12 13 14 16 17 18 19 20 21 22 23 24 25 26 Image Zoom &times;",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/media/"
   },{
