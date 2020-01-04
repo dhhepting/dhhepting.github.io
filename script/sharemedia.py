@@ -59,9 +59,10 @@ else:
 
 # walk through that directory and get sharing link for each file
 # replace dropbox.com with dropboxcontent in URL
-dbmedia_dir = "/Users/hepting/Dropbox/teaching/" + off_id + "/"
+dbmedia_dir = "/Users/hepting/Dropbox/teaching/" + "m-" + off_id + "/"
 filedict = {}
 for root, subdirs, files in os.walk(dbmedia_dir):
+    print(dbmedia_dir)
     for filename in files:
         if (filename != ".DS_Store"):
             file_path = os.path.join(root, filename)
