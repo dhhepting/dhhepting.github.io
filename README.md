@@ -20,6 +20,9 @@ My personal website, built with Jekyll.
         * media
         * syllabus
         * feedback from students
+        
+   At the start of a new semester, do the following:
+   * create (or duplicate) a csv file for the semester schedule _data/teaching/schedule/s202010.csv (I found that jekyll does not like files that start with digits, I start these (and other data file names) with a character).
 
 ### /rss/
 
