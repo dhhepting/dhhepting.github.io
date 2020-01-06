@@ -8,6 +8,7 @@ layout: bg-image
 # {{ page.breadcrumb }}
 
 - [Academia.edu](https://uregina.academia.edu/DarylHepting){: target="blank" }
+- [Academia.edu](https://darylhepting.academia.edu/){: target="blank" }
 - [Association for Computing Machinery](http://member.acm.org/~dhepting){: target="blank" }
 - [Association for Computing Machinery DL](https://dlnext.acm.org/profile/81100496386)
 - [AMiner](https://aminer.org/profile/53f45b6bdabfaedd74e4095c){: target="blank" }

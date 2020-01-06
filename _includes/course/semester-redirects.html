@@ -43,6 +43,11 @@ $(document).ready(function(){
     else if (typ == 'media') {
       cu_str = cu.origin + cu.pathname + semid + '/media/'
     }
+    else if (typ == 'syllabus') {
+      let su_str = String(cu.pathname).replace('teaching','assets/teaching/pdf')
+      cu_str = cu.origin + su_str.slice(0,-1) + '-' + semid + '_syllabus.pdf'
+      console.log('SYLL',su_str,cu_str)
+    }
     else if (typ == 'textbook') {
       cu_str = cu.origin + cu.pathname + semid + '/textbook.html'
     }
@@ -50,7 +55,8 @@ $(document).ready(function(){
       cu_str = cu.origin + cu.pathname + semid + '/tlo.html'
     }
     else if (asgn) {
-      cu_str = cu.origin + cu.pathname + semid + '/assignments.html?asgn=' + asgn
+      let lastsemid = String('201930')
+      cu_str = cu.origin + cu.pathname + lastsemid + '/assignments.html?asgn=' + asgn
       console.log(cu_str)
     }
     else {
@@ -59,10 +65,11 @@ $(document).ready(function(){
     $.get(cu_str).done(
     function () {
       window.location.replace(cu_str)
-    }).fail(function () {
-      console.log(cu.pathname)
-      window.alert(crs + ' not offered in ' + semid)
     })
+    //.fail(function () {
+    //  console.log(cu.pathname)
+    //  window.alert(crs + ' not offered in ' + semid)
+    //})
   }
 })
 </script>
