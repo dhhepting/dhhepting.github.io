@@ -29,7 +29,7 @@
   {% assign sss = 30 %}
 {% endif %}
 {% capture now_sem %}{{ tdate[0] }}{{ sss }}{% endcapture %}
-{% if now_sem == crs_sem %}
+{% if now_sem == crs_sem or crs_sem == "201930"%}
   {% assign off_now = 1 %}
 {% else %}
   {% assign off_now = 0 %}
