@@ -112,7 +112,7 @@
 
           {% if mtg_dir == 1 %}
             {% include meetings/mtg-has-media.html mediadat=joff_id mtg=mctr %}
-            {% capture tabdat %}<a href="meetings/{{mctrstr}}-{{mdby}}.html">{{odate}}<span class="d-none d-md-inline"> : {{mctrstr}}</span></a> {% endcapture %}
+            {% capture tabdat %}<a href="meetings/{{mctrstr}}_{{mdby}}.html">{{odate}}<span class="d-none d-md-inline"> : {{mctrstr}}</span></a> {% endcapture %}
             {% if mtg_media contains "pic" %}
               {% capture tabdat %}{{ tabdat }}<i class="far fa-images"></i>{% endcapture %}
             {% endif %}
