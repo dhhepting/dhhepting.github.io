@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import sys, os, datetime, subprocess, errno
 from datetime import datetime
 from subprocess import Popen, PIPE
@@ -19,6 +19,7 @@ if (len(reldir) != 2):
 	print (sys.argv[0],"must be invoked with <course>/<semester>" )
 	sys.exit()
 
+# calendar card is created first, so get meeting file names from there
 off_index_html = os.path.join(os.path.abspath(SITE_DIR+HTML_ROOT),sys.argv[1],"index.html")
 grep_html = Popen(("grep", "html", off_index_html), stdout=PIPE)
 grep_href = Popen(("grep", "href=\"meetings"), stdin=grep_html.stdout, stdout=PIPE)
@@ -55,29 +56,30 @@ with open(mtgdatafile,"w") as mtgdata:
         if len(line) > 0:
             m += 1
             words = line.split('\"')
+            #sys.exit()
             mtg_fname = (words[1].split('.'))[0]
             mtgdata.write(str(m).zfill(2) + "," + mtg_fname.split('/')[1] + ".html\n")
-            datestr = mtg_fname.split('-',1)
-            #print(mtg_fname)
+            datestr = mtg_fname.split('_',1)
+            #print("Meeting file name: ",mtg_fname)
             try:
+                #print("TRYING")
                 mtg_dt = datetime.strptime(datestr[1],"%d-%b-%y")
-                #print (mtg_dt)
+                print (mtg_dt)
                 mfilestr = SITE_DIR + MD_ROOT + sys.argv[1] + "/" + mtg_fname + ".md"
                 #print(mfilestr)
                 with open(mfilestr,"w") as mtgfile:
                     mtgfile.write("---\n")
-                    mtgfile.write("title: " + reldir[0] + " (" + reldir[1] + ") Mtg " + str(m) + "\n")
+                    mtgfile.write("title: Mtg " + str(m) + reldir[0] +  " (" + reldir[1] + ")\n")
                     mtgfile.write("breadcrumb: " + str(m) + " (" + mtg_dt.strftime('%d-%b-%y') + ")\n")
                     mtgfile.write("mtg_nbr: " + str(m) + "\n")
                     mtgfile.write("total_meet: " + str(nbr_meetings) + "\n")
                     mtgfile.write("mtg_date: " + mtg_dt.strftime('%d-%b-%y') + "\n")
                     mtgfile.write("layout: bg-image\n")
                     mtgfile.write("focus:\n")
-                    mtgfile.write("- ka: HCI\n")
-                    mtgfile.write("  ku: 01-Foundations\n")
-                    mtgfile.write("  topic: t01\n")
-                    mtgfile.write("  outcome: l01\n")
+                    mtgfile.write("- ka:\n")
+                    mtgfile.write("  ku:\n")
                     mtgfile.write("---\n")
+                    #mtgfile.writelines(str(i) + "\n" for i in range(1, 6))
                     mtgfile.write("{% include meetings/pagination.html %}\n")
                     mtgfile.write("<h1 class=\"text-center\">{{ page.mtg_date }}</h1>\n<hr />\n")
                     mtgfile.write("### Administration\n")

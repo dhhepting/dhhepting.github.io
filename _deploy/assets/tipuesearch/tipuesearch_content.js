@@ -9,90 +9,360 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/01-05-Sep-19.html"
   },{
+    "title": "Mtg 1CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 (current) 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next 05-Sep-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/01_05-Sep-19.html"
+  },{
+    "title": "Mtg 1, CS-205 (202010)",
+    "text": "&laquo; Previous 1 (current) 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next Tue-07-Jan-2020 Focus Administration URcourses: Attendance URcourses: Calendar Questions? Outline for Today Concluding Thoughts Previous Next Your browser does not support the audio element.",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/01_07-Jan-20.html"
+  },{
+    "title": "Mtg 1 • CS-280 (202010)",
+    "text": "&laquo; Previous 1 (current) 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next Tue-07-Jan-2020 Focus SP/Social Context SP / Social Context Topics Social implications of computing in a networked world (cross-reference HCI/Foundations/social models; IAS/Fundamental Concepts/social issues) Impact of social media on individualism, collectivism and culture. Growth and control of the Internet (cross-reference NC/Introduction/organization of the Internet) Often referred to as the digital divide, differences in access to digital technology resources and its resulting ramifications for gender, class, ethnicity, geography, and/or underdeveloped countries. Accessibility issues, including legal requirements Context-aware computing (cross-reference HCI/Design for non-mouse interfaces/ ubiquitous and context-aware) Learning Outcomes Describe positive and negative ways in which computer technology (networks, mobile computing, cloud computing) alters modes of social interaction at the personal level. [Familiarity] Identify developers’ assumptions and values embedded in hardware and software design, especially as they pertain to usability for diverse populations including under-represented populations and the disabled. [Familiarity] Interpret the social context of a given design and its implementation. [Familiarity] Evaluate the efficacy of a given design and implementation using empirical data. [Assessment] Summarize the implications of social media on individualism versus collectivism and culture. [Usage] Discuss how Internet access serves as a liberating force for people living under oppressive forms of government; explain how limits on Internet access are used as tools of political and social repression. [Familiarity] Analyze the pros and cons of reliance on computing in the implementation of democracy (e.g. delivery of social services, electronic voting). [Assessment] Describe the impact of the under-representation of diverse populations in the computing profession (e.g., industry culture, product diversity). [Familiarity] Explain the implications of context awareness in ubiquitous computing systems. [Familiarity] Administration URcourses: Attendance URcourses: Calendar Questions? Outline for Today Syllabus Inspirations Concluding Thoughts Previous Next Your browser does not support the audio element.",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/01_07-Jan-20.html"
+  },{
     "title": "CS-428+828 (201930) Mtg 2",
     "text": "&laquo; Previous 1 2 (current) 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Tue-10-Sep-2019 Administration URcourses has been setup (you have been added as participants) Video: How to Build Your Creative Confidence Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do Annotations by: Tanu Nanda Prabhu",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/02-10-Sep-19.html"
+  },{
+    "title": "Mtg 2, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 (current) 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 09-Jan-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/02_09-Jan-20.html"
+  },{
+    "title": "Mtg 2CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 (current) 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 09-Jan-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/02_09-Jan-20.html"
+  },{
+    "title": "Mtg 2CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 (current) 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next 10-Sep-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/02_10-Sep-19.html"
   },{
     "title": "CS-428+828 (201930) Mtg 3",
     "text": "&laquo; Previous 1 2 3 (current) 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Thu-12-Sep-2019 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) a puzzle to solve marble answering machine video TiVo remote Elevator buttons Water faucet Which way? Where did we park? Out of order? https://www.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve IDEO at work Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do Read Chapter 1 of the text Take the poll for Chapter 1 Annotations by: Tanu Nanda Prabhu",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/03-12-Sep-19.html"
   },{
+    "title": "Mtg 3CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 (current) 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next 12-Sep-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/03_12-Sep-19.html"
+  },{
+    "title": "Mtg 3, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 (current) 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 14-Jan-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/03_14-Jan-20.html"
+  },{
+    "title": "Mtg 3CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 (current) 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 14-Jan-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/03_14-Jan-20.html"
+  },{
     "title": "CS-428+828 (201930) Mtg 4",
     "text": "&laquo; Previous 1 2 3 4 (current) 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Tue-17-Sep-2019 Administration add/drop deadline TODAY some people have been added to class, but not yet to URcourses (that will happen tonight). Therefore, we will delay group and assignment discussion until Thursday. Questions? did anyone take pictures of local parking machines? Observations clerk working alone at store McDonald’s kiosks forms at the University Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) IDEO at work What ideas for today can be found in the Marble Answering Machine? Design Thinking (video) Having a growth mindset Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/04-17-Sep-19.html"
+  },{
+    "title": "Mtg 4, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 (current) 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 16-Jan-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/04_16-Jan-20.html"
+  },{
+    "title": "Mtg 4CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 (current) 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 16-Jan-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/04_16-Jan-20.html"
+  },{
+    "title": "Mtg 4CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 (current) 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next 17-Sep-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/04_17-Sep-19.html"
   },{
     "title": "CS-428+828 (201930) Mtg 5",
     "text": "&laquo; Previous 1 2 3 4 5 (current) 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Thu-19-Sep-2019 Administration When to schedule midterm exam? Groups Assignments Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/05-19-Sep-19.html"
   },{
+    "title": "Mtg 5CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 (current) 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next 19-Sep-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/05_19-Sep-19.html"
+  },{
+    "title": "Mtg 5, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 (current) 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 21-Jan-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/05_21-Jan-20.html"
+  },{
+    "title": "Mtg 5CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 (current) 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 21-Jan-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/05_21-Jan-20.html"
+  },{
     "title": "CS-428+828 (201930) Mtg 6",
     "text": "&laquo; Previous 1 2 3 4 5 6 (current) 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Tue-24-Sep-2019 Administration Groups and assignments Questions? Outline for Today Topics Processes for user-centered development, e.g., early focus on users, empirical testing, iterative design ( HCI Foundations ) Norman Door (video) Design Thinking (video) Design Thinking Empathy Mapping Mental models, metaphors, usability, user experience 3 ways good design makes you happy Learning Outcomes Define a user-centered design process that explicitly takes account of the fact that the user is not like the developer or their acquaintances. [Usage] ( HCI Foundations ) To Do Read Chapter 2 of textbook",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/06-24-Sep-19.html"
+  },{
+    "title": "Mtg 6, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 (current) 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 23-Jan-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/06_23-Jan-20.html"
+  },{
+    "title": "Mtg 6CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 (current) 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 23-Jan-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/06_23-Jan-20.html"
+  },{
+    "title": "Mtg 6CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 (current) 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next 24-Sep-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/06_24-Sep-19.html"
   },{
     "title": "CS-428+828 (201930) Mtg 7",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 (current) 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Thu-26-Sep-2019 Administration Groups OK? Individual Assignment Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Norman Door (video) Design Thinking (video) Design Thinking Empathy Mapping Mental models, metaphors, usability, user experience 3 ways good design makes you happy Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do Read Chapter 2",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/07-26-Sep-19.html"
   },{
+    "title": "Mtg 7CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 (current) 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next 26-Sep-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/07_26-Sep-19.html"
+  },{
+    "title": "Mtg 7, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 (current) 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 28-Jan-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/07_28-Jan-20.html"
+  },{
+    "title": "Mtg 7CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 (current) 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 28-Jan-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/07_28-Jan-20.html"
+  },{
     "title": "CS-428+828 (201930) Mtg 8",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 (current) 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Tue-01-Oct-2019 Administration Attendance? Assignment Due by 23:55 today https://time.com/5687473/boeing-737-alarm-system/ see my own example of a confusing interface Questions? Do you need a bit of class time to finish group project assignment? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/08-01-Oct-19.html"
+  },{
+    "title": "Mtg 8CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 (current) 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next 01-Oct-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/08_01-Oct-19.html"
+  },{
+    "title": "Mtg 8, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 (current) 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 30-Jan-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/08_30-Jan-20.html"
+  },{
+    "title": "Mtg 8CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 (current) 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 30-Jan-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/08_30-Jan-20.html"
   },{
     "title": "CS-428+828 (201930) Mtg 9",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 (current) 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Thu-03-Oct-2019 Administration Update to Empathize Assignment, due October 10. Next Group assignment Questions? Outline for Today empathy for students submitting assignments redesigned groupwork page): how many did group ratings? how many thought that the explanation was clear? do you think that the new one is improved? Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do Be observant",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/09-03-Oct-19.html"
   },{
+    "title": "Mtg 9CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 (current) 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next 03-Oct-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/09_03-Oct-19.html"
+  },{
+    "title": "Mtg 9, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 (current) 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 04-Feb-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/09_04-Feb-20.html"
+  },{
+    "title": "Mtg 9CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 (current) 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 04-Feb-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/09_04-Feb-20.html"
+  },{
     "title": "CS-428+828 (201930) Mtg 10",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 (current) 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Tue-08-Oct-2019 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/10-08-Oct-19.html"
+  },{
+    "title": "Mtg 10, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 (current) 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 06-Feb-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/10_06-Feb-20.html"
+  },{
+    "title": "Mtg 10CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 (current) 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 06-Feb-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/10_06-Feb-20.html"
+  },{
+    "title": "Mtg 10CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 (current) 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next 08-Oct-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/10_08-Oct-19.html"
   },{
     "title": "Mtg-11 CS-428+828 (201930)",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 (current) 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Thu-10-Oct-2019 Administration Questions? Outline for Today Steve Krug’s Rocket Surgery Made Easy (Usability Demo) Topics Learning Outcomes ( HCI Foundations ) To Do Annotations by: Kanisha Vinod Agarwal Shivani Shah",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/11-10-Oct-19.html"
   },{
+    "title": "Mtg 11CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 (current) 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next 10-Oct-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/11_10-Oct-19.html"
+  },{
+    "title": "Mtg 11, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 (current) 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 11-Feb-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/11_11-Feb-20.html"
+  },{
+    "title": "Mtg 11CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 (current) 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 11-Feb-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/11_11-Feb-20.html"
+  },{
     "title": "CS-428+828 (201930) Mtg 12",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 (current) 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Tue-15-Oct-2019 Administration Project Proposal marks are posted [URcourses and me responsible for delay in marker getting grades posted] - your groups can take until Thursday to submit the next part of project (without penalty) Turnitin score: is it helpful to you? Proper quotations with sources seem to be flagged. Whatever your score is, use it to help you to improve your writing Questions? Any questions about the assignments? Why is it important to be specific? Outline for Today (short) VIDEO: Placeholders in Form Fields are Harmful textbook video, p. 392 Choice, happiness, and spaghetti sauce Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do Annotations by: Kanisha Vinod Agarwal Simranjeet (No marker, so no pictures of the board today)",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/12-15-Oct-19.html"
+  },{
+    "title": "Mtg 12, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 (current) 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 13-Feb-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/12_13-Feb-20.html"
+  },{
+    "title": "Mtg 12CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 (current) 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 13-Feb-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/12_13-Feb-20.html"
+  },{
+    "title": "Mtg 12CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 (current) 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next 15-Oct-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/12_15-Oct-19.html"
   },{
     "title": "CS-428+828 (201930) Mtg 13",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 (current) 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Thu-17-Oct-2019 Administration Questions about Understand Assignment? Time to work on it today? Midterm in 1 week https://www.youtube.com/watch?v=U2AkkuIVV-I Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/13-17-Oct-19.html"
   },{
+    "title": "Mtg 13CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 (current) 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next 17-Oct-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/13_17-Oct-19.html"
+  },{
+    "title": "Mtg 13, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 (current) 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 18-Feb-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/13_18-Feb-20.html"
+  },{
+    "title": "Mtg 13CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 (current) 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 18-Feb-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/13_18-Feb-20.html"
+  },{
     "title": "CS-428+828 (201930) Mtg 14",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 (current) 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Tue-22-Oct-2019 Administration Individual Assignment: – due 29 Oct. Project Assignment: – due 12 Nov. Summary of assignments on URcourses: please let me know if you find anything strange! Questions? What would you like to see for questions on the midterm exam? What’s on the exam? What we’ve discussed in class (and sources that we’ve used) Annotations Outline for Today Design /teaching/CS-428+828/201930/assignments.html Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do Annotations by: Shivani Shah Harsh Patel",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/14-22-Oct-19.html"
+  },{
+    "title": "Mtg 14, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 (current) 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 20-Feb-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/14_20-Feb-20.html"
+  },{
+    "title": "Mtg 14CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 (current) 15 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 20-Feb-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/14_20-Feb-20.html"
+  },{
+    "title": "Mtg 14CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 (current) 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next 22-Oct-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/14_22-Oct-19.html"
   },{
     "title": "CS-428+828 (201930) Mtg 15",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 (current) 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Thu-24-Oct-2019 Midterm Exam in Class",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/15-24-Oct-19.html"
   },{
+    "title": "Mtg 15CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 (current) 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next 24-Oct-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/15_24-Oct-19.html"
+  },{
+    "title": "Mtg 15, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 (current) 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 25-Feb-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/15_25-Feb-20.html"
+  },{
+    "title": "Mtg 15CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 (current) 16 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 25-Feb-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/15_25-Feb-20.html"
+  },{
     "title": "CS-428+828 (201930) Mtg 16",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 (current) 17 18 19 20 21 22 23 24 25 26 &raquo; Next Tue-29-Oct-2019 Administration Attendance Calendar Will discuss Empathize Assignment on Thursday Link on URcourses now to send email to marker Questions? Any questions about Critique Assignment due Thursday? Outline for Today Topics Learning Outcomes ( HCI Designing-Interaction ) Discuss feedback (Re-)design the Design Assignment Information Design and Interaction Design To Do Annotations by: Simranjeet",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/16-29-Oct-19.html"
+  },{
+    "title": "Mtg 16, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 (current) 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 27-Feb-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/16_27-Feb-20.html"
+  },{
+    "title": "Mtg 16CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 (current) 17 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 27-Feb-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/16_27-Feb-20.html"
+  },{
+    "title": "Mtg 16CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 (current) 17 18 19 20 21 22 23 24 25 26 &raquo; Next 29-Oct-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/16_29-Oct-19.html"
   },{
     "title": "CS-428+828 (201930) Mtg 17",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 (current) 18 19 20 21 22 23 24 25 26 &raquo; Next Thu-31-Oct-2019 Happy Hallowe’en Administration Attendance Calendar Questions? About Empathize Assignment? Outline for Today More feedback Design Assignment Assignments on course page redesign Evaluating interfaces Evaluating information: Card Sorting Topics Learning Outcomes ( HCI Designing-Interaction ) To Do Annotations by: Shivani Shah Simranjeet Trushil Patel",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/17-31-Oct-19.html"
   },{
+    "title": "Mtg 17, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 (current) 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 03-Mar-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/17_03-Mar-20.html"
+  },{
+    "title": "Mtg 17CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 (current) 18 19 20 21 22 23 24 25 26 27 28 &raquo; Next 03-Mar-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/17_03-Mar-20.html"
+  },{
+    "title": "Mtg 17CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 (current) 18 19 20 21 22 23 24 25 26 &raquo; Next 31-Oct-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/17_31-Oct-19.html"
+  },{
     "title": "CS-428+828 (201930) Mtg 18",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 (current) 19 20 21 22 23 24 25 26 &raquo; Next Tue-05-Nov-2019 Administration Attendance Calendar Questions? Design assignment? Anyone surprised by the football game?, the attendance? Outline for Today More feedback: documenting meetings (in addition to photos of board and audio recordings)? should annotations have some structure? Be treated as assignments (not this semester) Assignments on course page redesign – seems to be having some problems, so back to the drawing board for some fine-tuning. Evaluating interfaces typing or clicking? GOMS KLM Evaluating information: Card Sorting Topics Learning Outcomes ( HCI Designing-Interaction ) To Do Annotations by: Pratheeksha R. Naik (voice recorder didn’t record)",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/18-05-Nov-19.html"
+  },{
+    "title": "Mtg 18, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 (current) 19 20 21 22 23 24 25 26 27 28 &raquo; Next 05-Mar-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/18_05-Mar-20.html"
+  },{
+    "title": "Mtg 18CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 (current) 19 20 21 22 23 24 25 26 27 28 &raquo; Next 05-Mar-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/18_05-Mar-20.html"
+  },{
+    "title": "Mtg 18CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 (current) 19 20 21 22 23 24 25 26 &raquo; Next 05-Nov-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/18_05-Nov-19.html"
   },{
     "title": "CS-428+828 (201930) Mtg 19",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 (current) 20 21 22 23 24 25 26 &raquo; Next Tue-12-Nov-2019 Administration Midterm Exam results on Thursday (Project) Design – delayed until Thursday? Questions? what do you think of revamped Assignments page? Outline for Today SaskPower Digital Design Lab To Do Annotations by: Pratheeksha R. Naik Harsh Patel Likhitha Jasthi Kiranmai Arva Utkanth Sharma",
@@ -144,6 +414,21 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/projects/fractals/calendars/1996.html"
   },{
+    "title": "Mtg 19, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 (current) 20 21 22 23 24 25 26 27 28 &raquo; Next 10-Mar-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/19_10-Mar-20.html"
+  },{
+    "title": "Mtg 19CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 (current) 20 21 22 23 24 25 26 27 28 &raquo; Next 10-Mar-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/19_10-Mar-20.html"
+  },{
+    "title": "Mtg 19CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 (current) 20 21 22 23 24 25 26 &raquo; Next 12-Nov-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/19_12-Nov-19.html"
+  },{
     "title": "Mtg-20 CS-428+828 (201930)",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 (current) 21 22 23 24 25 26 &raquo; Next Thu-14-Nov-2019 Focus HCI/User-Centered Design and Testing HCI / User-Centered Design and Testing Topics Approaches to, and characteristics of, the design process Functionality and usability requirements (cross-reference to SE/Requirements Engineering) Techniques for gathering requirements, e.g., interviews, surveys, ethnographic and contextual enquiry Techniques and tools for the analysis and presentation of requirements, e.g., reports, personas Prototyping techniques and tools, e.g., sketching, storyboards, low-fidelity prototyping, wireframes Evaluation without users, using both qualitative and quantitative techniques, e.g., walkthroughs, GOMS, expert-based analysis, heuristics, guidelines, and standards Evaluation with users, e.g., observation, think-aloud, interview, survey, experiment Challenges to effective evaluation, e.g., sampling, generalization Reporting the results of evaluations Internationalization, designing for users from other cultures, cross-cultural Learning Outcomes Explain how user-centered design complements other software process models. [Familiarity] Use lo-fi (low fidelity) prototyping techniques to gather, and report, user responses. [Usage] Choose appropriate methods to support the development of a specific UI. [Assessment] Use a variety of techniques to evaluate a given UI. [Assessment] Compare the constraints and benefits of different evaluative methods. [Assessment] Administration Midterm marks not ready yet, but we will discuss the exam today (results will be available online before next meeting) Design due today by 23:59 Evaluate Low-Fidelity Prototypes due in 12 days and Report as Test Subject due in 14 days Questions? Are you ready for Evaluate assignment? I've seen plans being made for tomorrow (that seems early to me). Do you have your script and materials ready? Outline for Today Midterm Double Diamond Empathy Map example Evaluation Design Annotations by: Kanisha Vinod Agarwal Akash Singh Harshith Chanagani Sai Sravya Surapaneni Prashanth Chittompally Sriram Narra",
     "tags": "",
@@ -175,39 +460,164 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/schedule/201930.html"
   },{
     "title": "Winter 2020 Schedule",
-    "text": "Winter 2020 Important Dates: First day of term: Mon-06-Jan-2020 Last day of classes: Thu-09-Apr-2020 Last day of term: Sat-25-Apr-2020 Courses Taught: CS-205 : Introduction to Multimedia Systems CS-280 : Risk and Reward in the Information Society CS-499+900 : Seminars Office Hours: Mondays from 10:30 until 13:30 Chat Video Wednesdays from 13:00 until 16:00 Chat Video Request an appointment outside of office hours Times Monday Tuesday Wednesday Thursday Friday 08:30-09:00BusyBusyBusyBusyBusy09:00-09:3009:30-10:00 CS-499+900 CS-499+900 CS-499+900 10:00-10:30 CS-205 CS-205 10:30-11:00OfficeBusyBusy11:00-11:3011:30-12:00BusyBusy12:00-12:3012:30-13:0013:00-13:30Office13:30-14:00Busy14:00-14:30 CS-280 CS-280 14:30-15:0015:00-15:3015:30-16:00BusyBusy16:00-16:30Busy16:30-17:0017:00-17:30",
+    "text": "Winter 2020 Important Dates: First day of term: Mon-06-Jan-2020 Last day of classes: Thu-09-Apr-2020 Last day of term: Sat-25-Apr-2020 Courses Taught: CS-205 : Introduction to Multimedia Systems CS-280 : Risk and Reward in the Information Society CS-499+900 : Seminars Office Hours: Mondays from 10:30 until 13:30 Chat Video Wednesdays from 13:00 until 16:00 Chat Video Request an appointment outside of office hours Times Monday Tuesday Wednesday Thursday Friday 08:30-09:00BusyBusyBusyBusyBusy09:00-09:3009:30-10:00 CS-499+900 CS-499+900 CS-499+900 10:00-10:30 CS-205 CS-205 10:30-11:00OfficeBusyBusy11:00-11:3011:30-12:00BusyBusy12:00-12:3012:30-13:0013:00-13:30Office13:30-14:00Busy14:00-14:3014:30-15:00 CS-280 CS-280 15:00-15:3015:30-16:0016:00-16:30BusyBusyBusy16:30-17:0017:00-17:30",
     "tags": "",
     "url": "/~hepting/teaching/schedule/202010.html"
+  },{
+    "title": "Mtg 20, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 (current) 21 22 23 24 25 26 27 28 &raquo; Next 12-Mar-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/20_12-Mar-20.html"
+  },{
+    "title": "Mtg 20CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 (current) 21 22 23 24 25 26 27 28 &raquo; Next 12-Mar-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/20_12-Mar-20.html"
+  },{
+    "title": "Mtg 20CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 (current) 21 22 23 24 25 26 &raquo; Next 14-Nov-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/20_14-Nov-19.html"
   },{
     "title": "Mtg-21 CS-428+828 (201930)",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 (current) 22 23 24 25 26 &raquo; Next Tue-19-Nov-2019 Focus HCI/Statistical Methods for HCI HCI / Statistical Methods for HCI Topics t-tests ANOVA Randomization (non-parametric) testing, within vs. between-subjects design Calculating effect size Exploratory data analysis Presenting statistical data Combining qualitative and quantitative results Learning Outcomes Explain basic statistical concepts and their areas of application. [Familiarity] Extract and articulate the statistical arguments used in papers that quantitatively report user studies. [Usage] Design a user study that will yield quantitative results. [Usage] Conduct and report on a study that utilizes both qualitative and quantitative evaluation. [Usage] Administration URcourses: Attendance URcourses: Calendar Evaluate Low-Fidelity Prototypes due in 7 days and Report as Test Subject due in 9 days CS 428 students: \"Student Experience Surveys will be sent out on Nov. 22 to U of R student emails and will be available for two weeks. (Dec. 6).\" We will take 15 minutes during class on Tue-26-Nov-2019 for you to complete them Midterm marks not ready yet, but we will discuss the exam today (results will be available online before next meetingtoday). The reason is that I have to give more marks for inspiring answers (from all) &mdash; some that I have tried to realize on my website for today Request: if you have done annotations this semester, or you are going to do them, can you please email me 3 pieces of information : Meeting number Your name as you'd like it to appear on the meeting page The permalink for your blog entry (post=permalink) Questions? Any questions from last meeting ? Any questions about Evaluation (assignments)? Did you see the list of \"Eval\" groups ? Is it helpful? Outline for Today Mental models in designing interfaces: recall the HDMI disconnection in a recent meeting designers need real user input different entry points to website date format differences boring wallpaper Let's reconstruct the table we drew during last meeting Experiment design Free and informed consent Simple analysis of quantitative data: mean, median, mode Conclusion When is simple, and when is more complex analysis appropriate? Read Chapter 16 Annotations by: Harsh Patel Deepika Teegapuram",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/21-19-Nov-19.html"
   },{
+    "title": "Mtg 21, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 (current) 22 23 24 25 26 27 28 &raquo; Next 17-Mar-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/21_17-Mar-20.html"
+  },{
+    "title": "Mtg 21CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 (current) 22 23 24 25 26 27 28 &raquo; Next 17-Mar-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/21_17-Mar-20.html"
+  },{
+    "title": "Mtg 21CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 (current) 22 23 24 25 26 &raquo; Next 19-Nov-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/21_19-Nov-19.html"
+  },{
     "title": "CS-428+828 (201930) Mtg 22",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 (current) 23 24 25 26 &raquo; Next Thu-21-Nov-2019 Focus HCI/Foundations HCI / Foundations Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) Processes for user-centered development, e.g., early focus on users, empirical testing, iterative design Different measures for evaluation, e.g., utility, efficiency, learnability, user satisfaction Usability heuristics and the principles of usability testing Physical capabilities that inform interaction design, e.g., color perception, ergonomics Cognitive models that inform interaction design, e.g., attention, perception and recognition, movement, and memory; gulfs of expectation and execution Social models that inform interaction design, e.g., culture, communication, networks and organizations Principles of good design and good designers; engineering tradeoffs Accessibility, e.g., interfaces for differently-abled populations (e.g., blind, motion-impaired) Interfaces for differently-aged population groups (e.g., children, 80+) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] Summarize the basic precepts of psychological and social interaction. [Familiarity] Develop and use a conceptual vocabulary for analyzing human interaction with software: affordance, conceptual model, feedback, and so forth. [Usage] Define a user-centered design process that explicitly takes account of the fact that the user is not like the developer or their acquaintances. [Usage] Create and conduct a simple usability test for an existing software application. [Assessment] Administration URcourses: Attendance URcourses: Calendar Eval groups &mdash; any problems connecting? Questions? Any questions from last meeting ? Outline for Today SaskPower design lab Experiment design Free and informed consent Simple analysis of quantitative data: mean, median, mode Conclusion Read Chapter 15 Annotations by: Shirish Soni Iveatu Obioha Chermaraj Sai Sravya Surapaneni Vignesh Shankar Tolulope Fatoki",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/22-21-Nov-19.html"
+  },{
+    "title": "Mtg 22, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 (current) 23 24 25 26 27 28 &raquo; Next 19-Mar-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/22_19-Mar-20.html"
+  },{
+    "title": "Mtg 22CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 (current) 23 24 25 26 27 28 &raquo; Next 19-Mar-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/22_19-Mar-20.html"
+  },{
+    "title": "Mtg 22CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 (current) 23 24 25 26 &raquo; Next 21-Nov-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/22_21-Nov-19.html"
   },{
     "title": "CS-428+828 (201930) Mtg 23",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 (current) 24 25 26 &raquo; Next Tue-26-Nov-2019 Focus HCI/Statistical Methods for HCI HCI / Statistical Methods for HCI Topics t-tests ANOVA Randomization (non-parametric) testing, within vs. between-subjects design Calculating effect size Exploratory data analysis Presenting statistical data Combining qualitative and quantitative results Learning Outcomes Explain basic statistical concepts and their areas of application. [Familiarity] Extract and articulate the statistical arguments used in papers that quantitatively report user studies. [Usage] Design a user study that will yield quantitative results. [Usage] Conduct and report on a study that utilizes both qualitative and quantitative evaluation. [Usage] Administration URcourses: Attendance URcourses: Calendar Eval groups &mdash; any remaining problems connecting? Questions? Any questions from last meeting ? Outline for Today SaskPower design lab Experiment design Free and informed consent Simple analysis of quantitative data: mean, median, mode T-test (for comparing 2 interfaces) The R Project for Statistical Computing Concluding Thoughts For more information, see: The t-test and Basic Inference Principles Time for CS-428 students to complete experience surveys Annotations by: Chermaraj",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/23-26-Nov-19.html"
   },{
+    "title": "Mtg 23, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 (current) 24 25 26 27 28 &raquo; Next 24-Mar-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/23_24-Mar-20.html"
+  },{
+    "title": "Mtg 23CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 (current) 24 25 26 27 28 &raquo; Next 24-Mar-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/23_24-Mar-20.html"
+  },{
+    "title": "Mtg 23CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 (current) 24 25 26 &raquo; Next 26-Nov-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/23_26-Nov-19.html"
+  },{
     "title": "CS-428+828 (201930) Mtg 24",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 (current) 25 26 &raquo; Next Thu-28-Nov-2019 Focus HCI/Statistical Methods for HCI HCI / Statistical Methods for HCI Topics t-tests ANOVA Randomization (non-parametric) testing, within vs. between-subjects design Calculating effect size Exploratory data analysis Presenting statistical data Combining qualitative and quantitative results Learning Outcomes Explain basic statistical concepts and their areas of application. [Familiarity] Extract and articulate the statistical arguments used in papers that quantitatively report user studies. [Usage] Design a user study that will yield quantitative results. [Usage] Conduct and report on a study that utilizes both qualitative and quantitative evaluation. [Usage] Administration URcourses: Attendance URcourses: Calendar Individual Assignment Due Today ( see note ) Questions? Any questions from last meeting ? Outline for Today Tradeoffs of Building Green Prototyping tools Design at scale Data and Design Concluding Thoughts Keep up the good work and have a good weekend Annotations by: Samuel Anwo",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/24-28-Nov-19.html"
+  },{
+    "title": "Mtg 24, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 (current) 25 26 27 28 &raquo; Next 26-Mar-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/24_26-Mar-20.html"
+  },{
+    "title": "Mtg 24CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 (current) 25 26 27 28 &raquo; Next 26-Mar-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/24_26-Mar-20.html"
+  },{
+    "title": "Mtg 24CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 (current) 25 26 &raquo; Next 28-Nov-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/24_28-Nov-19.html"
   },{
     "title": "CS-428+828 (201930) Mtg 25",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 (current) 26 &raquo; Next Tue-03-Dec-2019 Focus HCI/Foundations HCI / Foundations Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) Processes for user-centered development, e.g., early focus on users, empirical testing, iterative design Different measures for evaluation, e.g., utility, efficiency, learnability, user satisfaction Usability heuristics and the principles of usability testing Physical capabilities that inform interaction design, e.g., color perception, ergonomics Cognitive models that inform interaction design, e.g., attention, perception and recognition, movement, and memory; gulfs of expectation and execution Social models that inform interaction design, e.g., culture, communication, networks and organizations Principles of good design and good designers; engineering tradeoffs Accessibility, e.g., interfaces for differently-abled populations (e.g., blind, motion-impaired) Interfaces for differently-aged population groups (e.g., children, 80+) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] Summarize the basic precepts of psychological and social interaction. [Familiarity] Develop and use a conceptual vocabulary for analyzing human interaction with software: affordance, conceptual model, feedback, and so forth. [Usage] Define a user-centered design process that explicitly takes account of the fact that the user is not like the developer or their acquaintances. [Usage] Create and conduct a simple usability test for an existing software application. [Assessment] Administration URcourses: Attendance URcourses: Calendar Project Assignment Due Today: (Video) Presentation Due in 7 days: Undergrad: You Choose Grad: Research Paper Review Project: High Fidelity Questions? Any questions from last meeting ? Outline for Today Previous Final Exam Six Blind Men and the Elephant The Designer's Stance Green New Deal: Last Week Tonight with John Oliver (HBO) [May, 2019] [language warning] ALF (television series) Concluding Thoughts Keep up the good work. Last next meeting will have videos from your projects and review. Annotations by: Iveatu Obioha",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/25-03-Dec-19.html"
   },{
+    "title": "Mtg 25CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 (current) 26 &raquo; Next 03-Dec-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/25_03-Dec-19.html"
+  },{
+    "title": "Mtg 25, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 (current) 26 27 28 &raquo; Next 31-Mar-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/25_31-Mar-20.html"
+  },{
+    "title": "Mtg 25CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 (current) 26 27 28 &raquo; Next 31-Mar-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/25_31-Mar-20.html"
+  },{
     "title": "CS-428+828 (201930) Mtg 26",
     "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 (current) &raquo; Next Thu-05-Dec-2019 Administration Questions? Outline for Today Video Presentations Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/26-05-Dec-19.html"
+  },{
+    "title": "Mtg 26, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 (current) 27 28 &raquo; Next 02-Apr-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/26_02-Apr-20.html"
+  },{
+    "title": "Mtg 26CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 (current) 27 28 &raquo; Next 02-Apr-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/26_02-Apr-20.html"
+  },{
+    "title": "Mtg 26CS-428+828 (201930)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 (current) &raquo; Next 05-Dec-19 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/meetings/26_05-Dec-19.html"
+  },{
+    "title": "Mtg 27, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 (current) 28 &raquo; Next 07-Apr-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/27_07-Apr-20.html"
+  },{
+    "title": "Mtg 27CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 (current) 28 &raquo; Next 07-Apr-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/27_07-Apr-20.html"
+  },{
+    "title": "Mtg 28, CS-205 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 (current) &raquo; Next 09-Apr-20 Administration Questions? Outline for Today Topics Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games) ( HCI Foundations ) Learning Outcomes Discuss why human-centered software development is important. [Familiarity] ( HCI Foundations ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/28_09-Apr-20.html"
+  },{
+    "title": "Mtg 28CS-280 (202010)",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 (current) &raquo; Next 09-Apr-20 Administration Questions? Outline for Today Topics Learning Outcomes ( ) To Do",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/28_09-Apr-20.html"
   },{
     "title": "Forbidden Access",
     "text": "Forbidden Access The link that was used to reach this site was forbidden access. Referring URL: Please send me the details of the link that was followed, so that I may correct the problem: e-mail Daryl Hepting You may also be able to go back the referring page by clicking here.",
@@ -275,7 +685,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/curriculum/2013/PBD.html"
   },{
     "title": "",
-    "text": "Knowledge Units Social Context Topics Learning Outcomes Analytical Tools Topics Learning Outcomes Professional Ethics Topics Learning Outcomes Intellectual Property Topics Learning Outcomes Privacy and Civil Liberties Topics Learning Outcomes Professional Communication Topics Learning Outcomes Sustainability Topics Learning Outcomes",
+    "text": "Knowledge Units Social Context Preamble Computers and the Internet, perhaps more than any other technologies, have transformed society over the past 75 years, with dramatic increases in human productivity; an explosion of options for news, entertainment, and communication; and fundamental breakthroughs in almost every branch of science and engineering. Social Context provides the foundation for all other SP knowledge units, especially Professional Ethics. Also see cross-referencing with Human-Computer Interaction (HCI) and Networking and Communication (NC) Knowledge Areas. Topics Social implications of computing in a networked world (cross-reference HCI/Foundations/social models; IAS/Fundamental Concepts/social issues)Impact of social media on individualism, collectivism and culture.Growth and control of the Internet (cross-reference NC/Introduction/organization of the Internet)Often referred to as the digital divide, differences in access to digital technology resources and its resulting ramifications for gender, class, ethnicity, geography, and/or underdeveloped countries.Accessibility issues, including legal requirementsContext-aware computing (cross-reference HCI/Design for non-mouse interfaces/ ubiquitous and context-aware) Learning Outcomes Describe positive and negative ways in which computer technology (networks, mobile computing, cloud computing) alters modes of social interaction at the personal level. [Familiarity]Identify developers’ assumptions and values embedded in hardware and software design, especially as they pertain to usability for diverse populations including under-represented populations and the disabled. [Familiarity]Interpret the social context of a given design and its implementation. [Familiarity]Evaluate the efficacy of a given design and implementation using empirical data. [Assessment]Summarize the implications of social media on individualism versus collectivism and culture. [Usage]Discuss how Internet access serves as a liberating force for people living under oppressive forms of government; explain how limits on Internet access are used as tools of political and social repression. [Familiarity]Analyze the pros and cons of reliance on computing in the implementation of democracy (e.g. delivery of social services, electronic voting). [Assessment]Describe the impact of the under-representation of diverse populations in the computing profession (e.g., industry culture, product diversity). [Familiarity]Explain the implications of context awareness in ubiquitous computing systems. [Familiarity] Analytical Tools Topics Learning Outcomes Professional Ethics Topics Learning Outcomes Intellectual Property Topics Learning Outcomes Privacy and Civil Liberties Topics Learning Outcomes Professional Communication Topics Learning Outcomes Sustainability Topics Learning Outcomes",
     "tags": "",
     "url": "/~hepting/teaching/curriculum/2013/SP.html"
   },{
@@ -539,8 +949,13 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-205/201810/"
   },{
+    "title": "CS-205 (202010) Meetings",
+    "text": "#CS-205 (202010) Meetings Month Meetings 20.html 01_07 02_09 03_14 04_16 05_21 06_23 07_28 08_30 09_04 10_06 11_11 12_13 13_18 14_20 15_25 16_27 17_03 18_05 19_10 20_12 21_17 22_19 23_24 24_26 25_31 26_02 27_07 28_09",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/meetings/"
+  },{
     "title": "CS 205 in Winter 2020",
-    "text": "CS 205 in 202010 Calendar Calendar Wk Week S Sun M Mon T Tue W Wed R Thu F Fri S Sat 1 01 : 01 02 : 02 2 03 : 03 04 : 04 3 05 : 05 06 : 06 4 07 : 07 08 : 08 5 09 : 09 10 : 10 6 11 : 11 12 : 12 7 13 : 13 14 : 14 8 15 : 15 16 : 16 9 17 : 17 18 : 18 10 19 : 19 20 : 20 11 21 : 21 22 : 22 12 23 : 23 24 : 24 13 25 : 25 26 : 26 14 27 : 27 28 : 28 15 FXFINAL EXAM @ 09:00 16 Total meetings this semester: 28 Information Syllabus Textbook Office Hours CS 205 on URcourses",
+    "text": "CS 205 in 202010 Calendar Calendar Wk Week S Sun M Mon T Tue W Wed R Thu F Fri S Sat 1 07 Jan : 01 09 Jan : 02 2 14 Jan : 03 16 Jan : 04 3 21 Jan : 05 23 Jan : 06 4 28 Jan : 07 30 Jan : 08 5 04 Feb : 09 06 Feb : 10 6 11 Feb : 11 13 Feb : 12 7 18 Feb : 13 20 Feb : 14 8 25 Feb : 15 27 Feb : 16 9 03 Mar : 17 05 Mar : 18 10 10 Mar : 19 12 Mar : 20 11 17 Mar : 21 19 Mar : 22 12 24 Mar : 23 26 Mar : 24 13 31 Mar : 25 02 Apr : 26 14 07 Apr : 27 09 Apr : 28 15 FXFINAL EXAM @ 09:00 16 Total meetings this semester: 28 Information Syllabus Textbook Office Hours CS 205 on URcourses Meetings",
     "tags": "",
     "url": "/~hepting/teaching/CS-205/202010/"
   },{
@@ -649,8 +1064,13 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-280/201010/"
   },{
+    "title": "CS-280 (202010) Meetings",
+    "text": "CS-280 (202010) Meetings Month Meetings 20.html 01_07 02_09 03_14 04_16 05_21 06_23 07_28 08_30 09_04 10_06 11_11 12_13 13_18 14_20 15_25 16_27 17_03 18_05 19_10 20_12 21_17 22_19 23_24 24_26 25_31 26_02 27_07 28_09",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/meetings/"
+  },{
     "title": "CS 280 in Winter 2020",
-    "text": "CS 280 in 202010 Calendar Calendar Wk Week S Sun M Mon T Tue W Wed R Thu F Fri S Sat 1 01 : 01 02 : 02 2 03 : 03 04 : 04 3 05 : 05 06 : 06 4 07 : 07 08 : 08 5 09 : 09 10 : 10 6 11 : 11 12 : 12 7 13 : 13 14 : 14 8 15 : 15 16 : 16 9 17 : 17 18 : 18 10 19 : 19 20 : 20 11 21 : 21 22 : 22 12 23 : 23 24 : 24 13 25 : 25 26 : 26 14 27 : 27 28 : 28 15 16 FXFINAL EXAM @ 14:00 Total meetings this semester: 28 Information Textbook Office Hours CS 280 on URcourses",
+    "text": "CS 280 in 202010 Calendar Calendar Wk Week S Sun M Mon T Tue W Wed R Thu F Fri S Sat 1 07 Jan : 01 09 Jan : 02 2 14 Jan : 03 16 Jan : 04 3 21 Jan : 05 23 Jan : 06 4 28 Jan : 07 30 Jan : 08 5 04 Feb : 09 06 Feb : 10 6 11 Feb : 11 13 Feb : 12 7 18 Feb : 13 20 Feb : 14 8 25 Feb : 15 27 Feb : 16 9 03 Mar : 17 05 Mar : 18 10 10 Mar : 19 12 Mar : 20 11 17 Mar : 21 19 Mar : 22 12 24 Mar : 23 26 Mar : 24 13 31 Mar : 25 02 Apr : 26 14 07 Apr : 27 09 Apr : 28 15 16 FXFINAL EXAM @ 14:00 Total meetings this semester: 28 Information Syllabus Textbook Office Hours CS 280 on URcourses Meetings Knowledge Units SP/01-Social-Context HCI/02-Designing-Interaction HCI/03-Programming-Interactive-Systems HCI/04-User_Centered-Design-and-Testing HCI/05-New-Interactive-Technologies HCI/06-Collaboration-and-Communication HCI/07-Statistical-Methods-for-HCI HCI/09-Design_Oriented-HCI",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202010/"
   },{
@@ -885,7 +1305,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201730/"
   },{
     "title": "CS-428+828 (201930) Meetings",
-    "text": "CS 428+828 (201930) Meetings Month Meetings Sep 01 02 03 04 05 06 07 Oct 08 09 10 11 12 13 14 15 16 17 Nov 18 19 20 21 22 23 24 Dec 25 26",
+    "text": "#CS-428+828 (201930) Meetings Month Meetings Sep 01 19.html 01_05 Sep 02 19.html 02_10 Sep 03 19.html 03_12 Sep 04 19.html 04_17 Sep 05 19.html 05_19 Sep 06 19.html 06_24 Sep 07 19.html 07_26 Oct 08 19.html 08_01 Oct 09 19.html 09_03 Oct 10 19.html 10_08 Oct 11 19.html 11_10 Oct 12 19.html 12_15 Oct 13 19.html 13_17 Oct 14 19.html 14_22 Oct 15 19.html 15_24 Oct 16 19.html 16_29 Oct 17 19.html 17_31 Nov 18 19.html 18_05 Nov 19 19.html 19_12 Nov 20 19.html 20_14 Nov 21 19.html 21_19 Nov 22 19.html 22_21 Nov 23 19.html 23_26 Nov 24 19.html 24_28 Dec 25 19.html 25_03 Dec 26 19.html 26_05",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/meetings/"
   },{
@@ -1068,6 +1488,11 @@ var tipuesearch = {"pages": [{
     "text": "Textbook Textbook website",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/textbook.html"
+  },{
+    "title": "Topics and Outcomes for CS 428+828 in 201930",
+    "text": "{% include tlo.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202010/tlo.html"
   },{
     "title": "Topics and Outcomes for CS 428+828 in 201930",
     "text": "{% include tlo.html %}",
