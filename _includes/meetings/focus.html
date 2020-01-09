@@ -10,6 +10,10 @@
     <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#focus-{{kakid}}-collapse" aria-expanded="false" aria-controls="focus-{{kakid}}-collapse">
       {{ pf.ka }}/{{ kuti }}
     </button>
+    {% else %}
+    <span>
+      NOT FOUND: {{ pf.ka }}/{{ kuti }}
+    </span>
     {% endif %}
   {%- endfor -%}
   </div>
