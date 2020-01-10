@@ -9,6 +9,34 @@ MD_ROOT = "teaching/"
 HTML_ROOT = "_site/teaching/"
 DATA_ROOT = "_data/teaching/meetings/"
 
+meet_template = { "CS-205" : """
+{% include meetings/pagination.html %}
+<div class="card">
+  <h1 class="text-center card-header lightcthru">
+    {{ page.mtg_date | date: '%a-%d-%b-%Y' }}
+  </h1>
+  <div class="card-body">
+    {% include meetings/focus.html %}
+
+    {% include meetings/admin-0-open.html %}
+    {% include meetings/ul-1-close.html %}
+
+    {% include meetings/quest-0-open.html %}
+    {% include meetings/ul-1-close.html %}
+
+    {% include meetings/outline-0-open.html %}
+    {% include meetings/ul-1-close.html %}
+
+    {% include meetings/concluding-0-open.html %}
+    {% include meetings/ul-1-close.html %}
+
+    {% include meetings/annotations.html %}
+
+    {% include meetings/media.html mtg_media=joff_id mtg=page.mtg_nbr %}
+  </div>
+</div>"""
+}
+
 # Make sure that script is executed properly: i.e. CS-428+828/201830
 if (len(sys.argv) != 2):
 	print (sys.argv[0],"must be invoked with <course>/<semester>")
@@ -34,6 +62,9 @@ m = 0
 mtgdatafile = os.path.join(os.path.abspath(SITE_DIR+DATA_ROOT),reldir[0]+"-"+reldir[1]+".csv")
 mtgdatafile = mtgdatafile.replace("+","_")
 print(mtgdatafile)
+for mt in meet_template:
+    print(meet_template[mt])
+sys.exit()
 mdirstr = str(SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings")
 try:
     os.makedirs(mdirstr)
