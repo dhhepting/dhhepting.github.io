@@ -15,6 +15,10 @@
   {% assign osn = o.semester | plus: 0 %}
   {% if osn == psn %}
     {% capture offs %}{{offs}}#{{o.id}}{% endcapture %}
+    {% for c in site.data.teaching.courses %}
+      {% if o.id == c.id %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
 

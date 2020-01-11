@@ -12,6 +12,12 @@
 {% assign crs_nbr = crs_parts[1] %}
 {% assign crs_sem = url_parts[sem_idx] %}
 {% capture crs_id %}{{crs_sbj}}-{{crs_nbr}}{% endcapture %}
+{% for c in site.data.teaching.courses %}
+  {% if crs_id == c.id %}
+    {% assign urc_id = c.urcourses %}
+    {% assign urc_attend = c.attendance %}
+  {% endif %}
+{% endfor %}
 {% capture off_id %}{{crs_sbj}}-{{crs_nbr}}-{{crs_sem}}{% endcapture %}
 {% capture joff_id %}{{off_id | replace: "+", "_"}}{% endcapture %}
 

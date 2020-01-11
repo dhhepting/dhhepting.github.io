@@ -23,7 +23,7 @@
       {% assign sotd = s.term-start | date: "%e-%b-%y" | date: "%a" %}
       {% assign eocts = s.class-end | date: "%e-%b-%y" | date: "%s" %}
       {% assign eotts = s.term-end | date: "%e-%b-%y" | date: "%s" %}
-      {% assign nomeet = s.no-class-days | split: ","  %}
+      {% assign nomeet = s.no-class-days | split: "," %}
     {% endif %}
   {% endfor %}
 {%- endif -%}
@@ -99,7 +99,7 @@
     {% if day > eoc %}
       {% assign nmc = "true" %}
     {% endif %}
-    {% assign odate = day | date: "%d %b" %}
+    {% assign odate = day | date: "%d-%b" %}
     {% if nomeet contains odate %}
       {% capture tabdat %}&mdash;{% endcapture %}
     {% else %}
