@@ -3,6 +3,10 @@ import sys, os, datetime, subprocess, errno
 from datetime import datetime
 from subprocess import Popen, PIPE
 
+#tdt = datetime.today().strftime("%d-%b-%y")
+#ydt = datetime()
+#print ("TODAY: ",tdt)
+#print ("NOW: ",datetime.now()) #.strftime("%d-%b-%y"))
 
 SITE_DIR = "/Users/hepting/Sites/dhhepting.github.io/"
 MD_ROOT = "teaching/"
@@ -55,16 +59,17 @@ outs, errs = grep_href.communicate()
 utfout = (outs.decode("utf-8")).split('\n')
 
 nbr_meetings = 0
+#print(utfout)
 for line in utfout:
     if len(line) > 0:
         nbr_meetings += 1
 m = 0
 mtgdatafile = os.path.join(os.path.abspath(SITE_DIR+DATA_ROOT),reldir[0]+"-"+reldir[1]+".csv")
 mtgdatafile = mtgdatafile.replace("+","_")
-print(mtgdatafile)
-for mt in meet_template:
-    print(meet_template[mt])
-sys.exit()
+#print("MDF: ",mtgdatafile)
+#for mt in meet_template:
+#    print(meet_template[mt])
+#sys.exit()
 mdirstr = str(SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings")
 try:
     os.makedirs(mdirstr)
@@ -73,7 +78,9 @@ except OSError as e:
         pass
     else:
         raise
-with open(SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings/index.md","w") as mtgidx:
+midxstr = SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings/index.md"
+print (midxstr)
+with open(midxstr,"w") as mtgidx:
     mtgidx.write("---\n")
     mtgidx.write("title: " + reldir[0] + " (" + reldir[1] + ") Meetings\n")
     mtgidx.write("breadcrumb: Meetings\n")
@@ -94,41 +101,29 @@ with open(mtgdatafile,"w") as mtgdata:
             #print("Meeting file name: ",mtg_fname)
             try:
                 #print("TRYING")
+                #print(datestr[1])
                 mtg_dt = datetime.strptime(datestr[1],"%d-%b-%y")
-                print (mtg_dt)
-                mfilestr = SITE_DIR + MD_ROOT + sys.argv[1] + "/" + mtg_fname + ".md"
-                #print(mfilestr)
-                with open(mfilestr,"w") as mtgfile:
-                    mtgfile.write("---\n")
-                    mtgfile.write("title: Mtg " + str(m) + reldir[0] +  " (" + reldir[1] + ")\n")
-                    mtgfile.write("breadcrumb: " + str(m) + " (" + mtg_dt.strftime('%d-%b-%y') + ")\n")
-                    mtgfile.write("mtg_nbr: " + str(m) + "\n")
-                    mtgfile.write("total_meet: " + str(nbr_meetings) + "\n")
-                    mtgfile.write("mtg_date: " + mtg_dt.strftime('%d-%b-%y') + "\n")
-                    mtgfile.write("layout: bg-image\n")
-                    mtgfile.write("focus:\n")
-                    mtgfile.write("- ka:\n")
-                    mtgfile.write("  ku:\n")
-                    mtgfile.write("---\n")
-                    #mtgfile.writelines(str(i) + "\n" for i in range(1, 6))
-                    mtgfile.write("{% include meetings/pagination.html %}\n")
-                    mtgfile.write("<h1 class=\"text-center\">{{ page.mtg_date }}</h1>\n<hr />\n")
-                    mtgfile.write("### Administration\n")
-                    mtgfile.write("\n")
-                    mtgfile.write("### Questions?\n")
-                    mtgfile.write("\n")
-                    mtgfile.write("### Outline for Today\n")
-                    mtgfile.write("\n")
-                    mtgfile.write("{% include meetings/topics.html %}\n")
-                    mtgfile.write("\n")
-                    mtgfile.write("{% include meetings/outcomes.html %}\n")
-                    mtgfile.write("\n")
-                    mtgfile.write("### To Do\n")
-                    mtgfile.write("\n")
-                    mtgfile.write("<hr />\n")
-                    mtgfile.write("{% include meetings/media.html mtg_media=off_med mtg=page.mtg_nbr %}\n")
-
-
-                    #mtgfile.write("{% include meeting-media.html mtg_media=off_med mtg=page.mtg_nbr %}\n")
+                print(mtg_dt)
+                #print(tdt)
+                #print(datetime.strptime(tdt,"%d-%b-%y"))
+                print(mtg_dt >= datetime.today())
+                if mtg_dt >= datetime.today():
+                    #print (datetime.today.strftime("%d-%b-%y"))
+                    print(SITE_DIR + MD_ROOT + sys.argv[1] + "/" + mtg_fname + ".md")
+                    mfilestr = SITE_DIR + MD_ROOT + sys.argv[1] + "/" + mtg_fname + ".md"
+                    print(mfilestr)
+                    with open(mfilestr,"w") as mtgfile:
+                        mtgfile.write("---\n")
+                        mtgfile.write("title: Mtg " + str(m) + "&bull;" + reldir[0] +  " (" + reldir[1] + ")\n")
+                        mtgfile.write("breadcrumb: " + str(m) + " (" + mtg_dt.strftime('%d-%b-%y') + ")\n")
+                        mtgfile.write("mtg_nbr: " + str(m) + "\n")
+                        mtgfile.write("total_meet: " + str(nbr_meetings) + "\n")
+                        mtgfile.write("mtg_date: " + mtg_dt.strftime('%d-%b-%y') + "\n")
+                        mtgfile.write("layout: bg-image\n")
+                        mtgfile.write("focus:\n")
+                        mtgfile.write("- ka:\n")
+                        mtgfile.write("  ku:\n")
+                        mtgfile.write("---\n")
+                        mtgfile.write(meet_template["CS-205"])
             except:
                 pass
