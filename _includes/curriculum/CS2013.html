@@ -1,31 +1,43 @@
 <h1>
   Knowledge Areas
 </h1>
-<ul class="list-group list-group-flush">
 {% assign kal = "" %}
 {% for entry in site.data.teaching.CS2013 %}
-  {% assign ki = entry[0] %}
-  {% capture kintro %}00-{{ ki }}{% endcapture %}
-  {% capture kal %}{{ kal }},{{ ki }}#{{ site.data.teaching.CS2013_KA[ki].name }}#{{ kintro }}{% endcapture %}
+  {% assign ka = entry[0] %}
+  {% capture ka_intro %}00-{{ ka }}{% endcapture %}
+  {% capture kal %}{{ kal }},{{ ka }}#{{ ka_intro }}{% endcapture %}
 {% endfor %}
-{% assign kap = kal | split: "," | sort %}
-{% for kaa in kap offset:1 %}
-  {% assign kk = kaa | split: "#" %}
-    <li class="list-group-item">
-      <div class="card">
-      <h3 class="card-header">
+{% assign kaol = kal | split: "," | sort %}
+{% for kkaa in kaol offset:1 %}
+  {% assign kk = kkaa | split: "#" %}
+  <div class="card">
+    <h3 class="card-header">
+    {%comment%}{%endcomment%}
+    {% assign ka = kk[0] %}
+    {% assign kaf = kk[1] %}
+    {% assign kaff = site.data.teaching.CS2013[ka][kaf]%}
+    {{ kaff.title}} ({{ kaff.abbrev }})
+    {%comment%}{%endcomment%}
+    </h3>
+    <div class="card-body">
+    {% for d in kaff.desc %}
+      {{ d.para | markdownify }}
+    {% endfor %}
+    {%- assign kul = site.data.teaching.CS2013[ka] -%}
+    {% for e in kul %}
+      {% assign e_parts = e[0] | split: "-" %}
+      {% if e_parts[0] != "00" %}
+        {% assign kaf = e[0] %}
+        {% capture kakid %}{{ ka }}{{ e_parts[0] }}{% endcapture %}
+        {% capture kuti %}{{ e[0] | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, e[0].size }}{% endcapture %}
+        <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#{{ kakid }}-collapse" aria-expanded="false" aria-controls="{{kakid}}-collapse">
+          {{ kuti }}
+        </button>
         {%comment%}{%endcomment%}
-        <a href="{{ kk[0] }}.html">
-          {{ kk[1] }} ({{ kk[0] }})
-          </a>
+        {% include curriculum/KU-collapse.html ika=ka iku=kaf ikuti=kuti ikakid=kakid %}
         {%comment%}{%endcomment%}
-      </h3>
-      {% assign varr = kk[2] %}
-      {% assign karr = kk[0] %}
-      <div class="card-body">
-      {{ site.data.teaching.CS2013[karr][varr] }}
-      </div>
-      </div>
-    </li>
+      {% endif %}
+    {%- endfor -%}
+    </div>
+  </div>
 {% endfor %}
-</ul>

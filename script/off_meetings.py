@@ -103,18 +103,18 @@ with open(mtgdatafile,"w") as mtgdata:
                 #print("TRYING")
                 #print(datestr[1])
                 mtg_dt = datetime.strptime(datestr[1],"%d-%b-%y")
-                print(mtg_dt)
+                #print(mtg_dt)
                 #print(tdt)
                 #print(datetime.strptime(tdt,"%d-%b-%y"))
-                print(mtg_dt >= datetime.today())
-                if mtg_dt >= datetime.today():
+                #print(mtg_dt >= datetime.today())
+                if mtg_dt > datetime.today():
                     #print (datetime.today.strftime("%d-%b-%y"))
-                    print(SITE_DIR + MD_ROOT + sys.argv[1] + "/" + mtg_fname + ".md")
+                    #print(SITE_DIR + MD_ROOT + sys.argv[1] + "/" + mtg_fname + ".md")
                     mfilestr = SITE_DIR + MD_ROOT + sys.argv[1] + "/" + mtg_fname + ".md"
-                    print(mfilestr)
+                    #print(mfilestr)
                     with open(mfilestr,"w") as mtgfile:
                         mtgfile.write("---\n")
-                        mtgfile.write("title: Mtg " + str(m) + "&bull;" + reldir[0] +  " (" + reldir[1] + ")\n")
+                        mtgfile.write("title: Mtg " + str(m) + " &bull; " + reldir[0] +  " (" + reldir[1] + ")\n")
                         mtgfile.write("breadcrumb: " + str(m) + " (" + mtg_dt.strftime('%d-%b-%y') + ")\n")
                         mtgfile.write("mtg_nbr: " + str(m) + "\n")
                         mtgfile.write("total_meet: " + str(nbr_meetings) + "\n")

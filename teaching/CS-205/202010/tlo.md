@@ -13,11 +13,11 @@ tlouts:
   - l01
   - l02
   - l05
-- ka: CN/Data--Information--and-Knowledge
+- ka: CN/05-Data--Information--and-Knowledge
 - ka: GV/Basic-Rendering
 - ka: GV/Fundamental-Concepts
 - ka: HCI/Designing-Interaction
 - ka: IM/Multimedia-Systems
 - ka: PBD/Web-Platforms
 ---
-{%- include tlo.html -%}
+{%- include offering/tlo.html -%}
