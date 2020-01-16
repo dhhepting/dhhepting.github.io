@@ -1,0 +1,40 @@
+<h7>
+  {{ include.heading }}
+</h7>
+<ol>
+{%- for e in include.elems -%}
+  {%- assign spec = 1 -%}
+  {%- if include.special != 0 -%}
+    {%- assign spec = 0 -%}
+    {%- for se in include.special -%}
+      {%- if se == e.label -%}
+        {%- assign spec = 1 -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+  {%- if spec == 1 -%}
+  <div>
+  {%- else -%}
+  <div class="text-muted">
+  {%- endif -%}
+    <li>
+      {{ e.desc }}
+      {%- assign ein = e.import | minus: 0 -%}
+      &nbsp;
+      {%- for ss in (ein..2) -%}
+        &starf;
+      {%- endfor -%}
+      {%- if e.details -%}
+      <ul>
+      {%- for ed in e.details -%}
+        <li>
+          {{ ed }}
+        </li>
+      {%- endfor -%}
+      </ul>
+      {%- endif -%}
+    </li>
+  </div>
+{%- endfor -%}
+</ol>

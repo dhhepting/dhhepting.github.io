@@ -1,0 +1,28 @@
+<div class="card card-body collapse" id="{{ include.ikakid }}-collapse">
+  <h5>
+    {{ include.ika }} / {{ include.ikuti }}
+  </h5>
+  {% assign kaku = site.data.teaching.CS2013[include.ika][include.iku] %}
+  {% if kaku.preamble %}
+  {%- for pre in kaku.preamble -%}
+  <div class="row">
+    <div class="col-md-12">
+      {% if pre.label %}
+      <h7>
+        {{ pre.label }}
+      </h7>
+      {% endif %}
+      {{ pre.desc | markdownify }}
+    </div>
+  </div>
+  {% endfor %}
+  {% endif %}
+  <div class="row">
+    <div class="col-md-6">
+      {%- include curriculum/t-OR-lo.html heading="Topics" elems=kaku.topics special=0 -%}
+    </div>
+    <div class="col-md-6">
+      {%- include curriculum/t-OR-lo.html heading="Learning Outcomes" elems=kaku.outcomes special=0 -%}
+    </div>
+  </div>
+</div>

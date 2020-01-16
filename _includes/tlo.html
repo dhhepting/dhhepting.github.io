@@ -45,8 +45,10 @@ It provides an answer to the question “Why would you do that?”
         {%- for pre in tlo_dat.preamble -%}
       <div class="row">
         <div class="col-md-12">
+          {% if pre.label %}
           <h5>{{ pre.label }}</h5>
-          <p>{{ pre.desc }}</p>
+          {% endif %}
+          {{ pre.desc | markdownify }}
         </div>
       </div>
         {% endfor %}
@@ -56,77 +58,79 @@ It provides an answer to the question “Why would you do that?”
 	    <div class="col-md-6">
 	      <h5>Topics</h5>
 	      <ol>
-        {% if tlo.spectop %}
-          {% for st in tlo.spectop %}
-            {%- for top in tlo_dat.topics -%}
-              {%- if st == top.label -%}
-                {%- if top.details -%}
-                  <li>{{ top.desc }}
-                    <ol>
-                      {%- for td in top.details -%}
-                        <li>{{ td }}</li>
-                      {%- endfor -%}
-                    </ol>
-                  </li>
-                {%- else -%}
-                  <li>{{ top.desc }}</li>
-                {%- endif -%} {%comment%}top.details {%endcomment%}
-              {%- endif -%} {%comment%}st == top.label {%endcomment%}
-            {%- endfor -%} {%comment%}for top {%endcomment%}
-          {%- endfor -%}{%comment%}for spectop {%endcomment%}
-        {%- else -%}
-          {%- for top in tlo_dat.topics -%}
-              {%- if top.details -%}
-                <li>{{ top.desc }}
-                  <ul>
-                    {%- for td in top.details -%}
-                      <li>{{ td }}</li>
-                    {%- endfor -%}
-                  </ul>
-                </li>
-              {%- else -%}
-                <li>{{ top.desc }}</li>
-              {%- endif -%} {%comment%}top.details {%endcomment%}
-          {%- endfor -%} {%comment%}for top {%endcomment%}
-        {%- endif -%}
+        {%- for top in tlo_dat.topics -%}
+          {%- assign topspec = 1 -%}
+          {%- if tlo.spectop -%}
+            {%- assign topspec = 0 -%}
+            {%- for st in tlo.spectop -%}
+              {%- if top.label == st -%}
+                {%- assign topspec = 1 -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+          {%- if topspec == 1 -%}
+            <div>
+          {%- else -%}
+            <div class="text-muted">
+          {%- endif -%}
+          <li>{{ top.desc }}
+          {%- assign tin = top.import | minus: 0 -%}
+          &nbsp;
+          {%- for ss in (tin..2) -%}
+            &starf;
+          {%- endfor -%}
+          {%- if top.details -%}
+            <ol>
+            {%- for td in top.details -%}
+              <li>{{ td }}</li>
+            {%- endfor -%}
+            </ol>
+          </li>
+          {%- else -%}
+          </li>
+          {%- endif -%} {%comment%}top.details {%endcomment%}
+          </div>
+        {%- endfor -%}{%comment%}for topics {%endcomment%}
 	      </ol>
 	    </div>
 	    <div class="col-md-6">
 	      <h5>Learning Outcomes</h5>
 	      <ol>
-        {% if tlo.speclo %}
-          {% for slo in tlo.speclo %}
-            {%- for lout in tlo_dat.outcomes -%}
-              {%- if slo == lout.label -%}
-                {%- if lout.details -%}
-                  <li>{{ lout.desc }}
-                    <ol>
-                      {%- for lod in lout.details -%}
-                        <li>{{ lod }}</li>
-                      {%- endfor -%}
-                    </ol>
-                  </li>
-                {%- else -%}
-                  <li>{{ lout.desc }}</li>
-                {%- endif -%} {%comment%}lout.details {%endcomment%}
-              {%- endif -%} {%comment%}slo == lout.label {%endcomment%}
-            {%- endfor -%} {%comment%}for lout {%endcomment%}
-          {%- endfor -%}{%comment%}for speclo {%endcomment%}
-          {%- else -%}
-            {%- for lout in tlo_dat.outcomes -%}
-                {%- if lout.details -%}
-                  <li>{{ lout.desc }}
-                    <ol>
-                      {%- for lod in lout.details -%}
-                        <li>{{ lod }}</li>
-                      {%- endfor -%}
-                    </ol>
-                  </li>
-                {%- else -%}
-                  <li>{{ lout.desc }}</li>
-                {%- endif -%} {%comment%}lout.details {%endcomment%}
-            {%- endfor -%} {%comment%}for lout {%endcomment%}
+        {%- for lo in tlo_dat.outcomes -%}
+          {%- assign lospec = 1 -%}
+          {%- if tlo.speclo -%}
+            {%- assign lospec = 0 -%}
+            {%- for sl in tlo.speclo -%}
+              {%- if lo.label == sl -%}
+                {%- assign lospec = 1 -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
           {%- endif -%}
+          {%- if lospec == 1 -%}
+            <div>
+          {%- else -%}
+            <div class="text-muted">
+          {%- endif -%}
+          <li>{{ lo.desc }}
+          {%- assign lin = lo.import | minus: 0 -%}
+          &nbsp;
+          {%- for st in (lin..2) -%}
+            &starf;
+          {%- endfor -%}
+          {%- if lo.details -%}
+            <ol>
+            {%- for ld in lo.details -%}
+              <li>{{ ld }}</li>
+            {%- endfor -%}
+            </ol>
+          </li>
+          {%- else -%}
+          </li>
+          {%- endif -%} {%comment%}lo.details {%endcomment%}
+          </div>
+        {%- endfor -%}{%comment%}for lo {%endcomment%}
 	      </ol>
 	    </div>
 	</div>
