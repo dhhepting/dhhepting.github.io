@@ -20,8 +20,6 @@ rubric:
   l0: No plan and no personal connection
 ---
 ### Description
-{% assign curr_sem = "201910" %}
-{% capture topic_url %}/teaching/CS-280/{{ curr_sem }}/topics.html{% endcapture %}
 
 [Blogs](https://en.wikipedia.org/wiki/Blog) (short for weblogs) have become an important means of expression in the information society. Personal blog posts are discrete, often informal, diary-style commentaries written by an individual.
 
