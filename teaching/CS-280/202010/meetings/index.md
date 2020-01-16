@@ -3,5 +3,6 @@ title: CS-280 (202010) Meetings
 breadcrumb: Meetings
 layout: bg-image
 ---
-#CS-280 (202010) Meetings
+# {{ page.title | replace: "-"," " }}
+
 {% include meetings/index-table.html %}
