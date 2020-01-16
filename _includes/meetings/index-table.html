@@ -20,9 +20,10 @@
           {%- for sp in site.pages -%}
             {%- if sp.url contains page.url and sp.url != page.url -%}
             	{%- assign mtg_file = sp.url | split: '/' | last -%}
-              {%- assign mtg_parts = mtg_file | split: '-' -%}
-              {%- assign mtg_nbr = mtg_parts[0] -%}
-              {%- assign mtg_month = mtg_parts[2] -%}
+              {%- assign mtg_parts1 = mtg_file | split: '_' -%}
+              {%- assign mtg_nbr = mtg_parts1[0] -%}
+              {%- assign mtg_parts2 = mtg_file | split: '-' -%}
+              {%- assign mtg_month = mtg_parts2[1] -%}
               {% if month == "" %}
                 {% assign month = mtg_month %}
                 <tr class="d-flex">
