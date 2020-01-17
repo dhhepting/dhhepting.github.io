@@ -5,7 +5,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/news/website-deployed.html"
   },{
     "title": "Mtg 1 • CS-499+900 (202010)",
-    "text": "&laquo; Previous 1 (current) 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 &raquo; Next Mon-06-Jan-2020 Focus NOT FOUND: SP/ Administration URcourses: Attendance URcourses: Calendar Questions? Outline for Today Concluding Thoughts",
+    "text": "&laquo; Previous 1 (current) 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 &raquo; Next Mon-06-Jan-2020 Focus NOT FOUND: SP/Professional Communication Administration URcourses: Attendance URcourses: Calendar Questions? Outline for Today Concluding Thoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202010/meetings/01_06-Jan-20.html"
   },{
@@ -20,7 +20,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-280/202010/meetings/01_07-Jan-20.html"
   },{
     "title": "Mtg 2 • CS-499+900 (202010)",
-    "text": "&laquo; Previous 1 2 (current) 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 &raquo; Next Wed-08-Jan-2020 Focus NOT FOUND: SP/ Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts",
+    "text": "&laquo; Previous 1 2 (current) 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 &raquo; Next Wed-08-Jan-2020 No Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202010/meetings/02_08-Jan-20.html"
   },{
@@ -35,7 +35,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-280/202010/meetings/02_09-Jan-20.html"
   },{
     "title": "Mtg 3 • CS-499+900 (202010)",
-    "text": "&laquo; Previous 1 2 3 (current) 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 &raquo; Next Fri-10-Jan-2020 Focus NOT FOUND: SP/ Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts",
+    "text": "&laquo; Previous 1 2 3 (current) 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 &raquo; Next Fri-10-Jan-2020 No Meeting",
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202010/meetings/03_10-Jan-20.html"
   },{
@@ -50,22 +50,22 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-280/202010/meetings/03_14-Jan-20.html"
   },{
     "title": "Mtg 4 • CS-499+900 (202010)",
-    "text": "&laquo; Previous 1 2 3 4 (current) 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 &raquo; Next Mon-13-Jan-2020 Focus NOT FOUND: / Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts",
+    "text": "&laquo; Previous 1 2 3 4 (current) 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 &raquo; Next Mon-13-Jan-2020 Focus NOT FOUND: SP/Professional Communication Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202010/meetings/04_13-Jan-20.html"
   },{
     "title": "Mtg 4 • CS-205 (202010)",
-    "text": "&laquo; Previous 1 2 3 4 (current) 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Thu-16-Jan-2020 Focus NOT FOUND: / Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts",
+    "text": "&laquo; Previous 1 2 3 4 (current) 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Thu-16-Jan-2020 Focus NOT FOUND: / Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts Previous Next Your browser does not support the audio element.",
     "tags": "",
     "url": "/~hepting/teaching/CS-205/202010/meetings/04_16-Jan-20.html"
   },{
     "title": "Mtg 4 • CS-280 (202010)",
-    "text": "&laquo; Previous 1 2 3 4 (current) 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Thu-16-Jan-2020 Focus NOT FOUND: / Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts",
+    "text": "&laquo; Previous 1 2 3 4 (current) 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 &raquo; Next Thu-16-Jan-2020 Focus NOT FOUND: / Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts Previous Next Your browser does not support the audio element.",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202010/meetings/04_16-Jan-20.html"
   },{
     "title": "Mtg 5 • CS-499+900 (202010)",
-    "text": "&laquo; Previous 1 2 3 4 5 (current) 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 &raquo; Next Wed-15-Jan-2020 Focus NOT FOUND: SP/ Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts",
+    "text": "&laquo; Previous 1 2 3 4 5 (current) 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 &raquo; Next Wed-15-Jan-2020 Focus NOT FOUND: SP/Professional Communication Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202010/meetings/05_15-Jan-20.html"
   },{
@@ -80,7 +80,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-280/202010/meetings/05_21-Jan-20.html"
   },{
     "title": "Mtg 6 • CS-499+900 (202010)",
-    "text": "&laquo; Previous 1 2 3 4 5 6 (current) 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 &raquo; Next Fri-17-Jan-2020 Focus NOT FOUND: / Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts",
+    "text": "&laquo; Previous 1 2 3 4 5 6 (current) 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 &raquo; Next Fri-17-Jan-2020 Focus NOT FOUND: SP/Professional Communication Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202010/meetings/06_17-Jan-20.html"
   },{
