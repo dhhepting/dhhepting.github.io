@@ -1,0 +1,21 @@
+{% include teaching/url.html %}
+{% assign tlooff = site.data.teaching.tlo[joff_id] %}
+{%- if tlooff -%}
+<div class="card my-2">
+  <h3 class="card-header text-center">Knowledge Units</h3>
+  <div class="card-body">
+  {%- for ku in tlooff -%}
+    {%- assign kk = ku[0] | split: "/" -%}
+    {%- assign kkaa = kk[0] -%}
+    {%- assign kkuu = kk[1] -%}
+    {% assign kunum = kkuu | slice: 0,2 %}
+    {% capture kuti %}{{ kkuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kkuu.size }}{% endcapture %}
+    {% capture kakid %}{{ kkaa }}{{ kunum }}{% endcapture %}
+    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#{{ kakid }}-collapse" aria-expanded="false" aria-controls="{{kakid}}-collapse">
+      {{ kkaa }} / {{ kuti }}
+    </button>
+    {% include curriculum/KU-collapse.html ika=kkaa iku=kkuu ikuti=kuti ikakid=kakid %}
+  {%- endfor -%}
+  </div>
+</div>
+{%- endif -%}
