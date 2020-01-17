@@ -5,6 +5,8 @@
 
 # {{ crs_sbj }} {{ crs_nbr }} in {{ crs_sem }}
 
+{% include offering/knowledge-cardC.html %}
+
 <div class="card-deck">
   {% include offering/info-card.html %}
   {% if 0 == 1 %}
@@ -13,5 +15,6 @@
     {% include offering/knowledge-cardB.html %}
   {% endif %}
 </div>
-  {% include offering/calendar-card.html %}
-  {% include offering/assignments-cardC.html %}
+
+{% include offering/calendar-card.html %}
+{% include offering/assignments-cardC.html %}
