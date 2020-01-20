@@ -2,30 +2,42 @@
 title: Blog Outline
 breadcrumb: Blog Outline
 layout: bg-image
-moddate: 16-Jan-2020
+moddate: 17-Jan-2020
 aid: I_BO
 marks: 3
 rubric:
 - crit: Topic
-  wt: 1.5
-  l3: Clearly demonstrates engagement with an important issue connected to course topics, with more than 1 excellent reference
-  l2: Demonstrates some engagement with an important issue connected to course topics, with more than 1 good reference
-  l1: Some engagement with an issue connected to course topics, with 1 good reference
-  l0: Not connected to course topics, no good reference
-- crit: Outline
-  wt: 1.5
-  l3: Well-defined plan to deal with topic, including clear personal response to concepts
-  l2: Plan is clear, but personal connection could be more clear
-  l1: Plan and personal connection are unclear
-  l0: No plan and no personal connection
+  wt: 1
+  l3: Clearly demonstrates engagement with an important and timely issue connected to course topics
+  l2: Demonstrates some engagement with an important and timely issue connected to course
+  l1: Some engagement with an issue connected to course
+  l0: Not connected to course
+- crit: References
+  wt: 0.5
+  l3: 2 excellent sources referenced
+  l2: 2 good sources referenced
+  l1: 1 good source referenced
+  l0: No good sources
+- crit: Plan
+  wt: 0.5
+  l3: Well-defined plan to deal with topic
+  l2: Plan is clear
+  l1: Plan is unclear
+  l0: No plan
+- crit: Personal Connection
+  wt: 1.0
+  l3: Clear personal response to concepts
+  l2: Personal connection could be more clear
+  l1: Personal connection is unclear
+  l0: No personal connection
 ---
 ### Description
 
 [Blogs](https://en.wikipedia.org/wiki/Blog) (short for weblogs) have become an important means of expression in the information society. Personal blog posts are discrete, often informal, diary-style commentaries written by an individual.
 
-Prepare and submit an outline (pdf, not more than 1 page) for a blog post that deals with a course-related topic that is currently, or was recently, in the news.
+Prepare and submit an outline (pdf, not more than 1 page) for a blog post that deals with a topic within a course-related [knowledge unit]({{ "/teaching/CS-280/202010" | relative_url }}) that is currently, or was recently, in the news.
 
-The list of topics also includes learning outcomes associated with the topics. If it is helpful, you may consider those learning outcomes as suggestions about how to approach your topic.
+The list of [knowledge units]({{ "/teaching/CS-280/202010" | relative_url }}) also includes learning outcomes associated with the topics. If it is helpful, you may consider those learning outcomes as suggestions about how to approach your topic.
 
 Find a personal connection to the topic. You may, for example, evaluate the (consideration of) ethical and social tradeoffs in a technical decision or analyse the role of computer professionals in a global computing issue.
 
