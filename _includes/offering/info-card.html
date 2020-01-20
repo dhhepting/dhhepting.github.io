@@ -1,3 +1,5 @@
+
+{% include teaching/url.html %}
 <div class="card my-2" id="syll-card">
   <h3 class="card-header text-center">Information</h3>
   <div class="card-body">
@@ -70,8 +72,23 @@
         </a>
       </li>
       {% endif %}
+      {% assign urc = "" %}
+      {% assign offs = "" %}
+      {% assign psn = page.sem | plus: 0 %}
+      {% for o in site.data.teaching.offerings %}
+        {% assign osn = o.semester | plus: 0 %}
+        {% if osn == psn %}
+          {% capture offs %}{{offs}}#{{o.id}}{% endcapture %}
+          {% for c in site.data.teaching.courses %}
+            {% if o.id == c.id %}
+              {% assign urc = c.urcourses %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+
       <li class="list-group-item">
-        <a href="https://urcourses.uregina.ca/course/view.php?id=2084" target="_blank">
+        <a href="https://urcourses.uregina.ca/course/view.php?id={{ urc_id }}" target="_blank">
           {{ crs_id | replace: "-", " " }} on URcourses
         </a>
       </li>

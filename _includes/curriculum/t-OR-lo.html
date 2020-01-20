@@ -4,7 +4,7 @@
 <ol>
 {%- for e in include.elems -%}
   {%- assign spec = 1 -%}
-  {%- if include.special != 0 -%}
+  {%- if include.special.size > 0 -%}
     {%- assign spec = 0 -%}
     {%- for se in include.special -%}
       {%- if se == e.label -%}

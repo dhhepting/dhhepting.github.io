@@ -19,10 +19,10 @@
   {% endif %}
   <div class="row">
     <div class="col-md-6">
-      {%- include curriculum/t-OR-lo.html heading="Topics" elems=kaku.topics special=0 -%}
+      {%- include curriculum/t-OR-lo.html heading="Topics" elems=kaku.topics special=include.ikkd.spectop -%}
     </div>
     <div class="col-md-6">
-      {%- include curriculum/t-OR-lo.html heading="Learning Outcomes" elems=kaku.outcomes special=0 -%}
+      {%- include curriculum/t-OR-lo.html heading="Learning Outcomes" elems=kaku.outcomes special=include.ikkd.speclo -%}
     </div>
   </div>
 </div>

@@ -5,11 +5,13 @@
 
 # {{ crs_sbj }} {{ crs_nbr }} in {{ crs_sem }}
 
+{% include offering/info-card.html %}
+
 {% include offering/knowledge-cardC.html %}
 
 <div class="card-deck">
-  {% include offering/info-card.html %}
   {% if 0 == 1 %}
+    {% include offering/info-card.html %}
     {% include offering/rss-card.html %}
     {% include offering/media-cardB.html %}
     {% include offering/knowledge-cardB.html %}

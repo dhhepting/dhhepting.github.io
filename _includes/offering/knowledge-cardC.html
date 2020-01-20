@@ -6,6 +6,7 @@
   <div class="card-body">
   {%- for ku in tlooff -%}
     {%- assign kk = ku[0] | split: "/" -%}
+    {%- assign kkd = ku[1] -%}
     {%- assign kkaa = kk[0] -%}
     {%- assign kkuu = kk[1] -%}
     {% assign kunum = kkuu | slice: 0,2 %}
@@ -14,8 +15,9 @@
     <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#{{ kakid }}-collapse" aria-expanded="false" aria-controls="{{kakid}}-collapse">
       {{ kkaa }} / {{ kuti }}
     </button>
-    {% include curriculum/KU-collapse.html ika=kkaa iku=kkuu ikuti=kuti ikakid=kakid %}
+    {% include curriculum/KU-collapse.html ika=kkaa iku=kkuu ikuti=kuti ikakid=kakid ikkd=kkd %}
   {%- endfor -%}
   </div>
+  {%- include offering/tlo-explain-card.html -%}
 </div>
 {%- endif -%}
