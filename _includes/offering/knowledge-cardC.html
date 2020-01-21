@@ -2,7 +2,7 @@
 {% assign tlooff = site.data.teaching.tlo[joff_id] %}
 {%- if tlooff -%}
 <div class="card my-2">
-  <h3 class="card-header text-center">Knowledge Units</h3>
+  <h3 id="ku_card" class="card-header text-center">Knowledge Units</h3>
   <div class="card-body">
   {%- for ku in tlooff -%}
     {%- assign kk = ku[0] | split: "/" -%}
