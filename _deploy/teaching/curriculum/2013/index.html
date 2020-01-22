@@ -350,7 +350,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Topics
 </h7>
 <ol><div><li>
-      &nbsp;&starf;&starf;&starf;</li>
+      &nbsp;</li>
   </div></ol>
 </div>
     <div class="col-md-6"><h7>
@@ -492,17 +492,81 @@ style="background-color: rgba(32, 32, 32, 0.75)">
     GV / Basic Rendering
   </h5>
   
+  <div class="row">
+    <div class="col-md-12">
+      
+      <p>This section describes basic rendering and fundamental graphics techniques that nearly every undergraduate course in graphics will cover and that are essential for further study in graphics. Sampling and anti-aliasing are related to the effect of digitization and appear in other areas of computing, for example, in audio sampling.</p>
+
+    </div>
+  </div>
+  
   
   <div class="row">
     <div class="col-md-6"><h7>
   Topics
 </h7>
-<ol></ol>
+<ol><div><li>
+      Rendering in nature, e.g., the emission and scattering of light and its relation to numerical integration&nbsp;</li>
+  </div><div><li>
+      Forward and backward rendering (i.e., ray-casting and rasterization)&nbsp;</li>
+  </div><div><li>
+      Polygonal representation&nbsp;</li>
+  </div><div><li>
+      Basic radiometry, similar triangles, and projection model&nbsp;</li>
+  </div><div><li>
+      Affine and coordinate system transformations&nbsp;</li>
+  </div><div><li>
+      Ray tracing&nbsp;</li>
+  </div><div><li>
+      Visibility and occlusion, including solutions to this problem such as depth buffering, Painter’s algorithm, and ray tracing&nbsp;</li>
+  </div><div><li>
+      The forward and backward rendering equation&nbsp;</li>
+  </div><div><li>
+      Simple triangle rasterization&nbsp;</li>
+  </div><div><li>
+      Rendering with a shader-based API&nbsp;</li>
+  </div><div><li>
+      Texture mapping, including minification and magnification (e.g., trilinear MIP-mapping)&nbsp;</li>
+  </div><div><li>
+      Application of spatial data structures to rendering&nbsp;</li>
+  </div><div><li>
+      Sampling and anti-aliasing&nbsp;</li>
+  </div><div><li>
+      Scene graphs and the graphics pipeline&nbsp;</li>
+  </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
-<ol></ol>
+<ol><div><li>
+      Discuss the light transport problem and its relation to numerical integration i.e., light is emitted, scatters around the scene, and is measured by the eye. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Describe the basic graphics pipeline and how forward and backward rendering factor in this. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Create a program to display 3D models of simple graphics images. [Usage]&nbsp;</li>
+  </div><div><li>
+      Derive linear perspective from similar triangles by converting points (x, y, z) to points (x/z, y/z, 1). [Usage]&nbsp;</li>
+  </div><div><li>
+      Obtain 2-dimensional and 3-dimensional points by applying affine transformations. [Usage]&nbsp;</li>
+  </div><div><li>
+      Apply 3-dimensional coordinate system and the changes required to extend 2D transformation operations to handle transformations in 3D. [Usage]&nbsp;</li>
+  </div><div><li>
+      Contrast forward and backward rendering. [Assessment]&nbsp;</li>
+  </div><div><li>
+      Explain the concept and applications of texture mapping, sampling, and anti-aliasing. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Explain the ray tracing/rasterization duality for the visibility problem. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Implement simple procedures that perform transformation and clipping operations on simple 2-dimensional images. [Usage]&nbsp;</li>
+  </div><div><li>
+      Implement a simple real-time renderer using a rasterization API (e.g., OpenGL) using vertex buffers and shaders. [Usage]&nbsp;</li>
+  </div><div><li>
+      Compare and contrast the different rendering techniques. [Assessment]&nbsp;</li>
+  </div><div><li>
+      Compute space requirements based on resolution and color coding. [Assessment]&nbsp;</li>
+  </div><div><li>
+      Compute time requirements based on refresh rates, rasterization techniques. [Assessment]&nbsp;</li>
+  </div></ol>
 </div>
   </div>
 </div>
@@ -525,17 +589,59 @@ style="background-color: rgba(32, 32, 32, 0.75)">
     GV / Fundamental Concepts
   </h5>
   
+  <div class="row">
+    <div class="col-md-12">
+      
+      <p>For nearly every computer scientist and software developer, an understanding of how humans interact with machines is essential. While these topics may be covered in a standard undergraduate graphics course, they may also be covered in introductory computer science and programming courses. Part of our motivation for including immediate and retained modes is that these modes are analogous to polling vs. event driven programming. This is a fundamental question in computer science: Is there a button object, or is there just the display of a button on the screen? Note that most of the outcomes in this section are at the knowledge level, and many of these topics are revisited in greater depth in later sections.</p>
+
+    </div>
+  </div>
+  
   
   <div class="row">
     <div class="col-md-6"><h7>
   Topics
 </h7>
-<ol></ol>
+<ol><div><li>
+      Media applications including user interfaces, audio and video editing, game engines, cad, visualization, virtual reality&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Digitization of analog data, resolution, and the limits of human perception, e.g., pixels for visual display, dots for laser printers, and samples for audio (HCI/Foundations)&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Use of standard APIs for the construction of UIs and display of standard media formats (see HCI/GUI construction)&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Standard media formats, including lossless and lossy formats&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Additive and subtractive color models (CMYK and RGB) and why these provide a range of colors&nbsp;&starf;</li>
+  </div><div><li>
+      Tradeoffs between storing data and re-computing data as embodied by vector and raster representations of images&nbsp;&starf;</li>
+  </div><div><li>
+      Animation as a sequence of still images&nbsp;&starf;</li>
+  </div><div><li>
+      Double buffering&nbsp;</li>
+  </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
-<ol></ol>
+<ol><div><li>
+      Identify common uses of digital presentation to humans (e.g., computer graphics, sound). [Familiarity]&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Explain in general terms how analog signals can be reasonably represented by discrete samples, for example, how images can be represented by pixels. [Familiarity]&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Explain how the limits of human perception affect choices about the digital representation of analog signals. [Familiarity]&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Construct a simple user interface using a standard API. [Usage]&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Describe the differences between lossy and lossless image compression techniques, for example as reflected in common graphics image file formats such as JPG, PNG, MP3, MP4, and GIF. [Familiarity]&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Describe color models and their use in graphics display devices. [Familiarity]&nbsp;&starf;</li>
+  </div><div><li>
+      Describe the tradeoffs between storing information vs. storing enough information to reproduce the information, as in the difference between vector and raster rendering. [Familiarity]&nbsp;&starf;</li>
+  </div><div><li>
+      Describe the basic process of producing continuous motion from a sequence of discrete frames (sometimes called “flicker fusion”). [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Describe how double-buffering can remove flicker from animation. [Familiarity]&nbsp;</li>
+  </div></ol>
 </div>
   </div>
 </div>
@@ -593,15 +699,15 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Topics
 </h7>
 <ol><div><li>
-      Intellectual styles and perspectives to technology and its interfaces&nbsp;&starf;&starf;&starf;</li>
+      Intellectual styles and perspectives to technology and its interfaces&nbsp;</li>
   </div><div><li>
-      Consideration of HCI as a design discipline&nbsp;&starf;&starf;&starf;<ul><li>
+      Consideration of HCI as a design discipline&nbsp;<ul><li>
           Sketching
         </li><li>
           Participatory design
         </li></ul></li>
   </div><div><li>
-      Critically reflective HCI&nbsp;&starf;&starf;&starf;<ul><li>
+      Critically reflective HCI&nbsp;<ul><li>
           Critical technical practice
         </li><li>
           Technologies for political activism
@@ -611,7 +717,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
           Ethnography and ethnomethodology
         </li></ul></li>
   </div><div><li>
-      Indicative domains of application&nbsp;&starf;&starf;&starf;<ul><li>
+      Indicative domains of application&nbsp;<ul><li>
           Sustainability
         </li><li>
           Arts-informed computing
@@ -622,11 +728,11 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Learning Outcomes
 </h7>
 <ol><div><li>
-      Explain what is meant by “HCI is a design-oriented discipline”. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Explain what is meant by “HCI is a design-oriented discipline”. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Detail the processes of design appropriate to specific design orientations. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Detail the processes of design appropriate to specific design orientations. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Apply a variety of design methods to a given problem. [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Apply a variety of design methods to a given problem. [Usage]&nbsp;</li>
   </div></ol>
 </div>
   </div>
@@ -666,15 +772,15 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Topics
 </h7>
 <ol><div><li>
-      Intellectual styles and perspectives to technology and its interfaces&nbsp;&starf;&starf;&starf;</li>
+      Intellectual styles and perspectives to technology and its interfaces&nbsp;</li>
   </div><div><li>
-      Consideration of HCI as a design discipline&nbsp;&starf;&starf;&starf;<ul><li>
+      Consideration of HCI as a design discipline&nbsp;<ul><li>
           Sketching
         </li><li>
           Participatory design
         </li></ul></li>
   </div><div><li>
-      Critically reflective HCI&nbsp;&starf;&starf;&starf;<ul><li>
+      Critically reflective HCI&nbsp;<ul><li>
           Critical technical practice
         </li><li>
           Technologies for political activism
@@ -684,7 +790,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
           Ethnography and ethnomethodology
         </li></ul></li>
   </div><div><li>
-      Indicative domains of application&nbsp;&starf;&starf;&starf;<ul><li>
+      Indicative domains of application&nbsp;<ul><li>
           Sustainability
         </li><li>
           Arts-informed computing
@@ -695,11 +801,11 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Learning Outcomes
 </h7>
 <ol><div><li>
-      Explain what is meant by “HCI is a design-oriented discipline”. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Explain what is meant by “HCI is a design-oriented discipline”. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Detail the processes of design appropriate to specific design orientations. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Detail the processes of design appropriate to specific design orientations. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Apply a variety of design methods to a given problem. [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Apply a variety of design methods to a given problem. [Usage]&nbsp;</li>
   </div></ol>
 </div>
   </div>
@@ -739,40 +845,40 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Topics
 </h7>
 <ol><div><li>
-      Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games)&nbsp;&starf;&starf;&starf;</li>
+      Contexts for HCI (anything with a user interface, e.g., webpage, business applications, mobile applications, and games)&nbsp;</li>
   </div><div><li>
-      Processes for user-centered development, e.g., early focus on users, empirical testing, iterative design&nbsp;&starf;&starf;&starf;</li>
+      Processes for user-centered development, e.g., early focus on users, empirical testing, iterative design&nbsp;</li>
   </div><div><li>
-      Different measures for evaluation, e.g., utility, efficiency, learnability, user satisfaction&nbsp;&starf;&starf;&starf;</li>
+      Different measures for evaluation, e.g., utility, efficiency, learnability, user satisfaction&nbsp;</li>
   </div><div><li>
-      Usability heuristics and the principles of usability testing&nbsp;&starf;&starf;&starf;</li>
+      Usability heuristics and the principles of usability testing&nbsp;</li>
   </div><div><li>
-      Physical capabilities that inform interaction design, e.g., color perception, ergonomics&nbsp;&starf;&starf;&starf;</li>
+      Physical capabilities that inform interaction design, e.g., color perception, ergonomics&nbsp;</li>
   </div><div><li>
-      Cognitive models that inform interaction design, e.g., attention, perception and recognition, movement, and memory; gulfs of expectation and execution&nbsp;&starf;&starf;&starf;</li>
+      Cognitive models that inform interaction design, e.g., attention, perception and recognition, movement, and memory; gulfs of expectation and execution&nbsp;</li>
   </div><div><li>
-      Social models that inform interaction design, e.g., culture, communication, networks and organizations&nbsp;&starf;&starf;&starf;</li>
+      Social models that inform interaction design, e.g., culture, communication, networks and organizations&nbsp;</li>
   </div><div><li>
-      Principles of good design and good designers; engineering tradeoffs&nbsp;&starf;&starf;&starf;</li>
+      Principles of good design and good designers; engineering tradeoffs&nbsp;</li>
   </div><div><li>
-      Accessibility, e.g., interfaces for differently-abled populations (e.g., blind, motion-impaired)&nbsp;&starf;&starf;&starf;</li>
+      Accessibility, e.g., interfaces for differently-abled populations (e.g., blind, motion-impaired)&nbsp;</li>
   </div><div><li>
-      Interfaces for differently-aged population groups (e.g., children, 80+)&nbsp;&starf;&starf;&starf;</li>
+      Interfaces for differently-aged population groups (e.g., children, 80+)&nbsp;</li>
   </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
 <ol><div><li>
-      Discuss why human-centered software development is important. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Discuss why human-centered software development is important. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Summarize the basic precepts of psychological and social interaction. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Summarize the basic precepts of psychological and social interaction. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Develop and use a conceptual vocabulary for analyzing human interaction with software: affordance, conceptual model, feedback, and so forth. [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Develop and use a conceptual vocabulary for analyzing human interaction with software: affordance, conceptual model, feedback, and so forth. [Usage]&nbsp;</li>
   </div><div><li>
-      Define a user-centered design process that explicitly takes account of the fact that the user is not like the developer or their acquaintances. [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Define a user-centered design process that explicitly takes account of the fact that the user is not like the developer or their acquaintances. [Usage]&nbsp;</li>
   </div><div><li>
-      Create and conduct a simple usability test for an existing software application. [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      Create and conduct a simple usability test for an existing software application. [Assessment]&nbsp;</li>
   </div></ol>
 </div>
   </div>
@@ -812,44 +918,44 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Topics
 </h7>
 <ol><div><li>
-      Software Architecture Patterns, e.g., Model-View controller; command objects, online, offline (cross reference PL/Event Driven and Reactive Programming, where MVC is used in the context of event-driven programming)&nbsp;&starf;&starf;&starf;</li>
+      Software Architecture Patterns, e.g., Model-View controller; command objects, online, offline (cross reference PL/Event Driven and Reactive Programming, where MVC is used in the context of event-driven programming)&nbsp;</li>
   </div><div><li>
-      Interaction Design Patterns: visual hierarchy, navigational distance&nbsp;&starf;&starf;&starf;</li>
+      Interaction Design Patterns: visual hierarchy, navigational distance&nbsp;</li>
   </div><div><li>
-      Event management and user interaction&nbsp;&starf;&starf;&starf;</li>
+      Event management and user interaction&nbsp;</li>
   </div><div><li>
-      Geometry management (cross-reference GV/Geometric Modelling)&nbsp;&starf;&starf;&starf;</li>
+      Geometry management (cross-reference GV/Geometric Modelling)&nbsp;</li>
   </div><div><li>
-      Choosing interaction styles and interaction techniques&nbsp;&starf;&starf;&starf;</li>
+      Choosing interaction styles and interaction techniques&nbsp;</li>
   </div><div><li>
-      Presenting information: navigation, representation, manipulation&nbsp;&starf;&starf;&starf;</li>
+      Presenting information: navigation, representation, manipulation&nbsp;</li>
   </div><div><li>
-      Interface animation techniques (e.g., scene graphs)&nbsp;&starf;&starf;&starf;</li>
+      Interface animation techniques (e.g., scene graphs)&nbsp;</li>
   </div><div><li>
-      Widget classes and libraries&nbsp;&starf;&starf;&starf;</li>
+      Widget classes and libraries&nbsp;</li>
   </div><div><li>
-      Modern GUI libraries (e.g. iOS, Android, JavaFX) GUI builders and UI programming environments (cross reference PBD/Mobile Platforms)&nbsp;&starf;&starf;&starf;</li>
+      Modern GUI libraries (e.g. iOS, Android, JavaFX) GUI builders and UI programming environments (cross reference PBD/Mobile Platforms)&nbsp;</li>
   </div><div><li>
-      Declarative Interface Specification: Stylesheets and DOM&nbsp;&starf;&starf;&starf;</li>
+      Declarative Interface Specification: Stylesheets and DOM&nbsp;</li>
   </div><div><li>
-      Data-driven applications (database-backed web pages)&nbsp;&starf;&starf;&starf;</li>
+      Data-driven applications (database-backed web pages)&nbsp;</li>
   </div><div><li>
-      Cross-platform design&nbsp;&starf;&starf;&starf;</li>
+      Cross-platform design&nbsp;</li>
   </div><div><li>
-      Design for resource-constrained devices (e.g. small, mobile devices)&nbsp;&starf;&starf;&starf;</li>
+      Design for resource-constrained devices (e.g. small, mobile devices)&nbsp;</li>
   </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
 <ol><div><li>
-      Explain the importance of Model-View controller to interface programming. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Explain the importance of Model-View controller to interface programming. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Create an application with a modern graphical user interface. [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Create an application with a modern graphical user interface. [Usage]&nbsp;</li>
   </div><div><li>
-      Identify commonalities and differences in UIs across different platforms. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Identify commonalities and differences in UIs across different platforms. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Explain and use GUI programming concepts: event handling, constraint-based layout management, etc. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Explain and use GUI programming concepts: event handling, constraint-based layout management, etc. [Familiarity]&nbsp;</li>
   </div></ol>
 </div>
   </div>
@@ -889,32 +995,32 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Topics
 </h7>
 <ol><div><li>
-      t-tests&nbsp;&starf;&starf;&starf;</li>
+      t-tests&nbsp;</li>
   </div><div><li>
-      ANOVA&nbsp;&starf;&starf;&starf;</li>
+      ANOVA&nbsp;</li>
   </div><div><li>
-      Randomization (non-parametric) testing, within vs. between-subjects design&nbsp;&starf;&starf;&starf;</li>
+      Randomization (non-parametric) testing, within vs. between-subjects design&nbsp;</li>
   </div><div><li>
-      Calculating effect size&nbsp;&starf;&starf;&starf;</li>
+      Calculating effect size&nbsp;</li>
   </div><div><li>
-      Exploratory data analysis&nbsp;&starf;&starf;&starf;</li>
+      Exploratory data analysis&nbsp;</li>
   </div><div><li>
-      Presenting statistical data&nbsp;&starf;&starf;&starf;</li>
+      Presenting statistical data&nbsp;</li>
   </div><div><li>
-      Combining qualitative and quantitative results&nbsp;&starf;&starf;&starf;</li>
+      Combining qualitative and quantitative results&nbsp;</li>
   </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
 <ol><div><li>
-      Explain basic statistical concepts and their areas of application. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Explain basic statistical concepts and their areas of application. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Extract and articulate the statistical arguments used in papers that quantitatively report user studies. [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Extract and articulate the statistical arguments used in papers that quantitatively report user studies. [Usage]&nbsp;</li>
   </div><div><li>
-      Design a user study that will yield quantitative results. [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Design a user study that will yield quantitative results. [Usage]&nbsp;</li>
   </div><div><li>
-      Conduct and report on a study that utilizes both qualitative and quantitative evaluation. [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Conduct and report on a study that utilizes both qualitative and quantitative evaluation. [Usage]&nbsp;</li>
   </div></ol>
 </div>
   </div>
@@ -954,38 +1060,38 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Topics
 </h7>
 <ol><div><li>
-      Applied psychology and security policies&nbsp;&starf;&starf;&starf;</li>
+      Applied psychology and security policies&nbsp;</li>
   </div><div><li>
-      Security economics&nbsp;&starf;&starf;&starf;</li>
+      Security economics&nbsp;</li>
   </div><div><li>
-      Regulatory environments – responsibility, liability and self-determination&nbsp;&starf;&starf;&starf;</li>
+      Regulatory environments – responsibility, liability and self-determination&nbsp;</li>
   </div><div><li>
-      Organizational vulnerabilities and threats&nbsp;&starf;&starf;&starf;</li>
+      Organizational vulnerabilities and threats&nbsp;</li>
   </div><div><li>
-      Usability design and security&nbsp;&starf;&starf;&starf;</li>
+      Usability design and security&nbsp;</li>
   </div><div><li>
-      Pretext, impersonation and fraud, e.g., phishing and spear phishing (cross-reference IAS/Threats and Attacks)&nbsp;&starf;&starf;&starf;</li>
+      Pretext, impersonation and fraud, e.g., phishing and spear phishing (cross-reference IAS/Threats and Attacks)&nbsp;</li>
   </div><div><li>
-      Trust, privacy and deception&nbsp;&starf;&starf;&starf;</li>
+      Trust, privacy and deception&nbsp;</li>
   </div><div><li>
-      Biometric authentication (camera, voice)&nbsp;&starf;&starf;&starf;</li>
+      Biometric authentication (camera, voice)&nbsp;</li>
   </div><div><li>
-      Identity management&nbsp;&starf;&starf;&starf;</li>
+      Identity management&nbsp;</li>
   </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
 <ol><div><li>
-      Explain the concepts of phishing and spear phishing, and how to recognize them. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Explain the concepts of phishing and spear phishing, and how to recognize them. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Describe the issues of trust in interface design with an example of a high and low trust system. [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      Describe the issues of trust in interface design with an example of a high and low trust system. [Assessment]&nbsp;</li>
   </div><div><li>
-      Design a user interface for a security mechanism. [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      Design a user interface for a security mechanism. [Assessment]&nbsp;</li>
   </div><div><li>
-      Explain the concept of identity management and its importance. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Explain the concept of identity management and its importance. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Analyze a security policy and/or procedures to show where they consider, or fail to consider, human factors. [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Analyze a security policy and/or procedures to show where they consider, or fail to consider, human factors. [Usage]&nbsp;</li>
   </div></ol>
 </div>
   </div>
@@ -1025,32 +1131,32 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Topics
 </h7>
 <ol><div><li>
-      Asynchronous group communication, e.g., e-mail, forums, social networks&nbsp;&starf;&starf;&starf;</li>
+      Asynchronous group communication, e.g., e-mail, forums, social networks&nbsp;</li>
   </div><div><li>
-      Synchronous group communication, e.g., chat rooms, conferencing, online games&nbsp;&starf;&starf;&starf;</li>
+      Synchronous group communication, e.g., chat rooms, conferencing, online games&nbsp;</li>
   </div><div><li>
-      Social media, social computing, and social network analysis&nbsp;&starf;&starf;&starf;</li>
+      Social media, social computing, and social network analysis&nbsp;</li>
   </div><div><li>
-      Online collaboration, 'smart' spaces, and social coordination aspects of workflow technologies&nbsp;&starf;&starf;&starf;</li>
+      Online collaboration, 'smart' spaces, and social coordination aspects of workflow technologies&nbsp;</li>
   </div><div><li>
-      Online communities&nbsp;&starf;&starf;&starf;</li>
+      Online communities&nbsp;</li>
   </div><div><li>
-      Software characters and intelligent agents, virtual worlds and avatars (cross-reference IS/Agents)&nbsp;&starf;&starf;&starf;</li>
+      Software characters and intelligent agents, virtual worlds and avatars (cross-reference IS/Agents)&nbsp;</li>
   </div><div><li>
-      Social psychology&nbsp;&starf;&starf;&starf;</li>
+      Social psychology&nbsp;</li>
   </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
 <ol><div><li>
-      Describe the difference between synchronous and asynchronous communication. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Describe the difference between synchronous and asynchronous communication. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Compare the HCI issues in individual interaction with group interaction. [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      Compare the HCI issues in individual interaction with group interaction. [Assessment]&nbsp;</li>
   </div><div><li>
-      Discuss several issues of social concern raised by collaborative software. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Discuss several issues of social concern raised by collaborative software. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Discuss the HCI issues in software that embodies human intention. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Discuss the HCI issues in software that embodies human intention. [Familiarity]&nbsp;</li>
   </div></ol>
 </div>
   </div>
@@ -1090,42 +1196,42 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Topics
 </h7>
 <ol><div><li>
-      Choosing interaction styles and interaction techniques&nbsp;&starf;&starf;&starf;</li>
+      Choosing interaction styles and interaction techniques&nbsp;</li>
   </div><div><li>
-      Representing information to users: navigation, representation, manipulation&nbsp;&starf;&starf;&starf;</li>
+      Representing information to users: navigation, representation, manipulation&nbsp;</li>
   </div><div><li>
-      Approaches to design, implementation and evaluation of non-mouse interaction&nbsp;&starf;&starf;&starf;</li>
+      Approaches to design, implementation and evaluation of non-mouse interaction&nbsp;</li>
   </div><div><li>
-      Touch and multi-touch interfaces&nbsp;&starf;&starf;&starf;</li>
+      Touch and multi-touch interfaces&nbsp;</li>
   </div><div><li>
-      Shared, embodied, and large interfaces&nbsp;&starf;&starf;&starf;</li>
+      Shared, embodied, and large interfaces&nbsp;</li>
   </div><div><li>
-      New input modalities (such as sensor and location data)&nbsp;&starf;&starf;&starf;</li>
+      New input modalities (such as sensor and location data)&nbsp;</li>
   </div><div><li>
-      New Windows, e.g., iPhone, Android&nbsp;&starf;&starf;&starf;</li>
+      New Windows, e.g., iPhone, Android&nbsp;</li>
   </div><div><li>
-      Speech recognition and natural language processing (cross reference IS/Natural Language Processing)&nbsp;&starf;&starf;&starf;</li>
+      Speech recognition and natural language processing (cross reference IS/Natural Language Processing)&nbsp;</li>
   </div><div><li>
-      Wearable and tangible interfaces&nbsp;&starf;&starf;&starf;</li>
+      Wearable and tangible interfaces&nbsp;</li>
   </div><div><li>
-      Persuasive interaction and emotion&nbsp;&starf;&starf;&starf;</li>
+      Persuasive interaction and emotion&nbsp;</li>
   </div><div><li>
-      Ubiquitous and context-aware interaction technologies (Ubicomp)&nbsp;&starf;&starf;&starf;</li>
+      Ubiquitous and context-aware interaction technologies (Ubicomp)&nbsp;</li>
   </div><div><li>
-      Bayesian inference (e.g. predictive text, guided pointing)&nbsp;&starf;&starf;&starf;</li>
+      Bayesian inference (e.g. predictive text, guided pointing)&nbsp;</li>
   </div><div><li>
-      Ambient/peripheral display and interaction&nbsp;&starf;&starf;&starf;</li>
+      Ambient/peripheral display and interaction&nbsp;</li>
   </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
 <ol><div><li>
-      Describe when non-mouse interfaces are appropriate. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Describe when non-mouse interfaces are appropriate. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Understand the interaction possibilities beyond mouse-and-pointer interfaces. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Understand the interaction possibilities beyond mouse-and-pointer interfaces. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Discuss the advantages (and disadvantages) of non-mouse interfaces. [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      Discuss the advantages (and disadvantages) of non-mouse interfaces. [Assessment]&nbsp;</li>
   </div></ol>
 </div>
   </div>
@@ -1167,34 +1273,34 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Topics
 </h7>
 <ol><div><li>
-      Principles of graphical user interfaces (GUIs)&nbsp;&starf;&starf;&starf;</li>
+      Principles of graphical user interfaces (GUIs)&nbsp;</li>
   </div><div><li>
-      Elements of visual design (layout, colour, fonts, labelling)&nbsp;&starf;&starf;&starf;</li>
+      Elements of visual design (layout, colour, fonts, labelling)&nbsp;</li>
   </div><div><li>
-      Task analysis, including qualitative aspects of generating task analytic models&nbsp;&starf;&starf;&starf;</li>
+      Task analysis, including qualitative aspects of generating task analytic models&nbsp;</li>
   </div><div><li>
-      Low-fidelity (paper) prototyping&nbsp;&starf;&starf;&starf;</li>
+      Low-fidelity (paper) prototyping&nbsp;</li>
   </div><div><li>
-      Quantitative evaluation techniques, e.g., keystroke-level evaluation&nbsp;&starf;&starf;&starf;</li>
+      Quantitative evaluation techniques, e.g., keystroke-level evaluation&nbsp;</li>
   </div><div><li>
-      Help and documentation&nbsp;&starf;&starf;&starf;</li>
+      Help and documentation&nbsp;</li>
   </div><div><li>
-      Handling human/system failure&nbsp;&starf;&starf;&starf;</li>
+      Handling human/system failure&nbsp;</li>
   </div><div><li>
-      User interface standards&nbsp;&starf;&starf;&starf;</li>
+      User interface standards&nbsp;</li>
   </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
 <ol><div><li>
-      For an identified user group, undertake and document an analysis of their needs. [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      For an identified user group, undertake and document an analysis of their needs. [Assessment]&nbsp;</li>
   </div><div><li>
-      Create a simple application, together with help and documentation, that supports a graphical user interface. [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Create a simple application, together with help and documentation, that supports a graphical user interface. [Usage]&nbsp;</li>
   </div><div><li>
-      Conduct a quantitative evaluation and discuss/report the results. [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Conduct a quantitative evaluation and discuss/report the results. [Usage]&nbsp;</li>
   </div><div><li>
-      Discuss at least one national or international user interface design standard. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Discuss at least one national or international user interface design standard. [Familiarity]&nbsp;</li>
   </div></ol>
 </div>
   </div>
@@ -1234,40 +1340,40 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Topics
 </h7>
 <ol><div><li>
-      Approaches to, and characteristics of, the design process&nbsp;&starf;&starf;&starf;</li>
+      Approaches to, and characteristics of, the design process&nbsp;</li>
   </div><div><li>
-      Functionality and usability requirements (cross-reference to SE/Requirements Engineering)&nbsp;&starf;&starf;&starf;</li>
+      Functionality and usability requirements (cross-reference to SE/Requirements Engineering)&nbsp;</li>
   </div><div><li>
-      Techniques for gathering requirements, e.g., interviews, surveys, ethnographic and contextual enquiry&nbsp;&starf;&starf;&starf;</li>
+      Techniques for gathering requirements, e.g., interviews, surveys, ethnographic and contextual enquiry&nbsp;</li>
   </div><div><li>
-      Techniques and tools for the analysis and presentation of requirements, e.g., reports, personas&nbsp;&starf;&starf;&starf;</li>
+      Techniques and tools for the analysis and presentation of requirements, e.g., reports, personas&nbsp;</li>
   </div><div><li>
-      Prototyping techniques and tools, e.g., sketching, storyboards, low-fidelity prototyping, wireframes&nbsp;&starf;&starf;&starf;</li>
+      Prototyping techniques and tools, e.g., sketching, storyboards, low-fidelity prototyping, wireframes&nbsp;</li>
   </div><div><li>
-      Evaluation without users, using both qualitative and quantitative techniques, e.g., walkthroughs, GOMS, expert-based analysis, heuristics, guidelines, and standards&nbsp;&starf;&starf;&starf;</li>
+      Evaluation without users, using both qualitative and quantitative techniques, e.g., walkthroughs, GOMS, expert-based analysis, heuristics, guidelines, and standards&nbsp;</li>
   </div><div><li>
-      Evaluation with users, e.g., observation, think-aloud, interview, survey, experiment&nbsp;&starf;&starf;&starf;</li>
+      Evaluation with users, e.g., observation, think-aloud, interview, survey, experiment&nbsp;</li>
   </div><div><li>
-      Challenges to effective evaluation, e.g., sampling, generalization&nbsp;&starf;&starf;&starf;</li>
+      Challenges to effective evaluation, e.g., sampling, generalization&nbsp;</li>
   </div><div><li>
-      Reporting the results of evaluations&nbsp;&starf;&starf;&starf;</li>
+      Reporting the results of evaluations&nbsp;</li>
   </div><div><li>
-      Internationalization, designing for users from other cultures, cross-cultural&nbsp;&starf;&starf;&starf;</li>
+      Internationalization, designing for users from other cultures, cross-cultural&nbsp;</li>
   </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
 <ol><div><li>
-      Explain how user-centered design complements other software process models. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Explain how user-centered design complements other software process models. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Use lo-fi (low fidelity) prototyping techniques to gather, and report, user responses. [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Use lo-fi (low fidelity) prototyping techniques to gather, and report, user responses. [Usage]&nbsp;</li>
   </div><div><li>
-      Choose appropriate methods to support the development of a specific UI. [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      Choose appropriate methods to support the development of a specific UI. [Assessment]&nbsp;</li>
   </div><div><li>
-      Use a variety of techniques to evaluate a given UI. [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      Use a variety of techniques to evaluate a given UI. [Assessment]&nbsp;</li>
   </div><div><li>
-      Compare the constraints and benefits of different evaluative methods. [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      Compare the constraints and benefits of different evaluative methods. [Assessment]&nbsp;</li>
   </div></ol>
 </div>
   </div>
@@ -1301,11 +1407,11 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         
         
         
-        <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#IM01-collapse" aria-expanded="false" aria-controls="IM01-collapse">
+        <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#IM12-collapse" aria-expanded="false" aria-controls="IM12-collapse">
           Multimedia Systems
         </button>
         
-        <div class="card card-body collapse" id="IM01-collapse">
+        <div class="card card-body collapse" id="IM12-collapse">
   <h5>
     IM / Multimedia Systems
   </h5>
@@ -1315,12 +1421,38 @@ style="background-color: rgba(32, 32, 32, 0.75)">
     <div class="col-md-6"><h7>
   Topics
 </h7>
-<ol></ol>
+<ol><div><li>
+      Input and output devices, device drivers, control signals and protocols, DSPs&nbsp;</li>
+  </div><div><li>
+      Standards (e.g., audio, graphics, video)&nbsp;</li>
+  </div><div><li>
+      Applications, media editors, authoring systems, and authoring&nbsp;</li>
+  </div><div><li>
+      Streams/structures, capture/represent/transform, spaces/domains, compression/coding&nbsp;</li>
+  </div><div><li>
+      Content-based analysis, indexing, and retrieval of audio, images, animation, and video&nbsp;</li>
+  </div><div><li>
+      Presentation, rendering, synchronization, multi-modal integration/interfaces&nbsp;</li>
+  </div><div><li>
+      Real-time delivery, quality of service (including performance), capacity planning, audio/video conferencing, video-on-demand&nbsp;</li>
+  </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
-<ol></ol>
+<ol><div><li>
+      Describe the media and supporting devices commonly associated with multimedia information and systems. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Demonstrate the use of content-based information analysis in a multimedia information system. [Usage]&nbsp;</li>
+  </div><div><li>
+      Critique multimedia presentations in terms of their appropriate use of audio, video, graphics, color, and other information presentation concepts. [Assessment]&nbsp;</li>
+  </div><div><li>
+      Implement a multimedia application using an authoring system. [Usage]&nbsp;</li>
+  </div><div><li>
+      For each of several media or multimedia standards, describe in non-technical language what the standard calls for, and explain how aspects of human perception might be sensitive to the limitations of that standard. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Describe the characteristics of a computer system (including identification of support tools and appropriate standards) that has to host the implementation of one of a range of possible multimedia applications. [Familiarity]&nbsp;</li>
+  </div></ol>
 </div>
   </div>
 </div>
@@ -1351,11 +1483,11 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         
         
         
-        <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#PBD01-collapse" aria-expanded="false" aria-controls="PBD01-collapse">
+        <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#PBD02-collapse" aria-expanded="false" aria-controls="PBD02-collapse">
           Web Platforms
         </button>
         
-        <div class="card card-body collapse" id="PBD01-collapse">
+        <div class="card card-body collapse" id="PBD02-collapse">
   <h5>
     PBD / Web Platforms
   </h5>
@@ -1365,12 +1497,32 @@ style="background-color: rgba(32, 32, 32, 0.75)">
     <div class="col-md-6"><h7>
   Topics
 </h7>
-<ol></ol>
+<ol><div><li>
+      Web programming languages (e.g., HTML5, JavaScript, PHP, CSS)&nbsp;</li>
+  </div><div><li>
+      Web platform constraints&nbsp;</li>
+  </div><div><li>
+      Software as a Service (SaaS)&nbsp;</li>
+  </div><div><li>
+      Web standards&nbsp;</li>
+  </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
-<ol></ol>
+<ol><div><li>
+      Design and implement a simple web application. [Usage]&nbsp;</li>
+  </div><div><li>
+      Describe the constraints that the web puts on developers. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Compare and contrast web programming with general purpose programming. [Assessment]&nbsp;</li>
+  </div><div><li>
+      Describe the differences between Software-as-a-Service and traditional software products. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Discuss how web standards impact software development. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Review an existing web application against a current web standard. [Assessment]&nbsp;</li>
+  </div></ol>
 </div>
   </div>
 </div>
@@ -1576,52 +1728,52 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Topics
 </h7>
 <ol><div><li>
-      Philosophical foundations of intellectual property&nbsp;&starf;&starf;&starf;</li>
+      Philosophical foundations of intellectual property&nbsp;</li>
   </div><div><li>
-      Intellectual property rights (cross-reference IM/Information Storage and Retrieval/intellectual property and protection)&nbsp;&starf;&starf;&starf;</li>
+      Intellectual property rights (cross-reference IM/Information Storage and Retrieval/intellectual property and protection)&nbsp;</li>
   </div><div><li>
-      Intangible digital intellectual property (IDIP)&nbsp;&starf;&starf;&starf;</li>
+      Intangible digital intellectual property (IDIP)&nbsp;</li>
   </div><div><li>
-      Legal foundations for intellectual property protection&nbsp;&starf;&starf;&starf;</li>
+      Legal foundations for intellectual property protection&nbsp;</li>
   </div><div><li>
-      Digital rights management&nbsp;&starf;&starf;&starf;</li>
+      Digital rights management&nbsp;</li>
   </div><div><li>
-      Copyrights, patents, trade secrets, trademarks&nbsp;&starf;&starf;&starf;</li>
+      Copyrights, patents, trade secrets, trademarks&nbsp;</li>
   </div><div><li>
-      Plagiarism&nbsp;&starf;&starf;&starf;</li>
+      Plagiarism&nbsp;</li>
   </div><div><li>
-      Foundations of the open source movement&nbsp;&starf;&starf;&starf;</li>
+      Foundations of the open source movement&nbsp;</li>
   </div><div><li>
-      Software piracy&nbsp;&starf;&starf;&starf;</li>
+      Software piracy&nbsp;</li>
   </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
 <ol><div><li>
-      Discuss the philosophical bases of intellectual property. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Discuss the philosophical bases of intellectual property. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Discuss the rationale for the legal protection of intellectual property. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Discuss the rationale for the legal protection of intellectual property. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Describe legislation aimed at digital copyright infringements. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Describe legislation aimed at digital copyright infringements. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Critique legislation aimed at digital copyright infringements. [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      Critique legislation aimed at digital copyright infringements. [Assessment]&nbsp;</li>
   </div><div><li>
-      Identify contemporary examples of intangible digital intellectual property. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Identify contemporary examples of intangible digital intellectual property. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Justify uses of copyrighted materials. [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      Justify uses of copyrighted materials. [Assessment]&nbsp;</li>
   </div><div><li>
-      Evaluate the ethical issues inherent in various plagiarism detection mechanisms. [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      Evaluate the ethical issues inherent in various plagiarism detection mechanisms. [Assessment]&nbsp;</li>
   </div><div><li>
-      Interpret the intent and implementation of software licensing. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Interpret the intent and implementation of software licensing. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Discuss the issues involved in securing software patents. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Discuss the issues involved in securing software patents. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Characterize and contrast the concepts of copyright, patenting and trademarks. [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      Characterize and contrast the concepts of copyright, patenting and trademarks. [Assessment]&nbsp;</li>
   </div><div><li>
-      Identify the goals of the open source movement. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Identify the goals of the open source movement. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Identify the global nature of software piracy. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Identify the global nature of software piracy. [Familiarity]&nbsp;</li>
   </div></ol>
 </div>
   </div>
@@ -1939,40 +2091,40 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Topics
 </h7>
 <ol><div><li>
-      Philosophical foundations of privacy rights (cross-reference IS/Fundamental Issues/philosophical issues)&nbsp;&starf;&starf;&starf;</li>
+      Philosophical foundations of privacy rights (cross-reference IS/Fundamental Issues/philosophical issues)&nbsp;</li>
   </div><div><li>
-      Legal foundations of privacy protection&nbsp;&starf;&starf;&starf;</li>
+      Legal foundations of privacy protection&nbsp;</li>
   </div><div><li>
-      Privacy implications of widespread data collection for transactional databases, data warehouses, surveillance systems, and cloud computing (cross-reference IM/Database Systems/data independence; IM/Data Mining/data cleaning)&nbsp;&starf;&starf;&starf;</li>
+      Privacy implications of widespread data collection for transactional databases, data warehouses, surveillance systems, and cloud computing (cross-reference IM/Database Systems/data independence; IM/Data Mining/data cleaning)&nbsp;</li>
   </div><div><li>
-      Ramifications of differential privacy&nbsp;&starf;&starf;&starf;</li>
+      Ramifications of differential privacy&nbsp;</li>
   </div><div><li>
-      Technology-based solutions for privacy protection (cross-reference IAS/Threats and Attacks/attacks on privacy and anonymity)&nbsp;&starf;&starf;&starf;</li>
+      Technology-based solutions for privacy protection (cross-reference IAS/Threats and Attacks/attacks on privacy and anonymity)&nbsp;</li>
   </div><div><li>
-      Privacy legislation in areas of practice&nbsp;&starf;&starf;&starf;</li>
+      Privacy legislation in areas of practice&nbsp;</li>
   </div><div><li>
-      Civil liberties and cultural differences&nbsp;&starf;&starf;&starf;</li>
+      Civil liberties and cultural differences&nbsp;</li>
   </div><div><li>
-      Freedom of expression and its limitations&nbsp;&starf;&starf;&starf;</li>
+      Freedom of expression and its limitations&nbsp;</li>
   </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
 <ol><div><li>
-      Discuss the philosophical basis for the legal protection of personal privacy. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Discuss the philosophical basis for the legal protection of personal privacy. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Evaluate solutions to privacy threats in transactional databases and data warehouses. [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      Evaluate solutions to privacy threats in transactional databases and data warehouses. [Assessment]&nbsp;</li>
   </div><div><li>
-      Describe the role of data collection in the implementation of pervasive surveillance systems (e.g., RFID, face recognition, toll collection, mobile computing). [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Describe the role of data collection in the implementation of pervasive surveillance systems (e.g., RFID, face recognition, toll collection, mobile computing). [Familiarity]&nbsp;</li>
   </div><div><li>
-      Describe the ramifications of differential privacy. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Describe the ramifications of differential privacy. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Investigate the impact of technological solutions to privacy problems. [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Investigate the impact of technological solutions to privacy problems. [Usage]&nbsp;</li>
   </div><div><li>
-      Critique the intent, potential value and implementation of various forms of privacy legislation. [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      Critique the intent, potential value and implementation of various forms of privacy legislation. [Assessment]&nbsp;</li>
   </div><div><li>
-      Identify strategies to enable appropriate freedom of expression. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Identify strategies to enable appropriate freedom of expression. [Familiarity]&nbsp;</li>
   </div></ol>
 </div>
   </div>
@@ -2012,42 +2164,42 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   Topics
 </h7>
 <ol><div><li>
-      Being a sustainable practitioner by taking into consideration cultural and environmental impacts of implementation decisions (e.g. organizational policies, economic viability, and resource consumption).&nbsp;&starf;&starf;&starf;</li>
+      Being a sustainable practitioner by taking into consideration cultural and environmental impacts of implementation decisions (e.g. organizational policies, economic viability, and resource consumption).&nbsp;</li>
   </div><div><li>
-      Explore global social and environmental impacts of computer use and disposal (e-waste)&nbsp;&starf;&starf;&starf;</li>
+      Explore global social and environmental impacts of computer use and disposal (e-waste)&nbsp;</li>
   </div><div><li>
-      Environmental impacts of design choices in specific areas such as algorithms, operating systems, networks, databases, or human-computer interaction (cross-reference SE/Software Evaluation/software evolution; HCI/Design-Oriented HCI/sustainability)&nbsp;&starf;&starf;&starf;</li>
+      Environmental impacts of design choices in specific areas such as algorithms, operating systems, networks, databases, or human-computer interaction (cross-reference SE/Software Evaluation/software evolution; HCI/Design-Oriented HCI/sustainability)&nbsp;</li>
   </div><div><li>
-      Guidelines for sustainable design standards&nbsp;&starf;&starf;&starf;</li>
+      Guidelines for sustainable design standards&nbsp;</li>
   </div><div><li>
-      Systemic effects of complex computer-mediated phenomena (e.g. telecommuting or web shopping)&nbsp;&starf;&starf;&starf;</li>
+      Systemic effects of complex computer-mediated phenomena (e.g. telecommuting or web shopping)&nbsp;</li>
   </div><div><li>
-      Pervasive computing; information processing integrated into everyday objects and activities, such as smart energy systems, social networking and feedback systems to promote sustainable behavior, transportation, environmental monitoring, citizen science and activism.&nbsp;&starf;&starf;&starf;</li>
+      Pervasive computing; information processing integrated into everyday objects and activities, such as smart energy systems, social networking and feedback systems to promote sustainable behavior, transportation, environmental monitoring, citizen science and activism.&nbsp;</li>
   </div><div><li>
-      Research on applications of computing to environmental issues, such as energy, pollution, resource usage, recycling and reuse, food management, farming and others.&nbsp;&starf;&starf;&starf;</li>
+      Research on applications of computing to environmental issues, such as energy, pollution, resource usage, recycling and reuse, food management, farming and others.&nbsp;</li>
   </div><div><li>
-      The interdependence of the sustainability of software systems with social systems, including the knowledge and skills of its users, organizational processes and policies, and its societal context (e.g., market forces, government policies).&nbsp;&starf;&starf;&starf;</li>
+      The interdependence of the sustainability of software systems with social systems, including the knowledge and skills of its users, organizational processes and policies, and its societal context (e.g., market forces, government policies).&nbsp;</li>
   </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
 <ol><div><li>
-      Identify ways to be a sustainable practitioner. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Identify ways to be a sustainable practitioner. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Illustrate global social and environmental impacts of computer use and disposal (e-waste). [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Illustrate global social and environmental impacts of computer use and disposal (e-waste). [Usage]&nbsp;</li>
   </div><div><li>
-      Describe the environmental impacts of design choices within the field of computing that relate to algorithm design, operating system design, networking design, database design, etc. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Describe the environmental impacts of design choices within the field of computing that relate to algorithm design, operating system design, networking design, database design, etc. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Investigate the social and environmental impacts of new system designs through projects. [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Investigate the social and environmental impacts of new system designs through projects. [Usage]&nbsp;</li>
   </div><div><li>
-      Identify guidelines for sustainable IT design or deployment. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      Identify guidelines for sustainable IT design or deployment. [Familiarity]&nbsp;</li>
   </div><div><li>
-      List the sustainable effects of telecommuting or web shopping. [Familiarity]&nbsp;&starf;&starf;&starf;</li>
+      List the sustainable effects of telecommuting or web shopping. [Familiarity]&nbsp;</li>
   </div><div><li>
-      Investigate pervasive computing in areas such as smart energy systems, social networking, transportation, agriculture, supply-chain systems, environmental monitoring and citizen activism. [Usage]&nbsp;&starf;&starf;&starf;</li>
+      Investigate pervasive computing in areas such as smart energy systems, social networking, transportation, agriculture, supply-chain systems, environmental monitoring and citizen activism. [Usage]&nbsp;</li>
   </div><div><li>
-      Develop applications of computing and assess through research areas pertaining to environmental issues (e.g. energy, pollution, resource usage, recycling and reuse, food management, farming). [Assessment]&nbsp;&starf;&starf;&starf;</li>
+      Develop applications of computing and assess through research areas pertaining to environmental issues (e.g. energy, pollution, resource usage, recycling and reuse, food management, farming). [Assessment]&nbsp;</li>
   </div></ol>
 </div>
   </div>
@@ -2062,7 +2214,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2020-01-21 11:27 -0600
+  Site built: 2020-01-21 20:38 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/curriculum/2013/">
     Give feedback <span class="d-none d-sm-inline">about page</span>

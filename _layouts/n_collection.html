@@ -1,0 +1,23 @@
+---
+layout: bg-image
+group:
+- category
+- project
+---
+<h1>
+	Notes
+</h1>
+
+{% assign notes_list = "" %}
+{% for item in site.notes %}
+  {% capture notes_list %}{{ notes_list }}#{{item.breadcrumb}}!{{item.url}}{% endcapture %}
+{% endfor %}
+{% assign nl = notes_list | split: "#" | sort | uniq %}
+<ul>
+  {% for n in nl %}
+    {% if n != "" %}
+      {% assign nnn = n | split: "!" %}
+      <li><a href="{{ nnn[1] | relative_url }}">{{ nnn[0] }}</a>
+    {% endif %}
+  {% endfor %}
+</ul>

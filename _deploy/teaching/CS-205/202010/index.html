@@ -154,6 +154,18 @@
         "item":
         {
           "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca/~hepting/teaching/CS-205/202010/assignments.html",
+          "name": "Assignments"
+        }
+        
+      },
+        
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
           "@id": "http://www2.cs.uregina.ca/~hepting/teaching/CS-205/202010/meetings/",
           "name": "Meetings"
         }
@@ -162,7 +174,7 @@
         
       {
         "@type": "ListItem",
-        "position": 2,
+        "position": 3,
         "item":
         {
           "@type": "WebPage",
@@ -1292,87 +1304,229 @@ style="background-color: rgba(32, 32, 32, 0.75)">
 
     
     
-    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#GVBa-collapse" aria-expanded="false" aria-controls="GVBa-collapse">
-      GV / ic Rendering
+    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#GV01-collapse" aria-expanded="false" aria-controls="GV01-collapse">
+      GV / Fundamental Concepts
     </button>
-    <div class="card card-body collapse" id="GVBa-collapse">
+    <div class="card card-body collapse" id="GV01-collapse">
   <h5>
-    GV / ic Rendering
+    GV / Fundamental Concepts
   </h5>
+  
+  <div class="row">
+    <div class="col-md-12">
+      
+      <p>For nearly every computer scientist and software developer, an understanding of how humans interact with machines is essential. While these topics may be covered in a standard undergraduate graphics course, they may also be covered in introductory computer science and programming courses. Part of our motivation for including immediate and retained modes is that these modes are analogous to polling vs. event driven programming. This is a fundamental question in computer science: Is there a button object, or is there just the display of a button on the screen? Note that most of the outcomes in this section are at the knowledge level, and many of these topics are revisited in greater depth in later sections.</p>
+
+    </div>
+  </div>
   
   
   <div class="row">
     <div class="col-md-6"><h7>
   Topics
 </h7>
-<ol></ol>
+<ol><div><li>
+      Media applications including user interfaces, audio and video editing, game engines, cad, visualization, virtual reality&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Digitization of analog data, resolution, and the limits of human perception, e.g., pixels for visual display, dots for laser printers, and samples for audio (HCI/Foundations)&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Use of standard APIs for the construction of UIs and display of standard media formats (see HCI/GUI construction)&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Standard media formats, including lossless and lossy formats&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Additive and subtractive color models (CMYK and RGB) and why these provide a range of colors&nbsp;&starf;</li>
+  </div><div><li>
+      Tradeoffs between storing data and re-computing data as embodied by vector and raster representations of images&nbsp;&starf;</li>
+  </div><div><li>
+      Animation as a sequence of still images&nbsp;&starf;</li>
+  </div><div><li>
+      Double buffering&nbsp;</li>
+  </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
-<ol></ol>
+<ol><div><li>
+      Identify common uses of digital presentation to humans (e.g., computer graphics, sound). [Familiarity]&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Explain in general terms how analog signals can be reasonably represented by discrete samples, for example, how images can be represented by pixels. [Familiarity]&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Explain how the limits of human perception affect choices about the digital representation of analog signals. [Familiarity]&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Construct a simple user interface using a standard API. [Usage]&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Describe the differences between lossy and lossless image compression techniques, for example as reflected in common graphics image file formats such as JPG, PNG, MP3, MP4, and GIF. [Familiarity]&nbsp;&starf;&starf;</li>
+  </div><div><li>
+      Describe color models and their use in graphics display devices. [Familiarity]&nbsp;&starf;</li>
+  </div><div><li>
+      Describe the tradeoffs between storing information vs. storing enough information to reproduce the information, as in the difference between vector and raster rendering. [Familiarity]&nbsp;&starf;</li>
+  </div><div><li>
+      Describe the basic process of producing continuous motion from a sequence of discrete frames (sometimes called “flicker fusion”). [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Describe how double-buffering can remove flicker from animation. [Familiarity]&nbsp;</li>
+  </div></ol>
 </div>
   </div>
 </div>
 
     
     
-    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#GVFu-collapse" aria-expanded="false" aria-controls="GVFu-collapse">
-      GV / damental Concepts
+    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#GV02-collapse" aria-expanded="false" aria-controls="GV02-collapse">
+      GV / Basic Rendering
     </button>
-    <div class="card card-body collapse" id="GVFu-collapse">
+    <div class="card card-body collapse" id="GV02-collapse">
   <h5>
-    GV / damental Concepts
+    GV / Basic Rendering
   </h5>
+  
+  <div class="row">
+    <div class="col-md-12">
+      
+      <p>This section describes basic rendering and fundamental graphics techniques that nearly every undergraduate course in graphics will cover and that are essential for further study in graphics. Sampling and anti-aliasing are related to the effect of digitization and appear in other areas of computing, for example, in audio sampling.</p>
+
+    </div>
+  </div>
   
   
   <div class="row">
     <div class="col-md-6"><h7>
   Topics
 </h7>
-<ol></ol>
+<ol><div><li>
+      Rendering in nature, e.g., the emission and scattering of light and its relation to numerical integration&nbsp;</li>
+  </div><div><li>
+      Forward and backward rendering (i.e., ray-casting and rasterization)&nbsp;</li>
+  </div><div><li>
+      Polygonal representation&nbsp;</li>
+  </div><div><li>
+      Basic radiometry, similar triangles, and projection model&nbsp;</li>
+  </div><div><li>
+      Affine and coordinate system transformations&nbsp;</li>
+  </div><div><li>
+      Ray tracing&nbsp;</li>
+  </div><div><li>
+      Visibility and occlusion, including solutions to this problem such as depth buffering, Painter’s algorithm, and ray tracing&nbsp;</li>
+  </div><div><li>
+      The forward and backward rendering equation&nbsp;</li>
+  </div><div><li>
+      Simple triangle rasterization&nbsp;</li>
+  </div><div><li>
+      Rendering with a shader-based API&nbsp;</li>
+  </div><div><li>
+      Texture mapping, including minification and magnification (e.g., trilinear MIP-mapping)&nbsp;</li>
+  </div><div><li>
+      Application of spatial data structures to rendering&nbsp;</li>
+  </div><div><li>
+      Sampling and anti-aliasing&nbsp;</li>
+  </div><div><li>
+      Scene graphs and the graphics pipeline&nbsp;</li>
+  </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
-<ol></ol>
+<ol><div><li>
+      Discuss the light transport problem and its relation to numerical integration i.e., light is emitted, scatters around the scene, and is measured by the eye. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Describe the basic graphics pipeline and how forward and backward rendering factor in this. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Create a program to display 3D models of simple graphics images. [Usage]&nbsp;</li>
+  </div><div><li>
+      Derive linear perspective from similar triangles by converting points (x, y, z) to points (x/z, y/z, 1). [Usage]&nbsp;</li>
+  </div><div><li>
+      Obtain 2-dimensional and 3-dimensional points by applying affine transformations. [Usage]&nbsp;</li>
+  </div><div><li>
+      Apply 3-dimensional coordinate system and the changes required to extend 2D transformation operations to handle transformations in 3D. [Usage]&nbsp;</li>
+  </div><div><li>
+      Contrast forward and backward rendering. [Assessment]&nbsp;</li>
+  </div><div><li>
+      Explain the concept and applications of texture mapping, sampling, and anti-aliasing. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Explain the ray tracing/rasterization duality for the visibility problem. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Implement simple procedures that perform transformation and clipping operations on simple 2-dimensional images. [Usage]&nbsp;</li>
+  </div><div><li>
+      Implement a simple real-time renderer using a rasterization API (e.g., OpenGL) using vertex buffers and shaders. [Usage]&nbsp;</li>
+  </div><div><li>
+      Compare and contrast the different rendering techniques. [Assessment]&nbsp;</li>
+  </div><div><li>
+      Compute space requirements based on resolution and color coding. [Assessment]&nbsp;</li>
+  </div><div><li>
+      Compute time requirements based on refresh rates, rasterization techniques. [Assessment]&nbsp;</li>
+  </div></ol>
 </div>
   </div>
 </div>
 
     
     
-    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#HCIDe-collapse" aria-expanded="false" aria-controls="HCIDe-collapse">
-      HCI / igning Interaction
+    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#HCI02-collapse" aria-expanded="false" aria-controls="HCI02-collapse">
+      HCI / Designing Interaction
     </button>
-    <div class="card card-body collapse" id="HCIDe-collapse">
+    <div class="card card-body collapse" id="HCI02-collapse">
   <h5>
-    HCI / igning Interaction
+    HCI / Designing Interaction
   </h5>
+  
+  <div class="row">
+    <div class="col-md-12">
+      
+      <h7>
+        Motivation
+      </h7>
+      
+      <p>CS students need a minimal set of well-established methods and tools to bring to interface construction.</p>
+
+    </div>
+  </div>
   
   
   <div class="row">
     <div class="col-md-6"><h7>
   Topics
 </h7>
-<ol></ol>
+<ol><div><li>
+      Principles of graphical user interfaces (GUIs)&nbsp;</li>
+  </div><div><li>
+      Elements of visual design (layout, colour, fonts, labelling)&nbsp;</li>
+  </div><div><li>
+      Task analysis, including qualitative aspects of generating task analytic models&nbsp;</li>
+  </div><div><li>
+      Low-fidelity (paper) prototyping&nbsp;</li>
+  </div><div><li>
+      Quantitative evaluation techniques, e.g., keystroke-level evaluation&nbsp;</li>
+  </div><div><li>
+      Help and documentation&nbsp;</li>
+  </div><div><li>
+      Handling human/system failure&nbsp;</li>
+  </div><div><li>
+      User interface standards&nbsp;</li>
+  </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
-<ol></ol>
+<ol><div><li>
+      For an identified user group, undertake and document an analysis of their needs. [Assessment]&nbsp;</li>
+  </div><div><li>
+      Create a simple application, together with help and documentation, that supports a graphical user interface. [Usage]&nbsp;</li>
+  </div><div><li>
+      Conduct a quantitative evaluation and discuss/report the results. [Usage]&nbsp;</li>
+  </div><div><li>
+      Discuss at least one national or international user interface design standard. [Familiarity]&nbsp;</li>
+  </div></ol>
 </div>
   </div>
 </div>
 
     
     
-    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#IMMu-collapse" aria-expanded="false" aria-controls="IMMu-collapse">
-      IM / timedia Systems
+    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#IM12-collapse" aria-expanded="false" aria-controls="IM12-collapse">
+      IM / Multimedia Systems
     </button>
-    <div class="card card-body collapse" id="IMMu-collapse">
+    <div class="card card-body collapse" id="IM12-collapse">
   <h5>
-    IM / timedia Systems
+    IM / Multimedia Systems
   </h5>
   
   
@@ -1380,24 +1534,50 @@ style="background-color: rgba(32, 32, 32, 0.75)">
     <div class="col-md-6"><h7>
   Topics
 </h7>
-<ol></ol>
+<ol><div><li>
+      Input and output devices, device drivers, control signals and protocols, DSPs&nbsp;</li>
+  </div><div><li>
+      Standards (e.g., audio, graphics, video)&nbsp;</li>
+  </div><div><li>
+      Applications, media editors, authoring systems, and authoring&nbsp;</li>
+  </div><div><li>
+      Streams/structures, capture/represent/transform, spaces/domains, compression/coding&nbsp;</li>
+  </div><div><li>
+      Content-based analysis, indexing, and retrieval of audio, images, animation, and video&nbsp;</li>
+  </div><div><li>
+      Presentation, rendering, synchronization, multi-modal integration/interfaces&nbsp;</li>
+  </div><div><li>
+      Real-time delivery, quality of service (including performance), capacity planning, audio/video conferencing, video-on-demand&nbsp;</li>
+  </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
-<ol></ol>
+<ol><div><li>
+      Describe the media and supporting devices commonly associated with multimedia information and systems. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Demonstrate the use of content-based information analysis in a multimedia information system. [Usage]&nbsp;</li>
+  </div><div><li>
+      Critique multimedia presentations in terms of their appropriate use of audio, video, graphics, color, and other information presentation concepts. [Assessment]&nbsp;</li>
+  </div><div><li>
+      Implement a multimedia application using an authoring system. [Usage]&nbsp;</li>
+  </div><div><li>
+      For each of several media or multimedia standards, describe in non-technical language what the standard calls for, and explain how aspects of human perception might be sensitive to the limitations of that standard. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Describe the characteristics of a computer system (including identification of support tools and appropriate standards) that has to host the implementation of one of a range of possible multimedia applications. [Familiarity]&nbsp;</li>
+  </div></ol>
 </div>
   </div>
 </div>
 
     
     
-    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#PBDWe-collapse" aria-expanded="false" aria-controls="PBDWe-collapse">
-      PBD /  Platforms
+    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#PBD02-collapse" aria-expanded="false" aria-controls="PBD02-collapse">
+      PBD / Web Platforms
     </button>
-    <div class="card card-body collapse" id="PBDWe-collapse">
+    <div class="card card-body collapse" id="PBD02-collapse">
   <h5>
-    PBD /  Platforms
+    PBD / Web Platforms
   </h5>
   
   
@@ -1405,12 +1585,32 @@ style="background-color: rgba(32, 32, 32, 0.75)">
     <div class="col-md-6"><h7>
   Topics
 </h7>
-<ol></ol>
+<ol><div><li>
+      Web programming languages (e.g., HTML5, JavaScript, PHP, CSS)&nbsp;</li>
+  </div><div><li>
+      Web platform constraints&nbsp;</li>
+  </div><div><li>
+      Software as a Service (SaaS)&nbsp;</li>
+  </div><div><li>
+      Web standards&nbsp;</li>
+  </div></ol>
 </div>
     <div class="col-md-6"><h7>
   Learning Outcomes
 </h7>
-<ol></ol>
+<ol><div><li>
+      Design and implement a simple web application. [Usage]&nbsp;</li>
+  </div><div><li>
+      Describe the constraints that the web puts on developers. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Compare and contrast web programming with general purpose programming. [Assessment]&nbsp;</li>
+  </div><div><li>
+      Describe the differences between Software-as-a-Service and traditional software products. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Discuss how web standards impact software development. [Familiarity]&nbsp;</li>
+  </div><div><li>
+      Review an existing web application against a current web standard. [Assessment]&nbsp;</li>
+  </div></ol>
 </div>
   </div>
 </div>
@@ -1481,6 +1681,67 @@ style="background-color: rgba(32, 32, 32, 0.75)">
 <div class="card-deck">
   
 </div>
+
+<div class="card my-2">
+  <span class="d-inline d-md-none">
+    <span class="btn card-header w-100 text-center" role="button" data-toggle="collapse" data-target="#asgnBody">
+      <h3>
+        Assignments
+      </h3>
+    </span>
+  </span>
+  <span class="d-none d-md-inline">
+    <h3 class="card-header text-center">
+      Assignments
+    </h3>
+  </span>
+  <div class="collapse d-md-inline card-body bg-transparent" id="asgnBody">
+    <div class="card my-2" id="individual-asgn-card">
+      <h5 class="card-header text-center">Individual</h5>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+        
+          
+          
+          <li class="list-group-item btn btn-link" role="button">
+            <a href="assignments.html?asgn=I_ENT">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-auto mr-auto d-inline">
+                Illustrate Entropy
+              </div>
+              <div class="col-auto ml-auto d-inline">
+                Due: 03-Feb-2020 @ 23:59
+              </div>
+            </div>
+            </a>
+          </li></ul>
+      </div>
+    </div>
+    <div class="card my-2" id="project-asgn-card">
+      <h5 class="card-header text-center">Project</h5>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+        
+          
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--</div>/* asgn_elem.scrollIntoView() */
+</div>-->
+
+<!-- -->
+<script>
+const params = new URLSearchParams(location.search)
+let asgn = params.get('asgn')
+if (asgn !== null) {
+  document.getElementById('collapse-' + asgn).classList.toggle('show')
+  let asgn_elem = document.getElementById('collapse-' + asgn)
+}
+</script>
+
+<!-- -->
 
 <div class="card my-2">
   <span class="d-inline d-md-none">
@@ -1918,7 +2179,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
     
             <td class="col">
     
-              <a href="meetings/05_21-Jan-20.html">21-Jan<span class="d-none d-md-inline"> : 05</span></a> 
+              <a href="meetings/05_21-Jan-20.html">21-Jan<span class="d-none d-md-inline"> : 05</span></a> <i class="far fa-images"></i><i class="far fa-file-audio"></i>
             </td>
     
   
@@ -3804,22 +4065,195 @@ style="background-color: rgba(32, 32, 32, 0.75)">
 </div>
 </div>
 
-<!-- -->
+<div class="card my-2" id="media">
+  <h3 class="card-header text-center">Media</h3>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr class="d-flex bg-info">
+            <th class="col-2">
+              Meeting
+            </th>
+            <th class="col-10">
+              Media
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+      
+        
+        
+      <tr class="d-flex">
+        <th class="col-2">
+          
+          
+            
+              
+          <a href="http://www2.cs.uregina.ca/~hepting/meetings/01_07-Jan-20.html" class="btn btn-primary" role="button">
+      01
+          </a>
+              </th>
+        <td class="col-10">
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/9ndkag79fsondhy/01%20-%201.jpg?dl=0" alt="01 - 1.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/x1u6xxl2v2yupto/01%20-%202.jpg?dl=0" alt="01 - 2.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/pazr249mq6efnh9/01%20-%203.jpg?dl=0" alt="01 - 3.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/o983ib0xk2c0fs5/01%20-%204.jpg?dl=0" alt="01 - 4.jpg" height="64" class="m-1" /></a>
+      <a href="https://dl.dropboxusercontent.com/s/gfjx7vdheghj4wy/01.m4a?dl=0"><span class="far fa-file-audio fa-4x align-middle m-1"></span></a>
+      
+        
+      </td>
+    </tr>
+        
+        
+      <tr class="d-flex">
+        <th class="col-2">
+          
+          
+            
+            
+              
+          <a href="http://www2.cs.uregina.ca/~hepting/meetings/02_09-Jan-20.html" class="btn btn-primary" role="button">
+      02
+          </a>
+              </th>
+        <td class="col-10">
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/dplpcj73mfky2bh/02%20-%201.jpg?dl=0" alt="02 - 1.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/psv7c0mq5tp8trq/02%20-%202.jpg?dl=0" alt="02 - 2.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/duxmbojgqq48ttg/02%20-%203.jpg?dl=0" alt="02 - 3.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/wbken2xe5rjduyl/02%20-%204.jpg?dl=0" alt="02 - 4.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/nle7yqyjw0iqio9/02%20-%205.jpg?dl=0" alt="02 - 5.jpg" height="64" class="m-1" /></a>
+      <a href="https://dl.dropboxusercontent.com/s/bww0xlghw5289di/02.m4a?dl=0"><span class="far fa-file-audio fa-4x align-middle m-1"></span></a>
+      
+        
+      </td>
+    </tr>
+        
+        
+      <tr class="d-flex">
+        <th class="col-2">
+          
+          
+            
+            
+            
+              
+          <a href="http://www2.cs.uregina.ca/~hepting/meetings/03_14-Jan-20.html" class="btn btn-primary" role="button">
+      03
+          </a>
+              </th>
+        <td class="col-10">
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/q8je1d4hu8t9gu1/03%20-%201.jpg?dl=0" alt="03 - 1.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/ep0o0pwxfafqgcv/03%20-%202.jpg?dl=0" alt="03 - 2.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/fqrtyvsc2ewq89u/03%20-%203.jpg?dl=0" alt="03 - 3.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/btn4m517v4q6shf/03%20-%204.jpg?dl=0" alt="03 - 4.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/pxlbs26ou9apji0/03%20-%205.jpg?dl=0" alt="03 - 5.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/z3k2spkifi09ra1/03%20-%206.jpg?dl=0" alt="03 - 6.jpg" height="64" class="m-1" /></a>
+      <a href="https://dl.dropboxusercontent.com/s/fm0fo94rj951qgi/03.m4a?dl=0"><span class="far fa-file-audio fa-4x align-middle m-1"></span></a>
+      
+        
+      </td>
+    </tr>
+        
+        
+      <tr class="d-flex">
+        <th class="col-2">
+          
+          
+            
+            
+            
+            
+              
+          <a href="http://www2.cs.uregina.ca/~hepting/meetings/04_16-Jan-20.html" class="btn btn-primary" role="button">
+      04
+          </a>
+              </th>
+        <td class="col-10">
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/8gll1wbhyijgdj9/04%20-%201.jpg?dl=0" alt="04 - 1.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/ckb09bppynzuj59/04%20-%202.jpg?dl=0" alt="04 - 2.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/n01b5a51bfk6jgn/04%20-%203.jpg?dl=0" alt="04 - 3.jpg" height="64" class="m-1" /></a>
+      <a href="https://dl.dropboxusercontent.com/s/8amklfpbm4ukd8j/04.m4a?dl=0"><span class="far fa-file-audio fa-4x align-middle m-1"></span></a>
+      
+        
+      </td>
+    </tr>
+        
+        
+      <tr class="d-flex">
+        <th class="col-2">
+          
+          
+            
+            
+            
+            
+            
+              
+          <a href="http://www2.cs.uregina.ca/~hepting/meetings/05_21-Jan-20.html" class="btn btn-primary" role="button">
+      05
+          </a>
+              </th>
+        <td class="col-10">
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/stizwozlh5b0n6a/05%20-%201.jpg?dl=0" alt="05 - 1.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/tmh6nk62qv1coyh/05%20-%202.jpg?dl=0" alt="05 - 2.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/5kji5wn94df4jlb/05%20-%203.jpg?dl=0" alt="05 - 3.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/hdkx036ecii62qx/05%20-%204.jpg?dl=0" alt="05 - 4.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/ppuoy9xozwvm4w8/05%20-%205.jpg?dl=0" alt="05 - 5.jpg" height="64" class="m-1" /></a>
+      <a href="https://dl.dropboxusercontent.com/s/hl54suwdlsoy9ar/05.m4a?dl=0"><span class="far fa-file-audio fa-4x align-middle m-1"></span></a><div class="modal fade" id="zoomModal" tabindex="-1" role="dialog" aria-labelledby="zoomModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable" role="image">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="zoomModalTitle">Image Zoom</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body bg-primary">
+          <img src="https://dl.dropboxusercontent.com/s/mfpv5ggdqkt6yqv/18%20-%201.jpg" alt="Zoomed Image" class="imagepreview" />
+        </div>
+      </div>
+    </div>
+  </div>
+&lt;/div&gt;
 <script>
-const params = new URLSearchParams(location.search)
-let asgn = params.get('asgn')
-if (asgn !== null) {
-  document.getElementById('collapse-' + asgn).classList.toggle('show')
-  let asgn_elem = document.getElementById('collapse-' + asgn)
-}
+  $(function() {
+		$('.pop').on('click', function() {
+			$('.imagepreview').attr('src', $(this).find('img').attr('src'));
+			$('#zoomModal').modal('show');
+		});
+  });
 </script>
 
-<!-- -->
 
+</td></tr></tbody></table></div></div></div>
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2020-01-21 11:27 -0600
+  Site built: 2020-01-21 20:38 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-205/202010/">
     Give feedback <span class="d-none d-sm-inline">about page</span>

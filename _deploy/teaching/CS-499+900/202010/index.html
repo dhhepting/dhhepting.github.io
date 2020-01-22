@@ -1665,6 +1665,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   
 </div>
 
+<!-- -->
+<script>
+const params = new URLSearchParams(location.search)
+let asgn = params.get('asgn')
+if (asgn !== null) {
+  document.getElementById('collapse-' + asgn).classList.toggle('show')
+  let asgn_elem = document.getElementById('collapse-' + asgn)
+}
+</script>
+
+<!-- -->
+
 <div class="card my-2">
   <span class="d-inline d-md-none">
     <span class="btn card-header w-100 text-center" role="button" data-toggle="collapse" data-target="#calBody">
@@ -4189,22 +4201,117 @@ style="background-color: rgba(32, 32, 32, 0.75)">
 </div>
 </div>
 
-<!-- -->
+<div class="card my-2" id="media">
+  <h3 class="card-header text-center">Media</h3>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr class="d-flex bg-info">
+            <th class="col-2">
+              Meeting
+            </th>
+            <th class="col-10">
+              Media
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+      
+        
+        
+      <tr class="d-flex">
+        <th class="col-2">
+          
+          
+            
+              
+          <a href="http://www2.cs.uregina.ca/~hepting/meetings/01_06-Jan-20.html" class="btn btn-primary" role="button">
+      01
+          </a>
+              </th>
+        <td class="col-10">
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/2ffpszq52u8gvhk/01%20-%201.jpg?dl=0" alt="01 - 1.jpg" height="64" class="m-1" /></a>
+      
+        
+      </td>
+    </tr>
+        
+        
+      <tr class="d-flex">
+        <th class="col-2">
+          
+          
+            
+            
+            
+            
+              
+          <a href="http://www2.cs.uregina.ca/~hepting/meetings/04_13-Jan-20.html" class="btn btn-primary" role="button">
+      04
+          </a>
+              </th>
+        <td class="col-10">
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/x59ofuf5nevngjo/04%20-%201.jpg?dl=0" alt="04 - 1.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/4b95c14546huxpc/04%20-%202.jpg?dl=0" alt="04 - 2.jpg" height="64" class="m-1" /></a>
+      
+        
+      </td>
+    </tr>
+        
+        
+      <tr class="d-flex">
+        <th class="col-2">
+          
+          
+            
+            
+            
+            
+            
+              
+          <a href="http://www2.cs.uregina.ca/~hepting/meetings/05_15-Jan-20.html" class="btn btn-primary" role="button">
+      05
+          </a>
+              </th>
+        <td class="col-10">
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/a9f571ky9so20m3/05%20-%201.jpg?dl=0" alt="05 - 1.jpg" height="64" class="m-1" /></a>
+      
+  <a href="#" class="pop" role="button"><img src="https://dl.dropboxusercontent.com/s/d39i59ay9l29bki/05%20-%202.jpg?dl=0" alt="05 - 2.jpg" height="64" class="m-1" /></a><div class="modal fade" id="zoomModal" tabindex="-1" role="dialog" aria-labelledby="zoomModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable" role="image">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="zoomModalTitle">Image Zoom</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body bg-primary">
+          <img src="https://dl.dropboxusercontent.com/s/mfpv5ggdqkt6yqv/18%20-%201.jpg" alt="Zoomed Image" class="imagepreview" />
+        </div>
+      </div>
+    </div>
+  </div>
+&lt;/div&gt;
 <script>
-const params = new URLSearchParams(location.search)
-let asgn = params.get('asgn')
-if (asgn !== null) {
-  document.getElementById('collapse-' + asgn).classList.toggle('show')
-  let asgn_elem = document.getElementById('collapse-' + asgn)
-}
+  $(function() {
+		$('.pop').on('click', function() {
+			$('.imagepreview').attr('src', $(this).find('img').attr('src'));
+			$('#zoomModal').modal('show');
+		});
+  });
 </script>
 
-<!-- -->
 
+</td></tr></tbody></table></div></div></div>
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2020-01-21 11:27 -0600
+  Site built: 2020-01-21 20:38 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-499+900/202010/">
     Give feedback <span class="d-none d-sm-inline">about page</span>
