@@ -20,7 +20,10 @@
   {%- endif -%}
     <li>
       {{ e.desc }}
-      {%- assign ein = e.import | minus: 0 -%}
+      {%- assign ein = 3 -%}
+      {%- if e.import -%}
+        {%- assign ein = e.import | minus: 0 -%}
+      {%- endif -%}
       &nbsp;
       {%- for ss in (ein..2) -%}
         &starf;

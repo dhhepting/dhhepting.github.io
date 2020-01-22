@@ -1,5 +1,5 @@
 ---
-layout: collection
+layout: w_collection
 title: Collected Works
 redirect_from:
   - /research/works.html
