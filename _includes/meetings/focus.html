@@ -1,22 +1,21 @@
 {% include teaching/url.html %}
 {% if page.focus %}
   <h3>Focus</h3>
-  <div class="btn-group" role="group" id="focusButtons" aria-label="Focus Buttons">
   {% for pf in page.focus %}
     {% capture kakid %}{{ pf.ka }}-{{ pf.ku | slice: 0, 2 }}{% endcapture %}
     {% capture kuti %}{{ pf.ku | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, pf.ku.size }}{% endcapture %}
     {% capture kkidx %}{{ pf.ka }}/{{ pf.ku }}{% endcapture %}
     {% if site.data.teaching.tlo[joff_id][kkidx] %}
-    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#focus-{{kakid}}-collapse" aria-expanded="false" aria-controls="focus-{{kakid}}-collapse">
+    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#{{kakid}}-collapse" aria-expanded="false" aria-controls="focus-{{kakid}}-collapse">
       {{ pf.ka }}/{{ kuti }}
     </button>
-    {% else %}
-    <span>
-      NOT FOUND in TLO: {{ pf.ka }}/{{ kuti }}
-    </span>
+    {%comment%}{%endcomment%}
+    {% include curriculum/KU-collapse.html ika=pf.ka iku=pf.ku ikuti=kuti ikakid=kakid %}
+    {%comment%}{%endcomment%}
     {% endif %}
   {%- endfor -%}
-  </div>
+{% endif %}
+  {%comment%}
   {% for pf in page.focus %}
     {% capture kakid %}{{ pf.ka }}-{{ pf.ku | slice: 0, 2 }}{% endcapture %}
     {% capture kuti %}{{ pf.ku | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, pf.ku.size }}{% endcapture %}
@@ -83,3 +82,4 @@
     {% endif %}
   {%- endfor -%}
 {% endif %}
+{%endcomment%}
