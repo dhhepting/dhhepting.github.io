@@ -58,11 +58,16 @@
         </a>
       </li>
       {% endif %}
+      {% assign links = site.data.teaching.off_links[joff_id] %}
+      {%- if links -%}
+        {% for ll in links %}
       <li class="list-group-item">
-        <a href="https://editor.p5js.org/">
-          https://editor.p5js.org/
+        <a href="{{ ll.url }}">
+          {{ ll.name }}
         </a>
       </li>
+      {% endfor %}
+      {% endif %}
       {% if sched_dir == 1 %}
       <li class="list-group-item">
         <a href="{{ sched_url | relative_url }}">
