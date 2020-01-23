@@ -2,7 +2,7 @@
 title: Blog Outline
 breadcrumb: Blog Outline
 layout: bg-image
-moddate: 20-Jan-2020
+moddate: 22-Jan-2020
 aid: I_BO
 marks: 3
 rubric:
@@ -31,7 +31,7 @@ rubric:
   l1: Personal connection is unclear
   l0: No personal connection
 ---
-### Description
+### {{ page.title }}
 
 [Blogs](https://en.wikipedia.org/wiki/Blog) (short for weblogs) have become an important means of expression in the information society. Personal blog posts are discrete, often informal, diary-style commentaries written by an individual.
 
@@ -47,7 +47,7 @@ I have prepared [a sample]({{ "/assets/teaching/pdf/CS-280_blog-outline-sample.p
 
 ### Submission
 
-* submit a [pdf](https://en.wikipedia.org/wiki/PDF) document on URcourses
+* submit a well-formatted [pdf](https://en.wikipedia.org/wiki/PDF) document on URcourses
 * target length: 1 page
 
 {% include grading/main.html %}

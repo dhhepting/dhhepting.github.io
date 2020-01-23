@@ -336,7 +336,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   </div>
 </nav>
 
-            <h3 id="description">Description</h3>
+            <h3 id="illustrate-entropy">Illustrate Entropy</h3>
 
 <p>Use p5.js to illustrate the idea of entropy.</p>
 
@@ -346,8 +346,6 @@ style="background-color: rgba(32, 32, 32, 0.75)">
 either to your <editor.p5js.org> sketch or to your own CS website page that runs your sketch.</editor.p5js.org></p>
 
 <h3 id="grading">Grading</h3>
-
-<h3 id="grading-1">Grading</h3>
 
 <div class="border text-light px-4 pt-3 mx-4 mt-3 bg-dark border-primary">
   Grade penalties will be applied in the following situations for assignment submissions:
@@ -379,6 +377,60 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
     </thead>
     <tbody>
 
+      <tr>
+        <th>
+          Basic implementation (2)
+        </th>
+        <td>
+          Code functions as required and code is easily readable
+        </td>
+        <td>
+          Code functions as required but code is not so easily readable
+        </td>
+        <td>
+          Completed but code does not function as required
+        </td>
+        <td>
+          Not completed
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Advanced feature (1)
+        </th>
+        <td>
+          Advanced feature well done and clearly written
+        </td>
+        <td>
+          Advanced feature well done but not so clearly written
+        </td>
+        <td>
+          Completed but feature does not function as indicated
+        </td>
+        <td>
+          Not completed
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Comments (1)
+        </th>
+        <td>
+          Comments well written and explain rationale
+        </td>
+        <td>
+          Comments well written but do not fully explain rationale
+        </td>
+        <td>
+          Comments not consistently done
+        </td>
+        <td>
+          Little to no comments in code
+        </td>
+			</tr>
+
 		</tbody>
 	</table>
 </div>
@@ -393,6 +445,78 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
 
 
 
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion1">Basic implementation (2)</label>
+      <select class="col-sm-9 form-control" name="criteria_I_ENT" id="rcriterion1">
+        criteria_I_ENT
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): Code functions as required and code is easily readable</option>
+        <option value="9"> Exemplary: Code functions as required and code is easily readable</option>
+        <option value="8"> Exemplary (-): Code functions as required and code is easily readable</option>
+        <option value="7"> Sufficient (+): Code functions as required but code is not so easily readable</option>
+        <option value="6"> Sufficient: Code functions as required but code is not so easily readable</option>
+        <option value="5"> Sufficient (-): Code functions as required but code is not so easily readable</option>
+        <option value="4"> Developing (+): Completed but code does not function as required</option>
+        <option value="3"> Developing: Completed but code does not function as required</option>
+        <option value="2"> Developing (-): Completed but code does not function as required</option>
+        <option value="1">Needs Improvement: Not completed</option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion2">Advanced feature (1)</label>
+      <select class="col-sm-9 form-control" name="criteria_I_ENT" id="rcriterion2">
+        criteria_I_ENT
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): Advanced feature well done and clearly written</option>
+        <option value="9"> Exemplary: Advanced feature well done and clearly written</option>
+        <option value="8"> Exemplary (-): Advanced feature well done and clearly written</option>
+        <option value="7"> Sufficient (+): Advanced feature well done but not so clearly written</option>
+        <option value="6"> Sufficient: Advanced feature well done but not so clearly written</option>
+        <option value="5"> Sufficient (-): Advanced feature well done but not so clearly written</option>
+        <option value="4"> Developing (+): Completed but feature does not function as indicated</option>
+        <option value="3"> Developing: Completed but feature does not function as indicated</option>
+        <option value="2"> Developing (-): Completed but feature does not function as indicated</option>
+        <option value="1">Needs Improvement: Not completed</option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion3">Comments (1)</label>
+      <select class="col-sm-9 form-control" name="criteria_I_ENT" id="rcriterion3">
+        criteria_I_ENT
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): Comments well written and explain rationale</option>
+        <option value="9"> Exemplary: Comments well written and explain rationale</option>
+        <option value="8"> Exemplary (-): Comments well written and explain rationale</option>
+        <option value="7"> Sufficient (+): Comments well written but do not fully explain rationale</option>
+        <option value="6"> Sufficient: Comments well written but do not fully explain rationale</option>
+        <option value="5"> Sufficient (-): Comments well written but do not fully explain rationale</option>
+        <option value="4"> Developing (+): Comments not consistently done</option>
+        <option value="3"> Developing: Comments not consistently done</option>
+        <option value="2"> Developing (-): Comments not consistently done</option>
+        <option value="1">Needs Improvement: Little to no comments in code</option>
+      </select>
+    </div>
 
 
   </div>
@@ -422,7 +546,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
       <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
 
 
-      <textarea class="col-sm-9 form-control" id="comments_I_ENT" rows="5" placeholder="Criteria Weights Not Equal to Total Marks"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_I_ENT" rows="5" readonly="true"></textarea>
   
     </div>
     <div class="form-group row">
@@ -442,7 +566,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
 <script>
   function process_I_ENT()
   {
-    var weights = []
+    var weights = ["","2","1","1"]
     console.log(weights)
     var mult = 1.0
     // get multiplier from penalty radio buttons
@@ -582,7 +706,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2020-01-21 20:38 -0600
+  Site built: 2020-01-22 18:51 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-205/202010/assignments.html">
     Give feedback <span class="d-none d-sm-inline">about page</span>
