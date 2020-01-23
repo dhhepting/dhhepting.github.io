@@ -1,0 +1,10 @@
+<li>
+  {{ include.txt0 }}
+  {%- if include.lnk -%}
+  <a target="_blank" {%comment%}_{%endcomment%}
+  href="{{ include.lnk }}">
+    {{ include.lnktxt }}
+  </a>
+  {%- endif -%}
+  {{ include.txt1 }}
+</li>
