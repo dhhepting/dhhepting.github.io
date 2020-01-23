@@ -1,8 +1,8 @@
 ---
-title: Blog Post
-breadcrumb: Blog Post
+title: Blog Entry
+breadcrumb: Blog Entry
 layout: bg-image
-aid: I_BP
+aid: I_BE
 marks: 9
 rubric:
   - crit: Intellectual Engagement with Key Theme-Related Concepts
@@ -13,7 +13,7 @@ rubric:
     l0: Makes no reference to issues raised through readings and/or class activities
   - crit: Personal Response to Key Theme-Related Concepts
     wt: 3
-    l3: Extensive evidence of a personal response to the issues raised in the readings/activities, and Demonstrates your growth
+    l3: Extensive evidence of a personal response to the issues raised in the readings/activities, and demonstrates your growth
     l2: Some evidence of a personal response to the issues/concepts raised in the readings/activities
     l1: Little evidence of a personal response to the issues/concepts raised in the readings/activities
     l0: No personal response is made to the issues/concepts raised in the readings/activities
@@ -26,14 +26,13 @@ rubric:
 ---
 ### {{ page.title }}
 
-Your blog post is to be posted in the [blog on URcourses](https://urcourses.uregina.ca/mod/oublog/view.php?id=909814). References are to be included as hyperlinks within the post, close to the text that makes the reference.
+Your blog entry is to be posted in the [blog on URcourses](https://urcourses.uregina.ca/mod/oublog/view.php?id=909814). References are to be included as hyperlinks within the post, close to the text that makes the reference.
 
 Please see [this resource for information about writing for the web](<https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/>).
 
 ### Submission
 
-Post the blog and then submit only the hyperlink to your blog post.
-The link to your post will end with <code>viewpost.php?post=</code>, including a number after the "=". You can see a [demonstration post](https://urcourses.uregina.ca/mod/oublog/viewpost.php?post=32130), which is then used as the example in  the following instructions (<code>https://urcourses.uregina.ca/mod/oublog/viewpost.php?post=32130</code>):
+Post your blog entry and then submit only the hyperlink to it. The link to your posted entry will end with <code>viewpost.php?post=</code>, including a number after the "=". You can see a [demonstration post](https://urcourses.uregina.ca/mod/oublog/viewpost.php?post=32130), which is then used as the example in  the following instructions (<code>https://urcourses.uregina.ca/mod/oublog/viewpost.php?post=32130</code>):
 * start your submission and you will see this window:<br />
 <img class="img-fluid rounded" alt="Start" src="{{"/assets/teaching/img/link-1-start.png" | relative_url }}" />
 <p>&nbsp;</p>
@@ -57,7 +56,5 @@ The link to your post will end with <code>viewpost.php?post=</code>, including a
 <p>&nbsp;</p>
 
 The target length is 800-900 words.
-
-Please follow these instructions because you will be penalized if the instructions are not followed.
 
 {% include marker.html %}
