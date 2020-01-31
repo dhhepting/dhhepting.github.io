@@ -27,6 +27,7 @@ rubric:
 ### {{ page.title}}
 
 Use p5.js to illustrate the idea of entropy.
+Recall the [video about information entropy as a measure of surprise](https://www.youtube.com/watch?v=2s3aJfRr9gE)
 
 ### Submission
 

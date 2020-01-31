@@ -22,10 +22,14 @@ layout: bg-image
         <tr>
           <td>{{ s.date | date: "%a-%d-%b" }}</td>
           <td>
+            {% if 0 == 1 %}
             <a target="_blank"{%comment %}_{% endcomment %}
             href="{{ s.student | replace: " ","-" }}.html">
               {{ s.student }}
             </a>
+            {%else%}
+              {{ s.student }}
+            {%- endif -%}  
           </td>
         </tr>
       {%- endif -%}

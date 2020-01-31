@@ -1,0 +1,16 @@
+{% include teaching/url.html %}
+
+<h1>Feedback from Course Offering</h1>
+
+{%- comment %}
+  Find all feedback data files
+{%- endcomment %}
+
+{%- assign ofbfs = "" -%}
+{%- for ff in site.data.teaching.feedback -%}
+  {%- if ff[0] contains joff_id -%}
+    {% assign include.fbd = 1 %}
+    INSIDE {{ include.fbd }}
+    {% break %}
+  {%- endif -%}
+{%- endfor -%}
