@@ -2,6 +2,8 @@
 title: Computer Science Seminars
 breadcrumb: Computer Science Seminars
 layout: bg-image
+redirect_from:
+- /teaching/CS-499+900/202010/Elham-Parhizkar-Abyaneh.html
 presenter: Elham Parhizkar Abyaneh
 supervisor: Sandra Zilles
 semtitle: Indirect Trust is Simple to Establish
