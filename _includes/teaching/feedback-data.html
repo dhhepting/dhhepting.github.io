@@ -1,0 +1,36 @@
+{%- comment -%}
+  Find all feedback data files
+{%- endcomment -%}
+{%- assign semdat = "" -%}
+{%- assign psn = page.sem | plus: 0 -%}
+{%- assign fdb_courses = "" -%}
+{%- for ff in site.data.teaching.feedback -%}
+  {%- assign ff_parts = ff[0] | split: "-" -%}
+  {%- if ff_parts.size > 1 -%}
+    {%- capture cofb -%}{{cofb}},{{ff_parts[0]}}-{{ff_parts[1]}}#{{ff_parts[2]}}{% endcapture %}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign scofb = cofb | split: "," | sort | uniq -%}
+<div class="card">
+  <h3 class="card-header">
+    Course Offerings with Feedback Data
+  </h3>
+  <div class="card-body">
+{%- assign newc = "" -%}
+{%- for cc in scofb -%}
+  {%- if cc != "" -%}
+    {%- assign offs = cc | replace: "_","+" | split: "#" -%}
+    {%- capture courl -%}/teaching/{{offs[0]}}/{{offs[1]}}/feedback.html{% endcapture %}
+    {%- if newc != offs[0] -%}
+      {%- if newc != "" -%}
+        </div></div><hr />
+      {%- endif -%}
+      <div class="row">
+      <div class="col-3 text-center align-bottom">{{ offs[0] }}</div>
+      <div class="col-9">
+    {%- endif -%}
+     <a href="{{ courl | relative_url }}" class="btn btn-primary m-1" type="button">{{ offs[1] }}</a>
+    {%- assign newc = offs[0] -%}
+  {%- endif -%}
+{%- endfor %}
+</div>

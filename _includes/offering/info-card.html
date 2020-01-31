@@ -7,7 +7,7 @@
     {% capture sched_url %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
     {% capture meet_url %}{{ page.url }}meetings/{% endcapture %}
     {% capture media_url %}{{ page.url }}media/{% endcapture %}
-    {% capture fbk_url %}/teaching/{{ crs_id }}/{{ crs_sem }}/feedback/{% endcapture %}
+    {% capture fbk_url %}/teaching/{{ crs_id }}/{{ crs_sem }}/feedback.html{% endcapture %}
     {% capture rss_url %}/rss/{{ crs_id }}-{{ crs_sem }}.rss{% endcapture %}
     {% capture exam_url %}/teaching/{{ crs_id }}/{{ crs_sem }}/exams.html{% endcapture %}{% assign fbk_dir = 0 %}
     {% assign rss_feed = 0 %}
@@ -15,9 +15,18 @@
     {% assign meet_dir = 0 %}
     {% assign media_dir = 0 %}
     {% assign exams_file = 0 %}
+    {% assign fbd = 0 %}
+    {%- for ff in site.data.teaching.feedback -%}
+      {%- if ff[0] contains joff_id -%}
+        {% assign fbd = 1 %}
+        {% break %}
+      {%- endif -%}
+    {%- endfor -%}
     {% for sp in site.pages %}
       {% if sp.url contains fbk_url %}
-        {% assign fbk_dir = 1 %}
+        {% if fbd == 1 %}
+          {% assign fbk_dir = 1 %}
+        {% endif %}
       {% endif %}
       {% if sp.url contains syll_url %}
         {% assign syll = 1 %}
