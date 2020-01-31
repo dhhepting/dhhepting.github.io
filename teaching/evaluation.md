@@ -1,46 +1,86 @@
 ---
-title: Teaching Evaluation
+title: Evaluation of Teaching
 breadcrumb: Evaluation
 layout: bg-image
 ---
-# {{ page.breadcrumb }}
+# {{ page.title }}
 
+<div class="card">
+  <div class="card-body">
+    <p>
 I take my teaching seriously and I am always willing to hear from students about
 ways that I can improve.
 As a sign of this commitment, I provide a link to
-[my reviews on]( http://www.ratemyprofessors.com/ShowRatings.jsp?tid=34540) <tt>ratemyprofessors.com</tt>.
-If you are interested in my teaching,
-please also look at the other sources described here.
+<a target="_blank"{%comment%}_{%endcomment%}
+href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=34540">
+  my reviews on ratemyprofessors.com
+</a>.
+If you are interested in learning about me and my teaching,
+please read on.
+</p>
+<p>
+I give my students the <em>opportunity</em> to provide their written feedback to me at exam times
+(midterms and final), using my own
+<a target="_blank"{%comment%}_{%endcomment%}
+href="{{'/assets/teaching/pdf/feedback-instrument.pdf' | relative_url}}">
+  feedback instrument
+</a>
+There are nine 5-level
+<a target="_blank"{%comment%}_{%endcomment%}
+href="https://en.wikipedia.org/wiki/Likert_scale">
+  Likert items
+</a>,
+with which students are invited to evaluate statements about me as the instructor, on the dimension of frequency. For example, the statement &ldquo;The instructor is well-prepared for class.&rdquo; can be rated as follows:
+</p>
+<p></p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Label [implied]</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5</td><td>Always</td><td>very positive</td>
+    </tr>
+    <tr>
+      <td>4</td><td>[Mostly]</td><td>positive</td>
+    </tr>
+    <tr>
+      <td>3</td><td>[Sometimes]</td><td>neutral</td>
+    </tr>
+    <tr>
+      <td>2</td><td>[Rarely]</td><td>negative</td>
+    </tr>
+    <tr>
+      <td>1</td><td>Never</td><td>very negative</td>
+    </tr>
+  </tbody>
+</table>
 
-I give my students the opportunity to provide their written feedback to me at exam times
-(midterm and final).
-Midterm feedback is formative (I will look at these results immediately and discuss them with my students) and final feedback is summative (I will not look at these until my grades have been submitted).
+<p></p>
+<p>
+The levels of each Likert item are symmetrical (equal number of positive and negative levels around the neutral centre) and balanced (there is equal perceptual distance from the centre,
+&lsquo;Sometimes&rsquo;,
+for the pairs &lsquo;Always&rsquo; and &lsquo;Never&rsquo; and
+  &lsquo;Mostly&rsquo; and &lsquo;Rarely&rsquo;)
+  </p>
+  <p>
 
-* [Feedback Instrument]({{"/assets/teaching/pdf/feedback-instrument.pdf" | relative_url}})
+There are also three open-ended questions that students are invited to complete.
+</p>
+<p>
+Midterm feedback is formative (I will look at these results immediately and discuss them with my students) and final feedback is summative (I will not look at these until my grades have been submitted). The Faculty of Science also collects summative feedback about my teaching.
+</p>
+<p>
+My goal is to post to this website all the feedback response data that I receive. I provide a numerical summary of the Likert items and I transcribe responses to each of the open-ended questions.
+</p>
+<p>
+I compute a single number that is the percentage of agreement with the rating &lsquo;Always&rsquo; over those nine questions.
+</p>
 
-The Faculty of Science also collects summative feedback about my teaching.
-Whereas this was once done on paper during class time,
-it is now done online during the students' own time.
-
-I am undertaking the posting to the web of the feedback that I receive.
-I provide a numerical summary of each data set and word cloud summaries of the
-responses to each of the open-ended questions on my feedback instrument.
-
-I understand why [&ldquo;word clouds considered harmful&rdquo;]( http://www.niemanlab.org/2011/10/word-clouds-considered-harmful/) by some,
-in some cases.
-I think that they are appropriate here because they are engaging and allow a
-different way to look at the text.
-I use [<tt>https://www.jasondavies.com/wordcloud/</tt>]( https://www.jasondavies.com/wordcloud/)
-to generate the word clouds and save them in SVG for the web.
-I don't do any processing on the text that I create while transcribing the responses.
-
-My instrument and the one from the Faculty of Science have mostly different
-questions and different scales.
-My scale has 5 points (Always &mdash; Never) and the Faculty of Science scale
-has 4 points (Strongly Agree &mdash; Strongly Disagree). For both,
-higher scores are better.
-
-I compute the Weighted Rating for a course offering by multiplying each of the two
-summative scores by the number of respondents who determined that score, summing the
-results and dividing by the total number of respondents.  The result is expressed
-as a percentage.
+{% include teaching/feedback-data.html %}
+</div>
+</div>

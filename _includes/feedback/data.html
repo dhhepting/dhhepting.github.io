@@ -1,0 +1,72 @@
+{% include teaching/url.html %}
+
+<h1>Feedback from Course Offering</h1>
+
+{%- comment %}
+  Find all feedback data files
+{%- endcomment %}
+
+{%- assign ofbfs = "" -%}
+{%- for ff in site.data.teaching.feedback -%}
+  {%- if ff[0] contains joff_id -%}
+    {% capture ofbfs %}{{ofbfs}},{{ff[0]}}{% endcapture %}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign sof = ofbfs | split: "," | sort -%}
+{%- assign newfb = "" %}
+
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+{%- for ss in sof -%}
+  {%- if ss != "" -%}
+    {%- assign comm = "" %}
+    {%- assign likert = "" %}
+    {%- assign ss_parts = ss | split: "-" %}
+    {%- assign fid = ss_parts[4] %}
+    {%- if newfb == "" -%}
+      {%- assign actstr = "active" %}
+    {%- else -%}
+      {%- assign actstr = "" %}
+    {%- endif -%}
+    {%- if newfb != fid -%}
+      <a class="nav-item nav-link {{ actstr }}" id="{{ fid }}-tab" data-toggle="tab" href="#{{ fid }}"
+      role="tab" aria-controls="{{ fid }}" aria-selected="false">
+        {{ fid | capitalize }}
+      </a>
+    {%- endif %}
+    {%- assign newfb = fid %}
+  {%- endif -%}
+{%- endfor -%}
+</div>
+</nav>
+{%- assign newfb = "" %}
+{%- assign frst = "" %}
+<div class="tab-content" id="nav-tabContent">
+  {%- assign comm = "" %}
+  {%- assign likert = "" %}
+  {%- for ss in sof -%}
+    {%- if ss != "" -%}
+      {%- assign ss_parts = ss | split: "-" %}
+      {%- assign dt =  ss_parts[3] | slice: 1 %}
+      {%- assign fid = ss_parts[4] %}
+
+      {% if dt == "C" %}
+        {%- assign comm = ss %}
+      {%- else %}
+        {%- assign likert = ss %}
+        {%- if frst == "" -%}
+          {%- assign actstr = "show active" %}
+        {%- else -%}
+          {%- assign actstr = "" %}
+        {%- endif -%}
+      <div class="tab-pane fade {{ actstr }}" id="{{fid}}" role="tabpanel" aria-labelledby="{{fid}}-tab">
+        {% include feedback/present.html iid=fid ilike=likert icomm=comm %}
+        {%- assign comm = "" %}
+        {%- assign likert = "" %}
+        {%- assign frst = "X" %}
+      </div>
+      {%- endif %}
+      {%- assign newfb = fid %}
+    {%- endif -%}
+  {%- endfor -%}
+</div>

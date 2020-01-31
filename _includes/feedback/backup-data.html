@@ -1,0 +1,34 @@
+{% include teaching/url.html %}
+
+<h1>Feedback from Course Offering</h1>
+
+{%- comment %}
+  Find all feedback data files
+{%- endcomment %}
+
+{%- assign ofbfs = "" -%}
+{%- for ff in site.data.teaching.feedback -%}
+  {%- if ff[0] contains joff_id -%}
+    {% capture ofbfs %}{{ofbfs}},{{ff[0]}}{% endcapture %}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign sof = ofbfs | split: "," | sort -%}
+{%- assign newfb = "" %}
+{%- for ss in sof -%}
+  {%- if ss != "" -%}
+    {%- assign ss_parts = ss | split: "-" %}
+    {%- assign fid = ss_parts[4] %}
+    {%- if newfb != fid -%}
+      <a href="#{{fid}}" class="btn btn-primary m-1" type="button" data-toggle="collapse">
+        {{ fid | capitalize }}
+      </a>
+      {%- assign comm = ss %}
+    {%- else %}
+      {%- assign likert = ss %}
+      <div id="{{fid}}" class="container collapse">
+        {% include feedback/present.html iid=fid ilike=likert icomm=comm %}
+      </div>
+    {%- endif %}
+    {%- assign newfb = fid %}
+  {%- endif -%}
+{%- endfor -%}
