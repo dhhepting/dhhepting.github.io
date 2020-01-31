@@ -20,7 +20,7 @@
 {%- for cc in scofb -%}
   {%- if cc != "" -%}
     {%- assign offs = cc | replace: "_","+" | split: "#" -%}
-    {%- capture courl -%}/teaching/{{offs[0]}}/{{offs[1]}}/feedback/{% endcapture %}
+    {%- capture courl -%}/teaching/{{offs[0]}}/{{offs[1]}}/feedback.html{% endcapture %}
     {%- if newc != offs[0] -%}
       {%- if newc != "" -%}
         </div></div><hr />
