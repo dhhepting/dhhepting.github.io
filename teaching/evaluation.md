@@ -78,7 +78,7 @@ Midterm feedback is formative (I will look at these results immediately and disc
 My goal is to post to this website all the feedback response data that I receive. I provide a numerical summary of the Likert items and I transcribe responses to each of the open-ended questions.
 </p>
 <p>
-I compute a single number that is the percentage of agreement with the rating &lsquo;Always&rsquo; over those nine questions.
+I compute a single number that is the percentage of agreement, over those nine Likert items, with the rating &lsquo;Always&rsquo;.
 </p>
 
 {% include teaching/feedback-data.html %}

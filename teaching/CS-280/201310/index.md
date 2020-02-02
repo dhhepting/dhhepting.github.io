@@ -1,6 +1,6 @@
 ---
-title: CS 215 in Winter 2007
-breadcrumb: 200710
+title: CS 280 in Winter 2013
+breadcrumb: 201310
 
 layout: bg-image
 description:
