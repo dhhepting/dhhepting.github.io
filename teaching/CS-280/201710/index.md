@@ -1,6 +1,6 @@
 ---
-title: CS 280 in Winter 2019
-breadcrumb: 201910
+title: CS 280 in Winter 2017
+breadcrumb: 201710
 layout: bg-image
 ---
 
