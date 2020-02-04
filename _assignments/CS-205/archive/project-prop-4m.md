@@ -2,6 +2,7 @@
 title: Project Proposal
 layout: bg-image
 marks: 4
+aid:
 rubric:
   - crit: Content/Concept of the project
     wt: 2
