@@ -57,4 +57,4 @@ Post your blog entry and then submit only the hyperlink to it. The link to your 
 
 The target length is 800-900 words.
 
-{% include marker.html %}
+{% include grading/main.html %}
