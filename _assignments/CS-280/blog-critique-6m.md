@@ -2,8 +2,9 @@
 title: Blog Critique
 breadcrumb: Blog Critique
 layout: bg-image
-aid: I_BC
+aid: I_CBE
 marks: 6
+moddate: 07-Feb-2020
 rubric:
   - crit: Evaluation according to rubric
     wt: 2
