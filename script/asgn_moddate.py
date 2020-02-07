@@ -31,16 +31,19 @@ for root, subdirs, files in os.walk(assign_root):
             #
             #print (fp_modtime)
             update = 0
+            #print(file_path)
             with open(file_path,'r') as f:
                 file_moddate = ""
                 for line in f:
                     line = line.rstrip().split()
                     if len(line) > 0 and "moddate:" in line[0]:
+                        #print(line[0],cur_moddate)
                         if len(line) >= 2:
                             file_moddate = line[1]
-                            if file_moddate != cur_moddate:
-                                print ("Update ",file_path," : ",file_moddate,cur_moddate)
-                                update = 1
+                        #print(line[0],file_moddate,cur_moddate,file_moddate != cur_moddate)
+                        if file_moddate != cur_moddate:
+                            print ("Update ",file_path," : ",file_moddate,cur_moddate)
+                            update = 1
             if (update):
                 with FileInput(files=[file_path], inplace=True) as f:
                     for line in f:

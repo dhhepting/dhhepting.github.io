@@ -1,9 +1,10 @@
 ---
-title: Prioritize
-breadcrumb: Prioritize
+title: Assess Humane-ness of CS Website
+breadcrumb: Assess Humane-ness of CS Website
 layout: bg-image
 marks: 10
-nid: G-P
+aid: G_AH
+moddate: 07-Feb-2020
 rubric:
   - crit: Define Task
     wt: 1

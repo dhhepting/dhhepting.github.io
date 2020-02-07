@@ -3,6 +3,7 @@ title: Blog Entry
 breadcrumb: Blog Entry
 layout: bg-image
 aid: I_BE
+moddate: 07-Feb-2020
 marks: 9
 rubric:
   - crit: Intellectual Engagement with Key Theme-Related Concepts
@@ -24,7 +25,7 @@ rubric:
     l1: Shows some evidence of correct spelling, grammar, and punctuation. Audience will have some trouble reading your blog. Recommended style used occasionally (and only 1 link is included)
     l0: Incorrect grammar and spelling are apparent throughout, making it difficult for others to follow. No links are included and recommended style not followed
 ---
-### {{ page.title }}
+### Description
 
 Your blog entry is to be posted in the [blog on URcourses](https://urcourses.uregina.ca/mod/oublog/view.php?id=909814). References are to be included as hyperlinks within the post, close to the text that makes the reference.
 
