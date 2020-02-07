@@ -24,10 +24,10 @@ rubric:
   l1: Comments not consistently done
   l0: Little to no comments in code
 ---
-### {{ page.title}}
+### Description
 
 Use p5.js to illustrate the idea of entropy.
-Recall the [video about information entropy as a measure of surprise](https://www.youtube.com/watch?v=2s3aJfRr9gE)
+Recall the [video about information entropy as a measure of surprise](https://www.youtube.com/watch?v=2s3aJfRr9gE). A basic sample sketch for this assignment is [available by clicking here](https://editor.p5js.org/dhhepting/sketches/Cg4XuXeR).
 
 ### Submission
 
