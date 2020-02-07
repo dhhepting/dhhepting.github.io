@@ -290,6 +290,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
       </li>
       
     
+      
+      
+      <li class="nav-item">
+        <a class="nav-link" id="I_CBE-tab" data-toggle="tab" href="#I_CBE-pane" role="tab" aria-controls="i-asgnTabs" aria-selected="true">
+          Critique a Blog Entry
+        </a>
+      </li>
+      
+    
+      
+      
+    
     </ul>
     <div class="tab-content">
     
@@ -801,7 +813,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
 
     <script>
     $(document).ready(function(){
-      var duedate_I_BE = '31-Feb-2020'
+      var duedate_I_BE = '06-Mar-2020'
       var duetime_I_BE =
         new Date(duedate_I_BE).getTime() + 86340000
       $('#I_BE-cdt').countdown(duetime_I_BE,
@@ -882,17 +894,17 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
 
 <h3 id="grading">Grading</h3>
 
-<p>This assignment is worth 9 marks, according to the following rubric:</p>
+<div class="border text-light px-4 pt-3 mx-4 mt-3 bg-dark border-primary">
+  Grade penalties will be applied in the following situations for assignment submissions:
+  <ul>
+    <li>on time but the written instructions for the submission were not followed: deduct 10% of the earned grade</li>
+    <li>late (but within 48 hours of the due date and time): deduct 10% of the earned grade</li>
+    <li>late by more than 48 hours: deduct 50% of the earned grade</li>
+    <li>academic dishonesty: deduct 100% of the earned grade</li>
+  </ul>
+</div>
 
-<p>Grade penalties will be applied in the following situations for assignment submissions:</p>
-<ul>
-  <li>on time but the written instructions for the submission were not followed:
-deduct 10% of the earned grade</li>
-  <li>late (but within 48 hours of the due date and time):
-deduct 10% of the earned grade</li>
-  <li>late by more than 48 hours:
-deduct 50% of the earned grade</li>
-</ul>
+<p>This assignment is worth 9 marks, according to the following rubric:</p>
 
 <h5 id="rubric">Rubric</h5>
 
@@ -974,26 +986,6 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
 <h5 id="calculator">Calculator</h5>
 
 <form name="calculator_I_BE">
-  <!-- penalties -->
-  <div class="form-group border bg-info m-2 p-4" id="pen">
-    <strong>Penalties</strong>
-    <div class="form-check" id="p0">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-0" value="0" checked="" />
-      <label class="form-check-label" for="penalties">None (on-time and followed instructions)</label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-1" value="10" />
-      <label class="form-check-label" for="penalty-1">Instructions not followed</label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-2" value="10" />
-      <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="penalties" id="penalty-3" value="50" />
-      <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
-    </div>
-  </div>
 
   <!-- rubric criteria -->
   <div class="border bg-info m-2 p-4">
@@ -1004,12 +996,14 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
 
   
   
+  <!---->
   
   
   
     <div class="form-group row">
       <label class="col-sm-3 col-form-label text-right" for="rcriterion1">Intellectual Engagement with Key Theme-Related Concepts (3)</label>
       <select class="col-sm-9 form-control" name="criteria_I_BE" id="rcriterion1">
+        criteria_I_BE
         <option selected="" disabled="">Choose...</option>
         <option value="10"> Exemplary (+): Demonstrates engagement with the important issues raised through readings and/or class activities</option>
         <option value="9"> Exemplary: Demonstrates engagement with the important issues raised through readings and/or class activities</option>
@@ -1026,12 +1020,14 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
 
   
   
+  <!---->
   
   
   
     <div class="form-group row">
       <label class="col-sm-3 col-form-label text-right" for="rcriterion2">Personal Response to Key Theme-Related Concepts (3)</label>
       <select class="col-sm-9 form-control" name="criteria_I_BE" id="rcriterion2">
+        criteria_I_BE
         <option selected="" disabled="">Choose...</option>
         <option value="10"> Exemplary (+): Extensive evidence of a personal response to the issues raised in the readings/activities, and demonstrates your growth</option>
         <option value="9"> Exemplary: Extensive evidence of a personal response to the issues raised in the readings/activities, and demonstrates your growth</option>
@@ -1048,12 +1044,14 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
 
   
   
+  <!---->
   
   
   
     <div class="form-group row">
       <label class="col-sm-3 col-form-label text-right" for="rcriterion3">Engaged Writing for the Web (3)</label>
       <select class="col-sm-9 form-control" name="criteria_I_BE" id="rcriterion3">
+        criteria_I_BE
         <option selected="" disabled="">Choose...</option>
         <option value="10"> Exemplary (+): Shows a good command of Standard English. No problems for your audience. Blog entry includes several links and uses recommended style</option>
         <option value="9"> Exemplary: Shows a good command of Standard English. No problems for your audience. Blog entry includes several links and uses recommended style</option>
@@ -1070,12 +1068,37 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
 
 
   </div>
+  <!-- penalties -->
+  <div class="form-group border bg-info m-2 p-4" id="pen">
+    <strong>Penalties</strong>
+
+    <div class="form-check" id="p0">
+      <input class="form-check-input" type="radio" name="penalties_I_BE" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_I_BE">None (on-time and followed instructions)</label>
+    </div>
+    <div class="form-check" id="p1">
+      <input class="form-check-input" type="radio" name="penalties_I_BE" id="penalty-1" value="10" />
+      <label class="form-check-label" for="penalty-1">Instructions not followed</label>
+    </div>
+    <div class="form-check" id="p2">
+      <input class="form-check-input" type="radio" name="penalties_I_BE" id="penalty-2" value="10" />
+      <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
+    </div>
+    <div class="form-check" id="p3">
+      <input class="form-check-input" type="radio" name="penalties_I_BE" id="penalty-3" value="50" />
+      <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
+    </div>
+    <div class="form-check" id="p4">
+      <input class="form-check-input" type="radio" name="penalties_I_BE" id="penalty-4" value="100" />
+      <label class="form-check-label" for="penalty-4">Academic dishonesty</label>
+    </div>
+  </div>
   <div class="border bg-info m-2 p-4">
     <div class="form-group row">
       <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
 
 
-      <textarea class="col-sm-9 form-control" id="comments_I_BE" rows="5"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_I_BE" rows="5" readonly="true"></textarea>
   
     </div>
     <div class="form-group row">
@@ -1096,16 +1119,24 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
   function process_I_BE()
   {
     var weights = ["","3","3","3"]
+    console.log(weights)
+    var mult = 1.0
     // get multiplier from penalty radio buttons
-    var penalty = document.querySelector("input[name=penalties]:checked");
-    var mult = (100.0 - penalty.value)/100.0;
+    /*if (document.querySelector('input[name=penalties_I_BE]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_I_BE]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
+    console.log("mult: ",mult)
 
-    // output penalty information
+    // find comment span
+    // BETTER: find the end of the text area content
+    // for additional comments?
     var commentspan = document.getElementById("comments_I_BE");
-    commentspan.textContent = "Penalty:\n";
-    commentspan.textContent = commentspan.textContent +
-      "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
-
+    console.log(commentspan)
+    commentspan.textContent = "";
+    console.log(commentspan.textContent)
     // get grades for each rubric criterion
     var sumgrade = 0;
     var critname = "criteria" + "_" + "I_BE";
@@ -1117,25 +1148,36 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
         crits[i].parentNode.querySelector("label").textContent + ":\n";
       if (crits[i].value >= 0 && crits[i].value <= 10)
       {
-        var cv = (crits[i].value / 10.0) * weights[i+1];
-        sumgrade += cv;
+        var cw = weights[i+1];
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(commentspan.textContent)
+        console.log(cv,sumgrade)
+
         commentspan.textContent = commentspan.textContent +
-          "\t (" + cv + ") " + crits[i].options[crits[i].selectedIndex].text + "\n";
+          "\t ( " + cv.toFixed(2) + " / " + cw + " ) " +
+          crits[i].options[crits[i].selectedIndex].text + "\n";
       }
       else
       {
         commentspan.textContent = commentspan.textContent +
           "\tNOT GRADED\n";
       }
+      console.log(commentspan)
     }
     // output earned grade and the grade after penalty, if there is one
-    var eg = Math.round(sumgrade * 10) / 10;
-    var pg = Math.round(mult * sumgrade * 10) / 10;
-    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg +"\n";
+    var eg = Math.round(sumgrade * 100) / 100;
+    var pg = Math.round(mult * sumgrade * 100) / 100;
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toFixed(2) +"\n";
+    // output penalty information
     if (mult < 1.0)
     {
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
       commentspan.textContent = commentspan.textContent +
-        "After Penalty: " + pg + "\n";
+        "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
+      commentspan.textContent = commentspan.textContent +
+        "After Penalty: " + pg.toFixed(2) + "\n";
     }
   }
 
@@ -1151,6 +1193,96 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
             
       
       </div>
+      
+    
+      
+      
+      <div class="tab-pane fade" id="I_CBE-pane">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      </div>
+      
+    
+      
       
     
     </div>
@@ -1172,6 +1304,18 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
       
       
     
+      
+      
+    
+      
+      
+      <li class="nav-item">
+        <a class="nav-link" id="P_RR_P-tab" data-toggle="tab" href="#P_RR_P-pane" role="tab" aria-controls="p-asgnTabs" aria-selected="true">
+          Project Proposal
+        </a>
+      </li>
+      
+    
     </ul>
     <div class="tab-content">
     
@@ -1179,6 +1323,432 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
       
     
       
+      
+    
+      
+      
+    
+      
+      
+      <div class="tab-pane fade bg-transparent" id="P_RR_P-pane">
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <span class="navbar-brand" id="P_RR_P-cdt"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#P_RR_P-navbar" aria-controls="P_RR_P-navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <script>
+      $(document).ready(function(){
+      var duedate_P_RR_P = '28-Feb-2020'
+      var duetime_P_RR_P =
+        new Date(duedate_P_RR_P).getTime() + 86340000
+      $('#P_RR_P-cdt').countdown(duetime_P_RR_P,
+        function(event) {
+          $(this).html(event.strftime('Due in: <span>%D d %H h %M m</span>'))
+        })
+      })
+    </script>
+
+    <div class="collapse navbar-collapse" id="P_RR_P-navbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link btn" href="https://urcourses.uregina.ca/mod/forum/discuss.php?d=" role="button">
+            Discuss
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn" href="https://urcourses.uregina.ca/mod/assign/view.php?id=&amp;action=editsubmission" role="button">
+            Submit
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn disabled" href="#" aria-disabled="true">
+          Updated: 
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+              <h3 id="description">Description</h3>
+
+<p>The project can be done individually or in a small group. If you choose to work in a group, make clear how each group member will participate in the final deliverable.</p>
+
+<p>You may choose what you will do for the project. It must deal with class themes in some way, and I am open to your ideas about how you will do it. Your options include, but are not limited to:</p>
+
+<ul>
+  <li>Book Review</li>
+  <li>Research Paper (1000 - 1400 words)</li>
+  <li>Wikipedia article (create new or add to existing)</li>
+  <li>Create and promote some online content (video, blog)</li>
+  <li>Picture Yourself as a Computing Professional</li>
+  <li>Discuss your contributions to an open source project (on github, for example)</li>
+  <li>Write some code to test an idea</li>
+</ul>
+
+<h3 id="submission">Submission</h3>
+<ul>
+  <li>submit a well-formatted <a href="https://en.wikipedia.org/wiki/PDF">pdf</a> document on URcourses</li>
+  <li>target length: 1 page</li>
+</ul>
+
+<h3 id="grading">Grading</h3>
+
+<div class="border text-light px-4 pt-3 mx-4 mt-3 bg-dark border-primary">
+  Grade penalties will be applied in the following situations for assignment submissions:
+  <ul>
+    <li>on time but the written instructions for the submission were not followed: deduct 10% of the earned grade</li>
+    <li>late (but within 48 hours of the due date and time): deduct 10% of the earned grade</li>
+    <li>late by more than 48 hours: deduct 50% of the earned grade</li>
+    <li>academic dishonesty: deduct 100% of the earned grade</li>
+  </ul>
+</div>
+
+<p>This assignment is worth 3 marks, according to the following rubric:</p>
+
+<h5 id="rubric">Rubric</h5>
+
+<p>DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of
+<a href="https://resources.depaul.edu/teaching-commons/teaching-guides/feedback-grading/rubrics/Pages/creating-rubrics.aspx">creating rubrics</a>.
+Your comments about the following rubric are welcome <a href="mailto:daryl.hepting@uregina.ca?subject=Rubric at /teaching/assignments/CS-280/project-propose-3m/project-propose-3m.html">via email</a></p>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+		  <tr>
+        <th><em>Criterion and Weight</em></th>
+        <th> Exemplary</th>
+        <th> Sufficient</th>
+        <th> Developing</th>
+        <th>Needs Improvement</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th>
+          Topic (1)
+        </th>
+        <td>
+          Topic actively engages an important issue related to class
+        </td>
+        <td>
+          Topic engages an important issue related to class
+        </td>
+        <td>
+          Topic somewhat engages an important issue related to class
+        </td>
+        <td>
+          Topic does not engage an important issue related to class
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Deliverable and Rationale (1)
+        </th>
+        <td>
+          Intended deliverable is appropriate and imaginative. Rationale for approach is clear and well-formed
+        </td>
+        <td>
+          Intended deliverable is appropriate. Rationale for approach is reasonable
+        </td>
+        <td>
+          Intended deliverable is somewhat appropriate. Rationale for approach is mostly unclear and not well-formed
+        </td>
+        <td>
+          Intended deliverable is not appropriate. Rationale for approach is not clear
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Tentative Plan (1)
+        </th>
+        <td>
+          Ambitious and thorough
+        </td>
+        <td>
+          Reasonably thorough
+        </td>
+        <td>
+          Somewhat thorough
+        </td>
+        <td>
+          Not thorough
+        </td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>
+
+<h5 id="calculator">Calculator</h5>
+
+<form name="calculator_P_RR_P">
+
+  <!-- rubric criteria -->
+  <div class="border bg-info m-2 p-4">
+    <strong>Rubric Criteria</strong>
+
+
+
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion1">Topic (1)</label>
+      <select class="col-sm-9 form-control" name="criteria_P_RR_P" id="rcriterion1">
+        criteria_P_RR_P
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): Topic actively engages an important issue related to class</option>
+        <option value="9"> Exemplary: Topic actively engages an important issue related to class</option>
+        <option value="8"> Exemplary (-): Topic actively engages an important issue related to class</option>
+        <option value="7"> Sufficient (+): Topic engages an important issue related to class</option>
+        <option value="6"> Sufficient: Topic engages an important issue related to class</option>
+        <option value="5"> Sufficient (-): Topic engages an important issue related to class</option>
+        <option value="4"> Developing (+): Topic somewhat engages an important issue related to class</option>
+        <option value="3"> Developing: Topic somewhat engages an important issue related to class</option>
+        <option value="2"> Developing (-): Topic somewhat engages an important issue related to class</option>
+        <option value="1">Needs Improvement: Topic does not engage an important issue related to class</option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion2">Deliverable and Rationale (1)</label>
+      <select class="col-sm-9 form-control" name="criteria_P_RR_P" id="rcriterion2">
+        criteria_P_RR_P
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): Intended deliverable is appropriate and imaginative. Rationale for approach is clear and well-formed</option>
+        <option value="9"> Exemplary: Intended deliverable is appropriate and imaginative. Rationale for approach is clear and well-formed</option>
+        <option value="8"> Exemplary (-): Intended deliverable is appropriate and imaginative. Rationale for approach is clear and well-formed</option>
+        <option value="7"> Sufficient (+): Intended deliverable is appropriate. Rationale for approach is reasonable</option>
+        <option value="6"> Sufficient: Intended deliverable is appropriate. Rationale for approach is reasonable</option>
+        <option value="5"> Sufficient (-): Intended deliverable is appropriate. Rationale for approach is reasonable</option>
+        <option value="4"> Developing (+): Intended deliverable is somewhat appropriate. Rationale for approach is mostly unclear and not well-formed</option>
+        <option value="3"> Developing: Intended deliverable is somewhat appropriate. Rationale for approach is mostly unclear and not well-formed</option>
+        <option value="2"> Developing (-): Intended deliverable is somewhat appropriate. Rationale for approach is mostly unclear and not well-formed</option>
+        <option value="1">Needs Improvement: Intended deliverable is not appropriate. Rationale for approach is not clear</option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion3">Tentative Plan (1)</label>
+      <select class="col-sm-9 form-control" name="criteria_P_RR_P" id="rcriterion3">
+        criteria_P_RR_P
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): Ambitious and thorough</option>
+        <option value="9"> Exemplary: Ambitious and thorough</option>
+        <option value="8"> Exemplary (-): Ambitious and thorough</option>
+        <option value="7"> Sufficient (+): Reasonably thorough</option>
+        <option value="6"> Sufficient: Reasonably thorough</option>
+        <option value="5"> Sufficient (-): Reasonably thorough</option>
+        <option value="4"> Developing (+): Somewhat thorough</option>
+        <option value="3"> Developing: Somewhat thorough</option>
+        <option value="2"> Developing (-): Somewhat thorough</option>
+        <option value="1">Needs Improvement: Not thorough</option>
+      </select>
+    </div>
+
+
+  </div>
+  <!-- penalties -->
+  <div class="form-group border bg-info m-2 p-4" id="pen">
+    <strong>Penalties</strong>
+
+    <div class="form-check" id="p0">
+      <input class="form-check-input" type="radio" name="penalties_P_RR_P" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_P_RR_P">None (on-time and followed instructions)</label>
+    </div>
+    <div class="form-check" id="p1">
+      <input class="form-check-input" type="radio" name="penalties_P_RR_P" id="penalty-1" value="10" />
+      <label class="form-check-label" for="penalty-1">Instructions not followed</label>
+    </div>
+    <div class="form-check" id="p2">
+      <input class="form-check-input" type="radio" name="penalties_P_RR_P" id="penalty-2" value="10" />
+      <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
+    </div>
+    <div class="form-check" id="p3">
+      <input class="form-check-input" type="radio" name="penalties_P_RR_P" id="penalty-3" value="50" />
+      <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
+    </div>
+    <div class="form-check" id="p4">
+      <input class="form-check-input" type="radio" name="penalties_P_RR_P" id="penalty-4" value="100" />
+      <label class="form-check-label" for="penalty-4">Academic dishonesty</label>
+    </div>
+  </div>
+  <div class="border bg-info m-2 p-4">
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
+
+
+      <textarea class="col-sm-9 form-control" id="comments_P_RR_P" rows="5" readonly="true"></textarea>
+  
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-9">
+        <button class="btn btn-primary" onclick="process_P_RR_P(); return false;">Evaluate</button>
+        <a id="clipboard_P_RR_P" href="#clipboard_P_RR_P" class="m-2 btn btn-primary" aria-label="Copy comments" data-clipboard-action="copy" data-clipboard-target="#comments_P_RR_P">
+          Copy Output to Clipboard
+        </a>
+        <button class="btn btn-primary" onclick="clearform_P_RR_P(); return false;">Clear Form</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<script>
+  function process_P_RR_P()
+  {
+    var weights = ["","1","1","1"]
+    console.log(weights)
+    var mult = 1.0
+    // get multiplier from penalty radio buttons
+    /*if (document.querySelector('input[name=penalties_P_RR_P]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_P_RR_P]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
+    console.log("mult: ",mult)
+
+    // find comment span
+    // BETTER: find the end of the text area content
+    // for additional comments?
+    var commentspan = document.getElementById("comments_P_RR_P");
+    console.log(commentspan)
+    commentspan.textContent = "";
+    console.log(commentspan.textContent)
+    // get grades for each rubric criterion
+    var sumgrade = 0;
+    var critname = "criteria" + "_" + "P_RR_P";
+    var crits = document.getElementsByName(critname);
+    for (var i = 0, length = crits.length; i < length; i++)
+    {
+      // output information for each criterion
+      commentspan.textContent = commentspan.textContent +
+        crits[i].parentNode.querySelector("label").textContent + ":\n";
+      if (crits[i].value >= 0 && crits[i].value <= 10)
+      {
+        var cw = weights[i+1];
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(commentspan.textContent)
+        console.log(cv,sumgrade)
+
+        commentspan.textContent = commentspan.textContent +
+          "\t ( " + cv.toFixed(2) + " / " + cw + " ) " +
+          crits[i].options[crits[i].selectedIndex].text + "\n";
+      }
+      else
+      {
+        commentspan.textContent = commentspan.textContent +
+          "\tNOT GRADED\n";
+      }
+      console.log(commentspan)
+    }
+    // output earned grade and the grade after penalty, if there is one
+    var eg = Math.round(sumgrade * 100) / 100;
+    var pg = Math.round(mult * sumgrade * 100) / 100;
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toFixed(2) +"\n";
+    // output penalty information
+    if (mult < 1.0)
+    {
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
+      commentspan.textContent = commentspan.textContent +
+        "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
+      commentspan.textContent = commentspan.textContent +
+        "After Penalty: " + pg.toFixed(2) + "\n";
+    }
+  }
+
+  function clearform_P_RR_P()
+  {
+    document.forms["calculator_P_RR_P"].reset();
+    var commentspan = document.getElementById("comments_P_RR_P");
+    commentspan.textContent = "";
+  }
+</script>
+
+
+              
+        
+      </div>
       
     
     </div>
@@ -1222,7 +1792,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2020-02-05 13:47 -0600
+  Site built: 2020-02-06 18:24 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-280/202010/assignments.html">
     Give feedback <span class="d-none d-sm-inline">about page</span>
