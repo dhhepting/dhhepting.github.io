@@ -3,7 +3,7 @@ title: Project Proposal
 breadcrumb: Project Proposal
 marks: 3
 aid: P_RR_P
-moddate: 07-Feb-2020
+moddate: 10-Feb-2020
 rubric:
   - crit: Topic
     wt: 1
@@ -24,7 +24,7 @@ rubric:
     l1: Somewhat thorough
     l0: Not thorough
 ---
-### Description
+### {{ page.title }}
 
 The project can be done individually or in a small group. If you choose to work in a group, make clear how each group member will participate in the final deliverable.
 
