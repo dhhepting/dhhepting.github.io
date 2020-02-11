@@ -1,7 +1,8 @@
 ---
-title: CS 305 in Fall 2001
-breadcrumb: 200130
+title: CS 828 in Fall 2008
+breadcrumb: 200830
 layout: bg-image
+description:
 ---
 
 {% include offering/main.html %}

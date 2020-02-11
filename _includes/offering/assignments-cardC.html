@@ -5,12 +5,13 @@
     <span class="btn card-header w-100 text-center" role="button" data-toggle="collapse" data-target="#asgnBody">
       <h3>
         Assignments
+        <!-- &plus; <span class="fas fa-plus fa-3x"></span> -->
       </h3>
     </span>
   </span>
   <span class="d-none d-md-inline">
     <h3 class="card-header text-center">
-      Assignments
+      Assignments <!--<span class="fas fa-plus fa-3x"></span>-->
     </h3>
   </span>
   <div class="collapse d-md-inline card-body bg-transparent" id="asgnBody">
@@ -45,6 +46,30 @@
         {% for sdta in site.data.teaching.assignments[joff_id] %}
           {% assign fla = sdta.aid | slice: 0 %}
           {% if fla == "P" %}
+          <li class="list-group-item btn btn-link" role="button">
+            <a href="assignments.html?asgn={{ sdta.aid }}">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-auto mr-auto d-inline">
+                {{ sdta.title }}
+              </div>
+              <div class="col-auto ml-auto d-inline">
+                Due: {{ sdta.duedate }} @ 23:59
+              </div>
+            </div>
+            </a>
+          </li>
+          {%- endif -%}
+        {%- endfor -%}
+        </ul>
+      </div>
+    </div>
+    <div class="card my-2" id="group-asgn-card">
+      <h5 class="card-header text-center">Group</h5>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+        {% for sdta in site.data.teaching.assignments[joff_id] %}
+          {% assign fla = sdta.aid | slice: 0 %}
+          {% if fla == "G" %}
           <li class="list-group-item btn btn-link" role="button">
             <a href="assignments.html?asgn={{ sdta.aid }}">
             <div class="row align-items-center justify-content-between">

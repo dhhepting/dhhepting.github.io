@@ -29,7 +29,7 @@ rubric:
   l1: Writing and coding plan lacks clarity
   l0: No plan for writing and coding
 ---
-### Description
+### {{ page.title }}
 
 The project will be an interactive web-based multimedia presentation on a topic of your choosing, related to class. You will decide on the mix of writing/research and coding/implementation (using [p5.js](https://p5js.org/)). The project can be done either individually or in a small group (in that case, only 1 submission is required from the members of that group).
 

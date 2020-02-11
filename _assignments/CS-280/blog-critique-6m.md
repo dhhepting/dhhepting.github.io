@@ -1,10 +1,10 @@
 ---
-title: Blog Critique
-breadcrumb: Blog Critique
+title: Critique of a Blog Entry
+breadcrumb: Critique of a Blog Entry
 layout: bg-image
 aid: I_CBE
 marks: 6
-moddate: 07-Feb-2020
+moddate: 10-Feb-2020
 rubric:
   - crit: Evaluation according to rubric
     wt: 2
@@ -19,9 +19,9 @@ rubric:
     l1: Assessment is uneven. Although it may add something new, there are parts needing further development
     l0: Lacking substance
 ---
-### Description
+### {{ page.title }}
 
-Critique the blog entry that immediately follows your own entry. If yours is the last blog entry 48 hours after submissions are due, you will critique the first blog entry in the blog.
+Critique the blog entry that immediately follows your own entry. If yours is the last blog entry 48 hours after submissions are due, you will critique the first entry in the blog.
 
 ### Submission
 
