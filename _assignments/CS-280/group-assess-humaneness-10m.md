@@ -3,7 +3,7 @@ title: Assess Humaneness
 breadcrumb: Assess Humaneness
 layout: bg-image
 marks: 10
-moddate: 10-Feb-2020
+moddate: 11-Feb-2020
 aid: G_AH
 rubric:
   - crit: One
@@ -34,6 +34,8 @@ rubric:
 ### {{ page.title }}
 
 This is a [GROUP]({{ "/teaching/groupwork.html" | relative_url }}) assignment. It cannot be done individually. Without your input, 26 groups have been created ("A" through "Z"). You may communicate with your group using the [Within-Group Discussion Forum](https://urcourses.uregina.ca/mod/forum/view.php?id=908333). You are not required to use this forum for the whole assignment, but it may help to get you in touch with your fellow group members.
+
+"An interface is humane if it is responsive to human needs and considerate of human frailties."
 
 
 
