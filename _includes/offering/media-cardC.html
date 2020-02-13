@@ -30,7 +30,7 @@
           {% assign mtgnbr_str = mtg_nbr | prepend: '00' | slice: -2, 2 %}
           {% for mf in site.data.teaching.meetings[joff_id] %}
             {% if mf.meeting == mtgnbr_str %}
-              {% capture mff %}{{ puwl }}/meetings/{{ mf.file }}{% endcapture %}
+              {% capture mff %}{{ page.url }}/meetings/{{ mf.file }}{% endcapture %}
           <a href="{{ mff | absolute_url }}" class="btn btn-primary" role="button">
       {{ mtgnbr_str }}
           </a>
