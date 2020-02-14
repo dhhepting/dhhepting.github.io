@@ -35,7 +35,7 @@ The project will be an interactive web-based multimedia presentation on a topic 
 
 #### Concept
 
-What you want to accomplish with this project? What is your vision? What are your goals?
+What do you want to accomplish with this project? What is your vision? What are your goals?
 
 #### Ambition
 
