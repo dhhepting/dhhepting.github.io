@@ -3,7 +3,7 @@ title: Illustrate Entropy
 breadcrumb: Illustrate Entropy
 layout: bg-image
 marks: 4
-moddate: 10-Feb-2020
+moddate: 13-Feb-2020
 aid: I_ENT
 rubric:
 - crit: Basic implementation
