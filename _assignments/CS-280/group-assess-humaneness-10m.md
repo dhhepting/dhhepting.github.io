@@ -3,7 +3,7 @@ title: Assess Humaneness
 breadcrumb: Assess Humaneness
 layout: bg-image
 marks: 10
-moddate: 11-Feb-2020
+moddate: 25-Feb-2020
 aid: G_AH
 rubric:
   - crit: One
@@ -37,6 +37,14 @@ This is a [GROUP]({{ "/teaching/groupwork.html" | relative_url }}) assignment. I
 
 "An interface is humane if it is responsive to human needs and considerate of human frailties."
 
+As a group, you will assess the humaneness of the [Department of Computer Science website](http://cs.uregina.ca) by testing the website content as described in [this article by Hoa Loranger](https://www.nngroup.com/articles/testing-content-websites/)
 
+Look everywhere on the site, organized by the main links down the left side navigation menu. A report of the most popular links will also be provided.
+
+Consider these questions:
+* is this valuable content to have on this website?
+* is the valuable content accessible to the user?
+* is there some way that you would like to use the content, but it is not clear how do it?
+* should the content be put elsewhere (UR Courses, etc.)?
 
 {% include grading/main.html %}
