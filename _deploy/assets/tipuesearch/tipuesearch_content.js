@@ -640,7 +640,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/evaluation.html"
   },{
     "title": "CS 205 Exams",
-    "text": "Exams Current Offering Midterm: Thu, Feb 27, 2020 @ 10:00 Final: Thu, Apr 16, 2020 @ 09:00 Previous Exams CS-205-201910_exam-2-final.pdf CS-205-201910_exam-1-midterm.pdf CS-205-201810_exam-2-final.pdf CS-205-201810_exam-1-midterm.pdf CS-205-201710_exam-2-final.pdf CS-205-201710_exam-1-midterm.pdf CS-205-201610_exam-2-final.pdf CS-205-201610_exam-1-midterm.pdf CS-205-201010_exam-2-final.pdf",
+    "text": "Exams Current Offering Midterm: Thu, Feb 27, 2020 @ 10:00 Final: Thu, Apr 16, 2020 @ 09:00 Previous Exams CS-205-202010_exam-1-midterm.pdf CS-205-201910_exam-2-final.pdf CS-205-201910_exam-1-midterm.pdf CS-205-201810_exam-2-final.pdf CS-205-201810_exam-1-midterm.pdf CS-205-201710_exam-2-final.pdf CS-205-201710_exam-1-midterm.pdf CS-205-201610_exam-2-final.pdf CS-205-201610_exam-1-midterm.pdf CS-205-201010_exam-2-final.pdf",
     "tags": "",
     "url": "/~hepting/teaching/CS-205/202010/exams.html"
   },{
