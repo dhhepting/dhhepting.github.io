@@ -3,7 +3,7 @@ title: Assess Humaneness
 breadcrumb: Assess Humaneness
 layout: bg-image
 marks: 10
-moddate: 27-Feb-2020
+moddate: 28-Feb-2020
 aid: G_AH
 rubric:
   - crit: Exploration
@@ -39,7 +39,7 @@ This is a [GROUP]({{ "/teaching/groupwork.html" | relative_url }}) assignment. I
 
 As a group, you will assess the humaneness of the [Department of Computer Science website](http://cs.uregina.ca) by testing the website content as described in [this NN/group article by Hoa Loranger](https://www.nngroup.com/articles/testing-content-websites/) and [this NN/group article by Kara Pernice](https://www.nngroup.com/articles/intranet-content-strategy/) (more focused on intranets)
 
-Look everywhere on the site, as organized by the main links down the left side navigation menu. A report of the most popular links will also be provided. The main links are:
+Look everywhere on the site, as organized by the main links down the left side navigation menu. [Search Performance data for the website has been posted on UR Courses](https://urcourses.uregina.ca/course/view.php?id=1458#section-4). The main links are:
 1. [What We Do](http://www.cs.uregina.ca/what_we_do.html)
 1. [Future Students](http://www.cs.uregina.ca/FutureStudents/)
 1. [People](http://www.cs.uregina.ca/People/)
