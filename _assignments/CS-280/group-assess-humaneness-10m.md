@@ -69,19 +69,19 @@ In-depth exploration of pages on the website.
 
 ### Content Testing
 
-Meaningful questions considered thoroughly
+Meaningful questions considered thoroughly.
 
 ### Observations
 
-Summary of what your group found
+Summary of what your group found.
 
 ### Recommendations
 
-Your ideas about how the website could be redesigned to make it more attractive and relevant to students
+Your ideas about how the website could be redesigned to make it more attractive and relevant and more humane to students and other visitors.
 
 ### Submission
 
-Submit 1 document (pdf) -- only 1 group member needs to submit.
+* 1 document (pdf) -- only 1 group member needs to submit
 * Target length: 1 or more pages per main navigation link
 
 {% include grading/main.html %}
