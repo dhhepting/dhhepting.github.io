@@ -14,22 +14,22 @@ rubric:
     l0: Not at all thorough
   - crit: Content Testing
     wt: 3
-    l3: Clearly defined
-    l2: Somewhat clearly defined
-    l1: Somewhat clear, but questions remain
-    l0: Lacks necessary specificity
+    l3: Questions are answered thoroughly and with specificity
+    l2: Questions are answered somewhat thoroughly and with specificity
+    l1: Answers are not thorough and somewhat vague
+    l0: Answers are not thorough nor specific
   - crit: Observations
     wt: 2
-    l3: Consolidated map clearly completed with detailed entries in all quadrants
-    l2: Consolidated map completed with entries in all quadrants
-    l1: Consolidated map completed with entries in most quadrants
-    l0: Consolidated map incomplete
+    l3: Report clearly consolidates observations from all group members
+    l2: Report consolidates observations from all group members
+    l1: Report consolidates observations from some group members
+    l0: Observations not consolidated
   - crit: Recommendations
     wt: 2
-    l3: Good rationale for chosen qualitative and quantitative metrics provided
-    l2: Rationale for chosen metrics provided
-    l1: Metrics chosen, but little rationale provided
-    l0: Metrics not identified
+    l3: Clear recommendations about content
+    l2: Clear recommendations about most of the content
+    l1: Recommendations about some of the content
+    l0: Recommendations not clear
 ---
 ### {{ page.title }}
 
