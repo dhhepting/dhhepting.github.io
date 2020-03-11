@@ -61,7 +61,8 @@ Consider these questions:
 * is there some way that you would like to use the content, but it is not clear how to do it?
 * should the content be put elsewhere (UR Courses, Faculty of Science, and so on)?
 
-After your group members have explored the content on the website, create a summary report organized according to the main navigation structure of the site detailed earlier in this document.
+After your group members have explored the content on the website, create a summary report organized according to the main navigation structure of the site detailed above.
+You may use the headings below to organize your report either by each main link (so that there are 13 summaries) or as a whole (so that there is 1 summary with 13 parts).
 
 ### Exploration
 
