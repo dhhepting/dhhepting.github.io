@@ -1,7 +1,9 @@
 ---
-title: Image to Sound
-breadcrumb: Image to Sound
+title: Connect Images and Sounds
+breadcrumb: Connect Images and Sounds
 layout: bg-image
+moddate: 11-Mar-2020
+aid: I_CIS
 marks: 4
 rubric:
 - crit: Basic implementation
@@ -23,21 +25,13 @@ rubric:
   l1: Comments not consistently done
   l0: Little to no comments in code
 ---
-### Description
+### {{page.title}}
 
-Use p5.js to read an image and use it as input for
-creation of a sounds. Explore different ways to use the input
-data to create sounds.
-Use different formats for the image as input
-(including <a href="http://www.freeformatter.com/base64-encoder.html">base64</a>).
+Use p5.js to take an image as input and create sounds as output. Explore different ways to use the input
+image to create sounds.
 
 ### Submission
 
-You may submit your assignment on URcourses in 1 of 3 ways:
-* as a link to a project on the editor.p5js.org website
-* as a link to a page on your cs.uregina.ca website
-* as a zip file containing your javascript and an HTML file to run it
+You may submit your assignment on URcourses as a link to either a sketch on the editor.p5js.org website or to your CS webpage where you run the sketch.
 
-### Grading
-
-{% include marker.html %}
+{% include grading/main.html %}
