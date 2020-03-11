@@ -3,15 +3,15 @@ title: Assess Humaneness
 breadcrumb: Assess Humaneness
 layout: bg-image
 marks: 10
-moddate: 28-Feb-2020
+moddate: 11-Mar-2020
 aid: G_AH
 rubric:
   - crit: Exploration
     wt: 3
-    l3: Clearly defined
-    l2: Somewhat clearly defined
-    l1: Somewhat clear, but questions remain
-    l0: Lacks necessary specificity
+    l3: Thorough
+    l2: Somewhat thorough
+    l1: Somewhat superficial
+    l0: Not at all thorough
   - crit: Content Testing
     wt: 3
     l3: Clearly defined
