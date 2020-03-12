@@ -41,23 +41,18 @@
         <td class="col-10">
       {% endif %}
       {%- if media.URL contains "jpg" -%}
-    {% comment %}<a href="{{media.URL}}"><img src="{{media.URL}}" alt="{{media.file}}" height="64" class="m-1 img-responsive"/></a>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#zoomModal">
-    <img src="https://picsum.photos/200" alt="X" height=64 />
-    </button>{% endcomment %}
-  <a href="#" class="pop" role="button"><img src="{{media.URL}}" alt="{{media.file}}" height="64" class="m-1" /></a>
-
+        <img src="{{media.URL}}" alt="{{media.file}}" height="64" class="m-1" />
       {%- endif -%}
       {%- if media.URL contains "m4a" -%}
-    <a href="{{media.URL}}"><span class="far fa-file-audio fa-4x align-middle m-1"></span></a>
+        <span class="far fa-file-audio fa-4x align-middle m-1"></span>
       {%- endif -%}
     {%- endfor -%}
   {%- else -%}
     <p>None available</p>
   </div>
-  </div>
   {%- endif -%}
 
+{% comment %}
   <div class="modal fade" id="zoomModal" tabindex="-1" role="dialog" aria-labelledby="zoomModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-scrollable" role="image">
       <div class="modal-content">
@@ -73,7 +68,8 @@
       </div>
     </div>
   </div>
-</div>
+  {% endcomment %}
+
 <script>
   $(function() {
 		$('.pop').on('click', function() {
