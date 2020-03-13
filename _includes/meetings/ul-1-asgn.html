@@ -1,0 +1,12 @@
+{% include teaching/url.html %}
+<li>
+  {{ include.txt0 }}
+  {%- if include.lnk -%}
+  {%- capture asgnlnk -%}/teaching/{{ crs_id }}/?asgn={{ include.lnk }}{% endcapture %}
+  <a target="_blank" {%comment%}_{%endcomment%}
+  href="{{ asgnlnk | relative_url }}">
+    {{ include.lnktxt }}
+  </a>
+  {%- endif -%}
+  {{ include.txt1 }}
+</li>
