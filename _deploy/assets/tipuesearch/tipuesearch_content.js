@@ -320,12 +320,12 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/projects/fractals/calendars/1996.html"
   },{
     "title": "Mtg 19 • CS-205 (202010)",
-    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 (current) 20 21 22 23 24 25 26 &raquo; Next Tue-17-Mar-2020 Focus Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 (current) 20 21 22 23 24 25 26 &raquo; Next Tue-17-Mar-2020 Administration URcourses: Attendance URcourses: Calendar Class Meeting Cancelled (COVID-19)",
     "tags": "",
     "url": "/~hepting/teaching/CS-205/202010/meetings/19_17-Mar-20.html"
   },{
     "title": "Mtg 19 • CS-280 (202010)",
-    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 (current) 20 21 22 23 24 25 26 &raquo; Next Tue-17-Mar-2020 Focus Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 (current) 20 21 22 23 24 25 26 &raquo; Next Tue-17-Mar-2020 Administration URcourses: Attendance URcourses: Calendar Class Meeting Cancelled (COVID-19)",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202010/meetings/19_17-Mar-20.html"
   },{
@@ -365,12 +365,12 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/schedule/202010.html"
   },{
     "title": "Mtg 20 • CS-205 (202010)",
-    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 (current) 21 22 23 24 25 26 &raquo; Next Thu-19-Mar-2020 Focus Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 (current) 21 22 23 24 25 26 &raquo; Next Thu-19-Mar-2020 Administration URcourses: Attendance URcourses: Calendar Class Meeting Cancelled (COVID-19)",
     "tags": "",
     "url": "/~hepting/teaching/CS-205/202010/meetings/20_19-Mar-20.html"
   },{
     "title": "Mtg 20 • CS-280 (202010)",
-    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 (current) 21 22 23 24 25 26 &raquo; Next Thu-19-Mar-2020 Focus Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 (current) 21 22 23 24 25 26 &raquo; Next Thu-19-Mar-2020 Administration URcourses: Attendance URcourses: Calendar Class Meeting Cancelled (COVID-19)",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202010/meetings/20_19-Mar-20.html"
   },{
