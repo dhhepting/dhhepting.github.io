@@ -68,8 +68,13 @@
 <li>
   <a target="_blank" {% comment %}_{% endcomment %}
   href="https://zoom.us/s/{{ page.video }}" class="btn-primary btn m-1 p-1" role="button">
-    Audio/Video
+    Zoom
   </a>
+  <a target="_blank" {% comment %}_{% endcomment %}
+  href="https://discord.gg/YTZQmC" class="btn-primary btn m-1 p-1" role="button">
+    Discord
+  </a>
+  {% comment %}
   {% for o in soffs %}
     {% if o != "" %}
       {% assign crss = site.data.teaching.courses | where: "id", o %}
@@ -79,6 +84,7 @@
       </a>
     {% endif %}
   {% endfor %}
+  {% endcomment %}
 </li>
 <li>
   <a href="mailto:{{ site.email }}?subject=Request for an appointment outside of office hours">
