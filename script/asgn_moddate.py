@@ -32,8 +32,9 @@ for root, subdirs, files in os.walk(assign_root):
             #print (fp_modtime)
             update = 0
             #print(file_path)
-            with open(file_path,'r') as f:
+            with open(file_path,'r',encoding='utf-8') as f:
                 file_moddate = ""
+                #print("scanning file:",f)
                 for line in f:
                     line = line.rstrip().split()
                     if len(line) > 0 and "moddate:" in line[0]:
