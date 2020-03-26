@@ -2,7 +2,7 @@
 title: Connect Images and Sounds
 breadcrumb: Connect Images and Sounds
 layout: bg-image
-moddate: 11-Mar-2020
+moddate: 26-Mar-2020
 aid: I_CIS
 marks: 4
 rubric:
@@ -29,6 +29,8 @@ rubric:
 
 Use p5.js to take an image as input and create sounds as output. Explore different ways to use the input
 image to create sounds.
+
+Sample sketch: <https://editor.p5js.org/dhhepting/sketches/vp04VYgL>
 
 ### Submission
 
