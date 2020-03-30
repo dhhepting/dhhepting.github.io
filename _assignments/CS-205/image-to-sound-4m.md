@@ -30,6 +30,8 @@ rubric:
 Use p5.js to take an image as input and create sounds as output. Explore different ways to use the input
 image to create sounds.
 
+Sample sketch: <https://editor.p5js.org/dhhepting/sketches/vp04VYgL>
+
 ### Submission
 
 You may submit your assignment on URcourses as a link to either a sketch on the editor.p5js.org website or to your CS webpage where you run the sketch.

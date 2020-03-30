@@ -1,6 +1,7 @@
 ---
 title: Self Portrait
 marks: 4
+aid: I_SP
 rubric:
 - crit: Basic implementation
   wt: 2
@@ -21,8 +22,8 @@ rubric:
   l1: Comments not consistently done
   l0: Little to no comments in code
 ---
-### Description
+### {{ page.title }}
 
-Create a portrait of yourself using p5.js
+Create an interactive portrait of yourself using p5.js.
 
-{% include marker.html %}
+{% include grading/main.html %}
