@@ -425,12 +425,12 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-280/202010/meetings/23_31-Mar-20.html"
   },{
     "title": "Mtg 24 • CS-205 (202010)",
-    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 (current) 25 26 &raquo; Next Thu-02-Apr-2020 Administration URcourses: Attendance URcourses: Calendar Is this helpful?: https://www.uregina.ca/student/registrar/academic-contingencies.html Questions? Outline for Today Concluding Thoughts",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 (current) 25 26 &raquo; Next Thu-02-Apr-2020 Administration URcourses: Attendance URcourses: Calendar Is this helpful?: https://www.uregina.ca/student/registrar/academic-contingencies.html Questions? Outline for Today Lauren McCarthy: LEARNING WHILE MAKING P5 JS Concluding Thoughts",
     "tags": "",
     "url": "/~hepting/teaching/CS-205/202010/meetings/24_02-Apr-20.html"
   },{
     "title": "Mtg 24 • CS-280 (202010)",
-    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 (current) 25 26 &raquo; Next Thu-02-Apr-2020 Focus Administration URcourses: Attendance URcourses: Calendar Questions? Any questions from last meeting ? Outline for Today Concluding Thoughts",
+    "text": "&laquo; Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 (current) 25 26 &raquo; Next Thu-02-Apr-2020 Administration URcourses: Attendance URcourses: Calendar Is this helpful?: https://www.uregina.ca/student/registrar/academic-contingencies.html Questions? Outline for Today Can I be phished? Opinion (CBC.ca): Why cellphone tracking is the wrong way to try and contain COVID-19 at this point #BuildforCOVID19 Global Online Hackathon Forbes.com: As Cities Face COVID-19, The Digital Divide Becomes More Acute google: computer sustainability issues TED talk: Tim Berners Lee and the next web Concluding Thoughts Stay Well",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202010/meetings/24_02-Apr-20.html"
   },{
