@@ -1,6 +1,6 @@
 ---
-title: About/Personal * D. H. Hepting
+title: Personal
 breadcrumb: Personal
-layout: default
+layout: bg-image
 ---
-# Personal
+# {{ page.title }}

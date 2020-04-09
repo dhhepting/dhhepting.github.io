@@ -36,7 +36,7 @@ for root, subdirs, files in os.walk(assign_root):
                 file_moddate = ""
                 #print("scanning file:",f)
                 for line in f:
-                    line = line.rstrip().split()
+                    line = line.decode("utf-8").rstrip().split()
                     if len(line) > 0 and "moddate:" in line[0]:
                         #print(line[0],cur_moddate)
                         if len(line) >= 2:
@@ -48,7 +48,8 @@ for root, subdirs, files in os.walk(assign_root):
             if (update):
                 with FileInput(files=[file_path], inplace=True) as f:
                     for line in f:
-                        line = line.rstrip()
+                        line = line.decode("utf-8").rstrip()
+                        #line = line.rstrip()
                         if "moddate:" in line:
                             print("moddate:",cur_moddate)
                         else:
