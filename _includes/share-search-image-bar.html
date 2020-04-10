@@ -1,0 +1,63 @@
+<div class="btn-toolbar bg-transp" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group my-1" role="group" aria-label="Share group">
+    <!-- Share on LinkedIn -->
+    <a class="btn btn-primary mx-1" aria-label="Share on LinkedIn"
+    href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}{{site.baseurl}}{{page.url}}&title={{page.breadcrumb}}&summary={{page.description | truncate: 256 | url_encode}}&source={{site.url}}{{site.baseurl}}"
+  	role="button" target="_blank">
+      <span class="fab fa-linkedin" title="Share on LinkedIn"></span>
+    </a>
+    <!-- Share on Facebook -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Facebook"
+    href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+  	role="button" target="_blank">
+      <span class="fab fa-facebook" title="Share on Facebook"></span>
+    </a>
+    <!-- Share on Google+ -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Google+"
+    href="https://plus.google.com/share?url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+    role="button" target="_blank">
+      <span class="fab fa-google-plus-square" title="Share on Google+"></span>
+    </a>
+    <!-- Share on twitter -->
+    <a class="btn btn-primary mx-1" aria-label="Share on Twitter"
+    href="https://twitter.com/intent/tweet?text={{page.breadcrumb}}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+    role="button" target="_blank">
+      <span class="fab fa-twitter-square" title="Share on Twitter"></span>
+    </a>
+    <!-- Share via email -->
+    <a class="btn btn-primary mx-1" aria-label="Share via Email"
+    href="mailto:someone@example.com?subject={{page.breadcrumb}}&amp;body=Check out this page: {{page.url | absolute_url}}"
+    role="button">
+     <span class="fas fa-envelope" title="Share via Email"></span>
+    </a>
+  </div>
+  {% capture yearstr %}{{ page.title | split: " " | last }}{% endcapture %}
+  {% capture searchstr %}"{{ page.title | remove: yearstr | strip }}"{% endcapture %}
+  <div class="btn-group my-1" role="group" aria-label="Search group">
+    <!-- Search on google -->
+    <a class="btn btn-info mx-1" aria-label="Search google"
+    href="https://www.google.ca/search?q={{ searchstr | url_encode }}"
+    role="button" target="_blank">
+      google
+    </a>
+    <!-- Search on bing -->
+    <a class="btn btn-info mx-1" aria-label="Search bing"
+    href="https://www.bing.com/search?q={{ searchstr | url_encode }}"
+    role="button" target="_blank">
+      bing
+    </a>
+    <!-- Search on google scholar
+    <a class="btn btn-info mx-1" aria-label="Search google scholar"
+    href="https://scholar.google.ca/scholar?hl=en&as_sdt=0%2C5&q={{ searchstr | url_encode }}&btnG="
+    role="button" target="_blank">
+      google scholar
+    </a>
+    -->
+    <!-- Search (reverse) on google images -->
+    <a class="btn btn-info mx-1" aria-label="Search google by image"
+    href="https://www.google.com/searchbyimage?image_url={{ page.image | absolute_url }}"
+    role="button" target="_blank">
+      <span class="fas fa-camera" title="Search google by image"></span>
+    </a>
+  </div>
+</div>
