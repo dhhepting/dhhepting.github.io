@@ -1,4 +1,5 @@
 {% assign jpglist = "" %}
+{% assign audio_url = "" %}
 {% assign has_media = "false" %}
 {% assign media_ctr = 0 %}
 {% assign mtgstr = include.mtg | prepend: '00' | slice: -2, 2 %}
@@ -62,11 +63,13 @@
       </a>
     </div>
   </div>
+  {% if audio_url != "" %}
   <div class="card-footer text-center">
     <audio controls="true" src="{{ audio_url }}" type="audio/mp4">
       Your browser does not support the <code>audio</code> element.
     </audio>
   </div>
+  {% endif %}
 </div>
   {%- endif -%}
 {%- endif -%}
