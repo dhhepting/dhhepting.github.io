@@ -8,7 +8,6 @@
   {%- for m in site.data.teaching.media[include.mtg_media] -%}
     {%- if m.meet == mtgstr -%}
       {% assign has_media = "true" %}
-      {%- if m.file contains "jpg" -%}
       {% break %}
     {% endif %}
   {% endfor %}
@@ -64,7 +63,7 @@
       </a>
     </div>
   </div>
-  {% if audio_url %}
+  {% if audio_url != "" %}
   <div class="card-footer text-center">
     <audio controls="true" src="{{ audio_url }}" type="audio/mp4">
       Your browser does not support the <code>audio</code> element.
