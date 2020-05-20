@@ -1,0 +1,227 @@
+import math
+import numpy as np
+
+twopi = 2.0 * math.pi
+
+# regular heptagon vertices CW
+# 0 = top
+# 1 = right-upper
+# 2 = right-lower
+# 3 = bottom-right
+# 4 = bottom-left
+# 5 = left-lower
+# 6 = left-upper
+vertices = []
+for i in range (7):
+    vertices.append([])
+    ang = (i * (twopi/7.0)) - (math.pi/2.0)
+    xpos = math.cos(ang)*100.0
+    if (abs(xpos) < 0.00001):
+        xpos = 0.0
+    vertices[i].append(xpos)
+    ypos = math.sin(ang)*100.0
+    if (abs(ypos) < 0.00001):
+        ypos = 0.0
+    vertices[i].append(ypos)
+    #print (vertices[i][0], ",", vertices[i][1])
+### calculate equations of lines (edges)
+# regular heptagon vertices CW
+# 0 = right-upper - top
+# 1 = right-lower - right-upper
+# 2 = right-bottom - right-lower
+# 3 = left-bottom - right-bottom
+# 4 = left-lower - left-bottom
+# 5 = left-upper - left-lower
+# 6 = top - left-upper
+edges = []
+for i in range (7):
+    edges.append([])
+    dx = vertices[(i+1)%7][0] - vertices[i][0]
+    dy = vertices[(i+1)%7][1] - vertices[i][1]
+    slope = dy/dx
+    edges[i].append(slope)
+    edges[i].append(-1)
+    edges[i].append(vertices[i][1] - slope * vertices[i][0])
+    #print (edges[i][0], ",", edges[i][1], ",", edges[i][2])
+
+#### exterior of "d"
+print('#### exterior of "d"')
+## top centre
+print (vertices[0][0],vertices[0][1])
+## bottom centre
+print (vertices[0][0],vertices[3][1])
+## bottom left
+print (vertices[4][0],vertices[4][1])
+## lower left
+print (vertices[5][0],vertices[5][1])
+## back to origin
+l1 = [vertices[5][1]/vertices[5][0], -1, 0]
+l2 = [1, 0, 18]
+mid_d = np.cross(l1, l2)
+midl = [mid_d[0]/mid_d[2], mid_d[1]/mid_d[2]]
+print (midl[0], midl[1])
+## back to top (near) centre
+l1 = edges[6]
+top_d = np.cross(l1, l2)
+topl = [top_d[0]/top_d[2], top_d[1]/top_d[2]]
+print (topl[0], topl[1])
+
+#### interior of "d"
+print('#### interior of "d"')
+## top stem
+print (midl[0],midl[1]+18)
+## bottom stem
+print(midl[0],vertices[3][1]-18)
+## d bottom loop (from angle)
+dblang = math.radians((128 + 4.0/7.0)/2.0)
+botl = [vertices[4][0] + 18.0/math.tan(dblang), vertices[4][1] - 18.0]
+print (botl[0],botl[1])
+## d top loop
+l1 = [edges[4][0],-1, botl[1] - edges[4][0] * botl[0]]
+l2 = [vertices[5][1]/vertices[5][0], -1,(midl[1] + 18.0) - (vertices[5][1]/vertices[5][0]) * midl[0]]
+tlp_d = np.cross(l1, l2)
+tlpl = [tlp_d[0]/tlp_d[2],tlp_d[1]/tlp_d[2]]
+print (tlpl[0], tlpl[1])
+
+#### exterior of "h"
+print('#### exterior "h"')
+## top centre (1)
+print (vertices[0][0],vertices[0][1])
+## bottom centre (2)
+print (vertices[0][0],vertices[3][1])
+## bottom stem (3)
+print (18.0,vertices[3][1])
+## middle stem (4)
+print (-midl[0],midl[1]+18)
+## top inside of hook (5)
+print (-tlpl[0], tlpl[1])
+## bottom inside of hook (6)
+print (vertices[3][0]-18.0,vertices[3][1])
+## bottom outside of hook (7)
+print (vertices[3][0],vertices[3][1])
+## top outside of hook (8)
+print (vertices[2][0],vertices[2][1])
+## upper middle stem (9)
+print (-midl[0], midl[1])
+## top stem (10)
+print (-topl[0], topl[1])
+
+#### inlaid exterior of "d"
+print('#### inlaid exterior of "d"')
+## top centre (1)
+tl1 = edges[6]
+tl1[2] = edges[6][2] + 6.0
+l2 = [1, 0, 6]
+top_d = np.cross(tl1, l2)
+topl = [top_d[0]/top_d[2], top_d[1]/top_d[2]]
+print (topl[0], topl[1])
+#print (-6.0,vertices[0][1]+6.0)
+## bottom centre (2)
+print (-6.0,vertices[3][1]-6.0)
+## bottom left(3)
+botl = [vertices[4][0] + 6.0/math.tan(dblang), vertices[4][1] - 6.0]
+print (botl[0],botl[1])
+## lower left
+#print (vertices[5][0],vertices[5][1])
+## d top loop (4)
+l1 = [edges[4][0],-1, botl[1] - edges[4][0] * botl[0]]
+l2 = [vertices[5][1]/vertices[5][0], -1,(midl[1] + 6.0) - (vertices[5][1]/vertices[5][0]) * midl[0]]
+tlp_d = np.cross(l1, l2)
+tlpl = [tlp_d[0]/tlp_d[2],tlp_d[1]/tlp_d[2]]
+print (tlpl[0], tlpl[1])
+## back to origin (5)
+l1 = [vertices[5][1]/vertices[5][0], -1, 6]
+l2 = [1, 0, 12]
+mid_d = np.cross(l1, l2)
+midl = [mid_d[0]/mid_d[2], mid_d[1]/mid_d[2]]
+print (midl[0], midl[1])
+## back to top (near) centre (6)
+
+top_d = np.cross(tl1, l2)
+topl = [top_d[0]/top_d[2], top_d[1]/top_d[2]]
+print (topl[0], topl[1])
+
+#### inlaid interior of "d"
+print('#### inlaid interior of "d"')
+## top stem
+print (-12,midl[1]+6.0)
+## bottom stem
+print(-12,vertices[3][1]-12)
+## d bottom loop (from angle)
+#dblang = math.radians((128 + 4.0/7.0)/2.0)
+botl = [vertices[4][0] + 12.0/math.tan(dblang), vertices[4][1] - 12.0]
+print (botl[0],botl[1])
+## d top loop
+l1 = [edges[4][0],-1, botl[1] - edges[4][0] * botl[0]]
+l2 = [vertices[5][1]/vertices[5][0], -1,(midl[1] + 6.0) - (vertices[5][1]/vertices[5][0]) * midl[0]]
+tlp_d = np.cross(l1, l2)
+tlpl = [tlp_d[0]/tlp_d[2],tlp_d[1]/tlp_d[2]]
+print (tlpl[0], tlpl[1])
+
+
+
+#### inlaid "h"
+print('#### inlaid "h"')
+## top centre (1)
+tl1 = edges[0]
+tl1[2] = edges[0][2] + 6.0
+l2 = [1, 0, -6]
+top_d = np.cross(tl1, l2)
+topl = [top_d[0]/top_d[2], top_d[1]/top_d[2]]
+print (topl[0], topl[1])
+## bottom centre (2)
+print (6.0,vertices[3][1]-6.0)
+## bottom left(3)
+print (12.0,vertices[3][1]-6.0)
+#botl = [vertices[4][0] + 6.0/math.tan(dblang), vertices[4][1] - 6.0]
+#print (botl[0],botl[1])
+## lower left
+#print (vertices[5][0],vertices[5][1])
+## d top loop (4)
+## top stem (4)
+print (12,midl[1]+6.0)
+## inside hook (5)
+print (-tlpl[0], tlpl[1])
+## bottom inside hook (6)
+botl = [vertices[4][0] + 6.0/math.tan(dblang), vertices[4][1] - 6.0]
+print (-botl[0],botl[1])
+print (-botl[0] + 6,botl[1])
+print(-12,vertices[3][1]-6)
+l1 = [edges[4][0],-1, botl[1] - edges[4][0] * botl[0]]
+l2 = [vertices[5][1]/vertices[5][0], -1,(midl[1] + 6.0) - (vertices[5][1]/vertices[5][0]) * midl[0]]
+tlp_d = np.cross(l1, l2)
+tlpl = [tlp_d[0]/tlp_d[2],tlp_d[1]/tlp_d[2]]
+print (tlpl[0], tlpl[1])
+## back to origin (5)
+l1 = [vertices[5][1]/vertices[5][0], -1, 6]
+l2 = [1, 0, -12]
+mid_d = np.cross(l1, l2)
+midl = [mid_d[0]/mid_d[2], mid_d[1]/mid_d[2]]
+print (midl[0], midl[1])
+## back to top (near) centre (6)
+
+top_d = np.cross(tl1, l2)
+topl = [top_d[0]/top_d[2], top_d[1]/top_d[2]]
+print (topl[0], topl[1])
+
+#### inlaid interior of "d"
+#print('#### inlaid interior of "d"')
+## top stem
+print (-12,midl[1]+6.0)
+## bottom stem
+print(-12,vertices[3][1]-12)
+## d bottom loop (from angle)
+#dblang = math.radians((128 + 4.0/7.0)/2.0)
+botl = [vertices[4][0] + 12.0/math.tan(dblang), vertices[4][1] - 12.0]
+print (botl[0],botl[1])
+## d top loop
+l1 = [edges[4][0],-1, botl[1] - edges[4][0] * botl[0]]
+l2 = [vertices[5][1]/vertices[5][0], -1,(midl[1] + 6.0) - (vertices[5][1]/vertices[5][0]) * midl[0]]
+tlp_d = np.cross(l1, l2)
+tlpl = [tlp_d[0]/tlp_d[2],tlp_d[1]/tlp_d[2]]
+print (tlpl[0], tlpl[1])
+
+l2 = [1, 0, 12]
+top_d = np.cross(tl1, l2)
+topl = [top_d[0]/top_d[2], top_d[1]/top_d[2]]
+print (topl[0], topl[1])
