@@ -917,3 +917,208 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.dropboxapi.co
 2020-04-18 16:30:08.364003
 2020-04-19 17:54:03.816741
 2020-04-20 16:30:23.931941
+2020-04-21 19:40:32.354725
+2020-04-22 16:30:09.235669
+2020-04-23 16:30:06.828858
+2020-04-24 16:30:09.988589
+2020-04-25 16:30:11.164102
+2020-04-26 16:30:09.809018
+2020-04-27 16:30:09.294235
+2020-04-28 16:30:09.243973
+2020-04-29 16:36:46.330155
+2020-04-30 16:31:53.813905
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x10f2d6390>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Library/Python/3.6/lib/python/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10f2d6390>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Sites/dhhepting.github.io/script/sharemedia.py", line 53, in <module>
+    dbx.users_get_current_account()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/base.py", line 4301, in users_get_current_account
+    None,
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 272, in request
+    timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 363, in request_json_string_with_retry
+    timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 447, in request_json_string
+    timeout=timeout,
+  File "/Users/hepting/Library/Python/3.6/lib/python/site-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/Users/hepting/Library/Python/3.6/lib/python/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/hepting/Library/Python/3.6/lib/python/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/hepting/Library/Python/3.6/lib/python/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10f2d6390>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+2020-05-01 16:30:09.238466
+2020-05-02 18:51:59.814912
+2020-05-03 16:30:06.585851
+2020-05-04 16:30:07.821785
+2020-05-05 16:32:02.613080
+2020-05-06 17:01:56.972778
+2020-05-07 16:30:08.586246
+2020-05-08 16:30:07.843092
+2020-05-09 02:06:52.376267
+2020-05-09 17:04:52.687021
+2020-05-10 16:30:08.582093
+2020-05-11 16:30:14.378098
+2020-05-12 16:58:40.742333
+2020-05-12 17:20:05.395858
+2020-05-13 16:30:21.807700
+2020-05-14 17:01:54.438649
+2020-05-15 16:30:10.189696
+2020-05-15 19:21:22.016902
+2020-05-16 16:32:02.091136
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py", line 294, in recv_into
+    raise timeout('The read operation timed out')
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Library/Python/3.6/lib/python/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 389, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 309, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Sites/dhhepting.github.io/script/sharemedia.py", line 72, in <module>
+    share = dbx.sharing_create_shared_link(dbp)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/base.py", line 3095, in sharing_create_shared_link
+    None,
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 272, in request
+    timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 363, in request_json_string_with_retry
+    timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 447, in request_json_string
+    timeout=timeout,
+  File "/Users/hepting/Library/Python/3.6/lib/python/site-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/Users/hepting/Library/Python/3.6/lib/python/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/hepting/Library/Python/3.6/lib/python/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/hepting/Library/Python/3.6/lib/python/site-packages/requests/adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Read timed out. (read timeout=30)
+2020-05-18 03:43:41.210365
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x10f29fc18>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Library/Python/3.6/lib/python/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10f29fc18>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Sites/dhhepting.github.io/script/sharemedia.py", line 53, in <module>
+    dbx.users_get_current_account()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/base.py", line 4301, in users_get_current_account
+    None,
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 272, in request
+    timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 363, in request_json_string_with_retry
+    timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dropbox/dropbox.py", line 447, in request_json_string
+    timeout=timeout,
+  File "/Users/hepting/Library/Python/3.6/lib/python/site-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/Users/hepting/Library/Python/3.6/lib/python/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/hepting/Library/Python/3.6/lib/python/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/hepting/Library/Python/3.6/lib/python/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10f29fc18>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+2020-05-18 18:25:53.257565
+2020-05-19 16:30:06.828837
