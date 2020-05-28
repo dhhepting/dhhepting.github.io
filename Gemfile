@@ -11,7 +11,7 @@ gem 'jekyll'
 # gem 'nokogiri', '~> 1.10', '>= 1.10.4'
 gem "nokogiri", '>= 1.10.8'
 #gem 'ffi', '=1.9.21'
-gem 'html-proofer'
+gem 'html-proofer', '>= 3.15.3'
 gem 'travis'
 group :jekyll_plugins do
    gem 'jekyll-seo-tag'
