@@ -49,3 +49,7 @@ Header set Access-Control-Allow-Headers "Content-Type, Authorization"
     </FilesMatch>
 </IfModule>
 
+RewriteEngine On
+Options +FollowSymLinks
+RewriteRule ^favicon.ico path_to_favicon_folder/favicon.ico [L]
+

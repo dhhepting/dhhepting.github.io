@@ -1,4 +1,211 @@
-var tipuesearch = {"pages": [{
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4427429-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date())
+    gtag('config', 'UA-4427429-2')
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css"
+  />
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css"
+  />
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+  <!--
+  <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous"
+  />-->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+    integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ="
+    crossorigin="anonymous"
+  />
+  <script src="https://kit.fontawesome.com/44322658e3.js" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+  </script>
+  <script src="/~hepting/assets/jquery.countdown-2.2.0/jquery.countdown.min.js"></script>
+
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+<!-- realfavicongenerator.net start -->
+<link rel="apple-touch-icon" sizes="180x180" href="http://www2.cs.uregina.ca/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+<link rel="icon" type="image/png" sizes="32x32" href="http://www2.cs.uregina.ca/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+<link rel="icon" type="image/png" sizes="194x194" href="http://www2.cs.uregina.ca/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+<link rel="icon" type="image/png" sizes="192x192" href="http://www2.cs.uregina.ca/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+<link rel="icon" type="image/png" sizes="16x16" href="http://www2.cs.uregina.ca/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+<link rel="icon" type="image/x-icon" href="/favicon.ico?v=ngJaaxNvlX" >
+<link rel="mask-icon" type="image/svg" href="http://www2.cs.uregina.ca/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+<link rel="manifest" href="http://www2.cs.uregina.ca/~hepting/site.webmanifest?v=ngJaaxNvlX">
+<meta name="apple-mobile-web-app-title" content="DH Hepting">
+<meta name="application-name" content="DH Hepting">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#ffffff">
+<!-- end realfavicongenerator.net -->
+  <link rel="alternate" type="application/rss+xml"
+    href="http://www2.cs.uregina.ca/~hepting/rss/news.rss"
+  />
+  <link rel="canonical" href="http://www2.cs.uregina.ca/~hepting/assets/tipuesearch/tipuesearch_content.js" />
+  
+  <title> | D. H. Hepting, Ph.D.</title>
+  <meta property="og:title" content=" | D. H. Hepting, Ph.D." />
+  <meta property="og:url" content="http://www2.cs.uregina.ca/~hepting/assets/tipuesearch/tipuesearch_content.js" />
+  <meta property="og:type" content="website" />
+
+  <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+
+  
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca/~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca/~hepting/assets/",
+        
+          "name": ""
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca/~hepting/assets/tipuesearch/",
+        
+          "name": ""
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca/~hepting/assets/tipuesearch/tipuesearch_content.js/",
+        
+          "name": ""
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+
+
+
+
+
+</head>
+
+<body>
+
+<div class="card bg-light">
+	
+
+
+
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb card-header">
+    <li class="breadcrumb-item"><a href="/~hepting/">D. H. Hepting</a></li>
+
+  
+  
+  
+    
+  
+
+  
+  
+  
+    
+  
+
+  
+  
+  
+    
+  
+
+  
+  
+  
+    
+  
+
+
+
+
+    </ol>
+</nav>
+
+
+	<div class="card-body">
+	var tipuesearch = {"pages": [{
     "title": "New Website",
     "text": "My new website, made using Jekyll with support from Travis CI and github.com, is now live. I have deployed the same website to 2 locations: http://www2.cs.uregina.ca/~hepting/ and https://dhhepting.github.io/.",
     "tags": "news",
@@ -2539,3 +2746,50 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/projects/fractals/gallery/1997-Hep-My-Life.html"
   }]};
+
+	</div>
+
+	<div class="card-footer text-muted lightcthru">
+    Site built: 
+    2020-05-28 15:43 -0600
+</div>
+
+</div>
+<!-- </div> -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script async
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous">
+  </script>
+  <script async
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous">
+  </script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+    integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+    crossorigin="anonymous">
+  </script>
+  
+	<script>
+		var clipboard = new ClipboardJS('.btn')
+	</script>
+  
+	<!-- Google Analytics
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+		ga('create', 'UA-4427429-2', 'auto')
+		ga('send', 'pageview')
+	</script>
+ End Google Analytics -->
+</body>
+</html>
+
+
