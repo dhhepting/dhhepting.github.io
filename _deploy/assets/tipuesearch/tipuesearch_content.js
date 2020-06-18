@@ -1647,7 +1647,7 @@
     "url": "/~hepting/research/inspirations.html"
   },{
     "title": "Silver Anniversary",
-    "text": "Silver Anniversary Jennifer and Daryl’s 25th Wedding Anniversary Please do NOT talk to Jennifer about this (because it would be nice to surprise her). Would you like to share?: a happy story about Jennifer and Daryl a happy anniversary greeting for Jennifer and Daryl Yes? Please create a video and upload it to this place (https://www.dropbox.com/request/N8hw5KbkFlrys7Nutour). Please share this with anyone you think may be interested. If you have any questions, please ask Daryl or Finn.",
+    "text": "Silver Anniversary Jennifer and Daryl’s 25th Wedding Anniversary Please do NOT talk to Jennifer about this (because it would be nice to surprise her). Would you like to share?: a happy story about Jennifer and Daryl a happy anniversary greeting for Jennifer and Daryl Yes? Please create a video and upload it to this place (https://www.dropbox.com/request/N8hw5KbkFlrys7Nutour). Please share this link (https://bit.ly/JLDH25) with anyone you think may be interested. If you have any questions, please ask Daryl or Finn.",
     "tags": "",
     "url": "/~hepting/about/personal/jd25.html"
   },{
@@ -2756,7 +2756,7 @@
 
 	<div class="card-footer text-muted lightcthru">
     Site built: 
-    2020-06-18 01:09 -0600
+    2020-06-18 13:37 -0600
 </div>
 
 </div>
