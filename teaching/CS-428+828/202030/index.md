@@ -1,6 +1,6 @@
 ---
-title: CS 280 in Winter 2020
-breadcrumb: 202010
+title: CS 428+828 in Fall 2020
+breadcrumb: 202030
 layout: bg-image
 description:
 ---
