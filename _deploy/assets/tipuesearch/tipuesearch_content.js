@@ -1057,7 +1057,7 @@
     "url": "/~hepting/teaching/CS-428+828/content/"
   },{
     "title": "CS 428+828 in Fall 2020",
-    "text": "CS 428+828 in 202030 Information CS 428+828 on URcourses Calendar Calendar Wk Week S Sun M Mon T Tue W Wed R Thu F Fri S Sat 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 Total meetings this semester: 0 Calendar Calendar Wk Week S Sun M Mon T Tue W Wed R Thu F Fri S Sat 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 Total meetings this semester: 0 None available &lt;/div&gt;",
+    "text": "CS 428+828 in 202030 Information Syllabus CS 428+828 on URcourses Calendar Calendar Wk Week S Sun M Mon T Tue W Wed R Thu F Fri S Sat 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 Total meetings this semester: 0 Calendar Calendar Wk Week S Sun M Mon T Tue W Wed R Thu F Fri S Sat 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 Total meetings this semester: 0 None available &lt;/div&gt;",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/"
   },{
@@ -2276,7 +2276,7 @@
 
 	<div class="card-footer text-muted lightcthru">
     Site built: 
-    2020-07-10 02:09 -0600
+    2020-07-10 14:44 -0600
 </div>
 
 </div>
