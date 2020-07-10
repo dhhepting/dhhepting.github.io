@@ -5,15 +5,20 @@
 
 # {{ crs_sbj }} {{ crs_nbr }} in {{ crs_sem }}
 
-{% include offering/calendar-card.html %}
+{% include offering/info-card.html %}
 
+{% include offering/knowunits-card.html %}
+
+{% include offering/schedule-card.html %}
 <div class="card-deck">
-  {% include offering/info-card.html %}
-  {% include offering/knowledge-card.html %}
+  {% if 0 == 1 %}
+    {% include offering/info-card.html %}
+    {% include offering/rss-card.html %}
+    {% include offering/media-cardB.html %}
+    {% include offering/knowledge-cardB.html %}
+  {% endif %}
 </div>
 
-{% include offering/assignments-card.html %}
-
-{% comment %}
-{% include offering/media-card.html %}
-{% endcomment %}
+{% include offering/assignments-cardC.html %}
+{% include offering/calendar-card.html %}
+{% include offering/media-cardC.html %}

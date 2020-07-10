@@ -67,15 +67,43 @@
         </a>
       </li>
       {% endif %}
-      {% assign links = site.data.teaching.off_links[joff_id] %}
+      {% assign links = site.data.teaching.offerings[joff_id]links %}
       {%- if links -%}
-        {% for ll in links %}
+      {% comment %}
+      Add a collapse item for links as a sublist
+      {% endcomment %}
+        <li class="list-group-item" id="parent">
+          <a href="#" class="dropdown-toggle" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+            Links
+            <span class="sr-only">Toggle Dropdown</span>
+          </a>
+        </li>
+        {% comment %}
+        Add a collapse item for links as a sublist
+
+         for ll in links
+        <div class="btn-group">
+   <button type="button" class="btn btn-secondary">Reference</button>
+   <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+     <span class="sr-only">Toggle Dropdown</span>
+   </button>
+   {% endcomment %}
+   <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+     <a class="dropdown-item" href="#">Action</a>
+     <a class="dropdown-item" href="#">Another action</a>
+     <a class="dropdown-item" href="#">Something else here</a>
+     <div class="dropdown-divider"></div>
+     <a class="dropdown-item" href="#">Separated link</a>
+   </div>
+   {% comment %}
+ </div>
       <li class="list-group-item">
         <a href="{{ ll.url }}">
           {{ ll.name }}
         </a>
       </li>
       {% endfor %}
+      {% endcomment %}
       {% endif %}
       {% if sched_dir == 1 %}
       <li class="list-group-item">
