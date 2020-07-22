@@ -9,7 +9,8 @@
     {% capture media_url %}{{ page.url }}media/{% endcapture %}
     {% capture fbk_url %}/teaching/{{ crs_id }}/{{ crs_sem }}/feedback.html{% endcapture %}
     {% capture rss_url %}/rss/{{ crs_id }}-{{ crs_sem }}.rss{% endcapture %}
-    {% capture exam_url %}/teaching/{{ crs_id }}/{{ crs_sem }}/exams.html{% endcapture %}{% assign fbk_dir = 0 %}
+    {% capture exam_url %}/teaching/{{ crs_id }}/{{ crs_sem }}/exams.html{% endcapture %}
+    {% assign fbk_dir = 0 %}
     {% assign rss_feed = 0 %}
     {% assign sched_dir = 0 %}
     {% assign meet_dir = 0 %}
@@ -67,7 +68,16 @@
         </a>
       </li>
       {% endif %}
-      {% assign links = site.data.teaching.offerings[joff_id]links %}
+      {% assign links = site.data.teaching[joff_id]plan %}
+      <li class="list-group-item">
+        <a href="#">
+          Semester Plan
+        </a>
+        <br />
+        {% for ll in links %}
+          {{ ll[0] }} <br />
+        {% endfor %}
+      </li>
       {%- if links -%}
       {% comment %}
       Add a collapse item for links as a sublist
