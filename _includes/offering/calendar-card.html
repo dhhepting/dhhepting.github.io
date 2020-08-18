@@ -7,8 +7,9 @@
 {% assign dabbr = "S, M, T, W, R, F, S" | split: ", " %}
 {% assign odd = 86400 | minus: 0 %}
 {% capture crs_id %}{{ crs_sbj }}-{{ crs_nbr | strip }}{% endcapture %}
-{%- if site.data.teaching.offerings -%}
-  {% for o in site.data.teaching.offerings %}
+{%- if site.data.teaching.course_offerings -%}
+  {% for o in site.data.teaching.coure_offerings %}
+    {{ o }}
     {% if o.id == crs_id and o.semester == crs_sem %}
       {% assign mdays = o.mdays | split: "," %}
       {% assign final_exam = o.final-exam | date: "%a, %b %e, %Y @ %H:00" | date: "%s" %}

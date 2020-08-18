@@ -2,6 +2,7 @@
 import sys, os, datetime, subprocess, errno
 from datetime import datetime
 from subprocess import Popen, PIPE
+import csv
 
 #tdt = datetime.today().strftime("%d-%b-%y")
 #ydt = datetime()
@@ -52,6 +53,11 @@ if (len(reldir) != 2):
 	sys.exit()
 
 # calendar card is created first, so get meeting file names from there
+### don't rely on other code that could have strange interactions
+with open(SITE_DIR + '_data/teaching/course_offerings.csv', newline='') as csvfile:
+	spamreader = csv.reader(csvfile)
+	for row in spamreader:
+		print(', '.join(row))
 off_index_html = os.path.join(os.path.abspath(SITE_DIR+HTML_ROOT),sys.argv[1],"index.html")
 grep_html = Popen(("grep", "html", off_index_html), stdout=PIPE)
 grep_href = Popen(("grep", "href=\"meetings"), stdin=grep_html.stdout, stdout=PIPE)
@@ -59,16 +65,16 @@ outs, errs = grep_href.communicate()
 utfout = (outs.decode("utf-8")).split('\n')
 
 nbr_meetings = 0
-#print(utfout)
+print(utfout)
 for line in utfout:
     if len(line) > 0:
         nbr_meetings += 1
 m = 0
 mtgdatafile = os.path.join(os.path.abspath(SITE_DIR+DATA_ROOT),reldir[0]+"-"+reldir[1]+".csv")
 mtgdatafile = mtgdatafile.replace("+","_")
-#print("MDF: ",mtgdatafile)
-#for mt in meet_template:
-#    print(meet_template[mt])
+print("MDF: ",mtgdatafile)
+for mt in meet_template:
+    print(meet_template[mt])
 #sys.exit()
 mdirstr = str(SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings")
 try:
@@ -89,6 +95,7 @@ with open(midxstr,"w") as mtgidx:
     mtgidx.write("#" + reldir[0] + " (" + reldir[1] + ") Meetings\n")
     mtgidx.write("{% include meetings/index-table.html %}\n")
 with open(mtgdatafile,"w") as mtgdata:
+    m = 0
     mtgdata.write("meeting,file\n")
     for line in utfout:
         if len(line) > 0:
@@ -98,7 +105,7 @@ with open(mtgdatafile,"w") as mtgdata:
             mtg_fname = (words[1].split('.'))[0]
             mtgdata.write(str(m).zfill(2) + "," + mtg_fname.split('/')[1] + ".html\n")
             datestr = mtg_fname.split('_',1)
-            #print("Meeting file name: ",mtg_fname)
+            print("Meeting file name: ",mtg_fname)
             try:
                 #print("TRYING")
                 #print(datestr[1])
@@ -111,7 +118,7 @@ with open(mtgdatafile,"w") as mtgdata:
                     #print (datetime.today.strftime("%d-%b-%y"))
                     #print(SITE_DIR + MD_ROOT + sys.argv[1] + "/" + mtg_fname + ".md")
                     mfilestr = SITE_DIR + MD_ROOT + sys.argv[1] + "/" + mtg_fname + ".md"
-                    #print(mfilestr)
+                    print(mfilestr)
                     with open(mfilestr,"w") as mtgfile:
                         mtgfile.write("---\n")
                         mtgfile.write("title: Mtg " + str(m) + " &bull; " + reldir[0] +  " (" + reldir[1] + ")\n")

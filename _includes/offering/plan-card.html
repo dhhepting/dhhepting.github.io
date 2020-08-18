@@ -2,29 +2,93 @@
 {% include teaching/url.html %}
 {% assign plan = site.data.teaching[joff_id]plan %}
 
-    {{ ll[0] }} <br />
-  {% endfor %}
-</li>
-<div class="card my-2" id="plan-card">
-  <h3 class="card-header text-center card-title" aria-expanded="false">Semester Plan</h3>
-  <div class="card-body">
-    <div class="accordion" id="accordion-plan">
-      {% for steps in plan %}
-      <div class="card">
-        <div class="card-header" id="heading_{{ steps[0] }}">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed card-title" type="button" data-toggle="collapse" data-target="#collapse_{{ steps[0] }}" aria-expanded="false" aria-controls="collapseOne">
-              {{ steps[0] }}
-            </button>
-          </h2>
-        </div>
+<div class="card" id="plan-card">
+  <div class="card-header" role="tab" id="heading_SP">
+    <h3 class="mb-0">
+      <a class="xtra collapsed" data-toggle="collapse"
+      href="#collapse_SP"
+      aria-expanded="false" aria-controls="collapse_SP">
+        Semester Plan
+      </a>
+    </h3>
+  </div>
 
-        <div id="collapse_{{ steps[0] }}" class="collapse" aria-labelledby="heading_{{ steps[0] }}" data-parent="#accordion-plan">
-          <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          </div>
+<div id="collapse_SP" class="collapse"
+aria-labelledby="heading_SP">
+  <div class="card card-body">
+    {% for mtgs in plan %}
+      {% if mtgs[1].date %}
+    <div class="card">
+      <div class="card-header" role="tab" id="heading_{{ mtgs[0] }}">
+        <h5 class="mb-0">
+          <a class="collapsed" data-toggle="collapse"
+          href="#collapse_{{ mtgs[0] }}"
+          aria-expanded="false" aria-controls="collapse_{{ mtgs[0] }}">
+            {{ mtgs[1].date }}
+          </a>
+        </h5>
+      </div>
+
+      <div id="collapse_{{ mtgs[0] }}" class="collapse"
+      aria-labelledby="heading_{{ mtgs[0] }}">
+        <div class="card card-body">
+          <h5>{{ mtgs[1].theme }}</h5>
+          {% assign hkk = mtgs[1].BOK %}
+          {% for hh in hkk %}
+            {%- assign kaku = hh.kaku | split: "/" -%}
+            {%- assign kaaa = kaku[0] -%}
+            {%- assign kuuu = kaku[1] -%}
+            <h5>{{ kaaa }} / {{ kuuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kuuu.size }}</h5>
+
+            {%- assign cur_dat = site.data.teaching.CS2013[kaaa][kuuu] -%}
+            {%- if cur_dat -%}
+            <ul>
+              <li>Topics:
+                <ul>
+                {% for ht in hh.topics %}
+                  {%- for ct in cur_dat.topics -%}
+                    {% if ht == ct.label %}
+                      <li>{{ ct.desc }}</li>
+                    {% endif %}
+                  {%- endfor -%}
+                {% endfor %}
+                </ul>
+              </li>
+              <li>Learning Outcomes:
+                <ul>
+                {% for ho in hh.outcomes %}
+                  {%- for co in cur_dat.outcomes -%}
+                    {% if ho == co.label %}
+                      <li>{{ co.desc }}</li>
+                    {% endif %}
+                  {%- endfor -%}
+                {% endfor %}
+                </ul>
+              </li>
+              <li>Notes:
+                <ul>
+                {% for hn in hh.notes %}
+                  {% capture noteurl %}/teaching/notes/{{ hn }}.html{% endcapture %}
+                  {% for note in site.notes %}
+                    {% if note.url == noteurl %}
+                      <li>
+                        <a href="{{ noteurl | absolute_url }}">
+                          {{ note.title }}
+                        </a>
+                      </li>
+                      {% break %}
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+                </ul>
+              </li>
+            </ul>
+            {%- endif -%}
+          {% endfor %}
         </div>
       </div>
     </div>
+    {% endif %}
+    {% endfor %}
   </div>
 </div>
