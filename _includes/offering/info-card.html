@@ -1,8 +1,19 @@
 
 {% include teaching/url.html %}
-<div class="card my-2" id="syll-card">
-  <h3 class="card-header text-center">Information</h3>
-  <div class="card-body">
+<div class="card" id="info-card">
+  <div class="card-header" role="tab" id="heading_IN">
+    <h3 class="mb-0">
+      <a class="xtra collapsed" data-toggle="collapse"
+      href="#collapse_IN" role="button"
+      aria-expanded="false" aria-controls="collapse_IN">
+        Information
+      </a>
+    </h3>
+  </div>
+  <div id="collapse_IN" class="collapse"
+  aria-labelledby="heading_IN">
+    <div class="card card-body">
+
     {% capture syll_url %}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{% endcapture %}
     {% capture sched_url %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
     {% capture meet_url %}{{ page.url }}meetings/{% endcapture %}
@@ -68,16 +79,7 @@
         </a>
       </li>
       {% endif %}
-      {% assign links = site.data.teaching[joff_id]plan %}
-      <li class="list-group-item">
-        <a href="#">
-          Semester Plan
-        </a>
-        <br />
-        {% for ll in links %}
-          {{ ll[0] }} <br />
-        {% endfor %}
-      </li>
+      {% assign links = site.data.teaching[joff_id]links %}
       {%- if links -%}
       {% comment %}
       Add a collapse item for links as a sublist

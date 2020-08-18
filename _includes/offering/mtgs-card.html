@@ -1,0 +1,21 @@
+
+{% include teaching/url.html %}
+{% assign plan = site.data.teaching[joff_id]plan %}
+
+<div class="card" id="mtgs-card">
+  <div class="card-header" role="tab" id="heading_MT">
+    <h3 class="mb-0">
+      <a class="xtra" data-toggle="collapse"
+      href="#collapse_MT"
+      aria-expanded="true" aria-controls="collapse_MT">
+        Meetings
+      </a>
+    </h3>
+  </div>
+
+<div id="collapse_MT" class="collapse show" role="tabpanel"
+aria-labelledby="heading_MT">
+  <div class="card card-body">
+    {% include meetings/pagination.html path="meetings/" tm=26 cm=5 %}
+  </div>
+</div>

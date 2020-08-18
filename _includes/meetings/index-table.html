@@ -23,7 +23,7 @@
               {%- assign mtg_parts1 = mtg_file | split: '_' -%}
               {%- assign mtg_nbr = mtg_parts1[0] -%}
               {%- assign mtg_parts2 = mtg_file | split: '-' -%}
-              {%- assign mtg_month = mtg_parts2[1] -%}
+              {%- assign mtg_month = mtg_parts2[2] -%}
               {% if month == "" %}
                 {% assign month = mtg_month %}
                 <tr class="d-flex">
