@@ -1,21 +1,28 @@
 
 {% include teaching/url.html %}
-{% assign plan = site.data.teaching[joff_id]plan %}
+{% capture mtg_dir %}/teaching/{{ crs_sbj }}-{{ crs_nbr }}/{{ crs_sem }}/meetings/{% endcapture %}
+{% for sp in site.pages %}
+  {% if sp.url == mtg_dir %}
+    {% assign has_mtg_dir = "true" %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% if has_mtg_dir == "true" %}
+  <div class="card" id="mtgs-card">
+    <div class="card-header" role="tab" id="heading_MT">
+      <h3 class="mb-0">
+        <a class="xtra" data-toggle="collapse"
+        href="#collapse_MT"
+        aria-expanded="true" aria-controls="collapse_MT">
+          Meetings
+        </a>
+      </h3>
+    </div>
 
-<div class="card" id="mtgs-card">
-  <div class="card-header" role="tab" id="heading_MT">
-    <h3 class="mb-0">
-      <a class="xtra" data-toggle="collapse"
-      href="#collapse_MT"
-      aria-expanded="true" aria-controls="collapse_MT">
-        Meetings
-      </a>
-    </h3>
+  <div id="collapse_MT" class="collapse show" role="tabpanel"
+  aria-labelledby="heading_MT">
+    <div class="card card-body">
+      {% include meetings/pagination.html path="meetings/" tm=26 cm=5 %}
+    </div>
   </div>
-
-<div id="collapse_MT" class="collapse show" role="tabpanel"
-aria-labelledby="heading_MT">
-  <div class="card card-body">
-    {% include meetings/pagination.html path="meetings/" tm=26 cm=5 %}
-  </div>
-</div>
+{% endif %}
