@@ -17,7 +17,7 @@
   {% for m in site.data.teaching[joff_id]plan %}
     {% if m[1].date %}
       {% assign mmtg = m[0] | prepend: '00' | slice: -2, 2 %}
-      {% capture mfile %}{{ mmtg }}_{{ m[1].date }}{% endcapture %}
+      {% capture mfile %}{{ mmtg }}_{{ m[1].date }}.html{% endcapture %}
       {% capture mfcat %}{{ mfcat }}{{ mfile }},{% endcapture %}
       {% assign mm = mmtg | plus: 0 %}
       {% if mm == prv_mtg %}
