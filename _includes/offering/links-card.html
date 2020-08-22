@@ -1,0 +1,30 @@
+
+{% include teaching/url.html %}
+
+{% assign links = site.data.teaching[joff_id]links %}
+{%- if links -%}
+  <div class="card" id="webres-card">
+    <div class="card-header" role="tab" id="heading_WR">
+      <h3 class="mb-0">
+        <a class="xtra collapsed" data-toggle="collapse"
+        href="#collapse_WR" role="button"
+        aria-expanded="false" aria-controls="collapse_WR">
+          Web-linked Resources
+        </a>
+      </h3>
+    </div>
+    <div id="collapse_WR" class="collapse"
+    aria-labelledby="heading_WR">
+      <div class="card card-body">
+      <ul class="list-group list-group-flush">
+        {% for ll in links %}
+        <li class="list-group-item">
+          <a href="{{ ll.url }}">
+            {{ ll.name }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endif %}

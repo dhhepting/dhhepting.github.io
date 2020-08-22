@@ -1,7 +1,8 @@
 
 {% include teaching/url.html %}
-{% assign plan = site.data.teaching[joff_id]plan %}
+{% assign planfile = site.data.teaching[joff_id]plan %}
 
+{% if planfile %}
 <div class="card" id="plan-card">
   <div class="card-header" role="tab" id="heading_SP">
     <h3 class="mb-0">
@@ -16,7 +17,7 @@
 <div id="collapse_SP" class="collapse"
 aria-labelledby="heading_SP">
   <div class="card card-body">
-    {% for mtgs in plan %}
+    {% for mtgs in planfile %}
       {% if mtgs[1].date %}
     <div class="card">
       <div class="card-header" role="tab" id="heading_{{ mtgs[0] }}">
@@ -92,3 +93,4 @@ aria-labelledby="heading_SP">
     {% endfor %}
   </div>
 </div>
+{% endif %}
