@@ -2,23 +2,31 @@
 {% endcomment %}
 
 {% include teaching/url.html %}
+<div class="card">
+  <div class="card card-header">
+    <h1>
+      {{ crs_sbj }} {{ crs_nbr }} in {{ crs_sem }}
+    </h1>
+  </div>
+  <div class="m-2">
+    {% include offering/mtgs-card.html %}
+    {% include offering/info-card.html %}
+    {% include offering/knowunits-card.html %}
+    {% include offering/plan-card.html %}
+    {% include offering/links-card.html %}
+  </div>
+</div>
 
-# {{ crs_sbj }} {{ crs_nbr }} in {{ crs_sem }}
 
-{% include offering/info-card.html %}
 
-{% include offering/knowunits-card.html %}
 
-{% include offering/schedule-card.html %}
-<div class="card-deck">
-  {% if 0 == 1 %}
+  {% comment %}
+    {% include offering/schedule-card.html %}
     {% include offering/info-card.html %}
     {% include offering/rss-card.html %}
     {% include offering/media-cardB.html %}
     {% include offering/knowledge-cardB.html %}
-  {% endif %}
-</div>
-
-{% include offering/assignments-cardC.html %}
-{% include offering/calendar-card.html %}
-{% include offering/media-cardC.html %}
+    {% include offering/assignments-cardC.html %}
+    {% include offering/calendar-card.html %}
+    {% include offering/media-cardC.html %}
+  {% endcomment %}

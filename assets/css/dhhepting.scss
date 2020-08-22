@@ -27,6 +27,23 @@ body {
     will-change: position;
 }
 
+//.xtra [data-toggle="collapse"]:after {
+.xtra:after {
+  //display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f054";
+  float: right;
+  transform: rotate(90deg) ;
+  //transition: all linear 0.25s;
+}
+//.xtra [data-toggle="collapse"].collapsed:after {
+.xtra.collapsed:after {
+  transform: rotate(0deg) ;
+}
 // Prevent Bootstrap 4.x iOS issue where user
 // scrolls the body behind the modal when body height > 100vh
 
@@ -44,6 +61,7 @@ canvas {
   display: block;
 }
 
+/*
 li li{
     list-style-type: lower-alpha;
 }
@@ -51,6 +69,7 @@ li li{
 li li li{
     list-style-type: lower-roman;
 }
+*/
 
 .C {
   background-color: rgba(95,158,160,0.75);
@@ -241,4 +260,21 @@ li li li{
 	margin: 8px; */
   background-color: rgba(255,0,0,0.75);
 	color: black
+}
+
+.card-title {
+  position: relative;
+}
+
+.card-title::after {
+	content: "\f107";
+	color: #333;
+	top: -2px;
+	right: 0px;
+	position: absolute;
+    font-family: "FontAwesome"
+}
+
+.card-title[aria-expanded="true"]::after {
+	content: "\f106";
 }

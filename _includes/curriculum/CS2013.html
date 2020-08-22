@@ -23,21 +23,34 @@
     {% for d in kaff.desc %}
       {{ d.para | markdownify }}
     {% endfor %}
-    {%- assign kul = site.data.teaching.CS2013[ka] -%}
-    {% for e in kul %}
-      {% assign e_parts = e[0] | split: "-" %}
-      {% if e_parts[0] != "00" %}
-        {% assign kaf = e[0] %}
-        {% capture kakid %}{{ ka }}{{ e_parts[0] }}{% endcapture %}
-        {% capture kuti %}{{ e[0] | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, e[0].size }}{% endcapture %}
+    {% assign kctr = 1 %}
+
+    <ul class="list-group list-group-flush">
+
+    {% for k in kaff.kakusumm %}
+      {% assign zfkctr = kctr | prepend: '00' | slice: -2, 2 %}
+      {% capture kakid %}{{ ka }}{{ zfkctr }}{% endcapture %}
+      {% capture kufn %}{{ zfkctr }}-{{ k.ku | replace: "-","_" | replace: ", ","--" | replace: " ","-" }}{% endcapture %}
+      <li class="list-group-item d-flex justify-content-between align-items-center">
         <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#{{ kakid }}-collapse" aria-expanded="false" aria-controls="{{kakid}}-collapse">
-          {{ kuti }}
+          {{ k.ku }}
         </button>
-        {%comment%}{%endcomment%}
-        {% include curriculum/KU-collapse.html ika=ka iku=kaf ikuti=kuti ikakid=kakid %}
-        {%comment%}{%endcomment%}
-      {% endif %}
-    {%- endfor -%}
+        <div>
+        {% if k.ct1h > 0 %}
+        <span class="badge badge-primary badge-pill">&starf; &starf; Core</span>
+        {% endif %}
+        {% if k.ct2h > 0 %}
+        <span class="badge badge-primary badge-pill">&starf; Core</span>
+        {% endif %}
+        {% if k.elect == "y" %}
+        <span class="badge badge-primary badge-pill">Elective</span>
+        {% endif %}
+        </div>
+      </li>
+      {% include curriculum/KU-collapse.html ika=ka iku=kufn ikuti=k.ku ikakid=kakid %}
+      {% assign kctr = kctr | plus: 1 %}
+    {% endfor %}
+    </ul>
     </div>
   </div>
 {% endfor %}

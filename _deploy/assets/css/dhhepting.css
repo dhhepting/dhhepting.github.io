@@ -1,68 +1,252 @@
-/* ensure that parents of page elements have full height: html, body */
-html { margin: 0; padding: 0; height: 100%; }
+/*
+ * ensure that parents of page elements have full height:
+ * html, body
+ */
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
 
-.scrollable { overflow-y: auto; max-height: 240px; }
+.scrollable {
+  overflow-y: auto;
+  max-height: 240px; }
 
-body { margin: 0; padding: 0; height: 100%; }
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
 
-body { width: 100%; max-width: 100%; will-change: position; }
+body {
+  width: 100%;
+  max-width: 100%;
+  will-change: position; }
 
-body.modal-open { position: fixed; top: 0; right: 0; bottom: 0; left: 0; }
+.xtra:after {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f054";
+  float: right;
+  transform: rotate(90deg); }
+
+.xtra.collapsed:after {
+  transform: rotate(0deg); }
+
+body.modal-open {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
 
 /* p5.js style addition */
-canvas { display: block; }
+canvas {
+  display: block; }
 
-li li { list-style-type: lower-alpha; }
+/*
+li li{
+    list-style-type: lower-alpha;
+}
 
-li li li { list-style-type: lower-roman; }
+li li li{
+    list-style-type: lower-roman;
+}
+*/
+.C {
+  background-color: rgba(95, 158, 160, 0.75); }
 
-.C { background-color: rgba(95, 158, 160, 0.75); }
+.M {
+  background-color: rgba(128, 64, 0, 0.75); }
 
-.M { background-color: rgba(128, 64, 0, 0.75); }
+.O {
+  background-color: rgba(128, 128, 0, 0.75); }
 
-.O { background-color: rgba(128, 128, 0, 0.75); }
+.B {
+  background-color: rgba(245, 245, 220, 0.75); }
 
-.B { background-color: rgba(245, 245, 220, 0.75); }
+/*
+ * suggestion from https://stackoverflow.com/questions/34092774/bootstrap-navbar-collapse-dropdown-menu
+ * to fix ios nav collapse button data-toggle
+ */
+.navbar-static-top .navbar-collapse.in .navbar-expand .navbar-expand-sm {
+  overflow-y: visible !important;
+  /* Bootstrap default is "auto" */ }
 
-/* suggestion from https://stackoverflow.com/questions/34092774/bootstrap-navbar-collapse-dropdown-menu to fix ios nav collapse button data-toggle */
-.navbar-static-top .navbar-collapse.in .navbar-expand .navbar-expand-sm { overflow-y: visible !important; /* Bootstrap default is "auto" */ }
+/*
+ * style for home page
+ */
+.splash {
+  background-image: url("/~hepting/assets/bg/home.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5); }
 
-/* style for home page */
-.splash { background-image: url("/~hepting/assets/bg/home.jpg"); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; color: white; text-align: center; text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5); }
+/*
+ * style for news page
+ */
+.HTTPerrors {
+  background-image: url("/~hepting/assets/bg/home.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
 
-/* style for news page */
-.HTTPerrors { background-image: url("/~hepting/assets/bg/home.jpg"); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; }
+/*
+ * style for about pages
+ */
+.about {
+  background-image: url("/~hepting/assets/bg/about.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /*
+  color: white;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  */ }
 
-/* style for about pages */
-.about { background-image: url("/~hepting/assets/bg/about.jpg"); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; /* color: white; text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5); */ }
+/*
+ * style for projects pages
+ */
+.projects {
+  background-image: url("/~hepting/assets/bg/projects.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /*
+  color: white;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  */ }
 
-/* style for projects pages */
-.projects { background-image: url("/~hepting/assets/bg/projects.jpg"); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; /* color: white; text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5); */ }
+/*
+ * style for research pages
+ */
+.research {
+  background-image: url("/~hepting/assets/bg/research.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /*
+  color: white;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  */ }
 
-/* style for research pages */
-.research { background-image: url("/~hepting/assets/bg/research.jpg"); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; /* color: white; text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5); */ }
+/*
+ * style for teaching pages
+ */
+.teaching {
+  background-image: url("/~hepting/assets/bg/teaching.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  /*
+  background-attachment: fixed;
+  color: white;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  */ }
 
-/* style for teaching pages */
-.teaching { background-image: url("/~hepting/assets/bg/teaching.jpg"); background-position: center center; background-repeat: no-repeat; background-attachment: scroll; background-size: cover; /* background-attachment: fixed; color: white; text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5); */ }
+/*
+ * style for rss page
+ */
+.rss {
+  background-image: url("/~hepting/assets/bg/rss.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /*
+  color: white;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  */ }
 
-/* style for rss page */
-.rss { background-image: url("/~hepting/assets/bg/rss.jpg"); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; /* color: white; text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5); */ }
+/*
+ * style for teaching pages
+ */
+.trouble {
+  background-image: url("/~hepting/assets/bg/trouble.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover; }
 
-/* style for teaching pages */
-.trouble { background-image: url("/~hepting/assets/bg/trouble.jpg"); background-position: center center; background-repeat: no-repeat; background-attachment: scroll; background-size: cover; }
+/*
+ * style for search pages
+ */
+.search {
+  background-image: url("/~hepting/assets/bg/search.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /*
+  color: white;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  */ }
 
-/* style for search pages */
-.search { background-image: url("/~hepting/assets/bg/search.jpg"); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; /* color: white; text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5); */ }
+/*
+ * style for news page
+ */
+.news {
+  background-image: url("/~hepting/assets/bg/news.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /*
+  color: white;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  */ }
 
-/* style for news page */
-.news { background-image: url("/~hepting/assets/bg/news.jpg"); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; /* color: white; text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5); */ }
+/*
+ * vertical alignment style for text in grid column
+ */
+ /*
+.vertical-align {
 
-/* vertical alignment style for text in grid column */
-/* .vertical-align { display: flex; flex-direction: column; align-items: center; height: 100%; } */
-.darkcthru { /* padding: 8px; margin: 8px; */ background-color: rgba(32, 32, 32, 0.75); color: white; }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+*/
+.darkcthru {
+  /* padding: 8px;
+  margin: 8px; */
+  background-color: rgba(32, 32, 32, 0.75);
+  color: white; }
 
-.lightcthru { /* padding: 8px; margin: 8px; */ /*background-color: rgba(248, 249, 250, 0.75);*/ background-color: rgba(248, 249, 250, 0.75); color: black; }
+.lightcthru {
+  /* padding: 8px;
+  margin: 8px; */
+  /*background-color: rgba(248, 249, 250, 0.75);*/
+  background-color: rgba(248, 249, 250, 0.75);
+  color: black; }
 
-.redcthru { /* padding: 8px; margin: 8px; */ background-color: rgba(255, 0, 0, 0.75); color: black; }
+.redcthru {
+  /* padding: 8px;
+  margin: 8px; */
+  background-color: rgba(255, 0, 0, 0.75);
+  color: black; }
 
-/*# sourceMappingURL=dhhepting.css.map */
+.card-title {
+  position: relative; }
+
+.card-title::after {
+  content: "\f107";
+  color: #333;
+  top: -2px;
+  right: 0px;
+  position: absolute;
+  font-family: "FontAwesome"; }
+
+.card-title[aria-expanded="true"]::after {
+  content: "\f106"; }
