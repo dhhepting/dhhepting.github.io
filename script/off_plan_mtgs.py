@@ -15,31 +15,33 @@ MD_ROOT = "teaching/"
 HTML_ROOT = "_site/teaching/"
 DATA_ROOT = "_data/teaching/"
 
-meet_template = { "CS-205" : """
-{% include meetings/pagination.html %}
+meet_template = { "CS" : """
+{% include meetings/pagination.html tm=page.total_meet cm=page.mtg_nbr %}
 <div class="card">
-  <h1 class="text-center card-header lightcthru">
-    {{ page.mtg_date | date: '%a-%d-%b-%Y' }}
-  </h1>
-  <div class="card-body">
-    {% include meetings/focus.html %}
+    <div class="card card-header lightcthru">
+        <h1>
+            {{ page.mtg_date | date: '%a-%d-%b-%Y' }}
+        </h1>
+    </div>
+    <div class="card card-body">
+        {% include meetings/plan.html mtg=page.mtg_nbr %}
 
-    {% include meetings/admin-0-open.html %}
-    {% include meetings/ul-1-close.html %}
+        {% include meetings/admin-0-open.html %}
+        {% include meetings/ul-1-close.html %}
 
-    {% include meetings/quest-0-open.html %}
-    {% include meetings/ul-1-close.html %}
+        {% include meetings/quest-0-open.html %}
+        {% include meetings/ul-1-close.html %}
 
-    {% include meetings/outline-0-open.html %}
-    {% include meetings/ul-1-close.html %}
+        {% include meetings/outline-0-open.html %}
+        {% include meetings/ul-1-close.html %}
 
-    {% include meetings/concluding-0-open.html %}
-    {% include meetings/ul-1-close.html %}
+        {% include meetings/concluding-0-open.html %}
+        {% include meetings/ul-1-close.html %}
 
-    {% include meetings/annotations.html %}
+        {% include meetings/annotations.html %}
 
-    {% include meetings/media.html mtg_media=joff_id mtg=page.mtg_nbr %}
-  </div>
+        {% include meetings/media.html mtg_media=joff_id mtg=page.mtg_nbr %}
+    </div>
 </div>"""
 }
 
@@ -107,32 +109,29 @@ while (sday <= ced):
         d[mtgctr]['theme'] = 'Human Computer Communication'
         mtgctr += 1
     sday = sday + timedelta(days=1)
-with open(planfile, 'w') as yaml_file:
-    yaml.dump(d, yaml_file, default_flow_style=False)
+if (0):
+    with open(planfile, 'w') as yaml_file:
+        yaml.dump(d, yaml_file, default_flow_style=False)
 nbr_meetings = mtgctr - 1
 
-# for mt in meet_template:
-#     print(meet_template[mt])
+if (0):
+    midxstr = SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings/index.md"
+    with open(midxstr,"w") as mtgidx:
+        mtgidx.write("---\n")
+        mtgidx.write("title: " + reldir[0] + " (" + reldir[1] + ") Meetings\n")
+        mtgidx.write("breadcrumb: Meetings\n")
+        mtgidx.write("layout: bg-image\n")
+        mtgidx.write("---\n")
+        mtgidx.write("{% include meetings/index-table.html %}\n")
 
-midxstr = SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings/index.md"
-print (midxstr)
-with open(midxstr,"w") as mtgidx:
-    mtgidx.write("---\n")
-    mtgidx.write("title: " + reldir[0] + " (" + reldir[1] + ") Meetings\n")
-    mtgidx.write("breadcrumb: Meetings\n")
-    mtgidx.write("layout: bg-image\n")
-    mtgidx.write("---\n")
-    mtgidx.write("# " + reldir[0] + " (" + reldir[1] + ") Meetings\n")
-    mtgidx.write("{% include meetings/index-table.html %}\n")
-
-mdirstr = str(SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings/")
-try:
-    os.makedirs(mdirstr)
-except OSError as e:
-    if e.errno == errno.EEXIST and os.path.isdir(mdirstr):
-        pass
-    else:
-        raise
+    mdirstr = str(SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings/")
+    try:
+        os.makedirs(mdirstr)
+    except OSError as e:
+        if e.errno == errno.EEXIST and os.path.isdir(mdirstr):
+            pass
+        else:
+            raise
 
 with open(planfile, 'r') as stream:
     try:
@@ -160,29 +159,4 @@ for uu in yamldict:
             mtgfile.write("- ka:\n")
             mtgfile.write("  ku:\n")
             mtgfile.write("---\n")
-            mtgfile.write("{% include meetings/pagination.html tm=page.total_meet cm=page.mtg_nbr %}")
-        # mtgfile.write(meet_template["CS-205"])
-            # except:
-            #     pass
-# m = 0
-# mtgdata.write("meeting,file\n")
-# for line in utfout:
-#     if len(line) > 0:
-#         m += 1
-#         words = line.split('\"')
-#         #sys.exit()
-#         mtg_fname = (words[1].split('.'))[0]
-#         mtgdata.write(str(m).zfill(2) + "," + mtg_fname.split('/')[1] + ".html\n")
-#         datestr = mtg_fname.split('_',1)
-#         print("Meeting file name: ",mtg_fname)
-        #try:
-            #print("TRYING")
-            #print(datestr[1])
-            #mtg_dt = datetime.strptime(datestr[1],"%d-%b-%y")
-            #print(mtg_dt)
-            #print(tdt)
-            #print(datetime.strptime(tdt,"%d-%b-%y"))
-            #print(mtg_dt >= datetime.today())
-            #if mtg_dt > datetime.today():
-                #print (datetime.today.strftime("%d-%b-%y"))
-                #print(SITE_DIR + MD_ROOT + sys.argv[1] + "/" + mtg_fname + ".md")
+            mtgfile.write(meet_template["CS"])

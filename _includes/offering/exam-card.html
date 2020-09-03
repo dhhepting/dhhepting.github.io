@@ -1,0 +1,37 @@
+
+{% include teaching/url.html %}
+
+<div class="card" id="exam-card">
+  <div class="card-header" role="tab" id="heading_EX">
+    <h5 class="mb-0">
+      <a class="xtra collapsed" data-toggle="collapse"
+      href="#collapse_EX" role="button"
+      aria-expanded="false" aria-controls="collapse_EX">
+        Exams
+      </a>
+    </h5>
+  </div>
+  <div id="collapse_EX" class="collapse"
+  aria-labelledby="heading_EX">
+    <div class="card card-body">
+      <h7>In {{ crs_sem }}</h7>
+      <ul>
+        <li>Midterm: 24 Oct 2019</li>
+        <li>Final: 19 Dec 2019</li>
+      </ul>
+
+      <h7>In the Past</h7>
+      {% capture exam_url %}/assets/teaching/pdf/{{ crs_id }}{% endcapture %}
+      <ul>
+      {% for sp in site.static_files reversed %}
+        {% if sp.path contains exam_url %}
+          {% if sp.path contains "exam" %}
+            <li><a href="{{ sp.path | relative_url }}">{{ sp.path | split: "/" | last }}</a></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      </ul>
+
+    </div>
+  </div>
+</div>

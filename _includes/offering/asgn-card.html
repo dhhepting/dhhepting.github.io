@@ -1,0 +1,30 @@
+{% include teaching/url.html %}
+
+{% assign asgnfile = site.data.teaching[joff_id]assignments %}
+{% if asgnfile %}
+<div class="card" id="asgn-card">
+  <div class="card-header" role="tab" id="heading_AS">
+    <h3 class="mb-0">
+      <a class="xtra collapsed" data-toggle="collapse"
+      href="#collapse_AS" role="button"
+      aria-expanded="false" aria-controls="collapse_AS">
+        Assignments
+      </a>
+    </h3>
+  </div>
+  <div id="collapse_AS" class="collapse"
+  aria-labelledby="heading_AS">
+    <div class="card card-body">
+      {% include offering/asgn-card-body.html %}
+    </div>
+  </div>
+</div>
+{% endif %}
+<script>
+const params = new URLSearchParams(location.search)
+let asgn = params.get('asgn')
+if (asgn !== null) {
+  document.getElementById('collapse-' + asgn).classList.toggle('show')
+  let asgn_elem = document.getElementById('collapse-' + asgn)
+}
+</script>
