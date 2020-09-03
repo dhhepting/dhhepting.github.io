@@ -1,0 +1,56 @@
+{% include teaching/url.html %}
+
+{% assign asgnfile = site.data.teaching[joff_id]assignments %}
+{% if asgnfile %}
+  <div class="card" id="i-asgn-card">
+    <div class="card-header" role="tab" id="heading_IAS">
+      <h5 class="mb-0">
+        <a class="xtra collapsed" data-toggle="collapse"
+        href="#collapse_IAS" role="button"
+        aria-expanded="false" aria-controls="collapse_IAS">
+          Individual
+        </a>
+      </h5>
+    </div>
+    <div id="collapse_IAS" class="collapse"
+    aria-labelledby="heading_IAS">
+      <div class="card card-body">
+        INDIVIDUAL ASSIGNMENTS
+      </div>
+    </div>
+  </div>
+  <div class="card" id="p-asgn-card">
+    <div class="card-header" role="tab" id="heading_PAS">
+      <h5 class="mb-0">
+        <a class="xtra collapsed" data-toggle="collapse"
+        href="#collapse_PAS" role="button"
+        aria-expanded="false" aria-controls="collapse_PAS">
+          Project
+        </a>
+      </h5>
+    </div>
+    <div id="collapse_PAS" class="collapse"
+    aria-labelledby="heading_PAS">
+      <div class="card card-body">
+        PROJECT ASSIGNMENTS
+      </div>
+    </div>
+    <div class="card" id="g-asgn-card">
+      <div class="card-header" role="tab" id="heading_GAS">
+        <h5 class="mb-0">
+          <a class="xtra collapsed" data-toggle="collapse"
+          href="#collapse_GAS" role="button"
+          aria-expanded="false" aria-controls="collapse_GAS">
+            Group
+          </a>
+        </h5>
+      </div>
+      <div id="collapse_GAS" class="collapse"
+      aria-labelledby="heading_GAS">
+        <div class="card card-body">
+          Group ASSIGNMENTS
+        </div>
+      </div>
+  </div>
+{% endif %}
+<!-- -->

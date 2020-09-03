@@ -33,12 +33,15 @@
 <div class="container-fluid">
   <nav aria-label="mtg">
     <ul class="pagination justify-content-center">
+      {% if include.path %}
+      {% else %}
       <li class="page-item">
         <a class="page-link" href="{{ include.path }}{{ prv_lnk }}" aria-label="Previous">
           <span aria-hidden="true">&laquo;</span>
           <span class="sr-only">Previous</span>
         </a>
       </li>
+      {% endif %}
 {% assign xs_lb = cur_mtg | minus: 2 %}
 {% assign sm_lb = cur_mtg | minus: 4 %}
 {% assign md_lb = cur_mtg | minus: 8 %}
@@ -57,7 +60,7 @@
     {% assign mms = mf | split: "_" %}
     {% assign mtn = mms[0] | plus: 0 %}
     {% assign pcl = "" %}
-    {% if mtn != cur_mtg %}
+    {% if mtn != cur_mtg or include.path %}
       {% if (mtn < lg_lb or mtn > lg_ub) %}
         {% assign pcl = "page-item d-none d-xl-inline" %}
       {% elsif (mtn >= lg_lb and mtn < md_lb) or (mtn > md_ub and mtn <= lg_ub) %}
@@ -70,7 +73,11 @@
         {% assign pcl = "page-item d-inline" %}
       {% endif %}
       <li class="{{ pcl }}">
+        {% if mtn == cur_mtg %}
+        <a class="page-link bg-info text-white" href="{{ include.path }}{{ mf }}">
+        {% else %}
         <a class="page-link" href="{{ include.path }}{{ mf }}">
+        {% endif %}
           {{ mtn }}
         </a>
       </li>
@@ -84,12 +91,15 @@
     {% endif %}
   {% endif %}
 {% endfor %}
+{% if include.path %}
+{% else %}
       <li class="page-item">
         <a class="page-link" href="{{ include.path }}{{ nxt_lnk }}" aria-label="Next">
           <span aria-hidden="true">&raquo;</span>
           <span class="sr-only">Next</span>
         </a>
       </li>
+{% endif %}
     </ul>
   </nav>
 </div>

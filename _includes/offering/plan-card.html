@@ -27,13 +27,14 @@ aria-labelledby="heading_SP">
           aria-expanded="false" aria-controls="collapse_{{ mtgs[0] }}">
             {{ mtgs[1].date }}
           </a>
+          &bull; {{ mtgs[1].theme }}
         </h5>
       </div>
 
       <div id="collapse_{{ mtgs[0] }}" class="collapse"
       aria-labelledby="heading_{{ mtgs[0] }}">
         <div class="card card-body">
-          <h5>{{ mtgs[1].theme }}</h5>
+          <!-- <h5>{{ mtgs[1].theme }}</h5> -->
           {% assign hkk = mtgs[1].BOK %}
           {% for hh in hkk %}
             {%- assign kaku = hh.kaku | split: "/" -%}
