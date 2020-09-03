@@ -4,6 +4,7 @@ breadcrumb: Assignments
 layout: bg-image
 ---
 {% include teaching/url.html %}
+<!--
 <h1>Assignments</h1>
 
 <div class="card my-2">
@@ -294,3 +295,4 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   //console.log(params)
 })
 </script>
+-->
