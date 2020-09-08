@@ -1,6 +1,7 @@
 
 {% include teaching/url.html %}
-{% assign chatfile = site.data.teaching.chat %}
+{% assign mtn = include.mtg | prepend: '00' | slice: -2, 2  %}
+{% assign chatfile = site.data.teaching[joff_id]zoom.chat[mtn] %}
 
 {% if chatfile %}
 <div class="card" id="zoomchat-card">
