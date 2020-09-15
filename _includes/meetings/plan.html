@@ -1,85 +1,65 @@
 {% include teaching/url.html %}
-{% if page.focus %}
-  <h3>Focus</h3>
-  {% for pf in page.focus %}
-    {% capture kakid %}{{ pf.ka }}-{{ pf.ku | slice: 0, 2 }}{% endcapture %}
-    {% capture kuti %}{{ pf.ku | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, pf.ku.size }}{% endcapture %}
-    {% capture kkidx %}{{ pf.ka }}/{{ pf.ku }}{% endcapture %}
-    {% if site.data.teaching[joff_id]tlo[kkidx] %}
-    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#{{kakid}}-collapse" aria-expanded="false" aria-controls="focus-{{kakid}}-collapse">
-      {{ pf.ka }}/{{ kuti }}
-    </button>
-    {%comment%}{%endcomment%}
-    {% include curriculum/KU-collapse.html ika=pf.ka iku=pf.ku ikuti=kuti ikakid=kakid %}
-    {%comment%}{%endcomment%}
-    {% endif %}
-  {%- endfor -%}
-{% endif %}
-  {%comment%}
-  {% for pf in page.focus %}
-    {% capture kakid %}{{ pf.ka }}-{{ pf.ku | slice: 0, 2 }}{% endcapture %}
-    {% capture kuti %}{{ pf.ku | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, pf.ku.size }}{% endcapture %}
-    {% if site.data.teaching[joff_id]tlo[kkidx] %}
-  <div class="card card-body collapse" id="focus-{{kakid}}-collapse">
-    {% capture kkidx %}{{ pf.ka }}/{{ pf.ku }}{% endcapture %}
+{% assign planfile = site.data.teaching[joff_id]plan %}
+{% assign mtn = include.mtg | prepend: '00' | slice: -2, 2  %}
 
-    <h5>{{ pf.ka }} / {{ kuti }}</h5>
-
-      {% assign kaku = site.data.teaching.CS2013[pf.ka][pf.ku] %}
-      {% if kaku.preamble %}
-        {%- for pre in kaku.preamble -%}
-      <div class="row">
-        <div class="col-md-12">
-          {% if pre.label %}
-          <h5>{{ pre.label }}</h5>
-          {% endif %}
-          {{ pre.desc | markdownify }}
-        </div>
-      </div>
+{% if planfile %}
+<h3>
+  Plan for Today
+</h3>
+  {% for mtgs in planfile %}
+      {% if mtgs[0] == include.mtg %}
+        {% assign hkk = mtgs[1].BOK %}
+        {% for hh in hkk %}
+          {%- assign kaku = hh.kaku | split: "/" -%}
+          {%- assign kaaa = kaku[0] -%}
+          {%- assign kuuu = kaku[1] -%}
+          <h5>{{ kaaa }} / {{ kuuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kuuu.size }}</h5>
+          {%- assign cur_dat = site.data.teaching.CS2013[kaaa][kuuu] -%}
+          {%- if cur_dat -%}
+          <ul>
+            <li>Topics:
+              <ul>
+                {% for ht in hh.topics %}
+                  {%- for ct in cur_dat.topics -%}
+                    {% if ht == ct.label %}
+                      <li>{{ ct.desc }}</li>
+                    {% endif %}
+                  {%- endfor -%}
+                {% endfor %}
+              </ul>
+            </li>
+            <li>Learning Outcomes:
+              <ul>
+                {% for ho in hh.outcomes %}
+                  {%- for co in cur_dat.outcomes -%}
+                    {% if ho == co.label %}
+                      <li>{{ co.desc }}</li>
+                    {% endif %}
+                  {%- endfor -%}
+                {% endfor %}
+              </ul>
+            </li>
+            <li>Notes:
+              <ul>
+                {% for hn in hh.notes %}
+                  {% capture noteurl %}/teaching/notes/{{ hn }}.html{% endcapture %}
+                  {% for note in site.notes %}
+                    {% if note.url == noteurl %}
+                      <li>
+                        <a href="{{ noteurl | absolute_url }}">
+                          {{ note.title }}
+                        </a>
+                      </li>
+                      {% break %}
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+              </ul>
+            </li>
+          </ul>
+        {%- endif -%}
       {% endfor %}
-      {% endif %}
-    <div class="row">
-	    <div class="col-md-6">
-	      <h7>Topics</h7>
-	      <ol>
-        {%- for top in kaku.topics -%}
-          <li>
-            {{ top.desc }}
-          {%- if top.details -%}
-            <ul>
-            {%- for td in top.details -%}
-              <li>
-                {{ td }}
-              </li>
-            {%- endfor -%}
-            </ul>
-          {%- endif -%}
-          </li>
-        {%- endfor -%}
-	      </ol>
-	    </div>
-	    <div class="col-md-6">
-	      <h7>Learning Outcomes</h7>
-	      <ol>
-          {%- for lout in kaku.outcomes -%}
-          <li>
-            {{ lout.desc }}
-            {%- if lout.details -%}
-            <ul>
-              {%- for lod in lout.details -%}
-              <li>
-                {{ lod }}
-              </li>
-              {%- endfor -%}
-            </ul>
-            {%- endif -%}
-          </li>
-          {%- endfor -%}
-	      </ol>
-      </div>
-    </div>
-  </div>
+      {% break %}
     {% endif %}
-  {%- endfor -%}
+  {% endfor %}
 {% endif %}
-{%endcomment%}
