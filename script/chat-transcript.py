@@ -9,7 +9,7 @@ from pathlib import Path
 # arguments to this script:
 # - the absolute path to the website's local root directory
 if (len(sys.argv) != 2):
-  print (sys.argv[0],"must be invoked with \"<path-to-group-file>\"")
+  print (sys.argv[0],"must be invoked with \"<path-to-chat-file>\"")
   sys.exit()
 
 # get site directory, make sure it ends with "/"
@@ -17,8 +17,6 @@ chatfilepath = sys.argv[1]
 og = []
 ng = {}
 seqnbr = 1
-#print('---')
-#print('---')
 with open(chatfilepath,'r') as cf:
     curr_hm_stamp = ''
     for line in cf:
@@ -30,7 +28,6 @@ with open(chatfilepath,'r') as cf:
             try:
                 fp_dt = datetime.strptime(npline[0],'%H:%M:%S\t')
                 hm_stamp = fp_dt.strftime('%Hh%M')
-                # hm_stamp = '"' + fp_dt.strftime('%Hh%M') + '"'
             except:
                 sys.exit()
             sname = ''
@@ -54,10 +51,13 @@ with open(chatfilepath,'r') as cf:
                 #   - persid: DHH
                 #     msg: " Greetings."
             if hm_stamp != curr_hm_stamp:
-                print(hm_stamp + ':\n  chats:')
+                print(hm_stamp + ': ')
+                print('  chats:')
                 curr_hm_stamp = hm_stamp
             #print (fp_dt.strftime('%H:%M'),person_id,(' '.join(npline[colon_idx:])).strip(),'<br />')
-            print ('  - persid:',person_id,'\n    msg: "',(' '.join(npline[colon_idx+1:])).strip(),'"')
+            print ('  - persid:',person_id)
+            print ('    msg: >-')
+            print ('     ',(' '.join(npline[colon_idx+1:])).strip())
 
 
 """

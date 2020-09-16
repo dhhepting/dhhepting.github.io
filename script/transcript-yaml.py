@@ -6,10 +6,8 @@ import csv
 import yaml
 import collections
 
-#yd = {}
 with open(sys.argv[1], 'r') as stream1:
     try:
-        #print(yaml.safe_load(stream))
         yd1 = yaml.safe_load(stream1)
         yod1 = collections.OrderedDict(sorted(yd1.items()))
     except yaml.YAMLError as exc:
@@ -20,10 +18,8 @@ for k, v in yod1.items():
     if len(fl1) == 0:
         fl1.append(k)
 fl1.append(k)
-#print('first & last:',fl1)
 with open(sys.argv[2], 'r') as stream2:
     try:
-        #print(yaml.safe_load(stream))
         yd2 = yaml.safe_load(stream2)
         yod2 = collections.OrderedDict(sorted(yd2.items()))
     except yaml.YAMLError as exc:
@@ -31,12 +27,9 @@ with open(sys.argv[2], 'r') as stream2:
 print(sys.argv[2])
 fl2 = []
 for k, v in yod2.items():
-    #print (k,type(k))
     if len(fl2) == 0:
         fl2.append(k)
 fl2.append(k)
-#print (yd2)
-#print('first & last:',fl2)
 if (fl1[0] <= fl2[0]):
     start = fl1[0]
 else:
@@ -50,197 +43,15 @@ endtime = datetime.strptime(end,'%Hh%M')
 combo = {}
 timestamp = starttime
 while (timestamp <= endtime):
-    #key = '\'' + datetime.strftime(timestamp,'%Hh%M') +'\''
     key = datetime.strftime(timestamp,'%Hh%M')
-    #print ('KEY: ',key)
-    #print (key,type(key))
     timestamp += timedelta(minutes=1)
     if key in yd1 or key in yd2:
         combo[key] = {}
-        #print (combo[key],combo)
-        # chat
-        #combo[key].chats = []
         combo[key]['chats'] = []
         if key in yd1:
-            #combo[key].chats.append(yd1[key]['chats'])
             combo[key]['chats'] = yd1[key]['chats']
-        #print (combo[key],combo)
-        # talk
-        #combo[key].talks = []
         combo[key]['talks'] = []
         if key in yd2:
-            #combo[key].talks.append(yd2[key]['talks'])
-            #combo[key]['talks'] = yd1[key]['talks']
             combo[key]['talks'] = yd2[key]['talks']
-
-        #print (key,combo[key])
-
-# sys.exit()
-# print(starttime)
-# sday = sday + timedelta(days=1)
-#print (type(yd))
-#print (yd)
-# stream = open(sys.argv[1], "r")
-# doc = yaml.load(stream)
-#for doc in docs:
 with open('test.yml', 'w') as outfile:
     yaml.dump(combo, outfile, default_flow_style=False)
-# for k,v in doc.items():
-#     print (k, "->", v)
-# print ("\n")
-
-#tdt = datetime.today().strftime("%d-%b-%y")
-#ydt = datetime()
-#print ("TODAY: ",tdt)
-#print ("NOW: ",datetime.now()) #.strftime("%d-%b-%y"))
-
-SITE_DIR = "/Users/hepting/Sites/dhhepting.github.io/"
-MD_ROOT = "teaching/"
-HTML_ROOT = "_site/teaching/"
-DATA_ROOT = "_data/teaching/"
-
-meet_template = { "CS" : """
-{% include meetings/pagination.html tm=page.total_meet cm=page.mtg_nbr %}
-<div class="card">
-    <div class="card card-header lightcthru">
-        <h1>
-            {{ page.mtg_date | date: '%a-%d-%b-%Y' }}
-        </h1>
-    </div>
-    <div class="card card-body">
-        {% include meetings/plan.html mtg=page.mtg_nbr %}
-
-        {% include meetings/admin-0-open.html %}
-        {% include meetings/ul-1-close.html %}
-
-        {% include meetings/quest-0-open.html %}
-        {% include meetings/ul-1-close.html %}
-
-        {% include meetings/outline-0-open.html %}
-        {% include meetings/ul-1-close.html %}
-
-        {% include meetings/concluding-0-open.html %}
-        {% include meetings/ul-1-close.html %}
-
-        {% include meetings/annotations.html %}
-
-        {% include meetings/media.html mtg_media=joff_id mtg=page.mtg_nbr %}
-    </div>
-</div>"""
-}
-
-# Make sure that script is executed properly: i.e. CS-428+828/201830
-if (len(sys.argv) != 2):
-	print (sys.argv[0],"must be invoked with <course>/<semester>")
-	sys.exit()
-
-reldir = (sys.argv[1]).split('/')
-if (len(reldir) != 2):
-	print (sys.argv[0],"must be invoked with <course>/<semester>" )
-	sys.exit()
-
-# find offering indicated by arguments and load meeting days
-with open(SITE_DIR + '_data/teaching/course_offerings.csv', newline='') as offfile:
-    offreader = csv.DictReader(offfile)
-    off_found = 0
-    for row in offreader:
-        if (row['semester'] == reldir[1] and row['id'] == reldir[0]):
-            off_found = 1
-            # load necessary info, if offering not found then quit
-            mtgdays = row['mdays'].split(',')
-if off_found == 0:
-    sys.exit()
-
-# if offering is found, use semester data to make meetings list
-with open(SITE_DIR + '_data/teaching/semesters.csv', newline='') as semfile:
-    semreader = csv.DictReader(semfile)
-    sem_found = 0
-    for row in semreader:
-        if (row['semester'] == reldir[1]):
-            sem_found = 1
-            # find out no-class-days first
-            ncd = row['no-class-days'].split(',')
-            ncdlist = []
-            for dd in ncd:
-                ncdate = datetime.strptime(dd, "%d-%b-%y")
-                ncdlist.append(datetime.strftime(ncdate,"%a-%d-%b-%Y").split('-'))
-            # get term-start and class-end dates
-            sday = datetime.strptime(row['term-start'], "%d-%b-%y")
-            ced = datetime.strptime(row['class-end'], "%d-%b-%y")
-            break
-if off_found == 0:
-    sys.exit()
-
-joff_id = reldir[0] + "-" + reldir[1]
-joff_id = joff_id.replace("+","_")
-planfile = os.path.abspath(SITE_DIR + DATA_ROOT + joff_id + "/plan.yml")
-mtgctr = 1
-d = {}
-d['offering'] = {}
-d['offering']['id'] = joff_id
-while (sday <= ced):
-    datelist = datetime.strftime(sday,"%a-%d-%b-%Y").split('-')
-    if (datelist[0] in mtgdays) and datelist not in ncdlist:
-        #mtgwriter.writerow({'meeting': str(mtgctr).zfill(2), 'date': '-'.join(datelist)})
-        d[mtgctr] = {}
-        e = {}
-        e['kaku'] = 'HCI/Foundations'
-        e['topics'] = 'list of topics'
-        e['outcomes'] = 'list of outcomes'
-        e['notes'] = 'name of webpage with notes'
-        d[mtgctr]['BOK'] = [e]
-        d[mtgctr]['date'] = '-'.join(datelist)
-        d[mtgctr]['theme'] = 'Human Computer Communication'
-        mtgctr += 1
-    sday = sday + timedelta(days=1)
-if (0):
-    with open(planfile, 'w') as yaml_file:
-        yaml.dump(d, yaml_file, default_flow_style=False)
-nbr_meetings = mtgctr - 1
-
-if (0):
-    midxstr = SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings/index.md"
-    with open(midxstr,"w") as mtgidx:
-        mtgidx.write("---\n")
-        mtgidx.write("title: " + reldir[0] + " (" + reldir[1] + ") Meetings\n")
-        mtgidx.write("breadcrumb: Meetings\n")
-        mtgidx.write("layout: bg-image\n")
-        mtgidx.write("---\n")
-        mtgidx.write("{% include meetings/index-table.html %}\n")
-
-    mdirstr = str(SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings/")
-    try:
-        os.makedirs(mdirstr)
-    except OSError as e:
-        if e.errno == errno.EEXIST and os.path.isdir(mdirstr):
-            pass
-        else:
-            raise
-
-with open(planfile, 'r') as stream:
-    try:
-        yamldict = yaml.safe_load(stream)
-    except yaml.YAMLError as exc:
-        print(exc)
-for uu in yamldict:
-    if ('date' in yamldict[uu]):
-    #print (uu,yamldict[uu]['date'])
-        m = uu
-        mtg_date = yamldict[uu]['date']
-        mtg_fname = str(m).zfill(2) + '_' + mtg_date
-
-        mfilestr = SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings/" + mtg_fname + ".md"
-        print(mfilestr)
-        with open(mfilestr,"w") as mtgfile:
-            mtgfile.write("---\n")
-            mtgfile.write("title: Mtg " + str(m) + " &bull; " + reldir[0] +  " (" + reldir[1] + ")\n")
-            mtgfile.write("breadcrumb: " + str(m) + " (" + mtg_date + ")\n")
-            mtgfile.write("mtg_nbr: " + str(m) + "\n")
-            mtgfile.write("total_meet: " + str(nbr_meetings) + "\n")
-            mtgfile.write("mtg_date: " + mtg_date + "\n")
-            mtgfile.write("layout: bg-image\n")
-            mtgfile.write("focus:\n")
-            mtgfile.write("- ka:\n")
-            mtgfile.write("  ku:\n")
-            mtgfile.write("---\n")
-            mtgfile.write(meet_template["CS"])
