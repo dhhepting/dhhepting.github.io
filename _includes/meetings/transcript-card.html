@@ -1,0 +1,137 @@
+
+{% include teaching/url.html %}
+{% assign mtn = include.mtg | prepend: '00' | slice: -2, 2  %}
+{% assign tfile = site.data.teaching[joff_id]transcript[mtn] %}
+
+{% if tfile %}
+<div class="card" id="transcript-card">
+  <div class="card-header" role="tab" id="heading_CAT">
+    <h3 class="mb-0">
+      <a class="xtra collapsed" data-toggle="collapse"
+      href="#collapse_CAT"
+      aria-expanded="false" aria-controls="collapse_CAT">
+        Transcript from Meeting
+      </a>
+    </h3>
+  </div>
+
+<div id="collapse_CAT" class="collapse"
+aria-labelledby="heading_CAT">
+  <div class="card card-body">
+    {% for ts in tfile %}
+    <div class="card">
+      <div class="card-header" role="tab" id="heading_{{ ts[0] }}">
+        <h5 class="mb-0">
+          <button class="btn btn-primary mx-2">
+            <span class="fas fa-anchor"></span>
+          </button>
+          <a class="xtra collapse show" data-toggle="collapse"
+          id="{{ mtn }}_{{ ts[0] }}"
+          href="#collapse_{{ ts[0] }}"
+          aria-expanded="true" aria-controls="collapse_{{ ts[0] }}">
+            {{ ts[0] }}
+          </a>
+        </h5>
+      </div>
+      <div id="collapse_{{ ts[0] }}" class="collapse show"
+      aria-labelledby="heading_{{ ts[0] }}">
+      <div class="row">
+        <div class="col-6">
+        {% assign hkk = ts[1].chats %}
+        {% if hkk[0].persid %}
+        <div class="card card-body h-100">
+          <h5 class="mb-0 text-center" >
+            Chat
+          </h5>
+          <ul>
+          {% for hh in hkk %}
+            <li> {{ hh.persid }}: {{ hh.msg | markdownify }} </li>
+          {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        </div>
+        <div class="col-6">
+        {% assign hkk = ts[1].talks %}
+        {% if hkk[0].persid %}
+        <div class="card card-body h-100 bg-light">
+          <h5 class="mb-0 text-center" >
+            Audio
+          </h5>
+          <ul>
+          {% for hh in hkk %}
+            <li> {{ hh.persid }}: {{ hh.msg | markdownify }} </li>
+          {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        </div>
+      </div>
+    </div>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+{% endif %}
+            {% comment %}
+            {%- assign kaku = hh.kaku | split: "/" -%}
+            {%- assign kaaa = kaku[0] -%}
+            {%- assign kuuu = kaku[1] -%}
+            <h5>{{ kaaa }} / {{ kuuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kuuu.size }}</h5>
+
+            {%- assign cur_dat = site.data.teaching.CS2013[kaaa][kuuu] -%}
+            {%- if cur_dat -%}
+            <ul>
+              <li>Topics:
+                <ul>
+                {% for ht in hh.topics %}
+                  {%- for ct in cur_dat.topics -%}
+                    {% if ht == ct.label %}
+                      <li>{{ ct.desc }}</li>
+                    {% endif %}
+                  {%- endfor -%}
+                {% endfor %}
+                </ul>
+              </li>
+              <li>Learning Outcomes:
+                <ul>
+                {% for ho in hh.outcomes %}
+                  {%- for co in cur_dat.outcomes -%}
+                    {% if ho == co.label %}
+                      <li>{{ co.desc }}</li>
+                    {% endif %}
+                  {%- endfor -%}
+                {% endfor %}
+                </ul>
+              </li>
+              <li>Notes:
+                <ul>
+                {% for hn in hh.notes %}
+                  {% capture noteurl %}/teaching/notes/{{ hn }}.html{% endcapture %}
+                  {% for note in site.notes %}
+                    {% if note.url == noteurl %}
+                      <li>
+                        <a href="{{ noteurl | absolute_url }}">
+                          {{ note.title }}
+                        </a>
+                      </li>
+                      {% break %}
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+                </ul>
+              </li>
+            </ul>
+            {%- endif -%}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+{% endcomment %}
