@@ -42,14 +42,14 @@
         </a>
       </li>
       {% endif %}
-{% assign xs_lb = cur_mtg | minus: 2 %}
-{% assign sm_lb = cur_mtg | minus: 4 %}
-{% assign md_lb = cur_mtg | minus: 8 %}
-{% assign lg_lb = cur_mtg | minus: 12 %}
-{% assign xs_ub = xs_lb | plus: 4 %}
-{% assign sm_ub = sm_lb | plus: 8 %}
-{% assign md_ub = md_lb | plus: 16 %}
-{% assign lg_ub = lg_lb | plus: 24 %}
+{% assign xs_lb = cur_mtg | minus: 1 %}
+{% assign sm_lb = cur_mtg | minus: 2 %}
+{% assign md_lb = cur_mtg | minus: 4 %}
+{% assign lg_lb = cur_mtg | minus: 8 %}
+{% assign xs_ub = cur_mtg | plus: 1 %}
+{% assign sm_ub = cur_mtg | plus: 2 %}
+{% assign md_ub = cur_mtg | plus: 4 %}
+{% assign lg_ub = cur_mtg | plus: 8 %}
 {% assign sm_ctr = 0 | plus: 0 %}
 {% assign md_ctr = 0 | plus: 0 %}
 {% assign lg_ctr = 0 | plus: 0 %}
