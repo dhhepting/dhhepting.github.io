@@ -7,26 +7,36 @@
 <div class="card" id="transcript-card">
   <div class="card-header" role="tab" id="heading_CAT">
     <h3 class="mb-0">
-      <a class="xtra collapsed" data-toggle="collapse"
+      <a class="xtra collapse show" data-toggle="collapse"
       href="#collapse_CAT"
-      aria-expanded="false" aria-controls="collapse_CAT">
+      aria-expanded="true" aria-controls="collapse_CAT">
         Transcript from Meeting
       </a>
     </h3>
   </div>
 
-<div id="collapse_CAT" class="collapse"
+<div id="collapse_CAT" class="collapse show"
 aria-labelledby="heading_CAT">
   <div class="card card-body">
     {% for ts in tfile %}
     <div class="card">
       <div class="card-header" role="tab" id="heading_{{ ts[0] }}">
+        <!-- Target -->
+        <div id="tsuid_{{ ts[0] }}" style="position: absolute; left: -1000px; top: -1000px">
+          {{ page.url | absolute_url }}#{{ ts[0] }}
+        </div>
         <h5 class="mb-0">
-          <button class="btn btn-primary mx-2">
-            <span class="fas fa-anchor"></span>
+          <!-- Trigger -->
+          <button class="btn btn-primary"
+          aria-label="Copy timestamp link"
+          data-clipboard-action="copy"
+          data-clipboard-target="#tsuid_{{ ts[0] }}">
+            <span class="fas fa-anchor"
+            title="Copy timestamp link">
+            </span>
           </button>
           <a class="xtra collapse show" data-toggle="collapse"
-          id="{{ mtn }}_{{ ts[0] }}"
+          id="{{ ts[0] }}"
           href="#collapse_{{ ts[0] }}"
           aria-expanded="true" aria-controls="collapse_{{ ts[0] }}">
             {{ ts[0] }}
@@ -36,7 +46,7 @@ aria-labelledby="heading_CAT">
       <div id="collapse_{{ ts[0] }}" class="collapse show"
       aria-labelledby="heading_{{ ts[0] }}">
       <div class="row">
-        <div class="col-6">
+        <div class="col">
         {% assign hkk = ts[1].chats %}
         {% if hkk[0].persid %}
         <div class="card card-body h-100">
@@ -45,13 +55,13 @@ aria-labelledby="heading_CAT">
           </h5>
           <ul>
           {% for hh in hkk %}
-            <li> {{ hh.persid }}: {{ hh.msg | markdownify }} </li>
+            <li> {{ hh.persid }}: {{ hh.msg }} </li>
           {% endfor %}
           </ul>
         </div>
         {% endif %}
         </div>
-        <div class="col-6">
+        <div class="col">
         {% assign hkk = ts[1].talks %}
         {% if hkk[0].persid %}
         <div class="card card-body h-100 bg-light">
@@ -60,7 +70,7 @@ aria-labelledby="heading_CAT">
           </h5>
           <ul>
           {% for hh in hkk %}
-            <li> {{ hh.persid }}: {{ hh.msg | markdownify }} </li>
+            <li> {{ hh.persid }}: {{ hh.msg }} </li>
           {% endfor %}
           </ul>
         </div>
