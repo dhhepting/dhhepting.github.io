@@ -1,6 +1,8 @@
 <h1>Media</h1>
 
-{%- if site.data.teaching.media[include.media_dat] -%}
+{% include teaching/url.html %}
+{%- if site.data.teaching[joff_id][crs_sem]media -%}
+
 {% capture puwl %}{{ page.url | remove: "/media/" }}{% endcapture %}
 <div class="container-fluid">
   <div class="table-responsive">
@@ -16,7 +18,7 @@
         </tr>
       </thead>
       <tbody>
-  {%- assign sortedMedia = site.data.teaching.media[include.media_dat] | sort: 'file' -%}
+  {%- assign sortedMedia = site.data.teaching[joff_id][crs_sem]media | sort: 'file' -%}
   {% assign mtg_nbr = 0 %}
   {%- for media in sortedMedia -%}
     {% assign new_nbr = media.file | slice: 0, 2 } | plus: 0 %}
@@ -29,12 +31,12 @@
     <tr class="d-flex">
       <th class="col-2">
         {% assign mtgnbr_str = mtg_nbr | prepend: '00' | slice: -2, 2 %}
+        <a href="{{ mff | absolute_url }}" class="btn btn-primary" role="button">
+          {{ mtgnbr_str }}
+        </a>
         {% for mf in site.data.teaching.meetings[joff_id] %}
           {% if mf.meeting == mtgnbr_str %}
             {% capture mff %}{{ puwl }}/meetings/{{ mf.file }}{% endcapture %}
-        <a href="{{ mff | absolute_url }}" class="btn btn-primary" role="button">
-    {{ mtgnbr_str }}
-        </a>
             {% break %}
           {% endif %}
         {%- endfor -%}
@@ -42,12 +44,12 @@
       <td class="col-10">
     {% endif %}
     {%- if media.URL contains "jpg" -%}
-  {% comment %}<a href="{{media.URL}}"><img src="{{media.URL}}" alt="{{media.file}}" height="64" class="m-1 img-responsive"/></a>
+  {% comment %}<a href="{{media.URL}}">{%endcomment%}<img src="{{media.URL}}" alt="{{media.file}}" height="64" class="m-1 img-responsive"/>{%comment%}</a>
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#zoomModal">
   <img src="https://picsum.photos/200" alt="X" height=64 />
-  </button>{% endcomment %}
+  </button>
 <a href="#" class="pop" role="button"><img src="{{media.URL}}" alt="{{media.file}}" height="64" class="m-1" /></a>
-
+{% endcomment %}
     {%- endif -%}
     {%- if media.URL contains "m4a" -%}
   <a href="{{media.URL}}"><span class="far fa-file-audio fa-4x align-middle m-1"></span></a>

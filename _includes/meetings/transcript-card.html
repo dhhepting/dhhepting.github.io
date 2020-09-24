@@ -1,7 +1,7 @@
 
 {% include teaching/url.html %}
 {% assign mtn = include.mtg | prepend: '00' | slice: -2, 2  %}
-{% assign tfile = site.data.teaching[joff_id]transcript[mtn] %}
+{% assign tfile = site.data.teaching[joff_id][crs_sem]transcript[mtn] %}
 
 {% if tfile %}
 <div class="card" id="transcript-card">

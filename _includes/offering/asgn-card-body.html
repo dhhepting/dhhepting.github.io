@@ -1,6 +1,6 @@
 {% include teaching/url.html %}
 
-{% assign asgnfile = site.data.teaching[joff_id]assignments %}
+{% assign asgnfile = site.data.teaching[joff_id][crs_sem]assignments %}
 {% if asgnfile %}
   <div class="card" id="i-asgn-card">
     <div class="card-header" role="tab" id="heading_IAS">
