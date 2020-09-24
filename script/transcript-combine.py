@@ -6,25 +6,33 @@ import csv
 import yaml
 import collections
 
-with open(sys.argv[1], 'r') as stream1:
+if (len(sys.argv) != 3):
+  print (sys.argv[0],"must be invoked with crs_id/semester and meeting-number")
+  sys.exit()
+
+mtg_nbr = str(sys.argv[2]).zfill(2)
+
+CHATTY_SRC = '_data/teaching/' + sys.argv[1].replace('+','_') + '/transcript/chat/' + mtg_nbr + '.yml'
+TALKY_SRC = '_data/teaching/' + sys.argv[1].replace('+','_') + '/transcript/talk/' + mtg_nbr + '.yml'
+COMBO_DST = '_data/teaching/' + sys.argv[1].replace('+','_') + '/transcript/' + mtg_nbr + '.yml'
+
+with open(CHATTY_SRC, 'r') as s1:
     try:
-        yd1 = yaml.safe_load(stream1)
+        yd1 = yaml.safe_load(s1)
         yod1 = collections.OrderedDict(sorted(yd1.items()))
     except yaml.YAMLError as exc:
         print(exc)
-print(sys.argv[1])
 fl1 = []
 for k, v in yod1.items():
     if len(fl1) == 0:
         fl1.append(k)
 fl1.append(k)
-with open(sys.argv[2], 'r') as stream2:
+with open(TALKY_SRC, 'r') as s2:
     try:
-        yd2 = yaml.safe_load(stream2)
+        yd2 = yaml.safe_load(s2)
         yod2 = collections.OrderedDict(sorted(yd2.items()))
     except yaml.YAMLError as exc:
         print(exc)
-print(sys.argv[2])
 fl2 = []
 for k, v in yod2.items():
     if len(fl2) == 0:
@@ -53,5 +61,5 @@ while (timestamp <= endtime):
         combo[key]['talks'] = []
         if key in yd2:
             combo[key]['talks'] = yd2[key]['talks']
-with open('test.yml', 'w') as outfile:
+with open(COMBO_DST, 'w') as outfile:
     yaml.dump(combo, outfile, default_flow_style=False)
