@@ -21,7 +21,8 @@ sitedir = (sys.argv[1])
 print("SITE DIR: ", sitedir)
 if (not sitedir.endswith("/")):
   sitedir += "/"
-datadir = sitedir + "_data/teaching/media/"
+#datadir = sitedir + "_data/teaching/media/"
+datadir = sitedir + '_data/teaching/' + sys.argv[2] + '/'
 print("DATA DIR: ", datadir)
 
 # get the offering details: course/semester
@@ -77,7 +78,8 @@ for root, subdirs, files in os.walk(dbmedia_dir):
 
 
 # write sharing link details to csv file in _data directory of site
-dbmedia_csv = datadir + off_id.replace("+","_") + ".csv"
+#dbmedia_csv = datadir + off_id.replace("+","_") + ".csv"
+dbmedia_csv = datadir.replace("+","_") + "media.csv"
 with open(dbmedia_csv,"w") as data_file:
     data_file.write("meet,file,URL\n")
     for w in sorted(filedict, key=filedict.get, reverse=True):

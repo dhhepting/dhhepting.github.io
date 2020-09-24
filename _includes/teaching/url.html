@@ -18,7 +18,7 @@
     {% assign urc_attend = c.attendance %}
   {% endif %}
 {% endfor %}
-{% capture off_id %}{{crs_sbj}}-{{crs_nbr}}-{{crs_sem}}{% endcapture %}
+{% capture off_id %}{{crs_sbj}}-{{crs_nbr}}{% endcapture %}
 {% capture joff_id %}{{off_id | replace: "+", "_"}}{% endcapture %}
 
 {% capture today%}{{ "now" | date: "%Y-%m-%d" }}{% endcapture %}
@@ -35,7 +35,7 @@
   {% assign sss = 30 %}
 {% endif %}
 {% capture now_sem %}{{ tdate[0] }}{{ sss }}{% endcapture %}
-{% if now_sem == crs_sem or crs_sem == "201930"%}
+{% if now_sem == crs_sem %}
   {% assign off_now = 1 %}
 {% else %}
   {% assign off_now = 0 %}
