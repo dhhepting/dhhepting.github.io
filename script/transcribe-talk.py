@@ -11,22 +11,22 @@ from pathlib import Path
 # - real time HH:MM when recording starts
 # - crs_id/semester of offering
 if (len(sys.argv) != 4):
-  print (sys.argv[0],"must be invoked with meeting-number, start-time (HH:MM), and crs_id/semester")
+  print (sys.argv[0],"must be invoked with crs_id/semester, meeting-number, astart-time (HH:MM), and ")
   sys.exit()
 
-mtg_nbr = str(sys.argv[1]).zfill(2)
+mtg_nbr = str(sys.argv[2]).zfill(2)
 
-# 5 11:10 CS-428+828/202030
+# CS-428+828/202030 5 11:10
 # teaching/CS-428+828/202030/0_nonweb/zoom/talk/05*.srt
 # _data/teaching/CS-428_828/202030/transcript/talk/05.yml
 
-TALK_SRC = 'teaching/' + sys.argv[3] + '/0_nonweb/zoom/talk/' + mtg_nbr + '_otter.ai.srt'
+TALK_SRC = 'teaching/' + sys.argv[1] + '/0_nonweb/zoom/talk/' + mtg_nbr + '_otter.ai.srt'
 print(TALK_SRC)
-TALK_DST = '_data/teaching/' + sys.argv[3].replace('+','_') + '/transcript/talk/' + mtg_nbr + '.yml'
+TALK_DST = '_data/teaching/' + sys.argv[1].replace('+','_') + '/transcript/talk/' + mtg_nbr + '.yml'
 print(TALK_DST)
-starttime = sys.argv[2].split(':')
+starttime = sys.argv[3].split(':')
 std = timedelta(hours=int(starttime[0]),minutes=int(starttime[1]))
-atfilepath = sys.argv[2]
+#atfilepath = sys.argv[2]
 
 with open(TALK_SRC,'r') as atf, open(TALK_DST, 'w') as ydf:
     curr_hm_stamp = ''
@@ -51,7 +51,7 @@ with open(TALK_SRC,'r') as atf, open(TALK_DST, 'w') as ydf:
                     ydf.write('  talks:\n')
                     curr_hm_stamp = ts0.strftime('%Hh%M')
             elif ':' in line:
-                print ('case: :')
+                #print ('case: :')
                 spoken = line.split(':')
                 #print(spoken)
                 if new_block == 1 or curr_speaker != spoken[0]:
