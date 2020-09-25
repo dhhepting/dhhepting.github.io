@@ -24,23 +24,30 @@ seqnbr = 1
 
 with open(CHAT_SRC,'r') as ctf, open(CHAT_DST, 'w') as ydf:
     curr_hm_stamp = ''
-    for line in ctf:
+    for ll in ctf:
+        llr = ll.replace('\r','')
+        line = llr.replace('\n','')
         colon_idx = 0
         if '(Privately)' in line:
             continue
         else:
+            print(line)
             npline = line.split(' ')
             try:
                 fp_dt = datetime.strptime(npline[0],'%H:%M:%S\t')
                 hm_stamp = fp_dt.strftime('%Hh%M')
+                #print(hm_stamp)
             except:
-                sys.exit()
+                print("FAILING",npline[0])
+                print(npline)
+                #sys.exit()
             sname = ''
             for i in range(2,len(npline)):
                 if (npline[i] != ':'):
                     sname += (' ' + npline[i])
                 else:
                     colon_idx = i
+                    #print(colon_idx)
                     break
             snamekey = sname.strip()
 
@@ -58,4 +65,6 @@ with open(CHAT_SRC,'r') as ctf, open(CHAT_DST, 'w') as ydf:
             #print (fp_dt.strftime('%H:%M'),person_id,(' '.join(npline[colon_idx:])).strip(),'<br />')
             ydf.write ('  - persid: ' + person_id + '\n')
             ydf.write ('    msg: >-\n')
+            #print((' '.join(npline[colon_idx+1:])).strip())
+            #print(npline)
             ydf.write ('     ' + (' '.join(npline[colon_idx+1:])).strip() + '\n')
