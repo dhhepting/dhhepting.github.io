@@ -8,34 +8,46 @@ from pathlib import Path
 
 # arguments to this script:
 # - the absolute path to the website's local root directory
-if (len(sys.argv) != 2):
-  print (sys.argv[0],"must be invoked with \"<path-to-chat-file>\"")
+if (len(sys.argv) != 3):
+  print (sys.argv[0],"must be invoked with \"<crs_id>/<crs_sem>\" and meeting number")
   sys.exit()
-
+mtg_nbr = str(sys.argv[2]).zfill(2)
 # get site directory, make sure it ends with "/"
-chatfilepath = sys.argv[1]
+CHAT_SRC = 'teaching/' + sys.argv[1] + '/0_nonweb/zoom/chat/' + mtg_nbr + '_saved_chat.txt'
+print(CHAT_SRC)
+CHAT_DST = '_data/teaching/' + sys.argv[1].replace('+','_') + '/transcript/chat/' + mtg_nbr + '.yml'
+print(CHAT_DST)
+
 og = []
 ng = {}
 seqnbr = 1
-with open(chatfilepath,'r') as cf:
+
+with open(CHAT_SRC,'r') as ctf, open(CHAT_DST, 'w') as ydf:
     curr_hm_stamp = ''
-    for line in cf:
+    for ll in ctf:
+        llr = ll.replace('\r','')
+        line = llr.replace('\n','')
         colon_idx = 0
         if '(Privately)' in line:
             continue
         else:
+            print(line)
             npline = line.split(' ')
             try:
                 fp_dt = datetime.strptime(npline[0],'%H:%M:%S\t')
                 hm_stamp = fp_dt.strftime('%Hh%M')
+                #print(hm_stamp)
             except:
-                sys.exit()
+                print("FAILING",npline[0])
+                print(npline)
+                #sys.exit()
             sname = ''
             for i in range(2,len(npline)):
                 if (npline[i] != ':'):
                     sname += (' ' + npline[i])
                 else:
                     colon_idx = i
+                    #print(colon_idx)
                     break
             snamekey = sname.strip()
 
@@ -46,15 +58,13 @@ with open(chatfilepath,'r') as cf:
                 person_id = 'DHH'
             else:
                 person_id = 'S'+str(ng[snamekey]).zfill(2)
-                # "11h09" :
-                #   chats:
-                #   - persid: DHH
-                #     msg: " Greetings."
             if hm_stamp != curr_hm_stamp:
-                print(hm_stamp + ': ')
-                print('  chats:')
+                ydf.write(hm_stamp + ':\n')
+                ydf.write('  chats:\n')
                 curr_hm_stamp = hm_stamp
             #print (fp_dt.strftime('%H:%M'),person_id,(' '.join(npline[colon_idx:])).strip(),'<br />')
-            print ('  - persid:',person_id)
-            print ('    msg: >-')
-            print ('     ',(' '.join(npline[colon_idx+1:])).strip())
+            ydf.write ('  - persid: ' + person_id + '\n')
+            ydf.write ('    msg: >-\n')
+            #print((' '.join(npline[colon_idx+1:])).strip())
+            #print(npline)
+            ydf.write ('     ' + (' '.join(npline[colon_idx+1:])).strip() + '\n')
