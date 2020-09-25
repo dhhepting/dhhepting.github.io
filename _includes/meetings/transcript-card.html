@@ -77,6 +77,17 @@ aria-labelledby="heading_CAT">
         {% endif %}
         </div>
       </div>
+      {% assign hkk = ts[1].tags %}
+      {% if hkk[0].todo %}
+      <div class="card card-body mb-2 bg-warning">
+        <h5 class="mb-0 text-center" >
+          {{ hkk[0].todo | upcase }}
+        </h5>
+      {% for hh in hkk %}
+        <p class="text-center"> {{ hh.desc }} </p>
+      {% endfor %}
+      </div>
+      {% endif %}
     </div>
     </div>
   {% endfor %}
