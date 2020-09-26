@@ -1,0 +1,18 @@
+{% comment %}
+//
+// Find the UR Courses id for the offering this semester,
+// if it exists, include it in HTML output
+//
+{% endcomment %}
+{% assign urc = "" %}
+{% assign psn = page.sem | plus: 0 %}
+{% for o in site.data.teaching.offerings %}
+  {% assign osn = o.semester | plus: 0 %}
+  {% if osn == psn %}
+    {% for c in site.data.teaching.courses %}
+      {% if o.id == c.id %}
+        {% assign urc = c.urc %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}

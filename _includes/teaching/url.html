@@ -1,42 +1,43 @@
-{% capture purl %}{{ page.url | remove: ".html" }}{% endcapture %}
-{% assign url_parts = purl | split: '/' %}
-{% for u in (0..url_parts.size) %}
-  {% if url_parts[u] == "teaching" %}
-    {% assign crs_idx = u | plus: 1 %}
-    {% assign sem_idx = u | plus: 2 %}
-    {% break %}
-  {% endif %}
-{% endfor %}
-{% assign crs_parts = url_parts[crs_idx] | split: '-' %}
-{% assign crs_sbj = crs_parts[0] %}
-{% assign crs_nbr = crs_parts[1] %}
-{% assign crs_sem = url_parts[sem_idx] %}
-{% capture crs_id %}{{crs_sbj}}-{{crs_nbr}}{% endcapture %}
-{% for c in site.data.teaching.courses %}
-  {% if crs_id == c.id %}
-    {% assign urc_id = c.urcourses %}
-    {% assign urc_attend = c.attendance %}
-  {% endif %}
-{% endfor %}
-{% capture off_id %}{{crs_sbj}}-{{crs_nbr}}{% endcapture %}
-{% capture joff_id %}{{off_id | replace: "+", "_"}}{% endcapture %}
 
-{% capture today%}{{ "now" | date: "%Y-%m-%d" }}{% endcapture %}
-{% assign tdate = today | split: '-' %}
-{% assign sss = 0 %}
-{% assign month = tdate[1] | plus: 0 %}
-{% if month >= 1 and month <= 4 %}
-  {% assign sss = 10 %}
-{% endif %}
-{% if month >= 5 and month <= 8 %}
-  {% assign sss = 20 %}
-{% endif %}
-{% if month >= 9 and month <= 12 %}
-  {% assign sss = 30 %}
-{% endif %}
-{% capture now_sem %}{{ tdate[0] }}{{ sss }}{% endcapture %}
-{% if now_sem == crs_sem %}
-  {% assign off_now = 1 %}
-{% else %}
-  {% assign off_now = 0 %}
-{% endif %}
+  {% capture purl %}{{ page.url | remove: ".html" }}{% endcapture %}
+  {% assign url_parts = purl | split: '/' %}
+  {% for u in (0..url_parts.size) %}
+    {% if url_parts[u] == "teaching" %}
+      {% assign crs_idx = u | plus: 1 %}
+      {% assign sem_idx = u | plus: 2 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% assign crs_parts = url_parts[crs_idx] | split: '-' %}
+  {% assign crs_sbj = crs_parts[0] %}
+  {% assign crs_nbr = crs_parts[1] %}
+  {% assign crs_sem = url_parts[sem_idx] %}
+  {% capture crs_id %}{{crs_sbj}}-{{crs_nbr}}{% endcapture %}
+  {% capture jcrs_id %}{{crs_id | replace: "+", "_"}}{% endcapture %}
+  {% for c in site.data.teaching.courses %}
+    {% if crs_id == c.id %}
+      {% assign crs_urc = c.urc %}
+    {% endif %}
+  {% endfor %}
+  {% capture off_id %}{{crs_id}}-{{crs_sem}}{% endcapture %}
+  {% capture joff_id %}{{off_id | replace: "+", "_"}}{% endcapture %}
+
+  {% capture today%}{{ "now" | date: "%Y-%m-%d" }}{% endcapture %}
+  {% assign tdate = today | split: '-' %}
+  {% assign sss = 0 %}
+  {% assign month = tdate[1] | plus: 0 %}
+  {% if month >= 1 and month <= 4 %}
+    {% assign sss = 10 %}
+  {% endif %}
+  {% if month >= 5 and month <= 8 %}
+    {% assign sss = 20 %}
+  {% endif %}
+  {% if month >= 9 and month <= 12 %}
+    {% assign sss = 30 %}
+  {% endif %}
+  {% capture now_sem %}{{ tdate[0] }}{{ sss }}{% endcapture %}
+  {% if now_sem == crs_sem %}
+    {% assign off_now = 1 %}
+  {% else %}
+    {% assign off_now = 0 %}
+  {% endif %}
