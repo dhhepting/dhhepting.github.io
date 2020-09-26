@@ -1,0 +1,8 @@
+{% assign test_file = site.static_files | where: "path", include.test %}
+{% if test_file %}
+  <li class="list-group-item">
+    <a href="{{ include.test | relative_url }}">
+      {{ include.label }}
+    </a>
+  </li>
+{% endif %}
