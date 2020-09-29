@@ -24,22 +24,27 @@ seqnbr = 1
 
 with open(CHAT_SRC,'r') as ctf, open(CHAT_DST, 'w') as ydf:
     curr_hm_stamp = ''
-    for ll in ctf:
-        llr = ll.replace('\r','')
-        line = llr.replace('\n','')
+    hm_stamp = ''
+    failed = 0
+    for line in ctf:
+        #llr = ll.replace('\r','')
+        #line = llr.replace('\n','')
         colon_idx = 0
         if '(Privately)' in line:
             continue
         else:
-            print(line)
+            # if (failed):
+            #     print(line)
+            #     failed = 0
             npline = line.split(' ')
             try:
                 fp_dt = datetime.strptime(npline[0],'%H:%M:%S\t')
                 hm_stamp = fp_dt.strftime('%Hh%M')
                 #print(hm_stamp)
             except:
-                print("FAILING",npline[0])
-                print(npline)
+                print("FAILING",fp_dt,hm_stamp,npline,line)
+                #print(npline)
+                #failed = 1
                 #sys.exit()
             sname = ''
             for i in range(2,len(npline)):

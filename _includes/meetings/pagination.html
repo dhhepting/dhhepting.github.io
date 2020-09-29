@@ -13,8 +13,8 @@
 {% endif %}
 {% assign prv_lnk = "" %}
 {% assign nxt_lnk = "" %}
-{%- if site.data.teaching[joff_id][crs_sem]plan -%}
-  {% for m in site.data.teaching[joff_id][crs_sem]plan %}
+{%- if site.data.teaching[jcrs_id][crs_sem]plan -%}
+  {% for m in site.data.teaching[jcrs_id][crs_sem]plan %}
     {% if m[1].date %}
       {% assign mmtg = m[0] | prepend: '00' | slice: -2, 2 %}
       {% capture mfile %}{{ mmtg }}_{{ m[1].date }}.html{% endcapture %}
@@ -61,7 +61,7 @@
     {% assign mtn = mms[0] | plus: 0 %}
     {% assign pcl = "" %}
     {% if mtn != cur_mtg or include.path %}
-      {% if (mtn < lg_lb or mtn > lg_ub) %}
+      {% if ((mtn < lg_lb) or (mtn > lg_ub)) %}
         {% assign pcl = "page-item d-none d-xl-inline" %}
       {% elsif (mtn >= lg_lb and mtn < md_lb) or (mtn > md_ub and mtn <= lg_ub) %}
         {% assign pcl = "page-item d-none d-xl-inline d-lg-inline" %}
