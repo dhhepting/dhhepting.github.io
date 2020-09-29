@@ -5,11 +5,11 @@
 <div class="card">
   <div class="card card-header">
     <h1>
-      {{ crs_sbj }} {{ crs_nbr }} in {{ crs_sem }}
+      {{ crs_id }} in {{ crs_sem }}
     </h1>
   </div>
   <div class="m-2">
-
+    {% include offering/mtgs-card.html %}
     {% include offering/info-card.html %}
     {% include offering/asgn-card.html %}
     {% include offering/knowunits-card.html %}
@@ -22,7 +22,7 @@
 
 
   {% comment %}
-  {% include offering/mtgs-card.html %}
+
     {% include offering/schedule-card.html %}
     {% include offering/info-card.html %}
     {% include offering/rss-card.html %}
