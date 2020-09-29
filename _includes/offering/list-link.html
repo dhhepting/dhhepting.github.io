@@ -1,0 +1,10 @@
+{% assign test_url = site.pages | where: "url", include.test %}
+{% assign test_path = site.static_files | where: "path", include.test %}
+{% comment %}{{ include.test }} --> {{ test_url.size }} : {{ test_path.size}}{% endcomment %}
+{% if test_url.size > 0 or test_path.size > 0 %}
+  <li class="list-group-item">
+    <a href="{{ include.test | relative_url }}">
+      {{ include.label }}
+    </a>
+  </li>
+{% endif %}

@@ -1,0 +1,8 @@
+{% assign sched_file = site.static_files | where: "path", sched_url %}
+{% if sched_file %}
+  <li class="list-group-item">
+    <a href="{{ sched_url | relative_url }}">
+      Office Hours
+    </a>
+  </li>
+{% endif %}
