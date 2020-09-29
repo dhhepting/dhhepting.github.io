@@ -26,9 +26,9 @@
       {%- assign tddarr = todaydate | split: "-" -%}
       {%- assign tddmmm = tddarr[2] | date: "%m" | plus: 0 | times: 100 -%}
       {%- assign tddnbr = tddmmm | plus: tddarr[1] -%}
-      {%- if site.data.teaching[joff_id]plan -%}
+      {%- if site.data.teaching[jcrs_id][crs_sem]plan -%}
         {% assign currmtg = 1 | plus: 0 %}
-        {% for m in site.data.teaching[joff_id]plan %}
+        {% for m in site.data.teaching[jcrs_id][crs_sem]plan %}
           {% if m[1].date %}
             {%- assign mtdarr = m[1].date | split: "-" -%}
             {%- assign mtdmmm = mtdarr[2] | date: "%m" | plus: 0 | times: 100 -%}
