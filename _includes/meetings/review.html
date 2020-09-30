@@ -4,18 +4,18 @@
 
 {% if planfile %}
 <div class="card" id="todaysplan-card">
-  <div class="card-header" role="tab" id="heading_TOP">
+  <div class="card-header" role="tab" id="heading_REV">
     <h3 class="mb-0">
       <a class="xtra collapse show" data-toggle="collapse"
-      href="#collapse_TOP"
-      aria-expanded="true" aria-controls="collapse_TOP">
-        Plan for Today
+      href="#collapse_REV"
+      aria-expanded="true" aria-controls="collapse_REV">
+        Review of Last Meeting
       </a>
     </h3>
   </div>
 
-  <div id="collapse_TOP" class="collapse show"
-  aria-labelledby="heading_TOP">
+  <div id="collapse_REV" class="collapse show"
+  aria-labelledby="heading_REV">
     <div class="card card-body">
     {% for mtgs in planfile %}
         {% if mtgs[0] == include.mtg %}
