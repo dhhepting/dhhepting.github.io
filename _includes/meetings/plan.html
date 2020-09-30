@@ -1,5 +1,5 @@
 {% include teaching/url.html %}
-{% assign planfile = site.data.teaching[joff_id]plan %}
+{% assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
 {% assign mtn = include.mtg | prepend: '00' | slice: -2, 2  %}
 
 {% if planfile %}

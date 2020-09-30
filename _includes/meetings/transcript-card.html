@@ -27,14 +27,22 @@ aria-labelledby="heading_CAT">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary"
-          aria-label="Copy timestamp link"
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          aria-label="Copy anchor"
           data-clipboard-action="copy"
           data-clipboard-target="#tsuid_{{ ts[0] }}">
             <span class="fas fa-anchor"
-            title="Copy timestamp link">
+            title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse"
           id="{{ ts[0] }}"
           href="#collapse_{{ ts[0] }}"
@@ -70,7 +78,7 @@ aria-labelledby="heading_CAT">
           </h5>
           <ul>
           {% for hh in hkk %}
-            <li> {{ hh.persid }}: {{ hh.msg }} </li>
+            <p> {{ hh.persid }}: {{ hh.msg }} </p>
           {% endfor %}
           </ul>
         </div>
