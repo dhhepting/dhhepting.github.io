@@ -4,23 +4,34 @@
 {% assign media_ctr = 0 %}
 {% assign mtgstr = include.mtg | prepend: '00' | slice: -2, 2 %}
 
-{% if site.data.teaching.media[include.mtg_media] %}
-  {%- for m in site.data.teaching.media[include.mtg_media] -%}
+{% if site.data.teaching[jcrs_id][crs_sem]media %}
+  {%- for m in site.data.teaching[jcrs_id][crs_sem]media -%}
     {%- if m.meet == mtgstr -%}
       {% assign has_media = "true" %}
       {% break %}
     {% endif %}
   {% endfor %}
+  {%- endif -%}
 
   {% if has_media == "true" %}
+  <div class="card" id="todaymedia-card">
+    <div class="card-header" role="tab" id="heading_MED">
+      <h3 class="mb-0">
+        <a class="xtra collapse show" data-toggle="collapse"
+        href="#collapse_MED"
+        aria-expanded="true" aria-controls="collapse_MED">
+          Media from Meeting
+        </a>
+      </h3>
+    </div>
 
-<div class="card">
-  <h3 class="card-header text-center">{{include.mtg_title}}</h3>
-  <div class="card-body bg-dark">
-    {%- for m in site.data.teaching.media[include.mtg_media] -%}
+    <div id="collapse_MED" class="collapse show"
+    aria-labelledby="heading_MED">
+      <div class="card card-body bg-dark">
+    {%- for m in site.data.teaching[jcrs_id][crs_sem]media -%}
       {%- if m.meet == mtgstr -%}
         {%- if m.file contains "jpg" -%}
-          {%- capture jpglist-%}{{jpglist}}|{{m.file}}#{{m.URL}}{%- endcapture-%}
+          {%- capture jpglist -%}{{jpglist}}|{{m.file}}#{{m.URL}}{%- endcapture -%}
         {%- endif -%}
         {%- if m.file contains "m4a" -%}
           {% assign audio_url = m.URL %}
@@ -28,9 +39,11 @@
       {%- endif -%}
     {%- endfor -%}
     {%- assign sortedjpgs = jpglist | split: '|' | sort -%}
-    {%- assign numjpgs = sortedjpgs.size | minus:1 -%}
+    {%- assign numjpgs = sortedjpgs.size | minus: 1 -%}
     {%- capture carid -%}mtg_jpgs_{{ mtgstr }}{% endcapture %}
-    <div id="{{carid}}" class="carousel slide" data-ride="carousel" data-interval="false">
+    {%- if numjpgs > 0 -%}
+    <div id="{{ carid }}" class="m-2 carousel slide"
+    data-ride="carousel" data-interval="false">
       <ol class="carousel-indicators bg-dark mb-0">
     {%- for i in (1..numjpgs) -%}
       {%- if i == 1 %}
@@ -63,13 +76,15 @@
       </a>
     </div>
   </div>
+  {%- endif -%}
   {% if audio_url != "" %}
-  <div class="card-footer text-center">
+  <div class="m-2 w-100">
     <audio controls="true" src="{{ audio_url }}" type="audio/mp4">
       Your browser does not support the <code>audio</code> element.
     </audio>
   </div>
   {% endif %}
 </div>
+</div>
+</div>
   {%- endif -%}
-{%- endif -%}
