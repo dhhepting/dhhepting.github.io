@@ -27,14 +27,22 @@ aria-labelledby="heading_CAT">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary"
-          aria-label="Copy timestamp link"
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          aria-label="Copy anchor"
           data-clipboard-action="copy"
           data-clipboard-target="#tsuid_{{ ts[0] }}">
             <span class="fas fa-anchor"
-            title="Copy timestamp link">
+            title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse"
           id="{{ ts[0] }}"
           href="#collapse_{{ ts[0] }}"
@@ -49,8 +57,8 @@ aria-labelledby="heading_CAT">
         <div class="col">
         {% assign hkk = ts[1].chats %}
         {% if hkk[0].persid %}
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center" >
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center" >
             Chat
           </h5>
           <ul>
@@ -58,26 +66,34 @@ aria-labelledby="heading_CAT">
             <li> {{ hh.persid }}: {{ hh.msg }} </li>
           {% endfor %}
           </ul>
-        </div>
+      <!--   </div> -->
         {% endif %}
         </div>
         <div class="col">
         {% assign hkk = ts[1].talks %}
         {% if hkk[0].persid %}
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center" >
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center" >
             Audio
           </h5>
-          <ul>
           {% for hh in hkk %}
-            <li> {{ hh.persid }}: {{ hh.msg }} </li>
+            {% if hh.persid == "Daryl Hepting" %}
+            <p>{{ hh.msg }}</p>
+            {% else %}
+            <p> {{ hh.persid }}: {{ hh.msg }} </p>
+            {% endif %}
           {% endfor %}
-          </ul>
-        </div>
+        <!-- </div> -->
         {% endif %}
         </div>
       </div>
       {% assign hkk = ts[1].tags %}
+      {% if hkk[0].img %}
+        {% assign iname = hkk[0].img %}
+        {% assign idesc = hkk[0].desc %}
+        {% include helper/figure.html
+          name=iname desc=idesc %}
+      {% endif %}
       {% if hkk[0].todo %}
       <div class="card card-body mb-2 bg-warning">
         <h5 class="mb-0 text-center" >
@@ -93,66 +109,5 @@ aria-labelledby="heading_CAT">
   {% endfor %}
   </div>
 </div>
-{% endif %}
-            {% comment %}
-            {%- assign kaku = hh.kaku | split: "/" -%}
-            {%- assign kaaa = kaku[0] -%}
-            {%- assign kuuu = kaku[1] -%}
-            <h5>{{ kaaa }} / {{ kuuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kuuu.size }}</h5>
-
-            {%- assign cur_dat = site.data.teaching.CS2013[kaaa][kuuu] -%}
-            {%- if cur_dat -%}
-            <ul>
-              <li>Topics:
-                <ul>
-                {% for ht in hh.topics %}
-                  {%- for ct in cur_dat.topics -%}
-                    {% if ht == ct.label %}
-                      <li>{{ ct.desc }}</li>
-                    {% endif %}
-                  {%- endfor -%}
-                {% endfor %}
-                </ul>
-              </li>
-              <li>Learning Outcomes:
-                <ul>
-                {% for ho in hh.outcomes %}
-                  {%- for co in cur_dat.outcomes -%}
-                    {% if ho == co.label %}
-                      <li>{{ co.desc }}</li>
-                    {% endif %}
-                  {%- endfor -%}
-                {% endfor %}
-                </ul>
-              </li>
-              <li>Notes:
-                <ul>
-                {% for hn in hh.notes %}
-                  {% capture noteurl %}/teaching/notes/{{ hn }}.html{% endcapture %}
-                  {% for note in site.notes %}
-                    {% if note.url == noteurl %}
-                      <li>
-                        <a href="{{ noteurl | absolute_url }}">
-                          {{ note.title }}
-                        </a>
-                      </li>
-                      {% break %}
-                    {% endif %}
-                  {% endfor %}
-                {% endfor %}
-                </ul>
-              </li>
-            </ul>
-            {%- endif -%}
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-    {% endif %}
-
-
-    {% endfor %}
-  </div>
 </div>
 {% endif %}
-{% endcomment %}

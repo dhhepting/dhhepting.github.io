@@ -1,0 +1,12 @@
+{%- for m in site.data.teaching[jcrs_id][crs_sem]media -%}
+  {%- if m.file == include.name -%}
+    <div class="text-center">
+      <figure class="figure">
+        <img src="{{ m.URL }}" class="figure-img img-fluid"
+        alt="{{ include.desc }}"/>
+        <figcaption class="figure-caption">{{ include.desc }}</figcaption>
+      </figure>
+    </div>
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}

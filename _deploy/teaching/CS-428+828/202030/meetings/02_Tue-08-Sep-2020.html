@@ -779,9 +779,60 @@ style="background-color: rgba(32, 32, 32, 0.75)">
 
 
 
+<div class="card" id="todaysplan-card">
+  <div class="card-header" role="tab" id="heading_TOP">
+    <h3 class="mb-0">
+      <a class="xtra collapse show" data-toggle="collapse" href="#collapse_TOP" aria-expanded="true" aria-controls="collapse_TOP">
+        Plan for Today
+      </a>
+    </h3>
+  </div>
+
+  <div id="collapse_TOP" class="collapse show" aria-labelledby="heading_TOP">
+    <div class="card card-body">
+    
+        
+    
+        
+    
+        
+          
+          <h5>HCI / Foundations</h5><ul>
+              <li>Topics:
+                <ul>
+                  
+                </ul>
+              </li>
+              <li>Learning Outcomes:
+                <ul>
+                  
+                </ul>
+              </li>
+              <li>Notes:
+                <ul>
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                  
+                </ul>
+              </li>
+            </ul>
+        
+    </div>
+  </div>
+</div>
 
 
-        <h3>Administration</h3>
+
+        
   <ul>
     <!--
     <li>
@@ -791,12 +842,15 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         Attendance
       </a>
     </li>
-    -->
+
     <li>
-      <a target="_blank" href="https://urcourses.uregina.ca/calendar/view.php?view=month&amp;course=2084">
-        Calendar in UR Courses
+        -->
+      <a target="_blank" href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=2084">
+        <h3>
+          Upcoming Events
+        </h3>
       </a>
-    </li>
+  <!--  </li>  -->
 
         </ul>
 
@@ -867,6 +921,49 @@ style="background-color: rgba(32, 32, 32, 0.75)">
 
 
 
+  
+  
+      
+  <div class="card" id="todaymedia-card">
+    <div class="card-header" role="tab" id="heading_MED">
+      <h3 class="mb-0">
+        <a class="xtra collapse show" data-toggle="collapse" href="#collapse_MED" aria-expanded="true" aria-controls="collapse_MED">
+          Media from Meeting
+        </a>
+      </h3>
+    </div>
+
+    <div id="collapse_MED" class="collapse show" aria-labelledby="heading_MED">
+      <div class="card card-body bg-dark"><div id="mtg_jpgs_02" class="m-2 carousel slide" data-ride="carousel" data-interval="false">
+      <ol class="carousel-indicators bg-dark mb-0">
+        <li data-target="#mtg_jpgs_02" data-slide-to="0" class="active"></li>
+      </ol>
+      <div class="carousel-inner bg-dark">
+        <div class="carousel-item active">
+      
+          <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/ixv8auynntjvfwn/02%20-%201.jpg?dl=0" alt="02 - 1.jpg" />
+        </div>
+    
+      </div>
+      <a class="carousel-control-prev bg-dark" href="#mtg_jpgs_02" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next bg-dark" href="#mtg_jpgs_02" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-2 w-100">
+    <audio controls="true" src="https://dl.dropboxusercontent.com/s/wu6vone6klythc1/02.m4a?dl=0" type="audio/mp4">
+      Your browser does not support the <code>audio</code> element.
+    </audio>
+  </div>
+  
+</div>
+</div>
+</div>
 
         
 
@@ -923,10 +1020,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h27">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h27">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h27" href="#collapse_11h27" aria-expanded="true" aria-controls="collapse_11h27">
             11h27
           </a>
@@ -941,19 +1046,20 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: So can everyone hear me all right? Come on yeses. Okay. How's everyone doing today? </li>
+            
+            <p> DHH: So can everyone hear me all right? Come on yeses. Okay. How's everyone doing today? </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -967,10 +1073,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h29">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h29">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h29" href="#collapse_11h29" aria-expanded="true" aria-controls="collapse_11h29">
             11h29
           </a>
@@ -985,19 +1099,20 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: So just as we're getting people into the meeting, Maybe you didn't hear the notice about this meeting being recorded. In my own attempt to record last day's meeting, my recording cut out partway through and I've been experimenting with zoom to have it produce a transcript, so that a transcript is available of each meeting. </li>
+            
+            <p> DHH: So just as we're getting people into the meeting, Maybe you didn't hear the notice about this meeting being recorded. In my own attempt to record last day's meeting, my recording cut out partway through and I've been experimenting with zoom to have it produce a transcript, so that a transcript is available of each meeting. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1011,10 +1126,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h33">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h33">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h33" href="#collapse_11h33" aria-expanded="true" aria-controls="collapse_11h33">
             11h33
           </a>
@@ -1025,8 +1148,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -1040,7 +1163,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S04:  No I can’t as well  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
@@ -1048,6 +1171,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1061,10 +1185,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h34">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h34">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h34" href="#collapse_11h34" aria-expanded="true" aria-controls="collapse_11h34">
             11h34
           </a>
@@ -1075,8 +1207,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -1092,25 +1224,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S03:  Yes I can hear now  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: To begin with, you can see beside my name in the list of participants is a little cloud with a dot on it that says it's recording. So the idea is that we can have an audio recording and a transcript of it for each meeting. </li>
+            
+            <p> DHH: To begin with, you can see beside my name in the list of participants is a little cloud with a dot on it that says it's recording. So the idea is that we can have an audio recording and a transcript of it for each meeting. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1124,10 +1257,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h35">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h35">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h35" href="#collapse_11h35" aria-expanded="true" aria-controls="collapse_11h35">
             11h35
           </a>
@@ -1142,19 +1283,20 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: Alright, so there are lots of things going on here. What I want to do first of all is to start sharing my screen and we can look at the (my) website for this course. </li>
+            
+            <p> DHH: Alright, so there are lots of things going on here. What I want to do first of all is to start sharing my screen and we can look at the (my) website for this course. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1168,10 +1310,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h36">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h36">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h36" href="#collapse_11h36" aria-expanded="true" aria-controls="collapse_11h36">
             11h36
           </a>
@@ -1182,8 +1332,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -1191,25 +1341,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> DHH:  As we get people into the meeting, a reminder that the meeting is being recorded so that we can have audio and a transcript of the meeting. I will not keep your names in the transcript of the meeting.  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: Alright, so here's the updated version that should be published on the public website soon. This screen is from the chat recorded during Thursday's meeting. I'm experimenting with the display so you can let me know what you think. So DHH, that's me. </li>
+            
+            <p> DHH: Alright, so here's the updated version that should be published on the public website soon. This screen is from the chat recorded during Thursday's meeting. I'm experimenting with the display so you can let me know what you think. So DHH, that's me. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1223,10 +1374,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h37">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h37">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h37" href="#collapse_11h37" aria-expanded="true" aria-controls="collapse_11h37">
             11h37
           </a>
@@ -1237,8 +1396,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -1246,25 +1405,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S05:  There was a prompt when entering into the meeting that it was begin recorded.  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: In case you're wondering, the DHH is Daryl H. Hepting. You can call me Daryl or Dr. Hepting [or, as Zoom transcribed it, Dr. Happening], but I'd like you to pick one of those two. So this is the way that I presented the chat and anything that was sent to me privately has been excluded. The identifiers are consistent throughout the chat session. For example, any contribution from the student who typed 'hello!' at 11h29 during Thursday's meeting will be labelled as S03. </li>
+            
+            <p> DHH: In case you're wondering, the DHH is Daryl H. Hepting. You can call me Daryl or Dr. Hepting [or, as Zoom transcribed it, Dr. Happening], but I'd like you to pick one of those two. So this is the way that I presented the chat and anything that was sent to me privately has been excluded. The identifiers are consistent throughout the chat session. For example, any contribution from the student who typed 'hello!' at 11h29 during Thursday's meeting will be labelled as S03. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1278,10 +1438,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h38">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h38">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h38" href="#collapse_11h38" aria-expanded="true" aria-controls="collapse_11h38">
             11h38
           </a>
@@ -1296,19 +1464,20 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: We can keep track of people, but not by names. This is a good thing or a bad thing in different situations. It is an example of a tradeoff. </li>
+            
+            <p> DHH: We can keep track of people, but not by names. This is a good thing or a bad thing in different situations. It is an example of a tradeoff. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1322,10 +1491,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h40">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h40">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h40" href="#collapse_11h40" aria-expanded="true" aria-controls="collapse_11h40">
             11h40
           </a>
@@ -1336,8 +1513,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -1345,25 +1522,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> DHH:  Any thoughts about the display of the chat transcript?  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: Student, who points out that everyone should have gotten a note that the meeting is recorded, I just wanted to let you know why I'm recording it. We are not going to share (I'm not going to share the video with you) but I'll make the audio recording available and accessible. </li>
+            
+            <p> DHH: Student, who points out that everyone should have gotten a note that the meeting is recorded, I just wanted to let you know why I'm recording it. We are not going to share (I'm not going to share the video with you) but I'll make the audio recording available and accessible. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1377,10 +1555,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h41">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h41">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h41" href="#collapse_11h41" aria-expanded="true" aria-controls="collapse_11h41">
             11h41
           </a>
@@ -1391,8 +1577,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -1400,25 +1586,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S05:  You aren't displaying the transcript, just the info for today's lecture.  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: Then I can also get a transcript of the audio and the zoom text chat for each meeting. </li>
+            
+            <p> DHH: Then I can also get a transcript of the audio and the zoom text chat for each meeting. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1432,10 +1619,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h42">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h42">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h42" href="#collapse_11h42" aria-expanded="true" aria-controls="collapse_11h42">
             11h42
           </a>
@@ -1446,8 +1641,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -1463,7 +1658,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S03:  Can't see it here. I had to go to the site to see it  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
@@ -1471,6 +1666,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1484,10 +1680,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h43">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h43">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h43" href="#collapse_11h43" aria-expanded="true" aria-controls="collapse_11h43">
             11h43
           </a>
@@ -1498,8 +1702,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -1513,7 +1717,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S05:  CS 428+828 in 202030 is the title  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
@@ -1521,6 +1725,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1534,10 +1739,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h45">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h45">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h45" href="#collapse_11h45" aria-expanded="true" aria-controls="collapse_11h45">
             11h45
           </a>
@@ -1548,8 +1761,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -1561,25 +1774,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S01:  yes  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: OK, so now it makes sense that I can ask a question again about any thoughts about the display the chat transcript. </li>
+            
+            <p> DHH: OK, so now it makes sense that I can ask a question again about any thoughts about the display the chat transcript. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1593,10 +1807,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h46">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h46">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h46" href="#collapse_11h46" aria-expanded="true" aria-controls="collapse_11h46">
             11h46
           </a>
@@ -1607,8 +1829,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -1624,25 +1846,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S13:  yes  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: Okay. I think we have everybody in the room now. </li>
+            
+            <p> DHH: Okay. I think we have everybody in the room now. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1656,10 +1879,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h47">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h47">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h47" href="#collapse_11h47" aria-expanded="true" aria-controls="collapse_11h47">
             11h47
           </a>
@@ -1670,8 +1901,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -1679,25 +1910,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S05:  It looks good. Only some comments lack context.  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: A couple of comments and chat transcripts. Let me say a few things about recording the screen. I'm not interested in the video recording. Maybe I will look at it and see if it's possibly helpful. But that's not my reason for recording. My reason for recording is the audio and the automatic transcript generation. </li>
+            
+            <p> DHH: A couple of comments and chat transcripts. Let me say a few things about recording the screen. I'm not interested in the video recording. Maybe I will look at it and see if it's possibly helpful. But that's not my reason for recording. My reason for recording is the audio and the automatic transcript generation. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1711,10 +1943,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h48">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h48">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h48" href="#collapse_11h48" aria-expanded="true" aria-controls="collapse_11h48">
             11h48
           </a>
@@ -1725,8 +1965,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -1736,25 +1976,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S01:  with time stamps in blocks, i think it will be a lengthy document  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: Although the documentation says that the transcript will be ready shortly after the video is ready. But in my case, with the tests that I did on Thursday and Friday. It was a long time. Hours. So maybe you can expect to see the transcript of the audio tomorrow, sometime. So when we have a transcript of the audio, it might be helpful for the audio transcript to give context to the chat so you can see what things are going on. </li>
+            
+            <p> DHH: Although the documentation says that the transcript will be ready shortly after the video is ready. But in my case, with the tests that I did on Thursday and Friday. It was a long time. Hours. So maybe you can expect to see the transcript of the audio tomorrow, sometime. So when we have a transcript of the audio, it might be helpful for the audio transcript to give context to the chat so you can see what things are going on. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1768,10 +2009,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h49">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h49">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h49" href="#collapse_11h49" aria-expanded="true" aria-controls="collapse_11h49">
             11h49
           </a>
@@ -1782,8 +2031,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -1791,25 +2040,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S07:  transcript is missing the actual student names  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: And so regarding the de-identified students, I was thinking of doing some editing on the chat transcript. But then I thought to let it go ahead and be an 'accurate' representation of what happened. So, if a few people wrote 'hello' and one person wrote 'good morning' at 11h30 on Thursday, </li>
+            
+            <p> DHH: And so regarding the de-identified students, I was thinking of doing some editing on the chat transcript. But then I thought to let it go ahead and be an 'accurate' representation of what happened. So, if a few people wrote 'hello' and one person wrote 'good morning' at 11h30 on Thursday, </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1823,10 +2073,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h50">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h50">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h50" href="#collapse_11h50" aria-expanded="true" aria-controls="collapse_11h50">
             11h50
           </a>
@@ -1841,19 +2099,20 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: then I would just be fine to represent that. So I'm making the public version of this chat transcript available to help start class discussions. I still have the names of people who contributed even though the actual names have been removed from the public transcript. This seems like it could be a helpful feature. </li>
+            
+            <p> DHH: then I would just be fine to represent that. So I'm making the public version of this chat transcript available to help start class discussions. I still have the names of people who contributed even though the actual names have been removed from the public transcript. This seems like it could be a helpful feature. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1867,10 +2126,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h52">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h52">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h52" href="#collapse_11h52" aria-expanded="true" aria-controls="collapse_11h52">
             11h52
           </a>
@@ -1881,8 +2148,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -1894,25 +2161,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S14:  Sounds good!  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: We can close parts of the transcript as well. And what about the times? Is it better to represent the passage of time? This is something to think about. Could we increase the usefulness of this transcript in terms of the timestamps? Would it be helpful to have a visual representation of the passage of time? </li>
+            
+            <p> DHH: We can close parts of the transcript as well. And what about the times? Is it better to represent the passage of time? This is something to think about. Could we increase the usefulness of this transcript in terms of the timestamps? Would it be helpful to have a visual representation of the passage of time? </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1926,10 +2194,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h53">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h53">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h53" href="#collapse_11h53" aria-expanded="true" aria-controls="collapse_11h53">
             11h53
           </a>
@@ -1944,19 +2220,20 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: So there is activity at 11h29 and then a gap until 11h33 then activity each minute until 11h38. </li>
+            
+            <p> DHH: So there is activity at 11h29 and then a gap until 11h33 then activity each minute until 11h38. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -1970,10 +2247,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h54">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h54">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h54" href="#collapse_11h54" aria-expanded="true" aria-controls="collapse_11h54">
             11h54
           </a>
@@ -1984,8 +2269,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -1997,25 +2282,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S15:  How about we just skip the time when we had no responses or chats? Helps in optimizing  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: So instead of time stamps, perhaps the question that prompted the responses? I think that's a worthy goal to be able to have that connection. It may be a little bit hard to do. </li>
+            
+            <p> DHH: So instead of time stamps, perhaps the question that prompted the responses? I think that's a worthy goal to be able to have that connection. It may be a little bit hard to do. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2029,10 +2315,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h55">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h55">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h55" href="#collapse_11h55" aria-expanded="true" aria-controls="collapse_11h55">
             11h55
           </a>
@@ -2043,8 +2337,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -2056,25 +2350,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S01:  it will be complex to have the topic from the audio. but if questions were put in chat, that the convenient way  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: I'm going to hope that the transcript will help provide that context, by grouping together things that happened at the same time. </li>
+            
+            <p> DHH: I'm going to hope that the transcript will help provide that context, by grouping together things that happened at the same time. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2088,10 +2383,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h56">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h56">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h56" href="#collapse_11h56" aria-expanded="true" aria-controls="collapse_11h56">
             11h56
           </a>
@@ -2102,8 +2405,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -2111,25 +2414,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S07:  I think it will be good to have it in standard time format HH:MM:SS. It seems to be more descriptive.  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: I didn't. I thought that it might be helpful to have some grouping of them. Rather than just have each each timestamp, comment, or chat message on its own. </li>
+            
+            <p> DHH: I didn't. I thought that it might be helpful to have some grouping of them. Rather than just have each each timestamp, comment, or chat message on its own. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2143,10 +2447,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h57">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h57">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h57" href="#collapse_11h57" aria-expanded="true" aria-controls="collapse_11h57">
             11h57
           </a>
@@ -2157,8 +2469,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -2168,26 +2480,27 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S17:  Maye we can change the way we formulate the question in the chat, students can take the extra effort of using Q1) and then post it, people can answer or discuss on it. It would be easy to group it then?  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: Think about how to use this transcript, and we can talk about it some more on Thursday. How can we use this data, or how can this data be made as helpful as possible?
- " </li>
+            
+            <p> DHH: Think about how to use this transcript, and we can talk about it some more on Thursday. How can we use this data, or how can this data be made as helpful as possible?
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2201,10 +2514,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h59">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_11h59">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="11h59" href="#collapse_11h59" aria-expanded="true" aria-controls="collapse_11h59">
             11h59
           </a>
@@ -2215,8 +2536,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -2226,26 +2547,27 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S02:  not*  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: So, if you're going to say that you want to do X then what kind of interface supports X? What do you think of that question? Think about for next day. How could you present the chat data so that it is as helpful as possible?
- " </li>
+            
+            <p> DHH: So, if you're going to say that you want to do X then what kind of interface supports X? What do you think of that question? Think about for next day. How could you present the chat data so that it is as helpful as possible?
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2259,10 +2581,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h00">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h00">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h00" href="#collapse_12h00" aria-expanded="true" aria-controls="collapse_12h00">
             12h00
           </a>
@@ -2273,8 +2603,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -2286,25 +2616,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S14:  What I think is it might be very difficult to track question numbers for students, sometimes we end up mentioning wrong question number and it can introduce challenges for the person who is referring the chat later  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: Is that enough information? So something that happens happening here is that there's a delay in the chat. Answers coming up on the chat are responses to something typed (much) earlier. Chat is an asynchronous communication form. And that's both positive and negative because we have to try and put things back together in terms of a thread. </li>
+            
+            <p> DHH: Is that enough information? So something that happens happening here is that there's a delay in the chat. Answers coming up on the chat are responses to something typed (much) earlier. Chat is an asynchronous communication form. And that's both positive and negative because we have to try and put things back together in terms of a thread. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2318,10 +2649,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h01">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h01">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h01" href="#collapse_12h01" aria-expanded="true" aria-controls="collapse_12h01">
             12h01
           </a>
@@ -2336,13 +2675,13 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " But that's not unlike doing an interview instant messaging.
+            
+            <p> DHH: " But that's not unlike doing an interview instant messaging.
  in some form or another.
  Say, somebody person you're talking to.
  Two different questions before you can answer the first question.
@@ -2351,13 +2690,14 @@ style="background-color: rgba(32, 32, 32, 0.75)">
  In more than one message before you get to question two.
  And so it seems to be not very hard to
  To have things to verge of it.
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2371,10 +2711,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h02">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h02">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h02" href="#collapse_12h02" aria-expanded="true" aria-controls="collapse_12h02">
             12h02
           </a>
@@ -2385,8 +2733,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -2396,31 +2744,32 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S16:  If you could have the audio/video/transcript in a box nearby, and the timestamps linked directly to the part the class where it happened, that would help a lot  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " The
+            
+            <p> DHH: " The
  Transcript the audio at the same
  Together in a similar format.
  With
  The chat.
  I have a feeling
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2434,10 +2783,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h03">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h03">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h03" href="#collapse_12h03" aria-expanded="true" aria-controls="collapse_12h03">
             12h03
           </a>
@@ -2448,8 +2805,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -2459,19 +2816,19 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S14:  May be, professor can add the chat title for each meeting chat transcript, and a brief introduction about topic being covered and what understanding can be gained. After that, time title can be a good choice. This both things may help to refer chat transcript later  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " Okay, so
+            
+            <p> DHH: " Okay, so
  I'm going to work on presenting for Thursday my
  Homework will be to format the audio transcript.
  In
@@ -2484,13 +2841,14 @@ style="background-color: rgba(32, 32, 32, 0.75)">
  Not the time of day that
  Is being used in the chat. So there might be an issue of synchronizing that
  Although you think this is not a new problem so
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2504,10 +2862,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h04">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h04">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h04" href="#collapse_12h04" aria-expanded="true" aria-controls="collapse_12h04">
             12h04
           </a>
@@ -2522,25 +2888,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " I wonder if
+            
+            <p> DHH: " I wonder if
  There's some ways to
  Put some together.
  I get back. We can talk about this.
  Everyone able to get to access your courses now.
  All the 40 people in the zoom chat or the zoom meeting can
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2554,10 +2921,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h05">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h05">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h05" href="#collapse_12h05" aria-expanded="true" aria-controls="collapse_12h05">
             12h05
           </a>
@@ -2568,8 +2943,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -2583,30 +2958,31 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S03:  yes  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " Access your courses.
+            
+            <p> DHH: " Access your courses.
  Can you do a hat, a checkmark.
  Or an X for yes or no.
  Try and add the question in
  The chat stream.
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2620,10 +2996,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h06">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h06">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h06" href="#collapse_12h06" aria-expanded="true" aria-controls="collapse_12h06">
             12h06
           </a>
@@ -2634,8 +3018,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -2661,28 +3045,29 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S13:  yes  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " It.
+            
+            <p> DHH: " It.
  Yes, you are not able to 2122 23
  So I wasn't
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2696,10 +3081,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h07">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h07">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h07" href="#collapse_12h07" aria-expanded="true" aria-controls="collapse_12h07">
             12h07
           </a>
@@ -2710,8 +3103,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -2729,19 +3122,19 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S26:  yes  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " I asked her.
+            
+            <p> DHH: " I asked her.
  Show.
  Show check mark or her yes or no.
  So,
@@ -2751,13 +3144,14 @@ style="background-color: rgba(32, 32, 32, 0.75)">
  Of your courses access. So if you don't have your courses access, send me a note, an email will get you sorted out.
  Okay.
  So I'm going to clear that
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2771,10 +3165,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h09">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h09">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h09" href="#collapse_12h09" aria-expanded="true" aria-controls="collapse_12h09">
             12h09
           </a>
@@ -2785,8 +3187,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -2796,29 +3198,30 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> DHH:  Should all questions (even yes/no) be put into the chat and responses recorded there?  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " To
+            
+            <p> DHH: " To
  Interesting question. So I'm asking
  Whether we should put responses in the chat.
  So when I asked her, yes or no check marks.
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2832,10 +3235,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h10">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h10">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h10" href="#collapse_12h10" aria-expanded="true" aria-controls="collapse_12h10">
             12h10
           </a>
@@ -2846,8 +3257,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -2857,31 +3268,32 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S12:  Yes or No question should be done in vote from participants window  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " So, last time I asked her if you know check marks. I got a stream stream of yeses.
+            
+            <p> DHH: " So, last time I asked her if you know check marks. I got a stream stream of yeses.
  In the chat transcript with the chat window.
  But now,
  The people who are voting for chat.
  Holding it for
  The none of the people who said yes.
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2895,10 +3307,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h11">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h11">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h11" href="#collapse_12h11" aria-expanded="true" aria-controls="collapse_12h11">
             12h11
           </a>
@@ -2909,8 +3329,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -2928,19 +3348,19 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S09:  I also think yes/no questions will just clutter the chat  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " Responses
+            
+            <p> DHH: " Responses
  Are in the chat window.
  Okay, there's one I stand corrected. There's at least one positive response.
  And i i agree with them is
@@ -2950,13 +3370,14 @@ style="background-color: rgba(32, 32, 32, 0.75)">
  Here's a question.
  Seen the textbook.
  Yes, sir. Now,
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -2970,10 +3391,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h12">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h12">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h12" href="#collapse_12h12" aria-expanded="true" aria-controls="collapse_12h12">
             12h12
           </a>
@@ -2984,8 +3413,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -2997,7 +3426,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S16:  Can't we just add a note to the transcript as far as the  result?  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
@@ -3005,6 +3434,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3018,10 +3448,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h13">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h13">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h13" href="#collapse_12h13" aria-expanded="true" aria-controls="collapse_12h13">
             12h13
           </a>
@@ -3032,8 +3470,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -3041,7 +3479,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S17:  So I prefer yes/no to be included  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
@@ -3049,6 +3487,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3062,10 +3501,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h14">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h14">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h14" href="#collapse_12h14" aria-expanded="true" aria-controls="collapse_12h14">
             12h14
           </a>
@@ -3076,8 +3523,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -3089,29 +3536,30 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> DHH:  I can read or type the result of the Y/N question.  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " anyone remembers from anyone who is here and
+            
+            <p> DHH: " anyone remembers from anyone who is here and
  Looking one
  Who's sitting on my lap.
  Anyway,
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3125,10 +3573,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h15">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h15">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h15" href="#collapse_12h15" aria-expanded="true" aria-controls="collapse_12h15">
             12h15
           </a>
@@ -3139,8 +3595,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -3148,26 +3604,27 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S28:  Yes! I remembered.  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " reporting the results.
- " </li>
+            
+            <p> DHH: " reporting the results.
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3181,10 +3638,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h16">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h16">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h16" href="#collapse_12h16" aria-expanded="true" aria-controls="collapse_12h16">
             12h16
           </a>
@@ -3195,8 +3660,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -3212,26 +3677,27 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> DHH:  That was my report of the results…  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " In the process of getting the textbook.
- " </li>
+            
+            <p> DHH: " In the process of getting the textbook.
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3245,10 +3711,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h17">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h17">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h17" href="#collapse_12h17" aria-expanded="true" aria-controls="collapse_12h17">
             12h17
           </a>
@@ -3259,8 +3733,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -3272,7 +3746,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S03:  There is a Kindle version on Amazon  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
@@ -3280,6 +3754,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3293,10 +3768,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h18">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h18">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h18" href="#collapse_12h18" aria-expanded="true" aria-controls="collapse_12h18">
             12h18
           </a>
@@ -3307,8 +3790,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -3318,28 +3801,29 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> DHH:  I’m not sure about online, but here’s the link to the website:  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " So I didn't hit return there between my
+            
+            <p> DHH: " So I didn't hit return there between my
  Results.
  Next class response to the question about online access so
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3353,10 +3837,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h19">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h19">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h19" href="#collapse_12h19" aria-expanded="true" aria-controls="collapse_12h19">
             12h19
           </a>
@@ -3371,21 +3863,22 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " I've updated the links on the web page there.
+            
+            <p> DHH: " I've updated the links on the web page there.
  Each chapter
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3399,10 +3892,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h20">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h20">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h20" href="#collapse_12h20" aria-expanded="true" aria-controls="collapse_12h20">
             12h20
           </a>
@@ -3413,8 +3914,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -3424,7 +3925,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S01:  thank you  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
@@ -3432,6 +3933,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3445,10 +3947,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h21">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h21">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h21" href="#collapse_12h21" aria-expanded="true" aria-controls="collapse_12h21">
             12h21
           </a>
@@ -3459,8 +3969,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -3468,30 +3978,31 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> DHH:  Please have a look at Chapters 1 and 2 (or the slides on the website) for our next meeting.  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " Website is mobile friendly.
+            
+            <p> DHH: " Website is mobile friendly.
  And I can't look at it right now.
  You can see whether
  Out appeared, whether
  You have a good experience with that website on your mobile device.
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3505,10 +4016,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h22">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h22">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h22" href="#collapse_12h22" aria-expanded="true" aria-controls="collapse_12h22">
             12h22
           </a>
@@ -3519,8 +4038,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -3536,26 +4055,27 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S29:  Sure thing!  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " Enthusiasm in the chat room without an exclamation points.
- " </li>
+            
+            <p> DHH: " Enthusiasm in the chat room without an exclamation points.
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3569,10 +4089,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h23">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h23">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h23" href="#collapse_12h23" aria-expanded="true" aria-controls="collapse_12h23">
             12h23
           </a>
@@ -3583,8 +4111,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -3604,32 +4132,33 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> DHH:  working and usable?  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " Getting some reports that the website is working on mobile.
+            
+            <p> DHH: " Getting some reports that the website is working on mobile.
  But I would say that there's more two
  More to working
  There's more to it than just working
  So working is the is the bottom run
  On the left. So first of all,
  You can, you know, caught. So that's the question is can you accomplish a given task with a website and if you can answer yes so then they can wait say that it's effective.
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3643,10 +4172,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h24">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h24">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h24" href="#collapse_12h24" aria-expanded="true" aria-controls="collapse_12h24">
             12h24
           </a>
@@ -3657,8 +4194,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -3666,19 +4203,19 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S12:  yes I tried to navigate with different pages  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " If it's a little
+            
+            <p> DHH: " If it's a little
  Bit better to
  Work with so you can see
  How we might do other things and
@@ -3690,13 +4227,14 @@ style="background-color: rgba(32, 32, 32, 0.75)">
  That is, whether it's satisfying
  So,
  What are some ways that we can think of being satisfying
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3710,10 +4248,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h25">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h25">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h25" href="#collapse_12h25" aria-expanded="true" aria-controls="collapse_12h25">
             12h25
           </a>
@@ -3728,13 +4274,13 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " Do
+            
+            <p> DHH: " Do
  We don't have to think about what to do.
  What we what we want to do is
  easily available.
@@ -3743,13 +4289,14 @@ style="background-color: rgba(32, 32, 32, 0.75)">
  What happens between
  If we have a goal in mind the
  commands to achieve that goal are clear. And when we look at the state of the system.
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3763,10 +4310,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h26">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h26">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h26" href="#collapse_12h26" aria-expanded="true" aria-controls="collapse_12h26">
             12h26
           </a>
@@ -3781,25 +4336,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " We can
+            
+            <p> DHH: " We can
  Easily and correctly interpret the state and what needs to be done to go from the current state to our goal state.
  So I'm going to try and
  Draw Something.
  With my iPad here. Give me a second.
  See if I can
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3813,10 +4369,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h27">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h27">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h27" href="#collapse_12h27" aria-expanded="true" aria-controls="collapse_12h27">
             12h27
           </a>
@@ -3831,20 +4395,21 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " Let me see if I can
- " </li>
+            
+            <p> DHH: " Let me see if I can
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3858,10 +4423,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h28">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h28">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h28" href="#collapse_12h28" aria-expanded="true" aria-controls="collapse_12h28">
             12h28
           </a>
@@ -3876,23 +4449,24 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " Here.
+            
+            <p> DHH: " Here.
  We can see
  Me yes or no.
  You can see
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3906,10 +4480,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h29">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h29">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h29" href="#collapse_12h29" aria-expanded="true" aria-controls="collapse_12h29">
             12h29
           </a>
@@ -3920,8 +4502,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -3935,27 +4517,28 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S20:  yes  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " Human Computer
+            
+            <p> DHH: " Human Computer
  Single words, maybe they're not too illegible.
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -3969,10 +4552,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h30">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h30">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h30" href="#collapse_12h30" aria-expanded="true" aria-controls="collapse_12h30">
             12h30
           </a>
@@ -3983,8 +4574,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -3992,19 +4583,19 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S05:  yes  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " Okay, so taking back to our discussion last day about
+            
+            <p> DHH: " Okay, so taking back to our discussion last day about
  How to use those Chevron's to indicate
  Progressive discovery.
  So I saw that that term was used in the Microsoft interface guidelines and got a few links that all
@@ -4012,13 +4603,14 @@ style="background-color: rgba(32, 32, 32, 0.75)">
  What's the issue.
  Or down
  Then that can indicate that
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4032,10 +4624,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h31">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h31">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h31" href="#collapse_12h31" aria-expanded="true" aria-controls="collapse_12h31">
             12h31
           </a>
@@ -4050,13 +4650,13 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " So we're either moving up or down to reveal more content.
+            
+            <p> DHH: " So we're either moving up or down to reveal more content.
  Than the question. So that makes more sense. I can understand the argument that makes more sense than having a sideways arrow and it down to display.
  Because of sideways.
  It gives a direction that we're going off screen.
@@ -4065,13 +4665,14 @@ style="background-color: rgba(32, 32, 32, 0.75)">
  The idea that there's
  Content to be displayed with an in place.
  Then the question is
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4085,10 +4686,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h32">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h32">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h32" href="#collapse_12h32" aria-expanded="true" aria-controls="collapse_12h32">
             12h32
           </a>
@@ -4103,13 +4712,13 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " So,
+            
+            <p> DHH: " So,
  keep them separate. So the question is,
  So just an aside here I've got, I don't. You can see this. I've got a dialog box has come up and says, and P devices agent wants to use your confidential information.
  In your key chain.
@@ -4117,13 +4726,14 @@ style="background-color: rgba(32, 32, 32, 0.75)">
  They're big on privacy.
  So,
  Good, good for them to ask for permission.
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4137,10 +4747,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h33">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h33">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h33" href="#collapse_12h33" aria-expanded="true" aria-controls="collapse_12h33">
             12h33
           </a>
@@ -4155,13 +4773,13 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " But
+            
+            <p> DHH: " But
  There's no indication of what MP devices agent.
  Is and
  what it wants to do with my confidential information.
@@ -4172,13 +4790,14 @@ style="background-color: rgba(32, 32, 32, 0.75)">
  So now the question is,
  To use the app.
  Indicate
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4192,10 +4811,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h34">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h34">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h34" href="#collapse_12h34" aria-expanded="true" aria-controls="collapse_12h34">
             12h34
           </a>
@@ -4210,13 +4837,13 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " The state or the command.
+            
+            <p> DHH: " The state or the command.
  So should we see it when
  The content is
  Extra content is displayed indicating than that it's
@@ -4229,13 +4856,14 @@ style="background-color: rgba(32, 32, 32, 0.75)">
  Content hidden behind or below the
  Order that can be revealed by clicking
  So the same thing here.
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4249,10 +4877,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h35">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h35">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h35" href="#collapse_12h35" aria-expanded="true" aria-controls="collapse_12h35">
             12h35
           </a>
@@ -4267,23 +4903,24 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " That we see and we work with or we're dealing with
+            
+            <p> DHH: " That we see and we work with or we're dealing with
  And we look at the computer and then
  We try to make sense of that we say
  So, so this is an example of how the process evaluation.
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4297,10 +4934,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h36">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h36">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h36" href="#collapse_12h36" aria-expanded="true" aria-controls="collapse_12h36">
             12h36
           </a>
@@ -4315,23 +4960,24 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " See more content.
+            
+            <p> DHH: " See more content.
  inverted V
  Is pointing up to reveal more content.
  So this is my goal is to do more content.
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4345,10 +4991,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h37">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h37">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h37" href="#collapse_12h37" aria-expanded="true" aria-controls="collapse_12h37">
             12h37
           </a>
@@ -4363,13 +5017,13 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " Then I can decide to think that this is the way to go about it.
+            
+            <p> DHH: " Then I can decide to think that this is the way to go about it.
  And then I can
  See whether or not what I've done is
  Helping the situation, helping me to achieve my goal.
@@ -4377,13 +5031,14 @@ style="background-color: rgba(32, 32, 32, 0.75)">
  So we can't get
  Into too much trouble here.
  Maybe think otherwise.
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4397,10 +5052,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h38">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h38">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h38" href="#collapse_12h38" aria-expanded="true" aria-controls="collapse_12h38">
             12h38
           </a>
@@ -4415,13 +5078,13 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " But
+            
+            <p> DHH: " But
  So long as we have a representation. So the question is,
  If we have these icons.
  Giving the feedback.
@@ -4433,13 +5096,14 @@ style="background-color: rgba(32, 32, 32, 0.75)">
  Display
  The chat from month from Thursday's meeting.
  Related to
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4453,10 +5117,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h39">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h39">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h39" href="#collapse_12h39" aria-expanded="true" aria-controls="collapse_12h39">
             12h39
           </a>
@@ -4471,13 +5143,13 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: " The question about Chevron's
+            
+            <p> DHH: " The question about Chevron's
  And that's a little bit
  More involved and
  If we can
@@ -4487,13 +5159,14 @@ style="background-color: rgba(32, 32, 32, 0.75)">
  We don't have too much chance to make
  Mistakes so
  Yeah, as we're pointing at the screen.
- " </li>
+ " </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4507,10 +5180,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h40">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h40">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h40" href="#collapse_12h40" aria-expanded="true" aria-controls="collapse_12h40">
             12h40
           </a>
@@ -4525,19 +5206,20 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: Execution. Which word goes into the other blank? It starts with an 'E'. Put your hand up if you want to answer. </li>
+            
+            <p> DHH: Execution. Which word goes into the other blank? It starts with an 'E'. Put your hand up if you want to answer. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4551,10 +5233,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h41">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h41">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h41" href="#collapse_12h41" aria-expanded="true" aria-controls="collapse_12h41">
             12h41
           </a>
@@ -4565,8 +5255,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -4574,29 +5264,34 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S09:  evaluation  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: Okay, Student. Will turn your mic on. </li>
+            
+            <p> DHH: Okay, Student. Will turn your mic on. </p>
+            
           
-            <li> SAA: Let's try saying, I think. It's got to do with information. </li>
+            
+            <p> SAA: Let's try saying, I think. It's got to do with information. </p>
+            
           
-            <li> DHH: Information. Yes. We're dealing with evaluation (of information). Okay. Thanks for that. If I call on you, you are able to turn on your own microphone. </li>
+            
+            <p> DHH: Information. Yes. We're dealing with evaluation (of information). Okay. Thanks for that. If I call on you, you are able to turn on your own microphone. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4610,10 +5305,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h42">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h42">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h42" href="#collapse_12h42" aria-expanded="true" aria-controls="collapse_12h42">
             12h42
           </a>
@@ -4628,19 +5331,20 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: Thank you for the answer. So if we have a satisfying experience, these gulfs are small and if we have a frustrating experience, these gulfs are large. Make sense? It's like if you're scratching your head and thinking about how do I accomplish my goal, then it's a very large gulf that we're dealing with. </li>
+            
+            <p> DHH: Thank you for the answer. So if we have a satisfying experience, these gulfs are small and if we have a frustrating experience, these gulfs are large. Make sense? It's like if you're scratching your head and thinking about how do I accomplish my goal, then it's a very large gulf that we're dealing with. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4654,10 +5358,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h43">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h43">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h43" href="#collapse_12h43" aria-expanded="true" aria-controls="collapse_12h43">
             12h43
           </a>
@@ -4672,19 +5384,20 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: Two minutes left. Any questions or concerns that you want to express? Discord I will figure out and put an invitation on UR Courses. </li>
+            
+            <p> DHH: Two minutes left. Any questions or concerns that you want to express? Discord I will figure out and put an invitation on UR Courses. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4698,10 +5411,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h44">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h44">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h44" href="#collapse_12h44" aria-expanded="true" aria-controls="collapse_12h44">
             12h44
           </a>
@@ -4712,8 +5433,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -4721,25 +5442,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S01:  are we going to have a discord for the class?  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: For office hours, I plan on being available Tuesday @ 14h00-14h50, Wednesday @ 11h00-11h50, and Thursday @ 14h00-14h50. If you have questions, outside of those times, you can send me an email (you know how to get hold of me). </li>
+            
+            <p> DHH: For office hours, I plan on being available Tuesday @ 14h00-14h50, Wednesday @ 11h00-11h50, and Thursday @ 14h00-14h50. If you have questions, outside of those times, you can send me an email (you know how to get hold of me). </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4753,10 +5475,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h45">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h45">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h45" href="#collapse_12h45" aria-expanded="true" aria-controls="collapse_12h45">
             12h45
           </a>
@@ -4771,19 +5501,20 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: OK, so I'll post my artist's rendering of the concept of gulfs of execution and evaluation. And we'll have a look at the first 2 chapters of material from the textbook 'Interaction design: beyond human-computer interaction' And we didn't talk about my 'impolite robot attack' video -- all 13 seconds of it. So if you can have a look at that video and we'll talk about that too, on Thursday. Okay, thanks very much for your time. </li>
+            
+            <p> DHH: OK, so I'll post my artist's rendering of the concept of gulfs of execution and evaluation. And we'll have a look at the first 2 chapters of material from the textbook 'Interaction design: beyond human-computer interaction' And we didn't talk about my 'impolite robot attack' video -- all 13 seconds of it. So if you can have a look at that video and we'll talk about that too, on Thursday. Okay, thanks very much for your time. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4797,10 +5528,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h46">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h46">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h46" href="#collapse_12h46" aria-expanded="true" aria-controls="collapse_12h46">
             12h46
           </a>
@@ -4811,8 +5550,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -4828,25 +5567,26 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S12:  thank you  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
         
         
-        <div class="card card-body h-100 bg-light">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100 bg-light"> -->
+          <h5 class="my-2 text-center">
             Audio
           </h5>
-          <ul>
           
-            <li> DHH: And see you on Thursday. </li>
+            
+            <p> DHH: And see you on Thursday. </p>
+            
           
-          </ul>
-        </div>
+        <!-- </div> -->
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4860,10 +5600,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h47">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h47">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h47" href="#collapse_12h47" aria-expanded="true" aria-controls="collapse_12h47">
             12h47
           </a>
@@ -4874,8 +5622,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -4901,7 +5649,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> S31:  thanks ☺️  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
@@ -4909,6 +5657,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         
         </div>
       </div>
+      
       
       
     </div>
@@ -4922,10 +5671,18 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         </div>
         <h5 class="mb-0">
           <!-- Trigger -->
-          <button class="btn btn-primary" aria-label="Copy timestamp link" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h48">
-            <span class="fas fa-anchor" title="Copy timestamp link">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Copy anchor" data-clipboard-action="copy" data-clipboard-target="#tsuid_12h48">
+            <span class="fas fa-anchor" title="Copy anchor">
             </span>
           </button>
+          <!-- Example single danger button -->
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
           <a class="xtra collapse show" data-toggle="collapse" id="12h48" href="#collapse_12h48" aria-expanded="true" aria-controls="collapse_12h48">
             12h48
           </a>
@@ -4936,8 +5693,8 @@ style="background-color: rgba(32, 32, 32, 0.75)">
         <div class="col">
         
         
-        <div class="card card-body h-100">
-          <h5 class="mb-0 text-center">
+        <!-- <div class="card card-body h-100"> -->
+          <h5 class="my-2 text-center">
             Chat
           </h5>
           <ul>
@@ -4945,7 +5702,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             <li> DHH:  Thanks everyone  </li>
           
           </ul>
-        </div>
+      <!--   </div> -->
         
         </div>
         <div class="col">
@@ -4955,21 +5712,21 @@ style="background-color: rgba(32, 32, 32, 0.75)">
       </div>
       
       
+      
     </div>
     </div>
   
   </div>
 </div>
+</div>
 
-            
 
     </div>
-</div>
-</div>
+<p>&lt;/div&gt;</p>
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2020-09-29 17:32 -0600
+  Site built: 2020-09-30 17:24 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202030/meetings/02_Tue-08-Sep-2020.html">
     Give feedback <span class="d-none d-sm-inline">about page</span>
