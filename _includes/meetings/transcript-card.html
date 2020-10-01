@@ -28,21 +28,21 @@ aria-labelledby="heading_CAT">
         <h5 class="mb-0">
           <!-- Trigger -->
           <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-          aria-label="Copy anchor"
-          data-clipboard-action="copy"
-          data-clipboard-target="#tsuid_{{ ts[0] }}">
-            <span class="fas fa-anchor"
-            title="Copy anchor">
-            </span>
-          </button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+            aria-label="Copy anchor">
+              <span class="fas fa-anchor"
+              title="Copy anchor">
+              </span>
+            </button>
           <!-- Example single danger button -->
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
+            <div class="dropdown-menu">
+              <a class="dropdown-item"
+              data-clipboard-action="copy"
+              data-clipboard-target="#tsuid_{{ ts[0] }}">Copy</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
           <a class="xtra collapse show" data-toggle="collapse"
           id="{{ ts[0] }}"
           href="#collapse_{{ ts[0] }}"
