@@ -1,6 +1,6 @@
 
 {% include teaching/url.html %}
-{% assign planfile = site.data.teaching[joff_id]plan %}
+{% assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
 
 {% if planfile %}
 <div class="card" id="plan-card">
