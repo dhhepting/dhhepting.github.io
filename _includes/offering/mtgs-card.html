@@ -1,6 +1,6 @@
 
 {% include teaching/url.html %}
-{% capture mtg_dir %}/teaching/{{ crs_sbj }}-{{ crs_nbr }}/{{ crs_sem }}/meetings/{% endcapture %}
+{% capture mtg_dir %}/teaching/{{ crs_id }}/{{ crs_sem }}/meetings/{% endcapture %}
 {% for sp in site.pages %}
   {% if sp.url == mtg_dir %}
     {% assign has_mtg_dir = "true" %}

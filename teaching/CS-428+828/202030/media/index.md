@@ -1,7 +1,6 @@
 ---
 breadcrumb: Media
-title: Media from CS 428+828 Meetings in Fall 2020
+title: CS 428+828 (202030) Media
 layout: bg-image
 ---
-{% include teaching/url.html %}
 {% include offering/media-table.html %}

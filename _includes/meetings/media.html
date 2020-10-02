@@ -1,4 +1,4 @@
-{% assign jpglist = "" %}
+{% assign pixlist = "" %}
 {% assign audio_url = "" %}
 {% assign has_media = "false" %}
 {% assign media_ctr = 0 %}
@@ -11,60 +11,59 @@
       {% break %}
     {% endif %}
   {% endfor %}
-  {%- endif -%}
+{%- endif -%}
 
-  {% if has_media == "true" %}
-  <div class="card" id="todaymedia-card">
-    <div class="card-header" role="tab" id="heading_MED">
-      <h3 class="mb-0">
-        <a class="xtra collapse show" data-toggle="collapse"
-        href="#collapse_MED"
-        aria-expanded="true" aria-controls="collapse_MED">
-          Media from Meeting
-        </a>
-      </h3>
-    </div>
+{% if has_media == "true" %}
+<div class="card" id="todaymedia-card">
+  <div class="card-header" role="tab" id="heading_MED">
+    <h3 class="mb-0">
+      <a class="xtra collapse show" data-toggle="collapse"
+      href="#collapse_MED"
+      aria-expanded="true" aria-controls="collapse_MED">
+        Media from Meeting
+      </a>
+    </h3>
+  </div>
 
-    <div id="collapse_MED" class="collapse show"
-    aria-labelledby="heading_MED">
-      <div class="card card-body bg-dark">
+  <div id="collapse_MED" class="collapse show"
+  aria-labelledby="heading_MED">
+    <div class="card card-body bg-dark">
     {%- for m in site.data.teaching[jcrs_id][crs_sem]media -%}
       {%- if m.meet == mtgstr -%}
-        {%- if m.file contains "jpg" -%}
-          {%- capture jpglist -%}{{jpglist}}|{{m.file}}#{{m.URL}}{%- endcapture -%}
+        {%- if m.file contains "jpg" or m.file contains "png" -%}
+          {%- capture pixlist -%}{{pixlist}}|{{m.file}}#{{m.URL}}{%- endcapture -%}
         {%- endif -%}
         {%- if m.file contains "m4a" -%}
           {% assign audio_url = m.URL %}
         {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
-    {%- assign sortedjpgs = jpglist | split: '|' | sort -%}
-    {%- assign numjpgs = sortedjpgs.size | minus: 1 -%}
-    {%- capture carid -%}mtg_jpgs_{{ mtgstr }}{% endcapture %}
-    {%- if numjpgs > 0 -%}
-    <div id="{{ carid }}" class="m-2 carousel slide"
+    {%- assign sortedpix = pixlist | split: '|' | sort -%}
+    {%- assign numpix = sortedpix.size | minus: 1 -%}
+    {%- capture carid -%}mtg_pix_{{ mtgstr }}{% endcapture %}
+    {%- if numpix > 0 -%}
+    <div id="{{ carid }}" class="m-2 carousel slide bg-light"
     data-ride="carousel" data-interval="false">
       <ol class="carousel-indicators bg-dark mb-0">
-    {%- for i in (1..numjpgs) -%}
-      {%- if i == 1 %}
+      {%- for i in (1..numpix) -%}
+        {%- if i == 1 %}
         <li data-target="#{{carid}}" data-slide-to="0" class="active"></li>
-      {%- else %}
+        {%- else %}
         <li data-target="#{{carid}}" data-slide-to="{{ i | minus: 1}}"></li>
-      {%- endif %}
-    {%- endfor %}
+        {%- endif %}
+      {%- endfor %}
       </ol>
       <div class="carousel-inner bg-dark">
-    {%- for i in (1..numjpgs) -%}
-      {%- if i == 1 %}
+      {%- for i in (1..numpix) -%}
+        {%- if i == 1 %}
         <div class="carousel-item active">
-      {%- else %}
+        {%- else %}
         <div class="carousel-item">
-      {%- endif -%}
-      {% assign sj = sortedjpgs[i] | split: '#' %}
-      {% comment %}d-block w-100 object-fit: contain; object-position: 50% 50%;{% endcomment %}
-          <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="{{ sj[1] }}" alt="{{ sj[0] }}">
+        {%- endif -%}
+        {% assign sp = sortedpix[i] | split: '#' %}
+          <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="{{ sp[1] }}" alt="{{ sp[0] }}">
         </div>
-    {% endfor %}
+      {% endfor %}
       </div>
       <a class="carousel-control-prev bg-dark" href="#{{carid}}" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -75,16 +74,16 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+    {%- endif -%}
+    {% if audio_url != "" %}
+    <div class="m-2 p-2 w-100 bg-light">
+      <audio class="align-center" controls="true"
+      src="{{ audio_url }}" type="audio/mp4">
+        Your browser does not support the <code>audio</code> element.
+      </audio>
+    </div>
+    {% endif %}
   </div>
-  {%- endif -%}
-  {% if audio_url != "" %}
-  <div class="m-2 w-100">
-    <audio controls="true" src="{{ audio_url }}" type="audio/mp4">
-      Your browser does not support the <code>audio</code> element.
-    </audio>
-  </div>
-  {% endif %}
-</div>
 </div>
 </div>
   {%- endif -%}
