@@ -15,7 +15,24 @@
   <div id="collapse_AS" class="collapse"
   aria-labelledby="heading_AS">
     <div class="card card-body">
-      {% include offering/asgn-card-body.html %}
+    {% assign i_asgn = "" %}
+    {% assign p_asgn = "" %}
+    {% assign g_asgn = "" %}
+    {% for aa in asgnfile %}
+      {% assign fla = aa.aid | slice: 0 %}
+      {% if fla == "I" %}
+        {% capture i_asgn %}{{ i_asgn }}#{{ aa.aid }}!{{ aa.title }}{% endcapture %}
+      {% endif %}
+      {% if fla == "P" %}
+        {% capture p_asgn %}{{ p_asgn }}#{{ aa }}{% endcapture %}
+      {% endif %}
+      {% if fla == "G" %}
+        {% capture g_asgn %}{{ g_asgn }}#{{ aa }}{% endcapture %}
+      {% endif %}
+    {% endfor %}
+    {% include offering/asgn-by-type.html label='Individual' list=i_asgn id='IAS' %}
+    {% include offering/asgn-by-type.html label='Project' list=p_asgn id='PAS' %}
+    {% include offering/asgn-by-type.html label='Group' list=g_asgn id='GAS' %}
     </div>
   </div>
 </div>
