@@ -1,0 +1,90 @@
+{% assign al = include.list %}
+{% if al.size > 0 %}
+  {% assign az = al | split: "#" %}
+<div class="card card-body">
+  <div class="card my-2">
+    <div class="card card-header">
+      <h3>
+        {{ include.label }}
+      </h3>
+    </div>
+    <div class="card card-body" id="{{ include.id }}">
+      <ul class="nav nav-tabs bg-light"
+      id="{{ include.id }}-asgnTabs" role="tablist">
+      {% for aa in az %}
+        {% assign aaa = aa | split: "!" %}
+        {% if aaa.size > 0 %}
+        <li class="nav-item">
+          <a class="nav-link" id="{{ aaa[0] }}-tab" data-toggle="tab"
+          href="#{{ aaa[0] }}-pane" role="tab" aria-controls="{{ include.id }}-asgnTabs" aria-selected="true">
+            {{ aaa[1] }}
+          </a>
+        </li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+      <div class="tab-content">
+      {% for aa in az %}
+        {% assign aaa = aa | split: "!" %}
+        {% if aaa.size > 0 %}
+        <div class="tab-pane fade" id="{{ aaa[0] }}-pane">
+          {% for sa in site.assignments %}
+            {% if sa.aid == aaa[0] %}
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <div class="container">
+                <span class="navbar-brand" id="{{ aaa[0] }}-cdt"></span>
+                <button class="navbar-toggler" type="button"
+                data-toggle="collapse" data-target="#{{ aaa[0] }}-navbar"
+                aria-controls="{{ aaa[0] }}-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <script>
+                  $(document).ready(
+                    function(){
+                      var duedate_{{ aaa[0] }} = '{{ aaa[2] }}'
+                      var duetime_{{ aaa[0] }} =
+                        new Date(duedate_{{ aaa[0] }}).getTime() + 86340000
+                      $('#{{ aaa[0] }}-cdt').countdown(duetime_{{ aaa[0] }},
+                        function(event) {
+                          $(this).html(event.strftime('Due in: <span>%D d %H h %M m</span>'))
+                      })
+                  })
+                </script>
+                <div class="collapse navbar-collapse"
+                id="{{ aaa[0] }}-navbar">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link btn"
+                      href="https://urcourses.uregina.ca/mod/forum/discuss.php?d={{ aaa[3] }}"
+                      role="button">
+                        Discuss
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link btn"
+                      href="https://urcourses.uregina.ca/mod/assign/view.php?id={{ aaa[4] }}&action=editsubmission" role="button">
+                        Submit
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link btn disabled" href="#"
+                      aria-disabled="true">
+                        Updated: {{ sa.moddate }}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+              {{ sa.content | markdownify }}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

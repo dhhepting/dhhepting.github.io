@@ -1,0 +1,36 @@
+{% include teaching/url.html %}
+{% assign asgnfile = site.data.teaching[jcrs_id][crs_sem]assignments %}
+<div class="card">
+  <div class="card card-header">
+    <h1>
+      Assignments
+    </h1>
+  </div>
+  {% assign it_asgn = "" %}
+  {% assign pt_asgn = "" %}
+  {% assign gt_asgn = "" %}
+  {% for aa in asgnfile %}
+    {% capture nxtasgn %}{{ aa.aid }}!{{ aa.title }}!{{ aa.duedate }}!{{ aa.lms_discuss }}!{{ aa.lms_submit }}{% endcapture %}
+    {% assign fla = aa.aid | slice: 0 %}
+    {% if fla == "I" %}
+      {% capture it_asgn %}{{ it_asgn }}#{{ nxtasgn }}{% endcapture %}
+    {% endif %}
+    {% if fla == "P" %}
+      {% capture pt_asgn %}{{ pt_asgn }}#{{ nxtasgn }}{% endcapture %}
+    {% endif %}
+    {% if fla == "G" %}
+      {% capture gt_asgn %}{{ gt_asgn }}#{{ nxtasgn }}{% endcapture %}
+    {% endif %}
+  {% endfor %}
+  {% include offering/asgn-by-type-tabs.html label='Individual' list=it_asgn id='IAS' %}
+  {% include offering/asgn-by-type-tabs.html label='Project' list=pt_asgn id='PAS' %}
+  {% include offering/asgn-by-type-tabs.html label='Group' list=gt_asgn id='GAS' %}
+</div>
+<script>
+const params = new URLSearchParams(location.search)
+let asgn = params.get('asgn')
+if (asgn !== null) {
+  document.getElementById(asgn + '-tab').classList.toggle('show')
+  //let asgn_elem = document.getElementById('collapse-' + asgn)
+}
+</script>
