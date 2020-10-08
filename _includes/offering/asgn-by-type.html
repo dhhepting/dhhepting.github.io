@@ -1,0 +1,32 @@
+{% assign al = include.list %}
+{% if al.size > 0 %}
+  {% assign az = al | split: "#" %}
+<div class="card" id="i-asgn-card">
+  <div class="card-header" role="tab" id="heading_{{ include.id }}">
+    <h5 class="mb-0">
+      <a class="xtra collapsed" data-toggle="collapse"
+      href="#collapse_{{ include.id }}" role="button"
+      aria-expanded="false" aria-controls="collapse_{{ include.id }}">
+        {{ include.label }}
+      </a>
+    </h5>
+  </div>
+  <div id="collapse_{{ include.id }}" class="collapse"
+  aria-labelledby="heading_{{ include.id }}">
+    <div class="card card-body">
+      <ul class="list-group list-group-flush">
+      {% for aa in az %}
+        {% assign aaa = aa | split: "!" %}
+        {% if aaa.size > 0 %}
+        <li class="list-group-item">
+          <a href="{{ include.test | relative_url }}">
+            {{ aaa[1] }}
+          </a>
+        </li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endif %}
