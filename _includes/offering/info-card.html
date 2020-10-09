@@ -17,7 +17,7 @@
       <ul class="list-group list-group-flush">
         {% capture sched_url %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
         {% include helper/list-link.html
-           test=sched_url label="Office Hours" %}
+           test=sched_url label="Schedule and Office Hours" %}
 
         {% capture syll_url %}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{% endcapture %}
         {% include helper/list-link.html
@@ -34,6 +34,10 @@
         {% capture meet_url %}{{ page.url }}meetings/{% endcapture %}
         {% include helper/list-link.html
            test=meet_url label="Table of Meetings" %}
+
+        {% capture asgn_url %}{{ page.url }}assignments/{% endcapture %}
+        {% include helper/list-link.html
+           test=asgn_url label="Table of Assignments" %}
 
         {% capture media_url %}{{ page.url }}media/{% endcapture %}
         {% include helper/list-link.html

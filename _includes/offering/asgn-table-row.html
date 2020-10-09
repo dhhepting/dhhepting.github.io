@@ -1,0 +1,79 @@
+{% assign al = include.args | split: '!' %}
+<div class="card">
+  <a class="collapsed" data-toggle="collapse"
+  href="#collapse_{{ al[0] }}" role="button"
+  aria-expanded="false" aria-controls="collapse_{{ al[0] }}">
+    <div class="card card-header" id="heading_{{ al[0] }}">
+      <div class="row">
+        <div class="col-3">
+          {{ include.tlabel }}
+        </div>
+        <div class="col-5">
+          {{ al[1] }}
+        </div>
+        <div class="col-2">
+          {{ al[2] }}
+        </div>
+        <div class="col-2">
+          {{ al[3] }}
+        </div>
+      </div>
+    </div>
+  </a>
+  <div id="collapse_{{ al[0] }}" class="collapse"
+  aria-labelledby="heading_{{ al[0] }}">
+  <div class="card card-body">
+    {% assign msa = "" %}
+    {% for sa in site.assignments %}
+      {% if sa.aid == al[0] %}
+        {% assign msa = sa %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <span class="navbar-brand" id="{{ al[0] }}-timer"></span>
+        <button class="navbar-toggler" type="button"
+        data-toggle="collapse" data-target="#{{ al[0] }}-navbar"
+        aria-controls="{{ al[0] }}-navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <script>
+          $(document).ready(
+            function(){
+              var duedate_{{ al[0] }} = '{{ al[3] }}'
+              var duetime_{{ al[0] }} =
+                new Date(duedate_{{ al[0] }}).getTime() + 86340000
+              $('#{{ al[0] }}-timer').countdown(duetime_{{ al[0] }},
+                function(event) {
+                  $(this).html(event.strftime('Due in: <span>%D d %H h %M m</span>'))
+              })
+          })
+        </script>
+        <div class="collapse navbar-collapse" id="{{ al[0] }}-navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link btn"
+              href="https://urcourses.uregina.ca/mod/forum/discuss.php?d={{ al[4] }}"
+              role="button">
+                Discuss
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn"
+              href="https://urcourses.uregina.ca/mod/assign/view.php?id={{ al[5] }}&action=editsubmission" role="button">
+                Submit
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn disabled" href="#" aria-disabled="true">
+                Updated: {{ msa.moddate }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {{ msa.content | markdownify }}
+  </div>
+</div>
