@@ -287,161 +287,172 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   </div>
   
   
-  
-  
-  
-
-
-  
-
-  
-<div class="card card-body">
-  <div class="card my-2">
+  <div class="card card-body">
     <div class="card card-header">
-      <h3>
-        Project
-      </h3>
+      <strong>
+        <div class="row">
+          <div class="col-3">
+            Type
+          </div>
+          <div class="col-5">
+            Title
+          </div>
+          <div class="col-2">
+            Marks
+          </div>
+          <div class="col-2">
+            Due Date @ 23:59
+          </div>
+        </div>
+      </strong>
     </div>
-    <div class="card card-body" id="PAS">
-      <ul class="nav nav-tabs bg-light" id="PAS-asgnTabs" role="tablist">
+  
+  
+    
+      
       
         
         
+<div class="card">
+  <a class="collapsed" data-toggle="collapse" href="#collapse_P_UNDERSTAND" role="button" aria-expanded="false" aria-controls="collapse_P_UNDERSTAND">
+    <div class="card card-header" id="heading_P_UNDERSTAND">
+      <div class="row">
+        <div class="col-3">
+          Project
+        </div>
+        <div class="col-5">
+          Understand Your Project
+        </div>
+        <div class="col-2">
+          10
+        </div>
+        <div class="col-2">
+          22-Oct-2020
+        </div>
+      </div>
+    </div>
+  </a>
+  <div id="collapse_P_UNDERSTAND" class="collapse" aria-labelledby="heading_P_UNDERSTAND">
+  <div class="card card-body">
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
       
         
         
-        <li class="nav-item">
-          <a class="nav-link" id="P_UNDERSTAND-tab" data-toggle="tab" href="#P_UNDERSTAND-pane" role="tab" aria-controls="PAS-asgnTabs" aria-selected="true">
-            Understand Your Project
-          </a>
-        </li>
-        
-      
-      </ul>
-      <div class="tab-content">
-      
-        
-        
-      
-        
-        
-        <div class="tab-pane fade" id="P_UNDERSTAND-pane">
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-              <div class="container">
-                <span class="navbar-brand" id="P_UNDERSTAND-cdt"></span>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#P_UNDERSTAND-navbar" aria-controls="P_UNDERSTAND-navbar" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <script>
-                  $(document).ready(
-                    function(){
-                      var duedate_P_UNDERSTAND = '22-Oct-2020'
-                      var duetime_P_UNDERSTAND =
-                        new Date(duedate_P_UNDERSTAND).getTime() + 86340000
-                      $('#P_UNDERSTAND-cdt').countdown(duetime_P_UNDERSTAND,
-                        function(event) {
-                          $(this).html(event.strftime('Due in: <span>%D d %H h %M m</span>'))
-                      })
-                  })
-                </script>
-                <div class="collapse navbar-collapse" id="P_UNDERSTAND-navbar">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                      <a class="nav-link btn" href="https://urcourses.uregina.ca/mod/forum/discuss.php?d=613230" role="button">
-                        Discuss
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link btn" href="https://urcourses.uregina.ca/mod/assign/view.php?id=701110&amp;action=editsubmission" role="button">
-                        Submit
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link btn disabled" href="#" aria-disabled="true">
-                        Updated: 08-Oct-2020
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-              <h3 id="understand-your-project">Understand Your Project</h3>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <span class="navbar-brand" id="P_UNDERSTAND-timer"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#P_UNDERSTAND-navbar" aria-controls="P_UNDERSTAND-navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <script>
+          $(document).ready(
+            function(){
+              var duedate_P_UNDERSTAND = '22-Oct-2020'
+              var duetime_P_UNDERSTAND =
+                new Date(duedate_P_UNDERSTAND).getTime() + 86340000
+              $('#P_UNDERSTAND-timer').countdown(duetime_P_UNDERSTAND,
+                function(event) {
+                  $(this).html(event.strftime('Due in: <span>%D d %H h %M m</span>'))
+              })
+          })
+        </script>
+        <div class="collapse navbar-collapse" id="P_UNDERSTAND-navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link btn" href="https://urcourses.uregina.ca/mod/forum/discuss.php?d=701110" role="button">
+                Discuss
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn" href="https://urcourses.uregina.ca/mod/assign/view.php?id=613230&amp;action=editsubmission" role="button">
+                Submit
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn disabled" href="#" aria-disabled="true">
+                Updated: 08-Oct-2020
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h3 id="understand-your-project">Understand Your Project</h3>
 
 <p>In consultation with the members of your group,
 select an existing website or software application,
@@ -853,33 +864,59 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
 </script>
 
 
-              
-        </div>
-        
-      
-      </div>
-    </div>
   </div>
 </div>
 
-
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
   
-
-
+  
+  </div>
 </div>
 <script>
 const params = new URLSearchParams(location.search)
 let asgn = params.get('asgn')
 if (asgn !== null) {
-  document.getElementById(asgn + '-tab').classList.toggle('show')
+  document.getElementById('collapse_' + asgn).classList.toggle('show')
   //let asgn_elem = document.getElementById('collapse-' + asgn)
 }
 </script>
 
+</div>
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2020-10-08 10:57 -0600
+  Site built: 2020-10-09 02:20 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202030/assignments/">
     Give feedback <span class="d-none d-sm-inline">about page</span>

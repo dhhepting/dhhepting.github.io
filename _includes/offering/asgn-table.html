@@ -1,0 +1,67 @@
+{% include teaching/url.html %}
+{% assign asgnfile = site.data.teaching[jcrs_id][crs_sem]assignments %}
+<div class="card">
+  <div class="card card-header">
+    <h1>
+      Assignments
+    </h1>
+  </div>
+  {% assign fllist = "" %}
+  {% for aa in asgnfile %}
+    {% assign fla = aa.aid | slice: 0 %}
+    {% capture fllist %}{{ fllist }}{{ fla }}{% endcapture %}
+  {% endfor %}
+  <div class="card card-body">
+    <div class="card card-header">
+      <strong>
+        <div class="row">
+          <div class="col-3">
+            Type
+          </div>
+          <div class="col-5">
+            Title
+          </div>
+          <div class="col-2">
+            Marks
+          </div>
+          <div class="col-2">
+            Due Date @ 23:59
+          </div>
+        </div>
+      </strong>
+    </div>
+  {% if fllist contains "I" %}
+    {% for aa in asgnfile %}
+      {% assign fla = aa.aid | slice: 0 %}
+      {% if fla == "I" %}
+      i  {{ aa.aid }}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% if fllist contains "P" %}
+    {% for aa in asgnfile %}
+      {% assign fla = aa.aid | slice: 0 %}
+      {% if fla == "P" %}
+        {% capture asgnargs %}{{ aa.aid }}!{{ aa.title }}!{{ aa.marks }}!{{ aa.duedate }}!{{ aa.lms_discuss }}!{{ aa.lms_submit }}{% endcapture %}
+        {% include offering/asgn-table-row.html tlabel='Project' args=asgnargs %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% if fllist contains "G" %}
+    {% for aa in asgnfile %}
+      {% assign fla = aa.aid | slice: 0 %}
+      {% if fla == "G" %}
+        g {{ aa.aid }}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  </div>
+</div>
+<script>
+const params = new URLSearchParams(location.search)
+let asgn = params.get('asgn')
+if (asgn !== null) {
+  document.getElementById('collapse_' + asgn).classList.toggle('show')
+  //let asgn_elem = document.getElementById('collapse-' + asgn)
+}
+</script>
