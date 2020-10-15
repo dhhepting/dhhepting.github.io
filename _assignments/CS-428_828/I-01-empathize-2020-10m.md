@@ -2,12 +2,18 @@
 title: Empathize
 breadcrumb: Empathize
 layout: bg-image
-moddate: 13-Oct-2020
-marks: 6
+moddate: 15-Oct-2020
+marks: 10
 aid: I_EMPATHIZE
 rubric:
-- crit: Task Completed
-  wt: 4.0
+- crit: Activity Described
+  wt: 1.0
+  l3: Includes everything as requested
+  l2: Includes mostly all as requested
+  l1: Not described as requested
+  l0: Not described
+- crit: Activity Completed
+  wt: 3.0
   l3: Everything done as requested
   l2: Mostly done as requested
   l1: Not done as requested
@@ -42,7 +48,7 @@ Specifically, you are asked to:
       1. One "activity" that allows you to assign a grade upon completion
       1. One "resource" whose access is restricted based on the grade earned from your activity
 
-1. Describe whatever opportunities for redesign that you find by describing it (or them) in terms of your personal experience of completing your activity.
+1. Describe whatever opportunities for redesign that you find by relating it (or them) in terms of your personal experience of completing your activity.
 
 ### Submission
 
