@@ -2,7 +2,7 @@
 {% assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
 {% assign mtn = include.mtg | prepend: '00' | slice: -2, 2  %}
 
-{% if planfile %}
+{% if planfile and include.mtg > 1 %}
 <div class="card" id="todaysplan-card">
   <div class="card-header" role="tab" id="heading_REV">
     <h3 class="mb-0">

@@ -425,7 +425,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
             </li>
             <li class="nav-item">
               <a class="nav-link btn disabled" href="#" aria-disabled="true">
-                Updated: 13-Oct-2020
+                Updated: 15-Oct-2020
               </a>
             </li>
           </ul>
@@ -455,7 +455,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
       </li>
     </ol>
   </li>
-  <li>Describe whatever opportunities for redesign that you find by describing it (or them) in terms of your personal experience of completing your activity.</li>
+  <li>Describe whatever opportunities for redesign that you find by relating it (or them) in terms of your personal experience of completing your activity.</li>
 </ol>
 
 <h3 id="submission">Submission</h3>
@@ -477,7 +477,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   </ul>
 </div>
 
-<p>This assignment is worth 6 marks, according to the following rubric:</p>
+<p>This assignment is worth 10 marks, according to the following rubric:</p>
 
 <h5 id="rubric">Rubric</h5>
 
@@ -500,7 +500,25 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
 
       <tr>
         <th>
-          Task Completed (4.0)
+          Activity Described (1.0)
+        </th>
+        <td>
+          Includes everything as requested
+        </td>
+        <td>
+          Includes mostly all as requested
+        </td>
+        <td>
+          Not described as requested
+        </td>
+        <td>
+          Not described
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Activity Completed (3.0)
         </th>
         <td>
           Everything done as requested
@@ -574,8 +592,32 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
   
   
     <div class="form-group row">
-      <label class="col-sm-3 col-form-label text-right" for="rcriterion1">Task Completed (4.0)</label>
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion1">Activity Described (1.0)</label>
       <select class="col-sm-9 form-control" name="criteria_I_EMPATHIZE" id="rcriterion1">
+        criteria_I_EMPATHIZE
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): Includes everything as requested</option>
+        <option value="9"> Exemplary: Includes everything as requested</option>
+        <option value="8"> Exemplary (-): Includes everything as requested</option>
+        <option value="7"> Sufficient (+): Includes mostly all as requested</option>
+        <option value="6"> Sufficient: Includes mostly all as requested</option>
+        <option value="5"> Sufficient (-): Includes mostly all as requested</option>
+        <option value="4"> Developing (+): Not described as requested</option>
+        <option value="3"> Developing: Not described as requested</option>
+        <option value="2"> Developing (-): Not described as requested</option>
+        <option value="1">Needs Improvement: Not described</option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion2">Activity Completed (3.0)</label>
+      <select class="col-sm-9 form-control" name="criteria_I_EMPATHIZE" id="rcriterion2">
         criteria_I_EMPATHIZE
         <option selected="" disabled="">Choose...</option>
         <option value="10"> Exemplary (+): Everything done as requested</option>
@@ -598,8 +640,8 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
   
   
     <div class="form-group row">
-      <label class="col-sm-3 col-form-label text-right" for="rcriterion2">Empathy Map (3.0)</label>
-      <select class="col-sm-9 form-control" name="criteria_I_EMPATHIZE" id="rcriterion2">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion3">Empathy Map (3.0)</label>
+      <select class="col-sm-9 form-control" name="criteria_I_EMPATHIZE" id="rcriterion3">
         criteria_I_EMPATHIZE
         <option selected="" disabled="">Choose...</option>
         <option value="10"> Exemplary (+): All quadrants done well</option>
@@ -622,8 +664,8 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
   
   
     <div class="form-group row">
-      <label class="col-sm-3 col-form-label text-right" for="rcriterion3">Opportunities for Redesign (3.0)</label>
-      <select class="col-sm-9 form-control" name="criteria_I_EMPATHIZE" id="rcriterion3">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion4">Opportunities for Redesign (3.0)</label>
+      <select class="col-sm-9 form-control" name="criteria_I_EMPATHIZE" id="rcriterion4">
         criteria_I_EMPATHIZE
         <option selected="" disabled="">Choose...</option>
         <option value="10"> Exemplary (+): Thoroughly explored</option>
@@ -671,7 +713,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
       <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
 
 
-      <textarea class="col-sm-9 form-control" id="comments_I_EMPATHIZE" rows="5" placeholder="Criteria Weights Not Equal to Total Marks"></textarea>
+      <textarea class="col-sm-9 form-control" id="comments_I_EMPATHIZE" rows="5" readonly="true"></textarea>
   
     </div>
     <div class="form-group row">
@@ -691,7 +733,7 @@ Your comments about the following rubric are welcome <a href="mailto:daryl.hepti
 <script>
   function process_I_EMPATHIZE()
   {
-    var weights = ["","4.0","3.0","3.0"]
+    var weights = ["","1.0","3.0","3.0","3.0"]
     console.log(weights)
     var mult = 1.0
     // get multiplier from penalty radio buttons
@@ -1413,7 +1455,7 @@ if (asgn !== null) {
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2020-10-14 14:45 -0600
+  Site built: 2020-10-15 10:47 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202030/assignments/">
     Give feedback <span class="d-none d-sm-inline">about page</span>
