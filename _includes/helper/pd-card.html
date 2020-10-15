@@ -1,0 +1,32 @@
+{% assign test_url = site.pages | where: "url", include.test %}
+{% assign test_path = site.static_files | where: "path", include.test %}
+{% if include.open == 'y' %}
+  {% assign pd_show = "show" %}
+  {% assign pd_collapsed = "" %}
+  {% assign pd_expanded = "true" %}
+{% else %}
+  {% assign pd_show = "" %}
+  {% assign pd_collapsed = "collapsed" %}
+  {% assign pd_expanded = "false" %}
+{% endif %}
+{% if test_url.size > 0 or test_path.size > 0 %}
+<div class="card" id="{{ include.id }}-pd-card">
+  <{{ include.level }} class="mb-0">
+    <div class="card card-header" role="tab"
+    id="heading_{{ include.id }}">
+      <a class="xtra {{ pd_collapsed }}" data-toggle="collapse"
+      href="#collapse_{{ include.id }}"
+      aria-expanded="{{ pd_expanded }}"
+      aria-controls="collapse_{{ include.id }}">
+        {{ include.label }}
+      </a>
+    </div>
+  </{{ include.level }}>
+  <div id="collapse_{{ include.id }}" class="collapse {{ pd_show }}"
+  role="tabpanel" aria-labelledby="heading_{{ include.id }}">
+    <div class="card card-body">
+      {% include {{ include.body }} %}
+    </div>
+  </div>
+</div>
+{% endif %}

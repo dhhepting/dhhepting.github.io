@@ -1,0 +1,27 @@
+
+{% include teaching/url.html %}
+
+{%- assign todaydate = "now" | date: "%a-%d-%b-%Y" -%}
+{%- assign tddarr = todaydate | split: "-" -%}
+{%- assign tddmmm = tddarr[2] | date: "%m" | plus: 0 | times: 100 -%}
+{%- assign tddnbr = tddmmm | plus: tddarr[1] -%}
+{%- if site.data.teaching[jcrs_id][crs_sem]plan -%}
+  {% assign currmtg = 1 | plus: 0 %}
+  {% for m in site.data.teaching[jcrs_id][crs_sem]plan %}
+    {% if m[1].date %}
+      {%- assign mtdarr = m[1].date | split: "-" -%}
+      {%- assign mtdmmm = mtdarr[2] | date: "%m" | plus: 0 | times: 100 -%}
+      {%- assign mtdnbr = mtdmmm | plus: mtdarr[1] -%}
+      {% if tddnbr <= mtdnbr %}
+        {%- assign meetingdate = m[1].date -%}
+        {% break %}
+      {% endif %}
+      {% assign currmtg = currmtg | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+<p>
+  Today is: <i>{{ todaydate }}</i><br />
+  Next class meeting is: <i>{{ meetingdate }}</i>
+</p>
+{% include meetings/pagination.html path="meetings/" tm=26 cm=currmtg na=1 %}

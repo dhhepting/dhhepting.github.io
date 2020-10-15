@@ -8,9 +8,19 @@
       {{ crs_id }} in {{ crs_sem }}
     </h1>
   </div>
-  <div class="m-2">
-    {% include offering/mtgs-card.html %}
-    {% include offering/info-card.html %}
+  <div class="card card-body m-2">
+    {% capture mtg_dir %}/teaching/{{ crs_id }}/{{ crs_sem }}/meetings/{% endcapture %}
+    {% include helper/pd-card.html
+       test=mtg_dir label="Meetings" level='h3'
+       open='y' id='MTGS' body='offering/mtgs-body.html'
+    %}
+
+    {% capture off_dir %}/teaching/{{ crs_id }}/{{ crs_sem }}/{% endcapture %}
+    {% include helper/pd-card.html
+       test=off_dir label="Information" level='h3'
+       open='y' id='INFO' body='offering/info-card-body.html'
+    %}
+
     {% include offering/knowunits-card.html %}
     {% include offering/plan-card.html %}
     {% include offering/links-card.html %}
