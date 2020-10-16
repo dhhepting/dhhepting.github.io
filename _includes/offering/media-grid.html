@@ -1,0 +1,92 @@
+{% include teaching/url.html %}
+{%- assign mtgsfile = site.data.teaching[jcrs_id][crs_sem]meetings -%}
+{%- if site.data.teaching[jcrs_id][crs_sem]media -%}
+<div class="card">
+  <div class="card card-header">
+    <h1>
+      Media from Meetings
+    </h1>
+  </div>
+  <div class="card card-body">
+    <div class="card card-header">
+      <strong>
+        <div class="row">
+          <div class="col-sm-2">
+            Meeting
+          </div>
+          <div class="col-sm-10">
+            Media
+          </div>
+        </div>
+      </strong>
+    </div>
+  <div class="card card-body">
+  {%- capture murl_prefix %}/teaching/{{ crs_id }}/{{ crs_sem }}/meetings/{% endcapture %}
+  {%- assign sortedMedia = site.data.teaching[jcrs_id][crs_sem]media | sort: 'meet' -%}
+  {%- assign mtg_nbr = 0 -%}
+  {%- for media in sortedMedia -%}
+    {% assign new_nbr = media.meet | plus: 0 %}
+    {% if mtg_nbr != new_nbr %}
+      {% if mtg_nbr > 0 %}
+      </div>
+    </div>
+      {% endif %}
+      {% assign mtg_nbr = new_nbr %}
+      {% assign mtg_odd = mtg_nbr | modulo: 2 %}
+      {% if mtg_odd == 1 %}
+        {% assign mtg_bg = "bg-light" %}
+      {% else %}
+        {% assign mtg_bg = "" %}
+      {% endif %}
+    <div class="row {{ mtg_bg }} align-items-center">
+      <div class="col-sm-2">
+        {%- assign mtgnbr_str = mtg_nbr | prepend: '00' | slice: -2, 2 %}
+        {%- assign mtg_idx = mtg_nbr | minus: 1 %}
+        {%- capture murl -%}{{ murl_prefix }}{{ mtgsfile[mtg_idx].file }}{%- endcapture -%}
+        <a href="{{ murl | absolute_url }}" class="btn btn-primary" role="button">
+          {{ mtgnbr_str }}
+        </a>
+      </div>
+      <div class="col-sm-10">
+    {%- endif -%}
+        {%- if media.URL contains "jpg" or media.URL contains "png" -%}
+          <img src="{{ media.URL }}" alt="{{ media.file }}" height="64" class="m-1 img-responsive"/>
+        {%- endif -%}
+        {%- if media.URL contains "m4a" -%}
+          <a href="{{ media.URL }}">
+            <span class="far fa-file-audio fa-4x align-middle m-1">
+            </span>
+          </a>
+        {%- endif -%}
+    {%- endfor -%}
+      </div>
+    </div>
+    {% comment %}
+      <table class="table table-striped table-bordered">
+        <tbody>
+
+
+    <tr class="d-flex">
+      <th class="col-2">
+        {% assign mtgnbr_str = mtg_nbr | prepend: '00' | slice: -2, 2 %}
+        <a href="{{ mff | absolute_url }}" class="btn btn-primary" role="button">
+          {{ mtgnbr_str }}
+        </a>
+      </th>
+      <td class="col-10">
+    {% endif %}
+    {%- if media.URL contains "jpg" or media.URL contains "png" -%}
+        <img src="{{media.URL}}" alt="{{media.file}}" height="64" class="m-1 img-responsive"/>
+    {%- endif -%}
+    {%- if media.URL contains "m4a" -%}
+        <a href="{{media.URL}}"><span class="far fa-file-audio fa-4x align-middle m-1"></span></a>
+    {%- endif -%}
+  {%- endfor -%}
+</td>
+</tr>
+  </tbody>
+  </table>
+  </div>
+</div>
+{% endcomment %}
+{%- endif -%}

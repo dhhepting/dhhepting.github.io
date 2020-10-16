@@ -3,7 +3,7 @@ layout: bg-image
 title: Understand Your Project
 breadcrumb: Understand
 aid: P_UNDERSTAND
-moddate: 08-Oct-2020
+moddate: 15-Oct-2020
 marks: 10
 rubric:
 - crit: Description of Activities
@@ -52,8 +52,8 @@ which mirror the 3 stages of the <a href="https://www.nngroup.com/articles/desig
 
 The understand stage, comprising empathize and define steps, is the focus of this assignment. Focus on well-defined activities that well-defined users are trying to perform.
 
-1. describe: each member of your group will describe an activity and a user wanting to complete that activity with sufficient detail to be relatable.
-1. empathize: each member of your group will create an empathy map for each activity (and user).
+1. describe: each member of your group will describe, with sufficient detail to be relatable, an activity and a user wanting to complete that activity.
+1. empathize: each member of your group will create an empathy map for each activity (and user). If there are 4 people in your group, each person will do 4 empathy maps and your group's submission will have 16 in total.
 1. define: together as a group, identify specific aspects of the current interface that cause problems for the users and look to examine the roots of those problems. Identify whatever user needs may be unmet.
 
 Remember that this stage is concerned with understanding the opportunities for redesign with your selected website or software application.

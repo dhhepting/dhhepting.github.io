@@ -5,5 +5,4 @@ sem: 202030
 layout: bg-image
 description:
 ---
-
 {% include offering/main.html %}

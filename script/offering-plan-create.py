@@ -56,7 +56,7 @@ if (len(reldir) != 2):
 	sys.exit()
 
 # find offering indicated by arguments and load meeting days
-with open(SITE_DIR + '_data/teaching/course_offerings.csv', newline='') as offfile:
+with open(SITE_DIR + '_data/teaching/offerings.csv', newline='') as offfile:
     offreader = csv.DictReader(offfile)
     off_found = 0
     for row in offreader:
@@ -84,79 +84,30 @@ with open(SITE_DIR + '_data/teaching/semesters.csv', newline='') as semfile:
             sday = datetime.strptime(row['term-start'], "%d-%b-%y")
             ced = datetime.strptime(row['class-end'], "%d-%b-%y")
             break
-if off_found == 0:
+if sem_found == 0:
     sys.exit()
 
-joff_id = reldir[0] + "-" + reldir[1]
-joff_id = joff_id.replace("+","_")
-planfile = os.path.abspath(SITE_DIR + DATA_ROOT + joff_id + "/plan.yml")
+jcrs_id = reldir[0].replace("+","_")
+planfile = os.path.abspath(SITE_DIR + DATA_ROOT + jcrs_id + '/' + reldir[1] + "/plan.yml")
+joff_id = jcrs_id + '-' + reldir[1]
 mtgctr = 1
 d = {}
 d['offering'] = {}
 d['offering']['id'] = joff_id
-while (sday <= ced):
-    datelist = datetime.strftime(sday,"%a-%d-%b-%Y").split('-')
-    if (datelist[0] in mtgdays) and datelist not in ncdlist:
-        #mtgwriter.writerow({'meeting': str(mtgctr).zfill(2), 'date': '-'.join(datelist)})
-        d[mtgctr] = {}
-        e = {}
-        e['kaku'] = 'HCI/Foundations'
-        e['topics'] = 'list of topics'
-        e['outcomes'] = 'list of outcomes'
-        e['notes'] = 'name of webpage with notes'
-        d[mtgctr]['BOK'] = [e]
-        d[mtgctr]['date'] = '-'.join(datelist)
-        d[mtgctr]['theme'] = 'Human Computer Communication'
-        mtgctr += 1
-    sday = sday + timedelta(days=1)
-if (0):
-    with open(planfile, 'w') as yaml_file:
-        yaml.dump(d, yaml_file, default_flow_style=False)
-nbr_meetings = mtgctr - 1
-
-if (0):
-    midxstr = SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings/index.md"
-    with open(midxstr,"w") as mtgidx:
-        mtgidx.write("---\n")
-        mtgidx.write("title: " + reldir[0] + " (" + reldir[1] + ") Meetings\n")
-        mtgidx.write("breadcrumb: Meetings\n")
-        mtgidx.write("layout: bg-image\n")
-        mtgidx.write("---\n")
-        mtgidx.write("{% include meetings/index-table.html %}\n")
-
-    mdirstr = str(SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings/")
-    try:
-        os.makedirs(mdirstr)
-    except OSError as e:
-        if e.errno == errno.EEXIST and os.path.isdir(mdirstr):
-            pass
-        else:
-            raise
-
-with open(planfile, 'r') as stream:
-    try:
-        yamldict = yaml.safe_load(stream)
-    except yaml.YAMLError as exc:
-        print(exc)
-for uu in yamldict:
-    if ('date' in yamldict[uu]):
-    #print (uu,yamldict[uu]['date'])
-        m = uu
-        mtg_date = yamldict[uu]['date']
-        mtg_fname = str(m).zfill(2) + '_' + mtg_date
-
-        mfilestr = SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings/" + mtg_fname + ".md"
-        print(mfilestr)
-        with open(mfilestr,"w") as mtgfile:
-            mtgfile.write("---\n")
-            mtgfile.write("title: Mtg " + str(m) + " &bull; " + reldir[0] +  " (" + reldir[1] + ")\n")
-            mtgfile.write("breadcrumb: " + str(m) + " (" + mtg_date + ")\n")
-            mtgfile.write("mtg_nbr: " + str(m) + "\n")
-            mtgfile.write("total_meet: " + str(nbr_meetings) + "\n")
-            mtgfile.write("mtg_date: " + mtg_date + "\n")
-            mtgfile.write("layout: bg-image\n")
-            mtgfile.write("focus:\n")
-            mtgfile.write("- ka:\n")
-            mtgfile.write("  ku:\n")
-            mtgfile.write("---\n")
-            mtgfile.write(meet_template["CS"])
+with open(planfile, 'x') as yaml_file:
+    while (sday <= ced):
+        datelist = datetime.strftime(sday,"%a-%d-%b-%Y").split('-')
+        if (datelist[0] in mtgdays) and datelist not in ncdlist:
+            d[mtgctr] = {}
+            e = {}
+            e['kaku'] = 'knowledge area / knowledge unit'
+            e['topics'] = 'list of topics'
+            e['outcomes'] = 'list of outcomes'
+            e['notes'] = 'name of webpage with notes'
+            d[mtgctr]['BOK'] = [e]
+            d[mtgctr]['date'] = '-'.join(datelist)
+            d[mtgctr]['theme'] = 'theme'
+            mtgctr += 1
+        sday = sday + timedelta(days=1)
+    d['offering']['meetings'] = mtgctr - 1
+    yaml.dump(d, yaml_file, default_flow_style=False)
