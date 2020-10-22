@@ -1,10 +1,6 @@
-<div class="card" id="upcoming-link">
-  <div class="card-header">
-    <h3 class="mb-0">
-      <a target="_blank" {%comment%}_{%endcomment%}
-      href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&course={{ crs_urc }}">
-        Upcoming Events
-      </a>
-    </h3>
-  </div>
-</div>
+{% capture upurl %}https://urcourses.uregina.ca/calendar/view.php?view=upcoming&course={{ crs_urc }}{% endcapture %}
+{% include helper/lnk-card.html
+   label="Upcoming Events" level='h3'
+   id='EVENTS'
+   url=upurl
+%}
