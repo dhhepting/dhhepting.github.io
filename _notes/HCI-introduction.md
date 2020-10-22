@@ -13,9 +13,10 @@ layout: notes-default
     </h1>
   </div>
   <div class="card card-body">
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item"
-      src="https://www.youtube.com/embed/25jITfp4R0k" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    {%  
+      include helper/video.html
+      vidurl='https://www.youtube.com/embed/25jITfp4R0k'
+      desc='Attack of the Impolite Robots (2020)'
+    %}
   </div>
 </div>
