@@ -1,5 +1,6 @@
 {% assign test_url = site.pages | where: "url", include.test %}
 {% assign test_path = site.static_files | where: "path", include.test %}
+{% assign test_true = (include.test == "true") or (include.test != "")%}
 {% if include.open == 'y' %}
   {% assign pd_show = "show" %}
   {% assign pd_collapsed = "" %}
@@ -9,7 +10,9 @@
   {% assign pd_collapsed = "collapsed" %}
   {% assign pd_expanded = "false" %}
 {% endif %}
-{% if test_url.size > 0 or test_path.size > 0 %}
+<!-- {% if include.test != "" %}
+-{{ test_url.size }}--{{test_path.size}}---{{test_true}}-- -->
+{% if test_url.size > 0 or test_path.size > 0 or test_true %}
 <div class="card" id="{{ include.id }}-pd-card">
   <{{ include.level }} class="mb-0">
     <div class="card card-header" role="tab"
@@ -25,8 +28,23 @@
   <div id="collapse_{{ include.id }}" class="collapse {{ pd_show }}"
   role="tabpanel" aria-labelledby="heading_{{ include.id }}">
     <div class="card card-body">
-      {% include {{ include.body }} %}
+      {% if include.pass == 'y' %}
+        {%-
+          include {{ include.body }}
+          test=include.test
+          label=include.label
+          level=include.level
+          pass=include.pass
+          mtg=include.mtg
+          open=include.open
+          id=include.id
+          body=include.body
+        -%}
+      {% else %}
+        {%- include {{ include.body }} -%}
+      {% endif %}
     </div>
   </div>
 </div>
 {% endif %}
+<!-- {% endif %} -->

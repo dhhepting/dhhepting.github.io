@@ -1,0 +1,18 @@
+{% for ts in include.test %}
+  {% assign tmstmp = ts[0] %}
+  {% assign taghash =  %}
+  {% assign tagopen = 'y' %}
+  {% for oth in ts[1].tags %}
+    {% for ot in oth %}
+      {% if ot[0] == 'open' %}
+        {% assign tagopen = ot[1] %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  {%-
+    include helper/pd-card.html
+    test=ts label=tmstmp level='h5'
+    open=tagopen id=tmstmp body='meetings/transcript-hhmm-body.html'
+  -%}
+{% endfor %}

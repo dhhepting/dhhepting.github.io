@@ -35,7 +35,13 @@
     </div>
     {% endif %}
     {% assign month = mmf_parts[2] %}
-    <div class="row">
+    {% assign mnth_odd = month | modulo: 2 %}
+    {% if mtg_odd == 1 %}
+      {% assign mtg_bg = "bg-light" %}
+    {% else %}
+      {% assign mtg_bg = "" %}
+    {% endif %}
+    <div class="row {{ mtg_bg }} border align-items-center">
       <div class="col-sm-2">
         {{ crs_sem | slice: 0, 4 }}
       </div>

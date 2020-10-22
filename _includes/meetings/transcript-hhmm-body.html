@@ -1,0 +1,60 @@
+{% assign ts = include.test %}
+<div class="row">
+  <div class="col-sm-6">
+  {% assign hkk = ts[1].chats %}
+  {% if hkk[0].persid %}
+    <h5 class="bg-dark text-white" >
+      Chat
+    </h5>
+    {% for hh in hkk %}
+    <p>
+      <strong>
+        {{ hh.persid }}
+      </strong>
+      : {{ hh.msg }}
+    </p>
+    {% endfor %}
+  {% endif %}
+  </div>
+  <div class="col-sm-6">
+  {% assign hkk = ts[1].talks %}
+  {% if hkk[0].persid %}
+    <h5 class="bg-dark text-white">
+      Audio
+    </h5>
+    {% for hh in hkk %}
+      {% if hh.persid == "Daryl Hepting" or hh.persid == "DHH" %}
+        {% assign hhp = "DHH" %}
+      {% else %}
+        {% assign hhp = "SSS" %}
+      {% endif %}
+      <p>
+        <strong>
+          {{ hhp }}
+        </strong>
+        : {{ hh.msg }}
+      </p>
+    {% endfor %}
+  {% endif %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+  {% assign hkk = ts[1].tags %}
+  {% if hkk[0].img %}
+    {% assign iname = hkk[0].img %}
+    {% assign idesc = hkk[0].desc %}
+    {% include helper/figure.html
+      name=iname desc=idesc %}
+  {% endif %}
+  {% if hkk[0].todo %}
+  <div class="mb-2 bg-warning">
+    <h5 class="mb-0 text-center" >
+    {{ hkk[0].todo | upcase }}
+    </h5>
+    {% for hh in hkk %}
+    <p class="text-center"> {{ hh.desc }} </p>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>

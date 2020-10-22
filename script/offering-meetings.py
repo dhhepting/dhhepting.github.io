@@ -44,31 +44,12 @@ meet_template = { "old" : """
     </div>
 </div>""",
 "CS" : """
-{%
-    include meetings/pagination.html
+{%- include meetings/main.html
     tm=page.total_meet
-    cm=page.mtg_nbr
-%}
-<div class="card">
-    <div class="card card-header lightcthru">
-      <h1>
-        {{ page.mtg_date | date: '%a-%d-%b-%Y' }}
-      </h1>
-    </div>
-    <div class="card card-body">
-      {% include meetings/upcoming.html %}
-
-      {% include meetings/review.html mtg=page.mtg_nbr %}
-
-      {% include meetings/plan.html mtg=page.mtg_nbr %}
-      <hr /><hr />
-      {% include meetings/annotations.html %}
-
-      {% include meetings/media.html mtg=page.mtg_nbr %}
-
-      {% include meetings/transcript-card.html mtg=page.mtg_nbr %}
-    </div>
-</div>"""
+    mn=page.mtg_nbr
+    md=page.mtg_date
+-%}
+"""
 }
 
 # Make sure that script is executed properly: i.e. CS-428+828/201830
@@ -102,8 +83,6 @@ with open(midxstr,"w") as mtgidx:
 jcrs_id = reldir[0].replace("+","_")
 planfile = os.path.abspath(SITE_DIR + DATA_ROOT + jcrs_id + '/' + reldir[1] + "/plan.yml")
 mtgsfile = os.path.abspath(SITE_DIR + DATA_ROOT + jcrs_id + '/' + reldir[1] + "/meetings.csv")
-# meeting,file
-# 01,01_07-Jan-20.html
 with open(planfile, 'r') as stream, open(mtgsfile,'w') as mf:
     try:
         yamldict = yaml.safe_load(stream)
@@ -114,16 +93,13 @@ with open(mtgsfile,'w') as mf:
     for uu in yamldict:
         if ('id' in yamldict[uu]):
             mf.write('meeting,file\n')
-            #print (uu,yamldict[uu]['meetings'])
             nbr_meetings = yamldict[uu]['meetings']
         if ('date' in yamldict[uu]):
-            #print (uu,yamldict[uu]['date'])
             m = uu
             mtg_date = yamldict[uu]['date']
             mtg_fname = str(m).zfill(2) + '_' + mtg_date
             mf.write(str(m).zfill(2) + ',' + mtg_fname + '.html\n')
             mfilestr = SITE_DIR + MD_ROOT + sys.argv[1] + "/meetings/" + mtg_fname + ".md"
-            #print(mfilestr)
             with open(mfilestr,"w") as mtgfile:
                 mtgfile.write("---\n")
                 mtgfile.write("title: Mtg " + str(m) + " &bull; " + reldir[0] +  " (" + reldir[1] + ")\n")
@@ -132,8 +108,5 @@ with open(mtgsfile,'w') as mf:
                 mtgfile.write("total_meet: " + str(nbr_meetings) + "\n")
                 mtgfile.write("mtg_date: " + mtg_date + "\n")
                 mtgfile.write("layout: bg-image\n")
-                #mtgfile.write("focus:\n")
-                #mtgfile.write("- ka:\n")
-                #mtgfile.write("  ku:\n")
                 mtgfile.write("---\n")
                 mtgfile.write(meet_template["CS"])

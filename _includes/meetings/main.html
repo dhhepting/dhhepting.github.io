@@ -1,0 +1,30 @@
+{%-
+  include meetings/pagination.html
+  tm=include.tm
+  cm=include.mn
+-%}
+<div class="card">
+  <div class="card card-header lightcthru">
+    <h1>
+      {{ include.md | date: '%a-%d-%b-%Y' }}
+    </h1>
+  </div>
+  <div class="card card-body">
+
+    {% include meetings/upcoming.html %}
+
+    {% assign lmt = include.mn | minus: 1 %}
+    {% include meetings/review.html mtg=lmt %}
+
+    {% include meetings/plan.html mtg=include.mn %}
+
+    <hr /><!-- Above: before mtg, Below: after mtg --><hr />
+
+    {% include meetings/annotations.html %}
+
+    {% include meetings/media.html mtg=include.mn %}
+
+    {% include meetings/transcript.html mtg=include.mn %}
+
+  </div>
+</div>
