@@ -8,36 +8,80 @@
       {{ crs_id }} in {{ crs_sem }}
     </h1>
   </div>
-  <div class="card card-body m-2">
-    {% capture mtg_dir %}/teaching/{{ crs_id }}/{{ crs_sem }}/meetings/{% endcapture %}
-    {% include helper/pd-card.html
-       test=mtg_dir label="Meetings" level='h3'
-       open='y' id='MTGS' body='offering/mtgs-body.html'
-    %}
+  <div class="card card-body">
 
-    {% capture off_dir %}/teaching/{{ crs_id }}/{{ crs_sem }}/{% endcapture %}
-    {% include helper/pd-card.html
-       test=off_dir label="Information" level='h3'
-       open='y' id='INFO' body='offering/info-card-body.html'
-    %}
+  {% assign off_lvl = "h3" %}
+  <!-- syllabus -->
+  {% capture syll_path %}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{% endcapture %}
+  {% assign syll_url = syll_path | relative_url %}
+  {% if syll_url %}
+    {%-
+      include helper/lnk-card.html
+      label="Syllabus" url=syll_url
+      level=off_lvl id="OFF_SYLLABUS"
+    -%}
+  {% endif %}
 
-    {% include offering/knowunits-card.html %}
-    {% include offering/plan-card.html %}
-    {% include offering/links-card.html %}
+  <!-- schedule and office hours -->
+  {% capture sched_path %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
+  {% assign sched_url = sched_path | relative_url %}
+  {% if sched_url %}
+    {%-
+      include helper/lnk-card.html
+      url=sched_url label="Schedule and Office Hours"
+      level=off_lvl id="OFF_SCHED"
+   -%}
+ {% endif %}
+
+  <!--  Next meeting -->
+  {% capture mtg_dir %}{{ page.url }}/meetings/{% endcapture %}
+  {% include helper/pd-card.html
+     test=mtg_dir label="Next Meeting" level='h3'
+     open='y' id='OFF_NXTMTG' body='offering/mtgs-body.html'
+  %}
+
+  <!-- UR Courses -->
+  {%- if crs_urc != "" -%}
+    {%- capture urc_url -%}https://urcourses.uregina.ca/course/view.php?id={{ crs_urc }}{%- endcapture -%}
+    {%- capture urc_label -%}{{ crs_id | replace: "-", " " }} on UR Courses{%- endcapture -%}
+    {%-
+      include helper/lnk-card.html
+      url=urc_url label=urc_label
+      level=off_lvl id="OFF_URC"
+    -%}
+  {%- endif -%}
+
+  <!-- Assignments -->
+  {% capture asgn_path %}{{ page.url }}assignments/{% endcapture %}
+  {% assign asgn_url = asgn_path | relative_url %}
+  {% if asgn_url %}
+    {%-
+      include helper/lnk-card.html
+      url=asgn_url label="Assignments"
+      level=off_lvl id="OFF_MTGS"
+    -%}
+  {%- endif -%}
+
+  <!-- Media -->
+  {% capture media_path %}{{ page.url }}media/{% endcapture %}
+  {% assign media_url = media_path | relative_url %}
+  {% if media_url %}
+    {%-
+      include helper/lnk-card.html
+      url=media_url label="Media from Meetings"
+      level=off_lvl id="OFF_MEDIA"
+    -%}
+  {%- endif -%}
+
+  <!-- Meetings -->
+  {%-
+     include helper/lnk-card.html
+     url=mtg_dir label="Meetings"
+     level=off_lvl id="OFF_MTGS"
+  -%}
+
+  {% include offering/knowunits-card.html %}
+  {% include offering/plan-card.html %}
+  {% include offering/links-card.html %}
   </div>
 </div>
-
-
-
-
-  {% comment %}
-
-    {% include offering/schedule-card.html %}
-    {% include offering/info-card.html %}
-    {% include offering/rss-card.html %}
-    {% include offering/media-cardB.html %}
-    {% include offering/knowledge-cardB.html %}
-    {% include offering/assignments-cardC.html %}
-    {% include offering/calendar-card.html %}
-    {% include offering/media-cardC.html %}
-  {% endcomment %}
