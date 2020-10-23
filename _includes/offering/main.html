@@ -13,32 +13,29 @@
   {% assign off_lvl = "h3" %}
   <!-- syllabus -->
   {% capture syll_url %}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{% endcapture %}
-{% comment %}<!--
+{% comment %}
   {% capture syll_path %}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{% endcapture %}
   {% assign syll_url = syll_path | relative_url %}
-  {% if syll_url %} -->{% endcomment %}
+  {% if syll_url %}{% endif %}
+{% endcomment %}
     {%-
       include helper/lnk-card.html
       label="Syllabus" url=syll_url
       level=off_lvl id="OFF_SYLLABUS"
     -%}
-    <!--
-  {% endif %} -->
 
   <!-- schedule and office hours -->
   {% capture sched_url %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
   {% comment %}
   {% capture sched_path %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
   {% assign sched_url = sched_path | relative_url %}
-  {% if sched_url %} {% endcomment %}
+  {% if sched_url %}{% endif %}
+  {% endcomment %}
     {%-
       include helper/lnk-card.html
       url=sched_url label="Schedule and Office Hours"
       level=off_lvl id="OFF_SCHED"
    -%}
-
-   <!--
- {% endif %} -->
 
   <!--  Next meeting -->
   {% capture mtg_dir %}{{ page.url }}meetings/{% endcapture %}
