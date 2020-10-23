@@ -13,31 +13,29 @@
   {% assign off_lvl = "h3" %}
   <!-- syllabus -->
   {% capture syll_url %}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{% endcapture %}
-<!--
+{% comment %}
   {% capture syll_path %}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{% endcapture %}
   {% assign syll_url = syll_path | relative_url %}
-  {% if syll_url %} -->
+  {% if syll_url %}{% endif %}
+{% endcomment %}
     {%-
       include helper/lnk-card.html
       label="Syllabus" url=syll_url
       level=off_lvl id="OFF_SYLLABUS"
     -%}
-    <!--
-  {% endif %} -->
 
   <!-- schedule and office hours -->
   {% capture sched_url %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
-  <!--
+  {% comment %}
   {% capture sched_path %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
   {% assign sched_url = sched_path | relative_url %}
-  {% if sched_url %} -->
+  {% if sched_url %}{% endif %}
+  {% endcomment %}
     {%-
       include helper/lnk-card.html
       url=sched_url label="Schedule and Office Hours"
       level=off_lvl id="OFF_SCHED"
    -%}
-   <!--
- {% endif %} -->
 
   <!--  Next meeting -->
   {% capture mtg_dir %}{{ page.url }}meetings/{% endcapture %}
@@ -59,28 +57,19 @@
 
   <!-- Assignments -->
   {% capture asgn_url %}{{ page.url }}assignments/{% endcapture %}
-  <!-- {% assign asgn_url = asgn_path | relative_url %}
-  {% if asgn_url %} -->
-    {%-
-      include helper/lnk-card.html
-      url=asgn_url label="Assignments"
-      level=off_lvl id="OFF_MTGS"
-    -%}
-  <!--
-  {%- endif -%}-->
+  {%-
+    include helper/lnk-card.html
+    url=asgn_url label="Assignments"
+    level=off_lvl id="OFF_MTGS"
+  -%}
 
   <!-- Media -->
   {% capture media_url %}{{ page.url }}media/{% endcapture %}
-  <!-- {% capture media_path %}{{ page.url }}media/{% endcapture %}
-  {% assign media_url = media_path | relative_url %}
-  {% if media_url %} -->
-    {%-
-      include helper/lnk-card.html
-      url=media_url label="Media from Meetings"
-      level=off_lvl id="OFF_MEDIA"
-    -%}
-    <!--
-  {%- endif -%} -->
+  {%-
+    include helper/lnk-card.html
+    url=media_url label="Media from Meetings"
+    level=off_lvl id="OFF_MEDIA"
+  -%}
 
   <!-- Meetings -->
   {%-
