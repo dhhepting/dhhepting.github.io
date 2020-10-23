@@ -1,3 +1,11 @@
+<!-- first character = '{{ include.url | slice: 0 }}' -->
+{%- assign fc = include.url | slice: 0 -%}
+<!-- {{ fc | inspect }} -->
+{%- if fc == '/' -%}
+  {%- assign test_url = site.pages | where: "url", include.url -%}
+  {%- assign test_path = site.static_files | where: "path", include.url -%}
+{%- endif -%}
+{%- if fc != '/' or test_url.size > 0 or test_path.size > 0 -%}
 <div class="card" id="{{ include.id }}-lnk-card">
   <{{ include.level }} class="mb-0">
     <div class="card card-header" role="tab"
@@ -8,3 +16,4 @@
     </div>
   </{{ include.level }}>
 </div>
+{%- endif -%}
