@@ -7,7 +7,6 @@ env:
   - secure: fAVEqg9IULvs5DfdzlCp9QnuGh0bA5B67osjPUmP85ZV/gJuaZj1N0XbEz9tE60k62lUakxzPFINcpBE3IHCTzjfIOLFra6B5KTZrfkhuLP2Oru1ce7nM8VqEFRMwg8pk/Ox4WI5h/XZEOLrsA9ZnoWPSvJUf5ZHEkwamovd1LBqJfZLiCUlFEsbOO/OuuCIW+Rb0ZrNRxcQUmO1+vl2EDRBa5VHE36W9TIonPmQJIqNs/VWKQbxfOTZSyJjbZ7XFYaT2H8S02sR3Nd82GI6P1+tBrLlVBl+9jWWK1XII/lJuMnCvOyL4fOGBTm/jln0QB2nojrFeNfkzNDYmO30J6h9aIbDYyyn4JkdImKTEoRMjhskeoRk2rFC1Gnv+hh+i8BGy1VWVhAD497WA5lfDvX5f702IOxWjvN4dHf8COq4aSEej+100cRXA3JfZalbsEHEKr0DoI3NLbCNG0kw+nx0/kD13Eap44b4r+3sJTpuKB4ZmBZo6gg0Uw3OOgQ1trW3uMbl/JlWhzeBz2Z3odgVEWMGBR8+5v10tx3zGXYBoNVHs4Nu67uibMklDexX1+v3sTDGOr4U3xZ84Gi8ooSZt3pTLN8MrE8n1to+j0SRmlPxSebuMpdLcAwlZSDgaC9kAIkRi17fmOmrb7ESCRq1JDgLdWmb/u/UmerhGXA=
 exclude:
 - vendor
-sudo: false
 cache: bundler
 before_script:
 - chmod +x ./script/cibuild
@@ -21,9 +20,9 @@ before_install:
 - echo -e "Host $DEPLOY_HOST\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 deploy:
 - provider: pages
-  skip-cleanup: true
-  github-token: "$GITHUB_TOKEN"
-  keep-history: true
+  skip_cleanup: true
+  token: "$GITHUB_TOKEN"
+  keep_history: true
   on:
     branch: master
 - provider: script

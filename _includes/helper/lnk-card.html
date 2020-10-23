@@ -1,16 +1,22 @@
 <!-- first character = '{{ include.url | slice: 0 }}' -->
 {%- assign fc = include.url | slice: 0 -%}
-<!-- {{ fc | inspect }} -->
+<!-- fc inspect {{ fc | inspect }} -->
+<!-- include.url inspect {{ include.url | inspect }} -->
 {%- if fc == '/' -%}
   {%- assign test_url = site.pages | where: "url", include.url -%}
   {%- assign test_path = site.static_files | where: "path", include.url -%}
 {%- endif -%}
+<!-- TEST: {{fc != '/'}} or {{test_url.size > 0}} or {{test_path.size > 0}} -->
 {%- if fc != '/' or test_url.size > 0 or test_path.size > 0 -%}
 <div class="card" id="{{ include.id }}-lnk-card">
   <{{ include.level }} class="mb-0">
     <div class="card card-header" role="tab"
     id="heading_{{ include.id }}">
+    {%- if fc == '/' -%}
+      <a href="{{ include.url | relative_url }}">
+    {%- else -%}
       <a href="{{ include.url }}">
+    {%- endif -%}
         {{ include.label }}
       </a>
     </div>
