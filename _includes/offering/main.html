@@ -1,6 +1,3 @@
-{% comment %}
-{% endcomment %}
-
 {% include teaching/url.html %}
 <div class="card">
   <div class="card card-header">
@@ -10,37 +7,27 @@
   </div>
   <div class="card card-body">
 
-  {% assign off_lvl = "h3" %}
+  {% assign off_lvl = "h5" %}
   <!-- syllabus -->
   {% capture syll_url %}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{% endcapture %}
-{% comment %}
-  {% capture syll_path %}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{% endcapture %}
-  {% assign syll_url = syll_path | relative_url %}
-  {% if syll_url %}{% endif %}
-{% endcomment %}
-    {%-
-      include helper/lnk-card.html
-      label="Syllabus" url=syll_url
-      level=off_lvl id="OFF_SYLLABUS"
-    -%}
+  {%-
+    include helper/lnk-card.html
+    label="Syllabus" url=syll_url
+    level=off_lvl id="OFF_SYLLABUS"
+  -%}
 
   <!-- schedule and office hours -->
   {% capture sched_url %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
-  {% comment %}
-  {% capture sched_path %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
-  {% assign sched_url = sched_path | relative_url %}
-  {% if sched_url %}{% endif %}
-  {% endcomment %}
-    {%-
-      include helper/lnk-card.html
-      url=sched_url label="Schedule and Office Hours"
-      level=off_lvl id="OFF_SCHED"
+  {%-
+    include helper/lnk-card.html
+    url=sched_url label="Schedule and Office Hours"
+    level=off_lvl id="OFF_SCHED"
    -%}
 
   <!--  Next meeting -->
   {% capture mtg_dir %}{{ page.url }}meetings/{% endcapture %}
   {% include helper/pd-card.html
-     test=mtg_dir label="Next Meeting" level='h3'
+     test=mtg_dir label="Next Meeting" level=off_lvl
      open='y' id='OFF_NXTMTG' body='offering/mtgs-body.html'
   %}
 
@@ -60,7 +47,16 @@
   {%-
     include helper/lnk-card.html
     url=asgn_url label="Assignments"
-    level=off_lvl id="OFF_MTGS"
+    level=off_lvl id="OFF_ASGNS"
+  -%}
+
+  <!-- Exams -->
+  {% capture exam_url %}/assets/teaching/pdf/{{ crs_id }}{% endcapture %}
+  {{ exam_url }}
+  {%-
+    include helper/pd-card.html
+    test=exam_url label="Exams" level=off_lvl
+    open='n' id='OFF_EXAMS' body='offering/exams-body.html'
   -%}
 
   <!-- Media -->
@@ -78,8 +74,16 @@
      level=off_lvl id="OFF_MTGS"
   -%}
 
-  {% include offering/knowunits-card.html %}
+  <!--  Topics -->
+  {% assign tlofile = site.data.teaching.offerings[jcrs_id][crs_sem]tlo -%}
+  {% include helper/pd-card.html
+     test=tlofile label="Topics and Learning Outcomes"
+     level=off_lvl
+     open='n' id='OFF_TLO' body='offering/tlo-body.html'
+  %}
   {% include offering/plan-card.html %}
   {% include offering/links-card.html %}
   </div>
 </div>
+{% comment %}
+{% endcomment %}

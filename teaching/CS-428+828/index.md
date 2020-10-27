@@ -8,12 +8,4 @@ redirect_from:
   - /teach/cs428+828/201630/practical/grad.html
 description: Theory and practice related to the design and implementation of usable software and easy-to-learn interfaces. Specific topics will include user-centered design and task analysis; prototyping and the iterative design cycle; interface design and methods of evaluation.
 ---
-{% include teaching/url.html %}
-
-# {{crs_sbj}} {{crs_nbr}}
-## {{page.crs_name}}
-
-{% include course/description-card.html %}
-{% include course/semesters-card.html %}
-
-{% include course/semester-redirects.html %}
+{% include course/main.html name=crs_name %}
