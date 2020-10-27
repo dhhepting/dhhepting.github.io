@@ -13,7 +13,7 @@
 {% endif %}
 {% assign prv_lnk = "" %}
 {% assign nxt_lnk = "" %}
-{%- if site.data.teaching[jcrs_id][crs_sem]plan -%}
+{% if site.data.teaching[jcrs_id][crs_sem]plan %}
   {% for m in site.data.teaching[jcrs_id][crs_sem]plan %}
     {% if m[1].date %}
       {% assign mmtg = m[0] | prepend: '00' | slice: -2, 2 %}
@@ -26,9 +26,9 @@
       {% if mm == nxt_mtg %}
         {% assign nxt_lnk = mfile %}
       {% endif %}
-    {%- endif -%}
+    {%   endif  %}
   {% endfor %}
-{%- endif -%}
+{%   endif  %}
 
 <div class="container-fluid">
   <nav aria-label="mtg">
