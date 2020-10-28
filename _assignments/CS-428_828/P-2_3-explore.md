@@ -2,7 +2,7 @@
 layout: bg-image
 title: Explore Project
 breadcrumb: Explore
-moddate: 27-Oct-2020
+moddate: 28-Oct-2020
 marks: 10
 aid: P_EXPLORE
 rubric:
@@ -26,7 +26,7 @@ rubric:
   l0: incomplete
 - crit: Interface B Low-Fidelity Prototype (Sketch)
   wt: 2.0
-  l3: clear
+  l3: clear and complete
   l2: comprehensible
   l1: mostly complete
   l0: incomplete

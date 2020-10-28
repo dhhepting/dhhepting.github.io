@@ -1,16 +1,27 @@
 {% include teaching/url.html %}
 {% capture exam_url %}/assets/teaching/pdf/{{ crs_id }}{% endcapture %}
 
+{%- if off_now == true -%}
 <h6>
-  In {{ crs_sem }}
+  In {{ crs_sem }}:
 </h6>
-<ul>
-  <li>Midterm: 05 Nov 2020</li>
-  <li>Final: 22 Dec 2020</li>
-</ul>
-
+  {%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan -%}
+  {%- for entry in planfile -%}
+    {%- if entry[0] == 'offering' -%}
+    <ul>
+      <li>Midterm:
+      {%- for me in entry[1].midterm_exam -%}
+        &nbsp;{{ me }}
+      {%- endfor -%}
+      </li>
+      <li>Final: {{ entry[1].final_exam }}</li>
+    </ul>
+    {%- endif -%}
+    {%- break -%}
+  {%- endfor -%}
+{%- endif -%}
 <h6>
-  In the Past
+  In the Past:
 </h6>
 <ul>
 {% for sp in site.static_files reversed %}
@@ -23,3 +34,13 @@
   {% endif %}
 {% endfor %}
 </ul>
+<script>
+const params = new URLSearchParams(location.search)
+const exams = params.get('exams')
+if (exams !== null) {
+  var examelem = document.getElementById('collapse_OFF_EXAMS')
+  examelem.classList.toggle('show')
+  examelem.scrollIntoView()
+  //document.getElementById('collapse_OFF_EXAMS').classList.toggle('show')
+}
+</script>
