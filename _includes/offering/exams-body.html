@@ -1,4 +1,6 @@
 {% include teaching/url.html %}
+{% capture exam_url %}/assets/teaching/pdf/{{ crs_id }}{% endcapture %}
+
 <h6>
   In {{ crs_sem }}
 </h6>
@@ -8,11 +10,11 @@
 </ul>
 
 <h6>
-  In the Past {{ include.test }}
+  In the Past
 </h6>
 <ul>
 {% for sp in site.static_files reversed %}
-  {% if sp.path contains include.test and sp.path contains "exam" %}
+  {% if sp.path contains exam_url and sp.path contains "exam" %}
   <li>
     <a href="{{ sp.path | relative_url }}">
       {{ sp.path | split: "/" | last }}
