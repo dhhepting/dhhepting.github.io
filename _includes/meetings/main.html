@@ -7,7 +7,8 @@
   include meetings/pagination.html
   tm=include.tm
   cm=include.mn
- %} 
+ %}
+ {%comment%}{% endcomment %}
 
 <div class="card">
   <!-- Meeting Date as card header -->
@@ -21,7 +22,7 @@
 
   <!-- Upcoming Events -->
 
-  {%  capture upurl  %} https://urcourses.uregina.ca/calendar/view.php?view=upcoming&course={{ crs_urc }}{%  endcapture  %}
+  {%  capture upurl  %}https://urcourses.uregina.ca/calendar/view.php?view=upcoming&course={{ crs_urc }}{%  endcapture  %}
   {%
     include helper/lnk-card.html
     label="Upcoming Events" level=lvl
@@ -34,23 +35,40 @@
     {%
       include helper/pd-card.html
       test=planfile label="Review of Last Meeting" level=lvl
-      open='n' mtg=lmt pass='n' id='MTGREV' body='meetings/review-body.html'
+      open='n' mtg=lmt pass='y' id='MTGREV' body='meetings/review-body.html'
      %}
   {%  endif  %}
 
 
 
 
-
-  {% include meetings/plan.html mtg=include.mn %}
-
+{% comment %}{% endcomment %}
+{% include helper/pd-card.html
+   test=planfile label="Plan for Today" level=lvl
+   open='n' mtg=include.mn pass='y' id='MTGPLAN' body='meetings/plan-body.html'
+%}
   <hr /><hr />
 
   {% include meetings/annotations.html %}
 
-  {% include meetings/media.html mtg=include.mn %}
-  {% comment %}
-  {% include meetings/transcript.html mtg=include.mn %}
-{% endcomment %}
+  {% assign has_media = false %}
+  {%- for m in site.data.teaching[jcrs_id][crs_sem]media -%}
+    {%- if m.meet == mtn -%}
+      {% assign has_media = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% include helper/pd-card.html
+     test=has_media label="Media from Meeting" level=lvl
+     open='y' id='MTGMEDIA' body='meetings/media-body.html'
+  %}
+
+  {% assign tfile = site.data.teaching[jcrs_id][crs_sem]transcript[mtn] %}
+  {% if tfile != undefined and tfile != nil %}
+  {% include helper/pd-card.html
+     test=tfile label="Transcript of Meeting" level=lvl
+     pass='y' mtg=mtn open='y' id='MTGRECORD' body='meetings/transcript-body.html'
+  %}
+  {% endif %}
   </div>
 </div>

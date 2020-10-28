@@ -8,6 +8,7 @@ git_source(:github) {|repo_name| 'https://github.com/#{repo_name}' }
 
 # Added at 2018-05-14 15:47:17 -0600 by hepting:
 gem 'jekyll', '>= 3.8.7'
+gem 'liquid', '>= 4.0.0'
 #gem 'kramdown', '>= 2.3.0'
 # gem 'nokogiri', '~> 1.10', '>= 1.10.4'
 gem "nokogiri", '>= 1.10.8'

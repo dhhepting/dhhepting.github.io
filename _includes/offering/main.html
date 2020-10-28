@@ -51,11 +51,9 @@
   -%}
 
   <!-- Exams -->
-  {% capture exam_url %}/assets/teaching/pdf/{{ crs_id }}{% endcapture %}
-  {{ exam_url }}
   {%-
     include helper/pd-card.html
-    test=exam_url label="Exams" level=off_lvl
+    test=true label="Exams" level=off_lvl
     open='n' id='OFF_EXAMS' body='offering/exams-body.html'
   -%}
 
@@ -75,15 +73,24 @@
   -%}
 
   <!--  Topics -->
-  {% assign tlofile = site.data.teaching.offerings[jcrs_id][crs_sem]tlo -%}
+  {% assign tlofile = site.data.teaching[jcrs_id][crs_sem]tlo -%}
   {% include helper/pd-card.html
      test=tlofile label="Topics and Learning Outcomes"
      level=off_lvl
      open='n' id='OFF_TLO' body='offering/tlo-body.html'
   %}
-  {% include offering/plan-card.html %}
-  {% include offering/links-card.html %}
-  </div>
+
+{% assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
+{%
+  include helper/pd-card.html
+  test=planfile label="Semester Plan" level=off_lvl
+  open='n' pass='y' id='OFF_PLAN' body='offering/plan-body.html'
+ %}
+
+</div>
 </div>
 {% comment %}
+{% include offering/plan-card.html %}
+
+{% include offering/links-card.html %}
 {% endcomment %}

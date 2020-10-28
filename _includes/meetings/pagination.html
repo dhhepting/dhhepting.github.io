@@ -27,21 +27,17 @@
         {% assign nxt_lnk = mfile %}
       {% endif %}
     {%   endif  %}
-  {% endfor %}
+  {%- endfor -%}
 {%   endif  %}
-
 <div class="container-fluid">
   <nav aria-label="mtg">
     <ul class="pagination justify-content-center">
-      {% if include.path %}
-      {% else %}
       <li class="page-item">
         <a class="page-link" href="{{ include.path }}{{ prv_lnk }}" aria-label="Previous">
           <span aria-hidden="true">&laquo;</span>
           <span class="sr-only">Previous</span>
         </a>
       </li>
-      {% endif %}
 {% assign xs_lb = cur_mtg | minus: 1 %}
 {% assign sm_lb = cur_mtg | minus: 2 %}
 {% assign md_lb = cur_mtg | minus: 4 %}
@@ -91,15 +87,12 @@
     {% endif %}
   {% endif %}
 {% endfor %}
-{% if include.path %}
-{% else %}
       <li class="page-item">
         <a class="page-link" href="{{ include.path }}{{ nxt_lnk }}" aria-label="Next">
           <span aria-hidden="true">&raquo;</span>
           <span class="sr-only">Next</span>
         </a>
       </li>
-{% endif %}
     </ul>
   </nav>
 </div>

@@ -3,11 +3,57 @@
 {% assign mtn = include.mtg | prepend: '00' | slice: -2, 2  %}
 {% assign transcript = site.data.teaching[jcrs_id][crs_sem]transcript[mtn] %}
 
-{%- assign mtgdat = nil -%}
+{%- assign mtgdat = blank -%}
 {%- for mtgs in planfile -%}
   {%- if mtgs[0] == include.mtg -%}
     {%- assign mtgdat = mtgs[1] -%}
     {%- break -%}
   {%- endif -%}
-{%- endfor %-}
-{{ mtgdat }}
+{%- endfor -%}
+{%- if mtgdat != blank -%}
+<div>
+  {%- assign bok = mtgdat.BOK -%}
+  {%- for bb in bok -%}
+    {%- assign kaku = bb.kaku | split: "/" -%}
+    <h6>
+    {{ kaku[0] }} / {{ kaku[1] | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kaku[1].size }}
+    </h6>
+  {%- endfor -%}
+  {%- assign hltags = false %}
+    {%- if transcript -%}
+    {% for ts in transcript %}
+      {%- for hlwt in ts[1].tags -%}
+        {%- if hlwt contains 'img' -%}
+          {%- assign hltags = true -%}
+          {%- break -%}
+        {%- endif -%}
+      {% endfor %}
+    {% endfor %}
+  {%- endif -%}
+  {% if hltags == true %}
+    <h6>
+      Highlights from Transcript
+    </h6>
+    <div class="container-fluid">
+    {%- for ts in transcript -%}
+      {%- for hlwt in ts[1].tags -%}
+        {%- if hlwt contains 'img' -%}
+        <div class="row border align-items-center">
+          <div class="col-sm-2">
+            {{ ts[0] }}
+          </div>
+          <div class="col-sm-10">
+            {%-
+              include helper/figure.html
+              name=hlwt.img desc=hlwt.desc
+            -%}
+          </div>
+        </div>
+        {%- endif -%}
+        {% comment %}more hlwt{% endcomment %}
+      {%- endfor -%}
+    {%- endfor -%}
+    </div>
+  {%- endif -%}
+</div>
+{%- endif -%}
