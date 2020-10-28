@@ -352,22 +352,10 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   
   
 
-
-
 <h6>
-  In 201330
+  In the Past:
 </h6>
 <ul>
-  <li>Midterm: 05 Nov 2020</li>
-  <li>Final: 22 Dec 2020</li>
-</ul>
-
-<h6>
-  In the Past
-</h6>
-<ul>
-
-  
 
   
 
@@ -1656,6 +1644,16 @@ style="background-color: rgba(32, 32, 32, 0.75)">
   
 
 </ul>
+<script>
+const params = new URLSearchParams(location.search)
+const exams = params.get('exams')
+if (exams !== null) {
+  var examelem = document.getElementById('collapse_OFF_EXAMS')
+  examelem.classList.toggle('show')
+  examelem.scrollIntoView()
+  //document.getElementById('collapse_OFF_EXAMS').classList.toggle('show')
+}
+</script>
 
     </div>
   </div>
@@ -1689,7 +1687,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2020-10-28 00:47 -0600
+  Site built: 2020-10-28 16:52 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-305+828/201330/">
     Give feedback <span class="d-none d-sm-inline">about page</span>

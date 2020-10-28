@@ -445,6 +445,9 @@ $(document).ready(function(){
     else if (typ == 'textbook') {
       cu_str = cu.origin + cu.pathname + semid + '/textbook.html'
     }
+    else if (typ == 'exams') {
+      cu_str = cu.origin + cu.pathname + semid + '/?exams=1'
+    }
     else if (typ == 'tlo') {
       cu_str = cu.origin + cu.pathname + semid + '/tlo.html'
     }
@@ -473,7 +476,7 @@ $(document).ready(function(){
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2020-10-28 00:47 -0600
+  Site built: 2020-10-28 16:52 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/">
     Give feedback <span class="d-none d-sm-inline">about page</span>
