@@ -1,0 +1,25 @@
+{% include teaching/url.html %}
+{% capture exam_url %}/assets/teaching/pdf/{{ crs_id }}{% endcapture %}
+
+<h6>
+  In {{ crs_sem }}
+</h6>
+<ul>
+  <li>Midterm: 05 Nov 2020</li>
+  <li>Final: 22 Dec 2020</li>
+</ul>
+
+<h6>
+  In the Past
+</h6>
+<ul>
+{% for sp in site.static_files reversed %}
+  {% if sp.path contains exam_url and sp.path contains "exam" %}
+  <li>
+    <a href="{{ sp.path | relative_url }}">
+      {{ sp.path | split: "/" | last }}
+    </a>
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>

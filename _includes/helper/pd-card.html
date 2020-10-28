@@ -1,6 +1,12 @@
 {% assign test_url = site.pages | where: "url", include.test %}
 {% assign test_path = site.static_files | where: "path", include.test %}
-{% assign test_true = (include.test == "true") or (include.test != "")%}
+{% assign test_true = include.test == "true" or include.test != nil %}
+{% comment %}
+{{ include.test }}
+a. {{ test_url}}
+b. {{ test_path }}
+c. {{ test_true }}
+{% endcomment %}
 {% if include.open == 'y' %}
   {% assign pd_show = "show" %}
   {% assign pd_collapsed = "" %}
@@ -10,9 +16,11 @@
   {% assign pd_collapsed = "collapsed" %}
   {% assign pd_expanded = "false" %}
 {% endif %}
-<!-- {% if include.test != "" %}
--{{ test_url.size }}--{{test_path.size}}---{{test_true}}-- -->
-{% if test_url.size > 0 or test_path.size > 0 or test_true %}
+{% comment %} -> {{ pd_expanded | inspect }} <- {% endcomment %}
+
+{%- if test_url.size > 0 or test_path.size > 0 or include.test == true -%}
+{% comment %}->> {{ test_url.size}}  or {{test_path.size}} or {{test_true}} <<- {% endcomment %}
+
 <div class="card" id="{{ include.id }}-pd-card">
   <{{ include.level }} class="mb-0">
     <div class="card card-header" role="tab"
@@ -34,7 +42,7 @@
           test=include.test
           label=include.label
           level=include.level
-          pass=include.pass
+          pass='n'
           mtg=include.mtg
           open=include.open
           id=include.id
@@ -46,5 +54,6 @@
     </div>
   </div>
 </div>
+{% comment %}
+{% endcomment %}
 {% endif %}
-<!-- {% endif %} -->

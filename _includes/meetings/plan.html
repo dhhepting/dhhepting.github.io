@@ -1,7 +1,2 @@
 {% include teaching/url.html %}
 {% assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
-
-{% include helper/pd-card.html
-   test=planfile label="Plan for Today" level='h3'
-   open='n' mtg=include.mtg pass='y' id='MTGPLAN' body='meetings/plan-body.html'
-%}
