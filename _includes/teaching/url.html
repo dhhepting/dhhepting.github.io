@@ -37,7 +37,7 @@
   {% endif %}
   {% capture now_sem %}{{ tdate[0] }}{{ sss }}{% endcapture %}
   {% if now_sem == crs_sem %}
-    {% assign off_now = 1 %}
+    {% assign off_now = true %}
   {% else %}
-    {% assign off_now = 0 %}
+    {% assign off_now = false %}
   {% endif %}
