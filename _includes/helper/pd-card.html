@@ -16,9 +16,9 @@ c. {{ test_true }}
   {% assign pd_collapsed = "collapsed" %}
   {% assign pd_expanded = "false" %}
 {% endif %}
-{% comment %}-> {{ pd_expanded | inspect }} <- {% endcomment %}
+{% comment %} -> {{ pd_expanded | inspect }} <- {% endcomment %}
 
-{% if test_url.size > 0 or test_path.size > 0 or test_true %}
+{%- if test_url.size > 0 or test_path.size > 0 or include.test == true -%}
 {% comment %}->> {{ test_url.size}}  or {{test_path.size}} or {{test_true}} <<- {% endcomment %}
 
 <div class="card" id="{{ include.id }}-pd-card">
