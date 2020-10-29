@@ -1,60 +1,85 @@
-{% include teaching/url.html %}
-{% assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
+{%- include teaching/url.html %}
+{%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
 
-{% for mtgs in include.test %}
-  {% if mtgs[0] == include.mtg %}
-    {% for bk in mtgs[1].BOK %}
-      {%- assign kaku = bk.kaku | split: "/" -%}
-      {%- assign kaaa = kaku[0] -%}
-      {%- assign kuuu = kaku[1] -%}
-      <h5>{{ kaaa }} / {{ kuuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kuuu.size }}</h5>
-      {%- assign cur_dat = site.data.teaching.CS2013[kaaa][kuuu] -%}
-      {%- if cur_dat -%}
-      <ul>
-        <li>
-          Topics:
-          <ul>
-          {% for bkt in bk.topics %}
+{%- assign mtgplan = nil %}
+{%- for mtgs in include.test %}
+  {%- if mtgs[0] == include.mtg %}
+    {%- assign mtgplan = mtgs %}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if mtgplan != nil -%}
+  {%- for bk in mtgplan[1].BOK -%}
+    {%- assign kaku = bk.kaku | split: "/" -%}
+    {%- assign kaaa = kaku[0] -%}
+    {%- assign kuuu = kaku[1] -%}
+    <h6 class="bg-dark text-white">
+      {{ kaaa }} / {{ kuuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kuuu.size }}
+    </h6>
+    {%- assign cur_dat = site.data.teaching.CS2013[kaaa][kuuu] -%}
+    <ul>
+    {%- if cur_dat and bk.topics -%}
+      <li>
+        Topics:
+        <ul>
+          {%- for bkt in bk.topics %}
             {%- for csct in cur_dat.topics -%}
-              {% if bkt == csct.label %}
+              {%- if bkt == csct.label %}
                 <li>{{ csct.desc }}</li>
-              {% endif %}
+              {%- endif %}
             {%- endfor -%}
-          {% endfor %}
-          </ul>
-        </li>
-        <li>
-          Learning Outcomes:
-          <ul>
-          {% for ho in bk.outcomes %}
-            {%- for co in cur_dat.outcomes -%}
-              {% if ho == co.label %}
-                <li>{{ co.desc }}</li>
-              {% endif %}
-            {%- endfor -%}
-          {% endfor %}
-          </ul>
-        </li>
-        <li>Notes:
-          <ul>
-          {% for hn in hh.notes %}
-            {% capture noteurl %}/teaching/notes/{{ hn }}.html{% endcapture %}
-            {% for note in site.notes %}
-              {% if note.url == noteurl %}
-                <li>
-                  <a href="{{ noteurl | absolute_url }}">
-                    {{ note.title }}
-                  </a>
-                </li>
-                {% break %}
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-          </ul>
-        </li>
-      </ul>
-      {%- endif -%}
-    {% endfor %}
-    {% break %}
-  {% endif %}
-{% endfor %}
+          {%- endfor %}
+        </ul>
+      </li>
+    {%- endif -%}
+    {%- if cur_dat and bk.outcomes -%}
+      <li>
+        Learning Outcomes:
+        <ul>
+        {%- for ho in bk.outcomes %}
+          {%- for co in cur_dat.outcomes -%}
+            {%- if ho == co.label %}
+              <li>{{ co.desc }}</li>
+            {%- endif %}
+          {%- endfor -%}
+        {%- endfor %}
+        </ul>
+      </li>
+    {%- endif -%}
+    {%- if bk.notes -%}
+      <li>Notes:
+        <ul>
+        {%- for hn in bk.notes %}
+          {%- capture noteurl %}/teaching/notes/{{ hn }}.html{%- endcapture %}
+          {%- for note in site.notes %}
+            {%- if note.url == noteurl %}
+              <li>
+                <a href="{{ noteurl | absolute_url }}">
+                  {{ note.title }}
+                </a>
+              </li>
+              {%- break %}
+            {%- endif %}
+          {%- endfor %}
+        {%- endfor %}
+        </ul>
+      </li>
+    {%- endif -%}
+    </ul>
+  {%- endfor %}
+  {%- if mtgplan[1].outline -%}
+  <h6 class="bg-dark text-white">
+    Outline
+  </h6>
+  <ul>
+  {%- for ol in mtgplan[1].outline -%}
+    {%- if ol.url -%}
+    <li><a href="{{ ol.url }}">{{ ol.desc }}</a></li>
+    {%- else -%}
+    <li>{{ ol.desc }}</li>
+    {%- endif -%}
+  {%- endfor -%}
+  </ul>
+  {%- endif %}
+{%- endif %}

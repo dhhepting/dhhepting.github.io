@@ -8,23 +8,16 @@
     </h1>
   </div>
   <div class="card card-body">
-    <div class="card card-header">
-      <strong>
-        <div class="row">
-          <div class="col-sm-2">
-            Year
-          </div>
-          <div class="col-sm-2">
-            Month
-          </div>
-          <div class="col-sm-8">
-            Meeting Dates
-          </div>
+    <strong>
+      <div class="row">
+        <div class="col-sm-3">
+          Month
         </div>
-      </strong>
-    </div>
-    <div class="card card-body">
-    <!-- 01_Thu-03-Sep-2020.html -->
+        <div class="col-sm-9">
+          Meeting Dates
+        </div>
+      </div>
+    </strong>
 {% assign month = "" %}
 {%- for mm in mtgsfile -%}
   {%- assign mmf_parts = mm.file | split: '.' | first | split: '-' -%}
@@ -42,17 +35,14 @@
       {% assign mtg_bg = "" %}
     {% endif %}
     <div class="row {{ mtg_bg }} border align-items-center">
-      <div class="col-sm-2">
-        {{ crs_sem | slice: 0, 4 }}
-      </div>
-      <div class="col-sm-2">
+      <div class="col-sm-3">
         {{ month }}
       </div>
-      <div class="col-sm-8">
+      <div class="col-sm-9">
         <a href="{{ mm.file }}">
           {{ mtg_date }}
         </a>
-    {% elsif month == mmf_parts[2] %}
+  {% elsif month == mmf_parts[2] %}
         &bull;
         <a href="{{ mm.file }}">
           {{ mtg_date }}
@@ -61,5 +51,4 @@
       {% endif %}
     {% endfor %}
     </div>
-  </div>
 </div>

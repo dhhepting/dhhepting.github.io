@@ -3,9 +3,9 @@
   <div class="col-sm-6">
   {% assign hkk = ts[1].chats %}
   {% if hkk[0].persid %}
-    <h5 class="bg-dark text-white" >
+    <h6 class="bg-dark text-white" >
       Chat
-    </h5>
+    </h6>
     {% for hh in hkk %}
     <p>
       <strong>
@@ -19,9 +19,9 @@
   <div class="col-sm-6">
   {% assign hkk = ts[1].talks %}
   {% if hkk[0].persid %}
-    <h5 class="bg-dark text-white">
+    <h6 class="bg-dark text-white">
       Audio
-    </h5>
+    </h6>
     {% for hh in hkk %}
       {% if hh.persid == "Daryl Hepting" or hh.persid == "DHH" %}
         {% assign hhp = "DHH" %}

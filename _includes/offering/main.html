@@ -1,4 +1,4 @@
-{% include teaching/url.html %}
+{%- include teaching/url.html -%}
 <div class="card">
   <div class="card card-header">
     <h1>
@@ -7,43 +7,42 @@
   </div>
   <div class="card card-body">
 
-  {% assign off_lvl = "h5" %}
+  {%- assign off_lvl = "h5" -%}
   <!-- syllabus -->
-  {% capture syll_url %}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{% endcapture %}
+  {%- capture syll_url -%}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{%- endcapture -%}
   {%-
     include helper/lnk-card.html
     label="Syllabus" url=syll_url
     level=off_lvl id="OFF_SYLLABUS"
   -%}
 
-  <!-- schedule and office hours -->
-  {% capture sched_url %}/teaching/schedule/{{ crs_sem }}.html{% endcapture %}
+  <!-- (schedule and) office hours -->
+  {%- capture sched_url -%}/teaching/schedule/{{ crs_sem }}.html{%- endcapture -%}
   {%-
     include helper/lnk-card.html
-    url=sched_url label="Schedule and Office Hours"
+    url=sched_url label="Office Hours"
     level=off_lvl id="OFF_SCHED"
    -%}
 
-  <!--  Next meeting -->
-  {% capture mtg_dir %}{{ page.url }}meetings/{% endcapture %}
-  {% include helper/pd-card.html
-     test=mtg_dir label="Next Meeting" level=off_lvl
+  <!--  meetings: next and all -->
+  {%- capture mtg_dir -%}{{ page.url }}meetings/{%- endcapture -%}
+  {%- include helper/pd-card.html
+     test=mtg_dir label="Meetings" level=off_lvl
      open='y' id='OFF_NXTMTG' body='offering/mtgs-body.html'
-  %}
+  -%}
 
   <!-- UR Courses -->
-  {%- if crs_urc != "" -%}
+  {%- if crs_urc != "" and off_now == true -%}
     {%- capture urc_url -%}https://urcourses.uregina.ca/course/view.php?id={{ crs_urc }}{%- endcapture -%}
-    {%- capture urc_label -%}{{ crs_id | replace: "-", " " }} on UR Courses{%- endcapture -%}
     {%-
       include helper/lnk-card.html
-      url=urc_url label=urc_label
+      url=urc_url label="UR Courses"
       level=off_lvl id="OFF_URC"
     -%}
   {%- endif -%}
 
   <!-- Assignments -->
-  {% capture asgn_url %}{{ page.url }}assignments/{% endcapture %}
+  {%- capture asgn_url -%}{{ page.url }}assignments/{%- endcapture -%}
   {%-
     include helper/lnk-card.html
     url=asgn_url label="Assignments"
@@ -58,39 +57,27 @@
   -%}
 
   <!-- Media -->
-  {% capture media_url %}{{ page.url }}media/{% endcapture %}
+  {%- capture media_url -%}{{ page.url }}media/{%- endcapture -%}
   {%-
     include helper/lnk-card.html
-    url=media_url label="Media from Meetings"
+    url=media_url label="Media"
     level=off_lvl id="OFF_MEDIA"
   -%}
 
-  <!-- Meetings -->
+  <!--  Topics -->
+  {%- assign tlofile = site.data.teaching[jcrs_id][crs_sem]tlo -%}
   {%-
-     include helper/lnk-card.html
-     url=mtg_dir label="Meetings"
-     level=off_lvl id="OFF_MTGS"
+    include helper/pd-card.html
+    test=tlofile label="Topics"
+    level=off_lvl open='n' id='OFF_TLO'
+    body='offering/tlo-body.html'
   -%}
 
-  <!--  Topics -->
-  {% assign tlofile = site.data.teaching[jcrs_id][crs_sem]tlo -%}
-  {% include helper/pd-card.html
-     test=tlofile label="Topics and Learning Outcomes"
-     level=off_lvl
-     open='n' id='OFF_TLO' body='offering/tlo-body.html'
-  %}
-
-{% assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
-{%
-  include helper/pd-card.html
-  test=planfile label="Semester Plan" level=off_lvl
-  open='n' pass='y' id='OFF_PLAN' body='offering/plan-body.html'
- %}
-
+  {%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan -%}
+  {%-
+    include helper/pd-card.html
+    test=planfile label="Plan" level=off_lvl
+    open='n' pass='y' id='OFF_PLAN' body='offering/plan-body.html'
+  -%}
+  </div>
 </div>
-</div>
-{% comment %}
-{% include offering/plan-card.html %}
-
-{% include offering/links-card.html %}
-{% endcomment %}
