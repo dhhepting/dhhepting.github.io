@@ -63,13 +63,14 @@ else:
 dbmedia_dir = "/Users/hepting/Dropbox/teaching/" + "m-" + off_id + "/"
 filedict = {}
 for root, subdirs, files in os.walk(dbmedia_dir):
-    print(dbmedia_dir)
+    #print(dbmedia_dir)
     for filename in files:
         if (filename != ".DS_Store"):
             file_path = os.path.join(root, filename)
             db_path = os.path.join(dbmedia_dir, filename)
             dbp = db_path[len("Users/hepting/Dropbox/"):]
             try:
+                #print (dbp)
                 share = dbx.sharing_create_shared_link(dbp)
                 shared_url = (share.url).replace('www.dropbox','dl.dropboxusercontent')
                 filedict[filename] = shared_url
@@ -84,7 +85,7 @@ with open(dbmedia_csv,"w") as data_file:
     data_file.write("meet,file,URL\n")
     for w in sorted(filedict, key=filedict.get, reverse=True):
         meetstr = str(w).split(".")
-        print (meetstr)
+        #print (meetstr)
         if " " in meetstr[0]:
             meetstr = meetstr[0].split(" ")
         data_str = str(meetstr[0])+ "," + str(w) + "," + str(filedict[w]+"\n")
