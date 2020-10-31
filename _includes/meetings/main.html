@@ -1,7 +1,6 @@
 {%- include teaching/url.html %}
 {%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
 {%- assign mtn = include.mn | prepend: '00' | slice: -2, 2  %}
-
 <!-- Access to Other Meetings - Paginated -->
 {%
   include meetings/pagination.html
@@ -21,13 +20,12 @@
   {%-  assign lvl = 'h5'  %}
 
   <!-- Upcoming Events -->
-
-  {%-  capture upurl  %}https://urcourses.uregina.ca/calendar/view.php?view=upcoming&course={{ crs_urc }}{%-  endcapture  %}
-  {%
+  {%- capture upurl -%}https://urcourses.uregina.ca/calendar/view.php?view=upcoming&course={{ crs_urc }}{%- endcapture -%}
+  {%-
     include helper/lnk-card.html
     label="Upcoming Events" level=lvl
     id='EVENTS' url=upurl
-   %}
+   -%}
   {%- comment %}{%- endcomment %}
   <!-- Review of Last Meeting -->
   {%-  assign lmt = include.mn | minus: 1  %}
@@ -51,13 +49,14 @@
 
   {%- include meetings/annotations.html %}
 
-  {%- assign has_media = false %}
+  {%- assign mtn = include.mn | prepend: '00' | slice: -2, 2  %}
+  {%- assign has_media = false -%}
   {%- for m in site.data.teaching[jcrs_id][crs_sem]media -%}
     {%- if m.meet == mtn -%}
-      {%- assign has_media = true %}
-      {%- break %}
-    {%- endif %}
-  {%- endfor %}
+      {%- assign has_media = true -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
   {%-
     include helper/pd-card.html
     test=has_media label="Media from Meeting" level=lvl
@@ -65,11 +64,13 @@
   %}
 
   {%- assign tfile = site.data.teaching[jcrs_id][crs_sem]transcript[mtn] %}
-  {%- if tfile != undefined and tfile != nil %}
-  {%- include helper/pd-card.html
-     test=tfile label="Transcript of Meeting" level=lvl
-     pass='y' mtg=mtn open='y' id='MTGRECORD' body='meetings/transcript-body.html'
-  %}
+  {%- if tfile != nil -%}
+  {%-
+    include helper/pd-card.html
+    test=tfile label="Transcript of Meeting" level=lvl
+    pass='y' mtg=mtn open='y' id='MTGRECORD'
+    body='meetings/transcript-body.html'
+  -%}
   {%- endif %}
   </div>
 </div>
