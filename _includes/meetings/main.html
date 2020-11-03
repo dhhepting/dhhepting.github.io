@@ -32,7 +32,7 @@
   {%-  if lmt > 0  %}  <!-- line 59 -->
     {%
       include helper/pd-card.html
-      test=planfile label="Review of Last Meeting" level=lvl
+      test=planfile label="Review of Last Day" level=lvl
       open='n' mtg=lmt pass='y' id='MTGREV' body='meetings/review-body.html'
      %}
   {%-  endif  %}
@@ -59,7 +59,7 @@
   {%- endfor -%}
   {%-
     include helper/pd-card.html
-    test=has_media label="Media from Meeting" level=lvl
+    test=has_media label="Media" level=lvl
     open='n' id='MTGMEDIA' body='meetings/media-body.html'
   %}
 
@@ -67,7 +67,7 @@
   {%- if tfile != nil -%}
   {%-
     include helper/pd-card.html
-    test=tfile label="Transcript of Meeting" level=lvl
+    test=tfile label="Transcript" level=lvl
     pass='y' mtg=mtn open='y' id='MTGRECORD'
     body='meetings/transcript-body.html'
   -%}
