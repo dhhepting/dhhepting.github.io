@@ -28,14 +28,14 @@
    -%}
   {%- comment %}{%- endcomment %}
   <!-- Review of Last Meeting -->
-  {%-  assign lmt = include.mn | minus: 1  %}
-  {%-  if lmt > 0  %}  <!-- line 59 -->
-    {%
+  {%- assign lmt = include.mn | minus: 1 -%}
+  {%- if lmt > 0 -%}  <!-- line 59 -->
+    {%-
       include helper/pd-card.html
       test=planfile label="Review of Last Day" level=lvl
       open='n' mtg=lmt pass='y' id='MTGREV' body='meetings/review-body.html'
-     %}
-  {%-  endif  %}
+     -%}
+  {%- endif -%}
 
 
 
@@ -65,12 +65,12 @@
 
   {%- assign tfile = site.data.teaching[jcrs_id][crs_sem]transcript[mtn] %}
   {%- if tfile != nil -%}
-  {%-
-    include helper/pd-card.html
-    test=tfile label="Transcript" level=lvl
-    pass='y' mtg=mtn open='y' id='MTGRECORD'
-    body='meetings/transcript-body.html'
-  -%}
+    {%-
+      include helper/pd-card.html
+      test=tfile label="Transcript" level=lvl
+      pass='y' mtg=mtn open='y' id='MTGRECORD'
+      body='meetings/transcript-body.html'
+    -%}
   {%- endif %}
   </div>
 </div>
