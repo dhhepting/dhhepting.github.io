@@ -8,17 +8,39 @@
       name=iname desc=idesc %}
   </div>
   {% endif %}
+  {% if tt.video %}
+  <div class="m-2 p-2 border">
+    {% assign vurl = tt.video %}
+    {% assign vdesc = tt.desc %}
+    {% include helper/video.html
+      vidurl=vurl desc=vdesc %}
+  </div>
+  {% endif %}
   {% if tt.todo %}
   <div class="m-2 p-2 bg-warning">
     <h6 class="text-center">
       {{ tt.todo | upcase }}
     </h6>
-    {% for hh in tt %}
-    <p class="text-center"> {{ hh.desc }} </p>
-    {% endfor %}
+    <p class="text-center">{{ tt.desc }}</p>
+    <p class="text-center">
+      <a class="btn btn-warning" role="button"
+      href="{{ tt.discuss }}">
+        Discussion
+      </a>
+    </p>
   </div>
   {% endif %}
-  {% if tt.note %}
+  {% if tt.concept %}
+  <div class="m-2 p-2 bg-primary">
+    <h6 class="text-center">
+      {{ tt.concept | upcase }}
+    </h6>
+    <!--
+    <p class="text-center">{{ tt.desc }}</p>
+    -->
+  </div>
+  {% endif %}
+  {% if tt.info %}
   <div class="m-2 p-2 bg-success">
     <h6 class="text-center">
       NOTE
