@@ -23,12 +23,16 @@
     Highlights from Transcript
   </h6>
   <div class="container-fluid">
+  {%- capture lastmtg_frag -%}{{ mtn }}_{{ mtgdat.date }}.html#collapse_{% endcapture %}
   {%- for ts in transcript -%}
     {%- assign hlwt = ts[1].tags -%}
     {%- if hlwt[0].desc != nil -%}
     <div class="row border align-items-center">
       <div class="col-sm-2">
-        {{ ts[0] }}
+        <a class="btn btn-primary" role="button"
+        href="{{ lastmtg_frag }}{{ ts[0] }}">
+          {{ ts[0] }}
+        </a>
       </div>
       <div class="col-sm-10">
         {%-
