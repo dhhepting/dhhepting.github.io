@@ -12,10 +12,11 @@
   },
   "description": "{{ site.title }} : {{ site.description }}",
   {% endcomment %}
+  {%- assign search_url = "/search/" | absolute_url -%}
+  {%- capture target -%}{{search_url}}?q={tipue_search_input}{% endcapture %}
   "potentialAction": [{
     "@type": "SearchAction",
-{%- assign search_url = "/search/" | absolute_url -%}
-{%- capture target -%}{{search_url}}?q={tipue_search_input}{%- endcapture -%}
+    "name": "Site Search",
     "target": "{{ target }}",
     "query-input": "required name=tipue_search_input"
   }],
