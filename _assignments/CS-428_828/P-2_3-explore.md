@@ -2,7 +2,7 @@
 layout: bg-image
 title: Explore Project
 breadcrumb: Explore
-moddate: 28-Oct-2020
+moddate: 17-Nov-2020
 marks: 10
 aid: P_EXPLORE
 rubric:
@@ -59,7 +59,7 @@ Consider how the user will complete the activity:
 Choose 2 <strong>different</strong> metaphors and design an interface for each of the metaphors that you choose. For both interfaces:
 * Create a low-fidelity prototype (see Section 12.2 in textbook)
 * Write a scenario (see Section 11.5 in textbook) that includes details of the information presented and interaction undertaken
-* Analyze your scenario for positive and negative aspects and iterate your low-fidelity prototypes and scenarios to minimize the negative aspects and maximize the positive aspects
+* Analyze your scenario for positive and negative aspects and iterate your low-fidelity prototypes and scenarios to minimize the negative aspects and maximize the positive aspects. Describe the results of this iteration process
 
 ### Submission
 
