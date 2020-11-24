@@ -3,7 +3,7 @@ layout: bg-image
 title: You Choose (Undergrad)
 breadcrumb: You Choose (Undergrad)
 aid: I_U_YC
-moddate: 26-Nov-2019
+moddate: 24-Nov-2020
 marks: 12
 rubric:
 - crit: Topic
@@ -37,15 +37,15 @@ This is an INDIVIDUAL assignment for undergraduate students.
 
 Consider the class themes that we have discussed and will consider.
 Please see the page of
-[Topic and Learning Outcomes]({{ "/teaching/CS-428+828/?type=tlo" | relative_url }})
+[Topics]({{ "/teaching/CS-428+828/202030/#collapse_OFF_TLO" | relative_url }})
 for a guide.
 
 Write approximately 1000 words (or equivalent)
 about your chosen topic as an essay or
-you are welcome to consider other forms of deliverable that are more meaningful to you &mdash; such as a book report or a wikipedia posting.
+you are welcome to consider other forms of deliverable that are more meaningful to you &mdash; such an HTML/JavaScript implementation of some ideas discussed in class (perhaps extending something from <https://github.com/dhhepting/dhhepting.github.io>).
 It must deal with class themes in some way,
-and your idea about that connection are important.
-You might focus your efforts on researching smaller assessment questions (from [Topic and Learning Outcomes]({{ "/teaching/CS-428+828/?type=tlo" | relative_url }})),
+and your ideas about that connection are important.
+You might focus your efforts on researching smaller assessment questions (from [Topics]({{ "/teaching/CS-428+828/202030/#collapse_OFF_TLO" | relative_url }})),
 examining the usability of software that you use,
 writing some code to test an idea, and so forth.
 
