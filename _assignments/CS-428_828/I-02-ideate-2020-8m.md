@@ -30,6 +30,6 @@ Describe your unmet need or the unfulfilled potential upon which you are ideatin
 ### Submission
 
 * submit a [pdf](https://en.wikipedia.org/wiki/PDF) document
-* target: 1-3 pages
+* suggested length: 1-3 pages
 
 {% include grading/main.html %}
