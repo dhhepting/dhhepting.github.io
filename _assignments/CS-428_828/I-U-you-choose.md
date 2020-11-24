@@ -43,6 +43,7 @@ for a guide.
 Write approximately 1000 words (or equivalent)
 about your chosen topic as an essay or
 you are welcome to consider other forms of deliverable that are more meaningful to you &mdash; such an HTML/JavaScript implementation of some ideas discussed in class (perhaps extending something from <https://github.com/dhhepting/dhhepting.github.io>).
+
 It must deal with class themes in some way,
 and your ideas about that connection are important.
 You might focus your efforts on researching smaller assessment questions (from [Topics]({{ "/teaching/CS-428+828/202030/#collapse_OFF_TLO" | relative_url }})),
