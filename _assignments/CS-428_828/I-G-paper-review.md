@@ -4,7 +4,7 @@ title: Research Paper Review (Grad)
 breadcrumb: Research Paper Review (Grad)
 aid: I_G_RPR
 marks: 12
-moddate: 13-Nov-2019
+moddate: 24-Nov-2020
 rubric:
 - crit: What is the purpose of the work?
   wt: 2.0
@@ -70,6 +70,7 @@ for reviewing papers:
 Finally, include an explanation of why you chose this paper.
 
 Your summary should be approximately 1000 words.
+
 ### Submission
 
 * submit a [pdf](https://en.wikipedia.org/wiki/PDF) document
