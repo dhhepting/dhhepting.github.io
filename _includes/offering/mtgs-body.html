@@ -22,6 +22,15 @@
 {% endif %}
 <p>
   Today is: <i>{{ todaydate }}</i><br />
+  <!--
+  Today is: <span id="now"></span><br />
+  <script>
+    const nowstr = new Date(Date.now()).toString()
+    const nowarr = nowstr.split(' ')
+    //document.getElementById("now").innerHTML = nowarr
+    document.getElementById("now").innerHTML = nowarr[0] + '-' + nowarr[2] + '-' + nowarr[1] + '-' + nowarr[3]
+  </script>
+  -->
   Next class meeting is: <i>{{ meetingdate }}</i>
 </p>
 {% include meetings/pagination.html path="meetings/" tm=26 cm=currmtg na=1 %}
