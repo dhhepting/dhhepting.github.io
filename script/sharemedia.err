@@ -2075,3 +2075,83 @@ ModuleNotFoundError: No module named 'dropbox'
 2020-12-01 17:00:02.177643
 2020-12-02 17:00:04.104048
 2020-12-03 17:00:03.322599
+2020-12-04 17:00:02.207940
+2020-12-05 17:11:30.612778
+2020-12-06 17:00:02.712303
+2020-12-07 14:52:18.682847
+2020-12-07 17:00:02.665889
+2020-12-08 17:00:02.887526
+2020-12-09 17:00:02.920934
+2020-12-10 14:02:05.356461
+2020-12-10 17:00:02.514161
+2020-12-11 17:00:02.808382
+2020-12-12 17:51:50.510947
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/local/Cellar/python@3.9/3.9.0_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x111b27670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x111b27670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Sites/dhhepting.github.io/script/sharemedia.py", line 54, in <module>
+    dbx.users_get_current_account()
+  File "/usr/local/lib/python3.9/site-packages/dropbox/base.py", line 5090, in users_get_current_account
+    r = self.request(
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 313, in request
+    res = self.request_json_string_with_retry(host,
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 463, in request_json_string_with_retry
+    return self.request_json_string(host,
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 559, in request_json_string
+    r = self._session.post(url,
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 590, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x111b27670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2020-12-13 17:52:58.149145
+2020-12-14 17:00:04.377758
+2020-12-15 17:00:02.788656
+2020-12-16 13:49:26.577391
+2020-12-16 17:00:02.667166
+2020-12-17 13:34:45.737225
+2020-12-17 13:38:07.312776
+2020-12-17 13:57:44.968908
+2020-12-17 14:00:05.884157
+2020-12-17 14:01:34.430927
+2020-12-17 14:06:42.160814
+2020-12-17 14:10:27.259240
