@@ -8,24 +8,32 @@ from datetime import datetime
 from pathlib import Path
 
 
-est = pytz.timezone('US/Eastern')
+ltz = pytz.timezone('America/Regina')
 utc = pytz.utc
 fmt = '%Y-%m-%d %H:%M:%S %Z%z'
 
 fn = 'GMT20201124-172548_HCC-Mtg-22.m4a'
-print(fn)
-print(fn[3:7])
-print(fn[7:9])
-print(fn[9:11])
-winter = datetime(int(fn[3:7]),int(fn[7:9]),int(fn[9:11]), 18, 0, 0, tzinfo=utc)
-summer = datetime(2016, 7, 24, 18, 0, 0, tzinfo=utc)
 
-print (winter.strftime(fmt))
-print (summer.strftime(fmt))
+zYYYY = int(fn[3:7])
+zmm = int(fn[7:9])
+zdd = int(fn[9:11])
+zHH = int(fn[12:14])
+zMM = int(fn[14:16])
+zSS = int(fn[16:18])
 
-print (winter.astimezone(est).strftime(fmt))
-print (summer.astimezone(est).strftime(fmt))
-
+if (fn[0:3] == 'GMT'):
+    filetime_utc = datetime(zYYYY, zmm, zdd, zHH, zMM, zSS, tzinfo=utc)
+    filetime_local = filetime_utc.astimezone(ltz) #ltz.localize(filetime)
+    #filetime.replace()
+    #print (filetime.strftime(fmt))
+    #filetime_local = filetime_utc.astimezone(local)
+    #print (filetime_utc.astimezone(local).strftime(fmt))
+    print (filetime_local.strftime(fmt))
+    class_start = ltz.localize(datetime(zYYYY, zmm, zdd, 11, 30))
+    print (class_start.strftime(fmt))
+    td = filetime_local - class_start
+    print(td)
+#print(str(delta))
 sys.exit()
 # arguments to this script:
 # - the absolute path to the website's local root directory

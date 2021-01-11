@@ -3,6 +3,16 @@
 {%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan -%}
 {%- assign mtg_lvl='h6' -%}
 {%- for mtgs in include.test -%}
+  {%- if mtgs[1].id -%}
+    {%- if mtgs[1].overview -%}
+      <h5>
+        Overview
+      </h5>
+      {% for p in mtgs[1].overview %}
+        {{ p | markdownify }}
+      {% endfor %}
+    {%- endif -%}
+  {%- endif -%}
   {%- if mtgs[1].date -%}
     {%- capture mtg_id -%}MTG_PLAN_{{ mtgs[0] }}{%- endcapture -%}
     {%- assign mtg_nbr = mtgs[0] | plus: 0 -%}

@@ -4,20 +4,100 @@ var tipuesearch = {"pages": [{
     "tags": "news",
     "url": "/~hepting/news/website-deployed.html"
   },{
+    "title": "Mtg 01 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/01_Mon-11-Jan-2021.html.html"
+  },{
+    "title": "Mtg 01 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/01_Mon-11-Jan-2021.html"
+  },{
     "title": "Mtg 1 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/01_Thu-03-Sep-2020.html"
+  },{
+    "title": "Mtg 1 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/01_Tue-12-Jan-2021.html"
+  },{
+    "title": "Mtg 1 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/01_Tue-12-Jan-2021.html"
+  },{
+    "title": "Mtg 2 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/02_Thu-14-Jan-2021.html"
+  },{
+    "title": "Mtg 2 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/02_Thu-14-Jan-2021.html"
   },{
     "title": "Mtg 2 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/02_Tue-08-Sep-2020.html"
   },{
+    "title": "Mtg 02 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/02_Wed-13-Jan-2021.html.html"
+  },{
+    "title": "Mtg 02 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/02_Wed-13-Jan-2021.html"
+  },{
+    "title": "Mtg 03 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/03_Fri-15-Jan-2021.html.html"
+  },{
+    "title": "Mtg 03 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/03_Fri-15-Jan-2021.html"
+  },{
     "title": "Mtg 3 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/03_Thu-10-Sep-2020.html"
+  },{
+    "title": "Mtg 3 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/03_Tue-19-Jan-2021.html"
+  },{
+    "title": "Mtg 3 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/03_Tue-19-Jan-2021.html"
+  },{
+    "title": "Mtg 04 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/04_Mon-18-Jan-2021.html.html"
+  },{
+    "title": "Mtg 04 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/04_Mon-18-Jan-2021.html"
+  },{
+    "title": "Mtg 4 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/04_Thu-21-Jan-2021.html"
+  },{
+    "title": "Mtg 4 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/04_Thu-21-Jan-2021.html"
   },{
     "title": "Mtg 4 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -29,25 +109,145 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/05_Thu-17-Sep-2020.html"
   },{
+    "title": "Mtg 5 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/05_Tue-26-Jan-2021.html"
+  },{
+    "title": "Mtg 5 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/05_Tue-26-Jan-2021.html"
+  },{
+    "title": "Mtg 05 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/05_Wed-20-Jan-2021.html.html"
+  },{
+    "title": "Mtg 05 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/05_Wed-20-Jan-2021.html"
+  },{
+    "title": "Mtg 06 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/06_Fri-22-Jan-2021.html.html"
+  },{
+    "title": "Mtg 06 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/06_Fri-22-Jan-2021.html"
+  },{
+    "title": "Mtg 6 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/06_Thu-28-Jan-2021.html"
+  },{
+    "title": "Mtg 6 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/06_Thu-28-Jan-2021.html"
+  },{
     "title": "Mtg 6 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/06_Tue-22-Sep-2020.html"
+  },{
+    "title": "Mtg 07 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/07_Mon-25-Jan-2021.html.html"
+  },{
+    "title": "Mtg 07 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/07_Mon-25-Jan-2021.html"
   },{
     "title": "Mtg 7 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/07_Thu-24-Sep-2020.html"
   },{
+    "title": "Mtg 7 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/07_Tue-02-Feb-2021.html"
+  },{
+    "title": "Mtg 7 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/07_Tue-02-Feb-2021.html"
+  },{
+    "title": "Mtg 8 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/08_Thu-04-Feb-2021.html"
+  },{
+    "title": "Mtg 8 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/08_Thu-04-Feb-2021.html"
+  },{
     "title": "Mtg 8 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/08_Tue-29-Sep-2020.html"
   },{
+    "title": "Mtg 08 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/08_Wed-27-Jan-2021.html.html"
+  },{
+    "title": "Mtg 08 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/08_Wed-27-Jan-2021.html"
+  },{
+    "title": "Mtg 09 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/09_Fri-29-Jan-2021.html.html"
+  },{
+    "title": "Mtg 09 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/09_Fri-29-Jan-2021.html"
+  },{
     "title": "Mtg 9 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/09_Thu-01-Oct-2020.html"
+  },{
+    "title": "Mtg 9 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/09_Tue-09-Feb-2021.html"
+  },{
+    "title": "Mtg 9 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/09_Tue-09-Feb-2021.html"
+  },{
+    "title": "Mtg 10 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/10_Mon-01-Feb-2021.html.html"
+  },{
+    "title": "Mtg 10 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/10_Mon-01-Feb-2021.html"
+  },{
+    "title": "Mtg 10 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/10_Thu-11-Feb-2021.html"
+  },{
+    "title": "Mtg 10 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/10_Thu-11-Feb-2021.html"
   },{
     "title": "Mtg 10 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -59,25 +259,145 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/11_Thu-08-Oct-2020.html"
   },{
+    "title": "Mtg 11 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/11_Tue-23-Feb-2021.html"
+  },{
+    "title": "Mtg 11 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/11_Tue-23-Feb-2021.html"
+  },{
+    "title": "Mtg 11 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/11_Wed-03-Feb-2021.html.html"
+  },{
+    "title": "Mtg 11 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/11_Wed-03-Feb-2021.html"
+  },{
+    "title": "Mtg 12 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/12_Fri-05-Feb-2021.html.html"
+  },{
+    "title": "Mtg 12 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/12_Fri-05-Feb-2021.html"
+  },{
+    "title": "Mtg 12 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/12_Thu-25-Feb-2021.html"
+  },{
+    "title": "Mtg 12 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/12_Thu-25-Feb-2021.html"
+  },{
     "title": "Mtg 12 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/12_Tue-13-Oct-2020.html"
+  },{
+    "title": "Mtg 13 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/13_Mon-08-Feb-2021.html.html"
+  },{
+    "title": "Mtg 13 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/13_Mon-08-Feb-2021.html"
   },{
     "title": "Mtg 13 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/13_Thu-15-Oct-2020.html"
   },{
+    "title": "Mtg 13 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/13_Tue-02-Mar-2021.html"
+  },{
+    "title": "Mtg 13 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/13_Tue-02-Mar-2021.html"
+  },{
+    "title": "Mtg 14 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/14_Thu-04-Mar-2021.html"
+  },{
+    "title": "Mtg 14 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/14_Thu-04-Mar-2021.html"
+  },{
     "title": "Mtg 14 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/14_Tue-20-Oct-2020.html"
   },{
+    "title": "Mtg 14 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/14_Wed-10-Feb-2021.html.html"
+  },{
+    "title": "Mtg 14 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/14_Wed-10-Feb-2021.html"
+  },{
+    "title": "Mtg 15 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/15_Fri-12-Feb-2021.html.html"
+  },{
+    "title": "Mtg 15 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/15_Fri-12-Feb-2021.html"
+  },{
     "title": "Mtg 15 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/15_Thu-22-Oct-2020.html"
+  },{
+    "title": "Mtg 15 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/15_Tue-09-Mar-2021.html"
+  },{
+    "title": "Mtg 15 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/15_Tue-09-Mar-2021.html"
+  },{
+    "title": "Mtg 16 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/16_Mon-22-Feb-2021.html.html"
+  },{
+    "title": "Mtg 16 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/16_Mon-22-Feb-2021.html"
+  },{
+    "title": "Mtg 16 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/16_Thu-11-Mar-2021.html"
+  },{
+    "title": "Mtg 16 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/16_Thu-11-Mar-2021.html"
   },{
     "title": "Mtg 16 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -88,6 +408,46 @@ var tipuesearch = {"pages": [{
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/17_Thu-29-Oct-2020.html"
+  },{
+    "title": "Mtg 17 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/17_Tue-16-Mar-2021.html"
+  },{
+    "title": "Mtg 17 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/17_Tue-16-Mar-2021.html"
+  },{
+    "title": "Mtg 17 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/17_Wed-24-Feb-2021.html.html"
+  },{
+    "title": "Mtg 17 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/17_Wed-24-Feb-2021.html"
+  },{
+    "title": "Mtg 18 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/18_Fri-26-Feb-2021.html.html"
+  },{
+    "title": "Mtg 18 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/18_Fri-26-Feb-2021.html"
+  },{
+    "title": "Mtg 18 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/18_Thu-18-Mar-2021.html"
+  },{
+    "title": "Mtg 18 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/18_Thu-18-Mar-2021.html"
   },{
     "title": "Mtg 18 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -139,10 +499,30 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/projects/fractals/calendars/1996.html"
   },{
+    "title": "Mtg 19 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/19_Mon-01-Mar-2021.html.html"
+  },{
+    "title": "Mtg 19 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/19_Mon-01-Mar-2021.html"
+  },{
     "title": "Mtg 19 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/19_Thu-05-Nov-2020.html"
+  },{
+    "title": "Mtg 19 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/19_Tue-23-Mar-2021.html"
+  },{
+    "title": "Mtg 19 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/19_Tue-23-Mar-2021.html"
   },{
     "title": "Winter 2018",
     "text": "# {{page.breadcrumb }} First day of term: January 8, 2018 Last day of term: April 13, 2018 Courses taught: CS 110 &mdash; Programming and Problem Solving CS 205 &mdash; Multimedia Systems CS 499+900 &mdash; Seminars Times Monday Tuesday Wednesday Thursday Friday 08h30 CS 205 (Busy) CS 205 (Busy) CS 205 09h00 09h30 Office Hours Office Hours Meeting Meeting 10h00 10h30 11h00 (Busy) (Busy) (Busy) 11h30 12h00 (Meeting) 12h30 CS 110 (Busy) CS 110 CS 110 13h00 13h30 14h00 Meeting 14h30 CS 499+900 Meeting CS 499+900 CS 499+900 15h00 Office Hours 15h30 Meeting Office Hours (Busy) 16h00 (Busy) 16h30 (Busy)",
@@ -179,15 +559,80 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/schedule/202030.html"
   },{
+    "title": "Winter 2021 Schedule",
+    "text": "{% include teaching/semester.html %} {% include teaching/schedule.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/schedule/202110.html"
+  },{
+    "title": "Mtg 20 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/20_Thu-25-Mar-2021.html"
+  },{
+    "title": "Mtg 20 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/20_Thu-25-Mar-2021.html"
+  },{
     "title": "Mtg 20 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/20_Tue-17-Nov-2020.html"
   },{
+    "title": "Mtg 20 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/20_Wed-03-Mar-2021.html.html"
+  },{
+    "title": "Mtg 20 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/20_Wed-03-Mar-2021.html"
+  },{
+    "title": "Mtg 21 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/21_Fri-05-Mar-2021.html.html"
+  },{
+    "title": "Mtg 21 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/21_Fri-05-Mar-2021.html"
+  },{
     "title": "Mtg 21 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/21_Thu-19-Nov-2020.html"
+  },{
+    "title": "Mtg 21 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/21_Tue-30-Mar-2021.html"
+  },{
+    "title": "Mtg 21 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/21_Tue-30-Mar-2021.html"
+  },{
+    "title": "Mtg 22 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/22_Mon-08-Mar-2021.html.html"
+  },{
+    "title": "Mtg 22 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/22_Mon-08-Mar-2021.html"
+  },{
+    "title": "Mtg 22 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/22_Thu-01-Apr-2021.html"
+  },{
+    "title": "Mtg 22 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/22_Thu-01-Apr-2021.html"
   },{
     "title": "Mtg 22 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -199,20 +644,210 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/23_Thu-26-Nov-2020.html"
   },{
+    "title": "Mtg 23 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/23_Tue-06-Apr-2021.html"
+  },{
+    "title": "Mtg 23 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/23_Tue-06-Apr-2021.html"
+  },{
+    "title": "Mtg 23 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/23_Wed-10-Mar-2021.html.html"
+  },{
+    "title": "Mtg 23 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/23_Wed-10-Mar-2021.html"
+  },{
+    "title": "Mtg 24 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/24_Fri-12-Mar-2021.html.html"
+  },{
+    "title": "Mtg 24 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/24_Fri-12-Mar-2021.html"
+  },{
+    "title": "Mtg 24 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/24_Thu-08-Apr-2021.html"
+  },{
+    "title": "Mtg 24 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/24_Thu-08-Apr-2021.html"
+  },{
     "title": "Mtg 24 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/24_Tue-01-Dec-2020.html"
+  },{
+    "title": "Mtg 25 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/25_Mon-15-Mar-2021.html.html"
+  },{
+    "title": "Mtg 25 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/25_Mon-15-Mar-2021.html"
   },{
     "title": "Mtg 25 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/25_Thu-03-Dec-2020.html"
   },{
+    "title": "Mtg 25 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/25_Tue-13-Apr-2021.html"
+  },{
+    "title": "Mtg 25 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/25_Tue-13-Apr-2021.html"
+  },{
+    "title": "Mtg 26 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/26_Thu-15-Apr-2021.html"
+  },{
+    "title": "Mtg 26 • CS-280 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/26_Thu-15-Apr-2021.html"
+  },{
     "title": "Mtg 26 • CS-428+828 (202030)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/meetings/26_Tue-08-Dec-2020.html"
+  },{
+    "title": "Mtg 26 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/26_Wed-17-Mar-2021.html.html"
+  },{
+    "title": "Mtg 26 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/26_Wed-17-Mar-2021.html"
+  },{
+    "title": "Mtg 27 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/27_Fri-19-Mar-2021.html.html"
+  },{
+    "title": "Mtg 27 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/27_Fri-19-Mar-2021.html"
+  },{
+    "title": "Mtg 28 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/28_Mon-22-Mar-2021.html.html"
+  },{
+    "title": "Mtg 28 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/28_Mon-22-Mar-2021.html"
+  },{
+    "title": "Mtg 29 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/29_Wed-24-Mar-2021.html.html"
+  },{
+    "title": "Mtg 29 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/29_Wed-24-Mar-2021.html"
+  },{
+    "title": "Mtg 30 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/30_Fri-26-Mar-2021.html.html"
+  },{
+    "title": "Mtg 30 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/30_Fri-26-Mar-2021.html"
+  },{
+    "title": "Mtg 31 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/31_Mon-29-Mar-2021.html.html"
+  },{
+    "title": "Mtg 31 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/31_Mon-29-Mar-2021.html"
+  },{
+    "title": "Mtg 32 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/32_Wed-31-Mar-2021.html.html"
+  },{
+    "title": "Mtg 32 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/32_Wed-31-Mar-2021.html"
+  },{
+    "title": "Mtg 33 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/33_Mon-05-Apr-2021.html.html"
+  },{
+    "title": "Mtg 33 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/33_Mon-05-Apr-2021.html"
+  },{
+    "title": "Mtg 34 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/34_Wed-07-Apr-2021.html.html"
+  },{
+    "title": "Mtg 34 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/34_Wed-07-Apr-2021.html"
+  },{
+    "title": "Mtg 35 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/35_Fri-09-Apr-2021.html.html"
+  },{
+    "title": "Mtg 35 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/35_Fri-09-Apr-2021.html"
+  },{
+    "title": "Mtg 36 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/36_Mon-12-Apr-2021.html.html"
+  },{
+    "title": "Mtg 36 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/36_Mon-12-Apr-2021.html"
+  },{
+    "title": "Mtg 37 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/37_Wed-14-Apr-2021.html.html"
+  },{
+    "title": "Mtg 37 • CS-499+900 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/37_Wed-14-Apr-2021.html"
   },{
     "title": "Forbidden Access",
     "text": "# {{ page.breadcrumb }} The link that was used to reach this site was forbidden access. Referring URL: Please send me the details of the link that was followed, so that I may correct the problem: e-mail Daryl Hepting You may also be able to go back the referring page by [clicking here](javascript:window.history.back()).",
@@ -579,6 +1214,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-205/201810/"
   },{
+    "title": "CS 205 (202110) Assignments",
+    "text": "{% include offering/asgn-grid.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/assignments/"
+  },{
+    "title": "CS 205 (202110) Meetings",
+    "text": "{% include offering/mtgs-grid.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/"
+  },{
+    "title": "CS 205 (202110) Media",
+    "text": "{% include offering/media-grid.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/media/"
+  },{
+    "title": "CS 205 in Winter 2021",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/"
+  },{
     "title": "CS 205 in Winter 2020",
     "text": "{% include offering/main.html %}",
     "tags": "",
@@ -663,6 +1318,16 @@ var tipuesearch = {"pages": [{
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/201010/"
+  },{
+    "title": "CS-280 (202110) Meetings",
+    "text": "{% include offering/mtgs-grid.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/"
+  },{
+    "title": "CS 428+828 in Fall 2020",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/"
   },{
     "title": "CS 280 in Winter 2020",
     "text": "{% include offering/main.html %}",
@@ -858,6 +1523,16 @@ var tipuesearch = {"pages": [{
     "text": "# {{ page.breadcrumb }}",
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/201810/"
+  },{
+    "title": "CS-499+900 (202110) Meetings",
+    "text": "{% include offering/mtgs-grid.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/"
+  },{
+    "title": "CS 499+900 in Winter 2021",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/"
   },{
     "title": "CS 499+900 in Winter 2020",
     "text": "{% include offering/main.html %}",
@@ -2049,6 +2724,21 @@ var tipuesearch = {"pages": [{
     "tags": "chapter",
     "url": "/~hepting/research/works/2019-01-HepBinYao-Facial-Similarity-Analysis-A-Three-Way-Decision-Perspective.html"
   },{
+    "title": "CS 205 Meeting 1",
+    "text": "CS 205 Meeting 1",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M01.html"
+  },{
+    "title": "CS 280 Meeting 1",
+    "text": "CS 280 Meeting 1",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M01.html"
+  },{
+    "title": "Seminars",
+    "text": "Seminars",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-499_900-M01.html"
+  },{
     "title": "Introduction to Human Computer Interaction",
     "text": "Introduction to HCI Attack of the Impolite Robots (2020)",
     "tags": "{\"ka\"=>\"HCI\", \"ku\"=>nil}",
@@ -2068,6 +2758,11 @@ var tipuesearch = {"pages": [{
     "text": "Foundations of Interaction",
     "tags": "{\"ka\"=>\"HCI\", \"ku\"=>nil}",
     "url": "/~hepting/teaching/notes/foundations-interaction.html"
+  },{
+    "title": "Designing Interaction",
+    "text": "Multimedia",
+    "tags": "{\"ka\"=>\"HCI\", \"ku\"=>nil}",
+    "url": "/~hepting/teaching/notes/fred.html"
   },{
     "title": "Gasket in Bubbles (1989)",
     "text": "",
