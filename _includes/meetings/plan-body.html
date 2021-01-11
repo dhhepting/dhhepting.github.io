@@ -10,63 +10,51 @@
 {%- endfor -%}
 
 {%- if mtgplan != nil -%}
+  {%- if mtgplan[1].theme -%}
+  <h6>
+    {{ mtgplan[1].theme }}
+  </h6>
+  {%- endif -%}
   {%- for bk in mtgplan[1].BOK -%}
-    {%- assign kaku = bk.kaku | split: "/" -%}
-    {%- assign kaaa = kaku[0] -%}
-    {%- assign kuuu = kaku[1] -%}
-    <h6 class="bg-dark text-white">
-      {{ kaaa }} / {{ kuuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kuuu.size }}
-    </h6>
-    {%- assign cur_dat = site.data.teaching.CS2013[kaaa][kuuu] -%}
-    <ul>
-    {%- if cur_dat and bk.topics -%}
-      <li>
-        Topics:
-        <ul>
-          {%- for bkt in bk.topics %}
-            {%- for csct in cur_dat.topics -%}
-              {%- if bkt == csct.label %}
-                <li>{{ csct.desc }}</li>
+    {%- if bk.kaku -%}
+      {%- assign kaku = bk.kaku | split: "/" -%}
+      {%- assign kaaa = kaku[0] -%}
+      {%- assign kuuu = kaku[1] -%}
+      <h6 class="bg-dark text-white">
+        {{ kaaa }} / {{ kuuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kuuu.size }}
+      </h6>
+      {%- assign cur_dat = site.data.teaching.CS2013[kaaa][kuuu] -%}
+      <ul>
+      {%- if cur_dat and bk.topics -%}
+        <li>
+          Topics:
+          <ul>
+            {%- for bkt in bk.topics %}
+              {%- for csct in cur_dat.topics -%}
+                {%- if bkt == csct.label %}
+                  <li>{{ csct.desc }}</li>
+                {%- endif %}
+              {%- endfor -%}
+            {%- endfor %}
+          </ul>
+        </li>
+      {%- endif -%}
+      {%- if cur_dat and bk.outcomes -%}
+        <li>
+          Learning Outcomes:
+          <ul>
+          {%- for ho in bk.outcomes %}
+            {%- for co in cur_dat.outcomes -%}
+              {%- if ho == co.label %}
+                <li>{{ co.desc }}</li>
               {%- endif %}
             {%- endfor -%}
           {%- endfor %}
-        </ul>
-      </li>
+          </ul>
+        </li>
+      {%- endif -%}
+      </ul>
     {%- endif -%}
-    {%- if cur_dat and bk.outcomes -%}
-      <li>
-        Learning Outcomes:
-        <ul>
-        {%- for ho in bk.outcomes %}
-          {%- for co in cur_dat.outcomes -%}
-            {%- if ho == co.label %}
-              <li>{{ co.desc }}</li>
-            {%- endif %}
-          {%- endfor -%}
-        {%- endfor %}
-        </ul>
-      </li>
-    {%- endif -%}
-    {%- if bk.notes -%}
-      <li>Notes:
-        <ul>
-        {%- for hn in bk.notes %}
-          {%- capture noteurl %}/teaching/notes/{{ hn }}.html{%- endcapture %}
-          {%- for note in site.notes %}
-            {%- if note.url == noteurl %}
-              <li>
-                <a href="{{ noteurl | absolute_url }}">
-                  {{ note.title }}
-                </a>
-              </li>
-              {%- break %}
-            {%- endif %}
-          {%- endfor %}
-        {%- endfor %}
-        </ul>
-      </li>
-    {%- endif -%}
-    </ul>
   {%- endfor %}
   {%- if mtgplan[1].outline -%}
   <h6 class="bg-dark text-white">
@@ -82,4 +70,24 @@
   {%- endfor -%}
   </ul>
   {%- endif %}
+  {%- if mtgplan[1].notes -%}
+    <h6 class="bg-dark text-white">
+      Notes
+    </h6>
+    <ul>
+      {%- for hn in mtgplan[1].notes %}
+        {%- capture noteurl %}/teaching/notes/{{ hn }}.html{%- endcapture %}
+        {%- for note in site.notes %}
+          {%- if note.url == noteurl %}
+            <li>
+              <a href="{{ noteurl | relative_url }}">
+                {{ note.title }}
+              </a>
+            </li>
+            {%- break %}
+          {%- endif %}
+        {%- endfor %}
+      {%- endfor %}
+    </ul>
+  {%- endif -%}
 {%- endif %}
