@@ -165,15 +165,19 @@
           role="button" target="_blank">
             DHH
           </a>
+          {% assign urcid = 0 %}
           {% for c in site.data.teaching.courses %}
             {% if clslab[1] == c.id %}
-              {% assign urcid = c.urcourses %}
+              {% assign urcid = c.urc %}
+              {% break %}
             {% endif %}
           {% endfor %}
+          {% if urcid != 0 %}
           <a href="https://urcourses.uregina.ca/course/view.php?id={{ urcid }}" class="btn btn-info btn-md"
           role="button" target="_blank">
             URC
           </a>
+          {% endif %}
         </td>
         {%- else -%}
         <td rowspan="{{sd}}" class="{{clslab[0]}}">{{clslab[1]}}</td>

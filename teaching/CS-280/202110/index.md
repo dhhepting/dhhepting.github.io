@@ -1,7 +1,7 @@
 ---
-title: CS 428+828 in Fall 2020
-breadcrumb: 202030
-sem: 202030
+title: CS 280 in Winter 2021
+breadcrumb: 202110
+sem: 202110
 layout: bg-image
 description:
 ---
