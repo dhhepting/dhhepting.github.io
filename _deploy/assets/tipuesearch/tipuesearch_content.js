@@ -1324,7 +1324,7 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/"
   },{
-    "title": "CS 428+828 in Fall 2020",
+    "title": "CS 280 in Winter 2021",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/"
