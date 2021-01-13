@@ -2729,10 +2729,260 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/notes/CS-205-M01.html"
   },{
+    "title": "CS 205 Meeting 2",
+    "text": "CS 205 Meeting 2 Information entropy (2014)",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M02.html"
+  },{
+    "title": "CS 205 Meeting 3",
+    "text": "CS 205 Meeting 3",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M03.html"
+  },{
+    "title": "CS 205 Meeting 4",
+    "text": "CS 205 Meeting 4",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M04.html"
+  },{
+    "title": "CS 205 Meeting 5",
+    "text": "CS 205 Meeting 5",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M05.html"
+  },{
+    "title": "CS 205 Meeting 6",
+    "text": "CS 205 Meeting 6",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M06.html"
+  },{
+    "title": "CS 205 Meeting 7",
+    "text": "CS 205 Meeting 7",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M07.html"
+  },{
+    "title": "CS 205 Meeting 8",
+    "text": "CS 205 Meeting 8",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M08.html"
+  },{
+    "title": "CS 205 Meeting 9",
+    "text": "CS 205 Meeting 9",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M09.html"
+  },{
+    "title": "CS 205 Meeting 10",
+    "text": "CS 205 Meeting 10",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M10.html"
+  },{
+    "title": "CS 205 Meeting 11",
+    "text": "CS 205 Meeting 11",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M11.html"
+  },{
+    "title": "CS 205 Meeting 12",
+    "text": "CS 205 Meeting 12",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M12.html"
+  },{
+    "title": "CS 205 Meeting 13",
+    "text": "CS 205 Meeting 13",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M13.html"
+  },{
+    "title": "CS 205 Meeting 14",
+    "text": "CS 205 Meeting 14",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M14.html"
+  },{
+    "title": "CS 205 Meeting 15",
+    "text": "CS 205 Meeting 15",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M15.html"
+  },{
+    "title": "CS 205 Meeting 16",
+    "text": "CS 205 Meeting 16",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M16.html"
+  },{
+    "title": "CS 205 Meeting 17",
+    "text": "CS 205 Meeting 17",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M17.html"
+  },{
+    "title": "CS 205 Meeting 18",
+    "text": "CS 205 Meeting 18",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M18.html"
+  },{
+    "title": "CS 205 Meeting 19",
+    "text": "CS 205 Meeting 19",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M19.html"
+  },{
+    "title": "CS 205 Meeting 20",
+    "text": "CS 205 Meeting 20",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M20.html"
+  },{
+    "title": "CS 205 Meeting 21",
+    "text": "CS 205 Meeting 21",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M21.html"
+  },{
+    "title": "CS 205 Meeting 22",
+    "text": "CS 205 Meeting 22",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M22.html"
+  },{
+    "title": "CS 205 Meeting 23",
+    "text": "CS 205 Meeting 23",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M23.html"
+  },{
+    "title": "CS 205 Meeting 24",
+    "text": "CS 205 Meeting 24",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M24.html"
+  },{
+    "title": "CS 205 Meeting 25",
+    "text": "CS 205 Meeting 25",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M25.html"
+  },{
+    "title": "CS 205 Meeting 26",
+    "text": "CS 205 Meeting 26",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-205-M26.html"
+  },{
     "title": "CS 280 Meeting 1",
     "text": "CS 280 Meeting 1",
     "tags": "",
     "url": "/~hepting/teaching/notes/CS-280-M01.html"
+  },{
+    "title": "CS 280 Meeting 2",
+    "text": "CS 280 Meeting 2 Code Stars (2013) We need a \"moral operating system\" (2011)",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M02.html"
+  },{
+    "title": "CS 280 Meeting 3",
+    "text": "CS 280 Meeting 3",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M03.html"
+  },{
+    "title": "CS 280 Meeting 4",
+    "text": "CS 280 Meeting 4",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M04.html"
+  },{
+    "title": "CS 280 Meeting 5",
+    "text": "CS 280 Meeting 5",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M05.html"
+  },{
+    "title": "CS 280 Meeting 6",
+    "text": "CS 280 Meeting 6",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M06.html"
+  },{
+    "title": "CS 280 Meeting 7",
+    "text": "CS 280 Meeting 7",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M07.html"
+  },{
+    "title": "CS 280 Meeting 8",
+    "text": "CS 280 Meeting 8",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M08.html"
+  },{
+    "title": "CS 280 Meeting 9",
+    "text": "CS 280 Meeting 9",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M09.html"
+  },{
+    "title": "CS 280 Meeting 10",
+    "text": "CS 280 Meeting 10",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M10.html"
+  },{
+    "title": "CS 280 Meeting 11",
+    "text": "CS 280 Meeting 11",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M11.html"
+  },{
+    "title": "CS 280 Meeting 12",
+    "text": "CS 280 Meeting 12",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M12.html"
+  },{
+    "title": "CS 280 Meeting 13",
+    "text": "CS 280 Meeting 13",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M13.html"
+  },{
+    "title": "CS 280 Meeting 14",
+    "text": "CS 280 Meeting 14",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M14.html"
+  },{
+    "title": "CS 280 Meeting 15",
+    "text": "CS 280 Meeting 15",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M15.html"
+  },{
+    "title": "CS 280 Meeting 16",
+    "text": "CS 280 Meeting 16",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M16.html"
+  },{
+    "title": "CS 280 Meeting 17",
+    "text": "CS 280 Meeting 17",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M17.html"
+  },{
+    "title": "CS 280 Meeting 18",
+    "text": "CS 280 Meeting 18",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M18.html"
+  },{
+    "title": "CS 280 Meeting 19",
+    "text": "CS 280 Meeting 19",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M19.html"
+  },{
+    "title": "CS 280 Meeting 20",
+    "text": "CS 280 Meeting 20",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M20.html"
+  },{
+    "title": "CS 280 Meeting 21",
+    "text": "CS 280 Meeting 21",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M21.html"
+  },{
+    "title": "CS 280 Meeting 22",
+    "text": "CS 280 Meeting 22",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M22.html"
+  },{
+    "title": "CS 280 Meeting 23",
+    "text": "CS 280 Meeting 23",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M23.html"
+  },{
+    "title": "CS 280 Meeting 24",
+    "text": "CS 280 Meeting 24",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M24.html"
+  },{
+    "title": "CS 280 Meeting 25",
+    "text": "CS 280 Meeting 25",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M25.html"
+  },{
+    "title": "CS 280 Meeting 26",
+    "text": "CS 280 Meeting 26",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/CS-280-M26.html"
   },{
     "title": "Seminars",
     "text": "Seminars",
