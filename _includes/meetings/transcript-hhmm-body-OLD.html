@@ -1,0 +1,48 @@
+{% assign ts = include.test %}
+<div class="row">
+  <div class="col-sm-6">
+  {% assign hkk = ts[1].chats %}
+  {% if hkk[0].persid %}
+    <h6 class="bg-dark text-white" >
+      Chat
+    </h6>
+    {% for hh in hkk %}
+    <p>
+      <strong>
+        {{ hh.persid }}
+      </strong>
+      : {{ hh.msg }}
+    </p>
+    {% endfor %}
+  {% endif %}
+  </div>
+  <div class="col-sm-6">
+  {% assign hkk = ts[1].talks %}
+  {% if hkk[0].persid %}
+    <h6 class="bg-dark text-white">
+      Audio
+    </h6>
+    {% for hh in hkk %}
+      {% if hh.persid == "Daryl Hepting" or hh.persid == "DHH" %}
+        {% assign hhp = "DHH" %}
+      {% else %}
+        {% assign hhp = "SSS" %}
+      {% endif %}
+      <p>
+        <strong>
+          {{ hhp }}
+        </strong>
+        : {{ hh.msg }}
+      </p>
+    {% endfor %}
+  {% endif %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+  {% assign tgs = ts[1].tags %}
+  {% if tgs[0].desc != nil %}
+    {% include helper/tags.html th=tgs %}
+  {% endif %}
+  </div>
+</div>
