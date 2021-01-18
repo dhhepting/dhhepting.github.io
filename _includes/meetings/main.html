@@ -63,11 +63,11 @@
     open='n' id='MTGMEDIA' body='meetings/media-body.html'
   %}
 
-  {%- assign tfile = site.data.teaching[jcrs_id][crs_sem]transcript[mtn] %}
+  {%- assign tfile = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
   {%- if tfile != nil -%}
     {%-
       include helper/pd-card.html
-      test=tfile label="Transcript" level=lvl
+      test=tfile label="Summary" level=lvl
       pass='y' mtg=mtn open='y' id='MTGRECORD'
       body='meetings/transcript-body.html'
     -%}

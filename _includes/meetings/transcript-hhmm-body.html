@@ -1,48 +1,41 @@
 {% assign ts = include.test %}
-<div class="row">
-  <div class="col-sm-6">
-  {% assign hkk = ts[1].chats %}
-  {% if hkk[0].persid %}
-    <h6 class="bg-dark text-white" >
-      Chat
-    </h6>
-    {% for hh in hkk %}
-    <p>
-      <strong>
-        {{ hh.persid }}
-      </strong>
-      : {{ hh.msg }}
-    </p>
-    {% endfor %}
-  {% endif %}
-  </div>
-  <div class="col-sm-6">
-  {% assign hkk = ts[1].talks %}
-  {% if hkk[0].persid %}
-    <h6 class="bg-dark text-white">
-      Audio
-    </h6>
-    {% for hh in hkk %}
-      {% if hh.persid == "Daryl Hepting" or hh.persid == "DHH" %}
-        {% assign hhp = "DHH" %}
-      {% else %}
-        {% assign hhp = "SSS" %}
-      {% endif %}
-      <p>
-        <strong>
-          {{ hhp }}
-        </strong>
-        : {{ hh.msg }}
+<ul>
+{%- for ol in ts[1] -%}
+  {%- if ol.url -%}
+    <li>
+      <a href="{{ ol.url }}">
+        {{ ol.desc }}
+      </a>
+    </li>
+  {%- elsif ol.img -%}
+    <div class="m-2 p-2 border">
+      {% assign iname = ol.img %}
+      {% assign idesc = ol.desc %}
+      {% include helper/figure.html
+        name=iname desc=idesc %}
+    </div>
+  {%- elsif ol.todo -%}
+    <div class="m-2 p-2 bg-warning">
+      <h6 class="text-center">
+        {{ ol.todo | upcase }}
+      </h6>
+      <p class="text-center">
+        {{ ol.desc }}
       </p>
-    {% endfor %}
-  {% endif %}
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-12">
-  {% assign tgs = ts[1].tags %}
-  {% if tgs[0].desc != nil %}
-    {% include helper/tags.html th=tgs %}
-  {% endif %}
-  </div>
-</div>
+    </div>
+  {%- elsif ol.concept -%}
+    <div class="m-2 p-2 bg-primary">
+      <h6 class="text-center">
+        {{ ol.concept | upcase }}
+      </h6>
+      <p class="text-center">
+        {{ ol.desc }}
+      </p>
+    </div>
+  {%- else -%}
+    <li>
+      {{ ol.desc }}
+    </li>
+  {%- endif -%}
+{%- endfor -%}
+</ul>
