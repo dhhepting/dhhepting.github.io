@@ -1,0 +1,56 @@
+Binary-Guessing-Game:
+- desc: Think of a number between 0 and 15 and I will guess your number by asking
+    you 4 yes-or-no questions (I've added some links that explain the game in
+    more detail). It is easiest to ask those questions if I have cards
+    to show you, so let's talk about how to make those cards.
+- url: http://combinatorial-explosions.blogspot.com/2016/04/may-i-read-your-mind.html
+  desc: May I read your mind?
+- url: http://scratched.gse.harvard.edu/resources/binary-guessing-game-activity.html
+  desc: Binary guessing game activity
+- url: https://www.khanacademy.org/computing/computer-science/algorithms/intro-to-algorithms/a/a-guessing-game
+  desc: A guessing game
+- img: 02 - wb-1.JPG
+  desc: The game, as described above, works with 4 cards to guess one of 16
+    numbers. In this whiteboard image, I've started a table with headings
+    8, 4, 2, 1, and V (for value, but G for guess could also work). I've written
+    in Y and N into cells in the table (Y == "Yes" == 1 and N == "No" == 0). If
+    we have only 1 card (or we ask only 1 questions), we can "guess" from 2 values. Is
+    your number on this card? If you answer Yes, then your number is 1 and if you answer No, then
+    your number is 0. It gets a bit more interesting with 2 cards because we can "guess" from 4 values.
+- img: 02 - wb-2.JPG
+  desc: In this whiteboard image, I've sketched 3 cards which allow guesses from
+    8 values (2^3) by adding the "4" column to the table. To make a guess, start
+    with a value of zero and for each card to which the "volunteer" answers Yes
+    ("my number is on that card"), add the value of the column for the card.
+- todo: Next cards
+  desc: We have discussed how to make 3 cards. How does the table get extended with
+    Y's and N's if we make 4 cards and if we make 5 cards?
+- todo: Flip the cards
+  desc: We have discussed making cards with Y's from the table. What happens if
+    we make cards from the N's? How can a guess be made from these cards?
+Encoding:
+- concept: encoding
+  desc: Use of "a system of rules to convert information — such as a letter,
+    word, sound, image, or gesture — into another form, sometimes shortened or
+    secret, for communication through a communication channel or storage in a
+    storage medium." (Wikipedia)
+- url: https://en.wikipedia.org/wiki/Character_encoding
+  desc: Character encoding
+- url: https://en.wikipedia.org/wiki/Code
+  desc: Code
+- url: https://en.wikipedia.org/wiki/Encode
+  desc: Encode
+- img: 02 - wb-3.JPG
+  desc: In this whiteboard image, an example of 8 code values determined by 3
+    bits (binary digits). Note connection to binary guessing game. It is possible
+    to have those code values represent their numeric values, but they could represent
+    other things as well, like characters or colours. ASCII uses 7 bits to encode
+    all the characters for North American English. Unicode uses (up to) 32 bits to
+    encode international and historical characters (and emojis too). UTF-8 is a popular
+    way to encode Unicode characters using less bits.
+- url: https://en.wikipedia.org/wiki/ASCII
+  desc: ASCII
+- url: https://en.wikipedia.org/wiki/Unicode
+  desc: Unicode
+- url: https://en.wikipedia.org/wiki/UTF-8
+  desc: UTF-8
