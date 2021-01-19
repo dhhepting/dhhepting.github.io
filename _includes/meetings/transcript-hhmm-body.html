@@ -14,6 +14,13 @@
       {% include helper/figure.html
         name=iname desc=idesc %}
     </div>
+  {%- elsif ol.vid -%}
+    <div class="m-2 p-2 border">
+      {% assign vurl = ol.vid %}
+      {% assign vdesc = ol.desc %}
+      {% include helper/video.html
+        vidurl=vurl desc=vdesc %}
+    </div>
   {%- elsif ol.todo -%}
     <div class="m-2 p-2 bg-warning">
       <h6 class="text-center">
