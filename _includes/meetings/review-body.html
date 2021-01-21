@@ -1,15 +1,17 @@
 {% include teaching/url.html %}
 {% assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
 {% assign mtn = include.mtg | prepend: '00' | slice: -2, 2  %}
-{% assign transcript = site.data.teaching[jcrs_id][crs_sem]transcript[mtn] %}
+{% assign summary = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
 
-{%- assign mtgdat = blank -%}
+
+  {%- assign mtgdat = blank -%}
 {%- for mtgs in planfile -%}
   {%- if mtgs[0] == include.mtg -%}
     {%- assign mtgdat = mtgs[1] -%}
     {%- break -%}
   {%- endif -%}
 {%- endfor -%}
+  {% comment %}
 {%- if mtgdat != blank -%}
 <div>
   {%- assign bok = mtgdat.BOK -%}
@@ -19,12 +21,25 @@
     {{ kaku[0] }} / {{ kaku[1] | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kaku[1].size }}
     </h6>
   {%- endfor -%}
+  {%- endif -%}
+    {% endcomment %}
+    {%- assign tfile = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
+    {%- if tfile != nil -%}
+      {%-
+        include helper/pd-card.html
+        test=tfile label="Summary" level=lvl
+        pass='y' mtg=mtn open='y' id='MTGRECORD'
+        body='meetings/transcript-body.html'
+      -%}
+    {%- endif %}
+
+  {% comment %}
   <h6>
-    Highlights from Transcript
+    Summary
   </h6>
   <div class="container-fluid">
   {%- capture lastmtg_frag -%}{{ mtn }}_{{ mtgdat.date }}.html#collapse_{% endcapture %}
-  {%- for ts in transcript -%}
+  {%- for ts in summary -%}
     {%- assign hlwt = ts[1].tags -%}
     {%- if hlwt[0].desc != nil -%}
     <div class="row border align-items-center">
@@ -44,5 +59,7 @@
     {%- endif -%}
   {%- endfor -%}
   </div>
+
 </div>
 {%- endif -%}
+{% endcomment %}
