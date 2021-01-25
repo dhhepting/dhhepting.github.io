@@ -2,24 +2,24 @@
 title: Blog Entry
 breadcrumb: Blog Entry
 layout: bg-image
-aid: I_BE
+aid: I_BE_1
 moddate: 25-Jan-2021
 marks: 9
 rubric:
   - crit: Intellectual Engagement with Key Theme-Related Concepts
-    wt: 3
+    wt: 4
     l3: Demonstrates engagement with the important issues raised through readings and/or class activities
     l2: Makes some reference to issues raised through readings and/or class activities
     l1: Makes little reference to issues raised through readings and/or class activities
     l0: Makes no reference to issues raised through readings and/or class activities
   - crit: Personal Response to Key Theme-Related Concepts
-    wt: 3
+    wt: 4
     l3: Extensive evidence of a personal response to the issues raised in the readings/activities, and demonstrates your growth
     l2: Some evidence of a personal response to the issues/concepts raised in the readings/activities
     l1: Little evidence of a personal response to the issues/concepts raised in the readings/activities
     l0: No personal response is made to the issues/concepts raised in the readings/activities
   - crit: Engaged Writing for the Web
-    wt: 3
+    wt: 4
     l3: Shows a good command of Standard English. No problems for your audience. Blog entry includes several links and uses recommended style
     l2: Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your blog. More than 1 link is included and recommended style is mostly used
     l1: Shows some evidence of correct spelling, grammar, and punctuation. Audience will have some trouble reading your blog. Recommended style used occasionally (and only 1 link is included)
@@ -27,7 +27,15 @@ rubric:
 ---
 ### {{ page.title }}
 
-Your blog entry is to be posted in the [blog on URcourses](https://urcourses.uregina.ca/mod/oublog/view.php?id=1036240). References are to be included as hyperlinks within the post, close to the text that makes the reference.
+[Blogs](https://en.wikipedia.org/wiki/Blog) (short for weblogs) have become an important means of expression in the information society. Personal blog posts are discrete, often informal, diary-style commentaries written by an individual.
+
+Prepare and submit a blog post that deals with a topic within a course-related [knowledge unit]({{ "/teaching/CS-280/202110#collapse_OFF_TLO" | relative_url }}) that is currently, or was recently, in the news.
+
+The list of [knowledge units]({{ "/teaching/CS-280/202110#collapse_OFF_TLO" | relative_url }}) also includes learning outcomes associated with the topics. If it is helpful, you may consider those learning outcomes as suggestions about how to approach your topic.
+
+Find a personal connection to the topic. You may, for example, evaluate the (consideration of) ethical and social tradeoffs in a technical decision or analyse the role of computer professionals in a global computing issue.
+
+Identify 2-4 reputable online sources to reference in support of your topic. References are to be included as hyperlinks within the post, close to the text that makes the reference.
 
 From [Nielsen and Morkes](<https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/>), here are some ways to write for the web:
 
@@ -62,13 +70,10 @@ A sample blog entry, that I wrote a few years ago, can be found at: <https://www
 
 ### Submission
 
-Post your blog entry in the course and then submit only the hyperlink to it:
-* once you have posted your entry, click on "Permalink" at the bottom left of your posted entry.
-* copy the entire url for your post. It will be of the form [https://urcourses.uregina.ca/mod/oublog/viewpost.php?post=44653](https://urcourses.uregina.ca/mod/oublog/viewpost.php?post=44653) (your post will have a different number at the end)
-* go to [Submit Link to "Blog Entry"](https://urcourses.uregina.ca/mod/assign/view.php?id=909822) and choose "Add submission" or "Edit submission".
-* paste the URL into the online text entry area. UR Courses will automatically add the markup to make the URL clickable.
-* save changes and then submit
+Submit your blog entry as HTML, either uploaded as a file or pasted as online text. You may edit your blog entry in your "Individual Student Blog" and copy the HTML from there.
 
-The target length is 800-900 words.
+You may optionally choose to post your entry to the "Class Blog", as evidence of participation.
+
+The target length is 900 words.
 
 {% include grading/main.html %}
