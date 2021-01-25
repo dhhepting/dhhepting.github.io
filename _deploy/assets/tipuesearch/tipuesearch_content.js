@@ -1189,6 +1189,11 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-280/201010/"
   },{
+    "title": "CS 280 (202110) Assignments",
+    "text": "{% include offering/asgn-grid.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/assignments/"
+  },{
     "title": "CS-280 (202110) Meetings",
     "text": "{% include offering/mtgs-grid.html %}",
     "tags": "",
