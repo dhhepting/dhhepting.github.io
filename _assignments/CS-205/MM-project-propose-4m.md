@@ -51,7 +51,7 @@ How will you assess if you've met your goals? What is essential to the project a
 
 ### Submission
 
-* submit a well-formatted [pdf](https://en.wikipedia.org/wiki/PDF) document on URcourses
+* submit a well-formatted [pdf](https://en.wikipedia.org/wiki/PDF) document on UR Courses
 * target length: 1 page
 
 {% include grading/main.html %}

@@ -1,5 +1,6 @@
 ---
 title: Sound to Something Else
+aid: I_SSE
 marks: 4
 rubric:
 - crit: Basic implementation
@@ -28,4 +29,4 @@ Take the sound file that you created in the previous assignment
 and use it as input to a p5.js sketch for creation of an animation,
 an image, or text.
 
-{% include marker.html %}
+{% include grading/main.html %}
