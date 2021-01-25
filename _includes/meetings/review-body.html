@@ -22,7 +22,7 @@
     </h6>
   {%- endfor -%}
   {%- endif -%}
-    {% endcomment %}
+
     {%- assign tfile = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
     {%- if tfile != nil -%}
       {%-
@@ -32,6 +32,22 @@
         body='meetings/transcript-body.html'
       -%}
     {%- endif %}
+    {% endcomment %}
+
+    {%- assign tfile = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
+
+    {% for ts in tfile %}
+      {% assign tmstmp = ts[0] %}
+      {% assign tslab = tmstmp | replace: "-", " " %}
+      {% assign taghash =  %}
+      {% assign tagopen = 'n' %}
+
+      {%-
+        include helper/pd-card.html
+        test=ts label=tslab level='h6'
+        open=tagopen id=tmstmp body='meetings/transcript-hhmm-body.html'
+      -%}
+    {% endfor %}
 
   {% comment %}
   <h6>
