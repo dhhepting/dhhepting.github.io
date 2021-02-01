@@ -67,14 +67,15 @@
 {%- endfor -%}
 <li>
   <a target="_blank" {% comment %}_{% endcomment %}
-  href="https://zoom.us/s/{{ page.video }}" class="btn-primary btn m-1 p-1" role="button">
-    Zoom
+  href="{{ page.officezoom }}" class="btn-primary btn m-1 p-1" role="button">
+    Office Zoom
   </a>
+  {% comment %}
   <a target="_blank" {% comment %}_{% endcomment %}
   href="https://discord.gg/YTZQmC" class="btn-primary btn m-1 p-1" role="button">
     Discord
   </a>
-  {% comment %}
+
   {% for o in soffs %}
     {% if o != "" %}
       {% assign crss = site.data.teaching.courses | where: "id", o %}
