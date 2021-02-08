@@ -308,7 +308,7 @@ style="background-color: rgba(32, 32, 32, 0.75)">
 <div class="card" id="OFF_EXAMS-pd-card">
   <h5 class="mb-0">
     <div class="card card-header" role="tab" id="heading_OFF_EXAMS">
-      <a class="xtra collapsed" data-toggle="collapse" href="#collapse_OFF_EXAMS" aria-expanded="false" aria-controls="collapse_OFF_EXAMS">
+      <a class="xtra collapsed" data-toggle="collapse" href="#collapse_OFF_EXAMS" aria-expanded="false" id="OFF_EXAMS" aria-controls="collapse_OFF_EXAMS">
         Exams
       </a>
     </div>
@@ -1705,11 +1705,19 @@ if (exams !== null) {
 
 </div>
 </div>
+<script>
+//const params = new URLSearchParams(location.search)
+const hashid = window.location.hash
+//alert(hashid.slice(1))
+if (hashid !== '') {
+  document.getElementById(hashid.slice(1)).classList.toggle('show')
+}
+</script>
 
 
   </div>
 <div class="card-footer text-muted lightcthru">
-  Site built: 2021-02-03 15:35 -0600
+  Site built: 2021-02-08 15:05 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-280/201310/">
     Give feedback <span class="d-none d-sm-inline">about page</span>
