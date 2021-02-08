@@ -1,5 +1,6 @@
 {%- assign pixlist = "" -%}
 {%- assign audio_url = "" -%}
+{%- assign mtgstr = include.mtg | prepend: '00' | slice: -2, 2 -%}
 
 {%- for m in site.data.teaching[jcrs_id][crs_sem]media -%}
   {%- if m.meet == mtgstr -%}
