@@ -3,7 +3,7 @@ title: Blog Entry
 breadcrumb: Blog Entry
 layout: bg-image
 aid: I_BE_1
-moddate: 25-Jan-2021
+moddate: 08-Feb-2021
 marks: 12
 rubric:
   - crit: Intellectual Engagement with Key Theme-Related Concepts
@@ -29,9 +29,9 @@ rubric:
 
 [Blogs](https://en.wikipedia.org/wiki/Blog) (short for weblogs) have become an important means of expression in the information society. Personal blog posts are discrete, often informal, diary-style commentaries written by an individual.
 
-Prepare and submit a blog post that deals with a topic within a course-related [knowledge unit]({{ "/teaching/CS-280/202110#collapse_OFF_TLO" | relative_url }}) that is currently, or was recently, in the news.
+Prepare and submit a blog post that deals with a topic within a course-related [knowledge unit]({{ "/teaching/CS-280/202110/#collapse_OFF_TLO" | relative_url }}) that is currently, or was recently, in the news.
 
-The list of [knowledge units]({{ "/teaching/CS-280/202110#collapse_OFF_TLO" | relative_url }}) also includes learning outcomes associated with the topics. If it is helpful, you may consider those learning outcomes as suggestions about how to approach your topic.
+The list of [knowledge units]({{ "/teaching/CS-280/?type=tlo" | relative_url }}) also includes learning outcomes associated with the topics. If it is helpful, you may consider those learning outcomes as suggestions about how to approach your topic.
 
 Find a personal connection to the topic. You may, for example, evaluate the (consideration of) ethical and social tradeoffs in a technical decision or analyse the role of computer professionals in a global computing issue.
 

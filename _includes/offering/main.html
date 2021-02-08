@@ -68,7 +68,7 @@
   {%- assign tlofile = site.data.teaching[jcrs_id][crs_sem]tlo -%}
   {%-
     include helper/pd-card.html
-    test=tlofile label="Topics"
+    test=tlofile label="Topics &amp; Learning Outcomes"
     level=off_lvl open='n' id='OFF_TLO'
     body='offering/tlo-body.html'
   -%}
@@ -81,3 +81,11 @@
   -%}
   </div>
 </div>
+<script>
+//const params = new URLSearchParams(location.search)
+const hashid = window.location.hash
+//alert(hashid.slice(1))
+if (hashid !== '') {
+  document.getElementById(hashid.slice(1)).classList.toggle('show')
+}
+</script>

@@ -27,29 +27,29 @@
     id='EVENTS' url=upurl
    -%}
   {%- comment %}{%- endcomment %}
-  <!-- Review of Last Meeting -->
+  <!-- Responses to Last Meeting -->
   {%- assign lmt = include.mn | minus: 1 -%}
-  {%- if lmt > 0 -%}  <!-- line 59 -->
+  {%- if lmt > 0 -%}
+    {%- assign lmtn = lmt | prepend: '00' | slice: -2, 2  -%}
+    {%- assign rfile = site.data.teaching[jcrs_id][crs_sem]responses[lmtn] -%}
     {%-
       include helper/pd-card.html
-      test=planfile label="Review of Last Day" level=lvl
-      open='n' mtg=lmt pass='y' id='MTGREV' body='meetings/review-body.html'
+      test=rfile label="Responses to Last Meeting" level=lvl
+      open='n' mtg=lmt pass='y' id='MTGREV'
+      body='meetings/response-body.html'
      -%}
   {%- endif -%}
 
-
-
-
-{%- comment %}{%- endcomment %}
+<!-- Plan for Today's Meeting -->
 {%- include helper/pd-card.html
-   test=planfile label="Plan for Today" level=lvl
+   test=planfile label="Plan for this Meeting" level=lvl
    open='n' mtg=include.mn pass='y' id='MTGPLAN' body='meetings/plan-body.html'
 %}
-  <hr /><hr />
 
-  {%- include meetings/annotations.html %}
+  <hr /><!-- Before/After this Meeting --><hr />
 
-  {%- assign mtn = include.mn | prepend: '00' | slice: -2, 2  %}
+  <!-- Media from this Meeting -->
+  {%- assign mtn = include.mn | prepend: '00' | slice: -2, 2  -%}
   {%- assign has_media = false -%}
   {%- for m in site.data.teaching[jcrs_id][crs_sem]media -%}
     {%- if m.meet == mtn -%}
@@ -59,16 +59,17 @@
   {%- endfor -%}
   {%-
     include helper/pd-card.html
-    test=has_media label="Media" level=lvl
-    open='n' id='MTGMEDIA' body='meetings/media-body.html'
-  %}
+    test=has_media label="Media from this Meeting" level=lvl
+    pass='y' mtg=mtn open='n' id='MTGMEDIA'
+    body='meetings/media-body.html'
+  -%}
 
   {%- assign tfile = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
   {%- if tfile != nil -%}
     {%-
       include helper/pd-card.html
-      test=tfile label="Summary" level=lvl
-      pass='y' mtg=mtn open='y' id='MTGRECORD'
+      test=tfile label="Summary of this Meeting" level=lvl
+      pass='y' mtg=mtn open='n' id='MTGRECORD'
       body='meetings/transcript-body.html'
     -%}
   {%- endif %}
