@@ -60,6 +60,9 @@ with open(DL_DIR + sys.argv[2], newline='') as engfile:
             d['last_ts_read'] = row['modified']
             e = {}
             e['desc'] = row['message']
+            #print (e)
+            if (d['raw'] == None):
+                d['raw'] = []
             d['raw'].append(e)
 
         #print(row['modified'],row['message'])
