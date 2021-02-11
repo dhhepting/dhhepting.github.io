@@ -4,6 +4,9 @@
   {%- if ol.url -%}
     <li>
       <a href="{{ ol.url }}">
+        {%- if ol.persid -%}
+          <<strong>{{ ol.persid }}:</strong>
+        {%- endif -%}
         {{ ol.desc }}
       </a>
     </li>
@@ -41,6 +44,9 @@
     </div>
   {%- else -%}
     <li>
+      {%- if ol.persid -%}
+        <<strong>{{ ol.persid }}:</strong>
+      {%- endif -%}
       {{ ol.desc }}
     </li>
   {%- endif -%}
