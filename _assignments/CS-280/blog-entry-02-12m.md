@@ -1,8 +1,8 @@
 ---
-title: Blog Entry 1
-breadcrumb: Blog Entry 1
+title: Blog Entry 2
+breadcrumb: Blog Entry 2
 layout: bg-image
-aid: I_BE_1
+aid: I_BE_2
 moddate: 17-Feb-2021
 marks: 12
 rubric:
@@ -29,13 +29,10 @@ rubric:
 
 [Blogs](https://en.wikipedia.org/wiki/Blog) (short for weblogs) have become an important means of expression in the information society. Personal blog posts are discrete, often informal, diary-style commentaries written by an individual.
 
-Prepare and submit a blog post that deals with a topic within a course-related [knowledge unit]({{ "/teaching/CS-280/202110/#collapse_OFF_TLO" | relative_url }}) that is currently, or was recently, in the news.
+Prepare and submit a blog post that deals with
+upholding or defending the public interest or public good and examines how to define it in a practical way. The [ACM Code of Ethics](https://www.acm.org/code-of-ethics) says that "the Code includes principles formulated as statements of responsibility, based on the understanding that the public good is always the primary consideration." [Defense Distributed](https://en.wikipedia.org/wiki/Defense_Distributed) has claimed to serve the public interest. Find an example of a claim that the public good is primary consideration and critically examine that claim.
 
-The list of [knowledge units]({{ "/teaching/CS-280/?type=tlo" | relative_url }}) also includes learning outcomes associated with the topics. If it is helpful, you may consider those learning outcomes as suggestions about how to approach your topic.
-
-Find a personal connection to the topic. You may, for example, evaluate the (consideration of) ethical and social tradeoffs in a technical decision or analyse the role of computer professionals in a global computing issue.
-
-Identify 2-4 reputable online sources to reference in support of your topic. References are to be included as hyperlinks within the post, close to the text that makes the reference.
+Identify 2-4 reputable online sources to reference in support of your examination. References are to be included as hyperlinks within the post, close to the text that makes the reference.
 
 From [Nielsen and Morkes](<https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/>), here are some ways to write for the web:
 
