@@ -3,7 +3,7 @@ title: Explore Text and Image in Colour
 breadcrumb: Explore Text and Image in Colour
 layout: bg-image
 marks: 4
-moddate: 14-Feb-2020
+moddate: 03-Mar-2021
 aid: I_TIC
 rubric:
 - crit: Basic implementation
@@ -33,6 +33,6 @@ An advanced feature might be, for example, a means for text entry or interaction
 
 ### Submission
 
-You may submit your assignment on URcourses as a link to either a sketch on the editor.p5js.org website or to your CS webpage where you run the sketch.
+You may submit your assignment on UR Courses as a link to either a sketch on the < website or to your CS webpage where you run the sketch.
 
 {% include grading/main.html %}
