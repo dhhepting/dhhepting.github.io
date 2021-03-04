@@ -3,7 +3,7 @@ title: Explore Text and Image in Colour
 breadcrumb: Explore Text and Image in Colour
 layout: bg-image
 marks: 4
-moddate: 03-Mar-2021
+moddate: 04-Mar-2021
 aid: I_TIC
 rubric:
 - crit: Basic implementation
@@ -29,10 +29,12 @@ rubric:
 
 Basic implementation: use p5.js to present some text as both text (HTML element) and image (converted to bitmap). Use colour change to illustrate some properties of the text. Allow for the screen to be captured as an image (you can use <https://p5js.org/reference/#/p5/saveCanvas> to do this).
 
+See [this sketch](https://editor.p5js.org/dhhepting/sketches/rcBevrA2) and [this sketch](https://editor.p5js.org/dhhepting/sketches/7sT2w3Lh7) as partial examples.
+
 An advanced feature might be, for example, a means for text entry or interaction with the displayed text. Please make sure to describe and explain what you have chosen to implement for this.
 
 ### Submission
 
-You may submit your assignment on UR Courses as a link to either a sketch on the < website or to your CS webpage where you run the sketch.
+You may submit your assignment on UR Courses as a link to either a sketch on the <https://editor.p5js.org> website or to your CS webpage where the sketch can be run.
 
 {% include grading/main.html %}
