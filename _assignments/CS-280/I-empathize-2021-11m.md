@@ -2,7 +2,7 @@
 title: Empathize
 breadcrumb: Empathize
 layout: bg-image
-moddate: 03-Mar-2021
+moddate: 04-Mar-2021
 marks: 11
 aid: I_EM
 rubric:
@@ -30,9 +30,11 @@ rubric:
 This is an INDIVIDUAL assignment.
 
 Follow the instructions for "Proctortrack Onboarding and Practice Exam" (at [this link](https://urcourses.uregina.ca/course/view.php?id=16143)).
-Describe the steps that you undertake to perform the "Proctortrack Onboarding and Practice Exam" activity. As you complete this activity, reflect on your experience.
+As you complete this activity, reflect on your experience.
 
 Specifically, you are asked to:
+
+1. Describe the steps that you undertake to perform the "Proctortrack Onboarding and Practice Exam" activity.
 
 1. Create an [empathy map](https://www.nngroup.com/articles/empathy-mapping/) while you complete the "Proctortrack Onboarding and Practice Exam" activity.
 
