@@ -3,7 +3,7 @@ title: Project Proposal
 breadcrumb: Project Proposal
 marks: 5
 aid: P_RR_PROP
-moddate: 03-Mar-2021
+moddate: 04-Mar-2021
 rubric:
   - crit: Topic
     wt: 1
@@ -26,9 +26,9 @@ rubric:
 ---
 ### {{ page.title }}
 
-The project can be done individually or in a small group (of up to 5). If you choose to work in a group, list all the group members on the proposal (so that a project group can be created for you) -- only 1 copy of the proposal needs to be submitted. If your project changes after the proposal is submitted, please keep me informed (the goal of the proposal is for you to plan so that changes won't be necessary).
+The project can be done individually or in a small group (of up to 5). If you choose to work in a group, list all the group members on the proposal near the top (so that you can be put into a project group together) -- only 1 copy of the proposal needs to be submitted. If your project changes after the proposal is submitted, please keep me informed (the goal of the proposal is for you to plan so that changes won't be necessary).
 
-You may choose what you will do for the project. It must deal with class themes in some way, and I am open to your ideas about how you will do it. Your options include, but are not limited to:
+You may choose what you will do for the project. It must deal with class themes in some way, and I am open to your ideas about how you will do it.
 
 #### Contents and Format of the Proposal
 
@@ -40,7 +40,7 @@ Describe your topic and how it relates to class. The [list of topics and learnin
 
 ##### Deliverable and Rationale
 
-Choose the form in which you will deliver your project:
+Choose the form in which you will deliver your project. Your options include, but are not limited to:
 
 * Research Paper (1000 - 1500 words)
 * Book Review
@@ -50,7 +50,7 @@ Choose the form in which you will deliver your project:
 * Discuss your contributions to an open source project (on github, for example)
 * Write some code to test an idea
 
-and also explain why you are choosing it.
+Also, explain why you are choosing that particular deliverable.
 
 ##### Tentative Plan
 
