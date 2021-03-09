@@ -54,7 +54,7 @@ Also, explain why you are choosing that particular deliverable.
 
 ##### Tentative Plan
 
-Provide a plan, with some milestones, for realizing your chosen deliverable. This plan may look like an outline of what you plan to include. If you are doing this with a group, make clear how each group member will participate in the final deliverable.
+Provide a plan, with some milestones, for realizing your chosen deliverable. This plan may look like an outline of what you expect to include. If you are doing this with a group, make clear how each group member will participate in the final deliverable.
 
 ### Submission
 * submit a well-formatted [pdf](https://en.wikipedia.org/wiki/PDF) document on UR Courses
