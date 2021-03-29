@@ -47,7 +47,8 @@
       {%- if ol.persid -%}
         <<strong>{{ ol.persid }}:</strong>
       {%- endif -%}
-      {{ ol.desc }}
+      {% comment %}{{ ol.desc }}{% endcomment %}
+      {{ ol.desc | strip_html | strip_newlines | truncatewords: 100 }}
     </li>
   {%- endif -%}
 {%- endfor -%}
