@@ -1,0 +1,51 @@
+{% assign ts = include.test %}
+<ul>
+{%- for ol in ts[1] -%}
+  {%- if ol.url -%}
+    <li>
+      <a href="{{ ol.url }}">
+        {{ ol.desc }}
+      </a>
+    </li>
+  {%- elsif ol.img -%}
+    <div class="m-2 p-2 border">
+      {% assign iname = ol.img %}
+      {% assign idesc = ol.desc %}
+      {% include helper/figure.html
+        name=iname desc=idesc %}
+    </div>
+  {%- elsif ol.vid -%}
+    <div class="m-2 p-2 border">
+      {% assign vurl = ol.vid %}
+      {% assign vdesc = ol.desc %}
+      {% include helper/video.html
+        vidurl=vurl desc=vdesc %}
+    </div>
+  {%- elsif ol.todo -%}
+    <div class="m-2 p-2 bg-warning">
+      <h6 class="text-center">
+        {{ ol.todo | upcase }}
+      </h6>
+      <p class="text-center">
+        {{ ol.desc }}
+      </p>
+    </div>
+  {%- elsif ol.concept -%}
+    <div class="m-2 p-2 bg-primary">
+      <h6 class="text-center">
+        {{ ol.concept | upcase }}
+      </h6>
+      <p class="text-center">
+        {{ ol.desc }}
+      </p>
+    </div>
+  {%- else -%}
+    <li>
+      {%- if ol.persid -%}
+        <strong>{{ ol.persid }}:</strong>&nbsp;
+      {%- endif -%}
+      {{ ol.desc }}
+    </li>
+  {%- endif -%}
+{%- endfor -%}
+</ul>

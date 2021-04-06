@@ -39,16 +39,21 @@
         {{ month }}
       </div>
       <div class="col-sm-9">
-        <a href="{{ mm.file }}">
-          {{ mtg_date }}
-        </a>
   {% elsif month == mmf_parts[2] %}
         &bull;
-        <a href="{{ mm.file }}">
-          {{ mtg_date }}
-        </a>
-        {% assign month = mmf_parts[2] %}
-      {% endif %}
+    {% assign month = mmf_parts[2] %}
+  {% endif %}
+  {% comment %}
+        <a href="{{ mm.file }}">{{ mtg_date }} (<strong>{{ mm.meeting }}</strong>)</a>
+        :
+        <a href="{{ mm.meeting }}_S"> Summ. </a>
+        <a href="{{ mm.meeting }}_R"> Resp. </a>
+  {% endcomment %}
+        <a href="{{ mm.file }}">{{ mtg_date }} (<strong>{{ mm.meeting }}</strong>)</a>
+        :
+        <a role="button" class="btn btn-primary m-1" href="{{ mm.meeting }}_S">S</a>
+        <a role="button" class="btn btn-primary m-1" href="{{ mm.meeting }}_R">R</a>
+
     {% endfor %}
     </div>
 </div>

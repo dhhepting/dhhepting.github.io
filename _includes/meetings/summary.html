@@ -1,0 +1,23 @@
+{%- include teaching/url.html %}
+{%- assign mtn = page.mtg_nbr | prepend: '00' | slice: -2, 2  %}
+
+<div class="card">
+  <!-- Meeting Date as card header -->
+  <div class="card card-header lightcthru">
+    <h1>
+      Summary of Meeting {{ page.mtg_nbr }}
+    </h1>
+  </div>
+  <div class="card card-body">
+
+  {%- assign tfile = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
+  {%- if tfile != nil -%}
+    {%-
+        include meetings/summary-body.html
+        test=tfile label="Summary of this Meeting" level=lvl
+        pass='y' mtg=mtn open='n' id='MTGRECORD'
+    -%}
+  {%- else -%}
+    <h5 class="text-muted">No Summary</h5>
+  {%- endif %}
+  </div>
