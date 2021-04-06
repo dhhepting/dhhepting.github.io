@@ -1,0 +1,19 @@
+{% for ts in include.test %}
+  {% assign tmstmp = ts[0] %}
+  {% assign tslab = tmstmp | replace: "-", " " %}
+  {% assign taghash =  %}
+  {% assign tagopen = 'n' %}
+  {% for oth in ts[1].tags %}
+    {% for ot in oth %}
+      {% if ot[0] == 'open' %}
+        {% assign tagopen = ot[1] %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  {%-
+    include helper/pd-card.html
+    test=ts label=tslab level='h6'
+    open=tagopen id=tmstmp body='meetings/summary-unit-body.html'
+  -%}
+{% endfor %}
