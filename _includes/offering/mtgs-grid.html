@@ -51,9 +51,19 @@
   {% endcomment %}
         <a href="{{ mm.file }}">{{ mtg_date }} (<strong>{{ mm.meeting }}</strong>)</a>
         :
+        {%- assign mtn = mm.meeting -%}
+        {%- assign sfile = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
+        {%- assign rfile = site.data.teaching[jcrs_id][crs_sem]responses[mtn] %}
+        {%- if sfile != nil -%}
         <a role="button" class="btn btn-primary m-1" href="{{ mm.meeting }}_S">S</a>
+        {%- else -%}
+        <a role="button" class="disabled btn btn-primary m-1" href="">S</a>
+        {%- endif -%}
+        {%- if rfile != nil -%}
         <a role="button" class="btn btn-primary m-1" href="{{ mm.meeting }}_R">R</a>
-
+        {%- else -%}
+        <a role="button" class="disabled btn btn-primary m-1" href="">R</a>
+        {%- endif -%}
     {% endfor %}
     </div>
 </div>
