@@ -55,12 +55,12 @@
         {%- assign sfile = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
         {%- assign rfile = site.data.teaching[jcrs_id][crs_sem]responses[mtn] %}
         {%- if sfile != nil -%}
-        <a role="button" class="btn btn-primary m-1" href="{{ mm.meeting }}_S">S</a>
+        <a role="button" class="btn btn-primary m-1" href="{{ mm.meeting }}_S.html">S</a>
         {%- else -%}
         <a role="button" class="disabled btn btn-primary m-1" href="">S</a>
         {%- endif -%}
         {%- if rfile != nil -%}
-        <a role="button" class="btn btn-primary m-1" href="{{ mm.meeting }}_R">R</a>
+        <a role="button" class="btn btn-primary m-1" href="{{ mm.meeting }}_R.html">R</a>
         {%- else -%}
         <a role="button" class="disabled btn btn-primary m-1" href="">R</a>
         {%- endif -%}
