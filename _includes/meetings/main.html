@@ -71,9 +71,9 @@
   {%- assign tfile = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
 
     {%- capture surl -%}/teaching/{{ crs_id }}/{{ crs_sem }}/meetings/{{ mtn }}_S.html{%- endcapture -%}
-    {%- capture srurl -%}{{ surl | relative_url }}{%- endcapture -%}
+    {%- capture srurl -%}{{ surl | absolute_url }}{%- endcapture -%}
 
-    {%- if tfile != nil -%}
+    {%- if 1 -%}
     {%-
       include helper/lnk-card.html
       label='Summary of Meeting' level='h5'
@@ -84,9 +84,9 @@
   <!-- Responses to Meeting -->
   {%- assign rfile = site.data.teaching[jcrs_id][crs_sem]responses[lmtn] -%}
   {%- capture rurl -%}/teaching/{{ crs_id }}/{{ crs_sem }}/meetings/{{ mtn }}_R.html{%- endcapture -%}
-  {%- capture rrurl -%}{{ rurl | relative_url }}{%- endcapture -%}
+  {%- capture rrurl -%}{{ rurl | absolute_url }}{%- endcapture -%}
 
-  {%- if tfile != nil -%}
+  {%- if 1 -%}
   {%-
     include helper/lnk-card.html
     label='Responses to Meeting' level='h5'
