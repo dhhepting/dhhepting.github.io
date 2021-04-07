@@ -8,7 +8,6 @@
   cm=include.mn
  %}
  {%comment%}{%- endcomment %}
-
 <div class="card">
   <!-- Meeting Date as card header -->
   <div class="card card-header lightcthru">
@@ -27,18 +26,7 @@
     id='EVENTS' url=upurl
    -%}
   {%- comment %}{%- endcomment %}
-  <!-- Responses to Last Meeting -->
-  {%- assign lmt = include.mn | minus: 1 -%}
-  {%- if lmt > 0 -%}
-    {%- assign lmtn = lmt | prepend: '00' | slice: -2, 2  -%}
-    {%- assign rfile = site.data.teaching[jcrs_id][crs_sem]responses[lmtn] -%}
-    {%-
-      include helper/pd-card.html
-      test=rfile label="Responses to Last Meeting" level=lvl
-      open='n' mtg=lmt pass='y' id='MTGREV'
-      body='meetings/response-body.html'
-     -%}
-  {%- endif -%}
+
 
 <!-- Plan for Today's Meeting -->
 {%- include helper/pd-card.html
@@ -49,7 +37,23 @@
   <hr /><!-- Before/After this Meeting --><hr />
 
   <!-- Media from this Meeting -->
+
+
   {%- assign mtn = include.mn | prepend: '00' | slice: -2, 2  -%}
+  {%- comment %}
+  {%-
+    include helper/pd-card.html
+    test=tfile label="Summary of this Meeting" level=lvl
+    pass='y' mtg=mtn open='n' id='MTGRECORD'
+    body='meetings/transcript-body.html'
+  -%}
+  {%-
+    include helper/pd-card.html
+    test=rfile label="Responses to Last Meeting" level=lvl
+    open='n' mtg=lmt pass='y' id='MTGREV'
+    body='meetings/response-body.html'
+   -%}
+  {%- endcomment %}
   {%- assign has_media = false -%}
   {%- for m in site.data.teaching[jcrs_id][crs_sem]media -%}
     {%- if m.meet == mtn -%}
@@ -65,13 +69,30 @@
   -%}
 
   {%- assign tfile = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
-  {%- if tfile != nil -%}
+
+    {%- capture surl -%}/teaching/{{ crs_id }}/{{ crs_sem }}/meetings/{{ mtn }}_S.html{%- endcapture -%}
+    {%- capture srurl -%}{{ surl | relative_url }}{%- endcapture -%}
+
+    {%- if tfile != nil -%}
     {%-
-      include helper/pd-card.html
-      test=tfile label="Summary of this Meeting" level=lvl
-      pass='y' mtg=mtn open='n' id='MTGRECORD'
-      body='meetings/transcript-body.html'
-    -%}
+      include helper/lnk-card.html
+      label='Summary of Meeting' level='h5'
+      id='SUMMARY' url=srurl
+     -%}
+
   {%- endif %}
+  <!-- Responses to Meeting -->
+  {%- assign rfile = site.data.teaching[jcrs_id][crs_sem]responses[lmtn] -%}
+  {%- capture rurl -%}/teaching/{{ crs_id }}/{{ crs_sem }}/meetings/{{ mtn }}_R.html{%- endcapture -%}
+  {%- capture rrurl -%}{{ rurl | relative_url }}{%- endcapture -%}
+
+  {%- if tfile != nil -%}
+  {%-
+    include helper/lnk-card.html
+    label='Responses to Meeting' level='h5'
+    id='RESPONSES' url=rrurl
+   -%}
+
+  {%- endif -%}
   </div>
 </div>
