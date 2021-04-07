@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4427429-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date())
+    gtag('config', 'UA-4427429-2')
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css"
+  />
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css"
+  />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+    crossorigin="anonymous"
+  />
+  <!--
+  <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous"
+  />-->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+    integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ="
+    crossorigin="anonymous"
+  />
+  <script src="https://kit.fontawesome.com/44322658e3.js" crossorigin="anonymous"></script>
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- <script src="/~hepting/assets/jquery.countdown-2.2.0/jquery.countdown.min.js"></script>  -->
+
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+<!-- realfavicongenerator.net start -->
+<link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+<link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+<link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+<link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+<link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+<link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+<link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+<link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+<meta name="apple-mobile-web-app-title" content="DH Hepting">
+<meta name="application-name" content="DH Hepting">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#ffffff">
+<!-- end realfavicongenerator.net -->
+  <link rel="alternate" type="application/rss+xml"
+    href="http://www2.cs.uregina.ca/~hepting/rss/news.rss"
+  />
+  <link rel="canonical" href="http://www2.cs.uregina.ca/~hepting/teaching/CS-280/202110/meetings/05_S.html" />
+  
+  <title>Summary of Mtg 05 &bull; CS-280 (202110) | D. H. Hepting, Ph.D.</title>
+  <meta property="og:title" content="Summary of Mtg 05 &bull; CS-280 (202110) | D. H. Hepting, Ph.D." />
+  <meta property="og:url" content="http://www2.cs.uregina.ca/~hepting/teaching/CS-280/202110/meetings/05_S.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+
+  
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca/~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca/~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca/~hepting/teaching/CS-280/",
+        
+          "name": "CS 280"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca/~hepting/teaching/CS-280/202110/",
+        
+          "name": "202110"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca/~hepting/teaching/CS-280/202110/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca/~hepting/teaching/CS-280/202110/meetings/05_S.html",
+        
+          "name": "Summary of Mtg 05"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="card teaching w-100 lightcthru" style="min-height:100%" >
+<nav class="navbar navbar-expand navbar-dark"
+style="background-color: rgba(32, 32, 32, 0.75)">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle clickable" href="#"
+      id="nav-menu" role="button" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+        Site
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="nav-menu"
+      style="background-color: rgba(224,224, 224, 1.0)">
+      <li class="dropdown-item"><a class="dropdown-link" href="/~hepting/">
+  
+    Home</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/about/">
+  
+    About</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/projects/">
+  
+    Projects</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/research/">
+  
+    Research</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/teaching/">
+  
+    Teaching</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/rss/">
+  
+    RSS&nbsp;<span class="oi oi-rss"></span></a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/search/">
+  
+    Search&nbsp;<span class="oi oi-magnifying-glass"></span></a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/news/">
+  
+    News</a>
+</li>
+<li class="dropdown-item"><a class="dropdown-link" href="/~hepting/trouble/">
+  
+    Trouble</a>
+</li>
+
+
+      </ul>
+    </li>
+    
+  </ul>
+</nav>
+
+<div class="card-header lightcthru">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb card-header lightcthru">
+      <li class="breadcrumb-item">
+        <a href="/~hepting/">
+          D. H. Hepting
+        </a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/~hepting/teaching/">
+          Teaching
+        </a>
+
+      </li>
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/teaching/CS-280/">
+          CS 280
+        </a>
+
+      </li>
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/teaching/CS-280/202110/">
+          202110
+        </a>
+
+      </li>
+  
+      <li class="breadcrumb-item">
+        <a href="/~hepting/teaching/CS-280/202110/meetings/">
+          Meetings
+        </a>
+
+      </li>
+  
+      <li class="breadcrumb-item active">
+        Summary of Mtg 05
+      </li>
+  </ol>
+  </nav>
+</div>
+
+  <div class="card-body lightcthru" >
+    
+<div class="card">
+  <!-- Meeting Date as card header -->
+  <div class="card card-header lightcthru">
+    <h1>
+      Summary of Meeting 5
+    </h1>
+  </div>
+  <div class="card card-body">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+<div class="card" id="Anomie-pd-card">
+  <h6 class="mb-0">
+    <div class="card card-header" role="tab" id="heading_Anomie">
+      <a class="xtra collapsed" data-toggle="collapse" href="#collapse_Anomie" aria-expanded="false" id="Anomie" aria-controls="collapse_Anomie">
+        Anomie
+      </a>
+    </div>
+  </h6>
+  <div id="collapse_Anomie" class="collapse " role="tabpanel" aria-labelledby="heading_Anomie">
+    <div class="card card-body">
+      
+<ul><div class="m-2 p-2 border">
+      
+      
+      <div class="card">
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://embed.ted.com/talks/lang/en/eli_pariser_what_obligation_do_social_media_platforms_have_to_the_greater_good" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+  </div>
+  <p class="text-align-center">
+    What obligation do social media platforms have to the greater good?
+  </p>
+</div>
+
+    </div></ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+<div class="card" id="Engagement-pd-card">
+  <h6 class="mb-0">
+    <div class="card card-header" role="tab" id="heading_Engagement">
+      <a class="xtra collapsed" data-toggle="collapse" href="#collapse_Engagement" aria-expanded="false" id="Engagement" aria-controls="collapse_Engagement">
+        Engagement
+      </a>
+    </div>
+  </h6>
+  <div id="collapse_Engagement" class="collapse " role="tabpanel" aria-labelledby="heading_Engagement">
+    <div class="card card-body">
+      
+<ul><li>PLEASE NOTE that a summary of the meeting is not what I am after. Please read description. Thank you for your engagement.
+    </li></ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+<div class="card" id="Filter-Bubbles-pd-card">
+  <h6 class="mb-0">
+    <div class="card card-header" role="tab" id="heading_Filter-Bubbles">
+      <a class="xtra collapsed" data-toggle="collapse" href="#collapse_Filter-Bubbles" aria-expanded="false" id="Filter-Bubbles" aria-controls="collapse_Filter-Bubbles">
+        Filter Bubbles
+      </a>
+    </div>
+  </h6>
+  <div id="collapse_Filter-Bubbles" class="collapse " role="tabpanel" aria-labelledby="heading_Filter-Bubbles">
+    <div class="card card-body">
+      
+<ul><div class="m-2 p-2 border">
+      
+      
+      <div class="card">
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://embed.ted.com/talks/lang/en/eli_pariser_beware_online_filter_bubbles" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+  </div>
+  <p class="text-align-center">
+    Beware online filter bubbles
+  </p>
+</div>
+
+    </div><li>
+      <a href="https://urcourses.uregina.ca/mod/forum/view.php?id=1342504">
+        Search experiments in UR Courses
+      </a>
+    </li></ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+<div class="card" id="News-pd-card">
+  <h6 class="mb-0">
+    <div class="card card-header" role="tab" id="heading_News">
+      <a class="xtra collapsed" data-toggle="collapse" href="#collapse_News" aria-expanded="false" id="News" aria-controls="collapse_News">
+        News
+      </a>
+    </div>
+  </h6>
+  <div id="collapse_News" class="collapse " role="tabpanel" aria-labelledby="heading_News">
+    <div class="card card-body">
+      
+<ul><li>
+      <a href="https://www.cbc.ca/radio/ideas/how-alexa-is-threatening-society-s-trust-in-scientific-expertise-1.5886849">
+        How 'Alexa' is threatening society's trust in scientific expertise
+      </a>
+    </li></ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+<div class="card" id="Zoom-Audio-Transcript-pd-card">
+  <h6 class="mb-0">
+    <div class="card card-header" role="tab" id="heading_Zoom-Audio-Transcript">
+      <a class="xtra collapsed" data-toggle="collapse" href="#collapse_Zoom-Audio-Transcript" aria-expanded="false" id="Zoom-Audio-Transcript" aria-controls="collapse_Zoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </a>
+    </div>
+  </h6>
+  <div id="collapse_Zoom-Audio-Transcript" class="collapse " role="tabpanel" aria-labelledby="heading_Zoom-Audio-Transcript">
+    <div class="card card-body">
+      
+<ul><li><strong>DHH:</strong>&nbsp;Good morning. here's a chance to test your microphone good morning. Good morning.
+    </li><li><strong>S01:</strong>&nbsp;Good morning morning.
+    </li><li><strong>S02:</strong>&nbsp;morning, sir.
+    </li><li><strong>DHH:</strong>&nbsp;Good morning does anyone ever see the movie wanted pythons meaning of life. And it just occurred to me that. The fish in the tank and then we're going to say well look harold's being after around for good mornings and. Anyway, if you like, Monty Python naked that's the opening better than movies. was your weekend. Good morning. Okay, so I. tried to do things and yes there's a new password for attendance, which I will share with you shortly. Okay, so somebody sent me a direct message so. As I said before. I. turned it off, but I guess not. So please try to avoid sending the direct messages. feeling to communicate with me directly, outside of class, you can do, though, female. So that's the general rule just reiterate. Okay. going to be. engage the moment the password comes out and. can find it in your chat room chat archive then. Then you can put it in and do the attendance it tenses it's supposed to be a big thing. So. don't worry about. Past ones. Because this past this past. Okay. So just the comment of I appreciate everyone's engagement with the meetings. And I realized that I probably gave you the wrong impression start with. I said that I was like. On the day that was cut short because of my emergency, then I had to. I said well just summarize things. Really, I would rather have to. Not summarizing some matches. Tell me about what you. thought was the most important thing, or what you learned, or what was. hard to understand or well as exciting. You know you don't have to provide it along summary. Of what we discussed or what the movie what the videos showed. And so on so i'm just. cringing either say, less is more but make it with a bit more of a. Personal connection. So let me go to your courses. I can. change things up a little. bit here in the description. response. To the most recent meeting. And you can tell me i'm trying to get to the point where it to save so. So today's meeting five so you have until tomorrow night at one minute to midnight, in order to get ready response to. This meeting today. So your response can include one or more of the following most important thing you learned from the past meeting. concept from this past meeting that was most difficult for you to understand what would you what you would like to know more about something you encountered thats related to the meeting. My use of past meeting. over the top. More. Anyone suggestion more clear wording if the wording is not clear.
+    </li><li><strong>S03:</strong>&nbsp;make sense to me.
+    </li><li><strong>???:</strong>&nbsp;Okay.
+    </li><li><strong>DHH:</strong>&nbsp;So I read some of them and i'm. I made some. Some notes. All but I didn't well anyway. So I find it very interesting what you've written, so we just say that. Okay. I realize i'm not sharing my screen. put it into one form here the engagement meetings form. Originally, because I was advised that this is this would let me do what I want to do. But it's not letting me do exactly what I want to do so. So for meaning five here's the form.
+    </li><li><strong>???:</strong>&nbsp;And click.
+    </li><li><strong>DHH:</strong>&nbsp;So i'm not asking detailed question here. i'm just asking for a response or responses, the discussion. And then response question mark is the question. Okay, so we'll have one of these forums for every meeting from now on. And they'll be set up, so that there. They become read only at the same time, the due date. i'm going so I know there's some discussion about breakout rooms. And so on there so i'm going to create a. Separate form under meetings. where you can. discuss a topic from. well. want to talk about what you discussed in the breakout room. Then there's this form here. Okay. So I said, the first assignment is going to be due on. Thursday February. And I thought that might be. You can still submit it then. Acceptable until February 25 22nd the first day back. So Monday is the first day back after the break. Okay. So this is to pick a topic from once you discover we're discussing are covering in class this Matthew one that we've already talked about. is currently or was recently in the news. find a personal connection to the topic. identify two to four reputable online sources to reference and supportive your topic. References or could be included as hyperlinks at the post close to the texts that makes reference. And then i've included some. Some principles for good writing for the web. And there's a sample blog that I wrote a little while ago. So what i'd like you to do is. To create to mark up the file html. And you can submit it as a file or is online text so you can paste it is online text or create a file. and upload that. So i've created individual student blogs. See space where you can. Work on formatting. So. Then. So there's a submission, you can use this. This your courses submission to either upload the file or paste is online text. And then you can optionally. copy or blog from your individual student blog and put it into your put into the class blog. And i'll be kind of evidence of participation. Okay, so. engagement of meetings is really just about making those responses and everything else is about participation. Okay. So, and just. just another comment about the engagement within the meetings. So there's 26 meetings, all together, and we started doing this meeting to. That. you'll have a few free free ones, so if you started meeting. And do the rest of them, then you'll still be able to get 10 marks. So. i'm so started, we started meeting to. i'm going to. So that means we get 25 different marks for these meeting comments responses. And i'm going to take the top 20. That make sense. So you don't have to. respond to every meeting to get full marks. respond to 19 meetings, then. You won't get full marks. I mean. Okay, so there's that. So I wanted to get make sure that was open clear for everybody for for progressed any further. window and it shows the people who are in class was on top of the window that showed what. Or it gives me updates or notification to what's going on and to. So. it's not. The best way to not the best place to put notifications, for me, anyway. Because, by the time I see that this one there and then cover it then Scott. Maybe that's a feature, not a bug. Okay. Okay, so I haven't. Completely gotten the plan and the summary sorted out yet so I started making notes about what was. I did do the plan. For today, which includes the videos. Alright, so then here's. I mentioned, please know the summary, the meeting is not what i'm after for an engagement, please read the description thanks for your engagement. So everything's appreciate it. it's just. Since there's like 150 students here. Almost it's low. Everybody writes the page then it's a little harder to get through them. And the message of oh what. What was the most important thing today. Anyway, okay. Second thing first, so this is what I got. On my computer last night. So for the client is vpn. client, so if i'm going to access. grade. input grades and do other kinds of things from home I better have a vpn running, otherwise I can't access can't login to the university systems. So already this permission is required for for for protection. So MAC os reading for the client from accessing some folders please enable full disk access permission for for decline processes oh. Another actually reading it out yeah I see that it's mentioned in the name. So. Oh. That kind of takes the wind out of my sails. But it's not very clear. It took me seeing this more than once, to see this actually mentioned. So anyway so pretending that I didn't see that. I can go by and. click on open security and privacy settings. On the left, here we can see full disk access. Which when it first came up I changed the see could see that it was highlighted I scroll a little bit to highlight this full disk access it wasn't even. Showing to begin with. And so I see for the client. And it's got a check mark. Listen here's one that this. And then here's the, the process is asking for. So now, I know that I can do that. So, my comment was. My feeling was that this is likely for the client. But. it's not quite clear that should be. The the association, I mean like I can just call it so for the client. So, again back to this one. Name clear enough. about putting it up here in the heading or something like that. name this name appears in the dialog box. I have a good amount of. Trust to do it. Making too much. So here, I was listening to ideas last night and CBC is driving around getting some cat food. And I thought it was a very interesting discussion about. Trust and scientific expertise. So there's a link here to CBC. invite you to read that. headline is interesting, is it the philosopher science. who's speaking, who gave a talk, I think it was a world vaccine conference recently. it's concerned that voice assistant encourages delegation of judgment to algorithms. So do we put too much trust in algorithms and is it only because of. alexa and other. Other cool gadgets. example of. Asking for a chocolate chip cookie recipe. So if we ask the voice assistant for the chocolate chip cookie recipe replies immediately, but it doesn't say. You know this is highly rated or this was recommended by your mom or. This case came from a from the site that you, you seem you visit a lot or anything I just gives a recipe, and then. And then it's a concern to see. You know, are we concerned about these details or do we just accept the results given to us by alexa. Because it's got a fancy algorithm that must be Morse. more accurate than. People. Like like our mom or and or. friend who's a chef pastry chef. So I was thinking about. Creating a filter bubble experiment. So I think we can. We can try. The breakout room. Okay. So let me. write this out as i'm doing it. Okay, does that seem clear for a question.
+    </li><li><strong>S01:</strong>&nbsp;yep that's clear.
+    </li><li><strong>???:</strong>&nbsp;Okay.
+    </li><li><strong>S05:</strong>&nbsp;Are you wanting to skip over the ads or use the top add as a result.
+    </li><li><strong>???:</strong>&nbsp;yeah.
+    </li><li><strong>DHH:</strong>&nbsp;I that.
+    </li><li><strong>???:</strong>&nbsp;advertisement.
+    </li><li><strong>DHH:</strong>&nbsp;advertisement results. URL here okay. Can I turn that off right. Okay, so take a man to do that now. Results are. sally's baking addiction all recipes so he's baking addiction or recipes. I got two contenders here.
+    </li><li><strong>S03:</strong>&nbsp;that's crazy how much they've converged like there's no there's no variety.
+    </li><li><strong>???:</strong>&nbsp;mm hmm.
+    </li><li><strong>S06:</strong>&nbsp;There is some really good certain organization on sally's making predictions part.
+    </li><li><strong>DHH:</strong>&nbsp;Am I be. Here is one joy for sunshine.
+    </li><li><strong>???:</strong>&nbsp;So there's a third one.
+    </li><li><strong>S07:</strong>&nbsp;Well, I think sally's baking is shown to almost everyone, because it has the highest rating. And after that comes all recipes rating so maybe that's why people are getting only those two.
+    </li><li><strong>DHH:</strong>&nbsp;yeah it is. A question about. Which one comes first.
+    </li><li><strong>S08:</strong>&nbsp;relevancy if I saw a video and Google, it was mostly come from YouTube.
+    </li><li><strong>S09:</strong>&nbsp;So I think we get different results if we all looked it up on YouTube like.
+    </li><li><strong>S10:</strong>&nbsp;got an ad for Dell instead. Normal.
+    </li><li><strong>DHH:</strong>&nbsp;Know what's normal.
+    </li><li><strong>S11:</strong>&nbsp;I.
+    </li><li><strong>S12:</strong>&nbsp;wonder if logging into it and accounts might have affected your search results as well.
+    </li><li><strong>DHH:</strong>&nbsp;yeah well, so you can try it in different cases.
+    </li><li><strong>S03:</strong>&nbsp;I like the cold audit that we did, though, where it was just no extra factors just do it right now and see what you get.
+    </li><li><strong>DHH:</strong>&nbsp;yeah so it's not we're not quite so much a filter bubble, and then I realized, too, that these disease recipe displays a little bit tougher to organize them. So did.
+    </li><li><strong>S09:</strong>&nbsp;And recipes recipes might also be less subject to a filter bubbles, and something more political.
+    </li><li><strong>???:</strong>&nbsp;yeah.
+    </li><li><strong>DHH:</strong>&nbsp;Okay, so let's try another one what's a good. A good one that one inflamed tensions in the classroom. About. governor general of Canada. Since she recently resigned. or or how about. Something related to covert vaccines. We try could just do a covert 19. search. let's test here.
+    </li><li><strong>S06:</strong>&nbsp;19 is going to be location based if the location services are on its it's gonna show the local, provincial governments website at first.
+    </li><li><strong>S07:</strong>&nbsp;I go to hulu international. I mean, who wanted organizations website.
+    </li><li><strong>DHH:</strong>&nbsp;Oh yeah.
+    </li><li><strong>S13:</strong>&nbsp;International and then coven 19 Ontario.
+    </li><li><strong>S14:</strong>&nbsp;yeah.
+    </li><li><strong>S10:</strong>&nbsp;yeah same here.
+    </li><li><strong>DHH:</strong>&nbsp;Okay.
+    </li><li><strong>S09:</strong>&nbsp;something about looking up coven. Is that it's likely it's likely a curated topic, whereas the governor general they probably don't have staff curating that front page.
+    </li><li><strong>DHH:</strong>&nbsp;hmm. All right, okay.
+    </li><li><strong>S15:</strong>&nbsp;I believe that Google generally goes according to its running Google ranking algorithm which is said, and whenever someone searches. Like something like you search Google 19 vaccine right so for us it searches for the keyboard Secondly, uses your location. So just to show something related to you shortly your history and, for me, like the most recent ones or most visited websites. In this, where the Google ranks everything in in his website, like the multiple times us like most of the people, visited let's suppose know who website, then it will show that of force, so I feel that it's according to that.
+    </li><li><strong>DHH:</strong>&nbsp;yeah well so google's algorithms trade secret for some, for the most part right. I mean, I mean search engine optimization can be done. In reasonable ways, but the precise details. Of what's going on aren't aren't known.
+    </li><li><strong>S08:</strong>&nbsp;Maybe related by one, so a TV series they I mean it was about searches and stuff and they showed that even the good guys change. domain CERT the preferences of a search engine by their own world so.
+    </li><li><strong>S07:</strong>&nbsp;I started getting the forum replies for chocolate chip cookies in my email.
+    </li><li><strong>DHH:</strong>&nbsp;yeah. There is a comment about how to. Set preferences to. For notifications, but let me just change the. requirements. OK, so now that i've got. That into properly. So let's look at some of these responses for covert 19 vaccine. writers from the UK. Canada public health. Some surprises, the number of arguments on this URL. html. wasn't a criticism is just a comment about. URLs with tons of arguments and I don't know if i'm copying that that might don't. pass on the arguments, so that things can be tracked. anymore than. They need to be. org.
+    </li><li><strong>S16:</strong>&nbsp;perhaps.org is the regulatory affairs professional society. And it tracks. The vaccine type and to the developers are and the authorization approval, where they're from etc. I thought it was a bizarre first option to get actually.
+    </li><li><strong>S03:</strong>&nbsp;Does it government or private, who is.
+    </li><li><strong>S16:</strong>&nbsp;Just clicking the who we are, it.
+    </li><li><strong>???:</strong>&nbsp;looks private.
+    </li><li><strong>S16:</strong>&nbsp;As it's the largest global organization of and for those involved with regulation of healthcare related products. blah blah blah headquartered in suburban Washington DC with chapters and affiliates world worldwide.
+    </li><li><strong>S03:</strong>&nbsp;It almost sounds like some kind of weird anti vax front doesn't.
+    </li><li><strong>S16:</strong>&nbsp;I don't think so. i'd be concerned if it was.
+    </li><li><strong>S13:</strong>&nbsp;Was it's not doing a very good job at it, because it's showing where it's all approved.
+    </li><li><strong>DHH:</strong>&nbsp;homepage from the website. pretty well. i'll put together website to be a. disease to call astroturf. Or the fake grassroots organizations. The Canadian association of professionals and regulatory affairs. hoping to find a Wikipedia page about wraps or something like that. blog post about. So. You may have something related to covert there. raps is a very. very popular alternative. Health Canada again CBC. saskatchewan. So Google ad services, I think this isn't click on an ad. i'm not sure. CDC. and Canada. anyway. Interesting so we have a winner in terms of. Consensus, but not. So now we've learned about wraps now it's, the question is. Since. How many people have heard of it has heard of wraps for for today.
+    </li><li><strong>S03:</strong>&nbsp;First time for me.
+    </li><li><strong>???:</strong>&nbsp;yeah.
+    </li><li><strong>DHH:</strong>&nbsp;So that leads to a question. Do we decide whether that's reputable source. Just one website. How do we decide.
+    </li><li><strong>S16:</strong>&nbsp;Basically, that really puts the onus on the searcher to do their due diligence to actually check the source.
+    </li><li><strong>DHH:</strong>&nbsp;yeah well as always right, whether you're looking for chocolate chip cookie recipes or. Something more crucial like. covert vaccine information.
+    </li><li><strong>S08:</strong>&nbsp;Just gonna say something i'm in the government general of Canada, so I searched one from Korean IP and different from German and they don't match either and they're not very important to know.
+    </li><li><strong>DHH:</strong>&nbsp;Where where our the two searches done.
+    </li><li><strong>S08:</strong>&nbsp;For the gentleman one.
+    </li><li><strong>DHH:</strong>&nbsp;I mean vpn.
+    </li><li><strong>S08:</strong>&nbsp;I didn't even get the link on the first page of Google, which I got in the Canadian ap.
+    </li><li><strong>DHH:</strong>&nbsp;No, but what was your first. result from. Okay, let me go to that. i'm surprised that there isn't you. know in Germany, you get the Wikipedia page.
+    </li><li><strong>S08:</strong>&nbsp;No digital at all.
+    </li><li><strong>DHH:</strong>&nbsp;Well here's one news related. Article the conversation. or not new news. opinion or or topical story. Okay, so this this thing URL looks like a search instead of the search results. Try. interesting. Jennifer. we're almost out. it's kind of unexpected well. An interesting exercise, I think. So i'm going to post a couple videos. So, based on. eli pariser second video about the social the. Role of. social media platforms, the responsibility towards a greater good and. design and so forth. And I would, I have a couple of videos in mind one by David Kelly, and the other by don Norman. About design, because he talked about designing spaces so. there's other videos that will be about designing. software. And then, how that relates to. behavior they can engender the software and genders. Whether it's like Twitter it's all over the place, or whether it's more like linkedin. Something else. So i'm gonna leave that with you. And then.
+    </li><li><strong>S17:</strong>&nbsp;What about the attendance password.
+    </li><li><strong>DHH:</strong>&nbsp;Oh yes, thank you. So much fun with this.
+    </li><li><strong>S13:</strong>&nbsp;I don't think it'll, let us do the attendance because it closes at 1245.
+    </li><li><strong>DHH:</strong>&nbsp;yeah. well.
+    </li><li><strong>S09:</strong>&nbsp;yeah it's not letting me add here.
+    </li><li><strong>DHH:</strong>&nbsp;When someone sends me a direct message, then I it takes me a while to get it back set back to everyone. same password it should be good for five minutes.
+    </li><li><strong>S11:</strong>&nbsp;it's working.
+    </li><li><strong>S17:</strong>&nbsp;yeah.
+    </li><li><strong>DHH:</strong>&nbsp;sorry about that. Okay. Thanks for today. And will. Thank you, on Thursday. Okay. Take care. stay well bye.
+    </li><li><strong>S13:</strong>&nbsp;Thank you take care.
+    </li></ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+<div class="card" id="Zoom-Chat-Transcript-pd-card">
+  <h6 class="mb-0">
+    <div class="card card-header" role="tab" id="heading_Zoom-Chat-Transcript">
+      <a class="xtra collapsed" data-toggle="collapse" href="#collapse_Zoom-Chat-Transcript" aria-expanded="false" id="Zoom-Chat-Transcript" aria-controls="collapse_Zoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </a>
+    </div>
+  </h6>
+  <div id="collapse_Zoom-Chat-Transcript" class="collapse " role="tabpanel" aria-labelledby="heading_Zoom-Chat-Transcript">
+    <div class="card card-body">
+      
+<ul><li><strong>S14:</strong>&nbsp;Good Morning
+    </li><li><strong>S18:</strong>&nbsp;I have indeed
+    </li><li><strong>S12:</strong>&nbsp;Its a great show
+    </li><li><strong>S19:</strong>&nbsp;is there a new password for attendance??
+    </li><li><strong>S16:</strong>&nbsp;i worked
+    </li><li><strong>S20:</strong>&nbsp;pretty good
+    </li><li><strong>S21:</strong>&nbsp;Good
+    </li><li><strong>S19:</strong>&nbsp;ok thank you :D
+    </li><li><strong>S22:</strong>&nbsp;topics for the assignment??
+    </li><li><strong>S23:</strong>&nbsp;whats the password for attendence
+    </li><li><strong>S16:</strong>&nbsp;he said he would get to it, have patience :)
+    </li><li><strong>S23:</strong>&nbsp;sorry I joined late sorry again
+    </li><li><strong>S16:</strong>&nbsp;I think it's clear personally
+    </li><li><strong>S12:</strong>&nbsp;I think youre good lol
+    </li><li><strong>S24:</strong>&nbsp;yes
+    </li><li><strong>S25:</strong>&nbsp;yes
+    </li><li><strong>S26:</strong>&nbsp;Can we get some feedback on our engagements to see if they are good enough?
+    </li><li><strong>S07:</strong>&nbsp;this is the same video that we had in meeting 4
+    </li><li><strong>S12:</strong>&nbsp;Not to the common user
+    </li><li><strong>S07:</strong>&nbsp;it seems like FortiClient server control
+    </li><li><strong>S16:</strong>&nbsp;My pet peeve about this stuff is that it's often not accessible for the average user. I know my grandma panics anytime these popups come up whenever she's doing anything gon her computer.
+    </li><li><strong>S27:</strong>&nbsp;agreed!^
+    </li><li><strong>S28:</strong>&nbsp;I trust a tesla car more than myself
+    </li><li><strong>S28:</strong>&nbsp;to some degree...
+    </li><li><strong>S29:</strong>&nbsp;So, reading this, we have to post in meeting 5, right?
+    </li><li><strong>S30:</strong>&nbsp;I think its available on his website
+    </li><li><strong>S14:</strong>&nbsp;^You just have to write a short paragraph about what you found interesting in todays meeting, it can be this, or any of the videos on the website under today's date
+    </li><li><strong>S31:</strong>&nbsp;I mean I think that we should accept it with a grain of salt
+    </li><li><strong>S28:</strong>&nbsp;I like to believe it is more peer reviewed than a few family members
+    </li><li><strong>S32:</strong>&nbsp;I don’t see this content about Alexa in meeting 5.. am I missing something?
+    </li><li><strong>S14:</strong>&nbsp;^same
+    </li><li><strong>S33:</strong>&nbsp;I don't see it in meeting 5 yet either but here's a link to the article:
+    </li><li><strong>S28:</strong>&nbsp;thx
+    </li><li><strong>S25:</strong>&nbsp;I think top ad is the first result
+    </li><li><strong>S25:</strong>&nbsp;for me it is
+    </li><li><strong>S28:</strong>&nbsp;God damn, I got rice krisplies recipe as my first result XD
+    </li><li><strong>S18:</strong>&nbsp;I'd be curious to see which search engines we're all using to get these results too
+    </li><li><strong>S28:</strong>&nbsp;sally pulled a amazon on everyone...
+    </li><li><strong>S34:</strong>&nbsp;Could it depend on the search engine used?
+    </li><li><strong>S14:</strong>&nbsp;Yeah I think it does
+    </li><li><strong>S28:</strong>&nbsp;I used duckduck go
+    </li><li><strong>S12:</strong>&nbsp;On duckduckgo I got allrecipes
+    </li><li><strong>S14:</strong>&nbsp;I used duckduckgo and google both, got different results
+    </li><li><strong>S28:</strong>&nbsp;someone use Tor...
+    </li><li><strong>S35:</strong>&nbsp;I think maybe if we used a more controversial topic, something politics related, we would see more varying in the results
+    </li><li><strong>S10:</strong>&nbsp;Where is the link for us to post our ad url?
+    </li><li><strong>S10:</strong>&nbsp;Sorry just can't find it on his page atm.
+    </li><li><strong>S07:</strong>&nbsp;ur courses
+    </li><li><strong>S28:</strong>&nbsp;cars?
+    </li><li><strong>S36:</strong>&nbsp;https://urcourses.uregina.ca/mod/forum/view.php?id=1342504
+    </li><li><strong>S28:</strong>&nbsp;vehicles?
+    </li><li><strong>S09:</strong>&nbsp;"Best cellphone"
+    </li><li><strong>S37:</strong>&nbsp;Global warming
+    </li><li><strong>S27:</strong>&nbsp;if we look up a country it might be different too
+    </li><li><strong>S27:</strong>&nbsp;like in the ted talk
+    </li><li><strong>S28:</strong>&nbsp;japan?
+    </li><li><strong>S38:</strong>&nbsp;Cyberpunk 2077
+    </li><li><strong>S09:</strong>&nbsp;"Governor General of Canada" works
+    </li><li><strong>S36:</strong>&nbsp;How about Covid 19
+    </li><li><strong>S39:</strong>&nbsp;That's a good one
+    </li><li><strong>S36:</strong>&nbsp;Cars
+    </li><li><strong>S09:</strong>&nbsp;Covid 19 works too
+    </li><li><strong>S12:</strong>&nbsp;Covid 19 would be a good one
+    </li><li><strong>S40:</strong>&nbsp;COD
+    </li><li><strong>S28:</strong>&nbsp;i swear to god if any of you has a result saying its a hoax...
+    </li><li><strong>S38:</strong>&nbsp;Genshin Impact
+    </li><li><strong>S41:</strong>&nbsp;I got world health organization
+    </li><li><strong>S09:</strong>&nbsp;https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen
+    </li><li><strong>S25:</strong>&nbsp;same
+    </li><li><strong>S34:</strong>&nbsp;I got gov of Canada
+    </li><li><strong>S28:</strong>&nbsp;cdc
+    </li><li><strong>S42:</strong>&nbsp;same
+    </li><li><strong>S18:</strong>&nbsp;I got the CDC website
+    </li><li><strong>S43:</strong>&nbsp;https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen
+    </li><li><strong>S17:</strong>&nbsp;https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen
+    </li><li><strong>S44:</strong>&nbsp;https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen
+    </li><li><strong>S45:</strong>&nbsp;https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen
+    </li><li><strong>S14:</strong>&nbsp;I got this fact check website
+    </li><li><strong>S46:</strong>&nbsp;https://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=DChcSEwiYqvuvmrruAhXm_-MHHSgPCqsYABABGgJ5bQ&amp;ohost=www.google.com&amp;cid=CAESQOD2pabPCuj6LiK-W86nHS8oHiRiBcY0D4ZhaeMVlUOWKj-nPnsoofmJCYbZcxFJu58CdM5gzsb0HUQLpOZGYc0&amp;sig=AOD64_0UbnS-mOJt6HRlDbrntQMqQkf2GA&amp;q&amp;adurl&amp;ved=2ahUKEwiI-_CvmrruAhWKslkKHSQoD5wQ0Qx6BAgoEAE
+    </li><li><strong>S14:</strong>&nbsp;https://www.mayoclinic.org/diseases-conditions/coronavirus/in-depth/coronavirus-vaccine/art-20484859
+    </li><li><strong>S46:</strong>&nbsp;https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/vaccines.html
+    </li><li><strong>S28:</strong>&nbsp;i don't know why but I am more afraid of losing my sense of taste and smell than death...
+    </li><li><strong>S12:</strong>&nbsp;Those long-haul symptoms are pretty severe
+    </li><li><strong>S28:</strong>&nbsp;if im dead, im dead but is life worth living if you can't taste food anymore...
+    </li><li><strong>S40:</strong>&nbsp;walking dead
+    </li><li><strong>S28:</strong>&nbsp;i will be pretty much
+    </li><li><strong>S28:</strong>&nbsp;or like Captain Barbossa from Pirates of the carribean
+    </li><li><strong>S28:</strong>&nbsp;he has a whole movie speech kabout this...
+    </li><li><strong>S28:</strong>&nbsp;about
+    </li><li><strong>S14:</strong>&nbsp;Well, one good thing is you wont smell death creeping up on you
+    </li><li><strong>S40:</strong>&nbsp;that sounds fun
+    </li><li><strong>S28:</strong>&nbsp;https://www.youtube.com/watch?v=pqAKW7znYcs
+    </li><li><strong>S28:</strong>&nbsp;https://www.youtube.com/watch?v=1fzXmJyolfY
+    </li><li><strong>S28:</strong>&nbsp;sry ill stop
+    </li><li><strong>S07:</strong>&nbsp;why cant I hear anyone?
+    </li><li><strong>S12:</strong>&nbsp;I don't think anyones talking don't worry
+    </li><li><strong>S37:</strong>&nbsp;I am receiving a lot of email notifications
+    </li><li><strong>S07:</strong>&nbsp;me too
+    </li><li><strong>S05:</strong>&nbsp;Someone in class did share a way to fix that the second class. They also put it in discord
+    </li><li><strong>S29:</strong>&nbsp;can we get attendance password now?
+    </li><li><strong>S47:</strong>&nbsp;why we have 2 COVID-19 forums?
+    </li><li><strong>S48:</strong>&nbsp;by mistake I posted a new discussion form in meeting activities instead of replying
+    </li><li><strong>S47:</strong>&nbsp;ok
+    </li><li><strong>S48:</strong>&nbsp;I don't know how to delete it can anyone help
+    </li><li><strong>S17:</strong>&nbsp;I think that's fine
+    </li><li><strong>S48:</strong>&nbsp;sure?
+    </li><li><strong>S17:</strong>&nbsp;ya
+    </li><li><strong>S43:</strong>&nbsp;yeah is should be fine
+    </li><li><strong>S48:</strong>&nbsp;ok:)
+    </li><li><strong>S49:</strong>&nbsp;what is the password for attendance? anyone know?
+    </li><li><strong>S43:</strong>&nbsp;didn't give the password yet
+    </li><li><strong>S50:</strong>&nbsp;noopes
+    </li><li><strong>S51:</strong>&nbsp;no
+    </li><li><strong>S12:</strong>&nbsp;Not me
+    </li><li><strong>S52:</strong>&nbsp;nope
+    </li><li><strong>S53:</strong>&nbsp;no
+    </li><li><strong>S28:</strong>&nbsp;if I spend half an hour buy a few things from Amazon, I spend 25min looking at the reviews
+    </li><li><strong>S28:</strong>&nbsp;buying
+    </li><li><strong>S07:</strong>&nbsp;lmao me too
+    </li><li><strong>S13:</strong>&nbsp;Amazon reviews can be dicey though cause a bunch always seem like bots if its a "4000+" review product
+    </li><li><strong>S16:</strong>&nbsp;even reviews can be biased though - many reviews are paid or bots
+    </li><li><strong>S28:</strong>&nbsp;yup, 25min at least
+    </li><li><strong>S54:</strong>&nbsp;smart consumers are not really the problem it the dumb one that buy/believe the first thing they read
+    </li><li><strong>S13:</strong>&nbsp;Gotta love the "1/5, FedEx lost my package"
+    </li><li><strong>S07:</strong>&nbsp;X.d
+    </li><li><strong>S28:</strong>&nbsp;1/5 "ok"
+    </li><li><strong>S43:</strong>&nbsp;is there attendance today at all?
+    </li><li><strong>S55:</strong>&nbsp;we still haven’t gotten the attendance password so are we all going to loose marks for today?
+    </li><li><strong>S56:</strong>&nbsp;Where we will get it
+    </li><li><strong>S25:</strong>&nbsp;we probably wouldn't lose marks, he would just scratch t or something
+    </li><li><strong>S36:</strong>&nbsp;So what are we actually doing in meeting 5 response?
+    </li><li><strong>S54:</strong>&nbsp;responding to the new videos I think
+    </li><li><strong>S07:</strong>&nbsp;those are not new
+    </li><li><strong>S16:</strong>&nbsp;There's literally a prompt:
+    </li><li><strong>S18:</strong>&nbsp;It's the same as all the other responses
+    </li><li><strong>S12:</strong>&nbsp;Anything you like, just make sure it's related to today's discussion or the videos
+    </li><li><strong>DHH:</strong>&nbsp;ywyh7n
+    </li><li><strong>S43:</strong>&nbsp;yeah
+    </li><li><strong>S19:</strong>&nbsp;it is locked
+    </li><li><strong>S47:</strong>&nbsp;its is locked
+    </li><li><strong>S37:</strong>&nbsp;its locked
+    </li><li><strong>S43:</strong>&nbsp;it doesn't say anything showing me a question mark
+    </li><li><strong>S20:</strong>&nbsp;locked
+    </li><li><strong>S42:</strong>&nbsp;same
+    </li><li><strong>S25:</strong>&nbsp;if I already submitted am I fine?
+    </li><li><strong>S13:</strong>&nbsp;Yes
+    </li><li><strong>S13:</strong>&nbsp;He is just extending the deadline so we can too
+    </li><li><strong>S09:</strong>&nbsp;ywyh7n
+    </li><li><strong>S25:</strong>&nbsp;okay sweet goodbye everyone!
+    </li><li><strong>S16:</strong>&nbsp;it worked! :)
+    </li><li><strong>S30:</strong>&nbsp;thanks
+    </li><li><strong>S47:</strong>&nbsp;yes it worked
+    </li><li><strong>S38:</strong>&nbsp;Done :]
+    </li><li><strong>S10:</strong>&nbsp;Thanks! See you Thursday!
+    </li><li><strong>S47:</strong>&nbsp;Thanks
+    </li><li><strong>S14:</strong>&nbsp;Thanks, take care
+    </li><li><strong>S16:</strong>&nbsp;Thank you!
+    </li><li><strong>S39:</strong>&nbsp;Thank you
+    </li><li><strong>S38:</strong>&nbsp;Thanks!
+    </li><li><strong>S20:</strong>&nbsp;thank you sir
+    </li></ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  </div>
+</div>
+
+  </div>
+<div class="card-footer text-muted lightcthru">
+  Site built: 2021-04-07 13:06 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca/~hepting/teaching/CS-280/202110/meetings/05_S.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- </div> -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <!--
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous">
+  </script>
+  -->
+  <script async
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous">
+  </script>
+
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+  <script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+    integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+    crossorigin="anonymous">
+  </script>
+  
+	<script>
+		var clipboard = new ClipboardJS('.btn')
+	</script>
+  
+</body>
+</html>
+
+

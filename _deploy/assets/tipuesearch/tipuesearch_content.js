@@ -14,6 +14,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/01_Mon-11-Jan-2021.html"
   },{
+    "title": "Responses to Mtg 01 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/01_R.html"
+  },{
+    "title": "Responses to Mtg 01 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/01_R.html"
+  },{
+    "title": "Summary of Mtg 01 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/01_S.html"
+  },{
+    "title": "Summary of Mtg 01 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/01_S.html"
+  },{
     "title": "Mtg 1 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -23,6 +43,26 @@ var tipuesearch = {"pages": [{
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/01_Tue-12-Jan-2021.html"
+  },{
+    "title": "Responses to Mtg 02 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/02_R.html"
+  },{
+    "title": "Responses to Mtg 02 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/02_R.html"
+  },{
+    "title": "Summary of Mtg 02 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/02_S.html"
+  },{
+    "title": "Summary of Mtg 02 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/02_S.html"
   },{
     "title": "Mtg 2 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -54,6 +94,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/03_Fri-15-Jan-2021.html"
   },{
+    "title": "Responses to Mtg 03 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/03_R.html"
+  },{
+    "title": "Responses to Mtg 03 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/03_R.html"
+  },{
+    "title": "Summary of Mtg 03 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/03_S.html"
+  },{
+    "title": "Summary of Mtg 03 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/03_S.html"
+  },{
     "title": "Mtg 3 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -74,6 +134,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/04_Mon-18-Jan-2021.html"
   },{
+    "title": "Responses to Mtg 04 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/04_R.html"
+  },{
+    "title": "Responses to Mtg 04 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/04_R.html"
+  },{
+    "title": "Summary of Mtg 04 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/04_S.html"
+  },{
+    "title": "Summary of Mtg 04 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/04_S.html"
+  },{
     "title": "Mtg 4 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -83,6 +163,26 @@ var tipuesearch = {"pages": [{
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/04_Thu-21-Jan-2021.html"
+  },{
+    "title": "Responses to Mtg 05 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/05_R.html"
+  },{
+    "title": "Responses to Mtg 05 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/05_R.html"
+  },{
+    "title": "Summary of Mtg 05 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/05_S.html"
+  },{
+    "title": "Summary of Mtg 05 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/05_S.html"
   },{
     "title": "Mtg 5 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -114,6 +214,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/06_Fri-22-Jan-2021.html"
   },{
+    "title": "Responses to Mtg 06 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/06_R.html"
+  },{
+    "title": "Responses to Mtg 06 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/06_R.html"
+  },{
+    "title": "Summary of Mtg 06 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/06_S.html"
+  },{
+    "title": "Summary of Mtg 06 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/06_S.html"
+  },{
     "title": "Mtg 6 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -134,6 +254,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/07_Mon-25-Jan-2021.html"
   },{
+    "title": "Responses to Mtg 07 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/07_R.html"
+  },{
+    "title": "Responses to Mtg 07 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/07_R.html"
+  },{
+    "title": "Summary of Mtg 07 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/07_S.html"
+  },{
+    "title": "Summary of Mtg 07 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/07_S.html"
+  },{
     "title": "Mtg 7 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -143,6 +283,26 @@ var tipuesearch = {"pages": [{
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/07_Tue-02-Feb-2021.html"
+  },{
+    "title": "Responses to Mtg 08 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/08_R.html"
+  },{
+    "title": "Responses to Mtg 08 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/08_R.html"
+  },{
+    "title": "Summary of Mtg 08 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/08_S.html"
+  },{
+    "title": "Summary of Mtg 08 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/08_S.html"
   },{
     "title": "Mtg 8 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -174,6 +334,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/09_Fri-29-Jan-2021.html"
   },{
+    "title": "Responses to Mtg 09 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/09_R.html"
+  },{
+    "title": "Responses to Mtg 09 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/09_R.html"
+  },{
+    "title": "Summary of Mtg 09 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/09_S.html"
+  },{
+    "title": "Summary of Mtg 09 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/09_S.html"
+  },{
     "title": "Mtg 9 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -194,6 +374,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/10_Mon-01-Feb-2021.html"
   },{
+    "title": "Responses to Mtg 10 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/10_R.html"
+  },{
+    "title": "Responses to Mtg 10 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/10_R.html"
+  },{
+    "title": "Summary of Mtg 10 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/10_S.html"
+  },{
+    "title": "Summary of Mtg 10 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/10_S.html"
+  },{
     "title": "Mtg 10 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -203,6 +403,26 @@ var tipuesearch = {"pages": [{
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/10_Thu-11-Feb-2021.html"
+  },{
+    "title": "Responses to Mtg 11 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/11_R.html"
+  },{
+    "title": "Responses to Mtg 11 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/11_R.html"
+  },{
+    "title": "Summary of Mtg 11 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/11_S.html"
+  },{
+    "title": "Summary of Mtg 11 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/11_S.html"
   },{
     "title": "Mtg 11 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -234,6 +454,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/12_Fri-05-Feb-2021.html"
   },{
+    "title": "Responses to Mtg 12 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/12_R.html"
+  },{
+    "title": "Responses to Mtg 12 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/12_R.html"
+  },{
+    "title": "Summary of Mtg 12 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/12_S.html"
+  },{
+    "title": "Summary of Mtg 12 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/12_S.html"
+  },{
     "title": "Mtg 12 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -254,6 +494,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/13_Mon-08-Feb-2021.html"
   },{
+    "title": "Responses to Mtg 13 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/13_R.html"
+  },{
+    "title": "Responses to Mtg 13 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/13_R.html"
+  },{
+    "title": "Summary of Mtg 13 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/13_S.html"
+  },{
+    "title": "Summary of Mtg 13 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/13_S.html"
+  },{
     "title": "Mtg 13 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -263,6 +523,26 @@ var tipuesearch = {"pages": [{
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/13_Tue-02-Mar-2021.html"
+  },{
+    "title": "Responses to Mtg 14 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/14_R.html"
+  },{
+    "title": "Responses to Mtg 14 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/14_R.html"
+  },{
+    "title": "Summary of Mtg 14 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/14_S.html"
+  },{
+    "title": "Summary of Mtg 14 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/14_S.html"
   },{
     "title": "Mtg 14 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -294,6 +574,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/15_Fri-12-Feb-2021.html"
   },{
+    "title": "Responses to Mtg 15 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/15_R.html"
+  },{
+    "title": "Responses to Mtg 15 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/15_R.html"
+  },{
+    "title": "Summary of Mtg 15 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/15_S.html"
+  },{
+    "title": "Summary of Mtg 15 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/15_S.html"
+  },{
     "title": "Mtg 15 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -314,6 +614,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/16_Mon-22-Feb-2021.html"
   },{
+    "title": "Responses to Mtg 16 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/16_R.html"
+  },{
+    "title": "Responses to Mtg 16 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/16_R.html"
+  },{
+    "title": "Summary of Mtg 16 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/16_S.html"
+  },{
+    "title": "Summary of Mtg 16 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/16_S.html"
+  },{
     "title": "Mtg 16 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -323,6 +643,26 @@ var tipuesearch = {"pages": [{
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/16_Thu-11-Mar-2021.html"
+  },{
+    "title": "Responses to Mtg 17 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/17_R.html"
+  },{
+    "title": "Responses to Mtg 17 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/17_R.html"
+  },{
+    "title": "Summary of Mtg 17 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/17_S.html"
+  },{
+    "title": "Summary of Mtg 17 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/17_S.html"
   },{
     "title": "Mtg 17 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -353,6 +693,26 @@ var tipuesearch = {"pages": [{
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/18_Fri-26-Feb-2021.html"
+  },{
+    "title": "Responses to Mtg 18 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/18_R.html"
+  },{
+    "title": "Responses to Mtg 18 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/18_R.html"
+  },{
+    "title": "Summary of Mtg 18 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/18_S.html"
+  },{
+    "title": "Summary of Mtg 18 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/18_S.html"
   },{
     "title": "Mtg 18 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -419,6 +779,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/19_Mon-01-Mar-2021.html"
   },{
+    "title": "Responses to Mtg 19 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/19_R.html"
+  },{
+    "title": "Responses to Mtg 19 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/19_R.html"
+  },{
+    "title": "Summary of Mtg 19 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/19_S.html"
+  },{
+    "title": "Summary of Mtg 19 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/19_S.html"
+  },{
     "title": "Mtg 19 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -469,6 +849,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/schedule/202110.html"
   },{
+    "title": "Responses to Mtg 20 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/20_R.html"
+  },{
+    "title": "Responses to Mtg 20 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/20_R.html"
+  },{
+    "title": "Summary of Mtg 20 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/20_S.html"
+  },{
+    "title": "Summary of Mtg 20 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/20_S.html"
+  },{
     "title": "Mtg 20 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -499,6 +899,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/21_Fri-05-Mar-2021.html"
   },{
+    "title": "Responses to Mtg 21 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/21_R.html"
+  },{
+    "title": "Responses to Mtg 21 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/21_R.html"
+  },{
+    "title": "Summary of Mtg 21 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/21_S.html"
+  },{
+    "title": "Summary of Mtg 21 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/21_S.html"
+  },{
     "title": "Mtg 21 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -519,6 +939,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/22_Mon-08-Mar-2021.html"
   },{
+    "title": "Responses to Mtg 22 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/22_R.html"
+  },{
+    "title": "Responses to Mtg 22 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/22_R.html"
+  },{
+    "title": "Summary of Mtg 22 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/22_S.html"
+  },{
+    "title": "Summary of Mtg 22 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/22_S.html"
+  },{
     "title": "Mtg 22 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -528,6 +968,26 @@ var tipuesearch = {"pages": [{
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/22_Thu-01-Apr-2021.html"
+  },{
+    "title": "Responses to Mtg 23 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/23_R.html"
+  },{
+    "title": "Responses to Mtg 23 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/23_R.html"
+  },{
+    "title": "Summary of Mtg 23 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/23_S.html"
+  },{
+    "title": "Summary of Mtg 23 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/23_S.html"
   },{
     "title": "Mtg 23 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -559,6 +1019,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/24_Fri-12-Mar-2021.html"
   },{
+    "title": "Responses to Mtg 24 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/24_R.html"
+  },{
+    "title": "Responses to Mtg 24 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/24_R.html"
+  },{
+    "title": "Summary of Mtg 24 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/24_S.html"
+  },{
+    "title": "Summary of Mtg 24 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/24_S.html"
+  },{
     "title": "Mtg 24 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -579,6 +1059,26 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/25_Mon-15-Mar-2021.html"
   },{
+    "title": "Responses to Mtg 25 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/25_R.html"
+  },{
+    "title": "Responses to Mtg 25 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/25_R.html"
+  },{
+    "title": "Summary of Mtg 25 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/25_S.html"
+  },{
+    "title": "Summary of Mtg 25 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/25_S.html"
+  },{
     "title": "Mtg 25 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
@@ -588,6 +1088,26 @@ var tipuesearch = {"pages": [{
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/25_Tue-13-Apr-2021.html"
+  },{
+    "title": "Responses to Mtg 26 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/26_R.html"
+  },{
+    "title": "Responses to Mtg 26 • CS-280 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/26_R.html"
+  },{
+    "title": "Summary of Mtg 26 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/26_S.html"
+  },{
+    "title": "Summary of Mtg 26 • CS-280 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202110/meetings/26_S.html"
   },{
     "title": "Mtg 26 • CS-205 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
