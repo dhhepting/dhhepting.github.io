@@ -1,18 +1,227 @@
 Today:
-- vid: https://www.youtube.com/embed/IRdupNXpm8k
-  desc: Decode unicode - the world's writing systems
-- vid: https://embed.ted.com/talks/lang/en/matthew_carter_my_life_in_typefaces
-  desc: Matthew Carter -- My life in typefaces
-
+- desc: Decode unicode - the world's writing systems
+  vid: https://www.youtube.com/embed/IRdupNXpm8k
+- desc: Matthew Carter -- My life in typefaces
+  vid: https://embed.ted.com/talks/lang/en/matthew_carter_my_life_in_typefaces
 UTF-8:
-- url: https://en.wikipedia.org/wiki/Plane_(Unicode)
-  desc: Unicode Planes (including Basic Multilingual Plane)
+- desc: Unicode Planes (including Basic Multilingual Plane)
+  url: https://en.wikipedia.org/wiki/Plane_(Unicode)
 - desc: are there extra bits in UTF-8? Any relation to entropy?
-- vid: https://youtube.com/embed/TxkA5UX4kis
-  desc: Most frequent symbols get shortest codes
-- url: https://unicode.org/emoji/charts/emoji-list.html#1f60a
-  desc: smiling face with smiling eyes
-- url: https://www.fileformat.info/info/unicode/char/1f60a/index.htm
-  desc: Unicode Character 'SMILING FACE WITH SMILING EYES' (U+1F60A)
-- img: 05 - wb-1.png
-  desc: what was my mistake? (Hint) What is 6 (decimal) in binary?
+- desc: Most frequent symbols get shortest codes
+  vid: https://youtube.com/embed/TxkA5UX4kis
+- desc: smiling face with smiling eyes
+  url: https://unicode.org/emoji/charts/emoji-list.html#1f60a
+- desc: Unicode Character 'SMILING FACE WITH SMILING EYES' (U+1F60A)
+  url: https://www.fileformat.info/info/unicode/char/1f60a/index.htm
+- desc: what was my mistake? (Hint) What is 6 (decimal) in binary?
+  img: 05 - wb-1.png
+Zoom-Audio-Transcript:
+- desc: realized, I was muted there for a second okay. So. let's go back to. screen.
+    Okay, so this is. A line for today. So the decode unicode. kind of fun video.
+    That was made a few years ago, but every with every iteration of every release
+    of the unicode there gets to be more and more characters. And as you look at Matthew
+    carter's my life and typefaces. Another is interesting because. Cocteau designing
+    for different displays. Designing some plans for. Certain resolution displays
+    was the challenge of the time we undertook many challenging activities and. Then
+    they. A particular challenge at a given time that. relented. wanted to find some
+    other ones. some more general terms here. Okay, so. To answer some more questions
+    from last day. Do you see my reply that it says, I would talk about some of these
+    extra bits and so on. So I thought, maybe these so just watch a little bit of
+    this. Video. But compression codes. Probably not convenient for the audio but
+    i'll make i'll put the captions on. Okay. Do you see a connection there between.
+    entropy and encoding for. UCF encoding UCF eight encoding of unicode symbols.
+    Okay, so.
+  persid: DHH
+- desc: Let me.
+  persid: ???
+- desc: By the way. Having these two classes back to back sometimes. Let me just do
+    this quickly. Okay here's the presentation. generator myself. About that i'm still
+    finding. Some issues I need to tweak in your courses. Okay. So let me clear up
+    from my mistake anyone find my mistake you and see my hand from the state that
+    mistake. intuit is six and six decimal and binary. Because, all I did was I wrote.
+    A can twice, I did can hear Gray so eight plus. Two Stan is a, but I also did
+    eight plus. Two is six no that's not right, so these two bitches slept so I should
+    have got 0110. So. This changes. To the date was correct, but this should change
+    to a nine. Because those two bits are flip. And that's correct. So here's the
+    encoded. smiling face smiling eyes. You can see here. On the. Page unicode.org.
+    here's our smiling faces smiling guy So you can see that there's a number of different.
+    Alternative. representations. unicode. unicode code point. So the number that.
+    corresponds to the character. lead us to. This one. So, separate from the. satanic.
+    ideal of the smiling SMILEY face smiling is. This code points or expresses the
+    ideal. And this is. What what what different platforms realize provide to this
+    realization of that ideal. So this is apple. You see my cursor is and then. Google
+    and Facebook. And the i'm not sure what windows. windows, I guess. And Twitter.
+    and so on. So we'll talk about. Those in a minute or maybe on Monday on Tuesday.
+    next level of. realization we can realize the texts that were encoding. look carefully
+    at these this table. The sort of the order of the. emojis is different than their
+    colored points the code points aren't in numerical order. Determined determined
+    by. locale data. character locale data register cl Dr. that's what this is. That
+    abbreviation. Okay, so let's go back to. Our example with a salon. Okay, so if
+    we have an ascii character. etfs eight. If we're sending. Now, for we say that
+    we're going to. send a message and etfs aid. The only bites that can be perceived
+    be ever then. The only advice to the leading zero are one byte characters which
+    correspond. To the historical asking. characters are common. So you can think
+    of them as being. At the top of the. probability tree, so they get the shortest
+    code. And the code starts with. zero. So what does it mean to. leading not lending.
+    is meant to say that anyway. That worksheet. curious based on the Wikipedia page.
+    So we can say that maybe have one. Leading that meets means as part of a multi.
+    The continuation. Of the message. we've missed we've missed started the message
+    if we. tune in and we find a bike that one as one zero To begin with, that means
+    it's. Either the second, third or fourth bite of multi byte character. mean. Right.
+    there's one how many ones are there 121. We can have up to four Bytes so we could
+    have one. preceded by for that, for one. And zero bed. makes sense. to buy. to
+    buy a message character encoding. One continuation. So it has this has the advantage
+    of. We only have to wait until we get a. bite, starting with zero, which means
+    it'll be a single bite character. And self contained character self contained
+    within a bite so that's the leading leading zero if it has a leading 110, then
+    we have to only wait until we get. Zero or. One to avoid it has leading multiple
+    leading ones. So if we saw a continuation bite like this. In a message like this.
+    Making sense. And I understand why Oh, thank you. Emily. Okay, so we have five.
+    Leading by. Four by character. We need three by three that's. The first. And then
+    we have. One zero start the continuation bite, and then we have. six sets of data.
+    here. We don't know how many, we have to wait for except that. We have. the middle
+    of something. So we just need to. check the next one, so we're in the middle.
+    And then, when we start we if we encountered this bike. And we know. The start
+    and because we see for that view for one that's at the beginning, we know they're
+    gonna be for by itself together. So, in terms of transmission. We don't need to.
+    wait for any other characters. Once we get a new character here. So we get a.
+    start by then we can. move from mill you know there were a lot of middle or at
+    the start, so we can reset our. Our decoding here. So do we. have been converting
+    between binary and hex. or. Changing notations. If you read these and write these
+    betsen into hexadecimal. see what I can. Be. i'm not sure if I specified a valid
+    here to here, I think I should be all right. There are some. stipulations. This
+    ETF 16 only permits. 20 bits total and here we have 21. So that there's some.
+    can't express more than. 16. anyway. I think the web page to do a fairly good
+    job of explaining that once i've linked. Not to. I would say the details are interesting
+    but not so important in terms of our. interest here. Let me do one thing here.
+    So 100 is eight. And then 1011 is 11 which is. Be. So I can look that up. should
+    be able to find something. So any conversion between binary hacks. Group. In front
+    of it. So the. No. sweet, we can write them in. Other groupings of numbers. So
+    instead of grouping four bits together we can group three bits together. And those
+    are called octo. What is every leave us with. two. Eight anyone get eight Oh,
+    I see in the chat okay thanks. guys range from zero to seven. Maybe easier to
+    read these continuation characters. Right over that 107077. don't worry it'll.
+    Be tomorrow is not so helpful, I was reading about. In and storing. Using auto
+    presentation, because they be. A continuation of six bits of data. And then, in
+    this case, there was. Three bits of data and the leading plate as well. So makes
+    for. I also want to. touch on the idea of. not creating different representations.
+    Which is grouping things differently in terms of. binary hex and optimal. they're
+    just. ways that unicode is organized. So at the. Center. Of the. dmca encoding
+    is. Is the seven paths for the ascii so. The lowest order bite. Is. ascii So those
+    are the most frequent these characters. And then. Then, to add all the different
+    kinds of Latin. characters for the different languages, their accents and we need
+    to buy because this 11 bits of data allows us to you to get most of those characters.
+    And then, with 16. Yes. Basic multilingual plain. Chinese Japanese and Korean.
+    characters that are common. force plate. Access to other planes. I think there
+    are 17 other planes that are defined. So let me show you how i'm unicode. My rambling
+    too much well probably yes that's just. rambling too much, but. The message gets
+    through. We get immediate access to the basic multi lingual plane. Without any
+    so we're using two bites as our unit. starts we don't have anything any. characters
+    encoded in less than two byte. This. These two bites will access the basic multilingual
+    plane. And then we can add another two bites to access the other. plane planes.
+    So, because of the limitations of UCF 16 in terms of. How it. encodes ease of
+    supplemental planes and so on. We can access. All the. available. To the 20. 16
+    encode the same code points from this. Collection of to the 20. copy this down.
+    characters. thousand and 59 characters use. This in March 2020 and they have.
+    A they have plans to I think the last time they added about 5000 characters. So
+    they have a plan to roll out more and more characters. More and more to support
+    more and more languages. Like was discussed in that video about the unicode decoding
+    unicode. Any questions or comments about that. So the idea is. That there are
+    these different assignments. And i'm not sure. If these are. A New York. So. here's
+    an example of a note of a sketch to do. To illustrate entropy. So you can use
+    that as a. entropy example. So you can use that as a starting point. So I apologize
+    for not talking about this. On Tuesday. The I set the first two days, to the tune
+    of two weeks from the past Tuesday. Okay, so. message in the chat so, can you
+    please repeat, is a direct message, can you please repeat it as a message to everyone.
+    Okay, so basically how I got the different numbers, so this is a chart chart was
+    in is. very similar to presently in the Wikipedia page. So when there's one bite
+    this seven there's a leading zero Plus seven bits of data. mark by the axis. And
+    then there's two bites. In. The continuation byte six bits of data and the continuation
+    byte. And five bits of data in leading bite. So that I get 11 for that. And then.
+    Three bites. six plus six bits of data is 12 and then four bits. leading place
+    on 16. For the 16 bits of data. equals a to buy. You equal to Bytes of data. which
+    corresponds to the basic multi lingual playing. We can access using UCF 16 112
+    white word of etfs 16. Okay. I got it okay. Anyway, every day, tired of talking
+    about zeros and ones. that's not quite true. anyway. So back to. So you can make
+    the dates a little different. How many people are just gonna say simon's page
+    for for a. Now. State can be flexible. Just as a way to get you give you some
+    experience with. P five GS and the concepts are talking about in class. So let
+    me know about the date, and we can change it. As required so don't worry don't
+    worry about the date. The first one, and then the second. there's a project that
+    you can do in small groups let's say. And I should say bless you. generally. So
+    let's say groups of up to four she like and then you can think about. Something
+    that we're doing. In terms of writing a. web based. interactive web based multimedia
+    presentation of your topic so that's the deliverable. And so, think about. Some
+    of these things. And how much you're going to research and how much you're going
+    to write in P five js how much text you want to write and. How much coding, you
+    want to do. is to be a little bit of each but. can be predominantly one or the
+    other, or. Equal equal parts. make sense. Make sure I get the gradebook hooked
+    up properly. I think i've got the. engagement with meetings set up properly now
+    so they come up to 10. For the total mark. is a bit of a. country like extracting
+    One way is to be able to do it one way and I couldn't find that way to do it and
+    then. I. I was told about another way that. seems to work so we'll see that problems
+    been solved. For now. Any pending your. results obtained through that setup and
+    great book.
+  persid: DHH
+- desc: Activity code.
+  persid: S02
+- desc: Okay. yeah. I think that was not intended for everybody. Okay, so we'll talk
+    about the project that more. On Tuesday okay. Since we're out of time for today.
+    Any other questions or concerns. Okay, seeing Nanos say goodbye for today thanks
+    for your attention and your patience as my scribbling and rambling. And we'll
+    see you on Tuesday. Take care have a good weekend. hi there, yes, Edward with
+    innovation innovation hi hey yet some single dishes a few days ago, did you get
+    looked after, no. Not it's not a large number of shingles the spot, where they
+    came off the roof is seems to be covered by snow down yeah kind of put a hinder
+    on everything we're doing. we're opening it back at it next week, though. Are
+    you wanting us to take a look at it, or. Well i'm not sure what the priority is.
+    In terms of if this is important to do now we're gonna wait till spring or. Was
+    there plywood showing was a building paper underneath it. yeah you know I didn't
+    see myself okay. Maybe it's something we should look at just to make sure that.
+    It could be there may be something we could repair next week, on Sunday on to
+    help control the snow off. Okay, I mean I we were we're fixing shingle now and
+    I have no concern that their permanent fixes this time of year. So I mean it is
+    something we can definitely do this time of year okay.
+  persid: DHH
+- desc: Okay.
+  persid: ???
+Zoom-Chat-Transcript:
+- desc: hello!
+  persid: S03
+- desc: Was there an attendance pass posted yet?
+  persid: S04
+- desc: nope
+  persid: S05
+- desc: 'attendance: zwdpec'
+  persid: DHH
+- desc: yup
+  persid: S06
+- desc: '8'
+  persid: S05
+- desc: I got it
+  persid: S06
+- desc: thanks
+  persid: S06
+- desc: can you talk about the project? I don't fully grasp what is expected from
+    it
+  persid: S03
+- desc: can we see example projects from past semester classes.
+  persid: S05
+- desc: what
+  persid: S07
+- desc: sorry about that
+  persid: S02
+- desc: it was my friend
+  persid: S02
+- desc: Thanks, have a good weekend!
+  persid: S08
+- desc: thanks
+  persid: S06
+- desc: Thank you!
+  persid: S09
+- desc: "Thanks\uFF01"
+  persid: S10
+- desc: thank you! have a good weekend
+  persid: S03
+- desc: thanks
+  persid: S02
