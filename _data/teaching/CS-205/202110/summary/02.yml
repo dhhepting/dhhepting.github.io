@@ -1,59 +1,463 @@
-Puppy:
-- vid: https://www.youtube.com/embed/pzdMdbjd18I
-  desc: Elgar stars in commercial along with one of his litter mates
 Binary-Guessing-Game:
 - desc: Think of a number between 0 and 15 and I will guess your number by asking
-    you 4 yes-or-no questions (I've added some links that explain the game in
-    more detail). It is easiest to ask those questions if I have cards
-    to show you, so let's talk about how to make those cards.
-- url: http://combinatorial-explosions.blogspot.com/2016/04/may-i-read-your-mind.html
-  desc: May I read your mind?
-- url: http://scratched.gse.harvard.edu/resources/binary-guessing-game-activity.html
-  desc: Binary guessing game activity
-- url: https://www.khanacademy.org/computing/computer-science/algorithms/intro-to-algorithms/a/a-guessing-game
-  desc: A guessing game
-- img: 02 - wb-1.JPG
-  desc: The game, as described above, works with 4 cards to guess one of 16
-    numbers. In this whiteboard image, I've started a table with headings
-    8, 4, 2, 1, and V (for value, but G for guess could also work). I've written
-    in Y and N into cells in the table (Y == "Yes" == 1 and N == "No" == 0). If
-    we have only 1 card (or we ask only 1 questions), we can "guess" from 2 values. Is
-    your number on this card? If you answer Yes, then your number is 1 and if you answer No, then
-    your number is 0. It gets a bit more interesting with 2 cards because we can "guess" from 4 values.
-- img: 02 - wb-2.JPG
-  desc: In this whiteboard image, I've sketched 3 cards which allow guesses from
-    8 values (2^3) by adding the "4" column to the table. To make a guess, start
-    with a value of zero and for each card to which the "volunteer" answers Yes
-    ("my number is on that card"), add the value of the column for the card.
-- todo: Next cards
-  desc: We have discussed how to make 3 cards. How does the table get extended with
+    you 4 yes-or-no questions (I've added some links that explain the game in more
+    detail). It is easiest to ask those questions if I have cards to show you, so
+    let's talk about how to make those cards.
+- desc: May I read your mind?
+  url: http://combinatorial-explosions.blogspot.com/2016/04/may-i-read-your-mind.html
+- desc: Binary guessing game activity
+  url: http://scratched.gse.harvard.edu/resources/binary-guessing-game-activity.html
+- desc: A guessing game
+  url: https://www.khanacademy.org/computing/computer-science/algorithms/intro-to-algorithms/a/a-guessing-game
+- desc: The game, as described above, works with 4 cards to guess one of 16 numbers.
+    In this whiteboard image, I've started a table with headings 8, 4, 2, 1, and V
+    (for value, but G for guess could also work). I've written in Y and N into cells
+    in the table (Y == "Yes" == 1 and N == "No" == 0). If we have only 1 card (or
+    we ask only 1 questions), we can "guess" from 2 values. Is your number on this
+    card? If you answer Yes, then your number is 1 and if you answer No, then your
+    number is 0. It gets a bit more interesting with 2 cards because we can "guess"
+    from 4 values.
+  img: 02 - wb-1.JPG
+- desc: In this whiteboard image, I've sketched 3 cards which allow guesses from 8
+    values (2^3) by adding the "4" column to the table. To make a guess, start with
+    a value of zero and for each card to which the "volunteer" answers Yes ("my number
+    is on that card"), add the value of the column for the card.
+  img: 02 - wb-2.JPG
+- desc: We have discussed how to make 3 cards. How does the table get extended with
     Y's and N's if we make 4 cards and if we make 5 cards?
-- todo: Flip the cards
-  desc: We have discussed making cards with Y's from the table. What happens if
-    we make cards from the N's? How can a guess be made from these cards?
+  todo: Next cards
+- desc: We have discussed making cards with Y's from the table. What happens if we
+    make cards from the N's? How can a guess be made from these cards?
+  todo: Flip the cards
 Encoding:
 - concept: encoding
-  desc: Use of "a system of rules to convert information — such as a letter,
-    word, sound, image, or gesture — into another form, sometimes shortened or
-    secret, for communication through a communication channel or storage in a
-    storage medium." (Wikipedia)
-- url: https://en.wikipedia.org/wiki/Character_encoding
-  desc: Character encoding
-- url: https://en.wikipedia.org/wiki/Code
-  desc: Code
-- url: https://en.wikipedia.org/wiki/Encode
-  desc: Encode
-- img: 02 - wb-3.JPG
-  desc: In this whiteboard image, an example of 8 code values determined by 3
-    bits (binary digits). Note connection to binary guessing game. It is possible
-    to have those code values represent their numeric values, but they could represent
-    other things as well, like characters or colours. ASCII uses 7 bits to encode
-    all the characters for North American English. Unicode uses (up to) 32 bits to
-    encode international and historical characters (and emojis too). UTF-8 is a popular
-    way to encode Unicode characters using less bits.
-- url: https://en.wikipedia.org/wiki/ASCII
-  desc: ASCII
-- url: https://en.wikipedia.org/wiki/Unicode
-  desc: Unicode
-- url: https://en.wikipedia.org/wiki/UTF-8
-  desc: UTF-8
+  desc: "Use of \"a system of rules to convert information \u2014 such as a letter,\
+    \ word, sound, image, or gesture \u2014 into another form, sometimes shortened\
+    \ or secret, for communication through a communication channel or storage in a\
+    \ storage medium.\" (Wikipedia)"
+- desc: Character encoding
+  url: https://en.wikipedia.org/wiki/Character_encoding
+- desc: Code
+  url: https://en.wikipedia.org/wiki/Code
+- desc: Encode
+  url: https://en.wikipedia.org/wiki/Encode
+- desc: In this whiteboard image, an example of 8 code values determined by 3 bits
+    (binary digits). Note connection to binary guessing game. It is possible to have
+    those code values represent their numeric values, but they could represent other
+    things as well, like characters or colours. ASCII uses 7 bits to encode all the
+    characters for North American English. Unicode uses (up to) 32 bits to encode
+    international and historical characters (and emojis too). UTF-8 is a popular way
+    to encode Unicode characters using less bits.
+  img: 02 - wb-3.JPG
+- desc: ASCII
+  url: https://en.wikipedia.org/wiki/ASCII
+- desc: Unicode
+  url: https://en.wikipedia.org/wiki/Unicode
+- desc: UTF-8
+  url: https://en.wikipedia.org/wiki/UTF-8
+Puppy:
+- desc: Elgar stars in commercial along with one of his litter mates
+  vid: https://www.youtube.com/embed/pzdMdbjd18I
+Zoom-Audio-Transcript:
+- desc: Hello everyone. So I have a bit of a family thing going on today so I make
+    it a phone call. And then we'll end the meeting a bitch. You might end the meeting.
+    Early today. Okay. I do have a video of my puppy. Chasing his tail. Works later
+    on. Okay, so Everyone's 19 so I'm not sure whether the other people in the class.
+    Anyone, anyone lose your power last night. No. Apparently some people did well
+    versed I had Some flickering lights. Lot of wind that Is scary for the puppy and
+    And for me to actually mean it. Tree big tree outside the window here is Being
+    bent So scraping the house and say, gee, I probably wouldn't be good if a branch
+    broke off. Anyway, So enough about that. Okay, so for First things first. Video
+    of puppy. I think Discovering that the occasionally discovers he has a new toy.
+    There with him. This do that once your senses so short. Okay, so that's all These
+    see Is about 12 weeks old. Now we got them supposed to be all 10 weeks old. Two
+    weeks. And I Can week From this Sunday, which is almost two weeks past so He's
+    mostly adorable. Now it's completely adorable but sometimes he acts like a puppy.
+    Anyway, okay, so there we go. Now you've met him. Have you'll get a show you a
+    video from time to time. How easy Because by the end of the semester, he won't
+    be so so puppy like System of getting email before each day. So I'm inclined to
+    think that maybe I will just create a meeting the zoom meeting for the whole semester.
+    So we don't have to keep going through Emails, and then I can just post it in
+    the calendar. Any thoughts about that. Seem like A smoother solution. To be paranoid
+    so well. Just because I'm paranoid doesn't mean people are aren't out to get me.
+    Someone heard that before. Okay, so I'll created A link a recurring meeting link
+    for Our class meetings.
+  persid: DHH
+- desc: Me.
+  persid: ???
+- desc: See video link on our Meetings page. Alright. Well, Let me go back to So from
+    So I worked out a way to present the summary, but I didn't. fill in the details
+    or summary so The idea is for the transcripts of the audio and the chat. I will
+    Use my discretion to come up with topics here. That we discussed like welcome.
+    If you click on the topic and you can hide the details. And then I'll put in Various
+    points here and I'll add links as appropriate. So So for example, we talked. I'm
+    going to add the link for the CS web page. Building instructions. That's one of
+    the things we talked about Anyway, So that was last day and then So I didn't I'm
+    still working things out here a little bit. But then the notes for two or five
+    meeting to Now, take it to the video. Where's the thing they won't always be videos,
+    but maybe a links to look through and so forth. Try various say Maybe preparation
+    or something, instead of notes so it can be an unknown location. Let me just make
+    sure that it's there on the website. On the public website this is on my laptop
+    when it's local host Does anyone here use the static site website generator So
+    I'm using jackal. Well that's nice. Sorry, not that nice. You haven't used it
+    yet, but I see that the when you're on your camera view you say no or yes or something
+    and it pops up on the over top of the video. So that's very Very handy. I'm impressed
+    with the zoom for that feature. I can't get a whole list of people Anyway, Okay,
+    so this is the web page on On the public CS Department web server side. There.
+    Today, when I had the chance to look at that already. Okay. So look at this over
+    the weekend and then we can Talk about it next day in more detail. So the idea
+    is That information entropy Like the third law of thermodynamics, entropy In some
+    ways it is in some way that's not to me. I find it interesting that you talk about
+    the entropy and information as measuring surprise. So if you think of tossing
+    a coin. If it always lands on heads. Not necessarily a coin. For one thing, They're
+    also not very much surprise in it. So if the odds of Getting ahead and getting
+    a tail or equal at 50% then there's as much As we can handle from From that one
+    coin. And So that's So we have two outcomes from flipping a coin zeros and one
+    or heads or tails, which you can think of the zeros and ones. Which leads us to
+    the Idea of a binary digit or best And so I'm going to Impress you quote unquote
+    with my drawing skills in a minute here. I thought I don't have a video of this
+    And I don't have The props with me. So I'll dress and I'll draw it out from the
+    beginning, from the ground up. So this is going to be about An application of
+    of Of encoding to represent different Different quantities. So if we look at A
+    single bit. How many guys. Can we encode with that. You're welcome to use your
+    microphone. And if you want to just unmute yourself for a bit, you can press the
+    spacebar, I think. That's failing that, I will get out of my chat window. There's
+    a question. Yeah, so Much. So another way to say it is how much information you
+    know so we have to do is zero and one. And that's why, computer scientists like
+    to start counting with zero Or the first array indexes zero Right, because precinct
+    of Representation of it. If we say, off and on. So those two values us Euro and
+    one Okay, so how many if we get to bits. How many values, can we represent. Okay,
+    and how about three bits. Know 16 is four bits. All right. And 32 is five minutes.
+    Yeah, that's right. So it's, it's an experience. So two times two times two were
+    two to 38 Oh, you're just you're anticipating my question. That's very good. I
+    can see you. Laughing I can hear you. Laughing So, That's Kind of a nice way to
+    Experience it so that's That's eight bit. No. Yes, eight this is 256 OK, I can
+    count so eight and 910 Okay. All right. Okay, so this is this is a lot of fun
+    and we can go on to So we get the idea. So is anyone heard the story about The
+    fellow who Who did a fair for the king and for the reward. King said Nate name
+    which you'd like. He said, I'd like one grain of rice to put on This first square
+    the chessboard And then The next square and have it doubled and then doubled again.
+    It's all. Okay, sure. But by the time the chessboard is full. That's quite a big
+    number, isn't it. So, You know the bit a bit can only store two values and put
+    them together. In store lots and Lots of values. So, Without getting too philosophical
+    there. Let me Sorry, bear with me for a second. I tried to get this working in
+    rehearsal. Time. Okay, let me Try another thing here. I really better be worth
+    it if I'm gonna Okay, made some progress here. Okay, so This is a Binary guessing
+    game. Maybe you've heard about it. So, Okay. Okay, so if there's a One bet we
+    can set us in the zero position. And we can say no. Or yes, So vs revalue here.
+    Okay, let me back up and give you the context. So our binary guessing game. That
+    I have available. Which I should make the materials available online somewhere.
+    So you can see this and all its glory. So in that in the setup that I use. Generally,
+    I have four cards. And a card that represents the one position. The two position
+    before position and the position. So let's say I just had one card instead of
+    four. So one card. And so The idea is to show that I have ESP extrasensory perception.
+    Perception, I say, Is your number on this card and you say yes or no. So if I'm
+    going to have one card. And I'm going to guess your number. Two. The card is going
+    to have the number one on it. So what other constraints. So, what, what's the
+    range of numbers. You can guess you can pick, I can guess. I'm sorry, I should
+    have I got thrown off by the technology here a little bit, but
+  persid: DHH
+- desc: In this case, our options if I'm understanding you correctly would be one
+    or zero as our number so Either way to say yes or no. You're going to know what
+    our number is
+  persid: S02
+- desc: Yeah. That's right. So if I say pick a number between zero or one, zero and
+    one. Pick a number either zero or one. And I show you the card with the one on
+    it and you say, Yes, that's my number. And if you say no, that's not my number.
+    Then I take the card and put it to my head and say, After some theoretical part
+    theatrical pause I say this as the psychic energy travels from you to me. And
+    I say, If you answered yes to that question your numbers one and if you answered
+    no, that your number 01 card. Okay, now if I have two cards. What I'm going to
+    do is Different combination There's two cards we have twice as many values possible
+    Sorry. I have to make a little correction here. Alright. No, no, and we have To
+    but no one. So then we have To end if we ever yes and yes it's a two and a one
+    is three. So this Is the classic. How many different kinds of people are there
+    in the world. If you It's funnier if you see it written out if there are one,
+    zero kinds of people in the world. Those who understand binary and those who don't.
+    Because one zero yes no is is equivalent to decimal to Because you can only represent
+    one up to one with one between you. The second bit To represent The value of two
+    And then if we have yes and yes three Two cards. Okay. Why don't you tell me I'll
+    get my chat window open here again. So what are the numbers that we're going to
+    write on one of the cards. OK. So the reason Is a nice a nice number Nothing against
+    it. The reason I would vote, I would not choose that one is because
+  persid: DHH
+- desc: It.
+  persid: ???
+- desc: If I'm if I'm asking the question, Is your number on this card. And it's it
+    and we have a number that is a zero. So that would answer. No, no. And it gets
+    confusing. So what I'm gonna say is We put the From one column one in three Two
+    and three No, that's not right. So if this is the card. I'm showing one three
+    your answer yes to this. And then I show you the next card, which is two, three
+    answer yes to this and what is the number going to have to be You have to be a
+    three because you said yes to one and yes to the other. So the way we figure that
+    out is Two plus one equals three. And we can see that if we say yes to both cards,
+    the only number that appears on both of them. Is the three This let's do a three
+    cards and then that should Be enough torture with this thing. I don't mean to
+    create torture. I don't want to create that idea. Okay, so I saved that one. So
+    I'm going to erase A little bit of this. OK, so now for a third card. We're going
+    to write in
+  persid: DHH
+- desc: Pencil
+  persid: ???
+- desc: Alright, so adding a know in this third position doesn't change any of the
+    existing values. So we still have 0123 But now let's copy everything down. And
+    then for this one are going to Change the intro for change. The no to. Yes. Okay,
+    so without These next word numbers. So we can figure that out. In a few different
+    ways. Yeah 4567 So what we're doing here really one way, if it's helpful to think
+    about it is taking these values and heading for to them. So zero plus four is
+    for One plus four is five. To two plus Three plus four, seven. Consciously Yeah,
+    so We can just go by. Each call If we say each column is a card and we just record
+    designers have yeses beside them. In the values where there's a yes. So, for Six.
+    Seven. And then for the to The next card to 367 And then we have One, three, Maybe
+    too far down in the screen. I don't know what's going on here. Okay, so these
+    are the three cards and I say to you get guess an hour between zero and seven.
+    So how does this. How does this work in practice. So you have cards with these
+    three these three cards with These sets of numbers on them. So can you explain
+    how how to run the trick. To prove to unsuspecting grade school children that
+    you're having Extra Sensory perception. Anyone's welcome to turn the microphone
+    on for them.
+  persid: DHH
+- desc: So in this case we can assume that someone got for, for example. So when we
+    show the first card. We would ask, do you have a number on the first part. So
+    they have the Fort Detrick, they would say yes. So for us, we would know that
+    the number is either four or five, six or seven And then next card and then for
+    the next one, they would say no, definitely because the four is not there. So
+    we know that six and seven cannot be the option we eliminate those two Then we
+    go to the next card and they would say no, what's not on there too. So we are
+    limited to five and then we can do that. It's
+  persid: S03
+- desc: Okay, that that's That That's a very good explanation.
+  persid: DHH
+- desc: The question though. Does that work the same. If we use the positions of the
+    zeros instead of the ones right Like the yes the nose, instead of the yes
+  persid: S03
+- desc: Yeah. That would Be an extra level of indirection for people to say, So then,
+    then you'd have And the third card, it has 02402460145 And 0123 trying to get
+    my head around. To doing the tables. And this is all kind of like, well, it is
+    math on the board for me. Yeah, so that's right So we could do things. Change
+    it up and put the put the Nose yes and yes no and make a little more interesting
+    for set of cards. That brings me to a point that it's a good segue into A topic
+    about encoding. Let me just first say about the way to think about this. So if
+    we have the cards. These three cards set up. With a forum on the top and to the
+    top and one of the top If we make note of what's the number on the top number
+    on the card or a free Print out a make a note on the back with the number is the
+    top number is So if we say yes, no, yes. And we have four plus one. So if we have
+    a yes who started out in this way, we started our guests at zero. And for every
+    yes to a card we add the value we add to the first value on the card. So this
+    card is yes, and we add four to zero. So we have four to start with. And if we
+    say no to this card. We don't add anything, and if we say no to this card. We
+    don't add anything And so if they say yes to the four card. Then we Pass dramatically
+    and say your numbers for You can work out the instructions, if you if you flip
+    it between The show the zeros to the Card be the 0246 And so far. Anyway, I'm
+    getting I'm getting Work. Anyway, Alright. So that makes sense. First of all,
+    so the idea is that we can have We have Three best we can store. And then the
+    idea is necessary that we have to Don't have to store. We could say it's durable.
+    We can also say it's 28 So we're going to store different values. So we can use
+    this technique. We only need to store. Restore the index values here. We go. We
+    only need three best to do that. We can storm. We can have a reference larger
+    values. And that's what's done in images. For example, and we'll talk about it
+    later. So if you have a We have 256 Spots to different guys you can represent
+    So we can have them represent grayscale value. We can represent raise your turn
+    black and white. Is a Fraction on that continuum, or we can use those value. Where
+    we can have We can have each value reference look up into a table of full color.
+    So, When when space is more of a premium. We could do this trick by storing on
+    the eight bits. For the pixel dies. But then, having us. 236 index nice looking
+    like of into a table that would We would have a palette of 20 256 colors. So we
+    could have a Rich colored image. That have very little storage without the need
+    to have Store each row is 24 bits. What time is it 10 minutes left. Okay. So we
+    need more than three best represent Characters in the English language. Right.
+    So we could we would need at least Values. So we could encode the characters in
+    the text. So that would let us do the capital letters, plus a little bit of punctuation
+    maybe Which which is a sci, which stands for American Standard Code for Information
+    Interchange Someone pointed out that it's really know the American national Standard
+    well anyway. We don't really talk about ASCII too much anymore directly. We talk
+    about UT F8.
+  persid: DHH
+- desc: pretext.
+  persid: ???
+- desc: Okay. Which is skipping ahead a little bit So we're going to talk about ASCII
+    and Unicode ETFs eight is a way to represent Unicode In a compact way. Store ASCII
+    We don't even use 888 that would give us 236 more Me because another hundred and
+    20 character positions. Because asked good for North American English. Not even
+    Now even all the variations of English. With the different symbols and so an accent.
+    So we'll talk about that in more detail what happens If we try and get more characters
+    out of ASCII by using the eight bit And then That may be a good start, but it
+    doesn't really get us very much for that and we As far as we need to go so Unicode
+    is based on a form that form bite. So eight bits, the bite. So one bite for asking
+    or it to a portion of a bite for ASCII And the Unicode is for by So that gives
+    us a lot more potential But we don't have anyway. So there's some complications
+    involved, and we'll talk about them in the next Next week, So if you can have
+    a look at that video I posted And I'll post some other videos as well before Tuesday.
+    Okay, and it will get your courses. Set up so So we'll start in earnest, with
+    the attendance and then engage with us meetings. Tuesday. Okay. Okay. And I'll
+    figure out how to better uses technology. See what What Zoom is telling me to
+    do and what wasn't doing for me on my iPad. Anyway, Never a dull moment right
+    so stay well. And we'll keep warm and Have a great weekend. And we'll talk to
+    you on Tuesday. And I do have some office hours coming up. Well, I have an officer
+    at 334 30 today. And Otherwise you can send me email or push to the forums and
+    I'll get to them. So with that, I'll say goodbye. Thanks for today and we'll talk
+    to you soon. Okay.
+  persid: DHH
+Zoom-Chat-Transcript:
+- desc: hello
+  persid: S04
+- desc: HII
+  persid: S05
+- desc: Hello!
+  persid: S06
+- desc: yup
+  persid: S07
+- desc: yup
+  persid: S08
+- desc: Yeah
+  persid: S03
+- desc: Yup, for a while.
+  persid: S06
+- desc: My security system went haywire and I ended up using ear plugs all night
+  persid: S07
+- desc: until powere was officially on
+  persid: S07
+- desc: '*power'
+  persid: S07
+- desc: my power didn't go off but my building decided to lose a lot of its siding,
+    shingles, and outside support lol
+  persid: S04
+- desc: PUPPY
+  persid: S04
+- desc: "What is your puppy\u2019s name?"
+  persid: S02
+- desc: Cute dog!
+  persid: S06
+- desc: VERY CUTEEEEEEEEEEEEEEEEEE
+  persid: S08
+- desc: adorable
+  persid: S07
+- desc: Yeah that would be Great!
+  persid: S08
+- desc: yes please
+  persid: S07
+- desc: That would be better
+  persid: S09
+- desc: that'd be good
+  persid: S04
+- desc: Yes please
+  persid: S10
+- desc: sounds good.
+  persid: S11
+- desc: Definitely smoother
+  persid: S09
+- desc: I like having one book marked zoom link
+  persid: S07
+- desc: ya it would be better
+  persid: S12
+- desc: Either is good but having one consistent link is nice
+  persid: S02
+- desc: that would be great
+  persid: S13
+- desc: instead of clicking stuff
+  persid: S07
+- desc: the zoombomb in winter 2020 was partially due to the classroom links not needing
+    anyone to sign-in to view the links
+  persid: S04
+- desc: if it's posted in URCourses it should be fine
+  persid: S04
+- desc: I agree @emily
+  persid: S08
+- desc: yep
+  persid: S14
+- desc: 'yes'
+  persid: S08
+- desc: 'no'
+  persid: S15
+- desc: i'm sorry, i missed the question.
+  persid: S04
+- desc: what was the question? I missed it too
+  persid: S03
+- desc: how many values can 1 bit hold?
+  persid: DHH
+- desc: '2'
+  persid: S03
+- desc: 2 values - 0 and 1
+  persid: S04
+- desc: on and off
+  persid: S07
+- desc: 4 values
+  persid: S03
+- desc: '8'
+  persid: S06
+- desc: 16?
+  persid: S04
+- desc: '8'
+  persid: S16
+- desc: 8 values
+  persid: S03
+- desc: '8'
+  persid: S08
+- desc: '32'
+  persid: S07
+- desc: 2^3=8
+  persid: S09
+- desc: we are just answering in advance :)
+  persid: S04
+- desc: haha
+  persid: S08
+- desc: '256'
+  persid: S07
+- desc: '512'
+  persid: S02
+- desc: '1024'
+  persid: S07
+- desc: '2048'
+  persid: S11
+- desc: '2048'
+  persid: S03
+- desc: '2048'
+  persid: S02
+- desc: '4096'
+  persid: S06
+- desc: '4056'
+  persid: S03
+- desc: 2^32 = 4294967296
+  persid: S08
+- desc: 1e+10^9999
+  persid: S07
+- desc: i vote for 00
+  persid: S04
+- desc: '01'
+  persid: S08
+- desc: 0 and 1
+  persid: S13
+- desc: 0 and 1
+  persid: S03
+- desc: '1'
+  persid: S17
+- desc: 3 and 0
+  persid: S13
+- desc: 4,5,6,7
+  persid: S02
+- desc: 'card1: 4 5 6 7 card2: 2 3 6 7  card3:1 3 5 7'
+  persid: S03
+- desc: Each card has a column of yesses.
+  persid: S06
+- desc: yes it does
+  persid: S18
+- desc: 0 - 127
+  persid: S03
+- desc: Have a nice weekend!
+  persid: S02
+- desc: Thanks, you too.
+  persid: S15
+- desc: Thanks!
+  persid: S06
+- desc: have a great weekend!
+  persid: S04
+- desc: thank you
+  persid: S18
+- desc: bye
+  persid: S10
+- desc: Thank you. Bye
+  persid: S03
+- desc: Bye Sir
+  persid: S08
+- desc: Have a good weekend
+  persid: S09
