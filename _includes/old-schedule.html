@@ -1,0 +1,194 @@
+{%- comment -%}
+data file can't seem to start with a number -- prepend s (for example)
+{%- endcomment -%}
+{%- capture semfile -%}s{{page.sem}}{%- endcapture -%}
+{%- if site.data.teaching.schedule[semfile]-%}
+  {%- assign sched = "" -%}
+  {%- for r in site.data.teaching.schedule[semfile]-%}
+    {%- assign rts = "" -%}
+    {%- capture rts -%}{{rts}}{{r.Times}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Monday}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Tuesday}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Wednesday}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Thursday}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Friday}},{%- endcapture -%}
+    {%- capture sched -%}{{sched}}#{{rts}}{%- endcapture -%}
+  {%- endfor -%}
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th><em>Times</em></th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+      </tr>
+    </thead>
+    <tbody>
+  {%- comment -%}
+  {%- endcomment -%}
+  {%- assign schedslot = sched | split: "#" -%}
+  {%- assign spans = ",0,0,0,0,0" -%}
+  {%- assign rows = ",1,1,1,1,1" -%}
+  {%- comment -%}
+    go over the table rows
+  {%- endcomment -%}
+  {% assign tri = schedslot.size | minus: 1 %}
+  {%- for tr in (1..tri) -%}
+    {%- assign trslot = schedslot[tr] | split: "," -%}
+    {%- assign M = trslot[1] -%}
+    {%- assign T = trslot[2] -%}
+    {%- assign W = trslot[3] -%}
+    {%- assign R = trslot[4] -%}
+    {%- assign F = trslot[5] -%}
+    {%- assign spansa = spans | split: "," -%}
+    {%- assign Ms = spansa[1] | plus: 0 -%}
+    {%- assign Ts = spansa[2] | plus: 0 -%}
+    {%- assign Ws = spansa[3] | plus: 0 -%}
+    {%- assign Rs = spansa[4] | plus: 0 -%}
+    {%- assign Fs = spansa[5] | plus: 0 -%}
+    {%- assign rowsa = rows | split: "," -%}
+    {%- assign Mr = rowsa[1] | plus: 0 -%}
+    {%- assign Tr = rowsa[2] | plus: 0 -%}
+    {%- assign Wr = rowsa[3] | plus: 0 -%}
+    {%- assign Rr = rowsa[4] | plus: 0 -%}
+    {%- assign Fr = rowsa[5] | plus: 0 -%}
+    {%- comment -%}
+      go through day columns and find the span and the next starting row
+    {%- endcomment -%}
+    {%- for d in (1..5) -%}
+      {%- assign rd = rowsa[d] | plus: 0 -%}
+      {%- assign same = true -%}
+      {%- if tr == rd -%}
+        {%- for dr in (rd..tri) -%}
+          {%- assign ssa = schedslot[dr] | split: "," -%}
+	        {%- if same == true -%}
+            {%- case d -%}
+              {%- when 1 -%}
+                {%- assign newM = ssa[d] -%}
+                {%- if newM == M -%}
+                  {%- assign Ms = Ms | plus: 1 -%}
+                  {%- assign lastrow = dr -%}
+                {%- else -%}
+                  {%- assign same = false -%}
+                {%- endif -%}
+                {%- assign M = newM -%}
+              {%- when 2 -%}
+                {%- assign newT = ssa[d] -%}
+                {%- if newT == T -%}
+                  {%- assign Ts = Ts | plus: 1 -%}
+                  {%- assign lastrow = dr -%}
+                {%- else -%}
+                  {%- assign same = false -%}
+                {%- endif -%}
+                {%- assign T = newT -%}
+              {%- when 3 -%}
+                {%- assign newW = ssa[d] -%}
+                {%- if newW == W -%}
+                  {%- assign Ws = Ws | plus: 1 -%}
+                  {%- assign lastrow = dr -%}
+                {%- else -%}
+                  {%- assign same = false -%}
+                {%- endif -%}
+                {%- assign W = newW -%}
+              {%- when 4 -%}
+                {%- assign newR = ssa[d] -%}
+                {%- if newR == R -%}
+                  {%- assign Rs = Rs | plus: 1 -%}
+                  {%- assign lastrow = dr -%}
+                {%- else -%}
+                  {%- assign same = false -%}
+                {%- endif -%}
+                {%- assign R = newR -%}
+              {%- when 5 -%}
+                {%- assign newF = ssa[d] -%}
+                {%- if newF == F -%}
+                  {%- assign Fs = Fs | plus: 1 -%}
+                  {%- assign lastrow = dr -%}
+                {%- else -%}
+                  {%- assign same = false -%}
+                {%- endif -%}
+                {%- assign F = newF -%}
+            {%- endcase -%}
+          {%- endif -%}
+          {%- if same == false or lastrow >= tri -%}
+            {%- case d -%}
+              {%- when 1 -%}
+                {%- if lastrow >= tri -%}
+                  {%- comment -%}
+                  {%- assign Ms = tri | plus: 0 -%}
+                  {%- endcomment -%}
+                {%- endif -%}
+                {%- assign Mr = lastrow | plus: 1 -%}
+                {%- continue -%}
+              {%- when 2 -%}
+                {%- if lastrow >= tri -%}
+                {%- endif -%}
+                {%- assign Tr = lastrow | plus: 1 -%}
+                {%- continue -%}
+              {%- when 3 -%}
+                {%- if lastrow >= tri -%}
+                {%- endif -%}
+                {%- assign Wr = lastrow | plus: 1 -%}
+                {%- continue -%}
+              {%- when 4 -%}
+                {%- if lastrow >= tri -%}
+                {%- endif -%}
+                {%- assign Rr = lastrow | plus: 1 -%}
+                {%- continue -%}
+              {%- when 5 -%}
+                {%- if lastrow >= tri -%}
+                {%- endif -%}
+                {%- assign Fr = lastrow | plus: 1 -%}
+                {%- continue -%}
+            {%- endcase -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- capture spans -%},{{Ms}},{{Ts}},{{Ws}},{{Rs}},{{Fs}}{%- endcapture -%}
+        {%- capture rows -%},{{Mr}},{{Tr}},{{Wr}},{{Rr}},{{Fr}}{%- endcapture -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- assign spansa = spans | split: "," -%}
+      <tr>
+        {%- comment -%} time {%- endcomment -%}
+        <td rowspan="1">{{trslot[0]}}</td>
+    {%- for d in (1..5) -%}
+      {%- assign sd = spansa[d] | plus: 0 -%}
+      {%- if sd != 0 -%}
+        {%- comment -%} row span for each day, as required {%- endcomment -%}
+        {%- assign clslab = trslot[d] | split: "_" -%}
+        {%- if clslab[0] == "C" -%}
+          {%- capture clsurl -%}/teaching/{{clslab[1]}}/{{page.sem}}/{%- endcapture -%}
+        <td rowspan="{{sd}}" class="{{clslab[0]}}">
+          <a href="{{ clsurl | relative_url }}" class="btn btn-info btn-md"
+          role="button" target="_blank">
+            {{clslab[1]}}
+          </a>
+        </td>
+        {%- else -%}
+        <td rowspan="{{sd}}" class="{{clslab[0]}}">{{clslab[1]}}</td>
+        {%- endif -%}
+      {%- endif -%}
+      {%- case d -%}
+        {%- when 1 -%}
+          {%- assign Ms = 0 -%}
+        {%- when 2 -%}
+          {%- assign Ts = 0 -%}
+        {%- when 3 -%}
+          {%- assign Ws = 0 -%}
+        {%- when 4 -%}
+          {%- assign Rs = 0 -%}
+        {%- when 5 -%}
+          {%- assign Fs = 0 -%}
+      {%- endcase -%}
+    {%- endfor -%}
+    {%- capture spans -%},{{Ms}},{{Ts}},{{Ws}},{{Rs}},{{Fs}}{%- endcapture -%}
+      </tr>
+  {%- endfor -%}
+    </tbody>
+  </table>
+</div>
+{%- endif -%}
