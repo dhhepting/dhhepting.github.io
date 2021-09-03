@@ -14,9 +14,10 @@
   {% assign crs_sem = url_parts[sem_idx] %}
   {% capture crs_id %}{{crs_sbj}}-{{crs_nbr}}{% endcapture %}
   {% capture jcrs_id %}{{crs_id | replace: "+", "_"}}{% endcapture %}
-  {% for c in site.data.teaching.courses %}
-    {% if crs_id == c.id %}
+  {% for c in site.data.teaching.offerings %}
+    {% if crs_id == c.id and crs_sem == c.semester %}
       {% assign crs_urc = c.urc %}
+      URC: {{ crs_urc }}
     {% endif %}
   {% endfor %}
   {% capture off_id %}{{crs_id}}-{{crs_sem}}{% endcapture %}
