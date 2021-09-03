@@ -2,10 +2,33 @@
 {% assign mtn = include.mtg | prepend: '00' | slice: -2, 2  %}
 {% assign response = site.data.teaching[jcrs_id][crs_sem]responses[mtn] %}
 
-{%- if response.cooked != nil -%}
+{%- if response.important != nil -%}
+<h6>
+  Most Important:
+</h6>
   {%-
     include meetings/transcript-yaml-body.html
-    test=response.cooked
+    test=response.important
+  -%}
+{%- endif %}
+
+{%- if response.difficult != nil -%}
+<h6>
+  Most Difficult:
+</h6>
+  {%-
+    include meetings/transcript-yaml-body.html
+    test=response.difficult
+  -%}
+{%- endif %}
+
+{%- if response.know-more != nil -%}
+<h6>
+  Want to Know More:
+</h6>
+  {%-
+    include meetings/transcript-yaml-body.html
+    test=response.know-more
   -%}
 {%- endif %}
 
