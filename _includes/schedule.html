@@ -7,11 +7,11 @@ data file can't seem to start with a number -- prepend s (for example)
   {%- for r in site.data.teaching.schedule[semfile]-%}
     {%- assign rts = "" -%}
     {%- capture rts -%}{{rts}}{{r.Times}},{%- endcapture -%}
-    {%- capture rts -%}{{rts}}{{r.Monday}},{%- endcapture -%}
-    {%- capture rts -%}{{rts}}{{r.Tuesday}},{%- endcapture -%}
-    {%- capture rts -%}{{rts}}{{r.Wednesday}},{%- endcapture -%}
-    {%- capture rts -%}{{rts}}{{r.Thursday}},{%- endcapture -%}
-    {%- capture rts -%}{{rts}}{{r.Friday}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Mon}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Tue}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Wed}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Thu}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Fri}},{%- endcapture -%}
     {%- capture sched -%}{{sched}}#{{rts}}{%- endcapture -%}
   {%- endfor -%}
 
@@ -20,11 +20,11 @@ data file can't seem to start with a number -- prepend s (for example)
     <thead>
       <tr>
         <th><em>Times</em></th>
-        <th>Monday</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-        <th>Thursday</th>
-        <th>Friday</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
       </tr>
     </thead>
     <tbody>

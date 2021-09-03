@@ -44,9 +44,15 @@ except OSError as e:
 summfile = summdir + '/' + sys.argv[2].zfill(2) + '.yml'
 joff_id = jcrs_id + '-' + reldir[1]
 
-
-with open(summfile, 'r') as yaml_file:
-    d = yaml.safe_load(yaml_file)
+try:
+    with open(summfile, 'x') as yaml_file:
+        d['offering'] = {}
+        d['offering']['id'] = joff_id
+        yaml.safe_dump(d, yaml_file, default_flow_style=False)
+except:
+    print(sys.argv[0],': ', summfile, 'exists')
+    with open(summfile, 'r') as yaml_file:
+        d = yaml.safe_load(yaml_file)
 
 
 ng = {}
@@ -56,6 +62,7 @@ if ('Zoom-Audio-Transcript' not in d):
     ospkr = ''
     msgstr = ''
     VTT_SRC = DL_DIR + joff_id + '/' + sys.argv[2].zfill(2) + '.vtt'
+    print(VTT_SRC)
     for caption in webvtt.read(VTT_SRC):
         txtseg = caption.text.split(':')
         tsl = len(txtseg)
@@ -71,7 +78,7 @@ if ('Zoom-Audio-Transcript' not in d):
                 if snamekey not in ng:
                     ng[snamekey] = seqnbr
                     seqnbr += 1
-                if snamekey == 'Daryl Hepting':
+                if snamekey == 'Daryl Hepting' or snamekey == 'Daryl (heptingd)':
                     person_id = 'DHH'
                 elif snamekey == 'Unknown':
                     person_id = '???'
@@ -100,7 +107,7 @@ if ('Zoom-Chat-Transcript' not in d):
                 if snamekey not in ng:
                     ng[snamekey] = seqnbr
                     seqnbr += 1
-                if snamekey == 'Daryl Hepting':
+                if snamekey == 'Daryl Hepting' or snamekey == 'Daryl (heptingd)':
                     person_id = 'DHH'
                 else:
                     person_id = 'S'+str(ng[snamekey]).zfill(2)

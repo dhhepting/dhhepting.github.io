@@ -45,10 +45,16 @@ meet_template = { "CS" : """
 </div>"""
 }
 
+# Make sure that script is executed properly: i.e. 201830
+if (len(sys.argv) != 2):
+    print(sys.argv[0], 'must be invoked with <semester>')
+    sys.exit()
+currsem = sys.argv[1]
 #nine_hours_from_now = datetime.now() + timedelta(hours=9)
 #datetime.datetime(2012, 12, 3, 23, 24, 31, 774118)
 #datetime.datetime(tomorrow.year, tomorrow.month, tomorrow.day, 12, 0, 0)
 
+# make time slots for semester schedule, indicate all as empty (E_)
 midnight = datetime(
             datetime.now().year,
             datetime.now().month,
@@ -56,41 +62,84 @@ midnight = datetime(
             0, 0, 0)
 start_time = midnight + timedelta(hours=8,minutes=30)
 end_time = midnight + timedelta(hours=17,minutes=30)
-#print(start_time, end_time)
 slot_st = start_time
 slot_et = slot_st + timedelta(minutes=30)
-print(datetime.strftime(slot_st, "%H:%M") + '-' + datetime.strftime(slot_et, "%H:%M"))
-while (slot_et < end_time):
+tslots = {}
+alldays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+while (slot_et <= end_time):
+    tslot = datetime.strftime(slot_st, "%H:%M") + '-' + datetime.strftime(slot_et, "%H:%M")
+    tsk = datetime.strftime(slot_st, "%H:%M")
+    tslots[tsk] = {'Times': tslot,
+                   'Mon': 'E_', 'Tue': 'E_', 'Wed': 'E_',
+                   'Thu': 'E_', 'Fri': 'E_', 'Sat': 'E_' }
     slot_st += timedelta(minutes=30)
     slot_et += timedelta(minutes=30)
-    #print(slot_st, slot_et)
-    print(datetime.strftime(slot_st, "%H:%M") + '-' + datetime.strftime(slot_et, "%H:%M"))
-sys.exit()
 
-# Make sure that script is executed properly: i.e. CS-428+828/201830
-if (len(sys.argv) != 2):
-	print(sys.argv[0], 'must be invoked with <course>/<semester>')
-	sys.exit()
-
-reldir = (sys.argv[1]).split('/')
-if (len(reldir) != 2):
-	print(sys.argv[0], 'must be invoked with <course>/<semester>')
-	sys.exit()
-
-# find offering indicated by arguments and load meeting days
+# find course offerings for indicated semester
 with open(SITE_DIR + '_data/teaching/offerings.csv', newline='') as offfile:
     offreader = csv.DictReader(offfile)
-    off_found = 0
+    semoff_found = 0
     for row in offreader:
-        if (row['semester'] == reldir[1] and row['id'] == reldir[0]):
-            off_found = 1
-            # load necessary info, if offering not found then quit
+        if (row['semester'] == currsem):
+            semoff_found = 1
+            crsid = row['id']
             mtgdays = row['mdays'].split(',')
-if off_found == 0:
-    print(sys.argv[0], ':', sys.argv[1], '- course and semester not found in offerings file')
+            mtgtimes = row['times'].split('-')
+            for tk in tslots:
+                if tk >= mtgtimes[0] and tk < mtgtimes[1]:
+                    for i in range(len(mtgdays)):
+                        if (tslots[tk])[mtgdays[i]] == 'E_':
+                            (tslots[tk])[mtgdays[i]] = 'C_' + crsid
+if semoff_found == 0:
+    print(sys.argv[0], ':', 'no offerings found for this semester.')
     sys.exit()
 
+# add office hours
+
+# add extra meetings
+
+# switch 'E_' (empty) to 'B_' (busy)
+
+for tk in tslots:
+    for i in range(len(alldays)):
+        if (tslots[tk])[alldays[i]] == 'E_':
+            (tslots[tk])[alldays[i]] = 'B_'
+
+# write out semester schedule data as csv
+#  /Users/hepting/Sites/dhhepting.github.io/_data/teaching/schedule/s201830.csv
+semschedstr = SITE_DIR + '_data/teaching/schedule/s' + sys.argv[1] + '.csv'
+with open(semschedstr, 'w', newline='') as csvfile:
+    fieldnames = ['Times','Mon','Tue','Wed','Thu','Fri','Sat']
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+    writer.writeheader()
+    slot_st = start_time
+    slot_et = slot_st + timedelta(minutes=30)
+    while (slot_st < end_time):
+        tsk = datetime.strftime(slot_st, "%H:%M")
+        writer.writerow(tslots[tsk])
+        slot_st += timedelta(minutes=30)
+        #slot_et += timedelta(minutes=30)
+
+semschedmd = SITE_DIR + MD_ROOT + 'schedule/' + sys.argv[1] + '.md'
+with open(semschedmd,"w") as schedmd:
+    schedmd.write("---\n")
+    semsea = "None"
+    if (sys.argv[1][-2:] == "10"):
+        semsea = "Winter"
+    elif (sys.argv[1][-2:] == "20"):
+        semsea = "Spring/Summer"
+    elif (sys.argv[1][-2:] == "30"):
+        semsea = "Fall"
+    schedmd.write("title: " + semsea + sys.argv[1][0:4] + "Schedule\n")
+    #schedmd.write("breadcrumb: " + reldir[1] + "\n")
+    #offidx.write("sem: " + reldir[1] + "\n")
+    schedmd.write("layout: bg-image\n")
+    schedmd.write("---\n")
+    schedmd.write("{% include schedule.html %}\n")
+
 # if offering is found, use semester data to make meetings list
+"""
 with open(SITE_DIR + '_data/teaching/semesters.csv', newline='') as semfile:
     semreader = csv.DictReader(semfile)
     sem_found = 0
@@ -155,3 +204,4 @@ try:
             print('exceptions')
 except:
     print(sys.argv[0],': plan.yml exists')
+"""

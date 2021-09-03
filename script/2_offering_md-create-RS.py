@@ -77,10 +77,10 @@ except OSError as e:
         pass
     else:
         raise
-#offidxstr = offdirstr + 'index.md'
-"""with open(offidxstr,"w") as offidx:
+offidxstr = offdirstr + 'index.md'
+with open(offidxstr,"w") as offidx:
     offidx.write("---\n")
-    #print(reldir[1][-2:])
+    print(reldir[1][-2:])
     semsea = "None"
     if (reldir[1][-2:] == "10"):
         semsea = "Winter"
@@ -94,17 +94,15 @@ except OSError as e:
     offidx.write("layout: bg-image\n")
     offidx.write("---\n")
     offidx.write("{% include offering/main.html %}\n")
-"""
 mdirstr = offdirstr + 'meetings/'
 try:
-    os.makedirs(offdirstr)
+    os.makedirs(mdirstr)
 except OSError as e:
-    if e.errno == errno.EEXIST and os.path.isdir(offdirstr):
+    if e.errno == errno.EEXIST and os.path.isdir(mdirstr):
         pass
     else:
         raise
 
-"""
 midxstr = mdirstr + 'index.md'
 with open(midxstr,"w") as mtgidx:
     mtgidx.write("---\n")
@@ -113,20 +111,21 @@ with open(midxstr,"w") as mtgidx:
     mtgidx.write("layout: bg-image\n")
     mtgidx.write("---\n")
     mtgidx.write("{% include offering/mtgs-grid.html %}\n")
-"""
+
 with open(SITE_DIR + DATA_ROOT + reldir[0].replace('+', '_') + '/' + reldir[1] + '/meetings.csv', newline='') as mmmfile:
     mmmreader = csv.DictReader(mmmfile)
     for row in mmmreader:
-        #print(row['file'])
+        print(row['file'])
         mfilestr = mdirstr + row['file'].replace(".html",".md")
         m = row['meeting']
         rfilestr = mdirstr + str(m).zfill(2) + "_R.md"
         sfilestr = mdirstr + str(m).zfill(2) + "_S.md"
 
         tm = row['total_mtgs']
-        #print((row['file']).split('_','.'))
-        #mtg_date = row['date']
-        ##nbr_meetings = tm
+        #print(str((row['file']).split('_','.')))
+        mtg_date = row['date']
+        nbr_meetings = tm
+
         with open(rfilestr,"w") as rmtgfile:
             rmtgfile.write("---\n")
             rmtgfile.write("title: Responses to Mtg " + str(m) + " &bull; " + reldir[0] +  " (" + reldir[1] + ")\n")
@@ -145,7 +144,6 @@ with open(SITE_DIR + DATA_ROOT + reldir[0].replace('+', '_') + '/' + reldir[1] +
             smtgfile.write("---\n")
             smtgfile.write(meet_template["S"])
 
-"""
         with open(mfilestr,"w") as mtgfile:
             mtgfile.write("---\n")
             mtgfile.write("title: Mtg " + str(m) + " &bull; " + reldir[0] +  " (" + reldir[1] + ")\n")
@@ -156,4 +154,3 @@ with open(SITE_DIR + DATA_ROOT + reldir[0].replace('+', '_') + '/' + reldir[1] +
             mtgfile.write("layout: bg-image\n")
             mtgfile.write("---\n")
             mtgfile.write(meet_template["CS"])
-"""
