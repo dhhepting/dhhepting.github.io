@@ -2569,6 +2569,11 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201730/"
   },{
+    "title": "CS 428+828 (202030) Assignments",
+    "text": "{% include offering/asgn-grid.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/202130/assignments/"
+  },{
     "title": "CS-428+828 (202130) Meetings",
     "text": "{% include offering/mtgs-grid.html %}",
     "tags": "",
