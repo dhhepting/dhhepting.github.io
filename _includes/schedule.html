@@ -3,6 +3,7 @@ data file can't seem to start with a number -- prepend s (for example)
 {%- endcomment -%}
 {%- capture semfile -%}s{{page.sem}}{%- endcapture -%}
 {%- if site.data.teaching.schedule[semfile]-%}
+  {{ SEMFILE FOUND }}
   {%- assign sched = "" -%}
   {%- for r in site.data.teaching.schedule[semfile]-%}
     {%- assign rts = "" -%}
