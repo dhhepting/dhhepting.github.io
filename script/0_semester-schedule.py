@@ -15,36 +15,6 @@ MD_ROOT = "teaching/"
 HTML_ROOT = "_site/teaching/"
 DATA_ROOT = "_data/teaching/"
 
-meet_template = { "CS" : """
-{% include meetings/pagination.html tm=page.total_meet cm=page.mtg_nbr %}
-<div class="card">
-    <div class="card card-header lightcthru">
-        <h1>
-            {{ page.mtg_date | date: '%a-%d-%b-%Y' }}
-        </h1>
-    </div>
-    <div class="card card-body">
-        {% include meetings/plan.html mtg=page.mtg_nbr %}
-
-        {% include meetings/admin-0-open.html %}
-        {% include meetings/ul-1-close.html %}
-
-        {% include meetings/quest-0-open.html %}
-        {% include meetings/ul-1-close.html %}
-
-        {% include meetings/outline-0-open.html %}
-        {% include meetings/ul-1-close.html %}
-
-        {% include meetings/concluding-0-open.html %}
-        {% include meetings/ul-1-close.html %}
-
-        {% include meetings/annotations.html %}
-
-        {% include meetings/media.html mtg_media=joff_id mtg=page.mtg_nbr %}
-    </div>
-</div>"""
-}
-
 # Make sure that script is executed properly: i.e. 201830
 if (len(sys.argv) != 2):
     print(sys.argv[0], 'must be invoked with <semester>')
@@ -65,13 +35,13 @@ end_time = midnight + timedelta(hours=17,minutes=30)
 slot_st = start_time
 slot_et = slot_st + timedelta(minutes=30)
 tslots = {}
-alldays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+alldays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri']
 while (slot_et <= end_time):
     tslot = datetime.strftime(slot_st, "%H:%M") + '-' + datetime.strftime(slot_et, "%H:%M")
     tsk = datetime.strftime(slot_st, "%H:%M")
     tslots[tsk] = {'Times': tslot,
                    'Mon': 'E_', 'Tue': 'E_', 'Wed': 'E_',
-                   'Thu': 'E_', 'Fri': 'E_', 'Sat': 'E_' }
+                   'Thu': 'E_', 'Fri': 'E_' }
     slot_st += timedelta(minutes=30)
     slot_et += timedelta(minutes=30)
 
@@ -109,7 +79,7 @@ for tk in tslots:
 #  /Users/hepting/Sites/dhhepting.github.io/_data/teaching/schedule/s201830.csv
 semschedstr = SITE_DIR + '_data/teaching/schedule/s' + sys.argv[1] + '.csv'
 with open(semschedstr, 'w', newline='') as csvfile:
-    fieldnames = ['Times','Mon','Tue','Wed','Thu','Fri','Sat']
+    fieldnames = ['Times','Mon','Tue','Wed','Thu','Fri']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
     writer.writeheader()

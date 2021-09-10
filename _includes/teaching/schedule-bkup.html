@@ -166,6 +166,30 @@
           role="button" target="_blank">
             DHH
           </a>
+          {% assign urcid = 0 %}
+          {% for c in site.data.teaching.offerings %}
+          {% comment %}
+          {% if c.id == clslab[1] %}
+            IDMATCH
+          {% endif %}
+{{ page.sem | plus: 0}} and {{ c.semester | plus:0}}
+          {% if c.semester == page.sem %}
+              SEMMATCH-0
+          {% endif %}
+          {% if c.semester == {{ page.sem | plus: 0}} %}
+              SEMMATCH-1
+          {% endif %}
+          {% if {{ c.semester | plus: 0 }} == {{ page.sem | plus: 0}} %}
+              SEMMATCH-2
+          {% endif %}
+
+          {% if c.id == clslab[1] and c.semester == {{ page.sem | plus: 0}} %}
+              MATCH
+              {% assign urcid = c.urc %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+          {% endcomment %}
           {% assign urcid = 20981 %}
           {% if urcid != 0 %}
           <a href="https://urcourses.uregina.ca/course/view.php?id={{ urcid }}" class="btn btn-info btn-md"
