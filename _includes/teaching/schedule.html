@@ -4,11 +4,11 @@
   {%- for r in site.data.teaching.schedule[semfile]-%}
     {%- assign rts = "" -%}
     {%- capture rts -%}{{rts}}{{r.Times}},{%- endcapture -%}
-    {%- capture rts -%}{{rts}}{{r.Monday}},{%- endcapture -%}
-    {%- capture rts -%}{{rts}}{{r.Tuesday}},{%- endcapture -%}
-    {%- capture rts -%}{{rts}}{{r.Wednesday}},{%- endcapture -%}
-    {%- capture rts -%}{{rts}}{{r.Thursday}},{%- endcapture -%}
-    {%- capture rts -%}{{rts}}{{r.Friday}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Mon}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Tue}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Wed}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Thu}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Fri}},{%- endcapture -%}
     {%- capture sched -%}{{sched}}#{{rts}}{%- endcapture -%}
   {%- endfor %}
 
@@ -157,6 +157,7 @@
       {%- if sd != 0 -%}
         {%- comment -%} row span for each day, as required {%- endcomment -%}
         {%- assign clslab = trslot[d] | split: "_" -%}
+        {{ clslab[0] }} {{ clslab[1] }}
         {%- if clslab[0] == "C" -%}
           {%- capture clsurl -%}/teaching/{{clslab[1]}}/{{page.sem}}/{%- endcapture -%}
         <td rowspan="{{sd}}" class="{{clslab[0]}}">
@@ -165,13 +166,7 @@
           role="button" target="_blank">
             DHH
           </a>
-          {% assign urcid = 0 %}
-          {% for c in site.data.teaching.courses %}
-            {% if clslab[1] == c.id %}
-              {% assign urcid = c.urc %}
-              {% break %}
-            {% endif %}
-          {% endfor %}
+          {% assign urcid = 20981 %}
           {% if urcid != 0 %}
           <a href="https://urcourses.uregina.ca/course/view.php?id={{ urcid }}" class="btn btn-info btn-md"
           role="button" target="_blank">

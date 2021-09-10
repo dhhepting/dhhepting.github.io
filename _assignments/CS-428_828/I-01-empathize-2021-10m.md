@@ -2,19 +2,19 @@
 title: Empathize
 breadcrumb: Empathize
 layout: bg-image
-moddate: 08-Sep-2021
+moddate: 09-Sep-2021
 marks: 10
-aid: I_EMPATHIZE
+aid: I_EMPATHY
 asem: 202130
 rubric:
 - crit: Activity Described
-  wt: 1.0
+  wt: 2.0
   l3: Includes everything as requested
   l2: Includes mostly all as requested
   l1: Not described as requested
   l0: Not described
 - crit: Activity Completed
-  wt: 3.0
+  wt: 2.0
   l3: Everything done as requested
   l2: Mostly done as requested
   l1: Not done as requested
@@ -38,9 +38,12 @@ This is an INDIVIDUAL assignment.
 
 You have been made a TEACHER in a [course on UR Courses](https://urcourses.uregina.ca/course/view.php?id=21179), so that you can gain a different perspective on UR Courses (because you are normally a STUDENT).
 
-For this assignment, please define and describe an activity that meets the requirements below. As you complete your activity with the UR Courses interface, reflect on your experience.
+For this assignment, please define and describe an activity that a teacher could create for their students that includes one UR Courses "activity"
+that allows a grade to be assigned upon completion and one UR Courses "resource" whose access is restricted based on the grade earned on the "activity". As you complete your activity with the UR Courses interface, reflect on your experience.
 
 Specifically, you are asked to:
+
+1. Define and describe an activity that meets the requirements
 
 1. Create an [empathy map](https://www.nngroup.com/articles/empathy-mapping/) while you complete your activity within
 [your course on UR Courses](https://urcourses.uregina.ca/course/view.php?id=21179):

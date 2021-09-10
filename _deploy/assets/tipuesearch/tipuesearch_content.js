@@ -1134,8 +1134,8 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/schedule/202110.html"
   },{
-    "title": "Fall2021Schedule",
-    "text": "{% include schedule.html %}",
+    "title": "Fall 2021 Schedule",
+    "text": "{% include teaching/semester.html %} {% include teaching/schedule.html %}",
     "tags": "",
     "url": "/~hepting/teaching/schedule/202130.html"
   },{
@@ -2569,7 +2569,7 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201730/"
   },{
-    "title": "CS 428+828 (202030) Assignments",
+    "title": "CS 428+828 (202130) Assignments",
     "text": "{% include offering/asgn-grid.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/assignments/"
