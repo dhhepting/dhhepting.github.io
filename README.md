@@ -20,8 +20,11 @@ My personal website, built with Jekyll.
         * media
         * syllabus
         * feedback from students
-        
-   At the start of a new semester, do the following:
+
+   At the start of a new semester:
+   * create new entries in _data/teaching/semesters.csv and _data/teaching/offerings.csv as needed
+   * run script/1_offering_data-create.py to create data files needed for offering
+   * run script/2_offering_md-create.py to create markdown files for offering (meetings, responses, and summaries, assignments index)
    * create (or duplicate) a csv file for the semester schedule _data/teaching/schedule/s202010.csv (I found that jekyll does not like files that start with digits, I start these (and other data file names) with a character).
 
 ### /rss/
