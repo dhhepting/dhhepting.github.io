@@ -17,11 +17,11 @@
     <thead>
       <tr>
         <th><em>Times</em></th>
-        <th>Monday</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-        <th>Thursday</th>
-        <th>Friday</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
       </tr>
     </thead>
     <tbody>
@@ -157,7 +157,6 @@
       {%- if sd != 0 -%}
         {%- comment -%} row span for each day, as required {%- endcomment -%}
         {%- assign clslab = trslot[d] | split: "_" -%}
-        {{ clslab[0] }} {{ clslab[1] }}
         {%- if clslab[0] == "C" -%}
           {%- capture clsurl -%}/teaching/{{clslab[1]}}/{{page.sem}}/{%- endcapture -%}
         <td rowspan="{{sd}}" class="{{clslab[0]}}">
