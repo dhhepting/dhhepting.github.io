@@ -85,7 +85,7 @@ with open(semschedmd,"w") as schedmd:
                     for tk in tslots:
                         if tk >= otimes[0] and tk < otimes[1]:
                             if (tslots[tk])[oday] == 'E_':
-                                (tslots[tk])[oday] = 'O_'
+                                (tslots[tk])[oday] = 'O_Office'
                                 print ("officeblocks")
                             else:
                                 print('overlap')
