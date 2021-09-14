@@ -1,4 +1,6 @@
-{% include teaching/url.html %}
+{% comment %}
+  {% include teaching/url.html %}
+{% endcomment %}
 {% assign tlooff = site.data.teaching[jcrs_id][crs_sem]tlo -%}
 {%- if tlooff -%}
   {%- include offering/tlo-explanation.html -%}
