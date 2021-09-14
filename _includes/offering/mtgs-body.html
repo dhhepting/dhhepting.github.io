@@ -1,6 +1,6 @@
-
-{% include teaching/url.html %}
-
+{% comment %}
+  {% include teaching/url.html %}
+{% endcomment %}
 {%- assign todaydate = "now" | date: "%a-%d-%b-%Y" -%}
 {%- assign tddarr = todaydate | split: "-" -%}
 {%- assign tddmmm = tddarr[2] | date: "%m" | plus: 0 | times: 100 -%}

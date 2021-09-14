@@ -1,4 +1,6 @@
-{% include teaching/url.html %}
+{% comment %}
+  {% include teaching/url.html %}
+{% endcomment %}
 {% assign mtn = include.mtg | prepend: '00' | slice: -2, 2  %}
 {% assign response = site.data.teaching[jcrs_id][crs_sem]responses[mtn] %}
 
