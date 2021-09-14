@@ -1,4 +1,6 @@
-{%- include teaching/url.html %}
+{% comment %}
+  {% include teaching/url.html %}
+{% endcomment %}
 {%- assign mtn = page.mtg_nbr | prepend: '00' | slice: -2, 2  %}
 <div class="card">
   <!-- Meeting Date as card header -->
