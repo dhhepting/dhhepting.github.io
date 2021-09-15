@@ -17,7 +17,7 @@
   {% for c in site.data.teaching.offerings %}
     {% if crs_id == c.id and crs_sem == c.semester %}
       {% assign crs_urc = c.urc %}
-      URC: {{ crs_urc }}
+      {% comment %} URC: {{ crs_urc }}{% endcomment %}
     {% endif %}
   {% endfor %}
   {% capture off_id %}{{crs_id}}-{{crs_sem}}{% endcapture %}
