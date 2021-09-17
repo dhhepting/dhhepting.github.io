@@ -1,7 +1,6 @@
 ---
-title: CS 280 in Winter 2019
-breadcrumb: 201910
+title: CS 325 in Winter 201110
+breadcrumb: 201110
 layout: bg-image
 ---
-
 {% include offering/main.html %}

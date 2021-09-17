@@ -11,11 +11,11 @@ https://stackoverflow.com/questions/49282135/simulating-rowspan-on-table-using-f
   {%- for r in site.data.teaching.schedule[semfile]-%}
     {%- assign rts = "" -%}
     {%- capture rts -%}{{rts}}{{r.Times}},{%- endcapture -%}
-    {%- capture rts -%}{{rts}}{{r.Monday}},{%- endcapture -%}
-    {%- capture rts -%}{{rts}}{{r.Tuesday}},{%- endcapture -%}
-    {%- capture rts -%}{{rts}}{{r.Wednesday}},{%- endcapture -%}
-    {%- capture rts -%}{{rts}}{{r.Thursday}},{%- endcapture -%}
-    {%- capture rts -%}{{rts}}{{r.Friday}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Mon}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Tue}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Wed}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Thu}},{%- endcapture -%}
+    {%- capture rts -%}{{rts}}{{r.Fri}},{%- endcapture -%}
     {%- capture sched -%}{{sched}}#{{rts}}{%- endcapture -%}
   {%- endfor -%}
 

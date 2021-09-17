@@ -1094,28 +1094,23 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/19_Tue-23-Mar-2021.html"
   },{
-    "title": "Winter 2018",
-    "text": "# {{page.breadcrumb }} First day of term: January 8, 2018 Last day of term: April 13, 2018 Courses taught: CS 110 &mdash; Programming and Problem Solving CS 205 &mdash; Multimedia Systems CS 499+900 &mdash; Seminars Times Monday Tuesday Wednesday Thursday Friday 08h30 CS 205 (Busy) CS 205 (Busy) CS 205 09h00 09h30 Office Hours Office Hours Meeting Meeting 10h00 10h30 11h00 (Busy) (Busy) (Busy) 11h30 12h00 (Meeting) 12h30 CS 110 (Busy) CS 110 CS 110 13h00 13h30 14h00 Meeting 14h30 CS 499+900 Meeting CS 499+900 CS 499+900 15h00 Office Hours 15h30 Meeting Office Hours (Busy) 16h00 (Busy) 16h30 (Busy)",
-    "tags": "",
-    "url": "/~hepting/teaching/schedule/201810.html"
-  },{
-    "title": "Fall 2018",
-    "text": "# {{page.breadcrumb }} First day of classes: September 5, 2018 Last day of classes: December 6, 2018 Courses taught: CS 428+828: Human Computer Communication {% include teaching/schedule.html %}",
+    "title": "Fall 2018 Schedule",
+    "text": "{% include teaching/semester.html %} {% include teaching/schedule.html %}",
     "tags": "",
     "url": "/~hepting/teaching/schedule/201830.html"
   },{
     "title": "Winter 2019 Schedule",
-    "text": "# {{page.breadcrumb }} First day of classes: {{ page.firstdate }} Last day of classes: {{ page.lastdate }} Courses taught: CS 205 : Introduction to Multimedia Systems CS 280 : Risk and Reward in the Information Society {% include teaching/schedule.html %}",
+    "text": "{% include teaching/semester.html %} {% include teaching/schedule.html %}",
     "tags": "",
     "url": "/~hepting/teaching/schedule/201910.html"
   },{
     "title": "Spring/Summer 2019 Schedule",
-    "text": "# {{page.breadcrumb }} First day of classes: {{ page.firstdate }} Last day of classes: {{ page.lastdate }} Courses taught: CS 499+900 : Seminars {% include teaching/schedule.html %}",
+    "text": "{% include teaching/semester.html %} {% include teaching/schedule.html %}",
     "tags": "",
     "url": "/~hepting/teaching/schedule/201920.html"
   },{
     "title": "Fall 2019 Schedule",
-    "text": "# {{page.breadcrumb }} {%- include teaching/semester-data.html -%} Important Dates: First day of term: {{ semdat.term-start | date: '%a-%d-%b-%Y'}} Last day of classes: {{ semdat.class-end | date: '%a-%d-%b-%Y'}} Last day of term: {{ semdat.term-end | date: '%a-%d-%b-%Y'}} {% assign offs = \"\" %} {% assign psn = page.sem | plus: 0 %} {% for o in site.data.teaching.offerings %} {% assign osn = o.semester | plus: 0 %} {% if osn == psn %} {% capture offs %}{{offs}}#{{o.id}}{% endcapture %} {% endif %} {% endfor %} {% assign soffs = offs | split: \"#\" | sort %} {% if soffs.size > 0 %} Courses Taught: {% for o in soffs %} {% if o != \"\" %} {% assign crss = site.data.teaching.courses | where: \"id\", o %} {% capture soff_url %}/teaching/{{ o }}/{{ page.sem }}{% endcapture %} {{ crss[0].id }} : {{ crss[0].name }} {% endif %} {% endfor %} {% endif %} {%- if page.officeblocks -%} Office Hours: {%- for ob in page.officeblocks -%} {{ ob.day }}s from {{ ob.open | date: '%H:%M'}} until {{ ob.close | date: '%H:%M'}} Chat Video {%- endfor -%} Request an appointment outside of office hours {% endif %} {% include teaching/schedule.html %}",
+    "text": "{%- include teaching/semester.html -%} {%- include teaching/schedule.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/schedule/201930.html"
   },{
@@ -1900,87 +1895,87 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-280/202010/exams.html"
   },{
     "title": "CS 205 Feedback (202010)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-205/202010/feedback.html"
   },{
     "title": "CS 205 Feedback (201910)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-205/201910/feedback.html"
   },{
     "title": "CS 280 Feedback (201310)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/201310/feedback.html"
   },{
     "title": "CS 280 Feedback (202010)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202010/feedback.html"
   },{
     "title": "CS 280 Feedback (201510)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/201510/feedback.html"
   },{
     "title": "CS 280 Feedback (201610)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/201610/feedback.html"
   },{
     "title": "CS 280 Feedback (201910)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/201910/feedback.html"
   },{
     "title": "CS 280 Feedback (201710)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/201710/feedback.html"
   },{
     "title": "CS 305+828 Feedback (201430)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-305+828/201430/feedback.html"
   },{
     "title": "CS 305+828 Feedback (201330)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-305+828/201330/feedback.html"
   },{
     "title": "CS 305 Feedback (201230)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-305/201230/feedback.html"
   },{
     "title": "CS 428+828 Feedback (201730)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201730/feedback.html"
   },{
     "title": "CS 428+828 Feedback (201930)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201930/feedback.html"
   },{
     "title": "CS 428+828 Feedback (201630)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201630/feedback.html"
   },{
     "title": "CS 428+828 Feedback (201830)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/feedback.html"
   },{
     "title": "CS 110 Feedback (201810)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-110/201810/feedback.html"
   },{
     "title": "CS 110 Feedback (201510)",
-    "text": "{% include feedback/data.html %}",
+    "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-110/201510/feedback.html"
   },{
@@ -2219,8 +2214,8 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-205/201710/"
   },{
-    "title": "CS 205 (Introduction to Multimedia Systems)",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "title": "CS 205",
+    "text": "{% include course/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-205/"
   },{
@@ -2249,8 +2244,8 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-330/200430/"
   },{
-    "title": "CS 330 (Introduction to Operating Systems)",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "title": "CS 330",
+    "text": "{% include course/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-330/"
   },{
@@ -2329,8 +2324,8 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-280/201710/"
   },{
-    "title": "CS 280 (Risk and Reward in the Information Society)",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "title": "CS 280",
+    "text": "{% include course/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/"
   },{
@@ -2339,32 +2334,32 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-890/"
   },{
-    "title": "CS 280 in Winter 2019",
+    "title": "CS 325 in Fall 2012",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-325/201230/"
   },{
-    "title": "CS 280 in Winter 2019",
+    "title": "CS 325 in Winter 2014",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-325/201410/"
   },{
-    "title": "CS 280 in Winter 2019",
+    "title": "CS 325 in Winter 201110",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-325/201110/"
   },{
-    "title": "CS 280 in Winter 2019",
+    "title": "CS 325 in Fall 2005",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-325/200530/"
   },{
-    "title": "CS 280 in Winter 2019",
+    "title": "CS 325 in Fall 2003",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-325/200330/"
   },{
-    "title": "CS 280 in Winter 2019",
+    "title": "CS 325 in Fall 2004",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-325/200430/"
@@ -2374,23 +2369,23 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-325/200230/"
   },{
-    "title": "CS 280 in Winter 2019",
+    "title": "CS 325 in Fall 2006",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-325/200630/"
   },{
-    "title": "CS 325 (Introduction to Multimedia Systems)",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "title": "CS 325",
+    "text": "{% include course/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-325/"
   },{
-    "title": "CS 230",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "title": "CS 230 in Winter 2005",
+    "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-230/200510/"
   },{
     "title": "CS 230",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "text": "{% include course/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-230/"
   },{
@@ -2420,16 +2415,16 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-305+828/201330/"
   },{
     "title": "CS 305+828",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "text": "{% include course/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-305+828/"
   },{
-    "title": "CS 215 in Winter 2007",
+    "title": "CS 215 in Winter 2011",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-215/201110/"
   },{
-    "title": "CS 215 in Winter 2007",
+    "title": "CS 215 in Winter 2009",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-215/200910/"
@@ -2445,7 +2440,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-215/201130/"
   },{
     "title": "CS 215",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "text": "{% include course/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-215/"
   },{
@@ -2454,22 +2449,22 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-305/201230/"
   },{
-    "title": "CS 280 in Winter 2019",
+    "title": "CS 305 in Fall 2008",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-305/200830/"
   },{
-    "title": "CS 280 in Winter 2019",
+    "title": "CS 305 in Fall 2010",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-305/201030/"
   },{
-    "title": "CS 280 in Winter 2019",
+    "title": "CS 305 in Winter 2003",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-305/200310/"
   },{
-    "title": "CS 280 in Winter 2019",
+    "title": "CS 305 in Fall 2002",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-305/200230/"
@@ -2479,13 +2474,13 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-305/200130/"
   },{
-    "title": "CS 280 in Winter 2019",
+    "title": "CS 305 in Fall 2006",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-305/200630/"
   },{
     "title": "CS 305",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "text": "{% include course/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-305/"
   },{
@@ -2514,17 +2509,17 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202010/"
   },{
-    "title": "CS 499+900 (Seminars)",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "title": "CS 499+900",
+    "text": "{% include course/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/"
   },{
-    "title": "FILM 385AB in Fall 2002",
+    "title": "FILM 385AB in Winter 2011",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/FILM-385AB/201110/"
   },{
-    "title": "FILM 385AB in Fall 2002",
+    "title": "FILM 385AB in Fall 2005",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/FILM-385AB/200530/"
@@ -2534,7 +2529,7 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/FILM-385AB/200330/"
   },{
-    "title": "FILM 385AB in Fall 2002",
+    "title": "FILM 385AB in Fall 2004",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/FILM-385AB/200430/"
@@ -2544,13 +2539,13 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/FILM-385AB/200230/"
   },{
-    "title": "FILM 385AB in Fall 2002",
+    "title": "FILM 385AB in Fall 2006",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/FILM-385AB/200630/"
   },{
-    "title": "FILM 385AB (Introduction to Multimedia Systems)",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "title": "FILM 385AB",
+    "text": "{% include course/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/FILM-385AB/"
   },{
@@ -2610,7 +2605,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+828/201830/"
   },{
     "title": "CS 428+828",
-    "text": "{% include course/main.html name=crs_name %}",
+    "text": "{% include course/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/"
   },{
@@ -2624,18 +2619,18 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/schedule/"
   },{
-    "title": "",
-    "text": "# {{page.crs_subj}}{{page.crs_nbr}} &bull; {{ page.crs_sem }} ### {{ page.crs_name }} {% include index-dir.html %}",
+    "title": "CS 110 in Winter 2018",
+    "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-110/201810/"
   },{
-    "title": "",
-    "text": "# {{page.crs_subj}}{{page.crs_nbr}} &bull; {{ page.crs_sem }} ### {{ page.crs_name }} {% include index-dir.html %}",
+    "title": "CS 110 in Winter 2015",
+    "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-110/201510/"
   },{
-    "title": "",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "title": "CS 110",
+    "text": "{% include course/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-110/"
   },{
@@ -2922,11 +2917,6 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
-    "url": "/~hepting/teaching/201810/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
     "url": "/~hepting/403.html"
   },{
     "title": "",
@@ -3148,6 +3138,11 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/teaching/sem/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/201810/"
   },{
     "title": "",
     "text": "",

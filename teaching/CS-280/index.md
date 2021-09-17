@@ -1,8 +1,7 @@
 ---
-title: CS 280 (Risk and Reward in the Information Society)
-crs_nbr: CS 280
-crs_name: Risk and Reward in the Information Society
+title: CS 280
 breadcrumb: CS 280
+crs_name: Risk and Reward in the Information Society
 redirect_from:
   - /teaching/cs280/201510/
   - /teaching/cs280/201610/
@@ -11,15 +10,7 @@ redirect_from:
   - /teach/cs280/201510/
   - /teach/cs280/201610/
   - /teach/cs280/201710/
-layout: bg-image
 description: Social context of computing. Case study of human-computer interfaces and their evaluation. Methods and tools of analysis. Professional and ethical responsibilities. Risks and liabilities of computer-based systems. Intellectual property, privacy and civil liberties. Professional communication. Sustainability. Cybercrime.
+layout: bg-image
 ---
-{% include teaching/url.html %}
-
-# {{crs_sbj}} {{crs_nbr}}
-## {{page.crs_name}}
-
-{% include course/description-card.html %}
-{% include course/semesters-card.html %}
-
-{% include course/semester-redirects.html %}
+{% include course/main.html %}

@@ -1,18 +1,16 @@
 {% include teaching/url.html %}
-{% assign ddd = 000 | minus: wtf 1 %}
 <div class="card">
   <div class="card card-header">
     <h1>
       {{ crs_sbj }} {{ crs_nbr }}
     </h1>
     <h3>
-      {{ include.name }}
+      {{ page.crs_name }}
     </h3>
   </div>
   <div class="card card-body">
     {% include course/description-card.html %}
     {% include course/semesters-card.html %}
-
     {% include course/semester-redirects.html %}
   </div>
 </div>
