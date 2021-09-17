@@ -24,6 +24,10 @@ md_template = {
 """
 }
 
+# TODO:
+print ('TODO:')
+print ('add new directories to ignore in _config.yml')
+print ('copy data files from previous offering, like tlo, etc.')
 # Make sure that script is executed properly: i.e. CS-428+828/201830
 if (len(sys.argv) != 2):
 	print (sys.argv[0],"must be invoked with <course>/<semester>")
