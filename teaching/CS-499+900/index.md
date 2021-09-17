@@ -1,20 +1,11 @@
 ---
-title: CS 499+900 (Seminars)
+title: CS 499+900
 breadcrumb: CS 499+900
+crs_name: Seminars
 redirect_from:
   - /teaching/cs499+900/
   - /teaching/cs499%2B900/
-layout: bg-image
-crs_nbr: CS 499+900
-crs_name: Seminars
 description: Seminars
+layout: bg-image
 ---
-{% include teaching/url.html %}
-
-# {{crs_sbj}} {{crs_nbr}}
-## {{page.crs_name}}
-
-{% include course/description-card.html %}
-{% include course/semesters-card.html %}
-
-{% include course/semester-redirects.html %}
+{% include course/main.html %}

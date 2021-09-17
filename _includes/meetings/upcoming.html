@@ -1,6 +1,7 @@
-{% capture upurl %}https://urcourses.uregina.ca/calendar/view.php?view=upcoming&course={{ crs_urc }}{% endcapture %}
-{% include helper/lnk-card.html
-   label="Upcoming Events" level='h3'
-   id='EVENTS'
-   url=upurl
-%}
+{%- capture upurl -%}https://urcourses.uregina.ca/calendar/view.php?view=upcoming&course={{ crs_urc }}{%- endcapture -%}
+{%-
+  include helper/lnk-card.html
+  label="Upcoming Events" level='h3'
+  id='EVENTS'
+  url=upurl
+-%}

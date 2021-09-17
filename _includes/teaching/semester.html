@@ -1,17 +1,30 @@
 # {{page.breadcrumb }}
 
+{%- comment -%}
 {%- include teaching/semester-data.html -%}
+//  Find term-start, class-end, term-end, and no-class-days
+//  for the indicated semester
+{%- endcomment -%}
+{%- assign semdat = "" -%}
+{%- assign psn = page.sem | plus: 0 -%}
+{%- for ss in site.data.teaching.semesters -%}
+  {%- assign ssn = ss.semester | plus: 0 -%}
+  {%- if ssn == psn -%}
+    {%- assign semdat = ss -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor %}
 <div class="card m-2">
-<h3 class="card-header">
-  Important Dates
-</h3>
-<div class="card-body">
-  <ul>
-    <li>First day of term: {{ semdat.term-start | date: '%a-%d-%b-%Y'}}</li>
-  	<li>Last day of classes: {{ semdat.class-end | date: '%a-%d-%b-%Y'}}</li>
-    <li>Last day of term: {{ semdat.term-end | date: '%a-%d-%b-%Y'}}</li>
-  </ul>
-</div>
+  <h3 class="card-header">
+    Important Dates
+  </h3>
+  <div class="card-body">
+    <ul>
+      <li>First day of term: {{ semdat.term-start | date: '%a-%d-%b-%Y'}}</li>
+    	<li>Last day of classes: {{ semdat.class-end | date: '%a-%d-%b-%Y'}}</li>
+      <li>Last day of term: {{ semdat.term-end | date: '%a-%d-%b-%Y'}}</li>
+    </ul>
+  </div>
 </div>
 
 {% assign offs = "" %}

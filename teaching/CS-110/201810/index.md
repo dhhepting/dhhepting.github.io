@@ -1,14 +1,7 @@
 ---
-crs_id: CS110
-crs_subj: CS
-crs_nbr: 110
-crs_name: Programming and Problem Solving
-crs_sem: 201810
+title: CS 110 in Winter 2018
 breadcrumb: 201810
+sem: 201810
 layout: bg-image
 ---
-# {{page.crs_subj}}{{page.crs_nbr}} &bull; {{ page.crs_sem }}
-
-### {{ page.crs_name }}
-
-{% include index-dir.html %}
+{% include offering/main.html %}

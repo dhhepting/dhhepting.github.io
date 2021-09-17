@@ -1,8 +1,6 @@
 ---
-title: FILM 385AB in Fall 2002
-breadcrumb: 200230
+title: FILM 385AB in Fall 2005
+breadcrumb: 200530
 layout: bg-image
-description:
 ---
-
 {% include offering/main.html %}

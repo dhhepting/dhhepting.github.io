@@ -33,7 +33,7 @@ if (len(reldir) != 2):
 	sys.exit()
 
 d ={}
-# try opening response file for meeting
+# try opening summary file for meeting
 jcrs_id = reldir[0].replace("+","_")
 summdir = os.path.abspath(SITE_DIR + DATA_ROOT + jcrs_id + '/' + reldir[1] + '/summary')
 try:
@@ -97,6 +97,7 @@ else:
 if ('Zoom-Chat-Transcript' not in d):
     d['Zoom-Chat-Transcript'] = []
     CHAT_SRC = DL_DIR + joff_id + '/' + sys.argv[2].zfill(2) + '.txt'
+    print(CHAT_SRC)
     with open(CHAT_SRC,'r') as ctf:
         for line in ctf:
             npline = line.split('\t')

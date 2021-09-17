@@ -17,6 +17,9 @@
   -%}
 
   <!-- (schedule and) office hours -->
+  {% comment %}
+  Need to test if this URL exists
+  {% endcomment %}
   {%- capture sched_url -%}/teaching/schedule/{{ crs_sem }}.html{%- endcapture -%}
   {%-
     include helper/lnk-card.html
@@ -63,7 +66,16 @@
     url=media_url label="Media"
     level=off_lvl id="OFF_MEDIA"
   -%}
-
+  {% comment %}
+  Need to test if feedback data exists
+  {% endcomment %}
+  <!-- Feedback -->
+  {%- capture fdbk_url -%}{{ page.url }}feedback.html{%- endcapture -%}
+  {%-
+    include helper/lnk-card.html
+    url=fdbk_url label="Feedback"
+    level=off_lvl id="OFF_FEEDBACK"
+  -%}
   <!--  Topics -->
   {%- assign tlofile = site.data.teaching[jcrs_id][crs_sem]tlo -%}
   {%-

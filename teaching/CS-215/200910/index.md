@@ -1,8 +1,6 @@
 ---
-title: CS 215 in Winter 2007
-breadcrumb: 200710
-
+title: CS 215 in Winter 2009
+breadcrumb: 200910
 layout: bg-image
-description:
 ---
 {% include offering/main.html %}
