@@ -4,8 +4,9 @@
 {%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
 
 {%- assign mtgplan = nil %}
+{%- assign incmtg = include.mtg | plus: 0 %}
 {%- for mtgs in include.test %}
-  {%- if mtgs[0] == include.mtg %}
+  {%- if mtgs[0] == incmtg %}
     {%- assign mtgplan = mtgs %}
     {%- break -%}
   {%- endif -%}
