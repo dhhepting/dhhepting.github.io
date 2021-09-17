@@ -1,5 +1,11 @@
 {% comment %}
   {% include teaching/url.html %}
+  include meetings/transcript-yaml-body.html
+  test=response.important
+  include meetings/transcript-yaml-body.html
+  test=response.difficult
+  include meetings/transcript-yaml-body.html
+  test=response.know-more
 {% endcomment %}
 {% assign mtn = include.mtg | prepend: '00' | slice: -2, 2  %}
 {% assign response = site.data.teaching[jcrs_id][crs_sem]responses[mtn] %}
@@ -9,7 +15,7 @@
   The most important thing that I learned:
 </h6>
   {%-
-    include meetings/transcript-yaml-body.html
+    include helper/yaml-unit-body.html
     test=response.important
   -%}
 {%- endif %}
@@ -19,7 +25,7 @@
   The most difficult thing for me to understand:
 </h6>
   {%-
-    include meetings/transcript-yaml-body.html
+    include helper/yaml-unit-body.html
     test=response.difficult
   -%}
 {%- endif %}
@@ -29,7 +35,7 @@
   The thing about which I would most like to know more:
 </h6>
   {%-
-    include meetings/transcript-yaml-body.html
+    include helper/yaml-unit-body.html
     test=response.know-more
   -%}
 {%- endif %}
