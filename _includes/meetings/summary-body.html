@@ -1,21 +1,27 @@
-{% for ts in include.test %}
-  {% if ts[0] != 'offering' %}
-    {% assign tmstmp = ts[0] %}
-    {% assign tslab = tmstmp | replace: "-", " " %}
+{% for su in include.test %}
+  {% if su[0] != 'offering' %}
+    {% assign suslug = su[0] %}
+    {% assign suname = suslug | replace: "-", " " %}
     {% assign taghash =  %}
     {% assign tagopen = 'n' %}
-    {% for oth in ts[1].tags %}
-      {% for ot in oth %}
-        {% if ot[0] == 'open' %}
-          {% assign tagopen = ot[1] %}
+    {% comment %} for sui in su[1].tags {% endcomment %}
+    {% assign suitems = su[1] %}
+    {% for sui in suitems %}
+      {% for it in sui %}
+        {% if it[0] == 'open' %}
+          {% comment %}{{ it[0] }}, {{ it[1] }}<br />{% endcomment %}
+          {% assign tagopen = it[1] %}
           {% break %}
         {% endif %}
       {% endfor %}
     {% endfor %}
+    {% comment %}
+    suitems : {{ suitems }}<br />
+    {% endcomment %}
     {%-
       include helper/pd-card.html
-      test=ts label=tslab level='h6'
-      open=tagopen id=tmstmp body='meetings/summary-unit-body.html'
+      test=suitems label=suname level='h6'
+      pass='y' open=tagopen id=suslug body='helper/yaml-unit-body.html'
     -%}
   {% endif %}
 {% endfor %}
