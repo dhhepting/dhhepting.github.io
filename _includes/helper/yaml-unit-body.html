@@ -1,53 +1,57 @@
-{% assign ts = include.test %}
-<ul>
-{% comment %}
-for ol in ts[1]
+{% comment %}INCLUDE {{ include }} <br/>{% endcomment %}
+{% assign yu = include.test %}
+{% comment %}yu {{ yu }} <br/>
+[*] {{ include.test }} <br/>
+[0] {{ include.test[0] }} <br/>
+[1] {{ include.test[1] }} <br/>
 {% endcomment %}
-{%- for ol in ts -%}
-  {%- if ol.url -%}
+<ul>
+{%- for item in yu -%}
+  {% comment %}{{ item}} <br />{% endcomment %}
+  {%- if item.url -%}
     <li>
-      <a href="{{ ol.url }}">
-        {{ ol.desc }}
+      <a href="{{ item.url }}">
+        {{ item.desc }}
       </a>
     </li>
-  {%- elsif ol.img -%}
+  {%- elsif item.img -%}
     <div class="m-2 p-2 border">
-      {% assign iname = ol.img %}
-      {% assign idesc = ol.desc %}
+      {% assign iname = item.img %}
+      {% assign idesc = item.desc %}
       {% include helper/figure.html
         name=iname desc=idesc %}
     </div>
-  {%- elsif ol.vid -%}
+  {%- elsif item.vid -%}
     <div class="m-2 p-2 border">
-      {% assign vurl = ol.vid %}
-      {% assign vdesc = ol.desc %}
+      {% assign vurl = item.vid %}
+      {% assign vdesc = item.desc %}
       {% include helper/video.html
         vidurl=vurl desc=vdesc %}
     </div>
-  {%- elsif ol.todo -%}
+  {%- elsif item.todo -%}
     <div class="m-2 p-2 bg-warning">
       <h6 class="text-center">
-        {{ ol.todo | upcase }}
+        {{ item.todo | upcase }}
       </h6>
       <p class="text-center">
-        {{ ol.desc }}
+        {{ item.desc }}
       </p>
     </div>
-  {%- elsif ol.concept -%}
+  {%- elsif item.concept -%}
     <div class="m-2 p-2 bg-primary">
       <h6 class="text-center">
-        {{ ol.concept | upcase }}
+        {{ item.concept | upcase }}
       </h6>
       <p class="text-center">
-        {{ ol.desc }}
+        {{ item.desc }}
       </p>
     </div>
   {%- else -%}
     <li>
-      {%- if ol.persid -%}
-        <strong>{{ ol.persid }}:</strong>&nbsp;
+      {%- if item.persid -%}
+        <strong>{{ item.persid }}:</strong>&nbsp;
       {%- endif -%}
-      {{ ol.desc }}
+      {{ item.desc }}
     </li>
   {%- endif -%}
 {%- endfor -%}
