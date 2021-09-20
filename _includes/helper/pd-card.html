@@ -1,8 +1,8 @@
 {% assign test_url = site.pages | where: "url", include.test %}
 {% assign test_path = site.static_files | where: "path", include.test %}
 {% assign test_true = include.test == "true" or include.test != nil %}
+{% comment %}PD-CARD: {{ include.test }}<br/>{% endcomment %}
 {% comment %}
-{{ include.test }}
 a. {{ test_url}}
 b. {{ test_path }}
 c. {{ test_true }}

@@ -4,18 +4,24 @@
     {% assign suname = suslug | replace: "-", " " %}
     {% assign taghash =  %}
     {% assign tagopen = 'n' %}
-    {% for sui in su[1].tags %}
+    {% comment %} for sui in su[1].tags {% endcomment %}
+    {% assign suitems = su[1] %}
+    {% for sui in suitems %}
       {% for it in sui %}
         {% if it[0] == 'open' %}
+          {% comment %}{{ it[0] }}, {{ it[1] }}<br />{% endcomment %}
           {% assign tagopen = it[1] %}
           {% break %}
         {% endif %}
       {% endfor %}
     {% endfor %}
+    {% comment %}
+    suitems : {{ suitems }}<br />
+    {% endcomment %}
     {%-
       include helper/pd-card.html
-      test=su label=suname level='h6'
-      open=tagopen id=suslug body='helper/yaml-unit-body.html'
+      test=suitems label=suname level='h6'
+      pass='y' open=tagopen id=suslug body='helper/yaml-unit-body.html'
     -%}
   {% endif %}
 {% endfor %}
