@@ -1,0 +1,14 @@
+<div class="card">
+{%- for m in site.data.teaching[jcrs_id][crs_sem]media -%}
+  {%- if m.file == include.name -%}
+  <a href='{{ m.URL }}' class="button" download>
+    <span class="fa fa-download"></span>
+    Download {{include.name}}
+  </a>
+  <p class="text-align-center">
+    {{ include.desc }}
+  </p>
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+</div>

@@ -1,4 +1,4 @@
-{% include header.html %}
+{% include site/header.html %}
 
 {% for ldx in site.data.schema %}
 	{% if ldx.citekey == page.citekey %}
@@ -11,10 +11,10 @@
     {% include works-nav.html %}
     <div class="card-body">
 	<h1>{{ page.title }}</h1>
-	<hr>	
+	<hr>
 	<!-- Projects -->
 	{% include projects-bar.html %}
-	<hr>	
+	<hr>
 	<!-- Social Share Buttons -->
 	{% include share-bar.html %}
 	<hr />
@@ -24,7 +24,7 @@
 		<li>{{page.venue | strip}}</li>
 	</ul>
 
-			
+
 	{% capture author_count %}{{ page.authors.size | minus:0 }}{% endcapture %}
 	{% assign ac = author_count | plus: 0 %}
 	{% if ac == 1 %}
@@ -34,7 +34,7 @@
 	{% endif %}
 	<ul>
 	{% for author in page.authors %}
-   		<li>{{author | strip}}</li> 
+   		<li>{{author | strip}}</li>
 	{% endfor %}
 	</ul>
 
@@ -54,8 +54,8 @@
 	<h3>BibTeX</h3>
 	<!-- Target -->
 	<div class="border border-primary rounded flex-row">
-	<a id="clipboard" href="#clipboard" 
-	class="btn btn-primary" aria-label="Copy BibTeX entry" 
+	<a id="clipboard" href="#clipboard"
+	class="btn btn-primary" aria-label="Copy BibTeX entry"
 	data-clipboard-action="copy" data-clipboard-target="#bibtex">
                 <span class="far fa-clipboard fa-inverse" title="Copy BibTeX entry"></span>
         </a>

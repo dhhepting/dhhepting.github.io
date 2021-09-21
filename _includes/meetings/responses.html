@@ -1,25 +1,45 @@
-{% include teaching/url.html %}
-{%- assign mtn = page.mtg_nbr | prepend: '00' | slice: -2, 2  %}
+{%- include teaching/url.html -%}
+{%- assign mtn = page.mtg_nbr | prepend: '00' | slice: -2, 2  -%}
 <div class="card">
-  <!-- Meeting Date as card header -->
   <div class="card card-header lightcthru">
     <h1>
-      Responses to Meeting {{ page.mtg_nbr }}
+      Responses to Meeting {{ page.mtg_nbr | plus: 0 }}
     </h1>
   </div>
   <div class="card card-body">
-  {%-  assign lvl = 'h5'  %}
-
-  <!-- Responses to Meeting -->
   {%- assign rfile = site.data.teaching[jcrs_id][crs_sem]responses[mtn] -%}
   {%- if rfile != nil -%}
-  {%-
-    include meetings/response-body.html
-    test=rfile label="Responses to Last Meeting" level=lvl
-    open='n' mtg=mtn pass='y' id='MTGREV'
-   -%}
-   {%- else -%}
-   <h5 class="text-muted">No Responses</h5>
+    {%- if rfile.important != nil -%}
+    <h5>
+      The most important thing that I learned:
+    </h5>
+      {%-
+        include helper/yaml-unit-body.html
+        test=rfile.important
+      -%}
+    {%- endif %}
+    {%- if rfile.difficult != nil -%}
+    <h5>
+      The most difficult thing for me to understand:
+    </h5>
+      {%-
+        include helper/yaml-unit-body.html
+        test=rfile.difficult
+      -%}
+    {%- endif %}
+    {%- if rfile.know-more != nil -%}
+    <h5>
+      The thing about which I would most like to know more:
+    </h5>
+      {%-
+        include helper/yaml-unit-body.html
+        test=rfile.know-more
+      -%}
+    {%- endif %}
+  {%- else -%}
+   <h5 class="text-muted">
+     No Responses
+   </h5>
  {%- endif %}
    </div>
-</div>
+ </div>

@@ -28,7 +28,14 @@
       {% include helper/video.html
         vidurl=vurl desc=vdesc %}
     </div>
-  {%- elsif item.todo -%}
+    {%- elsif item.pdf -%}
+      <div class="m-2 p-2 border">
+        {% assign pdfname = item.pdf %}
+        {% assign pdesc = item.desc %}
+        {% include helper/pdf.html
+          name=pdfname desc=pdesc %}
+      </div>
+    {%- elsif item.todo -%}
     <div class="m-2 p-2 bg-warning">
       <h6 class="text-center">
         {{ item.todo | upcase }}

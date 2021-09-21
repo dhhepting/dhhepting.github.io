@@ -1,0 +1,23 @@
+  "@type": "WebPage",
+{% include schema-org/breadcrumbs.html %}
+  ,
+  "mainEntity":
+{% assign url_str = page.url %}
+{% assign strend = url_str | size | minus: 1 %}
+{% assign endchar = url_str | slice: strend, 1 %}
+{% if endchar == "/" %}
+  {% include schema-org-itemlist.html %}
+{% elsif page.main_entity == "Service" %}
+  {% include schema-org-service.html %}
+{% elsif page.main_entity == "ImageObject" %}
+  {% include schema-org-imageobject.html %}
+{% elsif page.main_entity == "ScholarlyArticle" %}
+  {% include schema-org-scholarly.html %}
+{% elsif page.main_entity == "Event" %}
+  {% include schema-org-event.html %}
+{% elsif page.main_entity == "Recipe" %}
+  {% include schema-org-recipe.html %}
+{% else %}
+  {
+  }
+{% endif %}
