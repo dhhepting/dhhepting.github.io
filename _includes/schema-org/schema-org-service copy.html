@@ -1,0 +1,33 @@
+{% comment %}
+create a whitelist for files to be indexed:
+name, value pairs name for file, value for breadcrumb if plain file
+{% endcomment %}
+  {
+    "@type": "Service",
+    "serviceType": "Office Hours",
+    "provider":
+    {
+      "@type": "Person",
+      "@id": "{{ "/about/" | absolute_url }}#DHHepting"
+    },
+    "hoursAvailable":
+    [
+{% assign obs = page.officeblocks.size %}
+{% assign obi = 1 | plus: 0 %}
+{% for ob in page.officeblocks %}
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "http://schema.org/{{ ob.day | strip }}",
+        "validFrom": "{{ page.firstdate }}",
+        "validThrough": "{{ page.lastdate }}",
+        "opens":  "{{ ob.open }}",
+  			"closes": "{{ ob.close}}"
+  {% if obi < obs %}
+      },
+  {% else %}
+      }
+  {% endif %}
+  {% assign obi = obi | plus: 1 %}
+{% endfor %}
+	 ]
+ }

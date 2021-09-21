@@ -1,0 +1,13 @@
+{% comment %}
+create a whitelist for files to be indexed:
+name, value pairs name for file, value for breadcrumb if plain file
+{% endcomment %}
+  {
+    "@type": "ImageObject",
+    "caption": "{{ page.title }}",
+    "name": "{{ page.title }}",
+    "representativeOfPage": "http://schema.org/True",
+    "contentUrl": "{{ page.image | absolute_url }}",
+    "thumbnailUrl": "{{ page.thumbnail | absolute_url }}",
+    "encodingFormat": "image/jpeg"
+  }

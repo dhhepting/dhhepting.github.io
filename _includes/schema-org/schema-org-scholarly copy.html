@@ -1,0 +1,78 @@
+{% comment %}{% for ldx in site.data.schema %}
+  {% if ldx.citekey == page.citekey %}
+    {{ ldx.linkeddata | replace: '=>', ':' }}
+  {% endif %}
+  {% break %}
+{% endfor %}
+{% endcomment %}
+{
+  "@type": "ScholarlyArticle",
+  {% comment %}
+  "dateModified": "2018-06-05 15:36:52 +0000",
+  {% endcomment %}
+  "name": "{{ page.title | strip }}",
+  "headline": "{{ page.title | strip }}",
+  "datePublished": "2014-06",
+  "dateModified": "{{ page.datemod }}",
+  "mainEntityOfPage": "{{ page.url | absolute_url }}",
+
+  "image": "{{ "/assets/works/img/2014-06-HepJafMac.jpg" | absolute_url }}",
+  {% assign pas = page.authors.size %}
+  {% assign pai = 1 | plus: 0 %}
+  "author":
+  [
+  {%- for pa in page.authors %}
+    {
+      "@type": "Person",
+    {%- if pa == "Daryl H. Hepting" %}
+      "name": "{{ pa }}",
+      "@id": "{{ "/about/" | absolute_url }}#DHHepting"
+    {%- else %}
+      "name": "{{ pa }}"
+    {%- endif %}
+    {%- if pai < pas %}
+    },
+    {%- else -%}
+    }
+    {% endif %}
+    {%- assign pai = pai | plus: 1 -%}
+  {%- endfor -%}
+],
+  "description": "{{ page.abstract }}",
+  "sameAs": "https://doi.org/{{ page.doi }}",
+  {% if page.keywords %}
+    {% assign pks = page.keywords.size %}
+    {% assign pki = 1 | plus: 0 %}
+  "keywords": "
+  {%- for pk in page.keywords -%}
+    {{- pk -}}{%- if pki < pks %} , {% endif -%}
+    {%- assign pki = pki | plus: 1 -%}
+  {%- endfor -%}
+  ",
+  {% endif %}
+  "pageStart": "{{ page.pagestart }}",
+  "pageEnd": "{{ page.pageend }}",
+  "url": "{{ site.canonical }}{{ page.url }}",
+  "isPartOf":
+  {
+    "@type": "PublicationIssue",
+    "issueNumber": "3",
+    "isPartOf":
+    {
+      "@type": "PublicationVolume",
+      "volumeNumber": "27",
+      "datePublished": "2014",
+      "isPartOf":
+      {
+        "@type": "Periodical",
+        "name": "Journal of Agricultural and Environmental Ethics",
+        "issn":
+        [
+          "1187-7863",
+          "1573-322X"
+        ],
+        "publisher": "Springer"
+      }
+    }
+  }
+}
