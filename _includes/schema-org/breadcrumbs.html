@@ -1,0 +1,49 @@
+{%- assign url_parts = page.url | split: '/' -%}
+{%- capture loop_max -%}{{ url_parts.size | minus: 1 }}{%- endcapture -%}
+{%- assign j = loop_max | plus: 0 -%}
+{%- assign bc_path = "/" -%}
+{%- assign bc_page = site.pages | where: "url", bc_path -%}
+  "breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "{{ bc_path | absolute_url }}",
+          "name": "{{ bc_page[0].breadcrumb }}"
+        }
+      {% if j >= 1 %}
+      },
+      {% else %}
+      }
+      {%- endif -%}
+      {%- for i in (1..loop_max) -%}
+        {%- capture bc_path -%}{{bc_path}}{{url_parts[i]}}{%- endcapture -%}
+        {%- unless bc_path contains ".html" -%}
+          {%- capture bc_path -%}{{bc_path}}/{%- endcapture -%}
+        {%- endunless -%}
+        {%- assign bc_page = site.pages | where: "url", bc_path -%}
+      {
+        "@type": "ListItem",
+        "position": {{ i | plus: 1 }},
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "{{ bc_path | absolute_url }}",
+        {% if bc_page and i < j %}
+          "name": "{{ bc_page[0].breadcrumb }}"
+        }
+      },
+        {% elsif bc_page and i == j %}
+          "name": "{{ page.breadcrumb }}"
+        }
+      }
+        {% endif %}
+      {%- endfor -%}
+    ]
+  }

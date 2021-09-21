@@ -29,7 +29,7 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/01_R.html"
   },{
-    "title": "Responses to Mtg 01 • CS-428+828 (202130)",
+    "title": "Responses to Mtg 1 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/01_R.html"
@@ -44,7 +44,7 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/01_S.html"
   },{
-    "title": "Summary of Mtg 01 • CS-428+828 (202130)",
+    "title": "Summary of Mtg 1 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/01_S.html"
@@ -454,7 +454,7 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/09_Fri-29-Jan-2021.html"
   },{
-    "title": "Mtg 09 • CS-428+828 (202130)",
+    "title": "Mtg 9 • CS-428+828 (202130)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/09_Mon-20-Sep-2021.html"
@@ -469,7 +469,7 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/09_R.html"
   },{
-    "title": "Responses to Mtg 09 • CS-428+828 (202130)",
+    "title": "Responses to Mtg 9 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/09_R.html"

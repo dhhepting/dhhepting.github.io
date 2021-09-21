@@ -43,10 +43,13 @@
 {% assign sm_lb = cur_mtg | minus: 1 %}
 {% assign md_lb = cur_mtg | minus: 2 %}
 {% assign lg_lb = cur_mtg | minus: 4 %}
+{% assign xl_lb = cur_mtg | minus: 8 %}
 {% assign xs_ub = cur_mtg | plus: 0 %}
 {% assign sm_ub = cur_mtg | plus: 1 %}
 {% assign md_ub = cur_mtg | plus: 2 %}
 {% assign lg_ub = cur_mtg | plus: 4 %}
+{% assign xl_ub = cur_mtg | plus: 8 %}
+
 {% assign sm_ctr = 0 | plus: 0 %}
 {% assign md_ctr = 0 | plus: 0 %}
 {% assign lg_ctr = 0 | plus: 0 %}
@@ -58,9 +61,9 @@
     {% assign mtn = mms[0] | plus: 0 %}
     {% assign pcl = "" %}
     {% if mtn != cur_mtg or include.path %}
-      {% if ((mtn < lg_lb) or (mtn > lg_ub)) %}
-        {% assign pcl = "page-item d-none d-xl-inline" %}
-      {% elsif (mtn >= lg_lb and mtn < md_lb) or (mtn > md_ub and mtn <= lg_ub) %}
+    {% if ((mtn < lg_lb) or (mtn > lg_ub)) %}
+      {% assign pcl = "page-item d-none" %}
+    {% elsif (mtn >= lg_lb and mtn < md_lb) or (mtn > md_ub and mtn <= lg_ub) %}
         {% assign pcl = "page-item d-none d-xl-inline d-lg-inline" %}
       {% elsif (mtn >= md_lb and mtn < sm_lb) or (mtn > sm_ub and mtn <= md_ub) %}
         {% assign pcl = "page-item d-none d-xl-inline d-lg-inline d-md-inline" %}

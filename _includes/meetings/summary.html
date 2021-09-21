@@ -2,22 +2,39 @@
 {%- assign mtn = page.mtg_nbr | prepend: '00' | slice: -2, 2  %}
 
 <div class="card">
-  <!-- Meeting Date as card header -->
   <div class="card card-header lightcthru">
     <h1>
-      Summary of Meeting {{ page.mtg_nbr }}
+      Summary of Meeting {{ page.mtg_nbr | plus: 0 }}
     </h1>
   </div>
-  <div class="card card-body">
 
-  {%- assign tfile = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
-  {%- if tfile != nil -%}
-    {%-
-        include meetings/summary-body.html
-        test=tfile label="Summary of this Meeting" level=lvl
-        pass='y' mtg=mtn open='n' id='MTGRECORD'
-    -%}
-  {%- else -%}
-    <h5 class="text-muted">No Summary</h5>
-  {%- endif %}
+  <div class="card card-body">
+    {%- assign sfile = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
+    {%- if sfile != nil -%}
+      {% for su in sfile %}
+        {% if su[0] != 'offering' %}
+          {% assign suslug = su[0] %}
+          {% assign suname = suslug | replace: "-", " " %}
+          {% assign taghash =  %}
+          {% assign tagopen = 'n' %}
+          {% assign suitems = su[1] %}
+          {% for sui in suitems %}
+            {% for it in sui %}
+              {% if it[0] == 'open' %}
+                {% assign tagopen = it[1] %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+          {%-
+            include helper/pd-card.html
+            test=suitems label=suname level='h6'
+            pass='y' open=tagopen id=suslug body='helper/yaml-unit-body.html'
+          -%}
+        {% endif %}
+      {% endfor %}
+    {%- else -%}
+      <h5 class="text-muted">No Summary</h5>
+    {%- endif -%}
+    </div>
   </div>

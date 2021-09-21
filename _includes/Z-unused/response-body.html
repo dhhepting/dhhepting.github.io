@@ -1,5 +1,6 @@
 {% assign mtn = include.mtg | prepend: '00' | slice: -2, 2  %}
 {% assign response = site.data.teaching[jcrs_id][crs_sem]responses[mtn] %}
+{% assign response = include.test %}
 
 {%- if response.important != nil -%}
 <h6>
