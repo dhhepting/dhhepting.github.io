@@ -57,66 +57,80 @@ except:
 
 ng = {}
 seqnbr = 0
-if ('Zoom-Audio-Transcript' not in d):
-    d['Zoom-Audio-Transcript'] = []
-    ospkr = ''
-    msgstr = ''
-    VTT_SRC = DL_DIR + joff_id + '/' + sys.argv[2].zfill(2) + '.vtt'
-    print(VTT_SRC)
-    for caption in webvtt.read(VTT_SRC):
-        txtseg = caption.text.split(':')
-        tsl = len(txtseg)
-        if (tsl == 1):
-            spkr = 'Unknown'
-            msg = txtseg[0]
-        if (tsl == 2):
-            spkr = txtseg[0]
-            msg = txtseg[1]
-        if (spkr != ospkr):
-            if (ospkr != ''):
-                snamekey = ospkr.strip()
-                if snamekey not in ng:
-                    ng[snamekey] = seqnbr
-                    seqnbr += 1
-                if snamekey == 'Daryl Hepting' or snamekey == 'Daryl (heptingd)':
-                    person_id = 'DHH'
-                elif snamekey == 'Unknown':
-                    person_id = '???'
-                else:
-                    person_id = 'S'+str(ng[snamekey]).zfill(2)
-                e = {}
-                e['desc'] = msgstr.strip()
-                e['persid'] = person_id
-                d['Zoom-Audio-Transcript'].append(e)
-                msgstr = ''
-            ospkr = spkr
-        msgstr += msg
-else:
-    print ('Zoom-Audio-Transcript already present.')
 
-if ('Zoom-Chat-Transcript' not in d):
-    d['Zoom-Chat-Transcript'] = []
-    CHAT_SRC = DL_DIR + joff_id + '/' + sys.argv[2].zfill(2) + '.txt'
-    print(CHAT_SRC)
-    with open(CHAT_SRC,'r') as ctf:
-        for line in ctf:
-            npline = line.split('\t')
-            if (len(npline) > 2):
-                sname = npline[1][:-1]
-                msg = npline[2]
-                snamekey = sname.strip()
-                if snamekey not in ng:
-                    ng[snamekey] = seqnbr
-                    seqnbr += 1
-                if snamekey == 'Daryl Hepting' or snamekey == 'Daryl (heptingd)':
-                    person_id = 'DHH'
-                else:
-                    person_id = 'S'+str(ng[snamekey]).zfill(2)
-                e = {}
-                e['desc'] = msg.strip()
-                e['persid'] = person_id
-                d['Zoom-Chat-Transcript'].append(e)
-else:
-    print ('Zoom-Chat-Transcript already present.')
+VTT_SRC = DL_DIR + joff_id + '/' + sys.argv[2].zfill(2) + '.vtt'
+print(VTT_SRC)
+if (os.path.isfile(VTT_SRC)):
+    if ('Zoom-Audio-Transcript' not in d):
+        d['Zoom-Audio-Transcript'] = []
+        ospkr = ''
+        msgstr = ''
+
+        for caption in webvtt.read(VTT_SRC):
+            #print("Caption:",caption)
+            txtseg = caption.text.split(':')
+            tsl = len(txtseg)
+            if (tsl == 1):
+                spkr = 'Unknown'
+                msg = txtseg[0]
+            if (tsl == 2):
+                spkr = txtseg[0]
+                msg = txtseg[1]
+            #print('\tmsg from caption:',msg)
+            #print(spkr,ospkr)
+            if (spkr != ospkr):
+                if (ospkr != ''):
+                    snamekey = ospkr.strip()
+                    if snamekey not in ng:
+                        ng[snamekey] = seqnbr
+                        seqnbr += 1
+                    if snamekey == 'Daryl Hepting' or snamekey == 'Daryl (heptingd)':
+                        person_id = 'DHH'
+                    elif snamekey == 'Unknown':
+                        person_id = '???'
+                    else:
+                        person_id = 'S'+str(ng[snamekey]).zfill(2)
+                    e = {}
+                    e['desc'] = msgstr.strip()
+                    #print("desc:",e['desc'])
+                    e['persid'] = person_id
+                    d['Zoom-Audio-Transcript'].append(e)
+                    msgstr = ''
+                ospkr = spkr
+            msgstr += msg
+            #print('\t\trunning msg str:',msgstr)
+    else:
+        print ('Zoom-Audio-Transcript already present.')
+    e = {}
+    e['desc'] = msgstr.strip()
+    #print("desc:",e['desc'])
+    e['persid'] = ''
+    d['Zoom-Audio-Transcript'].append(e)
+
+CHAT_SRC = DL_DIR + joff_id + '/' + sys.argv[2].zfill(2) + '.txt'
+print(CHAT_SRC)
+if (os.path.isfile(CHAT_SRC)):
+    if ('Zoom-Chat-Transcript' not in d):
+        d['Zoom-Chat-Transcript'] = []
+        with open(CHAT_SRC,'r') as ctf:
+            for line in ctf:
+                npline = line.split('\t')
+                if (len(npline) > 2):
+                    sname = npline[1][:-1]
+                    msg = npline[2]
+                    snamekey = sname.strip()
+                    if snamekey not in ng:
+                        ng[snamekey] = seqnbr
+                        seqnbr += 1
+                    if snamekey == 'Daryl Hepting' or snamekey == 'Daryl (heptingd)':
+                        person_id = 'DHH'
+                    else:
+                        person_id = 'S'+str(ng[snamekey]).zfill(2)
+                    e = {}
+                    e['desc'] = msg.strip()
+                    e['persid'] = person_id
+                    d['Zoom-Chat-Transcript'].append(e)
+    else:
+        print ('Zoom-Chat-Transcript already present.')
 with open(summfile, 'w') as yaml_file:
     yaml.safe_dump(d, yaml_file, default_flow_style=False)
