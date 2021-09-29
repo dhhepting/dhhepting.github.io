@@ -36,6 +36,8 @@ d ={}
 # try opening summary file for meeting
 jcrs_id = reldir[0].replace("+","_")
 summdir = os.path.abspath(SITE_DIR + DATA_ROOT + jcrs_id + '/' + reldir[1] + '/summary')
+planfile = os.path.abspath(SITE_DIR + DATA_ROOT + jcrs_id + '/' + reldir[1] + '/plan.yml')
+
 try:
     os.makedirs(summdir)
 except OSError as e:
@@ -43,7 +45,7 @@ except OSError as e:
     pass
 summfile = summdir + '/' + sys.argv[2].zfill(2) + '.yml'
 joff_id = jcrs_id + '-' + reldir[1]
-
+mtg = sys.argv[2]
 try:
     with open(summfile, 'x') as yaml_file:
         d['offering'] = {}
@@ -54,18 +56,35 @@ except:
     with open(summfile, 'r') as yaml_file:
         d = yaml.safe_load(yaml_file)
 
+try:
+    with open(planfile, 'r') as plyaml_file:
+        p = yaml.safe_load(plyaml_file)
+except:
+    pass
+
+print ('Processing outline for meeting:')
+if ('Outline' not in d):
+    d['Outline'] = []
+    if 'today' in p[int(sys.argv[2])]:
+        d['Outline'].append(p[int(sys.argv[2])]['today'])
+    elif 'outline' in p[int(sys.argv[2])]:
+        d['Outline'].append(p[int(sys.argv[2])]['outline'])
+else:
+    print ('\t--> Outline already present.')
 
 ng = {}
 seqnbr = 0
 
 VTT_SRC = DL_DIR + joff_id + '/' + sys.argv[2].zfill(2) + '.vtt'
-print(VTT_SRC)
+#print(VTT_SRC)
+print ('Processing audio transcript for meeting:')
 if (os.path.isfile(VTT_SRC)):
     if ('Zoom-Audio-Transcript' not in d):
+########
         d['Zoom-Audio-Transcript'] = []
         ospkr = ''
         msgstr = ''
-
+########
         for caption in webvtt.read(VTT_SRC):
             #print("Caption:",caption)
             txtseg = caption.text.split(':')
@@ -99,16 +118,20 @@ if (os.path.isfile(VTT_SRC)):
                 ospkr = spkr
             msgstr += msg
             #print('\t\trunning msg str:',msgstr)
+########
+        e = {}
+        e['desc'] = msgstr.strip()
+        #print("desc:",e['desc'])
+        e['persid'] = ''
+        d['Zoom-Audio-Transcript'].append(e)
     else:
-        print ('Zoom-Audio-Transcript already present.')
-    e = {}
-    e['desc'] = msgstr.strip()
-    #print("desc:",e['desc'])
-    e['persid'] = ''
-    d['Zoom-Audio-Transcript'].append(e)
+        print ('\t--> Zoom-Audio-Transcript already present.')
+
 
 CHAT_SRC = DL_DIR + joff_id + '/' + sys.argv[2].zfill(2) + '.txt'
-print(CHAT_SRC)
+#print(CHAT_SRC)
+print ('Processing chat transcript for meeting:')
+
 if (os.path.isfile(CHAT_SRC)):
     if ('Zoom-Chat-Transcript' not in d):
         d['Zoom-Chat-Transcript'] = []
@@ -131,6 +154,6 @@ if (os.path.isfile(CHAT_SRC)):
                     e['persid'] = person_id
                     d['Zoom-Chat-Transcript'].append(e)
     else:
-        print ('Zoom-Chat-Transcript already present.')
+        print ('\t--> Zoom-Chat-Transcript already present.')
 with open(summfile, 'w') as yaml_file:
     yaml.safe_dump(d, yaml_file, default_flow_style=False)
