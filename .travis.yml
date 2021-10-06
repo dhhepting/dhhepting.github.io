@@ -22,17 +22,14 @@ before_install:
 - ssh-add deploy_rsa
 - echo -e "Host $DEPLOY_HOST\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 deploy:
-  matrix:
-  - provider: pages
-    skip_cleanup: true
-    token: "$GITHUB_TOKEN"
-    keep_history: true
-    on:
-      branch: master
-  - provider: script
-    skip_cleanup: true
-    script: rsync --verbose -p -r --delete-after $TRAVIS_BUILD_DIR/_deploy/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIR
-    on:
-      branch: master
-  token:
-    secure: Lk7Rl3hXKtS+bQIKCjc7MMcbV1ohRywm8vB6NqCEnO8fbOI9w7zsvi+7gFIhXniLVKc0NjreJxtLcAch1IV+s7t+o+YFt+zMSte6YqvNHl6oLMgnAm3IRKRz2uiaPGSXncPaq2krzRvARFC3G9/oSazceJrPdTzb498979ZQK3nQrNac93ECrlLC9Wyy9/OBcjS71moehN7SW88IOHuXzEBaaVCqZ1/8eJpIPIbhNbzwsMrIlqzeP1BnFMC/uEBbI4E0W/6t9UCF728yy59AAleiBsN56QoRiseAzgj/+15ZwZYC+ex2sSj1JPWqhX3uiDmLIdJHv5gjEaGMiq+6CCsr5luC6gImTUZ8PlmLTYXCUMPCC0Cqla/RQXQUO7lyy5X56tr3V8nCvUPp+qAtIDkdIp7MbGWR6uyL4pBMEug9j20ltV14rpBX/Tc16YtGtW4iJDRZ+jhBc2lAVcU02eL7eJ5lIM+FogcrUKr4QXKMDEB7JQ2D/6EKfEHd6Ywb7Wq9gn8K+TfdLORDBrMpNLVFemrCV/Qudh4/Tru2aUVjX4PPP9YTZbZCi5EOmRsX5B6eBNCuppYxfZ7YkIjG3frAhEsD+OmeH7/ox886efNNfXHKNuPfECM0/tKqxBt8GOFgVB2mPDoFGLnc/z4tWIg7aJroq2iSrzuyAxhn+sI=
+- provider: pages
+  skip_cleanup: true
+  token: "$GITHUB_TOKEN"
+  keep_history: true
+  on:
+    branch: master
+- provider: script
+  skip_cleanup: true
+  script: rsync --verbose -p -r --delete-after $TRAVIS_BUILD_DIR/_deploy/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIR
+  on:
+    branch: master
