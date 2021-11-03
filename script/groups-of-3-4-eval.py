@@ -18,31 +18,45 @@ oldgrp = []
 nstu = 0
 with open(groupfilepath,'r') as gf:
     for line in gf:
-        l = line.split(',')
-        oldgrp.append(l)
-        nstu = nstu + int(l[len(l)-1])
+        l = line.strip('\n')
+        ll = l.split('\t')
+        #print(ll)
+        #print(line)
+        #print(ll[1])
+        #print(ll[2])
+        lll = ll[1].split(',')
+        #print(lll)
+        oldgrp.append(lll)
+        nstu = nstu + int(ll[2])
+
+#print(oldgrp)
+print (nstu)
 newgrp = {}
 nngrps = int(nstu/3)
+print("nngrps",nngrps)
 for i in range(nngrps):
     newgrp[i] = []
 #print(newgrp)
 nk = 1
 stu = 0
-for l in oldgrp:
-    for m in range(1,len(l)-1):
-        mgrp = 0
+for log in oldgrp:
+    print ("Line from old group:",log)
+    ngn = {}
+    for m in range(len(log)):
         nk = (nk + 1 + (m * int(nngrps/3))) % nngrps
-        fg = (l[0].replace(' ','-'),l[m].strip())
         for q in range(nngrps):
             nq = (nk + q) % nngrps
-            if len(newgrp[nq]) < 3:
-                if any(fg[0] in s for s in newgrp[nq]):
-                    pass
-                    #print(stu,nq,'fail:',fg[0],'--',newgrp[nq])
-                    # and fg[0] not in newgrp[nk]):
+            if nq not in ngn:
+                ngn[nq] = 0
+                print("new group:",stu,nstu,m,nq)
+                if (stu < 3 * nngrps):
+                    if len(newgrp[nq]) < 3:
+                        newgrp[nq].append(log[m])
+                        stu = stu + 1
+                        break
                 else:
-                    newgrp[nq].append(fg)
-                    #print(stu,nq,'success:',fg[0],'--',newgrp[nq])
+                    print("NQ = ",nq)
+                    newgrp[nq].append(log[m])
                     stu = stu + 1
                     break
             # else:
@@ -50,7 +64,9 @@ for l in oldgrp:
             #     if (nk == 0):
             #         nk = 1
         #print (stu,l[m].strip())
-
+    print(ngn)
+print ("STU:",stu)
+#sys.exit(1)
 for x in newgrp:
     print(x,newgrp[x])
 sys.exit()
