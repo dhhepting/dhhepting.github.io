@@ -1,0 +1,704 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/pda324/ontologies/survey"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/pda324/ontologies/survey"
+     versionIRI="http://www.semanticweb.org/pda324/ontologies/survey/1.7">
+    <Prefix name="" IRI="http://www.semanticweb.org/pda324/ontologies/survey"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Always"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Domain_entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Independent_entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Likert_NeverAlways5"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Likert_NeverAlways5_names"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Likert_NeverAlways5_numbers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Likert_question"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Never"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Open_Ended_question"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Respondents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sample_Detail"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Survey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Survey_Question"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#feedback_survey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sample_courseID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sample_course_name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sample_max_responses"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sample_name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sample_number"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sample_semester"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#0"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#1_The_instructor_is_well-prepared_for_class"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#1_What_do_you_like_the_best_about_this_course?"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#2_The_instructor_clearly_communicates_his_expectations_for_student_preparation_and_participation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#2_What_would_you_like_to_change_about_this_course?"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#3_The_instructor_uses_class_time_effectively"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#3_What_do_you_think_the_instructor&apos;s_greatest_strengths_are?"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#4"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#4_The_instructor_has_clear_expectations_for_assigned_work"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#5"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#5_The_instructor_encourages_student_participation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#6_The_instructor_clearly_answers_quaestions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7_The_instructor_treats_students_with_respect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#8_The_instructor_easily_directs_and_simulates_discussion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#9_The_instructor_effectively_encourages_students_to_ask_questions_and_give_answers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#[No_Answer]"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#[Often]"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#[Rarely]"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#[Sometimes]"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCourseID"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCourseName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMaxResponses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNumber"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRespondent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSampleDetail"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSemester"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSurveyQuestion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCourseIDOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCourseNameOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMaxResponseOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isNameOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isNumberOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRespondentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSampleDetailOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSemesterOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSurveyQuestionOf"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Always"/>
+        <Class IRI="#5"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Never"/>
+        <Class IRI="#1"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#0"/>
+        <Class IRI="#[No_Answer]"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#2"/>
+        <Class IRI="#[Rarely]"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#3"/>
+        <Class IRI="#[Sometimes]"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#4"/>
+        <Class IRI="#[Often]"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Always"/>
+        <Class IRI="#Likert_NeverAlways5_names"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Independent_entity"/>
+        <Class IRI="#Domain_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Likert_NeverAlways5"/>
+        <Class IRI="#Likert_question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Likert_NeverAlways5_names"/>
+        <Class IRI="#Likert_NeverAlways5"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Likert_NeverAlways5_numbers"/>
+        <Class IRI="#Likert_NeverAlways5"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Likert_question"/>
+        <Class IRI="#Survey_Question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Likert_question"/>
+        <Class IRI="#Value"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Never"/>
+        <Class IRI="#Likert_NeverAlways5_names"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Open_Ended_question"/>
+        <Class IRI="#Survey_Question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Open_Ended_question"/>
+        <Class IRI="#Value"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Respondents"/>
+        <Class IRI="#Independent_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample_Detail"/>
+        <Class IRI="#Independent_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey"/>
+        <Class IRI="#Independent_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Survey_Question"/>
+        <Class IRI="#Independent_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Value"/>
+        <Class IRI="#Domain_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#feedback_survey"/>
+        <Class IRI="#Survey"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sample_courseID"/>
+        <Class IRI="#Sample_Detail"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sample_course_name"/>
+        <Class IRI="#Sample_Detail"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sample_max_responses"/>
+        <Class IRI="#Sample_Detail"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sample_name"/>
+        <Class IRI="#Sample_Detail"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sample_number"/>
+        <Class IRI="#Sample_Detail"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sample_semester"/>
+        <Class IRI="#Sample_Detail"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#0"/>
+        <Class IRI="#Likert_NeverAlways5_numbers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#1"/>
+        <Class IRI="#Likert_NeverAlways5_numbers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#1_The_instructor_is_well-prepared_for_class"/>
+        <Class IRI="#Likert_NeverAlways5"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#1_What_do_you_like_the_best_about_this_course?"/>
+        <Class IRI="#Open_Ended_question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#2"/>
+        <Class IRI="#Likert_NeverAlways5_numbers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#2_The_instructor_clearly_communicates_his_expectations_for_student_preparation_and_participation"/>
+        <Class IRI="#Likert_NeverAlways5"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#2_What_would_you_like_to_change_about_this_course?"/>
+        <Class IRI="#Open_Ended_question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#3"/>
+        <Class IRI="#Likert_NeverAlways5_numbers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#3_The_instructor_uses_class_time_effectively"/>
+        <Class IRI="#Likert_NeverAlways5"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#3_What_do_you_think_the_instructor&apos;s_greatest_strengths_are?"/>
+        <Class IRI="#Open_Ended_question"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#4"/>
+        <Class IRI="#Likert_NeverAlways5_numbers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#4_The_instructor_has_clear_expectations_for_assigned_work"/>
+        <Class IRI="#Likert_NeverAlways5"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#5"/>
+        <Class IRI="#Likert_NeverAlways5_numbers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#5_The_instructor_encourages_student_participation"/>
+        <Class IRI="#Likert_NeverAlways5"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#6_The_instructor_clearly_answers_quaestions"/>
+        <Class IRI="#Likert_NeverAlways5"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7_The_instructor_treats_students_with_respect"/>
+        <Class IRI="#Likert_NeverAlways5"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#8_The_instructor_easily_directs_and_simulates_discussion"/>
+        <Class IRI="#Likert_NeverAlways5"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#9_The_instructor_effectively_encourages_students_to_ask_questions_and_give_answers"/>
+        <Class IRI="#Likert_NeverAlways5"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#[No_Answer]"/>
+        <Class IRI="#Likert_NeverAlways5_names"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#[Often]"/>
+        <Class IRI="#Likert_NeverAlways5_names"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#[Rarely]"/>
+        <Class IRI="#Likert_NeverAlways5_names"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#[Sometimes]"/>
+        <Class IRI="#Likert_NeverAlways5_names"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Always"/>
+        <Class IRI="#Never"/>
+        <Class IRI="#[No_Answer]"/>
+        <Class IRI="#[Often]"/>
+        <Class IRI="#[Rarely]"/>
+        <Class IRI="#[Sometimes]"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Independent_entity"/>
+        <Class IRI="#Value"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Likert_NeverAlways5_names"/>
+        <Class IRI="#Likert_NeverAlways5_numbers"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Likert_NeverAlways5_names"/>
+        <Class IRI="#Likert_NeverAlways5_numbers"/>
+        <Class IRI="#1_The_instructor_is_well-prepared_for_class"/>
+        <Class IRI="#2_The_instructor_clearly_communicates_his_expectations_for_student_preparation_and_participation"/>
+        <Class IRI="#3_The_instructor_uses_class_time_effectively"/>
+        <Class IRI="#4_The_instructor_has_clear_expectations_for_assigned_work"/>
+        <Class IRI="#5_The_instructor_encourages_student_participation"/>
+        <Class IRI="#6_The_instructor_clearly_answers_quaestions"/>
+        <Class IRI="#7_The_instructor_treats_students_with_respect"/>
+        <Class IRI="#8_The_instructor_easily_directs_and_simulates_discussion"/>
+        <Class IRI="#9_The_instructor_effectively_encourages_students_to_ask_questions_and_give_answers"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Likert_question"/>
+        <Class IRI="#Open_Ended_question"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Respondents"/>
+        <Class IRI="#Sample_Detail"/>
+        <Class IRI="#Survey"/>
+        <Class IRI="#Survey_Question"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Sample_Detail"/>
+        <Class IRI="#Survey"/>
+        <Class IRI="#Survey_Question"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#sample_courseID"/>
+        <Class IRI="#sample_course_name"/>
+        <Class IRI="#sample_max_responses"/>
+        <Class IRI="#sample_name"/>
+        <Class IRI="#sample_number"/>
+        <Class IRI="#sample_semester"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#sample_courseID"/>
+        <Class IRI="#sample_max_responses"/>
+        <Class IRI="#sample_name"/>
+        <Class IRI="#sample_number"/>
+        <Class IRI="#sample_semester"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#0"/>
+        <Class IRI="#1"/>
+        <Class IRI="#2"/>
+        <Class IRI="#3"/>
+        <Class IRI="#4"/>
+        <Class IRI="#5"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#1_What_do_you_like_the_best_about_this_course?"/>
+        <Class IRI="#2_What_would_you_like_to_change_about_this_course?"/>
+        <Class IRI="#3_What_do_you_think_the_instructor&apos;s_greatest_strengths_are?"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCourseID"/>
+        <ObjectProperty IRI="#hasSampleDetail"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCourseName"/>
+        <ObjectProperty IRI="#hasSampleDetail"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMaxResponses"/>
+        <ObjectProperty IRI="#hasSampleDetail"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasName"/>
+        <ObjectProperty IRI="#hasSampleDetail"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNumber"/>
+        <ObjectProperty IRI="#hasSampleDetail"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasRespondent"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSampleDetail"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSemester"/>
+        <ObjectProperty IRI="#hasSampleDetail"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSurveyQuestion"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isCourseIDOf"/>
+        <ObjectProperty IRI="#isSampleDetailOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isCourseNameOf"/>
+        <ObjectProperty IRI="#isSampleDetailOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isMaxResponseOf"/>
+        <ObjectProperty IRI="#isSampleDetailOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isNameOf"/>
+        <ObjectProperty IRI="#isSampleDetailOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isNumberOf"/>
+        <ObjectProperty IRI="#isSampleDetailOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isRespondentOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSampleDetailOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSemesterOf"/>
+        <ObjectProperty IRI="#isSampleDetailOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSurveyQuestionOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasCourseID"/>
+        <ObjectProperty IRI="#isCourseIDOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasCourseName"/>
+        <ObjectProperty IRI="#isCourseNameOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasMaxResponses"/>
+        <ObjectProperty IRI="#isMaxResponseOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasName"/>
+        <ObjectProperty IRI="#isNameOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasNumber"/>
+        <ObjectProperty IRI="#isNumberOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasRespondent"/>
+        <ObjectProperty IRI="#isRespondentOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSampleDetail"/>
+        <ObjectProperty IRI="#isSampleDetailOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSemester"/>
+        <ObjectProperty IRI="#isSemesterOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSurveyQuestion"/>
+        <ObjectProperty IRI="#isSurveyQuestionOf"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCourseID"/>
+        <Class IRI="#Sample_Detail"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCourseName"/>
+        <Class IRI="#Sample_Detail"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMaxResponses"/>
+        <Class IRI="#Sample_Detail"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasName"/>
+        <Class IRI="#Sample_Detail"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNumber"/>
+        <Class IRI="#Sample_Detail"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRespondent"/>
+        <Class IRI="#Survey"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSampleDetail"/>
+        <Class IRI="#Survey"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSemester"/>
+        <Class IRI="#Sample_Detail"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSurveyQuestion"/>
+        <Class IRI="#Survey"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRespondentOf"/>
+        <Class IRI="#Respondents"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSampleDetailOf"/>
+        <Class IRI="#Sample_Detail"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSurveyQuestionOf"/>
+        <Class IRI="#Survey_Question"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCourseID"/>
+        <Class IRI="#sample_courseID"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCourseName"/>
+        <Class IRI="#sample_course_name"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMaxResponses"/>
+        <Class IRI="#sample_max_responses"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasName"/>
+        <Class IRI="#sample_name"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNumber"/>
+        <Class IRI="#sample_number"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRespondent"/>
+        <Class IRI="#Respondents"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSampleDetail"/>
+        <Class IRI="#Sample_Detail"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSemester"/>
+        <Class IRI="#sample_semester"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSurveyQuestion"/>
+        <Class IRI="#Survey_Question"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRespondentOf"/>
+        <Class IRI="#Survey"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSampleDetailOf"/>
+        <Class IRI="#Survey"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSurveyQuestionOf"/>
+        <Class IRI="#Survey"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#hasCourseID"/>
+        <ObjectProperty IRI="#hasCourseName"/>
+        <ObjectProperty IRI="#hasMaxResponses"/>
+        <ObjectProperty IRI="#hasName"/>
+        <ObjectProperty IRI="#hasNumber"/>
+        <ObjectProperty IRI="#hasSemester"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#hasRespondent"/>
+        <ObjectProperty IRI="#hasSampleDetail"/>
+        <ObjectProperty IRI="#hasSurveyQuestion"/>
+        <ObjectProperty IRI="#isRespondentOf"/>
+        <ObjectProperty IRI="#isSampleDetailOf"/>
+        <ObjectProperty IRI="#isSurveyQuestionOf"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#isCourseIDOf"/>
+        <ObjectProperty IRI="#isCourseNameOf"/>
+        <ObjectProperty IRI="#isMaxResponseOf"/>
+        <ObjectProperty IRI="#isNameOf"/>
+        <ObjectProperty IRI="#isNumberOf"/>
+        <ObjectProperty IRI="#isSemesterOf"/>
+    </DisjointObjectProperties>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
