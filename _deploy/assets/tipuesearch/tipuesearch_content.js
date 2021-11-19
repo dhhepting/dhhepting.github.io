@@ -19,85 +19,85 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/01_Mon-30-Aug-2021.html"
   },{
-    "title": "Responses to Mtg 01 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/01_R.html"
-  },{
     "title": "Responses to Mtg 01 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/01_R.html"
+  },{
+    "title": "Responses to Mtg 01 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/01_R.html"
   },{
     "title": "Responses to Mtg 1 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/01_R.html"
   },{
-    "title": "Summary of Mtg 01 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/01_S.html"
-  },{
     "title": "Summary of Mtg 01 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/01_S.html"
+  },{
+    "title": "Summary of Mtg 01 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/01_S.html"
   },{
     "title": "Summary of Mtg 1 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/01_S.html"
   },{
-    "title": "Mtg 1 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/01_Tue-12-Jan-2021.html"
-  },{
     "title": "Mtg 1 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/01_Tue-12-Jan-2021.html"
   },{
-    "title": "Responses to Mtg 02 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
+    "title": "Mtg 1 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/02_R.html"
+    "url": "/~hepting/teaching/CS-205/202110/meetings/01_Tue-12-Jan-2021.html"
   },{
     "title": "Responses to Mtg 02 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/02_R.html"
   },{
+    "title": "Responses to Mtg 02 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/02_R.html"
+  },{
     "title": "Responses to Mtg 02 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/02_R.html"
-  },{
-    "title": "Summary of Mtg 02 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/02_S.html"
   },{
     "title": "Summary of Mtg 02 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/02_S.html"
   },{
+    "title": "Summary of Mtg 02 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/02_S.html"
+  },{
     "title": "Summary of Mtg 02 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/02_S.html"
   },{
-    "title": "Mtg 2 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/02_Thu-14-Jan-2021.html"
-  },{
     "title": "Mtg 2 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/02_Thu-14-Jan-2021.html"
+  },{
+    "title": "Mtg 2 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/02_Thu-14-Jan-2021.html"
   },{
     "title": "Mtg 02 • CS-428+828 (202130)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -129,45 +129,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/03_Fri-15-Jan-2021.html"
   },{
-    "title": "Responses to Mtg 03 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/03_R.html"
-  },{
     "title": "Responses to Mtg 03 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/03_R.html"
+  },{
+    "title": "Responses to Mtg 03 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/03_R.html"
   },{
     "title": "Responses to Mtg 03 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/03_R.html"
   },{
-    "title": "Summary of Mtg 03 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/03_S.html"
-  },{
     "title": "Summary of Mtg 03 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/03_S.html"
+  },{
+    "title": "Summary of Mtg 03 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/03_S.html"
   },{
     "title": "Summary of Mtg 03 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/03_S.html"
   },{
-    "title": "Mtg 3 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/03_Tue-19-Jan-2021.html"
-  },{
     "title": "Mtg 3 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/03_Tue-19-Jan-2021.html"
+  },{
+    "title": "Mtg 3 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/03_Tue-19-Jan-2021.html"
   },{
     "title": "Mtg 04 • CS-499+900 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -179,45 +179,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/04_Mon-18-Jan-2021.html"
   },{
-    "title": "Responses to Mtg 04 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/04_R.html"
-  },{
     "title": "Responses to Mtg 04 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/04_R.html"
+  },{
+    "title": "Responses to Mtg 04 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/04_R.html"
   },{
     "title": "Responses to Mtg 04 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/04_R.html"
   },{
-    "title": "Summary of Mtg 04 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/04_S.html"
-  },{
     "title": "Summary of Mtg 04 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/04_S.html"
+  },{
+    "title": "Summary of Mtg 04 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/04_S.html"
   },{
     "title": "Summary of Mtg 04 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/04_S.html"
   },{
-    "title": "Mtg 4 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/04_Thu-21-Jan-2021.html"
-  },{
     "title": "Mtg 4 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/04_Thu-21-Jan-2021.html"
+  },{
+    "title": "Mtg 4 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/04_Thu-21-Jan-2021.html"
   },{
     "title": "Mtg 04 • CS-428+828 (202130)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -229,45 +229,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/05_Fri-10-Sep-2021.html"
   },{
-    "title": "Responses to Mtg 05 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/05_R.html"
-  },{
     "title": "Responses to Mtg 05 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/05_R.html"
+  },{
+    "title": "Responses to Mtg 05 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/05_R.html"
   },{
     "title": "Responses to Mtg 05 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/05_R.html"
   },{
-    "title": "Summary of Mtg 05 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/05_S.html"
-  },{
     "title": "Summary of Mtg 05 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/05_S.html"
+  },{
+    "title": "Summary of Mtg 05 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/05_S.html"
   },{
     "title": "Summary of Mtg 05 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/05_S.html"
   },{
-    "title": "Mtg 5 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/05_Tue-26-Jan-2021.html"
-  },{
     "title": "Mtg 5 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/05_Tue-26-Jan-2021.html"
+  },{
+    "title": "Mtg 5 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/05_Tue-26-Jan-2021.html"
   },{
     "title": "Mtg 05 • CS-499+900 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -294,45 +294,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/06_Mon-13-Sep-2021.html"
   },{
-    "title": "Responses to Mtg 06 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/06_R.html"
-  },{
     "title": "Responses to Mtg 06 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/06_R.html"
+  },{
+    "title": "Responses to Mtg 06 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/06_R.html"
   },{
     "title": "Responses to Mtg 06 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/06_R.html"
   },{
-    "title": "Summary of Mtg 06 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/06_S.html"
-  },{
     "title": "Summary of Mtg 06 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/06_S.html"
+  },{
+    "title": "Summary of Mtg 06 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/06_S.html"
   },{
     "title": "Summary of Mtg 06 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/06_S.html"
   },{
-    "title": "Mtg 6 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/06_Thu-28-Jan-2021.html"
-  },{
     "title": "Mtg 6 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/06_Thu-28-Jan-2021.html"
+  },{
+    "title": "Mtg 6 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/06_Thu-28-Jan-2021.html"
   },{
     "title": "Mtg 07 • CS-499+900 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -344,45 +344,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/07_Mon-25-Jan-2021.html"
   },{
-    "title": "Responses to Mtg 07 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/07_R.html"
-  },{
     "title": "Responses to Mtg 07 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/07_R.html"
+  },{
+    "title": "Responses to Mtg 07 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/07_R.html"
   },{
     "title": "Responses to Mtg 07 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/07_R.html"
   },{
-    "title": "Summary of Mtg 07 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/07_S.html"
-  },{
     "title": "Summary of Mtg 07 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/07_S.html"
+  },{
+    "title": "Summary of Mtg 07 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/07_S.html"
   },{
     "title": "Summary of Mtg 07 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/07_S.html"
   },{
-    "title": "Mtg 7 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/07_Tue-02-Feb-2021.html"
-  },{
     "title": "Mtg 7 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/07_Tue-02-Feb-2021.html"
+  },{
+    "title": "Mtg 7 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/07_Tue-02-Feb-2021.html"
   },{
     "title": "Mtg 07 • CS-428+828 (202130)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -394,45 +394,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/08_Fri-17-Sep-2021.html"
   },{
-    "title": "Responses to Mtg 08 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/08_R.html"
-  },{
     "title": "Responses to Mtg 08 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/08_R.html"
+  },{
+    "title": "Responses to Mtg 08 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/08_R.html"
   },{
     "title": "Responses to Mtg 08 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/08_R.html"
   },{
-    "title": "Summary of Mtg 08 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/08_S.html"
-  },{
     "title": "Summary of Mtg 08 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/08_S.html"
+  },{
+    "title": "Summary of Mtg 08 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/08_S.html"
   },{
     "title": "Summary of Mtg 08 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/08_S.html"
   },{
-    "title": "Mtg 8 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/08_Thu-04-Feb-2021.html"
-  },{
     "title": "Mtg 8 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/08_Thu-04-Feb-2021.html"
+  },{
+    "title": "Mtg 8 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/08_Thu-04-Feb-2021.html"
   },{
     "title": "Mtg 08 • CS-499+900 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -459,45 +459,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/09_Mon-20-Sep-2021.html"
   },{
-    "title": "Responses to Mtg 09 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/09_R.html"
-  },{
     "title": "Responses to Mtg 09 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/09_R.html"
+  },{
+    "title": "Responses to Mtg 09 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/09_R.html"
   },{
     "title": "Responses to Mtg 9 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/09_R.html"
   },{
-    "title": "Summary of Mtg 09 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/09_S.html"
-  },{
     "title": "Summary of Mtg 09 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/09_S.html"
+  },{
+    "title": "Summary of Mtg 09 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/09_S.html"
   },{
     "title": "Summary of Mtg 09 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/09_S.html"
   },{
-    "title": "Mtg 9 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/09_Tue-09-Feb-2021.html"
-  },{
     "title": "Mtg 9 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/09_Tue-09-Feb-2021.html"
+  },{
+    "title": "Mtg 9 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/09_Tue-09-Feb-2021.html"
   },{
     "title": "Mtg 10 • CS-499+900 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -509,45 +509,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/10_Mon-01-Feb-2021.html"
   },{
-    "title": "Responses to Mtg 10 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/10_R.html"
-  },{
     "title": "Responses to Mtg 10 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/10_R.html"
+  },{
+    "title": "Responses to Mtg 10 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/10_R.html"
   },{
     "title": "Responses to Mtg 10 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/10_R.html"
   },{
-    "title": "Summary of Mtg 10 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/10_S.html"
-  },{
     "title": "Summary of Mtg 10 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/10_S.html"
+  },{
+    "title": "Summary of Mtg 10 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/10_S.html"
   },{
     "title": "Summary of Mtg 10 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/10_S.html"
   },{
-    "title": "Mtg 10 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/10_Thu-11-Feb-2021.html"
-  },{
     "title": "Mtg 10 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/10_Thu-11-Feb-2021.html"
+  },{
+    "title": "Mtg 10 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/10_Thu-11-Feb-2021.html"
   },{
     "title": "Mtg 10 • CS-428+828 (202130)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -559,45 +559,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/11_Fri-24-Sep-2021.html"
   },{
-    "title": "Responses to Mtg 11 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/11_R.html"
-  },{
     "title": "Responses to Mtg 11 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/11_R.html"
+  },{
+    "title": "Responses to Mtg 11 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/11_R.html"
   },{
     "title": "Responses to Mtg 11 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/11_R.html"
   },{
-    "title": "Summary of Mtg 11 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/11_S.html"
-  },{
     "title": "Summary of Mtg 11 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/11_S.html"
+  },{
+    "title": "Summary of Mtg 11 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/11_S.html"
   },{
     "title": "Summary of Mtg 11 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/11_S.html"
   },{
-    "title": "Mtg 11 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/11_Tue-23-Feb-2021.html"
-  },{
     "title": "Mtg 11 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/11_Tue-23-Feb-2021.html"
+  },{
+    "title": "Mtg 11 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/11_Tue-23-Feb-2021.html"
   },{
     "title": "Mtg 11 • CS-499+900 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -624,45 +624,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/12_Mon-27-Sep-2021.html"
   },{
-    "title": "Responses to Mtg 12 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/12_R.html"
-  },{
     "title": "Responses to Mtg 12 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/12_R.html"
+  },{
+    "title": "Responses to Mtg 12 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/12_R.html"
   },{
     "title": "Responses to Mtg 12 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/12_R.html"
   },{
-    "title": "Summary of Mtg 12 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/12_S.html"
-  },{
     "title": "Summary of Mtg 12 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/12_S.html"
+  },{
+    "title": "Summary of Mtg 12 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/12_S.html"
   },{
     "title": "Summary of Mtg 12 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/12_S.html"
   },{
-    "title": "Mtg 12 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/12_Thu-25-Feb-2021.html"
-  },{
     "title": "Mtg 12 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/12_Thu-25-Feb-2021.html"
+  },{
+    "title": "Mtg 12 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/12_Thu-25-Feb-2021.html"
   },{
     "title": "Mtg 13 • CS-499+900 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -674,45 +674,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/13_Mon-08-Feb-2021.html"
   },{
-    "title": "Responses to Mtg 13 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/13_R.html"
-  },{
     "title": "Responses to Mtg 13 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/13_R.html"
+  },{
+    "title": "Responses to Mtg 13 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/13_R.html"
   },{
     "title": "Responses to Mtg 13 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/13_R.html"
   },{
-    "title": "Summary of Mtg 13 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/13_S.html"
-  },{
     "title": "Summary of Mtg 13 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/13_S.html"
+  },{
+    "title": "Summary of Mtg 13 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/13_S.html"
   },{
     "title": "Summary of Mtg 13 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/13_S.html"
   },{
-    "title": "Mtg 13 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/13_Tue-02-Mar-2021.html"
-  },{
     "title": "Mtg 13 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/13_Tue-02-Mar-2021.html"
+  },{
+    "title": "Mtg 13 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/13_Tue-02-Mar-2021.html"
   },{
     "title": "Mtg 13 • CS-428+828 (202130)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -724,45 +724,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/14_Fri-01-Oct-2021.html"
   },{
-    "title": "Responses to Mtg 14 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/14_R.html"
-  },{
     "title": "Responses to Mtg 14 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/14_R.html"
+  },{
+    "title": "Responses to Mtg 14 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/14_R.html"
   },{
     "title": "Responses to Mtg 14 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/14_R.html"
   },{
-    "title": "Summary of Mtg 14 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/14_S.html"
-  },{
     "title": "Summary of Mtg 14 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/14_S.html"
+  },{
+    "title": "Summary of Mtg 14 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/14_S.html"
   },{
     "title": "Summary of Mtg 14 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/14_S.html"
   },{
-    "title": "Mtg 14 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/14_Thu-04-Mar-2021.html"
-  },{
     "title": "Mtg 14 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/14_Thu-04-Mar-2021.html"
+  },{
+    "title": "Mtg 14 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/14_Thu-04-Mar-2021.html"
   },{
     "title": "Mtg 14 • CS-499+900 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -789,45 +789,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/15_Mon-04-Oct-2021.html"
   },{
-    "title": "Responses to Mtg 15 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/15_R.html"
-  },{
     "title": "Responses to Mtg 15 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/15_R.html"
+  },{
+    "title": "Responses to Mtg 15 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/15_R.html"
   },{
     "title": "Responses to Mtg 15 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/15_R.html"
   },{
-    "title": "Summary of Mtg 15 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/15_S.html"
-  },{
     "title": "Summary of Mtg 15 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/15_S.html"
+  },{
+    "title": "Summary of Mtg 15 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/15_S.html"
   },{
     "title": "Summary of Mtg 15 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/15_S.html"
   },{
-    "title": "Mtg 15 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/15_Tue-09-Mar-2021.html"
-  },{
     "title": "Mtg 15 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/15_Tue-09-Mar-2021.html"
+  },{
+    "title": "Mtg 15 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/15_Tue-09-Mar-2021.html"
   },{
     "title": "Mtg 16 • CS-499+900 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -839,45 +839,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/16_Mon-22-Feb-2021.html"
   },{
-    "title": "Responses to Mtg 16 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/16_R.html"
-  },{
     "title": "Responses to Mtg 16 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/16_R.html"
+  },{
+    "title": "Responses to Mtg 16 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/16_R.html"
   },{
     "title": "Responses to Mtg 16 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/16_R.html"
   },{
-    "title": "Summary of Mtg 16 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/16_S.html"
-  },{
     "title": "Summary of Mtg 16 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/16_S.html"
+  },{
+    "title": "Summary of Mtg 16 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/16_S.html"
   },{
     "title": "Summary of Mtg 16 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/16_S.html"
   },{
-    "title": "Mtg 16 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/16_Thu-11-Mar-2021.html"
-  },{
     "title": "Mtg 16 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/16_Thu-11-Mar-2021.html"
+  },{
+    "title": "Mtg 16 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/16_Thu-11-Mar-2021.html"
   },{
     "title": "Mtg 16 • CS-428+828 (202130)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -889,45 +889,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/17_Fri-08-Oct-2021.html"
   },{
-    "title": "Responses to Mtg 17 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/17_R.html"
-  },{
     "title": "Responses to Mtg 17 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/17_R.html"
+  },{
+    "title": "Responses to Mtg 17 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/17_R.html"
   },{
     "title": "Responses to Mtg 17 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/17_R.html"
   },{
-    "title": "Summary of Mtg 17 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/17_S.html"
-  },{
     "title": "Summary of Mtg 17 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/17_S.html"
+  },{
+    "title": "Summary of Mtg 17 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/17_S.html"
   },{
     "title": "Summary of Mtg 17 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/17_S.html"
   },{
-    "title": "Mtg 17 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/17_Tue-16-Mar-2021.html"
-  },{
     "title": "Mtg 17 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/17_Tue-16-Mar-2021.html"
+  },{
+    "title": "Mtg 17 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/17_Tue-16-Mar-2021.html"
   },{
     "title": "Mtg 17 • CS-499+900 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -949,45 +949,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/18_Fri-26-Feb-2021.html"
   },{
-    "title": "Responses to Mtg 18 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/18_R.html"
-  },{
     "title": "Responses to Mtg 18 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/18_R.html"
+  },{
+    "title": "Responses to Mtg 18 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/18_R.html"
   },{
     "title": "Responses to Mtg 18 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/18_R.html"
   },{
-    "title": "Summary of Mtg 18 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/18_S.html"
-  },{
     "title": "Summary of Mtg 18 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/18_S.html"
+  },{
+    "title": "Summary of Mtg 18 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/18_S.html"
   },{
     "title": "Summary of Mtg 18 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/18_S.html"
   },{
-    "title": "Mtg 18 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/18_Thu-18-Mar-2021.html"
-  },{
     "title": "Mtg 18 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/18_Thu-18-Mar-2021.html"
+  },{
+    "title": "Mtg 18 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/18_Thu-18-Mar-2021.html"
   },{
     "title": "Mtg 18 • CS-428+828 (202130)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -1054,45 +1054,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/19_Mon-01-Mar-2021.html"
   },{
-    "title": "Responses to Mtg 19 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/19_R.html"
-  },{
     "title": "Responses to Mtg 19 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/19_R.html"
+  },{
+    "title": "Responses to Mtg 19 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/19_R.html"
   },{
     "title": "Responses to Mtg 19 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/19_R.html"
   },{
-    "title": "Summary of Mtg 19 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/19_S.html"
-  },{
     "title": "Summary of Mtg 19 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/19_S.html"
+  },{
+    "title": "Summary of Mtg 19 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/19_S.html"
   },{
     "title": "Summary of Mtg 19 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/19_S.html"
   },{
-    "title": "Mtg 19 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/19_Tue-23-Mar-2021.html"
-  },{
     "title": "Mtg 19 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/19_Tue-23-Mar-2021.html"
+  },{
+    "title": "Mtg 19 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/19_Tue-23-Mar-2021.html"
   },{
     "title": "Fall 2018 Schedule",
     "text": "{% include teaching/semester.html %} {% include teaching/schedule.html %}",
@@ -1139,45 +1139,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/20_Mon-18-Oct-2021.html"
   },{
-    "title": "Responses to Mtg 20 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/20_R.html"
-  },{
     "title": "Responses to Mtg 20 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/20_R.html"
+  },{
+    "title": "Responses to Mtg 20 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/20_R.html"
   },{
     "title": "Responses to Mtg 20 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/20_R.html"
   },{
-    "title": "Summary of Mtg 20 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/20_S.html"
-  },{
     "title": "Summary of Mtg 20 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/20_S.html"
+  },{
+    "title": "Summary of Mtg 20 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/20_S.html"
   },{
     "title": "Summary of Mtg 20 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/20_S.html"
   },{
-    "title": "Mtg 20 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/20_Thu-25-Mar-2021.html"
-  },{
     "title": "Mtg 20 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/20_Thu-25-Mar-2021.html"
+  },{
+    "title": "Mtg 20 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/20_Thu-25-Mar-2021.html"
   },{
     "title": "Mtg 20 • CS-499+900 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -1199,45 +1199,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/21_Fri-05-Mar-2021.html"
   },{
-    "title": "Responses to Mtg 21 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/21_R.html"
-  },{
     "title": "Responses to Mtg 21 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/21_R.html"
+  },{
+    "title": "Responses to Mtg 21 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/21_R.html"
   },{
     "title": "Responses to Mtg 21 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/21_R.html"
   },{
-    "title": "Summary of Mtg 21 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/21_S.html"
-  },{
     "title": "Summary of Mtg 21 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/21_S.html"
+  },{
+    "title": "Summary of Mtg 21 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/21_S.html"
   },{
     "title": "Summary of Mtg 21 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/21_S.html"
   },{
-    "title": "Mtg 21 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/21_Tue-30-Mar-2021.html"
-  },{
     "title": "Mtg 21 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/21_Tue-30-Mar-2021.html"
+  },{
+    "title": "Mtg 21 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/21_Tue-30-Mar-2021.html"
   },{
     "title": "Mtg 21 • CS-428+828 (202130)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -1259,90 +1259,90 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/22_Mon-08-Mar-2021.html"
   },{
-    "title": "Responses to Mtg 22 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/22_R.html"
-  },{
     "title": "Responses to Mtg 22 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/22_R.html"
+  },{
+    "title": "Responses to Mtg 22 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/22_R.html"
   },{
     "title": "Responses to Mtg 22 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/22_R.html"
   },{
-    "title": "Summary of Mtg 22 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/22_S.html"
-  },{
     "title": "Summary of Mtg 22 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/22_S.html"
+  },{
+    "title": "Summary of Mtg 22 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/22_S.html"
   },{
     "title": "Summary of Mtg 22 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/22_S.html"
   },{
-    "title": "Mtg 22 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/22_Thu-01-Apr-2021.html"
-  },{
     "title": "Mtg 22 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/22_Thu-01-Apr-2021.html"
+  },{
+    "title": "Mtg 22 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/22_Thu-01-Apr-2021.html"
   },{
     "title": "Mtg 23 • CS-428+828 (202130)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/23_Mon-25-Oct-2021.html"
   },{
-    "title": "Responses to Mtg 23 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/23_R.html"
-  },{
     "title": "Responses to Mtg 23 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/23_R.html"
+  },{
+    "title": "Responses to Mtg 23 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/23_R.html"
   },{
     "title": "Responses to Mtg 23 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/23_R.html"
   },{
-    "title": "Summary of Mtg 23 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/23_S.html"
-  },{
     "title": "Summary of Mtg 23 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/23_S.html"
+  },{
+    "title": "Summary of Mtg 23 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/23_S.html"
   },{
     "title": "Summary of Mtg 23 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/23_S.html"
   },{
-    "title": "Mtg 23 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/23_Tue-06-Apr-2021.html"
-  },{
     "title": "Mtg 23 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/23_Tue-06-Apr-2021.html"
+  },{
+    "title": "Mtg 23 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/23_Tue-06-Apr-2021.html"
   },{
     "title": "Mtg 23 • CS-499+900 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -1364,45 +1364,45 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/24_Fri-12-Mar-2021.html"
   },{
-    "title": "Responses to Mtg 24 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/24_R.html"
-  },{
     "title": "Responses to Mtg 24 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/24_R.html"
+  },{
+    "title": "Responses to Mtg 24 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/24_R.html"
   },{
     "title": "Responses to Mtg 24 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/24_R.html"
   },{
-    "title": "Summary of Mtg 24 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/24_S.html"
-  },{
     "title": "Summary of Mtg 24 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/24_S.html"
+  },{
+    "title": "Summary of Mtg 24 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/24_S.html"
   },{
     "title": "Summary of Mtg 24 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/24_S.html"
   },{
-    "title": "Mtg 24 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/24_Thu-08-Apr-2021.html"
-  },{
     "title": "Mtg 24 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/24_Thu-08-Apr-2021.html"
+  },{
+    "title": "Mtg 24 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/24_Thu-08-Apr-2021.html"
   },{
     "title": "Mtg 24 • CS-428+828 (202130)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -1424,90 +1424,90 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-499+900/202110/meetings/25_Mon-15-Mar-2021.html"
   },{
-    "title": "Responses to Mtg 25 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/25_R.html"
-  },{
     "title": "Responses to Mtg 25 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/25_R.html"
+  },{
+    "title": "Responses to Mtg 25 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/25_R.html"
   },{
     "title": "Responses to Mtg 25 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/25_R.html"
   },{
-    "title": "Summary of Mtg 25 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/25_S.html"
-  },{
     "title": "Summary of Mtg 25 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/25_S.html"
+  },{
+    "title": "Summary of Mtg 25 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/25_S.html"
   },{
     "title": "Summary of Mtg 25 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/25_S.html"
   },{
-    "title": "Mtg 25 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/25_Tue-13-Apr-2021.html"
-  },{
     "title": "Mtg 25 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/25_Tue-13-Apr-2021.html"
+  },{
+    "title": "Mtg 25 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/25_Tue-13-Apr-2021.html"
   },{
     "title": "Mtg 26 • CS-428+828 (202130)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/26_Mon-01-Nov-2021.html"
   },{
-    "title": "Responses to Mtg 26 • CS-205 (202110)",
-    "text": "{%- include meetings/responses.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/26_R.html"
-  },{
     "title": "Responses to Mtg 26 • CS-280 (202110)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/26_R.html"
+  },{
+    "title": "Responses to Mtg 26 • CS-205 (202110)",
+    "text": "{%- include meetings/responses.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/26_R.html"
   },{
     "title": "Responses to Mtg 26 • CS-428+828 (202130)",
     "text": "{%- include meetings/responses.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/26_R.html"
   },{
-    "title": "Summary of Mtg 26 • CS-205 (202110)",
-    "text": "{%- include meetings/summary.html -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/26_S.html"
-  },{
     "title": "Summary of Mtg 26 • CS-280 (202110)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/26_S.html"
+  },{
+    "title": "Summary of Mtg 26 • CS-205 (202110)",
+    "text": "{%- include meetings/summary.html -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/26_S.html"
   },{
     "title": "Summary of Mtg 26 • CS-428+828 (202130)",
     "text": "{%- include meetings/summary.html -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/meetings/26_S.html"
   },{
-    "title": "Mtg 26 • CS-205 (202110)",
-    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/26_Thu-15-Apr-2021.html"
-  },{
     "title": "Mtg 26 • CS-280 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/26_Thu-15-Apr-2021.html"
+  },{
+    "title": "Mtg 26 • CS-205 (202110)",
+    "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/26_Thu-15-Apr-2021.html"
   },{
     "title": "Mtg 26 • CS-499+900 (202110)",
     "text": "{%- include meetings/main.html tm=page.total_meet mn=page.mtg_nbr md=page.mtg_date -%}",
@@ -1894,45 +1894,35 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202010/exams.html"
   },{
-    "title": "CS 205 Feedback (202010)",
+    "title": "CS 280 Feedback (201510)",
     "text": "{% include feedback/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-205/202010/feedback.html"
-  },{
-    "title": "CS 205 Feedback (201910)",
-    "text": "{% include feedback/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/201910/feedback.html"
-  },{
-    "title": "CS 280 Feedback (201310)",
-    "text": "{% include feedback/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-280/201310/feedback.html"
+    "url": "/~hepting/teaching/CS-280/201510/feedback.html"
   },{
     "title": "CS 280 Feedback (202010)",
     "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202010/feedback.html"
   },{
-    "title": "CS 280 Feedback (201510)",
+    "title": "CS 280 Feedback (201710)",
     "text": "{% include feedback/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-280/201510/feedback.html"
+    "url": "/~hepting/teaching/CS-280/201710/feedback.html"
   },{
     "title": "CS 280 Feedback (201610)",
     "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/201610/feedback.html"
   },{
+    "title": "CS 280 Feedback (201310)",
+    "text": "{% include feedback/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/201310/feedback.html"
+  },{
     "title": "CS 280 Feedback (201910)",
     "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/201910/feedback.html"
-  },{
-    "title": "CS 280 Feedback (201710)",
-    "text": "{% include feedback/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-280/201710/feedback.html"
   },{
     "title": "CS 305+828 Feedback (201430)",
     "text": "{% include feedback/main.html %}",
@@ -1944,15 +1934,40 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-305+828/201330/feedback.html"
   },{
+    "title": "CS 205 Feedback (202010)",
+    "text": "{% include feedback/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202010/feedback.html"
+  },{
+    "title": "CS 205 Feedback (201910)",
+    "text": "{% include feedback/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/201910/feedback.html"
+  },{
     "title": "CS 305 Feedback (201230)",
     "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-305/201230/feedback.html"
   },{
+    "title": "CS 110 Feedback (201510)",
+    "text": "{% include feedback/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-110/201510/feedback.html"
+  },{
+    "title": "CS 110 Feedback (201810)",
+    "text": "{% include feedback/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-110/201810/feedback.html"
+  },{
     "title": "CS 428+828 Feedback (201730)",
     "text": "{% include feedback/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201730/feedback.html"
+  },{
+    "title": "CS 428+828 Feedback (201830)",
+    "text": "{% include feedback/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201830/feedback.html"
   },{
     "title": "CS 428+828 Feedback (201930)",
     "text": "{% include feedback/main.html %}",
@@ -1964,21 +1979,6 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201630/feedback.html"
   },{
-    "title": "CS 428+828 Feedback (201830)",
-    "text": "{% include feedback/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/201830/feedback.html"
-  },{
-    "title": "CS 110 Feedback (201810)",
-    "text": "{% include feedback/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-110/201810/feedback.html"
-  },{
-    "title": "CS 110 Feedback (201510)",
-    "text": "{% include feedback/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-110/201510/feedback.html"
-  },{
     "title": "Group Work",
     "text": "# {{ page.breadcrumb }} The mark awarded for each group assignment is shared by all group members. However, you have the ability to communicate extra information about your the performance of your group members to your group members, to the marker, and to me. For each group assignment, you are encouraged (but not required) to rate your group members by allocating 100 (or 99, in the case of a group with 3 members contributing equally) points amongst them (including yourself). Allocating points for a group assignment will provide evidence of your participation in the course. * If all group members contribute equally, allocate the points equally to each group member. * If you feel that all members of your group have not contributed equally, allocate the 100 points unequally and explain why you have done this. * If you provide a group rating, please be thoughtful as you undertake this activity. * If you decide to not provide a rating, it will be as if you had made an equal allocation of your 100 points. The points allocated to each group member are summed. The point total for each group member is divided by the largest total, to give a rating between 0.5 and 1 (any rating that is calculated to be less than 0.5 is set to 0.5). The group member who was allocated the most points will receive a rating of 1, which means 100% of the earned mark for the group assignment. If all group members have the same point total, all will receive 100% of the earned mark for the group assignment. The lowest rating allowed is 0.5 and that means the group member should receive 50% of the earned mark for the group assignment. The ratings are suggestions to me and information to you about your involvement in your group. * Use the \"Rate your group on...\" link on URcourses, for the appropriate assignment, and use the form provided here to help you to format your submission. * You can see your rating from the group in URcourses via the link labelled \"See Your Rating From Group\". Example 1: Equal Allocations Allocated By Results Allocated To Thomas Richard Harold Sally Total Points Rating Thomas 25 25 25 25 100 1.00 (1.00) Richard 25 25 25 25 100 1.00 (1.00) Harold 25 25 25 25 100 1.00 (1.00) Sally 25 25 25 25 100 1.00 (1.00) Example 2: Unequal Allocations Allocated By Results Allocated To Thomas Richard Harold Sally Total Points Rating Thomas 97 3 1 52 153 153/153 = 1.00 (1.00) Richard 1 50 25 25 101 101/153 = 0.66 (0.66) Harold 1 23 35 13 72 72/153 = 0.47 (0.50) Sally 1 24 39 10 74 74/153 = 0.47 (0.50) Example 3: Some Equal, Some Unequal Allocations Allocated By Results Allocated To Thomas Richard Harold Sally Total Points Rating Thomas 97 3 25 25 150 150/150 = 1.00 (1.00) Richard 1 50 25 25 101 101/150 = 0.67 (0.67) Harold 1 23 25 25 74 74/150 = 0.49 (0.50) Sally 1 24 25 25 75 75/150 = 0.5 (0.50) Format Your Submission Select your group size (3, 4, or 5) Enter the names of your group members in the left column, with your name first Enter your point allocations in the middle column When your total allocated points is equal to 99 or 100, you will be able to click on the \"Format\" button to see your formatted submission When you are satisfied with your submission, click \"Copy\" to make a copy of it that can be pasted at the URcourses link (described earlier) Number of Group Members: 3 4 5 Group Members {% for r in (2..5) %} {% endfor %} You allocate: {% for r in (1..5) %} {% else %} placeholder=\"GM {{r}}\"> {% endif %} {% endfor %} Output Format Copy GWM",
     "tags": "",
@@ -1989,140 +1989,15 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/gw-marking.html"
   },{
-    "title": "Blogging",
-    "text": "# {{ page.breadcrumb }} I have written blog posts in a few places: * my own blog, [Combinatorial Explosions](https://combinatorial-explosions.blogspot.com/) * and others... {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "title": "HTTP Errors",
+    "text": "# {{ page.breadcrumb }} Certain HTTP response status codes represent errors. If any of the following response status codes are encountered while attempting to access any of my pages, you will be redirected: * [Forbidden Access (403)](403.html) * [Not Found (404)](404.html) * [Unexpected Condition (500)](500.html)",
     "tags": "",
-    "url": "/~hepting/projects/blogging/"
+    "url": "/~hepting/trouble/HTTPerrors/"
   },{
-    "title": "Gallery",
-    "text": "",
+    "title": "Trouble",
+    "text": "# {{ page.breadcrumb }} Current website build status from [Travis CI](https://travis-ci.org): If you have had some trouble on this website, please either: * visit [GitHub](https://github.com/dhhepting/dhhepting.github.io/issues) to create an issue * send [e-mail](mailto:{{site.email}}) to me If you have had a specific error code returned ([403]({{ \"/trouble/HTTPerrors/403.html\" | relative_url }}), [404]({{ \"/trouble/HTTPerrors/404.html\" | relative_url }}), or [500]({{ \"/trouble/HTTPerrors/500.html\" | relative_url }})), you will be redirected to a page that gives you more information and the chance to send me a pre-formatted email message with details of the error.",
     "tags": "",
-    "url": "/~hepting/projects/fractals/gallery/"
-  },{
-    "title": "Exhibitions",
-    "text": "# {{ page.breadcrumb }} {% include index-dir.html %}",
-    "tags": "",
-    "url": "/~hepting/projects/fractals/exhibitions/"
-  },{
-    "title": "Calendars",
-    "text": "# {{ page.breadcrumb }} Each year between 1991 and 1997, a calendar of computer-generated images was published by Universe Publishing, based on the fractal geometry of Benoit B. Mandelbrot. Before 1997, the calendar was first done as a custom edition and then as a trade edition in the following year. In 1997, the trade and custom editions were the same. - Richard F. Voss edited the calendars for 1991 and 1992 - F. Kenton Musgrave edited the calendars for 1993 and 1994 - Daryl H. Hepting edited the calendars for [1995](1995.html) and [1996](1996.html), and both included the essay [A Path to Fractals](a-path-to-fractals.html) - F. Kenton Musgrave edited the calendar for 1997: it featured his work alone ### Links * [The Math Forum at NCTM](http://mathforum.org/library/view/2285.html)",
-    "tags": "",
-    "url": "/~hepting/projects/fractals/calendars/"
-  },{
-    "title": "Fractals Project",
-    "text": "# {{ page.breadcrumb }} {{ page.description | markdownify }} My M.Sc. thesis [Approximation and Visualization of Sets Defined by Iterated Function Systems]({{'/research/works/1991-03-Hep-Approximation-and-Visualization-of-Sets-Defined-by-Iterated-Function-Systems.html' | relative_url }}) (from 1991) dealt with linear fractals. That got me started and I am still hooked. - [Gallery of Images](gallery/) - [Fractals Calendars from Universe Publishing](calendars/) - [Exhibitions &mdash; in which I participated or helped to curate](exhibitions/) - [A Math of Art &mdash; exploring mathematics and art on the web](math-of-art.html) My supervisor for my Master of Science degree was [Przemyslaw Prusinkiewicz](https://en.wikipedia.org/wiki/Przemys%C5%82aw_Prusinkiewicz){:target=\"blank\"}. During my studies, Prusinkiewicz took a sabbatical and visited [Benoit Mandelbrot](https://en.wikipedia.org/wiki/Benoit_Mandelbrot){:target=\"blank\"}. Upon completion of my studies, that Mandelbrot connection helped F. David Fracchia (who had just completed his Ph.D. with Prusinkiewicz) and me to secure term employment with Mandelbrot's Fractals Project (Fracchia at Yale as a postdoc, me at IBM TJ Watson Research Centre), beginning in the summer of 1991. ![Sing Sing: the Grand Slammer]({{\"/assets/projects/img/grand-slammer.jpg\" | relative_url}}){:height=\"161px\" width=\"220px\" class=\"img-responsive\"} During my contract with IBM, I lived in Ossining, New York (Home of the Grand Slammer: Sing Sing Prison). The New York Times printed a story about travelling to Ossining in [Going Up the River, for a Visit](http://www.nytimes.com/2005/01/21/travel/escapes/going-up-the-river-for-a-visit.html){:target=\"blank\"}. {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/fractals/"
-  },{
-    "title": "Faces Project",
-    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/faces/"
-  },{
-    "title": "Multimedia",
-    "text": "# {{ page.breadcrumb }} {% include index-dir.html %} {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/multimedia/"
-  },{
-    "title": "cogito",
-    "text": "# {{ page.breadcrumb }} {{ page.description }} * VIDEO: [Exploring curves in gnuplot using cogito](https://www.youtube.com/watch?v=RhhBBUkuysg) * VIDEO: [Middleware for Quartz Composer](https://www.youtube.com/watch?v=HntNs71JrOM) * [web-based version of cogito on github.com](https://github.com/dhhepting/cogito) ([README](https://github.com/dhhepting/cogito/blob/master/README.md)) {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/cogito/"
-  },{
-    "title": "Challenging Bodies",
-    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/challenging-bodies/"
-  },{
-    "title": "The BUS PROJECT",
-    "text": "# {{ page.breadcrumb }} * [The Bus Project: Technologies, Spectators and Locational Practices](https://journals.lib.unb.ca/index.php/tric/article/view/11137/11848) by Kathleen Irwin, University of Regina in Theatre Research in Canada / Recherches théâtrales au Canada, Volume 29, Number 1 (2008) {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/bus/"
-  },{
-    "title": "Participant Pool",
-    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/participant-pool/"
-  },{
-    "title": "Robot Library",
-    "text": "# {{ page.breadcrumb }} * [EV3 Educational Kit](ev3educ.html)",
-    "tags": "",
-    "url": "/~hepting/projects/robots/library/"
-  },{
-    "title": "Robots",
-    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/robots/"
-  },{
-    "title": "Visualization",
-    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/visualization/"
-  },{
-    "title": "50th Birthday Party for CS @ U of R",
-    "text": "# {{ page.breadcrumb }} {{ page.description }} The celebration was originally planned for November 3, close to the birthdate, but circumstances dictated a change in plans. Now we will celebrate the 50th birthday of the Computer Science Department along with the 112th birthday of Admiral Grace Murray Hopper, computer pioneer and Basterfield Lecturer from November 1974 by moving the date to Thursday, December 6, 2018 &mdash; part of CSEdWeek 2018, which was established to recognize Admiral Hopper's birthday (December 9). \\#UR50CS * [Party](party.html) * [Blog](https://ur50.cs.uregina.ca/) {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/ur50cs/"
-  },{
-    "title": "Games",
-    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/games/"
-  },{
-    "title": "Interaction Design",
-    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/interaction-design/"
-  },{
-    "title": "CS Education",
-    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/cs-education/"
-  },{
-    "title": "Food Project",
-    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/food/"
-  },{
-    "title": "Free Knowledge",
-    "text": "# {{ page.breadcrumb }} This project was both an event, in 2005, and a [book](https://g.co/kgs/YS4DLk), published in 2015. {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/free-knowledge/"
-  },{
-    "title": "Open Source",
-    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/open-source/"
-  },{
-    "title": "A Picture’s Worth",
-    "text": "# {{ page.breadcrumb }} What does the phrase &ldquo;A picture is worth ten thousand words&rdquo; mean to you? Does it become more or less meaningful if it was written by an advertising executive, a newspaper publisher, or an ancient sage? I embarked on an exploration into the origins of this phrase in 1999 as part of my doctoral work (A New Paradigm for Exploration in Computer-Aided Visualization). It was important for me to use the phrase correctly and so I wanted to know whether a picture was worth 1,000 or 10,000 words. Various versions of the phrase, and stories about its origin, are in circulation. This page seeks to trace its history. For their help with the original version of the page, I thank Dona Bubelis of the Seattle Public Library, Ellen Chamberlain of the University of South Carolina, and Dr. Paul Lester of California State University Fullerton ( A Picture's Worth a Thousand Words?). In 1999, credit for the phrase seemed to belong to Frederick R. Barnard, National Advertising Manager for the Street Railways Advertising Company (offices then in New York, Chicago, and San Francisco). The maxim which is popular today seemed to originate as &ldquo;One look is worth a thousand words&rdquo;, and appeared in a 1921 advertisement by Barnard. He chose to modify the saying for a 1927 advertisement, where it took on its more famous form. The two advertisements appeared in the advertising trade journal called Printers' Ink (now known as Marketing/Communications). March 10, 1927 (pp. 114-115) &ldquo;One Picture is Worth Ten Thousand Words&rdquo;. This advertisement uses the specific example of a baking soda ad campaign seemingly done by Barnard's firm. The basic message is the same as the earlier ad, though perhaps Barnard hoped it would be more compelling as a Chinese proverb. December 8, 1921 (pp. 96-97) &ldquo;One Look is Worth A Thousand Words&rdquo;. This advertisement talks generally about the benefits about advertising with pictures on street cars. Confusion between whether a picture is worth 1,000 or 10,000 words may stem from a 1948 entry in The MacMillan Book of Proverbs, Maxims and Famous Phrases ( formerly known as the The Home Book of Proverbs, Maxims, and Familiar Phrases ) is an early and very informative source about the phrase. Editor Burton Egbert Stevenson made the following entry on page 2611 of that volume: One look is worth a thousand words. Fred R. Barnard, in Printers' Ink, 8 Dec., 1921, p. 96. He changed it to &ldquo;One picture is worth a thousand words&rdquo; in Printers' Ink, 10 March 1927, p. 114, and called it &ldquo;a Chinese proverb&rdquo;, so that people would take it seriously. It was immediately credited to Confucious. This entry establishes the link between the two advertisements, but this source misquotes the 1927 advertisement and thereby creates &ldquo;One picture is worth a thousand words&rdquo;. Familiar Quotations: a collection of passages, phrases, and proverbs traced to their sources in ancient and modern literature by John Bartlett also provides information. Stevenson's error is repeated on page 782 of the 16th edition (edited by Justin Kaplan and published by Little, Brown in 1992) where it credits &ldquo;One picture is worth a thousand words&rdquo; as a misattributed &ldquo;Chinese proverb&rdquo; and references part of the entry from the 1948 edition edited by Stevenson. \"Nice guys finish seventh\": false phrases, spurious sayings, and familiar misquotations by Ralph Keyes and published in 1992 by HarperCollins has a similar account to that of Stephenson. Keyes, however, adds his own twists to the story because the phrase \"One picture is worth a thousand words\" does not appear anywhere in the 1921 ad: Calling an orphan saying a Chinese proverb gives it a cachet with very little risk that its actual source will be discovered. A deliberate exploitation of this syndrome involved the proverb `One picture is worth a thousand words.' This saying first appeared in a 1921 ad in Printer's Ink [sic] which was written by publicist Frederick Barnard. Barnard headlined his ad `One look is worth a thousand words.' He attributed this maxim to `a famous Japanese philosopher.' Six years later, Barnard revised the saying to read `One picture is worth ten thousand words,' and then republished it in the same magazine as a `Chinese proverb.' Barnard thought his ploy would give his words added weight. He was right. For a time, Bartlett's identified Barnard's line as `a Chinese proverb.' Other sources attributed his proverb to Confucius. The Macmillan Dictionary of Quotations had it both ways. They cited Barnard as the maxim's author, adding `Ascribed to Chinese origin.' Keyes' book identified several rules of misquotation and the one of which he and several others have been guilty he calls numbernesia: getting the words right but the numbers wrong. The Oxford Dictionary of Phrase, Saying, and Quotation is one reference which has the correct attribution (but without any of the story). The phrase has endured to become an American proverb, appearing on page 465 of A Dictionary of American Proverbs, edited by Mieder, Kingsbury, and Harder and published by the Oxford University Press in 1992. Current opinion would remove Mr. Barnard from the picture (pun intended). There is now a wikipedia article entitled &ldquo;A picture is worth a thousand words&rdquo; that is focused much more broadly than this page. In updating this page, I came across a wonderful account of the history of this expression written by William Safire for his column On Language for the New York Times Magazine. Worth a Thousand Words was published on 7 April 1996. If you have more information about the origins of this quotation (or the stories that surround it), please send me e-mail and I will update this page accordingly. ### Sources * [Newspaper Copy That People Must Read]({{\"/assets/projects/pdf/pw-printers-ink-1911-apr-20.pdf\" | relative_url}}) {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/pictures-worth/"
-  },{
-    "title": "Genealogy",
-    "text": "# {{ page.breadcrumb }} {{ page.description }} {% include project-related-works.html %}",
-    "tags": "",
-    "url": "/~hepting/projects/genealogy/"
-  },{
-    "title": "Rough Sets",
-    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/rough-sets/"
-  },{
-    "title": "Enviromatics Project",
-    "text": "# {{page.breadcrumb}} {{ page.description }} {% include index-dir.html %} {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/enviromatics/"
-  },{
-    "title": "Creativity Project",
-    "text": "# {{ page.breadcrumb }} {% include index-dir.html %} {%comment%}{% include project-related-works.html %}{% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/projects/creativity/"
-  },{
-    "title": "Projects",
-    "text": "# {{ page.breadcrumb }} Collected here are the various projects that I have undertaken over the years, in collaboration with many wonderful people. {% include projects-list.html %}",
-    "tags": "",
-    "url": "/~hepting/projects/"
+    "url": "/~hepting/trouble/"
   },{
     "title": "Personal",
     "text": "# {{ page.title }}",
@@ -2134,150 +2009,80 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/about/"
   },{
-    "title": "Sitemap",
-    "text": "# Sitemap {% include sitemap-index.html %}",
-    "tags": "",
-    "url": "/~hepting/search/sitemap/"
-  },{
-    "title": "CS 828 in Winter 2006",
+    "title": "FILM 385AB in Fall 2004",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-828/200610/"
+    "url": "/~hepting/teaching/FILM-385AB/200430/"
   },{
-    "title": "CS 828 in Fall 2008",
+    "title": "FILM 385AB in Fall 2006",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-828/200830/"
+    "url": "/~hepting/teaching/FILM-385AB/200630/"
   },{
-    "title": "CS 828 in Winter 2004",
+    "title": "FILM 385AB in Fall 2003",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-828/200410/"
+    "url": "/~hepting/teaching/FILM-385AB/200330/"
   },{
-    "title": "CS 828 in Fall 2010",
+    "title": "FILM 385AB in Winter 2011",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-828/201030/"
+    "url": "/~hepting/teaching/FILM-385AB/201110/"
   },{
-    "title": "CS 325 (Introduction to Multimedia Systems)",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-828/"
-  },{
-    "title": "CS 325 (Introduction to Multimedia Systems)",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-490/"
-  },{
-    "title": "CS 205 in Winter 2018",
+    "title": "FILM 385AB in Fall 2002",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-205/201810/"
+    "url": "/~hepting/teaching/FILM-385AB/200230/"
   },{
-    "title": "CS 205 (202110) Assignments",
-    "text": "{% include offering/asgn-grid.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/assignments/"
-  },{
-    "title": "CS 205 (202110) Meetings",
-    "text": "{% include offering/mtgs-grid.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/meetings/"
-  },{
-    "title": "CS 205 (202110) Media",
-    "text": "{% include offering/media-grid.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/media/"
-  },{
-    "title": "CS 205 in Winter 2021",
+    "title": "FILM 385AB in Fall 2005",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-205/202110/"
+    "url": "/~hepting/teaching/FILM-385AB/200530/"
   },{
-    "title": "CS 205 in Winter 2020",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/202010/"
-  },{
-    "title": "CS 205 in Winter 2016",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/201610/"
-  },{
-    "title": "CS 205 in Winter 2019",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/201910/"
-  },{
-    "title": "CS 205 in Winter 2017",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-205/201710/"
-  },{
-    "title": "CS 205",
+    "title": "FILM 385AB",
     "text": "{% include course/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-205/"
+    "url": "/~hepting/teaching/FILM-385AB/"
   },{
-    "title": "CS 330 in Winter 2006",
+    "title": "2013 Computer Science Curriculum",
+    "text": "{% include curriculum/CS2013.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/curriculum/2013/"
+  },{
+    "title": "Computer Science Curriculum",
+    "text": "{{ page.breadcrumb }} 2013 Knowledge Areas 2013 Report (pdf)",
+    "tags": "",
+    "url": "/~hepting/teaching/curriculum/"
+  },{
+    "title": "LOD Entry",
+    "text": "{% comment %} dataentry: Student Feedback Form items: sequence group: type: likert scale {% endcomment %} Response number {% for qt in page.questions %} {{ qt.type }} {% if qt.type contains \"likert\" %} LIKERT {% assign lq = qt.labels.size | minus: 1 %} {% for ql in (0..lq) %} {{ql | plus: 1 }}. {{ qt.labels[ql].desc }} {% for ll in (1 .. qt.scale) %} {{ll}} {% endfor %} {% endfor %} {% else if qt.type contains \"open\" %} OPEN {% assign oq = qt.labels.size | minus: 1 %} {% for qo in (0..oq) %} {{qo | plus: 1 }}. {{ qt.labels[qo].desc }} {% endfor %} {% endif %} {% endfor %}",
+    "tags": "",
+    "url": "/~hepting/teaching/lod/"
+  },{
+    "title": "CS 280 in Winter 201510",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-330/200610/"
+    "url": "/~hepting/teaching/CS-280/201510/"
   },{
-    "title": "CS 330 in Fall 2009",
+    "title": "CS 215 in Winter 2007",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-330/200930/"
+    "url": "/~hepting/teaching/CS-280/201010/"
   },{
-    "title": "CS 330 in Winter 2010",
+    "title": "CS 280 in Winter 2020",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-330/201010/"
-  },{
-    "title": "CS 330 in Fall 2003",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-330/200330/"
-  },{
-    "title": "CS 330 in Fall 2004",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-330/200430/"
-  },{
-    "title": "CS 330",
-    "text": "{% include course/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-330/"
-  },{
-    "title": "Notes",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/teaching/notes/"
-  },{
-    "title": "CS 325 (Introduction to Multimedia Systems)",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-390/"
-  },{
-    "title": "CS 280 in Winter 2013",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-280/201310/"
+    "url": "/~hepting/teaching/CS-280/202010/"
   },{
     "title": "CS 215 in Winter 2007",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/201410/"
   },{
-    "title": "CS 215 in Winter 2007",
-    "text": "{% include offering/main.html %}",
+    "title": "CS 280 (202110) Media",
+    "text": "{% include offering/media-grid.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-280/201210/"
-  },{
-    "title": "CS 215 in Winter 2007",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-280/201010/"
+    "url": "/~hepting/teaching/CS-280/202110/media/"
   },{
     "title": "CS 280 (202110) Assignments",
     "text": "{% include offering/asgn-grid.html %}",
@@ -2289,115 +2094,40 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/meetings/"
   },{
-    "title": "CS 280 (202110) Media",
-    "text": "{% include offering/media-grid.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-280/202110/media/"
-  },{
     "title": "CS 280 in Winter 2021",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/202110/"
   },{
-    "title": "CS 280 in Winter 2020",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-280/202010/"
-  },{
-    "title": "CS 280 in Winter 201510",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-280/201510/"
-  },{
     "title": "CS 215 in Winter 2007",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-280/201610/"
-  },{
-    "title": "CS 280 in Winter 2019",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-280/201910/"
+    "url": "/~hepting/teaching/CS-280/201210/"
   },{
     "title": "CS 280 in Winter 2017",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/201710/"
   },{
+    "title": "CS 215 in Winter 2007",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/201610/"
+  },{
+    "title": "CS 280 in Winter 2013",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/201310/"
+  },{
+    "title": "CS 280 in Winter 2019",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/201910/"
+  },{
     "title": "CS 280",
     "text": "{% include course/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-280/"
-  },{
-    "title": "CS 325 (Introduction to Multimedia Systems)",
-    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-890/"
-  },{
-    "title": "CS 325 in Fall 2012",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-325/201230/"
-  },{
-    "title": "CS 325 in Winter 2014",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-325/201410/"
-  },{
-    "title": "CS 325 in Winter 201110",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-325/201110/"
-  },{
-    "title": "CS 325 in Fall 2005",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-325/200530/"
-  },{
-    "title": "CS 325 in Fall 2003",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-325/200330/"
-  },{
-    "title": "CS 325 in Fall 2004",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-325/200430/"
-  },{
-    "title": "CS 325 in Fall 2002",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-325/200230/"
-  },{
-    "title": "CS 325 in Fall 2006",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-325/200630/"
-  },{
-    "title": "CS 325",
-    "text": "{% include course/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-325/"
-  },{
-    "title": "CS 230 in Winter 2005",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-230/200510/"
-  },{
-    "title": "CS 230",
-    "text": "{% include course/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-230/"
-  },{
-    "title": "2013 Computer Science Curriculum",
-    "text": "{% include curriculum/CS2013.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/curriculum/2013/"
-  },{
-    "title": "Computer Science Curriculum",
-    "text": "{{ page.breadcrumb }} 2013 Knowledge Areas 2013 Report (pdf)",
-    "tags": "",
-    "url": "/~hepting/teaching/curriculum/"
   },{
     "title": "CS 305+828 in Fall 2014",
     "text": "{% include offering/main.html %}",
@@ -2419,40 +2149,65 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-305+828/"
   },{
-    "title": "CS 215 in Winter 2011",
+    "title": "CS 205 in Winter 2020",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-215/201110/"
+    "url": "/~hepting/teaching/CS-205/202010/"
   },{
-    "title": "CS 215 in Winter 2009",
+    "title": "CS 205 (202110) Media",
+    "text": "{% include offering/media-grid.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/media/"
+  },{
+    "title": "CS 205 (202110) Assignments",
+    "text": "{% include offering/asgn-grid.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/assignments/"
+  },{
+    "title": "CS 205 (202110) Meetings",
+    "text": "{% include offering/mtgs-grid.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/202110/meetings/"
+  },{
+    "title": "CS 205 in Winter 2021",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-215/200910/"
+    "url": "/~hepting/teaching/CS-205/202110/"
   },{
-    "title": "CS 215 in Winter 2007",
+    "title": "CS 205 in Winter 2017",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-215/200710/"
+    "url": "/~hepting/teaching/CS-205/201710/"
   },{
-    "title": "CS 215 in Fall 2011",
+    "title": "CS 205 in Winter 2016",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-215/201130/"
+    "url": "/~hepting/teaching/CS-205/201610/"
   },{
-    "title": "CS 215",
+    "title": "CS 205 in Winter 2018",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/201810/"
+  },{
+    "title": "CS 205 in Winter 2019",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-205/201910/"
+  },{
+    "title": "CS 205",
     "text": "{% include course/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-215/"
+    "url": "/~hepting/teaching/CS-205/"
+  },{
+    "title": "CS 305 in Fall 2001",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-305/200130/"
   },{
     "title": "CS 305 in Fall 2012",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-305/201230/"
-  },{
-    "title": "CS 305 in Fall 2008",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-305/200830/"
   },{
     "title": "CS 305 in Fall 2010",
     "text": "{% include offering/main.html %}",
@@ -2464,105 +2219,50 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-305/200310/"
   },{
-    "title": "CS 305 in Fall 2002",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-305/200230/"
-  },{
-    "title": "CS 305 in Fall 2001",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-305/200130/"
-  },{
     "title": "CS 305 in Fall 2006",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-305/200630/"
+  },{
+    "title": "CS 305 in Fall 2008",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-305/200830/"
+  },{
+    "title": "CS 305 in Fall 2002",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-305/200230/"
   },{
     "title": "CS 305",
     "text": "{% include course/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-305/"
   },{
-    "title": "CS 499+900 in Spring/Summer 2019",
+    "title": "CS 110 in Winter 2015",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-499+900/201920/"
+    "url": "/~hepting/teaching/CS-110/201510/"
   },{
-    "title": "CS 499+900",
-    "text": "# {{ page.breadcrumb }}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-499+900/201810/"
-  },{
-    "title": "CS-499+900 (202110) Meetings",
-    "text": "{% include offering/mtgs-grid.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-499+900/202110/meetings/"
-  },{
-    "title": "CS 499+900 in Winter 2021",
+    "title": "CS 110 in Winter 2018",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-499+900/202110/"
+    "url": "/~hepting/teaching/CS-110/201810/"
   },{
-    "title": "CS 499+900 in Winter 2020",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-499+900/202010/"
-  },{
-    "title": "CS 499+900",
+    "title": "CS 110",
     "text": "{% include course/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-499+900/"
+    "url": "/~hepting/teaching/CS-110/"
   },{
-    "title": "FILM 385AB in Winter 2011",
-    "text": "{% include offering/main.html %}",
+    "title": "Resources",
+    "text": "# {{ page.breadcrumb }} * [Links](links.html) * [Tools](tools.html) * [Videos](videos.html)",
     "tags": "",
-    "url": "/~hepting/teaching/FILM-385AB/201110/"
-  },{
-    "title": "FILM 385AB in Fall 2005",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/FILM-385AB/200530/"
-  },{
-    "title": "FILM 385AB in Fall 2003",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/FILM-385AB/200330/"
-  },{
-    "title": "FILM 385AB in Fall 2004",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/FILM-385AB/200430/"
-  },{
-    "title": "FILM 385AB in Fall 2002",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/FILM-385AB/200230/"
-  },{
-    "title": "FILM 385AB in Fall 2006",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/FILM-385AB/200630/"
-  },{
-    "title": "FILM 385AB",
-    "text": "{% include course/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/FILM-385AB/"
-  },{
-    "title": "Content - CS 428+828",
-    "text": "# Content * Topic 1 * Topic 2 * Topic 3",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/content/"
+    "url": "/~hepting/teaching/CS-428+828/resources/"
   },{
     "title": "CS 428+828 in Fall 2020",
     "text": "{% include offering/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202030/"
-  },{
-    "title": "CS 428+828 in Fall 2017",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/201730/"
   },{
     "title": "CS 428+828 (202130) Assignments",
     "text": "{% include offering/asgn-grid.html %}",
@@ -2579,20 +2279,10 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/202130/"
   },{
-    "title": "CS 428+828 in Fall 2019",
+    "title": "CS 428+828 in Fall 2017",
     "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/201930/"
-  },{
-    "title": "CS 428+828 in Fall 2016",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/201630/"
-  },{
-    "title": "Resources",
-    "text": "# {{ page.breadcrumb }} * [Links](links.html) * [Tools](tools.html) * [Videos](videos.html)",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-428+828/resources/"
+    "url": "/~hepting/teaching/CS-428+828/201730/"
   },{
     "title": "CS 428+828 (201830) Textbook",
     "text": "# {{ page.breadcrumb }} * [Textbook website](http://www.id-book.com/)",
@@ -2604,45 +2294,360 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/201830/"
   },{
+    "title": "CS 428+828 in Fall 2019",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201930/"
+  },{
+    "title": "Content - CS 428+828",
+    "text": "# Content * Topic 1 * Topic 2 * Topic 3",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/content/"
+  },{
+    "title": "CS 428+828 in Fall 2016",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428+828/201630/"
+  },{
     "title": "CS 428+828",
     "text": "{% include course/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/CS-428+828/"
   },{
-    "title": "LOD Entry",
-    "text": "{% comment %} dataentry: Student Feedback Form items: sequence group: type: likert scale {% endcomment %} Response number {% for qt in page.questions %} {{ qt.type }} {% if qt.type contains \"likert\" %} LIKERT {% assign lq = qt.labels.size | minus: 1 %} {% for ql in (0..lq) %} {{ql | plus: 1 }}. {{ qt.labels[ql].desc }} {% for ll in (1 .. qt.scale) %} {{ll}} {% endfor %} {% endfor %} {% else if qt.type contains \"open\" %} OPEN {% assign oq = qt.labels.size | minus: 1 %} {% for qo in (0..oq) %} {{qo | plus: 1 }}. {{ qt.labels[qo].desc }} {% endfor %} {% endif %} {% endfor %}",
+    "title": "CS 230 in Winter 2005",
+    "text": "{% include offering/main.html %}",
     "tags": "",
-    "url": "/~hepting/teaching/lod/"
+    "url": "/~hepting/teaching/CS-230/200510/"
+  },{
+    "title": "CS 230",
+    "text": "{% include course/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-230/"
+  },{
+    "title": "CS 828 in Winter 2006",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-828/200610/"
+  },{
+    "title": "CS 828 in Fall 2010",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-828/201030/"
+  },{
+    "title": "CS 828 in Fall 2008",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-828/200830/"
+  },{
+    "title": "CS 828 in Winter 2004",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-828/200410/"
+  },{
+    "title": "CS 325 (Introduction to Multimedia Systems)",
+    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-828/"
+  },{
+    "title": "CS 325 in Fall 2012",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-325/201230/"
+  },{
+    "title": "CS 325 in Winter 2014",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-325/201410/"
+  },{
+    "title": "CS 325 in Fall 2004",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-325/200430/"
+  },{
+    "title": "CS 325 in Fall 2006",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-325/200630/"
+  },{
+    "title": "CS 325 in Fall 2003",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-325/200330/"
+  },{
+    "title": "CS 325 in Winter 201110",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-325/201110/"
+  },{
+    "title": "CS 325 in Fall 2002",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-325/200230/"
+  },{
+    "title": "CS 325 in Fall 2005",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-325/200530/"
+  },{
+    "title": "CS 325",
+    "text": "{% include course/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-325/"
+  },{
+    "title": "Notes",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/notes/"
+  },{
+    "title": "CS 215 in Winter 2007",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-215/200710/"
+  },{
+    "title": "CS 215 in Winter 2009",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-215/200910/"
+  },{
+    "title": "CS 215 in Fall 2011",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-215/201130/"
+  },{
+    "title": "CS 215 in Winter 2011",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-215/201110/"
+  },{
+    "title": "CS 215",
+    "text": "{% include course/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-215/"
+  },{
+    "title": "CS 325 (Introduction to Multimedia Systems)",
+    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-390/"
+  },{
+    "title": "CS 330 in Winter 2010",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-330/201010/"
+  },{
+    "title": "CS 330 in Winter 2006",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-330/200610/"
+  },{
+    "title": "CS 330 in Fall 2009",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-330/200930/"
+  },{
+    "title": "CS 330 in Fall 2004",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-330/200430/"
+  },{
+    "title": "CS 330 in Fall 2003",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-330/200330/"
+  },{
+    "title": "CS 330",
+    "text": "{% include course/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-330/"
+  },{
+    "title": "CS 325 (Introduction to Multimedia Systems)",
+    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-890/"
+  },{
+    "title": "CS 325 (Introduction to Multimedia Systems)",
+    "text": "{% include teaching/url.html %} # {{crs_sbj}} {{crs_nbr}} ## {{page.crs_name}} {% include course/description-card.html %} {% include course/semesters-card.html %} {% include course/semester-redirects.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-490/"
+  },{
+    "title": "CS 499+900 in Winter 2020",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202010/"
+  },{
+    "title": "CS-499+900 (202110) Meetings",
+    "text": "{% include offering/mtgs-grid.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/meetings/"
+  },{
+    "title": "CS 499+900 in Winter 2021",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/202110/"
+  },{
+    "title": "CS 499+900",
+    "text": "# {{ page.breadcrumb }}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/201810/"
+  },{
+    "title": "CS 499+900 in Spring/Summer 2019",
+    "text": "{% include offering/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/201920/"
+  },{
+    "title": "CS 499+900",
+    "text": "{% include course/main.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-499+900/"
   },{
     "title": "Schedule",
     "text": "# {{ page.breadcrumb }} {%- assign url_parts = page.url | split: '/' -%} {% assign semdirs = \"\" %} {%- for sp in site.pages -%} {%- if sp.url contains page.url and sp.url.size > page.url.size %} {% capture semdirs %}{{semdirs}}#{{ sp.url | split: \"/\" | last | remove: \".html\" }}{% endcapture %} {% endif %} {% endfor %} {%- assign rssemdirs = semdirs | split: \"#\" | sort | reverse %} {% for sd in rssemdirs %} {% if sd != \"\" %} {% capture sd_url %}{{page.url}}{{sd}}.html{% endcapture %} {{sd}} {% endif %} {% endfor %} let cu = new URL(document.location) const params = new URLSearchParams(location.search) let typ = params.get(\"type\") // let asgn = params.get(\"asgn\") // get current semester let today = new Date(); let sem = 0; if (typ) { switch (today.getMonth()) { case 0: case 1: case 2: case 3: sem = 10; break; case 4: case 5: case 6: case 7: sem = 20; break; case 8: case 9: case 10: case 11: sem = 30; } let semid = today.getFullYear().toString() + sem.toString(); console.log(typ) let cu_str = cu.origin + cu.pathname if (typ == 'current') { let cu_str = cu.origin + cu.pathname + semid + '.html' window.location.replace(cu_str) } }",
     "tags": "",
     "url": "/~hepting/teaching/schedule/"
   },{
-    "title": "CS 110 in Winter 2018",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-110/201810/"
-  },{
-    "title": "CS 110 in Winter 2015",
-    "text": "{% include offering/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-110/201510/"
-  },{
-    "title": "CS 110",
-    "text": "{% include course/main.html %}",
-    "tags": "",
-    "url": "/~hepting/teaching/CS-110/"
-  },{
     "title": "Teaching",
     "text": "# {{ page.breadcrumb }} {% include teaching/main.html %}",
     "tags": "",
     "url": "/~hepting/teaching/"
   },{
-    "title": "RSS Feeds",
-    "text": "{{ page.breadcrumb }} News {% for sp in site.pages %} {% if sp.url contains page.url and sp.url > page.url %} {% capture sprl %}{{ sp.url | remove: \".rss\" }}{% endcapture %} {% assign url_parts = sprl | split: '/' %} {% for u in (0..url_parts.size) %} {% if url_parts[u] == \"rss\" %} {% assign off_idx = u | plus: 1 %} {% break %} {% endif %} {% endfor %} {% assign off_parts = url_parts[off_idx] | split: '-' %} {% assign off_year = off_parts[2] | slice: 0,4 %} {% assign now_year = \"now\" | date: \"%Y\" %} {% if off_year == now_year %} {% assign off_months = \"\" %} {% assign off_sem = off_parts[2] | slice: 4,2 %} {% assign now_month = \"now\" | date: \"%b\" %} {% if off_sem == \"10\" %} {% assign off_months = \"Jan,Feb,Mar,Apr\" | split: \",\" %} {% elsif off_sem == \"20\" %} {% assign off_months = \"May,Jun,Jul,Aug\" | split: \",\" %} {% elsif off_sem == \"30\" %} {% assign off_months = \"Sep,Oct,Nov,Dec\" | split: \",\" %} {% endif %} {% if off_months contains now_month %} {{ url_parts[off_idx] }} {% endif %} {% endif %} {% endif %} {% endfor %}",
+    "title": "Games",
+    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
     "tags": "",
-    "url": "/~hepting/rss/"
+    "url": "/~hepting/projects/games/"
+  },{
+    "title": "Interaction Design",
+    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/interaction-design/"
+  },{
+    "title": "Faces Project",
+    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/faces/"
+  },{
+    "title": "Rough Sets",
+    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/rough-sets/"
+  },{
+    "title": "A Picture’s Worth",
+    "text": "# {{ page.breadcrumb }} What does the phrase &ldquo;A picture is worth ten thousand words&rdquo; mean to you? Does it become more or less meaningful if it was written by an advertising executive, a newspaper publisher, or an ancient sage? I embarked on an exploration into the origins of this phrase in 1999 as part of my doctoral work (A New Paradigm for Exploration in Computer-Aided Visualization). It was important for me to use the phrase correctly and so I wanted to know whether a picture was worth 1,000 or 10,000 words. Various versions of the phrase, and stories about its origin, are in circulation. This page seeks to trace its history. For their help with the original version of the page, I thank Dona Bubelis of the Seattle Public Library, Ellen Chamberlain of the University of South Carolina, and Dr. Paul Lester of California State University Fullerton ( A Picture's Worth a Thousand Words?). In 1999, credit for the phrase seemed to belong to Frederick R. Barnard, National Advertising Manager for the Street Railways Advertising Company (offices then in New York, Chicago, and San Francisco). The maxim which is popular today seemed to originate as &ldquo;One look is worth a thousand words&rdquo;, and appeared in a 1921 advertisement by Barnard. He chose to modify the saying for a 1927 advertisement, where it took on its more famous form. The two advertisements appeared in the advertising trade journal called Printers' Ink (now known as Marketing/Communications). March 10, 1927 (pp. 114-115) &ldquo;One Picture is Worth Ten Thousand Words&rdquo;. This advertisement uses the specific example of a baking soda ad campaign seemingly done by Barnard's firm. The basic message is the same as the earlier ad, though perhaps Barnard hoped it would be more compelling as a Chinese proverb. December 8, 1921 (pp. 96-97) &ldquo;One Look is Worth A Thousand Words&rdquo;. This advertisement talks generally about the benefits about advertising with pictures on street cars. Confusion between whether a picture is worth 1,000 or 10,000 words may stem from a 1948 entry in The MacMillan Book of Proverbs, Maxims and Famous Phrases ( formerly known as the The Home Book of Proverbs, Maxims, and Familiar Phrases ) is an early and very informative source about the phrase. Editor Burton Egbert Stevenson made the following entry on page 2611 of that volume: One look is worth a thousand words. Fred R. Barnard, in Printers' Ink, 8 Dec., 1921, p. 96. He changed it to &ldquo;One picture is worth a thousand words&rdquo; in Printers' Ink, 10 March 1927, p. 114, and called it &ldquo;a Chinese proverb&rdquo;, so that people would take it seriously. It was immediately credited to Confucious. This entry establishes the link between the two advertisements, but this source misquotes the 1927 advertisement and thereby creates &ldquo;One picture is worth a thousand words&rdquo;. Familiar Quotations: a collection of passages, phrases, and proverbs traced to their sources in ancient and modern literature by John Bartlett also provides information. Stevenson's error is repeated on page 782 of the 16th edition (edited by Justin Kaplan and published by Little, Brown in 1992) where it credits &ldquo;One picture is worth a thousand words&rdquo; as a misattributed &ldquo;Chinese proverb&rdquo; and references part of the entry from the 1948 edition edited by Stevenson. \"Nice guys finish seventh\": false phrases, spurious sayings, and familiar misquotations by Ralph Keyes and published in 1992 by HarperCollins has a similar account to that of Stephenson. Keyes, however, adds his own twists to the story because the phrase \"One picture is worth a thousand words\" does not appear anywhere in the 1921 ad: Calling an orphan saying a Chinese proverb gives it a cachet with very little risk that its actual source will be discovered. A deliberate exploitation of this syndrome involved the proverb `One picture is worth a thousand words.' This saying first appeared in a 1921 ad in Printer's Ink [sic] which was written by publicist Frederick Barnard. Barnard headlined his ad `One look is worth a thousand words.' He attributed this maxim to `a famous Japanese philosopher.' Six years later, Barnard revised the saying to read `One picture is worth ten thousand words,' and then republished it in the same magazine as a `Chinese proverb.' Barnard thought his ploy would give his words added weight. He was right. For a time, Bartlett's identified Barnard's line as `a Chinese proverb.' Other sources attributed his proverb to Confucius. The Macmillan Dictionary of Quotations had it both ways. They cited Barnard as the maxim's author, adding `Ascribed to Chinese origin.' Keyes' book identified several rules of misquotation and the one of which he and several others have been guilty he calls numbernesia: getting the words right but the numbers wrong. The Oxford Dictionary of Phrase, Saying, and Quotation is one reference which has the correct attribution (but without any of the story). The phrase has endured to become an American proverb, appearing on page 465 of A Dictionary of American Proverbs, edited by Mieder, Kingsbury, and Harder and published by the Oxford University Press in 1992. Current opinion would remove Mr. Barnard from the picture (pun intended). There is now a wikipedia article entitled &ldquo;A picture is worth a thousand words&rdquo; that is focused much more broadly than this page. In updating this page, I came across a wonderful account of the history of this expression written by William Safire for his column On Language for the New York Times Magazine. Worth a Thousand Words was published on 7 April 1996. If you have more information about the origins of this quotation (or the stories that surround it), please send me e-mail and I will update this page accordingly. ### Sources * [Newspaper Copy That People Must Read]({{\"/assets/projects/pdf/pw-printers-ink-1911-apr-20.pdf\" | relative_url}}) {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/pictures-worth/"
+  },{
+    "title": "Multimedia",
+    "text": "# {{ page.breadcrumb }} {% include index-dir.html %} {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/multimedia/"
+  },{
+    "title": "Blogging",
+    "text": "# {{ page.breadcrumb }} I have written blog posts in a few places: * my own blog, [Combinatorial Explosions](https://combinatorial-explosions.blogspot.com/) * and others... {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/blogging/"
+  },{
+    "title": "Robot Library",
+    "text": "# {{ page.breadcrumb }} * [EV3 Educational Kit](ev3educ.html)",
+    "tags": "",
+    "url": "/~hepting/projects/robots/library/"
+  },{
+    "title": "Robots",
+    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/robots/"
+  },{
+    "title": "Calendars",
+    "text": "# {{ page.breadcrumb }} Each year between 1991 and 1997, a calendar of computer-generated images was published by Universe Publishing, based on the fractal geometry of Benoit B. Mandelbrot. Before 1997, the calendar was first done as a custom edition and then as a trade edition in the following year. In 1997, the trade and custom editions were the same. - Richard F. Voss edited the calendars for 1991 and 1992 - F. Kenton Musgrave edited the calendars for 1993 and 1994 - Daryl H. Hepting edited the calendars for [1995](1995.html) and [1996](1996.html), and both included the essay [A Path to Fractals](a-path-to-fractals.html) - F. Kenton Musgrave edited the calendar for 1997: it featured his work alone ### Links * [The Math Forum at NCTM](http://mathforum.org/library/view/2285.html)",
+    "tags": "",
+    "url": "/~hepting/projects/fractals/calendars/"
+  },{
+    "title": "Gallery",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/projects/fractals/gallery/"
+  },{
+    "title": "Exhibitions",
+    "text": "# {{ page.breadcrumb }} {% include index-dir.html %}",
+    "tags": "",
+    "url": "/~hepting/projects/fractals/exhibitions/"
+  },{
+    "title": "Fractals Project",
+    "text": "# {{ page.breadcrumb }} {{ page.description | markdownify }} My M.Sc. thesis [Approximation and Visualization of Sets Defined by Iterated Function Systems]({{'/research/works/1991-03-Hep-Approximation-and-Visualization-of-Sets-Defined-by-Iterated-Function-Systems.html' | relative_url }}) (from 1991) dealt with linear fractals. That got me started and I am still hooked. - [Gallery of Images](gallery/) - [Fractals Calendars from Universe Publishing](calendars/) - [Exhibitions &mdash; in which I participated or helped to curate](exhibitions/) - [A Math of Art &mdash; exploring mathematics and art on the web](math-of-art.html) My supervisor for my Master of Science degree was [Przemyslaw Prusinkiewicz](https://en.wikipedia.org/wiki/Przemys%C5%82aw_Prusinkiewicz){:target=\"blank\"}. During my studies, Prusinkiewicz took a sabbatical and visited [Benoit Mandelbrot](https://en.wikipedia.org/wiki/Benoit_Mandelbrot){:target=\"blank\"}. Upon completion of my studies, that Mandelbrot connection helped F. David Fracchia (who had just completed his Ph.D. with Prusinkiewicz) and me to secure term employment with Mandelbrot's Fractals Project (Fracchia at Yale as a postdoc, me at IBM TJ Watson Research Centre), beginning in the summer of 1991. ![Sing Sing: the Grand Slammer]({{\"/assets/projects/img/grand-slammer.jpg\" | relative_url}}){:height=\"161px\" width=\"220px\" class=\"img-responsive\"} During my contract with IBM, I lived in Ossining, New York (Home of the Grand Slammer: Sing Sing Prison). The New York Times printed a story about travelling to Ossining in [Going Up the River, for a Visit](http://www.nytimes.com/2005/01/21/travel/escapes/going-up-the-river-for-a-visit.html){:target=\"blank\"}. {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/fractals/"
+  },{
+    "title": "Visualization",
+    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/visualization/"
+  },{
+    "title": "CS Education",
+    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/cs-education/"
+  },{
+    "title": "The BUS PROJECT",
+    "text": "# {{ page.breadcrumb }} * [The Bus Project: Technologies, Spectators and Locational Practices](https://journals.lib.unb.ca/index.php/tric/article/view/11137/11848) by Kathleen Irwin, University of Regina in Theatre Research in Canada / Recherches théâtrales au Canada, Volume 29, Number 1 (2008) {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/bus/"
+  },{
+    "title": "Creativity Project",
+    "text": "# {{ page.breadcrumb }} {% include index-dir.html %} {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/creativity/"
+  },{
+    "title": "Open Source",
+    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/open-source/"
+  },{
+    "title": "Enviromatics Project",
+    "text": "# {{page.breadcrumb}} {{ page.description }} {% include index-dir.html %} {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/enviromatics/"
+  },{
+    "title": "cogito",
+    "text": "# {{ page.breadcrumb }} {{ page.description }} * VIDEO: [Exploring curves in gnuplot using cogito](https://www.youtube.com/watch?v=RhhBBUkuysg) * VIDEO: [Middleware for Quartz Composer](https://www.youtube.com/watch?v=HntNs71JrOM) * [web-based version of cogito on github.com](https://github.com/dhhepting/cogito) ([README](https://github.com/dhhepting/cogito/blob/master/README.md)) {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/cogito/"
+  },{
+    "title": "Participant Pool",
+    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/participant-pool/"
+  },{
+    "title": "Free Knowledge",
+    "text": "# {{ page.breadcrumb }} This project was both an event, in 2005, and a [book](https://g.co/kgs/YS4DLk), published in 2015. {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/free-knowledge/"
+  },{
+    "title": "50th Birthday Party for CS @ U of R",
+    "text": "# {{ page.breadcrumb }} {{ page.description }} The celebration was originally planned for November 3, close to the birthdate, but circumstances dictated a change in plans. Now we will celebrate the 50th birthday of the Computer Science Department along with the 112th birthday of Admiral Grace Murray Hopper, computer pioneer and Basterfield Lecturer from November 1974 by moving the date to Thursday, December 6, 2018 &mdash; part of CSEdWeek 2018, which was established to recognize Admiral Hopper's birthday (December 9). \\#UR50CS * [Party](party.html) * [Blog](https://ur50.cs.uregina.ca/) {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/ur50cs/"
+  },{
+    "title": "Challenging Bodies",
+    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/challenging-bodies/"
+  },{
+    "title": "Genealogy",
+    "text": "# {{ page.breadcrumb }} {{ page.description }} {% include project-related-works.html %}",
+    "tags": "",
+    "url": "/~hepting/projects/genealogy/"
+  },{
+    "title": "Food Project",
+    "text": "# {{ page.breadcrumb }} {{ page.description }} {%comment%}{% include project-related-works.html %}{% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/projects/food/"
+  },{
+    "title": "Projects",
+    "text": "# {{ page.breadcrumb }} Collected here are the various projects that I have undertaken over the years, in collaboration with many wonderful people. {% include projects-list.html %}",
+    "tags": "",
+    "url": "/~hepting/projects/"
+  },{
+    "title": "Student Supervision",
+    "text": "# {{ page.breadcrumb }} {% comment %} - [Academia.edu](https://uregina.academia.edu/DarylHepting) AMiner Citeseer Collection of CS Bibliographies DBLP Google Scholar Impactstory Interaction Design Foundation Microsoft Academic ORCID (Open Researcher and Contributor ID): http://orcid.org/0000-0002-3138-3521 oURspace: University of Regina institutional repository philpapers ResearchGate ResearcherID researchr SemanticScholar {% endcomment %}",
+    "tags": "",
+    "url": "/~hepting/research/students/"
   },{
     "title": "Collected Works",
     "text": "",
@@ -2654,30 +2659,25 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/research/funding/"
   },{
-    "title": "Student Supervision",
-    "text": "# {{ page.breadcrumb }} {% comment %} - [Academia.edu](https://uregina.academia.edu/DarylHepting) AMiner Citeseer Collection of CS Bibliographies DBLP Google Scholar Impactstory Interaction Design Foundation Microsoft Academic ORCID (Open Researcher and Contributor ID): http://orcid.org/0000-0002-3138-3521 oURspace: University of Regina institutional repository philpapers ResearchGate ResearcherID researchr SemanticScholar {% endcomment %}",
-    "tags": "",
-    "url": "/~hepting/research/students/"
-  },{
     "title": "Research",
     "text": "# {{ page.breadcrumb }} {% comment %}use type=text/plain for bib file {%endcomment%} {% include index-dir.html %}",
     "tags": "",
     "url": "/~hepting/research/"
   },{
-    "title": "HTTP Errors",
-    "text": "# {{ page.breadcrumb }} Certain HTTP response status codes represent errors. If any of the following response status codes are encountered while attempting to access any of my pages, you will be redirected: * [Forbidden Access (403)](403.html) * [Not Found (404)](404.html) * [Unexpected Condition (500)](500.html)",
+    "title": "Sitemap",
+    "text": "# Sitemap {% include sitemap-index.html %}",
     "tags": "",
-    "url": "/~hepting/trouble/HTTPerrors/"
-  },{
-    "title": "Trouble",
-    "text": "# {{ page.breadcrumb }} Current website build status from [Travis CI](https://travis-ci.org): If you have had some trouble on this website, please either: * visit [GitHub](https://github.com/dhhepting/dhhepting.github.io/issues) to create an issue * send [e-mail](mailto:{{site.email}}) to me If you have had a specific error code returned ([403]({{ \"/trouble/HTTPerrors/403.html\" | relative_url }}), [404]({{ \"/trouble/HTTPerrors/404.html\" | relative_url }}), or [500]({{ \"/trouble/HTTPerrors/500.html\" | relative_url }})), you will be redirected to a page that gives you more information and the chance to send me a pre-formatted email message with details of the error.",
-    "tags": "",
-    "url": "/~hepting/trouble/"
+    "url": "/~hepting/search/sitemap/"
   },{
     "title": "News",
     "text": "",
     "tags": "",
     "url": "/~hepting/news/"
+  },{
+    "title": "RSS Feeds",
+    "text": "{{ page.breadcrumb }} News {% for sp in site.pages %} {% if sp.url contains page.url and sp.url > page.url %} {% capture sprl %}{{ sp.url | remove: \".rss\" }}{% endcapture %} {% assign url_parts = sprl | split: '/' %} {% for u in (0..url_parts.size) %} {% if url_parts[u] == \"rss\" %} {% assign off_idx = u | plus: 1 %} {% break %} {% endif %} {% endfor %} {% assign off_parts = url_parts[off_idx] | split: '-' %} {% assign off_year = off_parts[2] | slice: 0,4 %} {% assign now_year = \"now\" | date: \"%Y\" %} {% if off_year == now_year %} {% assign off_months = \"\" %} {% assign off_sem = off_parts[2] | slice: 4,2 %} {% assign now_month = \"now\" | date: \"%b\" %} {% if off_sem == \"10\" %} {% assign off_months = \"Jan,Feb,Mar,Apr\" | split: \",\" %} {% elsif off_sem == \"20\" %} {% assign off_months = \"May,Jun,Jul,Aug\" | split: \",\" %} {% elsif off_sem == \"30\" %} {% assign off_months = \"Sep,Oct,Nov,Dec\" | split: \",\" %} {% endif %} {% if off_months contains now_month %} {{ url_parts[off_idx] }} {% endif %} {% endif %} {% endif %} {% endfor %}",
+    "tags": "",
+    "url": "/~hepting/rss/"
   },{
     "title": "Homepage",
     "text": "{% include navSmenu.html %} &nbsp; D. H. Hepting PhD &bull; Simon Fraser University MSc &bull; University of Regina BSc (Hons) &bull; University of Regina &nbsp;",
@@ -2937,126 +2937,6 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
-    "url": "/~hepting/research/web/lfgallery/dragons/index.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/lfgallery/ferns/index.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/lfgallery/ferns/reflecting.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/projects/fractals/old-fractals/gallery/ferns.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/lfgallery/gaskets/index.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/lfgallery/gaskets/mt_esc_gasket.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/art/AoFcals/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/projects/math-art/calendars/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/art/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/math-of-art/index.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/math-of-art/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/math-of-art/fractals1.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/projects/fractals/calendars/1994.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/nat-num/dynamics.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/art/math+art/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/projects/math-art/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/cogito/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/admin/ppool.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/teach/outreach/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/words/history.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/web/words/index.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/proverbial/history.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/proverbial/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/research/works/2007-06-hep-software-for-systematic-and-imaginative-exploration.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
     "url": "/~hepting/about/personal/daryls/"
   },{
     "title": "",
@@ -3107,16 +2987,6 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
-    "url": "/~hepting/teaching/cs499+900/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/~hepting/teaching/cs499+900/"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
     "url": "/~hepting/teach/resources/scenarios.html"
   },{
     "title": "",
@@ -3128,6 +2998,16 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/teach/cs428+828/201630/practical/grad.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/cs499+900/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/cs499+900/"
   },{
     "title": "",
     "text": "",
@@ -3188,6 +3068,126 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/teaching/byKA.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/words/history.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/words/index.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/proverbial/history.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/proverbial/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/art/AoFcals/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/projects/math-art/calendars/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/lfgallery/dragons/index.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/lfgallery/ferns/index.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/lfgallery/ferns/reflecting.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/projects/fractals/old-fractals/gallery/ferns.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/lfgallery/gaskets/index.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/lfgallery/gaskets/mt_esc_gasket.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/art/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/math-of-art/index.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/math-of-art/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/math-of-art/fractals1.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/projects/fractals/calendars/1994.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/web/nat-num/dynamics.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/art/math+art/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/projects/math-art/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teach/outreach/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/research/works/2007-06-hep-software-for-systematic-and-imaginative-exploration.html"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/cogito/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/admin/ppool.html"
   },{
     "title": "",
     "text": "",
