@@ -2009,6 +2009,11 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/about/"
   },{
+    "title": "Today",
+    "text": "# {{ page.breadcrumb }} {% include teaching/url.html %} {% include teaching/today.html %}",
+    "tags": "",
+    "url": "/~hepting/teaching/today/"
+  },{
     "title": "FILM 385AB in Fall 2004",
     "text": "{% include offering/main.html %}",
     "tags": "",
