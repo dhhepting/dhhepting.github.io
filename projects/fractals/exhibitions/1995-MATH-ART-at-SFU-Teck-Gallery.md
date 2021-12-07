@@ -125,7 +125,7 @@ British Columbia Ministry for Employment and Investment.
 
 <div class="card m-2">
   <div class="card-header">
-    <h3 id="fiery">Fiery Dragon</h3>
+    <h3 id="fiery">Fiery Dragon (1990)</h3>
     by Daryl H. Hepting
   </div>
   <div class="card-body">
