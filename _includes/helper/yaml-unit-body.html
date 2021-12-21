@@ -9,6 +9,7 @@
 {%- for item in yu -%}
   {% comment %}{{ item}} <br />{% endcomment %}
   {%- if item.url -%}
+    READ {{ item.url | absolute_url }}
     <li>
       <a href="{{ item.url }}">
         {{ item.desc }}
