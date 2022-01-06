@@ -1,0 +1,27 @@
+{%- comment -%}
+https://getbootstrap.com/docs/5.0/components/dropdowns/
+{%- endcomment -%}
+<div class="dropdown text-end">
+  <button class="p-2 btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+  {%- for l in site.data.sitenav -%}
+    <li>
+    {%- if page.url == l.url -%}
+      <a class="dropdown-item active" href="#" aria-current="true">
+        <span class="sr-only">
+          (current)
+        </span>
+    {%- else -%}
+        <a class="dropdown-item" href="{{ l.url | relative_url }}">
+    {%- endif -%}
+          {{ l.title }}
+          {%- if l.icon -%}
+            &nbsp;<span class="{{ l.icon }}"></span>
+          {%- endif -%}
+        </a>
+    </li>
+  {%- endfor -%}
+  </ul>
+</div>

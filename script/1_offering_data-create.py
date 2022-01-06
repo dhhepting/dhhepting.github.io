@@ -91,7 +91,8 @@ try:
         d['offering'] = {}
         d['offering']['id'] = joff_id
         d['offering']['overview'] = 'Overview'
-        while (tsd <= ced):
+        sday = tsd
+        while (sday <= ced):
             datelist = datetime.strftime(sday,"%a-%d-%b-%Y").split('-')
             if (datelist[0] in mtgdays) and datelist not in ncdlist:
                 d[mtgctr] = {}
@@ -130,10 +131,11 @@ try:
         # now write out assignments.csv file -- only the headings
         # and a sample entry line that will be ignored in other processing
         asgnfile = offdatadir + '/assignments.csv'
-try:
+        print('about to try:', asgnfile)
+        try:
             with open(asgnfile,'w') as af:
-                mf.write('aid,title,marks,lms_discuss,lms_submit,duedate\n')
-                mf.write('\#P_UNDERSTAND,'Understand Your Project',10,1241916,613230,22-Oct-2020\n')
+                af.write('aid,title,marks,lms_discuss,lms_submit,duedate\n')
+                #mf.write('\#P_UNDERSTAND,'Understand Your Project',10,1241916,613230,22-Oct-2020\n')
         except Exception as e:
             print('assignments.csv:',e)
 
