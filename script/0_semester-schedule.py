@@ -51,6 +51,7 @@ with open(SITE_DIR + '_data/teaching/offerings.csv', newline='') as offfile:
     semoff_found = 0
     for row in offreader:
         if (row['semester'] == currsem):
+            print (row)
             semoff_found = 1
             crsid = row['id']
             mtgdays = row['mdays'].split(',')
@@ -101,7 +102,7 @@ with open(semschedmd,"w") as schedmd:
         semsea = "Spring/Summer"
     elif (sys.argv[1][-2:] == "30"):
         semsea = "Fall"
-    schedmd.write("title: " + semsea + sys.argv[1][0:4] + "Schedule\n")
+    schedmd.write("title: " + semsea + " " + sys.argv[1][0:4] + " Schedule\n")
     #schedmd.write("breadcrumb: " + reldir[1] + "\n")
     #offidx.write("sem: " + reldir[1] + "\n")
     schedmd.write("layout: bg-image\n")
