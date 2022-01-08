@@ -1,0 +1,156 @@
+{%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan -%}
+{%- assign mtgplan = nil -%}
+{%- assign incmtg = include.mtg | plus: 0 -%}
+
+{%- for mtgs in planfile -%}
+  {%- if mtgs[0] == incmtg -%}
+    {%- assign mtgplan = mtgs %}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+<!-- mtgplan contains plan for this meeting -->
+{%- if mtgplan != nil -%}
+  <!-- THEME -->
+  {%- if mtgplan[1].theme -%}
+  <h5>
+    {{ mtgplan[1].theme }}
+  </h5>
+  {%- endif -%}
+  <!-- BODY OF KNOWLEDGE -->
+  {%- if mtgplan[1].BOK -%}
+    {%- for bk in mtgplan[1].BOK -%}
+      {%- if bk.kaku -%}
+        {%- assign kaku = bk.kaku | split: "/" -%}
+        {%- assign kaaa = kaku[0] -%}
+        {%- assign kuuu = kaku[1] -%}
+        <h5 class="bg-dark text-white">
+          {{ kaaa }} / {{ kuuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kuuu.size }}
+        </h5>
+        {%- assign cur_dat = site.data.teaching.CS2013[kaaa][kuuu] -%}
+        <ul>
+        {%- if cur_dat and bk.topics -%}
+          <li>
+            Topics:
+            <ul>
+              {%- for bkt in bk.topics %}
+                {%- for csct in cur_dat.topics -%}
+                  {%- if bkt == csct.label %}
+                    <li>{{ csct.desc }}</li>
+                  {%- endif %}
+                {%- endfor -%}
+              {%- endfor %}
+            </ul>
+          </li>
+        {%- endif -%}
+        {%- if cur_dat and bk.outcomes -%}
+          <li>
+            Learning Outcomes:
+            <ul>
+            {%- for ho in bk.outcomes %}
+              {%- for co in cur_dat.outcomes -%}
+                {%- if ho == co.label %}
+                  <li>{{ co.desc }}</li>
+                {%- endif %}
+              {%- endfor -%}
+            {%- endfor %}
+            </ul>
+          </li>
+        {%- endif -%}
+        </ul>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+  <!-- OUTLINE -->
+  {%- if mtgplan[1].today -%}
+  <h5 class="bg-dark text-white">
+    Outline
+  </h5>
+    {%- assign tod = mtgplan[1].today -%}
+    {% for su in tod %}
+      <h7>
+        H7: {{ su }}
+      </h7>
+      {{ su[0] }}
+      {% assign suitems = su[1] %}
+      <ul>
+      {%- for item in suitems -%}
+        {%- if item.url -%}
+          <li>
+            <a href="{{ item.url | relative_url }}">
+              {{ item.desc }}
+            </a>
+          </li>
+        {%- elsif item.img -%}
+          <div class="m-2 p-2 border">
+            {% assign iname = item.img %}
+            {% assign idesc = item.desc %}
+            {% include helper/figure.html
+              name=iname desc=idesc %}
+          </div>
+        {%- elsif item.vid -%}
+          <div class="m-2 p-2 border">
+            {% assign vurl = item.vid %}
+            {% assign vdesc = item.desc %}
+            {% include helper/video.html
+              vidurl=vurl desc=vdesc %}
+          </div>
+          {%- elsif item.pdf -%}
+            <div class="m-2 p-2 border">
+              {% assign pdfname = item.pdf %}
+              {% assign pdesc = item.desc %}
+              {% include helper/pdf.html
+                name=pdfname desc=pdesc %}
+            </div>
+          {%- elsif item.todo -%}
+          <div class="m-2 p-2 bg-warning">
+            <h6 class="text-center">
+              {{ item.todo | upcase }}
+            </h6>
+            <p class="text-center">
+              {{ item.desc }}
+            </p>
+          </div>
+        {%- elsif item.concept -%}
+          <div class="m-2 p-2 bg-primary">
+            <h6 class="text-center">
+              {{ item.concept | upcase }}
+            </h6>
+            <p class="text-center">
+              {{ item.desc }}
+            </p>
+          </div>
+        {%- else -%}
+          <li>
+            {%- if item.persid -%}
+              <strong>{{ item.persid }}:</strong>&nbsp;
+            {%- endif -%}
+            {{ item.desc }}
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+      </ul>
+      {% endif %}
+    {% endfor %}
+  {%- endif -%}
+  <!-- NOTES -->
+  {%- if mtgplan[1].notes -%}
+    <h5 class="bg-dark text-white">
+      Notes
+    </h5>
+    <ul>
+      {%- for hn in mtgplan[1].notes %}
+        {%- capture noteurl %}/teaching/notes/{{ hn }}.html{%- endcapture %}
+        {%- for note in site.notes %}
+          {%- if note.url == noteurl %}
+      <li>
+        <a href="{{ noteurl | relative_url }}">
+          {{ note.title }}
+        </a>
+      </li>
+            {%- break %}
+          {%- endif %}
+        {%- endfor %}
+      {%- endfor %}
+    </ul>
+  {%- endif -%}
+{%- endif %}

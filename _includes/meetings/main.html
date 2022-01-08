@@ -2,79 +2,82 @@
 {%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
 {%- assign mtn = include.mn | prepend: '00' | slice: -2, 2  %}
 
-<!-- Access to Other Meetings - Paginated -->
-{%
-  include meetings/pagination.html
-  tm=include.tm
-  cm=include.mn
- %}
- {%comment%}{%- endcomment %}
+<h1>
+  Mtg {{ include.mn }}/{{ include.tm }}: {{ include.md | date: '%a-%d-%b-%Y' }}
+</h1>
 <div class="card">
-  <!-- Meeting Date as card header -->
   <div class="card card-header lightcthru">
-    <h1>
-      {{ include.md | date: '%a-%d-%b-%Y' }}
-    </h1>
+  <div class="row">
+    <div class="col-2">
+      <button>
+        <
+      </button>
+      1
+      <button>
+        >
+      </button>
+    </div>
+    <div class="col-10 text-start">
+  <ul class="nav nav-pills" id="navbar-example2">
+    <li class="nav-item">
+      <a class="nav-link" href="#ssToday">Today</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#ssMedia">Media</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#ssTranscripts">Transcripts</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#ssResponses">Responses</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#ssWiki">Wiki</a>
+    </li>
+  </ul>
   </div>
-  <div class="card card-body">
-  {%-  assign lvl = 'h5'  %}
+</div>
+</div>
+<!-- class scrollspy-example -->
+<div class="card card-body cbss"
+  data-bs-spy="scroll" data-bs-target="#navbar-example2"
+  data-bs-offset="0" tabindex="0">
 
-  <!-- Upcoming Events -->
-  {%- capture upurl -%}https://urcourses.uregina.ca/calendar/view.php?view=upcoming&course={{ crs_urc }}{%- endcapture -%}
-  {%-
-    include helper/lnk-card.html
-    label="Upcoming Events" level=lvl
-    id='EVENTS' url=upurl
-   -%}
-  {%- comment %}{%- endcomment %}
+  <h3 id="ssToday">
+    Today
+  </h3>
 
-
-<!-- Plan for Today's Meeting -->
-{%- include helper/pd-card.html
-   test=planfile label="Plan for this Meeting" level=lvl
-   open='y' mtg=include.mn pass='y' id='MTGPLAN' body='meetings/plan-body.html'
-%}
-
-  <hr /><!-- Before/After this Meeting --><hr />
-
-  <!-- Media from this Meeting -->
-  {%- assign mtn = include.mn | prepend: '00' | slice: -2, 2  -%}
-
-  {%- assign has_media = false -%}
-  {%- for m in site.data.teaching[jcrs_id][crs_sem]media -%}
-    {%- if m.meet == mtn -%}
-      {%- assign has_media = true -%}
-      {%- break -%}
-    {%- endif -%}
-  {%- endfor -%}
-  {%-
-    include helper/pd-card.html
-    test=has_media label="Media from this Meeting" level=lvl
-    pass='y' mtg=mtn open='n' id='MTGMEDIA'
-    body='meetings/media-body.html'
+  {%- include meetings/plan-body.html
+      mtg=include.mn
   -%}
 
-  {%- assign sfile = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
-  {%- capture surl -%}/teaching/{{ crs_id }}/{{ crs_sem }}/meetings/{{ mtn }}_S.html{%- endcapture -%}
-  {%- if 1 -%}
-    {%-
-      include helper/lnk-card.html
-      label='Summary of Meeting' level='h5'
-      id='SUMMARY' url=surl
-     -%}
-  {%- endif %}
-  <!-- Responses to Meeting -->
-  {%- assign rfile = site.data.teaching[jcrs_id][crs_sem]responses[lmtn] -%}
-  {%- capture rurl -%}/teaching/{{ crs_id }}/{{ crs_sem }}/meetings/{{ mtn }}_R.html{%- endcapture -%}
-  {%- capture rrurl -%}{{ rurl | absolute_url }}{%- endcapture -%}
+  <h3 id="ssMedia">
+    Media
+  </h3>
 
-  {%- if 1 -%}
-  {%-
-    include helper/lnk-card.html
-    label='Responses to Meeting' level='h5'
-    id='RESPONSES' url=rurl
-   -%}
+  {%- include meetings/media-body.html
+      mtg=include.mn
+  -%}
 
-  {%- endif -%}
-  </div>
+  <h3 id="ssTranscripts">
+    Transcripts
+  </h3>
+
+  {%- include meetings/transcripts.html 
+      mtg=include.mn
+  -%}
+
+  <h3 id="ssResponses">
+    Responses
+  </h3>
+
+  {%- include meetings/responses.html
+      mtg=include.mn
+  -%}
+
+  <h4 id="scrollspyHeading5">Fifth heading</h4>
+
+  <p>
+    This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
+  </p>
 </div>

@@ -1,0 +1,92 @@
+{%- include teaching/url.html -%}
+{% for qq in site.data.teaching.offerings %}
+  {%- if qq.semester == crs_sem and qq.id == crs_id -%}
+    {%- assign mtgdays = qq.mdays | split: "," -%}
+    {%- assign mtimes = qq.times | split: "-" -%}
+    {%- assign shm = mtimes[0] | split: ":" -%}
+    {%- assign ehm = mtimes[1] | split: ":" -%}
+    {%- assign smins = shm[0] | times: 60 -%}
+    {%- assign smins = smins | plus: shm[1] -%}
+    {%- assign ehm = mtimes[1] | split: ":" -%}
+    {%- assign emins = ehm[0] | times: 60 -%}
+    {%- assign emins = emins | plus: ehm[1] -%}
+    {%- assign mpw = 0 -%}
+    {%- assign mpw = mpw | plus: mtgdays.size -%}
+    {%- break -%}
+  {%- endif -%}
+{% endfor %}
+<div class="container">
+  <div class="row border-bottom">
+    <div class="col-2 text-end">
+      It is now:
+    </div>
+    <div class="col-10 text-start">
+      <i id="now"></i>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2 text-end">
+      Next meeting:
+    </div>
+    <div class="col-10 text-start">
+      <i id="nxtmtg"></i>
+    </div>
+  </div>
+  <p></p>
+{% assign mctr = 0 %}
+{% assign mctr = mctr | plus: 0 %}
+{%- assign mtgsfile = site.data.teaching[jcrs_id][crs_sem]meetings -%}
+{%- for mm in mtgsfile -%}
+  {%- if mctr == 0 -%}
+    {%- assign totmtgs = mm.total_mtgs | plus: 0 -%}
+  <ul class="list-group list-group-horizontal">
+  {%- endif -%}
+  {%- assign mctr = mctr | plus: 1 -%}
+  {%- assign newrow = mctr | modulo: mpw -%}
+    <a href="{{ include.mtgdir }}{{ mm.file }}"
+      class="list-group-item list-group-item-action flex-fill w-25 p-3"
+      id="{{ mm.meeting }}">
+        Mtg {{ mm.meeting | plus: 0 }} ({{ mm.date }})
+    </a>
+  {%- if newrow == 0 -%}
+  </ul>
+    {%- if mctr < totmtgs -%}
+  <ul class="list-group list-group-horizontal">
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+</div>
+<script>
+  $(document).ready(function(){
+    // get meeting information initialized
+    const mar = {{ mtgsfile | jsonify }}
+    const smillis = {{ smins }} * 60 * 1000;
+    const emillis = {{ emins }} * 60 * 1000;
+    // get current time as local
+    const now = new Date();
+    // add local date string to page
+    document.getElementById("now").innerHTML = now.toString();
+    // get local now in milliseconds (timestamp)
+    const nts = now.getTime();
+    //const nts = 1641930840000; // testing
+    let mtn = 0;
+    let nxtmds = 0
+    let nxtmde = 0
+    for (const element of mar) {
+      const md = Date.parse(element.date);
+      nxtmds = md + smillis;
+      nxtmde = md + emillis;
+      mtn = element.meeting;
+      if (nts < nxtmds) {
+        const nxtmtgdt = new Date(nxtmds);
+        document.getElementById("nxtmtg").innerHTML = nxtmtgdt.toString();
+        break;
+      } else if (nts >= nxtmds && nts <= nxtmde) {
+        document.getElementById("nxtmtg").innerHTML = 'IN PROGRESS';
+        break;
+      }
+    }
+    console.log('nxtmtg',mtn)
+    document.getElementById(mtn).classList.add('active');
+  })
+</script>

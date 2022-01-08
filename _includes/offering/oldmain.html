@@ -1,0 +1,103 @@
+{%- include teaching/url.html -%}
+<div class="card">
+  <div class="card card-header">
+    <h1>
+      {{ crs_id | replace: "-"," " }} in {{ crs_sem }}
+    </h1>
+  </div>
+  <div class="card card-body">
+
+  {%- assign off_lvl = "h5" -%}
+  <!-- syllabus -->
+  {%- capture syll_url -%}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{%- endcapture -%}
+  {%-
+    include helper/lnk-card.html
+    label="Syllabus" url=syll_url
+    level=off_lvl id="OFF_SYLLABUS"
+  -%}
+
+  <!-- (schedule and) office hours -->
+  {% comment %}
+  Need to test if this URL exists
+  {% endcomment %}
+  {%- capture sched_url -%}/teaching/schedule/{{ crs_sem }}.html{%- endcapture -%}
+  {%-
+    include helper/lnk-card.html
+    url=sched_url label="Office Hours"
+    level=off_lvl id="OFF_SCHED"
+   -%}
+
+  <!--  meetings: next and all -->
+  {%- capture mtg_dir -%}{{ page.url }}meetings/{%- endcapture -%}
+  {%- include helper/pd-card.html
+     test=mtg_dir label="Meetings" level=off_lvl
+     open='y' id='OFF_NXTMTG' body='offering/mtgs-body.html'
+  -%}
+
+  <!-- UR Courses -->
+  {%- if crs_urc != "" and off_now == true -%}
+    {%- capture urc_url -%}https://urcourses.uregina.ca/course/view.php?id={{ crs_urc }}{%- endcapture -%}
+    {%-
+      include helper/lnk-card.html
+      url=urc_url label="UR Courses"
+      level=off_lvl id="OFF_URC"
+    -%}
+  {%- endif -%}
+
+  <!-- Assignments -->
+  {%- capture asgn_url -%}{{ page.url }}assignments/{%- endcapture -%}
+  {%-
+    include helper/lnk-card.html
+    url=asgn_url label="Assignments"
+    level=off_lvl id="OFF_ASGNS"
+  -%}
+
+  <!-- Exams -->
+  {%-
+    include helper/pd-card.html
+    test=true label="Exams" level=off_lvl
+    open='n' id='OFF_EXAMS' body='offering/exams-body.html'
+  -%}
+
+  <!-- Media -->
+  {%- capture media_url -%}{{ page.url }}media/{%- endcapture -%}
+  {%-
+    include helper/lnk-card.html
+    url=media_url label="Media"
+    level=off_lvl id="OFF_MEDIA"
+  -%}
+  {% comment %}
+  Need to test if feedback data exists
+  {% endcomment %}
+  <!-- Feedback -->
+  {%- capture fdbk_url -%}{{ page.url }}feedback.html{%- endcapture -%}
+  {%-
+    include helper/lnk-card.html
+    url=fdbk_url label="Feedback"
+    level=off_lvl id="OFF_FEEDBACK"
+  -%}
+  <!--  Topics -->
+  {%- assign tlofile = site.data.teaching[jcrs_id][crs_sem]tlo -%}
+  {%-
+    include helper/pd-card.html
+    test=tlofile label="Topics &amp; Learning Outcomes"
+    level=off_lvl open='n' id='OFF_TLO'
+    body='offering/tlo-body.html'
+  -%}
+
+  {%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan -%}
+  {%-
+    include helper/pd-card.html
+    test=planfile label="Plan" level=off_lvl
+    open='n' pass='y' id='OFF_PLAN' body='offering/plan-body.html'
+  -%}
+  </div>
+</div>
+<script>
+//const params = new URLSearchParams(location.search)
+const hashid = window.location.hash
+//alert(hashid.slice(1))
+if (hashid !== '') {
+  document.getElementById(hashid.slice(1)).classList.toggle('show')
+}
+</script>
