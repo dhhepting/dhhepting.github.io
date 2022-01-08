@@ -1,0 +1,76 @@
+{% include teaching/url.html %}
+{%- assign mtn = include.mtg | prepend: '00' | slice: -2, 2  %}
+
+{%- assign sfile = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
+{%- if sfile != nil -%}
+  {% for su in sfile %}
+    {% if su[0] != 'offering' %}
+      {% assign suname = su[0] | replace: "-", " " %}
+      {% assign suitems = su[1] %}
+      <h5>
+        {{ suname }}
+      </h5>
+      <ul>
+      {%- for item in suitems -%}
+      {%- if item.url -%}
+          <li>
+            <a href="{{ item.url | relative_url }}">
+              {{ item.desc }}
+            </a>
+          </li>
+        {%- elsif item.img -%}
+          <div class="m-2 p-2 border">
+            {% assign iname = item.img %}
+            {% assign idesc = item.desc %}
+            {% include helper/figure.html
+              name=iname desc=idesc %}
+          </div>
+        {%- elsif item.vid -%}
+          <div class="m-2 p-2 border">
+            {% assign vurl = item.vid %}
+            {% assign vdesc = item.desc %}
+            {% include helper/video.html
+              vidurl=vurl desc=vdesc %}
+          </div>
+          {%- elsif item.pdf -%}
+            <div class="m-2 p-2 border">
+              {% assign pdfname = item.pdf %}
+              {% assign pdesc = item.desc %}
+              {% include helper/pdf.html
+                name=pdfname desc=pdesc %}
+            </div>
+          {%- elsif item.todo -%}
+          <div class="m-2 p-2 bg-warning">
+            <h6 class="text-center">
+              {{ item.todo | upcase }}
+            </h6>
+            <p class="text-center">
+              {{ item.desc }}
+            </p>
+          </div>
+        {%- elsif item.concept -%}
+          <div class="m-2 p-2 bg-primary">
+            <h6 class="text-center">
+              {{ item.concept | upcase }}
+            </h6>
+            <p class="text-center">
+              {{ item.desc }}
+            </p>
+          </div>
+        {%- else -%}
+          <li>
+            {%- if item.persid -%}
+              <strong>{{ item.persid }}:</strong>&nbsp;
+            {%- endif -%}
+            {{ item.desc }}
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+      </ul>
+    {% endif %}
+  {% endfor %}
+{%- else -%}
+  <p class="text-muted">
+    No Transcripts
+  </p>
+{%- endif -%}

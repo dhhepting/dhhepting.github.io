@@ -84,7 +84,7 @@ with open(midxstr,"w") as mtgidx:
     mtgidx.write("breadcrumb: Meetings\n")
     mtgidx.write("layout: bg-image\n")
     mtgidx.write("---\n")
-    mtgidx.write("{% include offering/mtgs-grid.html %}\n")
+    mtgidx.write("{% include offering/mtgs-all.html %}\n")
 
 # use the _data/teaching/<jcrs_id>/<sem>/meetings.csv file to create
 # individual meeting files
@@ -97,31 +97,30 @@ with open(SITE_DIR + DATA_ROOT + jcrs_id + '/' + reldir[1] + '/meetings.csv', ne
     for row in mmmreader:
         # generate file names for the meeting, summary, and response files
         mfilestr = mdirstr + row['file'].replace(".html",".md")
+        #mfilestr = mdirstr + row['file']
         m = row['meeting']
-        rfilestr = mdirstr + str(m).zfill(2) + "_R.md"
-        sfilestr = mdirstr + str(m).zfill(2) + "_S.md"
+        #rfilestr = mdirstr + str(m).zfill(2) + "_R.md"
+        #sfilestr = mdirstr + str(m).zfill(2) + "_S.md"
 
         mtg_date = row['date']
         nbr_meetings = row['total_mtgs']
-
-        with open(rfilestr,"w") as rmtgfile:
-            rmtgfile.write("---\n")
-            rmtgfile.write("title: Responses to Mtg " + str(m) + " &bull; " + reldir[0] +  " (" + reldir[1] + ")\n")
-            rmtgfile.write("breadcrumb: Responses to Mtg " + str(m) + "\n")
-            rmtgfile.write("mtg_nbr: " + str(m) + "\n")
-            rmtgfile.write("layout: bg-image\n")
-            rmtgfile.write("---\n")
-            rmtgfile.write(meet_template["R"])
-
-        with open(sfilestr,"w") as smtgfile:
-            smtgfile.write("---\n")
-            smtgfile.write("title: Summary of Mtg " + str(m) + " &bull; " + reldir[0] +  " (" + reldir[1] + ")\n")
-            smtgfile.write("breadcrumb: Summary of Mtg " + str(m) + "\n")
-            smtgfile.write("mtg_nbr: " + str(m) + "\n")
-            smtgfile.write("layout: bg-image\n")
-            smtgfile.write("---\n")
-            smtgfile.write(meet_template["S"])
-
+        # with open(rfilestr,"w") as rmtgfile:
+        #     rmtgfile.write("---\n")
+        #     rmtgfile.write("title: Responses to Mtg " + str(m) + " &bull; " + reldir[0] +  " (" + reldir[1] + ")\n")
+        #     rmtgfile.write("breadcrumb: Responses to Mtg " + str(m) + "\n")
+        #     rmtgfile.write("mtg_nbr: " + str(m) + "\n")
+        #     rmtgfile.write("layout: bg-image\n")
+        #     rmtgfile.write("---\n")
+        #     rmtgfile.write(meet_template["R"])
+        #
+        # with open(sfilestr,"w") as smtgfile:
+        #     smtgfile.write("---\n")
+        #     smtgfile.write("title: Summary of Mtg " + str(m) + " &bull; " + reldir[0] +  " (" + reldir[1] + ")\n")
+        #     smtgfile.write("breadcrumb: Summary of Mtg " + str(m) + "\n")
+        #     smtgfile.write("mtg_nbr: " + str(m) + "\n")
+        #     smtgfile.write("layout: bg-image\n")
+        #     smtgfile.write("---\n")
+        #     smtgfile.write(meet_template["S"])
         with open(mfilestr,"w") as mtgfile:
             mtgfile.write("---\n")
             mtgfile.write("title: Mtg " + str(m) + " &bull; " + reldir[0] +  " (" + reldir[1] + ")\n")
@@ -131,7 +130,7 @@ with open(SITE_DIR + DATA_ROOT + jcrs_id + '/' + reldir[1] + '/meetings.csv', ne
             mtgfile.write("mtg_date: " + mtg_date + "\n")
             mtgfile.write("layout: bg-image\n")
             mtgfile.write("---\n")
-            mtgfile.write(meet_template["CS"])
+            mtgfile.write(md_template["CS"])
 
 # create a directory for assignments
 adirstr = offdirstr + 'assignments/'
