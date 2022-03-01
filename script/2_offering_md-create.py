@@ -14,6 +14,7 @@ md_template = {
     tm=page.total_meet
     mn=page.mtg_nbr
     md=page.mtg_date
+    ww=page.wiki_id
 -%}
 """,
 "R" : """
@@ -104,6 +105,7 @@ with open(SITE_DIR + DATA_ROOT + jcrs_id + '/' + reldir[1] + '/meetings.csv', ne
 
         mtg_date = row['date']
         nbr_meetings = row['total_mtgs']
+        wiki_id = row['wikipage_id']
         # with open(rfilestr,"w") as rmtgfile:
         #     rmtgfile.write("---\n")
         #     rmtgfile.write("title: Responses to Mtg " + str(m) + " &bull; " + reldir[0] +  " (" + reldir[1] + ")\n")
@@ -128,16 +130,18 @@ with open(SITE_DIR + DATA_ROOT + jcrs_id + '/' + reldir[1] + '/meetings.csv', ne
             mtgfile.write("mtg_nbr: " + str(m) + "\n")
             mtgfile.write("total_meet: " + str(nbr_meetings) + "\n")
             mtgfile.write("mtg_date: " + mtg_date + "\n")
+            mtgfile.write("wiki_id: " + wiki_id + "\n")
             mtgfile.write("layout: bg-image\n")
             mtgfile.write("---\n")
             mtgfile.write(md_template["CS"])
 
 # create a directory for assignments
 adirstr = offdirstr + 'assignments/'
+print(adirstr)
 try:
     os.makedirs(adirstr)
 except OSError as e:
-    if e.errno == errno.EEXIST and os.path.isdir(asdirstr):
+    if e.errno == errno.EEXIST and os.path.isdir(adirstr):
         pass
     else:
         raise

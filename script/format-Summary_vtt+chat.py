@@ -62,19 +62,19 @@ try:
 except:
     pass
 
-print ('Processing outline for meeting:')
-if 'today' in p[int(sys.argv[2])]:
-    for te in p[int(sys.argv[2])]['today']:
-        if (te not in d):
-            d[te] = []
-            #d[te].append(te)
-            d[te].append(p[int(sys.argv[2])]['today'][te])
-elif 'outline' in p[int(sys.argv[2])]:
-    if ('Outline' not in d):
-        d['Outline'] = []
-        d['Outline'].append(p[int(sys.argv[2])]['outline'])
-    else:
-        print ('\t--> Outline already present.')
+# print ('Processing outline for meeting:')
+# if 'today' in p[int(sys.argv[2])]:
+#     for te in p[int(sys.argv[2])]['today']:
+#         if (te not in d):
+#             d[te] = []
+#             #d[te].append(te)
+#             d[te].append(p[int(sys.argv[2])]['today'][te])
+# elif 'outline' in p[int(sys.argv[2])]:
+#     if ('Outline' not in d):
+#         d['Outline'] = []
+#         d['Outline'].append(p[int(sys.argv[2])]['outline'])
+#     else:
+#         print ('\t--> Outline already present.')
 
 ng = {}
 seqnbr = 0

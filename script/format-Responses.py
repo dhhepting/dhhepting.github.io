@@ -59,19 +59,17 @@ with open(RESP_SRC, newline='') as engfile:
     for row in reader:
         e = {}
         e['desc'] = row["(response) What is your response to today's meeting?"]
-        if (row['(description) Which description best suits your response?'] ==
-            'the most important thing that I learned'):
+        rtype = row["(type) Which type of response are you making?"]
+        if (rtype == 'the most important thing that I learned'):
             #print('important')
             if 'important' not in d:
                 d['important'] = []
             d['important'].append(e)
-        if (row['(description) Which description best suits your response?'] ==
-            'the most difficult thing for me to understand'):
+        if (rtype == 'the most difficult thing for me to understand'):
             if 'difficult' not in d:
                 d['difficult'] = []
             d['difficult'].append(e)
-        if (row['(description) Which description best suits your response?'] ==
-            'the thing about which I would most like to know more'):
+        if (rtype == 'the thing about which I would most like to know more'):
             if 'know-more' not in d:
                 d['know-more'] = []
             d['know-more'].append(e)

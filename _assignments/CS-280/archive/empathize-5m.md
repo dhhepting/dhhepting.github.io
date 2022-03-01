@@ -47,4 +47,4 @@ The goal of this assignment is to consider interaction with your chosen software
 
 ### Grading
 
-{% include marker.html %}
+{% include grading/main.html %}

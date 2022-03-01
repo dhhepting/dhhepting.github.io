@@ -1,5 +1,5 @@
-{% include site/header-without-body.html %}
-
-	{{ content }}
-
-{% include site/footer.html %}
+{%- include site/header.html
+    bodyclass="splash"
+-%}
+{{ content }}
+{%- include site/footer.html -%}

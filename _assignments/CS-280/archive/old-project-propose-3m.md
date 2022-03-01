@@ -170,4 +170,4 @@ You may choose what you will do for this assignment. It must deal with class the
 
 ### Grading
 
-{% include marker.html %}
+{% include grading/main.html %}

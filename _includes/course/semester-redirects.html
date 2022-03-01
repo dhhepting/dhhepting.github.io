@@ -53,17 +53,17 @@ $(document).ready(function(){
       cu_str = cu.origin + cu.pathname + semid + '/textbook.html'
     }
     else if (typ == 'exams') {
-      cu_str = cu.origin + cu.pathname + semid + '/?exams=1'
+      cu_str = cu.origin + cu.pathname + semid + '/#ssExams'
     }
     else if (typ == 'tlo') {
       //alert('tlo')
       //cu_str = cu.origin + cu.pathname + semid + '/tlo.html'
-      cu_str = cu.origin + cu.pathname + semid + '/#collapse_OFF_TLO'
+      cu_str = cu.origin + cu.pathname + semid + '/#ssTopics'
       //newhash = 'collapse_OFF_TLO'
 
     }
     else if (asgn) {
-      cu_str = cu.origin + cu.pathname + semid + '/assignments/?asgn=' + asgn
+      cu_str = cu.origin + cu.pathname + semid + '/#ssAsgn_' + asgn
       console.log(cu_str)
     }
     else {

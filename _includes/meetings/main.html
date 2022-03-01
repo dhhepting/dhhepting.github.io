@@ -1,83 +1,169 @@
 {%- include teaching/url.html %}
 {%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
 {%- assign mtn = include.mn | prepend: '00' | slice: -2, 2  %}
-
-<h1>
-  Mtg {{ include.mn }}/{{ include.tm }}: {{ include.md | date: '%a-%d-%b-%Y' }}
-</h1>
-<div class="card">
-  <div class="card card-header lightcthru">
-  <div class="row">
-    <div class="col-2">
-      <button>
-        <
-      </button>
-      1
-      <button>
-        >
-      </button>
+{%- assign prvmtg = mtn | minus: 1 | prepend: '00' | slice: -2, 2 -%}
+{%- assign prvlnk = nil -%}
+{%- assign nxtmtg = mtn | plus: 1 | prepend: '00' | slice: -2, 2 -%}
+{%- assign nxtlnk = nil -%}
+{%- for mm in site.data.teaching[jcrs_id][crs_sem]meetings -%}
+  {%- if mm.meeting == prvmtg -%}
+    {%- assign prvlnk = mm.file -%}
+  {%- endif -%}
+  {%- if mm.meeting == nxtmtg -%}
+    {%- assign nxtlnk = mm.file -%}
+  {%- endif -%}
+{%- endfor -%}
+<div>
+  <h1 id="mtgh1">
+    Mtg {{ include.mn | plus: 0 }}/{{ include.tm }}: {{ include.md | date: '%a-%d-%b-%Y' }}
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls">
+          {%- if prvlnk == nil -%}
+            <a role="button" class="btn btn-primary disabled"><span class="fas fa-chevron-left"></span></a>
+          {%- else -%}
+            <a href="{{ prvlnk }}" role="button" class="btn btn-primary"><span class="fas fa-chevron-left"></span></a>
+          {%- endif -%}
+            <a href="." role="button" class="btn btn-primary"><span class="fas fa-chevron-up"></span></a>
+          {%- if nxtlnk == nil -%}
+            <a role="button" class="btn btn-outline-primary disabled"><span class="fas fa-chevron-right"></span></a>
+          {%- else -%}
+            <a href="{{ nxtlnk }}" role="button" class="btn btn-primary"><span class="fas fa-chevron-right"></span></a>
+          {%- endif -%}
+          </div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Transcripts
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssZoom-Audio-Transcript">
+                    Zoom Audio Transcript
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssZoom-Chat-Transcript">
+                    Zoom Chat Transcript
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I learned
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="col-10 text-start">
-  <ul class="nav nav-pills" id="navbar-example2">
-    <li class="nav-item">
-      <a class="nav-link" href="#ssToday">Today</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#ssMedia">Media</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#ssTranscripts">Transcripts</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#ssResponses">Responses</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#ssWiki">Wiki</a>
-    </li>
-  </ul>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss"
+      data-bs-spy="scroll" data-bs-target="#navbar-example2"
+      data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3>
+
+        {%- include meetings/plan-body.html
+            mtg=include.mn
+        -%}
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3>
+
+        {%- include meetings/media-body.html
+            mtg=include.mn
+        -%}
+
+        <h3 id="ssTranscripts" class="bg-dark text-white">
+          Transcripts
+        </h3>
+
+        {%- include meetings/transcripts.html
+            mtg=include.mn
+        -%}
+
+        <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+
+        {%- include meetings/responses.html
+            mtg=include.mn
+        -%}
+
+        <h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank"
+          href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid={{ include.ww }}">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
   </div>
 </div>
-</div>
-<!-- class scrollspy-example -->
-<div class="card card-body cbss"
-  data-bs-spy="scroll" data-bs-target="#navbar-example2"
-  data-bs-offset="0" tabindex="0">
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
 
-  <h3 id="ssToday">
-    Today
-  </h3>
-
-  {%- include meetings/plan-body.html
-      mtg=include.mn
-  -%}
-
-  <h3 id="ssMedia">
-    Media
-  </h3>
-
-  {%- include meetings/media-body.html
-      mtg=include.mn
-  -%}
-
-  <h3 id="ssTranscripts">
-    Transcripts
-  </h3>
-
-  {%- include meetings/transcripts.html 
-      mtg=include.mn
-  -%}
-
-  <h3 id="ssResponses">
-    Responses
-  </h3>
-
-  {%- include meetings/responses.html
-      mtg=include.mn
-  -%}
-
-  <h4 id="scrollspyHeading5">Fifth heading</h4>
-
-  <p>
-    This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
-  </p>
-</div>
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>

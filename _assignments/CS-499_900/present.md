@@ -36,4 +36,4 @@ Present your seminar within 18-20 minutes.
 
 ### Grading
 
-{% include marker.html %}
+{% include grading/main.html %}

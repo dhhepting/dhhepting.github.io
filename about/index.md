@@ -40,7 +40,7 @@ layout: bg-image
 		<div class="col-xs-12 col-sm-8">
 			Daryl H. Hepting, Ph.D.
       <br />
-			Associate Professor
+			Professor
       <br />
       College West 308.22 (
   			<a href="http://maps.google.com/?q=50.41772003105197,-104.59164619445801">
@@ -48,11 +48,11 @@ layout: bg-image
   			</a>
   		)
       <br />
-			<a href="http://www.cs.uregina.ca/">
+			<a href="https://www.uregina.ca/science/cs/">
 				Department of Computer Science
 			</a>
 			<br />
-			<a href="http://www.uregina.ca/">
+			<a href="https://www.uregina.ca/">
 				University of Regina
 			</a>
 			<br />
@@ -63,10 +63,6 @@ layout: bg-image
 			Cell: 306-596-6312 ( <a href="tel:306-596-6312">voice</a>&nbsp;&bull;&nbsp;<a href="sms:306-596-6312">SMS</a> )
 			<br />
 			E-Mail:
-			<a href="mailto:hepting@cs.uregina.ca">
-				hepting@cs.uregina.ca
-			</a>
-			,
 			<a href="mailto:daryl.hepting@uregina.ca">
 				daryl.hepting@uregina.ca
 			</a>

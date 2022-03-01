@@ -4,7 +4,6 @@
 {% assign tlooff = site.data.teaching[jcrs_id][crs_sem]tlo -%}
 {%- if tlooff -%}
   {%- include offering/tlo-explanation.html -%}
-  <div class="container" role="group" aria-label="KAreas/KUnits">
   {%- for ku in tlooff -%}
     {%- assign kk = ku[0] | split: "/" -%}
     {%- assign kkd = ku[1] -%}
@@ -13,10 +12,31 @@
     {% assign kunum = kkuu | slice: 0,2 %}
     {% capture kuti %}{{ kkuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kkuu.size }}{% endcapture %}
     {% capture kakid %}{{ kkaa }}{{ kunum }}{% endcapture %}
-    <button class="btn btn-primary m-1" type="button" data-toggle="collapse" data-target="#{{ kakid }}-collapse" aria-expanded="false" aria-controls="{{kakid}}-collapse">
+    <h4 id="ssTLO_{{ kkaa }}_{{ kkuu }}">
       {{ kkaa }} / {{ kuti }}
-    </button>
-    {% include curriculum/KU-collapse.html ika=kkaa iku=kkuu ikuti=kuti ikakid=kakid ikkd=kkd %}
+    </h4>
+    {% assign kaku = site.data.teaching.CS2013[kkaa][kkuu] %}
+    {% if kaku.preamble %}
+      {%- for pre in kaku.preamble -%}
+      <div class="row">
+        <div class="col-md-12">
+          {% if pre.label %}
+          <h5>
+            {{ pre.label }}
+          </h5>
+          {% endif %}
+          {{ pre.desc | markdownify }}
+        </div>
+      </div>
+      {%- endfor -%}
+    {% endif %}
+    <div class="row">
+      <div class="col-md-6">
+        {%- include curriculum/t-OR-lo.html heading="Topics" elems=kaku.topics special=kkd.spectop -%}
+      </div>
+      <div class="col-md-6">
+        {%- include curriculum/t-OR-lo.html heading="Learning Outcomes" elems=kaku.outcomes special=kkd.speclo -%}
+      </div>
+    </div>
   {%- endfor -%}
-  </div>
 {%- endif -%}

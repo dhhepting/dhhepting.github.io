@@ -3,27 +3,27 @@
 {%- assign rfile = site.data.teaching[jcrs_id][crs_sem]responses[mtn] -%}
 {%- if rfile != nil -%}
   {%- if rfile.important != nil -%}
-  <h5>
+  <h4 id="ssR-Important">
     The most important thing that I learned:
-  </h5>
+  </h4>
     {%-
       include helper/yaml-unit-body.html
       test=rfile.important
     -%}
   {%- endif %}
   {%- if rfile.difficult != nil -%}
-  <h5>
+  <h4 id="ssR-Difficult">
     The most difficult thing for me to understand:
-  </h5>
+  </h4>
     {%-
       include helper/yaml-unit-body.html
       test=rfile.difficult
     -%}
   {%- endif %}
   {%- if rfile.know-more != nil -%}
-  <h5>
+  <h4 id="ssR-Know-More">
     The thing about which I would most like to know more:
-  </h5>
+  </h4>
     {%-
       include helper/yaml-unit-body.html
       test=rfile.know-more
