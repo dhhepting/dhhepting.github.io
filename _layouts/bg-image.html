@@ -1,24 +1,21 @@
 {% include site/header.html %}
 {% assign url_parts = page.url | split: "/" %}
-<div class="card {{ url_parts[1] }} w-100 lightcthru" style="min-height:100%" >
-  <div class="card-header bg-dark">
+<div class="card {{ url_parts[1] }} w-100 lightcthru" style="height:100%" >
+  <div class="card card-header bg-dark">
     <div class="row align-items-center">
-      <div class="col-10">
+      <div class="col-9 text-start">
         {%- include site/breadcrumb-nav.html -%}
       </div>
-      <div class="col-2">
+      <div class="col-3 text-start">
         {%- include site/dropdown-nav.html -%}
       </div>
     </div>
   </div>
-  <div class="card-body lightcthru" >
+  <div id="mcb" class="card card-body lightcthru" >
     {{ content }}
   </div>
-  <div class="card-footer text-muted bg-light">
-    Site built: {{ site.time | date: "%Y-%m-%d %H:%M %z" }} &nbsp;&bull;&nbsp;
-    <a href="mailto:{{site.email}}?subject=Feedback about webpage: {{ page.url | absolute_url }}">
-      Give feedback <span class="d-none d-sm-inline">about page</span>
-    </a>
+  <div id="mcbftr" class="card card-footer text-muted bg-dark">
+    Site built: {{ site.time | date: "%Y-%m-%d %H:%M %z" }}&nbsp;&bull;&nbsp;<a href="mailto:{{site.email}}?subject=Feedback about webpage: {{ page.url | absolute_url }}">Give feedback <span class="d-none d-sm-inline">about page</span></a>
   </div>
 </div>
 {% include site/footer.html %}

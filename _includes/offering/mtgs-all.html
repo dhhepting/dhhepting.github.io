@@ -17,18 +17,18 @@
 {% endfor %}
 <div class="container">
   <div class="row border-bottom">
-    <div class="col-2 text-end">
-      It is now:
+    <div class="col-3 text-end">
+      Now:
     </div>
-    <div class="col-10 text-start">
+    <div class="col-9 text-start">
       <i id="now"></i>
     </div>
   </div>
   <div class="row">
-    <div class="col-2 text-end">
-      Next meeting:
+    <div class="col-3 text-end">
+      Next mtg:
     </div>
-    <div class="col-10 text-start">
+    <div class="col-9 text-start">
       <i id="nxtmtg"></i>
     </div>
   </div>
@@ -43,12 +43,17 @@
   {%- endif -%}
   {%- assign mctr = mctr | plus: 1 -%}
   {%- assign newrow = mctr | modulo: mpw -%}
-    <a href="{{ include.mtgdir }}{{ mm.file }}"
+  {%- capture mtgurl %}{{ include.mtgdir }}{{ mm.file }}{% endcapture %}
+  {%- if include.abs == 1 %}
+    <a href="http://www2.cs.uregina.ca/~hepting/teaching/{{ crs_id}}/{{ crs_sem }}/{{ mtgurl }}"
+  {%- else %}
+    <a href="{{ mtgurl }}"
+  {%- endif %}
       class="list-group-item list-group-item-action flex-fill w-25 p-3"
       id="{{ mm.meeting }}">
         Mtg {{ mm.meeting | plus: 0 }} ({{ mm.date }})
     </a>
-  {%- if newrow == 0 -%}
+  {%- if newrow == 0 or mctr == totmtgs -%}
   </ul>
     {%- if mctr < totmtgs -%}
   <ul class="list-group list-group-horizontal">

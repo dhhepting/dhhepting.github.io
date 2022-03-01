@@ -37,4 +37,4 @@ Returning to your group after all the tests are complete:
 
 ### Grading
 
-{% include marker.html %}
+{% include grading/main.html %}

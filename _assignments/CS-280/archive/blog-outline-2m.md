@@ -42,4 +42,4 @@ I have prepared [a sample]({{ "/assets/teaching/pdf/CS-280_blog-outline-sample.p
 
 ### Grading
 
-{% include marker.html %}
+{% include grading/main.html %}

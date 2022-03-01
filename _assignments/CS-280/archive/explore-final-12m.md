@@ -37,4 +37,4 @@ Upload your finished product (as a pdf or as a link) to URcourses.
 
 ### Grading
 
-{% include marker.html %}
+{% include grading/main.html %}

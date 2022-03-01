@@ -1,8 +1,4 @@
 ---
-redirect_from:
-  - another Url
-  - still another
-  - just one more
 main_entity: ScholarlyArticle
 layout: bibtex-default
 citekey: 1991-12-HepPruSau

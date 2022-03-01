@@ -7,9 +7,9 @@
     {% if su[0] != 'offering' %}
       {% assign suname = su[0] | replace: "-", " " %}
       {% assign suitems = su[1] %}
-      <h5>
+      <h4 id="ss{{ su[0] }}">
         {{ suname }}
-      </h5>
+      </h4>
       <ul>
       {%- for item in suitems -%}
       {%- if item.url -%}
@@ -41,18 +41,18 @@
             </div>
           {%- elsif item.todo -%}
           <div class="m-2 p-2 bg-warning">
-            <h6 class="text-center">
+            <h5 class="text-center">
               {{ item.todo | upcase }}
-            </h6>
+            </h5>
             <p class="text-center">
               {{ item.desc }}
             </p>
           </div>
         {%- elsif item.concept -%}
           <div class="m-2 p-2 bg-primary">
-            <h6 class="text-center">
+            <h5 class="text-center">
               {{ item.concept | upcase }}
-            </h6>
+            </h5>
             <p class="text-center">
               {{ item.desc }}
             </p>

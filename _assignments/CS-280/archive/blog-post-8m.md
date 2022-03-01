@@ -61,4 +61,4 @@ Please follow these instructions because you will be penalized if the instructio
 
 ### Grading
 
-{% include marker.html %}
+{% include grading/main.html %}

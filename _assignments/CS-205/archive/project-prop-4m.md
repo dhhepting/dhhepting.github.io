@@ -48,4 +48,4 @@ Submit your work electronically, via URCourses, by uploading a single pdf file.
 
 ### Grading
 
-{% include marker.html %}
+{%- include grading/main.html -%}

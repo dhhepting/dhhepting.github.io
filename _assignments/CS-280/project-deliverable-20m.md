@@ -2,8 +2,11 @@
 title: Project Deliverable
 breadcrumb: Project Deliverable
 marks: 20
-moddate: 02-Feb-2021
-aid: P_RR_DELIV
+semesters:
+  - 202110
+  - 202210
+moddate:
+aid: P_DELIV
 rubric:
   - crit: Topic
     wt: 4
@@ -42,7 +45,7 @@ This is <strong>either</strong> an INDIVIDUAL or a GROUP assignment. It can be d
 
 Your project can involve (for example): a book review, a wikipedia entry, researching smaller assessment/why questions, discussion of contributing to an open source project (on github, for example), writing some code to test an idea, and so forth.
 
-As a reminder, your project must deal with [class themes]({{ "/teaching/CS-280/202110" | relative_url }}) in some way. It is important to realize the project that you proposed (changes from the proposal, if necessary, are permitted) and connect it our discussions this semester. Your ideas about those connections are important.
+As a reminder, your project must deal with [class themes]({{ "/teaching/CS-280/?type=current" | relative_url }}) in some way. It is important to realize the project that you proposed (changes from the proposal, if necessary, are permitted) and connect it our discussions this semester. Your ideas about those connections are important.
 
 ### Submission
 

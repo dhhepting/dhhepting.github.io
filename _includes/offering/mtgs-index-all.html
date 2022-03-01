@@ -5,6 +5,9 @@
     </h1>
   </div>
   <div class="card-body">
-    {%- include offering/mtgs-all.html -%}
+    {%- include offering/mtgs-all.html
+      abs=include.abs
+      mtgdir=include.mtgdir
+    -%}
   </div>
 </div>

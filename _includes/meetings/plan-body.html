@@ -10,19 +10,18 @@
 {%- endfor -%}
 {%- if mtgplan != nil -%}
   {%- if mtgplan[1].theme -%}
-  <h5>
-    {{ mtgplan[1].theme }}
-  </h5>
+  <h4>
+    <em>
+      {{ mtgplan[1].theme }}
+    </em>
+  </h4>
   {%- endif -%}
   {%- if mtgplan[1].today -%}
-  <h5 class="bg-dark text-white">
-    Outline
-  </h5>
     {%- assign tod = mtgplan[1].today -%}
     {% for su in tod %}
-      <h7>
-        {{ su[0] }}
-      </h7>
+      <h4>
+        {{ su[0] | replace: "-"," " }}
+      </h4>
       {% assign suitems = su[1] %}
       <ul>
       {%- for item in suitems -%}

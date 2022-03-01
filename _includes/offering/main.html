@@ -1,77 +1,197 @@
 {%- include teaching/url.html -%}
+<div class="card card-header">
+  <h1 id="offh1">
+    {{ crs_id | replace: "-"," " }} in {{ crs_sem }}
+  </h1>
+</div>
 <div class="card">
-  <div class="card-header">
-    <h1>
-      {{ crs_id | replace: "-"," " }} in {{ crs_sem }}
-    </h1>
-  </div>
-  <div class="card-body">
-    <div class="card">
-      <div class="card-header">
-        <ul class="nav nav-pills" id="navbar-example2">
-          <li class="nav-item">
-            <a class="nav-link" href="#ssMeetings">
-              Meetings
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#ssOffice">
-              Office Hours
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#ssLinks">
-              Links
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#scrollspyHeading4">Fourth</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#scrollspyHeading5">Fifth</a>
-          </li>
-
-        </ul>
-      </div>
-      <div class="card-body cbss"
-        data-bs-spy="scroll"
-        data-bs-target="#navbar-example2"
-        data-bs-offset="0" tabindex="0">
-
-        <h3 id="ssMeetings">
+  <div id="offhdr" class="card-header bg-info">
+    <ul class="nav nav-pills" id="navbar-scrollspy">
+      {%- if include.mtgs == 1 -%}
+      <li class="nav-item">
+        <a class="nav-link" href="#ssMeetings">
           Meetings
-        </h3>
-
-        {%- include offering/mtgs-all.html
-            mtgdir='meetings/'
-        -%}
-
-        <h3 id="ssOffice">
-          Office Hours and Semester Schedule
-        </h3>
-
-        {%- include teaching/schedule.html -%}
-
-        <h3 id="ssLinks">
+        </a>
+      </li>
+      {%- endif -%}
+      {%- if include.sched == 1 -%}
+      <li class="nav-item">
+        <a class="nav-link" href="#ssOffice">
+          Office Hours
+        </a>
+      </li>
+      {%- endif -%}
+      {%- if include.links == 1 -%}
+      <li class="nav-item">
+        <a class="nav-link" href="#ssLinks">
           Links
-        </h3>
+        </a>
+      </li>
+      {%- endif -%}
+      {%- if include.topics == 1 -%}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+          data-bs-toggle="dropdown" href="#" role="button"
+          aria-expanded="false">
+            Topics
+        </a>
+        <ul class="dropdown-menu">
+        {% assign tlooff = site.data.teaching[jcrs_id][crs_sem]tlo -%}
+        {%- for ku in tlooff -%}
+          {%- assign kk = ku[0] | split: "/" -%}
+          {%- assign kkd = ku[1] -%}
+          {%- assign kkaa = kk[0] -%}
+          {%- assign kkuu = kk[1] -%}
+          {% assign kunum = kkuu | slice: 0,2 %}
+          {% capture kuti %}{{ kkuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kkuu.size }}{% endcapture %}
+          {% capture kakid %}{{ kkaa }}{{ kunum }}{% endcapture %}
+          <li>
+            <a class="dropdown-item"
+            href="#ssTLO_{{ kkaa }}_{{ kkuu }}">
+              {{ kkaa }} / {{ kuti }}
+            </a>
+          </li>
+        {%- endfor %}
+        </ul>
+      </li>
+      {%- endif -%}
+
+      {%- if include.asgns == 1 -%}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+          data-bs-toggle="dropdown" href="#" role="button"
+          aria-expanded="false">
+            Assignments
+        </a>
+        <ul class="dropdown-menu">
+        {%- assign asgnfile = site.data.teaching[jcrs_id][crs_sem]assignments %}
+        {%- for aa in asgnfile %}
+          {%- assign msa = "" %}
+          {%- for sa in site.assignments %}
+            {%- if sa.aid == aa.aid %}
+              {%- assign msa = sa %}
+              {%- break %}
+            {%- endif %}
+          {%- endfor %}
+          <li>
+          {%- if msa != "" -%}
+            <a class="dropdown-item"
+            href="#ssAsgn_{{ msa.aid }}">
+              {{ aa.title }},
+              {{ aa.marks }} marks,
+              due {{ aa.duedate }}
+            </a>
+            {%- else -%}
+            <a class="dropdown-item" href="#ssAssignments">
+              {{ aa.title }},
+              {{ aa.marks }} marks,
+              due {{ aa.duedate }}
+              NOT FOUND
+            </a>
+            {%- endif -%}
+          </li>
+          {%- endfor %}
+        </ul>
+      </li>
+      {%- endif -%}
+
+      {%- if include.exams == 1 -%}
+      <li class="nav-item">
+        <a class="nav-link" href="#ssExams">
+          Exams
+        </a>
+      </li>
+      {%- endif -%}
+    </ul>
+  </div>
+  <div id="cbss" class="card-body cbss"
+    data-bs-spy="scroll"
+    data-bs-target="#navbar-scrollspy"
+    data-bs-offset="0" tabindex="0">
+
+    {%- if include.mtgs == 1 -%}
+    <h3 id="ssMeetings" class="bg-dark text-white">
+      Meetings
+    </h3>
+      {%- include offering/mtgs-all.html
+          mtgdir='meetings/'
+      -%}
+    <p></p>
+    {%- endif -%}
+
+    {%- if include.sched == 1-%}
+    <h3 id="ssOffice" class="bg-dark text-white">
+      Office Hours and Semester Schedule
+    </h3>
+      {%- include teaching/schedule.html -%}
+    <p></p>
+    {%- endif -%}
+
+    {%- if include.links == 1 -%}
+    <h3 id="ssLinks" class="bg-dark text-white">
+      Links
+    </h3>
+    <ul>
+      <li>
         {%- capture syll_url -%}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{%- endcapture -%}
-        <p>
-          Here is a link to the course syllabus: {{ syll_url }}
-        </p>
+        <a href="{{ syll_url | relative_url }}" target="_blank">
+          Syllabus (pdf)
+        </a>
+      </li>
+      <li>
+        <a href="https://urcourses.uregina.ca/course/view.php?id={{ crs_urc }}" target="_blank">
+          UR Courses
+        </a>
+      </li>
+      {%- include offering/links-body.html -%}
+    </ul>
+    <p></p>
+    {%- endif -%}
 
-        <h4 id="scrollspyHeading4">Fourth heading</h4>
+    {%- if include.topics == 1 -%}
+    <h3 id="ssTopics" class="bg-dark text-white">
+      Topics
+    </h3>
+      {%- include offering/tlo-body.html -%}
+    <p></p>
+    {%- endif -%}
 
-        <p>
-          This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
-        </p>
+    {%- if include.asgns == 1 -%}
+    <h3 id="ssAssignments" class="bg-dark text-white">
+      Assignments
+    </h3>
+      {%- include offering/asgn-body.html -%}
+    <p></p>
+    {%- endif -%}
 
-        <h4 id="scrollspyHeading5">Fifth heading</h4>
+    {%- if include.exams == 1 -%}
+    <h3 id="ssExams" class="bg-dark text-white">
+      Exams
+    </h3>
+      {%- include offering/exams-body.html -%}
+    <p></p>
+    {%- endif -%}
 
-        <p>
-          This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
-        </p>
-      </div>
-    </div>
+  </div>
+  <div id="offftr" class="card-header bg-info">
   </div>
 </div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('offh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('offhdr').offsetHeight;
+  console.log('-offhdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('offftr').offsetHeight;
+  console.log('-offftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>

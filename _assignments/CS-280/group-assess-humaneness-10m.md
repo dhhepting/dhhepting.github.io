@@ -3,8 +3,8 @@ title: Assess Humaneness
 breadcrumb: Assess Humaneness
 layout: bg-image
 marks: 10
-moddate: 11-Mar-2020
-aid: G_AH
+moddate: 09-Feb-2022
+aid: AHW
 rubric:
   - crit: Exploration
     wt: 3
@@ -31,28 +31,25 @@ rubric:
     l1: Recommendations about some of the content
     l0: Recommendations not clear
 ---
-### {{ page.title }}
+### Description
 
-This is a [GROUP]({{ "/teaching/groupwork.html" | relative_url }}) assignment. It cannot be done individually. With little input from you, 25 groups of 4 or 5 have been created. You may see who is in which group by checking this listYou may communicate with your group using the [Within-Group Discussion Forum](https://urcourses.uregina.ca/mod/forum/view.php?id=908333). You are not required to use this forum for the whole assignment, but it may help to get you in touch with your fellow group members.
+This is a group assignment and you have been assigned
+to a group, somewhat randomly, with either 4 or 5 members.
+You may communicate with your group using the [Web Within-Group Discussion Forum](https://urcourses.uregina.ca/mod/forum/view.php?id=1767844). You are not required to use this forum for the whole assignment, but it may help to get you in touch with your fellow group members.
 
 "An interface is humane if it is responsive to human needs and considerate of human frailties."
 
-As a group, you will assess the humaneness of the [Department of Computer Science website](http://cs.uregina.ca) by testing the website content as described in [this NN/group article by Hoa Loranger](https://www.nngroup.com/articles/testing-content-websites/) and [this NN/group article by Kara Pernice](https://www.nngroup.com/articles/intranet-content-strategy/) (more focused on intranets)
+As a group, you will assess the humaneness of the [Department of Computer Science website](https://www.uregina.ca/science/cs/) in the context of the newly updated University of Regina website. Do this by testing the website content as described in [this NN/group article by Hoa Loranger](https://www.nngroup.com/articles/testing-content-websites/) and [this NN/group article by Kara Pernice](https://www.nngroup.com/articles/intranet-content-strategy/) (more focused on intranets)
 
-Look everywhere on the site, as organized by the main links down the left side navigation menu. [Search Performance data for the website has been posted on UR Courses](https://urcourses.uregina.ca/course/view.php?id=1458#section-4). The main links are:
-1. [What We Do](http://www.cs.uregina.ca/what_we_do.html)
-1. [Future Students](http://www.cs.uregina.ca/FutureStudents/)
-1. [People](http://www.cs.uregina.ca/People/)
-1. [News & Events](http://www.cs.uregina.ca/News/)
-1. [Undergraduate Program](http://www.cs.uregina.ca/UndergradProgram/)
-1. [Graduate Program](http://www.cs.uregina.ca/GraduateProgram/)
-1. [Classes & Labs](http://www.cs.uregina.ca/ClassesLabs/)
-1. [Research](http://www.cs.uregina.ca/Research/)
-1. [Resources](http://www.cs.uregina.ca/Technical/)
-1. [Organizations](http://www.cs.uregina.ca/Organizations/)
-1. [Secure Services](http://www.cs.uregina.ca/Secure/)
-1. [Student Assistants](http://www.cs.uregina.ca/StudentAssists/)
-1. [Contact](http://www.cs.uregina.ca/contact.html)
+Look everywhere on the site, as organized by the main links on the CS Home page. Each of the main links has additional content organized in the left-hand navigation menu. The main links are:
+1. [Home](https://www.uregina.ca/science/cs/index.html)
+1. [People](https://www.uregina.ca/science/cs/people/index.html)
+1. [Undergraduate](https://www.uregina.ca/science/cs/undergraduate/index.html)
+1. [Graduate](https://www.uregina.ca/science/cs/graduate/index.html)
+1. [Classes & Labs](https://www.uregina.ca/science/cs/classes-and-labs/index.html)
+1. [Research](https://www.uregina.ca/science/cs/research/index.html)
+1. [Resources](https://www.uregina.ca/science/cs/resources/index.html)
+1. [Contact Us](https://www.uregina.ca/science/cs/contact-us/index.html)
 
 Consider these questions:
 * is the content valuable to you?
@@ -62,7 +59,7 @@ Consider these questions:
 * should the content be put elsewhere (UR Courses, Faculty of Science, and so on)?
 
 After your group members have explored the content on the website, create a summary report organized according to the main navigation structure of the site detailed above.
-You may use the headings below to organize your report either by each main link (so that there are 13 summaries) or as a whole (so that there is 1 summary with 13 parts).
+You may use the headings below to organize your report either by each main link or as a whole .
 
 ### Exploration
 

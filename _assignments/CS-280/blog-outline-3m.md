@@ -31,7 +31,7 @@ rubric:
   l1: Personal connection is unclear
   l0: No personal connection
 ---
-### {{ page.title }}
+##### Description
 
 [Blogs](https://en.wikipedia.org/wiki/Blog) (short for weblogs) have become an important means of expression in the information society. Personal blog posts are discrete, often informal, diary-style commentaries written by an individual.
 
@@ -45,7 +45,7 @@ Identify 2 reputable online sources to reference in support of your topic.
 
 I have prepared [a sample]({{ "/assets/teaching/pdf/CS-280_blog-outline-sample.pdf" | relative_url }}) that you may use as a guide for preparing your submission.
 
-### Submission
+##### Submission
 
 * submit a well-formatted [pdf](https://en.wikipedia.org/wiki/PDF) document on URcourses
 * target length: 1 page
