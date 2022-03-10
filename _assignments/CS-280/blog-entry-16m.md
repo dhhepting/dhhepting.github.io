@@ -1,6 +1,6 @@
 ---
-title: Blog Entry 1
-breadcrumb: Blog Entry 1
+title: Blog Entry
+breadcrumb: Blog Entry
 layout: bg-image
 aid: BLOG
 moddate:
@@ -20,10 +20,10 @@ rubric:
     l0: No personal response is made to the issues/concepts raised in the readings/activities
   - crit: Critical Evaluation of Online Sources
     wt: 4
-    l3:
-    l2:
-    l1:
-    l0:
+    l3: All questions answered thoroughly
+    l2: All questions answered
+    l1: Questions answered somewhat thoroughly
+    l0: Few questions answered
   - crit: Engaged Writing for the Web
     wt: 4
     l3: Shows a good command of Standard English. No problems for your audience. Blog entry uses recommended style
@@ -41,7 +41,12 @@ The list of [knowledge units]({{ "/teaching/CS-280/?type=tlo" | relative_url }})
 
 Find a personal connection to the topic. You may, for example, evaluate the (consideration of) ethical and social tradeoffs in a technical decision or analyse the role of computer professionals in a global computing issue.
 
-Identify multiple reputable online sources to reference in support of your topic. References are to be included as hyperlinks within the post, close to the text that makes the reference. They should also be clearly included in plain text at the end of your work.
+Identify multiple (4-8) reputable online sources to reference in support of your topic. References are to be included as hyperlinks within the post, close to the text that makes the reference. They should also be clearly included in plain text at the end of your work. Also at the end of your work, answer the following questions about each source:
+1. Who is the author?
+1. Who is the publisher?
+1. What is the purpose or prespective of the content?  
+1. Is the information provided by the source timely and relevant?
+1. How does this source compare to others?
 
 From [Nielsen and Morkes](<https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/>), here are some ways to write for the web:
 

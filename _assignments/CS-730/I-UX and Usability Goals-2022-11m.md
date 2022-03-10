@@ -3,12 +3,13 @@ title: User Experience and Usability Goals
 breadcrumb: User Experience and Usability Goals
 layout: bg-image
 moddate: 25-Feb-2022
-marks: 1-
-aid: I_EM
+marks: 11
+aid: UUX
 rubric:
 - crit: Activity Described
   wt: 2.0
-  l2: Includes everything as requested
+  l3: Includes everything as requested
+  l2: Includes mostly all as requested
   l1: Not described as requested
   l0: Not described
 - crit: Goals Stated
@@ -41,15 +42,14 @@ Specifically, you are asked to:
 
 1. Describe the steps that you undertake to perform the "Proctortrack Onboarding and Practice Exam" and "Onboarding Quiz" activities.
 1. Share your user experience from completing the "Proctortrack Onboarding and Practice Exam" and "Onboarding Quiz" activities.
-1. Reflect on the user experience and usability goals that you consider applicable to your personal experience of completing the activity. (Sharp topic 1.7)
-1. State each of your sets of usability and user experience goals into two or more questions. (Hint: You may think of the question/s as potential issues you may have come across with while completing the "Proctortrack Onboarding and Practice Exam" activity.)
-1. Suggest possible improvements for the "Proctortrack Onboarding and Practice Exam" activity, that will satisfy the questions asked by you.
-
+1. Reflect on the usability and user experience goals that you find applicable to your experience of completing the activities. (Sharp et al., Section 1.7)
+1. Phrase each of the applicable usability and user experience goals as questions that can be used to evaluate the Proctortrack interface. They may be based on issues that you have come across with while completing the activities.
+1. Suggest possible improvements for the "Proctortrack Onboarding and Practice Exam" and "Onboarding Quiz" activities, that will answer the questions that you asked.
 
 ### Submission
 
 * submit a single [pdf](https://en.wikipedia.org/wiki/PDF) document on UR Courses
-* target: up to 1 page for a description of the steps you took to complete the activity, 1 paragraph for user experience, 1-2 pages for the user experience and usability goals and relevant questions, half a page for the suggested improvements.  
+* target: up to 1 page for a description of the steps you took to complete the activity, 1 paragraph for user experience, 1-2 pages for the user experience and usability goals and relevant questions, up to 1 page for the suggested improvements.  
 
 
 {% include grading/main.html %}

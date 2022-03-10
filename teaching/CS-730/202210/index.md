@@ -9,6 +9,7 @@ layout: bg-image
   sched=1
   wkly=1
   links=1
+  asgns=1
   topics=0
   exams=1
 -%}
