@@ -5,7 +5,7 @@
 {%- for m in site.data.teaching[jcrs_id][crs_sem]media -%}
   {%- if m.meet == mtgstr -%}
     {%- assign mtgfnd = 1 -%}
-    {%- if m.file contains "jpg" or m.file contains "JPG" or m.file contains "png" -%}
+    {%- if m.file contains "jpg" or m.file contains "JPG" or m.file contains "jpeg" or m.file contains "png" -%}
       {%- capture pixlist -%}{{pixlist}}|{{m.file}}#{{m.URL}}{%- endcapture -%}
     {%- endif -%}
     {%- if m.file contains "m4a" -%}

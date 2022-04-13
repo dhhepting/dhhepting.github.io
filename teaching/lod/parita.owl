@@ -1,0 +1,697 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/pda324/ontologies/survey"
+     xml:base="http://www.semanticweb.org/pda324/ontologies/survey"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/pda324/ontologies/survey">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey/1.7"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#hasCourseID -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasCourseID">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#hasSampleDetail"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#isCourseIDOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#sample_courseID"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#hasCourseName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasCourseName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#hasSampleDetail"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#isCourseNameOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#sample_course_name"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#hasMaxResponses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasMaxResponses">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#hasSampleDetail"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#isMaxResponseOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#sample_max_responses"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#hasName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#hasSampleDetail"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#isNameOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#sample_name"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#hasNumber -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#hasSampleDetail"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#isNumberOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#sample_number"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#hasRespondent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasRespondent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#isRespondentOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Respondents"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#hasSampleDetail -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasSampleDetail">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#isSampleDetailOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#hasSemester -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasSemester">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#hasSampleDetail"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#isSemesterOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#sample_semester"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#hasSurveyQuestion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasSurveyQuestion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#isSurveyQuestionOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Survey_Question"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#isCourseIDOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isCourseIDOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#isSampleDetailOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#isCourseNameOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isCourseNameOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#isSampleDetailOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#isMaxResponseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isMaxResponseOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#isSampleDetailOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#isNameOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isNameOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#isSampleDetailOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#isNumberOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isNumberOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#isSampleDetailOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#isRespondentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isRespondentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Respondents"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Survey"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#isSampleDetailOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isSampleDetailOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Survey"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#isSemesterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isSemesterOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#isSampleDetailOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#isSurveyQuestionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isSurveyQuestionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Survey_Question"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Survey"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#Always -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Always">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#5"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_names"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#Domain_entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Domain_entity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#Independent_entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Independent_entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Domain_entity"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Value"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_question"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_names -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_names">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_numbers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_numbers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_numbers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#Likert_question -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Likert_question">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Survey_Question"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Value"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Open_Ended_question"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#Never -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Never">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#1"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_names"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#Open_Ended_question -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Open_Ended_question">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Survey_Question"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Value"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#Respondents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Respondents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Independent_entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Independent_entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#Survey -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Survey">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Independent_entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#Survey_Question -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Survey_Question">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Independent_entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#Value -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Value">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Domain_entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#feedback_survey -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#feedback_survey">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Survey"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#sample_courseID -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_courseID">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#sample_course_name -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_course_name">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#sample_max_responses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_max_responses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#sample_name -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_name">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#sample_number -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_number">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#sample_semester -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_semester">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#0 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#0">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#[No_Answer]"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_numbers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_numbers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#1_The_instructor_is_well-prepared_for_class -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#1_The_instructor_is_well-prepared_for_class">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#1_What_do_you_like_the_best_about_this_course? -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#1_What_do_you_like_the_best_about_this_course?">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Open_Ended_question"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#2">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#[Rarely]"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_numbers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#2_The_instructor_clearly_communicates_his_expectations_for_student_preparation_and_participation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#2_The_instructor_clearly_communicates_his_expectations_for_student_preparation_and_participation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#2_What_would_you_like_to_change_about_this_course? -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#2_What_would_you_like_to_change_about_this_course?">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Open_Ended_question"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#3">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#[Sometimes]"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_numbers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#3_The_instructor_uses_class_time_effectively -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#3_The_instructor_uses_class_time_effectively">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#3_What_do_you_think_the_instructor&apos;s_greatest_strengths_are? -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#3_What_do_you_think_the_instructor&apos;s_greatest_strengths_are?">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Open_Ended_question"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#4">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#[Often]"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_numbers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#4_The_instructor_has_clear_expectations_for_assigned_work -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#4_The_instructor_has_clear_expectations_for_assigned_work">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#5 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#5">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_numbers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#5_The_instructor_encourages_student_participation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#5_The_instructor_encourages_student_participation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#6_The_instructor_clearly_answers_quaestions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#6_The_instructor_clearly_answers_quaestions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#7_The_instructor_treats_students_with_respect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#7_The_instructor_treats_students_with_respect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#8_The_instructor_easily_directs_and_simulates_discussion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#8_The_instructor_easily_directs_and_simulates_discussion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#9_The_instructor_effectively_encourages_students_to_ask_questions_and_give_answers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#9_The_instructor_effectively_encourages_students_to_ask_questions_and_give_answers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#[No_Answer] -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#[No_Answer]">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_names"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#[Often] -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#[Often]">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_names"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#[Rarely] -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#[Rarely]">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_names"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pda324/ontologies/survey#[Sometimes] -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#[Sometimes]">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_names"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Always"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Never"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#[No_Answer]"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#[Often]"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#[Rarely]"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#[Sometimes]"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_names"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Likert_NeverAlways5_numbers"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#1_The_instructor_is_well-prepared_for_class"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#2_The_instructor_clearly_communicates_his_expectations_for_student_preparation_and_participation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#3_The_instructor_uses_class_time_effectively"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#4_The_instructor_has_clear_expectations_for_assigned_work"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#5_The_instructor_encourages_student_participation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#6_The_instructor_clearly_answers_quaestions"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#7_The_instructor_treats_students_with_respect"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#8_The_instructor_easily_directs_and_simulates_discussion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#9_The_instructor_effectively_encourages_students_to_ask_questions_and_give_answers"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Respondents"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Survey"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Survey_Question"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Sample_Detail"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Survey"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#Survey_Question"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_courseID"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_course_name"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_max_responses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_name"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_number"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_semester"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_courseID"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_max_responses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_name"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_number"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#sample_semester"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#0"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#3"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#4"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#5"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#1_What_do_you_like_the_best_about_this_course?"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#2_What_would_you_like_to_change_about_this_course?"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#3_What_do_you_think_the_instructor&apos;s_greatest_strengths_are?"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasCourseID"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasCourseName"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasMaxResponses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasName"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasNumber"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasSemester"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasRespondent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasSampleDetail"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#hasSurveyQuestion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isRespondentOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isSampleDetailOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isSurveyQuestionOf"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isCourseIDOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isCourseNameOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isMaxResponseOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isNameOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isNumberOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pda324/ontologies/survey#isSemesterOf"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

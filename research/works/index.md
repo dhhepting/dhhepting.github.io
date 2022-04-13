@@ -1,6 +1,8 @@
 ---
 layout: w_collection
 title: Collected Works
+breadcrumb: Collected Works
+collection: works
 redirect_from:
   - /research/works.html
   - /assets/pdfs/works/2006-00-C-CMiSoID.pdf.html
@@ -15,6 +17,5 @@ redirect_from:
   - /research/dwnld/annie2003interactevo.pdf.html
   - /research/works/2013-10-Discernibility-in-the-Analysis-of-Binary-Card-Sort-Data.html
   - /research/works/2014-06-Operationalizing-Ethics-in-Food-Choice-Decisions.html
-breadcrumb: Collected Works
-collection: works
 ---
+

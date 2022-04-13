@@ -7,7 +7,7 @@ group:
 <h1>
 	Collected Works
 </h1>
-
+{%comment%}
 {% assign proj_wrks = "" %}
 {% assign proj_list = "" %}
 {% for item in site.works reversed %}
@@ -32,6 +32,7 @@ group:
     {% endif %}
   {% endfor %}
 </ul>
+{% endcomment %}
 <ul>
 {% for item in site.works reversed %}
   <li><a href="{{ item.url | relative_url }}">{{ item.breadcrumb }}</a>

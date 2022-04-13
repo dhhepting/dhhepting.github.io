@@ -17,8 +17,8 @@ email: daryl.hepting@uregina.ca
 description: >- # this means to ignore newlines until "baseurl:"
   Professor of Computer Science, University of Regina.
   Ph.D. from Simon Fraser University. Augmenting human abilities to embrace diversity.
-baseurl:
-url: https://dhhepting.github.io
+baseurl: /~hepting
+url: http://www2.cs.uregina.ca/
 canonical: http://www2.cs.uregina.ca/~hepting
 github_username:  dhhepting
 
@@ -33,7 +33,9 @@ webmaster_verifications:
 
 # Build settings
 markdown: kramdown
-theme:
+
+#theme:
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -42,18 +44,50 @@ plugins:
 # feed:
 #   path: rss/news.xml
 
-sass:
+#sass:
+# Keep from being clobbered on each build
+keep_files:
+  - assets/works
+
+tipue_search:
+  include:
+    pages: true
+    collections: [works, notes, gallery]
+  exclude:
+    files: [search.html]
+    tags:
+    categories:
+
+collections:
+# permalink for _posts (news) -- only posts will be news, so effectively /news
+  posts:
+    output: true
+    permalink: /:categories/:title:output_ext
+  works:
+    output: true
+    permalink: /research/:collection/:title:output_ext
+  gallery:
+    output: true
+    permalink: /projects/fractals/:collection/:title:output_ext
+  assignments:
+    output: false
+    permalink: /teaching/:collection/:path/:categories/:title:output_ext
+  notes:
+    output: true
+    permalink: /teaching/:collection/:title:output_ext
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author: "Daryl H. Hepting"
 
 # Exclude from processing.
 exclude:
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - vendor
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor/
   - deploy_rsa
   - deploy_rsa.enc
   - script/
@@ -240,48 +274,3 @@ exclude:
   - teaching/schedule/0_nonweb/
   - teaching/resources/0_nonweb/
 
-# Keep from being clobbered on each build
-keep_files:
-  - assets/works
-
-tipue_search:
-  include:
-    pages: true
-    collections: [works, notes, gallery]
-  exclude:
-    files: [search.html]
-    tags:
-    categories:
-
-# permalink for _posts (news)
-
-collections:
-  - assignments
-  - gallery
-  - notes
-  - works
-
-
-collections:
-  posts:
-    output: true
-    permalink: /:categories/:title:output_ext
-  works:
-    output: true
-    permalink: /research/:collection/:title:output_ext
-  gallery:
-    output: true
-    permalink: /projects/fractals/:collection/:title:output_ext
-  assignments:
-    output: false
-    permalink: /teaching/:collection/:path/:categories/:title:output_ext
-  notes:
-    output: true
-    permalink: /teaching/:collection/:title:output_ext
-
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      author: "Daryl H. Hepting"

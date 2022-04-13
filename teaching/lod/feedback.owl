@@ -1,0 +1,402 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#"
+     xml:base="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#integer -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#hasOpenEndedAnswer -->
+
+    <owl:ObjectProperty rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#hasOpenEndedAnswer"/>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#hasRatingAnswer -->
+
+    <owl:ObjectProperty rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#hasRatingAnswer"/>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#isRatingsAnswer -->
+
+    <owl:ObjectProperty rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#isRatingsAnswer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RatingQuestions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#hasAnswerRatingsQ -->
+
+    <owl:DatatypeProperty rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#hasAnswerRatingsQ">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RatingQuestions"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#ID -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#ID">
+        <rdfs:subClassOf rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Survey"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OEQuestionAnswer -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OEQuestionAnswer">
+        <rdfs:subClassOf rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OpenEndedQuestions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OEQuestionLabel -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OEQuestionLabel">
+        <rdfs:subClassOf rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OpenEndedQuestions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OpenEndedQuestions -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OpenEndedQuestions">
+        <rdfs:subClassOf rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Questions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Questions -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Questions">
+        <rdfs:subClassOf rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Survey"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RQQuestionLabel -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RQQuestionLabel">
+        <rdfs:subClassOf rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RatingQuestions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RQRatingsAnswerScale -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RQRatingsAnswerScale">
+        <rdfs:subClassOf rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RatingQuestions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RatingQuestions -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RatingQuestions">
+        <rdfs:subClassOf rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Questions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Survey -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Survey"/>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#course -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#course">
+        <rdfs:subClassOf rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#ID"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#description -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#description">
+        <rdfs:subClassOf rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#ID"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When during the semester feedback is collected (e.g. midterm, final)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#instructor -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#instructor">
+        <rdfs:subClassOf rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#ID"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#semester -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#semester">
+        <rdfs:subClassOf rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#ID"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Always -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Always">
+        <rdf:type rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RQRatingsAnswerScale"/>
+        <hasAnswerRatingsQ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasAnswerRatingsQ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Never -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Never">
+        <rdf:type rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RQRatingsAnswerScale"/>
+        <hasAnswerRatingsQ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasAnswerRatingsQ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#NoAnswer -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#NoAnswer">
+        <rdf:type rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RQRatingsAnswerScale"/>
+        <hasAnswerRatingsQ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasAnswerRatingsQ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OE1"/>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OE2"/>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OE3">
+        <rdf:type rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OpenEndedQuestions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Often -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Often">
+        <rdf:type rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RQRatingsAnswerScale"/>
+        <hasAnswerRatingsQ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasAnswerRatingsQ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q1 -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q1"/>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q2 -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q2"/>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q3 -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q3"/>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q4 -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q4"/>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q5 -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q5"/>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q6 -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q6"/>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q7 -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q7"/>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q8 -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q8"/>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q9 -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Q9">
+        <rdf:type rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RatingQuestions"/>
+        <hasAnswerRatingsQ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasAnswerRatingsQ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Rarely -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Rarely">
+        <rdf:type rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RQRatingsAnswerScale"/>
+        <hasAnswerRatingsQ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasAnswerRatingsQ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Sometimes -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#Sometimes">
+        <rdf:type rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RQRatingsAnswerScale"/>
+        <hasAnswerRatingsQ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasAnswerRatingsQ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#What_do_you_like_about_this_course -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#What_do_you_like_about_this_course">
+        <rdf:type rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#OEQuestionLabel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#1.The_instructor_is_well-prepared_for_class -->
+
+    <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#1.The_instructor_is_well-prepared_for_class">
+        <rdf:type rdf:resource="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#RQQuestionLabel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#course"/>
+            <rdf:Description rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#description"/>
+            <rdf:Description rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#instructor"/>
+            <rdf:Description rdf:about="http://www2.cs.uregina.ca/~hepting/lod/feedback.owl#semester"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
