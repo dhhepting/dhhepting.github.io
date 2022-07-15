@@ -7050,3 +7050,298 @@ requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.dropboxapi.com', 
 2022-04-06 23:57:00.840685
 2022-04-12 00:27:03.905124
 2022-04-12 00:29:11.988324
+2022-04-16 00:10:47.183669
+2022-05-09 10:56:33.941414
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 411, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 428, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 472, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/Cellar/python@3.9/3.9.10/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/Cellar/python@3.9/3.9.10/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/Cellar/python@3.9/3.9.10/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:1129)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Sites/dhhepting.github.io/script/sharemedia.py", line 54, in <module>
+    dbx.users_get_current_account()
+  File "/usr/local/lib/python3.9/site-packages/dropbox/base.py", line 5090, in users_get_current_account
+    r = self.request(
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 313, in request
+    res = self.request_json_string_with_retry(host,
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 463, in request_json_string_with_retry
+    return self.request_json_string(host,
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 559, in request_json_string
+    r = self._session.post(url,
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 590, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))
+2022-05-09 10:58:34.875424
+2022-05-09 11:15:51.635848
+2022-05-09 11:15:51.637737
+2022-05-09 13:09:29.115553
+2022-05-09 13:09:29.128026
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 382, in _make_request
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1010, in _validate_conn
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 411, in connect
+    conn.connect()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 411, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 428, in ssl_wrap_socket
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 428, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 472, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/Cellar/python@3.9/3.9.10/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 472, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/Cellar/python@3.9/3.9.10/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/Cellar/python@3.9/3.9.10/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    return self.sslsocket_class._create(
+  File "/usr/local/Cellar/python@3.9/3.9.10/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/Cellar/python@3.9/3.9.10/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self.do_handshake()
+  File "/usr/local/Cellar/python@3.9/3.9.10/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:1129)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:1129)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    resp = conn.urlopen(
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 573, in increment
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Sites/dhhepting.github.io/script/sharemedia.py", line 54, in <module>
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Sites/dhhepting.github.io/script/sharemedia.py", line 54, in <module>
+    dbx.users_get_current_account()
+  File "/usr/local/lib/python3.9/site-packages/dropbox/base.py", line 5090, in users_get_current_account
+    dbx.users_get_current_account()
+  File "/usr/local/lib/python3.9/site-packages/dropbox/base.py", line 5090, in users_get_current_account
+    r = self.request(
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 313, in request
+    r = self.request(
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 313, in request
+    res = self.request_json_string_with_retry(host,
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 463, in request_json_string_with_retry
+    res = self.request_json_string_with_retry(host,
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 463, in request_json_string_with_retry
+    return self.request_json_string(host,
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 559, in request_json_string
+    return self.request_json_string(host,
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 559, in request_json_string
+    r = self._session.post(url,
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 590, in post
+    r = self._session.post(url,
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 590, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))
+2022-05-09 13:53:40.252946
+2022-05-09 13:53:40.252946
+2022-05-09 14:51:37.913089
+2022-05-13 17:34:52.809409
+2022-05-13 17:34:52.809621
+2022-05-13 17:38:37.625371
+2022-05-13 17:38:37.710153
+2022-05-14 11:06:33.550020
+2022-05-31 12:41:50.434908
+2022-05-31 12:41:51.040927
+2022-05-31 15:56:38.620893
+2022-05-31 15:56:38.621217
+2022-07-11 10:28:48.460263
+2022-07-11 10:28:48.461384
+2022-07-11 13:28:49.343159
+2022-07-11 13:28:49.343161
+2022-07-15 04:46:33.635924
+2022-07-15 04:46:34.219917
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1010, in _validate_conn
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 411, in connect
+    conn.connect()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 411, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 428, in ssl_wrap_socket
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 428, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 472, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/Cellar/python@3.9/3.9.10/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 472, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/Cellar/python@3.9/3.9.10/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/Cellar/python@3.9/3.9.10/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    return self.sslsocket_class._create(
+  File "/usr/local/Cellar/python@3.9/3.9.10/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/Cellar/python@3.9/3.9.10/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self.do_handshake()
+  File "/usr/local/Cellar/python@3.9/3.9.10/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:1129)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:1129)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 573, in increment
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Sites/dhhepting.github.io/script/sharemedia.py", line 54, in <module>
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hepting/Sites/dhhepting.github.io/script/sharemedia.py", line 54, in <module>
+    dbx.users_get_current_account()
+  File "/usr/local/lib/python3.9/site-packages/dropbox/base.py", line 5090, in users_get_current_account
+    dbx.users_get_current_account()
+  File "/usr/local/lib/python3.9/site-packages/dropbox/base.py", line 5090, in users_get_current_account
+    r = self.request(
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 313, in request
+    r = self.request(
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 313, in request
+    res = self.request_json_string_with_retry(host,
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 463, in request_json_string_with_retry
+    res = self.request_json_string_with_retry(host,
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 463, in request_json_string_with_retry
+    return self.request_json_string(host,
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 559, in request_json_string
+    r = self._session.post(url,
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 590, in post
+    return self.request_json_string(host,
+  File "/usr/local/lib/python3.9/site-packages/dropbox/dropbox.py", line 559, in request_json_string
+    r = self._session.post(url,
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 590, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 514, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.dropboxapi.com', port=443): Max retries exceeded with url: /2/users/get_current_account (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))

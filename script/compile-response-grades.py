@@ -36,18 +36,21 @@ for root, dirs, files in os.walk(RESP_DIR):
     for file in files:
         if file.endswith(".csv"):
             rfile = os.path.join(root, file)
+            print(rfile)
             mk = file.split(".")[0]
+            print(mk)
             with open(rfile, newline='') as rrrfile:
                 reader = csv.DictReader(rrrfile)
                 for row in reader:
                     #print(row["Email address"])
                     emi = row["Email address"].split("@")[0]
-                    grade = int(row["Grades"])
-                    #print(emi)
-                    if (emi not in sss):
-                        sss[emi] = grade
-                    else:
-                        sss[emi] += grade
+                    if (row["Grades"]):
+                        grade = int(row["Grades"])
+                        #print(emi)
+                        if (emi not in sss):
+                            sss[emi] = grade
+                        else:
+                            sss[emi] += grade
 for k in sss:
     print(k,sss[k])
     # if len(sss[k]) > 0:

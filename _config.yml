@@ -40,6 +40,17 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-rdf
+
+jekyll_rdf:
+  path: "_data/PizzaTutorialWithDataV2.owl"
+  default_template: "defaultrdfff.html"
+  restriction: "SELECT ?resourceUri WHERE { ?resourceUri ?p ?o . FILTER regex(str(?resourceUri), 'http://example.org/simpsons')  }"
+  class_template_mappings:
+      "http://xmlns.com/foaf/0.1/Person": "person.html"
+  instance_template_mappings:
+      "http://example.org/simpsons/Abraham": "abraham.html"
+
 
 # feed:
 #   path: rss/news.xml
@@ -273,4 +284,3 @@ exclude:
   - teaching/FILM-385AB/201110/1_offweb/
   - teaching/schedule/0_nonweb/
   - teaching/resources/0_nonweb/
-

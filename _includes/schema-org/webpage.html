@@ -5,8 +5,12 @@
 {% assign url_str = page.url %}
 {% assign strend = url_str | size | minus: 1 %}
 {% assign endchar = url_str | slice: strend, 1 %}
-{% if endchar == "/" %}
+{% if endchar == "?" %}
   {% include schema-org-itemlist.html %}
+{% elsif page.main_entity == "DataCatalog" %}
+  {% include schema-org/datacatalog.html %}
+{% elsif page.main_entity == "Dataset" %}
+  {% include schema-org/dataset.html %}
 {% elsif page.main_entity == "Service" %}
   {% include schema-org-service.html %}
 {% elsif page.main_entity == "ImageObject" %}

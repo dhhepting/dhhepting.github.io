@@ -1,0 +1,179 @@
+{
+  "@type": "Dataset",
+  "name": "{{ page.dsname | strip }}",
+  {% assign pcs = page.creators.size %}
+  {% assign pci = 1 | plus: 0 %}
+  "creator":
+  [
+  {%- for pc in page.creators %}
+    {
+      "@type": "Person",
+    {%- if pc == "Daryl H. Hepting" %}
+      "name": "{{ pc }}",
+      "@id": "{{ "/about/" | absolute_url }}#DHHepting"
+    {%- else %}
+      "name": "{{ pc }}"
+    {%- endif %}
+    {%- if pci < pcs %}
+    },
+    {%- else -%}
+    }
+    {% endif %}
+    {%- assign pci = pci | plus: 1 -%}
+  {%- endfor -%}
+],
+  "description": "{{ page.dsdesc | strip }}",
+  "url": "{{ page.dsurl | strip | absolute_url }}",
+  "license": "{{ page.license | strip }}"
+}
+  {% comment %}
+  "creator": "{{ page.creator | strip }}",
+  https://catalog.data.gov/dataset/ncdc-storm-events-database",
+    "sameAs":"https://gis.ncdc.noaa.gov/geoportal/catalog/search/resource/details.page?id=gov.noaa.ncdc:C00510",
+    "identifier": ["https://doi.org/10.1000/182",
+                   "https://identifiers.org/ark:/12345/fk1234"],
+    "keywords":[
+       "ATMOSPHERE > ATMOSPHERIC PHENOMENA > CYCLONES",
+       "ATMOSPHERE > ATMOSPHERIC PHENOMENA > DROUGHT",
+       "ATMOSPHERE > ATMOSPHERIC PHENOMENA > FOG",
+       "ATMOSPHERE > ATMOSPHERIC PHENOMENA > FREEZE"
+    ],
+    "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+    "isAccessibleForFree" : true,
+    "hasPart" : [
+      {
+        "@type": "Dataset",
+        "name": "Sub dataset 01",
+        "description": "Informative description of the first subdataset...",
+        "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+        "creator":{
+           "@type":"Organization",
+           "name": "Sub dataset 01 creator"
+        }
+      },
+      {
+        "@type": "Dataset",
+        "name": "Sub dataset 02",
+        "description": "Informative description of the second subdataset...",
+        "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+        "creator":{
+           "@type":"Organization",
+           "name": "Sub dataset 02 creator"
+        }
+      }
+    ],
+    "creator":{
+       "@type":"Organization",
+       "url": "https://www.ncei.noaa.gov/",
+       "name":"OC/NOAA/NESDIS/NCEI > National Centers for Environmental Information, NESDIS, NOAA, U.S. Department of Commerce",
+       "contactPoint":{
+          "@type":"ContactPoint",
+          "contactType": "customer service",
+          "telephone":"+1-828-271-4800",
+          "email":"ncei.orders@noaa.gov"
+       }
+    },
+    "funder":{
+       "@type": "Organization",
+       "sameAs": "https://ror.org/00tgqzw13",
+       "name": "National Weather Service"
+    },
+    "includedInDataCatalog":{
+       "@type":"DataCatalog",
+       "name":"data.gov"
+    },
+    "distribution":[
+       {
+          "@type":"DataDownload",
+          "encodingFormat":"CSV",
+          "contentUrl":"http://www.ncdc.noaa.gov/stormevents/ftp.jsp"
+       },
+       {
+          "@type":"DataDownload",
+          "encodingFormat":"XML",
+          "contentUrl":"http://gis.ncdc.noaa.gov/all-records/catalog/search/resource/details.page?id=gov.noaa.ncdc:C00510"
+       }
+    ],
+    "temporalCoverage":"1950-01-01/2013-12-18",
+    "spatialCoverage":{
+       "@type":"Place",
+       "geo":{
+          "@type":"GeoShape",
+          "box":"18.0 -65.0 72.0 172.0"
+       }
+    }
+  }
+  </script>
+</head>
+<body>
+</body>
+</html>
+
+
+  "name": "{{ page.title | strip }}",
+  "headline": "{{ page.title | strip }}",
+  "datePublished": "2014-06",
+  "dateModified": "{{ page.datemod }}",
+  "mainEntityOfPage": "{{ page.url | absolute_url }}",
+
+  "image": "{{ "/assets/works/img/2014-06-HepJafMac.jpg" | absolute_url }}",
+  {% assign pas = page.authors.size %}
+  {% assign pai = 1 | plus: 0 %}
+  "author":
+  [
+  {%- for pa in page.authors %}
+    {
+      "@type": "Person",
+    {%- if pa == "Daryl H. Hepting" %}
+      "name": "{{ pa }}",
+      "@id": "{{ "/about/" | absolute_url }}#DHHepting"
+    {%- else %}
+      "name": "{{ pa }}"
+    {%- endif %}
+    {%- if pai < pas %}
+    },
+    {%- else -%}
+    }
+    {% endif %}
+    {%- assign pai = pai | plus: 1 -%}
+  {%- endfor -%}
+],
+  "description": "{{ page.abstract }}",
+  "sameAs": "https://doi.org/{{ page.doi }}",
+  {% if page.keywords %}
+    {% assign pks = page.keywords.size %}
+    {% assign pki = 1 | plus: 0 %}
+  "keywords": "
+  {%- for pk in page.keywords -%}
+    {{- pk -}}{%- if pki < pks %} , {% endif -%}
+    {%- assign pki = pki | plus: 1 -%}
+  {%- endfor -%}
+  ",
+  {% endif %}
+  "pageStart": "{{ page.pagestart }}",
+  "pageEnd": "{{ page.pageend }}",
+  "url": "{{ site.canonical }}{{ page.url }}",
+  "isPartOf":
+  {
+    "@type": "PublicationIssue",
+    "issueNumber": "3",
+    "isPartOf":
+    {
+      "@type": "PublicationVolume",
+      "volumeNumber": "27",
+      "datePublished": "2014",
+      "isPartOf":
+      {
+        "@type": "Periodical",
+        "name": "Journal of Agricultural and Environmental Ethics",
+        "issn":
+        [
+          "1187-7863",
+          "1573-322X"
+        ],
+        "publisher": "Springer"
+      }
+    }
+  }
+}
+{% endcomment %}

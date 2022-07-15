@@ -50,10 +50,10 @@ for k in sss:
     if len(sss[k]) > 0:
         print (k, len(sss[k]))
         #print (sss[k])
-        for r in sss[k]:
-            #print (r, len(sss[k]))
-            print (r,sss[k][r])
-        print("++++++++++++++++")
+        # for r in sss[k]:
+        #     #print (r, len(sss[k]))
+        #     print (r,sss[k][r])
+        # print("++++++++++++++++")
 """
         if (row['(description) Which description best suits your response?'] ==
             'the most important thing that I learned'):
