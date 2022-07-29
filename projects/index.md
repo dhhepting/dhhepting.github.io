@@ -6,6 +6,6 @@ desc:
 ---
 # {{ page.breadcrumb }}
 
-Collected here are the various projects that I have undertaken over the years, in collaboration with many wonderful people.
+Collected here are the various projects that I have undertaken over the years, in collaboration with many wonderful [people](people.html).
 
-{% include projects-list.html %}
+{% include projects/list.html %}

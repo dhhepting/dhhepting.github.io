@@ -1,5 +1,5 @@
 ---
-title: Fractals Project
+title: Fractals
 breadcrumb: Fractals
 description:
 redirect_from:
@@ -11,13 +11,10 @@ redirect_from:
   - /research/web/nat-num/dynamics.html
   - /art/math+art/
   - /projects/math-art/
-projects:
-  - fractals
+project: fractals
 layout: bg-image
 ---
-# {{ page.breadcrumb }}
-
-{{ page.description | markdownify }}
+{% include projects/main.html title=page.title proj=page.project %}
 
 My M.Sc. thesis [Approximation and Visualization of Sets Defined by Iterated Function Systems]({{'/research/works/1991-03-Hep-Approximation-and-Visualization-of-Sets-Defined-by-Iterated-Function-Systems.html' | relative_url }}) (from 1991) dealt with linear fractals. That got me started and I am still hooked.
 

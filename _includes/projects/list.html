@@ -1,0 +1,14 @@
+{% comment %}
+    Updated for boostrap 4 (https://getbootstrap.com/docs/4.0/components/breadcrumb/) and
+    does not create a link for the last (active) item
+{% endcomment %}
+<ul>
+  {%- for p in site.data.projects.projects -%}
+    {% capture purl %}/projects/{{ p.label }}/{% endcapture %}
+    <li class="list-group-item">
+      <a href="{{ purl | relative_url }}">
+        {{ p.name }}
+      </a>
+    </li>
+  {%- endfor -%}
+</ul>

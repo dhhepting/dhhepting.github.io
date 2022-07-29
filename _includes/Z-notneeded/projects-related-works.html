@@ -1,0 +1,38 @@
+{% comment %}
+{% assign revworks = site.works | sort | reverse %}
+
+{% assign relwrk = false %}
+{% for item in revworks %}
+  {% for ip in item.projects %}
+    {% for pp in page.projects %}
+      {% if ip == pp %}
+        {% assign relwrk = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+
+{% if relwrk == true %}
+<h3>
+  Related Works
+</h3>
+<ul>
+{% for item in revworks %}
+  {% for ip in item.projects %}
+    {% if page.projects contains ip %}
+      <!-- {{ item }}-->
+      <li>
+        <a href="{{ item.url | relative_url }}">
+          {{ item.breadcrumb }}
+        </a>
+	<span class="badge badge-info badge-sm">
+          {{ item.category }}
+        </span>
+      </li>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+</ul>
+{%endif %}
+{% endcomment %}

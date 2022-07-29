@@ -13,6 +13,16 @@
       {%- capture bc_path -%}{{ bc_path }}/{%- endcapture -%}
     {%- endunless -%}
     {%- assign bc_page = site.pages | where: "url", bc_path -%}
+    {% if bc_page[0] %}
+      {% comment %}Do Nothing{% endcomment %}
+    {% else %}
+      {%- if include.type == "works" -%}
+        {%- assign bc_page = site.works | where: "url", bc_path -%}
+      {% endif %}
+      {%- if include.type == "gallery" -%}
+        {%- assign bc_page = site.gallery | where: "url", bc_path -%}
+      {% endif %}
+    {% endif %}
     {%- if bc_page and i < j -%}
     <li class="breadcrumb-item">
       <a href="{{ bc_path | relative_url }}">

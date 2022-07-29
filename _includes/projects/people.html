@@ -1,0 +1,24 @@
+{% comment %}
+{% assign relworks = site.works | sort | reverse %}
+{% endcomment %}
+{% assign relppl = false %}
+{%- for p in site.data.projects.people -%}
+  {%- if p.projects contains include.plabel %}
+    {% assign relppl = true %}
+  {%- endif %}
+{%- endfor %}
+{% if relppl == true %}
+<h5>
+  People
+</h5>
+<ul>
+  {%- assign snames = site.data.projects.people | sort: 'name' -%}
+  {%- for p in snames -%}
+    {%- if p.projects contains include.plabel %}
+    <li>
+      {{ p.name }}, <a href="https://orcid.org/{{ p.orcid }}">{{ p.orcid }}</a>
+    </li>
+    {%- endif %}
+  {%- endfor %}
+</ul>
+{%- endif %}

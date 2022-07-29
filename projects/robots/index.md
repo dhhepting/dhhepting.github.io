@@ -2,12 +2,7 @@
 title: Robots
 breadcrumb: Robots
 description: Description of Robots
-projects:
-  - robots
+project: robots
 layout: bg-image
 ---
-# {{ page.breadcrumb }}
-
-{{ page.description }}
-
-{%comment%}{% include project-related-works.html %}{% endcomment %}
+{% include projects/main.html title=page.title proj=page.project %}

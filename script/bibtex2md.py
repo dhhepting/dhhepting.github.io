@@ -145,71 +145,58 @@ def format_mscphd(entry,mdf):
 # output selected fields of BibTex entry
 #
 def output_bibtex_content(mdf):
-	ed = {}
-	edstr = entry_data.to_string('bibtex')
-	lines = edstr.split("\n")
-	lc = 0
-	for l in lines:
-		fields = l.split("=")
-		if len(fields) == 1:
-			if fields[0] != "":
-				ed[lc] = fields[0]
-				lc += 1
-			else:
-				pass
-		else:
-			ed[fields[0].strip()] = fields[1]
+    ed = {}
+    edstr = entry_data.to_string('bibtex')
+    lines = edstr.split("\n")
+    lc = 0
+    for l in lines:
+        fields = l.split("=")
+        if len(fields) == 1:
+            if fields[0] != "":
+                ed[lc] = fields[0]
+                lc += 1
+            else:
+                pass
+        else:
+            ed[fields[0].strip()] = fields[1]
 	# now to format them properly
-	mdf.write(ed[0] + "\n")
-	ed.pop(0, None)
+    mdf.write(ed[0] + "\n")
+    ed.pop(0, None)
 	#
 	# Author goes first
 	#
-	if "Author" in ed:
-		mdf.write("\tAuthor = " + ed["Author"] + "\n")
-	ed.pop("Author", None)
+    if "Author" in ed:
+        mdf.write("\tAuthor = " + ed["Author"] + "\n")
+    ed.pop("Author", None)
 	#
 	# then Title
 	#
-	if "Title" in ed:
-		mdf.write("\tTitle = " + ed["Title"] + "\n")
-	ed.pop("Title", None)
-	# OLD --
-	# the URL: if there is a pdf for the entry,
-	# create or replace Url indicated in bibtex file
-	#
-	#newurlstr = "/assets/works/pdf/" + entry.key + ".pdf"
-
-	#
-	# the URL: set it to the canonical webpage for this item
-	# create or replace Url indicated in bibtex file
-	#
-	newurlstr = "/research/works/" + htmlnamestr
-	# print(newurlstr)
-	newurlpath = Path(".." + newurlstr)
-	#teststr = "\\\"{{site.canonical}} +  newurlstr + "\\\"",\n")
-	teststr = "\\\"{{site.canonical}}" +  newurlstr + "\\\",\n"
-	# print(teststr)
-	mdf.write("\tUrl = " + teststr)
+    if "Title" in ed:
+        mdf.write("\tTitle = " + ed["Title"] + "\n")
+    ed.pop("Title", None)
+    newurlstr = "/research/works/" + htmlnamestr
+    newurlpath = Path(".." + newurlstr)
+    teststr = "\\\"{{site.canonical}}" +  newurlstr + "\\\",\n"
+    mdf.write("\tUrl = " + teststr)
 	#if newurlpath.is_file():
 	#	mdf.write("\tUrl = " + "\\\"{{ {{site.canonical}}\"" +  newurlstr + "\" | absolute_url }}\\\",\n")
 	#else:
 	#	print("MISSING PDF: ", newurlstr)
-	ed.pop("Url", None)
+    ed.pop("Url", None)
 	# don't output the following fields:
-	ed.pop("Abstract", None)
-	ed.pop("Date-Added",None)
-	ed.pop("Date-Modified",None)
-	ed.pop("W-Type",None)
-	ed.pop("W-Projects",None)
-	ed.pop("Bdsk-Url-1",None)
-	ed.pop("Bdsk-Url-2",None)
+    ed.pop("Abstract", None)
+    ed.pop("Date-Added",None)
+    ed.pop("Date-Modified",None)
+    ed.pop("W-Type",None)
+    ed.pop("W-Projects",None)
+    ed.pop("Bdsk-Url-1",None)
+    ed.pop("Bdsk-Url-2",None)
 	# output remaining fields as they occur
 	# and end with closing brace (ed[1])
-	for k in ed:
-		if k != 1:
-			mdf.write("\t"+k+" = "+ed[k]+"\n")
-	mdf.write(ed[1]+"\n")
+    for k in ed:
+        if k != 1:
+            mdf.write("\t"+k+" = "+ed[k]+"\n")
+    mdf.write(ed[1]+"\n")
 
 #
 # Main loop
@@ -239,6 +226,12 @@ for entry in bib_data.entries.values():
 	# those old markdown files). If the file exists, check its modification
 	# time against the bibtex entry's.
 	#
+    # localtz = timezone('America/Regina')
+    # filetimestr = time.ctime(os.path.getmtime("/Users/hepting/Sites/dhhepting.github.io/_works/bibtex"))
+    # filetime = datetime.strptime(filetimestr,"%a %b %d %H:%M:%S %Y")
+    #
+    # filetime = localtz.localize(filetime)
+
     if (recreate == False):
         mdnamestr = entry.key + " " + titlestr + ".md"
         mdnamestr = re.sub(r"\s+", '-', mdnamestr)
@@ -276,7 +269,7 @@ for entry in bib_data.entries.values():
     # above is decision about whether to recreate file
     if force or recreate:
     #if True:
-        print ("(re)create: ", entry.key)
+        #print ("(re)create: ", entry.key)
         with open(bibtex_path+mdnamestr,"w") as mdf:
             mdf.write("---\n")
             if yamlfilepath.is_file():
@@ -320,6 +313,7 @@ for entry in bib_data.entries.values():
             if 'W-Projects' in entry.fields:
                 mdf.write("projects:\n")
                 projectstr = entry.fields['W-Projects']
+                print('\"' + btitlestr + '\",\"' + projectstr + '\",')
                 projectarr = projectstr.split(",")
                 for pp in range(len(projectarr)):
                     ppstr = " - " + projectarr[pp]

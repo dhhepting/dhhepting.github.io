@@ -1,0 +1,286 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole site, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+timezone: America/Regina
+title: D. H. Hepting, Ph.D.
+lang: "en-CA"
+encoding: utf-8
+email: daryl.hepting@uregina.ca
+description: >- # this means to ignore newlines until "baseurl:"
+  Professor of Computer Science, University of Regina.
+  Ph.D. from Simon Fraser University. Augmenting human abilities to embrace diversity.
+baseurl: /~hepting
+url: http://www2.cs.uregina.ca/
+canonical: http://www2.cs.uregina.ca/~hepting
+github_username:  dhhepting
+
+webmaster_verifications:
+# google: "x1yg5SYk5hD2RE32QX-otdPrCyHgJfRhnidrzYgjONs"
+  google: "gsgGWE8pmuMxDXPcvsS7ukLSHeWoZWuMBqXIzCMiF04"
+  bing:   "F1CCB2E1C91FDC5B8A82937F80B46C0A"
+#  yandex: "f4086326493c97ca"
+  yandex: "624aa53b50cad90a"
+
+
+
+# Build settings
+markdown: kramdown
+
+#theme:
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-rdf
+
+jekyll_rdf:
+  path: "_data/PizzaTutorialWithDataV2.owl"
+  default_template: "defaultrdfff.html"
+  restriction: "SELECT ?resourceUri WHERE { ?resourceUri ?p ?o . FILTER regex(str(?resourceUri), 'http://example.org/simpsons')  }"
+  class_template_mappings:
+      "http://xmlns.com/foaf/0.1/Person": "person.html"
+  instance_template_mappings:
+      "http://example.org/simpsons/Abraham": "abraham.html"
+
+
+# feed:
+#   path: rss/news.xml
+
+#sass:
+# Keep from being clobbered on each build
+keep_files:
+  - assets/works
+
+tipue_search:
+  include:
+    pages: true
+    collections: [works, notes, gallery]
+  exclude:
+    files: [search.html]
+    tags:
+    categories:
+
+collections:
+# permalink for _posts (news) -- only posts will be news, so effectively /news
+  posts:
+    output: true
+    permalink: /:categories/:title:output_ext
+  works:
+    output: true
+    permalink: /research/:collection/:title:output_ext
+  gallery:
+    output: true
+    permalink: /projects/fractals/:collection/:title:output_ext
+  assignments:
+    output: false
+    permalink: /teaching/:collection/:path/:categories/:title:output_ext
+  notes:
+    output: true
+    permalink: /teaching/:collection/:title:output_ext
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author: "Daryl H. Hepting"
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - deploy_rsa
+  - deploy_rsa.enc
+  - script/
+  - 0_nonweb/
+  - 1_offweb/
+  - about/0_nonweb/
+  - assets/0_nonweb/
+  - projects/0_nonweb/
+  - research/0_nonweb/
+  - research/works/0_nonweb/
+  - research/students/0_nonweb/
+  - research/funding/0_nonweb/
+  - teaching/0_nonweb/
+  - teaching/1_offweb/
+  - teaching/CS-110/0_nonweb/
+  - teaching/CS-110/1_offweb/
+  - teaching/CS-110/201510/0_nonweb/
+  - teaching/CS-110/201510/1_offweb/
+  - teaching/CS-110/201810/0_nonweb/
+  - teaching/CS-110/201810/1_offweb/
+  - teaching/CS-205/0_nonweb/
+  - teaching/CS-205/1_offweb/
+  - teaching/CS-205/201610/0_nonweb/
+  - teaching/CS-205/201610/1_offweb/
+  - teaching/CS-205/201710/0_nonweb/
+  - teaching/CS-205/201710/1_offweb/
+  - teaching/CS-205/201810/0_nonweb/
+  - teaching/CS-205/201810/1_offweb/
+  - teaching/CS-205/201910/0_nonweb/
+  - teaching/CS-205/201910/1_offweb/
+  - teaching/CS-205/202010/0_nonweb/
+  - teaching/CS-205/202010/1_offweb/
+  - teaching/CS-205/202110/0_nonweb/
+  - teaching/CS-205/202110/1_offweb/
+  - teaching/CS-215/0_nonweb/
+  - teaching/CS-215/1_offweb/
+  - teaching/CS-215/201110/0_nonweb/
+  - teaching/CS-215/201110/1_offweb/
+  - teaching/CS-215/201130/0_nonweb/
+  - teaching/CS-215/201130/1_offweb/
+  - teaching/CS-230/0_nonweb/
+  - teaching/CS-230/1_offweb/
+  - teaching/CS-230/200510/0_nonweb/
+  - teaching/CS-230/200510/1_offweb/
+  - teaching/CS-280/0_nonweb/
+  - teaching/CS-280/1_offweb/
+  - teaching/CS-280/201010/0_nonweb/
+  - teaching/CS-280/201010/1_offweb/
+  - teaching/CS-280/201210/0_nonweb/
+  - teaching/CS-280/201210/1_offweb/
+  - teaching/CS-280/201310/0_nonweb/
+  - teaching/CS-280/201310/1_offweb/
+  - teaching/CS-280/201410/0_nonweb/
+  - teaching/CS-280/201410/1_offweb/
+  - teaching/CS-280/201510/0_nonweb/
+  - teaching/CS-280/201510/1_offweb/
+  - teaching/CS-280/201610/0_nonweb/
+  - teaching/CS-280/201610/1_offweb/
+  - teaching/CS-280/201710/0_nonweb/
+  - teaching/CS-280/201710/1_offweb/
+  - teaching/CS-280/201910/0_nonweb/
+  - teaching/CS-280/201910/1_offweb/
+  - teaching/CS-280/202010/0_nonweb/
+  - teaching/CS-280/202010/1_offweb/
+  - teaching/CS-280/202110/0_nonweb/
+  - teaching/CS-280/202110/1_offweb/
+  - teaching/CS-305+828/0_nonweb/
+  - teaching/CS-305+828/1_offweb/
+  - teaching/CS-305+828/201210/0_nonweb/
+  - teaching/CS-305+828/201210/1_offweb/
+  - teaching/CS-305+828/201230/0_nonweb/
+  - teaching/CS-305+828/201230/1_offweb/
+  - teaching/CS-305+828/201330/0_nonweb/
+  - teaching/CS-305+828/201330/1_offweb/
+  - teaching/CS-305+828/201430/0_nonweb/
+  - teaching/CS-305+828/201430/1_offweb/
+  - teaching/CS-305/0_nonweb/
+  - teaching/CS-305/1_offweb/
+  - teaching/CS-305/200130/0_nonweb/
+  - teaching/CS-305/200130/1_offweb/
+  - teaching/CS-305/200230/0_nonweb/
+  - teaching/CS-305/200230/1_offweb/
+  - teaching/CS-305/200310/0_nonweb/
+  - teaching/CS-305/200310/1_offweb/
+  - teaching/CS-305/200630/0_nonweb/
+  - teaching/CS-305/200630/1_offweb/
+  - teaching/CS-305/200830/0_nonweb/
+  - teaching/CS-305/200830/1_offweb/
+  - teaching/CS-305/201030/0_nonweb/
+  - teaching/CS-305/201030/1_offweb/
+  - teaching/CS-305/201230/0_nonweb/
+  - teaching/CS-305/201230/1_offweb/
+  - teaching/CS-325/0_nonweb/
+  - teaching/CS-325/1_offweb/
+  - teaching/CS-325/200230/0_nonweb/
+  - teaching/CS-325/200230/1_offweb/
+  - teaching/CS-325/200330/0_nonweb/
+  - teaching/CS-325/200330/1_offweb/
+  - teaching/CS-325/200430/0_nonweb/
+  - teaching/CS-325/200430/1_offweb/
+  - teaching/CS-325/200530/0_nonweb/
+  - teaching/CS-325/200530/1_offweb/
+  - teaching/CS-325/200630/0_nonweb/
+  - teaching/CS-325/200630/1_offweb/
+  - teaching/CS-325/201110/0_nonweb/
+  - teaching/CS-325/201110/1_offweb/
+  - teaching/CS-325/201230/0_nonweb/
+  - teaching/CS-325/201230/1_offweb/
+  - teaching/CS-325/201410/0_nonweb/
+  - teaching/CS-325/201410/1_offweb/
+  - teaching/CS-330/0_nonweb/
+  - teaching/CS-330/1_offweb/
+  - teaching/CS-330/200330/0_nonweb/
+  - teaching/CS-330/200330/1_offweb/
+  - teaching/CS-330/200430/0_nonweb/
+  - teaching/CS-330/200430/1_offweb/
+  - teaching/CS-330/200610/0_nonweb/
+  - teaching/CS-330/200610/1_offweb/
+  - teaching/CS-330/200930/0_nonweb/
+  - teaching/CS-330/200930/1_offweb/
+  - teaching/CS-330/201010/0_nonweb/
+  - teaching/CS-330/201010/1_offweb/
+  - teaching/CS-390/0_nonweb/
+  - teaching/CS-390/1_offweb/
+  - teaching/CS-428+828/0_nonweb/
+  - teaching/CS-428+828/1_offweb/
+  - teaching/CS-428+828/201630/0_nonweb/
+  - teaching/CS-428+828/201630/1_offweb/
+  - teaching/CS-428+828/201730/0_nonweb/
+  - teaching/CS-428+828/201730/1_offweb/
+  - teaching/CS-428+828/201730/cs428+828-201730/
+  - teaching/CS-428+828/201830/0_nonweb/
+  - teaching/CS-428+828/201830/1_offweb/
+  - teaching/CS-428+828/201930/0_nonweb/
+  - teaching/CS-428+828/201930/1_offweb/
+  - teaching/CS-428+828/202030/0_nonweb/
+  - teaching/CS-428+828/202030/1_offweb/
+  - teaching/CS-428+828/202130/0_nonweb/
+  - teaching/CS-428+828/202130/1_offweb/
+  - teaching/CS-428+828/content/0_nonweb/
+  - teaching/CS-428+828/content/1_offweb/
+  - teaching/CS-428+828/resources/0_nonweb/
+  - teaching/CS-428+828/resources/1_offweb/
+  - teaching/CS-490/0_nonweb/
+  - teaching/CS-490/1_offweb/
+  - teaching/CS-499+900/0_nonweb/
+  - teaching/CS-499+900/1_offweb/
+  - teaching/CS-499+900/201810/0_nonweb/
+  - teaching/CS-499+900/201810/1_offweb/
+  - teaching/CS-499+900/201920/0_nonweb/
+  - teaching/CS-499+900/201920/1_offweb/
+  - teaching/CS-499+900/202010/0_nonweb/
+  - teaching/CS-499+900/202010/1_offweb/
+  - teaching/CS-499+900/202110/0_nonweb/
+  - teaching/CS-499+900/202110/1_offweb/
+  - teaching/CS-730/202210/0_nonweb/
+  - teaching/CS-730/202210/1_offweb/
+  - teaching/CS-828/0_nonweb/
+  - teaching/CS-828/1_offweb/
+  - teaching/CS-828/200410/0_nonweb/
+  - teaching/CS-828/200410/1_offweb/
+  - teaching/CS-828/200610/0_nonweb/
+  - teaching/CS-828/200610/1_offweb/
+  - teaching/CS-828/200830/0_nonweb/
+  - teaching/CS-828/200830/1_offweb/
+  - teaching/CS-828/201030/0_nonweb/
+  - teaching/CS-828/201030/1_offweb/
+  - teaching/CS-890/0_nonweb/
+  - teaching/CS-890/1_offweb/
+  - teaching/FILM-385AB/0_nonweb/
+  - teaching/FILM-385AB/1_offweb/
+  - teaching/FILM-385AB/200230/0_nonweb/
+  - teaching/FILM-385AB/200230/1_offweb/
+  - teaching/FILM-385AB/200330/0_nonweb/
+  - teaching/FILM-385AB/200330/1_offweb/
+  - teaching/FILM-385AB/200430/0_nonweb/
+  - teaching/FILM-385AB/200430/1_offweb/
+  - teaching/FILM-385AB/200530/0_nonweb/
+  - teaching/FILM-385AB/200530/1_offweb/
+  - teaching/FILM-385AB/200630/0_nonweb/
+  - teaching/FILM-385AB/200630/1_offweb/
+  - teaching/FILM-385AB/201110/0_nonweb/
+  - teaching/FILM-385AB/201110/1_offweb/
+  - teaching/schedule/0_nonweb/
+  - teaching/resources/0_nonweb/
