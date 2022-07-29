@@ -11,3 +11,11 @@ redirect_from:
 breadcrumb: Gallery
 collection: gallery
 ---
+{%-  include projects/gallery-main.html
+  mtgs=1
+  sched=1
+  links=1
+  topics=1
+  asgns=1
+  exams=1
+-%}

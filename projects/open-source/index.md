@@ -1,13 +1,8 @@
 ---
-title: Open Source
-breadcrumb: Open Source
+title: Open Source Software
+breadcrumb: Open Source Software
 description: Description of Open Source Project!
-projects:
-  - open-source
+project: open-source
 layout: bg-image
 ---
-# {{ page.breadcrumb }}
-
-{{ page.description }}
-
-{%comment%}{% include project-related-works.html %}{% endcomment %}
+{% include projects/main.html title=page.title proj=page.project %}

@@ -17,6 +17,5 @@ group :jekyll_plugins do
    gem 'jekyll-seo-tag'
    gem 'jekyll-sitemap'
    gem 'jekyll-redirect-from'
-   gem "jekyll-rdf", "~> 3.2"
 end
 

@@ -2,14 +2,9 @@
 title: CS Education
 breadcrumb: CS Education
 description: Description of CS Education
-projects:
-  - cs-education
+project: cs-education
 redirect_from:
   - /teach/outreach/
 layout: bg-image
 ---
-# {{ page.breadcrumb }}
-
-{{ page.description }}
-
-{%comment%}{% include project-related-works.html %}{% endcomment %}
+{% include projects/main.html title=page.title proj=page.project %}

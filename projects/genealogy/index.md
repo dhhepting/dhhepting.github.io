@@ -2,12 +2,7 @@
 title: Genealogy
 breadcrumb: Genealogy
 description: Description of Genealogy
-project: 
-  - genealogy
+project: genealogy
 layout: bg-image
 ---
-# {{ page.breadcrumb }}
-
-{{ page.description }}
-
-{% include project-related-works.html %}
+{% include projects/main.html title=page.title proj=page.project %}

@@ -9,74 +9,102 @@ redirect_from:
   - /projects/math-art/exhibits/teck1995.html
 layout: bg-image
 ---
+<p>
+  In honour of the 1995 Canadian Math Society Winter Meeting,
+  Simon Fraser University presents:
+</p>
 
-In honour of the 1995 Canadian Math Society Winter Meeting,
-Simon Fraser University presents:
-
-# MATH-ART: 9 December 1995 &mdash; 24 January 1996
+<h1>
+  MATH-ART: 9 December 1995 &mdash; 24 January 1996
+</h1>
 
 <div class="container">
   <img src="{{ "/assets/projects/img/teck-map.jpg" | relative_url }}"
   alt="poster" class="img-fluid" />
 </div>
 
-Scroll down for more information about the exhibit
-(those images on a yellow background have extra information about how they
-were created).
+<p>
+  Scroll down for more information about the exhibit
+  (those images on a yellow background have extra information
+  about how they were created).
+</p>
 
 <div class="container">
   <figure>
-  <a href="teck-postcard.html">
-  <img src="{{ "/assets/projects/img/teck-postcard.jpg" | relative_url }}"
-  alt="postcard" class="img-responsive m-2" />
-  </a>
-  <figcaption>
-    Postcard advertising events on opening day: December 9, 1995
-  </figcaption>
+    <a href="teck-postcard.html">
+      <img src="{{ '/assets/projects/img/teck-postcard.jpg' |
+        relative_url }}"
+      alt="postcard" class="img-responsive m-2" />
+    </a>
+    <figcaption>
+      Postcard advertising events on opening day: December 9, 1995
+    </figcaption>
   </figure>
 </div>
 
-### Introduction
+<h3>
+  Introduction
+</h3>
 
-Mandates of art galleries are many, but the mandate that immediately
-defines a university gallery is the mandate that a gallery demonstrates the
-aesthetic dimensions of academic disciplines.  
-It was to this end that Simon Fraser Gallery mounted its first math art
-exhibition,
-<a href="1994-Exploring-the-Image-World-of-Computer-Graphics.html">
-EXPLORING THE IMAGE WORLD OF COMPUTER GRAPHICS</a>
-works by Daryl Hepting
-<em>(and others from the Graphics and Multimedia Research Lab in
-the School of Computing Science)</em>, in the W.A.C. Bennett Gallery,
-May 30 to July 26, 1994.
+<p>
+  Mandates of art galleries are many, but the mandate that
+  immediately defines a university gallery is the mandate that a
+  gallery demonstrates the aesthetic dimensions of academic
+  disciplines. It was to this end that Simon Fraser Gallery
+  mounted its first math art exhibition,
+  <a href="1994-Exploring-the-Image-World-of-Computer-Graphics.html">
+    EXPLORING THE IMAGE WORLD OF COMPUTER GRAPHICS,
+  </a>
+  with works by Daryl Hepting
+  <em>
+    (and others from the Graphics and Multimedia Research Lab
+    in the School of Computing Science),
+  </em>
+  in the W.A.C. Bennett Gallery, May 30 to July 26, 1994.
+</p>
 
-Daryl Hepting, a Ph.D. Candidate in the School of Computing Science and one
-of the four curators of this exhibition, knows the connections between
-computers and aesthetics as few in Simon Fraser University can. He takes us on a short course on math art in the notes on these digital graphics.
+<p>
+  Daryl Hepting, a Ph.D. Candidate in the School of
+  Computing Science and one of the four curators of this
+  exhibition, knows the connections between computers and
+  aesthetics as few in Simon Fraser University can. He takes us
+  on a short course on math art in the notes on these digital
+  graphics.
+</p>
 
-Other members of Simon Fraser University who joined me in curating this
-exhibition were Dr. Katherine Heinrich, Chair of Mathematics &amp; Statistics
-and Dr. Malgorzata Dubiel of the same department.
+<p>
+  Other members of Simon Fraser University who joined me in
+  curating this exhibition were Dr. Katherine Heinrich, Chair
+  of Mathematics &amp; Statistics and Dr. Malgorzata Dubiel of
+  the same department.
+</p>
 
-These eighteen images were selected from scores of possible images so as to
-represent the complexities and contrasts of visual aesthetics that are
-possible in digital graphics.  
-They were also selected to represent the images that are
-available from three sources on the WORLD WIDE WEB (internet): computer art
-exhibits, pioneer publications,
-and computer images created by Daryl Hepting of Simon Fraser University.
+<p>
+  These eighteen images were selected from scores of possible
+  images so as to represent the complexities and contrasts of
+  visual aesthetics that are possible in digital graphics.  
+  They were also selected to represent the images that are
+  available from three sources on the
+  WORLD WIDE WEB (internet): computer art exhibits, pioneer
+  publications, and computer images created by Daryl Hepting of
+  Simon Fraser University.
+</p>
 
-Simon Fraser Gallery is grateful for the assistance of Gallery
-staff, Daryl Hepting and the other curators for making this
-exhibition possible. It is also grateful to the Graphics and
-Multimedia Research Lab for production assistance. The Teck
-and Simon Fraser Galleries are honoured to support
-the Department of Mathematics &amp; Statistics in hosting the
-Canadian Mathematical Society 1995 Winter Meeting.
+<p>
+  Simon Fraser Gallery is grateful for the assistance of Gallery
+  staff, Daryl Hepting, and the other curators for making this
+  exhibition possible. It is also grateful to the Graphics and
+  Multimedia Research Lab for production assistance. The Teck
+  and Simon Fraser Galleries are honoured to support
+  the Department of Mathematics &amp; Statistics in hosting the
+  Canadian Mathematical Society 1995 Winter Meeting.
+</p>
 
 Dr. Edward Gibson, Director, December 1995.
 
-### Notes on Exhibition
+<h3>
+  Notes on Exhibition
+</h3>
 
 The majority of works in this exhibition represent a collection
 which rely on the computer for their existence. And the
@@ -130,56 +158,73 @@ British Columbia Ministry for Employment and Investment.
   </div>
   <div class="card-body">
     <div class="container">
-    <img class="img-responsive" alt="Fiery Dragon"
-    src="{{"/assets/gallery/img/1990-Hep-Fiery-Dragon.jpg" | relative_url }}" />
+      <img class="img-responsive" alt="Fiery Dragon"
+      src="{{"/assets/gallery/img/1990-Hep-Fiery-Dragon.jpg" | relative_url }}" />
     </div>
+    <p>
+      Martin Gardener tells the story of how this curve,
+      first discovered by John E. Heighway, used by
+      William G. Harter as a decoration symbolic of cryptic
+      structure, and later analysed by them and another
+      colleague, Bruce A. Banks. Though its final structure is
+      complex, its description is not.  The following two
+      transformations are required to generate this shape:
+    </p>
 
-Martin Gardener tells the story of how this curve,
-first discovered by John E. Heighway, used by William G. Harter as a
-decoration symbolic of cryptic structure, and later analysed by them and
-another colleague, Bruce A. Banks. Though its final structure is complex,
-its description is not.  The following two transformations are required to
-generate this shape:
+    <div class="container border bg-info p-2 m-2">
+      <pre>
+        xform
+        	scale { sqrt(2)/2 }
+        	rotate -45
 
-<div class="container border bg-info p-2 m-2">
-<pre>
-xform
-	scale { sqrt(2)/2 }
-	rotate -45
-
-xform
-	scale { sqrt(2)/2 }
-	rotate 135
-	translate 1.0 0.0
-</pre>
-</div>
-
-Beginning with a single point, the whole curve can be generated by repeated
-application of these two transformations.  This specification of the shape
-in terms of contractive, affine transformations is called an iterated function
-system (IFS).
-
-This image of a dragon curve was created by covering with disks (spheres) the
-parts of the plane which do not include the fractal.  These parts are
-determined by computing the minimum distance from a point <em>P</em>
-to the fractal.  
-If this distance is <em>d</em>,  
-then a disk of radius <em>d</em> can be
-drawn about the point <em>P</em> and all points inside that disk are known
-not to belong to the fractal.  
-<!--
-Click
-<a href="{{ "/assets/projects/videos/teck-dragondisks.mov" | relative_url}}">
-here</a> to see a movie which illustrates this process at work.
--->
-
-Like many of my other works, I've used
-<a href="http://graphics.stanford.edu/~cek/rayshade/info.html">
-<em>rayshade</em></a>
-to ray-trace this image.
-This process creates the final image (which you see above) by simulating a
-camera inside the computer.
-</div>
+        xform
+        	scale { sqrt(2)/2 }
+        	rotate 135
+        	translate 1.0 0.0
+      </pre>
+    </div>
+    <p>
+      Beginning with a single point, the whole curve can be
+      generated by repeated application of these two transformations.
+      This specification of the shape in terms of contractive, affine
+      transformations is called an iterated function system (IFS).
+    </p>
+    <p>
+      This image of a dragon curve was created by covering with disks
+      (spheres) the parts of the plane which do not include the
+      fractal. These parts are determined by computing the minimum
+      distance from a point <em>P</em> to the fractal. If this
+      distance is <em>d</em>, then a disk of radius <em>d</em> can
+      be drawn about the point <em>P</em> and all points inside that
+      disk are known not to belong to the fractal.
+    </p>
+    <p>
+      The following movie illustrates this process at work.
+    </p>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <div class="ratio ratio-16x9">
+          <video controls>
+            <source
+              src="{{ '/assets/projects/vid/fractals/teck-dragondisks.mp4' | relative_url }}"
+              type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+    <p>
+      Like many of my other works, I've used
+      <a href="http://graphics.stanford.edu/~cek/rayshade/info.html">
+        <em>rayshade</em>
+      </a>
+      to ray-trace this image.
+      This process creates the final image (which you see above)
+      by simulating a camera inside the computer.
+    </p>
+  </div>
 </div>
 
 <div class="card m-2">
@@ -353,7 +398,7 @@ And the final image once again...
   <div class="card-body">
     <div class="container">
       <img class="img-responsive" alt="The Great Fern Dune (1994)"
-      src="{{"/assets/gallery/img/1994-Hep-The-Great-Fern-Dune.jpg" | relative_url }}" />
+      src="{{ '/assets/gallery/img/1994-Hep-The-Great-Fern-Dune.jpg' | relative_url }}" />
     </div>
   </div>
 </div>
@@ -409,14 +454,27 @@ the transformations to their respective points and then to the results, over
 and over again.  As I compose the transformations into longer and longer
 strings, the contractivity of each composite transformation increases.  These
 "stronger" transformations capture more and more of the plane.  
-<!-- I've
-illustrated this process in a
-<a href="/~hepting/assets/videos/fractals/ex/teck-rhythmcones.mov">movie</a>,
-using cones to show the effect of the transformations.  
--->
-As the strength of a
-transformation increases, a cone under that transformation gets wider and
-shorter.
+
+<p>
+  I've illustrated this process in the following movie, using cones
+  to show the effect of the transformations.  
+  As the strength of a transformation increases, a cone
+  under that transformation gets wider and shorter.
+</p>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <div class="ratio ratio-16x9">
+      <video controls>
+        <source
+          src="{{ '/assets/projects/vid/fractals/teck-rhythmcones.mp4' | relative_url }}"
+          type="video/mp4">
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+    </div>
+  </div>
+  <div class="col-2"></div>
+</div>
 
     <div class="container m-2">
       <img class="img-responsive" alt="Captivating Rhythm - explainer 1"

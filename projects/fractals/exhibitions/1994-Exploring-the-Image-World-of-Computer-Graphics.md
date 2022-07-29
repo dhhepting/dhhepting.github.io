@@ -12,56 +12,57 @@ redirect_from:
 </h3>
 
 These computer-generated, digital images are the work of faculty and
-graduate students from the Graphics and Multimedia Research Lab, School
-of Computing Science, Simon Fraser University.  The computer-generated
-images are grouped within two general themes:
+graduate students from the Graphics and Multimedia Research Lab,
+School of Computing Science, Simon Fraser University. The
+computer-generated images are grouped within two general themes:
 * John Dill, Daryl Hepting, Philip Peterson, Przemyslaw Prusinkiewicz,
   Dietmar Saupe, and Allan Snider explore computer visualization
   as a way to see the unseen
-* Leslie Bishko, Michaela Zambranska, and Armin Bruderlin use computer graphics
-  as an artistic tool to produce animation
+* Leslie Bishko, Michaela Zambranska, and Armin Bruderlin
+  use computer graphics as an artistic tool to produce animation
 
 <div class="container-fluid">
   <div class="row">
     <figure>
-      <img class="img-fluid rounded m-1" style="height: 128px"
+      <img class="img-fluid" style="height: 128px"
       src="{{ "/assets/gallery/img/1989-Hep-Gasket-in-Bubbles.jpg" | relative_url }}"
       alt="Gasket in Bubbles" />
-      <img class="img-fluid rounded m-1" style="height: 128px"
+      <img class="img-fluid" style="height: 128px"
       src="{{ "/assets/gallery/img/1990-HepSni-Desktop-Tetrahedron.jpg" | relative_url }}"
       alt="Desktop Tetrahedron" />
-      <img class="img-fluid rounded m-1" style="height: 128px"
+      <img class="img-fluid" style="height: 128px"
       src="{{ "/assets/gallery/img/1990-Hep-Butte-Manhattan.jpg" | relative_url }}"
       alt="Butte Manhattan" />
-      <img class="img-fluid rounded m-1" style="height: 128px"
-      src="{{ "/assets/gallery/img/1990-Hep-Fiery-Dragon.jpg"| relative_url }}"
+      <img class="img-fluid" style="height: 128px"
+      src="{{ "/assets/gallery/img/1990-Hep-Fiery-Dragon.jpg" | relative_url }}"
       alt="Fiery Dragon" />
       <figcaption>
-        Left to right: <em>Gasket in Bubbles</em>,<em>Desktop Tetrahedron</em> (with
-        Allan Snider), <em>Butte Manhattan</em>, and <em>Fiery Dragon</em>
-  </figcaption>
-  </figure>
+        Left to right: <em>Gasket in Bubbles</em>,
+        <em>Desktop Tetrahedron</em> (with Allan Snider),
+        <em>Butte Manhattan</em>, and <em>Fiery Dragon</em>.
+      </figcaption>
+    </figure>
   </div>
   <div class="row">
   <figure>
-    <img class="img-fluid rounded m-1" style="height: 128px"
+    <img class="img-fluid" style="height: 128px"
     src="{{ "/assets/gallery/img/1990-HepSni-Reflecting-Fern.jpg" | relative_url }}"
       alt="Reflecting Fern" />
-    <img class="img-fluid rounded m-1" style="height: 128px"
+    <img class="img-fluid" style="height: 128px"
     src="{{ "/assets/gallery/img/1991-HepPru-Carrot-in-Blue.jpg" | relative_url }}"
       alt="Carrot in Blue" />
-    <img class="img-fluid rounded m-1" style="height: 128px"
+    <img class="img-fluid" style="height: 128px"
     src="{{ "/assets/gallery/img/1990-HepPruSni-The-Great-Fern-Dune-of-Goron-III.jpg" | relative_url }}"
       alt="The Great Fern Dune of Goron III" />
-    <img class="img-fluid rounded m-1" style="height: 128px"
+    <img class="img-fluid" style="height: 128px"
     src="{{ "/assets/gallery/img/1989-PruSauHep-Dragon-Mesa.jpg" | relative_url }}"
       alt="Dragon Mesa" />
   <figcaption>
-Left to right:
-<em>Reflecting Fern</em> (with Allan Snider),
-<em>Carrot in Blue</em> (with Przemyslaw Prusinkiewicz),
-<em>The Great Fern Dune of Goron III</em> (with Przemyslaw Prusinkiewicz and
-Allan Snider), and <em>Dragon Mesa</em> (with Przemyslaw Prusinkiewicz and Dietmar Saupe).
+    Left to right:
+    <em>Reflecting Fern</em> (with Allan Snider),
+    <em>Carrot in Blue</em> (with Przemyslaw Prusinkiewicz),
+    <em>The Great Fern Dune of Goron III</em> (with Przemyslaw Prusinkiewicz and
+    Allan Snider), and <em>Dragon Mesa</em> (with Przemyslaw Prusinkiewicz and Dietmar Saupe).
   </figcaption>
   </figure>
   </div>

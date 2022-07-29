@@ -4,23 +4,27 @@ group:
 - category
 - project
 ---
-<h1>
-	Gallery
-</h1>
-
-<div class="container">
-{% for item in site.gallery reversed %}
-  <div class="row mb-2">
-    <div class="col">
+<div class="w-100 h-100">
+  <div class="card card-header">
+  <h1 id="offh1">
+    Gallery of Fractal Images
+  </h1>
+</div>
+<div class="card card-body overflow-auto">
+  {% for item in site.gallery reversed %}
+  <div class="row">
+    <div class="col-6 justify-content-end">
       <a href="{{ item.url | relative_url }}">
-      <img src="{{ item.thumbnail | relative_url }}" class="rounded float-right" alt="{{item.thumbnail}}" />
+        <img src="{{ item.thumbnail | relative_url }}"
+        class="float-end mb-2" alt="{{ item.breadcrumb }}" />
       </a>
     </div>
-    <div class="col justify-content-start">
+    <div class="col-6 justify-content-start">
       <a href="{{ item.url | relative_url }}">
-      {{ item.breadcrumb }}
+        {{ item.breadcrumb }}
       </a>
     </div>
   </div>
-{% endfor %}
+  {% endfor %}
+</div>
 </div>

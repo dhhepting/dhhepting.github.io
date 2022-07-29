@@ -1,8 +1,10 @@
 {% include site/header.html %}
 {% assign url_parts = page.url | split: "/" %}
-<div class="card {{url_parts[1]}} w-100 lightcthru" style="min-height:100%" >
-  {% include gallery-nav-transp.html %}
-  <div class="card-body lightcthru" >
+<div class="card {{url_parts[1]}} w-100 lightcthru" style="height:100%" >
+  <div class="card-header lightcthru">
+    {% include site/content-header.html type="gallery" %}
+  </div>
+  <div class="card-body lightcthru overflow-auto" >
     <h1>
       {{ page.breadcrumb }}
     </h1>
@@ -33,6 +35,8 @@
      </figcaption>
     </figure>
   </div>
-  {% include site-date-transp.html %}
+  <div id="mcbftr" class="card-footer text-muted bg-dark">
+    {% include site/content-footer.html %}
+  </div>
 </div>
 {% include footer.html %}

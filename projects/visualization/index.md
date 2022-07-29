@@ -2,12 +2,7 @@
 title: Visualization
 breadcrumb: Visualization
 description: Description of Visualization
-projects:
-  - visualization
+project: visualization
 layout: bg-image
 ---
-# {{ page.breadcrumb }}
-
-{{ page.description }}
-
-{%comment%}{% include project-related-works.html %}{% endcomment %}
+{% include projects/main.html title=page.title proj=page.project %}

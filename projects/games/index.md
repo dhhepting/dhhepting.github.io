@@ -2,12 +2,7 @@
 title: Games
 breadcrumb: Games
 description: Description of Games
-project:
-  - games
+project: games
 layout: bg-image
 ---
-# {{ page.breadcrumb }}
-
-{{ page.description }}
-
-{%comment%}{% include project-related-works.html %}{% endcomment %}
+{% include projects/main.html title=page.title proj=page.project %}

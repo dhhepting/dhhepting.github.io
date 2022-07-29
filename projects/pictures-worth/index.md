@@ -6,19 +6,20 @@ redirect_from:
     - /research/web/words/index.html
     - /proverbial/history.html
     - /proverbial/
-projects:
-  - pictures-worth
+project: pictures-worth
 layout: bg-image
 ---
-# {{ page.breadcrumb }}
+{% include projects/main.html title=page.title proj=page.project %}
 
 What does the phrase &ldquo;A picture is worth ten thousand words&rdquo; mean to you?
 Does it become more or less meaningful if it was written by an
 advertising executive, a newspaper publisher, or an ancient sage?
 
 I embarked on an exploration into the origins of <em>this</em> phrase in 1999
-as part of my doctoral work
-(<a href="{{ "/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html" | relative_url }}">A New Paradigm for Exploration in Computer-Aided Visualization</a>).
+as part of my doctoral work (
+<a href="{{ '/research/works/1999-12-Hep-A-New-Paradigm-for-Exploration-in-Computer-Aided-Visualization.html' | relative_url }}">
+  A New Paradigm for Exploration in Computer-Aided Visualization
+</a>).
 
 It was important for me to use the phrase correctly and so
 I wanted to know whether a picture was worth 1,000 or 10,000 words.
@@ -151,6 +152,8 @@ In updating this page, I came across a wonderful account of the
 history of this expression written by William Safire for his column
 <a href="http://query.nytimes.com/search/sitesearch/#/On+Language/since1851/allresults/1/bySafire/"><em>On Language</em></a>
 for the New York Times Magazine. <a href="http://www.nytimes.com/1996/04/07/magazine/on-language-worth-a-thousand-words.html">Worth a Thousand Words</a> was published on 7 April 1996.
+
+Most recently is this post by Garson O'Toole at <https://quoteinvestigator.com/2022/07/22/picture-words/>.
 
 If you have more information about the origins of this quotation
 (or the stories that surround it),

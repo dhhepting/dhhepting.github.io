@@ -1,12 +1,11 @@
 ---
-title: The BUS PROJECT
-breadcrumb: The BUS PROJECT
+title: The Bus Project
+breadcrumb: The Bus Project
 description:
-projects:
-  - bus
+project: bus
 layout: bg-image
 ---
-# {{ page.breadcrumb }}
+{% include projects/main.html title=page.title proj=page.project %}
 
 * [The Bus Project:
 Technologies, Spectators and Locational Practices](https://journals.lib.unb.ca/index.php/tric/article/view/11137/11848)

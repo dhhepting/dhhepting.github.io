@@ -1,8 +1,10 @@
 {% include site/header.html %}
 {% assign url_parts = page.url | split: "/" %}
-<div class="card {{url_parts[1]}} w-100 lightcthru" style="min-height:100%" >
-  {% include works-nav-transp.html %}
-  <div class="card-body lightcthru" >
+<div class="card {{ url_parts[1] }} w-100 lightcthru" style="height:100%" >
+  <div class="card-header bg-dark">
+    {% include site/content-header.html type="works" %}
+  </div>
+  <div class="card-body lightcthru overflow-auto" >
     <h1>
       {{ page.title }}
     </h1>
@@ -14,10 +16,10 @@
     {% include share-search-bar.html %}
     <hr />
     <h3>
-      {{page.category | capitalize }}
+      {{ page.category | capitalize }}
     </h3>
     <ul>
-      <li>{{page.venue | strip}}</li>
+      <li>{{ page.venue | strip }}</li>
     </ul>
 
     {% capture author_count %}{{ page.authors.size | minus:0 }}{% endcapture %}
@@ -32,7 +34,7 @@
     <ul>
     {% for author in page.authors %}
       <li>
-        {{author | strip}}
+        {{ author | strip }}
       </li>
     {% endfor %}
     </ul>
@@ -89,6 +91,8 @@
     </div>
     {%comment%}{% include project-related-works.html %}{% endcomment %}
   </div>
-  {% include site-date-transp.html %}
+  <div id="mcbftr" class="card-footer text-muted bg-dark">
+    {% include site/content-footer.html %}
+  </div>
 </div>
-{% include footer.html %}
+{% include site/footer.html %}
