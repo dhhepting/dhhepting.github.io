@@ -36,9 +36,15 @@ with open(SITE_DIR + DATA_ROOT + 'offerings.csv', newline='') as offfile:
             off_found = 1
             # load necessary info, if offering not found then quit
             mtgdays = row['mdays'].split(',')
-            urcid = row['urc']
-            attendid = row['attendance']
-            wikifmid = row['wiki']
+            urcid = 0
+            if (row['urc']):
+                urcid = row['urc']
+            attendid = 0
+            if (row['attendance']):
+                attendid = row['attendance']
+            wikifmid = 0
+            if (row['wiki']):
+                wikifmid = row['wiki']
 
 if off_found == 0:
     print(sys.argv[0], ':', sys.argv[1], '- course and semester not found in offerings file')
@@ -140,18 +146,23 @@ try:
         # now write out meetings.csv file with meeting datelist
         # use mtgctr set in plan.yml loop
         try:
+            print ("mtgctr", mtgctr)
             with open(mtgsfile,'w') as mf:
                 mf.write('meeting,total_mtgs,date,file,wikipage_id\n')
                 for mm in range (1, mtgctr):
+                    print ("mm", type(mm), mm)
                     mtg_date = d[mm]['date']
                     # create HTML filename for each meeting
                     mtg_fname = str(mm).zfill(2) + '_' + mtg_date + '.html'
+                    print ("before write")
                     mf.write(
                         str(mm).zfill(2) + ',' +
                         str(mtgctr - 1) + ',' +
                         mtg_date + ',' +
                         mtg_fname + ',' +
-                        str(int(wikifmid) + mm - 1) + '\n')
+                        #str(int(wikifmid) + mm - 1) + '\n')
+                        'wiki\n')
+                    print ("after write")
         except Exception as e:
             print('meetings.csv:',e)
 

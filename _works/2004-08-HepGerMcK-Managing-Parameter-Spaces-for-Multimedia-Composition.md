@@ -27,3 +27,17 @@ venue: "ACM SIGGRAPH 2004 Posters"
 	Series =  "SIGGRAPH '04",
 	Year =  "2004",
 }
+
+<div class="mb-2 p-3">
+  {%- include helper/video.html
+      vidurl="https://www.youtube.com/embed/alXRb8_f2Rw"
+      desc="Video 1"
+  -%}
+</div>
+
+<div class="mb-2 p-3">
+  {%- include helper/video.html
+      vidurl="https://www.youtube.com/embed/S1m94tqJ_4I"
+      desc="Video 2"
+  -%}
+</div>

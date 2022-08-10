@@ -4,6 +4,12 @@ breadcrumb: 202210
 sem: 202210
 layout: bg-image
 ---
+<div class="bg-light mb-2 p-3">
+  <h1>
+    {{ page.title }}
+  </h1>
+</div>
+
 {%-  include offering/main.html
   mtgs=1
   sched=1

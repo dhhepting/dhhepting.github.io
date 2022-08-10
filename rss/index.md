@@ -3,8 +3,11 @@ title: RSS Feeds
 breadcrumb: RSS Feeds
 layout: bg-image
 ---
-<h1>{{ page.breadcrumb }}</h1>
-
+<div class="bg-light mb-2 p-3">
+  <h1>
+    {{ page.breadcrumb }}
+  </h1>
+</div>
 <ul>
   <li>
     <a rel="alternate" type="application/rss+xml"

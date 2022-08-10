@@ -17,12 +17,12 @@ description: >-
 * * *
 
 <!-- Projects -->
-{% include projects-bar.html %}
+{% include projects/bar.html %}
 
 * * *
 
 <!-- Social Share + Search Buttons -->
-{% include share-search-bar.html %}
+{% include helper/share-search-bar.html %}
 
 * * *
 
@@ -39,13 +39,16 @@ description: >-
 
 ### Media
 
-- <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item"
-  	src="https://www.youtube.com/embed/RQTH-jQ-gkg">
-  </iframe>
-  </div>
-- <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item"
-	src="https://www.youtube.com/embed/l2FHc0tjMuk">
-  </iframe>
-  </div>
+<div class="mb-2 p-3">
+  {%- include helper/video.html
+      vidurl="https://www.youtube.com/embed/RQTH-jQ-gkg"
+      desc="video 1"
+  -%}
+</div>
+
+<div class="mb-2 p-3">
+  {%- include helper/video.html
+      vidurl="https://www.youtube.com/embed/l2FHc0tjMuk"
+      desc="video 2"
+  -%}
+</div>

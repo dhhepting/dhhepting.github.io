@@ -7,7 +7,11 @@ redirect_from:
   - /personal/index.html
 layout: bg-image
 ---
-# About
+<div class="bg-light mb-2 p-3">
+  <h1>
+    {{ page.breadcrumb }}
+  </h1>
+</div>
 
 <div class="card card-body bg-light">
 	<div class="row">

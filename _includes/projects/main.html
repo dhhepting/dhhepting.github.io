@@ -1,6 +1,9 @@
-<h3>
-  {{ include.title }}
-</h3>
+<div class="bg-light mb-2 p-3">
+  <h1>
+    {{ page.breadcrumb }}
+  </h1>
+</div>
+
 {% include projects/projects/{{ include.proj }}.html %}
 {% include projects/people.html plabel=include.proj %}
 {% include projects/works.html plabel=include.proj %}

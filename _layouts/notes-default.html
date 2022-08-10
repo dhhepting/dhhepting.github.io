@@ -1,10 +1,17 @@
 {% include site/header.html %}
 {% assign url_parts = page.url | split: "/" %}
-<div class="card {{url_parts[1]}} w-100 lightcthru" style="min-height:100%" >
-  {% include notes-nav-transp.html %}
-  <div class="card-body lightcthru" >
-    {{ page.content | markdownify }}
+<div class="card {{ url_parts[1] }} w-100 h-100 bg-transparent">
+  {% include site/content-header.html type="notes" %}
+  <div class="card-body bg-white text-dark bg-opacity-50 overflow-auto" >
+    <div class="bg-light p-3 mb-2">
+      <h1>
+        {{ page.breadcrumb }}
+      </h1>
+    </div>
+    <div>
+      {{ page.content | markdownify }}
+    </div>
   </div>
-  {% include site-date-transp.html %}
+  {% include site/content-footer.html %}
 </div>
-{% include footer.html %}
+{% include site/footer.html %}

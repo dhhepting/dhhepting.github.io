@@ -1,11 +1,13 @@
 ---
 breadcrumb: Students
-title: Student Supervision
+title: Students
 layout: bg-image
 ---
-# {{ page.breadcrumb }}
-
-
+<div class="bg-light mb-2 p-3">
+  <h1>
+    {{ page.breadcrumb }}
+  </h1>
+</div>
 
 {% comment %}
 - [Academia.edu](https://uregina.academia.edu/DarylHepting)

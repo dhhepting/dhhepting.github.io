@@ -1,11 +1,15 @@
 ---
-title: Research Inspirations
+title: Inspirations
 redirect_from:
   - research/inspiration.html
 breadcrumb: Inspirations
 layout: bg-image
 ---
-# Inspirations
+<div class="bg-light mb-2 p-3">
+  <h1>
+    {{ page.breadcrumb }}
+  </h1>
+</div>
 
 <div class="card" id="dhhblock">
    <div class="card-body">
