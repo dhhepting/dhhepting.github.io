@@ -1,10 +1,14 @@
 ---
-title: Projects
-breadcrumb: Projects People
+title: People
+breadcrumb: People
 layout: bg-image
 desc:
 ---
-# {{ page.breadcrumb }}
+<div class="bg-light p-3 mb-2">
+  <h1>
+    {{ page.breadcrumb }}
+  </h1>
+</div>
 
 <ul>
   {%- assign snames = site.data.projects.people | sort: 'name' -%}

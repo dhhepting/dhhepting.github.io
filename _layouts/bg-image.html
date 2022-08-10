@@ -1,14 +1,10 @@
 {% include site/header.html %}
 {% assign url_parts = page.url | split: "/" %}
-<div class="card {{ url_parts[1] }} w-100 lightcthru" style="height:100%" >
-  <div class="card-header bg-dark">
-    {%- include site/content-header.html type="pages" -%}
-  </div>
-  <div id="mcb" class="card-body lightcthru overflow-auto" >
+<div class="card {{ url_parts[1] }} w-100 h-100 bg-transparent">
+  {%- include site/content-header.html type="pages" -%}
+  <div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
     {{ content }}
   </div>
-  <div id="mcbftr" class="card-footer text-muted bg-dark">
-    {% include site/content-footer.html %}
-  </div>
+  {% include site/content-footer.html %}
 </div>
 {% include site/footer.html %}

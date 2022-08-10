@@ -5,32 +5,18 @@ redirect_from:
   - /research/academic.html
 layout: bg-image
 ---
-# {{ page.breadcrumb }}
+<div class="bg-light mb-2 p-3">
+  <h1>
+    {{ page.breadcrumb }}
+  </h1>
+</div>
 
-- [Academia.edu](https://uregina.academia.edu/DarylHepting){: target="blank" }
-- [Academia.edu](https://darylhepting.academia.edu/){: target="blank" }
-- [Association for Computing Machinery](http://member.acm.org/~dhepting){: target="blank" }
-- [Association for Computing Machinery DL](https://dlnext.acm.org/profile/81100496386)
-- [AMiner](https://aminer.org/profile/53f45b6bdabfaedd74e4095c){: target="blank" }
-- [Collection of CS Bibliographies](http://liinwww.ira.uka.de/csbib?query=%2Bau:HeptingDH){: target="blank" }
-- [csauthors.net](https://www.csauthors.net/daryl-h-hepting/){: target="blank" }
-- [DBLP](http://dblp.uni-trier.de/pers/hd/h/Hepting:Daryl_H=.html){: target="blank" }
-- [Google Knowledge Panel](https://g.co/kgs/R7kiku){: target="blank" }
-- [Google Scholar](https://scholar.google.ca/citations?user=iXVS1CAAAAAJ&hl=en){: target="blank" }
-- [Impactstory](https://impactstory.org/u/0000-0002-3138-3521){: target="blank" }
-- [ISNI](http://www.isni.org/isni/0000000075888754){: target="blank" }
-- [Interaction Design Foundation](https://www.interaction-design.org/literature/author/daryl-h-hepting){: target="blank" }
-- [Mendeley](https://www.mendeley.com/profiles/daryl-hepting/){: target="blank" }
-- [Microsoft Academic](https://academic.microsoft.com/#/detail/226149746){: target="blank" }
-- [Library of Congress Name Authority File](http://id.loc.gov/authorities/names/no2015051738.html)
-- [Loop](https://loop.frontiersin.org/people/632723/overview){: target="blank" }
-- [Mendeley]( https://www.mendeley.com/profiles/daryl-hepting/stats/){: target="blank" }
-- [ORCID (Open Researcher and Contributor ID)](http://orcid.org/0000-0002-3138-3521){: target="blank" }
-- [oURspace: University of Regina institutional repository](http://ourspace.uregina.ca/handle/10294/6891){: target="blank" }
-- [philpapers](http://philpapers.org/profile/255774){: target="blank" }
-- [ResearcherID](http://www.researcherid.com/rid/A-8073-2010){: target="blank" }
-- [ResearchGate](https://www.researchgate.net/profile/Daryl_Hepting){: target="blank" }
-- [researchr](http://researchr.org/profile/darylhepting){: target="blank" }
-- [SemanticScholar](https://www.semanticscholar.org/author/Daryl-H-Hepting/2926392){: target="blank" }
-- [WorldCat Identities](https://worldcat.org/identities/lccn-no2015051738/)
-- [Zotero](https://www.zotero.org/dhhepting/)
+<ul class="bg-transparent">
+  {% for ew in site.data.about.elsewhere %}
+  <li class="list-group-item bg-white bg-opacity-75 mb-2 p-3">
+    <a href="{{ ew.url }}">
+      {{ ew.label }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>

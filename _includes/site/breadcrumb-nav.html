@@ -22,6 +22,12 @@
       {%- if include.type == "gallery" -%}
         {%- assign bc_page = site.gallery | where: "url", bc_path -%}
       {% endif %}
+      {%- if include.type == "news" -%}
+        {%- assign bc_page = site.posts | where: "url", bc_path -%}
+      {% endif %}
+      {%- if include.type == "notes" -%}
+        {%- assign bc_page = site.notes | where: "url", bc_path -%}
+      {% endif %}
     {% endif %}
     {%- if bc_page and i < j -%}
     <li class="breadcrumb-item">

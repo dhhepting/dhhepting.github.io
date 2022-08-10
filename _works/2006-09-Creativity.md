@@ -17,12 +17,12 @@ description: >-
 * * *
 
 <!-- Projects -->
-{% include projects-bar.html %}
+{% include projects/bar.html %}
 
 * * *
 
 <!-- Social Share + Search Buttons -->
-{% include share-search-bar.html %}
+{% include helper/share-search-bar.html %}
 
 * * *
 

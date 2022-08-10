@@ -43,3 +43,17 @@ The New York Times printed a story about travelling to Ossining in
 
 
 {%comment%}{% include project-related-works.html %}{% endcomment %}
+
+<div class="mb-2 p-3">
+  {%- include helper/video.html
+      vidurl="https://youtube.com/embed/S8ls_XwJZEQ"
+      desc="Line Drawings &mdash; Study 001 (2021)"
+  -%}
+</div>
+
+<div class="mb-2 p-3">
+  {%- include helper/video.html
+      vidurl="https://www.youtube.com/embed/vgNsxi-69Qw"
+      desc="Triangularhythmic (2004)"
+  -%}
+</div>

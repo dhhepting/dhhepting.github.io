@@ -1,42 +1,48 @@
 {% include site/header.html %}
 {% assign url_parts = page.url | split: "/" %}
-<div class="card {{url_parts[1]}} w-100 lightcthru" style="height:100%" >
-  <div class="card-header lightcthru">
-    {% include site/content-header.html type="gallery" %}
-  </div>
-  <div class="card-body lightcthru overflow-auto" >
-    <h1>
-      {{ page.breadcrumb }}
-    </h1>
+<div class="card {{ url_parts[1] }} w-100 h-100 bg-transparent">
+  {% include site/content-header.html type="gallery" %}
+  <div class="card-body bg-white text-dark bg-opacity-50 overflow-auto" >
+    <div class="bg-light p-3 mb-2">
+      <h1>
+        {{ page.breadcrumb }}
+      </h1>
+    </div>
     <hr />
     <!-- Social Share + Search Buttons -->
-    {% include share-search-image-bar.html %}
+    {%- include helper/share-search-image-bar.html -%}
     <hr />
-    <figure>
-      <img src="{{ page.image | relative_url }}" alt="{{page.breadcrumb}}" />
-      <figcaption>
-        {{ page.breadcrumb }} &mdash; by
-    {% assign pac = page.authors.size %}
-    {% assign curpa = 1 %}
-    {% for pa in page.authors %}
-      {{ pa | strip }}
-      {% if pac == 2 and curpa < 2 %}
-         and
-      {% elsif pac > 2 %}
-        {% assign pacm1 = pac | minus: 1 %}
-        {% if curpa == pacm1 %}
-          {{ ", and" | strip }}
-        {% elsif curpa < pacm1 %}
-          {{ "," | strip }}
+    <div class="bg-light bg-opacity-50 p-3 mb-2">
+      <figure>
+        <img src="{{ page.image | relative_url }}" alt="{{page.breadcrumb}}" />
+        <figcaption>
+          {{ page.breadcrumb }} &mdash; by
+      {% assign pac = page.authors.size %}
+      {% assign curpa = 1 %}
+      {% for pa in page.authors %}
+        {{ pa | strip }}
+        {% if pac == 2 and curpa < 2 %}
+           and
+        {% elsif pac > 2 %}
+          {% assign pacm1 = pac | minus: 1 %}
+          {% if curpa == pacm1 %}
+            {{ ", and" | strip }}
+          {% elsif curpa < pacm1 %}
+            {{ "," | strip }}
+          {% endif %}
         {% endif %}
-      {% endif %}
-      {% assign curpa = curpa | plus: 1 %}
-    {% endfor %}
-     </figcaption>
-    </figure>
+        {% assign curpa = curpa | plus: 1 %}
+      {% endfor %}
+       </figcaption>
+      </figure>
+    </div>
+    {% assign xcontent = page.content | strip_newlines %}
+    {% unless xcontent == "" %}
+    <div class="bg-light bg-opacity-50 p-3 mb-2">
+      {{ page.content }}
+    </div>
+    {% endunless %}
   </div>
-  <div id="mcbftr" class="card-footer text-muted bg-dark">
-    {% include site/content-footer.html %}
-  </div>
+  {% include site/content-footer.html %}
 </div>
 {% include footer.html %}

@@ -3,7 +3,11 @@ title: Education
 breadcrumb: Education
 layout: bg-image
 ---
-# {{page.breadcrumb}}
+<div class="bg-light mb-2 p-3">
+  <h1>
+    {{ page.breadcrumb }}
+  </h1>
+</div>
 
 * Ph.D. in Computer Science from [Simon Fraser University](https://www.sfu.ca/),
   Burnaby, British Columbia, Canada.<br />

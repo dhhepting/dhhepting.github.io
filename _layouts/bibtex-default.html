@@ -1,98 +1,98 @@
 {% include site/header.html %}
 {% assign url_parts = page.url | split: "/" %}
-<div class="card {{ url_parts[1] }} w-100 lightcthru" style="height:100%" >
-  <div class="card-header bg-dark">
-    {% include site/content-header.html type="works" %}
-  </div>
-  <div class="card-body lightcthru overflow-auto" >
-    <h1>
-      {{ page.title }}
-    </h1>
+<div class="card {{ url_parts[1] }} w-100 h-100 bg-transparent">
+  {% include site/content-header.html type="works" %}
+  <div class="card-body bg-white text-dark bg-opacity-50 overflow-auto" >
+    <div class="bg-light p-3 mb-2">
+      <h1>
+        {{ page.title }}
+      </h1>
+    </div>
     <hr />
     <!-- Projects -->
-    {%comment%}{% include projects-bar.html %}{%endcomment%}
+    {%- include projects/bar.html -%}
     <hr />
     <!-- Social Share + Search Buttons -->
-    {% include share-search-bar.html %}
+    {%- include helper/share-search-bar.html -%}
     <hr />
-    <h3>
-      {{ page.category | capitalize }}
-    </h3>
-    <ul>
-      <li>{{ page.venue | strip }}</li>
-    </ul>
+    <div class="bg-white bg-opacity-50 p-3">
+      <h3>
+        {{ page.category | capitalize }}
+      </h3>
+      <ul>
+        <li>{{ page.venue | strip }}</li>
+      </ul>
 
-    {% capture author_count %}{{ page.authors.size | minus:0 }}{% endcapture %}
-    {% assign ac = author_count | plus: 0 %}
-    <h3>
-    {% if ac == 1 %}
-      Author
-    {% else %}
-      Authors
-    {% endif %}
-    </h3>
-    <ul>
-    {% for author in page.authors %}
-      <li>
-        {{ author | strip }}
-      </li>
-    {% endfor %}
-    </ul>
-
-    {% if page.abstract %}
-    <h3>Abstract</h3>
-    <p>{{ page.abstract }}</p>
-    {% endif %}
-
-    {% assign download_open = false %}
-    {% capture work_url %}/assets/works/pdf/{{page.citekey}}.pdf{% endcapture %}
-    {% for s in site.static_files %}
-      {% if s.path == work_url %}
-        {% assign download_open = true %}
-    <h3>Links</h3>
-    <ul>
-      <li><a href="{{ work_url | absolute_url }}">download from this site</a></li>
-        {% break %}
+      {% capture author_count %}{{ page.authors.size | minus:0 }}{% endcapture %}
+      {% assign ac = author_count | plus: 0 %}
+      <h3>
+      {% if ac == 1 %}
+        Author
+      {% else %}
+        Authors
       {% endif %}
-    {% endfor %}
-
-    {% assign links = site.data.research.works[page.citekey].links %}
-    {% if links %}
-        {% capture linktitles %}
-          {% for ll in links %}
-            {{ll.lt | slice:0 | capitalize }}#{{ll.lt}}#{{ll.lu}}^
-          {% endfor %}
-        {% endcapture %}
-        {% assign sortedlt = linktitles | split:'^' | sort %}
-      {% unless download_open %}
-    <h3>Links</h3>
-    <ul>
-      {% endunless %}
-      {% assign ltcount = sortedlt.size | minus: 1 %}
-      {% for ll in (1..ltcount) %}
-        {% assign slt = sortedlt[ll] | split:'#' %}
-        <li><a href="{{ slt[2] }}">{{ slt[1] }}</a></li>
+      </h3>
+      <ul>
+      {% for author in page.authors %}
+        <li>
+          {{ author | strip }}
+        </li>
       {% endfor %}
-    {% endif %}
-    {% if download_open or links %}
-    </ul>
-    {% endif %}
+      </ul>
 
-    <h3>BibTeX</h3>
-    <!-- Target -->
-    <div class="border border-primary rounded flex-row flex-nowrap">
-      <a id="clipboard" href="#clipboard"
-      class="btn btn-primary" aria-label="Copy BibTeX entry"
-      data-clipboard-action="copy" data-clipboard-target="#bibtex">
-        <span class="far fa-clipboard fa-inverse" title="Copy BibTeX entry">
-        </span>
-      </a>
-      <code><pre id="bibtex">{{ content | remove: '<p>' | remove: '</p>' | strip }}</pre></code>
+      {% if page.abstract %}
+      <h3>Abstract</h3>
+      <p>{{ page.abstract }}</p>
+      {% endif %}
+
+      {% assign download_open = false %}
+      {% capture work_url %}/assets/works/pdf/{{page.citekey}}.pdf{% endcapture %}
+      {% for s in site.static_files %}
+        {% if s.path == work_url %}
+          {% assign download_open = true %}
+      <h3>Links</h3>
+      <ul>
+        <li><a href="{{ work_url | absolute_url }}">download from this site</a></li>
+          {% break %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign links = site.data.research.works[page.citekey].links %}
+      {% if links %}
+          {% capture linktitles %}
+            {% for ll in links %}
+              {{ll.lt | slice:0 | capitalize }}#{{ll.lt}}#{{ll.lu}}^
+            {% endfor %}
+          {% endcapture %}
+          {% assign sortedlt = linktitles | split:'^' | sort %}
+        {% unless download_open %}
+      <h3>Links</h3>
+      <ul>
+        {% endunless %}
+        {% assign ltcount = sortedlt.size | minus: 1 %}
+        {% for ll in (1..ltcount) %}
+          {% assign slt = sortedlt[ll] | split:'#' %}
+          <li><a href="{{ slt[2] }}">{{ slt[1] }}</a></li>
+        {% endfor %}
+      {% endif %}
+      {% if download_open or links %}
+      </ul>
+      {% endif %}
+
+      <h3>BibTeX</h3>
+      <!-- Target -->
+      <div class="border border-primary rounded flex-row flex-nowrap">
+        <a id="clipboard" href="#clipboard"
+        class="btn btn-primary" aria-label="Copy BibTeX entry"
+        data-clipboard-action="copy" data-clipboard-target="#bibtex">
+          <span class="far fa-clipboard fa-inverse" title="Copy BibTeX entry">
+          </span>
+        </a>
+        <code><pre id="bibtex">{{ content | remove: '<p>' | remove: '</p>' | strip }}</pre></code>
+      </div>
     </div>
     {%comment%}{% include project-related-works.html %}{% endcomment %}
   </div>
-  <div id="mcbftr" class="card-footer text-muted bg-dark">
-    {% include site/content-footer.html %}
-  </div>
+  {% include site/content-footer.html %}
 </div>
 {% include site/footer.html %}

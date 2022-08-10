@@ -1,5 +1,5 @@
 ---
-layout: gallery
+layout: bg-image
 title: Gallery
 redirect_from:
   - /research/web/lfgallery/dragons/index.html
@@ -11,11 +11,21 @@ redirect_from:
 breadcrumb: Gallery
 collection: gallery
 ---
-{%-  include projects/gallery-main.html
-  mtgs=1
-  sched=1
-  links=1
-  topics=1
-  asgns=1
-  exams=1
--%}
+<h1>
+  Gallery
+</h1>
+{% for item in site.gallery reversed %}
+<div class="row bg-white bg-opacity-50 m-2">
+  <div class="col-6 justify-content-end">
+    <a href="{{ item.url | relative_url }}">
+      <img src="{{ item.thumbnail | relative_url }}"
+      class="float-end" alt="{{ item.breadcrumb }}" />
+    </a>
+  </div>
+  <div class="col-6 justify-content-start">
+    <a href="{{ item.url | relative_url }}">
+      {{ item.breadcrumb }}
+    </a>
+  </div>
+</div>
+{% endfor %}

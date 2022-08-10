@@ -4,13 +4,13 @@
     <a class="btn btn-primary mx-1" aria-label="Share on LinkedIn"
     href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}{{site.baseurl}}{{page.url}}&title={{page.breadcrumb}}&summary={{page.description | truncate: 256 | url_encode}}&source={{site.url}}{{site.baseurl}}"
   	role="button" target="_blank">
-      <span class="fab fa-linkedin" title="Share on LinkedIn"></span>
+      <span class="bi bi-linkedin" title="Share on LinkedIn"></span>
     </a>
     <!-- Share on Facebook -->
     <a class="btn btn-primary mx-1" aria-label="Share on Facebook"
     href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}"
   	role="button" target="_blank">
-      <span class="fab fa-facebook" title="Share on Facebook"></span>
+      <span class="bi bi-facebook" title="Share on Facebook"></span>
     </a>
     <!-- Share on Google+
     <a class="btn btn-primary mx-1" aria-label="Share on Google+"
@@ -22,13 +22,13 @@
     <a class="btn btn-primary mx-1" aria-label="Share on Twitter"
     href="https://twitter.com/intent/tweet?text={{page.breadcrumb}}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
     role="button" target="_blank">
-      <span class="fab fa-twitter-square" title="Share on Twitter"></span>
+      <span class="bi bi-twitter" title="Share on Twitter"></span>
     </a>
     <!-- Share via email -->
     <a class="btn btn-primary mx-1" aria-label="Share via Email"
     href="mailto:someone@example.com?subject={{page.breadcrumb}}&amp;body=Check out this page: {{page.url | absolute_url}}"
     role="button">
-     <span class="fas fa-envelope" title="Share via Email"></span>
+     <span class="bi bi-envelope" title="Share via Email"></span>
     </a>
   </div>
   {% capture yearstr %}{{ page.title | split: " " | last }}{% endcapture %}
