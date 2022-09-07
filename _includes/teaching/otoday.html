@@ -1,0 +1,110 @@
+<div class="bg-light p-3">
+  <h1>
+    {{ page.breadcrumb }} {{ page.sem }}
+  </h1>
+</div>
+
+{% include teaching/url.html %}
+
+<div class="bg-light bg-opacity-75 p-3">
+  <ul class="bg-transparent">
+    {% comment %}
+    {% assign ssem = "" %}
+    {% for s in site.data.teaching.semesters %}
+      {% assign ssem = s.semester %}
+    {% endfor %}
+    {% endcomment %}
+    {% assign ssem = page.sem %}
+    {% capture ssemfile %}s{{ ssem }}{% endcapture %}
+    {% for ts in site.data.teaching.schedule[ssemfile] %}
+      <li id="{{ ts.Times }}" class="list-group-item bg-light bg-opacity-75 mb-1 p-2">
+        {% comment %}{{ ts.Times }}{% endcomment %}
+        <span id="{{ ts.Times }}_C">
+        </span>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+<script>
+  $(document).ready(function(){
+    // get the most recent semester defined in data
+    {% comment %}
+    {% assign sem = "" %}
+    {% for s in site.data.teaching.semesters %}
+      {% assign sem = s.semester %}
+    {% endfor %}
+    {% endcomment %}
+    {% capture semfile %}s{{ ssem }}{% endcapture %}
+    // load schedule for current semester
+    // jsonify filter will create an array of objects
+    const sched = {{ site.data.teaching.schedule[semfile] | jsonify }}
+    const sched_it = sched.values();
+    // load data for meetings of all courses offered in current semester
+    const crsmtgs = {
+    {% for o in site.data.teaching.offerings %}
+      {% if o.semester == ssem %}
+      "{{ o.id }}": {{ site.data.teaching.[o.jid].[o.semester].meetings | jsonify }},
+      {% endif %}
+    {% endfor %}
+      "end": "end"
+    }
+    // get the name of today's day and format today's date
+    const now = new Date()
+    let longday = now.toLocaleString('en-ca', { weekday: 'long' })
+    longday = "Tuesday"
+    let hr24 = now.toLocaleTimeString('en-ca', { hourCycle: 'h23', hour: '2-digit', minute: '2-digit' })
+    let todaystr = now.toLocaleDateString([], { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' })
+    let todayarr = todaystr.replace(/,/g,'').split(' ')
+    let fmtdate = todayarr[0] + '-' + todayarr[2] + '-' + todayarr[1] + '-' + todayarr[3]
+
+    // calculate milliseconds into today
+    const nowhm = hr24.split(':')
+    const nmillis = nowhm[0] * 3600000 + nowhm[1] * 60000
+
+    // highlight the section of the day's calendar corresponding
+    // to current time and test for a meeting on today's date
+    for (const sv of sched_it) {
+      stend = sv.Times.split('-')
+      starthm = stend[0].split(':')
+      const smillis = starthm[0] * 3600000 + starthm[1] * 60000
+      endhm = stend[1].split(':')
+      const emillis = endhm[0] * 3600000 + endhm[1] * 60000
+      // change class of current block
+      if (nmillis > smillis && nmillis < emillis) {
+        const slot = document.getElementById(sv.Times)
+        slot.classList.remove("bg-light")
+        slot.classList.add("bg-warning")
+      }
+      if (sv[longday]) {
+        const activity = sv[longday]
+        let cid = sv.Times + '_C'
+        if (activity.startsWith('B_')) {
+          // don't show anything for B_
+        }
+        else {
+          //document.getElementById(sv.Times).innerHTML = sv.Times
+          if (activity.startsWith('C_')) {
+            let crs = activity.slice(2)
+            const crsmtgs_it = crsmtgs[crs].values();
+            let match = false
+            for (const cmv of crsmtgs_it) {
+              if (fmtdate === fmtdate) {
+                //cmv.date
+                matchfile = cmv.file
+                matchmtg = cmv.meeting
+                match = true
+              }
+            }
+            if (!match) {
+              document.getElementById(cid).innerHTML = crs + ': No meeting today'
+            }
+            else {
+              let murl = "/~hepting/teaching/" + crs + "/{{ ssem }}/meetings/" + matchfile
+              document.getElementById(cid).innerHTML = crs + " : " + '<a href=\"' + murl + '\">Meeting ' + matchmtg + '</a>'
+            }
+          }
+        }
+      }
+    }
+  })
+</script>

@@ -8,6 +8,7 @@ layout: bg-image
     {{ page.breadcrumb }}
   </h1>
 </div>
+<div class="bg-light bg-opacity-75 p-3">
 <ul>
   <li>
     <a rel="alternate" type="application/rss+xml"

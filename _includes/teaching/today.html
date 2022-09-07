@@ -1,67 +1,121 @@
-{% comment %}
-{% endcomment %}
-{% assign url_parts = turl | split: '/' %}
-{% assign sem_size = 4 %}
-{% assign crsoffs = "" %}
-{% assign crs_ids = "" %}
-{% for sp in site.pages %}
-  {% if sp.url contains "teaching" %}
-    {% assign url_parts = sp.url | split: '/' %}
-    {% if url_parts.size == sem_size %}
-      {% assign crs_id = url_parts[2] %}
-      {% assign crs_part = crs_id | split: '-' %}
-      {% if crs_part.size == 2 %}
-        {% assign crsoff = url_parts | last %}
-        {% if crsoff contains "2" %}
-          {% capture crsoff_url %}{{crsoff}}/{%endcapture%}
-          {% capture crs_url %}{{ sp.url | remove: crsoff_url }}{%endcapture%}
-          {% capture crs_ids %}{{crs_ids}}|{{crs_url}}#{{crs_id}}{% endcapture %}
-          {% capture crsoffs %}{{crsoffs}}|{{crs_id}}#{{crsoff}}{% endcapture %}
-        {% endif %}
-      {% endif %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
+<div class="bg-light p-3 mb-2">
+  <h1>
+    {{ page.breadcrumb }} in {{ page.sem }}
+  </h1>
+  {%- assign semdat = "" -%}
+  {%- assign semdat = site.data.teaching.semesters | where: "semester", page.sem -%}
+  <p>
+    Today is <span id="now"></span>.
+    Classes in {{ page.sem }}
+    start on {{ semdat[0].term-start | date: '%a %b %d' }}
+    and end on {{ semdat[0].class-end | date: '%a %b %d' }}.
+    <a href="{{ "/teaching/schedule" | relative_url }}">
+      See my weekly schedule for this semester.
+    </a>
+  </p>
+</div>
 
-{% assign sortedcrs_ids = crs_ids | split: '|' | uniq | sort %}
-{% assign sortedcrsoffs = crsoffs | split: '|' | sort | reverse %}
-{% capture numcourses %}{{ sortedcrs_ids.size | minus:1 }}{% endcapture %}
-{% capture numoffs %}{{ sortedcrsoffs.size | minus:1 }}{% endcapture %}
+{%- assign office = site.data.teaching.officehrs | where: "semester", page.sem -%}
+{% include teaching/url.html %}
 
-{% comment %}
-Add direct links for courses currently offered
-{% endcomment %}
-{% assign yes_sem = 0 %}
-{% for off in site.data.teaching.offerings %}
-  {% if off.semester == now_sem %}
-      {% assign yes_sem = 1 %}
-  {% endif %}
-{% endfor %}
-{% if yes_sem == 1 %}
-  {% capture todate %}{{ "now" | date: "%a-%d-%b-%Y" }}{% endcapture %}
-<div class="card my-2" id="today-card">
-  <h3 class="card-header text-center">{{ todate }}</h3>
-  <div class="card-body">
-    <ul class="list-group list-group-flush">
-  {% for off in site.data.teaching.offerings %}
-    {% if off.semester == now_sem %}
-      {% capture jcrs_id %}{{ off.id | replace: "+", "_"}}{% endcapture %}
-      {% for mtg in site.data.teaching[jcrs_id][now_sem]meetings %}
-        {% if mtg.date == todate %}
-          {% capture tdf %}{{ mtg.file }}{% endcapture %}
-          {% capture tdm %}{{ mtg.meeting }}{% endcapture %}
-          {% capture tdtm %}{{ mtg.total_mtgs }}{% endcapture %}
-        {% endif %}
-      {% endfor %}
-    <li class="list-group-item">
-      {% capture today_url %}/teaching/{{ off.id }}/{{ now_sem }}/meetings/{{ tdf }}{% endcapture %}
-      <a href="{{ today_url | relative_url }}">
-        {{ off.id | replace: "-", " " }} Meeting {{ tdm }} / {{ tdtm }}
-      </a>
-    </li>
-    {% endif %}
-  {% endfor %}
+<div class="bg-light bg-opacity-75 p-3">
+  <ul class="bg-transparent">
+    {% capture ssemfile %}s{{ page.sem }}{% endcapture %}
+    {% for ts in site.data.teaching.schedule[ssemfile] %}
+      <li id="{{ ts.Times }}" class="list-group-item bg-light bg-opacity-75 mb-1 p-2">
+        <span id="{{ ts.Times }}_T"></span>
+        <span id="{{ ts.Times }}_C"></span>
+      </li>
+    {%- endfor -%}
   </ul>
 </div>
-</div>
-{%- endif -%}
+<script>
+  window.onload = (event) => {
+    let urlp = "{{ '/teaching/' | relative_url }}"
+    // get the most recent semester defined in data
+    // load schedule for current semester
+    // jsonify filter will create an array of objects
+    const sched = {{ site.data.teaching.schedule[ssemfile] | jsonify }}
+    const zoomurl = "{{ office[0].zoom }}"
+    const sched_it = sched.values();
+    // load data for meetings of all courses offered in current semester
+    const crsmtgs = {
+    {%- for o in site.data.teaching.offerings %}
+      {%- if o.semester contains page.sem %}
+      "{{ o.id }}": {{ site.data.teaching.[o.jid].[o.semester].meetings | jsonify }},
+      {%- endif %}
+    {%- endfor %}
+      "end": "end"
+    }
+    // get the name of today's day and format today's date
+    const now = new Date()
+    const nowstr = now.toString();
+    document.getElementById("now").innerHTML = nowstr
+
+    let longday = now.toLocaleString('en-ca', { weekday: 'short' })
+    //longday = "Tue"
+    let hr24 = now.toLocaleTimeString('en-ca', { hourCycle: 'h23', hour: '2-digit', minute: '2-digit' })
+    let todaystr = now.toLocaleDateString([], { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' })
+    let todayarr = todaystr.replace(/,/g,'').split(' ')
+    let fmtdate = todayarr[0] + '-' + todayarr[2] + '-' + todayarr[1] + '-' + todayarr[3]
+
+    // calculate milliseconds into today
+    const nowhm = hr24.split(':')
+    const nmillis = nowhm[0] * 3600000 + nowhm[1] * 60000
+
+    // highlight the section of the day's calendar corresponding
+    // to current time and test for a meeting on today's date
+    for (const sv of sched_it) {
+      let cid = sv.Times + '_C'
+      let tid = sv.Times + '_T'
+      stend = sv.Times.split('-')
+      starthm = stend[0].split(':')
+      const smillis = starthm[0] * 3600000 + starthm[1] * 60000
+      endhm = stend[1].split(':')
+      const emillis = endhm[0] * 3600000 + endhm[1] * 60000
+      // change bg class (colour) of current block
+      if (nmillis > smillis && nmillis < emillis) {
+        const slot = document.getElementById(sv.Times)
+        slot.classList.remove("bg-light")
+        slot.classList.add("bg-warning")
+        document.getElementById(tid).innerHTML = sv.Times
+      }
+      // process contents
+      if (sv[longday]) {
+        const activity = sv[longday]
+        if (activity.startsWith('B_')) {
+          // don't show anything for B_
+        }
+        if (activity.startsWith('C_')) {
+          document.getElementById(tid).innerHTML = sv.Times
+          let crs = activity.slice(2)
+          const crsmtgs_it = crsmtgs[crs].values();
+          let match = false
+          for (const cmv of crsmtgs_it) {
+            if (cmv.date == fmtdate) {
+              matchfile = cmv.file
+              matchmtg = cmv.meeting
+              match = true
+              break
+            }
+          }
+          if (match) {
+            let murl = urlp + crs + "/{{ page.sem }}/meetings/" + matchfile
+            document.getElementById(cid).innerHTML = "&nbsp;&bull;&nbsp;" + crs + " : " + '<a href=\"' + murl + '\">Meeting ' + matchmtg + '</a>'
+          }
+          else {
+            document.getElementById(cid).innerHTML = "&nbsp;&bull;&nbsp;" + crs + ': No meeting today'
+          }
+        }
+        if (activity.startsWith('O_')) {
+          document.getElementById(tid).innerHTML = sv.Times
+          document.getElementById(cid).innerHTML = "&nbsp;&bull;&nbsp;" + "Office : " + '<a href=\"' + zoomurl + '\">Zoom</a>'
+        }
+        if (activity.startsWith('R_')) {
+          document.getElementById(tid).innerHTML = sv.Times
+          document.getElementById(cid).innerHTML = "&nbsp;&bull;&nbsp;" + "Reserved"
+        }
+      }
+    }
+  }
+</script>

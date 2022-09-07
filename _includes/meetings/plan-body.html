@@ -3,6 +3,7 @@
 {%- assign incmtg = include.mtg | plus: 0 -%}
 
 {%- for mtgs in planfile -%}
+  {% comment %}\\ {{ mtgs[0] }} == {{ incmtg }} //{% endcomment %}
   {%- if mtgs[0] == incmtg -%}
     {%- assign mtgplan = mtgs %}
     {%- break -%}

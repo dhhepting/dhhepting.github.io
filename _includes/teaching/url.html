@@ -23,6 +23,29 @@
   {% capture off_id %}{{crs_id}}-{{crs_sem}}{% endcapture %}
   {% capture joff_id %}{{off_id | replace: "+", "_"}}{% endcapture %}
 
+  {% assign today_Y = site.time | date: "%y" | plus: 0 %}
+  {% assign today_M = site.time | date: "%m" | plus: 0 %}
+  {% assign today_D = site.time | date: "%d" | plus: 0 %}
+
+  {% assign currsem = "" %}
+  {% for sem in site.data.teaching.semesters %}
+    {% assign sem_Y = sem.term-end | date: "%y" | plus: 0 %}
+    {% assign sem_M = sem.term-end | date: "%m" | plus: 0 %}
+    {% assign sem_D = sem.term-end | date: "%d" | plus: 0 %}
+    {% if today_Y == sem_Y %}
+      {% if today_M == sem_M %}
+        {% if today_D <= sem_D %}
+          {% assign currsem = sem.semester %}
+          {% break %}
+        {% endif %}
+      {% elsif today_M < sem_M %}
+        {% assign currsem = sem.semester %}
+        {% break %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+{% comment %}
   {% capture today%}{{ "now" | date: "%Y-%m-%d" }}{% endcapture %}
   {% assign tdate = today | split: '-' %}
   {% assign sss = 0 %}
@@ -37,6 +60,8 @@
     {% assign sss = 30 %}
   {% endif %}
   {% capture now_sem %}{{ tdate[0] }}{{ sss }}{% endcapture %}
+{% endcomment %}
+  {% assign now_sem = currsem %}
   {% if now_sem == crs_sem %}
     {% assign off_now = true %}
   {% else %}
