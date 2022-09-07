@@ -27,6 +27,7 @@ print("DATA DIR: ", datadir)
 
 # get the offering details: course/semester
 offdir = (sys.argv[2]).split('/')
+print('split:',offdir)
 if (len(offdir) != 2):
   print (sys.argv[0],"must be invoked with \"<path-to-site-directory> <course>/<semester>\"")
   sys.exit()
@@ -88,5 +89,5 @@ with open(dbmedia_csv,"w") as data_file:
         #print (meetstr)
         if " " in meetstr[0]:
             meetstr = meetstr[0].split(" ")
-        data_str = str(meetstr[0])+ "," + str(w) + "," + str(filedict[w]+"\n")
+        data_str = str(meetstr[0]).zfill(2) + "," + str(w) + "," + str(filedict[w]+"\n")
         data_file.write(data_str)

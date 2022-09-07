@@ -19,7 +19,7 @@
   {%- capture carid -%}mtg_pix_{{ mtgstr }}{% endcapture %}
   {%- if numpix > 0 -%}
   <div id="{{ carid }}" class="m-2 carousel slide bg-light"
-  data-bs-ride="carousel" data-bs-interval="false">
+  data-bs-ride="false" data-bs-interval="false">
     <ol class="carousel-indicators bg-dark mb-0">
     {%- for i in (1..numpix) -%}
       {%- if i == 1 %}

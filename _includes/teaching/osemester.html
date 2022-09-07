@@ -1,0 +1,104 @@
+{%- assign semdat = "" -%}
+{%- assign psn = include.cs | plus: 0 -%}
+{%- for ss in site.data.teaching.semesters -%}
+  {%- assign ssn = ss.semester | plus: 0 -%}
+  {%- if ssn == psn -%}
+    {%- assign semdat = ss -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor %}
+<div class="card m-2">
+  <h3 class="card-header">
+    Important Dates
+  </h3>
+  <div class="card-body">
+    <ul>
+      <li>First day of term: {{ semdat.term-start | date: '%a-%d-%b-%Y'}}</li>
+    	<li>Last day of classes: {{ semdat.class-end | date: '%a-%d-%b-%Y'}}</li>
+      <li>Last day of term: {{ semdat.term-end | date: '%a-%d-%b-%Y'}}</li>
+    </ul>
+  </div>
+</div>
+
+{% assign offs = "" %}
+{% assign psn = page.sem | plus: 0 %}
+{% for o in site.data.teaching.offerings %}
+  {% assign osn = o.semester | plus: 0 %}
+  {% if osn == psn %}
+    {% capture offs %}{{offs}}#{{o.id}}{% endcapture %}
+    {% for c in site.data.teaching.courses %}
+      {% if o.id == c.id %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% assign soffs = offs | split: "#" | sort %}
+{% if soffs.size > 0 %}
+<div class="card m-2">
+<h3 class="card-header">
+  Courses Taught in {{ page.breadcrumb }}
+</h3>
+<div class="card-body">
+<ul>
+  {% for o in soffs %}
+    {% if o != "" %}
+  <li>
+      {% assign crss = site.data.teaching.courses | where: "id", o %}
+      {% capture soff_url %}/teaching/{{ o }}/{{ page.sem }}{% endcapture %}
+    <a href="{{ soff_url | relative_url }}">
+      {{ crss[0].id | replace: "-"," " }} : {{ crss[0].name }}
+    </a>
+  </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+</div>
+</div>
+{% endif %}
+
+{%- if page.officeblocks -%}
+<div class="card m-2">
+<h3 class="card-header">
+  Office Hours
+</h3>
+<div class="card-body">
+<ul>
+{%- for ob in page.officeblocks -%}
+  <li>
+    {{ ob.day }}s from
+    {{ ob.open | date: '%H:%M'}} until
+    {{ ob.close | date: '%H:%M'}}
+  </li>
+{%- endfor -%}
+<li>
+  <a target="_blank" {% comment %}_{% endcomment %}
+  href="{{ page.officezoom }}" class="btn-primary btn m-1 p-1" role="button">
+    Office Zoom
+  </a>
+  {% comment %}
+  <a target="_blank" {% comment %}_{% endcomment %}
+  href="https://discord.gg/YTZQmC" class="btn-primary btn m-1 p-1" role="button">
+    Discord
+  </a>
+
+  {% for o in soffs %}
+    {% if o != "" %}
+      {% assign crss = site.data.teaching.courses | where: "id", o %}
+      <a target="_blank" {% comment %}_{% endcomment %}
+      href="https://urcourses.uregina.ca/mod/chat/gui_ajax/index.php?id={{ crss[0].chat }}" class="btn-primary btn m-1 p-1" role="button">
+        Text Chat ({{ crss[0].id | replace: "-"," "}})
+      </a>
+    {% endif %}
+  {% endfor %}
+  {% endcomment %}
+</li>
+<li>
+  <a href="mailto:{{ site.email }}?subject=Request for an appointment outside of office hours">
+    Request an appointment outside of office hours
+  </a>
+</li>
+</ul>
+</div>
+</div>
+{% endif %}

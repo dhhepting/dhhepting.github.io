@@ -1,8 +1,10 @@
 {%- comment -%}
 https://getbootstrap.com/docs/5.0/components/dropdowns/
 {%- endcomment -%}
-<div class="dropdown text-end">
-  <button class="p-2 btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+<div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
     Site
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -10,7 +12,7 @@ https://getbootstrap.com/docs/5.0/components/dropdowns/
     <li>
     {%- if page.url == l.url -%}
       <a class="dropdown-item active" href="#" aria-current="true">
-        <span class="sr-only">
+        <span class="visually-hidden">
           (current)
         </span>
     {%- else -%}

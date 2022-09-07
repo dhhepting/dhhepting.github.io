@@ -1,8 +1,7 @@
 ---
 title: Today
 breadcrumb: Today
+sem: 202230
 layout: bg-image
 ---
-# {{ page.breadcrumb }}
-{% include teaching/url.html %}
 {% include teaching/today.html %}

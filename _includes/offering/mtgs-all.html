@@ -12,6 +12,7 @@
     {%- assign emins = emins | plus: ehm[1] -%}
     {%- assign mpw = 0 -%}
     {%- assign mpw = mpw | plus: mtgdays.size -%}
+    {%- assign mpwidx = mpw | minus: 1 -%}
     {%- break -%}
   {%- endif -%}
 {% endfor %}
@@ -33,34 +34,65 @@
     </div>
   </div>
   <p></p>
-{% assign mctr = 0 %}
-{% assign mctr = mctr | plus: 0 %}
 {%- assign mtgsfile = site.data.teaching[jcrs_id][crs_sem]meetings -%}
-{%- for mm in mtgsfile -%}
-  {%- if mctr == 0 -%}
-    {%- assign totmtgs = mm.total_mtgs | plus: 0 -%}
-  <ul class="list-group list-group-horizontal">
+{%- assign mm = mtgsfile[0] -%}
+{%- assign totmtgs = mm.total_mtgs | minus: 1 -%}
+{%- assign cctr = 0 -%}
+{%- for j in (0..totmtgs) -%}
+  {%- assign mm = mtgsfile[j] -%}
+  {%- assign mtgday = mm.date | split: "-" | first -%}
+  {%- for i in (0..mpwidx) -%}
+    {%- if mtgdays[i] == mtgday -%}
+      {%- assign mdi = i -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if cctr == 0 -%}
+    <ul class="list-group list-group-horizontal">
+    {%- assign ulopen = 1 -%}
   {%- endif -%}
-  {%- assign mctr = mctr | plus: 1 -%}
-  {%- assign newrow = mctr | modulo: mpw -%}
-  {%- capture mtgurl %}{{ include.mtgdir }}{{ mm.file }}{% endcapture %}
-  {%- if include.abs == 1 %}
-    <a href="http://www2.cs.uregina.ca/~hepting/teaching/{{ crs_id}}/{{ crs_sem }}/{{ mtgurl }}"
-  {%- else %}
-    <a href="{{ mtgurl }}"
-  {%- endif %}
-      class="list-group-item list-group-item-action flex-fill w-25 p-3"
-      id="{{ mm.meeting }}">
+  {%- if cctr < mdi -%}
+    {%- assign mdimo = mdi | minus: 1 -%}
+    {%- for k in (cctr..mdimo) -%}
+      <li class="list-group-item list-group-item-action flex-fill w-25 p-3">
+      </li>
+    {%- endfor -%}
+  {%- elsif cctr > mdi -%}
+    {%- for k in (cctr..mpwidx) -%}
+      <li class="list-group-item list-group-item-action flex-fill w-25 p-3">
+      </li>
+    {%- endfor -%}
+    </ul>
+    <ul class="list-group list-group-horizontal">
+    {%- assign mdimo = mdi | minus: 1 -%}
+    {%- assign cctr = 0 -%}
+    {%- for k in (0..mdimo) -%}
+      <li class="list-group-item list-group-item-action flex-fill w-25 p-3">
+      </li>
+    {%- endfor -%}
+  {%- endif -%}
+  <li class="list-group-item list-group-item-action flex-fill w-25 p-3">
+    {%- capture mtgurl %}/teaching/{{ crs_id}}/{{ crs_sem}}/meetings/{{ mm.file }}{% endcapture -%}
+    <a href="{{ mtgurl | absolute_url }}" id="{{ mm.meeting }}">
         Mtg {{ mm.meeting | plus: 0 }} ({{ mm.date }})
     </a>
-  {%- if newrow == 0 or mctr == totmtgs -%}
-  </ul>
-    {%- if mctr < totmtgs -%}
-  <ul class="list-group list-group-horizontal">
-    {%- endif -%}
+  </li>
+  {%- assign cctr = mdi -%}
+  {%- if cctr == mpwidx -%}
+    </ul>
+    {%- assign ulopen = 0 -%}
   {%- endif -%}
+  {%- assign cctr = mdi | plus: 1 | modulo: mpw -%}
 {%- endfor -%}
+{%- if ulopen == 1 -%}
+  {%- for k in (cctr..mpwidx) -%}
+    <li class="list-group-item list-group-item-action flex-fill w-25 p-3">
+    </li>
+  {%- endfor -%}
+  </ul>
+{%- endif -%}
 </div>
+
 <script>
   $(document).ready(function(){
     // get meeting information initialized
@@ -92,6 +124,6 @@
       }
     }
     console.log('nxtmtg',mtn)
-    document.getElementById(mtn).classList.add('active');
+    document.getElementById(mtn).classList.add('text-bg-primary');
   })
 </script>

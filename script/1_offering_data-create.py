@@ -102,6 +102,16 @@ try:
         d['offering'] = {}
         d['offering']['id'] = joff_id
         d['offering']['overview'] = 'Overview'
+        d['tentsched'] = {}
+          # W01:
+          # - meets:
+          #   - 01_
+          #   - 02_
+          # - theme:
+          # - reading:
+          # - topics:
+          # - lo:
+
         sday = tsd
         while (sday <= ced):
             datelist = datetime.strftime(sday,"%a-%d-%b-%Y").split('-')
@@ -154,7 +164,7 @@ try:
                     mtg_date = d[mm]['date']
                     # create HTML filename for each meeting
                     mtg_fname = str(mm).zfill(2) + '_' + mtg_date + '.html'
-                    print ("before write")
+                    #print ("before write")
                     mf.write(
                         str(mm).zfill(2) + ',' +
                         str(mtgctr - 1) + ',' +
@@ -162,7 +172,7 @@ try:
                         mtg_fname + ',' +
                         #str(int(wikifmid) + mm - 1) + '\n')
                         'wiki\n')
-                    print ("after write")
+                    #print ("after write")
         except Exception as e:
             print('meetings.csv:',e)
 

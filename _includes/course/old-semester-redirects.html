@@ -1,0 +1,92 @@
+<script>
+$(document).ready(function(){
+  let sems = {{ site.data.teaching.semesters | jsonify }}
+  let cu = new URL(document.location)
+  const params = new URLSearchParams(location.search)
+  let typ = params.get("type")
+  let asgn = params.get("asgn")
+  // get current semester
+  /*let today = new Date()
+  let sem = 0;
+  if (typ || asgn) {
+    switch (today.getMonth())
+    {
+      case 0:
+      case 1:
+      case 2:
+      case 3:
+        sem = 10;
+        break;
+      case 4:
+      case 5:
+      case 6:
+      case 7:
+        sem = 20;
+        break;
+      case 8:
+      case 9:
+      case 10:
+      case 11:
+        sem = 30;
+    }
+    const semid = today.getFullYear().toString() + sem.toString();
+    */
+    const semid = {{ currsem }}
+    const crs = String(cu.pathname).split('/')[2]
+    // test that there is an offering in current semester
+    // let cu_str = cu.origin + cu.pathname
+    let cu_str = 'Zero!'
+    let newhash = ''
+    if (typ == 'current') {
+      cu_str = cu.origin + cu.pathname + semid + '/'
+      console.log('current: ' + cu_str)
+    }
+    else if (typ == 'meetings') {
+      cu_str = cu.origin + cu.pathname + semid + '/meetings/'
+    }
+    else if (typ == 'media') {
+      cu_str = cu.origin + cu.pathname + semid + '/media/'
+    }
+    else if (typ == 'syllabus') {
+      let su_str = String(cu.pathname).replace('teaching','assets/teaching/pdf')
+      cu_str = cu.origin + su_str.slice(0,-1) + '-' + semid + '_syllabus.pdf'
+      console.log('SYLL',su_str,cu_str)
+    }
+    else if (typ == 'textbook') {
+      cu_str = cu.origin + cu.pathname + semid + '/textbook.html'
+    }
+    else if (typ == 'exams') {
+      cu_str = cu.origin + cu.pathname + semid + '/#ssExams'
+    }
+    else if (typ == 'tlo') {
+      //alert('tlo')
+      //cu_str = cu.origin + cu.pathname + semid + '/tlo.html'
+      cu_str = cu.origin + cu.pathname + semid + '/#ssTopics'
+      //newhash = 'collapse_OFF_TLO'
+
+    }
+    else if (asgn) {
+      cu_str = cu.origin + cu.pathname + semid + '/#ssAsgn_' + asgn
+      console.log(cu_str)
+    }
+    else {
+      cu_str = 'Nothing!'
+    }
+    $.get (cu_str).done(
+    function () {
+      window.location.replace(cu_str)
+      //window.location.reload()
+      /* if (newhash != '') {
+        alert('replaced', newhash)
+        window.location.hash = '#' + newhash
+        window.location.reload()
+        document.getElementById(newhash).classList.toggle('show')
+      }*/
+    })
+    //.fail(function () {
+    //  console.log(cu.pathname)
+    //  window.alert(crs + ' not offered in ' + semid)
+    //})
+  }
+})
+</script>

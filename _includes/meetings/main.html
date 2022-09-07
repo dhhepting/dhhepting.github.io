@@ -23,15 +23,25 @@
         <div class="col-4 text-start">
           <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls">
           {%- if prvlnk == nil -%}
-            <a role="button" class="btn btn-primary disabled"><span class="fas fa-chevron-left"></span></a>
+            <a role="button" class="btn btn-primary disabled">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a>
           {%- else -%}
-            <a href="{{ prvlnk }}" role="button" class="btn btn-primary"><span class="fas fa-chevron-left"></span></a>
+            <a href="{{ prvlnk }}" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a>
           {%- endif -%}
-            <a href="." role="button" class="btn btn-primary"><span class="fas fa-chevron-up"></span></a>
+            <a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a>
           {%- if nxtlnk == nil -%}
-            <a role="button" class="btn btn-outline-primary disabled"><span class="fas fa-chevron-right"></span></a>
+            <a role="button" class="btn btn-outline-primary disabled">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a>
           {%- else -%}
-            <a href="{{ nxtlnk }}" role="button" class="btn btn-primary"><span class="fas fa-chevron-right"></span></a>
+            <a href="{{ nxtlnk }}" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a>
           {%- endif -%}
           </div>
         </div>

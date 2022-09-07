@@ -71,7 +71,7 @@ layout: bg-image
 				daryl.hepting@uregina.ca
 			</a>
 			<br /><br />
-			<a id="semlink" href="{{ "/teaching/schedule/" | relative_url }}">
+			<a href="{{ "/teaching/schedule/" | relative_url }}">
 				Semester Schedule
 			</a>
       <br /><br />
@@ -80,32 +80,6 @@ layout: bg-image
       <a href="elsewhere.html">
         Find me elsewhere on the web
       </a>
-			<script>
-				var today = new Date();
-				var semnum = "";
-				if (today.getMonth() >= 0 && today.getMonth() <= 3) {
-					semnum = "10"
-				} else
-				if (today.getMonth() >= 4 && today.getMonth() <= 7) {
-					semnum = "20"
-				} else
-				if (today.getMonth() >= 8 && today.getMonth() <= 11) {
-					semnum = "30"
-				}    
-				var semurl = document.getElementById("semlink")
-				semurl.setAttribute("href","{{ "/teaching/schedule/" | relative_url}}"+today.getFullYear() + semnum + ".html");
-			</script>
-      <script>
-        window.onload = function() {
-          if (window.jQuery) {  
-              // jQuery is loaded  
-              console.log($.fn.button.Constructor.VERSION)
-          } else {
-              // jQuery is not loaded
-              console.log("Not loaded")
-          }
-        }  
-      </script>
 		</div>
 	</div>
 </div>
