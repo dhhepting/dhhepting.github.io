@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script id="vertex-shader" type="x-shader/x-vertex">
+      #version 300 es
+
+      in vec4 aPosition;
+      in vec4 aColor;
+
+      out vec4 vColor;
+
+      void
+      main()
+      {
+          gl_Position = aPosition;
+          vColor = aColor;
+          gl_PointSize = 10.0;
+      }
+    </script>
+    <script id="fragment-shader" type="x-shader/x-fragment">
+      #version 300 es
+      precision mediump float;
+
+      in vec4 vColor;
+      out vec4 fColor;
+
+      void
+      main()
+      {
+          fColor = vColor;
+      }
+    </script>
+    <script type="text/javascript" src="../Common/initShaders.js"></script>
+    <script type="text/javascript" src="../Common/MVnew.js"></script>
+    <script type="text/javascript" src="mouse.js"></script>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <h1>Mouse Input</h1>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-4">
+            <p>
+              Mouse X: <span id="mousex"></span>
+            </p>
+            <p>
+              Mouse Y: <span id="mousey"></span>
+            </p>
+            <p>
+              Rel X: <span id="relx"></span>
+            </p>
+            <p>
+              Rel Y: <span id="rely"></span>
+            </p>
+            <p>
+              Application X: <span id="appx"></span>
+            </p>
+            <p>
+              Application Y: <span id="appy"></span>
+            </p>
+            <p>
+              Canvas Left: <span id="crect_l"></span>
+            </p>
+            <p>
+              Canvas Top: <span id="crect_t"></span>
+            </p>
+            <p>Window height: <span id="wHeight"></span></p>
+            <p>Window width: <span id="wWidth"></span></p>
+          </div>
+          <div class="container-fluid col-8">
+            <canvas id="gl-canvas" width="512" height="512 "class="ratio ratio-1x1">
+              Your browser doesn't support the HTML5 canvas element
+            </canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>

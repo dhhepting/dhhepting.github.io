@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- based on https://interactivecomputergraphics.com/Code/02/triangle.html -->
+<html>
+  <head>
+    <script id="vertex-shader" type="x-shader/x-vertex">
+      #version 300 es
+
+      precision mediump float;
+      in vec4 aColor;
+      out vec4 vColor;
+      in vec4 aPosition;
+
+      void main()
+      {
+        vColor = aColor;
+        gl_Position = aPosition;
+      }
+    </script>
+    <script id="fragment-shader" type="x-shader/x-fragment">
+      #version 300 es
+
+      precision mediump float;
+      in vec4 vColor;
+      out vec4 fColor;
+
+      void main()
+      {
+          fColor = vColor;
+      }
+    </script>
+    <script type="text/javascript" src="../Common/initShaders.js"></script>
+    <script type="text/javascript" src="triangles.js"></script>
+  </head>
+  <body>
+    <canvas id="gl-canvas" width="512" height="512"></canvas>
+  </body>
+</html>

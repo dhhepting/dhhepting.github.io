@@ -94,7 +94,8 @@
 </div>
 
 <script>
-  $(document).ready(function(){
+  "use strict";
+  window.onload = (event) => {
     // get meeting information initialized
     const mar = {{ mtgsfile | jsonify }}
     const smillis = {{ smins }} * 60 * 1000;
@@ -125,5 +126,5 @@
     }
     console.log('nxtmtg',mtn)
     document.getElementById(mtn).classList.add('text-bg-primary');
-  })
+  }
 </script>

@@ -1,0 +1,21 @@
+{%- assign pixlist = "" -%}
+{%- assign pdflist = "" -%}
+{%- assign movlist = "" -%}
+{%- assign audio_url = "" -%}
+{%- assign mtgstr = include.mtg | prepend: '00' | slice: -2, 2 -%}
+{%- assign mtgfnd = 0 -%}
+{%- for m in site.data.teaching[jcrs_id][crs_sem]media -%}
+  {%- if m.meet == mtgstr -%}
+    {%- assign mtgfnd = 1 -%}
+    {%- if m.file contains "jpg" or m.file contains "JPG" or m.file contains "jpeg" or m.file contains "png"  -%}
+      {%- capture pixlist -%}{{pixlist}}|{{m.file}}#{{m.URL}}{%- endcapture -%}
+    {% elsif m.file contains "m4a" %}
+      {% assign audio_url = m.URL %}
+    {% elsif m.file contains "pdf" %}
+      {%- capture pdflist -%}{{ pdflist }}|{{ m.file }}#{{ m.URL }}{%- endcapture -%}
+    {%- endif -%}
+    {% elsif m.file contains "mov" %}
+      {%- capture movlist -%}{{ movlist }}|{{ m.file }}#{{ m.URL }}{%- endcapture -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}

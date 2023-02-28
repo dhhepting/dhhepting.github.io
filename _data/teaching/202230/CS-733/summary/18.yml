@@ -1,0 +1,328 @@
+Audio-Transcript:
+- desc: Okay, so
+  persid: ''
+- desc: just to recap what I've written on the board, so happy Tuesday, Happy first
+    day in November. I have a new marker today because I didn't bring my black marker.
+  persid: ''
+- desc: I found Twilight sky. So we'll see how that racism in a second. So let's talk
+    about assignment three, which is due on Monday the 14th After the break,
+  persid: ''
+- desc: and then we'll talk about Chapter Six stuff. And we'll look at Forex in the
+    email I sent earlier today. And we'll dip into chapter seven a little bit. And
+    so on Thursday we'll talk about the midterm exam, which will be 75 minutes in
+    class on the 15th of November, but this Thursday will be our last meeting before
+    the exam. So I want to make sure we'll review the things we've talked about. So
+    you're comfortable and then think of some possible exam questions. So even if
+    you don't think of possible exam questions, I will think of exam questions so
+    that we have an exam. And so like I say, I encourage your suggestions, but if
+    you don't make me give me any suggestions that doesn't mean we're not going to
+    have an exam
+  persid: ''
+- desc: Okay, so
+  persid: ''
+- desc: we'll start with that on Thursday and then see if we have time to talk about
+    some more things. Green they started with isn't very clear on the board I'll see
+    how much we can get off because of the surprise original green stuff it's not
+    cooperating so well. To mind exercise for today.
+  persid: ''
+- desc: So we have
+  persid: ''
+- desc: geometry of the model and save cubes are
+  persid: ''
+- desc: spheres and we
+  persid: ''
+- desc: use polygons or triangles particularly. So things we've done so far so we
+    started with geometry, colors and vertices. And we can either have flat shading
+    where there's no interpolation of colors or we can do some interpolation
+  persid: ''
+- desc: so once was What's your next step
+  persid: ''
+- desc: we can add lights? May and what kinds of lights can we
+  persid: ''
+- desc: think about in terms of properties they have
+  persid: ''
+- desc: Yeah, so we can do Ambien. So that's just light, light that is there for
+  persid: ''
+- desc: so you got to think about
+  persid: ''
+- desc: it. weather delay is pointing visible to the in line with the object. It's
+    just like that adds to the overall background. The brightness of the scene. Does
+    that make sense? So let's see ops will not the opposite. So it's a bit like ambient
+    and that it's Yeah, I was thinking directional. So it's been like ambient because
+    it's just it's there but it has a property of direction so the sun is shining
+    and Nunes down on us. So we don't have we're not varying the angles of interaction
+    with light certain source based on our positions but let the angle the direction
+    of the light source is constant. So retreating. Its interaction with all the parts
+    of the scene in a constant way, but because it has an angle we can
+  persid: ''
+- desc: directional we can have shadows and so forth. So, so those two are similar
+    because they're, they interact sort of at a at a global level with the scene.
+    So what's a third kind of light that we can put in let me see if I can do this
+  persid: ''
+- desc: so that's
+  persid: ''
+- desc: a light that can be put into the scene that point at a certain location or
+    something it's nothing very oh this is shiny.
+  persid: ''
+- desc: So you can see
+  persid: ''
+- desc: so we can call that what what kind of support light source Yeah. So service
+    like the whiteboard here is shiny. So we get different effects.
+  persid: ''
+- desc: come in and help yourself to Halloween candy. There's one kind only but I
+    was throwing them to begin with. I gave that up for the safety of all concerned
+  persid: ''
+- desc: we can get a couple. So part of it is colors and impacted. So you can see
+    we can define a coefficient for ambient lighting so what are some other kinds
+    of interactions that we can think about what services so there are a couple different
+    kinds of interactions here so we can we can see some soft shadows and we can also
+    see some not soft shadows but soft softer reflections
+  persid: ''
+- desc: sorry, sometimes infections
+  persid: ''
+- desc: yeah so it's about our modeling the interaction of the lake with the surface.
+    So we can think about diffuse reflections and then there's also specular. So that's
+    when things are very shiny. So we have a laser point light source interacting
+    with a shiny surface then we'll see specular reflections and those are for specular
+    highlights on the surface so we're free sit down, you can come and grab a couple
+    of Oh Henry chocolates. From my Halloween
+  persid: ''
+- desc: stash that you're welcome. Thanks. I think we had 10 Different groups of kids
+    at our house last night. Doesn't seem like a lot but it was
+  persid: ''
+- desc: it was pretty active for a while.
+  persid: ''
+- desc: Anyway, okay, so So. Okay, you're welcome to go get some chocolates. So I
+    have 30 in the bag so I wouldn't be happy, unhappy if they're all gone, but the
+    class I'm not going to twist anyone's arm. Anyway, alright, so we talked about
+    using normal vectors, which describes the vector perpendicular to the to the triangle
+    surface that we're leading. With so that's a way to capture the interaction so
+    then we have
+  persid: ''
+- desc: So this gets us a nicer looking surface because we have
+  persid: ''
+- desc: we can see where the the reflection of the lights are. In the surface is represented.
+    But it doesn't let us capture the specular highlights very well because we're
+    not interested. We're not calculating. We were only covering a few values here
+    at the vertices so it doesn't let us show specular highlights. On the triangles
+    surfaces that we're rendering.
+  persid: ''
+- desc: So let's see.
+  persid: ''
+- desc: approach that's.
+  persid: ''
+- desc: It so let's
+  persid: ''
+- desc: improve the algorithm that we talked about a little bit last week. Named after
+    well, fun was the originator, but blin made some improvements to it.
+  persid: ''
+- desc: So instead of so what do we need
+  persid: ''
+- desc: to be able to get the specular highlights in the middle of a triangle? We
+    need to be able to have that normal vector. Calculate the interaction with a lead
+    source so instead of interpolating the values we're interpolating? So then we're
+    using those interpolated normal vectors to cut those interactions.
+  persid: ''
+- desc: So maybe what I'll do is I'll
+  persid: ''
+- desc: show a couple of links All right, so people are asking me about responses
+    1415 and 16. Do tonight and I've taken out 17 Because we didn't meet.
+  persid: ''
+- desc: So this is the
+  persid: ''
+- desc: one that illustrates the difference between fog and gross shading so we can
+    see the interaction so notice, the code is in the vertex shader, because we're
+    making the calculations
+  persid: ''
+- desc: at each vertex and then interpolating values now let's turn on, on shading.
+    So the surface looks much shinier. And the other thing to notice is that the code
+    has moved from the vertex shader to the fragment shader. Because we're doing calculations,
+    not
+  persid: ''
+- desc: vertices, but we're doing some calculations Friday. This is
+  persid: ''
+- desc: a version of classic computer graphics keep fighting another person's DVD
+    you can come get a couple of low Henry's I was throwing them earlier but I decided
+    against that safety concern so this model is a little bit late on details. You
+    can see the handle around the edges anyway so it gives you an idea that difference
+    between the tourism section
+  persid: ''
+- desc: so
+  persid: ''
+- desc: obviously become less shiny crocheting
+  persid: ''
+- desc: You. So the other
+  persid: ''
+- desc: leg today sentence a little bit about using three js to support WebGL development
+    let me go through the assignment and answer questions with that since it's due
+    on the 14th picture This Set a more clear statement so so there are some sample
+    programs from the text that look at parallel and prospective projections. So
+  persid: ''
+- desc: using that code as a base so allow so let the user switch between
+  persid: ''
+- desc: support parallel and prospective projections. And then improve the interface
+  persid: ''
+- desc: I think we can use Bootstrap like we've done second assignment so to allow
+    for manipulation that being grounders and switching between projections
+  persid: ''
+- desc: so what are some ways to improve the
+  persid: ''
+- desc: the interface from what he's created? What the authors have created? more
+    informative? Right so it's not just about the functionality. It's also about user
+    experience, I guess.
+  persid: ''
+- desc: So it's nice to have
+  persid: ''
+- desc: a good looking interface.
+  persid: ''
+- desc: So what about
+  persid: ''
+- desc: I'm getting lazy in my old age instead of trying to hear I don't want to give
+    that impression so it's altar planks No, you d Yeah. Right so we can see what
+    the current values of the parameters are. That'd be a good way to prove the interface
+    you have any particular other questions about Whatever?
+  persid: ''
+- desc: Okay, so that's, if there are questions, let's have a discussion online. Or
+    if there are more questions come, come to see me or was question questions online
+  persid: ''
+- desc: let's take a peek at this
+  persid: ''
+- desc: resource shaders. So we're talking about vertex and fragment shaders.
+  persid: ''
+- desc: Soon as links to the three js tutorial and I want to bring that into our discussion
+    because maybe maybe when you're doing graphics, you're not just going to be doing
+    two jobs can use a library like three Jas to set up a lot of the background?
+  persid: ''
+- desc: So they're
+  persid: ''
+- desc: downloading
+  persid: ''
+- desc: a copy of
+  persid: ''
+- desc: the library to your to your web server with this
+  persid: ''
+- desc: evening. So here's the CDN. or.
+  persid: ''
+- desc: So you're doing the same basic setup as
+  persid: ''
+- desc: doing like GL examples, HTML and JavaScript. So we have three script tags
+  persid: ''
+- desc: three or more. We have some more than three. So we have the vertex shader
+    and one tag, fragment shader another tag and then the JavaScript code for the
+    scene. So our examples real life examples from the text we have in the library
+    and then feed dot j s.
+  persid: ''
+- desc: So we talked about specifying materials, different properties so we can make
+    this little more explicit here is for saying the shader material.
+  persid: ''
+- desc: Sewer we're creating a news structure with a vertex shader and a fragment
+    shader. So that makes it a little more clear when we're talking about building
+    objects out of materials
+  persid: ''
+- desc: so then we can create a cube by creating a new mesh with Box geometry made
+    from the shader material.
+  persid: ''
+- desc: So our grid
+  persid: ''
+- desc: so when we're doing this in WebGL examples, we're creating a program and attaching
+    the shaders to the program. So that's those details are taken care of for us by
+    the future as library I think of maybe a nicer abstraction here but material having
+    vertex and fragment shaders attached to
+  persid: ''
+- desc: it so this is
+  persid: ''
+- desc: location for the three js library making available the code and then we have
+    the vertex shader and this is the same as we've done
+  persid: ''
+- desc: before in our examples so doing the position so did the projection model your
+    matrix to the original position that we're specifying the color is this constant
+    color which is no red, green and more blue. And it's okay because
+  persid: ''
+- desc: you're in a JavaScript setting. Tonight, based on the window that we're creating,
+    specifying a renderer anti aliasing turned on. So it's a WebGL renderer. So we're
+    setting the size based on the information we got from the window. Setting a background
+    color so what does this color look like? So we haven't seen colors through like
+    that before. Anyone
+  persid: ''
+- desc: Okay, so.
+  persid: ''
+- desc: So what does this tell us? First of all we can see because of this
+  persid: ''
+- desc: it says it's written
+  persid: ''
+- desc: so each hexadecimal digit. Remember we talked about the cartrack and nine
+    will be four bits
+  persid: ''
+- desc: I'm not going to tell you the current trick Okay, I'll do the car trick on
+    Thursday. I didn't need my other class. That's why I thought I didn't vote. Anyway,
+    so each digit can represent
+  persid: ''
+- desc: 16 new values
+  persid: ''
+- desc: zero to 15.
+  persid: ''
+- desc: So two bits 2x. So we can do 16
+  persid: ''
+- desc: times 16, reserving 255
+  persid: ''
+- desc: which is
+  persid: ''
+- desc: standard depth or our precision of colors so we can do eight bits for red
+    eight bits for green eight. bits for blue, right? So
+  persid: ''
+- desc: it's so we know that we're getting the same guy for red, green and blue. So
+    that's going to be a grayscale. Because we're going we're just moving along the
+    axis that goes from black to white so the maximum value we can represent is we
+    shouldn't be late. So T V over F F
+  persid: ''
+- desc: so that's
+  persid: ''
+- desc: 1413. So let's crack anyway, but we'll leave it at grey
+  persid: ''
+- desc: so here we're adding
+  persid: ''
+- desc: child to
+  persid: ''
+- desc: see for the page
+  persid: ''
+- desc: document object model
+  persid: ''
+- desc: or creating a new scene
+  persid: ''
+- desc: and we're adding a perspective camera with field Field of View line and our
+    aspect ratio, specifying a camera position and we're adding it to the scene and
+    then ratting or Vox or cube specifying the shader and adding so as the
+  persid: ''
+- desc: geometry and the shader we're creating a new cube and adding it to the scene
+    number of rotating in the render we're going to request animation frame that we've
+    done before just stretching it then proceeding to the render that scene and the
+    camera position then render the scene and then we do a render to start the process
+    Suzanne no more simple than dealing with WebGL
+  persid: ''
+- desc: details
+  persid: ''
+- desc: so I thought there was a link here to the code this is the art of communication
+    okay.
+  persid: ''
+- desc: So I want to
+  persid: ''
+- desc: show you the code running on my website on Thursday. Which is your the torture
+    of empty handed around the classroom it's not that complicated math that makes
+    sense. Any other questions or concerns? still craving single Henry grab another
+    stash they have a friend. Otherwise we'll see you on Thursday. So Thursday we'll
+    talk about the midterm and the kartra Yes Okay, thank you for today. Just weren't
+    enough kids in my house last night sorry, we're just like there's no break from
+    this classroom. Checkout? literally going to be covered. Back this week So far
+    Right YEAH.
+  persid: ''
+- desc: show you the code running on my website on Thursday. Which is your the torture
+    of empty handed around the classroom it's not that complicated math that makes
+    sense. Any other questions or concerns? still craving single Henry grab another
+    stash they have a friend. Otherwise we'll see you on Thursday. So Thursday we'll
+    talk about the midterm and the kartra Yes Okay, thank you for today. Just weren't
+    enough kids in my house last night sorry, we're just like there's no break from
+    this classroom. Checkout? literally going to be covered. Back this week So far
+    Right YEAH.
+  persid: ''
+offering:
+  id: CS-733-202230

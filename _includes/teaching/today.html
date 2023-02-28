@@ -30,6 +30,7 @@
   </ul>
 </div>
 <script>
+  "use strict";
   window.onload = (event) => {
     let urlp = "{{ '/teaching/' | relative_url }}"
     // get the most recent semester defined in data
@@ -48,14 +49,15 @@
       "end": "end"
     }
     // get the name of today's day and format today's date
-    const now = new Date()
-    const nowstr = now.toString();
+    const nowd = new Date()
+    const nowstr = nowd.toString();
+    console.log(nowd,nowstr)
     document.getElementById("now").innerHTML = nowstr
 
-    let longday = now.toLocaleString('en-ca', { weekday: 'short' })
+    let longday = nowd.toLocaleString('en-ca', { weekday: 'short' })
     //longday = "Tue"
-    let hr24 = now.toLocaleTimeString('en-ca', { hourCycle: 'h23', hour: '2-digit', minute: '2-digit' })
-    let todaystr = now.toLocaleDateString([], { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' })
+    let hr24 = nowd.toLocaleTimeString('en-ca', { hourCycle: 'h23', hour: '2-digit', minute: '2-digit' })
+    let todaystr = nowd.toLocaleDateString([], { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' })
     let todayarr = todaystr.replace(/,/g,'').split(' ')
     let fmtdate = todayarr[0] + '-' + todayarr[2] + '-' + todayarr[1] + '-' + todayarr[3]
 
@@ -65,13 +67,16 @@
 
     // highlight the section of the day's calendar corresponding
     // to current time and test for a meeting on today's date
+
+    let matchfile = ""
+    let matchmtg = 0
     for (const sv of sched_it) {
       let cid = sv.Times + '_C'
       let tid = sv.Times + '_T'
-      stend = sv.Times.split('-')
-      starthm = stend[0].split(':')
+      let stend = sv.Times.split('-')
+      let starthm = stend[0].split(':')
       const smillis = starthm[0] * 3600000 + starthm[1] * 60000
-      endhm = stend[1].split(':')
+      let endhm = stend[1].split(':')
       const emillis = endhm[0] * 3600000 + endhm[1] * 60000
       // change bg class (colour) of current block
       if (nmillis > smillis && nmillis < emillis) {

@@ -1,18 +1,12 @@
 {%- include teaching/url.html -%}
-{% comment %}
-<div class="card card-header bg-light mb-2 p-3">
-  <h1 id="offh1">
-    {{ crs_id | replace: "-"," " }} in {{ crs_sem }}
-  </h1>
-</div>
-{% endcomment %}
+
 <div class="w-auto h-100">
   <div class="bg-light mb-2 p-3">
     <h1>
       {{ include.title }}
     </h1>
   </div>
-
+<!-- Make the navigation -->
   <div class="card" style="height: 85%">
     <div id="offhdr" class="card-header bg-info">
       <ul class="nav nav-pills" id="navbar-scrollspy">
@@ -27,6 +21,20 @@
         <li class="nav-item">
           <a class="nav-link" href="#ssOffice">
             Office Hours
+          </a>
+        </li>
+        {%- endif -%}
+        {%- if include.wkly == 1 -%}
+        <li class="nav-item">
+          <a class="nav-link" href="#ssWkly">
+            Weekly
+          </a>
+        </li>
+        {%- endif -%}
+        {%- if include.code == 1 -%}
+        <li class="nav-item">
+          <a class="nav-link" href="#ssCode">
+            Code
           </a>
         </li>
         {%- endif -%}
@@ -45,7 +53,7 @@
               Topics
           </a>
           <ul class="dropdown-menu">
-          {% assign tlooff = site.data.teaching[jcrs_id][crs_sem]tlo -%}
+          {%- assign tlooff = site.data.teaching[jcrs_id][crs_sem]tlo -%}
           {%- for ku in tlooff -%}
             {%- assign kk = ku[0] | split: "/" -%}
             {%- assign kkd = ku[1] -%}
@@ -65,50 +73,31 @@
         </li>
         {%- endif -%}
 
-        {%- if include.asgns == 1 -%}
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"
-            data-bs-toggle="dropdown" href="#" role="button"
-            aria-expanded="false">
-              Assignments
-          </a>
-          <ul class="dropdown-menu">
-          {%- assign asgnfile = site.data.teaching[jcrs_id][crs_sem]assignments %}
-          {%- for aa in asgnfile %}
-            {%- assign msa = "" %}
-            {%- for sa in site.assignments %}
-              {%- if sa.aid == aa.aid %}
-                {%- assign msa = sa %}
-                {%- break %}
-              {%- endif %}
-            {%- endfor %}
-            <li>
-            {%- if msa != "" -%}
-              <a class="dropdown-item"
-              href="#ssAsgn_{{ msa.aid }}">
-                {{ aa.title }},
-                {{ aa.marks }} marks,
-                due {{ aa.duedate }}
-              </a>
-              {%- else -%}
-              <a class="dropdown-item" href="#ssAssignments">
-                {{ aa.title }},
-                {{ aa.marks }} marks,
-                due {{ aa.duedate }}
-                NOT FOUND
-              </a>
-              {%- endif -%}
-            </li>
-            {%- endfor %}
-          </ul>
-        </li>
-        {%- endif -%}
-
         {%- if include.exams == 1 -%}
         <li class="nav-item">
           <a class="nav-link" href="#ssExams">
             Exams
           </a>
+        </li>
+        {%- endif -%}
+
+        {%- if include.feedback == 1 -%}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown" href="#" role="button"
+            aria-expanded="false">
+              Feedback
+          </a>
+          <ul class="dropdown-menu">
+            {%- assign fbo_hash = site.data.teaching[crs_sem][jcrs_id]feedback -%}
+            {%- for fb in fbo_hash -%}
+            <li>
+              <a class="dropdown-item" href="#ssFB_{{ fb[0] }}">
+                {{ fb[0] | split: "-" | last | capitalize }}
+              </a>
+            </li>
+            {%- endfor -%}
+          </ul>
         </li>
         {%- endif -%}
       </ul>
@@ -118,6 +107,7 @@
       data-bs-target="#navbar-scrollspy"
       data-bs-offset="0" tabindex="0">
 
+      <!-- Create the content -->
       {%- if include.mtgs == 1 -%}
       <h3 id="ssMeetings" class="bg-dark text-white">
         Meetings
@@ -134,6 +124,18 @@
       </h3>
         {%- include teaching/schedule.html cs=now_sem -%}
       <p></p>
+      {%- endif -%}
+
+      {%- if include.code == 1 -%}
+      <h3 id="ssCode" class="bg-dark text-white">
+        Code
+      </h3>
+      <p>
+        {%- capture code_url -%}/teaching/{{ crs_id }}/{{ page.sem }}/code/{%- endcapture -%}
+        <a href="{{ code_url | relative_url }}" target="_blank">
+          Code Directory
+        </a>
+      </p>
       {%- endif -%}
 
       {%- if include.links == 1 -%}
@@ -178,6 +180,20 @@
         Exams
       </h3>
         {%- include offering/exams-body.html -%}
+      <p></p>
+      {%- endif -%}
+
+      {%- if include.feedback == 1 -%}
+      <h3 id="ssFeedback" class="bg-dark text-white">
+        Feedback
+      </h3>
+      {% assign fboh = site.data.teaching[crs_sem][jcrs_id]feedback -%}
+      {%- for fb in fboh -%}
+      <h5 id="#ssFB_{{ fb[0] }}">
+        {{ fb[0] | split: "-" | last | capitalize }}
+      </h5>
+      {%- include offering/feedback-body.html fbdata=fb -%}
+      {%- endfor %}
       <p></p>
       {%- endif -%}
 

@@ -11,10 +11,9 @@ SafeDumper.add_representer(
   )
 SafeDumper.ignore_aliases = lambda *args : True
 
-SITE_DIR = "/Users/hepting/Sites/dhhepting.github.io/"
-MD_ROOT = "teaching/"
-HTML_ROOT = "_site/teaching/"
-DATA_ROOT = "_data/teaching/"
+SITE_DIR = '/Users/hepting/Sites/dhhepting.github.io/'
+MD_ROOT = SITE_DIR + 'teaching/'
+DATA_ROOT = SITE_DIR + '_data/teaching/'
 
 # Make sure that script is executed properly: i.e. CS-428+828/201830
 if (len(sys.argv) != 2):
@@ -27,9 +26,9 @@ if (len(reldir) != 2):
 	sys.exit()
 
 # find offering indicated by arguments and load meeting days
-with open(SITE_DIR + DATA_ROOT + 'offerings.csv', newline='') as offfile:
+with open(DATA_ROOT + 'offerings.csv', newline='') as offfile:
     offreader = csv.DictReader(offfile)
-    off_found = 0
+    off_found = False
     for row in offreader:
         #print(row)
         if (row['semester'] == reldir[1] and row['id'] == reldir[0]):
@@ -58,14 +57,14 @@ with open(SITE_DIR + DATA_ROOT + 'semesters.csv', newline='') as semfile:
         if (row['semester'] == reldir[1]):
             sem_found = 1
             # get term-start and class-end dates
-            tsd = datetime.strptime(row['term-start'], "%d-%b-%y")
-            ced = datetime.strptime(row['class-end'], "%d-%b-%y")
+            tsd = datetime.strptime(row['term-start'], '%d-%b-%y')
+            ced = datetime.strptime(row['class-end'], '%d-%b-%y')
             # get no-class-days
             ncd = row['no-class-days'].split(',')
             ncdlist = []
             for dd in ncd:
-                ncdate = datetime.strptime(dd, "%d-%b-%y")
-                ncdlist.append(datetime.strftime(ncdate,"%a-%d-%b-%Y").split('-'))
+                ncdate = datetime.strptime(dd, '%d-%b-%y')
+                ncdlist.append(datetime.strftime(ncdate,'%a-%d-%b-%Y').split('-'))
             break
 
 if sem_found == 0:
@@ -77,7 +76,7 @@ if sem_found == 0:
 # retrieved from offerings.csv and semesters.csv
 
 # create Jekyll-friendly version of course ID
-jcrs_id = reldir[0].replace("+","_")
+jcrs_id = reldir[0].replace('+','_')
 
 # create data directory for offering: jcrs_id / semester
 offdatadir = os.path.abspath(SITE_DIR + DATA_ROOT + jcrs_id + '/' + reldir[1] + '/')
@@ -114,8 +113,8 @@ try:
 
         sday = tsd
         while (sday <= ced):
-            datelist = datetime.strftime(sday,"%a-%d-%b-%Y").split('-')
-            dayname = (datetime.strftime(sday,"%A-%d-%b-%Y").split('-'))[0]
+            datelist = datetime.strftime(sday,'%a-%d-%b-%Y').split('-')
+            dayname = (datetime.strftime(sday,'%A-%d-%b-%Y').split('-'))[0]
             #print (dayname)
             if (datelist[0] in mtgdays) and datelist not in ncdlist:
                 d[mtgctr] = {}
@@ -156,15 +155,15 @@ try:
         # now write out meetings.csv file with meeting datelist
         # use mtgctr set in plan.yml loop
         try:
-            print ("mtgctr", mtgctr)
+            print ('mtgctr', mtgctr)
             with open(mtgsfile,'w') as mf:
                 mf.write('meeting,total_mtgs,date,file,wikipage_id\n')
                 for mm in range (1, mtgctr):
-                    print ("mm", type(mm), mm)
+                    print ('mm', type(mm), mm)
                     mtg_date = d[mm]['date']
                     # create HTML filename for each meeting
                     mtg_fname = str(mm).zfill(2) + '_' + mtg_date + '.html'
-                    #print ("before write")
+                    #print ('before write')
                     mf.write(
                         str(mm).zfill(2) + ',' +
                         str(mtgctr - 1) + ',' +
@@ -172,7 +171,7 @@ try:
                         mtg_fname + ',' +
                         #str(int(wikifmid) + mm - 1) + '\n')
                         'wiki\n')
-                    #print ("after write")
+                    #print ('after write')
         except Exception as e:
             print('meetings.csv:',e)
 

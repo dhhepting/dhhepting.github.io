@@ -59,9 +59,10 @@
           </div>
         {%- else -%}
           <li>
-            {%- if item.persid -%}
+            {%comment%}{%- if item.persid -%}
               <strong>{{ item.persid }}:</strong>&nbsp;
             {%- endif -%}
+            {%endcomment %}
             {{ item.desc }}
           </li>
         {%- endif -%}

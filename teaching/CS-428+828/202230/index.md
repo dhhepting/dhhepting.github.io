@@ -8,7 +8,7 @@ layout: bg-image
   title=page.title
   mtgs=1
   sched=1
-  wkly=1
+  wkly=0
   links=1
   asgns=1
   topics=1

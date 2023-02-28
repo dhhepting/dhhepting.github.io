@@ -1,22 +1,51 @@
 {%- assign pixlist = "" -%}
+{%- assign pdflist = "" -%}
+{%- assign movlist = "" -%}
 {%- assign audio_url = "" -%}
 {%- assign mtgstr = include.mtg | prepend: '00' | slice: -2, 2 -%}
 {%- assign mtgfnd = 0 -%}
 {%- for m in site.data.teaching[jcrs_id][crs_sem]media -%}
   {%- if m.meet == mtgstr -%}
     {%- assign mtgfnd = 1 -%}
-    {%- if m.file contains "jpg" or m.file contains "JPG" or m.file contains "jpeg" or m.file contains "png" -%}
+    {%- if m.file contains "jpg" or m.file contains "JPG" or m.file contains "jpeg" or m.file contains "png"  -%}
       {%- capture pixlist -%}{{pixlist}}|{{m.file}}#{{m.URL}}{%- endcapture -%}
-    {%- endif -%}
-    {%- if m.file contains "m4a" -%}
-      {% assign audio_url = m.URL %}
+    {% elsif m.file contains "pdf" %}
+      {%- capture pdflist -%}{{ pdflist }}|{{ m.file }}#{{ m.URL }}{%- endcapture -%}
+    {% elsif m.file contains "mov" or m.file contains "m4a" %}
+      {%- capture movlist -%}{{ movlist }}|{{ m.file }}#{{ m.URL }}{%- endcapture -%}
     {%- endif -%}
   {%- endif -%}
 {%- endfor -%}
 {%- if mtgfnd == 1 -%}
+  {%- assign sortedpdf = pdflist | split: '|' | sort -%}
+  {%- assign numpdf = sortedpdf.size | minus: 1 -%}
+  {%- if numpdf > 0 -%}
+    <ul>
+    {%- for i in (1..numpdf) -%}
+      {% assign sp = sortedpdf[i] | split: '#' %}
+      <li>
+        <a href="{{ sp[1] }}">
+          {{ sp[0] }}
+        </a>
+      </li>
+    {%- endfor -%}
+    </ul>
+  {%- endif -%}
+  {%- assign sortedmov = movlist | split: '|' | sort -%}
+  {%- assign nummov = sortedmov.size | minus: 1 -%}
+  {%- if nummov > 0 -%}
+    {%- for i in (1..nummov) -%}
+      {% assign sp = sortedmov[i] | split: '#' %}
+      <div>
+        <video width="400" controls autoplay>
+            <source src="{{ sp[1] }}" type="video/mp4">
+        </video>
+      </div>
+    {%- endfor -%}
+  {%- endif -%}
   {%- assign sortedpix = pixlist | split: '|' | sort -%}
   {%- assign numpix = sortedpix.size | minus: 1 -%}
-  {%- capture carid -%}mtg_pix_{{ mtgstr }}{% endcapture %}
+  {%- capture carid -%}mtg_pix_{{ mtgstr }}{%- endcapture -%}
   {%- if numpix > 0 -%}
   <div id="{{ carid }}" class="m-2 carousel slide bg-light"
   data-bs-ride="false" data-bs-interval="false">

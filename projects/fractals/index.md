@@ -14,7 +14,11 @@ redirect_from:
 project: fractals
 layout: bg-image
 ---
-{% include projects/main.html title=page.title proj=page.project %}
+{%-
+  include projects/main.html
+  title=page.title
+  proj=page.project
+-%}
 
 My M.Sc. thesis [Approximation and Visualization of Sets Defined by Iterated Function Systems]({{'/research/works/1991-03-Hep-Approximation-and-Visualization-of-Sets-Defined-by-Iterated-Function-Systems.html' | relative_url }}) (from 1991) dealt with linear fractals. That got me started and I am still hooked.
 

@@ -1,0 +1,607 @@
+Audio-Transcript:
+- desc: That's an explanation today seems like it's not just Tuesday this week but
+    because maybe Monday was seemed like a little bit too long for me. I don't know.
+    Anyway,
+  persid: ''
+- desc: it is Tuesday right? We wouldn't be here otherwise,
+  persid: ''
+- desc: unless it was Thursday. So I
+  persid: ''
+- desc: just brought up my page here. So you're gonna let's go to the other page here
+    so this works a little bit the time is right, but it's not checking. It's not
+    pulling up the right meeting number.
+  persid: ''
+- desc: Anyway so different. I invite you to have a look at your the browsers that
+    you use and see whether what behavior you can observe with that
+  persid: ''
+- desc: with this page
+  persid: ''
+- desc: so when I realized that it was working, when I look at that page on my browser
+    then I looked to the examples in this class, the JavaScript files they use use
+    strict
+  persid: ''
+- desc: so. So the other
+  persid: ''
+- desc: so I was wrong about that.
+  persid: ''
+- desc: This was v w r OMG. I think like better.
+  persid: ''
+- desc: The same there's plenty of formulas. So do you have I'm seeing like okay,
+    and you have a Mac. So we're using Chrome or which browser using Safari on your
+    phone there's swinging something like this
+  persid: ''
+- desc: so that's like, and what? For me? What are you running Chrome on what is it
+    on Android Android? So a question is maybe
+  persid: ''
+- desc: mixing some
+  persid: ''
+- desc: es five and es six. So I thought because we were doing JavaScript programming
+    this semester with WebGL this was an interesting thing to bring up in class. You
+    will not experience
+  persid: ''
+- desc: with this kind of behavior
+  persid: ''
+- desc: well, okay, keep working. Keep working on it Okay, so I'm not gonna try and
+    edit code on my on in front of the class on my Windows computer here. But we'll
+    look at we'll look at code and the source on the on the web. Right now can you
+    hear me now? No.
+  persid: ''
+- desc: I'm invisible.
+  persid: ''
+- desc: Okay. survey questions about things so far. So first assignment, get you warmed
+    up a little bit is not really meant to be too taxing. But take those two methods
+    of generating the SU Pinsky gasket. I didn't show the window here.
+  persid: ''
+- desc: So I was curious
+  persid: ''
+- desc: how many people
+  persid: ''
+- desc: who has a version of the textbook and you have the electronic version?
+  persid: ''
+- desc: edition do it yourself. Okay. So it's
+  persid: ''
+- desc: printed or electronic. Okay. Yeah. Okay. And I know it's not available. Other
+    than electronic. So you're gonna have a hard copy of an earlier version so I'm
+    just curious about your experience with it. So did you get it from Pearson or
+    do you get it from some other place?
+  persid: ''
+- desc: So I
+  persid: ''
+- desc: was recommended to get the Pearson Plus app. So I downloaded it and so first
+    thing he said was keep up the good work, Darryl. Which I wasn't sure that I thought
+    it was it's always nice to get an affirmation right. People with a good book by
+    Bob
+  persid: ''
+- desc: anyway I think I like the, the my iPhone version better than the website because
+    it keeps timing out and I have to log in again.
+  persid: ''
+- desc: Anyway so it's not quite as revolutionary as I was led to believe. So the
+    most exciting thing so far is it links to figures.
+  persid: ''
+- desc: It says the figures are two point or 3.1 or whatever it is. That was just
+    an example. And it has a link and then I click on the link and it scrolls down
+    a little bit on the page to show the pay the figured it just repositions the page.
+    So I was a little bit underwhelming for me. But I thought would be more interesting
+    is to have links to the application code. But I I don't see that they're doing
+    that very well. Anyway
+  persid: ''
+- desc: so let's be experience been okay so far with the E text.
+  persid: ''
+- desc: Price is better anyway, right. I think
+  persid: ''
+- desc: so okay.
+  persid: ''
+- desc: Think we'll try and stick with a
+  persid: ''
+- desc: whiteboard. Okay, so animation and interaction so what's you have any questions?
+    Okay. So, our first examples were fraud trying triangle and different shapes just
+    being just on the canvas, right. So what about if you want to add some movement?
+    So what are some possibilities? possible approaches that we can take to add movement
+    to or, or scenes or not?
+  persid: ''
+- desc: So what about if we
+  persid: ''
+- desc: have a model of say a triangle or a square or something? And we want to move
+    on to move it around on the screen. How about we just create some new vertices
+    and send them to the GPU is that a practical
+  persid: ''
+- desc: solution?
+  persid: ''
+- desc: All right, me it's a possible solution.
+  persid: ''
+- desc: It could be possible. Yeah, I think we can compute in GPU is better.
+  persid: ''
+- desc: Yeah, that's right. So not when we're dealing with Square,
+  persid: ''
+- desc: single squares or
+  persid: ''
+- desc: simple triangles and simple primitives. It's not a big
+  persid: ''
+- desc: issue but. So you might have a bottleneck so so maybe better to
+  persid: ''
+- desc: transmit the first use once and then just transmit some some limited information.
+    About how we want to move the object. So for example
+  persid: ''
+- desc: if you want to rotate a square might start
+  persid: ''
+- desc: out with some some coordinates for square send those to the GPU and then we
+    explain that we'd like to rotate them and here's the angle by which we'd like
+    to rotate them. So we're familiar. So what's the difference between, say, a rotation
+    angle and
+  persid: ''
+- desc: a list of points and colors so here
+  persid: ''
+- desc: so here we're specifying information for each vertex.
+  persid: ''
+- desc: So we call for uniform
+  persid: ''
+- desc: because they're operating not on vertices, but they are. They're intended
+    to use over all the vertices and we can get they come in all different types depending
+    on what we need points scalars court matrices
+  persid: ''
+- desc: so forth.
+  persid: ''
+- desc: CMRA so the first one is your rotating square
+  persid: ''
+- desc: so you can see it is in fact
+  persid: ''
+- desc: rotating. There's no dicing. may be causing seizures Caesar finials. Okay,
+    so it's still working right there. So what are the steps involved in setting up
+    the transfer points and colors? So the shaders
+  persid: ''
+- desc: are the code that's
+  persid: ''
+- desc: on your GPU and the JavaScript that's in the browser on our CPU.
+  persid: ''
+- desc: So we need
+  persid: ''
+- desc: to have some communication happening between the JavaScript and the shader
+    programs right so remember, we talked about a GL position? So we're setting a
+    variable
+  persid: ''
+- desc: for the vertex position? And here we're getting the u theta. So the idea of
+    the naming convention to receive it with a U is so that's a uniform
+  persid: ''
+- desc: variable. So we're saying the vertex shader. So we have a position with in
+    four dimensions and then we have the uniform float, u theta. So we're getting
+    the sine and the cosine. And we're changing the position. Minus minus the sine
+    times the y plus the cosine of the X
+  persid: ''
+- desc: or the cosine times the x position, the y position is sine of the x plus cosine
+    of the y position. And then we're setting
+  persid: ''
+- desc: the Zed position to be zero so on
+  persid: ''
+- desc: and so on.
+  persid: ''
+- desc: So we're at the X, run the Zed equals zero ln. And then he talked they've
+    introduced w here. They want to know familiar with W. So I, I looked for this.
+    They only start mentioning it next chapter. So we'll foreshadow a little bit here.
+    So these are W's come up in homogeneous coordinates.
+  persid: ''
+- desc: So we have the idea that a point is represented
+  persid: ''
+- desc: as x y Zed W. W
+  persid: ''
+- desc: is set to one. Idea is
+  persid: ''
+- desc: x y Zed w is the same as it's a 2x
+  persid: ''
+- desc: two y Zed
+  persid: ''
+- desc: to W because then we divide through by. So, the idea of homogeneous coordinates
+    allows us to combine rotation and scaling
+  persid: ''
+- desc: so we have we can have a rotation matrix which is two by two but then we have
+    to
+  persid: ''
+- desc: if you want to translate a point, instead of just rotated and we'd need to
+    add
+  persid: ''
+- desc: so we can specify
+  persid: ''
+- desc: this rotated position using
+  persid: ''
+- desc: we can see how
+  persid: ''
+- desc: we have four values fit into
+  persid: ''
+- desc: a matrix like
+  persid: ''
+- desc: that. Then, if you want to translate so, you want to move the pipe from 00
+    to one one
+  persid: ''
+- desc: and we have to add it to apply this matrix and then we have to add the specter
+    of what homogeneous coordinates allows us to do is so this is in 2d.
+  persid: ''
+- desc: So, we can do the
+  persid: ''
+- desc: rotation and translation one matrix. Missionary wonder I didn't match my space
+    very well. Here
+  persid: ''
+- desc: So, that's, that's what we have.
+  persid: ''
+- desc: That's where the W comes from. So it makes sense.
+  persid: ''
+- desc: really complex. It's not meant to be
+  persid: ''
+- desc: so complex and
+  persid: ''
+- desc: it's a very flexible way to do things because if we use homogeneous coordinates,
+    then
+  persid: ''
+- desc: we can specify all the operations in a single matrix
+  persid: ''
+- desc: so so
+  persid: ''
+- desc: I wanted to mention it because he put it in the example in chapter three.
+    We'll talk about in chapter four. And we'll get familiar with doing these transformations.
+    So the homogeneous coordinates allow us to do rotation and translation with a
+    single matrix
+  persid: ''
+- desc: which will become important next chapter. So for now,
+  persid: ''
+- desc: just think there's an explanation for
+  persid: ''
+- desc: it let's see all right for today. keep you up at night I hope
+  persid: ''
+- desc: okay. So we're just so like, we've
+  persid: ''
+- desc: done before with vertex shaders, determining the position based on the data
+    in your array.
+  persid: ''
+- desc: So to position the vertex data a position
+  persid: ''
+- desc: W floated onto
+  persid: ''
+- desc: the GPU. And we're returning GL
+  persid: ''
+- desc: underscore position. So the new position
+  persid: ''
+- desc: that we'd like to draw and for the fragment shader,
+  persid: ''
+- desc: we're just resetting a single color, so this is red again. So let's look at
+  persid: ''
+- desc: the GS file
+  persid: ''
+- desc: for the goes with the shaders.
+  persid: ''
+- desc: So first line, you can see you struck that was my inspiration for the first
+    comment I made. So we can have variables. So we declare variables. So for our
+    canvas and for graphics contexts. And then we have theta and angle
+  persid: ''
+- desc: and fade as luck is the location
+  persid: ''
+- desc: that we're connecting to.
+  persid: ''
+- desc: So that's how
+  persid: ''
+- desc: that's the connection. We're making between the JavaScript and the shaders.
+    Okay,
+  persid: ''
+- desc: so we set the view Part,
+  persid: ''
+- desc: clear color. So here are
+  persid: ''
+- desc: four vertices we're going to use. 01 minus 1010 and zero minus one. Okay,
+    so the first bit
+  persid: ''
+- desc: is familiar reloading we're creating a buffer and loading the vertex values
+    onto the GPU. And we're doing the flatten so that we get the IEEE floating point
+    array not
+  persid: ''
+- desc: the object, all the extra information and the JavaScript array and you can
+    see they're making the same spelling mistake and all there
+  persid: ''
+- desc: so you can trace back
+  persid: ''
+- desc: the comments
+  persid: ''
+- desc: so far, so good.
+  persid: ''
+- desc: I just, you know, notice associate out shader variables with our data buffer.
+  persid: ''
+- desc: I've seen that spelling mistake before.
+  persid: ''
+- desc: Okay, so we're sending the data. And we're associating we're linking from
+    program variable, a position, position, location and we're enabling that connection.
+    And then we're doing a similar connection between the data location and the you
+    feed, right, so we're saying this is the way we're going to access the shooter
+    variable. And then we call the render function
+  persid: ''
+- desc: so we're clearing.
+  persid: ''
+- desc: Clearing the buffer is our color. Clear color. There have been commanding
+    the angle by point one. G L uniform one f theta Lok theta so this is using the
+    connection make a user data variable in the shader and we're drawing an array
+    as a triangle strip. So we have four vertices. So how do we do so I have zero
+    and one. That's our first vertex. And then minus one zero and then one zero. And
+    then our last vertex is zero minus one. So that's how we draw the square
+  persid: ''
+- desc: is two triangles. Some
+  persid: ''
+- desc: that's you all right. So we're giving it a new value of theta than redrawing
+  persid: ''
+- desc: the square
+  persid: ''
+- desc: and then we have something new called Request Animation Frame. Render.
+  persid: ''
+- desc: So what's going on? There? Less you?
+  persid: ''
+- desc: What's the process involved in creating an image on the screen? So we have
+    an equation for a square or circle or whatever it is. When we want to see it on
+    a device on our phone or on our laptop or wherever, we need to. Decide which pixels
+    in the frame buffer are going to be signed which values. So if we're doing a static
+    image, we can wait till this drawing is done. And then display the buffer. We
+    can do the we don't have to worry about coordinating anything because we just
+    have one image and when it's done it'll be displayed.
+  persid: ''
+- desc: So what about when we have a moving image like we have the square rotating?
+    So what's the purpose if we have only one frame buffer that we're writing to the
+    screen? What are some possible issues that come up? So in the tech state, they
+    remind us to think about all the different possible ways the term Windows used.
+    So the browser has a window, application as a window
+  persid: ''
+- desc: and so on. So there's
+  persid: ''
+- desc: a number of different ways you can think of Windows. And in order to
+  persid: ''
+- desc: keep the image constant on the screen, we need to refresh
+  persid: ''
+- desc: the screen
+  persid: ''
+- desc: about 60 times a second.
+  persid: ''
+- desc: So this is being
+  persid: ''
+- desc: constantly refreshed. Nothing's changing.
+  persid: ''
+- desc: But when information is changing, we would like to coordinate so that we don't
+    fresh from the buffer that's only partially drawn into
+  persid: ''
+- desc: so that makes sense.
+  persid: ''
+- desc: So for drying. So we
+  persid: ''
+- desc: want to tell the program to wait until we have a complete image.
+  persid: ''
+- desc: So we want to
+  persid: ''
+- desc: wait until the square and its new angle of rotation is available in the buffer
+    before we refresh the screen from that buffer. So with a square rotating, it's
+    a simple example but if we have a very complicated scene, we don't want that's
+    what's more important that we take care to animate that using the request animation
+    frame.
+  persid: ''
+- desc: So we see something smooth,
+  persid: ''
+- desc: smoother on screen, and we don't see partial images.
+  persid: ''
+- desc: So it makes sense. So way
+  persid: ''
+- desc: back when I was
+  persid: ''
+- desc: a student. When you have to say
+  persid: ''
+- desc: we we identify front buffer and back buffer and swap buffers when you pretty
+    much ready. So this is a nicer abstraction. We were just saying we're going to
+    request an animation frame.
+  persid: ''
+- desc: So signal that
+  persid: ''
+- desc: you can use Once this is complete then we can have a framed put on
+  persid: ''
+- desc: to display on the screen on the canvas
+  persid: ''
+- desc: and so we notice that
+  persid: ''
+- desc: request animation frame we're calling the same function again. So it's we
+    have to do that otherwise we won't get an animation drop less and no more. So
+    the idea is we're managing
+  persid: ''
+- desc: rendering of the triangle of the squares and spins around
+  persid: ''
+- desc: okay so let's look at
+  persid: ''
+- desc: so looking at a couple of other variations of the rotating square
+  persid: ''
+- desc: so OpenGL in order to be portable,
+  persid: ''
+- desc: doesn't do much with Windows system.
+  persid: ''
+- desc: WebGL,
+  persid: ''
+- desc: which is a JavaScript implementation of OpenGL.
+  persid: ''
+- desc: OpenGL ES for embedded systems. situations better than more portability, because
+    everything works or html5 is available to us. So we can
+  persid: ''
+- desc: do interaction with
+  persid: ''
+- desc: event listeners and so
+  persid: ''
+- desc: forth.
+  persid: ''
+- desc: So let's look can change the rotation direction. We can spin faster even getting
+    queasy. Okay, let's look at source bad design for drop down. Yeah.
+  persid: ''
+- desc: Okay, so let's look at this. So in our HTML file, we have the same code for
+    the vertex shader and for the fragment shader. So done here, is added a button
+    give it an ID direction. Select ID select. As ID of controls there's three of
+    them. So we've given values 012012.
+  persid: ''
+- desc: Okay
+  persid: ''
+- desc: yes.
+  persid: ''
+- desc: I think uniformly all OpenGL examples that have interaction involved for core
+    core design
+  persid: ''
+- desc: so we can
+  persid: ''
+- desc: explore that even more, where we will explore that a bit more so let's go
+    into retaining
+  persid: ''
+- desc: square two.
+  persid: ''
+- desc: So Canvas viewport, and it shares that's all the same. Reloading the vertices,
+    excuse me production vertices into the GPU. And then we're associating the position
+    variable and make the association with new data. And then we have an event handler.
+    So here we have direction is true. Which is meaning the moment I'll say is a poor
+    design because I was a true direction right or left. Anyway, so we're gonna deal
+    with the first event handlers gonna deal with the direction.
+  persid: ''
+- desc: So it's just going
+  persid: ''
+- desc: to negate the direction
+  persid: ''
+- desc: whose true is going false and was false is going to be true. After
+  persid: ''
+- desc: and that's an on click function. And the other one is you're going to associate
+    with the ID of yourself as controls.
+  persid: ''
+- desc: So case zero
+  persid: ''
+- desc: is doing the same thing as the button. Which kind of makes it seem Why do
+    you have the button except to illustrate that you can put a button on the display
+    and faster we're having the delay. Excuse me in case two, we're doubling the delay
+  persid: ''
+- desc: so that's looking for clicking.
+  persid: ''
+- desc: And this is handling keyboard input. So we can one eye one and change the
+    direction
+  persid: ''
+- desc: which seems
+  persid: ''
+- desc: right. Be really nice to match them up. So don't introduce
+  persid: ''
+- desc: the seemingly different
+  persid: ''
+- desc: anyway, so we've typed the number two you divide the delay by by few and takes
+    three new increasingly by by two. So they were called render the same dry erase
+    all we're doing here instead of we're using set timeout to delay the call to render.
+  persid: ''
+- desc: So we're calling request
+  persid: ''
+- desc: animation frame render once in the latest finish so let's look at that
+  persid: ''
+- desc: so I think that's going is
+  persid: ''
+- desc: recent top speed
+  persid: ''
+- desc: see if we can still be useful to display
+  persid: ''
+- desc: there's lots of improvements I can make here.
+  persid: ''
+- desc: Oh okay get spinning again. There we go. Okay, what do you think of that?
+    So CMRA
+  persid: ''
+- desc: okay. So I'll show you
+  persid: ''
+- desc: the third one.
+  persid: ''
+- desc: Which to me also
+  persid: ''
+- desc: frustrating looks like it's set to 0% That's it. So I think it's
+  persid: ''
+- desc: frustrating because the slider doesn't
+  persid: ''
+- desc: each of these different types of controls is independent of one another. So
+    it'd be nice to see that the slider. Let's see if the slider works first. Looks
+    like
+  persid: ''
+- desc: the square has the impression of trying to exit
+  persid: ''
+- desc: stage right. Stage Left I
+  persid: ''
+- desc: guess you could stage
+  persid: ''
+- desc: from the performers perspective let's take a peek. At changes here.
+  persid: ''
+- desc: So we have
+  persid: ''
+- desc: a slider to find here. So in the ID slider range, zero to 100 Step by 10 initial
+    value of 50.
+  persid: ''
+- desc: Okay
+  persid: ''
+- desc: so on the call back was slider is on change speed equals 100 minus event target
+    value.
+  persid: ''
+- desc: Also seems not
+  persid: ''
+- desc: an intuitive to get 100 minus the value
+  persid: ''
+- desc: speed of change from delay to speed
+  persid: ''
+- desc: so, if I understand.
+  persid: ''
+- desc: So setting the speed to be 50 That's, that's all
+  persid: ''
+- desc: we're doing here. And we have the same set timeout. So we're calling request
+    animation frame once the speed so smart well thought out because it's the same.
+    as speed increases, the length decreases. So the value of the variable speed is
+    decreasing.
+  persid: ''
+- desc: Anyway, which is added to the list of complaints we have interfaces and these
+    examples
+  persid: ''
+- desc: Okay, let's
+  persid: ''
+- desc: look at another one.
+  persid: ''
+- desc: So here we can
+  persid: ''
+- desc: can each time we get a different color
+  persid: ''
+- desc: so we're setting
+  persid: ''
+- desc: the difference here is for the vertex shader. We're looking at
+  persid: ''
+- desc: so we're getting
+  persid: ''
+- desc: something this position
+  persid: ''
+- desc: of the point
+  persid: ''
+- desc: the color is input and we're saying the point size and we're outputting the
+    color in the fragment shader.
+  persid: ''
+- desc: So let's look at this so we're
+  persid: ''
+- desc: saying maximum number of triangles be 200
+  persid: ''
+- desc: Maximum positions three times 200.
+  persid: ''
+- desc: Okay, so we define colors seven colors you don't include the light here. So
+    when they
+  persid: ''
+- desc: have so this is a little different.
+  persid: ''
+- desc: We're using the Add listener here to
+  persid: ''
+- desc: add points to the
+  persid: ''
+- desc: GPU.
+  persid: ''
+- desc: So the colors are being said based on
+  persid: ''
+- desc: the index that we have
+  persid: ''
+- desc: the last few that's
+  persid: ''
+- desc: more in more detail on. I was showing foreshadow the other day that's another
+    database issue. Anyway,
+  persid: ''
+- desc: thanks for your
+  persid: ''
+- desc: attention today. Have a great
+  persid: ''
+- desc: rest of your Tuesday and
+  persid: ''
+- desc: see you on Thursday.
+  persid: ''
+- desc: see you on Thursday.
+  persid: ''
+offering:
+  id: CS-733-202230

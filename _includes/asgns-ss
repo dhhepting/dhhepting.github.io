@@ -1,0 +1,75 @@
+{%- if include.asgns == 1 -%}
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle"
+    data-bs-toggle="dropdown" href="#" role="button"
+    aria-expanded="false">
+      Assignments
+  </a>
+  <ul class="dropdown-menu">
+  {%- assign asgnfile = site.data.teaching[jcrs_id][crs_sem]assignments %}
+  {%- for aa in asgnfile %}
+    {%- assign msa = "" %}
+    {%- for sa in site.assignments %}
+      {%- if sa.aid == aa.aid %}
+        {%- assign msa = sa %}
+        {%- break %}
+      {%- endif %}
+    {%- endfor %}
+    <li>
+    {%- if msa != "" -%}
+      <a class="dropdown-item"
+      href="#ssAsgn_{{ msa.aid }}">
+        {{ aa.title }},
+        {{ aa.marks }} marks,
+        due {{ aa.duedate }}
+      </a>
+      {%- else -%}
+      <a class="dropdown-item" href="#ssAssignments">
+        {{ aa.title }},
+        {{ aa.marks }} marks,
+        due {{ aa.duedate }}
+        NOT FOUND
+      </a>
+      {%- endif -%}
+    </li>
+    {%- endfor %}
+  </ul>
+</li>
+{%- endif -%}{%- if include.asgns == 1 -%}
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle"
+    data-bs-toggle="dropdown" href="#" role="button"
+    aria-expanded="false">
+      Assignments
+  </a>
+  <ul class="dropdown-menu">
+  {%- assign asgnfile = site.data.teaching[jcrs_id][crs_sem]assignments %}
+  {%- for aa in asgnfile %}
+    {%- assign msa = "" %}
+    {%- for sa in site.assignments %}
+      {%- if sa.aid == aa.aid %}
+        {%- assign msa = sa %}
+        {%- break %}
+      {%- endif %}
+    {%- endfor %}
+    <li>
+    {%- if msa != "" -%}
+      <a class="dropdown-item"
+      href="#ssAsgn_{{ msa.aid }}">
+        {{ aa.title }},
+        {{ aa.marks }} marks,
+        due {{ aa.duedate }}
+      </a>
+      {%- else -%}
+      <a class="dropdown-item" href="#ssAssignments">
+        {{ aa.title }},
+        {{ aa.marks }} marks,
+        due {{ aa.duedate }}
+        NOT FOUND
+      </a>
+      {%- endif -%}
+    </li>
+    {%- endfor %}
+  </ul>
+</li>
+{%- endif -%}
