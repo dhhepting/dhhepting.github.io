@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <title>Three.js demo</title>
+    <script id="vertexShader" type="x-shader/x-vertex">
+      void main() {
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
+      }
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+      void main() {
+          gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
+      }
+    </script>
+  </head>
+  <body>
+    <script src="../Common/three.min.js"></script>
+    <script src="three-demo.js"></script>
+  </body>
+</html>

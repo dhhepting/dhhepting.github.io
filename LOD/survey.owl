@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/pda324/ontologies/untitled-ontology-153#"
+     xml:base="http://www.semanticweb.org/pda324/ontologies/untitled-ontology-153"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:survey="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#">
+    <owl:Ontology rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl">
+        <owl:versionIRI rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl/1.0"/>
+    </owl:Ontology>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasCollection -->
+
+    <owl:ObjectProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasCollection">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Course"/>
+        <rdfs:range rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#SurveyCollection"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasContent -->
+
+    <owl:ObjectProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasContent"/>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasEligibleRespondents -->
+
+    <owl:ObjectProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasEligibleRespondents">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#SurveyCollection"/>
+        <rdfs:range rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Respondent"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertScaleAnswer -->
+
+    <owl:ObjectProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertScaleAnswer">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#LikertScaleQuestions"/>
+        <rdfs:range rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#LikertScale5"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasOEAnswer_Change -->
+
+    <owl:ObjectProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasOEAnswer_Change">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#OpenEndedQuestions"/>
+        <rdfs:range rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#OpenEndedAnswers"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasOEAnswer_LikeBest -->
+
+    <owl:ObjectProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasOEAnswer_LikeBest">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#OpenEndedQuestions"/>
+        <rdfs:range rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#OpenEndedAnswers"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasOEAnswer_Strengths -->
+
+    <owl:ObjectProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasOEAnswer_Strengths">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#OpenEndedQuestions"/>
+        <rdfs:range rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#OpenEndedAnswers"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasRespondent -->
+
+    <owl:ObjectProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasRespondent">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#SurveyCollection"/>
+        <rdfs:range rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Respondent"/>
+    </owl:ObjectProperty>
+
+
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_clearly_answers_questions -->
+
+    <owl:DatatypeProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_clearly_answers_questions">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Respondent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_clearly_communicates_his_expectations_for_student_preparation_and_participation -->
+
+    <owl:DatatypeProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_clearly_communicates_his_expectations_for_student_preparation_and_participation">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Respondent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_effectively_directs_and_stimulates_discussion -->
+
+    <owl:DatatypeProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_effectively_directs_and_stimulates_discussion">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Respondent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_effectively_encourages_students_to_ask_questions_and_give_answers -->
+
+    <owl:DatatypeProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_effectively_encourages_students_to_ask_questions_and_give_answers">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Respondent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_encourages_student_participation -->
+
+    <owl:DatatypeProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_encourages_student_participation">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Respondent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_has_clear_expectations_for_assigned_work -->
+
+    <owl:DatatypeProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_has_clear_expectations_for_assigned_work">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Respondent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_is_well-prepared_for_class -->
+
+    <owl:DatatypeProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_is_well-prepared_for_class">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Respondent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_treats_students_with_respect -->
+
+    <owl:DatatypeProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_treats_students_with_respect">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Respondent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_uses_class_time_effectively -->
+
+    <owl:DatatypeProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasLikertAns_uses_class_time_effectively">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Respondent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasOEAns_Change -->
+
+    <owl:DatatypeProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasOEAns_Change">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Respondent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasOEAns_LikeBest -->
+
+    <owl:DatatypeProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasOEAns_LikeBest">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Respondent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasOEAns_Strengths -->
+
+    <owl:DatatypeProperty rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasOEAns_Strengths">
+        <rdfs:domain rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Respondent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+     <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#LikertScale5 -->
+
+     <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#LikertScale5">
+         <owl:equivalentClass>
+             <owl:Class>
+                 <owl:oneOf rdf:parseType="Collection">
+                     <rdf:Description rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#1_Never"/>
+                     <rdf:Description rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#2_Rarely"/>
+                     <rdf:Description rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#3_Sometimes"/>
+                     <rdf:Description rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#4_Often"/>
+                     <rdf:Description rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#5_Always"/>
+                 </owl:oneOf>
+             </owl:Class>
+         </owl:equivalentClass>
+         <rdfs:subClassOf rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#LikertScaleQuestions"/>
+     </owl:Class>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Course -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Course">
+        <rdfs:subClassOf rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#SurveyCollection"/>
+    </owl:Class>
+
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Survey -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#Survey">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasSurveyQuestion"/>
+                <owl:someValuesFrom rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#SurveyQuestions"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#SurveyAnswers -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#SurveyAnswers"/>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#SurveyCollection -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#SurveyCollection">
+        <owl:disjointWith rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#SurveyResponse"/>
+    </owl:Class>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#SurveyQuestions -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#SurveyQuestions"/>
+
+
+
+    <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#SurveyResponse -->
+
+    <owl:Class rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#SurveyResponse">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#hasCollection"/>
+                <owl:someValuesFrom rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#SurveyCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+     <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#1_Never -->
+
+       <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#1_Never">
+           <rdf:type rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#LikertScale5"/>
+       </owl:NamedIndividual>
+
+
+       <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#2_Rarely -->
+
+       <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#2_Rarely">
+           <rdf:type rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#LikertScale5"/>
+       </owl:NamedIndividual>
+
+
+       <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#3_Sometimes -->
+
+       <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#3_Sometimes">
+           <rdf:type rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#LikertScale5"/>
+       </owl:NamedIndividual>
+
+
+
+       <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#4_Often -->
+
+       <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#4_Often">
+           <rdf:type rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#LikertScale5"/>
+       </owl:NamedIndividual>
+
+
+
+       <!-- http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#5_Always -->
+
+       <owl:NamedIndividual rdf:about="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#5_Always">
+           <rdf:type rdf:resource="http://www2.cs.uregina.ca/~hepting/LOD/survey.owl#LikertScale5"/>
+       </owl:NamedIndividual>
+
+
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->

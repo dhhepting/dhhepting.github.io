@@ -1,0 +1,123 @@
+{% include teaching/url.html %}
+
+<div class="card">
+  <div class="card-body">
+  {% for r in include.fbdata[1] %}
+  <div class="card">
+    <h5>Respondent {{ r.response }}</h5>
+  <ol>
+    <li>
+      The instructor is well-prepared for class.
+      <p>
+        <strong>
+          {{ r.l1 }}
+        </strong>
+      </p>
+    </li>
+    <li>
+      The instructor clearly communicates their expectations for student preparation and participation.
+      <p>
+        <strong>
+          {{ r.l2 }}
+        </strong>
+      </p>
+    </li>
+    <li>
+      The instructor uses class time effectively.
+      <p>
+        <strong>
+          {{ r.l3 }}
+        </strong>
+      </p>
+    </li>
+    <li>
+      The instructor has clear expectations for assigned work.
+      <p>
+        <strong>
+          {{ r.l4 }}
+        </strong>
+      </p>
+    </li>
+    <li>
+      The instructor encourages student participation.
+      <p>
+        <strong>
+          {{ r.l5 }}
+        </strong>
+      </p>
+    </li>
+    <li>
+      The instructor clearly answers questions.
+      <p>
+        <strong>
+          {{ r.l6 }}
+        </strong>
+      </p>
+    </li>
+    <li>
+      The instructor treats students with respect.
+      <p>
+        <strong>
+          {{ r.l7 }}
+        </strong>
+      </p>
+    </li>
+    <li>
+      The instructor effectively directs and stimulates discussion.
+      <p>
+        <strong>
+          {{ r.l8 }}
+        </strong>
+      </p>
+    </li>
+    <li>
+      The instructor effectively encourages students to ask questions and give answers.
+      <p>
+        <strong>
+          {{ r.l9 }}
+        </strong>
+      </p>
+    </li>
+  </ol>
+  <ul>
+    <li>
+      What do you like best about this course?
+      <p>
+        <strong>
+          {{ r.oe1 }}
+        </strong>
+      </p>
+    </li>
+    <li>
+      What would you like to change about this course?
+      <p>
+        <strong>
+          {{ r.oe2 }}
+        </strong>
+      </p>
+    </li>
+    <li>
+      What do you think are the instructor's greatest strengths?
+      <p>
+        <strong>
+          {{ r.oe3 }}
+        </strong>
+      </p>
+    </li>
+  </ul>
+  </div>
+  {% endfor %}
+  </div>
+</div>
+<script type="text/javascript">
+    {% capture uniqrvn %}resp{{ include.fbdata[0] | remove: '-' }}{% endcapture %}
+    let {{ uniqrvn }} = {{ include.fbdata[1] | jsonify }}
+    let l = Number({{ uniqrvn }}.length)
+    console.log(l)
+
+    let suml1 = Number(0)
+    for (var i = 0; i < l; i++) {
+      suml1 += Number({{ uniqrvn }}[i].l1.slice(0,1))
+    }
+    console.log((suml1/l).toFixed(2))
+</script>

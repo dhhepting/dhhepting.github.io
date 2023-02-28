@@ -13,10 +13,4 @@ redirect_from:
 description: Social context of computing. Case study of human-computer interfaces and their evaluation. Methods and tools of analysis. Professional and ethical responsibilities. Risks and liabilities of computer-based systems. Intellectual property, privacy and civil liberties. Professional communication. Sustainability. Cybercrime.
 layout: bg-image
 ---
-<div class="bg-light mb-2 p-3">
-  <h1>
-    {{ page.breadcrumb }}
-  </h1>
-</div>
-
 {% include course/main.html %}

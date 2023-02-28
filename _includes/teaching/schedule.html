@@ -1,3 +1,5 @@
+{%- assign offs = site.data.teaching.offerings | where: "semester", include.cs -%}
+{%- assign office = site.data.teaching.officehrs | where: "semester", include.cs -%}
 {%- capture semfile -%}s{{include.cs}}{%- endcapture -%}
 {%- if site.data.teaching.schedule[semfile]-%}
   {%- assign sched = "" -%}
@@ -20,12 +22,13 @@
         <table class="table table-striped table-bordered">
           <thead>
             <tr>
-              <th><em>Times</em></th>
-              <th>Mon</th>
-              <th>Tue</th>
-              <th>Wed</th>
-              <th>Thu</th>
-              <th>Fri</th>
+              <th style="width:16%">
+                <em>Times</em></th>
+              <th style="width:16%">Mon</th>
+              <th style="width:16%">Tue</th>
+              <th style="width:16%">Wed</th>
+              <th style="width:16%">Thu</th>
+              <th style="width:16%">Fri</th>
             </tr>
           </thead>
           <tbody>
@@ -161,18 +164,18 @@
         {%- assign clslab = trslot[d] | split: "_" -%}
         {%- if clslab[0] == "C" -%}
           {%- capture clsurl -%}/teaching/{{clslab[1]}}/{{ include.cs }}/{%- endcapture -%}
-        <td rowspan="{{sd}}" class="{{clslab[0]}}">
-          {{ clslab[1] }}
+        <td rowspan="{{sd}}" class="bg-success">
+          {{ clslab[1] }}<br />
           <a href="{{ clsurl | relative_url }}" class="btn btn-info btn-md"
           role="button" target="_blank">
             DHH
           </a>
-          {% comment %}
-          for c in site.data.teaching.offerings
-            crs_id == c.id and crs_sem == c.semester
-               assign crs_urc = c.urc
-          assign sortedPages = site.pages | sort:"date" | reverse | where_exp: "item", "item.categories contains 'design-pattern' or item.categories contains 'anti-pat
-          {% endcomment %}
+          {%- for o in offs -%}
+            {%- if o.id == clslab[1] -%}
+              {%- assign urcid = o.urc -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
           {% if urcid != 0 %}
           <a href="https://urcourses.uregina.ca/course/view.php?id={{ urcid }}" class="btn btn-info btn-md"
           role="button" target="_blank">
@@ -181,18 +184,18 @@
           {% endif %}
         </td>
         {%- elsif clslab[0] == "O" -%}
-          <td rowspan="{{sd}}" class="{{clslab[0]}}">
-            <a href="{{ page.officezoom }}" class="btn btn-info btn-md"
+          <td rowspan="{{sd}}" class="bg-secondary">
+            <a href="{{ office[0].zoom }}" class="btn btn-info btn-md"
             role="button" target="_blank">
-              {{clslab[1]}}
+              Office
             </a>
           </td>
         {%- elsif clslab[0] == "R" -%}
-          <td rowspan="{{sd}}" class="{{clslab[0]}}">
+          <td rowspan="{{sd}}" class="bg-info">
             Reserved
           </td>
         {%- else -%}
-          <td rowspan="{{sd}}" class="{{clslab[0]}}">{{clslab[1]}}</td>
+          <td rowspan="{{sd}}" class="bg-light">{{clslab[1]}}</td>
         {%- endif -%}
       {%- endif -%}
       {%- case d -%}

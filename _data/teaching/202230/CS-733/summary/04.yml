@@ -1,0 +1,262 @@
+Audio-Transcript:
+- desc: So I'm not sure how well this application is working in being a transcription
+    of our discussion. But we'll keep working at it same the same
+  persid: ''
+- desc: so I
+  persid: ''
+- desc: have to download our full PDF still for the syllabus which I will get done
+    today. Save money producers so that's a little different than 730 some more weight
+    and assignments, less weight on the final exam and sweeten the midterm so half
+    during this semester half on exams
+  persid: ''
+- desc: okay, you can see me all right so
+  persid: ''
+- desc: you so these are the PowerPoint slides that we were looking at the other day
+    okay so last day we talked about
+  persid: ''
+- desc: so back here okay so
+  persid: ''
+- desc: we talked last day about See if we start with the mathematical So, we start
+    with a description of seeing formulas for a sphere for example that represents
+    our eight scoop of ice cream and ice cream cone.
+  persid: ''
+- desc: So, if we start with that description then if we make it 512 By 512 Or are
+    we prepared for it 505k by 5k or whatever resolution we'd like to produce then
+    we can get a high quality disk discrete raster image for So, if we start with
+    a discrete representation if we start with something which has which is rendered
+    at 128 by 120 pixels, we can still make that any size we want. But what's the
+    difficulty Sorry
+  persid: ''
+- desc: So let's
+  persid: ''
+- desc: think of a diagonal line. So we can specify the endpoints, the coordinates
+    00. And one one but if we convert it to one so, when we want to put onto the screen
+    we need to decide which which pixels or what every pixel in display what value
+    should should they be set to try that again. For every so we're, we're deciding
+    what value each sample for each pixel on the screen is will be set to to represent
+    this line
+  persid: ''
+- desc: so if we
+  persid: ''
+- desc: convert it to. generally have an image is 10 by 10 but I can match draw that
+    on the board you can imagine using bigger images.
+  persid: ''
+- desc: So far so good
+  persid: ''
+- desc: well I've made two small claims so just added a little bit here so for drawing
+    that line Imagine seeing how much by the economic get on this
+  persid: ''
+- desc: Sophie
+  persid: ''
+- desc: so let's think about some other lines here as well. Think about the one that
+    goes along the x axis
+  persid: ''
+- desc: and then maybe one that goes this way.
+  persid: ''
+- desc: So what do you notice about these different lines are these approximations
+    of different lines okay so let's imagine that I've drawn squares here. I know
+    that might be a bit of a stretch to join
+  persid: ''
+- desc: squared by using that plan this while you're talking about something else,
+    no I meant
+  persid: ''
+- desc: imagine that each of these
+  persid: ''
+- desc: is a square so the width
+  persid: ''
+- desc: of this line is the height of the square but the diagonal line is thinner
+    because it's only squares early touching. So
+  persid: ''
+- desc: at this point, let's say are there were the square or the samples or the pixels
+    are touching the width of the line is just the point but the then again here it's
+    square root. So this is a unit square then the width here is the square root of
+    to so it's 1.41 something so if we zoomed in further see the diagonal line looks
+    like this. A little bit.
+  persid: ''
+- desc: So we think of
+  persid: ''
+- desc: a line being a unit unit with.
+  persid: ''
+- desc: So we see
+  persid: ''
+- desc: we have we're not getting any. So the line is crossing these. These pixels
+    that don't have aren't set at all. So it'd be nice to reflect at some point line
+    is crossing them to some degree. So we're
+  persid: ''
+- desc: not sampling or not taking enough samples to be able to reconstruct this line
+    accurately. So does anyone heard the term aliasing? Before? No? Okay,
+  persid: ''
+- desc: that's good to know. So we have the function of anti aliasing.
+  persid: ''
+- desc: So anti aliasing is a way to address this sampling issue.
+  persid: ''
+- desc: was an honor so I expected it wouldn't last very long. So they may address
+    sampling issues. But it's also a question of quantization because we can't just
+    store for storing if we're only storing one bit per pixel whether it's on or off.
+    You get instead of getting a more nuanced line and we would add.
+  persid: ''
+- desc: That doesn't look much better. It just is thicker. So we need to be able to
+    represent the fact that this is almost 100% And this is maybe closer to 40% or
+    something like that. So if we can represent
+  persid: ''
+- desc: so if we have two beds
+  persid: ''
+- desc: gonna write it off
+  persid: ''
+- desc: so we might be able to represent four values. So it can pixel can be off,
+    it can be on for 1/3 and it could be on for two thirds and then on 100%. some
+    extent so if we have four bits then we can represent increments of less than 10%.
+    So we can so it'd be about 6% Six, six is 97 would be 105. So so each each end
+    we can represent increments of about six six and a half percent. With four beds.
+  persid: ''
+- desc: Okay so
+  persid: ''
+- desc: Does that makes sense? So if we start with a discrete image so if we start
+    with a formula that we're converting to discrete, then whatever range x is, so
+    if it's 2048 by 2048 that means that we're going to get and using anti aliasing
+    we can get very close and get a smooth looking line. Whatever resolution see
+  persid: ''
+- desc: is my 250.
+  persid: ''
+- desc: So you can see these are all vector formats, getting into what's done for
+    anti aliasing. The blurring between these two colors on the header
+  persid: ''
+- desc: I was I thought there was something on their
+  persid: ''
+- desc: stream but anyway, that gives you a sense of what the effect is when we have
+    a discrete resolution object that is certain so this they can see this effect
+    because the image is generated more resolution than we have displayed here. So
+    we don't have enough data so we're resampling the image to it as we zoom in and
+    there's not enough data to resolve the slide into a smooth line.
+  persid: ''
+- desc: Does that make sense?
+  persid: ''
+- desc: So okay, so
+  persid: ''
+- desc: in our forming, creating images, so we can think of a camera being in a scene
+    Do you like me writing on the blackboard as well or should I just stick with a
+    whiteboard
+  persid: ''
+- desc: Okay, So what can we think? Of
+  persid: ''
+- desc: this example of a camera and
+  persid: ''
+- desc: what it's called so for some
+  persid: ''
+- desc: buildings from ancient Greece so what are the elements we have? Let's maybe
+    see that we're exposing the film. So we're capturing some pieces of the world
+    which is might be several 100 meters.
+  persid: ''
+- desc: So how much what are we capturing on the film? So, field of use made determined
+    by the lenses that are brought the camera
+  persid: ''
+- desc: CMRA this lens so as a computer we might have a projection, transformation,
+    viewing transformation that would either make it a perspective or orthographic
+    but there's a number to choose from. Successful well it's not always film that
+    we're using now. It could be digital cameras they have we don't have a continuous
+    image then transform it into a discrete one we recapture pixels so quick sampling
+    is done in the camera so under taking a picture if it's
+  persid: ''
+- desc: if it's noonday sun, who would expose
+  persid: ''
+- desc: the detectors, the film where are our electronics to a very short amount we
+    would have a very quick shutter exposure opening to capture the light onto the
+    detector because if we left it open then it would become overexposed.
+  persid: ''
+- desc: So if it was
+  persid: ''
+- desc: a new moon at night, then we'd keep the exposure longer. Because it was delayed.
+  persid: ''
+- desc: See what else can we observe? About. Like
+  persid: ''
+- desc: to be natural or artificial for taking a picture of her taking a picture outside.
+    You might like to catch the light at a certain time of day but in an effort to
+    get a computer models and we don't have natural light everything is artificial
+  persid: ''
+- desc: so in
+  persid: ''
+- desc: in the real world as we're looking at different objects here we can see that
+    the whiteboard is shiny and reflects the light from the computer we need to think
+    of describing the properties of surfaces so that when light when we model lay
+    Ray hitting it that be desired interactions or effect. So if we have a model of
+    the room, you can see this whiteboard might be colored white walls are the color
+    beige and you're gonna go blue
+  persid: ''
+- desc: all that blue
+  persid: ''
+- desc: what's a better name for it so yeah
+  persid: ''
+- desc: I don't think that's I
+  persid: ''
+- desc: don't know. What's that dark blue. Okay
+  persid: ''
+- desc: I was wondering if someone's gonna say turquoise or aquamarine or anyway,
+    I'm not very good at colors. Some colors anyway can describe the services as having
+    a certain color property
+  persid: ''
+- desc: and an approximation of the front of the room would be dark blue and white,
+    the white, dark blue the wall wait for the whiteboard
+  persid: ''
+- desc: green for the Blackboard and this is white as well for the projector screen
+  persid: ''
+- desc: so we in our description of the of the room in the mind our model of the room.
+    Then we can we can create a model that looks like the room. Dimensions of let's
+    see eight feet, probably for the ceiling to two meters in something for the ceiling.
+    For those who don't speak Imperial. Many people are fluent in Imperial measurements
+    about metric about some other one nothing I ask will cause you to raise your hand
+  persid: ''
+- desc: okay
+  persid: ''
+- desc: so there
+  persid: ''
+- desc: so you can say so he says note the independence of the objects the viewer
+    and the light sources so the world in our view of this, of this room, ever taking
+    a photograph we don't have to worry about calculating the interaction between
+    the lights from the projector and the lights from the room that are in the room
+    and bouncing as they bounce off the shiny white board. And so forth. We can just
+    put objects in an environment with whatever lighting we want to put there. And
+    then we can just capture that with the camera. I mean there are more and more
+    options so even on your iPhones or Androids the cameras are becoming quite, quite
+    advanced so you can do a lot of different effects with them. So we can do more
+    complicated models of cameras.
+  persid: ''
+- desc: The same thing, though with
+  persid: ''
+- desc: the computer models we have to account for. We have to look for the interaction
+    with light sources and surfaces. So if you think of camera can do ray tracing
+    is an approach to creating a model so instead of instead of collecting late in
+    the scene, it's the film where the detectors were we go from the other way we
+    go through each pixel on what can what can be seen associated with with a sample
+  persid: ''
+- desc: that's going to fall off
+  persid: ''
+- desc: The one that was rather than run out
+  persid: ''
+- desc: The Lake started therapy legs on in the scene. So things that are going to
+    show up in
+  persid: ''
+- desc: ultimately, each point display is things that have some an interact with the
+    weights leg so source in some way. We'll discuss the details of modeling that
+    properties trying to take a picture of a room that has no lights off, might get
+    a very faint image if there's some ambient light that comes in, but it might just
+    be we get a black image so we need to have some lights in there. Now we're out
+    of time. So lates foreshadows innocence so we can measure the different wavelengths
+    of light. Our human visual system
+  persid: ''
+- desc: responds well to read those responses and so that's why we have
+  persid: ''
+- desc: model colors that deals with red and the images
+  persid: ''
+- desc: Okay, so for Thursday let's continue to think about
+  persid: ''
+- desc: that parallels between waiting interested in the camera and computer software
+    and then we'll look at
+  persid: ''
+- desc: so called again for next, sorry. So if you have access to the next
+  persid: ''
+- desc: chapter today as well okay. Thank you very much. from them.
+  persid: ''
+- desc: chapter today as well okay. Thank you very much. from them.
+  persid: ''
+offering:
+  id: CS-733-202230

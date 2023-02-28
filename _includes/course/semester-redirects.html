@@ -2,6 +2,7 @@
 $(document).ready(function(){
   let sems = {{ site.data.teaching.semesters | jsonify }}
   let cu = new URL(document.location)
+  console.log(cu)
   const params = new URLSearchParams(location.search)
   let typ = params.get("type")
   let asgn = params.get("asgn")
@@ -10,44 +11,55 @@ $(document).ready(function(){
   const crs = String(cu.pathname).split('/')[2]
   // test that there is an offering in current semester
   // let cu_str = cu.origin + cu.pathname
-  let cu_str = 'Zero!'
+  let cu_str = ''
   let newhash = ''
+  let refresh = false
   if (typ == 'current') {
     cu_str = cu.origin + cu.pathname + semid + '/'
+    refresh = true
     console.log('current: ' + cu_str)
   }
   else if (typ == 'meetings') {
     cu_str = cu.origin + cu.pathname + semid + '/meetings/'
+    refresh = true
   }
   else if (typ == 'media') {
     cu_str = cu.origin + cu.pathname + semid + '/media/'
+    refresh = true
   }
   else if (typ == 'syllabus') {
     let su_str = String(cu.pathname).replace('teaching','assets/teaching/pdf')
     cu_str = cu.origin + su_str.slice(0,-1) + '-' + semid + '_syllabus.pdf'
     console.log('SYLL',su_str,cu_str)
+    refresh = true
   }
   else if (typ == 'textbook') {
     cu_str = cu.origin + cu.pathname + semid + '/textbook.html'
+    refresh = true
   }
   else if (typ == 'exams') {
     cu_str = cu.origin + cu.pathname + semid + '/#ssExams'
+    refresh = true
   }
   else if (typ == 'tlo') {
     //alert('tlo')
     //cu_str = cu.origin + cu.pathname + semid + '/tlo.html'
     cu_str = cu.origin + cu.pathname + semid + '/#ssTopics'
+    refresh = true
     //newhash = 'collapse_OFF_TLO'
 
   }
   else if (asgn) {
     cu_str = cu.origin + cu.pathname + semid + '/#ssAsgn_' + asgn
+    refresh = true
     console.log(cu_str)
   }
-  else {
-    cu_str = 'Nothing!'
+  // else {
+  //   cu_str = 'Nothing!'
+  // }
+  if (refresh) {
+    window.location.replace(cu_str)
   }
-  window.location.replace(cu_str)
 }
 )
 </script>

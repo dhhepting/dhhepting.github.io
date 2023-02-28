@@ -53,16 +53,20 @@
             <li class="nav-item">
               <a class="nav-link" href="#ssMedia">Media</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle"
+            <li class="nav-item"> {%comment%}dropdown{%endcomment%}
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               {%comment%}
+               dropdown-toggle"
                 data-bs-toggle="dropdown" href="#" role="button"
                 aria-expanded="false">
-                  Transcripts
+                  Transcript
               </a>
+
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="#ssZoom-Audio-Transcript">
-                    Zoom Audio Transcript
+                  <a class="dropdown-item" href="#ssAudio-Transcript">
+                    Audio Transcript
                   </a>
                 </li>
                 <li>
@@ -71,6 +75,7 @@
                   </a>
                 </li>
               </ul>
+              {%endcomment%}
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle"
@@ -81,7 +86,7 @@
               <ul class="dropdown-menu">
                 <li>
                   <a class="dropdown-item" href="#ssR-Important">
-                    The most important thing that I learned
+                    The most important thing that I encountered
                   </a>
                 </li>
                 <li>
@@ -125,8 +130,8 @@
             mtg=include.mn
         -%}
 
-        <h3 id="ssTranscripts" class="bg-dark text-white">
-          Transcripts
+        <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
         </h3>
 
         {%- include meetings/transcripts.html

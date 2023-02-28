@@ -1,0 +1,86 @@
+{%- assign pixlist = "" -%}
+{%- assign pdflist = "" -%}
+{%- assign audio_url = "" -%}
+{%- assign mtgstr = include.mtg | prepend: '00' | slice: -2, 2 -%}
+{%- assign mtgfnd = 0 -%}
+{%- for m in site.data.teaching[jcrs_id][crs_sem]media -%}
+  {%- if m.meet == mtgstr -%}
+    {%- assign mtgfnd = 1 -%}
+    {%- if m.file contains "jpg" or m.file contains "JPG" or m.file contains "jpeg" or m.file contains "png" -%}
+      {%- capture pixlist -%}{{pixlist}}|{{m.file}}#{{m.URL}}{%- endcapture -%}
+    {%- endif -%}
+    {%- if m.file contains "m4a" -%}
+      {% assign audio_url = m.URL %}
+    {%- endif -%}
+    {%- if m.file contains "pdf"}
+      {%- capture pdflist -%}{{pdflist}}|{{m.file}}#{{m.URL}}{%- endcapture -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if mtgfnd == 1 -%}
+{% comment %}
+  {%- assign sortedpdf = pdflist | split: '|' | sort -%}
+  {%- assign numpdf = sortedpdf.size | minus: 1 -%}
+  {%- if numpdf > 0 -%}
+    <ul>
+    {%- for i in (1..numpdf) -%}
+      {% assign sp = sortedpdf[i] | split: '#' %}
+      <li>
+        <a href="{{sp[1]}}">
+          {{sp[0]}}
+        </a>
+      </li>
+    {%- endfor -%}
+    </ul>
+  {%- endif -%}
+  {% endcomment %}
+  {%- assign sortedpix = pixlist | split: '|' | sort -%}
+  {%- assign numpix = sortedpix.size | minus: 1 -%}
+  {%- capture carid -%}mtg_pix_{{ mtgstr }}{%- endcapture -%}
+  {%- if numpix > 0 -%}
+  <div id="{{ carid }}" class="m-2 carousel slide bg-light"
+  data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+    {%- for i in (1..numpix) -%}
+      {%- if i == 1 %}
+      <li data-bs-target="#{{carid}}" data-bs-slide-to="0" class="active"></li>
+      {%- else %}
+      <li data-bs-target="#{{carid}}" data-bs-slide-to="{{ i | minus: 1}}"></li>
+      {%- endif %}
+    {%- endfor %}
+    </ol>
+    <div class="carousel-inner bg-dark">
+    {%- for i in (1..numpix) -%}
+      {%- if i == 1 %}
+      <div class="carousel-item active">
+      {%- else %}
+      <div class="carousel-item">
+      {%- endif -%}
+      {% assign sp = sortedpix[i] | split: '#' %}
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="{{ sp[1] }}" alt="{{ sp[0] }}">
+      </div>
+    {% endfor %}
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#{{carid}}" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#{{carid}}" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  {%- endif -%}
+  {% if audio_url != "" %}
+  <div class="m-2 p-2 w-100 bg-light">
+    <audio class="align-center" controls="true"
+    src="{{ audio_url }}" type="audio/mp4">
+      Your browser does not support the <code>audio</code> element.
+    </audio>
+  </div>
+  {%- endif -%}
+{%- else -%}
+<p class="text-muted">
+  No Media
+</p>
+{%- endif -%}

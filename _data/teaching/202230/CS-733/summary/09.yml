@@ -1,0 +1,214 @@
+Audio-Transcript:
+- desc: In this lecture an inflatable gorilla on the status bar or whether they have
+    milling anyway you any questions or concerns about things that we did last day
+    to my case so I added a link here doesn't look great maybe put a link to those
+    so I created a directory and I realize this is going back and forth between what
+    I'm editing on my
+  persid: ''
+- desc: on the web on my website and what I'm keeping on my local copy my work
+  persid: ''
+- desc: my lab talk that I'm where I'm keeping my local version of the website so
+    I've got organize this meetings directory so I'm going to make sure all the other
+    examples work from there. But here are the the code directories from the textbook
+    and the common directory and so I've made that And another directory to contain
+    the things we do in the meetings so that
+  persid: ''
+- desc: you can just copy things from the textbook examples to the meetings directory
+    in the work
+  persid: ''
+- desc: that said he has sold having to edit anything else so we did the rotating
+    square last day so I've made I've made it into a rotating gasket so now I've changed
+    the menu a little bit here I don't know why. But it's fair arrows come up because
+    it's the right size
+  persid: ''
+- desc: so instead of toggle direction, so there's a button there. And then the first
+    thing was toggle direct toggle the direction and the numbers were different the
+    key keys to press are different than the values just seemed a little bit confusing.
+    So I've made it so I can press zero so one is on the left side and zero is on
+    the right side of the keyboard on a laptop. So pressing one will change it to
+    the left pressing zero change it to the right and I can also do that here and
+  persid: ''
+- desc: I've displayed the value of delay so I can press two get it spinning faster
+    but I'm the smallest delay that I'm allowing is one millisecond and I'm displaying
+    that as you can see and then I'm doubling the delay when I get it so I suppose
+    an improvement here would be if I'm pressing three the spin slower menu item could
+    be highlighted. Should we try and make some changes to this And how will we make
+    it a bit more complicated drawing so this is doing 10 frames a second right so
+    we're the 100 milliseconds so so we're redrawing 10 times per second so we don't
+    have a seizure turn that off turn the display off so here we have the request
+    animation frame so we're we're using that function to to coordinate our pre drying
+    so that we're not repainting the image
+  persid: ''
+- desc: just whenever so let's make a change here so take out that request animation
+    frame. What if you wanted to stop it any suggestions how to do that? How will
+    we add? As I look right now Let's change this Okay so I've broken this love to
+    do some more investigating so we can maybe that's something to put in to our next
+    coding assignment What's another way to do this instead of Let's Move to start
+    from here to the value of theta
+  persid: ''
+- desc: is not like a competitor solution nobody has a comment Any other thoughts
+    about this? Okay, so I want to bring up the other one that we looked at
+  persid: ''
+- desc: so remember that we're dealing with clip coordinates here so we go from minus
+    one and x plus one and x and minus one and y plus one and y
+  persid: ''
+- desc: so I'm printing out application X and application y values
+  persid: ''
+- desc: so now we have a click event and we can get the client X and Y position you
+    can see the values being recorded in different spots so sorry to fill up the buffer
+    on this one
+  persid: ''
+- desc: compared to the other one. Let's see Okay, so this is the JavaScript code
+    for that square for this one. So we have variables max number of triangles, maximum
+    positions, so So we're saying we're, we're allocating space for 600 positions
+    in this case, are that's what a, that's what we might guess from this declaration.
+    So here we have seven colors, black, red, yellow, green, blue, magenta, Cyan
+  persid: ''
+- desc: there, the red, first values red, green, then green, then blue, and then alpha.
+  persid: ''
+- desc: So when we when we load the window, and we run this function, and we're getting
+    we're making a connection in JavaScript, with the canvas on the screen.
+  persid: ''
+- desc: So what's different here is we're adding a listener for mouse down. And we
+    could also use mode, the click event for this. So what are we doing in this case,
+    so we're doing the bind buffer. So we're, because we have more than one buffer,
+    we have the vertex buffer, and we have color buffers kind of later on right so
+    we're saying we're going to first deal with the vertex buffer. And what is what's
+    the next line so we're creating a vector in two dimensional vector, we're taking
+    the client x position and the client y position as input, and we're using the
+    Canvas width and height. So we're calculating the position in clip coordinates
+    of the mouse click so here I've added a bit of code to display
+  persid: ''
+- desc: the click position in x and y. And the the application coordinates in the
+    clip coordinates. So the first position in that two dimensional vectors t zero,
+    and T one.
+  persid: ''
+- desc: So what about this next, command GL dot buffer sub data Okay so we have we're
+    saying we're using the array buffer and then we're giving
+  persid: ''
+- desc: an offset and the new data and so we're doing the index not using the mouse
+    wheel here so what is the effect of this? What is index keeping track know so
+    we're using so the index is being incremented to indicate the number of clicks
+    we have So, essentially the value of index is the number of points that we've
+    entered
+  persid: ''
+- desc: So it's vertex buffer Okay, so here we're choosing our we're saying that we're
+    going to deal with the vertex buffer scroll oh no I don't
+  persid: ''
+- desc: so we're substituting data so T is just a vector with two positions so it
+    gets giving the x and y
+  persid: ''
+- desc: in the coordinates here right because we're convert so what we're doing is
+    saying whatever the first one index is zero so we're having zero offset and we're
+    putting in the that those two values in the I triple E floating point format into
+    the buffer for the vertices so what is the eight indicate? So what's the answer
+    for my
+  persid: ''
+- desc: array because we have t zero and T one those are the coordinates in the clipping
+    clip coordinates. And we use four bytes to store each of them
+  persid: ''
+- desc: so when the end when the index is one, we're going to offset by eight and
+    then put in the next two to values and so on. So that's changing the vertex array
+    then we change switch by binding to the color buffer that we've set up. And so
+    we're saying is a four four dimensional vector so rgba and if we remember, go
+    up to a
+  persid: ''
+- desc: little further so we get so as index, if the value is zero we go through black,
+    red, yellow, green, blue, magenta, Cyan
+  persid: ''
+- desc: sounds important so the seven positions have index values zero through six
+    right
+  persid: ''
+- desc: and so we're doing the mod seven so we go so for the first seven values we're
+    going through black all the way to cyan for the first seven points and then with
+    the eighth point which is index seven so seven months seven goes back to zero
+    this is the modulus operator is giving the remainder right
+  persid: ''
+- desc: and here we're doing core values per entry. So we say offset is 16 times index
+    so each color is going to take 16 Bytes four times four bytes
+  persid: ''
+- desc: and then so when we're drawing the points, we keep track we use the index
+    to say how many points there are. So start at zero and it goes through index so
+    we're only drawing from the buffer what what's been an input so far so we were
+    wondering we need to I wonder if this is the best order of things to put them
+    in
+  persid: ''
+- desc: terms of clarity because we need to also set up the size of the buffer and
+    so forth.
+  persid: ''
+- desc: So that's that comes up here. So the vertex buffer creating the buffer and
+    we're saying it's an array buffer. And the buffer data is coming from or the size
+    of the buffer is eight times Max num positions so Max num positions is 600. About
+    we make it a little bit less make. I'm just a whiz with this keyboard. How many
+    people use vi have heard of Vi So a common trap instead of being able to close
+    it I do okay usually with that some things but the cursors are our cursor routers
+    J K and L, H J K and L but if you have a you have the caps lock on capital J will
+    join lines and so you think you're trying to move things around move the cursor
+    around and you're joining lines together into one big line so, there there are
+    some pitfalls there what kinds of things what editors are you do you prefer Visual
+    Studio is it VS code an atom sublime see
+  persid: ''
+- desc: okay
+  persid: ''
+- desc: so let's let's make 10 points see if I've done that right so now again 10
+    points 3489 10 So that's about it okay, so now, we haven't clicked yet so we're
+    not seeing anything.
+  persid: ''
+- desc: The impact of that other other choice was to show the buffer what's in the
+    buffer it's already there they're doing it again. I'm going to suggest this will
+    generate an error didn't
+  persid: ''
+- desc: my father's gonna complain about the 20 but see what happens when we go over
+    the the number of the size of government allocated can you read that it says buffer
+    sub data offset time sides pass the end of the buffer draw arrays instance vertex
+    bench requires 11 vertices but there are only 10 supplied after reporting 32 errors
+    no further errors will be reported for this context so what's awaited How can
+    we avoid the screen clearing winner finish entering our 10 points so, what if
+    you write an ad conditional statement here what do I need what's next if index
+    is less than or equal to call it
+  persid: ''
+- desc: out it hasn't happened it's not going to stop showing up all right. Yeah,
+    really big
+  persid: ''
+- desc: deals that I just don't get. And I was talking to some guy in class yesterday
+    guy by the way, which is just ridiculous property seems like this makes sense.
+    And for some reasons. I'm sure I have an equal sign they're not going to rent
+  persid: ''
+- desc: statement Correct?
+  persid: ''
+- desc: Yes, yes. Okay. So we're going to test the index is less than 10 less than
+    or equal to 10 in this case
+  persid: ''
+- desc: so we serve zero so what are the 10 index values? That's gonna work fine.
+    zero through nine right? So do we want to maybe stop with lesson one okay, I deserve
+    this I was let's try that 2345689 10 Oh, that's right because it's not I have
+    an insect why this is still not working
+  persid: ''
+- desc: Do you have an insight about why that's what's generating the air so should
+    I be in the render function with this if statement How about here trying to change
+    and I should also do the same for the other one for the colors right. Okay, I
+    think this is the right track, though. We'll run out of time. So I invite you
+    to fix this. So to keep the our 10 points on the screen there, there's quite question
+    I have for you to think about is what if the window isn't in the top right corner?
+    When we're clicking What if it's some arbitrary position on the screen? Maybe
+    we want to find out what the club coordinates are. Let's say we put some text
+    here and here and we do some styling. So the square the window isn't right at
+    the top left. How do we get the most position? So I hope you have a good long
+    weekend. And we'll see you on Tuesday and we'll get into chapter four. That soon
+    All right, any questions or concerns? Thank you.
+  persid: ''
+- desc: Do you have an insight about why that's what's generating the air so should
+    I be in the render function with this if statement How about here trying to change
+    and I should also do the same for the other one for the colors right. Okay, I
+    think this is the right track, though. We'll run out of time. So I invite you
+    to fix this. So to keep the our 10 points on the screen there, there's quite question
+    I have for you to think about is what if the window isn't in the top right corner?
+    When we're clicking What if it's some arbitrary position on the screen? Maybe
+    we want to find out what the club coordinates are. Let's say we put some text
+    here and here and we do some styling. So the square the window isn't right at
+    the top left. How do we get the most position? So I hope you have a good long
+    weekend. And we'll see you on Tuesday and we'll get into chapter four. That soon
+    All right, any questions or concerns? Thank you.
+  persid: ''
+offering:
+  id: CS-733-202230

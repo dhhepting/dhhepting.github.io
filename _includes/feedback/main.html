@@ -4,12 +4,13 @@
 
 {%- comment %}
   Find all feedback data files
-{%- endcomment %}
+
 
 {%- assign ofbfs = "" -%}
 {%- for ff in site.data.teaching.feedback -%}
   {%- if ff[0] contains joff_id -%}
     {% capture ofbfs %}{{ofbfs}},{{ff[0]}}{% endcapture %}
+    {{ ofbfs }}
   {%- endif -%}
 {%- endfor -%}
 {%- assign sof = ofbfs | split: "," | sort -%}
@@ -70,3 +71,5 @@
     {%- endif -%}
   {%- endfor -%}
 </div>
+
+{%- endcomment %}

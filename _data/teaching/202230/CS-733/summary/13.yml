@@ -1,0 +1,574 @@
+Audio-Transcript:
+- desc: Hey me get a shell open here the weekend
+  persid: ''
+- desc: anything you'd like to share back okay
+  persid: ''
+- desc: so the one we had in class was using the triangle fan let's start with the
+    triangle strip so in that
+  persid: ''
+- desc: triangle strip new zigzag
+  persid: ''
+- desc: so instead of defining the two triangles
+  persid: ''
+- desc: on a face and the queue
+  persid: ''
+- desc: separately and we have six points we just need to specify for position four
+    vertices
+  persid: ''
+- desc: we do that zigzag
+  persid: ''
+- desc: and that's saves us
+  persid: ''
+- desc: some space so now let's
+  persid: ''
+- desc: imagine these are all
+  persid: ''
+- desc: squares
+  persid: ''
+- desc: I need one No That's right. There's six faces 123456
+  persid: ''
+- desc: So we can. So, the way
+  persid: ''
+- desc: I've put
+  persid: ''
+- desc: the vertices together
+  persid: ''
+- desc: for the cube, it's
+  persid: ''
+- desc: 0123 and then I have.
+  persid: ''
+- desc: So we can describe the cube
+  persid: ''
+- desc: in terms of one triangle strip so, let's
+  persid: ''
+- desc: start with this friend face 0123 And then connected to this to three edge
+  persid: ''
+- desc: face with four and five and then the other side is
+  persid: ''
+- desc: seven and six
+  persid: ''
+- desc: so, then connected to
+  persid: ''
+- desc: the one two edge, the opposite face is six five
+  persid: ''
+- desc: so, you can see
+  persid: ''
+- desc: some patterns here so, whatever vertices we have
+  persid: ''
+- desc: we're going
+  persid: ''
+- desc: whatever the numbers you have will have a pattern like this where this
+  persid: ''
+- desc: vertex six is repeated here. So, you can see that's how these edges connect
+    together and five is repeated. seven and four are repeated.
+  persid: ''
+- desc: So we see this
+  persid: ''
+- desc: pattern and then
+  persid: ''
+- desc: the closer we repeat zero and three on the bottom edge
+  persid: ''
+- desc: so, then we start with zero
+  persid: ''
+- desc: and then we go to three
+  persid: ''
+- desc: and then go to one
+  persid: ''
+- desc: and go to two
+  persid: ''
+- desc: and go to five then
+  persid: ''
+- desc: three then four
+  persid: ''
+- desc: So, three Four is repeated here
+  persid: ''
+- desc: so, that makes sense
+  persid: ''
+- desc: solver so we're
+  persid: ''
+- desc: duplicating
+  persid: ''
+- desc: edge
+  persid: ''
+- desc: and then from four we go to zero
+  persid: ''
+- desc: to seven this edge
+  persid: ''
+- desc: is repeated here
+  persid: ''
+- desc: so, we're repeating this
+  persid: ''
+- desc: and then we go from seven to one so we're always making the zig zag shape
+    and then from one to six six to
+  persid: ''
+- desc: five five to 774
+  persid: ''
+- desc: So that gets us
+  persid: ''
+- desc: 1414 indices
+  persid: ''
+- desc: to describe our triangle strap
+  persid: ''
+- desc: okay
+  persid: ''
+- desc: so here we turn off
+  persid: ''
+- desc: the syntax
+  persid: ''
+- desc: so we define the vertices
+  persid: ''
+- desc: So, this corresponds to I don't want to move the mouse pointer
+  persid: ''
+- desc: over to the whiteboard
+  persid: ''
+- desc: but the sketch of the cube so, where are
+  persid: ''
+- desc: you are using this we're using this data, these eight vertices describe the
+  persid: ''
+- desc: cube and then and then we're taking these so
+  persid: ''
+- desc: '03125340716574'
+  persid: ''
+- desc: That makes sense so if we
+  persid: ''
+- desc: have the different four vertices in our in the coordinate matrix then these
+    numbers will change but the pattern will be the same. Right so, because these
+    corners
+  persid: ''
+- desc: are the same the seven and four
+  persid: ''
+- desc: okay so let's see speak at this so
+  persid: ''
+- desc: I've commented out the primitive restart fixed index because we don't have
+    more than one triangle strip in this example
+  persid: ''
+- desc: that's a way to indicate
+  persid: ''
+- desc: the end of so if we have more more than one triangle strip than you could
+    and if we're using this then we could indicate the end of one triangle strip on
+    the start of another by including 256 and 256 system is the maximum that we can
+    store in a single byte. So we have this uniform int eight array so we're using
+    unsigned bytes to store the indices GL unsigned byte, so an unsigned byte has
+    eight bits and then two to the eight is
+  persid: ''
+- desc: two plus 255.
+  persid: ''
+- desc: So we can
+  persid: ''
+- desc: so we have 14
+  persid: ''
+- desc: Whoo. We'll
+  persid: ''
+- desc: look at some more. Next example. So he said number of elements to 14 and that's
+    really four plus three plus three plus four. And you notice that the first four
+    are one face of the cube and the last four is the is the other face and then so
+    the six in between are connecting the two faces together.
+  persid: ''
+- desc: I'm trying to
+  persid: ''
+- desc: do some geometric intuition about this. So the
+  persid: ''
+- desc: more
+  persid: ''
+- desc: if dealing with complicated
+  persid: ''
+- desc: shapes
+  persid: ''
+- desc: we're able to save a lot more. So save space have a more compact representation
+    and have fewer fewer vertices going to the GPU does that make sense?
+  persid: ''
+- desc: Anyway? Okay, let's Go. So no holes
+  persid: ''
+- desc: in the Cube.
+  persid: ''
+- desc: This one does have a whole so, let's
+  persid: ''
+- desc: work on
+  persid: ''
+- desc: changes for that so here's the 255 So, it's turned 56 values possible with
+    a single byte. go from zero to 255.
+  persid: ''
+- desc: So 235 is maximum and it says we're going out of a triangle fan another triangle
+    fan another one another one another one and another one so we're having problems
+  persid: ''
+- desc: with that definition. So what is a triangle
+  persid: ''
+- desc: fan you?
+  persid: ''
+- desc: So there's no password you just for a tendency just have to click on the link
+  persid: ''
+- desc: Okay, so let's keep
+  persid: ''
+- desc: let's use the same vertices that we did in the triangle strip. So if this
+  persid: ''
+- desc: is our first
+  persid: ''
+- desc: vertex
+  persid: ''
+- desc: Okay, so
+  persid: ''
+- desc: we started out with one vertex
+  persid: ''
+- desc: was the anchor and then we make triangles
+  persid: ''
+- desc: going around joining so, we tape
+  persid: ''
+- desc: anchor plus the first two and the next pair, the next pair and the next pair
+    so, seven vertices we have five triangles
+  persid: ''
+- desc: how many triangle fans
+  persid: ''
+- desc: do we need to describe a cube to do we need six
+  persid: ''
+- desc: so, this is what they've defined
+  persid: ''
+- desc: but it doesn't
+  persid: ''
+- desc: the model has a hole in that.
+  persid: ''
+- desc: So, let's let's
+  persid: ''
+- desc: try some thing new here.
+  persid: ''
+- desc: Okay, well, we'll comment this out.
+  persid: ''
+- desc: So just
+  persid: ''
+- desc: pretend that's not there
+  persid: ''
+- desc: okay
+  persid: ''
+- desc: so let's say I start with this vertex.
+  persid: ''
+- desc: How many triangles what's my reach?
+  persid: ''
+- desc: If that's the anchor point
+  persid: ''
+- desc: so I can do this edge because that's all
+  persid: ''
+- desc: uses one line can do this edge or part of the face because that's got the
+    one and and I can do this face. It's a little hard to
+  persid: ''
+- desc: see but
+  persid: ''
+- desc: I could do the front,
+  persid: ''
+- desc: left and the bottom
+  persid: ''
+- desc: what if what if I pick
+  persid: ''
+- desc: another vertex as an anchor
+  persid: ''
+- desc: and before
+  persid: ''
+- desc: would let me do
+  persid: ''
+- desc: that face
+  persid: ''
+- desc: I struggled so
+  persid: ''
+- desc: I can try and do better man I'm
+  persid: ''
+- desc: just that's supposed to be on the back. Right so if I pick anchors that are
+    diagonally opposite to one another. Then I can define two triangle fans
+  persid: ''
+- desc: to make a cube
+  persid: ''
+- desc: Okay, so the first one could be
+  persid: ''
+- desc: start with 1256
+  persid: ''
+- desc: So we want to make six triangles.
+  persid: ''
+- desc: So what do we need? Missing that was my drying so far better than missing
+    Leonardo da Vinci will salute you sir wow that's some very good sucking up and
+    it's appreciated Of course. So we want to draw so we have triangles there. triangles
+    here and this is a little difficult triangles there so we want to end up one in
+    the middle so you want to look down the diagonal one two. We want to make sure
+    they're connected
+  persid: ''
+- desc: let's try to draw
+  persid: ''
+- desc: loaded here
+  persid: ''
+- desc: so this is one
+  persid: ''
+- desc: then we want to connect and then we want to get this last one that's maybe
+    a little more clear. Do you agree? Okay.
+  persid: ''
+- desc: So we start
+  persid: ''
+- desc: '16523076'
+  persid: ''
+- desc: Okay, let me copy the vertices from the other codes so we
+  persid: ''
+- desc: can okay let's Can you read out the numbers
+  persid: ''
+- desc: in our last
+  persid: ''
+- desc: '116766'
+  persid: ''
+- desc: to convention 55.
+  persid: ''
+- desc: Okay sorry once more.
+  persid: ''
+- desc: One six by 230766. Okay,
+  persid: ''
+- desc: so for six triangles we have eight vertices plus the marker at the end
+  persid: ''
+- desc: so let's draw nine. So far so good.
+  persid: ''
+- desc: Okay well, let's do the other
+  persid: ''
+- desc: so here we're going to start with four
+  persid: ''
+- desc: so we have
+  persid: ''
+- desc: three
+  persid: ''
+- desc: into five
+  persid: ''
+- desc: and then we have
+  persid: ''
+- desc: 45666 and seven
+  persid: ''
+- desc: because they're connected here
+  persid: ''
+- desc: and then the last one, we want to
+  persid: ''
+- desc: connect
+  persid: ''
+- desc: to this space so we have 07 that goes with three four.
+  persid: ''
+- desc: Okay so let's start with seven zero see okay.
+  persid: ''
+- desc: Okay. Send more 7703 to 567
+  persid: ''
+- desc: Okay, so now we have eight and eight plus one
+  persid: ''
+- desc: so look great okay syntax here I didn't want to clap Looks like we have a
+    cube
+  persid: ''
+- desc: so the original one was 29
+  persid: ''
+- desc: elements
+  persid: ''
+- desc: so we did with 19
+  persid: ''
+- desc: CMRA.
+  persid: ''
+- desc: Okay. So this is the same text is on
+  persid: ''
+- desc: in the textbook for the example programs from
+  persid: ''
+- desc: chapter 5x except
+  persid: ''
+- desc: in the text are numbered it's not clear wish I had the first four E's for
+    ortho to add perspective to anyway so here we're doing a perspective projection
+    so theta and fee control the eye position
+  persid: ''
+- desc: also R
+  persid: ''
+- desc: and Zed not a great interface
+  persid: ''
+- desc: so, when we
+  persid: ''
+- desc: when things go out of view completely means you're set.
+  persid: ''
+- desc: So the viewing parameters so that the object isn't in the core and that's
+    anymore. So we're getting a perspective view. Of the queue?
+  persid: ''
+- desc: So we'd like to specify
+  persid: ''
+- desc: our objects in
+  persid: ''
+- desc: space that's familiar for the application.
+  persid: ''
+- desc: So if you want to model
+  persid: ''
+- desc: desks, tables and chairs and all view your smiling faces then
+  persid: ''
+- desc: we'll have coordinates that are you might have
+  persid: ''
+- desc: meters so
+  persid: ''
+- desc: sweet track one to represent. Seen the coordinates of a sense or the application
+    so
+  persid: ''
+- desc: we use units that are the actual use
+  persid: ''
+- desc: of the space.
+  persid: ''
+- desc: So that's easy, easy to work with the details.
+  persid: ''
+- desc: So we're going to specify
+  persid: ''
+- desc: a model in reasonable coordinates for the application. And then
+  persid: ''
+- desc: we want to specify a camera
+  persid: ''
+- desc: position in the space to Cat captures the model
+  persid: ''
+- desc: so this could be my I'm looking through my camera
+  persid: ''
+- desc: so when we're doing
+  persid: ''
+- desc: so I'd like to maybe specify so what what choices can we make about the camera
+    so
+  persid: ''
+- desc: where the eye position or the cameras located
+  persid: ''
+- desc: next one choice was another choice
+  persid: ''
+- desc: close up Mr DeMille
+  persid: ''
+- desc: So, I have to position the camera position
+  persid: ''
+- desc: what I'm looking at
+  persid: ''
+- desc: where I'm orienting the camera so what's another choice that I can make about
+    how I'm looking with my camera what if I decide I don't want to do landscape I
+    want to do portrait
+  persid: ''
+- desc: so what am I indicate?
+  persid: ''
+- desc: Okay now if we think about
+  persid: ''
+- desc: projection coming from the eye position. So if if the eye position is in the
+    model and it's finite, it's not off at infinity. Then we can have a perspective
+    projection. If we can if we think about the camera at infinity then we can have
+    parallel projections so what's characteristic with prospective projections compared
+    to parallel? Can we take measurements or parallel projection
+  persid: ''
+- desc: as an architect of the blueprints we want to
+  persid: ''
+- desc: get a sense of the floor plan. So then, we have the model of parallel projection
+    get distances measure and and be certain about that we've gotten that we've measured
+    them well.
+  persid: ''
+- desc: What about a prospective rejection can we use the measurements we get? So
+  persid: ''
+- desc: what happens
+  persid: ''
+- desc: things close to us. Things that are far from us are they the same size?
+  persid: ''
+- desc: I had a I had a
+  persid: ''
+- desc: it was before pleasure for you to play this Canadian comedy group called Kids
+    in the Hall somebody will look at somebody else and push their head. Other person
+  persid: ''
+- desc: played it off. I'll see if I can still find that I'm really confused Oh work
+    on the video so
+  persid: ''
+- desc: when I'm at a certain distance, I can it seems like I could squish your head
+    but as I get closer you can see
+  persid: ''
+- desc: it doesn't work. So what's going on with the perspective
+  persid: ''
+- desc: projection? Closer objects seem larger or just an object seems smaller. So
+    we talk about foreshortening. So remember in our clipping coordinates we have
+    space that's minus one One. So we have a cube that extends when you need an ad
+    in each direction
+  persid: ''
+- desc: so that's
+  persid: ''
+- desc: what we're viewing from.
+  persid: ''
+- desc: So we want
+  persid: ''
+- desc: the parallel
+  persid: ''
+- desc: projection it's easier
+  persid: ''
+- desc: in the sense that
+  persid: ''
+- desc: get a parallel the pipe
+  persid: ''
+- desc: do that right?
+  persid: ''
+- desc: Parallel Hi there so
+  persid: ''
+- desc: it's just a matter of orienting the parallel pavement into the cube. So we
+    can
+  persid: ''
+- desc: choose a section of space by determining
+  persid: ''
+- desc: the rate range in in the Zed axis to include so we have a near and afar plane.
+    So what does this shape look like for a perspective projection?
+  persid: ''
+- desc: strat plan view of this? So
+  persid: ''
+- desc: it's like a pyramid but it's truncated. So here is the i point
+  persid: ''
+- desc: so we don't want we're not we're not going to have
+  persid: ''
+- desc: we generally don't have taking a picture of the camera and we don't
+  persid: ''
+- desc: get this close to the object that we want to look at. And with the new
+  persid: ''
+- desc: cameras that we can set the focal length so you get more control over the
+    quality of the image at the depth that we're interested in need some words
+  persid: ''
+- desc: okay
+  persid: ''
+- desc: so then our process is to go from this shape to this shape, so we need
+  persid: ''
+- desc: to make the front bigger and keep the back
+  persid: ''
+- desc: say same, essentially so that we're into this unit cube of clipping coordinates.
+  persid: ''
+- desc: Last minute
+  persid: ''
+- desc: so we have the usual stuff
+  persid: ''
+- desc: so it's based on a quad
+  persid: ''
+- desc: routine, or
+  persid: ''
+- desc: a cubed main quad
+  persid: ''
+- desc: which are made up of triangles so we're specifying guy position with two angles
+    and the radius
+  persid: ''
+- desc: is very descriptive button names button one through eight. So the look at
+    so there's a model view matrix and the projection matrix. So fo v y star is dealing
+    with the field of view
+  persid: ''
+- desc: and the aspect ratio, so x and y, two dimensions are square. So one to one
+    aspect ratio I for doing things for 4k video than a 16 by nine aspect ratio.
+  persid: ''
+- desc: So here we're
+  persid: ''
+- desc: passing.
+  persid: ''
+- desc: So we're adjusting the matrices and passing them to the shader and then we're
+    getting the results so we'll take another look at this on Tuesday. Same okay.
+    Thanks for your participation today. I'm laughing at my jokes Okay, so thanks
+    again for listening have a good weekend and see you on Tuesday. Face here's how
+    to do It. Find the
+  persid: ''
+- desc: one guy fights back. Anyway,
+  persid: ''
+- desc: thanks again.
+  persid: ''
+- desc: The book Second Life assignment that you gave us for the reference in the
+    queue but
+  persid: ''
+- desc: what functionality Do you want? What kind of work shouldn't be like? What
+    all we want the functionality
+  persid: ''
+- desc: if you press the button like it was toggle x. So in the mouse it shows the
+    like the
+  persid: ''
+- desc: X and the Y points. So in the trackball, what do you want
+  persid: ''
+- desc: leaving it up to you to decide how you want to design something that makes
+    it more available. About how to control the queue Yeah, so I don't have it built.
+    It's up to us. Yeah. Thank you Thank you. Rock
+  persid: ''
+- desc: leaving it up to you to decide how you want to design something that makes
+    it more available. About how to control the queue Yeah, so I don't have it built.
+    It's up to us. Yeah. Thank you Thank you. Rock
+  persid: ''
+offering:
+  id: CS-733-202230
