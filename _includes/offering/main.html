@@ -89,14 +89,17 @@
               Feedback
           </a>
           <ul class="dropdown-menu">
-            {%- assign fbo_hash = site.data.teaching[crs_sem][jcrs_id]feedback -%}
-            {%- for fb in fbo_hash -%}
-            <li>
-              <a class="dropdown-item" href="#ssFB_{{ fb[0] }}">
-                {{ fb[0] | split: "-" | last | capitalize }}
-              </a>
-            </li>
-            {%- endfor -%}
+            {%- for fboh in site.data.teaching[crs_sem][jcrs_id]feedback -%}
+              {% for i in fboh[1].information %}
+                {% if i.dataType == "dataCollection" %}
+                <li>
+                  <a class="dropdown-item" href="#ssFB_{{ fboh[0] }}">
+                    {{ fboh[0] | split: "-" | last | capitalize }}
+                  </a>
+                </li>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
           </ul>
         </li>
         {%- endif -%}
@@ -187,17 +190,19 @@
       <h3 id="ssFeedback" class="bg-dark text-white">
         Feedback
       </h3>
-      {% assign fboh = site.data.teaching[crs_sem][jcrs_id]feedback -%}
-      {%- for fb in fboh -%}
-      <h5 id="#ssFB_{{ fb[0] }}">
-        {{ fb[0] | split: "-" | last | capitalize }}
-      </h5>
-      {%- include offering/feedback-body.html fbdata=fb -%}
-      {%- endfor %}
+      {%- for fboh in site.data.teaching[crs_sem][jcrs_id]feedback -%}
+        {% for i in fboh[1].information %}
+          {% if i.dataType == "dataCollection" %}
+          <h5 id="ssFB_{{ fboh[0] }}">
+            {{ fboh[0] | split: "-" | last | capitalize }}
+          </h5>
+          {%- include offering/feedback-body.html fbdata=fboh -%}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
       <p></p>
       {%- endif -%}
 
-    </div>
     <div id="offftr" class="card-header bg-info">
     </div>
   </div>
