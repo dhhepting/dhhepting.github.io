@@ -13,4 +13,5 @@ layout: bg-image
   asgns=1
   topics=1
   exams=1
+  feedback=1
 -%}
