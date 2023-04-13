@@ -1,0 +1,204 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcmitype: <http://purl.org/dc/terms/DCMIType> .
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix qb: <http://purl.org/linked-data/cube#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix disco: <http://rdf-vocabulary.ddialliance.org/discovery#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+@prefix org: <http://www.w3.org/ns/org#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix xkos: <http://purl.org/linked-data/xkos#>.
+@prefix sfi: <https://dhhepting.github.io/sfi#>.
+
+sfi:FrequencyRepr a skos:ConceptScheme, disco:Representation;
+	skos:hasTopConcept sfi:FNever, sfi:FRarely, sfi:FSometimes, sfi:FOften, sfi:FAlways .
+
+sfi:FNever a skos:Concept;
+	skos:notation "1"^^xsd:integer;
+	skos:prefLabel "Never";
+	skos:inScheme sfi:FrequencyRepr.
+
+sfi:FRarely a skos:Concept;
+	skos:notation "2"^^xsd:integer;
+	skos:prefLabel "Rarely";
+	skos:inScheme sfi:FrequencyRepr.
+
+sfi:FSometimes a skos:Concept;
+	skos:notation "3"^^xsd:integer;
+	skos:prefLabel "Sometimes";
+	skos:inScheme sfi:FrequencyRepr.
+
+sfi:FOften a skos:Concept;
+	skos:notation "4"^^xsd:integer;
+ 	skos:prefLabel "Often";
+ 	skos:inScheme sfi:FrequencyRepr.
+
+sfi:FAlways a skos:Concept;
+ 	skos:notation "5"^^xsd:integer;
+ 	skos:prefLabel "Always";
+ 	skos:inScheme sfi:FrequencyRepr.
+
+sfi:sfi_1 a disco:Questionnaire;
+	disco:question sfi:FreqRating1WellPrepared;
+	disco:question sfi:FreqRating2ClearExpectationsPrepPart;
+	disco:question sfi:FreqRating3UsesTimeEffectively;
+	disco:question sfi:FreqRating4ClearExpectationsAssignments;
+	disco:question sfi:FreqRating5EncouragesParticipation;
+	disco:question sfi:FreqRating6ClearlyAnswersQuestions;
+	disco:question sfi:FreqRating7RespectsStudents;
+	disco:question sfi:FreqRating8StimulatesDiscussions;
+	disco:question sfi:FreqRating9EncouragesStudentQA;
+ 
+	disco:question sfi:OpenEnded1CourseLikeBest;
+	disco:question sfi:OpenEnded2CourseLikeToChange; 
+	disco:question sfi:OpenEnded3InstructorStrengths.
+
+sfi:FreqRating1WellPrepared a disco:Question;
+	disco:questionText "1. The instructor is well-prepared for class."@en;
+	disco:responseDomain sfi:FrequencyRepr.
+
+sfi:FreqRating2ClearExpectationsPrepPart a disco:Question;
+	disco:questionText "2. The instructor clearly communicates his expectations for student preparation and participation."@en;
+	disco:responseDomain sfi:FrequencyRepr.
+
+sfi:FreqRating3UsesTimeEffectively a disco:Question;
+	disco:questionText "3. The instructor uses class time effectively."@en;
+	disco:responseDomain sfi:FrequencyRepr.
+
+sfi:FreqRating4ClearExpectationsAssignments a disco:Question;
+	disco:questionText "4. The instructor has clear expectations for assigned work."@en;
+	disco:responseDomain sfi:FrequencyRepr.
+
+sfi:FreqRating5EncouragesParticipation a disco:Question;
+	disco:questionText "5. The instructor encourages student participation."@en;
+	disco:responseDomain sfi:FrequencyRepr.
+
+sfi:FreqRating6ClearlyAnswersQuestions a disco:Question;
+	disco:questionText "6. The instructor clearly answers questions."@en;
+	disco:responseDomain sfi:FrequencyRepr.
+
+sfi:FreqRating7RespectsStudents a disco:Question;
+	disco:questionText "7. The instructor treats students with respect."@en;
+	disco:responseDomain sfi:FrequencyRepr.
+
+sfi:FreqRating8StimulatesDiscussions a disco:Question;
+	disco:questionText "8. The instructor effectively directs and stimulates discussion."@en;
+	disco:responseDomain sfi:FrequencyRepr.
+
+sfi:FreqRating9EncouragesStudentQA a disco:Question;
+	disco:questionText "9. The instructor effectively encourages students to ask questions and give answers."@en;
+	disco:responseDomain sfi:FrequencyRepr.
+
+sfi:OpenEnded1CourseLikeBest a disco:Question;
+	disco:questionText "1. What do you like best about this course?"@en;
+ 	disco:responseDomain xsd:string.
+
+sfi:OpenEnded2CourseLikeToChange a disco:Question;
+	disco:questionText "2. What would you like to change about this course?"@en;
+	disco:responseDomain xsd:string.
+
+sfi:OpenEnded3InstructorStrengths a disco:Question;
+	disco:questionText "3. What do you think are the instructor's greatest strengths?"@en;
+ 	disco:responseDomain xsd:string.
+
+### Variables
+
+sfi:FrequencyVD a disco:RepresentedVariable;
+   disco:representation sfi:FrequencyRepr;
+   skos:prefLabel "Frequency (Never - Always)"@en;
+   dcterms:description "5-point Likert Scale for frequency (Never, Rarely, Sometimes, Often, Always)"@en.
+
+sfi:FR1wellPrepared a disco:Variable;
+   dcterms:identifier "FR1wellPrepared";
+   skos:prefLabel "Instructor well-prepared"@en;
+   dcterms:description "Frequency rating for the instructor being well-prepared."@en;
+   disco:basedOn sfi:FreqencyVD;
+   disco:question sfi:FreqRating1WellPrepared.
+
+sfi:FR2clearExpPrepPart a disco:Variable;
+   dcterms:identifier "FR2clearExpPrepPart";
+   skos:prefLabel "Instructor clearly communicates expectations for student preparation and participation"@en;
+   dcterms:description "Frequency rating for the instructor clearly communicating expectations for student preparation and participation. "@en;
+   disco:basedOn sfi:FreqencyVD;
+   disco:question sfi:FreqRating2ClearExpectationsPrepPart.
+
+sfi:FR3usesTimeEffectively a disco:Variable;
+   dcterms:identifier "FR3usesTimeEffectively";
+   skos:prefLabel "Instructor uses time effectively"@en;
+   dcterms:description "The frequency rating for the instructor using time effectively."@en;
+   disco:basedOn sfi:FreqencyVD;
+   disco:question sfi:FreqRating3UsesTimeEffectively.
+
+sfi:FR4clearExpAssigned a disco:Variable;
+   dcterms:identifier "FR4clearExpAssigned";
+   skos:prefLabel "Instructor clearly communicates expectations of assigned work"@en;
+   dcterms:description "Frequency rating for the instructor clearly communicating expectations for assigned work."@en;
+   disco:basedOn sfi:FreqencyVD;
+   disco:question sfi:FreqRating4ClearExpectationsAssignments.
+
+sfi:FR5encouragesPart a disco:Variable;
+   dcterms:identifier "FR5encouragesPart";
+   skos:prefLabel "Instructor encourages student participation"@en;
+   dcterms:description "The frequency rating for the instructor encouraging student participation."@en;
+   disco:basedOn sfi:FreqencyVD;
+   disco:question sfi:FreqRating5EncouragesParticipation.
+
+sfi:FR6clearlyAnswersQs a disco:Variable;
+   dcterms:identifier "FR6clearlyAnswersQs";
+   skos:prefLabel "Instructor clearly answers questions"@en;
+   dcterms:description "The frequency rating for the instructor clearly answering questions."@en;
+   disco:basedOn sfi:FreqencyVD;
+   disco:question sfi:FreqRating6ClearlyAnswersQuestions.
+
+sfi:FR7respectsStudents a disco:Variable;
+   dcterms:identifier "FR7respectsStudents";
+   skos:prefLabel "Instructor respects students"@en;
+   dcterms:description "The frequency rating for the instructor respecting students."@en;
+   disco:basedOn sfi:FreqencyVD;
+   disco:question sfi:FreqRating7RespectsStudents.
+
+sfi:FR8stimulatesDiscuss a disco:Variable;
+   dcterms:identifier "FR8stimulatesDiscuss";
+   skos:prefLabel "Instructor stimulates discussions"@en;
+   dcterms:description "The frequency rating for the instructor stimulating discussions."@en;
+   disco:basedOn sfi:FreqencyVD;
+   disco:question sfi:FreqRating8StimulatesDiscussions.
+
+sfi:FR9encouragesQA a disco:Variable;
+   dcterms:identifier "FR9encouragesQA";
+   skos:prefLabel "Instructor encourages questions and answers"@en;
+   dcterms:description "The frequency rating for the instructor encouraging questions and answers."@en;
+   disco:basedOn sfi:FreqencyVD;
+   disco:question sfi:FreqRating9EncouragesStudentQA.
+
+sfi:OpenEndedTextRespVD a disco:RepresentedVariable;
+   disco:representation xsd:string;
+   skos:prefLabel "Open Ended Textual Response"@en;
+   dcterms:description "Open Ended Textual Response."@en.
+
+sfi:OE1courseLikeBest a disco:Variable;
+	dcterms:identifier "OE1courseLikeBest";
+	skos:prefLabel "Liked Best about Course"@en;
+	dcterms:description "A textual response about what is liked best about the course."@en;
+	disco:basedOn sfi:OpenEndedTextRespVD;
+	disco:question sfi:OpenEnded1CourseLikeBest.
+
+sfi:OE2courseLikeToChange a disco:Variable;
+   dcterms:identifier "OE2courseLikeToChange";
+   skos:prefLabel "Like to Change about Course"@en;
+   dcterms:description "A textual response about what is liked best about the course."@en;
+   disco:basedOn sfi:OpenEndedTextRespVD;
+   disco:question sfi:OpenEnded2CourseLikeToChange. 
+
+sfi:OE3instructorStrengths a disco:Variable;
+   dcterms:identifier "OE3instructorStrengths";
+   skos:prefLabel "Instructor Strengths"@en;
+   dcterms:description "A textual response about the instructor’s greatest strengths."@en;
+   disco:basedOn sfi:OpenEndedTextRespVD;
+   disco:question sfi:OpenEnded3InstructorStrengths.
