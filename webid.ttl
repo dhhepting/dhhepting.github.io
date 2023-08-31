@@ -1,0 +1,20 @@
+@base <http://dhhepting.github.io/webid.ttl> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cert: <http://www.w3.org/ns/auth/cert#> .
+@prefix rdfs: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<> a foaf:PersonalProfileDocument ;
+   foaf:maker <#this> ;
+   foaf:primaryTopic <#this> .
+
+<#this> a foaf:Person ;
+   foaf:name "Daryl Hepting";
+   foaf:img <https://dhhepting.github.io/DHH.png>;
+   foaf:account <https://github.com/dhhepting>;
+   cert:key [ 
+       a cert:RSAPublicKey;
+       rdfs:label "created on my laptop 18 April 2023";
+       cert:modulus "C46A4BEE725F50E9DFE5960E0EC3A18BF22C613483077C25655285D584513ACFC6E77F3F583AFC153DD4F9F74CCAE36B0C84AA30A873C6534A3C6278176DD3761A3474B46B3A0884E659894C6EB55B9A56A5A45888EDC356A9821A1544863236781CE2C6CFAFE32E5672CA73C5BDB1954519A5B6E2CD32EF9EFFD722549AE0BC4E284358D924E9C075D0EAB99870DA15D9CB1E3D390389A9E58DC70A5C7713369396FF473164099813C65BAB2B3031DBC9B03D01CA4F50781708C4CA07EF405A0C339F27C0A0DACE7808BC0CAB1791FF1189B8176AA3726619A1BA346E56C0434E4A9DCE3A71DFE57BCDBADE20B3F38D3DA8A47814D11CDC7FDB1F603A178F4F"^^xsd:hexBinary;
+       cert:exponent "65537"^^xsd:integer;
+   ] .
