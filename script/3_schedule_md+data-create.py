@@ -5,9 +5,9 @@ import csv
 import yaml
 
 SITE_DIR = "/Users/hepting/Sites/dhhepting.github.io/"
-MD_ROOT = "teaching/"
-HTML_ROOT = "_site/teaching/"
-DATA_ROOT = "_data/teaching/"
+MD_ROOT = SITE_DIR + "teaching/"
+HTML_ROOT = SITE_DIR + "_site/teaching/"
+DATA_ROOT = SITE_DIR + "_data/teaching/"
 
 # Make sure that script is executed properly: i.e. 201830
 if (len(sys.argv) != 2):
@@ -55,7 +55,7 @@ tslots[tsk] = {'Times': tslot,
                'Thu': 'E_', 'Fri': 'E_' }
 
 # find course offerings for indicated semester
-with open(SITE_DIR + DATA_ROOT + 'offerings.csv', newline='') as offfile:
+with open(DATA_ROOT + 'offerings.csv', newline='') as offfile:
     offreader = csv.DictReader(offfile)
     semoff_found = 0
     for row in offreader:
@@ -75,7 +75,7 @@ if semoff_found == 0:
     sys.exit()
 
 # add office hours
-semschedmd = SITE_DIR + MD_ROOT + 'schedule/index.md'
+semschedmd = MD_ROOT + 'schedule/index.md'
 with open(semschedmd,"w") as schedmd:
     schedmd.write("---\n")
     semsea = "None"
@@ -90,7 +90,7 @@ with open(semschedmd,"w") as schedmd:
     schedmd.write("sem: " + currsem + "\n")
     schedmd.write("main_entity: Service\n")
     schedmd.write("officeblocks:\n")
-    with open(SITE_DIR + DATA_ROOT + 'officehrs.csv', newline='') as offile:
+    with open(DATA_ROOT + 'officehrs.csv', newline='') as offile:
         offreader = csv.DictReader(offile)
         for row in offreader:
             if (row['semester'] == currsem):
@@ -116,7 +116,7 @@ with open(semschedmd,"w") as schedmd:
     schedmd.write("layout: bg-image\n")
     schedmd.write("---\n")
 
-    with open(SITE_DIR + DATA_ROOT + 'reserved.csv', newline='') as resfile:
+    with open(DATA_ROOT + 'reserved.csv', newline='') as resfile:
         resreader = csv.DictReader(resfile)
         for row in resreader:
             if (row['semester'] == currsem):

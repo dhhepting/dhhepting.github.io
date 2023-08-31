@@ -5,8 +5,8 @@ import csv
 import yaml
 
 SITE_DIR = "/Users/hepting/Sites/dhhepting.github.io/"
-MD_ROOT = "teaching/"
-DATA_ROOT = "_data/teaching/"
+MD_ROOT = SITE_DIR + "teaching/"
+DATA_ROOT = SITE_DIR + "_data/teaching/"
 
 md_template = {
 "CS" : """
@@ -41,7 +41,7 @@ if (len(reldir) != 2):
 
 # make the directory for the offering in the markdown (visible) portion of the
 # file structure
-offdirstr = str(SITE_DIR + MD_ROOT + sys.argv[1] + '/')
+offdirstr = str(MD_ROOT + sys.argv[1] + '/')
 try:
     os.makedirs(offdirstr)
 except OSError as e:
@@ -93,7 +93,7 @@ with open(midxstr,"w") as mtgidx:
 # create Jekyll-friendly version of course ID
 jcrs_id = reldir[0].replace("+","_")
 
-with open(SITE_DIR + DATA_ROOT + jcrs_id + '/' + reldir[1] + '/meetings.csv', newline='') as mmmfile:
+with open(DATA_ROOT + jcrs_id + '/' + reldir[1] + '/meetings.csv', newline='') as mmmfile:
     mmmreader = csv.DictReader(mmmfile)
     for row in mmmreader:
         # generate file names for the meeting, summary, and response files
