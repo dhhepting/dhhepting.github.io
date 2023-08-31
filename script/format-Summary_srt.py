@@ -81,7 +81,8 @@ seqnbr = 0
 
 SRT_SRC = DL_DIR + joff_id + '/' + sys.argv[2].zfill(2) + '.srt'
 #print(VTT_SRC)
-print ('Processing audio transcript for meeting:')
+print(SRT_SRC)
+print ('Processing audio transcript for meeting NOW:')
 if (os.path.isfile(SRT_SRC)):
     if ('Audio-Transcript' not in d):
 ########
@@ -90,7 +91,7 @@ if (os.path.isfile(SRT_SRC)):
         msgstr = ''
 ########
         for caption in webvtt.from_srt(SRT_SRC):
-            #print("Caption:",caption)
+            print("Caption:",caption)
             txtseg = caption.text.split(':')
             print("txtseg:",txtseg)
             tsl = len(txtseg)

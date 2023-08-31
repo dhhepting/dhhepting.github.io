@@ -1,0 +1,32 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix pav:     <http://pav-ontology.github.io/pav/> .
+@prefix dqv:     <http://www.w3.org/ns/dqv#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+# Basic facts about the dataset
+<http://www2.cs.uregina.ca/~hepting/sample/sample>
+  a dcat:Dataset;
+  dcterms:title "Bus stops of MyCity";
+  dcat:distribution <http://www2.cs.uregina.ca/~hepting/sample/sample.json>;
+  dcat:distribution <http://www2.cs.uregina.ca/~hepting/sample/sample.jsonld>;
+  owl:versionInfo "1.0";
+  pav:version "1.0".
+
+# The JSON distribution of the dataset
+<http://www2.cs.uregina.ca/~hepting/sample/sample.json>
+  a dcat:Distribution;
+  dcterms:title "JSON distribution of dataset";
+  dcat:mediaType "application/json".
+
+# The JSON+LD distribution of the bus stops dataset
+<http://www2.cs.uregina.ca/~hepting/sample/sample.jsonld>
+  a dcat:Distribution;
+  dcterms:title "JSON+LD distribution of dataset";
+  dcat:mediaType "application/ld+json".

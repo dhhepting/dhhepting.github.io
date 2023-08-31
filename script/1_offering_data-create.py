@@ -50,7 +50,7 @@ if off_found == 0:
     sys.exit()
 
 # if offering is found, use semester data to make meetings list
-with open(SITE_DIR + DATA_ROOT + 'semesters.csv', newline='') as semfile:
+with open(DATA_ROOT + 'semesters.csv', newline='') as semfile:
     semreader = csv.DictReader(semfile)
     sem_found = 0
     for row in semreader:
@@ -79,7 +79,7 @@ if sem_found == 0:
 jcrs_id = reldir[0].replace('+','_')
 
 # create data directory for offering: jcrs_id / semester
-offdatadir = os.path.abspath(SITE_DIR + DATA_ROOT + jcrs_id + '/' + reldir[1] + '/')
+offdatadir = os.path.abspath(DATA_ROOT + jcrs_id + '/' + reldir[1] + '/')
 try:
     os.makedirs(offdatadir)
 except OSError as e:
