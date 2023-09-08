@@ -17,6 +17,20 @@ md_template = {
     ww=page.wiki_id
 -%}
 """,
+"OFF" : """
+{%- include offering/main.html
+  title=page.title
+  mtgs=1
+  sched=1
+  wkly=0
+  code=1
+  links=1
+  asgns=1
+  topics=0
+  exams=1
+  feedback=1
+-%}
+""",
 "R" : """
 {%- include meetings/responses.html -%}
 """,
@@ -66,7 +80,8 @@ with open(offidxstr,"w") as offidx:
     offidx.write("sem: " + reldir[1] + "\n")
     offidx.write("layout: bg-image\n")
     offidx.write("---\n")
-    offidx.write("{% include offering/main.html %}\n")
+    #offidx.write("{% include offering/main.html %}\n")
+    offidx.write(md_template["OFF"])
 
 # create a directory for Meetings
 mdirstr = offdirstr + 'meetings/'
@@ -106,6 +121,10 @@ with open(DATA_ROOT + jcrs_id + '/' + reldir[1] + '/meetings.csv', newline='') a
         mtg_date = row['date']
         nbr_meetings = row['total_mtgs']
         wiki_id = row['wikipage_id']
+        resp_id = row['response_id']
+        if resp_id == None:
+            resp_id = str(0)
+        print(mtg_date,nbr_meetings,wiki_id,resp_id)
         # with open(rfilestr,"w") as rmtgfile:
         #     rmtgfile.write("---\n")
         #     rmtgfile.write("title: Responses to Mtg " + str(m) + " &bull; " + reldir[0] +  " (" + reldir[1] + ")\n")
@@ -131,6 +150,7 @@ with open(DATA_ROOT + jcrs_id + '/' + reldir[1] + '/meetings.csv', newline='') a
             mtgfile.write("total_meet: " + str(nbr_meetings) + "\n")
             mtgfile.write("mtg_date: " + mtg_date + "\n")
             mtgfile.write("wiki_id: " + wiki_id + "\n")
+            mtgfile.write("resp_id: " + resp_id + "\n")
             mtgfile.write("layout: bg-image\n")
             mtgfile.write("---\n")
             mtgfile.write(md_template["CS"])
