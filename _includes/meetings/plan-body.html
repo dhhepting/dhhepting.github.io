@@ -1,15 +1,15 @@
 {%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan -%}
 {%- assign mtgplan = nil -%}
 {%- assign incmtg = include.mtg | plus: 0 -%}
-
 {%- for mtgs in planfile -%}
-  {% comment %}\\ {{ mtgs[0] }} == {{ incmtg }} //{% endcomment %}
-  {%- if mtgs[0] == incmtg -%}
-    {%- assign mtgplan = mtgs %}
+  {%- assign pmtg = mtgs[0] | plus: 0 -%}
+  {%- if pmtg == incmtg -%}
+    {%- assign mtgplan = mtgs -%}
     {%- break -%}
   {%- endif -%}
 {%- endfor -%}
-{%- if mtgplan != nil -%}
+
+{%- if mtgplan[1] != nil -%}
   {%- if mtgplan[1].theme -%}
   <h4>
     <em>
@@ -18,69 +18,28 @@
   </h4>
   {%- endif -%}
   {%- if mtgplan[1].today -%}
-    {%- assign tod = mtgplan[1].today -%}
-    {% for su in tod %}
-      <h4>
-        {{ su[0] | replace: "-"," " }}
-      </h4>
-      {% assign suitems = su[1] %}
-      <ul>
-      {%- for item in suitems -%}
-        {%- if item.url -%}
-          <li>
-            <a href="{{ item.url | relative_url }}">
-              {{ item.desc }}
-            </a>
-          </li>
-        {%- elsif item.img -%}
-          <div class="m-2 p-2 border">
-            {% assign iname = item.img %}
-            {% assign idesc = item.desc %}
-            {% include helper/figure.html
-              name=iname desc=idesc %}
-          </div>
-        {%- elsif item.vid -%}
-          <div class="m-2 p-2 border">
-            {% assign vurl = item.vid %}
-            {% assign vdesc = item.desc %}
-            {% include helper/video.html
-              vidurl=vurl desc=vdesc %}
-          </div>
-        {%- elsif item.pdf -%}
-          <div class="m-2 p-2 border">
-            {% assign pdfname = item.pdf %}
-            {% assign pdesc = item.desc %}
-            {% include helper/pdf.html
-              name=pdfname desc=pdesc %}
-          </div>
-        {%- elsif item.todo -%}
-          <div class="m-2 p-2 bg-warning">
-            <h7 class="text-center">
-              {{ item.todo | upcase }}
-            </h7>
-            <p class="text-center">
-              {{ item.desc }}
-            </p>
-          </div>
-        {%- elsif item.concept -%}
-          <div class="m-2 p-2 bg-primary">
-            <h7 class="text-center">
-              {{ item.concept | upcase }}
-            </h7>
-            <p class="text-center">
-              {{ item.desc }}
-            </p>
-          </div>
-        {%- else -%}
-          <li>
-            {%- if item.persid -%}
-              <strong>{{ item.persid }}:</strong>&nbsp;
+    {%- assign todayplan = mtgplan[1].today -%}
+    {%- for headings in todayplan -%}
+      {%- for topic in headings -%}
+        <h4>
+          {{ topic[0] }}
+        </h4>
+        <ul>
+          {%- for item in topic[1] -%}
+            {%- if item.url -%}
+              <li>
+                <a href="{{ item.url | relative_url }}">
+                  {{ item.desc }}
+                </a>
+              </li>
+            {%- else -%}
+              <li>
+                {{ item.desc }}
+              </li>
             {%- endif -%}
-            {{ item.desc }}
-          </li>
-        {%- endif -%}
+          {%- endfor -%}
+        </ul>
       {%- endfor -%}
-      </ul>
     {%- endfor -%}
   {%- endif -%}
 {%- endif -%}

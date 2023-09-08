@@ -43,6 +43,7 @@ with open(DATA_ROOT + 'offerings.csv', newline='') as offfile:
                 attendid = row['attendance']
             wikifmid = 0
             if (row['wiki']):
+                print('WIKI MODULE ID:',row['wiki'])
                 wikifmid = row['wiki']
 
 if off_found == 0:
@@ -170,8 +171,9 @@ try:
                         mtg_date + ',' +
                         mtg_fname + ',' +
                         #str(int(wikifmid) + mm - 1) + '\n')
-                        'wiki\n')
-                    #print ('after write')
+                        str(int(wikifmid)) + '\n')
+                        #'wiki\n')
+                    print ('after write')
         except Exception as e:
             print('meetings.csv:',e)
 
