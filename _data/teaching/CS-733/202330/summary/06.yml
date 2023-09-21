@@ -1,0 +1,590 @@
+Audio-Transcript:
+- desc: How's everyone doing today? Better
+  persid: ''
+- desc: How's everyone doing today
+  persid: ''
+- desc: felt cold when I left the house this morning but now it's not bad I
+  persid: ''
+- desc: go to bed weather alert on my phone day before yesterday that temperature
+    the temperatures gonna drop and I really wasn't expecting it to go down to three
+    while we were down three yesterday
+  persid: ''
+- desc: dad was like 30
+  persid: ''
+- desc: Okay
+  persid: ''
+- desc: Okay, so we're
+  persid: ''
+- desc: gonna continue on chapter two in the theme of graphics programming today
+  persid: ''
+- desc: actually a little bit cooler in here.
+  persid: ''
+- desc: So
+  persid: ''
+- desc: please remember to record your attendance. I'm not going to from now on I'm
+    not going to really remind you or good morning or marquee present after the fact
+  persid: ''
+- desc: okay
+  persid: ''
+- desc: so there's a comment about summarizing what we've discussed in the meeting.
+    So I'm going to try and do that
+  persid: ''
+- desc: so I'm
+  persid: ''
+- desc: so I've added a heading for that purpose. So today we're going to look at
+    the basic structure of what the WebGL programs and we're going to look at 2d and
+    3d, Sir Pinsky triangles tetrahedrons.
+  persid: ''
+- desc: So this is kind of this isn't a great picture, but this is what I have on
+    the web
+  persid: ''
+- desc: I should have a bigger maybe this is done in 1990.
+  persid: ''
+- desc: What's the ray tracing program so you can see reflections so you can see this
+    weird green surface that's very polished because we have a reflection and shadows
+    and we have a perspective you
+  persid: ''
+- desc: the dots so the tetrahedron
+  persid: ''
+- desc: has four triangles put together
+  persid: ''
+- desc: so there's two basic triangles a bit the base is a triangle. And there's one,
+    two and three on the other side.
+  persid: ''
+- desc: So that's what circusy gasket looks like in 3d.
+  persid: ''
+- desc: So, over the semester, we'll
+  persid: ''
+- desc: be adding we'll be able to make more complex images like this. Today, we're
+    not going to consider all the bells and whistles that are in that image.
+  persid: ''
+- desc: So I've
+  persid: ''
+- desc: renamed these files, so they were gasket one through four in the interactive
+    computer graphics.com website.
+  persid: ''
+- desc: And then Sue is
+  persid: ''
+- desc: So that's one we looked at last day
+  persid: ''
+- desc: so
+  persid: ''
+- desc: I just want to mention about the coordinates that the world coordinates that
+    we're dealing with. As part of the pipeline
+  persid: ''
+- desc: So
+  persid: ''
+- desc: So remember we define these vertices at vertices as minus one minus one one
+    minus one and 01
+  persid: ''
+- desc: So we have
+  persid: ''
+- desc: these two coordinate systems
+  persid: ''
+- desc: and
+  persid: ''
+- desc: what's important is the relative position of the camera and our
+  persid: ''
+- desc: gasket in this case.
+  persid: ''
+- desc: So we're not dealing
+  persid: ''
+- desc: we have
+  persid: ''
+- desc: we're using love defaults here for the viewing we'll get into more details
+    about that. But the clipping coordinates what's inside those coordinates will
+    be displayed
+  persid: ''
+- desc: so I'm going to try editing some code
+  persid: ''
+- desc: I didn't rehearse this. So
+  persid: ''
+- desc: we'll see how that goes.
+  persid: ''
+- desc: Okay.
+  persid: ''
+- desc: So if I'm changing one vertex
+  persid: ''
+- desc: to be not minus one to minus two.
+  persid: ''
+- desc: That's going to stretch out the triangle
+  persid: ''
+- desc: and it should also be partially obscured.
+  persid: ''
+- desc: That make sense
+  persid: ''
+- desc: what we're seeing here
+  persid: ''
+- desc: so by default we're looking to regional that we're looking at display is minus
+    one to plus one minus one to plus one. Originally, the triangle was defined in
+    those coordinates. So we saw the whole thing
+  persid: ''
+- desc: now it's not so we see the the change in the shape of the triangle and also
+    part of it is clipped
+  persid: ''
+- desc: so it's
+  persid: ''
+- desc: not part of the image.
+  persid: ''
+- desc: So here's an example where
+  persid: ''
+- desc: so we've changed the coordinates so there contained within the clipping so
+    we see the whole thing
+  persid: ''
+- desc: and I'm gonna change this back before I wonder what happened to it.
+  persid: ''
+- desc: Up Okay, any other
+  persid: ''
+- desc: changes to test on this one
+  persid: ''
+- desc: so just to go through the JavaScript here so we
+  persid: ''
+- desc: have
+  persid: ''
+- desc: JL is going to be it's going to hold the context for the web. GL version two.
+    And we use it not just in a net but in render. So that's why it's
+  persid: ''
+- desc: it's defined in that scope
+  persid: ''
+- desc: and then we have an array for the positions so we're getting the canvas from
+    the HTML file
+  persid: ''
+- desc: and then regenerating the data
+  persid: ''
+- desc: so we're going to set up a number of positions. So the number of points is
+    going to be 500,000.
+  persid: ''
+- desc: So here I've
+  persid: ''
+- desc: set the starting point as one of the vertices.
+  persid: ''
+- desc: Storing
+  persid: ''
+- desc: that initial point in the array of positions
+  persid: ''
+- desc: and we're doing the transformation and adding subsequent points. To the array
+    of positions. So that's the data
+  persid: ''
+- desc: so under setting up
+  persid: ''
+- desc: the web GL so viewport is
+  persid: ''
+- desc: is taking the
+  persid: ''
+- desc: clip coordinates minus one plus one minus one two plus one and mapping it
+    into
+  persid: ''
+- desc: the screen our campus.
+  persid: ''
+- desc: Clear color we're setting it to be white
+  persid: ''
+- desc: so I went
+  persid: ''
+- desc: and added a bit more documentation
+  persid: ''
+- desc: to this example.
+  persid: ''
+- desc: So when array buffer
+  persid: ''
+- desc: means that the buffer contains vertex attributes such as vertex coordinates,
+    texture coordinate data or vertex color data.
+  persid: ''
+- desc: So we
+  persid: ''
+- desc: are creating a vertex or an array buffer getting the ID
+  persid: ''
+- desc: and
+  persid: ''
+- desc: the usage of the buffer is static draw, which means that we generate the points
+    once and draw them multiple times.
+  persid: ''
+- desc: So whenever
+  persid: ''
+- desc: we're getting the position location
+  persid: ''
+- desc: some
+  persid: ''
+- desc: in the documentation sometimes it says index and also refers to location so,
+    this is the way they've done it in the
+  persid: ''
+- desc: in the sample code so, I kept that naming
+  persid: ''
+- desc: So, the program has the shaders. So, we're finding
+  persid: ''
+- desc: variable from the shader.
+  persid: ''
+- desc: And then we're enabling it. So we're making that connection with the shader
+    and then in the render.
+  persid: ''
+- desc: For clearing to wait and then drying the points drying the contents of the
+    array of the buffer as points.
+  persid: ''
+- desc: So here's the
+  persid: ''
+- desc: the variable in the shader
+  persid: ''
+- desc: so we're looking up and making the connection to
+  persid: ''
+- desc: let's try
+  persid: ''
+- desc: let's try this with a bigger point. Size
+  persid: ''
+- desc: let's go bigger still
+  persid: ''
+- desc: okay
+  persid: ''
+- desc: now let's look at
+  persid: ''
+- desc: evening let me show up
+  persid: ''
+- desc: right
+  persid: ''
+- desc: so we're doing the same kinds of things here
+  persid: ''
+- desc: so
+  persid: ''
+- desc: now we start with a triangle with the vertices as we had them before
+  persid: ''
+- desc: we have a function divide triangle. So we take the three vertices and then
+  persid: ''
+- desc: we pass a number of times to subdivide.
+  persid: ''
+- desc: Let's do
+  persid: ''
+- desc: it three which is a little bit easier to see, maybe
+  persid: ''
+- desc: you're all just like I wanted to take one
+  persid: ''
+- desc: so dividing the triangle
+  persid: ''
+- desc: I feel like I could improve this code a little bit
+  persid: ''
+- desc: so we're dividing the triangle. So
+  persid: ''
+- desc: count is the number of times to subdivide.
+  persid: ''
+- desc: So if our count is zero as then we've reached the end and we're going to create
+    a triangle
+  persid: ''
+- desc: never passing the
+  persid: ''
+- desc: the vertices of a triangle and then the work
+  persid: ''
+- desc: to try and go function will push the coordinates into the position array
+  persid: ''
+- desc: so if we're not finished subdividing.
+  persid: ''
+- desc: Divide the triangle
+  persid: ''
+- desc: make three smaller triangles reduce the count and then we divide each of those
+    three triangles until we get to the lower limit of recursion.
+  persid: ''
+- desc: So this time instead of points we're drawing triangles
+  persid: ''
+- desc: so we're
+  persid: ''
+- desc: doing the same things in terms of setting up the buffer to hold the positions.
+    The only difference is we're interpreting the contents of the buffer as triangles
+  persid: ''
+- desc: and we're doing the red color
+  persid: ''
+- desc: so everything is colored red, so there's no
+  persid: ''
+- desc: just a very simple fragment shader here
+  persid: ''
+- desc: okay.
+  persid: ''
+- desc: So let's look at
+  persid: ''
+- desc: does that look like a 3d object?
+  persid: ''
+- desc: Okay, let's look at
+  persid: ''
+- desc: what we see colors are changing here
+  persid: ''
+- desc: let's look at the JavaScript first.
+  persid: ''
+- desc: So we have the same
+  persid: ''
+- desc: the same setup we get the graphics context
+  persid: ''
+- desc: so I notice
+  persid: ''
+- desc: that they're using different vertices then. Then the recursive 3d example.
+  persid: ''
+- desc: Let me update
+  persid: ''
+- desc: Does that look more?
+  persid: ''
+- desc: More interesting.
+  persid: ''
+- desc: Okay. I just
+  persid: ''
+- desc: so we're doing the same thing we're picking transformations at random based
+    on the vertex or picking a vertex 012 or three and then
+  persid: ''
+- desc: and then doing the transformation and saving the point
+  persid: ''
+- desc: so we're one thing that's different here is we're enabling a depth test. So
+    we're keeping track of the positions have pixels of the point so we're drawing
+  persid: ''
+- desc: we're displaying the nearest points
+  persid: ''
+- desc: so after covering
+  persid: ''
+- desc: ones further away, you don't see the ones that are further away. Okay, let's
+    turn that off and see what the difference
+  persid: ''
+- desc: changed. A bit.
+  persid: ''
+- desc: So let's look at
+  persid: ''
+- desc: the shaders. So we have
+  persid: ''
+- desc: are taking in the position and we're passing out a vertex color.
+  persid: ''
+- desc: So we're
+  persid: ''
+- desc: not computing the color based on geometry. We'll see an example of how the
+    color gets
+  persid: ''
+- desc: assigned.
+  persid: ''
+- desc: We can do a color buffer with our next example. Here we're doing a computation
+    based on the position
+  persid: ''
+- desc: fragment shader is just taking the vertex color and passing it to the fragment
+    color or assigning it to the fragment color.
+  persid: ''
+- desc: So this is a way
+  persid: ''
+- desc: that we can change colors without using a color buffer, we can
+  persid: ''
+- desc: just do the computation in the shader.
+  persid: ''
+- desc: Before we have to leave
+  persid: ''
+- desc: look worse to 3d Guess
+  persid: ''
+- desc: so here
+  persid: ''
+- desc: we're using a color buffer
+  persid: ''
+- desc: yes thank
+  persid: ''
+- desc: you have a nice day thank you okay
+  persid: ''
+- desc: now
+  persid: ''
+- desc: so use the same
+  persid: ''
+- desc: coordinates with vertices as
+  persid: ''
+- desc: as the 3d Chaos game.
+  persid: ''
+- desc: So, we're doing the same kind of approach instead of dividing a triangle.
+    We're dividing a tetrahedron. So we have four vertices.
+  persid: ''
+- desc: And then we have a number of times to subdivide so let's change that. From
+    four.
+  persid: ''
+- desc: That's maybe a little
+  persid: ''
+- desc: makes the structure a little bit easier to see.
+  persid: ''
+- desc: So
+  persid: ''
+- desc: what's different here? We're doing colors.
+  persid: ''
+- desc: But we're using a color buffer.
+  persid: ''
+- desc: So we're creating an array buffer
+  persid: ''
+- desc: so I've
+  persid: ''
+- desc: used the Canadian spelling of color in the JavaScript file, but got it
+  persid: ''
+- desc: I use the American spelling kept the American spelling in the shader so that's
+    why I'm looking for a color because that's that's the variable name and the shader.
+  persid: ''
+- desc: So
+  persid: ''
+- desc: we have a buffer for colors information and we have a buffer for vertex information.
+  persid: ''
+- desc: Should we change the
+  persid: ''
+- desc: colors okay, what instead of red?
+  persid: ''
+- desc: How will we do yellow
+  persid: ''
+- desc: and instead of green
+  persid: ''
+- desc: we can
+  persid: ''
+- desc: I would say
+  persid: ''
+- desc: that should be magenta the fourth color is black but we don't see any of the
+    black.
+  persid: ''
+- desc: Okay
+  persid: ''
+- desc: so we have triangles and then the color
+  persid: ''
+- desc: so the tetrahedron
+  persid: ''
+- desc: with these four vertices is made into four triangles and we're assigning a
+    color to them
+  persid: ''
+- desc: so,
+  persid: ''
+- desc: if we've reached the depth of recursion, then we create a tetrahedron which
+    is made up of triangles. Otherwise, we subdivide
+  persid: ''
+- desc: again
+  persid: ''
+- desc: so, we're drawing
+  persid: ''
+- desc: triangles again, for the positions
+  persid: ''
+- desc: so
+  persid: ''
+- desc: let's see
+  persid: ''
+- desc: the free turn off.
+  persid: ''
+- desc: So
+  persid: ''
+- desc: if again unexpected results
+  persid: ''
+- desc: I'm gonna try this once. More
+  persid: ''
+- desc: change this color to red
+  persid: ''
+- desc: and let's
+  persid: ''
+- desc: go think I'll make a difference
+  persid: ''
+- desc: so does this make sense?
+  persid: ''
+- desc: So we're drying the front facing triangles
+  persid: ''
+- desc: so we have the yellow,
+  persid: ''
+- desc: cyan and magenta but we don't have the sense of a 3d structure because
+  persid: ''
+- desc: we haven't got
+  persid: ''
+- desc: we haven't preserved the depth information here
+  persid: ''
+- desc: so by moving so when it
+  persid: ''
+- desc: came in is all black or all red
+  persid: ''
+- desc: the back facing triangle was drawn last
+  persid: ''
+- desc: so that
+  persid: ''
+- desc: overrode because because we're not using the depth information and overrode.
+  persid: ''
+- desc: These triangles which were
+  persid: ''
+- desc: closer
+  persid: ''
+- desc: I think that's all you need to say about that. If that makes sense.
+  persid: ''
+- desc: What we're seeing
+  persid: ''
+- desc: thought I'd put the assignment yeah
+  persid: ''
+- desc: so I will I'll get that sorted out.
+  persid: ''
+- desc: So basically, it's going to be
+  persid: ''
+- desc: making some changes to the example code and we have
+  persid: ''
+- desc: discussed already adding some
+  persid: ''
+- desc: features so I'll get that posted and
+  persid: ''
+- desc: posted here and linked on your courses shortly after class today
+  persid: ''
+- desc: I didn't
+  persid: ''
+- desc: put this into
+  persid: ''
+- desc: our exam. Or the code examples that I
+  persid: ''
+- desc: updated
+  persid: ''
+- desc: here's an example of
+  persid: ''
+- desc: using a
+  persid: ''
+- desc: slider
+  persid: ''
+- desc: so this is the subdivision level
+  persid: ''
+- desc: very
+  persid: ''
+- desc: much example of how to use adding some controls in HTML and connecting them
+    to
+  persid: ''
+- desc: JavaScript
+  persid: ''
+- desc: Okay, so we've talked
+  persid: ''
+- desc: about
+  persid: ''
+- desc: some structures so are using
+  persid: ''
+- desc: we are using
+  persid: ''
+- desc: to find colors in the shaders and they are excited for this but you're like
+    well listen to an album like in a row on my drive home like
+  persid: ''
+- desc: in chaos 3d We did the color based on the shader only. And then in the 3d
+    example we did colors based on a color buffer
+  persid: ''
+- desc: and we also looked at the
+  persid: ''
+- desc: using hidden service eliminate removal by keeping track the depth
+  persid: ''
+- desc: so I'll add some more comments to those those code examples
+  persid: ''
+- desc: any questions or concerns?
+  persid: ''
+- desc: I know we're out of time here so
+  persid: ''
+- desc: if anything comes up, let me know. Post in the question post in the class
+    discussions.
+  persid: ''
+- desc: So that was
+  persid: ''
+- desc: a good way to go through things okay. It just occurred to me that anyway
+  persid: ''
+- desc: I didn't this is the first time I've tried it this way. So I welcome your
+    feedback about things and how to do things more effectively. And
+  persid: ''
+- desc: so I didn't put it here, but if you want to take a look at chapter three.
+  persid: ''
+- desc: We'll get into those things next week.
+  persid: ''
+- desc: Okay, thanks again for today. Have a great Wednesday and a great weekend and
+    I have office hours tomorrow as anyone tried to reach me in office hours and not
+    been able to okay
+  persid: ''
+- desc: I'm not I'm not always good at turning on the Zoom to try and get me by zoom.
+    But anyway,
+  persid: ''
+- desc: don't have to be shy about getting a hold of me if you need to. Okay.
+  persid: ''
+- desc: Have a good rest of your day?
+  persid: ''
+- desc: Have a good day. Thanks you too. Thanks, you too.
+  persid: ''
+- desc: This company thanks you too.
+  persid: ''
+- desc: This company thanks you too.
+  persid: ''
+offering:
+  id: CS-733-202330

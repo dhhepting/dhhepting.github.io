@@ -14,8 +14,12 @@
     {%- endunless -%}
     {%- assign bc_page = site.pages | where: "url", bc_path -%}
     {% if bc_page[0] %}
+    {% comment %}<br /> BC_PATH bc_page[0] {{ bc_path }} <br />{% endcomment %}
       {% comment %}Do Nothing{% endcomment %}
     {% else %}
+    {% comment %}<br /> BC_PATH not bc_page[0] {{ bc_path }} <br />{% endcomment %}
+      {%- if include.type == "pages" -%}
+      {% endif %}
       {%- if include.type == "works" -%}
         {%- assign bc_page = site.works | where: "url", bc_path -%}
       {% endif %}
