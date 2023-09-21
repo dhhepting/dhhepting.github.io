@@ -3,40 +3,50 @@
 {%- for aa in asgnfile %}
   {%- assign msa = "" %}
   {%- for sa in site.assignments %}
+   {%- comment -%} AID {{ sa.aid }} == {{ aa.aid }}? <br/> {%- endcomment -%}
     {%- if sa.aid == aa.aid %}
       {%- assign msa = sa %}
       {%- break %}
     {%- endif %}
   {%- endfor %}
   {%- if msa != "" -%}
-<h4 id="ssAsgn_{{ msa.aid }}" class="bg-primary text-white">
-  {{ aa.title }} (<span id="{{ msa.aid }}-timer"></span>)
-</h4>
-<script>
-  $(document).ready(
-    function(){
-      var duedate_{{ aa.aid }} = '{{ aa.duedate }}'
-      var duetime_{{ aa.aid }} =
-        new Date(duedate_{{ aa.aid }}).getTime() + 86340000
-      $('#{{ aa.aid }}-timer').countdown(duetime_{{ aa.aid }},
-        function(event) {
-          $(this).html(event.strftime('due in: <span>%D d %H h %M m</span>'))
+    <h4 id="ssAsgn_{{ msa.aid }}" class="bg-primary text-white">
+      {{ aa.title }} (<span id="{{ msa.aid }}-timer"></span>)
+    </h4>
+    <script>
+      $(document).ready(
+        function(){
+          var duedate_{{ aa.aid }} = '{{ aa.duedate }}'
+          var duetime_{{ aa.aid }} =
+            new Date(duedate_{{ aa.aid }}).getTime() + 86340000
+          $('#{{ aa.aid }}-timer').countdown(duetime_{{ aa.aid }},
+            function(event) {
+              $(this).html(event.strftime('due in: <span>%D d %H h %M m</span>'))
+          })
       })
-  })
-</script>
-<ul>
-  <li>
-    Marks: {{ aa.marks }}
-  </li>
-  <li>
-    Due Date: {{ aa.duedate }} @ 23:59
-  </li>
-</ul>
-
+    </script>
+    <ul>
+      <li>
+        Marks: {{ aa.marks }}
+      </li>
+      <li>
+        Due Date: {{ aa.duedate }} @ 23:59
+      </li>
+      <li>
+        <a href="https://urcourses.uregina.ca/mod/forum/view.php?id={{ aa.lms_discuss }}">
+          Discuss
+        </a>
+      </li>
+      <li>
+        <a href="https://urcourses.uregina.ca/mod/assign/view.php?id={{ aa.lms_submit }}&action=editsubmission">
+          Submit
+        </a>
+      </li>
+    </ul>
     {{ msa.content | markdownify }}
   {%- else -%}
-<h4 class="bg-primary text-white">
-    {{ aa.title }} : NOT FOUND
-</h4>
+    <h4 class="bg-primary text-white">
+      {{ aa.title }} : NOT FOUND
+    </h4>
   {%- endif -%}
 {%- endfor -%}

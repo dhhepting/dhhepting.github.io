@@ -1,18 +1,20 @@
 {%- include teaching/url.html %}
 {%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
-{%- assign mtn = include.mn | prepend: '00' | slice: -2, 2  %}
-{%- assign prvmtg = mtn | minus: 1 | prepend: '00' | slice: -2, 2 -%}
+
+{%- assign prvmtg = include.mn | minus: 1 -%}
 {%- assign prvlnk = nil -%}
-{%- assign nxtmtg = mtn | plus: 1 | prepend: '00' | slice: -2, 2 -%}
+{%- assign prevm = site.data.teaching[jcrs_id][crs_sem]meetings | find: "meeting", prvmtg -%}
+{%- if prevm -%}
+  {%- assign prvlnk = prevm.file -%} 
+{%- endif -%}
+
+{%- assign nxtmtg = include.mn | plus: 1 -%}
 {%- assign nxtlnk = nil -%}
-{%- for mm in site.data.teaching[jcrs_id][crs_sem]meetings -%}
-  {%- if mm.meeting == prvmtg -%}
-    {%- assign prvlnk = mm.file -%}
-  {%- endif -%}
-  {%- if mm.meeting == nxtmtg -%}
-    {%- assign nxtlnk = mm.file -%}
-  {%- endif -%}
-{%- endfor -%}
+{%- assign nextm = site.data.teaching[jcrs_id][crs_sem]meetings | find: "meeting", nxtmtg -%}
+{%- if nextm -%}
+  {%- assign nxtlnk = nextm.file -%} 
+{%- endif -%}
+
 <div>
   <h1 id="mtgh1">
     Mtg {{ include.mn | plus: 0 }}/{{ include.tm }}: {{ include.md | date: '%a-%d-%b-%Y' }}

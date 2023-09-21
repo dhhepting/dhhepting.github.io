@@ -15,13 +15,18 @@
       <li>
         Midterm:
         {%- for me in entry[1].midterm_exam -%}
-        &nbsp;{{ me }}
+        <a href="{{ entry[1].midterm_urc }}" target="_blank">
+          &nbsp;{{ me }}
+        </a>
         {%- endfor -%}
       </li>
       {%- endif -%}
       {%- if entry[1].final_exam -%}
       <li>
-        Final: {{ entry[1].final_exam }}
+        Final: 
+        <a href="{{ entry[1].final_urc }}" target="_blank">
+          {{ entry[1].final_exam }}
+        </a>
       </li>
       {%- endif -%}
     </ul>

@@ -1,0 +1,248 @@
+Audio-Transcript:
+- desc: Some of these dry erase markers are more reasonable than others. Don't be
+    negative anyway so we talked about last day so I was so we have to know which
+    is which and be mindful that there are two ways to two valid ways to have coordinates
+    okay so which is this one so x and y and Zed goes into the screen goes away from
+    us with a right handed coordinate system x times y Zed points out so this would
+    be
+  persid: ''
+- desc: this would be the right hand system that way what do you
+  persid: ''
+- desc: think I had this worked out should be x? So the one with the wonder I'm doing
+    this three axes. This is one it's new to me. I always thought of x times x cross
+    y and then this downward points in the positive direction
+  persid: ''
+- desc: So, x cross y so this is the left handed coordinate system
+  persid: ''
+- desc: so x and y and Zed that works an X and Y and Zed works x is your thumb that's
+    why,
+  persid: ''
+- desc: why is your index finger and your middle finger Z positive Zed
+  persid: ''
+- desc: oh no no it's not see it said
+  persid: ''
+- desc: we supposed to spell things with the EU like colors with the EU and the last
+    letter no but is that that might also be because it's French
+  persid: ''
+- desc: you have some skeletons in Canada from French. So you see this for center
+    sometimes anyway
+  persid: ''
+- desc: feels like like a Star Trek show or a greeting that some alien races Star
+    Trek anyways,
+  persid: ''
+- desc: I don't wanna get too far off track. So left handed and right handed. So we
+    have to know what which one are dealing with or
+  persid: ''
+- desc: so that we can
+  persid: ''
+- desc: keep keep a standard standard. So what are the what's the benefit? That we
+    can keep the understanding of how
+  persid: ''
+- desc: white how points are organized in the model?
+  persid: ''
+- desc: So that's the question. So when we're
+  persid: ''
+- desc: thinking about modeling objects in computer graphics, then
+  persid: ''
+- desc: we don't so if you want to model this table, we don't do this. There's no
+    hard surfaces involved.
+  persid: ''
+- desc: So how do we so the property is a service you'd like to model is
+  persid: ''
+- desc: so it's it's not it's completely opaque so you weren't let's think about the
+    first first thing we talked about last day. In our first example code
+  persid: ''
+- desc: cube what what properties of the cube
+  persid: ''
+- desc: Do you want to preserve
+  persid: ''
+- desc: my making sense of my questions.
+  persid: ''
+- desc: I'm trying not. I'm trying to encourage some answers.
+  persid: ''
+- desc: So what did we notice about the order of
+  persid: ''
+- desc: points affecting the way the cube was drawn? So let's go back. Let's have
+    a peek at our example from last Day. should do 10 minutes here
+  persid: ''
+- desc: so there's no password see if you click on attendance yourself you can just
+    get to the screen
+  persid: ''
+- desc: I tried when I tried to shoot well, I didn't. I didn't exhaust every possibility
+    but I was trying to get the QR Code image to show up and then I was trying to
+    get with the scanner on my phone and it would take me to your courses but then
+    you would have me do the the two factor authentication and then I wouldn't I couldn't
+    get back onto the attendance page. So anyway there is a QR code.
+  persid: ''
+- desc: So this is the original one and then we I made a change. Then we see we haven't
+    changed the points. But the order of points has created
+  persid: ''
+- desc: a problem with the geometry because we have some conventions that we're not
+    following anymore. Let me change this to the lines reaching into points. Should
+    come back
+  persid: ''
+- desc: okay
+  persid: ''
+- desc: remember what a mistake I've made in declaring?
+  persid: ''
+- desc: Are Did I do something different? Morning? Let's common without even see if
+    again. Think points may not work. Yeah, I just want to
+  persid: ''
+- desc: So that's different colors for each vertex.
+  persid: ''
+- desc: So we notice from that other example that
+  persid: ''
+- desc: the other one has vertices out of my vertex out of order
+  persid: ''
+- desc: what do you notice here about the colors? Gradients?
+  persid: ''
+- desc: Yeah, so the gradients and some some corners and edges are
+  persid: ''
+- desc: can't stop this one. You can see this quarter is nice. But other ones. You
+    can see the artifacts of the triangle of the way the colors are being blended.
+    Across triangles.
+  persid: ''
+- desc: Okay so if we take
+  persid: ''
+- desc: the points from here
+  persid: ''
+- desc: so, let's go through them and check that so why don't we start from the bottom
+    point five minus point five minus point five. That's correct.
+  persid: ''
+- desc: And then this one is not the same
+  persid: ''
+- desc: point 5.5 minus point five
+  persid: ''
+- desc: Let's try that again.
+  persid: ''
+- desc: Okay, we can fix it. So these are all the same notes are all the same. So
+    at the front, the points in the front face and then the points in the back face.
+    A different set and then here we see the same pattern minus zero from start out
+    with this point minus minus and then we have x is minus and y is positive and
+    then x and y are positive and then x is positive and y is negative. do that same
+    thing okay. So
+  persid: ''
+- desc: selling better
+  persid: ''
+- desc: so six sides off triangles. So one of the issues here is that we're using
+    triangle fans so what is that? Doing?
+  persid: ''
+- desc: Triangle? Fan
+  persid: ''
+- desc: so we can save some space here right so what if we? So if we start here we
+    can represent maybe let's start. Let's start where we can see let's start with
+    this point
+  persid: ''
+- desc: so we can specify a fan and that gets three or six of the 12 triangles involved.
+    So a fan is retaking. triangles that have a common vertex and then if we went
+    on the other side of the cube so. So you can also
+  persid: ''
+- desc: maybe it's better this way
+  persid: ''
+- desc: can make we can save some space in modeling in the number of vertices we use
+    based on careful placement of careful arrangement of the vertices Computer habit
+    out for me Let's go back
+  persid: ''
+- desc: to our cube here and. Okay, so we have four dimensional four by four matrix
+    and these matrices are in column major.
+  persid: ''
+- desc: So that means
+  persid: ''
+- desc: from we read the first four elements are the first column, second for the
+    second column, third column, fourth column So, notice the last entries in the
+    first two columns are zero.
+  persid: ''
+- desc: So that means that we're dealing with
+  persid: ''
+- desc: transformations that are going to preserve lines and then the other feature
+    here's the last column zeros and then finally one. So this if it's if we end up
+    if there are multiplications with a value that's not one we'll divide through
+    by it to be able to express points with with w equal to one.
+  persid: ''
+- desc: So these are the points so here we're doing rotation
+  persid: ''
+- desc: we can do scaling as well.
+  persid: ''
+- desc: If we wanted to scale so for scaling, so what is this matrix do? How do we
+    know this? What's another name for this matrix? Now what if he wanted to scale
+    an axe? Where would I? Well, where would I put that information? So
+  persid: ''
+- desc: I'm gonna scale quantity along the x dimension.
+  persid: ''
+- desc: I'm changing one value in which which column and row would I change this one
+    this one okay, is that am I changing?
+  persid: ''
+- desc: X or is that going to change said
+  persid: ''
+- desc: let's make it twice as big Okay, so if we have x y Zed One? Does that make
+    sense okay so that's how what if we want to change why it's not that one the sooner
+    that one. Yeah. So that so the interesting thing that we can do was
+  persid: ''
+- desc: almost genius coordinates is we can specify a translation in
+  persid: ''
+- desc: in the same matrix so what we're going to look at the values here in this
+    the first three values in the last column
+  persid: ''
+- desc: so what translation should we
+  persid: ''
+- desc: apply anyone want to
+  persid: ''
+- desc: suggest some numbers?
+  persid: ''
+- desc: About
+  persid: ''
+- desc: a four, two
+  persid: ''
+- desc: so then x prime becomes so it's x. We don't take any wires that contributions
+    but then we add eight to it and then for y for y know Zed plus four and Zed is
+  persid: ''
+- desc: two Zed plus two.
+  persid: ''
+- desc: And we end up with one. So with this single matrix,
+  persid: ''
+- desc: and we've we've Express we've done scaling and translation. And here's the
+    way we would
+  persid: ''
+- desc: specify rotation around different axes. So those rotation matrix matrices
+  persid: ''
+- desc: so what's, what are we rotating? around with a matrix like this where's the
+    center of rotation? Get on rotates around on the x axis. at the origin.
+  persid: ''
+- desc: So rotating around positive X axis but it's
+  persid: ''
+- desc: we're not off somewhere in space. We're at the origin of the coordinate system.
+    So if we do X Y or Zed we're always rotating around this
+  persid: ''
+- desc: center so because we have a coordinates to find the word driving the queue
+    equally around the center sort of rotating around.
+  persid: ''
+- desc: can see that we're always rotating around please position the cube at the
+    origin of the coordinate system.
+  persid: ''
+- desc: So what are the rotating it stays in the middle so what if you want to rotate
+    around a different point? So
+  persid: ''
+- desc: that's for everyone. corrode hair I'm different. Why do we need translation?
+    matrices? So this origin of where do you want to translate? Let's try two in the
+    x direction
+  persid: ''
+- desc: okay. So it's doing some translation would it be good for us to put things
+    back?
+  persid: ''
+- desc: This is Art inverse Okay
+  persid: ''
+- desc: well, we're out of time. So we'll talk about changing the center of rotation.
+    Next day be a little more we'll get to see more material on Thursday. Thanks for
+    today and we'll see you on Thursday.
+  persid: ''
+- desc: What about the second segment it's not a website to do. I talked about it
+    in class last day
+  persid: ''
+- desc: on the board, so I'll write it out onto the website and get back to my office
+    Your time is they thanks have a good rest of your day.
+  persid: ''
+- desc: on the board, so I'll write it out onto the website and get back to my office
+    Your time is they thanks have a good rest of your day.
+  persid: ''
+offering:
+  id: CS-733-202230

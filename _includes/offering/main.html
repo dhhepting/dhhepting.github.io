@@ -73,6 +73,14 @@
         </li>
         {%- endif -%}
 
+        {%- if include.asgns == 1 -%}
+        <li class="nav-item">
+          <a class="nav-link" href="#ssAssignments">
+            Assignments
+          </a>
+        </li>
+        {%- endif -%}
+
         {%- if include.exams == 1 -%}
         <li class="nav-item">
           <a class="nav-link" href="#ssExams">
@@ -135,9 +143,13 @@
       </h3>
       <p>
         {%- capture code_url -%}/teaching/{{ crs_id }}/{{ page.sem }}/code/{%- endcapture -%}
-        <a href="{{ code_url | relative_url }}" target="_blank">
-          Code Directory
-        </a>
+        <ul>
+          <li>
+            <a href="{{ code_url | relative_url }}" target="_blank">
+              Code Directory
+            </a>
+          </li>
+        </ul>
       </p>
       {%- endif -%}
 

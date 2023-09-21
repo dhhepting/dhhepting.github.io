@@ -1,0 +1,9 @@
+{% include site/header.html %}
+{% assign url_parts = page.url | split: "/" %}
+<div class="card w-100 bg-transparent">
+  {%- include site/content-header.html type="pages" -%}
+</div>
+<div>
+    {{ page.content }}
+</div>
+{% include site/footer.html %}

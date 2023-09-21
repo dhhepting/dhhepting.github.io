@@ -1,9 +1,9 @@
 {%- assign linkfile = site.data.teaching[jcrs_id][crs_sem]links %}
 {%- if linkfile -%}
   {%- for ll in linkfile -%}
-  <li class="list-group-item">
+  <li>
     <a href="{{ ll.url }}">
-      {{ ll.name }}
+      {{ ll.desc }}
     </a>
   </li>
   {% endfor %}

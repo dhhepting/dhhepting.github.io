@@ -4,7 +4,7 @@
 // declare variables with global scope
 var gl
 var positions = []
-var numPositions = 10000
+var numPositions = 100000
 
 window.onload = function init () {
   var canvas = document.getElementById('gl-canvas')

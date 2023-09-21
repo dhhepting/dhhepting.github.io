@@ -1,0 +1,295 @@
+Audio-Transcript:
+- desc: didn't turn the projector on anyway. So I added the different settings so
+    that should automatically Yeah, we don't want to choose how does that work?
+  persid: ''
+- desc: So stop this 32nd Because one day is Halloween see right okay and then the
+    following week I think it's the seventh seventh Friday okay so fall break them
+    are back on the 14th So the 16th So, this is two weeks per assignment okay
+  persid: ''
+- desc: so I'm gonna suggest
+  persid: ''
+- desc: when you think about moving
+  persid: ''
+- desc: us to the Monday after the break and then we're having the midterm the next
+    day 15 We agreed to put up after the break because you have a midterm before your
+    other classmates before the break
+  persid: ''
+- desc: Okay. What are the words to fill in fill those blanks.
+  persid: ''
+- desc: Number we talked about this on Tuesday Yeah, that depths is part of it.
+  persid: ''
+- desc: Yeah I'm thinking removal in your.
+  persid: ''
+- desc: Termination the word I have in mind. So determination is good in a number
+    of senses right. Determined to make jokes in class. That's my determination. A
+    side of my determination anyway.
+  persid: ''
+- desc: Right so this.
+  persid: ''
+- desc: So we can do. One way we can do a visible surface determination is if we're
+    looking at the surface normals and they're pointing away from our viewpoint, then
+    we don't need to consider them when they're processing the scene. So the command
+    is gL enable
+  persid: ''
+- desc: Okay? So
+  persid: ''
+- desc: let's you know, if you want to determine what's visible that's where we can
+    use
+  persid: ''
+- desc: So So if we enable a depth buffer, then we can keep track of the depth
+  persid: ''
+- desc: whatever color we're putting on screen.
+  persid: ''
+- desc: So how can we.
+  persid: ''
+- desc: So we talked, if we have seen the sorting, we could think of an algorithm
+    to sort the objects so that we draw or paint first ones first. And then and with
+    nearest ones so a couple drawbacks. That approach is that we need to know everything
+    in the scene. So that we can sort everything for restarting to draw it and the
+    other drawback is that some objects may have a complicated interaction. Clouds
+    might be branches of a tree might be sticking out of the cloud, or something else
+    like so we can't get a definitive order. It's going to produce the right image.
+    But if we keep track of the depth of the colors in the pixel buffer, and the color
+    buffer, pardon me. So we have a color buffer that shows what the image is going
+    to look like. And then we have a depth buffer that keeps track of the image, the
+    depth of those objects. So as we encounter an object we get to the point of pixels
+    on the screen. And then what do we what kind of approach can we use to get to
+    determine which
+  persid: ''
+- desc: things aren't visible?
+  persid: ''
+- desc: Determine if thing we're processing is visible. So we're going to compute
+    the depth of the fragment that we have and our first next step is to compare the
+    depth that we have with the depth that's drawn at that location.
+  persid: ''
+- desc: So if a new piece is closer,
+  persid: ''
+- desc: we update the depth buffer and update the color buffer. So if the depth of
+    the new item is greater is further away then what's been drawn about location
+    and we don't proceed into this part of the stream. We don't update the color buffer
+  persid: ''
+- desc: so if we're starting out drawing something so there's no depth recorded, then
+    we can. Like when I talked about finding the maximum number, and a list, we can
+    initialize it with the first item and then make comparisons after that. So if
+    the Zed buffer is clear, if we haven't any information in it, then we can start
+    by putting the new off putting the new item into the buffer, and then we can compare
+    to that first object and subsequent you iterations so
+  persid: ''
+- desc: that makes sense. So I wanted to go to look at some code so this is not a
+    great interface. I would say. But it's so we're getting some.
+  persid: ''
+- desc: Gonna Fly by of the queue
+  persid: ''
+- desc: very close. Can see
+  persid: ''
+- desc: effectively changing the clipping volume?
+  persid: ''
+- desc: Okay, let's have a look at the source for this. What do you think so as examples
+    we did the script tags in the head but the button is not in editor per se anyway
+  persid: ''
+- desc: okay, so we have these buttons, named one buttons one through eight
+  persid: ''
+- desc: and so we have the vertex shader.
+  persid: ''
+- desc: The position the color or attributes from the application really linked
+  persid: ''
+- desc: and then here we're using as in two matrices
+  persid: ''
+- desc: four by four matrices. So, there's the modelview matrix and the projection
+    matrix so, the position of appoint So,
+  persid: ''
+- desc: we're starting
+  persid: ''
+- desc: with the position x y Zed one and then we're applying the modelview matrix
+    and the projection matrix
+  persid: ''
+- desc: so we're doing these matrix transformations, get the new position
+  persid: ''
+- desc: and Vertex Color is the attribute color location then the fragment shader
+    medium precision to make it compatible with
+  persid: ''
+- desc: various implementations of
+  persid: ''
+- desc: other possible devices so that we have the color so, the D Color was defined
+    in the vertex shader, so that's why is the author's naming convention is. So A
+    is for attribute B is for vertex shader F is for fragment shader.
+  persid: ''
+- desc: And U is for uniform variables. So uniform variables are associated with vertices
+  persid: ''
+- desc: or fragments but they're separately
+  persid: ''
+- desc: Okay, so
+  persid: ''
+- desc: the new position of vertex is determined by this transformation model view
+    matrix the projection matrix and for the fragment shader, we're just passing the
+    vertex color
+  persid: ''
+- desc: so, this is
+  persid: ''
+- desc: JavaScript function so. So we're creating a variable with a function for the
+    function.
+  persid: ''
+- desc: So in this example Everything's
+  persid: ''
+- desc: Included in the prospective example function so we have an open race there
+  persid: ''
+- desc: goes to the end here
+  persid: ''
+- desc: and then we're up there calling the function I'm sure about the benefit of
+    this compared to style. Anyway. So we have four vertices for the cube minus five
+    minus five.
+  persid: ''
+- desc: So we define one face
+  persid: ''
+- desc: the constant Zed value and then the other face the constant set value.
+  persid: ''
+- desc: So I notice here the vertices
+  persid: ''
+- desc: vertices in x and y are centered around the origin for the Zed direction they're
+    both in positive 7.5 and 1.5. So then we have vertex colors and we're defining
+    near and far planes
+  persid: ''
+- desc: radius
+  persid: ''
+- desc: theta phi So other common aspect ratios
+  persid: ''
+- desc: think this is
+  persid: ''
+- desc: I want to say VGA NTSC as well. And then for cinema 4k 616 by nine people
+    here. Draw them better that makes sense.
+  persid: ''
+- desc: Okay
+  persid: ''
+- desc: so we have variables for the matrix matrices and
+  persid: ''
+- desc: location of those variables in the shaders So,
+  persid: ''
+- desc: we can make a connection and connect stuff we're doing the program
+  persid: ''
+- desc: was the shaders. And so we can
+  persid: ''
+- desc: use the value of the matrices we compute in the program inside the shaders
+    like we've done with the colors and vertices and so on before so we're gonna do
+    fine. So we talked about
+  persid: ''
+- desc: parameters so these two parameters
+  persid: ''
+- desc: are defined how we're looking at things. So if we have 16 by nine, aspect
+    ratio and the field of views that gives us these details, but then we want to
+    determine where we're looking at. So that's why have a vector that indicates what
+    we're looking at. And then so that fixes most things and then we just need to
+    say which direction is up. So there's portrait view, landscape or some other orientation?
+    This one says is a positive y direction. So this function is putting vertices
+    and colors into the race. So what is being called by color cube? So we're defining
+    these phases of the cube and then we're reading the frizzies and the colors it's
+    quite functional. Okay. So then we get the internet aspect of it as with Canva
+    Canva Swinton eight clearly the color limit screen to white and we enable the
+    depth test so here we're doing this are standard stuff, paper shares ready. And
+    then we call color cube to create the data. And then we're loading the color.
+    The color buffer to color cereda. specified. In here we're making the connection
+    between the shader program variable attribute we're doing the same with the parentheses
+    and position
+  persid: ''
+- desc: this is how we're doing the same thing.
+  persid: ''
+- desc: For the model. View and projection matrices. So when we click button one we're
+    increasing the near and far. planes. The click button to decreasing them by 10%,
+    so we're shift shifting the near and far free click on button one removing both
+    increasing force and if we click button two, we're decreasing the value of both
+    so here we've made some progress
+  persid: ''
+- desc: so it wouldn't be nice to
+  persid: ''
+- desc: so I've done is we've increased the near and far.
+  persid: ''
+- desc: So we have cute here. So what we see here is the inside of the cube you can
+    see
+  persid: ''
+- desc: the lines are converging
+  persid: ''
+- desc: in the middle there. So increaser
+  persid: ''
+- desc: button three. We're getting two times radius cook button for getting half
+    the radius.
+  persid: ''
+- desc: So the radius
+  persid: ''
+- desc: affects the eye position. So we're specifying if we decrease our we're gonna
+    fly in the cube so let's try
+  persid: ''
+- desc: feels like we should have
+  persid: ''
+- desc: finer grained control there so now
+  persid: ''
+- desc: decrease the radius.
+  persid: ''
+- desc: I have
+  persid: ''
+- desc: to start with ranges radiuses for and radiuses to increase the radius so we
+  persid: ''
+- desc: are now at eight
+  persid: ''
+- desc: so five
+  persid: ''
+- desc: times five my divided by when he don't want to do a mouse and keyboard with
+    my right hand. It's especially difficult. Anyway, so we're estimating that we're
+    changing angle by little bit. So when we render, we're clearing the color buffer
+    bit and the depth buffer bit so we're starting with fresh buffers. We're going
+    to compute the eye position based on the radius two angles specified ModelView
+    matrix is going to be based on the eye position. Vector we're looking at the point
+    we're looking at and the app direction and projection matrix. The field of view
+    why the aspect ratio near and far things were passing the model view and projection
+    matrices
+  persid: ''
+- desc: to the shader
+  persid: ''
+- desc: we're drawing triangles with a number of positions.
+  persid: ''
+- desc: So are you six
+  persid: ''
+- desc: triangle vertices how many triangles are drawing so whenever an answer, I
+    think development is 12. Six faces two triangles per face. Both triangles Okay,
+  persid: ''
+- desc: let's
+  persid: ''
+- desc: fly around. In a statement to find our fee So let's look at the functions
+    so there's two functions we haven't looked at yet. Look at and perspective. So
+    what I noticed about this is the error messages are wrong he just copied and pasted.
+    Should be the second parameter and the third parameter. So good, good attempt.
+    Doing here checking
+  persid: ''
+- desc: so what is this next one? So we're looking for
+  persid: ''
+- desc: three tuples for the look at for priming for the eye position. Look at position
+    and factor so what is that? There's this next bit?
+  persid: ''
+- desc: Any ideas so what happens if
+  persid: ''
+- desc: the eye position and looking position we're looking at are the same? Just
+    returning a generic
+  persid: ''
+- desc: matrix which is.
+  persid: ''
+- desc: Which gives us an identity matrix. So if we don't have any arguments to Matt
+    for just opening the identity matrix so that
+  persid: ''
+- desc: your action vector is going to find the difference between the eye position
+    position we're looking at so the view direction vector and the up vector and then.
+    So we want a vector that's perpendicular to these two? And then we assemble that
+    into a matrix so this is the first column second column third column fourth column
+    projection perspective projection matrix.
+  persid: ''
+- desc: So my topic for assignment three is this code
+  persid: ''
+- desc: not the library code but abstracting projection code and allow for some exploration
+    of the viewing parameters and respective projection as well as with an orthographic
+    projection or parallel projection
+  persid: ''
+- desc: let's assume okay I don't want to make it too simple don't want to keep you
+    up at night either.
+  persid: ''
+- desc: let's assume okay I don't want to make it too simple don't want to keep you
+    up at night either.
+  persid: ''
+offering:
+  id: CS-733-202230
