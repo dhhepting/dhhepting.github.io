@@ -1,0 +1,637 @@
+Audio-Transcript:
+- desc: So my new laptop is in the works now so I can say goodbye to this the 2017
+    version that I have. Remember that problem I had about not having a more recent
+    enough computer to update the software so
+  persid: ''
+- desc: I'll be able to deal with that. As well.
+  persid: ''
+- desc: Meeting 825.
+  persid: ''
+- desc: Questions from our previous meeting. Did you look at that example I
+  persid: ''
+- desc: the code that I posted actually improved it a little bit since our meeting.
+  persid: ''
+- desc: That's right.
+  persid: ''
+- desc: It's worth more better attendance today.
+  persid: ''
+- desc: Eight 813
+  persid: ''
+- desc: Anyway, okay, let's look at that first.
+  persid: ''
+- desc: Let's look at the example from yesterday.
+  persid: ''
+- desc: Gonna move us down.
+  persid: ''
+- desc: Oh, great. Thanks.
+  persid: ''
+- desc: That's exactly I'm going to show today.
+  persid: ''
+- desc: Okay.
+  persid: ''
+- desc: Pardon my messy desktop here
+  persid: ''
+- desc: okay
+  persid: ''
+- desc: so remember we did the rotation on the triangle
+  persid: ''
+- desc: right good so you can see the little triangle so I added a control to do a
+    toggle rotation. So turn rotation on and off
+  persid: ''
+- desc: and then I have reset center. So if you remember I did
+  persid: ''
+- desc: well, it wasn't
+  persid: ''
+- desc: rotating around this.
+  persid: ''
+- desc: It was rotating
+  persid: ''
+- desc: was retaining at this point? Because I had said
+  persid: ''
+- desc: minus high
+  persid: ''
+- desc: minus,
+  persid: ''
+- desc: minus zero. And given the point zero minus 0.5. Well, anyway, it was this
+    point
+  persid: ''
+- desc: for trying, four because there's one upside down. So in the middle, the bottom
+    line here is the distance between the bottom and the top back with two
+  persid: ''
+- desc: triangles here.
+  persid: ''
+- desc: That isn't the center of the triangle. So the triangle is here.
+  persid: ''
+- desc: So this is so this is 60 degrees here, this angle
+  persid: ''
+- desc: so that 30 degrees this right here so that's the point
+  persid: ''
+- desc: for centering rotation so how do we center rotation? What did we do in our
+    code
+  persid: ''
+- desc: to do the rotation the other day? For those of you that are here, do you remember
+    what we did?
+  persid: ''
+- desc: I'm not sure that we did a translation.
+  persid: ''
+- desc: So the vertex render.
+  persid: ''
+- desc: We took the positions that were set from
+  persid: ''
+- desc: the vertex buffer
+  persid: ''
+- desc: and then did a multiplication to do
+  persid: ''
+- desc: effective rotation. So we're rotating
+  persid: ''
+- desc: we're gonna rotate around the origin if we don't do any translation. So the
+    origin here because this is minus one, plus one, y minus one plus one and x
+  persid: ''
+- desc: is going to be around here are just
+  persid: ''
+- desc: some how do we adjust the center of the rotation
+  persid: ''
+- desc: How can we specify transformation to do that?
+  persid: ''
+- desc: I'm not sure the name of the file
+  persid: ''
+- desc: thinks that's.
+  persid: ''
+- desc: Anyway, so if we do a rotation, rotating about the origin How can we specify
+    different points rotate around
+  persid: ''
+- desc: let's say here's the origin. Let's say we have a triangle over here and here's
+    the center of the triangle
+  persid: ''
+- desc: so intuitively what do we need to do is change.
+  persid: ''
+- desc: Nancy or Nancy?
+  persid: ''
+- desc: See this, this helps me because I
+  persid: ''
+- desc: know you're both here and
+  persid: ''
+- desc: I can see I can see both of your names
+  persid: ''
+- desc: covered. I seem like I know.
+  persid: ''
+- desc: I'm doing better than that. Anyway,
+  persid: ''
+- desc: I tried to get a laugh every now.
+  persid: ''
+- desc: So that's my attempt today. Let's keep it so
+  persid: ''
+- desc: if I want to rotate the triangle around at center
+  persid: ''
+- desc: so here's the
+  persid: ''
+- desc: origin
+  persid: ''
+- desc: and here's this seat for center.
+  persid: ''
+- desc: So what happens if we translate the center to the origin?
+  persid: ''
+- desc: That can help a bit. Because we're gonna rotate
+  persid: ''
+- desc: and rotate it the triangle around the center but the center is not with the
+    origin. So if you want to rotate it in place what do we have to do? XYZ.
+  persid: ''
+- desc: Okay, so we're
+  persid: ''
+- desc: getting five plays
+  persid: ''
+- desc: well, we don't
+  persid: ''
+- desc: want to have it's good to have some numbers to work, work out specific examples.
+    But let's just talk about
+  persid: ''
+- desc: the general principle.
+  persid: ''
+- desc: So if I want to rotate around the center of the triangle I'm going to move
+    the center of the triangle to the origin.
+  persid: ''
+- desc: So we're going to translate
+  persid: ''
+- desc: this point the origin
+  persid: ''
+- desc: now
+  persid: ''
+- desc: now that we've got rotating about the center of the triangle,
+  persid: ''
+- desc: how do we get the triangle back where it was to begin with
+  persid: ''
+- desc: could we do another translation? Yeah.
+  persid: ''
+- desc: So we have those three steps. So let's
+  persid: ''
+- desc: try move moving the center around
+  persid: ''
+- desc: Okay, so
+  persid: ''
+- desc: what if I change the X what do we expect to happen? Do you have some intuition
+    about that?
+  persid: ''
+- desc: So we're not rotating around the center anymore.
+  persid: ''
+- desc: So the center of rotation is
+  persid: ''
+- desc: is about here
+  persid: ''
+- desc: Okay, so let's we'll take a quick look at the code for this version.
+  persid: ''
+- desc: Okay
+  persid: ''
+- desc: so we have uniform variables and for those who are here what are the uniform
+    variables for from Monday
+  persid: ''
+- desc: so, we have the attributes the positions and those are changing with so every
+    vertex has its own position.
+  persid: ''
+- desc: When we have a uniform variable we don't change it for each vertex. We're
+    just providing a value to the shader So, it makes sense. So, here we're going
+    to specify a theta for the rotation and a plot an xy point for the center
+  persid: ''
+- desc: so, the first two lines there we're getting it. We're doing the translation
+    of the point to the center to the value in the center
+  persid: ''
+- desc: excuse me, then we're getting a sine and cosine for that angle and then we're
+    computing a new X and Y position. So we do the rotation first, and then we're
+    adding. So this is step two and three that we just talked about. So here's the
+    rotation and an x and then we're translating back to the center
+  persid: ''
+- desc: that same okay
+  persid: ''
+- desc: can you see that alright or should I let me see if I can make it Bigger?
+  persid: ''
+- desc: Okay, so we're setting up the buffer was data from the positions array that
+    we computed and then we're making the connection between the eight position variable
+    in the shader with the buffer
+  persid: ''
+- desc: and then we just have these two
+  persid: ''
+- desc: the these are simpler for the uniform variables. We're just giving the location
+  persid: ''
+- desc: so if we're right in the render if we're rotating the gasket then we're changing
+    theta. And then we
+  persid: ''
+- desc: set we pass the value of fader to our shader
+  persid: ''
+- desc: and I forgot rotate rotating we just
+  persid: ''
+- desc: well
+  persid: ''
+- desc: here we're resetting, resetting the value of the center and then we're drawing
+    triangles.
+  persid: ''
+- desc: So this is a fun click handler for the reset button.
+  persid: ''
+- desc: That seem okay
+  persid: ''
+- desc: so here we have animation and interaction
+  persid: ''
+- desc: I just want to
+  persid: ''
+- desc: flip down to the render function again.
+  persid: ''
+- desc: Best animation frames that
+  persid: ''
+- desc: so what does that mean prepares smooth the next frame so the transmission
+    is smooth
+  persid: ''
+- desc: so
+  persid: ''
+- desc: if we're rotating this So, here's the images on the screen
+  persid: ''
+- desc: so, remember we're we're simulating animation or we're giving a sense of animation.
+  persid: ''
+- desc: we're animating
+  persid: ''
+- desc: like creating
+  persid: ''
+- desc: a number of static static images showing them
+  persid: ''
+- desc: at a high enough rate that we have a sense of motion.
+  persid: ''
+- desc: So if we see this
+  persid: ''
+- desc: image and then we request
+  persid: ''
+- desc: another frame and the Rotate and the animation
+  persid: ''
+- desc: so we're not going to switch to the new frame until it's rendered in the buffer.
+  persid: ''
+- desc: So we don't see things being drawn on the stream draw them
+  persid: ''
+- desc: off screen and enemies just switch the buffer
+  persid: ''
+- desc: little bit more clear.
+  persid: ''
+- desc: This make sense so far.
+  persid: ''
+- desc: Okay.
+  persid: ''
+- desc: So we're dealing with interaction.
+  persid: ''
+- desc: How do we know when the user interacts with the application?
+  persid: ''
+- desc: How do we know when
+  persid: ''
+- desc: something happens?
+  persid: ''
+- desc: So I've indicated that there's
+  persid: ''
+- desc: two ways to do this one is the original approach
+  persid: ''
+- desc: when I started writing code
+  persid: ''
+- desc: for the Silicon Graphics workstations
+  persid: ''
+- desc: that we had
+  persid: ''
+- desc: in the lab in the late 80s and early 90s
+  persid: ''
+- desc: I was using the original approach.
+  persid: ''
+- desc: So we had a big there's a big loop.
+  persid: ''
+- desc: So we're just while one that kind of
+  persid: ''
+- desc: approach so we're just.
+  persid: ''
+- desc: So we have a big loop,
+  persid: ''
+- desc: and then we're testing for different kinds of events.
+  persid: ''
+- desc: And then we're handling them
+  persid: ''
+- desc: from this loop that loop is the organizing structure of the application.
+  persid: ''
+- desc: So what's
+  persid: ''
+- desc: a modern approach? To maybe?
+  persid: ''
+- desc: Have you written applications that
+  persid: ''
+- desc: interact with
+  persid: ''
+- desc: the user or the user interacts with the application and how do you?
+  persid: ''
+- desc: I mentioned an example
+  persid: ''
+- desc: on the screen right now.
+  persid: ''
+- desc: events I believe.
+  persid: ''
+- desc: 'No'
+  persid: ''
+- desc: this is more like Wheel of Fortune here we'll play
+  persid: ''
+- desc: you to give us some vowels
+  persid: ''
+- desc: Okay, I'll give you a vowel.
+  persid: ''
+- desc: Dress rasterization. Is
+  persid: ''
+- desc: design one eight and rasterization no that's not right. That's a longer word.
+  persid: ''
+- desc: A consonant we'd like to see if there's a constant.
+  persid: ''
+- desc: Call out some choices for constants. And I'll fill him in there
+  persid: ''
+- desc: no tea
+  persid: ''
+- desc: Oh no
+  persid: ''
+- desc: What about
+  persid: ''
+- desc: oh, I forgot
+  persid: ''
+- desc: I missed a letter I'm sorry.
+  persid: ''
+- desc: Good thing we're not playing for a new car. Or something.
+  persid: ''
+- desc: callbacks, yeah.
+  persid: ''
+- desc: So
+  persid: ''
+- desc: the events are interested in creating a callback function register that so
+    the system
+  persid: ''
+- desc: calls that event handler that's registered for the event. And that's a little
+    more efficient
+  persid: ''
+- desc: or a lot more
+  persid: ''
+- desc: so. Maybe I should show you here.
+  persid: ''
+- desc: Yeah. Me
+  persid: ''
+- desc: so this application is allowing us to draw rectangles by specifying two points
+    and then we fill in the other vertices
+  persid: ''
+- desc: Oh, that's
+  persid: ''
+- desc: why
+  persid: ''
+- desc: I'm zoomed in.
+  persid: ''
+- desc: So this code
+  persid: ''
+- desc: we're getting a mouse event and we're translating into the coordinates that
+    we're drawing from the minus one to plus one minus one to plus one.
+  persid: ''
+- desc: So this code
+  persid: ''
+- desc: is limited because it needs the canvas to be at the top left
+  persid: ''
+- desc: Excuse me.
+  persid: ''
+- desc: Let's look at
+  persid: ''
+- desc: this vert Shin so
+  persid: ''
+- desc: here I'm
+  persid: ''
+- desc: I'm using the bounding box rectangle to get the get the points relative to
+    the canvas.
+  persid: ''
+- desc: So
+  persid: ''
+- desc: display here
+  persid: ''
+- desc: start counting at zero rectangles zero
+  persid: ''
+- desc: as
+  persid: ''
+- desc: the points the vertices minus point eight 4.69.
+  persid: ''
+- desc: Excuse
+  persid: ''
+- desc: me again. minus point eight 4.17 minus point two 3.17 and minus point two
+    3.69. And then I'm also displaying the color for the rectangle.
+  persid: ''
+- desc: So the vertex shader is just getting the position and then
+  persid: ''
+- desc: vertex color is set to be the attribute color value that we get from the color
+    buffer.
+  persid: ''
+- desc: I've
+  persid: ''
+- desc: given the code a facelift from the one that's on the website
+  persid: ''
+- desc: with the idea of making it more readable so, I'm saying that we could specify
+    up to 200 rectangles and a rectangle has four vertices. So the max number of positions
+    are the number of vertices times the max number of rectangles so
+  persid: ''
+- desc: are going to create space for 800 vertices and then
+  persid: ''
+- desc: well, let's go through it. A little more.
+  persid: ''
+- desc: So here's a variable to keep track of the rectangles. And we're distinguishing
+    between the first click so if it's the first click or getting starting a new rectangle
+    if it's
+  persid: ''
+- desc: if it's not the first click, which means is the second click. Then we're finishing
+    completing the rectangle
+  persid: ''
+- desc: and we're going to store the rectangle is an array
+  persid: ''
+- desc: so this is
+  persid: ''
+- desc: well some very well we'll just deal with the variables later.
+  persid: ''
+- desc: So we have an array for colors and then our in our init function
+  persid: ''
+- desc: setting up the context and the color so we're doing a light gray as the fill
+    color or loading our shaders and using that and then here I have the variables.
+    So
+  persid: ''
+- desc: I have variables so it's a bit more readable as you go through for the GL
+    commands. So now we're dealing with vertices. We have x and y so the so each vertex
+    has two components
+  persid: ''
+- desc: as I've indicated here, component size is four. So a floating point number
+    has four bytes, or 32 bits. So we create a buffer and we're going to bind to that
+    buffer
+  persid: ''
+- desc: now
+  persid: ''
+- desc: the size we're going to allocate for that buffer is two times four times.
+  persid: ''
+- desc: That's not right. Two times four eight times 800 vertices. So we're going
+    to allocate 64 for 6400.
+  persid: ''
+- desc: Locations
+  persid: ''
+- desc: bytes
+  persid: ''
+- desc: we're going to connect a position with the buffer and then we're gonna do
+    the same here for a color buffer
+  persid: ''
+- desc: so here I am specifying the event handlers.
+  persid: ''
+- desc: Here I'm getting using the DOM to get the text area. I'm going to record some
+    things there.
+  persid: ''
+- desc: So we're going to add a listener function for most down and we're going to
+    attach it to the canvas so we don't care about most down events outside the canvas
+    but if it's happens inside the canvas, then we're going to
+  persid: ''
+- desc: do this and so again, and get the bounding client rectangle for the canvas.
+    And then so from our event, we get client x and y.
+  persid: ''
+- desc: So we subtract the x position from the left of the bounding box and y we subtract
+    the top of the bounding box
+  persid: ''
+- desc: so event, client x and y will be in the range of
+  persid: ''
+- desc: the canvas size so we set it up to be 512 by 512. So that's what we're getting.
+  persid: ''
+- desc: So we're multiplying the x the relative x by two
+  persid: ''
+- desc: and we're divided by Canvas width. So we have numbers in the range of the
+    canvas, multiply it by two. So now we have in the case of 512 by 512. We have
+    a range zero to 1023. And then we're gonna divide here by 512.
+  persid: ''
+- desc: So then because we've multiplied by two
+  persid: ''
+- desc: so we've gotten values between zero and two. And we subtract. Minus we subtract
+    one so then the range is minus one.
+  persid: ''
+- desc: To one.
+  persid: ''
+- desc: Does that make sense?
+  persid: ''
+- desc: So and we're flipping y, so we're not coming from the top left or going from
+    the bottom left, when we're drawing
+  persid: ''
+- desc: so when we ever first click, we store the two points.
+  persid: ''
+- desc: Then we computed here
+  persid: ''
+- desc: in position zero of the array, and then said first click is a false so we're
+    not we're done processing. The first click once we assign that first position
+    in the rectangle array
+  persid: ''
+- desc: and then
+  persid: ''
+- desc: so for not on the first click, so or the second click we set it back to be
+  persid: ''
+- desc: first click and then we're dealing with
+  persid: ''
+- desc: the new point we're putting in position to the array and then we're filling
+    in positions one and three.
+  persid: ''
+- desc: With combinations of those input points. So here I'm modifying the text content
+    of the text area on the interface so I print them the rectangle the coordinates
+    with two decimal places.
+  persid: ''
+- desc: Then here we're adding service originally, we set up this buffer to be 6400
+    bytes. Right 200 rectangles, each with four vertices, each vertex with x and y
+    and each x, y value, taking four bytes. So we've allocate that block of memory
+    and now we're going to add to it
+  persid: ''
+- desc: so we bind to the vertex buffer and then we're going to compute an offset.
+    And the offset is the number of vertices so there's four vertices two components
+    for each vertex so that's
+  persid: ''
+- desc: Yeah, so we have x and y so so num vertices is four. And there's two components
+    each vertex. So there's eight components, per the rec, each rectangle and we have
+    four bytes for each of them. So that's 32. So we need to store 32 bytes for each
+    rectangle. So we start rectangles, zero so we have zero offset. And then for a
+    second rectangle. We have a 32 or offsets, 32 and 64. Yeah, so we can see 32 Bytes
+    times 200 equals the size that we've allocated. For our buffer.
+  persid: ''
+- desc: I should really test that we don't exceed the maximum number of triangles
+    here
+  persid: ''
+- desc: I'll add that
+  persid: ''
+- desc: okay,
+  persid: ''
+- desc: so then we're going to do the color buffer.
+  persid: ''
+- desc: So
+  persid: ''
+- desc: we're assigning the same color to each vertex
+  persid: ''
+- desc: so
+  persid: ''
+- desc: I just have a loop to repeat the values for each vertex
+  persid: ''
+- desc: and then
+  persid: ''
+- desc: so the offset for colors
+  persid: ''
+- desc: for vertices.
+  persid: ''
+- desc: Each vertex needs four, four components because we're dealing with RGB A.
+    So that's 16. times is four. That's 64. So we need 64. bytes to specify the Virtus,
+    vertex colors
+  persid: ''
+- desc: so the color I'm outputting I'm just recording one of the colors since they're
+    the same
+  persid: ''
+- desc: and then
+  persid: ''
+- desc: at the end of the loop, we add increment rectangles. So we're dealing with
+    the next rectangle
+  persid: ''
+- desc: and then, when we render.
+  persid: ''
+- desc: We're doing a triangle fan so we're going through the number of rectangles.
+  persid: ''
+- desc: So this is this the primitive redrawing and then the starting point and
+  persid: ''
+- desc: and the number we're drawing it that from that starting Point
+  persid: ''
+- desc: So
+  persid: ''
+- desc: I just want to talk about triangles. Oh boy sorry
+  persid: ''
+- desc: no one started closing books which I thought was a generally approved sign
+    for
+  persid: ''
+- desc: this makes sense.
+  persid: ''
+- desc: I invite you to look at the code for cat ones. And then look at my version
+    and see if you have
+  persid: ''
+- desc: if you think I've done a better and improved the readability and if there
+    are things that could still be improved
+  persid: ''
+- desc: anyway, so
+  persid: ''
+- desc: this gives you have a sense of how to use.
+  persid: ''
+- desc: Events for input.
+  persid: ''
+- desc: So things you might explore, what about assigning different colors to different
+    vertices and what does that look like? I don't want to keep o'clock or so
+  persid: ''
+- desc: thank you. Very much for today.
+  persid: ''
+- desc: Any questions before
+  persid: ''
+- desc: Thank you very much for today.
+  persid: ''
+- desc: So we're not
+  persid: ''
+- desc: we don't meet on Friday. Friday is the
+  persid: ''
+- desc: national truth and
+  persid: ''
+- desc: reconciliation. the
+  persid: ''
+- desc: opportunity to look at history
+  persid: ''
+- desc: So,
+  persid: ''
+- desc: have a good weekend and Monday. I'll get website updated. Have a look at chapter
+    four.
+  persid: ''
+- desc: have a good weekend and Monday. I'll get website updated. Have a look at chapter
+    four.
+  persid: ''
+offering:
+  id: CS-733-202330

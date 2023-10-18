@@ -259,3 +259,63 @@ layout: bg-image
     Lecture 4 (16 Mar 2022)
   </div>
 </div>
+
+<div class="card bg-light m-2">
+  <div class="card-header">
+    <h3>
+      Ross Niebergall ('86 BSc High Honours)
+    </h3>
+  </div>
+  <div class="card-body">
+    <h5>
+      “Past, Present, and Future of the Space Industry”
+    </h5>
+    <p>
+      The space domain enables everyday life in commercial, civil and military industries. Today, technology development is driving lower cost launch and the proliferation of space assets. The intersection of government and commercial developments provide hybrid space architectures which accomplish missions with newfound speed and agility. As space matures, technology that was once hosted on the ground is moving to space. However, space is increasingly becoming contested, putting future developments at risk.
+    </p>
+    <p>
+      <a href="https://www.facebook.com/events/1251923198710979" target="_blank">
+        Event on facebook.
+      </a>
+    </p>
+    <p>
+      Ross Niebergall is the Vice President and Chief Technology Officer of L3Harris Technologies, an agile global aerospace and defense technology innovator that delivers end-to-end solutions that meet customers’ mission-critical needs. The company provides advanced defense and commercial technologies across space, air, land, sea, and cyber domains. Dr. Niebergall leads the company’s engineering, technology & corporate strategy organization, including driving the company’s overall technology strategy. Dr. Niebergall joined Harris Corporation in 2017, prior to the company’s merger with L3 Technologies, after a long career at Raytheon.
+    </p>
+    <p>
+      Dr. Niebergall was born and raised in Saskatchewan. He holds a B.Sc. in Mathematics from the University of Regina, and an M.Sc. and a Ph.D. in Mathematics from the University of Notre Dame. Before joining Raytheon, he served as an Associate Professor of Mathematics and Computer Science at the University of North British Columbia and as a post-doctoral research fellow and visiting scientist at McMaster University.
+    </p>
+  </div>
+  <div class="card-header">
+    Lecture 5 (29 Nov 2022)
+  </div>
+</div>
+
+<div class="card bg-light m-2">
+  <div class="card-header">
+    <h3>
+      Donna Lindskog ('79 BSc Honours,'92 MSc)
+    </h3>
+  </div>
+  <div class="card-body">
+    <h5>
+      “Ethical IT Talent in Canada”
+    </h5>
+    <p>
+      From the privacy issues with Facebook to the recent explosion of AI concerns, IT Ethics are now political issues that we must all work to clarify. IT Professionals are needed to describe the facts and issue the warnings.  As past Chair of the Saskatchewan Information Technology Sector Partnership with government and educators, Donna led discussions about recruitment into the IT sector and how to support career paths in Saskatchewan and Canada. Donna will describe some lessons learned and some challenges for growth of Ethical IT Talent in Canada.
+    </p>
+    <p>
+      <a href="https://www.facebook.com/events/1127494838211857" target="_blank">
+        Event on facebook.
+      </a>
+    </p>
+    <p>
+      Since Donna retired from SaskTel 12 years ago, she has written a book called “The More Things Change: A Case Study to Introduce Information Technology Ethics” and has been awarded the status of CIPS fellow (see 
+      <a href="https://cips.ca/DonnaLindskog/">
+        https://cips.ca/DonnaLindskog/
+      </a>). IT Ethics are an important part of being an IT Professional and it is where Donna continues to encourage industry discussions.
+    </p>
+  </div>
+  <div class="card-header">
+    Lecture 6 (7 Nov 2023)
+  </div>
+</div>

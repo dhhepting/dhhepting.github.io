@@ -116,6 +116,6 @@ function render()
     if(flag) theta[axis] += 2.0;
     gl.uniform3fv(thetaLoc, theta);
 
-    gl.drawElements(gl.TRIANGLE_FAN, numElements, gl.UNSIGNED_BYTE, 0);
+    gl.drawElements(gl.TRIANGLE_STRIP, numElements, gl.UNSIGNED_BYTE, 0);
     requestAnimationFrame(render);
 }
