@@ -10,8 +10,12 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 
 gem "jekyll", "~> 4.2.2"
+gem 'nokogiri', '~> 1.15', '>= 1.15.4'
+gem 'racc', '~> 1.7', '>= 1.7.1'
+gem 'async', '~> 2.6', '>= 2.6.4'
+gem 'io-event', '~> 1.3', '>= 1.3.2'
 gem "webrick", "~> 1.7"
-gem "html-proofer"
+gem 'html-proofer', '~> 5.0', '>= 5.0.8'
 
 group :jekyll_plugins do
    gem 'jekyll-seo-tag'
