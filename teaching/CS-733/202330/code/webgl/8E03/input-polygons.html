@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- based on: https://www.interactivecomputergraphics.com/8E/Code/03/cad1.html -->
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Input Points Draw Shape
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script id="vertex-shader" type="x-shader/x-vertex">
+            #version 300 es
+
+            in vec4 aPosition;
+            in vec4 aColor;
+            out vec4 vColor;
+
+            void
+            main()
+            {
+                gl_Position = aPosition;
+                vColor = aColor;
+            }
+        </script>
+        <script id="fragment-shader" type="x-shader/x-fragment">
+            #version 300 es
+            precision mediump float;
+
+            in vec4 vColor;
+            out vec4 fColor;
+
+            void
+            main()
+            {
+                fColor = vColor;
+            }
+        </script>
+        <script type="text/javascript" src="../Common/initShaders.js"></script>
+        <script type="text/javascript" src="../Common/MVnew.js"></script>
+        <script type="text/javascript" src="input-polygons.js"></script>
+    </head>
+    <body>
+    <div>
+        <canvas id="gl-canvas" width="512" height="512">
+            Your browser does not support the HTML5 canvas element
+        </canvas>
+</div>
+<div>
+<select id = "mymenu" size = "7">
+    <option value = "0">Black</option>
+    <option value = "1">Red</option>
+    <option value = "2">Yellow</option>
+    <option value = "3">Green</option>
+    <option value = "4">Blue</option>
+    <option value = "5">Magenta</option>
+    <option value = "6">Cyan</option>
+</select>
+<button id = "Button1">End Polygon</button>
+</div>
+
+
+
+</body>
+</html>
