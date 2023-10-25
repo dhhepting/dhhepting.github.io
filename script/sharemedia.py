@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/opt/homebrew/bin/python3
 
 import sys, os, datetime, subprocess
 import dropbox
