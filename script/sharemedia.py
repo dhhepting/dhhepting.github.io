@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/python3
+#!/usr/bin/env python3
 
 import sys, os, datetime, subprocess
 import dropbox
@@ -38,7 +38,8 @@ off_id = off_crs + "-" + off_sem
 # Get Dropbox OAuth2 access token from environment variable
 # See <https://blogs.dropbox.com/developers/2014/05/generate-an-access-token [...]
 # for how to generate one for an account.
-command = ['bash', '-c', 'source /Users/hepting/.bashrc && env | grep DB_ACCESS_TOKEN']
+#command = ['bash', '-c', 'source /Users/hepting/.bashrc && env | grep DB_ACCESS_TOKEN']
+command = ['zsh', '-c', 'source /Users/hepting/.zshrc && env | grep DB_ACCESS_TOKEN']
 proc = subprocess.Popen(command, stdout = subprocess.PIPE)
 for line in proc.stdout:
   kvs = line.decode("utf-8").strip().split("=")

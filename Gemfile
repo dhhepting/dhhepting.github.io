@@ -11,7 +11,7 @@ source "https://rubygems.org"
 
 gem "jekyll", "~> 4.2.2"
 gem "webrick", "~> 1.7"
-gem "html-proofer"
+gem 'html-proofer', '~> 5.0', '>= 5.0.8'
 
 group :jekyll_plugins do
    gem 'jekyll-seo-tag'

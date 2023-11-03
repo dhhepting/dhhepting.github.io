@@ -1,0 +1,693 @@
+Audio-Transcript:
+- desc: Okay
+  persid: ''
+- desc: How's everybody doing today?
+  persid: ''
+- desc: I see you embracing the winter now.
+  persid: ''
+- desc: I've got a sweater. Yeah. It's not my park. That will come hopefully not too
+    soon
+  persid: ''
+- desc: so happy Wednesday everybody. So this is our last day before the fall break
+    after years of fall break has been around Remembrance Day so it was much later
+    in the semester so first time for everything
+  persid: ''
+- desc: okay, so midterm is on Monday, October 23. So that's Monday is one week after
+    we come back from our break.
+  persid: ''
+- desc: So I will post
+  persid: ''
+- desc: last year is
+  persid: ''
+- desc: likely today this week
+  persid: ''
+- desc: so we were talking last day where we looked at a program to draw a cube and
+    spin it around.
+  persid: ''
+- desc: One of them had a Call of Duty fix it. Yeah. It was pretty easy. It was pretty
+    easy to find.
+  persid: ''
+- desc: So we'll look at some code for that
+  persid: ''
+- desc: so how do we go
+  persid: ''
+- desc: about constructing a cube
+  persid: ''
+- desc: so why don't we start with Nick.
+  persid: ''
+- desc: Even before that, how do we make a square or? Yeah, so start with vertices.
+  persid: ''
+- desc: Did you see points or parts? I just said God's point. Okay.
+  persid: ''
+- desc: We'll give you half a plan for that.
+  persid: ''
+- desc: Points positions
+  persid: ''
+- desc: vertices
+  persid: ''
+- desc: Okay, so then what can we do? From that? You know, we don't see points very
+    easily
+  persid: ''
+- desc: so we make a
+  persid: ''
+- desc: point about the points.
+  persid: ''
+- desc: Unless you're drawing points
+  persid: ''
+- desc: so we have to say we're drawing and we're going we're going to use draw, draw
+    mode, set the points and we have to have a point size
+  persid: ''
+- desc: one
+  persid: ''
+- desc: instead of interrupting the class or whatever that is across the hallway,
+    just easier to close the door. You seem to be playing a video quite loud
+  persid: ''
+- desc: next
+  persid: ''
+- desc: Okay, does that make sense?
+  persid: ''
+- desc: So the one where I have all the input rectangles code from in chapter three,
+    I have the way to select the menu to select the different kinds of drawing modes.
+    So in our code, you'll notice in the shader it has a line to set the point size
+    to four.
+  persid: ''
+- desc: So you get this we can see them
+  persid: ''
+- desc: if we don't set if we don't have a Value for points size. We won't see them
+    even if we have drawing mode set to be fights.
+  persid: ''
+- desc: Anyway, so let's
+  persid: ''
+- desc: see the points but drawing points isn't a very good way to get a sense of
+    geometry.
+  persid: ''
+- desc: And doesn't scream out a cube desert. Or even Raven's speaks say it softly
+    it doesn't say cube.
+  persid: ''
+- desc: Sorry, that's my sense of humor.
+  persid: ''
+- desc: And if we connect, we draw the thesis. And because it's a cube just consider
+    that
+  persid: ''
+- desc: these are all square
+  persid: ''
+- desc: so that says more of a cuboid helped to make this more of a cube still.
+  persid: ''
+- desc: Or give the impression of a cube instead of a collection of lines.
+  persid: ''
+- desc: missing one edge
+  persid: ''
+- desc: will that do it? Does that say cube now or does it still say some lines? Some
+    point maybe parallel lines
+  persid: ''
+- desc: okay, what what way could I improve it still?
+  persid: ''
+- desc: So I don't want to see this line
+  persid: ''
+- desc: because that's blocked by the face. So again, just consider these little squares
+    I'm drawing
+  persid: ''
+- desc: It's better. It's a little more rectangular cubish Right. So we could if we
+    do if we set the depth buffer been suffering for keeping track of the depth, so
+    we're doing some hidden surface elimination this gives us a better sense of the
+    geometry of the cube
+  persid: ''
+- desc: so to draw squares and WebGL
+  persid: ''
+- desc: because surfaces
+  persid: ''
+- desc: we're going to use triangles. So why are triangles better than planes or quadrilaterals
+    or rectangles is a guaranteed that we can put up
+  persid: ''
+- desc: is a guaranteed that for dry wreck if we specify a rectangle that all points
+    are going to be coplanar
+  persid: ''
+- desc: well, we might wish it to be that way but it doesn't have to be right
+  persid: ''
+- desc: me say explain to you.
+  persid: ''
+- desc: Lines and rectangles quadrilaterals are not necessarily.
+  persid: ''
+- desc: Right. So if we specify two points, what does what a two points specify for
+    us?
+  persid: ''
+- desc: Two points.
+  persid: ''
+- desc: Two points are in basically a line. Thanks. I heard that a few few different
+    people. So that's a line. So
+  persid: ''
+- desc: if we specify a line
+  persid: ''
+- desc: we have a choice of all if the line is like this than the planes that we specify
+    can be anywhere that passes through that line.
+  persid: ''
+- desc: So we specify a third point that fixes the orientation of the plane. So the
+    third point is it makes the triangle so
+  persid: ''
+- desc: so triangles are coplanar. So if we have a rectangle or face it isn't coplanar
+    we have to make a choice of how to triangulate it. So if
+  persid: ''
+- desc: I mean, another circle I want to do another circle they're looking for my
+    camera
+  persid: ''
+- desc: so the idea is we can use triangles to represent a face. Q But in general,
+  persid: ''
+- desc: if the four points aren't
+  persid: ''
+- desc: the same plane then we have to make a decision about how to break it into
+    two triangles.
+  persid: ''
+- desc: Soon as we have
+  persid: ''
+- desc: definitely not keeping them up
+  persid: ''
+- desc: so we can break up
+  persid: ''
+- desc: so we can see three phases here. So, that's six triangles, but altogether
+    there'll be 12 I want to see if I can draw
+  persid: ''
+- desc: draw something that's clearly not
+  persid: ''
+- desc: in the plane.
+  persid: ''
+- desc: So the idea is this one is higher, the second is higher than that and
+  persid: ''
+- desc: so if we do it this way
+  persid: ''
+- desc: the center line is the lower altitude.
+  persid: ''
+- desc: We can maybe think of it
+  persid: ''
+- desc: like this
+  persid: ''
+- desc: but then if we divide it the other way.
+  persid: ''
+- desc: Then we're getting
+  persid: ''
+- desc: that kind of shaped twice
+  persid: ''
+- desc: Does that make sense?
+  persid: ''
+- desc: We should write some code like this
+  persid: ''
+- desc: should we take that on today? Okay.
+  persid: ''
+- desc: Okay
+  persid: ''
+- desc: so before that
+  persid: ''
+- desc: let's think about the queue.
+  persid: ''
+- desc: So we can in WebGL we can draw triangles
+  persid: ''
+- desc: so the basic approach you can do is just give the coordinates of each of these
+    vertices and say, here are the triangles
+  persid: ''
+- desc: and together they make up the cube
+  persid: ''
+- desc: but that's not terribly efficient.
+  persid: ''
+- desc: So you can do
+  persid: ''
+- desc: so instead of a face
+  persid: ''
+- desc: I mean draw a bigger fan.
+  persid: ''
+- desc: FBI says a circle
+  persid: ''
+- desc: if you squint a little
+  persid: ''
+- desc: Sabian Nightingale rows of data plot.
+  persid: ''
+- desc: Anyway the idea is so we have
+  persid: ''
+- desc: one vertex here. So we specify the center and then we say make a triangle.
+    So this is C was called C for center
+  persid: ''
+- desc: and then.
+  persid: ''
+- desc: So we
+  persid: ''
+- desc: you can specify
+  persid: ''
+- desc: the fan as see
+  persid: ''
+- desc: and the way we understand that as role is using C
+  persid: ''
+- desc: then we're using D and E
+  persid: ''
+- desc: and E and F
+  persid: ''
+- desc: then she and so on
+  persid: ''
+- desc: So, for doing a face
+  persid: ''
+- desc: square
+  persid: ''
+- desc: we do this triangle, so,
+  persid: ''
+- desc: see
+  persid: ''
+- desc: and we use those two and then we use the last two
+  persid: ''
+- desc: so what does it say? Triangle? Tangent
+  persid: ''
+- desc: fan
+  persid: ''
+- desc: fans
+  persid: ''
+- desc: alternatively we can do triangle strip
+  persid: ''
+- desc: what is the upper line triangle? That the
+  persid: ''
+- desc: triangles detached separately
+  persid: ''
+- desc: with three words are defined
+  persid: ''
+- desc: Thank you My apologies.
+  persid: ''
+- desc: I was listening to a story of what how teachers have had to buy news supplies
+    for the students every year and out of their own pocket and when school board
+    and told the teachers to try to get the students not to sharpen their pencils
+    too. Often because he only had one for the year. Anyway, that reminds me of sharpening
+    my piece of chalk. So I might have an easier time writing on the board.
+  persid: ''
+- desc: Although I'm not sure that I would have an easier time so long as I'm not
+    testing it with having access to a chalk sharpener I'll just say that's that's
+    the magic solution. And my handwriting would be wonderfully legible that okay,
+    triangle strips so
+  persid: ''
+- desc: I'm gonna take a cube
+  persid: ''
+- desc: and make it look like an elephant a little bit or a letter T.
+  persid: ''
+- desc: So there's a way to make a cube from a single triangle strip.
+  persid: ''
+- desc: So the idea is I'm not sure let me try
+  persid: ''
+- desc: so we start here
+  persid: ''
+- desc: don't know why they had to make the line squeak?
+  persid: ''
+- desc: So this is much more efficient I think that comes
+  persid: ''
+- desc: so that's 14
+  persid: ''
+- desc: So that's 14 indices to specify an ordering for the eight vertices. So we
+    don't have let's write some other fakery.
+  persid: ''
+- desc: On the board here.
+  persid: ''
+- desc: Illustration there so
+  persid: ''
+- desc: six faces times two triangles per face
+  persid: ''
+- desc: three
+  persid: ''
+- desc: C's
+  persid: ''
+- desc: So, that means we have
+  persid: ''
+- desc: 12 times 12 144
+  persid: ''
+- desc: Now if we just specify the vertices once
+  persid: ''
+- desc: so, we have eight vertices
+  persid: ''
+- desc: scratch my nail on the chalkboard just ever so slightly so, it gave me I got
+    the Harrison I got them back my neck, my neck. I hope it didn't extend far into
+    the audience was just a very localized effect eight vertices trying in the cube
+    pardon me.
+  persid: ''
+- desc: Is enough just specify the eight vertices
+  persid: ''
+- desc: do we
+  persid: ''
+- desc: have the saving of
+  persid: ''
+- desc: about 75% is do we have enough information to draw the cube with this
+  persid: ''
+- desc: oh
+  persid: ''
+- desc: okay, we're drawing two squares, which we said isn't a good way to proceed.
+    And we're not drawing squares or drawing triangles. triangles
+  persid: ''
+- desc: so we can get
+  persid: ''
+- desc: if we specify indices
+  persid: ''
+- desc: let's just start
+  persid: ''
+- desc: if we say
+  persid: ''
+- desc: okay, we'll do that
+  persid: ''
+- desc: so we can think of this as
+  persid: ''
+- desc: I'm Fred face zero
+  persid: ''
+- desc: then connected to two three. And let's label these 4567.
+  persid: ''
+- desc: So two, three are connected to six seven
+  persid: ''
+- desc: and then six,
+  persid: ''
+- desc: seven are connected to four, five and four five are connected to 01.
+  persid: ''
+- desc: And then one three are connected 257
+  persid: ''
+- desc: and
+  persid: ''
+- desc: 02 are connected to four six.
+  persid: ''
+- desc: So if we
+  persid: ''
+- desc: use this path
+  persid: ''
+- desc: then you can specify indices
+  persid: ''
+- desc: '0123'
+  persid: ''
+- desc: So got to three and then go across to seven
+  persid: ''
+- desc: and then why one,
+  persid: ''
+- desc: five
+  persid: ''
+- desc: and you see here we've got one five or connecting to one five there
+  persid: ''
+- desc: think it's 1404
+  persid: ''
+- desc: Isn't the Zealand?
+  persid: ''
+- desc: No, I drew this this one the other way.
+  persid: ''
+- desc: Here we're connecting to four zero
+  persid: ''
+- desc: and then we get to
+  persid: ''
+- desc: 23456 7/14 14.
+  persid: ''
+- desc: Okay,
+  persid: ''
+- desc: so I'm gonna give you I'll send this post a link to the paper where this triangle
+    strip came from. They have different numbers. I'm not sure why they started where
+    they did. Anyway
+  persid: ''
+- desc: so there's 14
+  persid: ''
+- desc: If we're going to specify a triangle strip, we need to specify 14 indices.
+  persid: ''
+- desc: Now for us an unsigned in like a one one bite
+  persid: ''
+- desc: I guess. Unsigned character. So how many indices can represent using one byte?
+  persid: ''
+- desc: 'No'
+  persid: ''
+- desc: 'no'
+  persid: ''
+- desc: one day test for
+  persid: ''
+- desc: memory space know as a four
+  persid: ''
+- desc: in the CFA so.
+  persid: ''
+- desc: Do for each in this index
+  persid: ''
+- desc: I didn't follow
+  persid: ''
+- desc: if there are eight memory spaces in one byte and we take two for each index.
+    So, is it four indices?
+  persid: ''
+- desc: So,
+  persid: ''
+- desc: using one byte to store one index value so, using one byte how many values
+    can I represent
+  persid: ''
+- desc: one byte how many values of it any other questions
+  persid: ''
+- desc: anyone else be able to restate the question so it's more clear
+  persid: ''
+- desc: so, as an aside, we talked about colors being
+  persid: ''
+- desc: what color is that?
+  persid: ''
+- desc: Yeah, let's read so we have.
+  persid: ''
+- desc: So,
+  persid: ''
+- desc: the hexadecimal digit can represent 16 values because we're doing
+  persid: ''
+- desc: so we have
+  persid: ''
+- desc: four beds. A hexadecimal digit means regrouping four bits. So that means we
+    can have between we have value 01 all the way to 15 because we have capacity for
+    16 values in four bits
+  persid: ''
+- desc: What do you think about that
+  persid: ''
+- desc: so, remember card trick for bits for yes or no questions? I guess quote unquote
+    your number that was between zero and six between zero and 15 inclusive.
+  persid: ''
+- desc: So, 16 times 16
+  persid: ''
+- desc: is how many values
+  persid: ''
+- desc: 256 Yeah.
+  persid: ''
+- desc: So, in this case, we don't need more than eight index values so 256 is fine.
+    If we needed more than 256 indices, we could use a 216 bit storage or two bytes
+  persid: ''
+- desc: so,
+  persid: ''
+- desc: we're adding 14 here
+  persid: ''
+- desc: so this
+  persid: ''
+- desc: requires 47 Pardon me 46 By switches about a third of the costs. If we just
+    did it
+  persid: ''
+- desc: plainly.
+  persid: ''
+- desc: Just didn't triangles
+  persid: ''
+- desc: triangle fan is a bit more because we need to specify the fan for each.
+  persid: ''
+- desc: And for each face.
+  persid: ''
+- desc: So each face
+  persid: ''
+- desc: so
+  persid: ''
+- desc: six times
+  persid: ''
+- desc: for indices. Plus we need Sony say don't make the whole thing into it's not
+    just one triangle fan because we need to change the center of the fan from each
+    face. So we need to
+  persid: ''
+- desc: so
+  persid: ''
+- desc: six times four that's 24 529
+  persid: ''
+- desc: So we had that
+  persid: ''
+- desc: that makes sense.
+  persid: ''
+- desc: So we're going to use element arrays to give the extra information about the
+    indices you that we need to construct the geometric primitive so if we're talking
+    about bytes, but maybe megabytes then these differences are more important.
+  persid: ''
+- desc: So let me go to the two examples
+  persid: ''
+- desc: no that's not the one I wanted.
+  persid: ''
+- desc: May be it is.
+  persid: ''
+- desc: Let's see.
+  persid: ''
+- desc: Okay,
+  persid: ''
+- desc: let's do the plane
+  persid: ''
+- desc: so the colors are not
+  persid: ''
+- desc: gonna say very helpful for interpreting the shape
+  persid: ''
+- desc: but anyway that we
+  persid: ''
+- desc: let's just, yeah, that's the technical problem. I had.
+  persid: ''
+- desc: Go away. Go away.
+  persid: ''
+- desc: Okay. So.
+  persid: ''
+- desc: Okay, so this first one we're defining a function called Color Cube and we're
+    drying the six quad six faces
+  persid: ''
+- desc: and then we have indices
+  persid: ''
+- desc: so the indices say how to make the two triangles out of the quadrilateral.
+    That we've input. And so we're putting the positions together according to the
+    indices.
+  persid: ''
+- desc: So we're drawing arrays. Using draw arrays, which are drawing triangles. Zero
+    to the we were drawing all 36 triangles. Does that make sense?
+  persid: ''
+- desc: That's what we've done before.
+  persid: ''
+- desc: Now to draw the triangle fans. So we can see triangle fan and we're doing
+    num elements but instead here we're specifying the right hand side unsigned unsigned
+    bytes. So this, they can store up to 246 values and serve draw arrays reusing
+    draw elements Does that make sense?
+  persid: ''
+- desc: So to go up to the top here.
+  persid: ''
+- desc: So
+  persid: ''
+- desc: you are the vertices and I've indicated the index value for each of them.
+  persid: ''
+- desc: And then
+  persid: ''
+- desc: I have indicated the plane that they represent. So we have four indices to
+    specify the face of the cube and then a fifth one to say that's the end of the
+    triangle fan. So we're specifying six fans and we don't need this the Terminator
+    at the end
+  persid: ''
+- desc: so in order to enable this understanding of the 255 in the data here, we enable
+    primitive restart fixed index
+  persid: ''
+- desc: so we're creating a third buffer for the indices and we're making it unsigned
+    int eight bit array
+  persid: ''
+- desc: we're making a color buffer which is pretty standard, and then our vertex
+    array. So we're just storing the eight vertices, not 36 vertices. So just the
+    eight there
+  persid: ''
+- desc: and then we have
+  persid: ''
+- desc: dry elements triangle fan, number of elements. So we have num elements is
+    29. We're using that.
+  persid: ''
+- desc: Size of our element is an unsigned byte. So specify those parameters. And
+    we draw again
+  persid: ''
+- desc: now let's go to let's show
+  persid: ''
+- desc: first.
+  persid: ''
+- desc: So you can see it's fixed.
+  persid: ''
+- desc: There's no hole here. We'll take a look at the original in a second. Here.
+  persid: ''
+- desc: But our third example
+  persid: ''
+- desc: is.
+  persid: ''
+- desc: I've
+  persid: ''
+- desc: worked on the interface a little bit here. You can tell me what you think
+    about it.
+  persid: ''
+- desc: Basically
+  persid: ''
+- desc: I reordered the vertices a little bit. But the indices that we have
+  persid: ''
+- desc: in the code
+  persid: ''
+- desc: I think they should have been similar to the ones we came up with.
+  persid: ''
+- desc: So we don't need any
+  persid: ''
+- desc: and he breaks in that triangle strip. Because we're just specify as opposed
+    to the Triangle, triangle strip are just see sequencing them. So we use the first
+    three vertices, or the first three indices to draw a triangle and then we use
+    the next V and the next three and the next three. So that's a distinction. Like
+    with the drawing modes, we have lines and line loops, or line strip. So if we're
+    drawing triangles, we take three vertices and then we want the next three vertices.
+    We don't overlap. So for drawing lines compared to a line strip, taking two vertices
+    drawing the line, then moving on to the next two, with a blind strip between two
+    and then moving. One doing those two vertices moving one doing the next two vertices
+    Does that make sense?
+  persid: ''
+- desc: Either
+  persid: ''
+- desc: that makes sense. Okay. All right. Any questions about that?
+  persid: ''
+- desc: Know it's not my one.
+  persid: ''
+- desc: Okay, triangle strip
+  persid: ''
+- desc: elements.
+  persid: ''
+- desc: leaves a little bit to be desired, but
+  persid: ''
+- desc: here we go.
+  persid: ''
+- desc: So what I've done here is I colored one face read from the initial from the
+    initial eight vertices I did. One face red and one face blue and then as a go
+    between them is blending.
+  persid: ''
+- desc: was working for me to begin with and then start have some problems.
+  persid: ''
+- desc: So you can
+  persid: ''
+- desc: think about this as well?
+  persid: ''
+- desc: So whichever one I type into them becomes the one that's animated the X who
+    gets animated
+  persid: ''
+- desc: let's see if that's true.
+  persid: ''
+- desc: Yeah
+  persid: ''
+- desc: oh
+  persid: ''
+- desc: okay so we
+  persid: ''
+- desc: have here the vertices of vertex colors
+  persid: ''
+- desc: and then the indices
+  persid: ''
+- desc: Can you see where the problem is?
+  persid: ''
+- desc: Compare the first and second triangle fan specifications here
+  persid: ''
+- desc: what do you notice about these four numbers compared to these four numbers
+  persid: ''
+- desc: is the repetition of this number. Yeah 372
+  persid: ''
+- desc: That's the problem
+  persid: ''
+- desc: that was the one that was creating the whole yeah
+  persid: ''
+- desc: I'm
+  persid: ''
+- desc: over time here. So, I don't want to keep you but the thought I had was just
+    to modify one of these faces to not not be coplanar
+  persid: ''
+- desc: you can experiment with that over the break any questions? This makes sense
+    about the geometry and how we can specify geometry and the trade offs we get.
+  persid: ''
+- desc: Okay, well,
+  persid: ''
+- desc: I won't keep you any longer. Thank you very much for today and have a good
+    break. And need to get in touch with me. I'm available. Thank you. You're welcome.
+    Happy Thanksgiving. Thanks. Yeah. So there's Thanksgiving. And then my 40th high
+    school reunion.
+  persid: ''
+- desc: Okay, and maybe against
+  persid: ''
+- desc: my better judgment. I decided to go.
+  persid: ''
+- desc: Before you go since you
+  persid: ''
+- desc: know 40 Since I graduated high school
+  persid: ''
+- desc: was 48 years I'd really be old.
+  persid: ''
+- desc: Thank you, Doctor have a good
+  persid: ''
+- desc: Thank you, Doctor have a good
+  persid: ''
+offering:
+  id: CS-733-202330

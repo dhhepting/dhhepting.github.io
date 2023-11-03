@@ -1,4 +1,5 @@
-#!/opt/homebrew/bin/python3
+#!/usr/bin/env python3
+
 import sys, os, errno #, datetime, subprocess
 from datetime import datetime, timedelta
 #from subprocess import Popen, PIPE
