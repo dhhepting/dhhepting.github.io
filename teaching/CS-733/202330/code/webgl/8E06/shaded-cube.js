@@ -21,33 +21,29 @@ function shadedCube() {
     vec4(0.5, -0.5, -0.5, 1.0)];
 
   const viewerPosition = vec4(0.0, 0.0, 20.0, 0.0);
-  const lightPosition = vec4(0.0, 2.0, 2.0, 0.0);
+  const lightPosition = vec4(0.5, 0.5, 1.0, 0.0);
   const lightAmbient = vec4(0.2, 0.2, 0.2, 1.0);
-  // const lightAmbient = vec4(1.0, 1.0, 1.0, 1.0);
   const lightDiffuse = vec4(1.0, 1.0, 1.0, 1.0);
-  const lightSpecular = vec4(1.0, 1.0, 1.0, 1.0);
+  const lightSpecular = vec4(1.0, 0.0, 1.0, 1.0);
 
-  const materialAmbient = vec4(0.0, 0.0, 0.8, 1.0);
-  const materialDiffuse = vec4(0.8, 0.8, 0.0, 1.0);
-  const materialSpecular = vec4(0.4, 0.4, 0.4, 1.0);
+  const materialAmbient = vec4(0.8, 0.8, 0.8, 1.0);
+  const materialDiffuse = vec4(0.8, 0.8, 0.8, 1.0);
+  const materialSpecular = vec4(0.8, 0.8, 0.8, 1.0);
   const materialShininess = 100.0;
 
   const xAxis = 0;
   const yAxis = 1;
   const zAxis = 2;
-  const axis = 0;
+  let axis = 0;
   const theta = vec3(0, 0, 0);
 
-  const flag = true;
+  let flag = true;
 
   function quad(a, b, c, d) {
     const t1 = subtract(vertices[b], vertices[a]);
     const t2 = subtract(vertices[c], vertices[b]);
     let normal = cross(t1, t2);
-    //normal = vec4(normal,0.0);
     normal = vec3(normal);
-    console.log('cube face normal', normal[0], normal[1], normal[2]);//, normal[3]);
-
     positionsArray.push(vertices[a]);
     normalsArray.push(normal);
     positionsArray.push(vertices[b]);
@@ -84,7 +80,7 @@ function shadedCube() {
     //
     //  Load shaders and initialize attribute buffers
     //
-    program = initShaders(gl, 'vertex-shader-f', 'fragment-shader-f');
+    program = initShaders(gl, 'vertex-shader', 'fragment-shader');
     gl.useProgram(program);
 
     // generate the data needed for the cube
@@ -112,7 +108,7 @@ function shadedCube() {
     const ambientProduct = mult(lightAmbient, materialAmbient);
     const diffuseProduct = mult(lightDiffuse, materialDiffuse);
     const specularProduct = mult(lightSpecular, materialSpecular);
-    /*
+
     document.getElementById('ButtonX').onclick = function() {
       axis = xAxis;
     };
@@ -124,8 +120,7 @@ function shadedCube() {
     };
     document.getElementById('ButtonT').onclick = function() {
       flag = !flag;
-    }; */
-
+    };
     gl.uniform4fv(
         gl.getUniformLocation(program, 'uAmbientProduct'), ambientProduct);
     gl.uniform4fv(

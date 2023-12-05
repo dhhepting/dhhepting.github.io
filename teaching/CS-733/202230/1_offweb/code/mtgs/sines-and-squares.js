@@ -1,10 +1,11 @@
+/* eslint-disable require-jsdoc */
 'use strict'
 
 let canvas, gl, program, texture1, texture2
 
 const numPositions = 36
 const texSize = 256
-const numChecks = 8
+const numChecks = 4
 
 let rotateOn = true
 
@@ -135,6 +136,12 @@ window.onload = function init () {
   if (!gl) {
     alert('WebGL 2.0 is not available')
   }
+  const maxVertexTextureUnits = gl.getParameter(gl.MAX_VERTEX_TEXTURE_IMAGE_UNITS);
+ const maxFragmentTextureUnits = gl.getParameter(gl.MAX_TEXTURE_IMAGE_UNITS);
+ const maxCombinedTextureUnits = gl.getParameter(gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS);
+  console.log(maxVertexTextureUnits);
+  console.log(maxFragmentTextureUnits);
+  console.log(maxCombinedTextureUnits);
   gl.viewport(0, 0, canvas.width, canvas.height)
   gl.clearColor(0.9, 0.9, 0.9, 1.0)
   gl.enable(gl.DEPTH_TEST)

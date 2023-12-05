@@ -316,6 +316,6 @@ layout: bg-image
     </p>
   </div>
   <div class="card-header">
-    Lecture 6 (7 Nov 2023)
+    Lecture 6 (8 Nov 2023)
   </div>
 </div>
