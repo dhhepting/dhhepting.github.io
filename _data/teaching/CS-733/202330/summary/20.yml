@@ -1,0 +1,781 @@
+Audio-Transcript:
+- desc: 'Okay, so we''re at meeting 20 of
+
+    25. Yes, time flies when you''re'
+  persid: ''
+- desc: having fun right yesterday
+  persid: ''
+- desc: 'so I''ve done some updating on
+
+    the website.'
+  persid: ''
+- desc: 'So when we create a web GL to
+
+    context we get a frame buffer'
+  persid: ''
+- desc: 'but we can declare additional
+
+    lengths or use additional lens'
+  persid: ''
+- desc: 'to do different things, so I
+
+    thought I would take a look at a'
+  persid: ''
+- desc: few examples from Chapter Eight
+  persid: ''
+- desc: Good morning
+  persid: ''
+- desc: 'so you can make use of
+
+    additional frame buffers to'
+  persid: ''
+- desc: create
+  persid: ''
+- desc: interesting effects
+  persid: ''
+- desc: 'so the memory for the frame
+
+    buffers and the textures these'
+  persid: ''
+- desc: are on the GPU.
+  persid: ''
+- desc: Morning
+  persid: ''
+- desc: 'So maybe let''s start looking at
+
+    some things I''m gonna do start'
+  persid: ''
+- desc: 'with an interesting example. I
+
+    think'
+  persid: ''
+- desc: so another thing
+  persid: ''
+- desc: morning
+  persid: ''
+- desc: 'so we''ll look at look at a few
+
+    examples. That illustrate these'
+  persid: ''
+- desc: different things.
+  persid: ''
+- desc: So I look interesting
+  persid: ''
+- desc: Okay, so
+  persid: ''
+- desc: J I can still see it
+  persid: ''
+- desc: okay
+  persid: ''
+- desc: 'so let''s look at the code so we
+
+    have two shader, two sets of'
+  persid: ''
+- desc: 'shaders and lead program. Pardon
+
+    me. We have two sets of shaders'
+  persid: ''
+- desc: 'are going to have two programs
+
+    that are going to switch between'
+  persid: ''
+- desc: them.
+  persid: ''
+- desc: 'So the first vertex shader takes
+
+    a two dimensional position which'
+  persid: ''
+- desc: 'is an attribute of vertex
+
+    attributes. So we''re going to'
+  persid: ''
+- desc: 'get a position in 2d and then
+
+    put it into 3d homogeneous'
+  persid: ''
+- desc: 'coordinates. So we have a four
+
+    four dimensional or a four bit'
+  persid: ''
+- desc: 'for Apple or for vector x y Zed
+
+    w. And then we''re passing a pass'
+  persid: ''
+- desc: 'through for the texture
+
+    coordinate. That''s one shader'
+  persid: ''
+- desc: 'vertex shader and the other
+
+    vertex shader is setting the'
+  persid: ''
+- desc: 'point size based on the uniform
+
+    that''s passed, and then we''re'
+  persid: ''
+- desc: doing the same with a position
+  persid: ''
+- desc: fragment shader one is taking
+  persid: ''
+- desc: texture coordinate from
+  persid: ''
+- desc: first vertex shader
+  persid: ''
+- desc: 'and then creating a fragment
+
+    color based on texture mapping.'
+  persid: ''
+- desc: 'So we''re going to supply it with
+
+    a texture map in 2d and we''re'
+  persid: ''
+- desc: 'going to sample and then we have
+
+    a couple other parameters and'
+  persid: ''
+- desc: 'we''re going to apply use those
+
+    in determining the fragment'
+  persid: ''
+- desc: 'color now the second fragment
+
+    shader is just a pass through'
+  persid: ''
+- desc: 'it''s not actually passing
+
+    through. We''re setting the color'
+  persid: ''
+- desc: 'in our Java Script. And we''re
+
+    assigning that to the fragment'
+  persid: ''
+- desc: 'color does that make sense
+
+    generally.'
+  persid: ''
+- desc: Karen said seem
+  persid: ''
+- desc: I missed the last point.
+  persid: ''
+- desc: 'So we''re talking about two sets
+
+    of shaders. The first fragment'
+  persid: ''
+- desc: 'shaders during the texture
+
+    mapping based on the vertex'
+  persid: ''
+- desc: 'extra coordinates and then we''re
+
+    using the texture function in'
+  persid: ''
+- desc: 'GLSL. To determine the fragment
+
+    color, and then the fragment'
+  persid: ''
+- desc: 'shader to we''re taking the color
+
+    from a uniform that''s passed in'
+  persid: ''
+- desc: 'our JavaScript and we''re using
+
+    that to set the fragment color'
+  persid: ''
+- desc: so with that, yes CMRA.
+  persid: ''
+- desc: Okay, so we're setting up
+  persid: ''
+- desc: 'or making a texture size of 1024
+
+    and 24 by 1024 texture'
+  persid: ''
+- desc: 'coordinates golf between zero
+
+    and one or vertices. So r'
+  persid: ''
+- desc: 'squared is minus one minus one,
+
+    two plus one plus one. You have'
+  persid: ''
+- desc: 'to frag two programs. Two
+
+    textures one frame buffer we''re'
+  persid: ''
+- desc: going to use
+  persid: ''
+- desc: 'so the first few lines are as we
+
+    would expect them to be'
+  persid: ''
+- desc: 'so these are referencing texture
+
+    registers on the GPU. So you can'
+  persid: ''
+- desc: 'query your own setup to see what
+
+    your capability is for my'
+  persid: ''
+- desc: 'computer there are 16 vertex 16
+
+    threads.'
+  persid: ''
+- desc: Extra registers
+  persid: ''
+- desc: 'so we go from zero to 31 so we
+
+    can start with zero and'
+  persid: ''
+- desc: 'these turn out into an index so
+
+    he can do textures zero plus I'
+  persid: ''
+- desc: 'for example, select different
+
+    textures'
+  persid: ''
+- desc: 'so, the main texture one
+
+    creating texture one and'
+  persid: ''
+- desc: 'assigning it to texture zero. I
+
+    think it would be more'
+  persid: ''
+- desc: 'straightforward to call this
+
+    texture zero but I''m strange'
+  persid: ''
+- desc: 'that way I guess so, we''re going
+
+    to create the first texture'
+  persid: ''
+- desc: 'and finding the texture so we''re
+
+    going to be working with texture'
+  persid: ''
+- desc: one to start with
+  persid: ''
+- desc: 'so then we''re talking about data
+
+    the RGB a format so for use for'
+  persid: ''
+- desc: 'each element of the array, so
+
+    text size, so 1024 by 1024.'
+  persid: ''
+- desc: 'And then we''re setting different
+
+    parameters for the texture or'
+  persid: ''
+- desc: texture to D can use.
+  persid: ''
+- desc: 'Filters for magnifying and
+
+    minifying. And then, this is'
+  persid: ''
+- desc: 'this talks about how we can wrap
+
+    the texture. So here we''re'
+  persid: ''
+- desc: 'clapping to the edge so
+
+    stretches we''re ending right on'
+  persid: ''
+- desc: 'the edges will do you could do a
+
+    repeat and there''s another'
+  persid: ''
+- desc: option as well.
+  persid: ''
+- desc: 'Gmail dot text image today we
+
+    are taking RGB values twice in'
+  persid: ''
+- desc: 'that was the second time and
+
+    it''s both of them are the exact'
+  persid: ''
+- desc: same
+  persid: ''
+- desc: yeah
+  persid: ''
+- desc: 'let me consult the manual page
+
+    for that.'
+  persid: ''
+- desc: 'So we have a target. So,
+
+    texture, texture 2d level zero'
+  persid: ''
+- desc: 'internal format it''s RGBA with a
+
+    border format. So that is why it'
+  persid: ''
+- desc: 'appears again. And then the
+
+    internal the type is unsigned'
+  persid: ''
+- desc: 'byte. And we''re not passing data
+
+    to it at this point. So pixels'
+  persid: ''
+- desc: are null.
+  persid: ''
+- desc: 'So the level talks about mipmaps
+
+    and we haven''t mentioned that'
+  persid: ''
+- desc: 'really so the idea of providing
+
+    texture images. So we''re going'
+  persid: ''
+- desc: 'to create a hierarchy of levels.
+
+    So level zero is the base so'
+  persid: ''
+- desc: 'that''s 1024 by 1024. And level
+
+    one would be a 512 by 512 256 or'
+  persid: ''
+- desc: 'creating a range of resolutions
+
+    to with the goal of improving'
+  persid: ''
+- desc: 'the quality of the texture
+
+    mapping'
+  persid: ''
+- desc: Okay, so.
+  persid: ''
+- desc: 'We''re setting up texture one
+
+    with these parameters and then'
+  persid: ''
+- desc: 'we''re setting up texture to with
+
+    the same parameters.'
+  persid: ''
+- desc: 'So we''re going so we''re binding
+
+    so when we''re talking about a'
+  persid: ''
+- desc: 'texture 2d we''re binding it to
+
+    this one. So that''s what we''re'
+  persid: ''
+- desc: 'working on. Here, we''re
+
+    specifying that again, and then'
+  persid: ''
+- desc: 'we''re creating the two programs.
+
+    Vertex one shader fragment one'
+  persid: ''
+- desc: 'shader. fragment shader one.
+
+    program two has vertex shader to'
+  persid: ''
+- desc: 'fragment shader two and then
+
+    we''re creating a frame buffer'
+  persid: ''
+- desc: 'now the framebuffer texture 2d
+
+    We''re setting up'
+  persid: ''
+- desc: genetic color or attaching
+  persid: ''
+- desc: 'me like a straw. Man feature and
+
+    best'
+  persid: ''
+- desc: Yeah, so we're using
+  persid: ''
+- desc: 'so we''re saying what we''re going
+
+    to do with texture two, in this'
+  persid: ''
+- desc: 'case is attach it or use it to
+
+    modify the color values in the'
+  persid: ''
+- desc: 'frame buffer. So we''re doing a
+
+    status check to make sure the'
+  persid: ''
+- desc: 'frame buffer is complete. There
+
+    weren''t any problems'
+  persid: ''
+- desc: 'I didn''t looking at his code,
+
+    the author''s code here'
+  persid: ''
+- desc: 'I will work on a better version
+
+    for you to look at.'
+  persid: ''
+- desc: 'So the number of points we''re
+
+    dealing with is 1000.'
+  persid: ''
+- desc: So this is Creating.
+  persid: ''
+- desc: 'So I''m gonna say that this is
+
+    adding to the vertices surging'
+  persid: ''
+- desc: 'for plus I make sure we''re not
+
+    overriding these initial values'
+  persid: ''
+- desc: 'and then we''re creating so in
+
+    these extra positions, we''re'
+  persid: ''
+- desc: assigning points randomly
+  persid: ''
+- desc: within the
+  persid: ''
+- desc: 'within the space range of minus
+
+    one to plus one.'
+  persid: ''
+- desc: 'Okay, so buffer we''re going to
+
+    create a buffer so many use'
+  persid: ''
+- desc: program to pass
+  persid: ''
+- desc: 'a color, the point size and the
+
+    color'
+  persid: ''
+- desc: so this color is a bluish one
+  persid: ''
+- desc: 'we''re going to use program one
+
+    and we''re'
+  persid: ''
+- desc: 'binding to create a buffer here.
+
+    We''re binding it.'
+  persid: ''
+- desc: 'Now we''re setting up the size of
+
+    the data.'
+  persid: ''
+- desc: So let's check the math here.
+  persid: ''
+- desc: So we had four vertices.
+  persid: ''
+- desc: 'Okay, so if there are four
+
+    vertices'
+  persid: ''
+- desc: 'they each have to VAT two values
+
+    x and y.'
+  persid: ''
+- desc: Snap makes eight and if there
+  persid: ''
+- desc: math seem right
+  persid: ''
+- desc: 'so 64 would mean we have eight
+
+    bytes per values which seems to'
+  persid: ''
+- desc: be.
+  persid: ''
+- desc: 'So I have to check this by the
+
+    64 here and 32 here'
+  persid: ''
+- desc: 'could be a typo Should we try
+
+    changing that'
+  persid: ''
+- desc: 'So, the rest of it makes sense
+
+    because we''re doing eight times'
+  persid: ''
+- desc: number of points
+  persid: ''
+- desc: to float values four bytes each.
+  persid: ''
+- desc: 'Okay we''ll go through the rest
+
+    of it. First.'
+  persid: ''
+- desc: They may be putting
+  persid: ''
+- desc: 'the two sets of data together
+
+    that''s fine'
+  persid: ''
+- desc: looks like they're doing
+  persid: ''
+- desc: 'because when you set the
+
+    position or the attributes'
+  persid: ''
+- desc: we're doing
+  persid: ''
+- desc: during the same buffer
+  persid: ''
+- desc: know it's different offsets
+  persid: ''
+- desc: So when it comes to rendering
+  persid: ''
+- desc: 'so we''re going to switch between
+
+    programs. So here''s program one.'
+  persid: ''
+- desc: 'And we''re going to bind our
+
+    frame buffer to the one we''ve'
+  persid: ''
+- desc: 'created with a texture you were
+
+    going to switch between texture'
+  persid: ''
+- desc: one and texture two.
+  persid: ''
+- desc: Now we're going to use program
+  persid: ''
+- desc: we're going to.
+  persid: ''
+- desc: 'Switching between so using
+
+    program to set the attribute,'
+  persid: ''
+- desc: 'location and then send it to
+
+    color which is red and green so'
+  persid: ''
+- desc: that's yellow
+  persid: ''
+- desc: and we're drawing the points
+  persid: ''
+- desc: 'switching colors so drawing half
+
+    the points and switching colors'
+  persid: ''
+- desc: 'and then we''re switching to
+
+    using program one regenerating'
+  persid: ''
+- desc: the map for texture
+  persid: ''
+- desc: 'This is still in there rendering
+
+    or running program and we''re'
+  persid: ''
+- desc: changing the values
+  persid: ''
+- desc: minds
+  persid: ''
+- desc: 'are swapping the textures and
+
+    we''re getting a new frame to'
+  persid: ''
+- desc: render
+  persid: ''
+- desc: 'I apologize I got thrown by that
+
+    putting two two sets of data in'
+  persid: ''
+- desc: one array
+  persid: ''
+- desc: 'just correcting a mistake there
+
+    it looks like referencing the'
+  persid: ''
+- desc: variable you texture here
+  persid: ''
+- desc: in the shader is texture map.
+  persid: ''
+- desc: 'Change the day of scale and
+
+    texture'
+  persid: ''
+- desc: okay
+  persid: ''
+- desc: 'I apologize for the slow pace
+
+    today. So I''m trying to make'
+  persid: ''
+- desc: 'sense of they''re not very
+
+    readable code. I thought I had'
+  persid: ''
+- desc: 'it figured out but then. Anyway,
+
+    the buffer mask sidetrack me a'
+  persid: ''
+- desc: 'little bit. Anyway, I''m going to
+
+    create a better version of this'
+  persid: ''
+- desc: 'and I''ll post it online. I''ll
+
+    let you know when I''ve gotten a'
+  persid: ''
+- desc: 'better version available. So let
+
+    me show a couple other examples'
+  persid: ''
+- desc: 'so this one is doing some image
+
+    processing.'
+  persid: ''
+- desc: 'So here was the vertex shaders
+
+    passing through the vertex, the'
+  persid: ''
+- desc: 'texture coordinates we''re
+
+    getting the position as soon as'
+  persid: ''
+- desc: 'position is an X and Y then
+
+    we''re adding Zed and W for GL'
+  persid: ''
+- desc: 'position and then we''re taking
+
+    the texture coordinate from the'
+  persid: ''
+- desc: 'vertex or creating a fragment
+
+    color the idea here is we''re'
+  persid: ''
+- desc: doing some edge enhancement.
+  persid: ''
+- desc: Here's the image data
+  persid: ''
+- desc: you're using
+  persid: ''
+- desc: 'This is not illustrating frame
+
+    buffers as much as it is'
+  persid: ''
+- desc: textures and processing in GPU
+  persid: ''
+- desc: 'last one I want to look at
+
+    picking'
+  persid: ''
+- desc: 'let''s do a different one that
+
+    has a better display'
+  persid: ''
+- desc: 'so they can see where it is.
+
+    We''re clicking and we''re seeing'
+  persid: ''
+- desc: which phase we're in
+  persid: ''
+- desc: 'first one was just doing console
+
+    log messages.'
+  persid: ''
+- desc: 'So what we''re doing with picking
+
+    is recruiting the image in a'
+  persid: ''
+- desc: separate buffer
+  persid: ''
+- desc: 'so we''re rendering into this
+
+    other frame buffer. And then'
+  persid: ''
+- desc: 'when we''re reading pixels, we''re
+
+    testing the value returned by'
+  persid: ''
+- desc: 'color so we can decide. Bottom
+
+    left, front back'
+  persid: ''
+- desc: 'top bottom left, right back and
+
+    then we can also see it for the'
+  persid: ''
+- desc: background.
+  persid: ''
+- desc: 'So if you look at the shader
+
+    again'
+  persid: ''
+- desc: so we have these
+  persid: ''
+- desc: values are we're setting
+  persid: ''
+- desc: 'so that''s what we''re accessing
+
+    in the Excellent'
+  persid: ''
+- desc: 'so it''s allowing us to create
+
+    some extra data'
+  persid: ''
+- desc: 'and access it with the mouse can
+
+    read the pixels and then based'
+  persid: ''
+- desc: on what the pixel value says we
+  persid: ''
+- desc: have to take this call sorry
+  persid: ''
+- desc: yeah
+  persid: ''
+- desc: I will also fix this one up
+  persid: ''
+- desc: 'so I think you can wrap it up
+
+    there. I don''t know if I''ve'
+  persid: ''
+- desc: 'helped your understanding about
+
+    these things yet or not. So'
+  persid: ''
+- desc: 'thanks for your attention today.
+
+    You''re gonna say something'
+  persid: ''
+- desc: carefully but
+  persid: ''
+- desc: 'I was a little confusing right
+
+    now. Probably just go through'
+  persid: ''
+- desc: it.
+  persid: ''
+- desc: 'Okay, so I''ll fix up these the
+
+    codes to make them a little more'
+  persid: ''
+- desc: 'readable and to add some
+
+    documentation'
+  persid: ''
+- desc: 'anyway, thank you for your
+
+    attention today. And marks for'
+  persid: ''
+- desc: 'assignment two will be posted
+
+    today. And regrade requests I''ll'
+  persid: ''
+- desc: 'deal I''m dealing with them so
+
+    don''t worry about that. Okay.'
+  persid: ''
+- desc: Thanks again.
+  persid: ''
+- desc: Everyone
+  persid: ''
+- desc: Everyone
+  persid: ''
+offering:
+  id: CS-733-202330
