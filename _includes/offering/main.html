@@ -124,7 +124,7 @@
         Meetings
       </h3>
         {%- include offering/mtgs-all.html
-            mtgdir='meetings/'
+            mtgdir=''
         -%}
       <p></p>
       {%- endif -%}
@@ -141,7 +141,6 @@
       <h3 id="ssCode" class="bg-dark text-white">
         Code
       </h3>
-      <p>
         {%- capture code_url -%}/teaching/{{ crs_id }}/{{ page.sem }}/code/{%- endcapture -%}
         <ul>
           <li>
@@ -149,8 +148,8 @@
               Code Directory
             </a>
           </li>
+          {%- include offering/code-body.html -%}
         </ul>
-      </p>
       {%- endif -%}
 
       {%- if include.links == 1 -%}

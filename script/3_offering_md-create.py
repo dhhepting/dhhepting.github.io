@@ -84,7 +84,7 @@ with open(offidxstr,"w") as offidx:
     offidx.write(md_template["OFF"])
 
 # create a directory for Meetings
-mdirstr = offdirstr + 'meetings/'
+""" mdirstr = offdirstr + 'meetings/'
 try:
     os.makedirs(mdirstr)
 except OSError as e:
@@ -101,7 +101,7 @@ with open(midxstr,"w") as mtgidx:
     mtgidx.write("layout: bg-image\n")
     mtgidx.write("---\n")
     mtgidx.write("{% include offering/mtgs-all.html %}\n")
-
+ """
 # use the _data/teaching/<jcrs_id>/<sem>/meetings.csv file to create
 # individual meeting files
 
@@ -112,7 +112,8 @@ with open(DATA_ROOT + jcrs_id + '/' + reldir[1] + '/meetings.csv', newline='') a
     mmmreader = csv.DictReader(mmmfile)
     for row in mmmreader:
         # generate file names for the meeting, summary, and response files
-        mfilestr = mdirstr + row['file'].replace(".html",".md")
+        #mfilestr = mdirstr + row['file'].replace(".html",".md")
+        mfilestr = row['file'].replace(".html",".md")
         #mfilestr = mdirstr + row['file']
         m = row['meeting']
         #rfilestr = mdirstr + str(m).zfill(2) + "_R.md"
@@ -145,7 +146,7 @@ with open(DATA_ROOT + jcrs_id + '/' + reldir[1] + '/meetings.csv', newline='') a
         with open(mfilestr,"w") as mtgfile:
             mtgfile.write("---\n")
             mtgfile.write("title: Mtg " + str(m) + " &bull; " + reldir[0] +  " (" + reldir[1] + ")\n")
-            mtgfile.write("breadcrumb: " + str(m) + " (" + mtg_date + ")\n")
+            mtgfile.write("breadcrumb: Mtg " + str(m) + " (" + mtg_date + ")\n")
             mtgfile.write("mtg_nbr: " + str(m) + "\n")
             mtgfile.write("total_meet: " + str(nbr_meetings) + "\n")
             mtgfile.write("mtg_date: " + mtg_date + "\n")
@@ -156,7 +157,7 @@ with open(DATA_ROOT + jcrs_id + '/' + reldir[1] + '/meetings.csv', newline='') a
             mtgfile.write(md_template["CS"])
 
 # create a directory for assignments
-adirstr = offdirstr + 'assignments/'
+"""adirstr = offdirstr + 'assignments/'
 print(adirstr)
 try:
     os.makedirs(adirstr)
@@ -174,3 +175,4 @@ with open(aidxstr,"w") as mtgidx:
     mtgidx.write("layout: bg-image\n")
     mtgidx.write("---\n")
     mtgidx.write("{% include offering/asgn-grid.html %}\n")
+"""

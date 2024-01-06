@@ -45,7 +45,7 @@ onload = function init() {
   gl.clearColor(0.5, 0.5, 0.5, 1.0);
 
   const myCube = cube();
-  colors = myCube.TriangleFaceColors;
+  colors = myCube.TriangleVertexColors;
   points = myCube.TriangleVertices;
   console.log(colors.length, points.length);
 
