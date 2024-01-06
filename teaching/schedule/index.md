@@ -1,17 +1,12 @@
 ---
-title: Fall 2023 Schedule
+title: Winter 2024 Schedule
 breadcrumb: Schedule
-sem: 202330
+sem: 202410
 main_entity: Service
 officeblocks:
-  - day: Tuesday
-    open: "10:00"
-    close: "11:30"
-  - day: Thursday
-    open: "10:00"
-    close: "11:30"
-firstdate: 2022-08-31
-lastdate: 2022-12-06
+officezoom: https://uregina-ca.zoom.us/j/95186400120?pwd=aDFvTCswY3NlaTQ2OWI1NlZZMG50UT09
+firstdate: 2024-01-08
+lastdate: 2024-04-12
 layout: bg-image
 ---
 {% include teaching/semester.html cs=page.sem %}

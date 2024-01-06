@@ -136,7 +136,7 @@ function render() {
   if (rotateOn) {
     angle = ((angle + 1.0) % 360);
     angleSine = Math.sin(angle * Math.PI / 180);
-    theta[Base] = angleSine * 180;
+    theta[Base] = angleSine * 360;
     theta[LowerArm] = angleSine * 60;
     theta[UpperArm] = angleSine * 30;
   }

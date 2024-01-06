@@ -1,5 +1,5 @@
 {%- include teaching/url.html %}
-{%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
+{%- assign plan = site.data.teaching[jcrs_id][crs_sem]plan %}
 
 {%- assign prvmtg = include.mn | minus: 1 -%}
 {%- assign prvlnk = nil -%}
@@ -19,7 +19,7 @@
   <h1 id="mtgh1">
     Mtg {{ include.mn | plus: 0 }}/{{ include.tm }}: {{ include.md | date: '%a-%d-%b-%Y' }}
   </h1>
-  <div class="card">
+<div class="card">
     <div id="mtghdr" class="card card-header w-100 bg-info">
       <div class="row align-items-center">
         <div class="col-4 text-start">

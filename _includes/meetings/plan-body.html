@@ -1,45 +1,55 @@
-{%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan -%}
-{%- assign mtgplan = nil -%}
 {%- assign incmtg = include.mtg | plus: 0 -%}
-{%- for mtgs in planfile -%}
-  {%- assign pmtg = mtgs[0] | plus: 0 -%}
-  {%- if pmtg == incmtg -%}
-    {%- assign mtgplan = mtgs -%}
-    {%- break -%}
-  {%- endif -%}
-{%- endfor -%}
+{%- assign plan = site.data.teaching[jcrs_id][crs_sem]plan -%}
+{%- assign mtg = plan.meetings | find: "mtg", incmtg -%}
 
-{%- if mtgplan[1] != nil -%}
-  {%- if mtgplan[1].theme -%}
+{%- if mtg != nil -%}
+  {%- if mtg.theme -%}
   <h4>
     <em>
-      {{ mtgplan[1].theme }}
+      {{ mtg.theme }}
     </em>
   </h4>
   {%- endif -%}
-  {%- if mtgplan[1].today -%}
-    {%- assign todayplan = mtgplan[1].today -%}
-    {%- for headings in todayplan -%}
-      {%- for topic in headings -%}
-        <h4>
-          {{ topic[0] }}
-        </h4>
-        <ul>
-          {%- for item in topic[1] -%}
-            {%- if item.url -%}
-              <li>
-                <a href="{{ item.url | relative_url }}">
-                  {{ item.desc }}
-                </a>
-              </li>
-            {%- else -%}
-              <li>
-                {{ item.desc }}
-              </li>
-            {%- endif -%}
-          {%- endfor -%}
-        </ul>
-      {%- endfor -%}
-    {%- endfor -%}
+
+  {%- if mtg.admin -%}
+  <h4>
+    Administration
+  </h4>
+  {{ mtg.admin | markdownify }}
+  {%- endif -%}
+
+  {%- if mtg.r2r -%}
+  <h4>
+    Response to Responses
+  </h4>
+  {{ mtg.r2r | markdownify }}
+  {%- endif -%}
+
+  {%- if mtg.results -%}
+  <h4>
+    Results from Last Meeting
+  </h4>
+  {{ mtg.results | markdownify }}
+  {%- endif -%}
+
+  {%- if mtg.today -%}
+  <h4>
+    Today
+  </h4>
+  {{ mtg.today | markdownify }}
+  {%- endif -%}
+
+  {%- if mtg.summ -%}
+  <h4>
+    Summary
+  </h4>
+  {{ mtg.summ | markdownify }}
+  {%- endif -%}
+  
+  {%- if mtg.next -%}
+  <h4>
+    For Next Meeting
+  </h4>
+  {{ mtg.next | markdownify }}
   {%- endif -%}
 {%- endif -%}
