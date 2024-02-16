@@ -1,6 +1,13 @@
 {%- include teaching/url.html %}
+{% if site.data.teaching[jcrs_id][crs_sem]yplan %}
+    {%- include meetings/mainyplan.html
+      tm=page.total_meet
+      mn=page.mtg_nbr
+      md=page.mtg_date
+      ww=page.wiki_id
+  -%}
+{%- else -%}
 {%- assign plan = site.data.teaching[jcrs_id][crs_sem]plan %}
-
 {%- assign prvmtg = include.mn | minus: 1 -%}
 {%- assign prvlnk = nil -%}
 {%- assign prevm = site.data.teaching[jcrs_id][crs_sem]meetings | find: "meeting", prvmtg -%}
@@ -88,17 +95,17 @@
               <ul class="dropdown-menu">
                 <li>
                   <a class="dropdown-item" href="#ssR-Important">
-                    The most important thing that I encountered
+                    What important concept or perspective did you encounter today?
                   </a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="#ssR-Difficult">
-                    The most difficult thing for me to understand
+                    Was there anything today that was difficult to understand?
                   </a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="#ssR-Know-More">
-                    The thing about which I would most like to know more
+                    Was there anything today about which you would like to know more?
                   </a>
                 </li>
               </ul>
@@ -184,3 +191,4 @@ $(document).ready(function(){
   console.log('cbss.style.height',cbss.style.height )
 })
 </script>
+{% endif %}

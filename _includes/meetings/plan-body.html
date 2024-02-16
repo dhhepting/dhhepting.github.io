@@ -1,6 +1,6 @@
 {%- assign incmtg = include.mtg | plus: 0 -%}
 {%- assign plan = site.data.teaching[jcrs_id][crs_sem]plan -%}
-{%- assign mtg = plan.meetings | find: "mtg", incmtg -%}
+{%- assign mtg = plan.meetings | find: "mtgnbr", incmtg -%}
 
 {%- if mtg != nil -%}
   {%- if mtg.theme -%}

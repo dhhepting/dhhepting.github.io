@@ -23,7 +23,43 @@ layout: bg-image
     </a>
   </h3>
 </div>
+<div class="bg-warning p-3 m-2">
+<h2>Next Lecture</h2>
+<div class="card bg-light  m-2">
+  <div class="card-header">
+    <h3>
+      Tim Belsher
+    </h3>
+  </div>
+  <div class="card-body">
+    <h5>
+      "My Career in Film & Games - Merging Tech & Art"
+    </h5>
+    <p>
+    The Faculty of Science Department of Computer Science invites you to a virtual public lecture with Computer Science friend <a href="https://www.linkedin.com/in/tim-belsher/" target="_blank">Tim Belsher</a>, currently a Technical Art Director at Electronic Arts, on Thursday, February 29th, 7 p.m. – 8 p.m. CST via zoom: <a href="https://uregina-ca.zoom.us/meeting/register/tJApfumqrD8oG9ZtfyKkv9G3LLtnJ9rybOrQ" target="_blank">please be sure to register in advance by clicking here</a>
 
+</p><p>
+In this talk, Tim will go through his career in Computer Graphics that spans more than 25 years, in both film and games. His career objective has always been to combine his technical and artistic skills in a creative environment. He will describe how the film and games industries combine the technical and art disciplines to create amazing imagery and experiences. He will describe the rewards and challenges of combining these two disciplines and outline the similarities and differences between the games and film industries. He will finish with future interesting challenges facing the computer graphics industry, including incredible advancements in real-time graphics and the new possibilities of Generative AI.
+</p>
+    <p>
+      <a href="https://www.facebook.com/events/2410972902418078" target="_blank">
+        Event on facebook.
+      </a>
+    </p>
+    <p>
+Tim has been in the computer graphics industry for over 25 years. For the first 20 years of his career, he worked in the film industry, where he was hired in both technical and artistic leadership roles as a CG Supervisor, Pipeline Supervisor and Technical Director at companies such as Industrial Light + Magic, Digital Domain and Image Engine. Tim moved into the games industry seven years ago, and is currently at Electronic Arts as a Technical Art Director. His résumé includes work on films such as: "Star Wars: Episode VII - The Force Awakens", "Star Wars: Episode III - Revenge of the Sith", "Doctor Strange", "Captain America 2: The Winter Soldier", "TRON: Legacy", and "District 9"; and video games such as: "Plants vs. Zombies: Battle for Neighborville", "UFC 4", and "UFC 5".
+</p>
+<p>
+Tim was born in Regina and moved to British Columbia in 1985. He has a Computer Science degree from Simon Fraser University.
+    </p>
+  </div>
+  <div class="card-header">
+    Lecture 7 (29 Feb 2024)
+  </div>
+</div>
+</div>
+<div class="bg-info p-3 m-2">
+<h2>Past Lectures</h2>
 <div class="card bg-light m-2">
   <div class="card-header">
     <h3>
@@ -32,11 +68,11 @@ layout: bg-image
   </div>
   <div class="card-body">
     <h5>
-      “The Secret History of Task Manager”
+      "The Secret History of Task Manager"
     </h5>
     <p>
       If you ask Google
-      “who created Microsoft Windows Task Manager”,
+      "who created Microsoft Windows Task Manager",
       David Plummer is the reply.
       David is an entrepreneur, programmer, and U of R
       alumnus. After graduation, he went on to work with
@@ -78,7 +114,7 @@ layout: bg-image
   </div>
   <div class="card-body">
     <h5>
-      “Robotic Mars Exploration”
+      "Robotic Mars Exploration"
     </h5>
     <p>
       Larry Matthies' job with the Jet Propulsion Lab, California Institute of Technology allows him to personally participate in putting robots on other planets, like Perseverance on Mars.
@@ -137,7 +173,7 @@ layout: bg-image
   </div>
   <div class="card-body">
     <h5>
-      “Social Reinforcement Learning”
+      "Social Reinforcement Learning"
     </h5>
     <p>
       Social learning helps humans and animals rapidly
@@ -198,14 +234,14 @@ layout: bg-image
   </div>
   <div class="card-body">
     <h5>
-      “AI for Precision Healthcare”
+      "AI for Precision Healthcare"
     </h5>
     <p>
       In this talk I will give a high-level overview of AI
       in healthcare, followed by a discussion of key
       trends that I think will impact developments in the
       area over the next several years.
-      This will include examples from a “laundry list” of
+      This will include examples from a "laundry list" of
       tools I would love to develop for clinicians.
       Finally I will discuss some of the challenges and
       solutions to AI implementation in healthcare, with
@@ -268,7 +304,7 @@ layout: bg-image
   </div>
   <div class="card-body">
     <h5>
-      “Past, Present, and Future of the Space Industry”
+      "Past, Present, and Future of the Space Industry"
     </h5>
     <p>
       The space domain enables everyday life in commercial, civil and military industries. Today, technology development is driving lower cost launch and the proliferation of space assets. The intersection of government and commercial developments provide hybrid space architectures which accomplish missions with newfound speed and agility. As space matures, technology that was once hosted on the ground is moving to space. However, space is increasingly becoming contested, putting future developments at risk.
@@ -298,7 +334,7 @@ layout: bg-image
   </div>
   <div class="card-body">
     <h5>
-      “Ethical IT Talent in Canada”
+      "Ethical IT Talent in Canada"
     </h5>
     <p>
       From the privacy issues with Facebook to the recent explosion of AI concerns, IT Ethics are now political issues that we must all work to clarify. IT Professionals are needed to describe the facts and issue the warnings.  As past Chair of the Saskatchewan Information Technology Sector Partnership with government and educators, Donna led discussions about recruitment into the IT sector and how to support career paths in Saskatchewan and Canada. Donna will describe some lessons learned and some challenges for growth of Ethical IT Talent in Canada.
@@ -309,7 +345,7 @@ layout: bg-image
       </a>
     </p>
     <p>
-      Since Donna retired from SaskTel 12 years ago, she has written a book called “The More Things Change: A Case Study to Introduce Information Technology Ethics” and has been awarded the status of CIPS fellow (see 
+      Since Donna retired from SaskTel 12 years ago, she has written a book called "The More Things Change: A Case Study to Introduce Information Technology Ethics" and has been awarded the status of CIPS fellow (see 
       <a href="https://cips.ca/DonnaLindskog/">
         https://cips.ca/DonnaLindskog/
       </a>). IT Ethics are an important part of being an IT Professional and it is where Donna continues to encourage industry discussions.
@@ -318,4 +354,5 @@ layout: bg-image
   <div class="card-header">
     Lecture 6 (8 Nov 2023)
   </div>
+</div>
 </div>

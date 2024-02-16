@@ -36,7 +36,6 @@ d ={}
 # try opening summary file for meeting
 jcrs_id = reldir[0].replace("+","_")
 summdir = os.path.abspath(SITE_DIR + DATA_ROOT + jcrs_id + '/' + reldir[1] + '/summary')
-planfile = os.path.abspath(SITE_DIR + DATA_ROOT + jcrs_id + '/' + reldir[1] + '/plan.yml')
 
 try:
     os.makedirs(summdir)
@@ -56,31 +55,10 @@ except:
     with open(summfile, 'r') as yaml_file:
         d = yaml.safe_load(yaml_file)
 
-try:
-    with open(planfile, 'r') as plyaml_file:
-        p = yaml.safe_load(plyaml_file)
-except:
-    pass
-
-# print ('Processing outline for meeting:')
-# if 'today' in p[int(sys.argv[2])]:
-#     for te in p[int(sys.argv[2])]['today']:
-#         if (te not in d):
-#             d[te] = []
-#             #d[te].append(te)
-#             d[te].append(p[int(sys.argv[2])]['today'][te])
-# elif 'outline' in p[int(sys.argv[2])]:
-#     if ('Outline' not in d):
-#         d['Outline'] = []
-#         d['Outline'].append(p[int(sys.argv[2])]['outline'])
-#     else:
-#         print ('\t--> Outline already present.')
-
 ng = {}
 seqnbr = 0
 
-VTT_SRC = DL_DIR + joff_id + '/' + sys.argv[2].zfill(2) + '.vtt'
-#print(VTT_SRC)
+VTT_SRC = DL_DIR + reldir[0] + '-' + reldir[1] + '/' + sys.argv[2].zfill(2) + '.vtt'
 print ('Processing audio transcript for meeting:')
 if (os.path.isfile(VTT_SRC)):
     if ('Zoom-Audio-Transcript' not in d):
@@ -132,8 +110,7 @@ if (os.path.isfile(VTT_SRC)):
         print ('\t--> Zoom-Audio-Transcript already present.')
 
 
-CHAT_SRC = DL_DIR + joff_id + '/' + sys.argv[2].zfill(2) + '.txt'
-#print(CHAT_SRC)
+CHAT_SRC = DL_DIR + reldir[0] + '-' + reldir[1] + '/' + sys.argv[2].zfill(2) + '.txt'
 print ('Processing chat transcript for meeting:')
 
 if (os.path.isfile(CHAT_SRC)):
@@ -146,10 +123,13 @@ if (os.path.isfile(CHAT_SRC)):
                     sname = npline[1][:-1]
                     msg = npline[2]
                     snamekey = sname.strip()
+                    #print(snamekey)
+                    #if snamekey.find('heptingd'):
+                     #   print('DHH')
                     if snamekey not in ng:
                         ng[snamekey] = seqnbr
                         seqnbr += 1
-                    if snamekey == 'Daryl Hepting' or snamekey == 'Daryl (heptingd)':
+                    if snamekey == 'Daryl Hepting' or snamekey.find('heptingd'):
                         person_id = 'DHH'
                     else:
                         person_id = 'S'+str(ng[snamekey]).zfill(2)

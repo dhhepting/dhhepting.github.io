@@ -7,13 +7,13 @@ layout: bg-image
 
 {%- include offering/main.html
   title=page.title
-  mtgs=1
+  mtgs=0
   sched=1
-  wkly=0
-  code=1
+  wkly=1
+  code=0
   links=1
   asgns=1
   topics=0
   exams=1
-  feedback=1
+  feedback=0
 -%}

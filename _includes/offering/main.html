@@ -17,17 +17,17 @@
           </a>
         </li>
         {%- endif -%}
+        {%- if include.wkly == 1 -%}
+        <li class="nav-item">
+          <a class="nav-link" href="#ssWeekly">
+            Weekly Schedule (Tentative)
+          </a>
+        </li>
+        {%- endif -%}
         {%- if include.sched == 1 -%}
         <li class="nav-item">
           <a class="nav-link" href="#ssOffice">
             Office Hours
-          </a>
-        </li>
-        {%- endif -%}
-        {%- if include.wkly == 1 -%}
-        <li class="nav-item">
-          <a class="nav-link" href="#ssWkly">
-            Weekly
           </a>
         </li>
         {%- endif -%}
@@ -125,6 +125,15 @@
       </h3>
         {%- include offering/mtgs-all.html
             mtgdir=''
+        -%}
+      <p></p>
+      {%- endif -%}
+
+      {%- if include.wkly == 1 -%}
+      <h3 id="ssWeekly" class="bg-dark text-white">
+        Weekly Schedule (Tentative)
+      </h3>
+        {%- include offering/weekly.html
         -%}
       <p></p>
       {%- endif -%}

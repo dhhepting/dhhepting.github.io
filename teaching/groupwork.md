@@ -5,17 +5,15 @@ layout: bg-image
 ---
 # {{ page.breadcrumb }}
 
-The mark awarded for each group assignment is shared by all group members. However, you have the ability to communicate extra information about
-your the performance of your group members to your group members,
-to the marker, and to me.
+The mark awarded for each group assignment is shared by all group members. However, you have the ability to communicate extra information about the performance of your group members to your group members, to the marker(s), and to me.
 
 For each group assignment,
 you are encouraged (but not required)
-to rate your group members by allocating 100 (or 99, in the case of a group with 3 members contributing equally) points amongst them (including yourself). Allocating points for a group assignment will provide evidence of your participation in the course.
+to rate your group members (including yourself) by allocating 100 (or 99, in the case of a group with 3 members) points amongst them. Allocating points for a group assignment will provide evidence of your participation in the course.
 
-* If all group members contribute equally, allocate the points equally to each group member.
+* If all group members contribute equally, allocate the points equally to each group member (for example: in a group of 3, each member would get 33 and in a group of 4, each member would get 25).
 
-* If you feel that all members of your group have not contributed equally, allocate the 100 points unequally and explain why you have done this.
+* If you feel that all members of your group have not contributed equally, allocate the 100 (or 99 for a group of 3) points unequally and explain why you have done this.
 
 * If you provide a group rating, please be thoughtful as you undertake this activity.
 
@@ -23,7 +21,7 @@ to rate your group members by allocating 100 (or 99, in the case of a group with
 
 The points allocated to each group member are summed. The point total for each group member is divided by the largest total, to give a rating between 0.5 and 1 (any rating that is calculated to be less than 0.5 is set to 0.5).
 
-The group member who was allocated the most points will receive a rating of 1, which means 100% of the earned mark for the group assignment. If all group members have the same point total, all will receive 100% of the earned mark for the group assignment. The lowest rating allowed is 0.5 and that means the group member should receive 50% of the earned mark for the group assignment.
+The group member who was allocated the most points should receive a rating of 1, which means 100% of the earned mark for the group assignment. If all group members have the same point total, all should receive 100% of the earned mark for the group assignment. The lowest rating allowed is 0.5 and that means the group member should receive 50% of the earned mark for the group assignment.
 
 The ratings are suggestions to me and information to you about your involvement in your group.
 
@@ -33,7 +31,7 @@ The ratings are suggestions to me and information to you about your involvement 
 "See Your Rating From Group".  
 
 <p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#rateEx1" role="button" aria-expanded="false" aria-controls="rateEx1">
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#rateEx1" role="button" aria-expanded="false" aria-controls="rateEx1">
     Example 1: Equal Allocations
   </a>
 </p>
@@ -100,7 +98,7 @@ The ratings are suggestions to me and information to you about your involvement 
 </div>
 
 <p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#rateEx2" role="button" aria-expanded="false" aria-controls="rateEx3">
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#rateEx2" role="button" aria-expanded="false" aria-controls="rateEx3">
     Example 2: Unequal Allocations
   </a>
 </p>
@@ -167,7 +165,7 @@ The ratings are suggestions to me and information to you about your involvement 
 </div>
 
 <p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#rateEx3" role="button" aria-expanded="false" aria-controls="rateEx3">
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#rateEx3" role="button" aria-expanded="false" aria-controls="rateEx3">
     Example 3: Some Equal, Some Unequal Allocations
   </a>
 </p>

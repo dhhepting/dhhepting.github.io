@@ -1,0 +1,45 @@
+{%- assign planfile = site.data.teaching[jcrs_id][crs_sem]yplan -%}
+{%- assign mtgplan = nil -%}
+{%- assign incmtg = include.mtg | plus: 0 -%}
+{%- for mtgs in planfile -%}
+  {%- assign pmtg = mtgs[0] | plus: 0 -%}
+  {%- if pmtg == incmtg -%}
+    {%- assign mtgplan = mtgs -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if mtgplan[1] != nil -%}
+  {%- if mtgplan[1].theme -%}
+  <h4>
+    <em>
+      {{ mtgplan[1].theme }}
+    </em>
+  </h4>
+  {%- endif -%}
+  {%- if mtgplan[1].today -%}
+    {%- assign todayplan = mtgplan[1].today -%}
+    {%- for headings in todayplan -%}
+      {%- for topic in headings -%}
+        <h4>
+          {{ topic[0] }}
+        </h4>
+        <ul>
+          {%- for item in topic[1] -%}
+            {%- if item.url -%}
+              <li>
+                <a href="{{ item.url | relative_url }}">
+                  {{ item.desc }}
+                </a>
+              </li>
+            {%- else -%}
+              <li>
+                {{ item.desc }}
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      {%- endfor -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endif -%}
