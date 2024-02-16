@@ -113,7 +113,7 @@ with open(DATA_ROOT + jcrs_id + '/' + reldir[1] + '/meetings.csv', newline='') a
     for row in mmmreader:
         # generate file names for the meeting, summary, and response files
         #mfilestr = mdirstr + row['file'].replace(".html",".md")
-        mfilestr = row['file'].replace(".html",".md")
+        mfilestr = offdirstr + row['file'].replace(".html",".md")
         #mfilestr = mdirstr + row['file']
         m = row['meeting']
         #rfilestr = mdirstr + str(m).zfill(2) + "_R.md"

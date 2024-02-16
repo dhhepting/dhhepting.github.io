@@ -1,16 +1,16 @@
 ---
 ---
-{% assign plan = site.data.teaching.CS-280.202410.plan %}
+{% assign planfile = site.data.teaching.CS-280.202410.plan %}
 <h1>
-    {{ plan.offering}}
+    {{ planfile.offering}}
 </h1>
 <h3>Overview</h3>
 <p>
-    {{ plan.overview | markdownify }}
+    {{ planfile.overview | markdownify }}
 </p>
 <h3>Exams</h3>
 <ul>
-    {% for exam in plan.exams %}
+    {% for exam in planfile.exams %}
      <li>
         <strong>{{ exam.name | capitalize }}</strong>:
         {{ exam.date }} ( 
@@ -22,13 +22,13 @@
 </ul>
 <h3>Meetings</h3>
 <ul>
-    {% for mtg in plan.meetings %}
+    {% for mtg in planfile.meetings %}
    <li>
-        <strong>Meeting {{ mtg.number }} / {{ plan.totmeet }} (Week {{ mtg.week }})</strong>:
+        <strong>Meeting {{ mtg.number }} / {{ planfile.totmeet }} (Week {{ mtg.week }})</strong>:
         {{ mtg.date }}
     </li>
     <li> 
-        Administration 
+        Administration
         {{ mtg.admin | markdownify }}
     </li>
     <li> {{ mtg.next | markdownify }} </li>

@@ -88,7 +88,9 @@ with open(mtgsfile, newline='') as mtgscsv:
         currwk = int(row['week'])
         currwkof = row['week_of']
         if (currwk != prevwk):
-            pwodt = datetime.strptime(prevwkof,'%a-%d-%b-%Y')
+            print(currwk,prevwk,'prevwkof',prevwkof)
+            if (prevwkof != ''):
+                pwodt = datetime.strptime(prevwkof,'%a-%d-%b-%Y')
             for i in range(currwk - prevwk - 1):
                 wkctr += 1   
                 w.append({}) 
@@ -101,24 +103,15 @@ with open(mtgsfile, newline='') as mtgscsv:
             w[wkctr]['week'] = int(row['week'])
             w[wkctr]['weekof'] = row['week_of']
             w[wkctr]['mtgs'] = []
-            w[wkctr]['mtgs'].append(int(row['meeting']))
+            w[wkctr]['mtgs'].append(row['file'])
         else:
-            w[wkctr]['mtgs'].append(int(row['meeting']))
+            w[wkctr]['mtgs'].append(row['file'])
+        w[wkctr]['topics'] = 'Topics'
+        w[wkctr]['noteworth'] = 'Noteworthy Items'
         prevwk = currwk
         prevwkof = currwkof
         
 d['wklysched'] = w
-""" 
-d['tentsched'] = {}
-    # W01:
-    # - meets:
-    #   - 01_
-    #   - 02_
-    # - theme:
-    # - reading:
-    # - topics:
-    # - lo: 
-"""
 # meetings
 m = []
 mtgctr = 0
@@ -131,10 +124,10 @@ with open(mtgsfile, newline='') as mtgscsv:
         # plan for each week
         # plan for each meeting
         m.append({})
-        m[mtgctr]['number'] = int(row['meeting'])
+        m[mtgctr]['mtgnbr'] = int(row['meeting'])
         m[mtgctr]['week'] = int(row['week'])
         m[mtgctr]['date'] = row['date']
-        m[mtgctr]['theme'] = "<insert theme>"
+        m[mtgctr]['theme'] = "Theme"
         # Administrative Items (formatted in markdown)
         adminstr = ''
         date_object = datetime.strptime(row['date'], "%a-%d-%b-%Y")
@@ -143,10 +136,13 @@ with open(mtgsfile, newline='') as mtgscsv:
         adminstr += '* [Class calendar for today](https://urcourses.uregina.ca/calendar/view.php?view=day&time=' + str(int(date_object.timestamp())) + '&course=' + str(urcid) + '){:target=\'_blank\'}\n'
         adminstr += '* [Upcoming events](https://urcourses.uregina.ca/calendar/view.php?view=upcoming&course=' + str(urcid) + '){:target=\'_blank\'}\n'
         m[mtgctr]['admin'] = adminstr
-        m[mtgctr]['r2r'] = '<Response to responses>'
-        m[mtgctr]['today'] = '<TODAY>'
-        m[mtgctr]['summ'] = '<Summary>'
-        m[mtgctr]['next'] = '* [Submit your response to this meeting before 11pm tonight](https://urcourses.uregina.ca/mod/feedback/view.php?id=2336380){:target=\'_blank\'}\n'
+        m[mtgctr]['r2r'] = 'Response to responses'
+        m[mtgctr]['today'] = 'TODAY'
+        m[mtgctr]['summ'] = 'Summary'
+        nextstr = ''
+        nextstr += '* [Submit your response to this meeting before 11pm tonight](https://urcourses.uregina.ca/mod/questionnaire/view.php?id=' + str(row['response_id']) + '){:target=\'_blank\'}\n'
+        nextstr += '* [Take quiz before the start of our next meeting](https://urcourses.uregina.ca/mod/quiz/view.php?id=' + str(row['quiz_id']) + '){:target=\'_blank\'}'
+        m[mtgctr]['next'] = nextstr
        
         """ 
         # BOK

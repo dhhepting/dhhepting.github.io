@@ -3,6 +3,7 @@
 {%- for aa in asgnfile %}
   {%- assign msa = "" %}
   {%- for sa in site.assignments %}
+
    {%- comment -%} AID {{ sa.aid }} == {{ aa.aid }}? <br/> {%- endcomment -%}
     {%- if sa.aid == aa.aid %}
       {%- assign msa = sa %}

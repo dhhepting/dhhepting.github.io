@@ -1,0 +1,26 @@
+{%- assign wklyplans = site.data.teaching[jcrs_id][crs_sem]plan.wklysched -%}
+<table class="table table-striped-columns">
+  <thead>
+    <th>Week of</th>
+    <th>Meetings</th>
+    <th>Topics</th>
+    <th>Items of Note</th>
+  </thead>
+  <tbody>
+  {%- for w in wklyplans -%}
+    <tr>
+      <td>{{ w.weekof }}</td>
+      <td>
+      {%- for mw in w.mtgs -%}
+        {%- capture murl -%}teaching/{{ crs_id }}/{{crs_sem }}/{{ mw }}{%- endcapture -%}
+        <a href="{{ murl | absolute_url }}" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          {{ mw | split: "_" | first }}
+        </a>
+      {%- endfor -%}
+      </td>
+      <td>{{ w.topics }}</td>
+      <td>{{ w.noteworth }}</td>
+    </tr>
+  {%- endfor -%}
+</tbody>
+</table>
