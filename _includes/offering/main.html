@@ -1,5 +1,5 @@
 {%- include teaching/url.html -%}
-
+{%- assign asgnfile = site.data.teaching[jcrs_id][crs_sem]assignments -%}
 <div class="w-auto h-100">
   <div class="bg-light mb-2 p-3">
     <h1>
@@ -74,10 +74,19 @@
         {%- endif -%}
 
         {%- if include.asgns == 1 -%}
-        <li class="nav-item">
-          <a class="nav-link" href="#ssAssignments">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
             Assignments
           </a>
+          <ul class="dropdown-menu">
+          {%- for aa in asgnfile -%}
+          <li>
+            <a class="dropdown-item" href="#ssAsgn_{{ aa.aid }}">
+              {{ aa.title }} (due: {{ aa.duedate }})
+            </a>
+          </li>
+          {%- endfor -%}
+          </ul>
         </li>
         {%- endif -%}
 
