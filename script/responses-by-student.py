@@ -38,25 +38,40 @@ for root, dirs, files in os.walk(RESP_DIR):
             mk = file.split(".")[0]
             with open(rfile, newline='') as rrrfile:
                 reader = csv.DictReader(rrrfile)
+                print('DDD',mk,reader.fieldnames)
                 for row in reader:
+                    #print(row)
                     #print(row["Email address"])
-                    emi = row["Email address"].split("@")[0]
+                    #emi = row["Email address"].split("@")[0]
+                    #emi = row["Username"]
+                    emi = row["Full name"]
                     #print(emi)
                     if (emi not in sss):
                         sss[emi] = {}
-                    else:
-                        sss[emi][mk] = row["(response) What is your response to today's meeting?"]
+                    if (mk not in sss[emi]):
+                        sss[emi][mk] = {}
+                    if "Q01" not in sss[emi][mk]:
+                        if "Q01_Concept" in row and len(row["Q01_Concept"]) > 0:
+                            sss[emi][mk]["Q01"] = row["Q01_Concept"]
+                    if "Q02" not in sss[emi][mk]:
+                        if "Q02_Difficulty" in row and len(row["Q02_Difficulty"]) > 0:
+                            sss[emi][mk]["Q02"] = row["Q02_Difficulty"]
+                    if "Q03" not in sss[emi][mk]:
+                        if "Q03_Knowmore" in row and len(row["Q03_Knowmore"]) > 0:
+                            sss[emi][mk]["Q03"] = row["Q03_Knowmore"]
 for k in sss:
     if len(sss[k]) > 0:
         print (k, len(sss[k]))
-        #print (sss[k])
-        # for r in sss[k]:
-        #     #print (r, len(sss[k]))
-        #     print (r,sss[k][r])
-        # print("++++++++++++++++")
+        bymeeting = dict(sorted(sss[k].items()))
+        #for r in sss[k]:
+        for r in bymeeting:
+            #for t in sss[k][r]:
+            for t in bymeeting[r]:
+                print (k,r,t,bymeeting[r][t])
+            print(k,"++++++++++++++++")
 """
         if (row['(description) Which description best suits your response?'] ==
-            'the most important thing that I learned'):
+            'the most impor]tant thing that I learned'):
             #print('important')
             if 'important' not in d:
                 d['important'] = []

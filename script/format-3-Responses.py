@@ -64,15 +64,23 @@ with open(RESP_SRC, newline='') as engfile:
             rr[un] = {}
             rr[un]['count'] = 1
         else:
-             rr[un]['count'] += 1
+            rr[un]['count'] += 1
+        if 'Q00_Concept' in row:
+            rr[un]['Q01'] = row['Q00_Concept']
         if 'Q01_Concept' in row:
             rr[un]['Q01'] = row['Q01_Concept']
+        if 'Q01_Difficulty' in row:
+            rr[un]['Q02'] = row['Q01_Difficulty']
+        if 'Q01_Diffiiculty' in row:
+            rr[un]['Q02'] = row['Q01_Diffiiculty']
         if 'Q02_Difficulty' in row:
             rr[un]['Q02'] = row['Q02_Difficulty']
         if 'Q02_Diffiiculty' in row:
             rr[un]['Q02'] = row['Q02_Diffiiculty']
-        #rr[un]['Q02'] = row['Q02_Difficulty']
-        #rr[un]['Q03'] = row['Q03_Knowmore']
+        if 'Q02_Knowmore' in row:
+            rr[un]['Q03'] = row['Q02_Knowmore']
+        if 'Q02_knowmore' in row:
+            rr[un]['Q03'] = row['Q02_knowmore']
         if 'Q03_Knowmore' in row:
             rr[un]['Q03'] = row['Q03_Knowmore']
         if 'Q03_knowmore' in row:

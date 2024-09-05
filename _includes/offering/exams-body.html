@@ -3,7 +3,8 @@
 {% endcomment %}
 {% capture exam_url %}/assets/teaching/pdf/{{ crs_id }}{% endcapture %}
 
-{%- if off_now == true -%}
+{%comment %}if off_now == true {% endcomment%}
+{% if 0 %}
 <h4>
   In {{ crs_sem }}:
 </h4>
@@ -42,7 +43,8 @@
 {% endfor %}
 {%- if prevexams.size > 0 -%}
 <h4>
-  From previous offerings:
+  <!-- From previous offerings: -->
+  Previous exams
 </h4>
 <ul>
   {% assign epaths = prevexams | split: '#' %}
