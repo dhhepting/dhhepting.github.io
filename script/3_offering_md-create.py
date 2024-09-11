@@ -22,13 +22,13 @@ md_template = {
   title=page.title
   mtgs=1
   sched=1
-  wkly=0
+  wkly=1
   code=1
   links=1
   asgns=1
   topics=0
   exams=1
-  feedback=1
+  feedback=0
 -%}
 """,
 "R" : """

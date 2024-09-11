@@ -60,6 +60,9 @@
               <a class="nav-link" href="#ssToday">Outline</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#ssMedia">Media</a>
             </li>
             <li class="nav-item"> {%comment%}dropdown{%endcomment%}
@@ -110,9 +113,6 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#ssWiki">Wiki</a>
-            </li>
           </ul>
         </div>
       </div>
@@ -130,6 +130,16 @@
         {%- include meetings/plan-body.html
             mtg=include.mn
         -%}
+
+        <h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank"
+          href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid={{ include.ww }}">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
 
         <h3 id="ssMedia" class="bg-dark text-white">
           Media
@@ -154,17 +164,6 @@
         {%- include meetings/responses.html
             mtg=include.mn
         -%}
-
-        <h3 id="ssWiki" class="bg-dark text-white">
-          Wiki
-        </h3>
-
-        <p>
-          <a target="_blank"
-          href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid={{ include.ww }}">
-            Link to the UR Courses wiki page for this meeting
-          </a>
-        </p>
 
       </div>
     </div>

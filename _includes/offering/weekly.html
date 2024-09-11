@@ -18,8 +18,8 @@
         </a>
       {%- endfor -%}
       </td>
-      <td>{{ w.topics }}</td>
-      <td>{{ w.noteworth }}</td>
+      <td>{{ w.topics | markdownify }}</td>
+      <td>{{ w.noteworth | markdownify }}</td>
     </tr>
   {%- endfor -%}
 </tbody>
