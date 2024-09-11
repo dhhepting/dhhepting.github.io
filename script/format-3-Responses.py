@@ -63,24 +63,21 @@ with open(RESP_SRC, newline='') as engfile:
         if un not in rr:
             rr[un] = {}
             rr[un]['count'] = 1
+            rr[un]['Q01'] = ''
+            rr[un]['Q02'] = ''
+            rr[un]['Q03'] = ''
         else:
             rr[un]['count'] += 1
-        # if 'Q00_Concept' in row:
-        #     rr[un]['Q01'] = row['Q00_Concept']
+        if 'Q00_concept' in row:
+            rr[un]['Q01'] = row['Q00_concept']
         if 'Q01_concept' in row:
             rr[un]['Q01'] = row['Q01_concept']
-        # if 'Q01_Difficulty' in row:
-        #     rr[un]['Q02'] = row['Q01_Difficulty']
-        # if 'Q01_Diffiiculty' in row:
-        #     rr[un]['Q02'] = row['Q01_Diffiiculty']
+        if 'Q01_difficult' in row:
+            rr[un]['Q02'] = row['Q01_difficult']
         if 'Q02_difficult' in row:
             rr[un]['Q02'] = row['Q02_difficult']
-        # if 'Q02_Diffiiculty' in row:
-        #     rr[un]['Q02'] = row['Q02_Diffiiculty']
-        # if 'Q02_Knowmore' in row:
-        #     rr[un]['Q03'] = row['Q02_Knowmore']
-        # if 'Q02_knowmore' in row:
-        #     rr[un]['Q03'] = row['Q02_knowmore']
+        if 'Q02_knowmore' in row:
+            rr[un]['Q03'] = row['Q02_knowmore']
         if 'Q03_knowmore' in row:
             rr[un]['Q03'] = row['Q03_knowmore']
 
@@ -91,6 +88,7 @@ d['difficult'] = []
 d['know-more'] = []
             
 for un in rr:
+    print ('user response',rr[un])
     q1 = {}
     q1['desc'] = rr[un]['Q01']
     if len(q1['desc']) > 0:
