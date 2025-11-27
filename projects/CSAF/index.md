@@ -23,41 +23,11 @@ layout: bg-image
     </a>
   </h3>
 </div>
+<!-- 
 <div class="bg-warning p-3 m-2">
 <h2>Next Lecture</h2>
-<div class="card bg-light  m-2">
-  <div class="card-header">
-    <h3>
-      Tim Belsher
-    </h3>
-  </div>
-  <div class="card-body">
-    <h5>
-      "My Career in Film & Games - Merging Tech & Art"
-    </h5>
-    <p>
-    The Faculty of Science Department of Computer Science invites you to a virtual public lecture with Computer Science friend <a href="https://www.linkedin.com/in/tim-belsher/" target="_blank">Tim Belsher</a>, currently a Technical Art Director at Electronic Arts, on Thursday, February 29th, 7 p.m. – 8 p.m. CST via zoom: <a href="https://uregina-ca.zoom.us/meeting/register/tJApfumqrD8oG9ZtfyKkv9G3LLtnJ9rybOrQ" target="_blank">please be sure to register in advance by clicking here</a>
-
-</p><p>
-In this talk, Tim will go through his career in Computer Graphics that spans more than 25 years, in both film and games. His career objective has always been to combine his technical and artistic skills in a creative environment. He will describe how the film and games industries combine the technical and art disciplines to create amazing imagery and experiences. He will describe the rewards and challenges of combining these two disciplines and outline the similarities and differences between the games and film industries. He will finish with future interesting challenges facing the computer graphics industry, including incredible advancements in real-time graphics and the new possibilities of Generative AI.
-</p>
-    <p>
-      <a href="https://www.facebook.com/events/2410972902418078" target="_blank">
-        Event on facebook.
-      </a>
-    </p>
-    <p>
-Tim has been in the computer graphics industry for over 25 years. For the first 20 years of his career, he worked in the film industry, where he was hired in both technical and artistic leadership roles as a CG Supervisor, Pipeline Supervisor and Technical Director at companies such as Industrial Light + Magic, Digital Domain and Image Engine. Tim moved into the games industry seven years ago, and is currently at Electronic Arts as a Technical Art Director. His résumé includes work on films such as: "Star Wars: Episode VII - The Force Awakens", "Star Wars: Episode III - Revenge of the Sith", "Doctor Strange", "Captain America 2: The Winter Soldier", "TRON: Legacy", and "District 9"; and video games such as: "Plants vs. Zombies: Battle for Neighborville", "UFC 4", and "UFC 5".
-</p>
-<p>
-Tim was born in Regina and moved to British Columbia in 1985. He has a Computer Science degree from Simon Fraser University.
-    </p>
-  </div>
-  <div class="card-header">
-    Lecture 7 (29 Feb 2024)
-  </div>
 </div>
-</div>
+ -->
 <div class="bg-info p-3 m-2">
 <h2>Past Lectures</h2>
 <div class="card bg-light m-2">
@@ -355,4 +325,34 @@ Tim was born in Regina and moved to British Columbia in 1985. He has a Computer 
     Lecture 6 (8 Nov 2023)
   </div>
 </div>
+<div class="card bg-light  m-2">
+  <div class="card-header">
+    <h3>
+      Tim Belsher
+    </h3>
+  </div>
+  <div class="card-body">
+    <h5>
+      "My Career in Film & Games - Merging Tech & Art"
+    </h5>
+<p>
+In this talk, Tim will go through his career in Computer Graphics that spans more than 25 years, in both film and games. His career objective has always been to combine his technical and artistic skills in a creative environment. He will describe how the film and games industries combine the technical and art disciplines to create amazing imagery and experiences. He will describe the rewards and challenges of combining these two disciplines and outline the similarities and differences between the games and film industries. He will finish with future interesting challenges facing the computer graphics industry, including incredible advancements in real-time graphics and the new possibilities of Generative AI.
+</p>
+    <p>
+      <a href="https://www.facebook.com/events/2410972902418078" target="_blank">
+        Event on facebook.
+      </a>
+    </p>
+    <p>
+Tim has been in the computer graphics industry for over 25 years. For the first 20 years of his career, he worked in the film industry, where he was hired in both technical and artistic leadership roles as a CG Supervisor, Pipeline Supervisor and Technical Director at companies such as Industrial Light + Magic, Digital Domain and Image Engine. Tim moved into the games industry seven years ago, and is currently at Electronic Arts as a Technical Art Director. His résumé includes work on films such as: "Star Wars: Episode VII - The Force Awakens", "Star Wars: Episode III - Revenge of the Sith", "Doctor Strange", "Captain America 2: The Winter Soldier", "TRON: Legacy", and "District 9"; and video games such as: "Plants vs. Zombies: Battle for Neighborville", "UFC 4", and "UFC 5".
+</p>
+<p>
+Tim was born in Regina and moved to British Columbia in 1985. He has a Computer Science degree from Simon Fraser University.
+    </p>
+  </div>
+  <div class="card-header">
+    Lecture 7 (29 Feb 2024)
+  </div>
+</div>
+
 </div>

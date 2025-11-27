@@ -1,0 +1,789 @@
+Audio-Transcript:
+- desc: 'So what kind of shading
+
+    have we used so far? What''s the'
+  persid: ''
+- desc: way to describe it?
+  persid: ''
+- desc: Would You like a vowel?
+  persid: ''
+- desc: Wow, yes. I
+  persid: ''
+- desc: 'So what other information Can we
+
+    Add?'
+  persid: ''
+- desc: Models and
+  persid: ''
+- desc: 'light. Yeah, We can add Lights.
+
+    We''re'
+  persid: ''
+- desc: 'when can we add to describe how
+
+    the light is going interact with'
+  persid: ''
+- desc: a cube? Let's say I
+  persid: ''
+- desc: so we can add
+  persid: ''
+- desc: 'material descriptions, or we
+
+    have the model of the surface'
+  persid: ''
+- desc: 'so we can get different effects
+
+    when we Apply the'
+  persid: ''
+- desc: when that Surface is lit. I
+  persid: ''
+- desc: so We can think about
+  persid: ''
+- desc: describing The
+  persid: ''
+- desc: so we have a
+  persid: ''
+- desc: 'plate that comes back from
+
+    interacting with the surface. We'
+  persid: ''
+- desc: 'can describe in terms of
+
+    ambient, diffuse and specular'
+  persid: ''
+- desc: components and
+  persid: ''
+- desc: 'so shading, a proper shading,
+
+    gives us a sense of three'
+  persid: ''
+- desc: 'dimensional quality jumping out
+
+    of the computer screen. So we''re'
+  persid: ''
+- desc: 'talk about the types of lights
+
+    we can use and interaction with'
+  persid: ''
+- desc: materials, and
+  persid: ''
+- desc: 'then we''ll talk about how that
+
+    can be implemented on graphics'
+  persid: ''
+- desc: hardware.
+  persid: ''
+- desc: 'So the first one looks like a
+
+    circle. Does the second one look'
+  persid: ''
+- desc: like a sphere? I
+  persid: ''
+- desc: 'It''s not terribly convincing to
+
+    me. I'
+  persid: ''
+- desc: 'so we agree with this assessment
+
+    that the light material'
+  persid: ''
+- desc: 'interactions on each point have
+
+    a different color or shade, so'
+  persid: ''
+- desc: 'we don''t see a flat color.
+
+    That''s the variation of the'
+  persid: ''
+- desc: surface.
+  persid: ''
+- desc: 'So in addition to light sources
+
+    and material properties, we can'
+  persid: ''
+- desc: 'also take into account the
+
+    location of the viewer and the'
+  persid: ''
+- desc: regulation of the surface so
+  persid: ''
+- desc: 'We can think about scattering
+
+    light in the scene and'
+  persid: ''
+- desc: 'light strike surface A. Sun is
+
+    scattered. Sun is absorbed. Some'
+  persid: ''
+- desc: 'of that scattered light strikes
+
+    B, some scattered Sun absorbed,'
+  persid: ''
+- desc: 'some of the scattered light
+
+    strikes a and'
+  persid: ''
+- desc: 'So that''s keeping track of A lot
+
+    of interactions and'
+  persid: ''
+- desc: so we
+  persid: ''
+- desc: 'we have a description of
+
+    scattering and absorption, but'
+  persid: ''
+- desc: 'it doesn''t have a general
+
+    solution, and we can ray trace'
+  persid: ''
+- desc: 'using ray tracing With perfectly
+
+    reflective services and again,'
+  persid: ''
+- desc: an accurate model.
+  persid: ''
+- desc: 'So you can see there''s a lot to
+
+    keep track of. If we''re'
+  persid: ''
+- desc: 'going to do an accurate
+
+    rendering, we''re it.'
+  persid: ''
+- desc: 'So in this picture of global
+
+    effects, we see the light'
+  persid: ''
+- desc: source,
+  persid: ''
+- desc: 'Shadow, multiple reflections,
+
+    and here''s A translucent'
+  persid: ''
+- desc: 'surface. So in that case, some
+
+    length reflects and sun passes'
+  persid: ''
+- desc: through the object The
+  persid: ''
+- desc: 'so global illumination isn''t
+
+    suited to graphics hardware. So'
+  persid: ''
+- desc: 'to the graphics hardware
+
+    pipeline.'
+  persid: ''
+- desc: 'But we''re happy if we can make
+
+    it look reasonably good. So'
+  persid: ''
+- desc: 'there are some techniques to be
+
+    used to simulate global'
+  persid: ''
+- desc: 'illumination effects. Light
+
+    strikes an object is partially'
+  persid: ''
+- desc: 'absorbed, length of strikes an
+
+    object is partially absorbed,'
+  persid: ''
+- desc: 'partially scattered, reflected.
+
+    The amount reflected terms of'
+  persid: ''
+- desc: 'color and brightness of the
+
+    object. The surface appears red'
+  persid: ''
+- desc: 'under white light, because the
+
+    red component of the light is'
+  persid: ''
+- desc: 'reflected and the rest is
+
+    absorbed. The'
+  persid: ''
+- desc: 'reflected light is scattering
+
+    back, and depends on The smooth,'
+  persid: ''
+- desc: 'smoothness and orientation of
+
+    The surface You'
+  persid: ''
+- desc: 'So what kinds of legs are
+
+    available for computer graphics?'
+  persid: ''
+- desc: I
+  persid: ''
+- desc: 'Are you talking about like
+
+    directional and positional'
+  persid: ''
+- desc: or Yeah, so I
+  persid: ''
+- desc: so
+  persid: ''
+- desc: 'if we specify This a position of
+
+    a light in the scene and'
+  persid: ''
+- desc: 'so it''s, we have the leg Coming
+
+    from a point, so it doesn''t have'
+  persid: ''
+- desc: 'any I need. Geometry is just a
+
+    point, and light is emitted in'
+  persid: ''
+- desc: every direction, if
+  persid: ''
+- desc: we specify direction
+  persid: ''
+- desc: it's like when we move
+  persid: ''
+- desc: 'object off to infinity, whereas
+
+    if we''re looking at something'
+  persid: ''
+- desc: close,
+  persid: ''
+- desc: 'the directions are quite
+
+    different from the eye to'
+  persid: ''
+- desc: 'different parts of the scene. If
+
+    you move that off to infinity,'
+  persid: ''
+- desc: 'then the projectors become
+
+    parallel and'
+  persid: ''
+- desc: 'so when We think of a
+
+    directional light, the light has'
+  persid: ''
+- desc: a
+  persid: ''
+- desc: 'so what''s a directional light
+
+    source that we see most days?'
+  persid: ''
+- desc: Yeah,
+  persid: ''
+- desc: 'so if we take a white light
+
+    source and restrict the'
+  persid: ''
+- desc: 'if we restrict the directions in
+
+    which it is emitting, If'
+  persid: ''
+- desc: so then we have a Spot like I
+  persid: ''
+- desc: 'so we talked. We''ve talked about
+
+    These ambient Light. I'
+  persid: ''
+- desc: 'so we can Cover up. We can we
+
+    make stuff look good or look'
+  persid: ''
+- desc: 'better by adding some ambient
+
+    light to account for i'
+  persid: ''
+- desc: to account for
+  persid: ''
+- desc: 'terms that are too hard to
+
+    compute in your graphics'
+  persid: ''
+- desc: pipeline And
+  persid: ''
+- desc: so
+  persid: ''
+- desc: if we have a smooth surface and
+  persid: ''
+- desc: 'the more it reflects like A
+
+    mirror. So we get the light'
+  persid: ''
+- desc: bouncing off of
+  persid: ''
+- desc: 'if The surface is rough, we get
+
+    more scattering. If'
+  persid: ''
+- desc: 'so we have diffuse, the
+
+    specular, the ambient'
+  persid: ''
+- desc: 'components, And we have four
+
+    vectors.'
+  persid: ''
+- desc: 'So L is the direction of is the
+
+    location of the light source to'
+  persid: ''
+- desc: 'the viewer. That''s V then we
+
+    have a normal to the surface,'
+  persid: ''
+- desc: 'and we have the perfect
+
+    reflector. So this is that''s the'
+  persid: ''
+- desc: 'direction in which light would
+
+    be. If the surface was a perfect'
+  persid: ''
+- desc: 'reflector, the light would
+
+    bounce in that direction. I'
+  persid: ''
+- desc: 'So the normal is defined
+
+    determined by local orientation'
+  persid: ''
+- desc: 'of the model. The angle of
+
+    incidence equals the angle of'
+  persid: ''
+- desc: 'reflection. The three vectors
+
+    must be co planar. So we have L'
+  persid: ''
+- desc: to the light source,
+  persid: ''
+- desc: 'and the perfect reflector is the
+
+    angle of incidence, which we'
+  persid: ''
+- desc: 'find by looking at the angle
+
+    between l and n, and'
+  persid: ''
+- desc: 'then the reflection is that same
+
+    angle. And'
+  persid: ''
+- desc: 'it so we can think about another
+
+    type of surface, inversion'
+  persid: ''
+- desc: 'surface, perfectly diffused
+
+    reflector, so it scatters. It'
+  persid: ''
+- desc: doesn't have
+  persid: ''
+- desc: 'it''s the opposite of the perfect
+
+    reflector that we saw.'
+  persid: ''
+- desc: 'None of light reflect is
+
+    proportional to the vertical'
+  persid: ''
+- desc: 'component of the incoming light.
+
+    The Yeah.'
+  persid: ''
+- desc: 'So we''re taking the cosine
+
+    between the light vector and the'
+  persid: ''
+- desc: normal vector.
+  persid: ''
+- desc: 'So most of the surfaces are
+
+    neither ideal diffusers or ideal'
+  persid: ''
+- desc: 'reflectors. Smooth surfaces show
+
+    specular highlights due to'
+  persid: ''
+- desc: 'incoming light being reflected
+
+    in directions concentrated close'
+  persid: ''
+- desc: 'to the direction of a perfect
+
+    reflection and'
+  persid: ''
+- desc: 'so we''re interested so we can
+
+    see specular highlights in the'
+  persid: ''
+- desc: 'region Around the reflected, the
+
+    perfect The perfect reflection'
+  persid: ''
+- desc: reflector you
+  persid: ''
+- desc: so fun proposed
+  persid: ''
+- desc: 'a term that makes the highlight
+
+    stronger when the viewer is at'
+  persid: ''
+- desc: or near the perfect reflector,
+  persid: ''
+- desc: and it's a
+  persid: ''
+- desc: 'so that highlight is going to be
+
+    much less apparent If the viewer'
+  persid: ''
+- desc: is not looking in that direction
+  persid: ''
+- desc: So we can
+  persid: ''
+- desc: try different values To get
+  persid: ''
+- desc: the effect we want you.
+  persid: ''
+- desc: So to handle ambient light,
+  persid: ''
+- desc: 'we have an intensity term for
+
+    The ambient light'
+  persid: ''
+- desc: 'and the reflection coefficient
+
+    light from the'
+  persid: ''
+- desc: 'so the Light from a point source
+
+    is proportional to the distance'
+  persid: ''
+- desc: 'of the source from the surface,
+
+    and then we can add A term like'
+  persid: ''
+- desc: 'this to attenuate and soften The
+
+    effects of the light.'
+  persid: ''
+- desc: 'So we have in the farm model
+
+    nine coefficients for each point'
+  persid: ''
+- desc: source,
+  persid: ''
+- desc: 'nine absorption coefficients and
+
+    the shininess coefficient.'
+  persid: ''
+- desc: 'So for each color component, we
+
+    add the contributions across the'
+  persid: ''
+- desc: sources and
+  persid: ''
+- desc: 'so This is where the halfway
+
+    vector becomes more efficient'
+  persid: ''
+- desc: and
+  persid: ''
+- desc: 'so here''s An array of teapots
+
+    with different parameters In the'
+  persid: ''
+- desc: blend faux model.
+  persid: ''
+- desc: 'So we have the light vector and
+
+    the Uber vector specified in our'
+  persid: ''
+- desc: 'scene, so we can compute R from
+
+    L and N. But how do we determine'
+  persid: ''
+- desc: n for simple surfaces and
+  persid: ''
+- desc: so how do we deal with the
+  persid: ''
+- desc: Timing In the
+  persid: ''
+- desc: 'again, suspension, disbelief,
+
+    that''s a cube. I'
+  persid: ''
+- desc: 'so On the surface of the queue
+
+    and that'
+  persid: ''
+- desc: Normal is
+  persid: ''
+- desc: easy to define
+  persid: ''
+- desc: what happens when a group,
+  persid: ''
+- desc: then we
+  persid: ''
+- desc: 'have a bunch of triangles to
+
+    make up a surface. So the marble'
+  persid: ''
+- desc: 'on the surface of the triangle
+
+    is clear, but What about where'
+  persid: ''
+- desc: 'it meets up with other
+
+    triangles? So'
+  persid: ''
+- desc: 'like, what about that edge or
+
+    This corner?'
+  persid: ''
+- desc: So we can interpolate the
+  persid: ''
+- desc: so the normal to the sphere. So,
+  persid: ''
+- desc: 'at a point on the sphere, we
+
+    have a 10, the tangent plane,'
+  persid: ''
+- desc: 'and that allows us to do the
+
+    cross pride, to get the normal'
+  persid: ''
+- desc: 'so Here are some details about
+
+    competing normals For triangles'
+  persid: ''
+- desc: you
+  persid: ''
+- desc: so
+  persid: ''
+- desc: 'we can this is a little bit
+
+    about calling Back faces. You.'
+  persid: ''
+- desc: So when we
+  persid: ''
+- desc: 'do the vertex per vertex,
+
+    shading calculations are done'
+  persid: ''
+- desc: 'for each vertex, which makes
+
+    sense.'
+  persid: ''
+- desc: So We Could we
+  persid: ''
+- desc: so we could use that
+  persid: ''
+- desc: attribute approach Changing
+  persid: ''
+- desc: 'the color, or we could do The
+
+    shading and'
+  persid: ''
+- desc: in The vertex shader and
+  persid: ''
+- desc: 'so we have the normal for the
+
+    triangle, but in the case of a'
+  persid: ''
+- desc: 'sphere that we can see here, we
+
+    want different normals at Each'
+  persid: ''
+- desc: 'vertex, even though it''s not
+
+    quite correct mathematically, We'
+  persid: ''
+- desc: so if we set the normals
+  persid: ''
+- desc: 'at each vertex, then we get
+
+    smooth shading, But we see the'
+  persid: ''
+- desc: edge of the sphere Model and
+  persid: ''
+- desc: 'so what''s called Grow shading
+
+    involves averaging'
+  persid: ''
+- desc: 'The normals of the triangles
+
+    around The vertex and'
+  persid: ''
+- desc: 'so with corrosion, we want to
+
+    have that normal vector for each'
+  persid: ''
+- desc: 'vertex so we can apply The
+
+    modify the limb form model at'
+  persid: ''
+- desc: 'each vertex And the interpolate
+
+    vertex comes across each'
+  persid: ''
+- desc: polygon, the
+  persid: ''
+- desc: 'So where can we get Highlights
+
+    if we''re doing garosha,'
+  persid: ''
+- desc: 'Because what we''re doing is
+
+    we''re doing'
+  persid: ''
+- desc: the whole calculation for
+  persid: ''
+- desc: 'the vertex so if the light The
+
+    sprinkler highlights correspond'
+  persid: ''
+- desc: 'with the vertices of our wall,
+
+    then we''ll see the highlights'
+  persid: ''
+- desc: 'come out, because in the vertex
+
+    shade, we''re computing vertex'
+  persid: ''
+- desc: 'color that gets interpolated by
+
+    the fragment shader.'
+  persid: ''
+- desc: So
+  persid: ''
+- desc: 'in Grow shading, it all depends
+
+    on the intensity values at the'
+  persid: ''
+- desc: 'vertices, because those values
+
+    are interpolated.'
+  persid: ''
+- desc: 'So Fauci says find the vertex
+
+    normals and'
+  persid: ''
+- desc: 'like we''ve done before, but
+
+    interpolate the vertex normals'
+  persid: ''
+- desc: 'Across edges, and interpolate
+
+    edge normals across The polygon'
+  persid: ''
+- desc: And
+  persid: ''
+- desc: 'so what''s the advantage of Fauci
+
+    compared to grow shade? I'
+  persid: ''
+- desc: 'What''s An advantage and what''s a
+
+    disadvantage. I'
+  persid: ''
+- desc: let's say
+  persid: ''
+- desc: 'that''s the point where the
+
+    specular highlight would Be most'
+  persid: ''
+- desc: pronounced.
+  persid: ''
+- desc: So in Grow
+  persid: ''
+- desc: 'shading, we''re calculating
+
+    intensities at the vertices, and'
+  persid: ''
+- desc: 'we''re interpolating the value so
+
+    we don''t get the highlight and'
+  persid: ''
+- desc: 'but in Phong shading, we''re
+
+    interpolating the normals. So in'
+  persid: ''
+- desc: 'the fragment shader, we''re doing
+
+    the calculation with an'
+  persid: ''
+- desc: 'approximation to the surface
+
+    normal. So we can get we can'
+  persid: ''
+- desc: capture these highlights and
+  persid: ''
+- desc: 'Okay, so that''s an advantage.
+
+    What''s a disadvantage'
+  persid: ''
+- desc: is this a little bit more work
+  persid: ''
+- desc: or a lot more? I
+  persid: ''
+- desc: 'because instead of doing the
+
+    four vertices of a quad and or a'
+  persid: ''
+- desc: 'triangle strip, we''re doing the
+
+    calculation not four times, but'
+  persid: ''
+- desc: 'once, for each fragment, for
+
+    each pixel. Does That make'
+  persid: ''
+- desc: sense? I
+  persid: ''
+- desc: 'that''s a bit more complicated. I
+
+    so'
+  persid: ''
+- desc: it's
+  persid: ''
+- desc: 'not clear where the light is
+
+    going either. Well, it is'
+  persid: ''
+- desc: 'because you can see the surface.
+
+    The'
+  persid: ''
+- desc: 'it. So anyway, in the shaded
+
+    cube, oh, we''re out of time. I'
+  persid: ''
+- desc: knew that because of the
+  persid: ''
+- desc: 'so we''re doing the lighting and
+
+    the faux calculation in the'
+  persid: ''
+- desc: 'vertex shader, and then fragment
+
+    shader. We''re just assigning the'
+  persid: ''
+- desc: 'color to the fragment color.
+
+    Thank you for today. Have a good'
+  persid: ''
+- desc: rest. Of your Wednesday.
+  persid: ''
+- desc: Good weekend, a
+  persid: ''
+- desc: good long weekend.
+  persid: ''
+offering:
+  id: CS-315_733-202430

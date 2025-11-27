@@ -1,14 +1,17 @@
 ---
-title: Fall 2024 Schedule
+title: Fall 2025 Schedule
 breadcrumb: Schedule
-sem: 202430
+sem: 202530
 main_entity: Service
 officeblocks:
   - day: Tuesday
-    open: "10:30"
+    open: "11:00"
+    close: "12:00"
+  - day: Wednesday
+    open: "11:00"
     close: "12:00"
   - day: Thursday
-    open: "10:30"
+    open: "11:00"
     close: "12:00"
 firstdate: 2022-08-31
 lastdate: 2022-12-06
