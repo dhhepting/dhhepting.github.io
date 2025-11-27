@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--
+Compare the calculation of gl_Position
+in vertex-shader-1 and vertex-shader-2
+-->
+<html>
+<head>
+<script id="vertex-shader-1" type="x-shader/x-vertex">
+#version 300 es
+
+in  vec4 aPosition;
+in  vec4 aColour;
+out vec4 vColour;
+
+uniform mat4 uModelViewMatrix;
+uniform mat4 uProjectionMatrix;
+
+uniform vec3 uEta;
+
+void main()
+{
+    vec3 angles = radians(uEta);
+    vec3 c = cos(angles);
+    vec3 s = sin(angles);
+
+    // Create 3 matrices to encapsulate the rotation about an arbitrary axis
+    // as the composition of rotations about X, Y, and Z
+    // Remember: these matrices are column-major,
+    // Col_n = (Row_n)^T
+    mat4 rx = mat4(1.0,  0.0,  0.0, 0.0,
+		    0.0,  c.x,  s.x, 0.0,
+		    0.0, -s.x,  c.x, 0.0,
+		    0.0,  0.0,  0.0, 1.0);
+
+    mat4 ry = mat4(c.y, 0.0, -s.y, 0.0,
+		    0.0, 1.0,  0.0, 0.0,
+		    s.y, 0.0,  c.y, 0.0,
+		    0.0, 0.0,  0.0, 1.0);
+
+    mat4 rz = mat4(c.z, s.z, 0.0, 0.0,
+		    -s.z,  c.z, 0.0, 0.0,
+		    0.0,  0.0, 1.0, 0.0,
+		    0.0,  0.0, 0.0, 1.0);
+
+    gl_Position = uProjectionMatrix * uModelViewMatrix * (rz * ry * rx * aPosition);
+    vColour = aColour;
+}
+</script>
+
+<script id="fragment-shader-1" type="x-shader/x-fragment">
+#version 300 es
+
+precision mediump float;
+
+in vec4 vColour;
+out vec4 fColour;
+
+void
+main()
+{
+    fColour = vColour;
+}
+</script>
+
+<script id="vertex-shader-2" type="x-shader/x-vertex">
+#version 300 es
+
+// assume both position and normal are in homogeneous form
+in vec4 aPosition;
+in vec4 aNormal;
+in vec4 aColour;
+
+out vec4 vColour;
+
+uniform mat4 uModelViewMatrix;
+uniform mat4 uProjectionMatrix;
+uniform mat3 uNormalMatrix;
+
+vec4 AmbientProduct, DiffuseProduct, SpecularProduct;
+float Shininess;
+void
+main()
+{
+    //  lightPosition = vec4(1.0, 1.0, 1.0, 0.0);
+    vec4 lightAmbient = vec4(0.2, 0.2, 0.2, 1.0);
+    vec4 lightDiffuse = vec4(1.0, 1.0, 1.0, 1.0);
+    vec4 lightSpecular = vec4(1.0, 1.0, 1.0, 1.0);
+
+    vec4 materialAmbient = aColour;
+    vec4 materialDiffuse = aColour;
+    vec4 materialSpecular = aColour;
+    float materialShininess = 100.0;
+
+    AmbientProduct = lightAmbient * materialAmbient;
+    DiffuseProduct = lightDiffuse * materialDiffuse;
+    SpecularProduct = lightSpecular * materialSpecular;
+    
+    // pos is vertex position in eye coordinates
+    vec3 pos = (uModelViewMatrix * aPosition).xyz;
+
+    // Because the eye point the is at the orgin
+    // the vector from the vertex position to the eye is
+    vec3 E = -normalize(pos);
+
+    // and because the light is at the eyepoint
+     vec3 L = -normalize(pos);
+
+    // halfway vector
+
+    vec3 H = normalize(L + E);
+
+    // Transform vertex normal into eye coordinates
+
+    vec3 N = normalize( uNormalMatrix*aNormal.xyz);
+
+    // Compute terms in the illumination equation
+    vec4 ambient = AmbientProduct;
+
+    float Kd = max( dot(L, N), 0.0 );
+    vec4 diffuse = Kd *DiffuseProduct;
+
+    float Ks = pow( max(dot(N, H), 0.0), Shininess );
+    vec4 specular = Ks * SpecularProduct;
+
+    if( dot(L, N) < 0.0 ) {
+	      specular = vec4(0.0, 0.0, 0.0, 1.0);
+    }
+
+    gl_Position = uProjectionMatrix * uModelViewMatrix * aPosition;
+
+    vColour = ambient + diffuse + specular;
+
+    vColour.a = 1.0;
+}
+</script>
+<!-- #version 300 es
+
+in  vec4 aPosition;
+in  vec4 aColour;
+out vec4 vColour;
+
+uniform mat4 uModelViewMatrix;
+uniform mat4 uProjectionMatrix;
+
+void main()
+{
+    gl_Position = uProjectionMatrix * uModelViewMatrix * (aPosition);
+    vColour = aColour;
+}
+</script> -->
+
+<script id="fragment-shader-2" type="x-shader/x-fragment">
+#version 300 es
+
+precision mediump float;
+
+in vec4 vColour;
+out vec4 fColour;
+
+void
+main()
+{
+    fColour = vColour;
+}
+</script>
+<script type="text/javascript" src="https://interactivecomputergraphics.com/8E/Code/Common/initShaders.js"></script>
+<script type="text/javascript" src="https://interactivecomputergraphics.com/8E/Code/Common/MVnew.js"></script>
+<script type="text/javascript" src="asgn3-fly-by.js"></script>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <fieldset>
+                    <legend>Canvas1: rotate model</legend>
+                    <canvas id="gl-canvas-1" width="256" height="256">
+                        Your browser does not support the HTML5 canvas element
+                    </canvas>
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                    <legend>Canvas2: rotate camera</legend>
+                    <canvas id="gl-canvas-2" width="256" height="256">
+                        Your browser does not support the HTML5 canvas element
+                    </canvas>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <fieldset>
+                    <legend>Rotation Angles</legend>
+                    <label>
+                        <strong>X:</strong>
+                        <input type="number" name="XANGinput" id="XANGinput" min="-180" max="180" step="5" value="0" />
+                        <strong>Y:</strong>
+                        <input type="number" name="YANGinput" id="YANGinput" min="-180" max="180" step="5" value="0" />
+                        <strong>Z:</strong>
+                        <input type="number" name="ZANGinput" id="ZANGinput" min="-180" max="180" step="5" value="0" />
+                        <strong>Invert:</strong>
+                        <input type="checkbox" name="LAinvert" id="LAinvert">
+                    </label>
+                </fieldset>
+            </tr>
+        </tbody>
+    </table>
+    
+
+</body>
+</html>

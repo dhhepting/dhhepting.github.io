@@ -9,8 +9,10 @@
 {%- else -%}
 {%- assign plan = site.data.teaching[jcrs_id][crs_sem]plan %}
 {%- assign prvmtg = include.mn | minus: 1 -%}
+{%- assign curmtg = include.mn | minus: 0 -%}
 {%- assign prvlnk = nil -%}
 {%- assign prevm = site.data.teaching[jcrs_id][crs_sem]meetings | find: "meeting", prvmtg -%}
+{%- assign currm = site.data.teaching[jcrs_id][crs_sem]meetings | find: "meeting", curmtg -%}
 {%- if prevm -%}
   {%- assign prvlnk = prevm.file -%} 
 {%- endif -%}
@@ -65,8 +67,8 @@
             <li class="nav-item">
               <a class="nav-link" href="#ssMedia">Media</a>
             </li>
-            <li class="nav-item"> {%comment%}dropdown{%endcomment%}
-              <a class="nav-link" href="#ssTranscript">Transcript</a>
+            <!-- <li class="nav-item"> {%comment%}dropdown{%endcomment%}
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
 
                {%comment%}
                dropdown-toggle"
@@ -87,14 +89,16 @@
                   </a>
                 </li>
               </ul>
-              {%endcomment%}
+              
             </li>
+            {%endcomment%}
+            <!--
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle"
+               <a class="nav-link dropdown-toggle"
                 data-bs-toggle="dropdown" href="#" role="button"
                 aria-expanded="false">
                   Responses
-              </a>
+              </a> 
               <ul class="dropdown-menu">
                 <li>
                   <a class="dropdown-item" href="#ssR-Important">
@@ -112,7 +116,7 @@
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -130,13 +134,15 @@
         {%- include meetings/plan-body.html
             mtg=include.mn
         -%}
-
+        {%- if currm.quiz_id -%}
+         <H5><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id={{ currm.quiz_id }}">ACTION: Take quiz before next meeting</a></H5>
+        {%- endif -%}
         <h3 id="ssWiki" class="bg-dark text-white">
           Wiki
         </h3>
         <p>
           <a target="_blank"
-          href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid={{ include.ww }}">
+          href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid={{ currm.wikipage_id }}">
             Link to the UR Courses wiki page for this meeting
           </a>
         </p>
@@ -149,27 +155,27 @@
             mtg=include.mn
         -%}
 
-        <h3 id="ssTranscript" class="bg-dark text-white">
+        <!-- <h3 id="ssTranscript" class="bg-dark text-white">
           Transcript
         </h3>
 
         {%- include meetings/transcripts.html
             mtg=include.mn
-        -%}
+        -%} -->
 
-        <h3 id="ssResponses" class="bg-dark text-white">
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
           Responses
-        </h3>
+        </h3> 
 
         {%- include meetings/responses.html
             mtg=include.mn
         -%}
-
+-->
       </div>
     </div>
     <div id="mtgftr" class="card card-footer w-100 bg-info">
     </div>
-  </div>
+  </div> 
 </div>
 <script>
 $(document).ready(function(){

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- based on: https://www.interactivecomputergraphics.com/8E/Code/02/gasket2.html -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Rotating 2D Sierpiński Gasket (Recursive)
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script id="vertex-shader" type="x-shader/x-vertex">
+            #version 300 es
+            in vec4 aPosition;
+            uniform float uTheta;
+            uniform vec2 uCentre;
+
+            void
+            main()
+            {
+                float rcX = aPosition.x - uCentre.x;
+                float rcY = aPosition.y - uCentre.y;
+                float s = sin(uTheta);
+                float c = cos(uTheta);
+
+                gl_Position.x = (c * rcX) + (-s * rcY) + uCentre.x;
+                gl_Position.y = (s * rcX) + (c * rcY) + uCentre.y;
+                gl_Position.z = 0.0;
+                gl_Position.w = 1.0;
+            }
+        </script>
+        <script id="fragment-shader" type="x-shader/x-fragment">
+            #version 300 es
+            precision mediump float;
+
+            out vec4 fColor;
+
+            void
+            main()
+            {
+                fColor = vec4( 1.0, 0.0, 0.0, 1.0 );
+            }
+        </script>
+        <script type="text/javascript" src="../Common/initShaders.js"></script>
+        <script type="text/javascript" src="../Common/MVnew.js"></script>
+        <script type="text/javascript" src="gasket-2D-recursive-rotate.js"></script>
+    </head>
+    <body>
+        <div class="card w-100 h-100">
+            <h1 class="card card-header bg-light">
+                Rotating 2D Sierpiński Gasket
+            </h1>
+            <div class="card card-body">
+                <label for="centre-X" class="form-label">Centre (X)</label>
+                <input id="centre-X"type="number" class="form-number" min="-1" max="1" step="0.01" value="0">
+                <label for="centre-Y" class="form-label">Centre (Y)</label>
+                <input id="centre-Y" type="number" class="form-number" min="-1" max="1" step="0.01" value="0">
+                <button id="reset">Reset Centre</button>
+                <button id="toggleRotation">Toggle Rotation</button>
+                <canvas class="bg-dark" width="512" height="512" id="gl-canvas">
+                    Your browser does not support the HTML5 canvas element
+                </canvas>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>

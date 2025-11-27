@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- based on: https://www.interactivecomputergraphics.com/8E/Code/02/gasket2.html -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            2XF-2D (Recursive Points)
+        </title>
+        <script id="vertex-shader" type="x-shader/x-vertex">
+            #version 300 es
+            in vec4 aPosition;
+            in vec4 aColour;
+            out vec4 vColour;
+            uniform vec4 uColour;
+            uniform float uPointSize;
+            uniform int uState;
+
+            void
+            main()
+            {
+                gl_Position = aPosition;
+                gl_PointSize = uPointSize;
+                if (uState == 0) {
+                    vColour = aColour;
+                } else {
+                    vColour = uColour;
+                }
+            }
+        </script>
+        <script id="fragment-shader" type="x-shader/x-fragment">
+            #version 300 es
+            precision mediump float;
+            in vec4 vColour;
+            out vec4 fColour;
+
+            void
+            main()
+            {
+                fColour = vColour;
+            }
+        </script>
+        <script type="text/javascript" src="initShaders.js"></script>
+        <script type="text/javascript" src="MVnew.js"></script>
+        <script type="text/javascript" src="2XF-2D-recursive-pts.js"></script>
+    </head>
+    <body>
+        <canvas width="512" height="512" id="gl-canvas">
+            Your browser does not support the HTML5 canvas element
+        </canvas>
+        <fieldset>
+            <legend>General Settings</legend>
+            <label>
+                <strong>Colours</strong>
+                <input type="radio" id="per-point" name="colours" value="0" checked />
+                <label for="per-point">per point</label>
+                <input type="radio" id="uniform" name="colours" value="1" />
+                <label for="uniform">uniform</label>
+            </label>
+            <br />
+            <label>
+                <strong>Number of transformations to colour</strong>
+                <input type="number" name="colour-len" id="colour-len" min="1" max="3" step="1" value="1" />
+            </label>
+            <br />
+            <label>
+                <strong>Concatenation</strong>
+                <input type="radio" id="pre" name="concat" value="0" checked />
+                <label for="pre">pre</label>
+                <input type="radio" id="post" name="concat" value="1" />
+                <label for="post">post</label>
+            </label>
+            <br />
+            <label>
+                <strong>Precision</strong>
+                <input type="number" name="precision" id="precision" min="0.0001" max="1" step="0.001" value="0.01" />
+            </label>
+            <br />
+            <label>Show Centres:</label>
+            <br />
+        </fieldset>
+        <fieldset>
+            <legend>Transformation 0</legend>
+            <label>
+                <strong>Rotation</strong>
+                (angle in degrees: <input type="number" name="rotation-angle" id="0-theta" min="0" max="359" step="0.001" value="45" />)
+            </label>
+            <br />
+            <label>
+                <strong>Scale</strong>
+                (x: <input type="number" name="scale-0x" id="0x-scale" min="-1" max="1" step="0.001" value="0.7071" />,
+                y: <input type="number" name="scale-0y" id="0y-scale" min="-1" max="1" step="0.001" value="0.7071" />) 
+            </label>
+            <br />
+            <label>
+                <strong>Shear</strong>
+                (x: <input type="number" name="shear-0x" id="0x-shear" min="-1" max="1" step="0.001" value="0" />,
+                y: <input type="number" name="shear-0y" id="0y-shear" min="-1" max="1" step="0.001" value="0" />) 
+            </label>
+            <br />
+            <label>
+                <strong>Centre</strong>
+                (x: <input type="number" name="centre-coord-0x" id="0x-centre" min="-1" max="1" step="0.001" value="-0.5" />,
+                y: <input type="number" name="centre-coord-0y" id="0y-centre" min="-1" max="1" step="0.001" value="0.0" />) 
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Transformation 1</legend>
+            <label>
+                <strong>Rotation</strong>
+                (angle in degrees: <input type="number" name="rotation-angle" id="1-theta" min="0" max="359" step="0.001" value="45" />)
+            </label>
+            <br />
+            <label>
+                <strong>Scale</strong>
+                (x: <input type="number" name="scale-1x" id="1x-scale" min="-1" max="1" step="0.001" value="0.7071" />,
+                y: <input type="number" name="scale-1y" id="1y-scale" min="-1" max="1" step="0.001" value="0.7071" />) 
+            </label>
+            <br />
+            <label>
+                <strong>Shear</strong>
+                (x: <input type="number" name="shear-1x" id="1x-shear" min="-1" max="1" step="0.001" value="0" />,
+                y: <input type="number" name="shear-1y" id="1y-shear" min="-1" max="1" step="0.001" value="0" />) 
+            </label>
+            <br />
+            <label>
+                <strong>Centre</strong>
+                (x: <input type="number" name="centre-coord-1x" id="1x-centre" min="-1" max="1" step="0.001" value="0.5" />,
+                y: <input type="number" name="centre-coord-1y" id="1y-centre" min="-1" max="1" step="0.001" value="0.0" />)
+            </label>
+        </fieldset>
+        <button id="apply">
+            Apply
+        </button>
+    </body>
+</html>

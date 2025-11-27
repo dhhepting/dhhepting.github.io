@@ -1,0 +1,687 @@
+Audio-Transcript:
+- desc: anyway.
+  persid: ''
+- desc: Welcome to
+  persid: ''
+- desc: 'so we''re At meeting planning
+
+    today. I'
+  persid: ''
+- desc: 'so there''s a choice in your
+
+    courses that''s available now'
+  persid: ''
+- desc: until the end of the day.
+  persid: ''
+- desc: 'I don''t know why I can vote on
+
+    this. Sometimes it tells me for'
+  persid: ''
+- desc: 'other activities that says I
+
+    can''t. I''m not allowed to vote'
+  persid: ''
+- desc: or give my input,
+  persid: ''
+- desc: 'but here I can. I''m just going
+
+    to turn off the pictures to like'
+  persid: ''
+- desc: 'and look at the responses so
+
+    far. Do'
+  persid: ''
+- desc: Is everyone here voted.
+  persid: ''
+- desc: 'So we have pointed responses and
+
+    240 to keep the due date today,'
+  persid: ''
+- desc: 'five for Wednesday, Five for
+
+    Friday, and eight for the'
+  persid: ''
+- desc: following Friday. I
+  persid: ''
+- desc: 'so keep an eye on it that it
+
+    won''t be due today.'
+  persid: ''
+- desc: 'So I asked you a question about
+
+    colors and'
+  persid: ''
+- desc: reflection.
+  persid: ''
+- desc: Now let's take a look at this.
+  persid: ''
+- desc: 'What''s going on in this piece of
+
+    code?'
+  persid: ''
+- desc: Anyone? Take a look at it?
+  persid: ''
+- desc: 'Anyone starting to feel a
+
+    seizure coming on or I'
+  persid: ''
+- desc: I Don't need to make light
+  persid: ''
+- desc: of that. Let's do i
+  persid: ''
+- desc: Does that make it easier to
+  persid: ''
+- desc: interpret What's going On. I
+  persid: ''
+- desc: 'so what do we have? What are you
+
+    looking at? What''s In the scene?'
+  persid: ''
+- desc: Yes, Q, I,
+  persid: ''
+- desc: 'so how do we decide the colors
+
+    that we see on the Cube? I'
+  persid: ''
+- desc: 'So this is a COVID reflection
+
+    map. If'
+  persid: ''
+- desc: QC and
+  persid: ''
+- desc: 'so the cube we see is reflecting
+
+    The environment from a cube we'
+  persid: ''
+- desc: don't see the
+  persid: ''
+- desc: 'Okay, so the vertex shader,
+
+    we''re getting the position by'
+  persid: ''
+- desc: 'multiplying the vertex after you
+
+    get from our buffer by the ball'
+  persid: ''
+- desc: 'of U and The projection matrix,
+
+    and then we''re getting the eye'
+  persid: ''
+- desc: position.
+  persid: ''
+- desc: 'It''s not the eye position, it''s
+
+    the position of the vertex in'
+  persid: ''
+- desc: eye coordinates,
+  persid: ''
+- desc: 'and then we are transforming the
+
+    normal and'
+  persid: ''
+- desc: 'by the normal matrix, which is
+
+    the matrix that we need to'
+  persid: ''
+- desc: 'transform normals And object
+
+    space to normals in our eye'
+  persid: ''
+- desc: space
+  persid: ''
+- desc: and and then
+  persid: ''
+- desc: we do
+  persid: ''
+- desc: 'make A call to the GL SL
+
+    function reflect. So that''s'
+  persid: ''
+- desc: 'going to give us the information
+
+    of where, where the reflection'
+  persid: ''
+- desc: is,
+  persid: ''
+- desc: 'where, from? Where are we going
+
+    to access the texture?'
+  persid: ''
+- desc: 'So there''s no i No no colors
+
+    assigned. Here, no vertex colors'
+  persid: ''
+- desc: assigned. We're just passing
+  persid: ''
+- desc: this
+  persid: ''
+- desc: 'vec three for R for reflection,
+
+    and in the fragment shader,'
+  persid: ''
+- desc: 'we take the reflection R as
+
+    input and we output the fragment'
+  persid: ''
+- desc: 'color. So we''re going to use a
+
+    uniform sampler cube, so we have'
+  persid: ''
+- desc: a cube map,
+  persid: ''
+- desc: 'and We''re determining the
+
+    fragment color based on the'
+  persid: ''
+- desc: sample And
+  persid: ''
+- desc: 'that''s returned by the texture
+
+    function, GLSL, if'
+  persid: ''
+- desc: 'So how do we specify the texture
+
+    map to'
+  persid: ''
+- desc: I Don't know that
+  persid: ''
+- desc: 'picture helps. Does it help or
+
+    harm both? Okay,'
+  persid: ''
+- desc: 'so anyway, that''s that''s the
+
+    basic shader, the shaders that'
+  persid: ''
+- desc: 'are doing reflection maps. So
+
+    all everything we see on screen'
+  persid: ''
+- desc: 'is the reflection of the
+
+    environment map.'
+  persid: ''
+- desc: So
+  persid: ''
+- desc: here we're defining the
+  persid: ''
+- desc: 'red, green, blue, cyan, gent and
+
+    yellow as a union terrain and'
+  persid: ''
+- desc: 'so here''s the configured texture
+
+    map. So we''re going to create a'
+  persid: ''
+- desc: 'texture, and then we''re binding
+
+    texture, as we''re using a cube'
+  persid: ''
+- desc: map. So
+  persid: ''
+- desc: 'create the texture and bind it
+
+    as a cube map here, and then we'
+  persid: ''
+- desc: specify the images that Go on
+  persid: ''
+- desc: each side.
+  persid: ''
+- desc: 'So we specify the positive x
+
+    direction,'
+  persid: ''
+- desc: 'so positive x gets red, negative
+
+    x gets green, positive y gets'
+  persid: ''
+- desc: 'blue, negative y gets cyan,
+
+    positive z is yellow and'
+  persid: ''
+- desc: Negative z Is magenta i
+  persid: ''
+- desc: 'So does that picture make more
+
+    sense? Now? Let''s see. So an'
+  persid: ''
+- desc: agenda. I
+  persid: ''
+- desc: so here We
+  persid: ''
+- desc: have Green, Yellow and Blue. We
+  persid: ''
+- desc: so We're seeing we're this
+  persid: ''
+- desc: corner,
+  persid: ''
+- desc: 'In the reflection. So here''s a
+
+    question. It''s a little design'
+  persid: ''
+- desc: 'question, maybe, how do we make
+
+    this code a little more'
+  persid: ''
+- desc: 'demonstrative of reflection
+
+    mapping?'
+  persid: ''
+- desc: 'This is clear what''s going on
+
+    from looking at the screen and'
+  persid: ''
+- desc: the code and
+  persid: ''
+- desc: 'who says it''s crystal clear, the
+
+    textbook author did A great job'
+  persid: ''
+- desc: 'creating this sample piece of
+
+    code. I'
+  persid: ''
+- desc: It's okay. I
+  persid: ''
+- desc: You don't have to You
+  persid: ''
+- desc: anyway,
+  persid: ''
+- desc: what's going on. Let's
+  persid: ''
+- desc: 'let''s do a few more rotations
+
+    here and see what'
+  persid: ''
+- desc: 'so There seems to be an awful
+
+    lot of magenta. I'
+  persid: ''
+- desc: 'so do you have any questions
+
+    that that we can discuss before'
+  persid: ''
+- desc: 'we get To the point of how To
+
+    improve the code? I'
+  persid: ''
+- desc: 'should we leave it here? Who
+
+    thinks this might be a good I it'
+  persid: ''
+- desc: question for The final exam you
+  persid: ''
+- desc: 'it. So I mentioned Terminator
+
+    two already, but I forgot about'
+  persid: ''
+- desc: 'the abyss. Anyone seen the
+
+    abyss?'
+  persid: ''
+- desc: 'Okay? That''s a good movie to
+
+    watch. Lots of interesting'
+  persid: ''
+- desc: special effects. I
+  persid: ''
+- desc: So similar to Terminator two.
+  persid: ''
+- desc: 'I, okay, I don''t want to give
+
+    any spoiler, in case you''re'
+  persid: ''
+- desc: 'going to run out and download
+
+    not download, but stream or Find'
+  persid: ''
+- desc: a copy of the Abyss to
+  persid: ''
+- desc: to watch the
+  persid: ''
+- desc: 'so the Ideas are reflecting the
+
+    environment on to the surface'
+  persid: ''
+- desc: and
+  persid: ''
+- desc: so we have
+  persid: ''
+- desc: 'Our view position, a normal and
+
+    the reflected vector and So'
+  persid: ''
+- desc: WebGL
+  persid: ''
+- desc: tube has only Q maps to work,
+  persid: ''
+- desc: so we're determining the
+  persid: ''
+- desc: 'where the reflection reflective
+
+    vector intersects the texture,'
+  persid: ''
+- desc: 'and then that''s how we''re
+
+    determining the frame and color'
+  persid: ''
+- desc: and
+  persid: ''
+- desc: 'so we compute reflection as two
+
+    times n dot v n minus V'
+  persid: ''
+- desc: 'log. Largest magnitude component
+
+    of r will determine the face of'
+  persid: ''
+- desc: 'the cube. The other two
+
+    components give the texture of'
+  persid: ''
+- desc: coordinates.
+  persid: ''
+- desc: 'So that gives a bit of
+
+    explanation of how the colors'
+  persid: ''
+- desc: are chosen.
+  persid: ''
+- desc: 'So we''re putting together six
+
+    different texture maps.'
+  persid: ''
+- desc: 'This is obviously so you Just
+
+    use texture in GLSL.'
+  persid: ''
+- desc: 'So here''s The example. Consider
+
+    to rotate a cube inside a cube'
+  persid: ''
+- desc: 'that reflects the color of the
+
+    walls. If'
+  persid: ''
+- desc: 'so this is a cube, as you may
+
+    have guessed, but It''s using'
+  persid: ''
+- desc: 'different values of alpha, so
+
+    The colors of Alpha point five'
+  persid: ''
+- desc: and
+  persid: ''
+- desc: 'so how Do we make sense of this?
+
+    I'
+  persid: ''
+- desc: so that's these are The shaders,
+  persid: ''
+- desc: fairly standard. And
+  persid: ''
+- desc: Let's look at The colors and
+  persid: ''
+- desc: 'so we have black, red Hill,
+
+    green, blue agenda, Cyan and'
+  persid: ''
+- desc: white defined. I
+  persid: ''
+- desc: 'So to enable to set up blending.
+
+    So we''re using Z buffer, so'
+  persid: ''
+- desc: 'you''ve enabled depth test,
+
+    enable blend, and Then we''re'
+  persid: ''
+- desc: 'doing source alpha One. Minus
+
+    source alpha one'
+  persid: ''
+- desc: 'so do all sides look translucent
+
+    And'
+  persid: ''
+- desc: 'does this appear like you think
+
+    it Should? I?'
+  persid: ''
+- desc: 'Let''s turn off in Service
+
+    removal and'
+  persid: ''
+- desc: 'and there''s No indication of
+
+    whether the inserts rule is on'
+  persid: ''
+- desc: 'or off In the interface. That''s
+
+    an issue with sound code and'
+  persid: ''
+- desc: So here's a simple piece
+  persid: ''
+- desc: of code that uses alpha so the
+  persid: ''
+- desc: 'so GL position, again, geo
+
+    position from the a position and'
+  persid: ''
+- desc: 'the vertex color from the
+
+    attribute color, and pass, pass'
+  persid: ''
+- desc: 'those through to the fragment
+
+    color In the fragment'
+  persid: ''
+- desc: shader. And you
+  persid: ''
+- desc: 'so I''ve made yellow opaque and
+
+    cyan opaque, and the Other ones'
+  persid: ''
+- desc: are translucent and
+  persid: ''
+- desc: so You can see some I
+  persid: ''
+- desc: 'So maybe that makes A little
+
+    more sense. Do'
+  persid: ''
+- desc: I want to show you Another
+  persid: ''
+- desc: one that's kind
+  persid: ''
+- desc: of fun. I
+  persid: ''
+- desc: does it look fun?
+  persid: ''
+- desc: 'So here we''re using two
+
+    different texture maps, and'
+  persid: ''
+- desc: 'we''re updating one from the
+
+    other, and we''re flipping back'
+  persid: ''
+- desc: and forth.
+  persid: ''
+- desc: So this is
+  persid: ''
+- desc: think of A game of Life. Maybe I
+  persid: ''
+- desc: so if you can see that
+  persid: ''
+- desc: 'this is the picking example that
+
+    was mentioned earlier. So we can'
+  persid: ''
+- desc: render into an off screen buffer
+  persid: ''
+- desc: 'and make it easier to read from
+
+    that buffer the solid colors,'
+  persid: ''
+- desc: 'and then we can decide What''s
+
+    going to select. It.'
+  persid: ''
+- desc: Does that make sense? I
+  persid: ''
+- desc: 'so here we''re doing our laying.
+
+    We''re'
+  persid: ''
+- desc: 'and our fragment shader we have
+
+    the'
+  persid: ''
+- desc: 'we have, first of all, the
+
+    vertex color that''s passed from'
+  persid: ''
+- desc: our vertex shader and
+  persid: ''
+- desc: 'and we have the Other face
+
+    colors, red, green, Blue,'
+  persid: ''
+- desc: yellow,
+  persid: ''
+- desc: cyan and agenda.
+  persid: ''
+- desc: 'So we''re using uniform variable
+
+    u color index.'
+  persid: ''
+- desc: 'So if we if it''s set to zero,
+
+    it''s just going to pass the'
+  persid: ''
+- desc: 'fragment color to the shader.
+
+    Otherwise, it''s going to'
+  persid: ''
+- desc: 'the fragment color from the
+
+    vertex computed by the vertex'
+  persid: ''
+- desc: 'shader. If it''s set to other
+
+    than zero, then we''re going to'
+  persid: ''
+- desc: use the
+  persid: ''
+- desc: 'I can explain that better so you
+
+    color index is an index into the'
+  persid: ''
+- desc: 'seven to this seven color array.
+
+    So the computed color is'
+  persid: ''
+- desc: 'position zero, then one through
+
+    Seven are the primary colors. So'
+  persid: ''
+- desc: when you color the
+  persid: ''
+- desc: 'me. So I''m not sure why the
+
+    author has made the if statement'
+  persid: ''
+- desc: there. I
+  persid: ''
+- desc: because we
+  persid: ''
+- desc: 'can just use the in depth color
+
+    New color index to access All'
+  persid: ''
+- desc: the seven Colors And
+  persid: ''
+- desc: 'so here we have the List of your
+
+    mouse down and'
+  persid: ''
+- desc: so We're going to
+  persid: ''
+- desc: 'to bind a frame buffer. So we''re
+
+    going to draw the scene in'
+  persid: ''
+- desc: 'the frame buffer and then read
+
+    the colors from it.'
+  persid: ''
+- desc: 'So here''s the read pixels
+
+    command to get the color and'
+  persid: ''
+- desc: 'So if red, so this is red is set
+
+    and'
+  persid: ''
+- desc: 'I always prefer to use braces,
+
+    so if I'
+  persid: ''
+- desc: if Red is on, if green is on, If
+  persid: ''
+- desc: that doesn't seem like cyan. I
+  persid: ''
+- desc: 'anyway, you can write this more
+
+    clearly, but the idea is we can'
+  persid: ''
+- desc: 'draw a simpler version of the
+
+    cube in the frame buffer read.'
+  persid: ''
+- desc: 'So then when we interact with
+
+    the frame buffer, we can read'
+  persid: ''
+- desc: 'the solid color per face and
+
+    return that so we know what''s'
+  persid: ''
+- desc: 'been picked and we can perform
+
+    the interaction we want to do'
+  persid: ''
+- desc: 'with that without having to deal
+
+    with the complicated or the'
+  persid: ''
+- desc: 'complex fragment colors that
+
+    Come out of the shader. Does'
+  persid: ''
+- desc: that make sense? I
+  persid: ''
+- desc: 'any questions About the
+
+    assignments I'
+  persid: ''
+- desc: 'any thoughts About that
+
+    reflection now? I'
+  persid: ''
+- desc: 'should it be stopped here for
+
+    today? I'
+  persid: ''
+- desc: 'thank you for today, see you on
+
+    Wednesday.'
+  persid: ''
+- desc: Take care. Thank
+  persid: ''
+- desc: Take care. Thank
+  persid: ''
+offering:
+  id: CS-315_733-202430

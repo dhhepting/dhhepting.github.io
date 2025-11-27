@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--
+Compare the calculation of gl_Position
+in vertex-shader-1 and vertex-shader-2
+-->
+<html>
+<head>
+<script id="vertex-shader-1" type="x-shader/x-vertex">
+#version 300 es
+
+in  vec4 aPosition;
+in  vec4 aColour;
+out vec4 vColour;
+
+uniform mat4 uModelViewMatrix;
+uniform mat4 uProjectionMatrix;
+
+uniform vec3 uEta;
+
+void main()
+{
+    vec3 angles = radians(uEta);
+    vec3 c = cos(angles);
+    vec3 s = sin(angles);
+
+    // Create 3 matrices to encapsulate the rotation about an arbitrary axis
+    // as the composition of rotations about X, Y, and Z
+    // Remember: these matrices are column-major,
+    // Col_n = (Row_n)^T
+    mat4 rx = mat4(1.0,  0.0,  0.0, 0.0,
+		    0.0,  c.x,  s.x, 0.0,
+		    0.0, -s.x,  c.x, 0.0,
+		    0.0,  0.0,  0.0, 1.0);
+
+    mat4 ry = mat4(c.y, 0.0, -s.y, 0.0,
+		    0.0, 1.0,  0.0, 0.0,
+		    s.y, 0.0,  c.y, 0.0,
+		    0.0, 0.0,  0.0, 1.0);
+
+    mat4 rz = mat4(c.z, s.z, 0.0, 0.0,
+		    -s.z,  c.z, 0.0, 0.0,
+		    0.0,  0.0, 1.0, 0.0,
+		    0.0,  0.0, 0.0, 1.0);
+
+    gl_Position = uProjectionMatrix * uModelViewMatrix * (rz * ry * rx * aPosition);
+    vColour = aColour;
+}
+</script>
+
+<script id="fragment-shader-1" type="x-shader/x-fragment">
+#version 300 es
+
+precision mediump float;
+
+in vec4 vColour;
+out vec4 fColour;
+
+void
+main()
+{
+    fColour = vColour;
+}
+</script>
+
+<script id="vertex-shader-2" type="x-shader/x-vertex">
+#version 300 es
+
+in  vec4 aPosition;
+in  vec4 aColour;
+out vec4 vColour;
+
+uniform mat4 uModelViewMatrix;
+uniform mat4 uProjectionMatrix;
+
+void main()
+{
+    gl_Position = uProjectionMatrix * uModelViewMatrix * (aPosition);
+    vColour = aColour;
+}
+</script>
+
+<script id="fragment-shader-2" type="x-shader/x-fragment">
+#version 300 es
+
+precision mediump float;
+
+in vec4 vColour;
+out vec4 fColour;
+
+void
+main()
+{
+    fColour = vColour;
+}
+</script>
+<script type="text/javascript" src="https://interactivecomputergraphics.com/8E/Code/Common/initShaders.js"></script>
+<script type="text/javascript" src="https://interactivecomputergraphics.com/8E/Code/Common/MVnew.js"></script>
+<script type="text/javascript" src="cubeview-double.js"></script>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <fieldset>
+                    <legend>Canvas1: rotate model</legend>
+                    <canvas id="gl-canvas-1" width="256" height="256">
+                        Your browser does not support the HTML5 canvas element
+                    </canvas>
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                    <legend>Canvas2: rotate camera</legend>
+                    <canvas id="gl-canvas-2" width="256" height="256">
+                        Your browser does not support the HTML5 canvas element
+                    </canvas>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <fieldset>
+                    <legend>Rotation Angles</legend>
+                    <label>
+                        <strong>X:</strong>
+                        <input type="number" name="XANGinput" id="XANGinput" min="-180" max="180" step="5" value="0" />
+                        <strong>Y:</strong>
+                        <input type="number" name="YANGinput" id="YANGinput" min="-180" max="180" step="5" value="0" />
+                        <strong>Z:</strong>
+                        <input type="number" name="ZANGinput" id="ZANGinput" min="-180" max="180" step="5" value="0" />
+                        <strong>Invert:</strong>
+                        <input type="checkbox" name="LAinvert" id="LAinvert">
+                    </label>
+                </fieldset>
+            </tr>
+        </tbody>
+    </table>
+    
+
+</body>
+</html>

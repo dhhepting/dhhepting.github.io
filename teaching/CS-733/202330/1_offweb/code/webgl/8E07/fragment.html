@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script id="vertex-shader" type="x-shader/x-vertex">
+            #version 300 es
+
+            in vec4 aPosition;
+            in vec3 aNormal;
+            out vec3 N, L, V;
+
+            uniform mat4 uModelViewMatrix, uProjectionMatrix;
+            uniform vec4 uLightPosition, uViewerPosition;
+
+            void main()
+            {
+                vec3 pos = (uModelViewMatrix * aPosition).xyz;
+                vec3 light = uLightPosition.xyz;
+                vec4 NN = vec4(aNormal,0.0);
+
+                N = normalize((uModelViewMatrix * NN).xyz);
+                L = normalize(light - pos);
+                V = normalize(uViewerPosition).xyz;
+
+                gl_Position = uProjectionMatrix * uModelViewMatrix * aPosition;
+            }
+        </script>
+        <script id="fragment-shader" type="x-shader/x-fragment">
+            #version 300 es
+
+            precision mediump float;
+            
+            in vec3 N, L, V;
+            out vec4 fColor;
+
+            uniform vec4 uAmbientProduct, uDiffuseProduct, uSpecularProduct;
+            uniform float uShininess;
+
+            void main()
+            {
+                vec3 H = normalize(L + V);
+                vec4 ambient = uAmbientProduct;
+
+                float Kd = max( dot(L, N), 0.0 );
+                vec4 diffuse = Kd * uDiffuseProduct;
+
+                float Ks = pow(max(dot(N, H), 0.0), uShininess);
+                vec4 specular = Ks * uSpecularProduct;
+
+                fColor = ambient + diffuse + specular;
+                fColor.a = 1.0;
+            }
+        </script>
+        <script type="text/javascript" src="https://interactivecomputergraphics.com/8E/Code/Common/initShaders.js"></script>
+        <script type="text/javascript" src="https://interactivecomputergraphics.com/8E/Code/Common/MVnew.js"></script>
+        <script type="text/javascript" src="shaded-cube.js"></script>
+    </head>
+    <body>
+        <canvas id="gl-canvas" width="512" height="512">
+            Your browser does not support the HTML5 canvas element
+        </canvas>
+        <br />
+        <button id="ButtonX">Rotate X</button>
+        <button id="ButtonY">Rotate Y</button>
+        <button id="ButtonZ">Rotate Z</button>
+        <button id="ButtonT">Toggle Rotation</button>
+    </body>
+</html>

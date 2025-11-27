@@ -1,0 +1,2135 @@
+Audio-Transcript:
+- desc: 'Okay? Ed Jerome is
+
+    working Today.'
+  persid: ''
+- desc: 'Do but so I owe
+
+    you a choice activity about'
+  persid: ''
+- desc: 'assignments. I''ll do that today,
+
+    and I thought because I CS,'
+  persid: ''
+- desc: 'there''s an option of dealing
+
+    with the code. I would show you'
+  persid: ''
+- desc: 'a video with Matt far walking
+
+    through the code, so that it''s a'
+  persid: ''
+- desc: 'little bit dated, because it was
+
+    done in 2020 but I think it'
+  persid: ''
+- desc: 'might be interesting of value if
+
+    you''re thinking about doing'
+  persid: ''
+- desc: 'something with code to to see
+
+    how things are set up. And then'
+  persid: ''
+- desc: 'I want to show you some examples
+
+    with pbrt and what I''ve been'
+  persid: ''
+- desc: 'I''ve been trying some examples
+
+    with different settings, so'
+  persid: ''
+- desc: 'we''ll look at that as well, and
+
+    then We''ll get into the'
+  persid: ''
+- desc: 'beginning of the chapter four
+
+    stuff you'
+  persid: ''
+- desc: 'No, so I have pbrt version four
+
+    and TEV are installed in'
+  persid: ''
+- desc: 'classroom 135 so you''re able to
+
+    go in there when it''s rooms not'
+  persid: ''
+- desc: 'being used, if you want to use
+
+    that software in case you don''t'
+  persid: ''
+- desc: 'have your computer with you, or
+
+    is there a code to you in that'
+  persid: ''
+- desc: 'room? Yes, so you have to swear
+
+    that you''re not going to share'
+  persid: ''
+- desc: the code with anyone,
+  persid: ''
+- desc: 'and I will post it in the
+
+    announcements in your courses'
+  persid: ''
+- desc: today. I on all
+  persid: ''
+- desc: the machines in there,
+  persid: ''
+- desc: 'or just one.
+
+    That''s what they told me. It''s'
+  persid: ''
+- desc: 'on the desktop. Of all the both
+
+    programs are on all The desktops'
+  persid: ''
+- desc: i
+  persid: ''
+- desc: 'Okay, Just see her,
+
+    forewarned.'
+  persid: ''
+- desc: 'Okay, so this will watch this
+
+    video'
+  persid: ''
+- desc: 'with random
+
+    YouTube ads sprinkled in what'
+  persid: ''
+- desc: 'you needed is for
+
+    entertainers. Yeah,'
+  persid: ''
+- desc: oh, That's it.
+  persid: ''
+- desc: Okay, sound. I
+  persid: ''
+- desc: Oh, sound settings there.
+  persid: ''
+- desc: 'Alright. So what does it
+
+    actually look like to dedicate'
+  persid: ''
+- desc: 'an entire week to just tackling
+
+    everything that we''ve'
+  persid: ''
+- desc: 'procrastinated in one fell
+
+    swoop, leads, finances, folding'
+  persid: ''
+- desc: 'laundry, calling your mom back,
+
+    personal projects, you name it,'
+  persid: ''
+- desc: 'life would be so much easier if
+
+    we could just get everything'
+  persid: ''
+- desc: 'done and out of the way for
+
+    good. Does all that sound or'
+  persid: ''
+- desc: Dev?
+  persid: ''
+- desc: 'So this is running around my
+
+    laptop. I hmm, alrighty. So'
+  persid: ''
+- desc: 'today we released an early
+
+    access version of the next'
+  persid: ''
+- desc: 'version of pbrt, The Great Race
+
+    for the will be described in the'
+  persid: ''
+- desc: 'forthcoming fourth edition of
+
+    physical based rendering book.'
+  persid: ''
+- desc: 'You know, CS is an early
+
+    release. It has rough edges and'
+  persid: ''
+- desc: 'it''s not, not very documented,
+
+    you know, it will, in time, in'
+  persid: ''
+- desc: 'time, be documented through the
+
+    book. And we''re going to kind of'
+  persid: ''
+- desc: 'focus on documentation efforts
+
+    there, however, you know, it'
+  persid: ''
+- desc: 'should be kind of, you know, we
+
+    hope it''ll be kind of'
+  persid: ''
+- desc: 'understandable if you know pbrt
+
+    already. But I did want to make'
+  persid: ''
+- desc: 'a short video just to kind of
+
+    walk through a couple of new'
+  persid: ''
+- desc: 'things in kind of how the system
+
+    is structured, you know. So this'
+  persid: ''
+- desc: 'is more focused on the system
+
+    structure, and in particular,'
+  persid: ''
+- desc: 'how the GP back end is
+
+    implemented. I''m not going to'
+  persid: ''
+- desc: 'talk about the new graphics
+
+    algorithms. There are a whole'
+  persid: ''
+- desc: 'bunch of them there. They''re
+
+    prescribed to read me. You know,'
+  persid: ''
+- desc: 'for those at this point until
+
+    the book''s done, if you want to'
+  persid: ''
+- desc: 'understand their implementation,
+
+    you''ll need to kind of refer to'
+  persid: ''
+- desc: 'both the code and the
+
+    corresponding paper on that'
+  persid: ''
+- desc: 'topic. Okay, so first, I just
+
+    want to start with briefly, one'
+  persid: ''
+- desc: 'of the things I''m excited about
+
+    is that the system now supports'
+  persid: ''
+- desc: 'the image as it''s being
+
+    rendered, using Thomas rulers to'
+  persid: ''
+- desc: 'have image viewer. So tab is on
+
+    GitHub. It''s really nice image'
+  persid: ''
+- desc: 'viewer. And now pbrt can talk to
+
+    it over a socket and send'
+  persid: ''
+- desc: 'images. So just to show that,
+
+    quickly, you know, you pass this'
+  persid: ''
+- desc: 'display server command line. You
+
+    pass the IP address of machine,'
+  persid: ''
+- desc: 'Ryan dev on the image, or Dev,
+
+    you know. So this is running'
+  persid: ''
+- desc: 'around my laptop. So you know,
+
+    it takes a few seconds for pbrt'
+  persid: ''
+- desc: 'To get started, but once
+
+    rendering begins, you know, you'
+  persid: ''
+- desc: 'can see the images as it''s being
+
+    rendered. And so it''s fun. It''s'
+  persid: ''
+- desc: 'it''s useful. Zoom in, pixel
+
+    geek, all that sort of thing.'
+  persid: ''
+- desc: 'And you know, it''s just kind of
+
+    close you see your images being'
+  persid: ''
+- desc: 'rendered. CS bug. So if you
+
+    check out pbrt, the you know,'
+  persid: ''
+- desc: 'it''s a pretty similar directory
+
+    structure before, with couple'
+  persid: ''
+- desc: 'changes though source pbrt And
+
+    the external dependencies, like,'
+  persid: ''
+- desc: 'the XR and then we''ll just go
+
+    into DRG. So the biggest change'
+  persid: ''
+- desc: 'is that, whereas before we had
+
+    separate source files for each'
+  persid: ''
+- desc: 'and every shape and camera and
+
+    filter and all that stuff, now'
+  persid: ''
+- desc: 'we''ve collected that so all the
+
+    cameras are in cameras that H'
+  persid: ''
+- desc: 'and cameras that CPD and so
+
+    forth, there are a couple of'
+  persid: ''
+- desc: 'different sub directories. Now
+
+    you know that that should be'
+  persid: ''
+- desc: 'fairly clear. There''s util for
+
+    kind of lower level utility'
+  persid: ''
+- desc: 'code, math and four level
+
+    matrices, data structures and'
+  persid: ''
+- desc: 'containers and stuff like this.
+
+    There''s command which has the,'
+  persid: ''
+- desc: 'you know, for each binary
+
+    executable built by those in the'
+  persid: ''
+- desc: 'build. You know, there''s there''s
+
+    the file with the main function,'
+  persid: ''
+- desc: 'there''s some command, and then
+
+    there''s a base, CP and GP. So'
+  persid: ''
+- desc: 'let''s start with base. So the
+
+    biggest change, one of the one'
+  persid: ''
+- desc: 'of the biggest changes, you
+
+    know, in terms of kind of system'
+  persid: ''
+- desc: 'organization, is that we''ve,
+
+    we''ve moved away from virtual'
+  persid: ''
+- desc: 'functions for dynamic dispatch,
+
+    and this, this was kind of an'
+  persid: ''
+- desc: 'enabling changes that enabled
+
+    the GPU port, so that you know'
+  persid: ''
+- desc: 'that that has an effect if
+
+    you''re trying to add a new shape'
+  persid: ''
+- desc: 'pretty late. So just want to
+
+    briefly walk through a little'
+  persid: ''
+- desc: bit of that.
+  persid: ''
+- desc: 'Did you know that you can make
+
+    between five and 25% on your'
+  persid: ''
+- desc: 'money per month, passively,
+
+    without predicting the market,'
+  persid: ''
+- desc: 'without trading experience, and
+
+    without doing a thing? I'
+  persid: ''
+- desc: 'so what we have now is we have
+
+    this base directory. So you'
+  persid: ''
+- desc: 'know, for each of the kind of
+
+    main base classes in the system,'
+  persid: ''
+- desc: 'shape, light, camera, material,
+
+    all of those have a header file'
+  persid: ''
+- desc: 'and base. And this header and
+
+    base, basically it does two'
+  persid: ''
+- desc: 'things. First of all, it defines
+
+    these candle types. So here we'
+  persid: ''
+- desc: 'have a shape handle, and all of
+
+    these candles, you know, and'
+  persid: ''
+- desc: 'this is kind of a replacement
+
+    for a shape, shape pointer with'
+  persid: ''
+- desc: 'virtual with virtual functions.
+
+    So now we have these handles,'
+  persid: ''
+- desc: 'and they inherit from tag
+
+    pointer. And tag pointer is some'
+  persid: ''
+- desc: 'kind of C Plus Plus template
+
+    insanity, but that it kind of'
+  persid: ''
+- desc: 'that''s gives us the engine to do
+
+    the dynamic dispatch, but you'
+  persid: ''
+- desc: 'don''t have to clarify
+
+    communication. But the point is'
+  persid: ''
+- desc: 'that you need to register each
+
+    instance of a particular type in'
+  persid: ''
+- desc: 'this tag pointer template
+
+    parameter list. So you can see'
+  persid: ''
+- desc: 'here all the shapes that PBR
+
+    team now supports, and by'
+  persid: ''
+- desc: 'registering them in this way, a
+
+    is able to do that in dispatch'
+  persid: ''
+- desc: 'and then B, in the GPU path, C
+
+    will be able to kind of do some'
+  persid: ''
+- desc: 'fancy things. For like. We
+
+    iterate over all the types, say,'
+  persid: ''
+- desc: 'for each type of sampler which
+
+    is different than like it or'
+  persid: ''
+- desc: 'like the types that are
+
+    essentially so these headers in'
+  persid: ''
+- desc: 'base define the interface that
+
+    that each implementation of this'
+  persid: ''
+- desc: 'type has to fulfill. So so every
+
+    shape has to provide an'
+  persid: ''
+- desc: 'implementation of these methods.
+
+    And this is essentially the same'
+  persid: ''
+- desc: 'set of methods that that PBR, TV
+
+    three supported or required from'
+  persid: ''
+- desc: 'shapes, but they are through
+
+    abstract base classes and'
+  persid: ''
+- desc: 'virtual functions. So here you
+
+    don''t have the same level of'
+  persid: ''
+- desc: 'kind of compile time enforcement
+
+    of that stuff. But you know,'
+  persid: ''
+- desc: 'hopefully it''s pretty
+
+    straightforward. I Okay? So the,'
+  persid: ''
+- desc: 'you know, so, so that''s kind of
+
+    the the key, you know, you know,'
+  persid: ''
+- desc: 'as far as the system structure
+
+    of the CPU, port of pbrt, that''s'
+  persid: ''
+- desc: 'basically the only change. Well,
+
+    I mean, there''s more, but you'
+  persid: ''
+- desc: 'know, that''s kind of the most
+
+    important change, or that''s the'
+  persid: ''
+- desc: 'only one that''s worth really
+
+    going into here. Next step, I'
+  persid: ''
+- desc: 'want to say a bunch about the
+
+    GPU implementation and walk'
+  persid: ''
+- desc: 'through some of that code, but
+
+    let me, let me motivate that'
+  persid: ''
+- desc: 'first. Okay, so I''ve logged into
+
+    another I''m logged into another'
+  persid: ''
+- desc: 'machine here. This one has 32
+
+    cores. It''s one of the thread,'
+  persid: ''
+- desc: 'or photos with 32 cores and 60
+
+    more threads. So let''s start out'
+  persid: ''
+- desc: 'by rendering that on that CPU
+
+    and see what that looks like. So'
+  persid: ''
+- desc: 'here I''m going to pipe the pipe
+
+    the image to the to the instance'
+  persid: ''
+- desc: 'of a tavrick in my laptop. Here,
+
+    just go throw that out. Start'
+  persid: ''
+- desc: 'rendering now, we''ll wait just
+
+    for the same view of parts and'
+  persid: ''
+- desc: 'stuff. And it''s much faster,
+
+    right, you know. And of course,'
+  persid: ''
+- desc: 'you know, it''s clocking charge
+
+    on my laptop. It''s got a lot'
+  persid: ''
+- desc: 'more cores, you know. And we see
+
+    this image, you know, chugging'
+  persid: ''
+- desc: 'along nicely. If you go back,
+
+    it''s supposed to render 56'
+  persid: ''
+- desc: 'samples per pixel. I just killed
+
+    the render, but you know, we''re'
+  persid: ''
+- desc: 'looking at about 565, seconds to
+
+    render it at 256, samples per'
+  persid: ''
+- desc: 'pixel. Okay, but let''s, try
+
+    doing that on the GPU. So same'
+  persid: ''
+- desc: 'command line. If you build a GPU
+
+    support, you still have to do'
+  persid: ''
+- desc: 'dash dash GP on the command line
+
+    to enable it.'
+  persid: ''
+- desc: 'Now this is actually looking
+
+    slower than it is because of'
+  persid: ''
+- desc: 'network buffer. So that first
+
+    set of samples was actually done'
+  persid: ''
+- desc: 'much more quickly than it
+
+    appeared. And if we go back to'
+  persid: ''
+- desc: 'the shell, it''s actually done so
+
+    if we scroll back up, so it''s'
+  persid: ''
+- desc: 'about 12 and a half seconds to
+
+    render that at 256 samples per'
+  persid: ''
+- desc: 'pixel on the GPU. And to me,
+
+    that''s, that''s pretty exciting,'
+  persid: ''
+- desc: 'you know, because, you know, if
+
+    we go back to the 165 seconds we'
+  persid: ''
+- desc: 'were, we were trending for, for
+
+    the 32 core CP version, you'
+  persid: ''
+- desc: 'know, we''re 10x faster than
+
+    than, you know, a beefy, beefy'
+  persid: ''
+- desc: 'modern CPU. So, you know, that''s
+
+    the motivation for the little'
+  persid: ''
+- desc: 'bit of complexity we''re going to
+
+    go into now, for kind of how the'
+  persid: ''
+- desc: 'GPU backing works, I should add,
+
+    you know, that kind of, you'
+  persid: ''
+- desc: 'know, as I explained all this
+
+    stuff, you know, if you''re'
+  persid: ''
+- desc: 'working with pbrt, or if you''re
+
+    extending it, kind of at the'
+  persid: ''
+- desc: 'level of graphics and graphics
+
+    algorithms. If you''re adding new'
+  persid: ''
+- desc: 'light source or something like
+
+    that, you know, you shouldn''t.'
+  persid: ''
+- desc: 'If you don''t want to, you
+
+    shouldn''t really need to worry'
+  persid: ''
+- desc: 'about how, what I''m about to
+
+    show you about how the GPU stuff'
+  persid: ''
+- desc: 'is wired together, you know, so
+
+    it should just work, you know,'
+  persid: ''
+- desc: 'if you have any details, right,
+
+    you know that your new light or'
+  persid: ''
+- desc: 'whatever will just work on the
+
+    GPU path in the same way that,'
+  persid: ''
+- desc: 'you know, you don''t have to
+
+    worry about the the'
+  persid: ''
+- desc: 'implementation of bi directional
+
+    path tracer, you know, when'
+  persid: ''
+- desc: 'you''re adding a light to pbrt
+
+    before, right? You know, you'
+  persid: ''
+- desc: 'just fulfill the interface, and
+
+    then when you''re seeing and'
+  persid: ''
+- desc: 'then, you know, so should be the
+
+    same sort of thing for GPU path.'
+  persid: ''
+- desc: 'But I think there''s some
+
+    interesting stuff to see. So I''m'
+  persid: ''
+- desc: 'just going to quickly go through
+
+    some of that. So the big'
+  persid: ''
+- desc: 'challenge in the GPU version is
+
+    polymorphism. And pbrt, you'
+  persid: ''
+- desc: 'know, by design, is highly
+
+    extensible, and there are all'
+  persid: ''
+- desc: 'sorts of incidents of different
+
+    types of of the same thing. And'
+  persid: ''
+- desc: 'what this means, you know, and
+
+    on the CPU, it''s fine, right?'
+  persid: ''
+- desc: 'You''re, you''re rendering a
+
+    single pixel sample in a thread,'
+  persid: ''
+- desc: 'you know, if your thread just
+
+    kind of does whatever it needs'
+  persid: ''
+- desc: 'to do for the type of light
+
+    attach, or the type of shape it'
+  persid: ''
+- desc: 'hit, or whatever, you know, by
+
+    the GPU, because you have this'
+  persid: ''
+- desc: 'kind of, you know, groups of
+
+    threads executing together,'
+  persid: ''
+- desc: 'stuff, polymorphism Can, can
+
+    have much bigger effect on'
+  persid: ''
+- desc: 'performance. So to get good
+
+    performance GPU, you have to'
+  persid: ''
+- desc: 'address this, and kind of that''s
+
+    how the design of the back end,'
+  persid: ''
+- desc: 'the GPU back end, was informed.
+
+    The key ideas here are a couple'
+  persid: ''
+- desc: 'of things, you know. So we have,
+
+    we have a sequence of kernels.'
+  persid: ''
+- desc: 'We''re kind of, we''re doing some
+
+    chunk of work in rendering'
+  persid: ''
+- desc: 'computation, and these kernels
+
+    are fed by queues, so kind of'
+  persid: ''
+- desc: 'proceeding kernels in the
+
+    pipeline can queue up work for'
+  persid: ''
+- desc: 'subsequent kernels, and then
+
+    each kernel just kind of'
+  persid: ''
+- desc: 'consumes the work from this
+
+    queue and operates out of in'
+  persid: ''
+- desc: 'parallel. And that''s like pure
+
+    data. Parallel elements are'
+  persid: ''
+- desc: 'processed independently, and
+
+    that''s what we parallel so. And'
+  persid: ''
+- desc: 'this is effectively the
+
+    architecture that was described'
+  persid: ''
+- desc: 'in Mega kernels, considered a
+
+    harmful paper and by Simone'
+  persid: ''
+- desc: 'friends. And this is a really
+
+    great paper, this kind of you'
+  persid: ''
+- desc: 'like to understand why the GPU
+
+    staff and pbrt is structured,'
+  persid: ''
+- desc: 'why it is this beautifully lays
+
+    out the kind of trade offs and'
+  persid: ''
+- desc: 'issues. So definitely check that
+
+    out. Okay, so these are the main'
+  persid: ''
+- desc: 'kernels in the system, and we''ll
+
+    walk through some of this code'
+  persid: ''
+- desc: 'shortly, but just to give a high
+
+    level view of how it all works,'
+  persid: ''
+- desc: 'you know, and it''s the classic
+
+    structure of the path tracer,'
+  persid: ''
+- desc: 'just decomposed into kernels
+
+    with cues feeding them, we'
+  persid: ''
+- desc: 'generate a camera aid, you know,
+
+    for edit pixel, for example. In'
+  persid: ''
+- desc: 'this case, we have a separate
+
+    kernel to generate random'
+  persid: ''
+- desc: 'samples, sec, and then we find
+
+    the closest hit and then meet,'
+  persid: ''
+- desc: 'queue up and do additional
+
+    kernels based on what happened'
+  persid: ''
+- desc: 'at that hit. This version of
+
+    pipeline does not include some'
+  persid: ''
+- desc: 'sort of scattering, or
+
+    volumetric scattering, which'
+  persid: ''
+- desc: 'adds a number of additional
+
+    kernels that I''ve discovered.'
+  persid: ''
+- desc: 'Most of the work happens the
+
+    key, the key stage, the key to'
+  persid: ''
+- desc: 'the efficiency of it, is the
+
+    sorting stage that happens'
+  persid: ''
+- desc: 'during intersection. So when a
+
+    gray surface intersection is'
+  persid: ''
+- desc: 'found, the work for that is done
+
+    in a different cue, is put on'
+  persid: ''
+- desc: 'different cues based on the
+
+    specific material found. So'
+  persid: ''
+- desc: 'everything diffuse goes here,
+
+    and everything dielectric goes'
+  persid: ''
+- desc: 'here, inductors and so, you
+
+    know. So what that does is it'
+  persid: ''
+- desc: 'lines up kind of coherent work
+
+    to work on. So we can work on'
+  persid: ''
+- desc: 'all the few stuff all at once.
+
+    That''s more coherent than'
+  persid: ''
+- desc: 'interleaving different material
+
+    types, you know. And then in'
+  persid: ''
+- desc: 'this kernel, which we''ll look at
+
+    shortly, you know, basically all'
+  persid: ''
+- desc: 'the usual stuff happens. You
+
+    know, we evaluate the textures.'
+  persid: ''
+- desc: 'We get a PSDF, choose a light
+
+    source, choose point and light'
+  persid: ''
+- desc: 'source, send PSDF, view, a
+
+    shadow ray, impute, indirect'
+  persid: ''
+- desc: 'array, brush. So classic path
+
+    tracer. It''s kind of the heart'
+  persid: ''
+- desc: 'of the heart of your regular
+
+    path tracer. So, yeah. Okay, so'
+  persid: ''
+- desc: 'let''s, let''s go look at the code
+
+    for this. Okay, so this kind of'
+  persid: ''
+- desc: 'material evaluation stuff I just
+
+    described is in our GPU service,'
+  persid: ''
+- desc: 'scattered at cpp. I should add
+
+    that, you know, all of this'
+  persid: ''
+- desc: 'stuff will probably shift around
+
+    in the coming months. So this'
+  persid: ''
+- desc: 'may be a little scale. Okay, so
+
+    this material in BSDF, somewhat'
+  persid: ''
+- desc: 'work happens in this evaluating
+
+    material, BSDF method of the'
+  persid: ''
+- desc: 'path integral. You''ll notice
+
+    here that it''s a templated'
+  persid: ''
+- desc: 'method. So it''s templated on the
+
+    type of material, and then a'
+  persid: ''
+- desc: 'texture evaluator thing, which
+
+    I''m not going to go into today.'
+  persid: ''
+- desc: 'It''s just a little wrapper on
+
+    texture evaluation, but'
+  persid: ''
+- desc: 'basically in other code, which
+
+    we won''t look at now, what''s'
+  persid: ''
+- desc: 'happening is that code it''s
+
+    looping over all of the types of'
+  persid: ''
+- desc: 'material in dbrt via that tag
+
+    corner thing we saw before,'
+  persid: ''
+- desc: 'which allows us to kind of
+
+    iterate over the types and then'
+  persid: ''
+- desc: 'for each type, it''s calling this
+
+    method with that particular'
+  persid: ''
+- desc: 'material type. So then we get
+
+    instantiated for diffuse'
+  persid: ''
+- desc: 'material. Now we have this for
+
+    all queued construct. And what'
+  persid: ''
+- desc: 'this is, is it wraps a parallel
+
+    for loop over one of these'
+  persid: ''
+- desc: 'queues feeding into a kernel. So
+
+    each kernel has a kernel, a'
+  persid: ''
+- desc: 'queue going in with its own
+
+    little struct that describes'
+  persid: ''
+- desc: 'what''s, what the work items are
+
+    in the queue. And then we can do'
+  persid: ''
+- desc: 'a parallel for that, and then
+
+    that takes in which we use for'
+  persid: ''
+- desc: 'printing stats and stuff, makes
+
+    a queue full work from and in'
+  persid: ''
+- desc: 'this case, the aval queue is
+
+    kind of this multi queue where'
+  persid: ''
+- desc: 'there''s kind of wraps a queue
+
+    over each type of material. So'
+  persid: ''
+- desc: 'we have to ask to a queue for
+
+    our specific material type and'
+  persid: ''
+- desc: 'the maximum queue size. Then it
+
+    takes a lambda. And then, you'
+  persid: ''
+- desc: 'know, these lambdas, you know,
+
+    the key thing with the lambda is'
+  persid: ''
+- desc: 'this first argument is this work
+
+    item. So, you know, this is a'
+  persid: ''
+- desc: 'structure that kind of, you
+
+    know, withholds all the, all the'
+  persid: ''
+- desc: 'values for particular work item
+
+    on the queue. So you''re just'
+  persid: ''
+- desc: 'given the start like, Hey,
+
+    here''s your input. So then what'
+  persid: ''
+- desc: 'happened, you know, and then you
+
+    start doing work that is, you'
+  persid: ''
+- desc: 'know. So kind of, from here on
+
+    out, it''s pretty much the same,'
+  persid: ''
+- desc: 'you know, as the path tracer,
+
+    you know, on the CPU, you know.'
+  persid: ''
+- desc: 'And the difference is just that,
+
+    you know, when you want the'
+  persid: ''
+- desc: 'shading normal. Well, it turns
+
+    out that''s one of the, you know,'
+  persid: ''
+- desc: 'some of the value stored in the
+
+    work in the work item you''re'
+  persid: ''
+- desc: 'given, you just put a pull it
+
+    out of that work item start. So'
+  persid: ''
+- desc: 'you''re just getting that out of
+
+    the key, you know. And then'
+  persid: ''
+- desc: 'everything else follows similar
+
+    so we do the same bump mapping'
+  persid: ''
+- desc: 'calculation as before, the same
+
+    bump back function to compute'
+  persid: ''
+- desc: 'that partial derivatives, BSDF.
+
+    There''s a little bit of stuff'
+  persid: ''
+- desc: 'related to G buffer, don''t worry
+
+    about but then there on out, you'
+  persid: ''
+- desc: 'know, again, it kind of
+
+    continues in a very familiar'
+  persid: ''
+- desc: 'way. You know, we sample the
+
+    PSDF for the right lighting. Did'
+  persid: ''
+- desc: 'we get a sample? If so, then,
+
+    you know, we have throughput,'
+  persid: ''
+- desc: 'some PDFs, a little more work.
+
+    Apply Russian roulette. And then'
+  persid: ''
+- desc: 'we respond the indirect Ray, you
+
+    know. So whereas before we would'
+  persid: ''
+- desc: 'just be doing a while loop, you
+
+    know, in the integrator, you'
+  persid: ''
+- desc: 'know, where we kind of go around
+
+    again to trace the indirect Ray,'
+  persid: ''
+- desc: 'in this case, we''re just pushing
+
+    the indirect Ray onto the ray'
+  persid: ''
+- desc: 'cube for the next bounce, and
+
+    subsequently, eventually the'
+  persid: ''
+- desc: 'kernels will run to consume
+
+    that. I won''t, I won''t walk'
+  persid: ''
+- desc: 'through all the details for
+
+    direct lighting, but it''s the'
+  persid: ''
+- desc: 'same idea. You can check out the
+
+    code yourself. You know, it''s'
+  persid: ''
+- desc: 'just kind of, you know, same
+
+    structure as the CPU prediction.'
+  persid: ''
+- desc: 'I''d like to talk briefly. Okay,
+
+    so this is kind of work items'
+  persid: ''
+- desc: 'that H and all the different
+
+    types of work item are declared'
+  persid: ''
+- desc: 'there. So like, you know, we
+
+    have a ray work item. So that''s'
+  persid: ''
+- desc: 'the, you know, the state for,
+
+    you know, the ray, and a ray'
+  persid: ''
+- desc: 'cube to be traced the ray, and
+
+    you know which pixel it''s'
+  persid: ''
+- desc: 'associated with, and, you know,
+
+    a little bit of information'
+  persid: ''
+- desc: 'about the previous intersection
+
+    to use for mis light source, you'
+  persid: ''
+- desc: 'know, and just kind of the state
+
+    of array. So these are things'
+  persid: ''
+- desc: 'that just be local variables,
+
+    you know, in the old path, you'
+  persid: ''
+- desc: 'know, we have a different table
+
+    type for escape grades. When a'
+  persid: ''
+- desc: 'ray doesn''t intersect anything.
+
+    It gets put on a queue. So we'
+  persid: ''
+- desc: 'can deal with the fact that
+
+    there''s, like an environment map'
+  persid: ''
+- desc: 'that has to be sampled. So work
+
+    items that age has all of these'
+  persid: ''
+- desc: 'declarations of all these work
+
+    items, or all the sorts of'
+  persid: ''
+- desc: 'things that are stored in the
+
+    queues. Now, a couple things'
+  persid: ''
+- desc: 'about that. So one thing to
+
+    note, and again, this is'
+  persid: ''
+- desc: 'something you don''t need to
+
+    worry about, you know, if you''re'
+  persid: ''
+- desc: 'just kind of writing rendering
+
+    code, but you know, if you''re an'
+  persid: ''
+- desc: 'expert GPU programmer, you may
+
+    be wondering about data layout,'
+  persid: ''
+- desc: 'you know. So here I''ve just
+
+    defined these structs, and I''ve'
+  persid: ''
+- desc: 'said, and in fact, the kernels
+
+    are just past these structs'
+  persid: ''
+- desc: 'here, your values doing the book
+
+    like a share kind of thing. Now,'
+  persid: ''
+- desc: 'the the optimal layout for these
+
+    things in memory is, is'
+  persid: ''
+- desc: 'structure, a raised layout,
+
+    where kind of you know, for'
+  persid: ''
+- desc: 'each, each you know pixel you
+
+    know, integer, pixel index or'
+  persid: ''
+- desc: 'whatever, instead of having it
+
+    in regular struct layout, it''s'
+  persid: ''
+- desc: 'better if all the pixel indices
+
+    for the work queue are'
+  persid: ''
+- desc: 'contiguous in memory, so that
+
+    way the group of threads reads'
+  persid: ''
+- desc: 'their pixel index, then that''s a
+
+    contiguous performance. So'
+  persid: ''
+- desc: 'structure of a raised layout is
+
+    a much better way to do this.'
+  persid: ''
+- desc: 'Now it can get pretty grungy to
+
+    kind of redeclare all of your'
+  persid: ''
+- desc: 'structs and to kind of write the
+
+    logic code, to kind of re'
+  persid: ''
+- desc: 'Swizzle it in memory. And I
+
+    couldn''t find a way of doing'
+  persid: ''
+- desc: 'that I was familiar with. So I
+
+    ended up we have this kind of'
+  persid: ''
+- desc: 'hacked up structure of arrays
+
+    compiler called soac, which is'
+  persid: ''
+- desc: 'one of the things that gets
+
+    built. So this is work items,'
+  persid: ''
+- desc: 'SOA file and this, this is kind
+
+    of C like, but not C. But'
+  persid: ''
+- desc: 'effectively, what this is doing
+
+    is it''s basically a'
+  persid: ''
+- desc: 'redeclaration of the types with
+
+    some additional information'
+  persid: ''
+- desc: 'about, you know, laying these
+
+    things out, flat memory and'
+  persid: ''
+- desc: 'stuff like this. What it does is
+
+    it parses these, these kind of,'
+  persid: ''
+- desc: 'you know, pars is a very small,
+
+    you know, subset of C,'
+  persid: ''
+- desc: 'basically, to be able to kind of
+
+    figure out these types and then'
+  persid: ''
+- desc: 'automatically generate code to
+
+    do, to read them and write the'
+  persid: ''
+- desc: 'construction of the race layout.
+
+    So this is nice, because a T is'
+  persid: ''
+- desc: 'to write that code B, you know,
+
+    it can be error prone, but it'
+  persid: ''
+- desc: 'also lets us kind of add some
+
+    syntactic short so we''ll go back'
+  persid: ''
+- desc: 'to the look at camera rate
+
+    generation for a second here. So'
+  persid: ''
+- desc: 'camera rays are a little
+
+    different where, you know, they'
+  persid: ''
+- desc: 'don''t consume from a queue like
+
+    this is where it started, where'
+  persid: ''
+- desc: 'it all starts, and then it
+
+    pushes race into a queue. So'
+  persid: ''
+- desc: 'that starts out with this GPU,
+
+    parallel four, but it does all'
+  persid: ''
+- desc: 'of the usual things to generate
+
+    camera, Ray, camera, generate'
+  persid: ''
+- desc: 'Ray eventually, but then you can
+
+    see when it''s writing out the'
+  persid: ''
+- desc: 'state for a particular pixel.
+
+    The syntax is really clean. You'
+  persid: ''
+- desc: 'might expect this to be written
+
+    as pixel sample State Index, if'
+  persid: ''
+- desc: 'it was kind of an array of
+
+    structures layout. So we have'
+  persid: ''
+- desc: 'the indexing in the slightly
+
+    funny place, but under the'
+  persid: ''
+- desc: 'covers, you know? So from from
+
+    the user perspective, this is'
+  persid: ''
+- desc: 'all you need to do. But under
+
+    the covers, this is actually'
+  persid: ''
+- desc: 'transformed into SOA, right? An
+
+    SOA right into an SOA array for'
+  persid: ''
+- desc: 'the pixel radiance value. The
+
+    last thing I wanted to mention,'
+  persid: ''
+- desc: 'you know, so we do a bunch of,
+
+    you know, we saw with materials'
+  persid: ''
+- desc: 'that we''re kind of storing all
+
+    over all the material types, you'
+  persid: ''
+- desc: 'know, and having a separate
+
+    kernel for each one. And just to'
+  persid: ''
+- desc: 'show one more example of that,
+
+    another example is samplers. So,'
+  persid: ''
+- desc: 'you know, in this case, we don''t
+
+    have to iterate over all the'
+  persid: ''
+- desc: 'samplers, but we, what we end up
+
+    doing is we say, like, well, on'
+  persid: ''
+- desc: 'the CPU side, we say, what type
+
+    of sampler do we have? Oh, it''s'
+  persid: ''
+- desc: 'ALT and sampler, right? And then
+
+    what we end up doing is then'
+  persid: ''
+- desc: 'dispatching the specialized
+
+    kernel based on the sampler type'
+  persid: ''
+- desc: 'to generate the random samples,
+
+    you know. And you know, we can'
+  persid: ''
+- desc: 'do this on the CPU as well. It
+
+    wouldn''t have a lot of benefit'
+  persid: ''
+- desc: 'there, you know. It would save
+
+    us, you know, the, you know, the'
+  persid: ''
+- desc: 'indirect dispatch, but on the
+
+    GP, it''s a big name, because,'
+  persid: ''
+- desc: 'you know, we can have this
+
+    kernel implemented knowing the'
+  persid: ''
+- desc: 'concrete you have multiple
+
+    kernels, one for example, or'
+  persid: ''
+- desc: 'type and recall this one, but
+
+    it''s implemented knowing the'
+  persid: ''
+- desc: 'concrete type the sample. And by
+
+    doing so, I would just stack,'
+  persid: ''
+- desc: 'allocate it, which, in turn,
+
+    allows it to not'
+  persid: ''
+- desc: live in
+  persid: ''
+- desc: 'graphics memory, but I can live
+
+    in registers GPU, which is a lot'
+  persid: ''
+- desc: 'faster, and that works out
+
+    myself. Okay, I''m gonna wrap up'
+  persid: ''
+- desc: 'there. I think that''s all the
+
+    key stuff, hopefully enough to'
+  persid: ''
+- desc: 'get folks going and enjoy VRT
+
+    before. Please send thought'
+  persid: ''
+- desc: 'reports, suggestions, anything
+
+    would be fantastic. And I''ll'
+  persid: ''
+- desc: 'wrap up by rendering the
+
+    landscape scene from the GPU. So'
+  persid: ''
+- desc: 'this is that scene from loud,
+
+    loud, work, and this is going to'
+  persid: ''
+- desc: 'keep Google Now, again, we have
+
+    this leg because it''s coming in'
+  persid: ''
+- desc: 'over the network. But see it
+
+    renders pretty quickly. And so,'
+  persid: ''
+- desc: 'for examples, we just finished
+
+    in 1.3 seconds. So that''s cool.'
+  persid: ''
+- desc: Okay, all right. Thank you. So
+  persid: ''
+- desc: 'hi, I''m Daniel Wright, and today
+
+    I''m going to talk about using'
+  persid: ''
+- desc: 'radiance caching to solve real
+
+    time global illumination.'
+  persid: ''
+- desc: 'Surprised no ad, no ad. And it
+
+    seems like a relevant'
+  persid: ''
+- desc: suggestion,
+  persid: ''
+- desc: 'just The next video, but It''s
+
+    good one.'
+  persid: ''
+- desc: It's okay, so,
+  persid: ''
+- desc: Any thoughts about that video? I
+  persid: ''
+- desc: anything you'd like to share.
+  persid: ''
+- desc: 'I noticed he continued to say,
+
+    This is what''s different. What'
+  persid: ''
+- desc: 'was different from the previous
+
+    version?'
+  persid: ''
+- desc: Yeah, it
+  persid: ''
+- desc: 'helps you familiar with the
+
+    previous version. Would help if'
+  persid: ''
+- desc: 'you were more familiar with
+
+    their previous version? Yes. So'
+  persid: ''
+- desc: 'so I just want to show you where
+
+    I got this from I''m'
+  persid: ''
+- desc: 'so under
+
+    resources I should have, I'
+  persid: ''
+- desc: should put a link for that. I
+  persid: ''
+- desc: 'So i i visited Benedict.
+
+    Bitterly sight and chose an'
+  persid: ''
+- desc: image there.
+  persid: ''
+- desc: 'So I picked the gray and white
+
+    room. And then I downloaded the'
+  persid: ''
+- desc: 'PBR key version four input file
+
+    or specification files, and'
+  persid: ''
+- desc: 'so I did this myself On my
+
+    laptop. And this is 1024 samples'
+  persid: ''
+- desc: per pixel.
+  persid: ''
+- desc: 'So here are some previous
+
+    versions.'
+  persid: ''
+- desc: 'Here''s me choosing the wrong
+
+    parameters for the image.'
+  persid: ''
+- desc: 'So I I had set the maximum depth
+
+    for the integrator to be a'
+  persid: ''
+- desc: 'default instead of in the input
+
+    file. Let''s look at the input'
+  persid: ''
+- desc: file and
+  persid: ''
+- desc: 'so it is a path integrator,
+
+    integer max depth, 65 so instead'
+  persid: ''
+- desc: 'of 65 I just used the default,
+
+    and it seemed to generate More'
+  persid: ''
+- desc: 'work because the estimated time
+
+    kept increasing'
+  persid: ''
+- desc: 'the transparents in
+
+    that window makes it look like'
+  persid: ''
+- desc: 'it''s like been burnt. I feel
+
+    like the printer or something.'
+  persid: ''
+- desc: 'Yeah, I''m not sure how I can
+
+    here. Let me see if I can open'
+  persid: ''
+- desc: Another window I
+  persid: ''
+- desc: sound a little better.
+  persid: ''
+- desc: 'So what''s the
+
+    keyword to separate the file'
+  persid: ''
+- desc: into two? I Yeah,
+  persid: ''
+- desc: 'so there''s no world end. I think
+
+    that''s appropriate, because we'
+  persid: ''
+- desc: 'don''t need to think about the
+
+    end of the world. There''s enough'
+  persid: ''
+- desc: 'stuff going on to make us think
+
+    of keep that in in mind. So the'
+  persid: ''
+- desc: 'first part we describe the
+
+    rendering parameters, and then'
+  persid: ''
+- desc: 'we''ll begin then we describe the
+
+    textures and the shapes and how'
+  persid: ''
+- desc: they're put together. You
+  persid: ''
+- desc: 'so we have a variety of
+
+    materials and'
+  persid: ''
+- desc: 'to describe different elements
+
+    of the scene, we have leaves for'
+  persid: ''
+- desc: 'the plant the plant pot,
+
+    branches'
+  persid: ''
+- desc: 'so those are the materials, and
+
+    then We have The shapes and'
+  persid: ''
+- desc: 'then we position them, and then
+
+    At the end we have a light'
+  persid: ''
+- desc: source. And
+  persid: ''
+- desc: let Me copied This and
+  persid: ''
+- desc: Let's make a
+  persid: ''
+- desc: 'Oh, so this is
+
+    128 samples per Pixel. I''m'
+  persid: ''
+- desc: 'so if you wanted to,
+
+    you could go through and in the'
+  persid: ''
+- desc: 'parameters of the file, you
+
+    could change, like leaf texture'
+  persid: ''
+- desc: 'to be Gold again, for instance,
+
+    like we did before, yeah,'
+  persid: ''
+- desc: 'I could have done a few Last
+
+    samples. So the thing about five'
+  persid: ''
+- desc: 'minutes is still faster than
+
+    some of the other ones. 200'
+  persid: ''
+- desc: 'seconds instead of 2000 Yeah,
+
+    still a fraction of the time.'
+  persid: ''
+- desc: 'So I was gonna say, if you''re
+
+    running files in CO 135 your job'
+  persid: ''
+- desc: 'ends when you log out, you can
+
+    set Up to run, have a coffee and'
+  persid: ''
+- desc: come back.
+  persid: ''
+- desc: 'Snap. Make it easier. Well, I
+
+    have to get out. Okay, let me'
+  persid: ''
+- desc: 'start running this and then I''ll
+
+    cut back after this class would'
+  persid: ''
+- desc: have been
+  persid: ''
+- desc: 'heavy, yeah, it''s a good
+
+    feature, though, for letting us'
+  persid: ''
+- desc: get access To the lab that was
+  persid: ''
+- desc: the best pass so far.
+  persid: ''
+- desc: 'They cleaned up a lot of pixel
+
+    in the living room. Yeah.'
+  persid: ''
+- desc: So I notice,
+  persid: ''
+- desc: 'I notice this
+
+    interesting feature. I didn''t'
+  persid: ''
+- desc: 'try this before. You can play
+
+    through the images.'
+  persid: ''
+- desc: 'Interesting and one of
+
+    these doesn''t belong, very'
+  persid: ''
+- desc: 'interesting treat like a jump
+
+    scare. I jump scare.'
+  persid: ''
+- desc: 'So we can see
+
+    that the floor is getting'
+  persid: ''
+- desc: cleaned up here,
+  persid: ''
+- desc: 'we''re in a different
+
+    way. Yeah, I know. Oh, okay, but'
+  persid: ''
+- desc: 'the sea ring and the other
+
+    details that are don''t get as'
+  persid: ''
+- desc: 'much light are still quite
+
+    noisy. I think when I did, oh,'
+  persid: ''
+- desc: 'it''s done now. That''s with 128
+
+    CS. I'
+  persid: ''
+- desc: 'it, yeah, and it
+
+    also generate a segmentation'
+  persid: ''
+- desc: 'fault at the end. So we finished
+
+    the work, but it'
+  persid: ''
+- desc: 'there''s a segmentation fault. So
+
+    if anyone''s interested in'
+  persid: ''
+- desc: 'finding out what''s the cause of
+
+    that, I'
+  persid: ''
+- desc: 'I realized I needed to put two
+
+    dashes in front of stats.'
+  persid: ''
+- desc: Let's do 32 samples per pixel,
+  persid: ''
+- desc: 'and I did one test. So the wave
+
+    front is I talked about that a'
+  persid: ''
+- desc: 'little bit, or in that paper,
+
+    the word was mentioned the wave'
+  persid: ''
+- desc: 'front. That''s the GPU
+
+    integrator. So we can, if we'
+  persid: ''
+- desc: 'give it the argument, wave front
+
+    to the to pbrt. It''s going to'
+  persid: ''
+- desc: 'use the code, the method from
+
+    The GPU, but it''s going Around'
+  persid: ''
+- desc: the CPU and you
+  persid: ''
+- desc: 'it. So we can specify the
+
+    samples per pixel on the command'
+  persid: ''
+- desc: 'line instead of editing the
+
+    file.'
+  persid: ''
+- desc: 'So where is it storing
+
+    all these images? Because I'
+  persid: ''
+- desc: 'notice they all have the same
+
+    name just by the different sort'
+  persid: ''
+- desc: of numbering after that,
+  persid: ''
+- desc: 'I''m not sure. I''m
+
+    guessing that they''re cached. I'
+  persid: ''
+- desc: because
+  persid: ''
+- desc: 'they''re Yeah, they because the
+
+    files don''t exist anymore, with'
+  persid: ''
+- desc: 'these earlier versions in them.
+
+    I'
+  persid: ''
+- desc: 'So here''s some interesting
+
+    stats. Yeah, so 3300 67,657, out'
+  persid: ''
+- desc: 'of gamma pixels clamped to 01,
+
+    so that''s about 35% of the'
+  persid: ''
+- desc: 'pixels are not resolved. The
+
+    BVH, that''s bounding volume'
+  persid: ''
+- desc: 'hierarchy. So we just give some
+
+    stats about'
+  persid: ''
+- desc: 'about these different things. So
+
+    geometry, buffer, cash hits. So'
+  persid: ''
+- desc: I
+  persid: ''
+- desc: 'Is there a is there a
+
+    difference in performance, if'
+  persid: ''
+- desc: 'you were to use a different type
+
+    of graphics card, like if you'
+  persid: ''
+- desc: 'did the same passes and stuff
+
+    like that, the same settings,'
+  persid: ''
+- desc: 'would it be the same output just
+
+    in a shorter time or so?'
+  persid: ''
+- desc: 'It''s their Monte Carlo method.
+
+    So details can be different, but'
+  persid: ''
+- desc: 'we''ll get to a point that we''re
+
+    happy with. If we convert we can'
+  persid: ''
+- desc: 'convert can converge on
+
+    something, then the variability'
+  persid: ''
+- desc: will be negligible.
+  persid: ''
+- desc: 'Would it be just faster so on
+
+    average? Or will this be'
+  persid: ''
+- desc: 'quicker? Or will it be rough at
+
+    the same speed as well? Because'
+  persid: ''
+- desc: 'I have two different graphics
+
+    cards, and I could. I''m'
+  persid: ''
+- desc: 'wondering if they would perform
+
+    in a similar manner. I would use'
+  persid: ''
+- desc: 'either of them, despite the fact
+
+    that they are like different'
+  persid: ''
+- desc: generations and stuff like that.
+  persid: ''
+- desc: 'Why don''t you test it? Find it.
+
+    I''d have to plug in the other'
+  persid: ''
+- desc: part.
+  persid: ''
+- desc: 'So with the one
+
+    that''s plugged in, did you'
+  persid: ''
+- desc: 'build? Were able to build the
+
+    GPU? I haven''t had enough.'
+  persid: ''
+- desc: 'I have one that''s like
+
+    a 4000 series, and I have one'
+  persid: ''
+- desc: 'that''s a 16 series, and it''s
+
+    just, I''m curious if I should'
+  persid: ''
+- desc: 'maybe just plug in the other
+
+    one, because I know that'
+  persid: ''
+- desc: 'sometimes if you overuse a
+
+    graphics card, who causes'
+  persid: ''
+- desc: 'issues, probably not doing these
+
+    renderings, though, as far as I'
+  persid: ''
+- desc: 'should keep my one safe, or if I
+
+    should just use it, I think'
+  persid: ''
+- desc: 'that''s mostly when people are
+
+    doing like Bitcoin mining or'
+  persid: ''
+- desc: 'whatever, that they ruin their
+
+    graphics cards. I''m just a'
+  persid: ''
+- desc: little cautious. That's all i
+  persid: ''
+- desc: 'Yes, I''d be
+
+    cautious about Bitcoin mining.'
+  persid: ''
+- desc: So
+  persid: ''
+- desc: 'anyway, these are
+
+    somewhat self explanatory'
+  persid: ''
+- desc: 'geometry intersections, Green
+
+    Triangle intersection tests, 96'
+  persid: ''
+- desc: million, I
+  persid: ''
+- desc: 'so there''s one light 20. 20
+
+    materials and 13 textures.'
+  persid: ''
+- desc: Anyway,
+  persid: ''
+- desc: I Want to,
+  persid: ''
+- desc: 'want to show you,
+
+    I'
+  persid: ''
+- desc: 'so this talks about rendering
+
+    The scene from the PBR TV for'
+  persid: ''
+- desc: Scenes repository And
+  persid: ''
+- desc: I haven't tried this before. I
+  persid: ''
+- desc: 'Oh, that''s more
+
+    reasonable pixel samples per'
+  persid: ''
+- desc: pixel time
+  persid: ''
+- desc: at the front of the command,
+  persid: ''
+- desc: 'yeah, That''s that
+
+    gives the timing information for'
+  persid: ''
+- desc: The process. I
+  persid: ''
+- desc: No, it's, it's still working. I
+  persid: ''
+- desc: 'Yeah, it''d be nice to know that
+
+    It''s still doing something'
+  persid: ''
+- desc: productive. I
+  persid: ''
+- desc: um radiance.
+  persid: ''
+- desc: Irradiance sounds good.
+  persid: ''
+- desc: Plus intensity,
+  persid: ''
+- desc: intensity and right?
+  persid: ''
+- desc: Anyone?
+  persid: ''
+- desc: 'Thrown off a bit by multiple
+
+    choice, who You choose all the'
+  persid: ''
+- desc: other the Other question, I
+  persid: ''
+- desc: yeah, what's An adequate model?
+  persid: ''
+- desc: Geometric optics. I
+  persid: ''
+- desc: 'What are some features of that
+
+    do? What does that allow us to'
+  persid: ''
+- desc: 'so it shows how light interacts
+
+    with objects that are much'
+  persid: ''
+- desc: larger than them,
+  persid: ''
+- desc: 'okay, but to what assumptions is
+
+    this permit.'
+  persid: ''
+- desc: I so we can think of the
+  persid: ''
+- desc: you Can
+  persid: ''
+- desc: 'we can linearly combine
+
+    different contributions and'
+  persid: ''
+- desc: What are some other ones?
+  persid: ''
+- desc: No qualification. I
+  persid: ''
+- desc: 'energy conservation, no
+
+    fluorescence or phosphorescence.'
+  persid: ''
+- desc: Do estimates
+  persid: ''
+- desc: and steady states and
+  persid: ''
+- desc: 'so that means state. State means
+
+    that lights are'
+  persid: ''
+- desc: 'always flickering in this room.
+
+    Technically, we just can''t see'
+  persid: ''
+- desc: 'it, so it just assumes a
+
+    constant light, right?'
+  persid: ''
+- desc: 'Yeah, or not, the energy is
+
+    distributed'
+  persid: ''
+- desc: over time, right? Yeah,
+  persid: ''
+- desc: 'very quickly reaches the steady
+
+    state almost instantaneously and'
+  persid: ''
+- desc: 'So light has reached
+
+    equilibrium, so radians'
+  persid: ''
+- desc: 'distribution is not changing
+
+    over time.'
+  persid: ''
+- desc: 'So it''s not these
+
+    aren''t wild assumptions. They'
+  persid: ''
+- desc: 'just help us deal with light in
+
+    a in a better in a more'
+  persid: ''
+- desc: straightforward way.
+  persid: ''
+- desc: It's 216
+  persid: ''
+- desc: 'Thank you for
+
+    today. Have a good weekend, and'
+  persid: ''
+- desc: 'I will have things on Your
+
+    courses for you to look at.'
+  persid: ''
+- desc: Thanks again. Bye.
+  persid: ''
+- desc: 'Thanks, you, too. You
+
+    too.'
+  persid: ''
+- desc: 'Thanks, you, too. You
+
+    too.'
+  persid: ''
+offering:
+  id: CS-405_805-202510

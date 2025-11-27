@@ -6,8 +6,12 @@
   Grade penalties will be applied in the following situations for assignment submissions:
   <ul>
     <li>on time but the written instructions for the submission were not followed: deduct 10% of the earned grade</li>
-    <li>late (but within 48 hours of the due date and time): deduct 10% of the earned grade</li>
-    <li>late by more than 48 hours: deduct 20% of the earned grade</li>
+    <li>Within 24 hours of the due date and time): deduct 20% of the earned grade</li>
+    <li>More than 24 and less than 48 hours late: deduct 40% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 48 and less than 72 hours late: deduct 60% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 72 and less than 96 hours late: deduct 80% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 96 and less than 108 hours late: deduct 90% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 108 hours late: deduct 100% of the earned grade until the cut-off date, after which no grade can be earned.</li>
   </ul>
 </div>
 
@@ -107,13 +111,33 @@ Your comments about the following rubric are welcome [via email](mailto:{{site.e
     </div>
     <div class="form-check" id="p2">
       <input class="form-check-input" type="radio" name="penalties_{{page.aid}}"
-      id="penalty-2" value="10">
-      <label class="form-check-label" for="penalty-2">Assignment submitted late, but within 48 hours</label>
+      id="penalty-2" value="20">
+      <label class="form-check-label" for="penalty-2">Assignment submitted late, within 24 hours</label>
     </div>
     <div class="form-check" id="p3">
       <input class="form-check-input" type="radio" name="penalties_{{page.aid}}"
-      id="penalty-3" value="20">
-      <label class="form-check-label" for="penalty-3">Assignment submitted more than 48 hours late</label>
+      id="penalty-3" value="40">
+      <label class="form-check-label" for="penalty-3">Assignment submitted late, within 48 hours</label>
+    </div>
+    <div class="form-check" id="p4">
+      <input class="form-check-input" type="radio" name="penalties_{{page.aid}}"
+      id="penalty-4" value="60">
+      <label class="form-check-label" for="penalty-4">Assignment submitted late, within 72 hours</label>
+    </div>
+    <div class="form-check" id="p5">
+      <input class="form-check-input" type="radio" name="penalties_{{page.aid}}"
+      id="penalty-5" value="80">
+      <label class="form-check-label" for="penalty-5">Assignment submitted late, within 96 hours</label>
+    </div>
+    <div class="form-check" id="p6">
+      <input class="form-check-input" type="radio" name="penalties_{{page.aid}}"
+      id="penalty-6" value="90">
+      <label class="form-check-label" for="penalty-6">Assignment submitted late, within 108 hours</label>
+    </div>
+    <div class="form-check" id="p7">
+      <input class="form-check-input" type="radio" name="penalties_{{page.aid}}"
+      id="penalty-7" value="100">
+      <label class="form-check-label" for="penalty-7">Assignment NOT submitted within 108 hours</label>
     </div>
   </div>
   <div class="border bg-info m-2 p-4">

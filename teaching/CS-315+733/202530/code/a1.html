@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- based on: https://www.interactivecomputergraphics.com/8E/Code/02/gasket1.html -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>2D Sierpiński Triangle (Chaos Game)</title>
+        <script id="vertex-shader" type="x-shader/x-vertex">
+            #version 300 es
+
+            in vec2 aPosition;
+            in vec4 aColour;
+            uniform float uPointSize;
+            uniform mat3 uCenteredRotationMatrix;
+            out vec4 vColour;
+
+            void
+            main()
+            {
+                gl_PointSize = uPointSize;
+                vec3 a3pos = vec3(aPosition.x,aPosition.y,1.0);
+                gl_Position = vec4((uCenteredRotationMatrix * a3pos).xy, 0.0, 1.0);
+                
+                /* static 90 degree rotation
+                gl_Position = vec4(
+                    aPosition.x * 0.0 + aPosition.y * -1.0,
+                    aPosition.x * 1.0 + aPosition.y * 0.0,
+                    0.0,
+                    1.0
+                ); */
+                vColour = aColour;
+            }
+        </script>
+        <script id="fragment-shader" type="x-shader/x-fragment">
+            #version 300 es
+            precision mediump float;
+
+            in vec4 vColour;
+            out vec4 fColour;
+
+            void
+            main()
+            {
+                fColour = vColour;
+            }
+        </script>
+        <script src="https://interactivecomputergraphics.com/8E/Code/Common/initShaders.js"></script>
+        <script src="https://interactivecomputergraphics.com/8E/Code/Common//MVnew.js"></script>
+        <script src="asgn1-gasket-2D-chaos-spin.js"></script>
+    </head>
+    <body>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <canvas width="512" height="512" id="gl-canvas">
+                            Your browser does not support the HTML5 canvas element
+                        </canvas>
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>General Settings</legend>
+                            <label>
+                                <strong>Number of points</strong>
+                                <input type="number" name="nbr-points" id="nbr-points" min="99" max="65536" step="10" value="99999" />
+                            </label>
+                            <br />
+                            <label>
+                                <strong>Show vertices</strong>
+                                <input type="checkbox" id="show-centres" name="show-centres" checked />
+                            </label>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend>Vertex 0</legend>
+                            <label>
+                                <strong>Position</strong>
+                                (x: <input type="number" name="v0-xpos" id="v0-xpos" min="-1" max="1" step="0.01" value="-0.5" />,
+                                y: <input type="number" name="v0-ypos" id="v0-ypos" min="-1" max="1" step="0.01" value="0.0" />)
+                                <br />
+                                <strong>Rotation</strong>
+                                (angle in degrees: <input type="number" name="v0-rot" id="v0-rot" min="0" max="359" step="0.1" value="0" />)
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Vertex 1</legend>
+                            <label>
+                                <strong>Position</strong>
+                                (x: <input type="number" name="v1-xpos" id="v1-xpos" min="-1" max="1" step="0.01" value="0.5" />,
+                                y: <input type="number" name="v1-ypos" id="v1-ypos" min="-1" max="1" step="0.01" value="0.0" />)
+                                <br />
+                                <strong>Rotation</strong>
+                                (angle in degrees: <input type="number" name="v1-rot" id="v1-rot" min="0" max="359" step="0.1" value="0" />)
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Vertex 2</legend>
+                            <label>
+                                <strong>Position</strong>
+                                (x: <input type="number" name="v2-xpos" id="v2-xpos" min="-1" max="1" step="0.01" value="0.0" />,
+                                y: <input type="number" name="v2-ypos" id="v2-ypos" min="-1" max="1" step="0.01" value="0.8660" />)
+                                <br />
+                                <strong>Rotation</strong>
+                                (angle in degrees: <input type="number" name="v2-rot" id="v2-rot" min="0" max="359" step="0.1" value="0" />)
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Shader</legend>
+                            <label>
+                                <strong>Rotate</strong>
+                                <input type="checkbox" id="rotate-on" name="rotate-on" unchecked />
+                            </label>
+                            <br />
+                            <label>
+                                <strong>Rotation centre</strong>
+                                (x: <input type="number" name="src-xpos" id="src-xpos" min="-1" max="1" step="0.01" value="0.5" />,
+                                y: <input type="number" name="src-ypos" id="src-ypos" min="-1" max="1" step="0.01" value="0.0" />)
+                            </label>
+                        </fieldset>
+                        <br />
+                        <button id="apply">
+                            Apply
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

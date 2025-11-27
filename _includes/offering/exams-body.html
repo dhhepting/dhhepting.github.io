@@ -1,9 +1,13 @@
 {% comment %}
   {% include teaching/url.html %}
 {% endcomment %}
-{% capture exam_url %}/assets/teaching/pdf/{{ crs_id }}{% endcapture %}
+{% assign crsvars = crs_nbr %}
+{%- assign sepnbrs = crs_nbr | split: "+" -%}
+{%- for n in sepnbrs %}
+  {% capture crsvars %}{{ crsvars }}#{{ n }}{% endcapture %}
+{% endfor %}
 
-{%comment %}if off_now == true {% endcomment%}
+{%comment %}if off_now == true endcomm
 {% if 0 %}
 <h4>
   In {{ crs_sem }}:
@@ -35,26 +39,35 @@
     {%- break -%}
   {%- endfor -%}
 {%- endif -%}
+{% endcomment%}
+
 {% assign prevexams = "" %}
-{% for sp in site.static_files reversed %}
-  {% if sp.path contains exam_url and sp.path contains "exam" %}
-    {% capture prevexams %}{{ prevexams }}#{{ sp.path }}{% endcapture %}
-  {% endif %}
-{% endfor %}
+{% assign cv = crsvars | split: '#' %}
+{%- for n in cv %}
+  {% capture exam_url %}/assets/teaching/pdf/{{ crs_sbj }}-{{ n }}{% endcapture %}
+  {% for sp in site.static_files reversed %}
+    {% if sp.path contains exam_url and sp.path contains "exam" %}
+      {% capture prevexams %}{{ prevexams }}#{{ sp.path }}{% endcapture %}
+    {% endif %}
+  {% endfor %}
+{%- endfor -%}
 {%- if prevexams.size > 0 -%}
+{%comment%}
+
 <h4>
   <!-- From previous offerings: -->
   Previous exams
 </h4>
+{% endcomment%}
 <ul>
-  {% assign epaths = prevexams | split: '#' %}
+  {% assign epaths = prevexams | split: '#' | uniq %}
   {% for i in (0..epaths.size) %}
     {%- if epaths[i].size > 0 -%}
       {%- assign efn = epaths[i] | split: "/" | last | remove: ".pdf"-%}
       {%- assign efn_parts = efn | split: "_" %}
       {%- assign esem = efn_parts[0] | split: "-" %}
       {%- assign etype = efn_parts[1] | split: "-" %}
-      {%- if esem[2] != crs_sem -%}
+      {%- if 1 -%} {% comment %} esem[2] != crs_sem -%} {% endcomment%}
   <li>
     <a href="{{ epaths[i] | relative_url }}">
       {{ esem[2] }} {{ etype[2] | capitalize }}

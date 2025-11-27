@@ -1,0 +1,10 @@
+ let a = mat4();
+   printm(a);
+   a = mult(a,translate(5,-7,2));
+   a = mult(a,rotateZ(90));
+   a = mult(a,rotateY(-90));
+   a = mult(a,rotateX(90));
+   a = mult(a,translate(-5,7,-2));
+   let p = vec4(5,-7,2,1);
+   printm(a);
+   console.log(mult(a,p));

@@ -60,17 +60,17 @@ joff_id = jcrs_id + '-' + reldir[1]
 # plan structure
 d = {}
 d['offering'] = joff_id
-d['overview'] = "1. Overview\n 1. d dfdfhadsf\n 1. jdf jkdsafh jdsahf\n"
+d['overview'] = "1. Overview\n 1. Some detail\n 1. Detail\n"
 d['assignments'] = "sample"
 # exams
 e = []
 e.append({})
 e[0] = {}
-e[0]['name'] = "Midterm"
-e[0]['date'] = "Thu-29-Feb-2024"
+#e[0]['name'] = "Midterm"
+#e[0]['date'] = "Thu-29-Feb-2024"
 e.append({})
-e[1]['name'] = "Final"
-e[1]['date'] = "Tue-16-Apr-2024"
+#e[1]['name'] = "Final"
+#e[1]['date'] = "Tue-16-Apr-2024"
 d['exams'] = e
 # weekly schedule
 w = []
@@ -132,16 +132,16 @@ with open(mtgsfile, newline='') as mtgscsv:
         adminstr = ''
         date_object = datetime.strptime(row['date'], "%a-%d-%b-%Y")
         adminstr += '* Happy ' + (datetime.strftime(date_object,'%A-%d-%b-%Y').split('-'))[0] + '\n'
-        adminstr += '* [Attendance](https://urcourses.uregina.ca/mod/attendance/manage.php?id=' + str(attendid) + '&view=1){:target=\'_blank\'}\n'
+        adminstr += '* [ACTION: Record your attendance](https://urcourses.uregina.ca/mod/attendance/manage.php?id=' + str(attendid) + '&view=1){:target=\'_blank\'}\n'
         adminstr += '* [Class calendar for today](https://urcourses.uregina.ca/calendar/view.php?view=day&time=' + str(int(date_object.timestamp())) + '&course=' + str(urcid) + '){:target=\'_blank\'}\n'
         adminstr += '* [Upcoming events](https://urcourses.uregina.ca/calendar/view.php?view=upcoming&course=' + str(urcid) + '){:target=\'_blank\'}\n'
         m[mtgctr]['admin'] = adminstr
-        m[mtgctr]['r2r'] = 'Response to responses'
-        m[mtgctr]['today'] = 'TODAY'
-        m[mtgctr]['summ'] = 'Summary'
+        #m[mtgctr]['r2r'] = 'Response to responses'
+        m[mtgctr]['today'] = ''
+        m[mtgctr]['summ'] = ''
         nextstr = ''
-        nextstr += '* [Submit your response to this meeting before 11pm tonight](https://urcourses.uregina.ca/mod/questionnaire/view.php?id=' + str(row['response_id']) + '){:target=\'_blank\'}\n'
-        nextstr += '* [Take quiz before the start of our next meeting](https://urcourses.uregina.ca/mod/quiz/view.php?id=' + str(row['quiz_id']) + '){:target=\'_blank\'}'
+        #nextstr += '* [Submit your response to this meeting before 11pm tonight](https://urcourses.uregina.ca/mod/questionnaire/view.php?id=' + str(row['response_id']) + '){:target=\'_blank\'}\n'
+        #nextstr += '* [Take quiz before the start of our next meeting](https://urcourses.uregina.ca/mod/quiz/view.php?id=' + str(row['quiz_id']) + '){:target=\'_blank\'}'
         m[mtgctr]['next'] = nextstr
        
         """ 

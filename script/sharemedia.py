@@ -87,8 +87,11 @@ with open(dbmedia_csv,"w") as data_file:
     data_file.write("meet,file,URL\n")
     for w in sorted(filedict, key=filedict.get, reverse=True):
         meetstr = str(w).split(".")
-        #print (meetstr)
+        print (meetstr)
         if " " in meetstr[0]:
             meetstr = meetstr[0].split(" ")
+        if "-" in meetstr[0]:
+            meetstr = meetstr[0].split("-")
         data_str = str(meetstr[0]).zfill(2) + "," + str(w) + "," + str(filedict[w]+"\n")
+        print(data_str)
         data_file.write(data_str)

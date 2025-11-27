@@ -1,0 +1,1041 @@
+Audio-Transcript:
+- desc: 'How''s that for sound
+
+    good? Okay, I I'
+  persid: ''
+- desc: better get The screen up here. I
+  persid: ''
+- desc: 'Okay, here We are meeting for
+
+    you.'
+  persid: ''
+- desc: 'Okay, so we''re going to look at
+
+    a graph that''s programming in'
+  persid: ''
+- desc: more detail today. Okay,
+  persid: ''
+- desc: 'so first of all, happy Monday,
+
+    there''s a link there for you to'
+  persid: ''
+- desc: 'take attendance. You can check
+
+    the past calendar for today and'
+  persid: ''
+- desc: 'see the upcoming events. I
+
+    wanted to just comment about the'
+  persid: ''
+- desc: 'responses to responses on
+
+    meeting two, as I made a more'
+  persid: ''
+- desc: 'detailed discussion here, where
+
+    there are questions and'
+  persid: ''
+- desc: difficulties.
+  persid: ''
+- desc: So if you have
+  persid: ''
+- desc: 'you might want to take a peek at
+
+    that if you have some questions,'
+  persid: ''
+- desc: 'and if you have questions about
+
+    stuff is going on in class, if'
+  persid: ''
+- desc: 'you''re comfortable ask them in
+
+    class. If you''re not comfortable'
+  persid: ''
+- desc: 'asking them in class, send me an
+
+    email or post to the class'
+  persid: ''
+- desc: discussion forum you
+  persid: ''
+- desc: 'Okay, let''s see where did that
+
+    go? I'
+  persid: ''
+- desc: 'so we have class discussions
+
+    here under the general area of'
+  persid: ''
+- desc: your courses
+  persid: ''
+- desc: 'and I have office hours, 1030 to
+
+    noon, Tuesdays and Thursdays.'
+  persid: ''
+- desc: 'So let me know if you have
+
+    problems getting in touch with'
+  persid: ''
+- desc: 'me. Oh, I''ll try to be on Zoom
+
+    during my office hours as well.'
+  persid: ''
+- desc: Does that seem okay? I
+  persid: ''
+- desc: 'so part of the answers to
+
+    reviewing the comments I made in'
+  persid: ''
+- desc: 'response to a question, I
+
+    suggested a video that I made'
+  persid: ''
+- desc: 'with a presentation by a friend
+
+    of mine from SFU his career in'
+  persid: ''
+- desc: 'games and film. So that''s the
+
+    video here.'
+  persid: ''
+- desc: 'Computer Science alumni and
+
+    Friends and'
+  persid: ''
+- desc: so What was missing? I
+  persid: ''
+- desc: 'so we talked about having A
+
+    model, texture or material'
+  persid: ''
+- desc: laying and viewing and
+  persid: ''
+- desc: So when the queue
+  persid: ''
+- desc: 'What if We don''t want To See
+
+    through'
+  persid: ''
+- desc: 'so these are two sides of the
+
+    same coin,'
+  persid: ''
+- desc: 'visible surface determination
+
+    and hidden surface removal.'
+  persid: ''
+- desc: 'So there are different ways we
+
+    can approach it. If we have a'
+  persid: ''
+- desc: 'complicated shape, a complicated
+
+    model, then it might be'
+  persid: ''
+- desc: 'worthwhile to remove from
+
+    processing the side the pieces'
+  persid: ''
+- desc: that aren't going to be visible.
+  persid: ''
+- desc: 'But we can also draw everything
+
+    into the frame buffer and'
+  persid: ''
+- desc: 'just show the stuff that''s
+
+    closest to the Camera.'
+  persid: ''
+- desc: 'Has anyone heard of A Z buffer
+
+    before so'
+  persid: ''
+- desc: 'I don''t Want to confuse that
+
+    with Zed butter.'
+  persid: ''
+- desc: 'I''ve been watching master chef
+
+    with my wife, and sometimes in a'
+  persid: ''
+- desc: 'compound butter. So maybe that
+
+    would be Zed butter. Could'
+  persid: ''
+- desc: be
+  persid: ''
+- desc: 'the next greatest thing, perhaps
+
+    anyway, said buffer keep track'
+  persid: ''
+- desc: 'of distances. So really drawing
+
+    the closest thing. We''ll talk'
+  persid: ''
+- desc: about that more later on. I
+  persid: ''
+- desc: 'so if we want to remove hidden,
+
+    hidden surfaces, what are,'
+  persid: ''
+- desc: 'what''s some intuition about how
+
+    we might do that, like Castle'
+  persid: ''
+- desc: rays on
+  persid: ''
+- desc: the camera, if
+  persid: ''
+- desc: 'it hits the surface before it
+
+    touches the surface that you''re'
+  persid: ''
+- desc: 'trying to reach, then it''s
+
+    behind something else. Make'
+  persid: ''
+- desc: sense?
+  persid: ''
+- desc: Yeah. I
+  persid: ''
+- desc: I don't
+  persid: ''
+- desc: 'that''s a bit more like Zed
+
+    buffer. I think I'
+  persid: ''
+- desc: 'it so we''d like to simplify the
+
+    model before we do processing.'
+  persid: ''
+- desc: So thanks for your comment.
+  persid: ''
+- desc: Let's look at the cube again. I
+  persid: ''
+- desc: so what information can we
+  persid: ''
+- desc: Let's say we're looking at I
+  persid: ''
+- desc: 'so we''re looking From here, and
+
+    we see the cube. What I'
+  persid: ''
+- desc: 'What can we say about this
+
+    surface so'
+  persid: ''
+- desc: 'so the surfaces can have normal
+
+    vectors, and if the'
+  persid: ''
+- desc: 'I realize I''m not going to be
+
+    able To see this side from Where'
+  persid: ''
+- desc: I'm viewing position I
+  persid: ''
+- desc: 'I''ll leave it there For now, But
+
+    Okay.'
+  persid: ''
+- desc: 'I So this is a comment. Let''s
+
+    start by looking at the'
+  persid: ''
+- desc: 'assignment one. So this is a
+
+    common for people in 733 to take'
+  persid: ''
+- desc: 'a look at the lab the
+
+    instructions For lab one,'
+  persid: ''
+- desc: 'setting up the Common folder,
+
+    etc. So'
+  persid: ''
+- desc: a little
+  persid: ''
+- desc: 'bit so there are some bug fixes
+
+    there and some good information'
+  persid: ''
+- desc: in the lab. Notes,
+  persid: ''
+- desc: 'CS, 315, students. Do you agree
+
+    that the lab I'
+  persid: ''
+- desc: the lab is good.
+  persid: ''
+- desc: 'Okay, so there are two versions
+
+    of the code, the jarpinski'
+  persid: ''
+- desc: gasket. I
+  persid: ''
+- desc: 'Has anyone ever heard of Benoit
+
+    Mandelbrot?'
+  persid: ''
+- desc: I He's the
+  persid: ''
+- desc: father of fractal geometry.
+  persid: ''
+- desc: 'So there''s a couple things here.
+
+    So now, with UTF eight encoding'
+  persid: ''
+- desc: for your web pages,
+  persid: ''
+- desc: 'you can put the accent on the
+
+    end like should be'
+  persid: ''
+- desc: 'sipinski was a Polish
+
+    mathematician. So if you hold'
+  persid: ''
+- desc: 'down the anarchy, you''ll see a
+
+    bunch of options.'
+  persid: ''
+- desc: So
+  persid: ''
+- desc: 'don''t forget to spell things
+
+    properly with the proper'
+  persid: ''
+- desc: 'accents. Now that you have the
+
+    available ability to do it.'
+  persid: ''
+- desc: 'The Mammoth road called it the
+
+    gasket as a joke. Do you know'
+  persid: ''
+- desc: 'what? Well, here we have Mr.
+
+    Pinsky gasket. He'
+  persid: ''
+- desc: so what's the gasket use for
+  persid: ''
+- desc: seal things? And
+  persid: ''
+- desc: 'I wouldn''t be a very good
+
+    protection. Or wouldn''t seal'
+  persid: ''
+- desc: much here.
+  persid: ''
+- desc: This one looks a bit better. I
+  persid: ''
+- desc: 'so it''s a it''s a fractal, and we
+
+    can construct from an'
+  persid: ''
+- desc: 'equilateral triangle, and we
+
+    subdivide the triangle into'
+  persid: ''
+- desc: three, well,
+  persid: ''
+- desc: four pieces.
+  persid: ''
+- desc: But we don't. I,
+  persid: ''
+- desc: 'if we add let''s not add another
+
+    transformation, but if we'
+  persid: ''
+- desc: 'accounted for the space in the
+
+    middle, we could generate a'
+  persid: ''
+- desc: 'triangle in you. An inefficient
+
+    way'
+  persid: ''
+- desc: we can keep going to Do this.
+  persid: ''
+- desc: So you see how we're getting
+  persid: ''
+- desc: 'the shape. So the first one, the
+
+    gasket one, is using something'
+  persid: ''
+- desc: called The Chaos gain and
+  persid: ''
+- desc: 'so we can generate the shape
+
+    starting From a point anywhere'
+  persid: ''
+- desc: that we Want To I
+  persid: ''
+- desc: 'so we just keep applying
+
+    transformations At random till'
+  persid: ''
+- desc: 'we get enough points. What are
+
+    enough points? You'
+  persid: ''
+- desc: maybe more than that. I'll
+  persid: ''
+- desc: 'let you think about that. We can
+
+    talk about it if we have some'
+  persid: ''
+- desc: questions.
+  persid: ''
+- desc: 'So let''s say this is
+
+    transformation. One, it shrinks'
+  persid: ''
+- desc: 'by a half and centered there. T2
+
+    shrinks by a half and centered'
+  persid: ''
+- desc: 'here, and t3 shrinks by half and
+
+    centered There,'
+  persid: ''
+- desc: 'here''s our starting point. Which
+
+    transformation should we apply?'
+  persid: ''
+- desc: 'Pick an arm between one and 311,
+
+    okay.'
+  persid: ''
+- desc: 'So let''s, let''s just mark our
+
+    transformations here'
+  persid: ''
+- desc: so We scale by half and
+  persid: ''
+- desc: next
+  persid: ''
+- desc: to two i
+  persid: ''
+- desc: Next,
+  persid: ''
+- desc: another 2k and
+  persid: ''
+- desc: should We do a three and
+  persid: ''
+- desc: then One and then a one and
+  persid: ''
+- desc: so drive this code.
+  persid: ''
+- desc: 'It''s in the textbook and it''s
+
+    linked to'
+  persid: ''
+- desc: watch how it the shame takes.
+  persid: ''
+- desc: The shape takes shame and
+  persid: ''
+- desc: does that make sense?
+  persid: ''
+- desc: 'Yes or no. Okay, let''s take a
+
+    look at the code for'
+  persid: ''
+- desc: 'here is that UTF eight
+
+    specification,'
+  persid: ''
+- desc: 'so everything we''re going to do
+
+    require shaders, so we don''t'
+  persid: ''
+- desc: 'have a default shader we''re
+
+    going to going to start with a'
+  persid: ''
+- desc: 'simple one, perhaps, and make it
+
+    more complex As we go through'
+  persid: ''
+- desc: the semester.
+  persid: ''
+- desc: 'So the fragment shader here,
+
+    we''re specifying the color red,'
+  persid: ''
+- desc: 'and we assign that to F color,
+
+    for fragment color, And then the'
+  persid: ''
+- desc: vertex shader.
+  persid: ''
+- desc: 'We have a point size set, and
+
+    then we''re also'
+  persid: ''
+- desc: sending GL position. So that's
+  persid: ''
+- desc: 'the that specifying coordinates
+
+    where we''re going to draw the'
+  persid: ''
+- desc: 'point. So we get GL position
+
+    from a position which is a'
+  persid: ''
+- desc: 'variable that we connect in the
+
+    JavaScript and'
+  persid: ''
+- desc: Okay,
+  persid: ''
+- desc: Let's see.
+  persid: ''
+- desc: 'So we''re going to generate 5000
+
+    points for'
+  persid: ''
+- desc: 'this onload is going to tell us
+
+    when we''re ready to start our'
+  persid: ''
+- desc: 'code so we don''t start executing
+
+    before things are available.'
+  persid: ''
+- desc: 'That''s also a bit dated in this
+
+    example, so I'
+  persid: ''
+- desc: 'the code might be from 2020, or
+
+    earlier. Anyway, you can tell'
+  persid: ''
+- desc: 'it''s not the latest version of
+
+    JavaScript. I'
+  persid: ''
+- desc: 'so we''re getting the canvas,
+
+    creating the context. If we'
+  persid: ''
+- desc: 'can''t get the context, then we
+
+    throw an error and'
+  persid: ''
+- desc: 'so we say vertices minus one
+
+    minus 101, And one minus One I.'
+  persid: ''
+- desc: Know That's wrong Because
+  persid: ''
+- desc: 'so in 2d We''re concerned with
+
+    this. We''re'
+  persid: ''
+- desc: 'so anything that''s inside this
+
+    window be drawn. Anything'
+  persid: ''
+- desc: outside will be not drawn. I
+  persid: ''
+- desc: 'so when we get and in 3d we''d
+
+    extend it to minus one and plus'
+  persid: ''
+- desc: one in z, we
+  persid: ''
+- desc: 'so we can see here the shapes
+
+    are drawn so they''re touching'
+  persid: ''
+- desc: 'the edge and the Left and the
+
+    top. If we had a different'
+  persid: ''
+- desc: background color, we could see
+  persid: ''
+- desc: 'that the right is touching the
+
+    shape The Edge as well. And'
+  persid: ''
+- desc: 'so we specify the vertices, then
+
+    we add the vertices,'
+  persid: ''
+- desc: 'so the comment about the point
+
+    must lie inside Any set of three'
+  persid: ''
+- desc: vertices.
+  persid: ''
+- desc: Is misleading. I think I
+  persid: ''
+- desc: So,
+  persid: ''
+- desc: 'so we''re adding that first
+
+    position to our array of points,'
+  persid: ''
+- desc: 'and then We''re doing selection
+
+    of the transformation at random.'
+  persid: ''
+- desc: 'So math dot, four three times.
+
+    Math dot random gives us a'
+  persid: ''
+- desc: number between zero and two,
+  persid: ''
+- desc: and then we add the
+  persid: ''
+- desc: 'now. So we apply, in fact, as we
+
+    apply this transformation at'
+  persid: ''
+- desc: 'that vertex J and B and then we
+
+    add The point to the positions'
+  persid: ''
+- desc: array.
+  persid: ''
+- desc: So when we configure web, GL,
+  persid: ''
+- desc: I Think we
+  persid: ''
+- desc: have 512, ask.
+  persid: ''
+- desc: I Want,
+  persid: ''
+- desc: so the
+  persid: ''
+- desc: 'space minus one, one minus one,
+
+    minus one to plus one plus one'
+  persid: ''
+- desc: 'is mapped onto this area on the
+
+    display.'
+  persid: ''
+- desc: 'So we create the buffer, bind
+
+    the buffer and and'
+  persid: ''
+- desc: then
+  persid: ''
+- desc: 'we transfer the data from our
+
+    JavaScript array, and that''s why'
+  persid: ''
+- desc: 'we have flattened to remove the
+
+    extra stuff that''s in the'
+  persid: ''
+- desc: JavaScript array. And and
+  persid: ''
+- desc: 'then we say it''s going to be
+
+    used for static drawing. And'
+  persid: ''
+- desc: 'then the last bit, get that
+
+    duplication a position. So this'
+  persid: ''
+- desc: 'is going to associate the
+
+    positions that you just put into'
+  persid: ''
+- desc: 'the buffer with the name a
+
+    position so we can access it in'
+  persid: ''
+- desc: 'the shader, the vertex shader,
+
+    if you remember that line, I so'
+  persid: ''
+- desc: 'the first one is a position
+
+    block. So we''re going to get a'
+  persid: ''
+- desc: 'location for the attribute, a
+
+    position, and then we''re going'
+  persid: ''
+- desc: to make a pointer.
+  persid: ''
+- desc: Was position locked,
+  persid: ''
+- desc: it's going to be
+  persid: ''
+- desc: 'two bytes or two elements under
+
+    each GL float, so two elements'
+  persid: ''
+- desc: 'of Four ways, each store
+
+    coordinates'
+  persid: ''
+- desc: 'and then the render function. We
+
+    clear the color bit where we'
+  persid: ''
+- desc: 'clear the buffer according to
+
+    the color we''ve set. And then we'
+  persid: ''
+- desc: 'draw a raise so we''re going to
+
+    draw points,'
+  persid: ''
+- desc: 'and we''re going to start at
+
+    zero, and we''re going'
+  persid: ''
+- desc: 'to positions on length. So the
+
+    number of positions we''ve'
+  persid: ''
+- desc: created, which is 5000
+  persid: ''
+- desc: Does that make sense? So
+  persid: ''
+- desc: if you try, I might you
+  persid: ''
+- desc: 'could try different ways to see
+
+    the planes fill in one by one in'
+  persid: ''
+- desc: 'the gasket, line, dots, dot,
+
+    HTML or JS example. So barnacle'
+  persid: ''
+- desc: described it as a
+  persid: ''
+- desc: 'hitting the ball thrown in to
+
+    the soccer field, and then'
+  persid: ''
+- desc: 'skilled players will pass
+
+    between themselves,'
+  persid: ''
+- desc: 'and then you get some fancy
+
+    gasket shape.'
+  persid: ''
+- desc: 'So really, after we''re finding
+
+    these'
+  persid: ''
+- desc: transformations and the
+  persid: ''
+- desc: 'ball gets arbitrarily close to
+
+    the shape we''re trying to'
+  persid: ''
+- desc: approximate to.
+  persid: ''
+- desc: 'I want to go through his slides
+
+    a little bit.'
+  persid: ''
+- desc: 'So amongst the things of that
+
+    response to responses on for'
+  persid: ''
+- desc: 'meeting two is the location of
+
+    the'
+  persid: ''
+- desc: slides from the textbook. Do
+  persid: ''
+- desc: 'any questions about what we''ve
+
+    talked about already.'
+  persid: ''
+- desc: 'So gasket one deals with points
+
+    and gasket two deals with'
+  persid: ''
+- desc: triangles. I
+  persid: ''
+- desc: So this gives us a little bit of
+  persid: ''
+- desc: 'an idea how things are working.
+
+    We''re using the GPU rather than'
+  persid: ''
+- desc: the CPU. GPU.
+  persid: ''
+- desc: 'It''s controlled through programs
+
+    called shaders. So'
+  persid: ''
+- desc: 'we have the vertex and the
+
+    fragment shader,'
+  persid: ''
+- desc: 'that''s where the action happens,
+
+    and'
+  persid: ''
+- desc: then we see the
+  persid: ''
+- desc: I don't want to switch back.
+  persid: ''
+- desc: There's GL use program, which is
+  persid: ''
+- desc: called in the JavaScript to
+  persid: ''
+- desc: 'Make use of the shaders to
+
+    create the graphics I'
+  persid: ''
+- desc: 'array. So we''re working with
+
+    contain mode graphics and put'
+  persid: ''
+- desc: 'all the vertices into an array
+
+    and send the array to the GPU to'
+  persid: ''
+- desc: be rendered.
+  persid: ''
+- desc: So we're storing the array on
+  persid: ''
+- desc: the GPU, so we don't have to
+  persid: ''
+- desc: 'keep incurring the cost of
+
+    sending it from the CPU to the'
+  persid: ''
+- desc: GPU.
+  persid: ''
+- desc: And GP, so
+  persid: ''
+- desc: 'GL 3.1, WebGL is based on
+
+    OpenGL, 3.3 point zero. Es and'
+  persid: ''
+- desc: 'for the embedded systems, we
+
+    don''t have a lot of state'
+  persid: ''
+- desc: information. We
+  persid: ''
+- desc: let me see if
+  persid: ''
+- desc: 'so that''s the Code he''s talking
+
+    about as an example.'
+  persid: ''
+- desc: 'So these are very
+
+    straightforward.'
+  persid: ''
+- desc: 'Just pass through to here. It''s
+
+    not even getting color'
+  persid: ''
+- desc: 'specified. It''s just sending a
+
+    solid color, in this case,'
+  persid: ''
+- desc: 'white, and we''re passing getting
+
+    the position from the JavaScript'
+  persid: ''
+- desc: the
+  persid: ''
+- desc: 'so we make the vertices clear.
+
+    The background is black. We do'
+  persid: ''
+- desc: 'the init shaders, and then we
+
+    the init shaders in is a'
+  persid: ''
+- desc: 'function in his common
+
+    directory, and then We do a GL'
+  persid: ''
+- desc: use program with the result so
+  persid: ''
+- desc: 'so we pass those four vertices,
+
+    set up a position For those four'
+  persid: ''
+- desc: vertices,
+  persid: ''
+- desc: 'and then You draw a Triangle fan
+
+    and'
+  persid: ''
+- desc: so We have minus 1n
+  persid: ''
+- desc: minus Five, I,
+  persid: ''
+- desc: 'so A triangle fan takes the
+
+    first point as the center, and'
+  persid: ''
+- desc: 'then next two points makes one
+
+    triangle, and then with the next'
+  persid: ''
+- desc: 'two points and makes another
+
+    one. So that''s a simple, simple'
+  persid: ''
+- desc: 'way we can make it more
+
+    efficient.'
+  persid: ''
+- desc: 'There are a number of ways to
+
+    interpret the data in The buffer'
+  persid: ''
+- desc: So I
+  persid: ''
+- desc: 'this is why you don''t deal with
+
+    PowerPoint a lot, but'
+  persid: ''
+- desc: if they're helpful,
+  persid: ''
+- desc: 'for reference, then we can Get
+
+    some guiding out of'
+  persid: ''
+- desc: 'so we have a few examples of a
+
+    complete first program, the'
+  persid: ''
+- desc: 'square in gasket one and gasket
+
+    two. So the viewing is'
+  persid: ''
+- desc: 'simplified, because we''re going
+
+    to be dealing with that minus'
+  persid: ''
+- desc: 'one, minus one, minus one to
+
+    plus one plus one area and'
+  persid: ''
+- desc: 'so the five steps describe The
+
+    page in HTML,'
+  persid: ''
+- desc: 'and then we''re going to include
+
+    the shader code there. It''s not'
+  persid: ''
+- desc: 'the only way that we can do it,
+
+    but it''s'
+  persid: ''
+- desc: it works for us,
+  persid: ''
+- desc: so we don't
+  persid: ''
+- desc: 'tinker with that. So we specify
+
+    the canvas and the other HTML'
+  persid: ''
+- desc: 'elements that we''re going to
+
+    access the JavaScript through'
+  persid: ''
+- desc: 'the DOM and we''re going to load
+
+    specify the necessary files and'
+  persid: ''
+- desc: 'JavaScript common libraries, MV
+
+    new.js and so on. Then define'
+  persid: ''
+- desc: shaders in the HTML file and
+  persid: ''
+- desc: 'so we''re going to use script
+
+    tags to do that.'
+  persid: ''
+- desc: 'Then the JavaScript file, we''re
+
+    going to compute or specify'
+  persid: ''
+- desc: data,
+  persid: ''
+- desc: 'send it to the GPU. That''s what
+
+    the Create buffers and so on.'
+  persid: ''
+- desc: 'And then we render the data also
+
+    in the JavaScript file.'
+  persid: ''
+- desc: 'So these are just doing the pass
+
+    through.'
+  persid: ''
+- desc: 'So we''re we''re passing the
+
+    position'
+  persid: ''
+- desc: setting, the
+  persid: ''
+- desc: 'ver setting, the position
+
+    variable that''s built in, and'
+  persid: ''
+- desc: 'here we''re specifying the Color.
+
+    The fragment color is going to'
+  persid: ''
+- desc: be white and
+  persid: ''
+- desc: I Think I've got
+  persid: ''
+- desc: 'separated both shaders are full
+
+    programs do'
+  persid: ''
+- desc: 'so the thing with WebGL two we
+
+    have that version 300 BS to'
+  persid: ''
+- desc: specify
+  persid: ''
+- desc: 'what version we''re using, So
+
+    things go smoothly. And'
+  persid: ''
+- desc: 'there''s A picture of a triangle
+
+    fan. I'
+  persid: ''
+- desc: 'so there''s a difference between
+
+    whether we do triangles,'
+  persid: ''
+- desc: triangle fans or strips.
+  persid: ''
+- desc: So that's a triangle fan.
+  persid: ''
+- desc: These are triangles,
+  persid: ''
+- desc: 'and this one is a Triangle
+
+    strip. I'
+  persid: ''
+- desc: any questions or comments I
+  persid: ''
+- desc: okay Thank you.
+  persid: ''
+- desc: Anyone's name,
+  persid: ''
+- desc: Anyone's name,
+  persid: ''
+offering:
+  id: CS-315_733-202430

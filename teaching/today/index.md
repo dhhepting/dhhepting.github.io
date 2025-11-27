@@ -1,7 +1,7 @@
 ---
 title: Today
 breadcrumb: Today
-sem: 202430
+sem: 202530
 layout: bg-image
 ---
 {% include teaching/today.html %}
