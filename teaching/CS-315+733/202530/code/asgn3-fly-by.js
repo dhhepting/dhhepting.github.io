@@ -11,6 +11,8 @@ var positions = [];
 var colors = [];
 var normalsArray = [];
 
+var index = 0;
+
 var xAxis = 0;
 var yAxis = 1;
 var zAxis = 2;
@@ -67,7 +69,16 @@ window.onload = function init() {
   mmmm = mult(mmmm, translate(0.9, 0, 0.1));
   mmmm = mult(mmmm, rotateY(5.0));
   colorCube(mmmm);
-  numPositions += 36;
+  // recompute number of positions from the arrays we've built
+  numPositions = positions.length;
+
+  // Debug: print array sizes so we can verify uploads
+  console.log('Model built:', {
+    numPositions: numPositions,
+    positions: positions.length,
+    colors: colors.length,
+    normals: normalsArray.length
+  });
 
   //
   //  Load shaders and initialize attribute buffers
@@ -108,6 +119,22 @@ window.onload = function init() {
   const positionLoc2 = gl2.getAttribLocation(program2, 'aPosition');
   gl2.vertexAttribPointer(positionLoc2, 4, gl2.FLOAT, false, 0, 0);
   gl2.enableVertexAttribArray(positionLoc2);
+  // upload normals and bind to attribute aNormal used by vertex-shader-2
+  const nBuffer2 = gl2.createBuffer();
+  gl2.bindBuffer(gl2.ARRAY_BUFFER, nBuffer2);
+  gl2.bufferData(gl2.ARRAY_BUFFER, flatten(normalsArray), gl2.STATIC_DRAW);
+  const normalLoc2 = gl2.getAttribLocation(program2, 'aNormal');
+  if (normalLoc2 !== -1) {
+    // normals are stored as vec3
+    gl2.vertexAttribPointer(normalLoc2, 3, gl2.FLOAT, false, 0, 0);
+    gl2.enableVertexAttribArray(normalLoc2);
+  }
+  // Debug: confirm attribute locations
+  console.log('Program2 attrib locations:', {
+    aPosition: positionLoc2,
+    aColour: colorLoc2,
+    aNormal: normalLoc2
+  });
   modelViewMatrixLoc2 = gl2.getUniformLocation(program2, 'uModelViewMatrix');
   projectionMatrixLoc2 = gl2.getUniformLocation(program2, 'uProjectionMatrix');
   normalMatrixLoc2 = gl2.getUniformLocation(program2, 'uNormalMatrix');
@@ -221,20 +248,22 @@ function triangle(a, b, c) {
   // vertex color assigned by the index of the vertex
 
   //  const indices = [a, b, c, a, c, d];
-  const t1 = subtract(b, a);
-  const t2 = subtract(c, a);
+  // compute edge vectors from actual vertex positions (not the indices)
+  const t1 = subtract(vertices[b], vertices[a]);
+  const t2 = subtract(vertices[c], vertices[a]);
   const normal = normalize(cross(t2, t1));
 
-  normalsArray.push(vec4(normal[0], normal[1], normal[2], 0.0));
-  normalsArray.push(vec4(normal[0], normal[1], normal[2], 0.0));
-  normalsArray.push(vec4(normal[0], normal[1], normal[2], 0.0));
+  // store normals as vec3 (no homogeneous component)
+  normalsArray.push(vec3(normal[0], normal[1], normal[2]));
+  normalsArray.push(vec3(normal[0], normal[1], normal[2]));
+  normalsArray.push(vec3(normal[0], normal[1], normal[2]));
 
   positions.push(vertices[a]);
-  colors.push(baseColours[0]);
+  colors.push(vertexColors[a]);
   positions.push(vertices[b]);
-  colors.push(baseColours[0]);
+  colors.push(vertexColors[b]);
   positions.push(vertices[c]);
-  colors.push(baseColours[0]);
+  colors.push(vertexColors[c]);
 
 
   index += 3;
@@ -271,6 +300,14 @@ function render() {
   projectionMatrix = ortho(-2., 2., -2.0, 2.0, -2., 2);
   gl2.uniformMatrix4fv(modelViewMatrixLoc2, false, flatten(modelViewMatrix));
   gl2.uniformMatrix4fv(projectionMatrixLoc2, false, flatten(projectionMatrix));
+  // For lighting: supply normal matrix (mat3) to transform normals into eye coords
+  if (normalMatrixLoc2) {
+    // compute the inverse-transpose of the modelView matrix and use its
+    // top-left 3x3 as the normal matrix (handles non-uniform scale)
+    const normalMatrix4 = inverse(transpose(modelViewMatrix));
+    const normalMatrix = mat3(normalMatrix4);
+    gl2.uniformMatrix3fv(normalMatrixLoc2, false, flatten(normalMatrix));
+  }
   gl2.drawArrays(gl2.TRIANGLES, 0, numPositions);
 
   requestAnimationFrame(render);
