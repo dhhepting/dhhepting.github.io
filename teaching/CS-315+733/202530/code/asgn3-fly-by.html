@@ -75,6 +75,7 @@ out vec4 vColour;
 uniform mat4 uModelViewMatrix;
 uniform mat4 uProjectionMatrix;
 uniform mat3 uNormalMatrix;
+uniform vec4 uLightPosition;  // light position in eye coordinates
 
 vec4 AmbientProduct, DiffuseProduct, SpecularProduct;
 float Shininess;
@@ -82,14 +83,15 @@ void
 main()
 {
     //  lightPosition = vec4(1.0, 1.0, 1.0, 0.0);
-    vec4 lightAmbient = vec4(0.2, 0.2, 0.2, 1.0);
+    vec4 lightAmbient = vec4(0.5, 0.5, 0.5, 1.0);
     vec4 lightDiffuse = vec4(1.0, 1.0, 1.0, 1.0);
     vec4 lightSpecular = vec4(1.0, 1.0, 1.0, 1.0);
 
-    vec4 materialAmbient = aColour;
-    vec4 materialDiffuse = aColour;
-    vec4 materialSpecular = aColour;
-    float materialShininess = 100.0;
+    // Use vertex color for ambient/diffuse; scale up to see shading better
+    vec4 materialAmbient = vec4(aColour.rgb * 0.8, 1.0);
+    vec4 materialDiffuse = vec4(aColour.rgb * 0.9, 1.0);
+    vec4 materialSpecular = vec4(1.0, 1.0, 1.0, 1.0);
+    float materialShininess = 32.0;
     // initialize the shader's Shininess variable
     Shininess = materialShininess;
 
@@ -100,15 +102,14 @@ main()
     // pos is vertex position in eye coordinates
     vec3 pos = (uModelViewMatrix * aPosition).xyz;
 
-    // Because the eye point the is at the orgin
+    // Vector from vertex to light (in eye coordinates)
+    vec3 L = normalize(uLightPosition.xyz - pos);
+
+    // Because the eye point is at the origin
     // the vector from the vertex position to the eye is
     vec3 E = -normalize(pos);
 
-    // and because the light is at the eyepoint
-     vec3 L = -normalize(pos);
-
     // halfway vector
-
     vec3 H = normalize(L + E);
 
     // Transform vertex normal into eye coordinates
