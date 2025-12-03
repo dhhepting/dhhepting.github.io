@@ -39,6 +39,8 @@ var bottom = -5.0;
 
 var modelViewMatrixLoc1; var projectionMatrixLoc1;
 var modelViewMatrixLoc2; var projectionMatrixLoc2;
+var normalMatrixLoc2;
+var lightPositionLoc2;
 
 var modelViewMatrix; var projectionMatrix;
 var eye;
@@ -138,6 +140,7 @@ window.onload = function init() {
   modelViewMatrixLoc2 = gl2.getUniformLocation(program2, 'uModelViewMatrix');
   projectionMatrixLoc2 = gl2.getUniformLocation(program2, 'uProjectionMatrix');
   normalMatrixLoc2 = gl2.getUniformLocation(program2, 'uNormalMatrix');
+  lightPositionLoc2 = gl2.getUniformLocation(program2, 'uLightPosition');
 
   // event listeners for buttons
 
@@ -251,7 +254,8 @@ function triangle(a, b, c) {
   // compute edge vectors from actual vertex positions (not the indices)
   const t1 = subtract(vertices[b], vertices[a]);
   const t2 = subtract(vertices[c], vertices[a]);
-  const normal = normalize(cross(t2, t1));
+  // Ensure normal points outward by using cross(t1, t2)
+  const normal = normalize(cross(t1, t2));
 
   // store normals as vec3 (no homogeneous component)
   normalsArray.push(vec3(normal[0], normal[1], normal[2]));
@@ -307,6 +311,10 @@ function render() {
     const normalMatrix4 = inverse(transpose(modelViewMatrix));
     const normalMatrix = mat3(normalMatrix4);
     gl2.uniformMatrix3fv(normalMatrixLoc2, false, flatten(normalMatrix));
+  }
+  // Set light position in eye coordinates (fixed above and to the right)
+  if (lightPositionLoc2) {
+    gl2.uniform4fv(lightPositionLoc2, vec4(1.0, 1.0, 1.0, 1.0));
   }
   gl2.drawArrays(gl2.TRIANGLES, 0, numPositions);
 
