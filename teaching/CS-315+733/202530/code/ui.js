@@ -24,12 +24,12 @@ export function bindUI() {
   }
 
   function readRotations() {
-    return [
-      parseFloat(document.getElementById('v0-rot').value),
-      parseFloat(document.getElementById('v1-rot').value),
-      parseFloat(document.getElementById('v2-rot').value),
-    ];
-  }
+  return [
+    parseFloat(document.getElementById('v0-rot').value),
+    parseFloat(document.getElementById('v1-rot').value),
+    parseFloat(document.getElementById('v2-rot').value)
+  ];
+}
 
   function readCount() {
     return Math.max(0, Math.floor(Number(nbrInput.value)));

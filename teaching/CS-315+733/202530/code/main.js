@@ -1,7 +1,7 @@
 // main.js
 import { Renderer } from './renderer.js';
 import { bindUI } from './ui.js';
-import { vec4, mat3, flatten, identity, mult, translate, scale } from './MVnew.js';
+import { vec4, mat3, flatten, identity, mult, translate, scale, rotate} from './MVnew.js';
 
 // copy of colour palette from original script
 const baseColours = [
@@ -47,11 +47,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function buildXforms(centresArr, rotations) {
   for (let k = 0; k < 3; ++k) {
-    xforms[k] = identity();
-    xforms[k] = mult(xforms[k], translate(centresArr[k][0], centresArr[k][1]));
-    xforms[k] = mult(xforms[k], scale(0.5, 0.5));
-    xforms[k] = mult(xforms[k], rotate(rotations[k]));
-    xforms[k] = mult(xforms[k], translate(-centresArr[k][0], -centresArr[k][1]));
+    // For Sierpinski triangle: scale by 0.5 and translate to each vertex
+    // M = [ 0.5  0    cx*0.5 ]
+    //     [ 0   0.5   cy*0.5 ]
+    //     [ 0    0     1      ]
+    const cx = centresArr[k][0];
+    const cy = centresArr[k][1];
+    xforms[k] = mat3(
+      0.5,  0,   cx * 0.5,
+      0,   0.5,  cy * 0.5,
+      0,    0,   1
+    );
   }
 }
 
@@ -61,7 +67,8 @@ function doApply() {
   const count = ui.readCount();
   const centresArr = ui.readCentres();
   const rotations = ui.readRotations();
-  centres = centresArr;
+  console.log('Rotations =', rotations);
+  centres = centresArr;  // Update global centres with UI values
   buildXforms(centres, rotations);
 
   // prepare buffers: 3 centres + count generated

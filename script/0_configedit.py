@@ -4,7 +4,6 @@ import sys, os, errno #, datetime, subprocess
 from datetime import datetime, timedelta
 #from subprocess import Popen, PIPE
 import csv
-import yaml
 from yaml import SafeDumper, SafeLoader
 
 SafeDumper.add_representer(

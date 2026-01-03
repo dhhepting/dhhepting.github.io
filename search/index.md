@@ -14,6 +14,15 @@ exclude_from_search: true
 </div>
 
 <div class="bg-light bg-opacity-75 mb-2 p-3">
+<link href="/~hepting/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/~hepting/pagefind/pagefind-ui.js"></script>
+<h3>PageFind:</h3>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+    });
+</script>
   <ul>
     <li>
       Browse the

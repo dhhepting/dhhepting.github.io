@@ -244,7 +244,7 @@ function triangle(a, b, c) {
     vec4(1.0, 1.0, 1.0, 1.0), // white
   ];
 
-  // We need to parition the quad into two triangles in order for
+  // We need to partition the quad into two triangles in order for
   // WebGL to be able to render it.  In this case, we create two
   // triangles from the quad indices
 
@@ -255,7 +255,7 @@ function triangle(a, b, c) {
   const t1 = subtract(vertices[b], vertices[a]);
   const t2 = subtract(vertices[c], vertices[a]);
   // Ensure normal points outward by using cross(t1, t2)
-  const normal = normalize(cross(t1, t2));
+  const normal = normalize(cross(t2, t1));
 
   // store normals as vec3 (no homogeneous component)
   normalsArray.push(vec3(normal[0], normal[1], normal[2]));

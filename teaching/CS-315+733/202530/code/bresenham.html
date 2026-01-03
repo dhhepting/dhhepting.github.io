@@ -1,0 +1,733 @@
+<script>
+
+        let mouse = { x : 0, y : 0 };
+
+        let pointer = { x : 0, y : 0 };
+
+        let pixels = [];
+
+        var boardWidth = 60;
+        var boardHeight = 20;
+        var cellWidth = 10;
+        var cellHeight = 10;
+
+        function erase_board(width, height) {
+          let index = 0;
+          for (let h = 0; h < height; h++)
+            for (let w = 0; w < width; w++, index++) {
+              pixels[index] = 0;
+              document.getElementById("pixel-" + w + "-" + h).style.backgroundColor = "yellow";
+            }
+        }
+
+        function pixel(x, y) { pixels[x + (boardWidth * y)] = 1 };
+
+        function render_pixels(width, height) {
+          let index = 0;
+          for (let h = 0; h < height; h++)
+            for (let w = 0; w < width; w++, index++)
+              if (pixels[index] == 1) {
+                  //console.log(w + ", " + h);
+                  let tag = "pixel-" + w + "-" + h;
+                  let id = document.getElementById(tag);
+                  if (id != null && id != undefined)
+                      //if (!document.getElementById("pixel-" + w + "-" + h).style.backgroundColor)
+                      document.getElementById("pixel-" + w + "-" + h).style.backgroundColor = "black";//"#"+((1<<24)*Math.random()|0).toString(16);//"black";
+              }
+        }
+
+        let draw_line = (x0, y0, x1, y1) => {
+
+          // Calculate "deltas" of the line (difference between two ending points)
+          let dx = x1 - x0;
+          let dy = y1 - y0;
+
+          // Calculate the line equation based on deltas
+          let D = (2 * dy) - dx;
+
+          let y = y0;
+
+          // Draw the line based on arguments provided
+          for (let x = x0; x < x1; x++) {
+
+            pixel(x, y);
+
+            if (D >= 0) {
+               y = y + 1;
+               D = D - 2 * dx;
+            }
+            D = D + 2 * dy;
+          }
+        };
+
+        let draw_line_2 = (x1,y1,x2,y2) => {
+         let x,y,dx,dy,dx1,dy1,px,py,xe,ye,i;
+         dx=x2-x1;
+         dy=y2-y1;
+         dx1=Math.abs(dx);
+         dy1=Math.abs(dy);
+         px=2*dy1-dx1;
+         py=2*dx1-dy1;
+         if (dy1 <= dx1) {
+
+                      // x is left to right             // x is right to left, so start from the "end" of line
+          if (dx >= 0) { x = x1; y = y1; xe = x2; } else { x = x2; y = y2; xe = x1; }
+
+          pixel(x, y);
+
+          for(i = 0; x < xe; i++) {
+           x = x + 1;
+           if (px < 0) { px = px + 2 * dy1; } else {
+            if ((dx<0 && dy<0) || (dx>0 && dy>0)) { y=y+1; } else { y=y-1; }
+            px=px+2*(dy1-dx1);
+           }
+           pixel(x, y);
+          }
+         }
+         else
+         {
+          if(dy>=0)
+          {
+           x=x1;
+           y=y1;
+           ye=y2;
+          }
+          else
+          {
+           x=x2;
+           y=y2;
+           ye=y1;
+          }
+          pixel(x, y);
+          for(i=0;y<ye;i++)
+          {
+           y=y+1;
+           if(py<=0)
+           {
+            py=py+2*dx1;
+           }
+           else
+           {
+            if((dx<0 && dy<0) || (dx>0 && dy>0))
+            {
+             x=x+1;
+            }
+            else
+            {
+             x=x-1;
+            }
+            py=py+2*(dx1-dy1);
+           }
+           pixel(x, y);
+          }
+         }
+        }
+
+        window.onload = function() {
+
+            document.addEventListener("mousemove", function(e) {
+                mouse.x = e.pageX;
+                mouse.y = e.pageY;
+                //console.log(E.pageY + "," + E.screenY);
+                // document.getElementById("mmm").innerHTML = mouse.x + " / " + mouse.y;
+            });
+
+            // Settings
+
+
+            // Render the board !
+
+            var target = document.getElementById("bresenham-board");
+
+            // Create the drawing board
+            for (var y = 0; y < boardHeight; y++) {
+              for (var x = 0; x < boardWidth; x++) {
+                var e = document.createElement("div");
+                e.setAttribute("id", "pixel-" + x + "-" + y);
+                e.style.position = "absolute";
+                e.style.display = "block";
+                e.style.left = (x * cellWidth) + "px";
+                e.style.top = (y * cellHeight) + "px";
+                e.style.width = cellWidth + "px";
+                e.style.height = cellHeight + "px";
+                e.style.border = "1px solid #ccc";
+                // Add this cell to the bresenham board container
+                target.append(e);
+              }
+            }
+
+            // Track mouse position on the grid
+            target.addEventListener("mousemove", function(e) {
+
+              pointer.x = mouse.x - $(target).offset().left;
+              pointer.y = mouse.y - $(target).offset().top;
+
+              pointer.x = parseInt(pointer.x / cellWidth);
+              pointer.y = parseInt(pointer.y / cellHeight);
+
+              if (pointer.x < 0)
+                  pointer.x = 0;
+
+              if (pointer.y < 0)
+                  pointer.y = 0;
+
+              //mouse.x = (e.pageX - this.offsetLeft - 30) / 10;
+              //mouse.y = (e.pageY - this.offsetTop - 105) / 10;
+              //console.log(E.pageY + "," + E.screenY);
+              document.getElementById("mmm").innerHTML = "["+mouse.x+","+mouse.y+"]" + pointer.x + " / " + pointer.y;
+
+              //pos_left = e.pageX - e.currentTarget.offsetLeft;
+              //pos_top = e.pageY - e.currentTarget.offsetTop;
+              //console.log(pos_left, pos_top);
+
+
+            });
+
+            setInterval(function() {
+              erase_board(boardWidth, boardHeight);
+              draw_line_2(boardWidth / 2, boardHeight / 2, pointer.x, pointer.y);
+              //pixel();
+              render_pixels(boardWidth, boardHeight);
+            }, 0);
+
+
+        };
+
+        function iterate() {
+            let iterator = 2;
+            setInterval(function() {
+                document.getElementsByClassName("it" + iterator)[0].className = "bg";
+                iterator++;
+            }, 1200);
+        }
+
+    </script>
+
+    <style type="text/css">
+
+        .b { border: 1px solid red; }
+
+        body { margin: 50px; padding: 150px; position: relative; }
+
+        /* Original element */
+        #S { position: absolute; display: block; top: 0; left: 0; width: 100px; height: 100px; border: 1px solid gray; background: #0072FF; text-align: center; line-height: 100px; font-size: 40px; font-family: Consolas; color: white; }
+
+        /* Element's animation properties*/
+        #S { animation: normal; animation-duration: 6000ms; animation-fill-mode: forwards}
+
+        .text {
+
+            animation: alternate;                   animation-fill-mode: forwards;
+            animation: alternate-reverse;           animation-fill-mode: backwards;
+            animation: backwards;                   animation-fill-mode: both;
+            animation: both;                        animation-fill-mode: revert;
+            animation: cubic-bezier();
+            animation: ease;
+            animation: ease-in;
+            animation: ease-in-out;
+            animation: ease-out;
+            animation: forwards;
+            animation: infinite;
+            animation: linear;
+            animation: none;
+            animation: normal;
+            animation: paused;
+            animation: reverse;
+            animation: running;
+            animation: step-end;
+            animation: step-start;
+            animation: steps();
+            animation: revert;
+            animation: inherit;
+            animation: initial;
+            animation: unset;
+        }
+
+        #S.next { animation-name: next;}
+        #S.percent { animation-name: percent; }
+
+        @keyframes next {
+            from { left: 0; }
+            to   { left: 250px; border-radius: 50px; background: yellow; }
+        }
+
+        @keyframes percent {
+            0%   { left: 0;     border-radius:  0px; background: yellow; }
+            25%  { left: 125px; border-radius: 15px; background: orange; }
+            50%  { left: 250px; border-radius: 30px; background: green; }
+            75%  { left: 375px; border-radius: 40px; background: blue; }
+            100% { left: 500px; border-radius: 50px; background: purple; }
+        }
+
+        input[type='button'] {  }
+
+        .bg { background: blue; color: yellow; }
+        .HL { background: yellow; }
+
+    </style>
+
+<style type="text/css">
+    .noselect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+    }
+    a {color:blue}
+    body { margin: 0; padding: 0; }
+    .smallest img {  }
+    .smallest { grid-template-columns: 0.7fr 0.5fr 0.1fr 20fr 0.1fr 0.5fr 0.7fr !important; }
+    div { font-family: Verdana,serif; margin: 0; }
+    h1 { font-size: 35px; font-family: "Heebo:400", Arial, sans-serif; margin: 0; color: #333; margin-bottom: 4px; }
+    h2 { font-size: 25px; font-family: Quicksand, Arial, sans-serif; color: #444; margin: 0; margin-bottom: 16px;}
+    p { font-size: 18px; color: #444; font-family: Arial; }
+    * {  }
+    * {  }
+    #tutorials { display: flex; flex-direction: row; align-items: flex-start; justify-items: center; justify-content: center;  }
+
+    .card-container { font-family: verdana; font-size: 14px;  border-radius: 8px; position: relative; }
+    .card {
+        height: 110px;
+        cursor: pointer !important;
+        background-size: 100%;
+        background-position: center;
+        overflow: hidden; margin: 0; padding: 0; background: url('/web/20191104140129im_/http://www.javascriptteacher.com/code2.png'); background-size: 100%; opacity: 0.5; background-position: center;
+        /*animation-name: example;
+          animation-duration: 1s;
+          animation-delay: 2s; */
+    }
+
+    .bold { font-weight: bold !important; }
+
+    @keyframes example {
+        from { background-size: 100%; }
+        to { background-size: 300%; }
+    }
+
+    .progress-container { width: 100%; height: 6px; background: silver; margin-top: 0px; }
+    .progress-bar { width: 1px; height: 6px; background: #0072FF; }
+    #tutorials a { text-decoration: none; color: #333; }
+    .level { cursor: pointer; box-shadow: 0 0 10px #aaa; position: relative; margin: auto; width: 140px; height: 32px; background-color: #0072FF; border-radius: 777px; color: white; font-size: 19px; font-family: Consolas; text-align: center; line-height: 32px; }
+
+    .dotscontainer { cursor: pointer; position: absolute; bottom: 8px; right: 8px; width: 32px; height: 24px; display: flex; align-items: center }
+    .dotscontainer div { width: 4px; height: 4px; background: gray; position: relative; border-radius: 10px; margin: 2px;}
+
+    center, center * { font-size: 20px; font-family: verdana; }
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 1.58;
+}
+
+* { font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased;}
+
+h1 { font-weight: 500;
+    text-align: left;
+    font-size: 40px;
+    line-height: 1.04;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; }
+
+    #scaffold { display: grid; grid-template-columns: 16px 785px 280px 16px; max-width: 1100px; margin: auto; }
+
+.SubscribeButton { cursor: pointer; position: relative; margin: 0;
+display: block; text-align: center; line-height: 45px;
+width: 100%; height: 48px; background: #333; color: #BBB; font-family: Verdana; font-size: 16px; border-radius: 2px; border: 1px solid gray; }
+.EmailInput { display: block;  font-size: 20px; width: 100%; margin: 0; height: 45px; border: 1px solid #AAA; padding: 1px; margin-bottom: 5px; border-radius: 2px; padding-left: 22px;  }
+* { outline-style: none; box-shadow: none; border-color: transparent; }
+
+.subbox p { font-size: 14px; }
+
+#header { display: grid; grid-template-columns: 1fr 1fr; margin: auto; position: relative; height: 100px; }
+#header div { height: 100px; line-height: 100px; }
+.navigation { display: flex; flex-direction: row; justify-content: space-evenly; }
+.navigation div { text-align: right; font-size: 22px; min-width: 50px; }
+
+.sub { width: 800px; border: 2px solid red; }
+
+@media only screen and (max-width: 950px) {
+    #header { display: grid; grid-template-columns: unset; grid-template-rows: 50px 10px; margin: auto; position: relative; height: 100px; }
+    #header .navigation { background: #eee; height: 50px; }
+    #header .navigation div { line-height: 50px; }
+   .headertitle h1 { line-height: 50px !important; }
+    .sub-margin { margin-top: 50px; }
+    .sub { width: unset; }
+}
+
+@media only screen and (max-width: 1100px) {
+    #scaffold { display: grid;
+    grid-template-columns: 16px 1fr 280px 16px; max-width: unset; margin: unset; }
+    .sub {width: 90% !important; }
+}
+
+#sub-email { display: inline-block; font-size: 30px !important; height: 42px !important; vertical-align: bottom !important; margin: 0; padding-left: 8px; }
+#sub { display: inline-block;  font-size: 18px !important; vertical-align: bottom !important; height: 42px !important; margin: 0; }
+
+@media only screen and (max-width: 900px) {
+    #scaffold { display: grid;
+    grid-template-columns: 16px 1fr 16px; grid-template-rows: 1fr; max-width: unset; margin: unset; }
+    .sub {width:90% !important; }
+    .subbox { display: none !important; }
+    .sub { width: unset; }
+	#sub-email { font-size: 30px !important; height: 45px !important; width: 300px !important; margin: auto; display: block; }
+	#sub { font-size: 25px !important; width: 300px; margin: auto; display: block !important; font-family: unset; }
+}
+
+* { }
+
+.unlink { text-decoration:none; color: inherit; }
+
+code, code * { font-size: 16px !important; }
+
+</style>
+
+<div id="header">
+  <div class="headertitle">
+    <h1 style="margin: 0; font-size: 27px; line-height: 100px; margin-left: 32px;"><a href="https://web.archive.org/web/20191104140129/http://www.javascriptteacher.com/" alt="javascript tutorials">JavaScript Tutorials</a> <span style="color: orangered;">It's That Simple<i>!</i></span>
+  </div>
+  <div class="navigation">
+    <div><a href="https://web.archive.org/web/20191104140129/http://www.csstutorial.org/" target="_blank" alt="css tutorials">CSS Tutorials</a></div>
+    <div><a href="https://web.archive.org/web/20191104140129/http://www.learningcurvebook.net/cssvd.html" alt="css visual dictionary e-book pdf download" target="_blank">CSS Visual Dictionary</a></div>
+    <div><a href="https://web.archive.org/web/20191104140129/https://twitter.com/js_tut" target="_blank" style="text-decoration: none;">@js_tut</a></div>
+  </div>
+</div>
+
+<div id="scaffold">
+
+    <div></div>
+
+    <div>
+
+<style>
+.subheader { color: gray; font-size: 14px; display:none; }
+</style>
+
+	<h1>Drawing Lines In HTML Without Canvas</h1>
+
+  <p class="subheader">Using Bresenham's Line Drawing Algorithm in JavaScript To Draw A Line Comprsed Entirely Out Of Standard HTML Elements (DIV, that is.)</p>
+
+  <p>Still available – <a href="https://web.archive.org/web/20191104140129/http://www.javascriptteacher.com/free-book.html" target="_blank" title="css pdf book giveaway">Free CSS Book giveaway</a> – $34.99 value, yours free for a retweet.</p>
+
+	<p>Do you ever have a project you lay off for later? You know, that one idea you wish you have coded but you can't because you are currently in the middle of a more important thing?</p>
+
+  <p>Well, <b>drawing a line in HTML without canvas</b> was something on my mind for over a year.</p>
+
+  <p>How would something like this work? I created this demo area to show the basic idea in action. Using your mouse <b>move the line below</b> to see how - <i>given any two end points</i> - we can render a line on a raster display. In this case represented by a simple HTML grid made out of DIV elements!</p>
+
+  <style>
+      #bresenham-board { width: 600px; height: 270px; margin: 0 auto; display: block; position: relative; }
+      #bresenham-board-container { width: 100%; display: block; position: relative; }
+  </style>
+  <div id="mmm"></div>
+
+      <div id="bresenham-board" style=""></div>
+
+
+  <h2>How Does It Work?</h2>
+
+  <p>We'll use Bresenham's line algorithm. It solves the problem of drawing a line in Quadrant 1:</p>
+
+  <img src="/web/20191104140129im_/http://www.javascriptteacher.com/bresenham-line-drawing-algorithm-quadrant-1.png" alt="bresenham's algorithm is for quadrant 1 only, the rest still need to be implemented for each case, separately."/>
+
+  <p>Drawing a line in any direction requires thinking in quadrants. While the algorithm for Quadrant 1 is simple, implementating for all quadrants (and octants) is tricky. However, it's really just a mirror image of the two octants in Quadrant 1.</p>
+
+  <script async src="//web.archive.org/web/20191104140129js_/http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1159030505595579" data-ad-slot="2078471490"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <h2>Why Draw Lines in HTML Without Canvas?</h2>
+
+  <p>Many reasons! To provide a clear explanation of how <i>Bresenham's drawing algorithm</i> works.</p>
+
+  <p>Many <i>Bresenham's line drawing tutorials</i> I came across only explained mathematical derivations. But they didn't go into much detail about code implementation <i>for each octant</i>. It just felt like implementing something you don't really understand.</p>
+
+  <p>It's simple – <b>some things are just fun.</b> I mean, wouldn't it be great to draw lines in HTML without using canvas or <a class="unlink" href="https://web.archive.org/web/20191104140129/http://www.webgltutorials.org/" target="_blank" alt="webgl tutorials">WebGL</a>? In this line drawing tutorial I will write a JavaScript class that handles instantiation of a single HTML line. You can spawn as many as you like.</p>
+
+  <p>I come from game development background. And in games you often deal with drawing lines. But beyond that, I always found the idea of <b>drawing lines in HTML</b> fascinating. Probably because I've never seen it done before.</p>
+
+  <p>Obviously <b>raw HTML rendering speed will be an issue</b>. And yes, further optimizations will be required to achieve meaningful performance. But the focus of this line drawing tutorial is primarily set on the line drawing algorithm explanation itself. You can always re-implement it in any other raster environment or graphics library.</p>
+
+  <h2>Implementing Bresenham's Line Drawing Algorithm in JS</h2>
+
+  <p>One of the most popular algorithms is perhaps the <b>Bresenham's line drawing algorithm</b>. It's pretty simple and straightforward. We take two deltas and calculate the slope of the line equation, based on two ending points of the line.</p>
+
+  <p>The <i>starting</i> and <i>ending</i> points of the line are provided to the four parameters of the <span class="monospace bold blue">draw_line</span> function ([<span class="monospace bold">x0</span>, <span class="monospace bold">y0</span>] and [<span class="monospace bold">x1</span>, <span class="monospace bold">y1</span>] respectively).</p>
+
+  <p>You can implement this in C, C++, Python, Java or any other language. In this tutorial, of course, we will use JavaScript.</p>
+
+  <p>Here is the <b>pseudo code</b>:</p>
+
+<pre><code><b style="font-weight: bold !important">draw_line</b>(x0, y0, x1, y1)
+
+  // Calculate "deltas" of the line (difference between two ending points)
+  dx = x1 - x0
+  dy = y1 - y0
+
+  // Calculate the line equation based on deltas
+  D = (2 * dy) - dx
+  y = y0
+
+  // Draw the line based on arguments provided
+  for x from x0 to x1
+
+    // Draw pixel at this location
+    <b style="font-weight: bold !important">pixel</b>(x, y)
+
+    // Progress the line drawing algorithm parameters
+    if D &gt; 0
+       y = y + 1
+       D = D - 2*dx
+    end if
+    D = D + 2*dy</code></pre>
+
+  <p>Converting it to JavaScript, we get the following:</p>
+
+<pre><code>let <b style="font-weight: bold !important">draw_line</b> = (x0, y0, x1, y1) =&gt; {
+
+    // Calculate "deltas" of the line (difference between two ending points)
+    let dx = x1 - x0;
+    let dy = y1 - y0;
+
+    // Calculate the line equation based on deltas
+    let D = (2 * dy) - dx;
+
+    let y = y0;
+
+    // Draw the line based on arguments provided
+    for (let x = x0; x &lt; x1; x++)
+    {
+        // Place pixel on the raster display
+        <b style="font-weight: bold !important">pixel</b>(x, y);
+
+        if (D &gt;= 0)
+        {
+             y = y + 1;
+             D = D - 2 * dx;
+        }
+
+        D = D + 2 * dy;
+    }
+};</code></pre>
+
+  <p>First we <b>calculate the difference between line's end points</b> on both axis (<span class="monospace bold">dx</span> and <span class="monospace bold">dy</span>) which are usually referred to as the deltas – for each of the two dimensions respectively.</p>
+
+  <p>Then we <b>calculate the <span class="monospace">delta</span> of the line as a whole</b> (here stored in variable <span class="monospace bold">D</span>) – you can think of it as the <i>mathematical equation</i> for drawing a line. Or in other words the <i>line slope equation.</i></p>
+
+  <p>Before iterating through each span of the line let's <b>reset <span class="monospace">y</span>-axis counter</b> (that we will walk using a <i>for-loop</i>, as the line is being drawn) by setting it to the initial position on the line. Here <span class="monospace bold">y0</span> refers to the <span class="monospace bold">Y</span> coordinate of the first point on the line.
+
+  <p>Finally, <b>draw the line</b> one "pixel" at a time, in pseudo code shown as <span class="monospace"><b>pixel</b>(x, y)</span> function. Once the pixel is rendered, we can adjust the current pixel position using the delta steps we calculated.</p>
+
+  <p>Every time <b>the delta counter exceeds 0</b> we step down to the next pixel on the Y-axis and adjust the <span class="monospace">D</span> variable again by in the opposite dimension, which ends up in progresively drawing the line across both dimensions until we reach line's end.</p>
+
+  <p><b>But that's not everything.</b> In addition, depending on <b><i>axis-dominance</i></b> the <i>for-loop</i> must be modified to travel in that direction. To complete the algorithm, we must also adjust parameters based on what <b>octant</b> (out of eight) we are in. This is explained in detail in the following section.</p>
+
+  <h2>Drawing In All 4 Quadrants / 8 Octants</h2>
+
+  <p>The barebones <b>Bresenham's line algorithm</b> above is designed to draw a line only in one quadrant (Quadrant 1) of the Cartesian coordinate system. But we need to cover all directions. After all, a random line can be plotted from any point on the raster screen to any other point.</p>
+
+  <p>This means that in addition to the pseudo code above, we need to take care of two other things:</p>
+
+  <ul>
+    <li><b>Quadrant-Aware Algorithm.</b> The algorithm must adjust iterator parameters, for each of the four quadrants. We can swap line endpoints to make sure that we always draw the line from left to right, and split the algorithm in two main parts (line is pointing either <i>up</i> or <i>down</i> from the starting point.) Or we can branch out in four different cases, for each quadrant respectively and just swap x-axis and y-axis iterators to accommodate for line direction.</li>
+    <li style="margin-top: 10px"><b>Axis-Dominance.</b> But even in each of the <b>four quadrants</b>, the line will either be x-axis or y-axis dominant. This means there are actually not four but eight different cases. One for each of the <b>eight octants</b>. Luckily, the algorithm stays exactly the same, all we need to do is switch the iterators and branch out a few times.</li>
+  </ul>
+
+  <p>That's a lot of branching out. But the algorithm presented in the following example will take care of all possible cases.</p>
+
+  <h2>The Complete Bresenham's Algorithm In JavaScript</h2>
+
+  <p>Okay – all of this sounds great in theory – and we already covered the pseudo code and JavaScript version - but only for one quadrant! Let's take a look at the whole enchilada.</p>
+
+<pre><code>let draw_line = (x1, y1, x2, y2) =&gt; {
+
+    // Iterators, counters required by algorithm
+    let x, y, dx, dy, dx1, dy1, px, py, xe, ye, i;
+
+    // Calculate line deltas
+    dx = x2 - x1;
+    dy = y2 - y1;
+
+    // Create a positive copy of deltas (makes iterating easier)
+    dx1 = Math.abs(dx);
+    dy1 = Math.abs(dy);
+
+    // Calculate error intervals for both axis
+    px = 2 * dy1 - dx1;
+    py = 2 * dx1 - dy1;
+
+    // The line is X-axis dominant
+    if (dy1 &lt;= dx1) {
+
+        // Line is drawn left to right
+        if (dx &gt;= 0) {
+            x = x1; y = y1; xe = x2;
+        } else { // Line is drawn right to left (swap ends)
+            x = x2; y = y2; xe = x1;
+        }
+
+        pixel(x, y); // Draw first pixel
+
+        // Rasterize the line
+        for (i = 0; x &lt; xe; i++) {
+            x = x + 1;
+
+            // Deal with octants...
+            if (px &lt; 0) {
+                px = px + 2 * dy1;
+            } else {
+                if ((dx &lt; 0 &amp;&amp; dy &lt; 0) || (dx &gt; 0 &amp;&amp; dy &gt; 0)) {
+                    y = y + 1;
+                } else {
+                    y = y - 1;
+                }
+                px = px + 2 * (dy1 - dx1);
+            }
+
+            // Draw pixel from line span at currently rasterized position
+            pixel(x, y);
+        }
+
+    } else { // The line is Y-axis dominant
+
+        // Line is drawn bottom to top
+        if (dy &gt;= 0) {
+            x = x1; y = y1; ye = y2;
+        } else { // Line is drawn top to bottom
+            x = x2; y = y2; ye = y1;
+        }
+
+        pixel(x, y); // Draw first pixel
+
+        // Rasterize the line
+        for (i = 0; y &lt; ye; i++) {
+            y = y + 1;
+
+            // Deal with octants...
+            if (py &lt;= 0) {
+                py = py + 2 * dx1;
+            } else {
+                if ((dx &lt; 0 &amp;&amp; dy&lt;0) || (dx &gt; 0 &amp;&amp; dy &gt; 0)) {
+                    x = x + 1;
+                } else {
+                    x = x - 1;
+                }
+                py = py + 2 * (dx1 - dy1);
+            }
+
+            // Draw pixel from line span at currently rasterized position
+            pixel(x, y);
+        }
+    }
+ }</code></pre>
+
+  <p>This is just one way of writing the Bresenham's line drawing algorithm. You can juggle around parameters and improvise on branching out. But the basic idea is there.</p>
+
+  <p>The main <i><b>if-statement</b></i> branches out between two potential <b>axis-dominance</b> cases.</p>
+
+  <p>The code is <b>octant-aware</b> – within the two if-statement scopes you will also see that the code basically mirrors itself between X and Y axis (tracked by variables <b>px</b> and <b>py</b>) but the algorithm logic is pretty much identical otherwise.</p>
+
+  <h2>Final Words</h2>
+
+  <p>Often, people ask me how to improve their coding skills. I usually suggest <i>choosing a project slightly above the range of your current ability</i>. If you make sure to finish it, this experience will help you advance your coding skills. For me, this was that type of project.</p>
+
+  </div>
+
+  <div class="subbox" style="display: flex; justify-content: center">
+ 	<div style="width: 210px" class="sub-margin">
+    	<!--<img src = "http://www.csstutorial.org/newsletter.png" style = "width: 60px; height: 60px; margin: auto; display: block"/>//-->
+    	<div style="display: flex; flex-direction: column;">
+
+        <p><b style="font-size: 20px;">JavaScript Tutorials.</b></p>
+        <p style="font-size: 16px">When I release something, I make sure it's worth reading or taking a look at — at least once.</b></p>
+    		<input type="text" name="email" placeholder="Email Address" type="email" id="sub-email-top" class="EmailInput"/>
+    		<div id="sub-1" class="SubscribeButton" onclick="var now = Math.floor(Date.now() / 1000);
+                   var hms = secondsToHms(now - window.VisitTimestamp);
+                   $.ajax( { url : 's.html', type : 'post', data : {
+                       'how' : 'top-right',
+                       'hms' : hms,
+                       'HTTP_REFERER' : document.referrer,
+                       'email' : $('#sub-email-top').val() }, success : function(msg) {
+            $('#sub-1').addClass('Thanks').text('Thanks!').prop('disabled', true);
+            $('#sub-email-top').prop('disabled', true);
+            $('#sub-msg-1').text('It happened, you\'re in! I post updates rarely, but when I do it\'s usually something significant and won\'t be a waste of your time.');
+            if (msg != '-1') $.ajax( { url : '/plugins/list/welcome.php', type : 'post', data : { 'email' : $('#sub-email-top').val() } } ) } } );"> S U B S C R I B E </div>
+    	  </div>
+        <div id="sub-msg-1"></div>
+
+        <div style="margin-top: 8px;"><a href="https://web.archive.org/web/20191104140129/https://twitter.com/js_tut" alt="javascript teacher" target="_blank"><img src="/web/20191104140129im_/http://www.javascriptteacher.com/Twitter.png" style="width: 50px; height: 50px;" alt="javascript teacher on Twitter"/></a></div>
+
+<!-- google ad //-->
+        <div>
+          <script async src="//web.archive.org/web/20191104140129js_/http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1159030505595579" data-ad-slot="5610522392"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+
+      </div> <!-- flex //-->
+
+
+
+  	</div> <!-- submargin //-->
+
+
+  </div>
+
+  <div></div>
+
+</div>
+
+  <div class="navigation" style="max-width: 900px; margin: auto;">
+    <div><a href="https://web.archive.org/web/20191104140129/http://www.learningcurvebook.net/cssvd.html" target="_blank">CSS Visual Dictionary</a> <span style="color: gray">(My CSS Book)</span></div>
+    <div><a href="https://web.archive.org/web/20191104140129/https://twitter.com/js_tut" target="_blank" style="text-decoration: none;"> <img src="/web/20191104140129im_/http://www.javascriptteacher.com/Twitter.png" style="width: 30px; height: 30px; vertical-align: middle; opacity: 0.5" alt="javascript teacher on Twitter"/> @js_tut</a> <span style="color: gray">(Twitter)</span></div>
+  </div>
+
+  <div style="margin: auto; position: relative; display: block; max-width: 900px;">
+    <script async src="//web.archive.org/web/20191104140129js_/http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1159030505595579" data-ad-slot="5610522392"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+<style>.sub span { font-family: verdana; font-size: 14px; }</style>
+
+<nav class="sub" style="font-size: 12px; text-align: left; padding: 10px; margin: auto; margin-top: 20px; background: white !important; margin-bottom: 32px;  position: relative; border: 1px solid #ddd;">
+    <h2 style="text-align: left; margin: 0; margin-bottom: 20px">Be Notified Every Time Something New Is Published Or Updated.</h2>
+    <span>I am constantly working on new useful JavaScript tutorials, various tools like <a href="https://web.archive.org/web/20191104140129/http://www.csstutorial.org/flex-both.html" target="_blank" style="font-size: inherit;" title="online flex layout editor">flex layout editor</a> and learning material (<a href="https://web.archive.org/web/20191104140129/http://www.learningcurvebook.net/" target="_blank" style="font-size: inherit;" title="programming books">books</a>) for teachers, designers, coders and makers of things. If you'd like to receive all of the new freemium-premium content as soon as it becomes available, you are welcome to subscribe below.</span><br><br>
+    <span>By subscribing you will receive access to my occasional (good software is hard to make!) updates. Also, any useful look-up diagrams or tutorials with high educational value will be given away for free.</span>
+    <div style="height: 30px;"></div>
+    <style>.Thanks{background:green !important;color:yellow !important;}</style>
+    <input type="text" placeholder="Email Address" name="email" style="border: 1px solid silver; width: 350px; height: 28px; font-size: 18px;" id="sub-email"/><input type="button" onclick="var now = Math.floor(Date.now() / 1000);
+                      var hms = secondsToHms(now - window.VisitTimestamp);
+                      $.ajax( { url : 's.html', type : 'post', data : {
+                          'how' : 'bottom',
+                          'hms' : hms,
+                          'HTTP_REFERER' : document.referrer,
+                          'email' : $('#sub-email').val() }, success : function(msg) {
+		               $('#sub').addClass('Thanks').val('Thanks!').prop('disabled', true);
+		               $('#sub-email').prop('disabled', true);
+		               $('#sub-msg').text('It happened, you\'re in! I post updates rarely, but when I do it\'s usually something significant and won\'t be a waste of your time.');
+		               if (msg != '-1') $.ajax( { url : '/plugins/list/welcome.php', type : 'post', data : { 'email' : $('#sub-email').val() } } );
+		           }});" id="sub" value=" S U B S C R I B E " style="cursor: pointer; border: 0; background: #333; color: #aaa; display: inline-block; padding: 5px; font-family: Verdana, sans-serif; font-size: 15px;"/>
+    <div id="sub-msg" style="margin-top:16px;"></div>
+
+    <!-- site details - copyright //-->
+    <p open class="details" style="clear: both; position: relative; margin: auto; height: auto; margin-bottom: 16px; padding-top: 10px;">
+    <p style="font-size: 12px; font-size: 11px; font-family: verdana;">&copy; 2018 Copyright CSS Tutorials (csstutorial.org) Oh<i>!</i> And thanks for using my <a target="_blank" href="https://web.archive.org/web/20191104140129/http://www.csstutorial.org/" title="flex layout designer" style="font-size: inherit;">flexbox editor</a> tool.</p>
+    <p style="font-size: 11px; font-family: verdana;">All software, tutorials and graphics on this website are &copy; <a href="https://web.archive.org/web/20191104140129/http://www.csstutorial.org/" title="css tutorials" style="font-size: inherit; text-decoration:none; color: black;">csstutorial.org</a> - please provide a back link when referencing on other sites.</p>
+</nav>
+<script type="text/javascript">if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) document.getElementsByTagName("body")[0].className = "safari"; if (navigator.appVersion.indexOf("Mac")!=-1) { document.getElementsByTagName("body")[0].className = "safari"; }</script>
+<script type="text/javascript">$(document).ready(function(){ $.ajax( { 'url': website.url + '/plugins/visitor/add.php', type : 'POST', data: { 'REQUEST_URI' : window.location.href, 'HTTP_USER_AGENT' : navigator.userAgent, 'HTTP_REFERER' : document.referrer } } ); });</script>
+</body>

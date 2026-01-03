@@ -337,11 +337,12 @@ function equal( u, v ) {
 // ----------------------------------------------------------------------------
 
 function add( u, v ) {
+  let result;
   if ( u.type != v.type ) {
     throw 'add(): trying to add different types';
   }
   if (isVector(u)) {
-    var result = new Array(u.length);
+    result = new Array(u.length);
     result.type = u.type;
     for (var i=0; i<u.length; i++) {
       result[i] = u[i] + v[i];
@@ -349,10 +350,10 @@ function add( u, v ) {
     return result;
   }
   if (isMatrix(u)) {
-    if (u.type == 'mat2') var result = mat2();
-    if (u.type == 'mat3') var result = mat3();
-    if (u.type == 'mat4') var result = mat4();
-    for (var i=0; i<u.length; i++) {
+    if (u.type == 'mat2') result = mat2();
+    if (u.type == 'mat3') result = mat3();
+    if (u.type == 'mat4') result = mat4();
+    for (let i=0; i<u.length; i++) {
       for (let j=0; j<u.length; j++) {
         result[i][j] = u[i][j] + v[i][j];
       }
@@ -364,24 +365,25 @@ function add( u, v ) {
 // ----------------------------------------------------------------------------
 
 function subtract( u, v ) {
+  let result;
   if ( u.type != v.type ) {
     throw 'add(): trying to add different types';
   }
   if (isVector(u)) {
-    if (u.type == 'vec2') var result =vec2();
-    if (u.type == 'vec3') var result = vec3();
-    if (u.type == 'vec4') var result = vec4();
+    if (u.type == 'vec2') result = vec2();
+    if (u.type == 'vec3') result = vec3();
+    if (u.type == 'vec4') result = vec4();
     result.type = u.type;
-    for (var i=0; i<u.length; i++) {
+    for (let i=0; i<u.length; i++) {
       result[i] = u[i] - v[i];
     }
     return result;
   }
   if (isMatrix(u)) {
-    if (u.type == 'mat2') var result = mat2();
-    if (u.type == 'mat3') var result = mat3();
-    if (u.type == 'mat4') var result = mat4();
-    for (var i=0; i<u.length; i++) {
+    if (u.type == 'mat2') result = mat2();
+    if (u.type == 'mat3') result = mat3();
+    if (u.type == 'mat4') result = mat4();
+    for (let i=0; i<u.length; i++) {
       for (let j=0; j<u.length; j++) {
         result[i][j] = u[i][j] - v[i][j];
       }
@@ -393,81 +395,83 @@ function subtract( u, v ) {
 // ----------------------------------------------------------------------------
 
 function mult( u, v ) {
+   // console.log(typeof(u), u.type, typeof(v), v.type);
+  let result;
   if (typeof(u)=='number' && (isMatrix(v)||isVector(v))) {
     if (isVector(v)) {
       result = new Array(v.length);
       result.type = v.type;
-      for (var i =0; i<v.length; i++) {
+      for (let i = 0; i<v.length; i++) {
         result[i] = u*v[i];
       }
       return result;
     }
-    if (v.type = 'mat2') result = mat2();
-    if (v.type = 'mat3') result = mat3();
-    if (v.type = 'mat4') result = mat4();
+    if (v.type == 'mat2') result = mat2();
+    if (v.type == 'mat3') result = mat3();
+    if (v.type == 'mat4') result = mat4();
   }
   if (u.type=='mat2' && v.type == 'vec2') {
-    var result = vec2();
-    for (i=0; i<2; i++) {
+    result = vec2();
+    for (let i=0; i<2; i++) {
       result[i] = 0.0;
-      for (var k=0; k<2; k++) result[i]+=u[i][k]*v[k];
+      for (let k=0; k<2; k++) result[i]+=u[i][k]*v[k];
     }
     return result;
   }
   if (u.type=='mat3'&& v.type=='vec3') {
-    var result = vec3();
-    for (i=0; i<3; i++) {
+    result = vec3();
+    for (let i=0; i<3; i++) {
       result[i] = 0.0;
-      for (var k=0; k<3; k++) result[i]+=u[i][k]*v[k];
+      for (let k=0; k<3; k++) result[i]+=u[i][k]*v[k];
     }
     return result;
   }
   if (u.type=='mat4'&& v.type=='vec4') {
-    var result = vec4();
-    for (i=0; i<4; i++) {
+    result = vec4();
+    for (let i=0; i<4; i++) {
       result[i] = 0.0;
-      for (var k=0; k<4; k++) result[i]+=u[i][k]*v[k];
+      for (let k=0; k<4; k++) result[i]+=u[i][k]*v[k];
     }
     return result;
   }
   if (u.type=='mat2'&&v.type=='mat2') {
     result = mat2();
-    for (i=0; i<2; i++) {
-      for (j=0; j<2; j++) {
+    for (let i=0; i<2; i++) {
+      for (let j=0; j<2; j++) {
         result[i][j] = 0.0;
-        for (var k=0; k<2; k++) result[i][j]+=u[i][k]*v[k][j];
+        for (let k=0; k<2; k++) result[i][j]+=u[i][k]*v[k][j];
       }
     }
     return result;
   }
   if (u.type=='mat3'&&v.type=='mat3') {
     result = mat3();
-    for (i=0; i<3; i++) {
-      for (j=0; j<3; j++) {
+    for (let i=0; i<3; i++) {
+      for (let j=0; j<3; j++) {
         result[i][j] = 0.0;
-        for (var k=0; k<3; k++) result[i][j]+=u[i][k]*v[k][j];
+        for (let k=0; k<3; k++) result[i][j]+=u[i][k]*v[k][j];
       }
     }
     return result;
   } else if (u.type=='mat4'&&v.type=='mat4') {
     result = mat4();
-    for (i=0; i<4; i++) {
-      for (j=0; j<4; j++) {
+    for (let i=0; i<4; i++) {
+      for (let j=0; j<4; j++) {
         result[i][j] = 0.0;
-        for (var k=0; k<4; k++) result[i][j]+=u[i][k]*v[k][j];
+        for (let k=0; k<4; k++) result[i][j]+=u[i][k]*v[k][j];
       }
     }
-
     return result;
   }
   if (u.type=='vec3'&&v.type=='vec3') {
-    var result = vec3(u[0]*v[0], u[1]*v[1], u[2]*v[2]);
+    result = vec3(u[0]*v[0], u[1]*v[1], u[2]*v[2]);
     return result;
   }
   if (u.type=='vec4'&&v.type=='vec4') {
-    var result = vec4(u[0]*v[0], u[1]*v[1], u[2]*v[2], u[3]*v[3]);
+    result = vec4(u[0]*v[0], u[1]*v[1], u[2]*v[2], u[3]*v[3]);
     return result;
   }
+   console.log(typeof(u), u.type, typeof(v), v.type);
   throw 'mult(): trying to mult incompatible types';
 }
 
@@ -481,6 +485,7 @@ function translate( x, y, z ) {
   if (arguments.length!=2 && arguments.length != 3) {
     throw 'translate(): not a mat3 or mat4';
   }
+  let result;
   if (arguments.length == 2) {
     result = mat3();
     result[0][2] = x;
@@ -500,13 +505,22 @@ function translate( x, y, z ) {
 // ----------------------------------------------------------------------------
 
 function rotate( angle, axis ) {
-  if ( axis.length == 3 ) {
+    // 1 argument -> 2D rotation about Z axis
+    if (arguments.length == 1) {
+        return (mat3(
+            Math.cos(radians(angle)), -Math.sin(radians(angle)), 0.0,
+            Math.sin(radians(angle)), Math.cos(radians(angle) ), 0.0,
+            0.0, 0.0, 1.0,
+        ));
+    }
+    // 2 or 4 arguments -> 3D rotation
+  if ( arguments.length == 2 && axis.length ) {
     axis = vec3(axis[0], axis[1], axis[2] );
   }
   if (arguments.length == 4) {
     axis = vec3(arguments[1], arguments[2], arguments[3]);
   }
-  if (axis.type != 'vec3') throw 'rotate: axis not a vec3';
+  if (arguments.type != 'vec3') throw 'rotate: axis not a vec3';
   const v = normalize( axis );
 
   const x = v[0];
@@ -559,7 +573,7 @@ function rotateZ(theta) {
 function scale( ) {
 // legacy code
 // should use mult
-
+  let result;
   if (arguments.length == 2 && isVector(arguments[1])) {
     result = new Array(arguments[1].length);
     result.type = arguments[1].type;
@@ -571,7 +585,7 @@ function scale( ) {
   // end legacy code
 
   if (arguments.length == 3) {
-    var result = mat4();
+    result = mat4();
     result[0][0] = arguments[0];
     result[1][1] = arguments[1];
     result[2][2] = arguments[2];
@@ -1171,5 +1185,5 @@ function identity(n = 3) {
   return mat3();
 }
 
-export { vec2, vec3, vec4, mat2, mat3, mat4, flatten, mult, translate, rotate, scale, dot, negate, cross, length, normalize, mix, transpose, det, inverse, normalMatrix, identity };
+export { vec2, vec3, vec4, mat2, mat3, mat4, flatten, mult, translate, rotate, rotateZ, scale, dot, negate, cross, length, normalize, mix, transpose, det, inverse, normalMatrix, identity };
 

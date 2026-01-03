@@ -44,7 +44,7 @@ in vec4 vColour;
 out vec4 fColour;
 
 void main() {
-  fColour = vColour;
+  fColour = vec4(1.0,1.0,0.0,1.0); //vColour;
 }
 `;
 
@@ -118,7 +118,9 @@ void main() {
     gl.bufferData(gl.ARRAY_BUFFER, positionsFloat32, gl.STATIC_DRAW);
     gl.bindBuffer(gl.ARRAY_BUFFER, this.cBuffer);
     gl.bufferData(gl.ARRAY_BUFFER, coloursFloat32, gl.STATIC_DRAW);
-    // count will be set by caller
+    // Store the count: positions are 2 floats per point
+    this.count = positionsFloat32.length / 2;
+    console.log(`Renderer.uploadData: count now = ${this.count}`);
   }
 
   render(generatedCount, showCentres, rotateOn, srcX = 0, srcY = 0) {
@@ -126,15 +128,7 @@ void main() {
     gl.viewport(0, 0, this.canvas.width, this.canvas.height);
     gl.clear(gl.COLOR_BUFFER_BIT);
 
-    gl.uniform1f(this.pointSizeLoc, 1.0);
-    if (generatedCount > 0) gl.drawArrays(gl.POINTS, 3, generatedCount);
-
-    if (showCentres) {
-      gl.uniform1f(this.pointSizeLoc, 8.0);
-      gl.drawArrays(gl.POINTS, 0, 3);
-    }
-
-    // set rotation matrix uniform
+    // set rotation matrix uniform BEFORE drawing
     let crm = identity();
     if (rotateOn) {
       crm = mult(crm, translate(srcX, srcY));
@@ -143,5 +137,18 @@ void main() {
       this._srcTheta = (this._srcTheta || 0) + 1;
     }
     gl.uniformMatrix3fv(this.centeredRotationMatrixLoc, false, flatten(crm));
+
+    gl.uniform1f(this.pointSizeLoc, 4.0);
+    // Draw all points (3 centres + generated points)
+    if (this.count > 3) {
+      const numToDraw = this.count - 3;
+      console.log(`Renderer: drawing ${numToDraw} generated points (count=${this.count})`);
+      gl.drawArrays(gl.POINTS, 3, numToDraw);
+    }
+
+    if (showCentres) {
+      gl.uniform1f(this.pointSizeLoc, 8.0);
+      gl.drawArrays(gl.POINTS, 0, 3);
+    }
   }
 }
