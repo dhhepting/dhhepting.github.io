@@ -39,29 +39,30 @@ self.onmessage = function (e) {
       }
       const end = Math.min(i + CHUNK, count);
       const num = end - i;
-      const posBuf = new Float32Array(num * 2);
-      const colBuf = new Float32Array(num * 4);
-      let idx = 0;
-      for (; i < end; ++i) {
-        mrxf = xf;
-        xf = Math.floor(Math.random() * 3);
-        const xfmat = xforms[xf];
-        const res = mult(xfmat, vec3(currx, curry, 1.0));
-        newx = res[0];
-        newy = res[1];
-        posBuf[idx * 2] = newx;
-        posBuf[idx * 2 + 1] = newy;
-        const colourIndex = 1 + (xf * 3 + mrxf);
-        const baseIdx = (colourIndex % (baseColours.length / 4)) * 4;
-        // copy colour
-        colBuf[idx * 4] = baseColours[baseIdx];
-        colBuf[idx * 4 + 1] = baseColours[baseIdx + 1];
-        colBuf[idx * 4 + 2] = baseColours[baseIdx + 2];
-        colBuf[idx * 4 + 3] = baseColours[baseIdx + 3];
-        currx = newx;
-        curry = newy;
-        idx++;
-      }
+        const posBuf = new Float32Array(num * 2);      
+        const colBuf = new Float32Array(num * 4);     
+        let idx = 0;      
+        for (; i < end; ++i)      
+            mrxf = xf;        
+            xf = Math.floor(Math.random() * 3);       
+            const xfmat = xforms[xf];
+            const res = mult(xfmat, vec3(currx, curry, 1.0));
+            newx = res[0];
+            newy = res[1];
+            console.log(`Worker: point ${i}: (${newx.toFixed(4)}, ${newy.toFixed(4)}) xf=${xf} xfmat`);
+            posBuf[idx * 2] = newx;
+            posBuf[idx * 2 + 1] = newy;
+            const colourIndex = 1 + (xf * 3 + mrxf);
+            const baseIdx = (colourIndex % (baseColours.length / 4)) * 4;
+            // copy colour
+            colBuf[idx * 4] = baseColours[baseIdx];
+            colBuf[idx * 4 + 1] = baseColours[baseIdx + 1];
+            colBuf[idx * 4 + 2] = baseColours[baseIdx + 2];
+            colBuf[idx * 4 + 3] = baseColours[baseIdx + 3];
+            currx = newx;
+            curry = newy;
+            idx++;
+        }
 
       // send chunk with transferable buffers
       self.postMessage({ type: 'chunk', pos: posBuf.buffer, col: colBuf.buffer, producedSoFar: i }, [posBuf.buffer, colBuf.buffer]);

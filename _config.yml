@@ -251,6 +251,26 @@ tipue_search:
     - notes
     - gallery
     pages: true
+
+# Deploy targets: environment-specific overrides.
+# Use `scripts/generate_config.py` to produce `_config_active.yml`
+# which merges the selected `deploy.targets.<name>` into the base config.
+deploy:
+  default: uregina
+  targets:
+    uregina:
+      url: https://www2.cs.uregina.ca
+      baseurl: /~hepting
+      webmaster_verifications:
+        google: "x1yg5SYk5hD2RE32QX-otdPrCyHgJfRhnidrzYgjONs"
+        yandex: "f4086326493c97ca"
+        bing: "B58E8EE8B63D2D6869CA610DC73CB57A"
+      include:
+        - '.htaccess'
+    local:
+      url: http://localhost:4000
+      baseurl: ""
+      webmaster_verifications: {}
 title: D. H. Hepting, Ph.D.
 url: http://www2.cs.uregina.ca/
 webmaster_verifications:
