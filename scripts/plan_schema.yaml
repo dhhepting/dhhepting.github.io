@@ -1,0 +1,19 @@
+---
+# Minimal Yamale schema for offering plan validation. Install yamale and
+# adapt this schema to your needs.
+# Run: yamale -s scripts/plan_schema.yaml path/to/plan_active.yml
+
+offering: map(required=True)
+offering.id: str()
+offering.title: str()
+offering.semester: str()
+
+course: str()
+
+rubrics: map()
+
+assignments: list()
+
+media: map()
+
+schedule: list()

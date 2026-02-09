@@ -23,7 +23,7 @@ if (len(reldir) != 2):
 	sys.exit()
 
 # find offering indicated by arguments and load meeting days
-with open(DATA_ROOT + 'offerings.csv', newline='') as offfile:
+with open(DATA_ROOT + 'all/offerings.csv', newline='') as offfile:
     offreader = csv.DictReader(offfile)
     off_found = False
     for row in offreader:
