@@ -16,7 +16,7 @@ if (len(reldir) != 2):
 	sys.exit()
 
 # find offering indicated by arguments and load meeting days
-with open(DATA_ROOT + 'offerings.csv', newline='') as offfile:
+with open(DATA_ROOT + 'all/offerings.csv', newline='') as offfile:
     offreader = csv.DictReader(offfile)
     off_found = False
     for row in offreader:
@@ -30,7 +30,7 @@ if off_found == False:
     sys.exit()
 daysFromMonday = { 'Mon' : 0, 'Tue' : 1, 'Wed' : 2, 'Thu' : 3, 'Fri' : 4, 'Sat' : 5, 'Sun' : 6 }
 # if offering is found, use semester data to make meetings list
-with open(DATA_ROOT + 'semesters.csv', newline='') as semfile:
+with open(DATA_ROOT + 'all/semesters.csv', newline='') as semfile:
     semreader = csv.DictReader(semfile)
     sem_found = False
     for row in semreader:

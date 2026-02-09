@@ -55,7 +55,7 @@ tslots[tsk] = {'Times': tslot,
                'Thu': 'E_', 'Fri': 'E_' }
 
 # find course offerings for indicated semester
-with open(DATA_ROOT + 'offerings.csv', newline='') as offfile:
+with open(DATA_ROOT + 'all/offerings.csv', newline='') as offfile:
     offreader = csv.DictReader(offfile)
     semoff_found = 0
     for row in offreader:
@@ -90,7 +90,7 @@ with open(semschedmd,"w") as schedmd:
     schedmd.write("sem: " + currsem + "\n")
     schedmd.write("main_entity: Service\n")
     schedmd.write("officeblocks:\n")
-    with open(DATA_ROOT + 'officehrs.csv', newline='') as offile:
+    with open(DATA_ROOT + 'all/officehrs.csv', newline='') as offile:
         offreader = csv.DictReader(offile)
         for row in offreader:
             if (row['semester'] == currsem):
@@ -116,7 +116,7 @@ with open(semschedmd,"w") as schedmd:
     schedmd.write("layout: bg-image\n")
     schedmd.write("---\n")
 
-    with open(DATA_ROOT + 'reserved.csv', newline='') as resfile:
+    with open(DATA_ROOT + 'all/reserved.csv', newline='') as resfile:
         resreader = csv.DictReader(resfile)
         for row in resreader:
             if (row['semester'] == currsem):
