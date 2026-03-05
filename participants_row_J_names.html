@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CS 280 Midterm Seating - Row J</title>
+<style>
+    @page { size: Letter portrait; margin: 0.5in; }
+    html,body{height:100%;margin:0;padding:0;font-family: Arial, Helvetica, sans-serif;color:#000}
+    .page{box-sizing:border-box;padding:0.5in;height:100vh;display:flex;flex-direction:column}
+    h1{text-align:left;margin:0 0 0.25in 0;font-size:28pt;font-weight:700}
+    ul.name-list{list-style:none;padding:0;margin:0;flex:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;max-width:100%}
+    ul.name-list li{width:100%;text-align:left;line-height:1.0;padding:0.06in 0;overflow:hidden}
+</style>
+</head>
+<body>
+<div class="page">
+    <h1>CS 280 Midterm Seating - Row J</h1>
+  <ul class="name-list" id="names">
+    <li>Aimdip Junior Mouafo Noutossi</li>
+    <li>Bibekjot Saini</li>
+    <li>Chetachukwu Okonkwo</li>
+    <li>Chhavi Gurjar</li>
+    <li>Daniel Ekine</li>
+    <li>Jaber Ahmed Onik</li>
+    <li>Kavya Anilkumar Panchal</li>
+    <li>Lakshay</li>
+    <li>Muhammad Hani Saulat</li>
+    <li>Nishit Suratwala</li>
+    <li>Olawande Aribisala</li>
+    <li>Osinachi Onuh</li>
+    <li>Vraj Mistry</li>
+    <li>Will Grainger</li>
+  </ul>
+</div>
+<script>
+    (function(){
+    const list = document.getElementById('names');
+    const items = Array.from(list.children).filter(li=>li.textContent.trim().length>0);
+    if(items.length===0){ items.push(list.children[0]); }
+    const page = document.querySelector('.page');
+    const headingH = document.querySelector('h1').offsetHeight;
+    const avail = page.clientHeight - headingH - 12; 
+    let perLine = Math.floor(avail / items.length);
+    let font = Math.floor(perLine * 0.95);
+    if(font < 10) font = 10;
+    if(font > 400) font = 400;
+    items.forEach(li=>{ li.style.fontSize = font + 'px'; });
+})();
+</script>
+</body>
+</html>
