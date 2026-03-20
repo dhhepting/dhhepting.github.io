@@ -118,9 +118,44 @@ def main():
         default_in, default_out = default_paths(args.course, args.semester, args.meet)
         infile = infile or default_in
         out = out or default_out
+    # If media CSV doesn't exist, run sharemedia.py to attempt to create it
+    workspace_root = os.getcwd()
+    def run_sharemedia():
+        share_cmd = ["python3", os.path.join("script", "sharemedia.py"), workspace_root, f"{args.course}/{args.semester}"]
+        print(f"Running sharemedia to populate media CSV: {' '.join(share_cmd)}")
+        try:
+            proc = subprocess.run(share_cmd, check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+            print(proc.stdout)
+            return proc.returncode == 0
+        except Exception as e:
+            print(f"Error running sharemedia.py: {e}")
+            return False
 
     if not os.path.exists(infile):
-        raise SystemExit(f"Input file not found: {infile}")
+        print(f"Input file not found: {infile} — attempting to run sharemedia.py to create it")
+        run_sharemedia()
+        if not os.path.exists(infile):
+            raise SystemExit(f"Input file not found after running sharemedia: {infile}")
+
+    # If media.csv exists but contains no entries for the requested meeting, run sharemedia.py to refresh
+    def media_has_meet_entries(path, meet):
+        key = str(int(meet)).zfill(2)
+        try:
+            for row in read_media_csv(path):
+                if len(row) >= 3:
+                    row_meet = str(row[0]).strip().zfill(2)
+                    if row_meet == key:
+                        return True
+        except Exception:
+            return False
+        return False
+
+    if not media_has_meet_entries(infile, args.meet):
+        print(f"No entries for meet {args.meet} in {infile} — running sharemedia.py to refresh media.csv")
+        run_sharemedia()
+        # re-check
+        if not media_has_meet_entries(infile, args.meet):
+            print(f"Warning: still no entries for meet {args.meet} after running sharemedia.py")
 
     warnings = convert(infile, args.meet, out)
     print(f"Wrote {out}")

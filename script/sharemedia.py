@@ -64,34 +64,65 @@ else:
 # replace dropbox.com with dropboxcontent in URL
 dbmedia_dir = "/Users/hepting/Dropbox/teaching/" + "m-" + off_id + "/"
 filedict = {}
+# path to local media.csv in site data (normalize + in path)
+dbmedia_csv = datadir.replace("+","_") + "media.csv"
+# read existing media.csv (if present) to reuse known URLs
+existing = {}
+if os.path.exists(dbmedia_csv):
+  try:
+    with open(dbmedia_csv, 'r', encoding='utf-8') as mf:
+      # skip header, parse lines: meet,file,URL
+      first = True
+      for line in mf:
+        if first:
+          first = False
+          continue
+        parts = line.rstrip('\n').split(',')
+        if len(parts) >= 3:
+          fname = parts[1]
+          url = ','.join(parts[2:]).strip()
+          if url:
+            existing[fname] = url
+  except Exception as e:
+    print(f"Warning: failed to read existing media.csv: {e}")
 for root, subdirs, files in os.walk(dbmedia_dir):
-    #print(dbmedia_dir)
+    print(dbmedia_dir)
     for filename in files:
         if (filename != ".DS_Store"):
             file_path = os.path.join(root, filename)
             db_path = os.path.join(dbmedia_dir, filename)
             dbp = db_path[len("Users/hepting/Dropbox/"):]
             try:
-                #print (dbp)
-                share = dbx.sharing_create_shared_link(dbp)
-                shared_url = (share.url).replace('www.dropbox','dl.dropboxusercontent')
-                filedict[filename] = shared_url
+                print(dbp)
+                # reuse existing URL if present
+                if filename in existing and existing[filename]:
+                    filedict[filename] = existing[filename]
+                else:
+                    share = dbx.sharing_create_shared_link(dbp)
+                    shared_url = (share.url).replace('www.dropbox','dl.dropboxusercontent')
+                    filedict[filename] = shared_url
+                    # add to existing map so new entries are preserved
+                    existing[filename] = shared_url
             except ApiError as err:
                 print(err)
 
 
 # write sharing link details to csv file in _data directory of site
-#dbmedia_csv = datadir + off_id.replace("+","_") + ".csv"
-dbmedia_csv = datadir.replace("+","_") + "media.csv"
-with open(dbmedia_csv,"w") as data_file:
-    data_file.write("meet,file,URL\n")
-    for w in sorted(filedict, key=filedict.get, reverse=True):
-        meetstr = str(w).split(".")
-        print (meetstr)
-        if " " in meetstr[0]:
-            meetstr = meetstr[0].split(" ")
-        if "-" in meetstr[0]:
-            meetstr = meetstr[0].split("-")
-        data_str = str(meetstr[0]).zfill(2) + "," + str(w) + "," + str(filedict[w]+"\n")
-        print(data_str)
-        data_file.write(data_str)
+with open(dbmedia_csv, "w", encoding='utf-8') as data_file:
+  data_file.write("meet,file,URL\n")
+  # Use the keys from the combined `existing`/filedict map so we include preserved URLs
+  # Sort by filename (column 2) for predictable ordering
+  for w in sorted(existing.keys()):
+    try:
+      meetstr = str(w).split(".")
+      if " " in meetstr[0]:
+        meetstr = meetstr[0].split(" ")
+      if "-" in meetstr[0]:
+        meetstr = meetstr[0].split("-")
+      meetval = str(meetstr[0]).zfill(2)
+    except Exception:
+      meetval = "00"
+    url = existing.get(w, '')
+    data_str = f"{meetval},{w},{url}\n"
+    print(data_str.strip())
+    data_file.write(data_str)
