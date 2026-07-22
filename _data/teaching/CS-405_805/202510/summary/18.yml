@@ -1,0 +1,1012 @@
+Audio-Transcript:
+- desc: 'Okay, so since I didn''t
+
+    have the recording on right'
+  persid: ''
+- desc: 'away, so I want to talk about
+
+    sampling and the rest of the'
+  persid: ''
+- desc: 'assignments, so we''ll look at
+
+    how to construct, sir pin ski'
+  persid: ''
+- desc: 'gaskets and tetrahedra. Look at
+
+    those assignments, and then talk'
+  persid: ''
+- desc: about sound.
+  persid: ''
+- desc: So I created an image here, and
+  persid: ''
+- desc: 'anything you notice about the
+
+    image?'
+  persid: ''
+- desc: 'The circles are pretty loaded,
+
+    yeah,'
+  persid: ''
+- desc: I suppose
+  persid: ''
+- desc: 'I are they bigger than they need
+
+    to be? So if we think in two'
+  persid: ''
+- desc: dimensions and
+  persid: ''
+- desc: 'so we have a circle, a unit
+
+    circle at the origin, and then'
+  persid: ''
+- desc: an equilateral triangle and
+  persid: ''
+- desc: 'is inscribed inside the circle,
+
+    so When we translate to the Vert'
+  persid: ''
+- desc: towards the vertices and
+  persid: ''
+- desc: I'm not doing a good job. Okay?
+  persid: ''
+- desc: So they should be touching,
+  persid: ''
+- desc: but not overlapping. You
+  persid: ''
+- desc: Does that make sense? So Do
+  persid: ''
+- desc: Yes, here they're overlapping. I
+  persid: ''
+- desc: 'so what I did in this image was
+
+    I, I made'
+  persid: ''
+- desc: 'an object instance that''s
+
+    floating in front and not to the'
+  persid: ''
+- desc: 'top, and then I transformed that
+
+    three times to make the shape in'
+  persid: ''
+- desc: 'the background upon which the
+
+    shadow is being cast and'
+  persid: ''
+- desc: 'it missed opportunity to call it
+
+    that scare ginsky gasket. I'
+  persid: ''
+- desc: so you can have that.
+  persid: ''
+- desc: 'So the way I''ve set up the pbrt
+
+    file is I''m looking that I'
+  persid: ''
+- desc: position is two and y looking at
+  persid: ''
+- desc: 'so we''re just x is zero, y is
+
+    two and Z is zero, and looking'
+  persid: ''
+- desc: 'at the origin, was the Z vector
+
+    being the up direction.'
+  persid: ''
+- desc: 'So this is all COVID From the
+
+    simple pbrt. And then I''m'
+  persid: ''
+- desc: 'including gasket dot PBR key,
+
+    which defines the instance'
+  persid: ''
+- desc: 'called gasket. And then I''m
+
+    scaling'
+  persid: ''
+- desc: 'I''m trying translating the
+
+    object three times, and then I''m'
+  persid: ''
+- desc: 'just after that, I''m translating
+
+    once more With the original,'
+  persid: ''
+- desc: 'with the original instance, not
+
+    scale'
+  persid: ''
+- desc: 'So this is what the gasket
+
+    object looks like.'
+  persid: ''
+- desc: 'So it''s material, diffuse,
+
+    material translate, and we''re'
+  persid: ''
+- desc: 'scaling well. We say the sphere
+
+    has a radius of point 03125,'
+  persid: ''
+- desc: 'so I believe There''s 240 43
+
+    spheres. I'
+  persid: ''
+- desc: 'I have a little piece of code
+
+    here. Let me show you where it'
+  persid: ''
+- desc: is on
+  persid: ''
+- desc: the website and
+  persid: ''
+- desc: 'so I didn''t do very well with
+
+    documentation. Sorry about that.'
+  persid: ''
+- desc: 'So we''re doing, I''m defining a
+
+    function gasket that will take a'
+  persid: ''
+- desc: 'level so it''s, it''s recursive
+
+    function.'
+  persid: ''
+- desc: 'So if level is greater than
+
+    zero, we''re going to call the'
+  persid: ''
+- desc: function with the image
+  persid: ''
+- desc: of the
+  persid: ''
+- desc: 'of the point that we start with.
+
+    And so in our case, the original'
+  persid: ''
+- desc: 'point is 000, because that''s,
+
+    that''s this point here. And'
+  persid: ''
+- desc: and then I'm
+  persid: ''
+- desc: outputting the details.
+  persid: ''
+- desc: Nothing so
+  persid: ''
+- desc: 'if levels gradients are up
+
+    calling it, I''m recursively'
+  persid: ''
+- desc: 'calling it with each of the
+
+    three transformations for the'
+  persid: ''
+- desc: 'vertices that correspond to the
+
+    vertices of the triangle or the'
+  persid: ''
+- desc: 'gasket. And if I''m at the leaf
+
+    node, then I,'
+  persid: ''
+- desc: 'then I print, then I Do the last
+
+    transformation and print out The'
+  persid: ''
+- desc: scaling. So
+  persid: ''
+- desc: Did That make sense? I
+  persid: ''
+- desc: 'CS Third Way. The details of the
+
+    transform of the program are in'
+  persid: ''
+- desc: 'this last little bit. So we
+
+    defined three transformation'
+  persid: ''
+- desc: 'matrices so we scale from the
+
+    coordinate of the vertex to the'
+  persid: ''
+- desc: 'origin, and then we scale by a
+
+    half.'
+  persid: ''
+- desc: 'And then we scale, or translate
+
+    back to the from the origin to'
+  persid: ''
+- desc: the sent fixed point.
+  persid: ''
+- desc: Okay,
+  persid: ''
+- desc: 'and then so we do object begin,
+
+    and then SP is a starting point'
+  persid: ''
+- desc: which is 000,
+  persid: ''
+- desc: 'and then we say starting point
+
+    identity matrix, and then we''re'
+  persid: ''
+- desc: 'giving it five levels. So I did
+
+    this. There''s room for'
+  persid: ''
+- desc: 'improvement in the code, but
+
+    gives you an idea of How it can'
+  persid: ''
+- desc: proceed. I
+  persid: ''
+- desc: 'so we start with zero, then We
+
+    have the sphere, The unit'
+  persid: ''
+- desc: sphere, I
+  persid: ''
+- desc: 'I''m curious why It''s good. It''s
+
+    taking so long. I'
+  persid: ''
+- desc: 'maybe it''s too close. The eye
+
+    point is too Close. We''ll see. C'
+  persid: ''
+- desc: I,
+  persid: ''
+- desc: that's A bit too close. I
+  persid: ''
+- desc: too far away. Let's Try That. I
+  persid: ''
+- desc: 'click theory is going To be too
+
+    Large. I'
+  persid: ''
+- desc: 'so it won''t be very easy To see
+
+    the Initial sphere, but do'
+  persid: ''
+- desc: 'It looks like they''re really
+
+    stuff in there, doesn''t it? But'
+  persid: ''
+- desc: it seems to be correct. I
+  persid: ''
+- desc: 'so the problem is with My
+
+    diagram here, Isn''t it? I'
+  persid: ''
+- desc: 'should we try? Let''s try another
+
+    intermediate size. Should have'
+  persid: ''
+- desc: 'added a command line argument
+
+    for This. I'
+  persid: ''
+- desc: 'i was expecting the spirit to be
+
+    still a little more visible on'
+  persid: ''
+- desc: 'the other side. Is there? Do I
+
+    See it? This time? I'
+  persid: ''
+- desc: Okay, that's two. One
+  persid: ''
+- desc: More, 1010.
+  persid: ''
+- desc: 'So I think it''s retracting from
+
+    the sphere, because I just did'
+  persid: ''
+- desc: 'approximation, and I did four
+
+    decimal places of the'
+  persid: ''
+- desc: transformation.
+  persid: ''
+- desc: 'Okay, does that make sense? Is
+
+    that helpful? I'
+  persid: ''
+- desc: 'so how do we make a tetrahedron
+
+    out of this? I'
+  persid: ''
+- desc: 'Are we able to, like,
+
+    instantiate points and stuff'
+  persid: ''
+- desc: 'like that? Because I know how to
+
+    do it with just points, but with'
+  persid: ''
+- desc: 'spheres, you''d have to, you''d
+
+    either have to, again, use'
+  persid: ''
+- desc: 'points, or you have to start to
+
+    collate the faces.'
+  persid: ''
+- desc: 'Can I meet? You''re a little bit
+
+    over complicating this. So how'
+  persid: ''
+- desc: 'do we get a tetrahedron instead
+
+    of a triangle,'
+  persid: ''
+- desc: three extra, you'd have to do a
+  persid: ''
+- desc: 'transform on the other like you
+
+    do the one, and then you would'
+  persid: ''
+- desc: 'have to do a trend, basically a
+
+    duplicate of it, but that'
+  persid: ''
+- desc: 'duplicate would be overall,
+
+    transform to'
+  persid: ''
+- desc: 'be different. How to position
+
+    different? Appear to be'
+  persid: ''
+- desc: 'different, position differently
+
+    so it would come out. Basically'
+  persid: ''
+- desc: your object space
+  persid: ''
+- desc: 'would be slightly different
+
+    transformations.'
+  persid: ''
+- desc: 'So how about it? So what do we
+
+    have now to make this triangle?'
+  persid: ''
+- desc: 'We got to replace all those
+
+    spheres with the littles, except'
+  persid: ''
+- desc: 'we got to make it three
+
+    dimensions, because it''s still'
+  persid: ''
+- desc: 'only one dimension or two
+
+    dimensions.'
+  persid: ''
+- desc: 'Now, yes, how many
+
+    transformations are we using to'
+  persid: ''
+- desc: 'make this triangle? Two
+
+    dimensions, three?'
+  persid: ''
+- desc: 'So how many transformations do
+
+    we need to make a 3d object'
+  persid: ''
+- desc: form? Yes.
+  persid: ''
+- desc: 'So we can think of the triangle
+
+    being in the sphere at the'
+  persid: ''
+- desc: 'try not To confuse this. So this
+
+    is just too deep. I'
+  persid: ''
+- desc: and then at this point we have
+  persid: ''
+- desc: 'triangle. And then we want to
+
+    put the other transformation'
+  persid: ''
+- desc: there,
+  persid: ''
+- desc: but At the Top we're
+  persid: ''
+- desc: 'I''m sorry I wrote that so small.
+
+    So the fourth transformation is'
+  persid: ''
+- desc: 'at the center of the triangle at
+
+    a different height.'
+  persid: ''
+- desc: 'So that means we can have, so
+
+    this is one triangle here, and'
+  persid: ''
+- desc: 'then we have another triangle.
+
+    And'
+  persid: ''
+- desc: 'so both triangles one and two
+
+    and three and four.'
+  persid: ''
+- desc: 'So if we just take the triangle
+
+    and copy it. You get the right'
+  persid: ''
+- desc: 'side looking properly bussing,
+
+    but'
+  persid: ''
+- desc: 'it wouldn''t have the interior
+
+    structure. So that''s why we''re'
+  persid: ''
+- desc: 'iterating with four
+
+    transformations instead of'
+  persid: ''
+- desc: 'three. Does that make sense? So
+
+    what are some other ways you'
+  persid: ''
+- desc: 'could instead of using spheres,
+
+    how could we describe the'
+  persid: ''
+- desc: 'tetrahedra shape the serpent ski
+
+    tetrahedra He drawn'
+  persid: ''
+- desc: triangles.
+  persid: ''
+- desc: 'Yeah, we Could do triangles,
+
+    cubes, oh,'
+  persid: ''
+- desc: here so we can define
+  persid: ''
+- desc: 'the shape and then transform it
+
+    instead of A sphere'
+  persid: ''
+- desc: How About cylinders? I
+  persid: ''
+- desc: 'or you could do boxes as well, I
+
+    guess so. Originally I did'
+  persid: ''
+- desc: spheres.
+  persid: ''
+- desc: One is 35 years old, and
+  persid: ''
+- desc: 'if you do cubes, you might have
+
+    the opposite problem, where'
+  persid: ''
+- desc: 'there''s gaps and they''re not
+
+    actually touching, just because'
+  persid: ''
+- desc: 'where the points are around the
+
+    cube. I Right? Because, maybe'
+  persid: ''
+- desc: 'not because the triangle, but if
+
+    we actually use the triangle,'
+  persid: ''
+- desc: 'there would be the height would
+
+    be less than the width, so you'
+  persid: ''
+- desc: 'end up getting like, so you have
+
+    to, like, sort of account for'
+  persid: ''
+- desc: 'that little gap and you face
+
+    together, so maybe you wouldn''t'
+  persid: ''
+- desc: 'have that same cubic gap. It''s
+
+    like the soft mother triangle is'
+  persid: ''
+- desc: 'smaller than the width of the
+
+    side. All'
+  persid: ''
+- desc: 'the lengths are the same. All
+
+    the sides are the same'
+  persid: ''
+- desc: 'length, but the interior height
+
+    is different than that side'
+  persid: ''
+- desc: 'length. You have, I think, root
+
+    three for a length of two, and'
+  persid: ''
+- desc: 'then the height of the pyramid
+
+    is root two. I''ve done all these'
+  persid: ''
+- desc: 'calculations already because I
+
+    made it out of points. So'
+  persid: ''
+- desc: 'points. So then it''s, it''s easy
+
+    to do points instead of spheres'
+  persid: ''
+- desc: 'instead of points, because we
+
+    Just placing this under the'
+  persid: ''
+- desc: sphere at the point. Okay?
+  persid: ''
+- desc: 'So is 10 levels of recursion.
+
+    Much'
+  persid: ''
+- desc: it gets a little worried. I
+  persid: ''
+- desc: 'so what do we see? Let me zoom
+
+    in here. I'
+  persid: ''
+- desc: 'blurring surface key. That''s
+
+    good. I'
+  persid: ''
+- desc: What was your answer?
+  persid: ''
+- desc: 'How did You describe them first?
+
+    Oh, okay. Do'
+  persid: ''
+- desc: 'so we have jagged edges from
+
+    aliasing. I'
+  persid: ''
+- desc: So where we have,
+  persid: ''
+- desc: 'where we have blurring. When we
+
+    look at the image at Greg,'
+  persid: ''
+- desc: 'intended resolution. We don''t
+
+    see this. I'
+  persid: ''
+- desc: 'It looks fine there for that
+
+    resolution, but once'
+  persid: ''
+- desc: 'you hit so many recursions, you
+
+    can''t really see the next ones'
+  persid: ''
+- desc: anyway, regardless of what
+  persid: ''
+- desc: 'resolution. So 10 is probably
+
+    too many, because you get to the'
+  persid: ''
+- desc: 'point where you just can''t see
+
+    the recursion anymore.'
+  persid: ''
+- desc: 'Yeah. So there are a couple
+
+    ideas here'
+  persid: ''
+- desc: the larger screen. Do
+  persid: ''
+- desc: so,
+  persid: ''
+- desc: 'so we see a staircase effect,
+
+    but also the different colors of'
+  persid: ''
+- desc: the pixels indicate
+  persid: ''
+- desc: that we're
+  persid: ''
+- desc: 'applying some anti aliasing here
+
+    to compete. The blur is it''s'
+  persid: ''
+- desc: compensating for the AVIC And
+  persid: ''
+- desc: 'so question is, what size is
+
+    sphere? I'
+  persid: ''
+- desc: 'so that question makes sense, so
+
+    what? How big a sphere do we'
+  persid: ''
+- desc: 'need, so that we''re making the
+
+    most of our display, but not'
+  persid: ''
+- desc: adding
+  persid: ''
+- desc: 'adding extra detail that, what
+
+    kind of can we think of an'
+  persid: ''
+- desc: expression to or attest to
+  persid: ''
+- desc: do that I use,
+  persid: ''
+- desc: like a radius of half the
+  persid: ''
+- desc: 'height short, yeah, Okay, so
+
+    Let''s Say you'
+  persid: ''
+- desc: 'so what are the world
+
+    coordinates that we have In this'
+  persid: ''
+- desc: image? And
+  persid: ''
+- desc: so We can figure out what
+  persid: ''
+- desc: 'how much world how much spaces
+
+    and world coordinates in the'
+  persid: ''
+- desc: 'image, and We divide that so we
+
+    figure out how much we'
+  persid: ''
+- desc: 'how Much of that space is
+
+    covered by A Pixel i'
+  persid: ''
+- desc: 'So conceptually, as we find out
+
+    how much world space is being'
+  persid: ''
+- desc: covered by a pixel, and then,
+  persid: ''
+- desc: 'and then, we find the
+
+    relationship between the size of'
+  persid: ''
+- desc: 'the sphere and the size of the
+
+    pixel and'
+  persid: ''
+- desc: 'so should the sphere be the same
+
+    size as The pixel, or should it'
+  persid: ''
+- desc: be half as Big or
+  persid: ''
+- desc: 'so I went to lead This into a
+
+    discussion about sampling if'
+  persid: ''
+- desc: 'I so we think about it in terms
+
+    of a signal. How'
+  persid: ''
+- desc: 'many samples do we need to take
+
+    to reconstruct that signal?'
+  persid: ''
+- desc: Does that question make sense?
+  persid: ''
+- desc: 'Let''s think about CD audio,
+
+    compact disc audio. You still'
+  persid: ''
+- desc: familiar with compact discs?
+  persid: ''
+- desc: Okay, yeah,
+  persid: ''
+- desc: 'is that what C stands for? Yes.
+
+    Oh, yeah, well, oh, good God,'
+  persid: ''
+- desc: the answer
+  persid: ''
+- desc: might be all
+  persid: ''
+- desc: 'over. I mean, I knew the Fauci
+
+    so just didn''t know that what CS'
+  persid: ''
+- desc: stand
+  persid: ''
+- desc: 'for, yeah, I once asked somebody
+
+    what an LP was. This is a few'
+  persid: ''
+- desc: 'years ago, and someone and they
+
+    said, LP, it''s a lumbar'
+  persid: ''
+- desc: 'puncture. They said they were
+
+    watching house at the time, if'
+  persid: ''
+- desc: 'you remember that show. Anyway,
+
+    LP stands for long play, 33 and'
+  persid: ''
+- desc: 'a half third revolutions per
+
+    minute on the turntable. Anyway,'
+  persid: ''
+- desc: I digress a little bit. See
+  persid: ''
+- desc: 'answering machine all over
+
+    again. I'
+  persid: ''
+- desc: 'so this CD audio standard is the
+
+    sample at 44.1 kilohertz.'
+  persid: ''
+- desc: 'Can people hear up to 44.1
+
+    kilohertz.'
+  persid: ''
+- desc: They tried really hard.
+  persid: ''
+- desc: Most People can hear around 22 i
+  persid: ''
+- desc: 'So have you ever heard of
+
+    Nyquist?'
+  persid: ''
+- desc: 'Sometimes it''s also, have you
+
+    heard of Shannon Claude Shannon?'
+  persid: ''
+- desc: 'Anyway? Sometimes it''s referred
+
+    to as Nyquist Shannon, but in'
+  persid: ''
+- desc: 'the text, it''s called Nyquist.
+
+    So Nyquist, the Nyquist sampling'
+  persid: ''
+- desc: 'rate is the rate we need to
+
+    reconstruct the signal. So if we'
+  persid: ''
+- desc: 'sample it at twice the highest
+
+    frequency, then we can'
+  persid: ''
+- desc: 'reconstruct the sound, or you
+
+    can reconstruct a signal. If'
+  persid: ''
+- desc: 'it. So there are a couple quiz
+
+    questions here that we can bring'
+  persid: ''
+- desc: In
+  persid: ''
+- desc: to Review And
+  persid: ''
+- desc: 'I so there is a question, Is it
+
+    useful to think of pixels as'
+  persid: ''
+- desc: 'squares, true or false? Anyone
+
+    think it is useful? So I said,'
+  persid: ''
+- desc: 'covered by a pixel. So I''m just
+
+    thinking about the area that'
+  persid: ''
+- desc: 'we''re sound from which we''re
+
+    drawing samples. So there''s no'
+  persid: ''
+- desc: 'geometry with the pixel. The
+
+    value we compute for the pixel'
+  persid: ''
+- desc: 'is a sample, and if it''s seen
+
+    with the ray tracer, we might'
+  persid: ''
+- desc: 'have more than one sample per
+
+    pixel that we average together'
+  persid: ''
+- desc: 'to come up with the value that
+
+    we assign to that the image'
+  persid: ''
+- desc: pixel. So
+  persid: ''
+- desc: 'So Elvie Ray Smith, who was at
+
+    Pixar, I believe, made an'
+  persid: ''
+- desc: 'emphatic argument for pixels not
+
+    being squares. That was back in'
+  persid: ''
+- desc: '1995 I think so that reference
+
+    is only 30 years old. So'
+  persid: ''
+- desc: 'so why don''t we just increase
+
+    the number of samples per pixel'
+  persid: ''
+- desc: when we're ray tracing?
+  persid: ''
+- desc: 'At some point, you''re going to
+
+    be just taking way too long, but'
+  persid: ''
+- desc: 'you''re also not going to be
+
+    seeing any gains from additional'
+  persid: ''
+- desc: sampling.
+  persid: ''
+- desc: 'So yeah, so as we take more
+
+    samples, the time goes up and we'
+  persid: ''
+- desc: 'get better images, but there''s
+
+    still noise in them.'
+  persid: ''
+- desc: 'So is there if we didn''t have to
+
+    worry about the time? Let''s say'
+  persid: ''
+- desc: 'we had a super duper computer
+
+    that made that first point not'
+  persid: ''
+- desc: so important. I
+  persid: ''
+- desc: 'Is there a number of samples we
+
+    could take that would say, Okay,'
+  persid: ''
+- desc: 'Well, this is enough to
+
+    reconstruct the image.'
+  persid: ''
+- desc: Yeah, I
+  persid: ''
+- desc: try that one again. I'm
+  persid: ''
+- desc: 'so the Nyquist works in the
+
+    audio case because people can''t'
+  persid: ''
+- desc: 'hear, generally people can''t
+
+    hear above 22,000 hertz. So that'
+  persid: ''
+- desc: 'gives us a limit on the
+
+    frequency that we need to'
+  persid: ''
+- desc: 'reconstruct get the signal of
+
+    the audio. But in the case, when'
+  persid: ''
+- desc: 'we have things in computer
+
+    graphics, if it''s we may not be'
+  persid: ''
+- desc: 'band limited, So that means we
+
+    can never take enough samples. I'
+  persid: ''
+- desc: CS, does That make sense? I
+  persid: ''
+- desc: 'I said, Yes, where do you get
+
+    the signal?'
+  persid: ''
+- desc: Or reconstruct is
+  persid: ''
+- desc: 'not band limited. So if it''s
+
+    not, if there isn''t a maximum'
+  persid: ''
+- desc: 'frequency that we can double the
+
+    i'
+  persid: ''
+- desc: 'Okay, and So about the
+
+    assignments'
+  persid: ''
+- desc: 'I''ve linked up things, so
+
+    there''s a place to get a'
+  persid: ''
+- desc: 'description, and I''ll work on
+
+    bit more detail for the'
+  persid: ''
+- desc: descriptions,
+  persid: ''
+- desc: 'but they''re there in your
+
+    courses, and they link Back to'
+  persid: ''
+- desc: my website,
+  persid: ''
+- desc: 'so I''ll film the details, but
+
+    the idea is linked to A small'
+  persid: ''
+- desc: 'version of the Web of The
+
+    picture. I'
+  persid: ''
+- desc: 'it Okay, so keep on filling them
+
+    in. Well, it won''t be a'
+  persid: ''
+- desc: 'continual process, but I''ll get
+
+    more detail. So I fixed the'
+  persid: ''
+- desc: 'links and by Tuesday, well, we
+
+    can discuss final versions of'
+  persid: ''
+- desc: 'the assignment with the rubrics
+
+    and so forth. Does that sound'
+  persid: ''
+- desc: 'okay? So they''re both. The two
+
+    assignments are due on April 8.'
+  persid: ''
+- desc: Cut off date will be April 15.
+  persid: ''
+- desc: 'Okay, so we''re out of time.
+
+    Thank you for today. You'
+  persid: ''
+- desc: 'does the did that? Exploration
+
+    of gaskets and pbrt help clarify'
+  persid: ''
+- desc: 'some things, very polite. And
+
+    let me go on about that. I think'
+  persid: ''
+- desc: 'you''re all very polite anyway.
+
+    Anyway, thanks for today. Have a'
+  persid: ''
+- desc: 'good weekend. See you on
+    Tuesday. Bye.'
+  persid: ''
+offering:
+  id: CS-405_805-202510

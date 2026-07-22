@@ -1,9 +1,18 @@
 {%- include teaching/url.html %}
-{%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan %}
-
+{% if site.data.teaching[jcrs_id][crs_sem]yplan %}
+    {%- include meetings/mainyplan.html
+      tm=page.total_meet
+      mn=page.mtg_nbr
+      md=page.mtg_date
+      ww=page.wiki_id
+  -%}
+{%- else -%}
+{%- assign plan = site.data.teaching[jcrs_id][crs_sem]plan %}
 {%- assign prvmtg = include.mn | minus: 1 -%}
+{%- assign curmtg = include.mn | minus: 0 -%}
 {%- assign prvlnk = nil -%}
 {%- assign prevm = site.data.teaching[jcrs_id][crs_sem]meetings | find: "meeting", prvmtg -%}
+{%- assign currm = site.data.teaching[jcrs_id][crs_sem]meetings | find: "meeting", curmtg -%}
 {%- if prevm -%}
   {%- assign prvlnk = prevm.file -%} 
 {%- endif -%}
@@ -19,7 +28,7 @@
   <h1 id="mtgh1">
     Mtg {{ include.mn | plus: 0 }}/{{ include.tm }}: {{ include.md | date: '%a-%d-%b-%Y' }}
   </h1>
-  <div class="card">
+<div class="card">
     <div id="mtghdr" class="card card-header w-100 bg-info">
       <div class="row align-items-center">
         <div class="col-4 text-start">
@@ -53,10 +62,13 @@
               <a class="nav-link" href="#ssToday">Outline</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#ssMedia">Media</a>
             </li>
-            <li class="nav-item"> {%comment%}dropdown{%endcomment%}
-              <a class="nav-link" href="#ssTranscript">Transcript</a>
+            <!-- <li class="nav-item"> {%comment%}dropdown{%endcomment%}
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
 
                {%comment%}
                dropdown-toggle"
@@ -77,35 +89,34 @@
                   </a>
                 </li>
               </ul>
-              {%endcomment%}
+              
             </li>
+            {%endcomment%}
+            <!--
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle"
+               <a class="nav-link dropdown-toggle"
                 data-bs-toggle="dropdown" href="#" role="button"
                 aria-expanded="false">
                   Responses
-              </a>
+              </a> 
               <ul class="dropdown-menu">
                 <li>
                   <a class="dropdown-item" href="#ssR-Important">
-                    The most important thing that I encountered
+                    What important concept or perspective did you encounter today?
                   </a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="#ssR-Difficult">
-                    The most difficult thing for me to understand
+                    Was there anything today that was difficult to understand?
                   </a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="#ssR-Know-More">
-                    The thing about which I would most like to know more
+                    Was there anything today about which you would like to know more?
                   </a>
                 </li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#ssWiki">Wiki</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -123,6 +134,18 @@
         {%- include meetings/plan-body.html
             mtg=include.mn
         -%}
+        {%- if currm.quiz_id -%}
+         <H5><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id={{ currm.quiz_id }}">ACTION: Take quiz before next meeting</a></H5>
+        {%- endif -%}
+        <h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank"
+          href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid={{ currm.wikipage_id }}">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
 
         <h3 id="ssMedia" class="bg-dark text-white">
           Media
@@ -132,38 +155,27 @@
             mtg=include.mn
         -%}
 
-        <h3 id="ssTranscript" class="bg-dark text-white">
+        <!-- <h3 id="ssTranscript" class="bg-dark text-white">
           Transcript
         </h3>
 
         {%- include meetings/transcripts.html
             mtg=include.mn
-        -%}
+        -%} -->
 
-        <h3 id="ssResponses" class="bg-dark text-white">
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
           Responses
-        </h3>
+        </h3> 
 
         {%- include meetings/responses.html
             mtg=include.mn
         -%}
-
-        <h3 id="ssWiki" class="bg-dark text-white">
-          Wiki
-        </h3>
-
-        <p>
-          <a target="_blank"
-          href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid={{ include.ww }}">
-            Link to the UR Courses wiki page for this meeting
-          </a>
-        </p>
-
+-->
       </div>
     </div>
     <div id="mtgftr" class="card card-footer w-100 bg-info">
     </div>
-  </div>
+  </div> 
 </div>
 <script>
 $(document).ready(function(){
@@ -184,3 +196,4 @@ $(document).ready(function(){
   console.log('cbss.style.height',cbss.style.height )
 })
 </script>
+{% endif %}
