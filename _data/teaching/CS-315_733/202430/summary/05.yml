@@ -1,0 +1,1003 @@
+Audio-Transcript:
+- desc: 'I''m turning on the
+
+    audio recording a bit late'
+  persid: ''
+- desc: today.
+  persid: ''
+- desc: Sorry about that.
+  persid: ''
+- desc: 'We''ve decided that the midterm
+
+    will be moved to October 30. I'
+  persid: ''
+- desc: 'and the graphics programming
+
+    assignment one should use nine'
+  persid: ''
+- desc: colors
+  persid: ''
+- desc: to
+  persid: ''
+- desc: to display the gasket images
+  persid: ''
+- desc: not 12,
+  persid: ''
+- desc: 'I will Make an addition to the
+
+    assignment description for that.'
+  persid: ''
+- desc: 'So we mentioned a little bit
+
+    about the Z buffer last day, so'
+  persid: ''
+- desc: we have to enable it and
+  persid: ''
+- desc: 'so let''s take A peek at the code
+
+    for this And'
+  persid: ''
+- desc: so vertex shader
+  persid: ''
+- desc: taking in the
+  persid: ''
+- desc: 'position determined by vertices
+
+    that we compute the geometry and'
+  persid: ''
+- desc: so in and
+  persid: ''
+- desc: 'the type, Back, three, a
+
+    position. In fact, three, in'
+  persid: ''
+- desc: color.
+  persid: ''
+- desc: So three
+  persid: ''
+- desc: 'position vector for color means,
+
+    what are we passing?'
+  persid: ''
+- desc: RGB
+  persid: ''
+- desc: and a, no, a, i,
+  persid: ''
+- desc: 'so this shape vertex shader is
+
+    doing very little, but it''s'
+  persid: ''
+- desc: 'taking care of the fact that we
+
+    passing a three RGB, and we''re'
+  persid: ''
+- desc: adding alpha and Alpha.
+  persid: ''
+- desc: So
+  persid: ''
+- desc: in the vertex share, we're
+  persid: ''
+- desc: storing the
+  persid: ''
+- desc: 'chord. Coordinate the position
+
+    of our vertices in GL,'
+  persid: ''
+- desc: underscore position
+  persid: ''
+- desc: and
+  persid: ''
+- desc: 'we''re creating For output, the V
+
+    color. With that simple'
+  persid: ''
+- desc: transformation, we're
+  persid: ''
+- desc: 'graphics library, Shading
+
+    Language is what We''re writing'
+  persid: ''
+- desc: in. It's like C
+  persid: ''
+- desc: so the convention
+  persid: ''
+- desc: 'The convention used By the
+
+    textbook And'
+  persid: ''
+- desc: 'so the variables that deal with
+
+    attributes start with a, those'
+  persid: ''
+- desc: 'that deal with vertex shader
+
+    variables start with V and deal'
+  persid: ''
+- desc: 'with the fragment shape and
+
+    start with the f, i,'
+  persid: ''
+- desc: so we can specify a single
+  persid: ''
+- desc: 'color For our gasket, and we
+
+    could use a uniform very'
+  persid: ''
+- desc: 'variable. Attributes are
+
+    written. Attributes can vary'
+  persid: ''
+- desc: 'with the primitives, with the
+
+    vertices the'
+  persid: ''
+- desc: 'so we can see in the fragment
+
+    shader code, we do an in VEC for'
+  persid: ''
+- desc: 'for V color, passing that
+
+    through from the vertex shader'
+  persid: ''
+- desc: 'we say, out of that 4v color,
+
+    and then in that form, V color'
+  persid: ''
+- desc: in the fragment
+  persid: ''
+- desc: shader. So
+  persid: ''
+- desc: 'then, from the fragment shader,
+
+    we''re the passing along F color.'
+  persid: ''
+- desc: Does that make sense?
+  persid: ''
+- desc: 'It''s a way to keep things a
+
+    little bit more organized. Do'
+  persid: ''
+- desc: Are you feeling it at all?
+  persid: ''
+- desc: 'Okay, let''s look at the gasket
+
+    for js file and'
+  persid: ''
+- desc: 'so we want to self divide Three
+
+    times, get our canvas from the'
+  persid: ''
+- desc: 'HTML file, get a context for
+
+    WebGL two.'
+  persid: ''
+- desc: 'Then we specify a gasket four
+
+    vertices on the unit circle,'
+  persid: ''
+- desc: initial tetrahedron
+  persid: ''
+- desc: with equal length side, so
+  persid: ''
+- desc: 'you might call it Sierpinski
+
+    tetrahedron. You I'
+  persid: ''
+- desc: 'did an image back in 1991 on The
+
+    desktop tetrahedron.'
+  persid: ''
+- desc: Would you like to see it? If
+  persid: ''
+- desc: 'I have yet to use a make a 3d
+
+    printed version of that'
+  persid: ''
+- desc: one day. Anyway, I
+  persid: ''
+- desc: so
+  persid: ''
+- desc: 'tetrahedron inscribed in a
+
+    sphere. So we have four'
+  persid: ''
+- desc: 'equilateral triangles on the
+
+    faces, and then we do the'
+  persid: ''
+- desc: subdivision. So so
+  persid: ''
+- desc: we
+  persid: ''
+- desc: 'pass the vertices the number of
+
+    times subdivide and'
+  persid: ''
+- desc: so here's the part with the Z
+  persid: ''
+- desc: 'buffer, we enable GL depth test,
+
+    and that turns on the capability'
+  persid: ''
+- desc: and all web, web GL,
+  persid: ''
+- desc: '2.0 implementations must support
+
+    the sin but the death test,'
+  persid: ''
+- desc: 'because it''s a fundamental
+
+    property'
+  persid: ''
+- desc: that's used in so many
+  persid: ''
+- desc: things. So So we
+  persid: ''
+- desc: 'set up our prayer program with
+
+    the'
+  persid: ''
+- desc: shaders.
+  persid: ''
+- desc: 'So instead of just a buffer for
+
+    vertices, we''re creating a'
+  persid: ''
+- desc: buffer for colors as well. We
+  persid: ''
+- desc: so
+  persid: ''
+- desc: 'we create buffer called C buffer
+
+    and bind it,'
+  persid: ''
+- desc: and then
+  persid: ''
+- desc: 'we go the color beta, and we
+
+    have to flatten it, because'
+  persid: ''
+- desc: we're we may be using,
+  persid: ''
+- desc: 'we may not just have the float
+
+    32 format, so make sure we get'
+  persid: ''
+- desc: 'just, just the data we have the
+
+    flatten function, which I'
+  persid: ''
+- desc: 'believe is an envy new may in
+
+    zone file I'
+  persid: ''
+- desc: 'so then the next bit specify
+
+    we''re'
+  persid: ''
+- desc: going to
+  persid: ''
+- desc: 'we have to Connect the color in
+
+    the shader to the program'
+  persid: ''
+- desc: 'so that''s what this block and
+
+    lines does, And then do the same'
+  persid: ''
+- desc: 'with the position data. So we
+
+    have a position,'
+  persid: ''
+- desc: 'and we''re in 3d so we have three
+
+    data points per position, and I'
+  persid: ''
+- desc: 'and there are flows So three
+
+    times, four bytes, and then we'
+  persid: ''
+- desc: render and
+  persid: ''
+- desc: 'so we just Have four colors
+
+    here, red, green, blue and Black'
+  persid: ''
+- desc: and
+  persid: ''
+- desc: so we're using color
+  persid: ''
+- desc: as a
+  persid: ''
+- desc: 'as an index into the space
+
+    colors, and we''re assigned the'
+  persid: ''
+- desc: 'same color for each With three
+
+    vertices of the triangle of the'
+  persid: ''
+- desc: face if
+  persid: ''
+- desc: 'we wanted to change it so that
+
+    we would have different colors'
+  persid: ''
+- desc: on the face, then we could,
+  persid: ''
+- desc: 'we could do color, color plus
+
+    one mod four, color plus two mod'
+  persid: ''
+- desc: four,
+  persid: ''
+- desc: to get
+  persid: ''
+- desc: 'three different colors on the
+
+    vertices. So thus, so we''re'
+  persid: ''
+- desc: 'creating the color buffer of
+
+    this the same size as positions'
+  persid: ''
+- desc: 'buffer. So whatever we put into
+
+    the color buffer, the individual'
+  persid: ''
+- desc: 'data points, the positions, get
+
+    us a color from the color'
+  persid: ''
+- desc: 'buffer, so that gives us some
+
+    control Over the coloring the'
+  persid: ''
+- desc: shape. Does that make sense? I
+  persid: ''
+- desc: 'so here''s a function to draw the
+
+    tetrahedron. So the triangle'
+  persid: ''
+- desc: 'draws the triangle face. Tetra
+
+    draws four triangles make a'
+  persid: ''
+- desc: 'tetrahedron, and then this one
+
+    does the subdivision, so we get'
+  persid: ''
+- desc: the fractal shape.
+  persid: ''
+- desc: 'So in the render, we do a clear,
+
+    GL clear, and we do the color'
+  persid: ''
+- desc: 'buffer red, so that restores us
+
+    to the background color. And'
+  persid: ''
+- desc: 'then we do a logical or to say
+
+    we should also clear the depth'
+  persid: ''
+- desc: buffer bit
+  persid: ''
+- desc: so we don't carry
+  persid: ''
+- desc: 'over information from the
+
+    previous display. We''re not'
+  persid: ''
+- desc: 'moving this tetrahedron, so
+
+    that''s less important. But if we'
+  persid: ''
+- desc: 'were, if we were rotating it,
+
+    that might cause problems.'
+  persid: ''
+- desc: Does that make sense? I
+  persid: ''
+- desc: Okay, Let's talk about Color. I
+  persid: ''
+- desc: 'All So I mentioned coordinates
+
+    because we have some choices In'
+  persid: ''
+- desc: 'the way we represent Colors and
+
+    positions and'
+  persid: ''
+- desc: so that say
+  persid: ''
+- desc: 'the red axis is aligned with
+
+    what we normally think of as the'
+  persid: ''
+- desc: 'x axis. So we go from zero to
+
+    one if we''re looking for an'
+  persid: ''
+- desc: 'eight bit, if we''re storing
+
+    eight bits of precision for the'
+  persid: ''
+- desc: red value,
+  persid: ''
+- desc: we go from zero to 255,
+  persid: ''
+- desc: 'Okay, so then Let''s do green.
+
+    I''m'
+  persid: ''
+- desc: 'so I''ve drawn the blue axis
+
+    going into the board. The'
+  persid: ''
+- desc: 'positive direction is going into
+
+    the board.'
+  persid: ''
+- desc: 'So what other way could I have
+
+    drawn the blue axis'
+  persid: ''
+- desc: 'that could have come out of the
+
+    board'
+  persid: ''
+- desc: too, right?
+  persid: ''
+- desc: I could say blue is this way. I
+  persid: ''
+- desc: 'I have an eternal drawing queue
+
+    here so it''s not more'
+  persid: ''
+- desc: 'complicated diagram. I just want
+
+    you to remember that'
+  persid: ''
+- desc: we have that decision to make
+  persid: ''
+- desc: 'when we''re doing three
+
+    dimensional We''re drawing things'
+  persid: ''
+- desc: in three dimensions.
+  persid: ''
+- desc: 'Okay, imagine these are parallel
+
+    lines'
+  persid: ''
+- desc: and their squares and
+  persid: ''
+- desc: try And fix you
+  persid: ''
+- desc: that's better than I thought.
+  persid: ''
+- desc: Okay, so we have
+  persid: ''
+- desc: 'red, green and blue and zero.
+
+    How do we also know that? I of'
+  persid: ''
+- desc: 'the other name do we have for
+
+    absence of color?'
+  persid: ''
+- desc: 'Yes, you might even go so far as
+
+    to say black. That might be a'
+  persid: ''
+- desc: history. Yeah, that
+  persid: ''
+- desc: 'might be history, yeah, well,
+
+    display is not really black'
+  persid: ''
+- desc: because,
+  persid: ''
+- desc: 'because the display is on and
+
+    there''s some light, so it''s not'
+  persid: ''
+- desc: it's not
+  persid: ''
+- desc: 'going to completely black, and
+
+    When you do printing. So this is'
+  persid: ''
+- desc: an additive i
+  persid: ''
+- desc: 'So we start from black and we
+
+    add to it, and'
+  persid: ''
+- desc: so If we add red, just red and
+  persid: ''
+- desc: 'this is green and this is blue
+
+    in the corner here. So what'
+  persid: ''
+- desc: 'happens if we add green and blue
+
+    and'
+  persid: ''
+- desc: it starts with a c3,
+  persid: ''
+- desc: 'letter three blanks fall in the
+
+    C higher.'
+  persid: ''
+- desc: The Yes, but not like the pepper
+  persid: ''
+- desc: or cyan. Yeah,
+  persid: ''
+- desc: I would say cyan.
+  persid: ''
+- desc: 'It''s interesting. How some
+
+    people, I don''t I think there''s'
+  persid: ''
+- desc: 'only one way you pronounce
+
+    things, but there''s choices'
+  persid: ''
+- desc: about whether It's a hard sea
+  persid: ''
+- desc: or soft sea.
+  persid: ''
+- desc: So cyan, I
+  persid: ''
+- desc: 'What other choices do? What
+
+    other mixes do we have? Red and'
+  persid: ''
+- desc: green? I
+  persid: ''
+- desc: 'six letters. I''m not going to
+
+    give you any hints other than'
+  persid: ''
+- desc: 'those six letters. What''s that?
+
+    Yellow? Yeah, yellow. I'
+  persid: ''
+- desc: 'And what about blue and red?
+
+    Purple?'
+  persid: ''
+- desc: 'Yes, but we have a fancier name
+
+    for it,'
+  persid: ''
+- desc: fancy for all.
+  persid: ''
+- desc: 'Magenta, yeah, so I''m not a good
+
+    person to be saying whether'
+  persid: ''
+- desc: 'magenta is a cool version of
+
+    purple, because I''m a little bit'
+  persid: ''
+- desc: colorblind. I
+  persid: ''
+- desc: 'and so in the opposite corner
+
+    here, where we have full red,'
+  persid: ''
+- desc: 'full green and full blue, what
+
+    does that give us?'
+  persid: ''
+- desc: 'Good answer. We have maxed out
+
+    the color so'
+  persid: ''
+- desc: we see what on the screen.
+  persid: ''
+- desc: The opposite of black. Yeah, I
+  persid: ''
+- desc: 'so you can see there. I hope you
+
+    can see that there''s a diagonal'
+  persid: ''
+- desc: 'there, connecting black and
+
+    white.'
+  persid: ''
+- desc: And then we get a
+  persid: ''
+- desc: 'it so I might see a color picker
+
+    that looks like'
+  persid: ''
+- desc: 'so around the edges Are the
+
+    hues, then we'
+  persid: ''
+- desc: can think about
+  persid: ''
+- desc: saturation. If
+  persid: ''
+- desc: So we can see six
+  persid: ''
+- desc: colors come out in so
+  persid: ''
+- desc: 'so this is a bit easier way to
+
+    pick colors than'
+  persid: ''
+- desc: use
+  persid: ''
+- desc: RGB. So the idea is
+  persid: ''
+- desc: 'the flavor. Bottom of the cone
+
+    here, value zero, then we only'
+  persid: ''
+- desc: 'have black. So if we turn the
+
+    value of the color down to zero,'
+  persid: ''
+- desc: 'we''re just going to get blacks.
+
+    And if we turn it up to one.'
+  persid: ''
+- desc: Then we get,
+  persid: ''
+- desc: 'get weights here, and then we
+
+    Add, if you venture out from the'
+  persid: ''
+- desc: center, and
+  persid: ''
+- desc: 'so the center of this cone is
+
+    gives us gray scale from black'
+  persid: ''
+- desc: to white. So we can,
+  persid: ''
+- desc: 'we can feel in grays here. And
+
+    then, if we go out, we go'
+  persid: ''
+- desc: to saturate. So regardless of
+  persid: ''
+- desc: 'So, we specify colors based on
+
+    hue, saturation and volume and'
+  persid: ''
+- desc: 'so we specify an angle here
+
+    gives the color'
+  persid: ''
+- desc: to Hue
+  persid: ''
+- desc: 'and saturation goes from white
+
+    for the top and'
+  persid: ''
+- desc: 'so it goes from a gray value to
+
+    a fully a bright color. So if we'
+  persid: ''
+- desc: 'have saturated, if we have value
+
+    turned up to one, then we get'
+  persid: ''
+- desc: 'the bright colors, red, green,
+
+    blue, cyan, magenta, yellow that'
+  persid: ''
+- desc: are at the corners of The Cube.
+  persid: ''
+- desc: So for any color, then we Have a
+  persid: ''
+- desc: so this is value, 01,
+  persid: ''
+- desc: 'so we can get tints and tones of
+
+    the color of a particular angle'
+  persid: ''
+- desc: 'that we''ve chosen for hue based
+
+    on manipulating the Saturation'
+  persid: ''
+- desc: 'and Value of parameters. If we
+
+    fix the hue the angle around the'
+  persid: ''
+- desc: 'circle, then we can get a
+
+    variety of variations of tints'
+  persid: ''
+- desc: 'and tones those colors. Does
+
+    that make sense? So the text, it'
+  persid: ''
+- desc: has a nicer
+  persid: ''
+- desc: rendition of the
+  persid: ''
+- desc: 'cube tipped on its end, so you
+
+    see the white'
+  persid: ''
+- desc: 'corner and then the other
+
+    vertices arranged around. So I'
+  persid: ''
+- desc: 'said there''s an additive color
+
+    model, or RGB is additive. I'
+  persid: ''
+- desc: 'Is there a possibility For a
+
+    different color model? I'
+  persid: ''
+- desc: 'subtractive like paint on
+
+    canvas, yes, So we can Talk'
+  persid: ''
+- desc: about subtractive. You.
+  persid: ''
+- desc: 'So the idea is you start From
+
+    white and'
+  persid: ''
+- desc: so from RGB I
+  persid: ''
+- desc: 'I think I should go up on that
+
+    piece of chalk'
+  persid: ''
+- desc: anyway. So for printing, we
+  persid: ''
+- desc: 'use cyan, jet yellow, and we use
+
+    a K. WHAT WOULD LIKE A?'
+  persid: ''
+- desc: 'K, B, yeah, so we can use black
+
+    as well.'
+  persid: ''
+- desc: So we use K for black
+  persid: ''
+- desc: 'because they''re using B for
+
+    blue.'
+  persid: ''
+- desc: So we use black a because
+  persid: ''
+- desc: sometimes black
+  persid: ''
+- desc: 'comes up in printing. A lot of
+
+    black gets printed. So instead'
+  persid: ''
+- desc: of having to make black by I
+  persid: ''
+- desc: 'so this might end up being a bit
+
+    the paper might be a bit soggy'
+  persid: ''
+- desc: 'after getting three coats of
+
+    three different inks and and it'
+  persid: ''
+- desc: 'may be not convincingly black,
+
+    either might be a little mighty.'
+  persid: ''
+- desc: So it's
+  persid: ''
+- desc: 'it''s nice to use black ink as
+
+    well, in addition to sandwich'
+  persid: ''
+- desc: 'and the yellow and out. So the
+
+    idea is the ink'
+  persid: ''
+- desc: subtracts
+  persid: ''
+- desc: 'from the white so we get color
+
+    image. So we''re doing the same'
+  persid: ''
+- desc: 'thing in two different ways. So
+
+    we build up an image on a'
+  persid: ''
+- desc: 'display from black, and then we
+
+    print it on a piece of paper.'
+  persid: ''
+- desc: 'We''re subtracting color from
+
+    white. Does that make sense? I'
+  persid: ''
+- desc: Okay, so
+  persid: ''
+- desc: 'maybe I can show you a version
+
+    of I'
+  persid: ''
+- desc: 'So this is a serpent ski gasket
+
+    with a CHAOS game. So we could'
+  persid: ''
+- desc: change the point size and
+  persid: ''
+- desc: so If you can do two, I
+  persid: ''
+- desc: 'There we go. I so here''s an
+
+    interface element to choose A'
+  persid: ''
+- desc: color and
+  persid: ''
+- desc: 'you can choose The desaturation
+
+    value.'
+  persid: ''
+- desc: So that's, that's
+  persid: ''
+- desc: 'container. Continuing from my
+
+    board diagram the other day'
+  persid: ''
+- desc: 'where I drew a few dots. You see
+
+    that it doesn''t take long before'
+  persid: ''
+- desc: 'the professional athletes who
+
+    are passing the ball around'
+  persid: ''
+- desc: get control. That makes a
+  persid: ''
+- desc: very good approximation
+  persid: ''
+- desc: 'to the fractal shape that we''re
+
+    after.'
+  persid: ''
+- desc: Does that make sense? I
+  persid: ''
+- desc: 'i pray now, harm set of time,
+
+    but I wanted to mention'
+  persid: ''
+- desc: coordinates again. I
+  persid: ''
+- desc: 'so if we''re describing three
+
+    dimensional space, start with x'
+  persid: ''
+- desc: 'and y. We can agree on what X
+
+    and Y, X and Y, other range,'
+  persid: ''
+- desc: 'percent do you ever need? You
+
+    don''t normally think'
+  persid: ''
+- desc: 'I can deal with this now, that''s
+
+    not typical,'
+  persid: ''
+- desc: 'and I suppose you could think of
+
+    doing this as well. And all,'
+  persid: ''
+- desc: it's also not difficult.
+  persid: ''
+- desc: 'So then we have a triumph. So
+
+    which way it''s positive?'
+  persid: ''
+- desc: 'So how do we deal with these two
+
+    choices? I'
+  persid: ''
+- desc: so the way, I know we
+  persid: ''
+- desc: 'can make this shape as well, but
+
+    I think'
+  persid: ''
+- desc: that x cross y and
+  persid: ''
+- desc: 'the thumb points in the
+
+    direction'
+  persid: ''
+- desc: of the positive z.
+  persid: ''
+- desc: So when it's going away,
+  persid: ''
+- desc: 'so X cross Y and Z comes out of
+
+    the board. So this is a'
+  persid: ''
+- desc: 'any ideas for anyone familiar
+
+    with this? I'
+  persid: ''
+- desc: 'Yes, where it''s the right hand
+
+    corner system. And then if we do'
+  persid: ''
+- desc: 'if my left hand X, cross Y, Z is
+
+    pointing away. So this would be'
+  persid: ''
+- desc: 'for the left handed system.
+
+    Another hand.'
+  persid: ''
+- desc: 'System is the choice of systems
+
+    kind of arbitrary, as long as we'
+  persid: ''
+- desc: have three intersection planes,
+  persid: ''
+- desc: all like normal. If
+  persid: ''
+- desc: Yeah, so
+  persid: ''
+- desc: 'there''s a variation set up. I
+
+    think what MGM is kind of'
+  persid: ''
+- desc: neutral on the subject. I
+  persid: ''
+- desc: is something where and so we
+  persid: ''
+- desc: 'can, when I was introducing we
+
+    can use the X cross Y idea to'
+  persid: ''
+- desc: 'decide what hidden surfaces for
+
+    this'
+  persid: ''
+- desc: physical surface determination.
+  persid: ''
+- desc: 'I''ll talk about that later, but
+
+    if we agree on which to'
+  persid: ''
+- desc: 'orientate. Orientation of the
+
+    vertices and the triangles that'
+  persid: ''
+- desc: 'we use in the models, then we
+
+    can make use that information to'
+  persid: ''
+- desc: decide which faces are visible
+  persid: ''
+- desc: 'on a minute late, minute over,
+
+    anyway, was that a helpful'
+  persid: ''
+- desc: discussion today?
+  persid: ''
+- desc: 'So I''ll ask a question about
+
+    using orthogonal in the'
+  persid: ''
+- desc: 'sentence. Anyway, thank you for
+
+    today. Take care and see you on'
+  persid: ''
+- desc: Monday.
+  persid: ''
+offering:
+  id: CS-315_733-202430

@@ -79,17 +79,18 @@ except:
 ng = {}
 seqnbr = 0
 
-SRT_SRC = DL_DIR + joff_id + '/' + sys.argv[2].zfill(2) + '.srt'
+#SRT_SRC = DL_DIR + joff_id + '/' + sys.argv[2].zfill(2) + '.srt'
+SRT_SRC = DL_DIR + reldir[0] + '-' + reldir[1] + '/' + sys.argv[2].zfill(2) + '.srt'
 #print(VTT_SRC)
 print(SRT_SRC)
 print ('Processing audio transcript for meeting NOW:')
 if (os.path.isfile(SRT_SRC)):
     if ('Audio-Transcript' not in d):
-########
+        print('audio transcript not present')
         d['Audio-Transcript'] = []
         ospkr = ''
         msgstr = ''
-########
+        print(SRT_SRC)
         for caption in webvtt.from_srt(SRT_SRC):
             print("Caption:",caption)
             txtseg = caption.text.split(':')
@@ -108,13 +109,15 @@ if (os.path.isfile(SRT_SRC)):
             e['desc'] = msg.strip()
             e['persid'] = ""
             d['Audio-Transcript'].append(e)
-########
         e = {}
         e['desc'] = msg.strip()
         e['persid'] = ''
         d['Audio-Transcript'].append(e)
     else:
+        print('audio transcript present')
         print ('\t--> Zoom-Audio-Transcript already present.')
-
+        print(SRT_SRC)
+else:
+    print("SRT_SRC not a file",SRT_SRC)
 with open(summfile, 'w') as yaml_file:
     yaml.safe_dump(d, yaml_file, default_flow_style=False)
