@@ -19,7 +19,7 @@ if (len(sys.argv) != 2):
 currsem = sys.argv[1]
 
 # create directory in DATA_ROOT for <currsem>
-Path(DATA_ROOT + currsem).mkdir(parents=True, exist_ok=True)
+# Path(DATA_ROOT + currsem).mkdir(parents=True, exist_ok=True)
 
 # make time slots for semester schedule, indicate all as empty (E_)
 midnight = datetime(
@@ -46,7 +46,7 @@ while (slot_et <= end_time):
 # if offering is found, use semester data to make meetings list
 semstart = ''
 semend = ''
-with open(DATA_ROOT + 'semesters.csv', newline='') as semfile:
+with open(DATA_ROOT + 'all/semesters.csv', newline='') as semfile:
     semreader = csv.DictReader(semfile)
     sem_found = False
     for row in semreader:
@@ -56,10 +56,11 @@ with open(DATA_ROOT + 'semesters.csv', newline='') as semfile:
             semend = datetime.strptime(row['class-end'], '%d-%b-%y')
             
 # find course offerings for indicated semester
-with open(DATA_ROOT + 'offerings.csv', newline='') as offfile:
+with open(DATA_ROOT + 'all/offerings.csv', newline='') as offfile:
     offreader = csv.DictReader(offfile)
     semoff_found = False
     for row in offreader:
+        print(row['semester'],currsem)
         if (row['semester'] == currsem):
             semoff_found = True
             print('... processing offerings.csv')
@@ -80,7 +81,7 @@ if semoff_found == False:
 semschedmd = MD_ROOT + 'schedule/index.md'
 
 # add office hours
-with open(DATA_ROOT + 'officehrs.csv', newline='') as ohrsfile, open(semschedmd,'w') as schedmd:
+with open(DATA_ROOT + 'all/officehrs.csv', newline='') as ohrsfile, open(semschedmd,'w') as schedmd:
     schedmd.write('---\n')
     semname = 'None'
     if (sys.argv[1][-2:] == '10'):
@@ -114,7 +115,7 @@ with open(DATA_ROOT + 'officehrs.csv', newline='') as ohrsfile, open(semschedmd,
                         schedmd.write('  - day: ' + longdays[oday] + '\n')
                         schedmd.write('    open: \'' + otr[0] + '\'\n')
                         schedmd.write('    close: \'' + otr[1] + '\'\n')
-    schedmd.write('officezoom:' + row['zoom'] + '\n')
+    schedmd.write('officezoom: ' + row['zoom'] + '\n')
     schedmd.write('firstdate: ' + datetime.strftime(semstart, '%Y-%m-%d') + '\n')
     schedmd.write('lastdate: ' + datetime.strftime(semend, '%Y-%m-%d') + '\n')
     schedmd.write('layout: bg-image\n')
@@ -124,7 +125,7 @@ with open(DATA_ROOT + 'officehrs.csv', newline='') as ohrsfile, open(semschedmd,
     schedmd.write('{% include teaching/schedule.html cs=page.sem %}\n')
 
 # add reserved times for prep and meetings
-with open(DATA_ROOT + 'reserved.csv', newline='') as resfile:
+with open(DATA_ROOT + 'all/reserved.csv', newline='') as resfile:
     resreader = csv.DictReader(resfile)
     #semester,days-times,zoom
     semoff_found = False
@@ -151,7 +152,10 @@ for tk in tslots:
             (tslots[tk])[alldays[i]] = 'B_'
 
 # write out semester schedule data to DATA_ROOT/<currsem>/schedule.csv
-semschedstr = DATA_ROOT + currsem + '/schedule.csv'
+# /Users/hepting/Sites/dhhepting.github.io/_data/teaching/schedule/s202530.csv
+semschedstr = DATA_ROOT + 'schedule/s' + currsem + '.csv'
+#print(semschedstr)
+#print(semschedmd)
 with open(semschedstr, 'w', newline='') as csvfile:
     fieldnames = ['Times','Mon','Tue','Wed','Thu','Fri']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
