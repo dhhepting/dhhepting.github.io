@@ -46,11 +46,11 @@ layout: bg-image
       <br />
 			Professor
       <br />
-      College West 308.22 (
+      <!-- College West 308.22 (
   			<a href="http://maps.google.com/?q=50.41772003105197,-104.59164619445801">
   				map
   			</a>
-  		)
+  		) -->
       <br />
 			<a href="https://www.uregina.ca/science/cs/">
 				Department of Computer Science

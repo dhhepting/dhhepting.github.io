@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- based on: https://www.interactivecomputergraphics.com/8E/Code/02/gasket1.html -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <title>2D Sierpiński Gasket (Random)</title>
+        <script id="vertex-shader" type="x-shader/x-vertex">
+            #version 300 es
+
+            in vec4 aPosition;
+
+            void
+            main()
+            {
+                gl_PointSize = 1.0;
+                gl_Position = aPosition;
+            }
+        </script>
+        <script id="fragment-shader" type="x-shader/x-fragment">
+            #version 300 es
+            precision mediump float;
+
+            out vec4 fColor;
+
+            void
+            main()
+            {
+                fColor = vec4(1.0, 0.0, 0.0, 1.0);
+            }
+        </script>
+        <script src="../Common/initShaders.js"></script>
+        <script src="../Common/MVnew.js"></script>
+        <script src="gasket-2D-chaos.js"></script>
+    </head>
+    <body>
+        <div class="card w-100 h-100">
+            <h1 class="card card-header bg-light">
+                2D Sierpiński Gasket (Random)
+            </h1>
+            <canvas class="card card-body bg-dark" width="512" height="512" id="gl-canvas">
+                Your browser does not support the HTML5 canvas element
+            </canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,512 @@
+Audio-Transcript:
+- desc: If that was the case so I'm sorry I'm not I'm not punctual today either. Because
+    my car was calling to me. So here's my new computer
+  persid: ''
+- desc: let's see if I have all the parts here.
+  persid: ''
+- desc: Here's the old one.
+  persid: ''
+- desc: Just want to say
+  persid: ''
+- desc: thank you
+  persid: ''
+- desc: this
+  persid: ''
+- desc: training
+  persid: ''
+- desc: so I just want to talk about Well, first of all, let me say it's happy. Academic
+    Integrity. X day of action.
+  persid: ''
+- desc: You concerned. So there's a presentation layer today about using generative
+    AI and its relationship to academic integrity and so I'm quite interested to see
+    that
+  persid: ''
+- desc: so I didn't so the marker and I had a discussion yesterday and would have
+    been better to have discussion earlier. But based on some of the work submitted,
+    we came up with a few more
+  persid: ''
+- desc: so I'm going to revise rubrics for the next assignments based on some of the
+    things we found here
+  persid: ''
+- desc: which isn't so did you find that it was the instructions were clear? So what
+    were the instructions
+  persid: ''
+- desc: GL programs
+  persid: ''
+- desc: So something I could have made more clear, it's about using the sample code
+    but acknowledging it and describing what's.
+  persid: ''
+- desc: What you've added to it
+  persid: ''
+- desc: Okay, so I should have also included tomorrow about.
+  persid: ''
+- desc: More about the submission format. Anything else that was?
+  persid: ''
+- desc: Missing from.
+  persid: ''
+- desc: Anything else that could be added to make it more clear
+  persid: ''
+- desc: so instead of
+  persid: ''
+- desc: so instead of just making it six marks or implementation and two for comments,
+    I'll break I'll break down future one so I'll give you some examples.
+  persid: ''
+- desc: So how do we indicate this a WebGL program
+  persid: ''
+- desc: let's where do we specify WebGL?
+  persid: ''
+- desc: Yes, required three Jas to code and then see making Okay, that's using three
+    js it's not using them to function like to we can watch so let's get context.
+    Right.
+  persid: ''
+- desc: JavaScript prefer single quotes
+  persid: ''
+- desc: Okay, so that's because we don't just be with a canvas we can have different
+    contexts. Could have a 2d We can. We can have a number of different ones. So we
+    wanted WebGL to context
+  persid: ''
+- desc: Okay, anyway, don't be too late. But the point
+  persid: ''
+- desc: so now we're dealing with viewing. There's two parts, right? We're establishing
+    the viewing coordinates where we're looking, we're where we are the camera and
+    where we're looking at and the orientation so how do we specify that
+  persid: ''
+- desc: looking from the eye point? So that's one point. So that that says where the
+    camera is going to be now what other things can we can we use to indicate our
+    position uniquely?
+  persid: ''
+- desc: So what other information do we need? If I have my camera here okay, my camera,
+    we've established the opposition but I can I can look anywhere from here. So I'm
+    not changing the camera, the eye position.
+  persid: ''
+- desc: Whatever of these information can I use to indicate precisely what where I
+    should be looking? With a camera
+  persid: ''
+- desc: in this scene and the points that it's for,
+  persid: ''
+- desc: option. So we talked about three. So we're going to have
+  persid: ''
+- desc: like, I'm talking about perspective.
+  persid: ''
+- desc: Now. I'm just talking about where I'm going establishing the viewing coordinates.
+    So I'm I'm here with a camera. Where should I be looking at Bob's?
+  persid: ''
+- desc: Yeah, so I have a position I need a point that I'm looking at XYZ coordinate
+    for Yeah, x y and Zed for good.
+  persid: ''
+- desc: Right so we talked about this yesterday, last day. Right? So then all right.
+  persid: ''
+- desc: So now if I have my camera position, and I'm looking at let's say I'm looking
+    at two projectors, so that's what was it
+  persid: ''
+- desc: Okay, so if I'm looking here with a camera so I have the camera position,
+    I'm looking at something. What degree of freedom is Yeah, so I need to specify
+    what is the up vector
+  persid: ''
+- desc: so when we changed so we had the hat
+  persid: ''
+- desc: and we make this CF factor. Then we see
+  persid: ''
+- desc: see that picture as we expect what happened when we made the up vector? Like
+    this? What happens to the picture? Or what happened to the picture? If you remember
+    from Monday
+  persid: ''
+- desc: Yeah. So it rotates so that this vector is pointing up. So the picture we
+    see then is.
+  persid: ''
+- desc: I shouldn't
+  persid: ''
+- desc: so it makes sense. Okay. So if we have two vectors here, if we have the vector
+    here between apps and the eye point, and then the app vector how do we make a
+    third vector so we have coordinates basis for our coordinate system?
+  persid: ''
+- desc: So what what are the vectors do we want?
+  persid: ''
+- desc: Well
+  persid: ''
+- desc: so we can have
+  persid: ''
+- desc: a vector that's normal to the other two, and it's perpendicular to the other
+    two is a cross from a cross product right.
+  persid: ''
+- desc: So then if we take this, make a trans transformation from our X, Y and Zed
+    coordinates to these UV and n coordinates
+  persid: ''
+- desc: and we can think about looking down set axis here.
+  persid: ''
+- desc: We got a matrix transformation to so the neat thing about computer graphics
+    is that so we have corn system that we're modeling things. We have a corn system
+    we're reviewing things and then we can trance and can transform between the neural
+    cell matrix multiplication
+  persid: ''
+- desc: so we talked earlier about clipping coordinates right. So that I guess what's,
+    what makes it into the onto the screen into the viewport? Is is divine minus one
+    one minus one to one.
+  persid: ''
+- desc: Imagine that mind straight this is minus one one.
+  persid: ''
+- desc: So, if we if we just if we don't do anything differently we can just see what
+    will just look straight on to this?
+  persid: ''
+- desc: So, that's my default stats rejection they have so it's just learing Zed values.
+    So that's why we do the Zed Zed test the depth then we're going to only draw the
+    things that are closer than things out there things have been drawn.
+  persid: ''
+- desc: Thinking about our synthetic camera, how do we where we have perspective,
+    usually
+  persid: ''
+- desc: so we have the camera.
+  persid: ''
+- desc: Then we have
+  persid: ''
+- desc: far
+  persid: ''
+- desc: so you can see this being transformed to minus one and one
+  persid: ''
+- desc: if we have a which which court system is that? Where is it? Where's it distances
+    increasing as we go away? Into the screen
+  persid: ''
+- desc: so left hand is x times y it goes away if someone's pointing in the direction
+    of positive Zed.
+  persid: ''
+- desc: So you can relate that back to this clipping volume. Now other thing so if
+    we put the front and back of the clipping volume alignment with the front and
+    back of our projection here we've got one thing taken care of right but what about
+    the other things? So
+  persid: ''
+- desc: what's going to happen in a perspective projection so if we have somebody
+    has the size looks like a letter chi with legs and arms. Anyway let's do it. Again.
+  persid: ''
+- desc: So they're about the same size. perspective projection. Is this one is this
+    character going to be projected any larger than the image what about this character
+  persid: ''
+- desc: so what needs to happen is
+  persid: ''
+- desc: that was not right
+  persid: ''
+- desc: so this guy is still mad big. But then here we
+  persid: ''
+- desc: go that's not not the scale but the idea is items in the foreground are made
+    larger because we're stretching
+  persid: ''
+- desc: to transform this into normalized coordinates the minus one to plus one coordinates.
+    We need to stretch the front need to stretch the whole thing so these aren't this
+    becomes a parallelogram or parallel a pipe it is that makes sense? Okay
+  persid: ''
+- desc: so we can specify the field of view and the y direction that's this angle.
+  persid: ''
+- desc: seem okay. In terms of a general idea of what's going on okay
+  persid: ''
+- desc: so we won't go any further than this this would be the last bit of material
+    for the exam. And what do you think about exam questions?
+  persid: ''
+- desc: Found a supercharged turbocharged car. I would have a place like this
+  persid: ''
+- desc: maybe it would be maybe Cypress Hills I guess that's the highest elevation
+    in Saskatchewan in the southeast corner
+  persid: ''
+- desc: that was insane because there's no connection.
+  persid: ''
+- desc: Evening was quite a concern
+  persid: ''
+- desc: I know it sounds up here
+  persid: ''
+- desc: so I try to link again it says 404 not found. So maybe it's
+  persid: ''
+- desc: there No, it was like totally fine. Like I
+  persid: ''
+- desc: didn't even give you an oh yeah. Well, that brings me joy.
+  persid: ''
+- desc: No, it was totally fine.
+  persid: ''
+- desc: Dr. Pepper. They talked about him in marketing. He was like they said, Dr.
+    Pepper Dyer. I love that. Okay, where are you guys? I don't know how it works.
+    For me I don't.
+  persid: ''
+- desc: Know isn't
+  persid: ''
+- desc: just an issue
+  persid: ''
+- desc: I don't
+  persid: ''
+- desc: know I'm not sure what happened.
+  persid: ''
+- desc: Just sitting for
+  persid: ''
+- desc: so long.
+  persid: ''
+- desc: Okay, I know what happened. I'm just like, these two laptops which I was forced
+    to switch between every day aren't in sync.
+  persid: ''
+- desc: You Okay? I will get that fixed up right after class
+  persid: ''
+- desc: but for now, let's look at
+  persid: ''
+- desc: it wouldn't have been a problem. Except I fixed an issue that I was cleaning
+    up the files each time I was refreshing the site. So if I had the old version
+    of my script, it would have kept once it got up there and stayed there. But now
+    I'm cleaning up so when it's not doesn't appear again. It gets removed anyway
+  persid: ''
+- desc: anyone see this yet? I apologize. I wasn't trying to play a cruel trick on
+    you
+  persid: ''
+- desc: anyone know the peanuts cartoons? wasn't trying to be Lucy with like the football
+    for Charlie Brown. Because what she does is she says I promise I'm gonna hold
+    a phrase and kick the ball. And he's graduate be against his better judgment.
+    believes her and then she pulls the football away. So he falls on his rear. He
+    doesn't that happens many times. Anyways, that wasn't my intent
+  persid: ''
+- desc: Okay, so what is a pixel? So that seemed like a good question.
+  persid: ''
+- desc: Anyone like that as a question? Any variations on the question? That you would
+    prefer?
+  persid: ''
+- desc: Okay, so how would anyone at how would you answer that question was the pixel
+    smallest addressable community?
+  persid: ''
+- desc: Have a sample phenomenon to be represented or reconstructive Do you like that
+    no first?
+  persid: ''
+- desc: Know it's really it's resolving and get extra marks for us
+  persid: ''
+- desc: extra five not
+  persid: ''
+- desc: so question is a pixel have geometry.
+  persid: ''
+- desc: Square and he told me that it isn't three times.
+  persid: ''
+- desc: It's not necessarily a square. That's right. But if we preserve the aspect
+    ratio
+  persid: ''
+- desc: thing we're trying to reconstruct then then they're equal distance so most
+    often associated with squares, I think. They don't have geometry in themselves
+    because of their samples even though that's that's not a happy face answer.
+  persid: ''
+- desc: Okay
+  persid: ''
+- desc: we start from black describer sketch how to get the color weight using three
+    parents of colors. When starting from wait and go to black.
+  persid: ''
+- desc: So what do we do to get from black to white? Do we add RGB so it's added?
+  persid: ''
+- desc: '1515'
+  persid: ''
+- desc: the accumulation of the answer to it. Describe prism
+  persid: ''
+- desc: prism.
+  persid: ''
+- desc: will find you a plus one with a past
+  persid: ''
+- desc: cube
+  persid: ''
+- desc: I should just draw a bigger one light side just a Magento game so if we start
+    here with black one direction we can add red we can add blue. Another direction
+    you can add green
+  persid: ''
+- desc: so, blue and green is cyan. Blue and red is magenta and then red and green
+    is yellow
+  persid: ''
+- desc: MS is white so, and then if we look at we looked down axis between white and
+    black and we get a shape like
+  persid: ''
+- desc: this look looking at right from the side and you see something like this
+  persid: ''
+- desc: well usually we squish it into a corner like this. So round the circle is
+    the hue and distance from the center to the edge is the saturation
+  persid: ''
+- desc: this is the value. So black here and what is the center of it
+  persid: ''
+- desc: so what happens if you want to go from white to black?
+  persid: ''
+- desc: So it's so this is a display. Laser additive started from black
+  persid: ''
+- desc: for printing on white paper, so if we print cyan, magenta and then we're subtracting
+    colors from the spec,
+  persid: ''
+- desc: the light that's reflected from them. So is yellow and black as well. Usually
+    because it's easier to get a nice black color if we start with black ink instead
+    of mixing cyan, magenta and yellow
+  persid: ''
+- desc: which can be sometimes very muddy and also paver gets very wet because he
+    applied three times
+  persid: ''
+- desc: does that make sense? Okay it's not a good question. If we say yes for you
+    removed
+  persid: ''
+- desc: so for the answer, just these things that you said you wrote actually and
+    the q will be in our control the cube to describe it. describe our scale
+  persid: ''
+- desc: test obviously is
+  persid: ''
+- desc: going to prevent drawing. You can draw on here or you can draw in here as
+    well to see you should be able to do the horizontal lines straight absolute joke.
+  persid: ''
+- desc: Use that to make the cube
+  persid: ''
+- desc: so is that a fair question? Because we've talked about colors. Right. I could
+    also ask what what does Alpha do? That's a great way.
+  persid: ''
+- desc: Evening Okay, so what about the concepts continuous and discrete? Sampling
+    and quantization the thoughts about those
+  persid: ''
+- desc: so resampling I continuous phenomenon
+  persid: ''
+- desc: and then we get back from our sampling. We got a discrete representation so
+    if we sample
+  persid: ''
+- desc: 'Yes'
+  persid: ''
+- desc: yes. Find that religious organization
+  persid: ''
+- desc: Okay, so now it's time to allow us to reconstruct continuous a continuous
+    phenomenon that we're trying to represent. Okay, does that make sense? So what
+    about because I wrote my writing degree was
+  persid: ''
+- desc: in discrete come together to form sampling. Is that a correct assessment?
+  persid: ''
+- desc: We sample a continuous phenomenon. And that gives us a discrete representation
+    of it. So what is what are enough samples? One day
+  persid: ''
+- desc: sir so let's think about the audio CD format
+  persid: ''
+- desc: so
+  persid: ''
+- desc: I do a CD format samples at 44.1 kilohertz. So what what's the highest frequency
+    we can reconstruct? No, we did this
+  persid: ''
+- desc: that's the highest frequency
+  persid: ''
+- desc: so a few different thinking about an image.
+  persid: ''
+- desc: Say we have this shape for some reason?
+  persid: ''
+- desc: Got let's say they got to. But if we take
+  persid: ''
+- desc: so here think of having a screen on the window. Do you have screens where
+    you live at home to keep up bugs for example.
+  persid: ''
+- desc: So the screen only works if it's small enough to keep up with the bugs. So
+    if you want to be able to represent the bugs or things in the screen, we don't
+    want the objects we're trying to represent to be able to fall through the cracks
+    so to speak. That's not the technical definition. But does that help make sense
+    of it? So if we think about the frequency, the spatial resolution how many samples
+    we're taking. samples should be should the distance between samples should be
+    half the smallest object we want to capture and what is quantization? We haven't
+    talked about quantization yet.
+  persid: ''
+- desc: This is how many bits
+  persid: ''
+- desc: so if we have four bits like the card trick, then you can store 16 values.
+    And if we have to arrange if we have 24 bits then we can store 24 So pardon me
+    16 point 7 million colors.
+  persid: ''
+- desc: I want to this TLA stands for three letter acronym for three letter abbreviation
+    I guess more particularly anyway that that came up in class last year, so don't
+    prepare for that. What are homogeneous coordinates and why are they important?
+    Window and viewport.
+  persid: ''
+- desc: What's the advantage of WebGL when it comes to interaction because we can
+    but we can also make use of HTML. We just go again to the Document Object Model
+    to attach callbacks and so on.
+  persid: ''
+- desc: So this one was about just how are things organized in the HTML and the JavaScript
+    files
+  persid: ''
+- desc: we did? We haven't been shading yet. Should you have known that? Okay, what
+    are triangle strips and why are they important? That's a possible because we've
+    talked about that might compare triangle strips and triangle fans
+  persid: ''
+- desc: Why is the flattened function required in our code
+  persid: ''
+- desc: and this 13 Does maybe a little bit of what we just talked about. What's the
+    purpose of a Zed buffer or a depth buffer? We've talked about that a little bit
+    too I think.
+  persid: ''
+- desc: So that's what we did last year. So you can see which ones we're not going
+    to touch. If you have suggestions about questions on the exam, that would be a
+    fair assessment of learning to date. All except them until Friday at noon. Okay,
+    that's CMRA
+  persid: ''
+- desc: okay. There are no objections will will dismiss for today. Oh, it's one minute
+    early. So as my writing the size of my writing, okay, here at the end
+  persid: ''
+- desc: this is not good.
+  persid: ''
+- desc: Relation values hue See
+  persid: ''
+- desc: ya know context is important right
+  persid: ''
+- desc: we don't have the whole chapter by it's only the part where like you describe
+    last.
+  persid: ''
+- desc: We talked about the beginning of class today.
+  persid: ''
+- desc: So is it finished? No. It's not. It's not the whole time.
+  persid: ''
+- desc: Yeah, but we're not gonna. I'm not gonna ask you good stuff. It's in chapter
+    five that we haven't talked about. Once no including some of the ideas from like
+    specifying the viewing coordinates and and the perspective projection transformations.
+    I won't make them
+  persid: ''
+- desc: I'll make them like our discussion. Not not more difficult. Anyway.
+  persid: ''
+- desc: I'll do my best to be considerate. Okay. Those were some some very good marks
+  persid: ''
+- desc: Yeah, I don't want you to do badly. That's why I welcome your input. Okay,
+    thank you. And I'll make this reappear on the website. Once they get back to my
+    office, are you gonna ask questions from this? So
+  persid: ''
+- desc: I think it's very vital to just ask for the question. Let's do that. On Friday
+    afternoon for one hour and one hour will be question people will be late
+  persid: ''
+- desc: scattering.
+  persid: ''
+- desc: So I went over that. This is last year's midterm. So it was later in the year
+    so it has more concepts than we've covered. So I went through last year's midterm
+    as a way to give you an idea of the kinds of questions I would ask and as an invitation
+    for you need to do suggest different questions that would be a fair assessment
+    of what we've learned in the class. To date.
+  persid: ''
+- desc: Okay, now we're over time.
+  persid: ''
+- desc: Thank you for today. So when you come, we'll be re examined here. So try and
+    spread out if you get here before me, I will be here early. Earlier than I have
+    been before you guys Yeah, the car my car. Will be back in good shape by then
+    or Yeah. Anyway, so see you Monday. Have a good weekend. I have office hours but
+    if you have questions, get in touch with me please. Okay, thanks. Today.
+  persid: ''
+- desc: I saw your new laptop is missing a sticker went to a developer's conference.
+    So got one so what it's a GitHub ice cream
+  persid: ''
+- desc: Yeah, Octocat is an ice cream. I thought it was Oh no. Ice cream with whipped.
+    Yeah. Thank you.
+  persid: ''
+- desc: Thank you have a good day. Thanks, you too.
+  persid: ''
+- desc: You could just send him to me, just
+  persid: ''
+- desc: because just because I'm going to study last Monday, I was here but I couldn't
+    reach it. I couldn't reduce the attendance. I'm not sure why. Last Monday I was
+    here.
+  persid: ''
+- desc: Right now I saw that you sent me a contact request. Oh yeah. But I don't do
+    that.
+  persid: ''
+- desc: Because you are courses contacts. are really strange, I think. I don't know.
+    When I'm gonna get a message from a contact, I don't know, the context and so
+    on. So I would just say send me email
+  persid: ''
+- desc: that would be better. I just, I don't want you to feel like I'm I'm snubbing
+    you or anything? It's just I don't do it for anybody.
+  persid: ''
+- desc: It's okay. Last, last Monday, I was about to ask this, this attendance. So
+    I just send request content in your Course.
+  persid: ''
+- desc: by Professor bye have a good day.
+  persid: ''
+- desc: Thank you. Professor. You're welcome.
+  persid: ''
+- desc: Thank you. Professor. You're welcome.
+  persid: ''
+offering:
+  id: CS-733-202330
