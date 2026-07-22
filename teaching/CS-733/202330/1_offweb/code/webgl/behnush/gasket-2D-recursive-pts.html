@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- based on: https://www.interactivecomputergraphics.com/8E/Code/02/gasket2.html -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            2D Sierpiński Gasket (Recursive Points)
+        </title>
+        <script id="vertex-shader" type="x-shader/x-vertex">
+            #version 300 es
+            in vec4 aPosition;
+            in vec4 aColor;
+            out vec4 vColor;
+
+            void
+            main()
+            {
+                gl_PointSize = 1.0;
+                gl_Position = aPosition;
+                vColor = aColor;
+            }
+        </script>
+        <script id="fragment-shader" type="x-shader/x-fragment">
+            #version 300 es
+            precision mediump float;
+            in vec4 vColor;
+            out vec4 fColor;
+
+            void
+            main()
+            {
+                fColor = vColor;
+            }
+        </script>
+        <script type="text/javascript" src="initShaders.js"></script>
+        <script type="text/javascript" src="MVnew.js"></script>
+        <script type="text/javascript" src="gasket-2D-recursive-pts.js"></script>
+    </head>
+    <body>
+        <canvas width="512" height="512" id="gl-canvas">
+            Your browser does not support the HTML5 canvas element
+        </canvas>
+    </body>
+</html>
