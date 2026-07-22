@@ -10,7 +10,7 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 
 gem "jekyll", "~> 4.2.2"
-gem 'nokogiri', '~> 1.15', '>= 1.15.4'
+gem 'nokogiri', '~> 1.19'
 gem 'racc', '~> 1.7', '>= 1.7.1'
 gem 'async', '~> 2.6', '>= 2.6.4'
 gem 'io-event', '~> 1.3', '>= 1.3.2'
