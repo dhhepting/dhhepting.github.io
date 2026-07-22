@@ -16,7 +16,7 @@ if (len(reldir) != 2):
 	sys.exit()
 
 # find offering indicated by arguments and load meeting days
-with open(DATA_ROOT + 'offerings.csv', newline='') as offfile:
+with open(DATA_ROOT + 'all/offerings.csv', newline='') as offfile:
     offreader = csv.DictReader(offfile)
     off_found = False
     for row in offreader:
@@ -30,7 +30,7 @@ if off_found == False:
     sys.exit()
 daysFromMonday = { 'Mon' : 0, 'Tue' : 1, 'Wed' : 2, 'Thu' : 3, 'Fri' : 4, 'Sat' : 5, 'Sun' : 6 }
 # if offering is found, use semester data to make meetings list
-with open(DATA_ROOT + 'semesters.csv', newline='') as semfile:
+with open(DATA_ROOT + 'all/semesters.csv', newline='') as semfile:
     semreader = csv.DictReader(semfile)
     sem_found = False
     for row in semreader:
@@ -72,8 +72,8 @@ except OSError as e:
     pass
 
 # create data files for meetings and weeks
-mtgsfile = offdatadir + '/testmeetings.csv'
-weeksfile = offdatadir + '/testweeks.csv'
+mtgsfile = offdatadir + '/meetings.csv'
+weeksfile = offdatadir + '/weeks.csv'
 
 # start meeting counter at 1, count total meetings and save the dates
 mtgdates = {}
@@ -104,12 +104,13 @@ while (sday <= ced):
         wke = wks + timedelta(days=6)
         weekctr += 1
 
-tot_mtgs = mtgctr - 1       
+tot_mtgs = mtgctr - 1
+tot_wks = weekctr       
 
 # write meeting file details into meetings.csv
 try:
-    with open(mtgsfile, 'w', newline='') as mtgscsv:
-        fieldnames = ['meeting','total_mtgs','week','date','file','wikipage_id','response_id']
+    with open(mtgsfile, 'x', newline='') as mtgscsv:
+        fieldnames = ['meeting','total_mtgs','week','total_wks','week_of','date','file','wikipage_id','response_id','quiz_id']
         mtgswriter = csv.DictWriter(mtgscsv, fieldnames=fieldnames)
         mtgswriter.writeheader()
         for mm in range(1,mtgctr):
@@ -120,12 +121,15 @@ try:
                 'meeting' : str(mm).zfill(2),
                 'total_mtgs' : tot_mtgs,
                 'week' : mtg_week,
+                'total_wks' : tot_wks,
+                'week_of' : mondays[mtg_week],
                 'date' : mtg_date, 
                 'file' : mtg_fname})
 except Exception as e:
     print('meetings.csv:',e)
+print(mtgsfile, 'written')
 
-# write meeting file details into weeks.csv
+""" # write meeting file details into weeks.csv
 try:
     with open(weeksfile, 'w', newline='') as wkscsv:
         fieldnames = ['week','start_date','meetings','topics','notes']
@@ -145,4 +149,4 @@ try:
                 'topics' : 'Lots', 
                 'notes' : 'None'})
 except Exception as e:
-    print('weeks.csv:',e)
+    print('weeks.csv:',e) """

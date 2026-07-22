@@ -26,7 +26,7 @@ if (len(reldir) != 2):
 	sys.exit()
 
 # find offering indicated by arguments and load meeting days
-with open(DATA_ROOT + 'offerings.csv', newline='') as offfile:
+with open(DATA_ROOT + 'all/offerings.csv', newline='') as offfile:
     offreader = csv.DictReader(offfile)
     off_found = False
     for row in offreader:
@@ -51,7 +51,7 @@ if off_found == 0:
     sys.exit()
 
 # if offering is found, use semester data to make meetings list
-with open(DATA_ROOT + 'semesters.csv', newline='') as semfile:
+with open(DATA_ROOT + 'all/semesters.csv', newline='') as semfile:
     semreader = csv.DictReader(semfile)
     sem_found = 0
     for row in semreader:
@@ -83,6 +83,7 @@ jcrs_id = reldir[0].replace('+','_')
 offdatadir = os.path.abspath(DATA_ROOT + jcrs_id + '/' + reldir[1] + '/')
 try:
     os.makedirs(offdatadir)
+    print('Created directory:', offdatadir)
 except OSError as e:
     # path already exists
     pass

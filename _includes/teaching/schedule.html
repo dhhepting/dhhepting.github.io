@@ -1,4 +1,4 @@
-{%- assign offs = site.data.teaching.offerings | where: "semester", include.cs -%}
+{%- assign offs = site.data.teaching.all.offerings | where: "semester", include.cs -%}
 {%- assign office = site.data.teaching.officehrs | where: "semester", include.cs -%}
 {%- capture semfile -%}s{{include.cs}}{%- endcapture -%}
 {%- if site.data.teaching.schedule[semfile]-%}

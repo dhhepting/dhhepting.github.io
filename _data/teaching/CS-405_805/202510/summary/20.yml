@@ -1,0 +1,3255 @@
+Audio-Transcript:
+- desc: Hello.
+  persid: ''
+- desc: 'So we''re at meeting 20 today, of
+
+    26'
+  persid: ''
+- desc: any questions or concerns You
+  persid: ''
+- desc: okay, I'm
+  persid: ''
+- desc: 'in the base color parameter,
+
+    therefore we perform linear'
+  persid: ''
+- desc: 'interpolation between The column
+
+    F zero for dielectrics and the'
+  persid: ''
+- desc: 'base color for metals. Using the
+
+    metallic parameter as weight, F'
+  persid: ''
+- desc: 'zero equals mix F zero base
+
+    color, metallic. For a metallic'
+  persid: ''
+- desc: 'value of zero, we get the
+
+    dielectric F zero. And for a'
+  persid: ''
+- desc: metallic value we
+  persid: ''
+- desc: 'Okay, so I want to talk about
+
+    reflection models. So we asked'
+  persid: ''
+- desc: 'you look at the First two
+
+    sections of chapter Nine And'
+  persid: ''
+- desc: 'so in pbrt, where Are reflection
+
+    computations Performed in'
+  persid: ''
+- desc: 'so this the answer that I was
+
+    Looking for from the Book,'
+  persid: ''
+- desc: reflection coordinate system you
+  persid: ''
+- desc: 'is So if you find that you''re
+
+    not happy with the way things'
+  persid: ''
+- desc: 'got marked by The system. Let me
+
+    know when I''ll review them. You'
+  persid: ''
+- desc: 'so why is cosine weighted
+
+    hemisphere sampling useful in'
+  persid: ''
+- desc: diffuse reflection computations?
+  persid: ''
+- desc: 'Was it because they could be
+
+    directly used? Was that the'
+  persid: ''
+- desc: 'answer? I wasn''t sure if that''s
+
+    the answer you''re looking for or'
+  persid: ''
+- desc: not. They could
+  persid: ''
+- desc: 'also, like, improve the error
+
+    without'
+  persid: ''
+- desc: additional competition.
+  persid: ''
+- desc: Yeah. I so
+  persid: ''
+- desc: 'I was looking for something Like
+
+    it reduces error without'
+  persid: ''
+- desc: additional computation so
+  persid: ''
+- desc: 'it, so reduces error without
+
+    increased computational cost.'
+  persid: ''
+- desc: 'So you can see in there''s an
+
+    interactive'
+  persid: ''
+- desc: 'there''s, well, it''s not
+
+    interactive so much. There''s one'
+  persid: ''
+- desc: 'with and without the cosine
+
+    weighted sampling, and you can'
+  persid: ''
+- desc: 'see that the one with looks
+
+    better.'
+  persid: ''
+- desc: 'That''s that weird gargoyle
+
+    looking thing. Yes, I'
+  persid: ''
+- desc: 'How would you describe material
+
+    with the property if you choose'
+  persid: ''
+- desc: 'a point on the surface and
+
+    rotate it around its normal axis'
+  persid: ''
+- desc: 'at that point, the distribution
+
+    of light reflected at that'
+  persid: ''
+- desc: 'if you choose a point on the
+
+    surface and rotate this surface'
+  persid: ''
+- desc: 'around its normal access axis at
+
+    that point, distribution of'
+  persid: ''
+- desc: 'light reflected at that point
+
+    does not change.'
+  persid: ''
+- desc: Isotropic, Yes, I
+  persid: ''
+- desc: 'so What''s the other way we could
+
+    describe a surface that doesn''t'
+  persid: ''
+- desc: have that property?
+  persid: ''
+- desc: 'Pitch Black. No what the
+
+    distribution would not changed.'
+  persid: ''
+- desc: There's no lighting. I
+  persid: ''
+- desc: 'don''t know if I''m saying it
+
+    right, but anisotropic'
+  persid: ''
+- desc: somewhere.
+  persid: ''
+- desc: Yeah, I
+  persid: ''
+- desc: 'so here is an example of an
+
+    isotropic i'
+  persid: ''
+- desc: So an isotropic surface,
+  persid: ''
+- desc: 'something with a matte paint and
+
+    maybe A black chalkboard. I'
+  persid: ''
+- desc: 'uh, velvet And the moon surface.
+
+    Yeah. So'
+  persid: ''
+- desc: another one is Cat size.
+  persid: ''
+- desc: 'So these were things that
+
+    reflected, like right back at'
+  persid: ''
+- desc: 'the light or the camera. Was
+
+    that the definite or retro'
+  persid: ''
+- desc: reflective?
+  persid: ''
+- desc: Yeah.
+  persid: ''
+- desc: 'So would a mirror be an example,
+
+    or is that too much scatter? And'
+  persid: ''
+- desc: 'it''s not really directed or
+
+    vocal. It''s'
+  persid: ''
+- desc: a mirror, just as it is,
+  persid: ''
+- desc: would be
+  persid: ''
+- desc: 'a different type of reflective
+
+    surface,'
+  persid: ''
+- desc: 'if it''s if it''s a perfect
+
+    Mirror, then, then we''ve got'
+  persid: ''
+- desc: 'the light going off at an angle
+
+    equal to the angle of incidence'
+  persid: ''
+- desc: and
+  persid: ''
+- desc: does that make sense?
+  persid: ''
+- desc: 'Yeah, because it compares to
+
+    these ones, will send the light'
+  persid: ''
+- desc: 'right back to the surface right
+
+    during rebounding. Is that'
+  persid: ''
+- desc: correct?
+  persid: ''
+- desc: 'Yeah, it''s collecting the
+
+    incoming rays and directing them'
+  persid: ''
+- desc: back
+  persid: ''
+- desc: so we can Have like
+  persid: ''
+- desc: 'reflective material or
+
+    reflectors on a bike or'
+  persid: ''
+- desc: 'so I have a couple videos today.
+
+    I'
+  persid: ''
+- desc: that may be
+  persid: ''
+- desc: 'provide a bit of context for
+
+    some of the other things we''ve'
+  persid: ''
+- desc: been discussing. I
+  persid: ''
+- desc: 'it so part of the part of them
+
+    are implementation, which we'
+  persid: ''
+- desc: 'won''t look at, we''ll just look
+
+    at the theory stuff,'
+  persid: ''
+- desc: 'and you can let me know if you
+
+    think they''re valuable. I'
+  persid: ''
+- desc: so I was looking at
+  persid: ''
+- desc: 'blin fun reflectance reflection
+
+    model,'
+  persid: ''
+- desc: because
+  persid: ''
+- desc: 'Now in the section on diffuse
+
+    reflection and talked about'
+  persid: ''
+- desc: micro facet
+  persid: ''
+- desc: models.
+  persid: ''
+- desc: Anyway,
+  persid: ''
+- desc: 'that was a bit of my thinking,
+
+    but let''s get started on the'
+  persid: ''
+- desc: videos. Okay,
+  persid: ''
+- desc: 'do you look at the gorgeous
+
+    woman? And immediately you think'
+  persid: ''
+- desc: 'to yourself, no, this woman is
+
+    out of my league. She''s'
+  persid: ''
+- desc: 'unattainable. The average middle
+
+    aged man'
+  persid: ''
+- desc: 'd squared for the radius we
+
+    choose the distance you'
+  persid: ''
+- desc: 'there are three simple changes I
+
+    tell all of my arthritis'
+  persid: ''
+- desc: 'patients to make. Number one,
+
+    you have to start drinking more'
+  persid: ''
+- desc: 'water. You wouldn''t believe
+
+    happy, huh?'
+  persid: ''
+- desc: 'Hello everybody. Welcome to
+
+    shaders monthly. Today we talk'
+  persid: ''
+- desc: 'about the form and bling form
+
+    shading models. Both models are'
+  persid: ''
+- desc: 'reflection models. This means
+
+    they describe mathematically how'
+  persid: ''
+- desc: 'light is reflected at an opaque
+
+    surface. Here you see the result'
+  persid: ''
+- desc: 'of the shader implementation
+
+    that we will have achieved at'
+  persid: ''
+- desc: 'the end of this episode, the
+
+    Fung model was published by'
+  persid: ''
+- desc: 'Bucha Fong in 1975 and later
+
+    refined to the blinnfong model'
+  persid: ''
+- desc: 'by Jim Blinn two years later.
+
+    Blinn Fung shading used to be'
+  persid: ''
+- desc: 'the standard in real time
+
+    graphics for quite a while. For'
+  persid: ''
+- desc: 'example, it was the only model
+
+    available in the OpenGL fixed'
+  persid: ''
+- desc: 'function pipeline before the
+
+    introduction of programmable'
+  persid: ''
+- desc: 'shaders in 2003 from today''s
+
+    point of view, these models are'
+  persid: ''
+- desc: 'quite simple. Consequently, I
+
+    will not only talk about the'
+  persid: ''
+- desc: 'form and bling form models in
+
+    this video, but I will present'
+  persid: ''
+- desc: 'these models in a general
+
+    theoretical framework that can'
+  persid: ''
+- desc: 'be easily extended to more
+
+    complex reflection models. In'
+  persid: ''
+- desc: 'particular, I will introduce the
+
+    rendering equation and the B'
+  persid: ''
+- desc: 'directional reflection
+
+    distribution function, BRDF,'
+  persid: ''
+- desc: 'which are the fundamental tools
+
+    in computer graphics to describe'
+  persid: ''
+- desc: 'what happens when light is
+
+    reflected at an opaque surface.'
+  persid: ''
+- desc: 'If you are not interested in the
+
+    theory, you can jump directly to'
+  persid: ''
+- desc: 'the implementation at the end of
+
+    the video. To perform shading,'
+  persid: ''
+- desc: 'we need to simulate how light is
+
+    emitted from light sources, how'
+  persid: ''
+- desc: 'it interacts with 3d objects
+
+    that are made of different'
+  persid: ''
+- desc: 'materials, and how it is finally
+
+    observed by our eyes or the'
+  persid: ''
+- desc: 'sensor of a camera and creates
+
+    an image of the world. So what'
+  persid: ''
+- desc: 'is light? Light is a quantized
+
+    electromagnetic wave. It is'
+  persid: ''
+- desc: 'quantized because it is made of
+
+    particles called photons, which'
+  persid: ''
+- desc: 'are packets of energy that
+
+    travel as waves to space. And'
+  persid: ''
+- desc: 'light travels extremely fast,
+
+    with about 300 million meters'
+  persid: ''
+- desc: 'per second. The wavelength of
+
+    the visible range is'
+  persid: ''
+- desc: 'approximately between 380 and
+
+    770 nanometers. Visible light'
+  persid: ''
+- desc: 'that is monochromatic, which
+
+    means that it only contains a'
+  persid: ''
+- desc: 'single wavelength, corresponds
+
+    to a speckled color from violet,'
+  persid: ''
+- desc: 'starting at 380 nanometers over
+
+    blue, cyan, green, yellow,'
+  persid: ''
+- desc: 'orange, and ending at Red, is
+
+    770 nanometers. Visible light is'
+  persid: ''
+- desc: 'just one form of electromagnetic
+
+    radiation. Gamma radiation has'
+  persid: ''
+- desc: 'the shortest wavelength and
+
+    carries the highest energy per'
+  persid: ''
+- desc: 'photon. Gamma radiation is
+
+    produced, for example, in a'
+  persid: ''
+- desc: 'nuclear explosion. Then we have
+
+    X rays, which also pass through'
+  persid: ''
+- desc: 'a material. For example, we all
+
+    know X rays from medical'
+  persid: ''
+- desc: 'applications, ultraviolet,
+
+    infrared, microwaves, which we'
+  persid: ''
+- desc: 'all know well because they heat
+
+    our food in the microwave oven,'
+  persid: ''
+- desc: 'and finally, radio waves with
+
+    the longest wavelengths, which'
+  persid: ''
+- desc: 'we use for radio and TV
+
+    broadcast and wireless'
+  persid: ''
+- desc: 'communication, light Sources
+
+    often emit a wide spectrum of'
+  persid: ''
+- desc: 'different wavelengths. In
+
+    particular, white light is a'
+  persid: ''
+- desc: 'superposition of many
+
+    wavelengths. Here you see the'
+  persid: ''
+- desc: 'spectral power distribution of
+
+    daylight. This figure shows the'
+  persid: ''
+- desc: 'spectrum of the standardized CIE
+
+    Illumina P 65 that can be used'
+  persid: ''
+- desc: 'as a reference for the so called
+
+    White Point, which we will see'
+  persid: ''
+- desc: 'later. So daylight is composed
+
+    out of all these spectral'
+  persid: ''
+- desc: 'colors. We can witness this in
+
+    nature when we observe rainbows.'
+  persid: ''
+- desc: 'Rainbows are created when rain
+
+    drops split the sunlight into'
+  persid: ''
+- desc: 'its individual spectral colors.
+
+    What happens when light'
+  persid: ''
+- desc: 'interacts with objects? Let''s
+
+    assume light is emitted from a'
+  persid: ''
+- desc: 'light source in a homogeneous
+
+    medium, such as air. Light is'
+  persid: ''
+- desc: 'traveling along straight lines
+
+    through the world. Some light'
+  persid: ''
+- desc: 'rays may hit the eye directly.
+
+    Others are reflected from an'
+  persid: ''
+- desc: 'object surface towards the eye.
+
+    When a light ray hits the'
+  persid: ''
+- desc: 'surface, the photons are either
+
+    reflected, transmitted or'
+  persid: ''
+- desc: 'absorbed. The energy of absorbed
+
+    photons is converted into other'
+  persid: ''
+- desc: 'forms of energy. Typically, this
+
+    is heat dependent on the'
+  persid: ''
+- desc: 'material. Photons with certain
+
+    wavelengths are absorbed, which'
+  persid: ''
+- desc: 'means that light changes its
+
+    spectrum and consequently its'
+  persid: ''
+- desc: 'perceived color. For example,
+
+    this tea port appears red under'
+  persid: ''
+- desc: 'white light because most photons
+
+    that are not in the range of the'
+  persid: ''
+- desc: 'red spectrum are absorbed. The
+
+    process of reflection can repeat'
+  persid: ''
+- desc: 'many times. In a scene, for
+
+    example, this ray hits the Blue'
+  persid: ''
+- desc: 'cup and changes its color
+
+    because of absorption. The'
+  persid: ''
+- desc: 'remaining light is reflected and
+
+    hits the red teapot. The'
+  persid: ''
+- desc: 'spectrum is further reduced at
+
+    this surface, and the remaining'
+  persid: ''
+- desc: 'part is reflected in the
+
+    direction of the eye. If the'
+  persid: ''
+- desc: 'light rays reach the eye,
+
+    receptors on the retina are'
+  persid: ''
+- desc: 'activated and an image is formed
+
+    in the brain, there are two'
+  persid: ''
+- desc: 'systems of light sensory cells
+
+    in humans. The first system'
+  persid: ''
+- desc: 'consists of rods that react very
+
+    sensitive to light, but do not'
+  persid: ''
+- desc: 'produce color vision. The second
+
+    system consists of cones, which'
+  persid: ''
+- desc: 'are the color receptors. There
+
+    are L, M and S cones, which'
+  persid: ''
+- desc: 'react to light at long, medium
+
+    and short wavelengths. The'
+  persid: ''
+- desc: 'diagram shows the curves for
+
+    normalized absorption of the'
+  persid: ''
+- desc: 'cones over the wavelengths. The
+
+    Center for blue, sensitive s'
+  persid: ''
+- desc: 'cones is at 420 nanometers. For
+
+    Green, sensitive M, cones at 534'
+  persid: ''
+- desc: 'nanometers, and for red,
+
+    sensitive L, cones at 564'
+  persid: ''
+- desc: 'nanometers. Because there are
+
+    only three types of cones, the'
+  persid: ''
+- desc: 'human visual system cannot
+
+    resolve the real spectral power'
+  persid: ''
+- desc: 'distribution of light. Instead,
+
+    the true distribution is sampled'
+  persid: ''
+- desc: 'very sparsely by the response of
+
+    the cones. Consequently, human'
+  persid: ''
+- desc: 'observers can be tricked to some
+
+    extent, different spectral power'
+  persid: ''
+- desc: 'distributions can produce the
+
+    same perceived color in low'
+  persid: ''
+- desc: 'light situations, the cones are
+
+    not sensitive enough, and only'
+  persid: ''
+- desc: 'the rods are working. That is
+
+    why we do not perceive color at'
+  persid: ''
+- desc: 'night, as you have already seen
+
+    in previous episodes of shaders'
+  persid: ''
+- desc: 'monthly. We typically use the
+
+    RGB color model as the output of'
+  persid: ''
+- desc: 'our fragment shaders. This means
+
+    different colors are created by'
+  persid: ''
+- desc: 'the additive mixture of three
+
+    primary colors, red, green and'
+  persid: ''
+- desc: 'blue. So for red, we have the
+
+    weighting factors, 100, which is'
+  persid: ''
+- desc: 'the first dimension of this
+
+    color space. For Green, the'
+  persid: ''
+- desc: 'weights are 010, which is the
+
+    second dimension. And for blue,'
+  persid: ''
+- desc: 'the weights are 001, which is
+
+    the third dimension. The'
+  persid: ''
+- desc: 'additive mixture of red and
+
+    green gives 110, resulting in'
+  persid: ''
+- desc: 'yellow. The additive mixture of
+
+    red and blue gives 101,'
+  persid: ''
+- desc: 'resulting in magenta. The
+
+    additive mixture of green and'
+  persid: ''
+- desc: 'blue gives 011, resulting inside
+
+    if all three weights are equal,'
+  persid: ''
+- desc: 'this results in a shade of gray.
+
+    When using arbitrary RGB'
+  persid: ''
+- desc: 'weighting factors in the range
+
+    from zero to one, many different'
+  persid: ''
+- desc: 'colors can be created. The use
+
+    of three primary colors is to'
+  persid: ''
+- desc: 'some extent, motivated by the
+
+    three code types in the human'
+  persid: ''
+- desc: 'visual system. However, until
+
+    now, these RGB weights have no'
+  persid: ''
+- desc: 'reconnection to quantitative
+
+    values in the physical world. To'
+  persid: ''
+- desc: 'establish this connection, we
+
+    have to talk about the CIE RGB'
+  persid: ''
+- desc: 'color space. This color space
+
+    was defined by the CIE in 1931'
+  persid: ''
+- desc: 'and is based on experiments with
+
+    human participants. The'
+  persid: ''
+- desc: 'participants were shown a target
+
+    color shown on the left here,'
+  persid: ''
+- desc: 'and had the task to recreate the
+
+    same color perception by'
+  persid: ''
+- desc: 'shooting the additive mixture of
+
+    three lines of 700 nanometers,'
+  persid: ''
+- desc: '541.1 nanometers. And 435.8
+
+    nanometers. So the CIE'
+  persid: ''
+- desc: 'experiments used real, physical
+
+    red, green and blue,'
+  persid: ''
+- desc: 'monochromatic light sources of a
+
+    defined wavelength. The question'
+  persid: ''
+- desc: 'was, if all possible colors
+
+    could be reproduced by additive'
+  persid: ''
+- desc: 'mixture of these three lights.
+
+    The experiment showed, yes,'
+  persid: ''
+- desc: 'three colors are sufficient, but
+
+    some weights had to be negative.'
+  persid: ''
+- desc: 'So what does this mean? How are
+
+    negative weights created? The'
+  persid: ''
+- desc: 'trick is simple. Light can be
+
+    subtracted from the right side'
+  persid: ''
+- desc: 'by adding light to the left
+
+    side. So if the participants use'
+  persid: ''
+- desc: 'additive light on the left side
+
+    to match the two colors. This'
+  persid: ''
+- desc: 'was counted as a negative
+
+    weight. Here you see the'
+  persid: ''
+- desc: 'resulting color matching
+
+    functions for red, green and'
+  persid: ''
+- desc: 'blue. So for example, if we want
+
+    to create a monochromatic bluish'
+  persid: ''
+- desc: 'sign, spectral color with 480
+
+    nanometers, we have to use the'
+  persid: ''
+- desc: 'RGB weights of minus 0.05, for
+
+    red, 0.04 for green and 0.15 for'
+  persid: ''
+- desc: 'blue. To represent any spectral
+
+    power distribution in the CIE'
+  persid: ''
+- desc: 'RGB color space, we can multiply
+
+    it with the color matching'
+  persid: ''
+- desc: 'functions and integrate over the
+
+    complete spectrum. This results'
+  persid: ''
+- desc: 'in three scalar RGB values. So
+
+    the CIE RGB color space defines'
+  persid: ''
+- desc: 'a three dimensional space of all
+
+    perceivable colors. This space'
+  persid: ''
+- desc: 'is visualized here in a special
+
+    two dimension called the CIE'
+  persid: ''
+- desc: 'chromaticity diagram. Here on
+
+    the border, we see the'
+  persid: ''
+- desc: 'monochromatic spectral colors
+
+    which enclose the space of all'
+  persid: ''
+- desc: 'possible colors. The colors that
+
+    can be created with positive'
+  persid: ''
+- desc: 'weights are always in this
+
+    triangle, spared by the three'
+  persid: ''
+- desc: 'primary colors at 700
+
+    nanometers, 546.1'
+  persid: ''
+- desc: 'nanometers and 435.8 nanometers.
+
+    For colors outside of this'
+  persid: ''
+- desc: 'triangle, negative weights must
+
+    be used. Next, we introduce the'
+  persid: ''
+- desc: 'sRGB color space, which is
+
+    different from CIE RGB. SRGB is'
+  persid: ''
+- desc: 'the current standard for
+
+    monitors, websites and images'
+  persid: ''
+- desc: 'without an explicit color
+
+    profile. Therefore, if we write'
+  persid: ''
+- desc: 'color values from our fragment
+
+    shader into the frame buffer and'
+  persid: ''
+- desc: 'display the result in a standard
+
+    consumer monitor. The expected'
+  persid: ''
+- desc: 'shader output is sRGB. The RGB
+
+    values are in the range from'
+  persid: ''
+- desc: 'zero to one. SRGB uses different
+
+    primary colors. Here you see the'
+  persid: ''
+- desc: 'color gamut of sRGB.
+
+    Consequently, the range of'
+  persid: ''
+- desc: 'displayable colors is smaller
+
+    compared to CIE RGB, the'
+  persid: ''
+- desc: 'standardized CIE illuminant D 65
+
+    defines a white point for sRGB.'
+  persid: ''
+- desc: 'Fortunately, we do not lose a
+
+    connection to physical'
+  persid: ''
+- desc: 'quantities when using sRGB
+
+    instead of CIE RGB. If gamma'
+  persid: ''
+- desc: 'correction is performed
+
+    beforehand, there is a linear'
+  persid: ''
+- desc: 'transformation from s RGB to CIE
+
+    RGB. What do I mean by gamma'
+  persid: ''
+- desc: 'correction? Here you see the
+
+    function to decode a color'
+  persid: ''
+- desc: 'channel from s RGB to
+
+    radiometric linear s RGB values'
+  persid: ''
+- desc: 'in the figure, this function is
+
+    plotted as a black curve. The'
+  persid: ''
+- desc: 'colors that you see down here
+
+    are s RGB values. So these color'
+  persid: ''
+- desc: 'steps are linear in s RGB space.
+
+    Interestingly, as you are'
+  persid: ''
+- desc: 'probably watching this video in
+
+    something that is close to s'
+  persid: ''
+- desc: 'RGB, these values should appear
+
+    approximately linear to you.'
+  persid: ''
+- desc: 'However, if you measured the
+
+    brightness with the radiometric'
+  persid: ''
+- desc: 'light meter, it would not be
+
+    linear. The reason is that our'
+  persid: ''
+- desc: 'visual perception is not linear.
+
+    The human visual system is'
+  persid: ''
+- desc: 'better at distinguishing darker
+
+    intensities than lighter ones,'
+  persid: ''
+- desc: 'which is considered in CS RGB
+
+    encoding. However, in rendering,'
+  persid: ''
+- desc: 'it is important to work in a
+
+    linear space, because otherwise'
+  persid: ''
+- desc: 'we cannot simply add
+
+    contributions from different'
+  persid: ''
+- desc: 'light sources. Therefore, it is
+
+    important that we apply gamma'
+  persid: ''
+- desc: 'decoding and encoding in our
+
+    shader. We could use the exact'
+  persid: ''
+- desc: 'function that is denoted here,
+
+    or we can approximate it. In the'
+  persid: ''
+- desc: 'figure, the red curve is a
+
+    simpler gamma decoding function'
+  persid: ''
+- desc: 'which decodes the color value by
+
+    raising it to the power of 2.2'
+  persid: ''
+- desc: 'ok. This concludes what we need
+
+    to know about representing'
+  persid: ''
+- desc: 'colors in our shader. The main
+
+    take home message is that we do'
+  persid: ''
+- desc: 'not need to simulate the Light
+
+    Transport for every wavelength.'
+  persid: ''
+- desc: 'Computing the Light Transport
+
+    for three primary colors is'
+  persid: ''
+- desc: 'sufficient for most
+
+    applications. Next we talk about'
+  persid: ''
+- desc: 'the rendering equation. The
+
+    rendering equation was'
+  persid: ''
+- desc: 'introduced in a SIGGRAPH paper
+
+    by James Cargill in 1986 this is'
+  persid: ''
+- desc: 'more than 10 years after the
+
+    form model was published. The'
+  persid: ''
+- desc: 'rendering equation describes
+
+    what happens when light is'
+  persid: ''
+- desc: 'reflected at an opaque surface.
+
+    Solving the rendering equation'
+  persid: ''
+- desc: 'is very challenging, and many
+
+    different approaches try to'
+  persid: ''
+- desc: 'approximate the exact solution.
+
+    As you see on this slide, there'
+  persid: ''
+- desc: 'are several terms, such as a
+
+    solid angle, irradiance and'
+  persid: ''
+- desc: 'radians, that we need to
+
+    introduce before coming back to'
+  persid: ''
+- desc: 'the rendering equation, let''s
+
+    start with a solid angle. In'
+  persid: ''
+- desc: 'school, we all learned about
+
+    angles in a 2d plane. In 2d if'
+  persid: ''
+- desc: 'we want to know the angle that
+
+    is covered by an object seen'
+  persid: ''
+- desc: 'from a certain point, we place a
+
+    circle around this point and'
+  persid: ''
+- desc: 'project the 2d object onto the
+
+    circle. Then the angle is'
+  persid: ''
+- desc: 'defined as the arc length s over
+
+    the radius r of the circle.'
+  persid: ''
+- desc: 'Although the angle is a
+
+    dimensionless quantity, it is'
+  persid: ''
+- desc: 'specified in the unit radian.
+
+    Obviously, for unit circle with'
+  persid: ''
+- desc: 'a radius of one, we can drop the
+
+    division by the radius for a'
+  persid: ''
+- desc: 'half revolution in the unit
+
+    circle, the arc length is pi,'
+  persid: ''
+- desc: 'which is in fact, the definition
+
+    of pi. Consequently, for a full'
+  persid: ''
+- desc: 'revolution in the unit circle,
+
+    the angle is two pi, the'
+  persid: ''
+- desc: 'equivalent of an angle in 3d
+
+    space is called a solid angle.'
+  persid: ''
+- desc: 'If we want to know the solid
+
+    angle that is covered by an'
+  persid: ''
+- desc: 'object seen from a certain
+
+    point, we place a sphere around'
+  persid: ''
+- desc: 'this point and project a 3d
+
+    object onto the sphere, then the'
+  persid: ''
+- desc: 'solid angle is defined as the
+
+    size of the projected area s'
+  persid: ''
+- desc: 'over the radius squared. The
+
+    solid angle is a dimensionless'
+  persid: ''
+- desc: 'quantity, but it is specified in
+
+    the unit steer radian. If we'
+  persid: ''
+- desc: 'want to compute the solid angle,
+
+    we can split the whole solid'
+  persid: ''
+- desc: 'angle into infinitesimal solid
+
+    angle pieces denoted by d omega'
+  persid: ''
+- desc: 'here, and integrate over the
+
+    whole domain. One way to solve'
+  persid: ''
+- desc: 'this integral is to parameterize
+
+    the solid angle in spherical'
+  persid: ''
+- desc: 'coordinates. These coordinates
+
+    are the polar angle, theta and'
+  persid: ''
+- desc: 'the other muscle angle, phi, d
+
+    omega is equal to an'
+  persid: ''
+- desc: 'infinitesimal surface patch ds
+
+    over the radius squared. We set'
+  persid: ''
+- desc: 'the Radius to one and compute
+
+    the area of a surface patch, ds'
+  persid: ''
+- desc: 'by the multiplication of d theta
+
+    and d phi now we see in the'
+  persid: ''
+- desc: 'figure that the size of a d phi
+
+    step depends on theta. When'
+  persid: ''
+- desc: 'theta equals zero, the
+
+    contribution is zero, and for'
+  persid: ''
+- desc: 'theta equal to pi over two, the
+
+    contribution is a full D phi'
+  persid: ''
+- desc: 'step. We can take this into
+
+    account and use a factor sinus'
+  persid: ''
+- desc: 'theta, to scale the d phi step
+
+    accordingly. Rearranging the'
+  persid: ''
+- desc: 'factors gives a final result of
+
+    the root. Two quick examples, if'
+  persid: ''
+- desc: 'we want to compute the solid
+
+    angle of an entire sphere, the'
+  persid: ''
+- desc: 'integration limits of phi go
+
+    from zero to two pi, and of'
+  persid: ''
+- desc: 'theta from zero to pi, we can
+
+    solve this interval'
+  persid: ''
+- desc: 'analytically, and the result is
+
+    a solid angle of four pi. Is the'
+  persid: ''
+- desc: 'radians. If we do the same for a
+
+    hemisphere, the result is two'
+  persid: ''
+- desc: 'pi. Okay, let''s define the other
+
+    terms that we need for the'
+  persid: ''
+- desc: 'rendering equation. First we
+
+    have the radial flux, which is a'
+  persid: ''
+- desc: 'measure of power. It is equal to
+
+    radian energy per time. The unit'
+  persid: ''
+- desc: 'is watt, which is joule per
+
+    second. We can think of it this'
+  persid: ''
+- desc: 'way, every photon carries energy
+
+    that is equal to Planck''s'
+  persid: ''
+- desc: 'constant h times the speed of
+
+    light, C, divided by the'
+  persid: ''
+- desc: 'wavelength lambda. So the radian
+
+    flux is the sum of the photon'
+  persid: ''
+- desc: 'energies that are emitted per
+
+    time in graphics. The radian'
+  persid: ''
+- desc: 'flux can be used as a typical
+
+    parameter for a point light'
+  persid: ''
+- desc: 'source that emits light
+
+    uniformly in all directions.'
+  persid: ''
+- desc: 'Another quantity that is often
+
+    used in graphics is radian'
+  persid: ''
+- desc: 'intensity. It is equal to radian
+
+    flux per solid angle, the unit'
+  persid: ''
+- desc: 'is one plus the radian in
+
+    graphics, the radian intensity'
+  persid: ''
+- desc: 'is often used if a light source
+
+    does not radiate equally in all'
+  persid: ''
+- desc: 'directions. For example, a
+
+    spotlight, radian intensity is'
+  persid: ''
+- desc: 'the sum of the photon energies
+
+    that are emitted per time in'
+  persid: ''
+- desc: 'solid angle, as I have tried to
+
+    illustrate in this figure here,'
+  persid: ''
+- desc: 'let''s consider an example that
+
+    relates the two quantities,'
+  persid: ''
+- desc: 'gradient flux and radiant
+
+    intensity that we have already'
+  persid: ''
+- desc: 'introduced. If we have a point
+
+    light that emits light uniformly'
+  persid: ''
+- desc: 'in all directions with a certain
+
+    flux, then the radiant intensity'
+  persid: ''
+- desc: 'can be computed by dividing the
+
+    total flux by the total solid'
+  persid: ''
+- desc: 'angle. We know from the previous
+
+    slide that the total solid angle'
+  persid: ''
+- desc: 'for a sphere around the point
+
+    light is four pi irradiance. So'
+  persid: ''
+- desc: 'for a point light, we get
+
+    radiant intensity is equal to'
+  persid: ''
+- desc: radian flux divided by four pi
+  persid: ''
+- desc: 'another important quantity is
+
+    irradiance. It is equal to'
+  persid: ''
+- desc: 'radian flux per area. In other
+
+    words, irradiance is the sum of'
+  persid: ''
+- desc: 'the photon energies that are
+
+    received by a surface per time'
+  persid: ''
+- desc: 'and per area. The unit is watt
+
+    per square meter. The received'
+  persid: ''
+- desc: 'flux can come from all
+
+    directions within the hemisphere'
+  persid: ''
+- desc: 'above the surface. As an
+
+    example, we compute the'
+  persid: ''
+- desc: 'irradiance produced by a point
+
+    light source for this small blue'
+  persid: ''
+- desc: 'surface, EA of infinitesimal
+
+    size, irradiance is flux per'
+  persid: ''
+- desc: 'area. We know the total amount
+
+    of flux that is emitted by the'
+  persid: ''
+- desc: 'point light in all directions,
+
+    but how much of this flux is'
+  persid: ''
+- desc: 'received by the blue surface?
+
+    Well, we have already computed'
+  persid: ''
+- desc: 'the rated intensity, which was
+
+    flux per solid angle. We put'
+  persid: ''
+- desc: 'this result in the equation for
+
+    the irradiance. Now we need to'
+  persid: ''
+- desc: 'compute the solid angle. The
+
+    solid angle d omega is equal to'
+  persid: ''
+- desc: 'the projected area, ds divided
+
+    by radius squared. For the'
+  persid: ''
+- desc: 'radius, we choose the distance
+
+    from the blue surface to the'
+  persid: ''
+- desc: 'point light, then we don''t have
+
+    to project the surface onto the'
+  persid: ''
+- desc: 'sphere, at least not if we
+
+    assume that it is of'
+  persid: ''
+- desc: 'infinitesimal size, but we have
+
+    to consider that the surface'
+  persid: ''
+- desc: 'area that is seen from the
+
+    direction of the point light'
+  persid: ''
+- desc: 'appears shorter if theta is the
+
+    angle between the surface normal'
+  persid: ''
+- desc: 'and the incident light
+
+    direction. Then the required'
+  persid: ''
+- desc: 'foreshortening factor is cosine
+
+    theta. This means, if the'
+  persid: ''
+- desc: 'incident light direction is
+
+    perpendicular to the surface,'
+  persid: ''
+- desc: 'theta is zero, cosine theta is
+
+    one and the visible area is'
+  persid: ''
+- desc: 'largest. But if the light comes
+
+    from the side, we have to'
+  persid: ''
+- desc: 'consider the cosine theta for
+
+    shortening factor. If we put'
+  persid: ''
+- desc: 'this result into the equation
+
+    for the irradiance, we see that'
+  persid: ''
+- desc: 'the factor DA is canceled the
+
+    irradiance caused by a point'
+  persid: ''
+- desc: 'light is the radiant intensity
+
+    of the light times cosine theta'
+  persid: ''
+- desc: 'divided by the squared distance
+
+    between the surface and the'
+  persid: ''
+- desc: 'light. In the case of a point
+
+    light, we can further replace'
+  persid: ''
+- desc: 'the radiant intensity with the
+
+    radiant flux divided by four pi,'
+  persid: ''
+- desc: 'as we have computed in the last
+
+    example. To summarize this'
+  persid: ''
+- desc: 'result, firstly, the irradiance
+
+    caused by a point light'
+  persid: ''
+- desc: 'decreases quadratically with
+
+    distance. Secondly, the'
+  persid: ''
+- desc: 'irradiance is largest for a
+
+    light direction perpendicular to'
+  persid: ''
+- desc: 'the surface, and decreases with
+
+    the cosine of the angle of'
+  persid: ''
+- desc: 'incidence. The last quantity
+
+    that we need for the rendering'
+  persid: ''
+- desc: 'equation is radians. If we
+
+    observe a surface patch and want'
+  persid: ''
+- desc: 'to measure its brightness, we
+
+    are not interested in the total'
+  persid: ''
+- desc: 'flux per area, but only in the
+
+    fraction that is going in a'
+  persid: ''
+- desc: 'certain direction. For example,
+
+    we are only interested in the'
+  persid: ''
+- desc: 'part that is going in the
+
+    direction of our eye or camera.'
+  persid: ''
+- desc: 'So we are interested in the flux
+
+    per area per solid angle.'
+  persid: ''
+- desc: 'However, when we say area here,
+
+    we mean the area in flux'
+  persid: ''
+- desc: 'direction. If a surface area is
+
+    not oriented in flux direction.'
+  persid: ''
+- desc: 'Its contribution in terms of
+
+    area, is smaller. We have to'
+  persid: ''
+- desc: 'multiply the surface area with
+
+    cosine theta to get the'
+  persid: ''
+- desc: 'contributing area in the flux
+
+    direction. Radians is flux per'
+  persid: ''
+- desc: 'solid angle per projected area.
+
+    An important property of radians'
+  persid: ''
+- desc: 'is that it does not change with
+
+    viewing distance, at least if we'
+  persid: ''
+- desc: 'do not consider participating
+
+    media such as fog or smoke. When'
+  persid: ''
+- desc: 'we move a camera or our eye
+
+    towards the surface, the solid'
+  persid: ''
+- desc: 'angle per pixel gets larger. But
+
+    on the other hand, the area that'
+  persid: ''
+- desc: 'we observe per pixel gets
+
+    smaller. These two effects'
+  persid: ''
+- desc: 'cancel each other out, and the
+
+    radiance does not change. This'
+  persid: ''
+- desc: 'is something that we observe
+
+    also in our everyday lives.'
+  persid: ''
+- desc: 'Let''s say we look at a wall and
+
+    move towards it, then the'
+  persid: ''
+- desc: 'brightness does not change. How
+
+    can we compute the irradiance'
+  persid: ''
+- desc: 'produced by incoming radians?
+
+    Irradiance is flux per area. So'
+  persid: ''
+- desc: 'received flux can come from all
+
+    directions within the hemisphere'
+  persid: ''
+- desc: 'above the surface. Radians is
+
+    flux per solid angle per'
+  persid: ''
+- desc: 'projected area. If we put the
+
+    definition of irradiance in this'
+  persid: ''
+- desc: 'equation, we get radians is
+
+    equal to de over D, omega times'
+  persid: ''
+- desc: 'cosine, theta. Rearranging the
+
+    equation gives de is equal to'
+  persid: ''
+- desc: 'radians times cosine, theta
+
+    times d, omega. De is a'
+  persid: ''
+- desc: 'contribution to the irradiance
+
+    by the radians received from'
+  persid: ''
+- desc: 'certain solid angle, D, omega.
+
+    To compute the complete'
+  persid: ''
+- desc: 'irradiance, E, we have to
+
+    integrate over the hemisphere.'
+  persid: ''
+- desc: 'The irradiance for the surface
+
+    patch is given by the integral'
+  persid: ''
+- desc: 'over the incoming radians, l
+
+    times cosine theta, where theta'
+  persid: ''
+- desc: 'is the angle of incidence. Let''s
+
+    remember this result and go back'
+  persid: ''
+- desc: to the rendering equation.
+  persid: ''
+- desc: 'The rendering equation
+
+    calculates the outgoing'
+  persid: ''
+- desc: 'radiance, l, o, in the direction
+
+    v, for surface patch at location'
+  persid: ''
+- desc: 'X with normal n, the outgoing
+
+    radiance is the sum of two'
+  persid: ''
+- desc: 'terms. The first term is the
+
+    emitted radiance, L, E in the'
+  persid: ''
+- desc: 'direction v. This term is only
+
+    larger than zero if the surface'
+  persid: ''
+- desc: 'is a light source that produces
+
+    radian flux itself, the second'
+  persid: ''
+- desc: 'term is integral over the
+
+    hemisphere. It is integrating'
+  persid: ''
+- desc: 'over the contributions of all
+
+    incoming radiances, Li from the'
+  persid: ''
+- desc: 'hemisphere above the surface
+
+    patch each incoming radiance Li'
+  persid: ''
+- desc: 'from direction l generates an
+
+    irradiance contribution. De This'
+  persid: ''
+- desc: 'is the same relationship between
+
+    radians and the resulting'
+  persid: ''
+- desc: 'irradiance contribution that we
+
+    have discussed a moment ago on'
+  persid: ''
+- desc: 'the previous slide. Again, we
+
+    have the cosine theta factor,'
+  persid: ''
+- desc: 'where theta is the angle between
+
+    the surface normal and the'
+  persid: ''
+- desc: 'direction of the incoming
+
+    radians. Consequently, radians'
+  persid: ''
+- desc: 'with the larger angle theta
+
+    contributes less to the'
+  persid: ''
+- desc: 'irradiance of the surface patch.
+
+    Each infinitesimal irradiance'
+  persid: ''
+- desc: 'contribution de is now
+
+    multiplied with the BRDF, which'
+  persid: ''
+- desc: 'is shown for B directional
+
+    reflection distribution'
+  persid: ''
+- desc: 'function. This is a function
+
+    that describes the material'
+  persid: ''
+- desc: 'property of the surface patch.
+
+    It defines how much radiance is'
+  persid: ''
+- desc: 'emitted by the patch in
+
+    direction v, if it receives an'
+  persid: ''
+- desc: 'irradiance contribution from
+
+    direction L. Of course, the vrdf'
+  persid: ''
+- desc: 'and the radiance values are also
+
+    dependent on the wavelengths, so'
+  persid: ''
+- desc: 'we have to evaluate the
+
+    rendering equation for each one'
+  persid: ''
+- desc: 'of our three RGB primary colors.
+
+    The rendering equation describes'
+  persid: ''
+- desc: 'the full light transport in a,
+
+    c. This means that an outgoing'
+  persid: ''
+- desc: 'radiance, l, o of a surface
+
+    patch contributes this radians'
+  persid: ''
+- desc: 'as incoming radiance, Li and
+
+    another surface patch. So all'
+  persid: ''
+- desc: 'surface patches in the scene are
+
+    connected via the radians. They'
+  persid: ''
+- desc: 'are contributing to each other.
+
+    This is why the rendering'
+  persid: ''
+- desc: 'equation is very hard to solve.
+
+    In practice, the BRDF describes'
+  persid: ''
+- desc: 'the angle dependent spectral
+
+    reflection factor for a surface'
+  persid: ''
+- desc: 'by the ratio of the outgoing
+
+    radians, lo and the incoming'
+  persid: ''
+- desc: 'irradiance, E, both the incoming
+
+    direction L and outgoing'
+  persid: ''
+- desc: 'direction d could be
+
+    parameterized with spherical'
+  persid: ''
+- desc: 'coordinates, theta and phi.
+
+    Consequently, the BRDF is a four'
+  persid: ''
+- desc: 'dimensional function, if you do
+
+    not consider the dependency on'
+  persid: ''
+- desc: 'the wavelength by specifying
+
+    this 40 function, the reflection'
+  persid: ''
+- desc: 'properties of a surface are
+
+    described precisely. The BRDF of'
+  persid: ''
+- desc: 'a material could be measured and
+
+    stored in a 40 table. However,'
+  persid: ''
+- desc: 'this would require a significant
+
+    amount of memory. Furthermore,'
+  persid: ''
+- desc: 'we cannot edit materials easily
+
+    with such a representation.'
+  persid: ''
+- desc: 'Consequently, for most cases,
+
+    parametric BRDF models are used.'
+  persid: ''
+- desc: 'For example, the form model and
+
+    the bling form model, which we'
+  persid: ''
+- desc: 'want to implement today in our
+
+    shaders, are parametric BRDF'
+  persid: ''
+- desc: 'models. Here you see different
+
+    materials. The metal material on'
+  persid: ''
+- desc: 'the left is almost a perfect
+
+    mirror. For such a material, the'
+  persid: ''
+- desc: 'angle of incidence is equal to
+
+    the angle of reflection for the'
+  persid: ''
+- desc: 'second metal sphere, the
+
+    material is not perfectly'
+  persid: ''
+- desc: 'smooth. For such a material, we
+
+    assume that there is some'
+  persid: ''
+- desc: 'variation in the orientation of
+
+    the micro facets in graphics,'
+  persid: ''
+- desc: 'the term micro facets is used
+
+    for tiny surface patches that'
+  persid: ''
+- desc: 'are much smaller than a pixel.
+
+    Each micro facet behaves like a'
+  persid: ''
+- desc: 'perfect mirror. It is assumed
+
+    that the orientation of the'
+  persid: ''
+- desc: 'micro facets follow some
+
+    distribution around the'
+  persid: ''
+- desc: 'macroscopic surface normal so
+
+    statistically, these small'
+  persid: ''
+- desc: 'variations in orientation cause
+
+    the reflected light to be'
+  persid: ''
+- desc: 'distributed around the
+
+    macroscopic reflection'
+  persid: ''
+- desc: 'direction, if the roughness of
+
+    the surface increases, the'
+  persid: ''
+- desc: 'scattering of light around the
+
+    reflection direction becomes'
+  persid: ''
+- desc: 'larger. For metals, photons are
+
+    either reflected or they enter'
+  persid: ''
+- desc: 'the material and are absorbed.
+
+    This is dependent on the'
+  persid: ''
+- desc: 'wavelength, therefore, the
+
+    reflected light might be'
+  persid: ''
+- desc: 'colored. Examples are copper or
+
+    gold. The behavior that I have'
+  persid: ''
+- desc: 'just described is true for
+
+    metals, for dielectric'
+  persid: ''
+- desc: 'materials, the reflection model
+
+    is a bit different as for'
+  persid: ''
+- desc: 'metals, a certain fraction of
+
+    photons are reflected at the'
+  persid: ''
+- desc: 'surface, and we call this part
+
+    the specular reflection. For'
+  persid: ''
+- desc: 'dielectric materials, the
+
+    specular reflection does not'
+  persid: ''
+- desc: 'depend on the wavelengths, so it
+
+    is not colored. Photons that are'
+  persid: ''
+- desc: 'not reflected enter the material
+
+    here, they are either absorbed'
+  persid: ''
+- desc: 'or they are scattered in random
+
+    directions below the surface. At'
+  persid: ''
+- desc: 'some point, they might come out
+
+    of the surface again and exit in'
+  persid: ''
+- desc: 'random directions. We call this
+
+    part the diffuse reflection. The'
+  persid: ''
+- desc: 'diffuse reflection depends on
+
+    the wavelength and consequently'
+  persid: ''
+- desc: 'is colored for dielectrics.
+
+    Okay. Now we are ready for the'
+  persid: ''
+- desc: 'form BRDF. The form BRDF has two
+
+    parts, one for diffuse and one'
+  persid: ''
+- desc: 'for specular reflection. The
+
+    Diffuse part is a simple'
+  persid: ''
+- desc: 'constant denoted by KD. It does
+
+    not depend on the light'
+  persid: ''
+- desc: 'direction L or the view
+
+    direction v. Note that the light'
+  persid: ''
+- desc: 'direction L is defined to go
+
+    towards the light. So the yellow'
+  persid: ''
+- desc: 'arrow that goes from the light
+
+    towards the surface is minus l.'
+  persid: ''
+- desc: 'In this figure, the reflected
+
+    direction R has the same angle'
+  persid: ''
+- desc: 'to the surface normal n as the
+
+    light direction. So if I change'
+  persid: ''
+- desc: 'the light direction here, the
+
+    reflection direction changes'
+  persid: ''
+- desc: 'accordingly. The specular part
+
+    is a dot product of the view'
+  persid: ''
+- desc: 'direction v and the reflection
+
+    direction r, raised to the power'
+  persid: ''
+- desc: 'of NS and weighted with a
+
+    constant Ks. If I increase Ks,'
+  persid: ''
+- desc: 'here you see that the specular
+
+    part is appearing as a lobe'
+  persid: ''
+- desc: 'around the reflected direction,
+
+    the dot product of the view'
+  persid: ''
+- desc: 'direction v and the reflection
+
+    direction r is equal to the'
+  persid: ''
+- desc: 'cosine of the angle between
+
+    these vectors. If the view'
+  persid: ''
+- desc: 'direction matches the reflection
+
+    direction, the contribution of'
+  persid: ''
+- desc: 'the specular lobe is largest and
+
+    reduces when the angle gets'
+  persid: ''
+- desc: 'larger, the exponent NS controls
+
+    the fall off of the specular'
+  persid: ''
+- desc: 'lobe. For a higher exponent, the
+
+    fall off is faster, as we have'
+  persid: ''
+- desc: 'learned. A higher exponent
+
+    corresponds to a smoother'
+  persid: ''
+- desc: 'surface. The exponent Ns is
+
+    typically referred to as'
+  persid: ''
+- desc: 'shininess. Okay, great. Let''s
+
+    implement the form blef, as we'
+  persid: ''
+- desc: 'have seen, the exact evaluation
+
+    of the rendering equation is'
+  persid: ''
+- desc: 'difficult in computationally
+
+    demanding the equation becomes'
+  persid: ''
+- desc: 'much simpler if the light
+
+    exchange between surfaces is'
+  persid: ''
+- desc: 'neglected and only the so called
+
+    direct light is taken into'
+  persid: ''
+- desc: 'account, which is emitted from a
+
+    number of light sources. For'
+  persid: ''
+- desc: 'each light source, we compute
+
+    the irradiance and multiply it'
+  persid: ''
+- desc: 'with the BRDF. Then we can sum
+
+    up the individual light source'
+  persid: ''
+- desc: 'contributions. Or if the emitted
+
+    light is zero and we have only'
+  persid: ''
+- desc: 'one light, we simply have
+
+    outgoing radians equals the BRDF'
+  persid: ''
+- desc: 'multiplied with the irradiance.
+
+    Let''s put in the form BRDF and'
+  persid: ''
+- desc: 'the irradiance of a point light,
+
+    the cosine theta term can be'
+  persid: ''
+- desc: 'replaced with the dot product of
+
+    the light direction and the'
+  persid: ''
+- desc: 'surface normal. Our
+
+    implementation starts from the'
+  persid: ''
+- desc: 'total stock example from episode
+
+    number three. The link is'
+  persid: ''
+- desc: 'provided in the video
+
+    description. I will use the GS'
+  persid: ''
+- desc: 'and composer at GSN minus
+
+    lip.org as a shader editor here,'
+  persid: ''
+- desc: 'but you can use any other shader
+
+    editor as well. Links to XM i'
+  persid: ''
+- desc: What'd you think of that? I
+  persid: ''
+- desc: thought it was cool.
+  persid: ''
+- desc: Yeah,
+  persid: ''
+- desc: 'it''s very thorough. I kind of
+
+    want to go through the video'
+  persid: ''
+- desc: 'again on my own time, just to
+
+    sort of go over it a little bit'
+  persid: ''
+- desc: 'slower. But like some of his
+
+    things, like when he'
+  persid: ''
+- desc: 'demonstrated how, like the palm
+
+    shooters work, like that last'
+  persid: ''
+- desc: 'Demonstration he did, I thought
+
+    that was really interesting.'
+  persid: ''
+- desc: 'I You didn''t mention the garage
+
+    here, though.'
+  persid: ''
+- desc: 'This is your brain when you''re
+
+    struggling to focus, and this is'
+  persid: ''
+- desc: 'your brain when you''re in the
+
+    zone, but getting in the zone'
+  persid: ''
+- desc: and staying there,
+  persid: ''
+- desc: 'therefore we perform linear
+
+    interpolation between the'
+  persid: ''
+- desc: 'current F Zero for dielectrics
+
+    and the base color for metal.'
+  persid: ''
+- desc: Now.
+  persid: ''
+- desc: Music.
+  persid: ''
+- desc: 'Hello, everybody. Welcome to
+
+    Sheila''s Mansfield Today we talk'
+  persid: ''
+- desc: 'about the cook Torrance micro
+
+    facet, BRDF. This is a'
+  persid: ''
+- desc: 'reflection model that was
+
+    introduced by Robert Cook and'
+  persid: ''
+- desc: 'Kenneth Torrance in 1981 micro
+
+    facets are imaginary, tiny'
+  persid: ''
+- desc: 'surface patches that are much
+
+    smaller than an output pixel.'
+  persid: ''
+- desc: 'This model allows describing the
+
+    behavior of the macroscopic'
+  persid: ''
+- desc: 'surface patch Mathematically,
+
+    the micro facet model'
+  persid: ''
+- desc: 'approximates the real world
+
+    physical material properties'
+  persid: ''
+- desc: 'more closely than the form or
+
+    plane form reflection model,'
+  persid: ''
+- desc: 'which we have discussed in
+
+    episode number four, blin form'
+  persid: ''
+- desc: 'shading used to be the standard
+
+    in real time rendering because'
+  persid: ''
+- desc: 'it is fast to compute. Nowadays,
+
+    the computing power has'
+  persid: ''
+- desc: 'increased, and the computer
+
+    graphics industry has almost'
+  persid: ''
+- desc: 'completely moved to Physically
+
+    Based Rendering, or PBR for'
+  persid: ''
+- desc: 'short. Today, the my professor
+
+    model is used everywhere in'
+  persid: ''
+- desc: 'offline as well as real time
+
+    rendering. Therefore, it is'
+  persid: ''
+- desc: 'important for us to know the
+
+    underlying theory. In a tutorial'
+  persid: ''
+- desc: 'presented at C graph in 2012
+
+    brand Burley, who works for Walt'
+  persid: ''
+- desc: 'Disney Animation Studios,
+
+    presented a user friendly'
+  persid: ''
+- desc: 'interface to the micro facet,
+
+    BRDF. In this interface, all'
+  persid: ''
+- desc: 'parameters are in the interval
+
+    from zero to one. This approach'
+  persid: ''
+- desc: 'is a current de facto industry
+
+    standard to represent a'
+  persid: ''
+- desc: 'material, and is known as the
+
+    metallic roughness workflow. As'
+  persid: ''
+- desc: 'the name suggests, the two most
+
+    important parameters are the'
+  persid: ''
+- desc: 'metallic and the roughness
+
+    parameters for metals such as'
+  persid: ''
+- desc: 'gold, silver, copper and so on.
+
+    The metallic parameter is one'
+  persid: ''
+- desc: 'for dielectric materials, which
+
+    are also called non metals, such'
+  persid: ''
+- desc: 'as plastic, wood and rubber. The
+
+    metallic parameter is zero. The'
+  persid: ''
+- desc: 'roughness parameter controls the
+
+    distribution of the orientations'
+  persid: ''
+- desc: 'of the micro facets. The micro
+
+    facets are not real geometry,'
+  persid: ''
+- desc: 'but are only evaluated
+
+    statistically. In the micro'
+  persid: ''
+- desc: 'facet model, each tiny micro
+
+    facet surface behaves like a'
+  persid: ''
+- desc: 'perfect mirror for very smooth
+
+    polished surfaces, the roughness'
+  persid: ''
+- desc: 'is zero. All micro facets point
+
+    in the same direction, and the'
+  persid: ''
+- desc: 'material behaves like a perfect
+
+    mirror. If the roughness'
+  persid: ''
+- desc: 'parameter is increased, the
+
+    orientations of the micro facets'
+  persid: ''
+- desc: 'are more random, and light is
+
+    collected from larger range of'
+  persid: ''
+- desc: 'incoming light directions in
+
+    Disney''s model, the metallic'
+  persid: ''
+- desc: 'parameter could also be set to a
+
+    fractional value, for example,'
+  persid: ''
+- desc: '0.5 This would mean that the
+
+    material behaves with 50% like'
+  persid: ''
+- desc: 'metal and with the other 50%
+
+    like a dielectric material,'
+  persid: ''
+- desc: 'which is physically not
+
+    plausible. Therefore we should'
+  persid: ''
+- desc: 'not use values other than zero
+
+    and one for the metallic'
+  persid: ''
+- desc: 'parameter. If we stay within the
+
+    physical world, it is much'
+  persid: ''
+- desc: 'easier to produce a realistic
+
+    material that works well in'
+  persid: ''
+- desc: 'different lighting conditions.
+
+    However, in textures or mid'
+  persid: ''
+- desc: 'maps, the resolution is limited,
+
+    and we might have a mix of'
+  persid: ''
+- desc: 'materials within a single pixel.
+
+    In these situations, a'
+  persid: ''
+- desc: 'fractional value for the
+
+    metallic parameter makes perfect'
+  persid: ''
+- desc: 'sense. Another parameter is
+
+    called base color. It is an RGB'
+  persid: ''
+- desc: 'vector for dielectrics. It
+
+    contains the RGB values for the'
+  persid: ''
+- desc: 'albedo, which is the amount of
+
+    diffuse reflection in the'
+  persid: ''
+- desc: 'interval from zero to one for
+
+    metal this parameter contains'
+  persid: ''
+- desc: 'the RGB values for the Fresnel
+
+    reflectance, which we have not'
+  persid: ''
+- desc: 'talked about yet, but it will be
+
+    introduced in a minute. Then'
+  persid: ''
+- desc: 'there is an additional parameter
+
+    called reflectance, which is'
+  persid: ''
+- desc: 'used only for die electrics. It
+
+    also contains a Fresnel'
+  persid: ''
+- desc: 'reflectance, but this time for
+
+    dielectric materials. This'
+  persid: ''
+- desc: 'parameter is called specular in
+
+    Disney''s original tutorial'
+  persid: ''
+- desc: 'notes. But I like the name
+
+    reflectance much more. Whatever'
+  persid: ''
+- desc: 'it is called, the parameter,
+
+    controls the amount of'
+  persid: ''
+- desc: 'dielectric specular reflection.
+
+    In contrast to metals, for which'
+  persid: ''
+- desc: 'the specular reflection at a
+
+    perpendicular incident angle can'
+  persid: ''
+- desc: 'reach up to 100% for die
+
+    electrics, it is much less. It'
+  persid: ''
+- desc: 'ranges approximately from zero
+
+    to 16% the quadratic remapping'
+  persid: ''
+- desc: 'function is used to map zero to
+
+    16% to a user friendly interval'
+  persid: ''
+- desc: 'from zero to one. These very few
+
+    parameters are sufficient to'
+  persid: ''
+- desc: 'control our basic micro facet.
+
+    BRDF, Disney''s full model has'
+  persid: ''
+- desc: 'several other parameters for
+
+    subsurface scattering, an'
+  persid: ''
+- desc: 'additional clear coat layer and
+
+    other advanced features that we'
+  persid: ''
+- desc: 'are not discussing today. Now
+
+    let''s dive more deeply into the'
+  persid: ''
+- desc: 'theory. Our microface BRDF is
+
+    used in combination with the'
+  persid: ''
+- desc: 'rendering equation. As a
+
+    refresher, here is a slide from'
+  persid: ''
+- desc: 'episode number four. The
+
+    rendering equation calculates'
+  persid: ''
+- desc: 'the outgoing radians, l, o, in
+
+    the direction v, for surface'
+  persid: ''
+- desc: 'patch application x, with normal
+
+    n, the outgoing radiance is a'
+  persid: ''
+- desc: 'sum of two terms. The first term
+
+    is the emitted radiance, l, e,'
+  persid: ''
+- desc: 'in the direction v. This term is
+
+    only larger than zero. As a'
+  persid: ''
+- desc: 'surface is a light source that
+
+    produces some radian flux'
+  persid: ''
+- desc: 'itself. The second term is the
+
+    integral over the complete solid'
+  persid: ''
+- desc: 'angle of the hemisphere above
+
+    the surface. We integrate over'
+  persid: ''
+- desc: 'the contributions from all
+
+    incoming radiances, Li from the'
+  persid: ''
+- desc: 'hemisphere above the surface.
+
+    Patch each incoming radiance, Li'
+  persid: ''
+- desc: 'from direction l generates an
+
+    irradiance contribution de, each'
+  persid: ''
+- desc: 'infinitesimal irradiance
+
+    contribution de, is multiplied'
+  persid: ''
+- desc: 'by the BRDF, which is short for
+
+    V directional reflection'
+  persid: ''
+- desc: 'distribution function. The BRDF
+
+    defines how much radiance is'
+  persid: ''
+- desc: 'emitted by the surface patch in
+
+    direction v, if it receives an'
+  persid: ''
+- desc: 'irradiance contribution from
+
+    direction L. This way the BRDF'
+  persid: ''
+- desc: 'describes the material
+
+    properties of the surface patch.'
+  persid: ''
+- desc: 'This is where we need to insert
+
+    the microface BRDF that we'
+  persid: ''
+- desc: 'discussed today. Here you see
+
+    the equation for the complete'
+  persid: ''
+- desc: 'BRDF. A quick introduction of
+
+    the use notation before we talk'
+  persid: ''
+- desc: 'about it, V is the outgoing view
+
+    direction. L is the light'
+  persid: ''
+- desc: 'direction it points from the
+
+    surface location towards the'
+  persid: ''
+- desc: 'lot. Consequently, minus L is
+
+    the incoming vector from the'
+  persid: ''
+- desc: 'light to the surface. N is the
+
+    surface normal. H is the halfway'
+  persid: ''
+- desc: 'vector. It has a unit vector at
+
+    the half angle between the view'
+  persid: ''
+- desc: 'and the light direction. The
+
+    vrdf is a function of the view'
+  persid: ''
+- desc: 'and the light direction. It has
+
+    a diffuse part and a specular'
+  persid: ''
+- desc: 'part. The constant diffuse part,
+
+    rho, d, divided by pi, is known'
+  persid: ''
+- desc: 'from the normalized form vrdf
+
+    that we have introduced in'
+  persid: ''
+- desc: 'episode number four. For the
+
+    specular part, we use the cook'
+  persid: ''
+- desc: 'tolerance microfacet model, the
+
+    cook Torres microface model has'
+  persid: ''
+- desc: 'three terms, Fresnel
+
+    reflectance, the normal'
+  persid: ''
+- desc: 'distribution function and the
+
+    geometry term. We will introduce'
+  persid: ''
+- desc: 'these terms one by one in the
+
+    following slides. Let''s start'
+  persid: ''
+- desc: 'with Pranav reflectance. Here
+
+    you see the image of a swimming'
+  persid: ''
+- desc: 'pool with a very flat water
+
+    surface. In the bottom part of'
+  persid: ''
+- desc: 'the image, we can see the ground
+
+    of the pool, but here in the'
+  persid: ''
+- desc: 'upper part, we don''t see the
+
+    ground, but only the reflected'
+  persid: ''
+- desc: 'sky. Why do we observe this
+
+    effect? The effect occurs'
+  persid: ''
+- desc: 'because the ratio of transmitted
+
+    and reflected light is not'
+  persid: ''
+- desc: 'constant. It depends on the
+
+    angle of incidence and the'
+  persid: ''
+- desc: 'refractive indices of the
+
+    involved materials. If we look'
+  persid: ''
+- desc: 'into the water from above, only
+
+    a small part of the light from'
+  persid: ''
+- desc: 'the sky is reflected in our view
+
+    direction at the water surface,'
+  persid: ''
+- desc: 'most of the light is transmitted
+
+    and we see the ground of the'
+  persid: ''
+- desc: 'pool, the more we look from the
+
+    side and observe the surface at'
+  persid: ''
+- desc: 'increasingly grazing angles, the
+
+    larger becomes the reflected'
+  persid: ''
+- desc: 'part, the more light is
+
+    reflected, the less light is'
+  persid: ''
+- desc: 'transmitted. The setup is
+
+    illustrated in this figure. We'
+  persid: ''
+- desc: 'have the interface between two
+
+    materials with two different'
+  persid: ''
+- desc: 'indices of refraction, eta one
+
+    and eta two. In the swimming'
+  persid: ''
+- desc: 'pool example, we observed the
+
+    interface between water and air'
+  persid: ''
+- desc: 'because water is an optically
+
+    denser medium than air, its'
+  persid: ''
+- desc: 'index of refraction is larger.
+
+    The angle of incidence of the'
+  persid: ''
+- desc: 'light is defined relative to the
+
+    surface normal, and is denoted'
+  persid: ''
+- desc: 'by theta one here for a
+
+    perfectly flat surface, the law'
+  persid: ''
+- desc: 'of reflection tells us that the
+
+    reflected direction has the same'
+  persid: ''
+- desc: 'angle as the incoming Ray.
+
+    Therefore this angle here'
+  persid: ''
+- desc: 'between the normal and the
+
+    reflected direction is equal to'
+  persid: ''
+- desc: 'theta one as well. Let''s have a
+
+    look at the angle of the'
+  persid: ''
+- desc: 'transmitted ray, theta two,
+
+    during the transition of the'
+  persid: ''
+- desc: 'light from an optically thinner
+
+    to an optically denser medium,'
+  persid: ''
+- desc: 'the light ray deviates towards
+
+    the normal consequently, theta'
+  persid: ''
+- desc: 'two is smaller than theta one
+
+    for such a situation,'
+  persid: ''
+- desc: 'mathematically, the relationship
+
+    between the angle of incidence'
+  persid: ''
+- desc: 'theta one and the angle of the
+
+    transmitted ray. Theta two is'
+  persid: ''
+- desc: 'given by Snells law, eta one
+
+    times sine of theta equals eta'
+  persid: ''
+- desc: 'two times sine of theta two.
+
+    Given eta one, eta two and theta'
+  persid: ''
+- desc: 'one, we can solve for theta two.
+
+    With theta two, we can compute'
+  persid: ''
+- desc: 'the fraction of the light that
+
+    is reflected using the Fresnel'
+  persid: ''
+- desc: 'equation shown here, the
+
+    transmitted fraction is then'
+  persid: ''
+- desc: 'given by one minus the reflected
+
+    part.'
+  persid: ''
+- desc: 'Let''s look at Fresnel reflection
+
+    for dielectrics light photons'
+  persid: ''
+- desc: 'are either reflected,
+
+    transmitted or absorbed with an'
+  persid: ''
+- desc: 'angle dependent relative
+
+    frequency. The reflected part is'
+  persid: ''
+- desc: 'scattered on the micro face.
+
+    Macroscopically, this creates a'
+  persid: ''
+- desc: 'specular part of the reflection
+
+    in opaque materials, the'
+  persid: ''
+- desc: 'transmitted part is randomly
+
+    deflected below the surface,'
+  persid: ''
+- desc: 'partially absorbed and emitted
+
+    into random directions.'
+  persid: ''
+- desc: 'Macroscopically, this creates a
+
+    diffuse part of the reflection.'
+  persid: ''
+- desc: 'The more light is reflected, the
+
+    less light is transmitted, and'
+  persid: ''
+- desc: 'the diffused part becomes
+
+    smaller. The likelihood of'
+  persid: ''
+- desc: 'absorption inside the medium is
+
+    wavelength dependent. Therefore'
+  persid: ''
+- desc: 'the diffuse part is colored and
+
+    the specular part is not. For'
+  persid: ''
+- desc: 'metals, the complete transmitted
+
+    fraction is absorbed. This means'
+  persid: ''
+- desc: 'there is no diffuse reflection.
+
+    For metals, the reflected part'
+  persid: ''
+- desc: 'depends on the wavelength, so
+
+    the specular part is covered. On'
+  persid: ''
+- desc: 'this slide, we see the index of
+
+    refraction for several'
+  persid: ''
+- desc: 'dielectric materials. The table
+
+    also contains the F zero values'
+  persid: ''
+- desc: 'in percent. F zero is a
+
+    reflectance for perpendicular'
+  persid: ''
+- desc: 'incidence of light when the
+
+    incident angle, theta one is'
+  persid: ''
+- desc: 'equal to zero. If you insert
+
+    theta one equals zero into the'
+  persid: ''
+- desc: 'Fresnel equations, all the
+
+    cosine terms evaluate into one,'
+  persid: ''
+- desc: 'and the equations become much
+
+    simpler, as you see here. If we'
+  persid: ''
+- desc: 'then put in 1.0 for eta one for
+
+    vacuum or air, and set eta two'
+  persid: ''
+- desc: 'to 1.5 for glass, we can compute
+
+    a value of 4% for F zero. This'
+  persid: ''
+- desc: 'means that at the transition
+
+    from air to glass at normal'
+  persid: ''
+- desc: 'incidence, only 4% of the light
+
+    is reflected and 96% is'
+  persid: ''
+- desc: 'transmitted. On this slide, we
+
+    have listed the F zero values'
+  persid: ''
+- desc: 'for several metals as discussed.
+
+    These are wavelengths dependent.'
+  persid: ''
+- desc: 'So we have three values for the
+
+    red, green and blue channel in'
+  persid: ''
+- desc: 'the first column, the
+
+    reflectance values are given in'
+  persid: ''
+- desc: 'linear space, which we can use
+
+    directly in our shader code. The'
+  persid: ''
+- desc: 'second column gives the
+
+    corresponding sRGB values, as we'
+  persid: ''
+- desc: 'have discussed in episode number
+
+    four, it is important to perform'
+  persid: ''
+- desc: 'gamma correction when we convert
+
+    between these two'
+  persid: ''
+- desc: 'representations, when we want to
+
+    apply the Fresnel reflectance in'
+  persid: ''
+- desc: 'the context of the micro facet
+
+    model, we need to be careful'
+  persid: ''
+- desc: 'which angle we use for theta one
+
+    for a perfectly flat surface,'
+  persid: ''
+- desc: 'theta one is the angle between
+
+    the incident light direction and'
+  persid: ''
+- desc: 'the normal of the surface, or
+
+    because of the law of'
+  persid: ''
+- desc: 'reflection, theta one is also
+
+    The angle between the view'
+  persid: ''
+- desc: 'direction and the surface
+
+    normal. However, in the micro'
+  persid: ''
+- desc: 'facet model, we assume that the
+
+    surface is built from tiny'
+  persid: ''
+- desc: 'surface patches that are much
+
+    smaller than an output pixel.'
+  persid: ''
+- desc: 'Each micro facet behaves like a
+
+    perfectly flat mirror surface.'
+  persid: ''
+- desc: 'This means we only get a light
+
+    contribution in the view'
+  persid: ''
+- desc: 'direction if the normal of the
+
+    micro facet is pointing exactly'
+  persid: ''
+- desc: 'in the direction of the
+
+    macroscopic half wave vector.'
+  persid: ''
+- desc: 'Consequently, the Fresnel
+
+    reflectance must be computed for'
+  persid: ''
+- desc: 'those micro facets which have
+
+    the macroscopic halfway vector'
+  persid: ''
+- desc: 'as surface normals. Therefore,
+
+    for the micro facet model, theta'
+  persid: ''
+- desc: 'one is the angle between the
+
+    incident light direction and the'
+  persid: ''
+- desc: 'macroscopic halfway vector, or
+
+    because of the law of'
+  persid: ''
+- desc: 'reflection, the same angle can
+
+    be found between the view'
+  persid: ''
+- desc: 'direction and the macroscopic
+
+    halfway vector in the paper by'
+  persid: ''
+- desc: 'cook and Torres from 1981 the
+
+    Fresnel reflectance for eta one'
+  persid: ''
+- desc: 'equals one is calculated by the
+
+    shown equations. We see that the'
+  persid: ''
+- desc: 'scalar product of the view
+
+    direction and the macroscopic'
+  persid: ''
+- desc: 'half wave vector is used. Though
+
+    these equations do not use'
+  persid: ''
+- desc: 'trigonometric functions like
+
+    sine or cosine. They are'
+  persid: ''
+- desc: 'nevertheless computationally
+
+    expensive. Therefore the faster'
+  persid: ''
+- desc: 'Schlick approximation is used in
+
+    many implementations. The figure'
+  persid: ''
+- desc: 'shows a comparison between
+
+    schliep s approximation and the'
+  persid: ''
+- desc: 'true equations for glass, for
+
+    theta, one equals zero, we get'
+  persid: ''
+- desc: '4% reflectance at a grazing
+
+    angle of incidence of 90'
+  persid: ''
+- desc: 'degrees. The reflectance is 100%
+
+    we see that the approximation is'
+  persid: ''
+- desc: 'not perfect for the in between
+
+    angles, but it follows the true'
+  persid: ''
+- desc: 'graph reasonably well. This was
+
+    the Fresnel reflectance term.'
+  persid: ''
+- desc: 'The next term is a normal
+
+    distribution function. The'
+  persid: ''
+- desc: 'distribution of the micro faced
+
+    normals changes depending on the'
+  persid: ''
+- desc: 'roughness of the surface. For a
+
+    perfectly smooth, polished'
+  persid: ''
+- desc: 'surface, all the micro facet
+
+    normals point in the same'
+  persid: ''
+- desc: 'direction as a macroscopic
+
+    normal. For a rougher surface,'
+  persid: ''
+- desc: 'the micro facet model assumes
+
+    that the orientations of the'
+  persid: ''
+- desc: 'micro facets follow some
+
+    distribution around the'
+  persid: ''
+- desc: 'macroscopic surface normal. So
+
+    statistically, these small'
+  persid: ''
+- desc: 'variations in orientation cause
+
+    a reflected light to be'
+  persid: ''
+- desc: 'distributed around the
+
+    macroscopic reflection'
+  persid: ''
+- desc: 'direction. If the roughness of
+
+    the surface increases, the'
+  persid: ''
+- desc: 'scattering of light around the
+
+    reflection direction becomes'
+  persid: ''
+- desc: 'larger. There are several
+
+    suggestions for the normal'
+  persid: ''
+- desc: 'distribution function in the
+
+    literature, all three options'
+  persid: ''
+- desc: 'that are shown here are
+
+    parameterized by alpha, where'
+  persid: ''
+- desc: 'alpha is equal to Rp squared and
+
+    RP is our user friendly'
+  persid: ''
+- desc: 'perceived roughness value in the
+
+    interval from zero to one.'
+  persid: ''
+- desc: 'Furthermore, we see that all
+
+    three options for the normal'
+  persid: ''
+- desc: 'distribution function depend on
+
+    the scalar product of the normal'
+  persid: ''
+- desc: 'and the halfway vector, which we
+
+    have also used for the specular'
+  persid: ''
+- desc: 'lobe in the blend form model in
+
+    episode number four. In the'
+  persid: ''
+- desc: 'figure on the right, we compare
+
+    the three options for the same'
+  persid: ''
+- desc: 'roughness value. The x axis
+
+    represents the angle between the'
+  persid: ''
+- desc: 'normal and the halfway vector.
+
+    The yellow curve is the GG X'
+  persid: ''
+- desc: 'distribution proposed by Walter
+
+    and co authors in 2007 nowadays,'
+  persid: ''
+- desc: 'it is a predominant model
+
+    because of the softer tails that'
+  persid: ''
+- desc: 'can also be observed in brdfs
+
+    captured from real world'
+  persid: ''
+- desc: 'materials. The last term of the
+
+    microfacet model is the geometry'
+  persid: ''
+- desc: 'term depending on the light''s
+
+    incident direction and the'
+  persid: ''
+- desc: 'observer''s viewing direction.
+
+    Shadowing and masking effects'
+  persid: ''
+- desc: 'occur at the micro facets. Blinn
+
+    as well as cook and tolerance.'
+  persid: ''
+- desc: 'Assume the micro facets are V
+
+    shaped and derive a geometry'
+  persid: ''
+- desc: 'factor from this model. There
+
+    can be either no interference, a'
+  persid: ''
+- desc: 'masking effect for grazing view
+
+    directions, or a shadowing'
+  persid: ''
+- desc: 'effect for grazing light
+
+    directions. Another well known'
+  persid: ''
+- desc: 'model for the geometry term was
+
+    proposed by B J Smith in 1967'
+  persid: ''
+- desc: 'the geometry term is created by
+
+    multiplying two factors that are'
+  persid: ''
+- desc: 'computed with the same function,
+
+    g1 the g1 function is evaluated'
+  persid: ''
+- desc: 'for the light direction and the
+
+    view direction. Different g1'
+  persid: ''
+- desc: 'functions that are mentioned in
+
+    the paper by Walter and co'
+  persid: ''
+- desc: 'authors are given here. The
+
+    first approximation by Schlick'
+  persid: ''
+- desc: 'for the GG X variant is given by
+
+    this equation. Use the graphs'
+  persid: ''
+- desc: 'for the mentioned g1 functions,
+
+    bag, man, GG X and slip GG X for'
+  persid: ''
+- desc: 'different roughness values, for
+
+    a roughness value of Z row, the'
+  persid: ''
+- desc: 'geometry term is one, which
+
+    means it has no effect. For'
+  persid: ''
+- desc: 'larger roughness values, we get
+
+    a stronger influence of this'
+  persid: ''
+- desc: 'term, which is the expected
+
+    result, because masking and'
+  persid: ''
+- desc: 'shadowing becomes more likely
+
+    for rougher surfaces, let''s'
+  persid: ''
+- desc: 'implement the Cooke tolerance,
+
+    microfacet BRDF, as we have seen'
+  persid: ''
+- desc: 'the Cooke Torres microface BRDF
+
+    that we use in our specular part'
+  persid: ''
+- desc: 'is quite general. We can use
+
+    different options for the three'
+  persid: ''
+- desc: 'terms. Let''s take the shake
+
+    approximation for the Fresnel'
+  persid: ''
+- desc: 'reflectance, the GG X normal
+
+    distribution function and the'
+  persid: ''
+- desc: 'Smith geometry term with the
+
+    Schlick GG x, g1 function. I use'
+  persid: ''
+- desc: 'the GSN composer and GSN minus
+
+    lip.org as a shader editor, but'
+  persid: ''
+- desc: 'you can use any other shader
+
+    editor as well. I'
+  persid: ''
+- desc: now right on time.
+  persid: ''
+- desc: Any questions or thoughts about
+  persid: ''
+- desc: those two videos, does He say,
+  persid: ''
+- desc: 'like, roughness is between zero
+
+    and one don''t exist. Like at the'
+  persid: ''
+- desc: 'start of that second video, that
+
+    part, I didn''t click'
+  persid: ''
+- desc: it. He said, We
+  persid: ''
+- desc: 'it''s either metallic or it''s
+
+    not.'
+  persid: ''
+- desc: 'So we don''t have objects that
+
+    are half metallic and half'
+  persid: ''
+- desc: dielectric.
+  persid: ''
+- desc: 'I think that''s the roughness can
+
+    vary continuously.'
+  persid: ''
+- desc: Thanks for today.
+  persid: ''
+offering:
+  id: CS-405_805-202510

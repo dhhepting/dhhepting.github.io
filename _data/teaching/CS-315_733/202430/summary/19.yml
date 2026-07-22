@@ -1,0 +1,163 @@
+Zoom-Audio-Transcript:
+- desc: Hello!
+  persid: DHH
+- desc: Hello!
+  persid: S01
+- desc: How are you dealing with the snow? It seems very wet hard to shovel. Sorry
+    for the short notice about this, but I thought it better to be on the safe side,
+    so I don't get anyone else sick. And then the roads aren't great, either, I hear.
+    So so if you hear the doorbell again. That's just people coming in, so not to
+    worry about it. So I missed the quiz before today's meeting, so I'll add an extra
+    question or 2 to the next quiz before Monday's meeting. Did the announcement work?
+    Okay to alert you to the Zoom Meeting today?
+  persid: DHH
+- desc: Yeah, but it was a little late.
+  persid: S01
+- desc: Yeah, I apologize for that.
+  persid: DHH
+- desc: Yeah, it's fine. Thank you, though, for the announcement.
+  persid: S01
+- desc: So I've added some more detail on some sample code, 2 assignments, 3 and 4.
+    Any questions about those. Okay? So I want, oh. I wanna go back to the can. You
+    see the screen? Is that sharing properly.
+  persid: DHH
+- desc: Yes.
+  persid: S02
+- desc: Thanks. So this example I've made by taking the shaded cube code and adding
+    texture, 4, yeah. So we have 2 textures on the shaded cube. So I don't have this
+    posted yet because I wanted to edit it. And I will share some. I will share the
+    code with some interface. some interactive elements to select things. Okay. So
+    here we have the cube rotating. So we get can see a bit of the highlights from
+    the shading. And it's I realize the doorbell rings after somebody's been admitted.
+    which is strange. Okay. so I'm opening the editor. Let me share that with you.
+    So I've change the texture coordinates a bit. So it goes from point one to point
+    2 instead of 0 0, and instead of 1 1 it goes to point 8.9. Let me change those
+    back. So I'm glad you can't hear the doorbell. Okay? So I've changed texture texture
+    coordinates there. So here it's back. So we see the whole texture on the face
+    of the cube. So we're not. We don't necessarily one to distort the texture in
+    the mapping process, but we can adjust the coordinates so we can see the effect
+    of the texture coordinates with the texture mapping. Oh, the other thing. There
+    are 2 textures defined in texture. Cube 4, a checkerboard, and the sign. So I've
+    applied texture one twice. So here's the checkerboard. Okay? What are? Let's change
+    the texture coordinates again, or the checkerboard any suggestions for values?
+    What do you expect if we change this to minus one minus point 1, let's change
+    this to point 9 and point 9 any other suggestions. Oh, did I switch to that? Okay,
+    let's do one more change there. Okay, so that's that's the values for that's what
+    happens with these texture coordinates. Well, let's just make one more change
+    there, and let's switch back to. So this was caused because I put instead of 0.
+    I put point 9. So now there just should be just smaller, smaller region. But equally
+    okay. Here, let me share this screen. So I had put mine at point 9 instead of
+    a 0. So that's that's the effect of that. But now let's see what I've so they're
+    instead of 0. 0. They're point 1. They're point one smaller than the original
+    coordinates. So let's see what happens there. So let's look at the code again.
+    Here. see the effect of I think it's here. No, sorry I'm not keeping up switches.
+    Very well here. so we have a repeat there, let's change that to clap to edge.
+    So what I was doing is changing the wrapping method in. I will document this a
+    little bit better. And the example that I'm going to post to the code directory.
+    Okay. does that make sense? So what if we wanted to make the gold parts reflective
+    and the black part's matte? So let me go back to the code here. And so that's
+    with both textures applied with those the same coordinates. So we could have different
+    coordinates. And the question was, How do we make this code. How can we get a
+    a sharper highlight on the gold pieces instead of the black pieces? Any ideas
+    or questions about that typing into the chat is just fine. So what is the shaded
+    cube code doing? So we're doing the lighting calculation and vertex shader. So
+    this is grow shading right? We're getting the intensity. Sorry I didn't switch
+    again. So we're calculating the intensity at the vertex. And then we're interpolating
+    the intensities across. So then we're we're accessing the color. We're accessing
+    the textures and multiplying by the vertex color that's determined in the vertex
+    shader. And they're passing that assign that to a fragment color a bit. And so
+    we're not doing anything with the and with the lighting calculations in the fragment
+    Shader, we're applying the texture, and that's it, or multiplying the vertex color
+    with the the texture, sample, sample of the texture textures. Pardon me, there's
+    2 of them. So what would happen if we used fong shading instead. So if we're doing
+    fong shading, the the lighting calculation is in the fragment shader, right? So
+    if we sample the texture in the fragment shader, and we're doing the lighting
+    calculation there. We could have have the texture impact the shininess. Does that
+    make sense? So I have this one other example. This is from the web fundamental
+    web Webgl, 2 fundamentals. I don't think these links work. So they have different
+    maps of the planet Earth. So he, this is part of the question. He talks about
+    his code. So then it's hard to see if that's rotating or not, anyway. So this
+    is the fong shader. And so that's computing inside the fragment shader. And then
+    you apply the the specular map so you can modulate the the surface based on this,
+    the map that we apply here, let's open in a separate window. Oh, I'm not sharing
+    with you, am I? It's been a while since I've done this. So here's the Fong shader.
+    And then we add, we sampled the specular map to to change the the reflectivity
+    of the surface, the specular highlights that we see. Okay. So in the and the vertex
+    shader. We're getting the position made. Position of the points transformed by
+    the model of you. Matrix one of you. Well, so the vertex position is the the model
+    matrix times a position. and the vertex normal is normalizing the. So we get normals
+    for the surface. And then the texture coordinates are passed along as well. So
+    here we can see the specular factor assignment here. So we're sampling the specular
+    map. So we pass that as a uniform sampler. 2D. The specular map. So you determine
+    the specular factor by applying the texture, applying the specular map as a texture
+    with the vertex coordinates. So we're getting the radius. So the specular is then
+    light spec like light, specular times, specular factor, times. the shininess,
+    coefficient expression with the with the shininess. Oh, not shyness, anyway. And
+    then we're passing out the fragment color there. So here's an example with, I
+    think this is the sun in the earth. They're not all the same size, I think. Think
+    the scale is off, if I remember from what I read about the question. So here we
+    have a surface color sampler, a bump map sampler and a specular map sampler. So
+    has anyone looked at these codes like samples from Webgl. 2 fundamentals you can't
+    type today. Maybe I can't type anymore. Anyway. my eyes are watering. It wasn't
+    supposed to be, anyway. So the question is, have you used web fundamentals? Web
+    gl 2 fundamentalist code. So I will take on creating an example that's in the
+    style that we've used from the set textbook examples because they're using a library
+    here to do a lot of things that makes it a little less clear what's going on this
+    TWGL. I used to remember I used to know the name that stood for a tiny webgl helper
+    library. There's the page for the library. So it's I know in the lab examples.
+    Alex is doing things a little differently. and what the textbook is doing, and
+    the and there are a lot of good examples in Webgl, 2 fundamentals. But they're
+    not in maybe easily convertible to are familiar organization of the programs.
+    So I would say, try and take away the the concepts rather than the code per se.
+    Does that make sense. So those of you who have looked at the code from Webgl,
+    2 fundamentals. what's your been your experience? Is it easy to work with, easy
+    to get what you need from it any questions or comments. so shall we adjourn for
+    today? Do I have a motion from the floor? Sorry if it's if there aren't any questions
+    or comments, shall we say. should we end end today's meeting? And I wish you a
+    good weekend. and we'll see you on Monday. I hope in person I'll be in better
+    shape and send me email if you need it. If you have any questions or concerns
+    about stuff that comes up in the class. Okay. thanks. Take care. Everyone bye.
+  persid: ''
+Zoom-Chat-Transcript:
+- desc: Hello
+  persid: DHH
+- desc: Happy Snowy Wednesday!
+  persid: DHH
+- desc: 'yes'
+  persid: DHH
+- desc: can't hear the doorbell
+  persid: DHH
+- desc: You are lucky!
+  persid: DHH
+- desc: Anyone?
+  persid: DHH
+- desc: sorry, im not really sure
+  persid: DHH
+- desc: "That\u2019s OK"
+  persid: DHH
+- desc: not yet
+  persid: DHH
+- desc: Any questions or comments?
+  persid: DHH
+- desc: none so far :)
+  persid: DHH
+- desc: Shall we adjourn for today?
+  persid: DHH
+- desc: Thank you. Get better soon!
+  persid: DHH
+- desc: Get well soon
+  persid: DHH
+- desc: Thank you Dr. Hepting. Hope you have a speedy recovery
+  persid: DHH
+- desc: Thank you. Take care.
+  persid: DHH
+- desc: Thank you
+  persid: DHH
+- desc: Get well soon sir
+  persid: DHH
+- desc: Thanks!
+  persid: DHH
+- desc: thanks
+  persid: DHH
+offering:
+  id: CS-315_733-202430

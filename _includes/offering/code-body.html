@@ -1,0 +1,10 @@
+{%- assign codelfile = site.data.teaching[jcrs_id][crs_sem]codelinks %}
+{%- if codelfile -%}
+  {%- for ll in codelfile -%}
+  <li>
+    <a href="{{ ll.url }}">
+      {{ ll.desc }}
+    </a>
+  </li>
+  {% endfor %}
+{% endif %}

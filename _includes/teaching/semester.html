@@ -1,5 +1,5 @@
 {%- assign semdat = "" -%}
-{%- assign semdat = site.data.teaching.semesters | where: "semester", include.cs -%}
+{%- assign semdat = site.data.teaching.all.semesters | where: "semester", include.cs -%}
 <div class="card m-2">
   <h3 class="card-header">
     Important Dates
@@ -14,7 +14,7 @@
 </div>
 
 {%- assign offs = "" -%}
-{%- assign offs = site.data.teaching.offerings | where: "semester", include.cs -%}
+{%- assign offs = site.data.teaching.all.offerings | where: "semester", include.cs -%}
 {% if offs.size > 0 %}
 <div class="card m-2">
   <h3 class="card-header">
@@ -24,7 +24,7 @@
     <ul>
     {% for o in offs %}
       <li>
-        {%- assign crss = site.data.teaching.courses | where: "id", o.id -%}
+        {%- assign crss = site.data.teaching.all.courses | where: "id", o.id -%}
         {% capture off_url %}/teaching/{{ o.id }}/{{ include.cs }}{% endcapture %}
         <a href="{{ off_url | relative_url }}">
           {{ crss[0].id | replace: "-"," " }} : {{ crss[0].name }}
