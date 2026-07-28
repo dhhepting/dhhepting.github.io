@@ -1,15 +1,13 @@
 baseurl: /~hepting
 canonical: https://www2.cs.uregina.ca/~hepting
 collections:
-   wiki_starts:
-       output: true
-       permalink: /wiki-starts/:path/
-     defaults:
-       - scope:
-           path: "_wiki_starts"
-         values:
-           render_with_liquid: false
-   assignments:
+  wiki_starts:
+    output: true
+    permalink: /wiki-starts/:path/
+  meeting_pages:
+    output: true
+    permalink: /meeting-pages/:path/
+  assignments:
      output: false
      permalink: /teaching/:collection/:path/:categories/:title:output_ext
    gallery:
@@ -24,13 +22,23 @@ collections:
    works:
     output: true
     permalink: /research/:collection/:title:output_ext
-     defaults:
-       - scope:
-     path: ''
-     values:
-    author: Daryl H. Hepting
-    description: Professor of Computer Science, University of Regina. Ph.D. from Simon
-  Fraser University. Augmenting human abilities to embrace diversity.
+ 
+defaults:
+  - scope:
+      path: "_wiki_starts"
+    values:
+      render_with_liquid: false
+  - scope:
+      path: "_meeting_pages"
+    values:
+      render_with_liquid: false
+  - scope:
+      path: ""
+    values:
+      author: "Daryl H. Hepting"
+      description: >-
+        Professor of Computer Science, University of Regina. Ph.D. from Simon
+        Fraser University. Augmenting human abilities to embrace diversity.
 email: daryl.hepting@uregina.ca
 encoding: utf-8
 exclude:
@@ -275,6 +283,10 @@ deploy:
         bing: "B58E8EE8B63D2D6869CA610DC73CB57A"
       include:
         - '.htaccess'
+    github:
+      url: https://dhhepting.github.io
+      baseurl: ""
+      webmaster_verifications: {}
     local:
       url: http://localhost:4000
       baseurl: ""
