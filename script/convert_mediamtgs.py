@@ -16,6 +16,7 @@ import csv
 import os
 import re
 import subprocess
+import sys
 from collections import OrderedDict
 
 THUMB_RE = re.compile(r'(?:[_\-](?:tn|thumb))$', re.IGNORECASE)
@@ -121,7 +122,7 @@ def main():
     # If media CSV doesn't exist, run sharemedia.py to attempt to create it
     workspace_root = os.getcwd()
     def run_sharemedia():
-        share_cmd = ["python3", os.path.join("script", "sharemedia.py"), workspace_root, f"{args.course}/{args.semester}"]
+        share_cmd = [sys.executable, os.path.join("script", "sharemedia.py"), workspace_root, os.path.join(args.course, args.semester), str(args.meet)]
         print(f"Running sharemedia to populate media CSV: {' '.join(share_cmd)}")
         try:
             proc = subprocess.run(share_cmd, check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
@@ -166,7 +167,7 @@ def main():
         # attempt to repair missing thumbnails by running sharemedia.py
         print("Running sharemedia.py to attempt to complete missing media pairs...")
         workspace_root = os.getcwd()
-        share_cmd = ["python3", os.path.join("script", "sharemedia.py"), workspace_root, f"{args.course}/{args.semester}"]
+        share_cmd = [sys.executable, os.path.join("script", "sharemedia.py"), workspace_root, os.path.join(args.course, args.semester), str(args.meet)]
         try:
             proc = subprocess.run(share_cmd, check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
             print(proc.stdout)

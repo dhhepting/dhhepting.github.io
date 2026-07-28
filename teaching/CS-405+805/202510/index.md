@@ -7,7 +7,7 @@ layout: bg-image
 
 {%- include offering/main.html
   title=page.title
-  mtgs=1
+  mtgs=0
   sched=1
   wkly=1
   code=1

@@ -1,4 +1,5 @@
 {%- include teaching/url.html -%}
+{% if false %}
 {% for qq in site.data.teaching.offerings %}
   {%- if qq.semester == crs_sem and qq.id == crs_id -%}
     {%- assign mtgdays = qq.mdays | split: "," -%}
@@ -10,7 +11,29 @@
     {%- assign ehm = mtimes[1] | split: ":" -%}
     {%- assign emins = ehm[0] | times: 60 -%}
     {%- assign emins = emins | plus: ehm[1] -%}
-    {%- assign mpw = 0 -%}
+    {%- assign mpw = 0 -%}{% comment %} meetings per week {% endcomment %}
+    {%- assign mpw = mpw | default: 1 -%}
+    {%- if mpw == 0 -%}
+      {%- assign mpw = 1 -%}
+    {%- endif -%}
+    {%- assign mpwidx = 0 -%}
+    {%- assign ulopen = 0 -%}
+    {%- assign mdi = 0 -%}
+    {%- assign cctr = 0 -%}
+    {%- assign totmtgs = 0 -%}
+    {%- assign mm = site.data.teaching[crs_id][crs_sem]meetings[0] -%}
+    {%- assign totmtgs = mm.total_mtgs | minus: 1 -%}
+    {%- for j in (0..totmtgs) -%}
+      {%- assign mm = site.data.teaching[crs_id][crs_sem]meetings[j] -%}
+      {%- assign mtgday = mm.date | split: "-" | first -%}
+      {%- for i in (0..mtgdays.size) -%}
+        {%- if mtgdays[i] == mtgday -%}
+          {%- assign mpw = mpw | plus: 1 -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {% endfor %}
+    {%- assign mpw = mpw | default: 1 -%}
     {%- assign mpw = mpw | plus: mtgdays.size -%}
     {%- assign mpwidx = mpw | minus: 1 -%}
     {%- break -%}
@@ -82,7 +105,8 @@
     </ul>
     {%- assign ulopen = 0 -%}
   {%- endif -%}
-  {%- assign cctr = mdi | plus: 1 | modulo: mpw -%}
+  {% comment %}next line: set cctr to 1 instead of mdi{% endcomment %}
+  {%- assign cctr = 1 | plus: 1 | modulo: mpw -%}
 {%- endfor -%}
 {%- if ulopen == 1 -%}
   {%- for k in (cctr..mpwidx) -%}
@@ -92,6 +116,7 @@
   </ul>
 {%- endif -%}
 </div>
+{% endif %}
 
 <script>
   "use strict";

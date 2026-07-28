@@ -9,7 +9,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 
-gem "jekyll", "~> 4.2.2"
+gem "jekyll"
 gem 'nokogiri', '~> 1.15', '>= 1.15.4'
 gem 'racc', '~> 1.7', '>= 1.7.1'
 gem 'async', '~> 2.6', '>= 2.6.4'
@@ -23,3 +23,5 @@ group :jekyll_plugins do
    gem 'jekyll-redirect-from'
 end
 
+
+gem "creole", "~> 0.5.0"
