@@ -5,7 +5,7 @@ sem: 202130
 layout: bg-image
 ---
 {%-  include offering/main.html
-  mtgs=1
+  mtgs=0
   sched=1
   topics=1
   asgns=1

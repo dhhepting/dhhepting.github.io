@@ -87,8 +87,13 @@
           {% endif %}
           {% assign wt = wt | minus: 1 %}
         {% endfor %}
-        {% assign oS = ws | divided_by: tv %}
-        {% assign oO = oS | divided_by: 5.0 %}
+        {% if tv and tv != 0 %}
+          {% assign oS = ws | divided_by: tv %}
+          {% assign oO = oS | divided_by: 5.0 %}
+        {% else %}
+          {% assign oS = 0 %}
+          {% assign oO = 0 %}
+        {% endif %}
         {% assign pc = oO | times: 100.0 %}
       </tr>
       <tr>

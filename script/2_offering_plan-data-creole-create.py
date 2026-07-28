@@ -82,6 +82,7 @@ template = '''
 == For Next Meeting ==
 
 ----
+== Resources ==
 ----
 
 == Raw Transcript ==

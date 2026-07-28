@@ -8,6 +8,7 @@ This writes `_data/teaching/CS-280/202610/linked-meetings` using
 `_data/teaching/CS-280/202610/meetings.csv` as input.
 """
 import argparse
+import sys
 import csv
 import html
 from pathlib import Path
@@ -77,11 +78,11 @@ def generate(rows, homepage_id=None):
         if wikipage_id and not noneish(wikipage_id):
             pid = html.escape(wikipage_id)
             url = f'https://urcourses.uregina.ca/mod/wiki/history.php?pageid={pid}'
-            page_history_cell = f'<a href="{url}" target="_blank">{url}</a>'
+            page_history_cell = f'<a href="{url}" target="_blank">History of Mtg {meeting} Wiki Page edits</a>'
 
         out.append('    <tr>')
         out.append(f'      <td>{meeting_cell}</td>')
-        out.append(f'      <td>{editors_cell}</td>')
+        out.append(f'      <td style="text-align:center">{editors_cell}</td>')
         out.append(f'      <td>{page_history_cell}</td>')
         out.append('    </tr>')
 
@@ -93,6 +94,14 @@ def generate(rows, homepage_id=None):
 
 def main():
     p = argparse.ArgumentParser(description='Generate linked-meetings from meetings.csv')
+    # If no args provided, show a friendly usage example instead of argparse's
+    # default error exit code.
+    if len(sys.argv) < 2:
+        p.print_help()
+        print('\nExample:')
+        print('  python3 script/generate_linked_meetings.py CS-280/202610 --homepage-id 9872')
+        raise SystemExit(0)
+
     p.add_argument('offering', help='Course offering path like CS-280/202610')
     p.add_argument('--base-dir', default='_data/teaching', help='Base data directory (default: _data/teaching)')
     p.add_argument('--input-name', default='meetings.csv', help='Input CSV file name (default: meetings.csv)')
