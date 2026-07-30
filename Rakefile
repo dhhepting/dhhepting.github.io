@@ -125,13 +125,13 @@ namespace :test do
   task html: :build do
     # --disable-external keeps this fast and offline; drop that flag
     # periodically (e.g. in CI on a schedule) to also check outbound links.
-    sh 'bundle exec htmlproofer ./_site --disable-external --check-html'
+    sh 'bundle exec htmlproofer ./_site --config-file _htmlproofer.yml'
   end
 
   desc 'Check both target builds (github, uregina) before deploying either'
   task html_all: 'build:all' do
     %w[github uregina].each do |target|
-      sh "bundle exec htmlproofer ./_site_#{target} --disable-external --check-html"
+      sh "bundle exec htmlproofer ./_site_#{target} --config-file _htmlproofer.yml"
     end
   end
 
