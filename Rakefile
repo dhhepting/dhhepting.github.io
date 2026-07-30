@@ -20,7 +20,7 @@ require 'yaml'
 task default: %i[data:validate wiki:validate build test:html]
 
 namespace :meetings do
-  desc 'Generate meeting pages from plan.yml/meetings.yml (usage: rake meetings:generate[CS-280,202610])'
+  desc 'Create new hand-authored meeting-page stubs for any meeting missing one (usage: rake meetings:generate[CS-280,202610]). Generated fields like weekday/links are computed automatically at build time — this only creates files, review + commit the result.'
   task :generate, %i[crs_id crs_sem] do |_t, args|
     require_relative 'lib/meeting_page_generator'
 
@@ -29,6 +29,18 @@ namespace :meetings do
 
     result[:created].each { |c| puts "created: #{c}" }
     result[:skipped].each { |s| puts "skipped: #{s}" }
+    result[:errors].each { |e| puts "ERROR: #{e}" }
+    abort if result[:errors].any?
+  end
+end
+
+namespace :photos do
+  desc 'Regenerate all meeting photo pages from media.csv across every offering. Always safe to run — these pages have no hand-authored content, so nothing is ever preserved or skipped.'
+  task :sync_all do
+    require_relative 'lib/meeting_photos_page_generator'
+
+    result = MeetingPhotosPageGenerator.new.generate_all
+    result[:written].each { |w| puts "wrote: #{w}" }
     result[:errors].each { |e| puts "ERROR: #{e}" }
     abort if result[:errors].any?
   end
@@ -80,7 +92,7 @@ namespace :wiki do
 end
 
 desc 'Build the Jekyll site, failing loudly on any Liquid/Ruby error'
-task :build do
+task build: 'photos:sync_all' do
   sh 'bundle exec jekyll build --trace'
 end
 
@@ -97,7 +109,7 @@ end
 namespace :build do
   %w[github uregina].each do |target|
     desc "Build the site for the #{target} deploy target"
-    task target do
+    task target => 'photos:sync_all' do
       sh "bundle exec jekyll build --trace " \
          "--config _config.yml,_config_#{target}.yml " \
          "--destination _site_#{target}"

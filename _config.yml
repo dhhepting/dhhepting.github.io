@@ -1,5 +1,14 @@
 baseurl: /~hepting
 canonical: https://www2.cs.uregina.ca/~hepting
+
+# Single declared location for the global reference tables — both
+# OfferingsIndexGenerator (build time) and TeachingDataValidator (rake
+# data:validate) read from here, so the real path only needs to be
+# correct in one place.
+teaching_data:
+  courses_csv: _data/teaching/all/courses.csv
+  semesters_csv: _data/teaching/all/semesters.csv
+
 collections:
   wiki_starts:
     output: true
@@ -7,22 +16,26 @@ collections:
   meeting_pages:
     output: true
     permalink: /meeting-pages/:path/
+  # NOTE: output: false means no pages are generated for this collection,
+  # so `permalink` below is currently inert.
   assignments:
-     output: false
-     permalink: /teaching/:collection/:path/:categories/:title:output_ext
-   gallery:
-     output: true
-     permalink: /projects/fractals/:collection/:title:output_ext
-   notes:
-     output: true
-     permalink: /teaching/:collection/:title:output_ext
-   posts:
-     output: true
-     permalink: /:categories/:title:output_ext
-   works:
+    output: false
+    permalink: /teaching/:collection/:path/:categories/:title:output_ext
+  gallery:
+    output: true
+    permalink: /projects/fractals/:collection/:title:output_ext
+  # NOTE: no `:path` component here — two notes with the same `:title` in
+  # different subdirectories will collide at the same output URL.
+  notes:
+    output: true
+    permalink: /teaching/:collection/:title:output_ext
+  posts:
+    output: true
+    permalink: /:categories/:title:output_ext
+  works:
     output: true
     permalink: /research/:collection/:title:output_ext
- 
+
 defaults:
   - scope:
       path: "_wiki_starts"
@@ -42,6 +55,12 @@ defaults:
 email: daryl.hepting@uregina.ca
 encoding: utf-8
 exclude:
+- lib
+- test
+- Rakefile
+- vendor
+- Gemfile
+- Gemfile.lock
 - 0_nonweb/
 - 1_offweb/
 - Gemfile

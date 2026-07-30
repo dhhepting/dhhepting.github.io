@@ -1,0 +1,57 @@
+---
+# _layouts/meeting_photos_page.html
+#
+# Purely generated — no hand-authored content, ever. Safe to fully
+# regenerate every build (see lib/meeting_photos_page_generator.rb).
+# Deliberately separate from meeting_page.html so re-copying this page's
+# text into Moodle never touches the main meeting page students may
+# already be collaboratively editing.
+---
+{%- assign gen = site.data.teaching[page.course][page.semester].meeting_pages_generated[page.generated_from] %}
+{%- capture creole_photos -%}
+== Photos: {{ page.course }} Mtg {{ gen.meeting }} ({{ gen.date }}) ==
+{%- for p in gen.photos %}
+* {% raw %}{{{% endraw %}{{ p.thumb_url }} | Mtg {{ p.label }} Thumbnail{% raw %}}}{% endraw %}
+[[{{ p.full_url }} | Mtg {{ p.label }} Full Size]]
+{%- endfor %}
+{%- endcapture -%}
+
+<div class="meeting-photos-page">
+  <h1>{{ page.title }}</h1>
+  <p class="text-muted">
+    <a href="{{ gen.meeting_page_path | relative_url }}">
+      Back to the main meeting page
+    </a>
+  </p>
+
+  <div class="alert alert-info">
+    This page is 100% generated and always safe to fully regenerate — it has no
+    hand-authored content. That's the whole point: updating photos here never
+    risks clobbering anything students have written on the main meeting page.
+  </div>
+
+  <h3>Photo gallery</h3>
+  <div class="mb-3">
+    {%- for p in gen.photos %}
+    <a href="{{ p.full_url }}" target="_blank"><img src="{{ p.thumb_url }}" alt="Mtg {{ p.label }}" class="me-2 mb-2"></a>
+    {%- endfor %}
+  </div>
+
+  <h3>Copy this into the Moodle photos page</h3>
+  <div class="mb-3">
+    <textarea id="creole-photos" class="form-control" rows="12" readonly>{{ creole_photos }}</textarea>
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyPhotos()">
+      Copy to clipboard
+    </button>
+  </div>
+</div>
+
+<script>
+  function copyPhotos() {
+    const ta = document.getElementById('creole-photos');
+    ta.select();
+    navigator.clipboard.writeText(ta.value).then(() => {
+      console.log('Photos Creole copied to clipboard');
+    });
+  }
+</script>

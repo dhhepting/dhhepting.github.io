@@ -69,7 +69,17 @@ class MeetingGridGenerator < Jekyll::Generator
   # Takes `site_data` (a plain Hash, e.g. site.data or a fixture Hash in
   # tests) rather than the whole `site` object, for the same reason.
   def self.compute_meeting_grid(site_data, crs_id, crs_sem, offering)
-    mtgdays = (offering['mdays'] || '').split(',').map(&:strip).reject(&:empty?)
+    # mdays comes as a real YAML list from offering.yml (mdays: [Tue, Thu])
+    # now that offerings are generated from per-offering files instead of
+    # the old offerings.csv, which packed this as a comma-separated string
+    # ("Mon,Wed,Fri") in a single cell. Handling both keeps this working
+    # for any offering not yet migrated off the old CSV shape.
+    mdays_raw = offering['mdays'] || []
+    mtgdays = if mdays_raw.is_a?(Array)
+                mdays_raw.map(&:to_s).map(&:strip).reject(&:empty?)
+              else
+                mdays_raw.to_s.split(',').map(&:strip).reject(&:empty?)
+              end
 
     if mtgdays.empty?
       raise MeetingGridError,
