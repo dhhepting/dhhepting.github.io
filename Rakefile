@@ -93,6 +93,13 @@ end
 
 desc 'Build the Jekyll site, failing loudly on any Liquid/Ruby error'
 task build: 'photos:sync_all' do
+  # Cleans _site/ and .jekyll-cache/ first — without this, output from a
+  # different command (e.g. `urserve`'s `jekyll serve`, which can bake in
+  # a completely different site.url depending on Jekyll version) could
+  # linger untouched by this build and get checked/deployed as if it were
+  # current. This is what let localhost:4000 URLs end up in checked HTML
+  # despite no template anywhere containing that string.
+  sh 'bundle exec jekyll clean'
   sh 'bundle exec jekyll build --trace'
 end
 
@@ -110,6 +117,7 @@ namespace :build do
   %w[github uregina].each do |target|
     desc "Build the site for the #{target} deploy target"
     task target => 'photos:sync_all' do
+      sh "bundle exec jekyll clean --destination _site_#{target}"
       sh "bundle exec jekyll build --trace " \
          "--config _config.yml,_config_#{target}.yml " \
          "--destination _site_#{target}"
@@ -123,12 +131,14 @@ end
 namespace :test do
   desc 'Check rendered _site/ for broken internal links and mismatched anchors'
   task html: :build do
-    run_htmlproofer('./_site')
+    # baseurl: matches the root _config.yml's `baseurl: /~hepting`
+    run_htmlproofer('./_site', baseurl: '/~hepting')
   end
 
   desc 'Check both target builds (github, uregina) before deploying either'
   task html_all: 'build:all' do
-    %w[github uregina].each { |target| run_htmlproofer("./_site_#{target}") }
+    run_htmlproofer('./_site_github', baseurl: '')
+    run_htmlproofer('./_site_uregina', baseurl: '/~hepting')
   end
 
   # Calls html-proofer's Ruby API directly rather than shelling out to the
@@ -145,12 +155,22 @@ namespace :test do
   # preserve; compiling everything as a Regexp is correct for both the
   # plain-string entries (mailto:, tel:) and the anchored patterns, since
   # none of the plain ones contain characters that change meaning as regex.
-  def run_htmlproofer(dir)
+  def run_htmlproofer(dir, baseurl: '')
     require 'html-proofer'
     require 'yaml'
 
     options = (YAML.load_file('_htmlproofer.yml') || {}).transform_keys(&:to_sym)
     options[:ignore_urls] = (options[:ignore_urls] || []).map { |p| Regexp.new(p) }
+
+    # Without this, html-proofer checks whether internal links literally
+    # exist at paths like _site/~hepting/teaching/index.html — which never
+    # exist, since ~hepting isn't a real directory, it's a URL prefix
+    # Jekyll adds from `baseurl`. This was responsible for ~92% of the
+    # 25,555 failures on the first real run (23,576 of them) — not actual
+    # broken links, just unresolved baseurl prefixes.
+    unless baseurl.to_s.empty?
+      options[:swap_urls] = { /^#{Regexp.escape(baseurl)}\// => '/' }
+    end
 
     proofer = HTMLProofer.check_directory(dir, options)
     proofer.run
