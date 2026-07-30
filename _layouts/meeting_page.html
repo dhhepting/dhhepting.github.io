@@ -16,6 +16,13 @@
 [[ {{ gen.prev_page }} | Previous]] <-- [[Home]] --> [[ {{ gen.next_page }} | Next]]
 == Today's Theme ==
 {{ gen.theme }}
+{%- if gen.BOK %}
+== Body of Knowledge ==
+{%- for b in gen.BOK %}
+* {{ b.kaku }}{% if b.spectop %}: {{ b.spectop }}{% endif %}
+{%- if b.outcomes %} — {{ b.outcomes | join: ", " }}{% endif %}
+{%- endfor %}
+{%- endif %}
 == Administration ==
 * Today's Wiki Editors: [[{{ gen.wiki_ed_url }} | ClassWork Group {{ gen.wiki_ed_group }}]]
 * Happy {{ gen.weekday }}
@@ -23,6 +30,7 @@
 * [[{{ gen.calendar_day_url }} | Class calendar for today]]
 * [[{{ gen.calendar_upcoming_url }} | Upcoming events ]]
 * [[{{ gen.groupblog_url }} | Discussions on group blog]]
+* [[{{ gen.photos_wiki_page_name }}]]
 
 {% endcapture -%}
 
@@ -36,6 +44,26 @@
   <div class="alert alert-info">
     Navigation/Theme/Administration above always reflect the current plan.yml and
     meetings.yml. The content below is hand-authored and is never regenerated once created.
+  </div>
+
+  {%- if gen.BOK %}
+  <div class="mb-3">
+    <h3>Body of Knowledge</h3>
+    <ul>
+      {%- for b in gen.BOK %}
+      <li><strong>{{ b.kaku }}</strong>{% if b.spectop %}: {{ b.spectop }}{% endif %}
+        {%- if b.outcomes %} — {{ b.outcomes | join: ", " }}{% endif %}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- endif %}
+
+  <div class="mb-3">
+    {%- if gen.photos_page_path %}
+    <a href="{{ gen.photos_page_path | relative_url }}">View/copy this meeting's photos (separate page)</a>
+    {%- else %}
+    <span class="text-muted">Photos page not created yet — [[{{ gen.photos_wiki_page_name }}]] will show red in Moodle until photos are added</span>
+    {%- endif %}
   </div>
 
   <h3>Copy this into the Moodle wiki page</h3>

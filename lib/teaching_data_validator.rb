@@ -14,15 +14,26 @@ require 'csv'
 class TeachingDataValidator
   REQUIRED_FIELDS = %w[mdays location times urc_course_id attendance_id].freeze
 
-  def initialize(teaching_data_dir = '_data/teaching')
+  # courses_csv_path/semesters_csv_path default to reading the same
+  # `teaching_data.courses_csv`/`semesters_csv` keys from _config.yml
+  # that OfferingsIndexGenerator uses at build time — one declared path,
+  # read the same way by both consumers, rather than each hardcoding its
+  # own guess at where these files live.
+  def initialize(teaching_data_dir = '_data/teaching',
+                  config_path: '_config.yml',
+                  courses_csv_path: nil,
+                  semesters_csv_path: nil)
     @teaching_data_dir = teaching_data_dir
+    config = File.exist?(config_path) ? (YAML.load_file(config_path) || {}) : {}
+    @courses_csv_path = courses_csv_path || config.dig('teaching_data', 'courses_csv') || File.join(teaching_data_dir, 'courses.csv')
+    @semesters_csv_path = semesters_csv_path || config.dig('teaching_data', 'semesters_csv') || File.join(teaching_data_dir, 'semesters.csv')
   end
 
   # Returns an Array of human-readable error strings. Empty array = pass.
   def run
     errors = []
-    known_course_ids = load_csv_column(File.join(@teaching_data_dir, 'courses.csv'), 'id')
-    known_semesters = load_csv_column(File.join(@teaching_data_dir, 'semesters.csv'), 'semester')
+    known_course_ids = load_csv_column(@courses_csv_path, 'id')
+    known_semesters = load_csv_column(@semesters_csv_path, 'semester')
 
     offering_files.each do |path|
       errors.concat(validate_offering(path, known_course_ids, known_semesters))
