@@ -123,16 +123,43 @@ end
 namespace :test do
   desc 'Check rendered _site/ for broken internal links and mismatched anchors'
   task html: :build do
-    # --disable-external keeps this fast and offline; drop that flag
-    # periodically (e.g. in CI on a schedule) to also check outbound links.
-    sh 'bundle exec htmlproofer ./_site --config-file _htmlproofer.yml'
+    run_htmlproofer('./_site')
   end
 
   desc 'Check both target builds (github, uregina) before deploying either'
   task html_all: 'build:all' do
-    %w[github uregina].each do |target|
-      sh "bundle exec htmlproofer ./_site_#{target} --config-file _htmlproofer.yml"
-    end
+    %w[github uregina].each { |target| run_htmlproofer("./_site_#{target}") }
+  end
+
+  # Calls html-proofer's Ruby API directly rather than shelling out to the
+  # `htmlproofer` CLI binary. This exists because the CLI's flag names have
+  # changed across versions in ways that were hard to predict from docs
+  # (--check-html and --config-file both turned out invalid for the
+  # installed 5.2.1) — the options-hash Ruby API is what the README
+  # documents in detail and is more stable to depend on.
+  #
+  # _htmlproofer.yml's keys are loaded as symbols to match that API.
+  # ignore_urls entries get compiled to real Regexp objects — the CLI's
+  # config loader may have handled string-vs-regex differently, but since
+  # --config-file never actually worked, there's no prior behavior here to
+  # preserve; compiling everything as a Regexp is correct for both the
+  # plain-string entries (mailto:, tel:) and the anchored patterns, since
+  # none of the plain ones contain characters that change meaning as regex.
+  def run_htmlproofer(dir)
+    require 'html-proofer'
+    require 'yaml'
+
+    options = (YAML.load_file('_htmlproofer.yml') || {}).transform_keys(&:to_sym)
+    options[:ignore_urls] = (options[:ignore_urls] || []).map { |p| Regexp.new(p) }
+
+    proofer = HTMLProofer.check_directory(dir, options)
+    proofer.run
+
+    return if proofer.failed_checks.empty?
+
+    puts "html-proofer found #{proofer.failed_checks.size} problem(s) in #{dir}:"
+    proofer.failed_checks.each { |f| puts "  #{f.path}: #{f.description}" }
+    abort
   end
 
   desc 'Run unit tests against plugin logic directly (no Jekyll build needed)'
