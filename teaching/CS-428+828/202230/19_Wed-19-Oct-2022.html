@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202230/19_Wed-19-Oct-2022.html" />
+    
+    <title>Mtg 19 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 19 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/19_Wed-19-Oct-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/",
+        
+          "name": "202230"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/19_Wed-19-Oct-2022.html",
+        
+          "name": "19 (Wed-19-Oct-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202230/">
+        202230
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      19 (Wed-19-Oct-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 19/36: Wed-19-Oct-2022
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="18_Mon-17-Oct-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="20_Fri-21-Oct-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I encountered
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+          Administration
+        </h4>
+        <ul><li>
+                Happy Wednesday
+              </li><li>
+                <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1900809&amp;view=1">
+                  Attendance
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1666159200&amp;course=24538">
+                  Class calendar for today
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=24538">
+                  Upcoming events
+                </a>
+              </li></ul><h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3>
+      <div>
+        <video width="400" controls="" autoplay="">
+            <source src="https://dl.dropboxusercontent.com/s/tqg57d092f2nr4p/19%20-%20img-5.mov?dl=0" type="video/mp4" />
+        </video>
+      </div><div id="mtg_pix_19" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_19" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_19" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_19" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_19" data-bs-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/kx4755q9fjaz9gw/19%20-%20img-1.png?dl=0" alt="19 - img-1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/ysohg6ifijkaapv/19%20-%20img-2.png?dl=0" alt="19 - img-2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/u9jtki9zpxib1o8/19%20-%20img-3.png?dl=0" alt="19 - img-3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/jk0b29f9pnk145j/19%20-%20img-4.png?dl=0" alt="19 - img-4.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_19" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_19" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Okay, so aside from the doors on the main floor of education building between AV services or photography and the elevator, are there other ones on campus that are problematic? Yes,
+          </li><li>
+            
+            multipurpose room where it has like the same crowd on both sides have no sort of like labeling. And so because people keep on trying to pull it when it's pushed, it's like automatically awkward already off balance. Like this way. We keep trying to pull it in. So pushing events which Keisha multipurpose room into one of the residences it comes to mind
+          </li><li>
+            
+            or we can think of the on campus.
+          </li><li>
+            
+            Their College has a string of fire doors that are perched exactly where I send everyone
+          </li><li>
+            
+            there's the doors of the entrance to the building that have just been
+          </li><li>
+            
+            ordered the last like multiple years and fire exits. Anything think that's for us to be? College Ready there's a couple doors that have just been with them for multiple years at this point.
+          </li><li>
+            
+            So are there any interface examples you've come up with? noticed? So people are coming late exam will be on paper on Friday. So any any examples of interfaces even notice since you've been more sinister?
+          </li><li>
+            
+            Sure. So it's a laundry machines and solder machine is the Tuesday machines and the residents here. You have to add money on the card on like a card or the laundry machines and the machine that you put in the money for it doesn't say like the interface doesn't tell you to put your credit card in like after like looking around for multiple minutes. I saw that they had like an instruction poster above the machine that you had to read. So like the machine has instructions on it, but at no point when you're trying to have money doesn't help for a credit card or debit card. So you're expected to see the post.
+          </li><li>
+            
+            So there's a parking machine at the airport isn't the most secure as well. I've noticed. So we can observe lots of examples like that. I think what I want I want to bring up that one example I talked about it's in the book and I mentioned that
+          </li><li>
+            
+            let me first Okay, so so if you weren't able to record attendance on Friday,
+          </li><li>
+            
+            because we had set it up to be minus, minus 40 minutes ahead of time. And it still didn't work. Send me a note. I'll fix it.
+          </li><li>
+            
+            So there's no no password here. So you can use this or go to the link directly Okay, can you see that all right. Zoom in a little bit Okay, so this is from 2018. So, last week I bought a great new Bluetooth headset then sadly proceeded to spend over an hour and a frustrating quest to connect it to my computer
+          </li><li>
+            
+            does that opening line resonate with anyone? Despite the promises made by both a headset manual and the computer support site, the headset did not automatically connect to the computer after rereading the instructions, checking to make sure both devices were on. scouring the headset reviews to confirm was compatible with my computer, and even testing the headset by syncing it to a different computer. I was just about ready to give up and then turn the darn thing and return the darn thing when I found a random Help page from a completely different hardware manufacturer which changed everything. The new Help page showed an actual screenshot of what the windows and Bluetooth settings switch looks like when it's turned on. Looking at this screenshots and they realized my mistake, the Bluetooth settings of the screen I'd be staring at for the past hour was actually showing me that the Bluetooth was off on my computer so here's
+          </li><li>
+            
+            what's okay
+          </li><li>
+            
+            so how could this be interpreted? So, now we see this is on so it's clearly visible design. But how does that one look like? How does that appearance need to be touched? On to begin
+          </li><li>
+            
+            with maybe the thought was like the play button, or the play symbol is showing I mean it's not
+          </li><li>
+            
+            Yeah, so that's one thing. So Bluetooth positions to the right, switches to the left. Also most the most pen keyboard at shows then it's connected. So this seems to show that it's it's on and it's working. They detected
+          </li><li>
+            
+            it to throw the device screen click on the plus sign to do that. So this style of label response to this interpretation of the bottom
+          </li><li>
+            
+            right. Because it says click the button to add a Bluetooth device or other device.
+          </li><li>
+            
+            So click this to turn it off so how do how do we address that kind of problem? If we're designing this interface, how do we make it better? Avoid this issue
+          </li><li>
+            
+            so that you can
+          </li><li>
+            
+            okay
+          </li><li>
+            
+            they just have the button hammered on and off on the side to indicate which sides off and I'd say gone
+          </li><li>
+            
+            So they've fixed that for Windows 11 has now turned it off. It says like a small message under Bluetooth it says Bluetooth is turned off
+          </li><li>
+            
+            it also depends on what you're looking at. Here is a quick pop up now and Windows. With the quick settings. I feel like I've moved to public quicksave it's a completely different point where there's no on or off. I think a little carry character will appear on the side that you can put down on this device okay so what what kind of metaphor is available to us in this situation? You're in a cave sofas license to search
+          </li><li>
+            
+            so what about a control panel so with the control panel behave this way that things that the slaves would change if you're a bank and switches. You change them and then the labels also change. I don't think that will happen. If you're looking at a console so the console here share this with you after I'll have a blinking button to maybe I should do a movie so if we have a light switch unless there are multiple switches switches up is on I'm thinking the other day so if we're going to play the metaphor of a light switch, you know when you're going to include three layer switches. In the interface we have a different kinds of switch
+          </li><li>
+            
+            where it turns green rockets are occupied
+          </li><li>
+            
+            so we could have some idea of that. So in that case, both alternatives are available, so we'd say
+          </li><li>
+            
+            so maybe, then if we're going to put the label on one side, indicate the state of the switch and we can also indicate there's more than one variable and the other metaphors we can employ
+          </li><li>
+            
+            when he learned the structured theory, term closed and open flow switches often
+          </li><li>
+            
+            we think often is like connected causes but it's just the opposite.
+          </li><li>
+            
+            Yeah okay. So how about
+          </li><li>
+            
+            the ones in zero switches that are labeled one and zero. Do understand zero is zero as often so one is true. Zero is open
+          </li><li>
+            
+            that means disconnected.
+          </li><li>
+            
+            This class I'm taking a course we're doing like tables where we have to deal with keys. And he said one is elected T but a productive use for one is it acts the same way is one
+          </li><li>
+            
+            so I tried to make a draw rocker switch there Yeah, so I guess one is true. Zero you think abs and oh for on
+          </li><li>
+            
+            is always good to know for all.
+          </li><li>
+            
+            So I would say that it's not completely guaranteed that one, we're going to press one and everyone's going to understand that it's going to be different so what can help? Was your like full picture so you had to say. Oh, wow, thanks.
+          </li><li>
+            
+            But that's just about you. Don't have to show the race.
+          </li><li>
+            
+            Yeah, it's all
+          </li><li>
+            
+            assuming that the user has the ability to read Joy not just hang on to the text of the word is the state. So as long as that way, confusion from the bottom we're actually telling the user what the state is. So it's a fair environment. That the user be able to read these computer we just the global standard.
+          </li><li>
+            
+            Yeah. So there's consistency issues here. Are we displaying the current state or are we displaying the future state if we activate the switch or the control?
+          </li><li>
+            
+            Of course. I haven't seen this in like a real life thing. But I've seen it in games where if you have a button for multiple states more than two it often reflects the future state. So is that
+          </li><li>
+            
+            I think it's a matter of being consistent.
+          </li><li>
+            
+            Because if we got to this value button for iPhones, I mean if it is silent, it shows her at night
+          </li><li>
+            
+            so where does it show the red
+          </li><li>
+            
+            line? That's the red line.
+          </li><li>
+            
+            Oh I never I didn't realize that I just thought if switches down
+          </li><li>
+            
+            silent so instead of red line i That didn't help me at all, but because then I could see that there's a color there but that
+          </li><li>
+            
+            we just wrote the wording entirely for one and given the current standard to show it for Android and most devices. It's
+          </li><li>
+            
+            just having a lit up button. If you swipe down on top your binary now lit up or not and it's not gonna say any words and you know, information you need from that. So if
+          </li><li>
+            
+            that's the standard, that's where the really originated kind
+          </li><li>
+            
+            of migrated from mobile to computers
+          </li><li>
+            
+            that I think you should just follow the standard setup and it's the same one
+          </li><li>
+            
+            all of a sudden disappeared. Too much. Although Apple also has it separated, I know on
+          </li><li>
+            
+            my laptop as well.
+          </li><li>
+            
+            So Bluetooth and other devices are two separate sections and settings rather than having them as one section, which would probably
+          </li><li>
+            
+            make more sense to make the switch vertical instead of horizontal about this. Some cultures really bad because I was gonna say if you read the other way that
+          </li><li>
+            
+            something's up culture is like
+          </li><li>
+            
+            so in that case, if you're reading right to left the nice feature of the interface would be to read the locale settings and then put so if if we have left to right off on that appropriate if we switch the order of labels
+          </li><li>
+            
+            more confusing someone is like multilingual. The baseline computer settings
+          </li><li>
+            
+            Yeah, so if we're doing like we should and reading the locale that set up on the computer then we should have the best chance to have a meaningful display for the person so the question here learning problems with is what are the other options so that it says it's on Zenmuse off now or it will be off if I flip switch and what are the other possible states for the switch?
+          </li><li>
+            
+            So that's a little bit of recall versus recognition. Having to recall that we want you to switch and see all the options that are available under control from the switch. And you can decide by one either on or off. So I'm going to see if it's off and I'm going to turn it on so that makes sense. So
+          </li><li>
+            
+            when you say feedback is the most important thing in this instance, because for example like a light switch, no matter how confusing it is, you'll just try and see what happens sort of like the feedback, but because of this is more like embedded. So maybe some sort of pop up or text messages are important are the most important.
+          </li><li>
+            
+            Oh, it's a little bit like we talked about so far just looking at the interface. Some things might become apparent to us if we're doing a walk through interface. Some things might be red flags, we notice the red line on the side of an iPhone is clear. sort of saying that's clear. But then when people use it. You asked about the red line maybe people don't understand that reference, maybe. Experience with users is maybe very different than the experience we have to sort of an analysis of
+          </li><li>
+            
+            the interface. So this feedback, the most important thing I'm not sure that I would say that but all these things can
+          </li><li>
+            
+            can help to reinforce the message. And if we have a metaphor that we're applying consistently right so they give a metaphor is that we have some description of we have some models, some idea of how the thing is operating based on our experience with the thing.
+          </li><li>
+            
+            We're making the connection to so if we've reinforced the metaphor every step then then we're conveying the message more clearly. So I want to kind of kick off the next design next project piece. And so that's basically
+          </li><li>
+            
+            start from the needs that we have identified in the first
+          </li><li>
+            
+            and the understand portion. We wanted to design two different interfaces. So first of all, clarify what you're focusing on what aspect of the interface you're going to focus on. And then think of two different metaphors. That can be used to help people are symbols that some symbols
+          </li><li>
+            
+            will say yes. So you want to different metaphors, and and then based on those metaphors, I want you to sketch two different interfaces that
+          </li><li>
+            
+            leverage those metaphors. So going from the needs, the unmet needs to the interface sketches. So it's okay to include some far out ideas video I think it's been a while most of the group from ideal industrial design for was designing a cuboid for Gilbert cute. cubicle for Gilbert cat, they went through some foreign ideas and it's kind of a fun video. To watch. I'll get the link to that. Any questions? Or concerns? So I didn't know the COVID test today and I'm negative understand what every shot is. Yes.
+          </li><li>
+            
+            Regarding the forces
+          </li><li>
+            
+            Yeah, I'll get that sorted out this week. So soon okay. Well have a good resting your Wednesday today. exam on Friday, and I'll give you a chance to provide some formative feedback as well as I'm collecting feedback Okay, have a good day. Yeah. I figured it was bugging sound far as I know so there is a document that you have on the center like those types of videos for watching he told me somebody was like LEDs and wraparound anytime you probably short about suicidal ideation you are doing the job it's pretty easy and when you still stay by studies in English it's very disorienting. Did you hear about the show when
+          </li><li>
+            
+            do you want to know when the lights are that electricity? We had to go to like elementary school that later so we did that call so much all the parents like that so I think that's all they should have to let me know if you have any more information about that thanks. Thanks See you Friday. Hello, hello. Hi. Can I scan the QR if you didn't scan that I'm sorry. It's okay. Thank you
+          </li><li>
+            
+            everyone I just have a good day bro
+          </li><li>
+            
+            I had one question about the midterm exam four chapters of the reference book. So I started start reading that that was so good, but there's so many details that was that was somewhat related to
+          </li><li>
+            
+            so so we talked about in class you can find additional material about our classes. Chapter chapters one through four. But it's gonna be focused on what we
+          </li><li>
+            
+            did in class. Oh, I see. I see.
+          </li><li>
+            
+            Because so I think we came up with a pretty good list of possibilities
+          </li><li>
+            
+            because that's what's so good because for example, I find a question, for example, in the previous midterm, about the correlation between intuition and metaphor. And this question was a little bit weird for me, so I didn't find I didn't find the answer. Exactly. So I just want to ask, how should we answer for example, such questions what do you think? No,
+          </li><li>
+            
+            I wouldn't give me such questions. I wouldn't give you a question that's not grounded.
+          </li><li>
+            
+            Because because, for example, was previous, you know previous exams for example, in 2020 2016, or something like that. So I'm just curious that one, because was the all topics covered? All of those terms or those those can be a little bit different? With each other?
+          </li><li>
+            
+            Yeah, I think going to talk about the same kinds of things, every class but the details can be a little different. So if something seems weird to you morning anyway, it's not COVID If the rapid engine test is accurate
+          </li><li>
+            
+            for me was the same action because the weather was getting cold and yeah, I saw a lot of people who
+          </li><li>
+            
+            I think this is killed.
+          </li><li>
+            
+            This is not working because the time is over.
+          </li><li>
+            
+            This is not working because the time is over.
+          </li></ul>
+    
+  
+    
+  <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Users must face the dual obstacles of comprehending the existing state of a system and figuring out how to change it with each encounter. By being aware of these gaps and bridging them with an open conceptual model, designers may help these groups.
+    </li><li>In today&#039;s class we discussed about various metaphor and interface issues. Example include light switch where a user will try atleast once to turn on the switch. Also, turning ON/OFF bluetooth on PC is tricky. Labelling both the sides of the button could be a possible solution inorder to avoid confusion.
+    </li><li>I personally think the most misleading thing about bluetooth control is what you can actually accomplish with it.  I know many technically illiterate people who connect things via bluetooth expecting to do things like share wireless signals, screenshare, or other features that it does not do.  I&#039;m not sure there is anything you could do with the interface to fix that.
+    </li><li>Midterm is on 21. In class student discuss about doors. Professor asked if we have any interface examples that are having problems. The next students discuss about Bluetooth features.
+    </li><li>Today we looked at examples of the gulfs of execution and evaluation. We looked at a bluetooth example and I thought the metaphor with a switch as quite accurate as many switches label the on/off as I/O which can be confusing depending on how you interpret it.
+    </li><li>We are talking about university doors and the problems and need to redesign also some interaction examples like  bluetooth and we explained some metaphors for that like switching buttons: Light switch  Control panel  Console Close/Open
+    </li><li>Discussed about midterm and university&#039;s doors
+    </li><li>The most important thing I&#039;d learned today was the use of the metaphor of a toggling regular switch for understanding the bluetooth switch in the control panel in Windows. Here, the switch clearly showed that the underlying operations involved in the process need not be recalled, but simply recognising the switch and familiar labels were good enough to bridge the gap of execution and evaluation involved in manipulating the system&#039;s bluetooth function.
+    </li><li>We talked about the interface for windows 10 and 11 where you switch bluethooth on and off.
+    </li><li>A switch is something we learn and has become part of natural actions.  If it doesn’t work one way, we will automatically try the other. Online switches are the same thing; if one way, we will try the other
+    </li><li>The most important thing I learned today is how powerful metaphors can be. Reinforcing the metaphor can often be the most powerful way of helping the user identify the functionality. Feedback is also beneficial for the user to be able to identify the current state and current progress.
+    </li><li>In todays meeting we discussed a lot about metaphors and interface issues. One interface issue I can think of is the placement of light switches on a switch board. You also feel like you are solving a puzzle when you try to switch on a specific light, you can never do it one try.  Maybe this is something that needs to be worked on to make the interface universal and keep its design consistent throughout.
+    </li><li>Bluetooth settings should be standardized between devices so that it is more easily understandable. Currently I think that Apple does a good job of making it simple with having Bluetooth and other devices split between multiple spots in settings.
+    </li><li>Today we spoke more about the Midterm!
+    </li><li>The most important thing  I learned today is the use of switches in a user interface. Having only one label on one side can be confusing if the switch is on or off, so it&#039;s better to have labels on both sides; or have the system show a message.
+    </li><li>The possible ideas of midterm
+    </li><li>The most important thing that I learned today is when we talked about a different example of interface that is problematic. An example of this would be the Bluetooth function in Windows. Disabling the adding bluetooth when it is not on and the label of the bluetooth button can be confusing which can cause users who are not very technically some problems. Another example we talked about is the switch with a label of | and O. How they are read and what their meaning can be confusing.
+    </li><li>Label both the sides of the on anf off switch for bluetooth settings on windows
+    </li><li>The bluetooth feature on windows has issues with its design. The disable function needs to be labelled on both sides of the switch like on off on either side and have the button moves to the correct side. It should only display the name of devided its connected to when its actually connected to it. Some of the metaphors for this is: light switch, control panel, bathroom lock vacant/occupied.
+    </li><li>There are many examples of Norman doors in old buildings like our university because it is cheaper and more efficient to add and remove features to the door instead of redesigning and replacing the entire door. For a simple interface with insignificant effects like a light switch, feedback is unnecessary because the user can simply do and undo its functions with no consequence.
+    </li><li>The format of the midterm.
+    </li><li>Possible question on the midterm.
+    </li><li>Dr.Hepting then asked in Mtg 19 if there were any other doors that required additional information in addition to those from AV services and elevators.  Daryl then inquired as to whether we had come across any examples of problematic interfaces. Yes! A first-time laundry machine without instructions and user  must rely on the poster rather than the machine.  While discussing a Bluetooth feature on a Windows 10 device, the user had been valiantly attempting to connect BT. He eventually found a related page.
+    </li><li>Brainstormed metaphors for bluetooth and switch from the two UX gulfs: evaluation and execution. Consistency is important in design thinking.
+    </li><li>In the meeting it is mentioned about doors in the university which needs to improve in design. Also some other interface example such as laundry machine which has some problems. bluetooth item was explained. We talked about some metaphors for that. Such as light switch, control panel or console, bathroom door lock and close/open. The importance of feedback was mentioned as well.
+    </li><li>Today in class I learned about bluetooth example which was tales about in class and few ideas which can make that interface better. Such as label both the sides with on and off, disable adding bluetooth when it is not on. Also talked about the idea of 1 and 0 switch, LTR, RTL switches.
+    </li><li>In today&#039;s meeting we have discussed the topic and questions for our midterm which is on Friday.
+    </li><li>I learned today Bluetooth settings and similar metaphors to it
+    </li><li>Type of questions that could be asked jn midterm.
+    </li><li>In today&#039;s class we continued discussion what questions can be asked in midterm and we talked a bit more about different types of doors present itself in our university of Regina. Moreover we discussed on the ways to solve bluetooth&#039;s interface problem
+    </li><li>started with &amp;quot;happy Wednesday&amp;quot; and discussed interfaces and metaphors, using examples such as &amp;quot;switch,&amp;quot; &amp;quot;Bluetooth,&amp;quot; and &amp;quot;some unmet needs to interfaces,&amp;quot; and covered different interface designs that were observed that are problematic, one of which is the laundry machine.
+    </li><li>Hello Prof. Hepting. Today you talked about the switch button which is using in mobile devices for turning on and off the Bluetooth. You used actual switches metaphor for turning a light on and off and compare these together to review the user experience. Thanks
+    </li><li>Today got to know more about metaphors for different applications and some of the inconsistent meanings drerived from those. I.e. On the bathrooms&#039; doors, for some it is &#039;closed/open&#039; and for others it is &#039;vacant/occupied&#039;. This creates inconsistency and great confusion to users. Hence, this point I found the most important today.
+    </li><li>We discussed more about the midterm and the possible questions on the midterm. Someone mentioned if we need to know about any other &amp;quot;Norman Doors&amp;quot; on campus which could come as an example in the midterm. Dr. Hepting also mentioned the Bluetooth example wherein sometimes it is difficult to add the bluetooth device on various machines. I related to this problem very much since I bought a bluetooth headset YESTERDAY! and had the same problem with and had to read the fine print instructions to figure it out.
+    </li><li>the most important thing that I learned the interface that windows has for the Bluetooth is not really easy to use for some users. Also, the button or activate and deactivate Bluetooth is somehow a resemble for the control panel or a switch.
+    </li><li>In this lesson, we mainly discuss some problems about the midterm exam and Bluetooth interface, analyze its advantages and disadvantages and discuss how to improve it.
+    </li><li>The most important thing that I learned today is how the same design can be perceived differently by different people who have different experiences. The main idea is that we want our design to make the message as unambiguous as possible, which usually means following the industry standards.
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>The response of design to its environment. Today&#039;s discussion was focused on the switching of bluetooth on a computer and reflecting it on the evaluation and execution gulfs. An idea presented in the article was that those gulfs transcend styles and devices which I slightly disagree. The way systems are understood is dependentant on the medium. You wouldn&#039;t use text to indicate traffic signals you&#039;d need lights to send a signal to cars. Systems get understood a certain way so why do gulfs transcend devices?
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>more guidance on what will be in the midterm from the textbook
+    </li><li>In today’s meeting we discussed more about the Midterm Questions. Also we discussed more about the other Norman doors on the campus, and relating to that we also discussed the switches. Gulf of Execution was one of the topic as well!. Further on Dr Hepting discussed about the confusing Bluetooth settings on Windows 10 and how the GUI plays an role in that.
+    </li><li>The metaphors for Bluetooth button was an interesting topic, I was thinking of maybe using Boolean/traffic light as a metaphor for that Bluetooth setting. However, the difficult part for me to understand was Norman door concept. If you can record your class, it would be great so that we can review it at our convenience.
+    </li><li>I would like to know the concept of metaphors that has bee discussed in today&#039;s class. A metaphor is a figure of speech that describes an object or action in a way that isn’t literally true, but helps explain an idea or make a comparison. It allows the user to get an insight of how the interface of the application is going to look like. Best practice for it would be to initialize into your day to day chores and understand the core concepts of it.
+    </li><li>Various ways to design ON/OFF switch which makes more sense to user about functioning of it.
+    </li><li>I would like to know more about the midterm as I get to know what to how much to prepare as I am confused about it.
+    </li><li>How it relates Quick settings of MS for bluetooth and whether it is consistent. I could not relate to that part in today&#039;s class.
+    </li><li>Discussed about door problem and another interface problematic examples.
+    </li></ul>
+
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=wiki">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/19_Wed-19-Oct-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

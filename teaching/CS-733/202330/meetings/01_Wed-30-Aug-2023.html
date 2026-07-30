@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-733/202330/meetings/01_Wed-30-Aug-2023.html" />
+    
+    <title>Mtg 1 &bull; CS-733 (202330) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 1 &bull; CS-733 (202330) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/01_Wed-30-Aug-2023.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/",
+        
+          "name": "CS 733"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/",
+        
+          "name": "202330"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/01_Wed-30-Aug-2023.html",
+        
+          "name": "1 (Wed-30-Aug-2023)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-733/">
+        CS 733
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-733/202330/">
+        202330
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-733/202330/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      1 (Wed-30-Aug-2023)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 1/25: Wed-30-Aug-2023
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a role="button" class="btn btn-primary disabled">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="02_Wed-06-Sep-2023.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=9105">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_01" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_01" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_01" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_01" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/zg693ln95g7nhkobp6xma/01-1.png?rlkey=rfuv5bxlg2e75jqrgxnyvxu6q&amp;dl=0" alt="01 - 1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/fm8zq051m93v5ul7nsyww/01-2.png?rlkey=iortgk0i6mqxlfo3tclkm1n0u&amp;dl=0" alt="01 - 2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/yv7fkm9rhcehq6yob4pj4/01-3.png?rlkey=ro5b35f7qh5zo37glarh2ls95&amp;dl=0" alt="01 - 3.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_01" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_01" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            If and if someday it seems like I've forgotten to do this, you can remind me these so you can call me
+          </li><li>
+            
+            I'll give you two choices stuff you have
+          </li><li>
+            
+            I noticed in zoom September that appears
+          </li><li>
+            
+            are happening
+          </li><li>
+            
+            Okay, so
+          </li><li>
+            
+            we're gonna meet Mondays and Wednesdays. So we're getting one Wednesday in and August here. And then Monday is Labor Day. So it's a long weekend. And so we're meeting next time on the sixth. So we're meeting for 75 minutes so our classes
+          </li><li>
+            
+            so if I'm writing too small or too, illegibly and you have a question say what did you just scribble on the board? Please ask me down and I'll try and correct so this is our meetings 125 So 75 minutes
+          </li><li>
+            
+            so the way you divide, schedule is up this is 150 minutes a week. So it for me three times a week times three times 50 minutes and once a week, it's one times 150 minutes. So that's what a week is worth in terms of schedule, so just because of the way things go. We're short what
+          </li><li>
+            
+            if you're all getting if we didn't have any constraints on the schedule, we'd have 26 meetings for our meeting two times a week turns into 13 weeks and that's how the math goes but because we have a few things like Truth and Reconciliation day, some introductory events on campus I see the big tent in the green and then our fall break. Anyway, so we have 25 meetings
+          </li><li>
+            
+            I think I've said about as much as I can save that so
+          </li><li>
+            
+            I have a hands on activity for you. Begin, so I'm going to do one as well. I'm going to turn these into 10 cards. So it's like
+          </li><li>
+            
+            arts and crafts portion
+          </li><li>
+            
+            so when it like you to do is first listen to how I'm gonna set this up and then there's gonna be a space for you to write your name. Like the name you'd like to be called in class. So don't please don't raise your hand Rachel name straight name you'd like me to call it. Like other people I like to be known in class Yes, I was gonna
+          </li><li>
+            
+            do a class Yeah.
+          </li><li>
+            
+            You're going to fold
+          </li><li>
+            
+            the paper in portrait orientation. And you fold it in half and then you're going to fold the halves into the middle. So it's gonna be a triangle or 10 it's gonna stand on your desk or maybe hanging off your lap or some
+          </li><li>
+            
+            folding twice this we make now okay. So we have the caper lengthwise
+          </li><li>
+            
+            and then we take open it up and sort of like a book cover
+          </li><li>
+            
+            when you fold
+          </li><li>
+            
+            fold into the middle, so you have four pieces like that. And then it looks like a 10 pick aside right in big letters remain you'd like to call
+          </li><li>
+            
+            me Okay, so that's not the only reason we're doing this but I just wanted to explain my idea and it is helped me get to know your names because I haven't had a chance you
+          </li><li>
+            
+            just have one face. I shouldn't do
+          </li><li>
+            
+            that. Morning well I just kind of the right amount. It's like I counted them or something. When I didn't.
+          </li><li>
+            
+            Okay,
+          </li><li>
+            
+            now let me
+          </li><li>
+            
+            don't often say upgrade to a previous version with a Mac but the HDMI video adapter from this company
+          </li><li>
+            
+            works so well.
+          </li><li>
+            
+            That's a good sign on the screen stayed in place first try
+          </li><li>
+            
+            Okay.
+          </li><li>
+            
+            Guess I really didn't have to do that.
+          </li><li>
+            
+            Well let's close
+          </li><li>
+            
+            when we try the HDMI
+          </li><li>
+            
+            that's better
+          </li><li>
+            
+            okay
+          </li><li>
+            
+            the yellow chairs. Well, there's no carpet in the classroom building I guess it's a better workout here. Okay, so so far there's just me in class
+          </li><li>
+            
+            but I believe that I have enrolled you
+          </li><li>
+            
+            so let me just switch to student or well actually I want to edit one thing, since you're not
+          </li><li>
+            
+            you're not enrolled yet. I don't want to make this unattainable
+          </li><li>
+            
+            Okay, so the first one I'm going to explain it but so for each of our meetings, I'm going to ask you to write a response. And over the semester, these will contribute to your participation mark, which is 10%. So I'd like you to do it by 11pm. They have our meeting so then I can go through them and prepare some material based on your responses for the next meeting. So I've set this one to now to Friday at 11. So you should have the course pop up. If not today, then first thing tomorrow morning so you should have time to do it.
+          </li><li>
+            
+            Okay, let me save that
+          </li><li>
+            
+            Okay, so this is our URL Courses page
+          </li><li>
+            
+            I'm not gonna click on the links in case they're not all working yet. But I'll get them sorted out. So by next meeting, all these things will be sorted in place
+          </li><li>
+            
+            so I've got my own website.
+          </li><li>
+            
+            material will be on my website, but it's linked to here. So your courses will do the assignments and the communication so we can have a class discussion here
+          </li><li>
+            
+            it's a good platform for doing class discussion. So you've just upgraded this. You can keep in mind this is a better or worse experience from your previous classes with your courses
+          </li><li>
+            
+            so I just saw I'm teaching 733 the semester. I've got other things on the go but that's the class of teaching. This is a class in the future. So that's Monday and Wednesday.
+          </li><li>
+            
+            10 to 1115 348.
+          </li><li>
+            
+            So that's my office. Are you familiar? With college West Third floor layout. It used to be a few years ago that I was in the alphabetical section of the Department of Computer Science. Because we have Dr. Hamilton and Dr. Hepting That's me. And then it was Dr. Hiltermann and Dr. Haber. So all of us were alphabetized but that's not the case anymore. Anyway, so when you go into the department, office, here's the menu
+          </li><li>
+            
+            you go down the hall and then where there's a key
+          </li><li>
+            
+            Okay, So office hours in three Oh 8.22. What do you think about Tuesday and Thursday? That's I don't know if that's a University of Regina. Shorthand but are for Thursday. seen it before? Okay.
+          </li><li>
+            
+            Dr as Thursday Yes.
+          </li><li>
+            
+            Key for Tuesday or Thursday.
+          </li><li>
+            
+            How does that sound for office hours? What's your other class schedule like?
+          </li><li>
+            
+            Monday and Wednesday again, but what?
+          </li><li>
+            
+            So we'll try this out and get a hold of me. Not in these hour. This time. Send me an email, we can figure it out. So we have an announcements Forum, which hopefully I was able to delete. Because I don't want to keep you informed.
+          </li><li>
+            
+            But only I can post it
+          </li><li>
+            
+            so you can reply and type of conversation there. So I'm just in the class discussions, forum, the course email, I don't think I can get rid of it. And some people like it and it's we used it before
+          </li><li>
+            
+            we discussed it in the first available skills because he was not happy with the way that it was because he did not feel like you have to come here to get verified especially more like a chat.
+          </li><li>
+            
+            Yeah, so you get you get an email notification that you've received a course email. But the top 90% of the message is useless. And this is to read the message you have to click here. It tells you who sent it so I guess that's that that's something anyway, but some people like to use it
+          </li><li>
+            
+            hmm, I thought I got rid of announcements. It was hearing me and let them complain when I deleted it but now it just snuck it back in. Okay, so I'm not going to post it analysis everything I'm going to post class discussions
+          </li><li>
+            
+            Okay, so do attendance. And I'll change the date. For that you can record yourself after the fact. I'll set up the same date as the other one. So I've made a class wiki so.
+          </li><li>
+            
+            Not sure how to I'm not I haven't mastered the art of getting people to do things that are optional. Anyway and even if I say they're not optional, that they contribute to your participation mark and still touch and go
+          </li><li>
+            
+            anyway
+          </li><li>
+            
+            I will encourage you to but interesting things that came out of our meeting here
+          </li><li>
+            
+            so there are pages for each of our days. Who would like to be to designate somebody to update the wiki each day that's a good idea is that can be productive or just let it?
+          </li><li>
+            
+            dealer's choice
+          </li><li>
+            
+            who feels like they can be responsive?
+          </li><li>
+            
+            Yes, I can do. Okay, so you can do today's meeting and then I'll
+          </li><li>
+            
+            actually I think I can share it with current. We can do hand puppets. Yeah. Yeah, we can both be responsible for it. Is it okay? Sure.
+          </li><li>
+            
+            Just say Don't forget, don't be shy about engaging your peers
+          </li><li>
+            
+            okay
+          </li><li>
+            
+            that's thank you for taking that on. The rest of you.
+          </li><li>
+            
+            Control
+          </li><li>
+            
+            current and Argus thank you that you're responsible to and you can contribute as well.
+          </li><li>
+            
+            Okay, thanks. So the wiki is HTML. So it's kind of
+          </li><li>
+            
+            it's a little funny
+          </li><li>
+            
+            because it's their own wiki stuff but
+          </li><li>
+            
+            the main thing about the wiki is
+          </li><li>
+            
+            enclose it in double square brackets, then that creates something and you can create the page and mostly it's HTML after that.
+          </li><li>
+            
+            So here are the responses to meeting so I've added a bit more information here than I had in the past.
+          </li><li>
+            
+            So by 11 o'clock on the day of a meeting right about 100 words and think about which of these three descriptors for your response so you either
+          </li><li>
+            
+            most important thing you learned or encountered the most difficult thing for you to understand the thing about which you'd like to know more.
+          </li><li>
+            
+            So pick
+          </li><li>
+            
+            a descriptor for your response. Then write the 100 words up to 100 words. So I say don't write a summary of what we covered.
+          </li><li>
+            
+            I say that I've done I've done this in the past I've said that
+          </li><li>
+            
+            and no one seems to understand or that's been a difficult one to get across. So then I'm going to record marks.
+          </li><li>
+            
+            So two marks are a response that is thoughtful and meaningful. Following instructions that I've sent out. One mark if you write a response as instructed and no marks, she did not write a response as instructed. So if you didn't write a response or you didn't, or maybe you wrote about what we did in class didn't follow the instructions. So and this is just
+          </li><li>
+            
+            this is a way to get you involved. And they said I'm going to take your responses and use them next time next meeting.
+          </li><li>
+            
+            So I've set up a choice activity for the date of the midterm. exam. So.
+          </li><li>
+            
+            So that's the breakdown of marks.
+          </li><li>
+            
+            We did five last five assignments last time. So five that are worth eight points. For so if you attend an adventure exam for 10% and that's going to be
+          </li><li>
+            
+            a formative evaluation. See how things are going. Now then also at that time, I'll ask you to
+          </li><li>
+            
+            not required. But if you'd like to give me some feedback about how the class is going, we'll take that as formative feedback for me, our class so and then we can discuss so
+          </li><li>
+            
+            think this should be open now.
+          </li><li>
+            
+            So I have three choices for the midterm. So my first day back after the fall break is Monday the 16th. And I have a feeling that that's not a good day to have an exam when you're just coming back. So I've given choices. Wednesday, the 18th. Monday, the 23rd or Wednesday the 25th. So when you find yourself with access to the class, you can
+          </li><li>
+            
+            do this
+          </li><li>
+            
+            and then we'll talk about it next week. I can't remember what Oh does it say closes Monday, September 11. So Monday, September 11. We'll make a decision about the day for the midterm.
+          </li><li>
+            
+            Okay
+          </li><li>
+            
+            so that's
+          </li><li>
+            
+            that's the layout of the course. Any questions? or concerns?
+          </li><li>
+            
+            So we're going to work with WebGL and
+          </li><li>
+            
+            textbook?
+          </li><li>
+            
+            Not sure if there's two or three authors
+          </li><li>
+            
+            I think that's his name.
+          </li><li>
+            
+            Give you the precise title. So the latest latest one.
+          </li><li>
+            
+            So I think there's a range of good online materials so
+          </li><li>
+            
+            I'm not over the I'm not thrilled about this book but I think it's got a nice there's some nice features about it
+          </li><li>
+            
+            but maybe you can find some other some earlier editions or just look at what's online.
+          </li><li>
+            
+            So I thought maybe I'll show you a quick example with this and then we can
+          </li><li>
+            
+            have 25 minutes
+          </li><li>
+            
+            so, let me go to the web's their website and I'll put this
+          </li><li>
+            
+            material
+          </li><li>
+            
+            on our webpage.
+          </li><li>
+            
+            So this is three jas.org the website for the library. So talks about the installation and making use of it so. So basically we have a web page index dot HTML and then a JavaScript file and then there's public there's a public directory that's that will contain the static resources for the web application So
+          </li><li>
+            
+            option one to use an NPM and a build tool. I think that fits with your experience already. Sorry you.
+          </li><li>
+            
+            Are you experts with NPM and node Okay. Good. Glad to hear so I'm just going to go through the ions I followed the instructions to set it up
+          </li><li>
+            
+            you can do this on your own computers now.
+          </li><li>
+            
+            So once you have it set up
+          </li><li>
+            
+            and px.
+          </li><li>
+            
+            So
+          </li><li>
+            
+            something that isn't crystal clear in the directions it's a you need to create an index dot HTML
+          </li><li>
+            
+            you need to take
+          </li><li>
+            
+            say this index file and this main.js file and then create the public directory as if you don't it won't start the web server
+          </li><li>
+            
+            so that's maybe an obvious fix but they could I think they could have mentioned that or mentioning it would just make it that much easier to get started.
+          </li><li>
+            
+            Just because we're not in a class about user experience that's not our main focus in this class, but it's still important so I reminds me of a I was an undergraduate when I took a class math 231 I believe it was called and we studied was essentially about wallpaper patterns and and understanding the 17 different ways that you could make repeating wallpaper patterns. And then that semester everywhere I saw a piece of some wallpaper I would analyze the pattern. So this is the same thing even though I encourage you to think about
+          </li><li>
+            
+            the usability and user experience issues that come up as we go through the stuff. Anyway, okay, so we start this
+          </li><li>
+            
+            move for Open in Browser
+          </li><li>
+            
+            think we can I'm not sure why
+          </li><li>
+            
+            so not bad
+          </li><li>
+            
+            is it they won't have experience with three js implementation
+          </li><li>
+            
+            but on the products that they've had the paddling the front end has had three Gs implemented
+          </li><li>
+            
+            Okay, so
+          </li><li>
+            
+            I don't want to jump too far ahead and I don't want to
+          </li><li>
+            
+            are going to take a more hands on approach by looking at the code that's gets hidden like the three js library calls.
+          </li><li>
+            
+            So the index html is the same as the first one they had.
+          </li><li>
+            
+            Almost
+          </li><li>
+            
+            okay
+          </li><li>
+            
+            so we're importing everything from 333 Jas. So we're making a new scene. We're adding a perspective camera we're using WebGL renderer. We're saying the window size. And then we're using the Document Object Model to locate our display window in the web page. So then we're creating a box unit and the unit size 111.
+          </li><li>
+            
+            And then we have material which is just
+          </li><li>
+            
+            just a color
+          </li><li>
+            
+            anyone tell me what color that is.
+          </li><li>
+            
+            Because RGB Yes.
+          </li><li>
+            
+            So
+          </li><li>
+            
+            I'm not trying to make a face there
+          </li><li>
+            
+            so one hex digit goes from zero. So two goes to zero
+          </li><li>
+            
+            so two hex digits, four bits, so we have eight, eight bits of color. So this gives us three times 824 events which is which has been the standard. Now there are more more bits allocated in some formats. So this is read
+          </li><li>
+            
+            since five.
+          </li><li>
+            
+            So we'll talk about color different models for color that maybe are a little bit easier to work with. It's okay if you want red, green, blue, cyan, magenta yellow.
+          </li><li>
+            
+            We can work with RGB quite easily. But something that's a bit more it's harder to move from one color to another in RGB space. So there are some alternatives we'll discuss.
+          </li><li>
+            
+            So, we create the cube with with geometry and the material and then we add the cube to the scene. We position the camera and then we animate
+          </li><li>
+            
+            so each time or we're we're doing the animation we're changing the rotation angle and then we send it to the Render less you.
+          </li><li>
+            
+            I'm just wondering whether this is a good spot to stop for our first day so if you're so inclined, even get the three Gs set up on your computer. Try the basic one under creating a scene
+          </li><li>
+            
+            and then
+          </li><li>
+            
+            and maybe think about what questions come up. What you notice about that first steam into the spinning cube and what
+          </li><li>
+            
+            have you what's missing?
+          </li><li>
+            
+            We'll frame our discussion for next time. I'll show you some web. We'll start with a WebGL street WebGL example on our next meeting on Wednesday
+          </li><li>
+            
+            won't take long for us to get this many lines and do much less
+          </li><li>
+            
+            that's really not a good pep talk is that seem okay
+          </li><li>
+            
+            so can you bring your
+          </li><li>
+            
+            hand cards
+          </li><li>
+            
+            next time
+          </li><li>
+            
+            any questions or concerns
+          </li><li>
+            
+            welcome Thank you
+          </li><li>
+            
+            welcome Thank you
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>It was nice to get introduction to WEBGL
+    </li><li>I became aware of threejs for animation and webgl 2.0.
+    </li><li>During the lecture is using three.js for 3D animation
+    </li><li>It was really great meeting you sir. Enjoyed the lecture. Excited to know more
+    </li><li>I learned about the three Js power in 3D graphics and also learned the hexadecimal colour meaning that i was not fully aware of .
+    </li><li>I have worked in the field for a very long time but I didn&#039;t pay attention to how the hex code is broken down from 0-15 and it was a great thing to pick up
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>I&#039;m interested in learning more about Dr. Hepting&#039;s computer graphics work. I would also like to learn more about his area of research. I want to know what to expect from the Computer Graphics course, the kind of assignments or projects, and how the grades will be distributed.  Since I&#039;ve used openGL in the past, I was curious to learn more about if webGL has any similarities to it.  The course description states that it incorporates mathematical and geographic modeling; I&#039;d like to learn more about these s
+    </li><li>I didn&#039;t even heard what three.js was. I cam to know about it in today&#039;s class. Now, I shall be exploring more about it in my free time.
+    </li><li>Three.js was interesting for me and I&#039;m going to learn deeper.
+    </li><li>NA
+    </li><li>threejs is a new thing for me as I am more familiar with mobile technologies. After surfing through threejs.org and saw some showcases, I find them quite interesting and would like to know more.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/01_Wed-30-Aug-2023.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

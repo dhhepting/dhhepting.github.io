@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-205/202110/meetings/25_Tue-13-Apr-2021.html" />
+    
+    <title>Mtg 25 &bull; CS-205 (202110) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 25 &bull; CS-205 (202110) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-205/202110/meetings/25_Tue-13-Apr-2021.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-205/",
+        
+          "name": "CS 205"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-205/202110/",
+        
+          "name": "202110"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-205/202110/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-205/202110/meetings/25_Tue-13-Apr-2021.html",
+        
+          "name": "25 (Tue-13-Apr-2021)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-205/">
+        CS 205
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-205/202110/">
+        202110
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-205/202110/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      25 (Tue-13-Apr-2021)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 25/26: Tue-13-Apr-2021
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="24_Thu-08-Apr-2021.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="26_Thu-15-Apr-2021.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ss0">
+        0
+      </h4>
+      <ul></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            My apologies I wasn't watching the clock. So we're doing today. share my screen. back with a vengeance. third wave of winter. anyway. watch a short video. And then. Another sketch. So this is from a few years ago, but. I think it has some interesting issues we can talk about. windows hiding the player controls, I guess, I can. Do. Now.
+          </li><li>
+            
+            yep.
+          </li><li>
+            
+            Looking at here is a reproduction of a digital photograph of the Solomon guggenheim museum, where I work on fifth avenue in 89 street in New York City. it's just one of the millions of digital and actual photographs that had been produced of this iconic frank Lloyd Wright designed building and according to Google sites map of photo heat mapping technology it's also one of the most photographed sites in the world.
+          </li><li>
+            
+            The image you're looking at here is the interior of the museum during one of our exhibitions in the summer of 2013 of the light and space artist James terrelle. As someone who actually saw this exhibition on my own, I was physically there, I can tell you the reproduction of the actual work of art does no justice to the actual experience when you're actually in the museum.
+          </li><li>
+            
+            And for the artist he's described his work as non vicarious any reproduction of that image is less than the experience itself and for that reason he requested that visitors not take pictures inside the museum.He did not want mobile devices glowing mobile devices to impede your experience of this light experience within the museum.The results of our social media campaign, however, indicated the exact opposite, with more than 5000 photos on instagram shared with the hashtag terrelle and it was also the most instagrams exhibition in our history.This prove that obviously visitors come to museums, to look at pictures and they also want to take pictures and in the age of the Internet, they put these pictures online on social media sites.The images are seeing here are the images on instagram that have been illegally uploaded and disseminated.Despite our warnings and as someone who manages social media for the new vm i'm interested in what it means to have these digital devices inside galleries.Inside these educational spaces and how the digital reproduction of these images changes the way we look at our and the way we learn about our.So does the rapid digitization of images, reduce the experience you have is it reductive or does it expand the meaning of that experience and object in an entirely new form there by reaching millions of people outside of the physical space, who could never physically come to the museum.In the history of art, the work of art is now a social object in the future, I predict that the the digitization of the work of art will completely change the physical object.And D materialize it and turn it into a social object completely defined by the conversation happening around it, rather than the experience itself.for everyone who came to the museum their first interaction with art was completely digital they saw it online they saw it on their phones or they saw it, because their friends were there and they shared it online.This is an image of the interior of the museum without the James trial installation, you can see that visitors are there with their mobile phones.they're taking pictures and not only are they taking pictures of art they're taking pictures of themselves within these spaces, so in the pre digital photography era, the message was this is what i'm seeing I have seen and today the message is I was there I came I saw and I sell food.So when someone takes an image and puts it online they're contributing to a digital economy.In the age of the Internet, when a piece of content is shared online, the value of that content increases, not only for the museum and the person, but the world at large, so the more you share the, the greater the value of that content.And why do we share this activities all ingrained within our brains social media sites are predicated on the idea of positive reinforcement.Every life follow every comment triggers a dose of serotonin in our brains, which is the chemical that makes you happy.And, like any pleasure seeking activity, the more you share the more you actually become happy, the more you're addicted so social media addiction is also a real phenomenon that impacts, all of us on a global scale.So, according to the Q Internet research Center 74% of Internet users within the United States are now on social media.On a global scale, the population of the number of people who use Facebook, is now more than the number of people who live in China and India.Globally, Apps such as whatsapp wechat linkedin are now surpassing the population of the United States, and this is followed by instagram Twitter and snapchat who aren't even far behind so among all of the Internet users 54% of them post original photos or videos that they take themselves.47% of them repost photos or videos that they find online on social media sharing.On instagram alone 70 million photos are posted per day.And this is all coming at a critical mass, because within the last two years we've produced 90% of the world's data.So the question of technology and what it means for the art object isn't new to the history of art or the study of our.In 1936 the German art critic Walter Binyamin wrote in his seminal essay the work of art in the age of mechanical reproduction.That that which withers in the age of mechanical reproduction is the aura of a work of art his morning was a warning about fear.The fear of reproduction, the fear that cameras, even in such an early stage in the history of photography cameras were.impeding your view of actually experiencing the object.So the idea of visitors making images inside galleries, is also not new Visitors have been sketching inside museums for years and they've been taking pictures with regular cameras, not just mobile devices.So this is a photograph by the photographer I Fred eisenstaedt who's a Martha martha's vineyard local have two teenagers sketching within the galleries of the Toledo, museum of art in the 1930s.Also, not new, is the way we use art to communicate very common principles and ideas throughout the history of art.art is there to ask some of life's most difficult questions, who are we How did we get here and what does it all mean.For Vincent Van Gogh he examine himself through self portraiture.Today that act takes in form of selfies, and these are selfies that visitors have taken in front of Vincent Van Gogh self portraiture.Monet is most known for his landscapes and fascination with light through abstract painting, and today I would argue, this is no different than our desire to express and represent the sunsets or sunrises to seeing on instagram.season was interested in still life painted food and apples, for his entire career.And today that contemporary interpretation is what you see when you search for food porn on instagram.So what's the difference between the images, you see online and the images that you see in museums.For centuries, museums, have been an authority when it comes to the interpretation of art artists art movements and all the intellectual content that is surrounded by that individual work of art.In the traditional publishing model museums, are the experts that disseminated content and probably one of the last culturally acceptable institutions that can dedicate resources to tremendous amount of research.But the Internet today is now a two way stream of information anyone has permission to upload images online edit articles on Wikipedia.We used to trust museums in the way that we trust dictionaries and encyclopedias but, in the age when Wikipedia is now eclipsing the encyclopedia do museums still matter.The reality is, we live in a Google worldview.So when you search for an image online you're searching on Google and trying to find the you know quickest way to to find what you're looking for what happens when the museum that owns that object isn't there and it's vanished within the history part from a digital perspective.So case in point, this is a painting by kandinsky in the guggenheim collection the guggenheim owns more than 150 works by this artist, more than any other artist.In the world, but when you do a quick Google search you type in kandinsky you see a range of images with varying colors and crops, many of which are incorrect you see no images within the top results that are from our website.And this isn't just our museum take a look at starry night, which is in the Museum of modern art collection, also by Van Gogh.you'll see that none of the top images are actually from moma.org.Again, the iconic Mona Lisa which you'll see in person in the loop completely vanishes from a digital perspective because none of the images, you see, on Google are actually from the live website.So why is it that, in the age of mechanical and Internet and the Internet.Why is it that museums have essentially fallen off the face of the earth it's because of the notion of fear the fear of reproduction, the fear of copyright to fear of artists is states and what's going to happen if we allow our information to go online and become disseminated.And if there's one message from my talk today it's fear not.In the age of the Internet, we have only something to gain by creating access opening up access to photography opening up access to our intellectual content and making these images available for the public.i'm often asked, will the digital experience and the digital representation of the museum online through social media.Ever replace the onsite physical experience, just because we're posting images for instagram we have millions of followers will that ever replace the actual experience of people coming to the museum.and going back into the James terrelle exhibition you'll see that this exhibition with an incredible digital footprint author brought in over 420,000 visitors who wanted to come to the museum to see it for themselves because they saw it on instagram.So the question remains we're living in an age of unprecedented access to art because of the Internet, but what is the role of the museum within this narrative.Do we risk the social media sites and the immense amount of data that's being uploaded online images shared sometimes incorrectly without the proper attributions without captions without any of the didactic materials that's associated with it.Do we risk social media essentially driving the course of art history, as is that OK.So the task today remains that we have to reclaim our job as the authority and as the expert within this Google worldview.Through making our images available online through opening up access through uploading our textbooks and catalogs and making this information free for everybody on the Internet.we're opening up the opportunity for anyone in the world, with an Internet connection to learn about art, which is essentially the mission of the museum to.help you look at pictures and interpret what they mean and how they create meaning within your life so by opening up access we open up the discourse for art and we can lead that discourse and we open up visual literacy for all thank you.
+          </li><li>
+            
+            Okay, so there's the video for today. Any thoughts about that before we get into our discussion that are. More class related. yeah We talked with aspect ratios of images. So the technically thinking about. Making sure the samples are. Equally spaced an x and y to make. keeps the perspective. This is important to keep. To not to crop, the images. And the cropping. The tools, the power as a cropping. tools to. Change the. meaning. anyway. So I would say let's talk about on Thursday, the final exam. So go through a review and. Then you can talk about questions and all those. All those things okay. All right. Any thumbs up perhaps.
+          </li><li>
+            
+            Sorry, so Thursday is when we'll discuss the final and all those details. yeah all right thanks.
+          </li><li>
+            
+            you're welcome.
+          </li><li>
+            
+            And sorry real quick just to confirm the date of the final is April 29 Is that correct.
+          </li><li>
+            
+            that's my understanding. That me. Let me go to the. Due dates for these two pieces of work. Is it okay to make them on Thursday. To make the change for them to Thursday.
+          </li><li>
+            
+            yeah I think that sounds good to me.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            Good Afternoon
+          </li><li>
+            
+            good afternoon
+          </li><li>
+            
+            How are You?? snow is back :(
+          </li><li>
+            
+            Student password
+          </li><li>
+            
+            Is the project due on Thursday or today? URCourses is showing submittal date is today. Your website says Thursday
+          </li><li>
+            
+            Can you able to extend if its due today ? because we have assignment due today !!!!!!!
+          </li><li>
+            
+            yes please
+          </li><li>
+            
+            will discuss
+          </li><li>
+            
+            Pretty interesting. Definitely a different point of view
+          </li><li>
+            
+            yes please
+          </li><li>
+            
+            yes please
+          </li><li>
+            
+            yup
+          </li><li>
+            
+            Yes Please
+          </li><li>
+            
+            Thanks!
+          </li><li>
+            
+            ok?
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            yep
+          </li><li>
+            
+            hello?
+          </li><li>
+            
+            :-)
+          </li><li>
+            
+            I missed the question, sorry!
+          </li><li>
+            
+            ok!
+          </li><li>
+            
+            Ok perfect. Thanks
+          </li><li>
+            
+            Does anyone have decent notes for this class they may be willing to share? I feel like mine are a complete nightmare lol. Would be greatly appreciated
+          </li><li>
+            
+            we can maybe all share our collection of notes on the Discord?
+          </li><li>
+            
+            i have good notes for the drawing classes, not for the other ones.
+          </li><li>
+            
+            You have a link to the server?
+          </li><li>
+            
+            The fractal triforce
+          </li><li>
+            
+            Thanks
+          </li><li>
+            
+            https://discord.gg/R3KwdgnX
+          </li><li>
+            
+            sorry! didn't see the message. Professor Hepting's server
+          </li><li>
+            
+            https://discord.gg/FBBhpkxj
+          </li><li>
+            
+            Its cool!
+          </li><li>
+            
+            Can I have a look at sample output of Self Portrait?
+          </li><li>
+            
+            thx
+          </li><li>
+            
+            Nope
+          </li><li>
+            
+            Thank you for editing the due dates!
+          </li><li>
+            
+            It is much appreciated
+          </li><li>
+            
+            Thank you so much
+          </li><li>
+            
+            Thank you!  Have a good day!
+          </li><li>
+            
+            see you on Thursday!
+          </li><li>
+            
+            Thanks
+          </li><li>
+            
+            cya thursday
+          </li><li>
+            
+            You too.
+          </li><li>
+            
+            thanks
+          </li><li>
+            
+            Thank you!
+          </li><li>
+            
+            Thanks you too!
+          </li><li>
+            
+            Stay Safe
+          </li><li>
+            
+            stay safe and have a good week
+          </li></ul>
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-205/202110/meetings/25_Tue-13-Apr-2021.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

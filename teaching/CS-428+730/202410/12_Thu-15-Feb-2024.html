@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+730/202410/12_Thu-15-Feb-2024.html" />
+    
+    <title>Mtg 12 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 12 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/12_Thu-15-Feb-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/",
+        
+          "name": "CS 428+730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/",
+        
+          "name": "202410"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/12_Thu-15-Feb-2024.html",
+        
+          "name": "Mtg 12 (Thu-15-Feb-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/">
+        CS 428+730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/202410/">
+        202410
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 12 (Thu-15-Feb-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 12/26: Thu-15-Feb-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="11_Tue-13-Feb-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="13_Tue-27-Feb-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Assignments
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Thursday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=2507968&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1707976800&amp;course=31184" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=31184" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Response to Responses
+  </h4>
+  <ul>
+  <li>Responsibilities: for developer and person using system – should we design for most vulnerable potential users?</li>
+  <li>AI not helpful. What about <a href="https://skift.com/2024/02/07/trivagos-ai-powered-ad-campaign-gets-mixed-global-reaction/" target="_blank">new Trivago ads</a></li>
+  <li>Is Teleflora website typical? Why do we accept that?</li>
+  <li><a href="https://www.nngroup.com/articles/slips/" target="_blank">Slips and mistakes</a></li>
+  <li>No matter how much ‘effort’, issues remain – is effort worthwhile?</li>
+</ul>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li>heuristics not followed: dark patterns, apathy?</li>
+  <li>project group formation in the interface</li>
+  <li>Keystroke Level Model for interface analysis</li>
+  <li>project ideas</li>
+</ul>
+<h4>
+    Summary
+  </h4>
+  <p>Enjoy the break!</p>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2546724" target="_blank">Submit your response to this meeting before noon tomorrow</a></li>
+  <li>Read ID-Book Chapter 6, Psych Chapter 10, IDFE Chapter 12</li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2544695" target="_blank">Take quiz before the start of our next meeting</a></li>
+</ul>
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Good morning, everyone. So I need to debug my my file was sharing the web site. And I'm not seeing what the problem is. Okay, I found it. Okay. So today, I want to talk about assignments. including the project. And and I'll go through some things related to that. I also want to go through some things we've talked about last day, and some of the things were brought up in the responses. Okay, so let me share my screen with you. so you don't have the big. My big giant head is the only thing to look at. Okay, so let me zoom in a little bit here make a little easier to read. Okay. So one issue that was brought up was responsibility in an interface. So who is? Should the developer have responsibility for following heuristics. listening to users and thinking about. But what the most vulnerable potential users might experience? Or is it up to the person using the system to the careful? Should we expect the the interface to be concerned with our safety? Or should we be? Do we need to be wary always? And if we're taking the perspective of user beware. do we need to think about regulatory frameworks. different ways to approach the issues of safety? So, for example, do we thinking about the dark pattern stuff? Is that something we we value? We search for? So something like the app store on Apple or Google play. Could there be a a process where dark patterns are identified or and not just identified, but lagged for users, or maybe even disallowed. was apt to be disallowed from being available on the various app stores. So that's a lot more than just that first comment about responsibilities between developer and the person using the system. Any thoughts about that
+          </li><li>
+            
+            feel like the responsibility kind of falls on both parties. You know, it's our responsibility as developers to create something that is nice, easy to use for the user, but also safe for them to use. But us as users as well, kind of have to take the responsibility to cover our own butts just because there are things out there that point us in the wrong directions or could get us into trouble.
+          </li><li>
+            
+            Umhm.
+          </li><li>
+            
+            I mean, if not mistaken on Google play. They have that Google Guard, or whatever it is, for all apps that are submitted. But there was a bunch of them last year, if not mistaken, that got through the protection. And they had a bunch of ill things inside their programming. So
+          </li><li>
+            
+            hmm. okay. So common in chat, I feel like users shouldn't be normalizing being tricked through dark patterns as part of them using the software, I feel that it's the responsibility of developers to explicitly address such techniques, for when used, and to inform users about them beforehand instead of tricking them into it. Okay, so what do he say to users? This web site is trying to get your money, so we're mak not making it easy for you to use it without paying for anything. So the dark patterns and dark patterns are. or maybe not. Well, not, maybe, but are, are never a good idea. So there are some comments about AI not being helpful. And so I wonder has anyone seen the new travago ads? So someone sent me a direct message. Please don't do that. So in that direct message I was called Mister Hepding. so Mr. Hepting is not incorrect in general, but I I indicated you can call me Darryl or Dr. Hepting, please. I had someone I heard some one on Cbc. Talk who got his Ph. D. Recently said. anyway. anyway, I don't want to go into that. So the new trivago ads. Anyone see the old travago ads. Have you seen any trivago ads?
+          </li><li>
+            
+            Those are the ones with the gnomes.
+          </li><li>
+            
+            I think that's a expedia or travel us. It's different. Those are different ads, I think. Let's see. So you can't see. I'm going to take a picture of this, and I'll post it. You can't see the quiz interface. We were talking yesterday about about having text, and suggests things. So in this interface there's text, but it's part of the label. So if I don't erase it. Then it's just gonna be. It's adding to the what I'm trying to enter. That makes sense. It will make sense when I show you the picture. I guess. So here's a quick poll about the travago ads. okay, so we have 97% participation. So let's stop the poll. There share results. Okay? So the people who said, Yes. what do you do? You have any impressions from those ads? So they're done with AI, and what I notice is that they're essentially saving money by having one actor, and then they're doing the dialogue in. So I'm not sure whether the voices are. If if the actors after, if the actor's voice is ever his own in the ad, but they're generated. The different languages used in the ad are generated using AI or the the sinking of the audio track to the video is done with AI. So they're able to. So they're able to save a lot of money. But the impact is even in English. which is presumably the the original language that's being recorded for the video. It feels like it's out of sync. So they might be too generic. So I have an article about that I link to. So there's so this actor appears in all the ads, and he's speaking different languages. So here's a comment. Why'd you replace him with a I? But I can do a better job. so a measurement of success is so I might be saving the company money. But whether or not people are reacting positively to it. and whether AI is helping anything other than the bottom line in terms of producing ads is still a question. I think it'd be interesting to see some research done about people's reaction to the the ads can fit the these overdubbed ads with the previous ads, for example. where we have somebody speaking in their native language. So we don't have the impression that the video and the audio is disjoint. anyway. So another comment that I saw seemed to indicate that the teleflor website that we looked at last day was nothing out of the ordinary. It was a pretty standard website for ecommerce. So a question is, why do we as users. except that low bar of or design any thoughts about that. Yeah. Okay. so thanks for the link to the video. There's. I think there's a video here as well. Here's a second version. I haven't looked at this video. Let's try it, though. What would you like to pay for your hotel in tonight? A 185, a hundred 69 or a hundred $55. Same room, same service, just different prices. frivolial to you. Well, nobody asks you. There's a perception. but that's exactly what Cherva does. Cherva compares hotel prices from hundreds of phone sites. so save yourself valuable time and money. Use trivago, prepare hotel prices, and save up to $30 a night. Hotel Travaga. Is this the same one? Let me let's try this one. No, that's maybe the same one, anyway. don't want to belabor the point. But it's yeah. So the uncanny valley is is a real thing. And so it's these ads seem a little bit creepy to me. so we'll see whether or not they help the accompany or hurt them in the long run. Or maybe people don't watch the ads who are looking. I've used the Travaga website before. and maybe maybe people like me have used it and found it helpful will continue to use it despite having bad advertising. We'll see how that plays out. I'm just looking at the comments. So if not travago, what's what's the what's the better website to look for comparing hotel prices. So now want to get into. There's a comment about errors that people make, and and so the heuristics we talk about handling errors, and, better yet, prevent errors altogether. So there are slips. The 2 types of user errors are slips when users intend to perform one action. but end up doing another one. for example, and sift, and I, typing an eye instead of it all counts as a slip. accidentally putting liquid hand soap on one's toothbrush instead of it. Toothpaste is also a slip. That's a pretty serious slip, I think slips are typical when users are an autopilot when they don't fully devote their attention to resources at the task at hand. so maybe they make a slip by clicking the wrong button on an interface by clicking. Yes, when the man to say no. So when mistakes are when users have goals are inappropriate for the current problem or task. Even if they take the right steps to complete their goals, the steps will result in error. For example, if I misunderstood, stood the meeting of the oil pressure warning light in my car and thought it was a tire pressure monitor. no matter how carefully I added air to my tires. would not fix the air, fix the issue with my oil pressure. This would be a mistake, since the goal that I was attempting to accomplish was inappropriate for the situation, even though I made no errors in executing my plan. Mistakes are conscious errors, and often, but not exclusively arise when a user is incomplete or incorrect information of the task and develops a mantle moth that doesn't match how the interface actually works. And that's that's an issue of design. And here's some more detail about that. So if I'm continually doing the wrong thing like with the Norman doors from trying to always push instead of pull or vice versa. That's a design problem. Yeah. So there's there is some issue of responsibility to understand the interface as best we can. but it still might be still might be prone to mistakes. because it doesn't present information properly, or it's confusing. And if people are making that error. A lot. That mistake has happens a lot. Then that's an issue for the designer to handle. The designer may have this elegant conceptual model, but its not being communicated to the user. So we need to address that.
+          </li><li>
+            
+            Yeah, II can agree that it's up. It's kind of up to the the designer to have a proper design. But I feel like it's glossing over the fact that I think the consumer or the end user has a certain degree of responsibility. I mean, I had. I had a friend in high school who wasn't allowed to drive his parents car until he read the user manual from front to back. which gave him like a really really good understanding of the car, obviously, and how everything works, so that in a case like that there was no misunderstanding. and they do give you a user manual for you to read it. It's there for your use, is there to inform me on how to use the car and what all the different things mean. You know I digress, but there's some I feel like there's a little bit of responsibility on the user to familiarize themselves with a new car if they get that new car. And sure it's kind of inconvenient to have to read through a manual. But just to, you know, get in it and assume it's like any other car is a bit like I don't know. I feel like that's not fair to the manufacturer.
+          </li><li>
+            
+            Yeah. so there's some issues, then. that I could think of so different manufacturers want to differentiate themselves. So they make interfaces that are different for the sake of being different, and they might not they, they might not effectively leverage people's understanding about how controls are arranged.
+          </li><li>
+            
+            Yeah, that's that's true, and that's fair enough. But
+          </li><li>
+            
+            and the other thing and my Ford edge again. So there's I have gotten this wrench up here on the display, and it says. check user manual for details. And I did check the user manual. But there is nothing that said what to do with a wrench coming up on my display. So it's can. So it's a question of whether the the manual's been written carefully. If it's a good quality manual, then it's a good thing to to direct people to it. and if you're going to direct people to it, make sure that you're directing them in a way that they can find what they're looking for, and in the manual. So if there are occasions when direct, it's like a wrench shows up. See Manual and I, there's no way to find the relevant material in the manual no easy way than I might disregard any further attempts to reference. The manual
+          </li><li>
+            
+            yeah. And and that checks out. It's kind of like a double edged blade, where, like both sides, have to put in the the same amount of effort for it to actually be like. The sort of fruitful. you know. Interaction.
+          </li><li>
+            
+            Yeah.
+          </li><li>
+            
+            I think it kind of comes down to people and humanities just gotten lazy and complacent in certain things. I mean if you look at a vehicle manual from back in the eighties and nineties, they were detailed. and you know now they're a little bit more vague and harder to find information.
+          </li><li>
+            
+            Yeah, and I think part of that is because there's like a norm that like, you leave the user manual in the car, and you only reference it if you really need it. And even then, like II know people who haven't touched the user manual for their for their cars. And I mean, yeah, cars all kind of work the same way they they drive you from point A to Point B. But there's again I feel like there's some level of responsibility on the user's part to actually take the incentive to to learn rather than just like expect the car to tell them everything they need to know. I 100% agree. It's like people who try to do an Ikea set without following the instructions. I mean, you see how sometimes those things turn out. It's like they're there to help you, and if you don't use them to help you, then, like I don't know what you're expecting to get out of it. But then, again, there's the other side of the argument as well. The manuals kind of suck. and you know what some of them do.
+          </li><li>
+            
+            Yeah.
+          </li><li>
+            
+            So it's it's like looking.
+          </li><li>
+            
+            Not all should require you to check the manual, especially the stuff that we're talking about in class like, I feel like goes example. You shouldn't need to go into a manual to understand what the car is saying like, these are issues that are pretty frequent, like the air pressure and tire. They should be designed so that you don't need to go check for some for somewhere, for instructions to understand what it's saying. and it's not hard to design something that's understandable, especially now that there's standard like there's a standard of how to do it. I guess it depends on older classes different. But the manual is there for certain issues. But something shouldn't need you to check a whole bunch of instructions to understand it. So
+          </li><li>
+            
+            I don't know. I think it depends, I guess, on the car. It does depend on the car. It also depends on the user. Right? So if someone has like a pretty like in-depth knowledge of cars, and how they work, someone kind of like myself. and I see a light come on the dash. I'll like 95% of the time. I'll already know what it is. I don't need something to tell me. Oh, it's like a tire pressure sensor light, or it's an oil pressure sensor light. They they both look different. And I've already made that differentiation. I've already seen it. So it I feel like it's you can't sort of apply it to the general population, because you have sort of 2 sides. You have the side that doesn't really know what's going on with their car. They don't really know how it works, and you have the side that's pretty well versed in that stuff that can figure it out relatively easily. And yeah, older cars obviously don't have the same types of equipment and whatnot. To tell you what's wrong. It'll be like, oh, something's wrong. The engine light just goes on, and then, if it's like a misfire or something with like the timing, then it will flash at you, because that's like really bad. but like not, everyone's gonna know that. So again, it's like. I feel like it should be approached more on a case by case rather than like a generalization.
+          </li><li>
+            
+            Umhm
+          </li><li>
+            
+            kind of falls back to how we all are complacent with how technology has brought us to this day. You know, we we've gotten more and more complacent with things, telling us what to do automatically without having to go back to what we used to do in the past, which I mean kind of plays into this as well cause you have different generations who are gonna have different ideas on both sides of this
+          </li><li>
+            
+            Umhm. So where you're in. possibly in danger of becoming the civilization. One of the Star Trek episodes were to rely on the computer to manage everything. But then the computer breaks down, and they don't know how to fix it. And they were lost without it.
+          </li><li>
+            
+            Exactly. I mean, it even comes down to AI. Look at email. Everybody hated email at the very beginning, when it first came out. Everyone loves it. Now. you know, AI, it's new. It's starting to. It's being developed more and more each day. It's getting better and better each day. It's better than what it was when it first came out. So it's like how much time, until everyone just gets complacent. And AI is, you know. AI, it's it's acceptable in our culture.
+          </li><li>
+            
+            Yeah. there's lots of risks with a I that aren't the same risks. As with email. So this is a different kind of technology. It's not. It's of a different character, I think. And maybe that's not clear to people.
+          </li><li>
+            
+            I mean, it comes down to dark patterns, right? If AI is used in the proper sense with honest intentions. then I mean, I could see it being something very useful potentially in the future. I mean, but with a bunch of the dark patterns that go on in this world today. I mean, I could see how that could totally be used for ill purposes and everything else, right  and it's kind of like phishing scams and email I mean, it was one of the big things that people hated about email, you'd get emails from people all over the place. You don't know what it is. You click a link. Next thing you know, you're hijacked ransomware, whatever else.
+          </li><li>
+            
+            Yeah. okay. So I think maybe if we if we could always think about a find uses or use AI as a way to upgrade people's skills and support them and augment their daily lives. That would be great. But the potential for R is also present, and we need to be careful in how we adapt things, I think. adopt things. So let me go on to what I wish to talk about today. which is about I went to demonstrate. do a live demo here about group form, project, group formation. And so we have the heuristics that we can use to evaluate and interface by looking at it. We don't need users to to do that. Evaluation. Experts can evaluate the screens and look at what happens when wait we click through different things, and so we can use those heuristics to do a walk-through and get a an overview of what a sense of what might be issued where issues might be in the interface, and whether it's well designed and not and do that kind of evaluation. So that that's and we can do an evaluation that's empirical where we get user data. And we can do an evaluation that's analytical where we don't have users. We do a separate analysis. So another kind of analysis we can do as called a keystroke level model. It's part of Gos gums, the gums framework. Gole's operator's method selections. And I'll put some links about it as well. But the idea is to look at the different actions that are required. So a key press takes a certain amount of time. and moving. The mouse, moving from the keyboard to the mouse and pointing. takes a certain amount of time. and going back and forth from the mouse to the keyboard takes a certain amount of time. so there are a number of actions that are required of of the number of actions that are required. They each get a time. and we can get an estimate of the relative time that an interface takes. So I want. I want to keep that in mind as we look at view, our courses interface. So I also want to think about this in terms of as you watch me go through this is there? Think about creating an empathy map for me as I go through it. So the project ideas I would like to consider is that we focus on like, there can be different aspects. But the focus on  the group's interface in your courses. So what opportunities there are for design, and how we might go about creating a new interface. So there are a number of facets for this, so we don't. We don't need to. I mean, there's opportunity to look at different aspects of it. So when I go to group under participants, I go to groupings. So I started making a project project groups. So the 3 project groups for 7, 30 were same as the assignment groups. So I copied them over. But II realize that maybe that's not the most clear way to do it. So I'm going to delete these groups. and I'm going to instead. because they're the same as the assignment groups. I'm just going to put these assignment groups into the project group. Does that make sense? So I can remove these groups? Let me see if I can to all 3 at the same time. Okay, that's all right. Okay, so I can reuse the groups there. So what I want to do for the 4, 28 project groups. So the reason I'm copying them without change is because there are 2 groups of 4 and one group of 3. So that's already set up according to the way I indicated for the project. So keep the same groups there. So there aren't any groups in 4, 28 project. Let's take all the groups that have 4 members. and this we don't have that information here. So let's go back and see see how this works. Let's just duplicate this tab. because we'll need to look at groups. So here we can see there's one group. So those are the. So we. I think we need one group O 3 for 4, 28 as well. So there's one group there. So here the list of groups that have 4 or 3 in them. Now I want to take that information and put it into here. So I know that group one has for. and then 15, 16, 17 as well. 23 and 25, 27, and 41. Now, what I want to do is take the remaining groups and use them to generate groups of 4. So let's see about auto creating groups. So we want 4 people in a group. and we'll just see whether we can get this members from grouping assignments 4, 28. So I was hoping that I could select groups individually here. But I can't. I can only select one group. So my plan is to then make another grouping for this group should have one or 2 members in them. so we can shuffle the groups that get generated. That's not my concern right now this makes sense. So it it's great that they do auto naming, but there's no way for me to specify for numbered groups. There's no way for me to say. Make them 0, pat pat them with 0. So they become. They're listed in numerical order. because I can only put in one at sign for a character or one number sign or hash for a number, so I can't say but 2 of them together to make a a two-digit number for the group. anyway. So let's go back here back to groupings. So let's create a new grouping. So all I can do here is name the group. I could give it an id. Maybe in the description there's no way for me to say. Have rules, let's say about what I want to put in this group this grouping. Now let's see if I get a screen. Okay. let's make one more copy of this. So here are the ones I want to exclude. So be nice. Say, I would like to take the silent grouping and take the rest of the groups in the assignment. 4, 20, Simon's 4, 28 grouping and put them. and to the other other grouping here. So 1, 1516, 17. So I'm trying to paste. Oh, there's a copy. See if that works. There we go. Okay. So I don't want one by 1, 10 do. 14, 18, 22, 2325, 27, 24.  wanted to leave 25, yeah, and 27 and 41. So the rest of these can be added. So it would be nice. Just think about this, that pick a group being here to choose from. So I don't have this extra noise and these other groups that are around. So here's the okay. I want to get this sorted before it doesn't show up. Okay. So no whooping. Okay, that didn't didn't quite work out. So let's adjust the grouping. I'm out of time here. So I appreciate our discussions till what I'd like to do. So I'll get this laid out and we'll focus on this after the break. Thank you for today for the discussion. That was very good. I appreciate it. Enjoy your break and take care. I have a great.
+          </li><li>
+            
+            aye.
+          </li><li>
+            
+            breathing weak.
+          </li><li>
+            
+            Thanks, Darryl. You, too.
+          </li><li>
+            
+            Thanks.
+          </li><li>
+            
+            thanks, Darryl. Have a great weekend. See you after the break.
+          </li><li>
+            
+            Okay, thanks. You, too.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            Good morning!
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            good morning
+          </li><li>
+            
+            good morning
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            morning, daryl
+          </li><li>
+            
+            Good morning!
+          </li><li>
+            
+            Good morning!
+          </li><li>
+            
+            morning!
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            I feel like users shouldn't be normalizing being tricked through dark patterns as part of them using a software. I fee that it is the responsibility of developers to explicitly address such techniques when used and to inform users about them beforehand instead of tricking them into it
+          </li><li>
+            
+            feel*
+          </li><li>
+            
+            Reacted to "I feel like users sh..." with 👆🏾
+          </li><li>
+            
+            Reacted to I feel like users sh... with "👆🏾"
+          </li><li>
+            
+            seems pretty scummy to trick users via any sort of dark patterns.
+          </li><li>
+            
+            Reacted to "seems pretty scummy ..." with 💯
+          </li><li>
+            
+            I wonder about where regulatory bodies fall in the responsibility here as well.
+          </li><li>
+            
+            Replying to "seems pretty scummy ..."
+          </li><li>
+            
+            Reacted to "I wonder about where..." with ☝️
+          </li><li>
+            
+            Replying to "seems pretty scummy ..."
+          </li><li>
+            
+            Reacted to "seems pretty scummy ..." with 💯
+          </li><li>
+            
+            I can't say I have seen the trivago ads.
+          </li><li>
+            
+            no
+          </li><li>
+            
+            I hate the trivago ads, at some point if you didn't have Youtube premium they used to pop every ad break during videos
+          </li><li>
+            
+            Reacted to "It's also a question..." with 👍
+          </li><li>
+            
+            Replying to "seems pretty scummy ..."
+          </li><li>
+            
+            Replying to "seems pretty scummy ..."
+          </li><li>
+            
+            Reacted to "It's also a question..." with 👍
+          </li><li>
+            
+            I think this is their new ad: https://www.youtube.com/watch?v=Iz-FxXBwoTY&ab_channel=trivago
+          </li><li>
+            
+            Replying to "I think this is thei..."
+          </li><li>
+            
+            Reacted to "it's giving uncanny ..." with 👍
+          </li><li>
+            
+            Replying to "I think this is thei..."
+          </li><li>
+            
+            I personally don't accept it, if a website is poorly designed I'll usually go somewhere else. To me it's a red flag. If they can't bother to make a good website why would I trust them with my payment information
+          </li><li>
+            
+            I hate that catchphrase
+          </li><li>
+            
+            The lips don't really match what he is saying
+          </li><li>
+            
+            Replying to "I hate that catchphr..."
+          </li><li>
+            
+            Reacted to "trivago? more like t..." with 😂
+          </li><li>
+            
+            How does this even get approved? You'd assume someone in the process would notice this stuff
+          </li><li>
+            
+            big corporations don't really care about such little details once they have already grown big. All they care about is.... money
+          </li><li>
+            
+            i use hotwire
+          </li><li>
+            
+            I think generally speaking, a poor advertising campaign won't lose you a ton of customers. There are some outliers, but as a general statement, a weak advertising campaign won't really deter the existing customer base.
+          </li><li>
+            
+            Reacted to "I think generally sp..." with 👆
+          </li><li>
+            
+            Reacted to "I think generally sp..." with 👆
+          </li><li>
+            
+            If you already have a large existing user base, you don't need to advertise to or for them since they are already using the service.
+          </li><li>
+            
+            As far as the oil pressure light and tire pressure light mixup goes, I think the end user has some level of responsibility to become familiar with their vehicle to safely operate it. They do have a manual for a reason.
+          </li><li>
+            
+            Replying to "As far as the oil pr..."
+          </li><li>
+            
+            agree
+          </li><li>
+            
+            It can also come down to the readability of the manual too. I agree that its a good practice to familiarize yourself with the user manual, but that is also on the manufacturer to ensure that its contents are easy to understand and doesn't overwhelm the user at first glance.
+          </li><li>
+            
+            Reacted to "It can also come dow..." with ☝️
+          </li><li>
+            
+            Reacted to It can also come dow... with "☝️"
+          </li><li>
+            
+            I agree that their is some responsibility for end users to familiarize themselves with a new system. It doesn't excuse bad design but the goal of design should not have to make everything "beige" or the same as every other designer for simplicity. Designers need to be permitted to try to improve designs
+          </li><li>
+            
+            I just end up googling it if I have questions
+          </li><li>
+            
+            I wish my car spoke to me when I ask it what the emojis are
+          </li><li>
+            
+            Reacted to "I wish my car spoke ..." with 😂
+          </li><li>
+            
+            Reacted to I wish my car spoke ... with "😂"
+          </li><li>
+            
+            I installed blinds in my house recently and the instructions that came with the blind set were abysmal, and YouTube and Google didn't help. I had to figure some things out on my own, and it probably added a solid hour onto the task.
+          </li><li>
+            
+            Replying to "I wish my car spoke ..."
+          </li><li>
+            
+            Reacted to "I wish my car spoke ..." with 😂
+          </li><li>
+            
+            There is also the concern of second-hand cars that may not have the manual on them. Sure the user can just search up the manual online for pdf or something, but at that point they may just result to searching for the actual solution to the problem they have rather than consume a manual and hope that it contains the information they need.
+          </li><li>
+            
+            Reacted to There is also the co... with "👆"
+          </li><li>
+            
+            Reacted to "There is also the co..." with 👆
+          </li><li>
+            
+            Replying to "I installed blinds i..."
+          </li><li>
+            
+            Reacted to "There is also the co..." with 👆
+          </li><li>
+            
+            Reacted to "I wish my car spoke ..." with 😂
+          </li><li>
+            
+            Reacted to "I've had a few thing..." with 👍
+          </li><li>
+            
+            Reacted to "I've had a few thing..." with 👍
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            That's great that urcourses has the auto naming
+          </li><li>
+            
+            428Asgn 1, 428Asgn 15, 428Asgn 16, 428Asgn 17, 428Asgn 23, 428Asgn 25, 428Asgn 27, 428Asgn 41
+          </li><li>
+            
+            You too Dr.hepting
+          </li><li>
+            
+            thanks daryl. have a good break :)
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            thank you, take care, and have a good break everyone
+          </li><li>
+            
+            Thanks. You too.
+          </li><li>
+            
+            Thank You
+          </li><li>
+            
+            Thank you!
+          </li><li>
+            
+            Thank you.
+          </li><li>
+            
+            Thanks, have a good break!
+          </li><li>
+            
+            Take care.
+          </li><li>
+            
+            Thank you, have a good weekend!
+          </li><li>
+            
+            thank you, have a good break!
+          </li><li>
+            
+            Thank you!
+          </li><li>
+            
+            Thank You..
+          </li><li>
+            
+            Thank you.
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Today the discussion continued about dark patterns, and whether it is a developer's responsibility to design interfaces with the most vulnerable people in mind. Also the concepts of Slips and Mistakes were introduced.
+    </li><li>Dark patterns
+    </li><li>The use of ai being helpful from a business perspective (cheap and easier) but people might not respond to advertising with it which could be seen as more of a waste
+    </li><li>Preventing User Errors: Avoiding Unconscious Slips
+    </li><li>The trivago ads were a really interesting topic, It's something I was not aware about,
+    </li><li>How to recognize dark patterns and see how they are used by corporations to potentially manipulate users.
+    </li><li>shopping website design and how they affect buyer's mind
+    </li><li>That overtime we became compliancent with design choices and new technology 
+    </li><li>Dark Patterns and how companies can be misleading with their information
+    </li><li>The important concept I encountered was Keystroke Level Model which is user for interface analysis and how this tool is important and functioning 
+    </li><li>Today I learned about dark patterns, and ho they can be used to trick users
+    </li><li>Dark pattern types
+    </li><li>Design for vulnerable potential users, about slips and mistakes
+    </li><li>Dark patterns. Prior to the reading for this class I was oblivious to dark patterns, and honestly I thought they were referring to dark mode UI settings, which had me genuinely confused for a bit.
+    </li><li>One concept we looked at today is the vulnerability of users when accessing/using a particular piece of software/system. For example, the dark patterns method is often deployed to deceive the user into doing things they didn't initially plan on. Such as adding additional items to shopping carts, downloading additional software, bait and switches and there's many others. This raises issues and is unethical because the end goal for a lot of these companies is profit and they'll do whatever it takes to gain.
+    </li><li>No 
+    </li><li>Today we went into more detail on whether or not the responsibility falls on designers or users when it comes to dark patterns. Also, Daryl spent time doing a live demonstration of the URCourses interface to help us conceptualize how we could think about approaching the assignment while doing a task (considering the empathy map, heuristics, etc).. 
+    </li><li>That many people will go somewhere else when a website or service is poorly designed
+    </li><li>I have realized the importance of the trustworthiness and reliability of the applications to users. Developers shouldn't trick users by using dark patterns.
+    </li><li> The concept of dark patterns was really interesting to learn. 
+    </li><li>We talked about assignment and project. Also we had chat about trivago new ad. 
+    </li><li>Design problems 
+    </li><li>Those Dark Strategies to encapsulate the user were important!
+    </li><li>the ads and how developers  uses tricks. 
+    </li><li>We discussed the use of AI in marketing campaigns and/or material such as the difference between the old and new Trivago ads and whether or not it is beneficial to use AI in such a way. In addition to that we discussed the topic of dark patterns and its use and whether it is the responsibility of the developer or user to mitigate and be aware of its downsides. Finally, we discussed groupings for the assignments and projects that will be used for the rest of the semester.
+    </li><li>dark patterns, ai in advertising, slips and mistakes
+    </li><li>An important perspective was what while using dark design methods may make your design more successful in the short term, it can make cause a loss of trust from the users in the long run.
+    </li><li>Dark patterns seem especially scary to me. I wonder how many people see these as a set of tools rather than something to avoid
+    </li><li> should developer to design interface for most vulnerable potential users
+    </li><li>It was interesting to consider that the responsibility to keep developers accountable for good design (and non-manipualtive design) should be the users. I had always thought that it was soley on the developers and designers to make design ethical and user friendly. 
+    </li><li>There are two types of user errors: slips where users intend to perform an action,  but end up doing another; and mistakes where users have goals that are inappropriate for the current problem or task.
+    </li><li>Dark patterns, trivago ads, responsibilities of the consumer and the developer for dark patterns, discussion on how to reduce user errors and how to prevent slips  
+    </li><li>Errors and how output depends on them
+    </li><li>In today's lecture, we discussed about responsibilities for developer and person using system, there was a poll about the new and old Trivago ads. Also the Teleflora website was just like any other shopping web page design. Discussion on preventing user errors and preventing unconscious slips. Efforts are never supposed to be considered in any type of way, because the outcome is not in our hands but the putting the amount of efforts is.
+    </li><li>heuristics for design patterns, Keystroke Level Model for interface analysis
+    </li><li>dark patterns, Trivago’s AI Design
+    </li><li>Slips and Mistakes
+    </li><li>dark patterns
+    </li><li>We discussed the responsibilities to the system whether it is developers or users. For developers, they should make easy and safe applications for users. On the other hand, users need to take their responsibility to be familiar with the system. Moreover, we looked at an example of using AI from Trivago ads that use the AI to generate multiple languages with the ads. Finally, we learned a concept about Slips and Mistakes from users.
+    </li><li>Keystroke level model for interface analysis 
+    </li><li>Keystroke level model
+    </li><li>dark pattern
+    </li><li>learnt more about dark patterns and how they affect the user
+    </li><li>It's almost like as we become more and more technologically advanced in society we seem to become more complacent and lazy, we expect the technologies we use to do everything for us without thought.  We seem to be creating more problems then we are fixing.
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>At the end of the class Dr. Hepting was showing us the group formation steps in UR Courses. I'm not quite sure what I need to do with this information. Are we supposed to create groups as part of the assignment for imaginary students?
+    </li><li>Everything was easy to understand 
+    </li><li>not really
+    </li><li>no
+    </li><li>Nothing, everything was clear
+    </li><li>nope, everything was easy to follow
+    </li><li>no 
+    </li><li>Why do we allow dark patterns 
+    </li><li>Going over the assignment groups was confusing I thought the groups were already decided
+    </li><li>The project submission was a bit difficult today but need to read more about it 
+    </li><li>No
+    </li><li>What is nessacary for group work and the option to work individually
+    </li><li>not at all
+    </li><li>The only difficult I had today was trying to sympathize for users who are unwilling to familiarize themselves with their cars, like in the example that was spoken to at length among a few classmates and myself. While its easy to blame the manufacturer for poor design, it's also easy to gloss over the fact that users generally do not familiarize themselves with their vehicles and fail to understand what certain things might mean.  I think both sides have responsibilities, so no one group should be blamed.
+    </li><li>No 
+    </li><li>Why on earth would Trivago not just hire actors to read lines???
+    </li><li>No, everything was straight forward.
+    </li><li>No, there was nothing I found difficult to understand.
+    </li><li>nope
+    </li><li>Nothing today!
+    </li><li>Nothing too difficult today!
+    </li><li>no
+    </li><li>no
+    </li><li>No, things were pretty clear to me. 
+    </li><li>no
+    </li><li>No.
+    </li><li>N/A
+    </li><li>no but some more responsibility of developers. 
+    </li><li>For today's lecture heuristics not followed: dark patterns, apathy? was a topic I was a bit confused about, because dark patterns theory also relate to the fraudulent activities which rises a question about missing design part for the understanding.
+    </li><li>No
+    </li><li>No
+    </li><li>Nothing
+    </li><li>No
+    </li><li>There was nothing difficult to understand in class today.
+    </li><li>No
+    </li><li>No
+    </li><li>no 
+    </li><li>no
+    </li><li>We need understand what to do in assignment and we are confused about that please help us student are facing this issue.
+    </li><li>nothing particularly difficult to understand - will go through the paper a couple of times
+    </li><li>Nope, great class enjoyed the discussions.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>Trivago is using AI now, and the class discussion today showed, that majority of students are complacent when it comes to AI, and they compared the dangers of AI to dangers of Email when that came out. But as pointed out by Dr. Hepting, the dangers are very different. I would like to know more what kind of dangers can we expect in the future from AI. Is it going to turn against humanity similar to Terminator movies or in a more subtle manner. 
+    </li><li>Project ideas
+    </li><li>The use of ai and how it can be effective and other times not be effective for it
+    </li><li>no
+    </li><li>The class project and its requirements
+    </li><li>I actually would like to know more about dark patterns. It is a very interesting concept.
+    </li><li>I'd like to further explore what responsibilities lie on a manufacturer or a user
+    </li><li>no
+    </li><li>Hotel? Triviago 
+    </li><li>More about design!
+    </li><li>todays class just needed more detail information about the projects ,groups and assignment 
+    </li><li>I would like to learn more about the legality surrounding these techniques. Especially the one example from Virgin Active, it seems like there might be some laws against design in such a way.
+    </li><li>Maybe more about the keystroke level model for interface analysis
+    </li><li>everything was upto mark
+    </li><li>I don't think so, though I also find the user slips and mistakes an interesting area of discussion.
+    </li><li>No 
+    </li><li>I would be curious how much (if at all) regulatory bodies are doing to address dark patterns and whether or not there are industry standards or regulatory practices that discourage (or encourage) the use of dark patterns. 
+    </li><li>No, I believed we have covered lot of topics in the lecture. 
+    </li><li>I'm excited to learn more about designing good software and about Human-Computer Communication
+    </li><li>Nope
+    </li><li>Dark designs and how ethical they are 
+    </li><li>What other maybe morally questionable design decisions are within our everyday applications that we don't always catch?
+    </li><li>no
+    </li><li>more on dark patterns and how easily we can miss them, what manipulation tactics are used to trick us
+    </li><li>Trivago’s AI-Powered Ad Campaign
+    </li><li>No.
+    </li><li>I would like to know more about how to we are going to work on group projects and what they actually going to be about and the submission requirements for the same 
+    </li><li>no
+    </li><li>I would like to know more about project group formation in the interface and the Keystroke Level Model for interface analysis.
+    </li><li>No
+    </li><li>Trivago’s AI
+    </li><li>More about dark patterns
+    </li><li>dark patterns
+    </li><li>I would like to know more about the heuristics not followed the dark patterns and apathy that you mentioned within the class.
+    </li><li>No
+    </li><li>No
+    </li><li>no
+    </li><li>no
+    </li><li>always eager to learn more about better design and user interfaces
+    </li><li>Dark patterns, design the list goes on.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/12_Thu-15-Feb-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

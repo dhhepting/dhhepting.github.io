@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+730/202410/13_Tue-27-Feb-2024.html" />
+    
+    <title>Mtg 13 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 13 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/13_Tue-27-Feb-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/",
+        
+          "name": "CS 428+730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/",
+        
+          "name": "202410"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/13_Tue-27-Feb-2024.html",
+        
+          "name": "Mtg 13 (Tue-27-Feb-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/">
+        CS 428+730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/202410/">
+        202410
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 13 (Tue-27-Feb-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 13/26: Tue-27-Feb-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="12_Thu-15-Feb-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="14_Thu-29-Feb-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Moving from 
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Tuesday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=2507968&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1709013600&amp;course=31184" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=31184" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Response to Responses
+  </h4>
+  <ul>
+  <li>What to do with the groups interface? Possible project</li>
+  <li>sobering discussions about risks of AI: <a href="https://www.humanetech.com/podcast" target="_blank">Center for Humane Technology</a></li>
+</ul>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li>Last Week Tonight: Pig-butchering, aided by app stores (metatrader)</li>
+  <li>Assignment discussion</li>
+  <li><a href="https://en.wikipedia.org/wiki/Keystroke-level_model" target="_blank">Keystroke Level Model</a></li>
+  <li><a href="http://courses.csail.mit.edu/6.831/2009/handouts/ac18-predictive-evaluation/klm.shtml" target="_blank">KLM Calculator</a></li>
+  <li><a href="http://courses.csail.mit.edu/6.831//2015/inclass/04-efficiency/klm.shtml" target="_blank">KLM example</a></li>
+</ul>
+<h4>
+    Summary
+  </h4>
+  <p>Summary</p>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=" target="_blank">Submit your response to this meeting before noon tomorrow</a></li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=" target="_blank">Take quiz before the start of our next meeting</a></li>
+</ul>
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Morning. so how did how did ever enjoy the break? Who's loving the return of winter to day? I'm just publishing a few changes to the website. So I think I've got everything up to date with the responses and transcripts. Now.  sorry meeting 13. Lucky 13. Well, it's not a Friday. So we're we should be a fine. So this is halfway through our class. And I didn't finish it. Moving from moving from sort of analysis, sort of understanding what problems there are into design. That's what I was going to put. So here's the link for attendance. So I just wrote a quick response to responses. So what was the group's interface about and say, it's a possible project. and we'll talk about that in a book. Sorry I'm not sharing my screen. Who was going to let me see if there are any comments about that already? How long are you? Gonna but wait till you let me know that I wasn't sharing my screen. Okay? So there's a comment about AI and the risks of AI. Has anyone heard of a centre for humane, for humane technology. That's good. Which sociology class was that digital society? Huh? Cool? Is that a reasonable elective to take for computer science? Do you think? Okay. there, you have a recommendation for digital society from so sociology department. Okay, so center for humane technology is. Trista was co-founded by other people. But the 2 people who are hosting the podcast are Tristan Harris. I think that's his last name. He was a a designer at Google for many years. and Azaraskin, who's the son of Jeff Raskin, who wrote the book, the Humane Interface. and he's been a developer and entrepreneur. So there is a relationship there. So from the humane interface. we go to humane technology and their podcast your undivided attention. I've actually linked to the podcast here. So you can check that out if you like. yeah. So dangers of AI are with respect to that travago ad. Maybe it's alluring of the bar. the devouring of human creative effort. If we have an an app that can do something, an apt lends credibility. So did everyone watch John Oliver last week tonight. So he talked about this week's show he taught. He's starting season 11. Now, this is the second episode. and I think it's good. It might be on U. Tube by Thursday for the main story. But the main story was about the pig butchering scams. So what was interesting there is well. few things interesting, but a lot of the the scams used used apps that are on the app stores for Google play and and apple. And one of them was Meditator. which is. it's a trading app. They it's been used by scammers to lend an error of legitimacy to their operations anyway.  So there's risks all around. So let's talk about the assignment. Let's do tonight. So I wanted this. So now all group members don't have to submit this one submission for the group. so I haven't. Let's go back to your courses to the course on your courses. No. So I'm trying to get a screening of social dilemma in the CS. 2 80 class, this semester and maybe make it also available on campus. That's why I'm so. I have that tab open a. So I said, there is enough sections. Has anyone had trouble getting a section is anyone. Can you let me know if you've had trouble getting a section? Okay? All right. So this assignment was focused on finding the problems and not going into the design of finding a solution. So that's part of empathy. So we want to listen to the users and not come up with a quick fix to say, this is clearly this is what you need. It's like the toaster example again. Well, if you need a new toaster, here's what you need. You just need to put more curlickies on the side of the toaster. and that's going to fix it up. And so the so the client may have some ideas. and you might have some ideas, but the idea is to focus on the problems that you find. and there may be some good things that you see as well. So you can include those in your analysis in your empathy map. But when we talk about opportunities for redesign. so it's not the redesign that we're doing. It's just the problem areas that we've encountered. So at this stage, we're trying to understand what's going on in the application. And in the interface and and think about what are the problem areas. But then, as you move along further in the process. we'll take on ways to ways to address those issues in in a in a design effort. Does that make sense? So yeah, it's focusing on the problems. Okay? So I thought, I had a link here that I don't. So there are 3 phases here. So there's understand. explore and materialize. So so the project that we'll focus on will be. We're going to have a section about, understand. explore and materialize. So those are 3 parts. So we'll do 1, 2, 3, and leave the HP. 8 marks. So my thinking was that we would use the group interface as the source of our project as the thing we're going to focus on for the project. Does that make sense? Okay? So  wondering if it's that makes sense for the project to divide it into. understand. explore and materialize phases. each worth 8 marks? And does it make sense to focus on the group interface? So it. There are many issues in the group interface, I think. And we can goes through goes through them again with the experiment you are courses. So there's a question about when we be able to do the prototype and test whatever redesign least, not such a short period of time. So the material. So the idea would be that we, you would design low fidelity, prototypes. a low fidelity prototype. and then we can. Well, we'll work out the details. But I understand that it's that the time is condensed. since we're at their midway point in the class. and we have the midterm coming up on Tuesday next week. So I'll take all those things into consideration. So yes, you can use the experimental? Yeah, ur courses. So about the midterm. still interested in receiving your question suggestions. So the questions with your suggested answers in the class discussion on Friday at noon. so the last assignment. So I hope that I've gone to 32 marks so far, including the ones due to day. The last assignment I'll deal with. Let me finish this slide. so it'll be about so for the midterm use zoom breakout rooms. So a format exam. so it's going to be online. So both exams will be online in your courses. So I'm not. I would tend to think it would be a closed book exam. But I'm willing to discuss that. And so so since you have access to the experiment with your courses. you can suggest different types of questions that are supported in the quizzes. so the midterm will be about things before the break. How's that to make it easy? So the things in the meetings. in our discussions and in the sources that I've asks you to look at all those things can. We'll form the base of our exam. So I'm against soliciting questions for a questions, suggestions with answers that would represent a fair assessment of your learning in the first half of the semester. So let me let me let me add another section for me. Let's add a few more just in case. So I'm still sharing my screen. Right? Okay? So I'm getting an error message. And I'm not. Let me see if more information about this error actually has more information. A general error occurred. Sorry we can't be more helpful here. You could try and copying the text that was shown and doing a web search with it. Wow! Has anyone gotten that message in your efforts to do the assignment? Let me see if I can reload it there. It's happier now. Okay, so PQ. Quiz. So when I create the quiz. I'm just creating the container for it. and then we can add questions. and the way to add questions is to go to the ad. which is not the most obvious place for it. So we add a new question. So we can add a question. So there's quite a few different ones here. I stick to the can drag and drop text. That's kind of that's the kind of fill in the blanks. I think there's a calculation and short answer, multiple choice matching. That's another good one. So I'm curious. I haven't checked what the other one is. What does help say?
+          </li><li>
+            
+            Oh.
+          </li><li>
+            
+            so you might have better luck in your browser with the help to get this. let me try it in chrome. So you see, maybe you saw that I'm using one password. Look at my password manager. How many people are using password managers, and which one do you would you recommend? I had used lastpass for a while, but this is much better, I find. Let's see if we can add. let's see what happens when we add a help. So I'm trying to get oh, sorry I'm not sharing my other screen. So I had the idea to make it to when to zoom out. Let's see if I can zoom out a bit more. so it's unreadable. But let's just see if I can get a bigger window. No. So that's that's me trying to access to help. So anyway. you can, you can feel free to be specific about the kinds of questions that you want. that you would suggest, including the format. And you can you can you have permission to edit in this section here in Section 30. Let's rename that. I don't know if that's gonna cause a jam, a log jam. If more than one person's trying to edit my quiz, but I'm sure I just changed that, and I get returned. Oh, there it is. Okay. anyway, that gives you an idea of. I'm trying to give you an opportunity for a hands-on work with this. Okay. so let's had an activity for group members. So there are some groups. So let me first go and make a grouping and some groups. So the way to access this is from participants and then go to groups. Well, let's do groupings because we don't have. So it's nice that I can reuse groups. And that's what I've done in our class that I've for the groups that have 4 people in them. I've just included them in the project groupings. But there are some issues. What I want to make sure is that people are in one group for the project and not in more than one group. And that seems to be difficult to find. And that interface. Okay, so so I'm going to leave it. As all groups of grouping here and now let's make some groups. So not groupings. but groups. auto create groups. So let's make a letter number of groups. Let's say 26. We don't run out of letters so we can control a little bit here. So then we have to select grouping. So we have 26 groups here. Oh, I'm not sharing the oh, darn! What happened? Oh, I must have taken the tab out of the another window. Okay, I think I'm back on track here. So these are the groups. So that's so, this shows everyone in their own groups. So that works all right. Now. if I want. So we'll do a manual. So we'll do number of groups again. 26. We'll do. Yes, for group messaging. So let's do no allocation. We'll put them in the same group here. same grouping. So if I want to add or remove users. So this is where the Gms Klm also comes in. So I want to add, remove users to the group. so I can select me and then add heresis then. So we're not enough people in the class. So I have to search everybody in 2 80 there are 266 students. So it doesn't let me scroll through the list. I have to do a search which is at the bottom. So I have to scroll down. And so I'm when I add student people individually to the group. So here's the search. not picking on cadence. So there are some issues here. I can't check the groups of the people I've added to the new group. So it seems that the when I do a search that the selected user's membership doesn't show up correctly. Let's test that. Yeah. If I'm picking from the list. if it shows the selected user's membership. So here I am. We'll do one more with. So if you remember, there were. there were 71 people. So if I want to say. make groups. I want to divide the class into groups. What I find frustrating is that I can't say. If I've added 6 people to the first group. then, instead of 70, 3 people, 71 plus one plus one. there should be 67 potential members. So there's a lot of scrolling here. and if I want to change the group membership it. it switches from the right to the left. So that's those are just some observations about about the group's interface. So the keystroke level model. So I went into just bring up the different approaches we can have to analyze the interface. So if we don't have without users present. We have a couple of options. We can do an analysis or an analytic evaluation. So when way to do that is using the heuristics to do a walk-through. So we might notice different things about the interface. The things seem to be the things might be problematic or not. and things might  might be highlighted. That aren't really issues when it's being used and the real issues might be missed. But it's a good first step to do that kind of analysis. So the keystroke level model is another way to approach analysis. So here's an example. You can try this for yourselves. delete the word tell from the third line, ensure that. and maintain a single space between words. So here we go. So there's me doing doing the delete by positioning. So I'd hit. So there are different timing. So it's not you. What's important is the relative. They don't. The timings don't have to be accurate for an individual, but they can be representative. So thinking takes the most time pointing. then homing. So if we're moving between the keyboard and a mouse. or doing fine control. Pressing a button is point one seconds. Keystroke is point 2 8 s. So we get the Klm is a thinking, pointing button button combing, picking keystrokes. 5 keystrokes. So that's so. That was 6 6 s. Let's try another one. So that was me double clicking on tell and deleting it. So this one oh, sorry! That's not. The calculator isn't reflecting my own clicks there, but on the left side. This is my information for this. So it took about a third of the time. and there are much fewer operations. So there's a calculator there. So we get a sense. The Klm approach gives us a sense of the relative merits of different interfaces, so one that can rely on keystrokes. Not so much on pointing. Oh, I'm sorry I'm 2 min over here. so thank you for today. I should end there. If you have. Yeah, I'll end there. I have. I'm gonna give you a video to look at. I'll update that on the meeting page. anyway, I'll say good bye. Thank you for to day. Take care. and if there's questions. let me know. Have a great day. Everyone stay warm.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            good morning
+          </li><li>
+            
+            Good morning!
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            morning
+          </li><li>
+            
+            good morning
+          </li><li>
+            
+            How was your break?
+          </li><li>
+            
+            Good morning!!
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            Morning
+          </li><li>
+            
+            pretty solid
+          </li><li>
+            
+            it was good
+          </li><li>
+            
+            was a good time
+          </li><li>
+            
+            Pretty good
+          </li><li>
+            
+            never long enough ahahah it went by so fast
+          </li><li>
+            
+            too short haha
+          </li><li>
+            
+            nope tooo cold
+          </li><li>
+            
+            it's supposed to be back in the positives on Thursday LOL
+          </li><li>
+            
+            this winter is giving me whiplash
+          </li><li>
+            
+            Reacted to "this winter is givin..." with 😂
+          </li><li>
+            
+            Reacted to "this winter is givin..." with 😂
+          </li><li>
+            
+            Reacted to "this winter is givin..." with 😂
+          </li><li>
+            
+            Anyone heard of Center for Humane Technology?
+          </li><li>
+            
+            We watched some of their stuff in my Sociology class.
+          </li><li>
+            
+            Digital Society
+          </li><li>
+            
+            It's a brand new class. I personally loved it
+          </li><li>
+            
+            Can't say I have!
+          </li><li>
+            
+            Haven't watched it in years tbh
+          </li><li>
+            
+            Any fans of Last Week Tonight? (John Oliver)?
+          </li><li>
+            
+            For the assignment, do all group members have to submit for their own or can one representative from the group submit for the entire group instead?
+          </li><li>
+            
+            sounds good, thank you!
+          </li><li>
+            
+            No troubles getting a section?
+          </li><li>
+            
+            No
+          </li><li>
+            
+            So for this assignment you just want us to list what is wrong and not how we'd fix it, correct?
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Reacted to "yes" with 👍
+          </li><li>
+            
+            Anyone?
+          </li><li>
+            
+            OK. Am I still connected?
+          </li><li>
+            
+            no it is just stuck
+          </li><li>
+            
+            My internet connection?
+          </li><li>
+            
+            I think it’s ok now
+          </li><li>
+            
+            I think you're fine Daryl. maybe just ask the question again.
+          </li><li>
+            
+            Project 3 parts: Understand, Explore, Materialize
+          </li><li>
+            
+            That makes sense to me! it seems fair
+          </li><li>
+            
+            I guess my question is if we were aiming to do this for the group project we wouldn't really be able to do the prototype and test part of a redesign (at least not in such a short period of time), so would it just be the design part?
+          </li><li>
+            
+            8 marks each. Focus on an aspect of group interface
+          </li><li>
+            
+            *interfaces
+          </li><li>
+            
+            So experimental UR course will be group project again?
+          </li><li>
+            
+            ABOUT the midterm, I am still interested in receiving your question suggestions (with answers) in the class discussion forum — by Friday at noon.
+          </li><li>
+            
+            Ok.  We will post about it.
+          </li><li>
+            
+            What is the format of the exam? Will this one be proctored or just an online one? Open book or closed?
+          </li><li>
+            
+            How many assignments will there be again?
+          </li><li>
+            
+            The last assignment (8) will deal with online exam environments: for the midterm, we will use zoom breakout rooms and for the final we will use proctor track.
+          </li><li>
+            
+            Reacted to "The last assignment ..." with 👍
+          </li><li>
+            
+            Reacted to "The last assignment ..." with 👍
+          </li><li>
+            
+            Reacted to "The last assignment ..." with 👍
+          </li><li>
+            
+            3 in the project and 1 individual/group assignment.
+          </li><li>
+            
+            Reacted to "The last assignment ..." with 👍
+          </li><li>
+            
+            Sorry I had some audio issues, did I miss what the midterm will be tested on?
+          </li><li>
+            
+            Reacted to "The last assignment ..." with 👍
+          </li><li>
+            
+            Okay got it!
+          </li><li>
+            
+            Reacted to "The last assignment ..." with 👍
+          </li><li>
+            
+            Reacted to The last assignment ... with "👍"
+          </li><li>
+            
+            Reacted to "The last assignment ..." with 👍
+          </li><li>
+            
+            Reacted to "The last assignment ..." with 👍
+          </li><li>
+            
+            what can we expect on the midterm
+          </li><li>
+            
+            Reacted to "The last assignment ..." with 👍
+          </li><li>
+            
+            Sounds good
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            no
+          </li><li>
+            
+            no
+          </li><li>
+            
+            no
+          </li><li>
+            
+            no
+          </li><li>
+            
+            no
+          </li><li>
+            
+            ewww
+          </li><li>
+            
+            help is bad
+          </li><li>
+            
+            It’s unhelpful.
+          </li><li>
+            
+            A lot of the popup windows seemed to be poorly sized. Why does it have to be so narrow? Can’t the window be a bit wider to better fit the contents?
+          </li><li>
+            
+            Ran into it when making interactive video content as well.
+          </li><li>
+            
+            Ah yes, useless in a different font. LOL
+          </li><li>
+            
+            we lost your screen, just showing Design Thinking website
+          </li><li>
+            
+            Are you sharing the wrong screen?
+          </li><li>
+            
+            I think you are sharing the wrong screen.
+          </li><li>
+            
+            Thank you very much sir
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Thank you!
+          </li><li>
+            
+            Thanks Daryl, see you Thursday
+          </li><li>
+            
+            thank you
+          </li><li>
+            
+            Thank you!
+          </li><li>
+            
+            Thank you sir.
+          </li><li>
+            
+            Thank you!
+          </li><li>
+            
+            Thanks Daryl! have a great day.
+          </li><li>
+            
+            Have a great day!
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Thank you.. Have a nice day!
+          </li><li>
+            
+            thank you!
+          </li><li>
+            
+            stay warm and have a good day, thank you
+          </li><li>
+            
+            Thanks Daryl. Have a good rest of your day!
+          </li><li>
+            
+            Thank you, have a nice day!
+          </li><li>
+            
+            good by sir !
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>KLM Modeling concept where you can time how long it takes a user to do a certain action
+    </li><li>I learned about keystroke level model.
+    </li><li>The introduction of AI 
+    </li><li>The important concept we learn today is: The Keystroke-Level Model (KLM) is a method used in human-computer interaction to estimate how long it will take an expert user to accomplish a task on a computer system.
+    </li><li>the perspective that i got to know today was the Keystroke Level Model and its structure 
+    </li><li>It was regarding design
+    </li><li>final explanation of the assignment and a section to add questions for the midterm
+    </li><li>More about the assignments and midterm was discussed and that helped me because I was unsure of what the midterm would be about 
+    </li><li>The important conecpt i learned was Keystroke Level Model it helped me to understand thefuctioning and other specifications 
+    </li><li>The key concept I learned about today was the keystroke level model
+    </li><li>Today we looked into the Keystroke Level Model, which is a method used to approach analysis of design by measuring how many actions and how much time it takes for a user to complete an action. 
+    </li><li>I enjoyed reading about concepts like visceral, reflective, and behavioural models of emotion and dark patterns was interesting to learn. 
+    </li><li>Important concept which I learnt in the class was Keystroke level model(KLM). We also discussed about the assignment. 
+    </li><li>We discussed about assignments and midterm exam.
+    </li><li>While making the assignment: using moodle is hard haha
+    </li><li>keystroke level model, possible harm of ai
+    </li><li>Pig-butchering is an important concept that links to dark patterns in a more obviously malicious way than in most game and website design. But in the end all of these tactics are used to trick people.
+    </li><li>The assignment clarification was very helpful.
+    </li><li>Centre of humane technology
+    </li><li>The key-stroke level model is important for improving human-computer interactions.
+    </li><li>In the previous lecture, we discussed about the the keystroke level model, KML calculator, KML example and mostly assignment discussion as well.
+    </li><li>Pig-butchering, aided by app stores, KLM Calculator
+    </li><li>The KLM approach and the importance of an interface
+    </li><li>We looked at the grouping workflow in the URCourses. Next, we have learned about a brief Keystroke-level model.
+    </li><li>Risk of AI
+    </li><li>Keystroke Level Model and KLM calculator
+    </li><li>I know about exam scope
+    </li><li>Learnt about KLM models a little bit
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>UR Courses group options
+    </li><li>Everything today was easy to understand 
+    </li><li>nope
+    </li><li>No
+    </li><li>the class was all good and everything was on point 
+    </li><li>Nonr
+    </li><li>no
+    </li><li>Everything that was talked about in class today was made clear to me and I understood it all, it was well laid out and taught well
+    </li><li>I think todays class was good 
+    </li><li>no
+    </li><li>I was a bit unclear on the final project discussion and what that would look like in the amount of time remaining for the semester. 
+    </li><li>No, everything was easy to understand.
+    </li><li>No, there was nothing I found difficult to understand.
+    </li><li>No I didn't find anything difficult in todays class. 
+    </li><li>no
+    </li><li>Why there are so many bugs still after so much maintenance?
+    </li><li>no
+    </li><li>it was difficult to understand in the beginning but when professor Hepting  started explaining then it made sense
+    </li><li>No.
+    </li><li>Not much I remember of the previous lecture but the KML part was about revising and researching by self for students so that we gain more knowledge regarding the same.
+    </li><li>No
+    </li><li>The KLM approach
+    </li><li>There is no difficulties.
+    </li><li>No
+    </li><li>KLM calculator
+    </li><li>no
+    </li><li>no particularly
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>Curious to see what type of questions will be on the midterm
+    </li><li>I would like to know more about the project and when assignment 2 would be available
+    </li><li>How AI can adversely affect certain careers and also be used maliciously
+    </li><li>No
+    </li><li>I need to know more about KLM 
+    </li><li>None
+    </li><li>More information about the midterm, when it is and what it will be on etc
+    </li><li>THere is nothing i found which i need to go in depth
+    </li><li>I wonder how some systems will define an expert user for their assessment of KLM, because some systems require different levels of knowledge and skill to control
+    </li><li>No, there wasn't anything.
+    </li><li>I would like to know more about the midterm
+    </li><li>I would like to know more about KLM. 
+    </li><li>no
+    </li><li>Is there a better tool for hosting urcourses?
+    </li><li>where is ai headed? what are some things we’re overlooking?
+    </li><li>keystorke level mode was quite interesting for me and i would like know more about that concept
+    </li><li>No.
+    </li><li>I feel the assignment submission was really untidy because we as group of only 2 students tried to submit then it was allowing other students as well who are together as a group for the project, I feel this glitch should be fixed as soon as possible. Even mailed the professor but did not receive any replies. 
+    </li><li>No
+    </li><li>The KLM approach and how to use it in a research
+    </li><li>I would like to know more about the Keystroke-level model concept in details.
+    </li><li>No
+    </li><li>I want to know more about the Keystroke Level Model, how to use it, and when it should be used.
+    </li><li>no
+    </li><li>yes would explore KLM more
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/13_Tue-27-Feb-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

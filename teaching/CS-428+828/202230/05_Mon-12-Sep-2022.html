@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202230/05_Mon-12-Sep-2022.html" />
+    
+    <title>Mtg 05 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 05 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/05_Mon-12-Sep-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/",
+        
+          "name": "202230"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/05_Mon-12-Sep-2022.html",
+        
+          "name": "05 (Mon-12-Sep-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202230/">
+        202230
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      05 (Mon-12-Sep-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 5/36: Mon-12-Sep-2022
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="04_Fri-09-Sep-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="06_Wed-14-Sep-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I encountered
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+          Administration
+        </h4>
+        <ul><li>
+                Happy Monday
+              </li><li>
+                <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1900809&amp;view=1">
+                  Attendance
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1662962400&amp;course=24538">
+                  Class calendar for today
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=24538">
+                  Upcoming events
+                </a>
+              </li><li>
+                1st Individual assignment -- issues (privacy, consent) are larger than I realized and I hope to have a resolution this week
+              </li><li>
+                Group discussion about Marble Answering Machine
+              </li><li>
+                <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">
+                  10 Usability Heuristics
+                </a>
+              </li><li>
+                Transforming healthcare for children and their families -- Doug Dietz at TEDxSanJoseCA 2012
+              </li><li>
+                <a href="https://www.ideou.com/blogs/inspiration/from-design-thinking-to-creative-confidence">
+                  From Design Thinking to Creative Confidence
+                </a>
+              </li><li>
+                <a href="https://www.nngroup.com/articles/sympathy-vs-empathy-ux/">
+                  Sympathy vs Empathy in UX
+                </a>
+              </li><li>
+                <a href="https://whitneyhess.com/blog/2012/08/21/on-empathy-and-apathy-two-case-studies/">
+                  On Empathy and Apathy -- 2 Case Studies
+                </a>
+              </li></ul><h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><ul>
+      <li>
+        <a href="https://dl.dropboxusercontent.com/s/hen6rifapsvikg3/5%20-%20Password.pdf?dl=0">
+          5 - Password.pdf
+        </a>
+      </li></ul><div id="mtg_pix_05" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_05" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_05" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_05" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_05" data-bs-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/9038ehw6wwa5b1u/5%20-%20wb_1.png?dl=0" alt="5 - wb_1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/617wqigd1mf7jfp/5%20-%20wb_2.png?dl=0" alt="5 - wb_2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/5fwmr88q2aeb3zb/5%20-%20wb_3.png?dl=0" alt="5 - wb_3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/qak076n20lxhsdw/5%20-%20wb_4.png?dl=0" alt="5 - wb_4.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_05" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_05" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Okay
+          </li><li>
+            
+            How was your weekend? Anyone watched a football game? The riders I wouldn't say it was that bad but they didn't win.
+          </li><li>
+            
+            To score. Flattered two bombers. I think I'm waiting for my two factor authentication. Oh, that's right. I turned off I put put on airplane mode so now I'm not going to get
+          </li><li>
+            
+            notification I think they'd better not turn a better keep the phone on because it's going to not do the transcription properly.
+          </li><li>
+            
+            Try Do Not Disturb and see if that is sufficient okay
+          </li><li>
+            
+            let's do the attendance first. Let's see if this then I have to change the link here well it'd be nice if I could create have a link that just shows me the QR code or that shows you the QR code that you could even bring it up on your laptop and take a picture from there instead of straining to see the screen at the front of the class.
+          </li><li>
+            
+            Anyway now let me see if I can do the Know day Okay, so we're talking about knife the first assignment they gave you about empathizing with teachers.
+          </li><li>
+            
+            Realize I've done this before other years, but it didn't occur to me as an issue. And now I am in good conscience.
+          </li><li>
+            
+            We tend to sign an issue. So I hope to have it resolved this week. A person who's who's dealing with this is a way of the conference
+          </li><li>
+            
+            so make some other contacts. So the idea is with student numbers more that's the key to some more information about you with university.
+          </li><li>
+            
+            So you want to protect that and I think consent is also an issue as you could say, right brass in class who's okay with me sharing your student number with within the class
+          </li><li>
+            
+            and not everybody might see a big problem with that. And then doesn't mean there's not an issue. And then people may not also be comfortable in speaking about this in front of the whole group. So that's another another issue. And then, even if you say yes, I give my consent. In some ways it's a little bit like saying yes you can cut off my arm because you well, it's not quite that dramatic, but it is you can give free and informed consent for something so impactful. So I'm hoping to have some discussions today and I hope to have something sorted out by Wednesday, next week. Okay. That makes sense.
+          </li><li>
+            
+            So until that's sorted out, we don't have a first design.
+          </li><li>
+            
+            Yeah, so no, and once I get it sorted out the knowledge just the due dates. So you still have time to work. On
+          </li><li>
+            
+            okay. So I've received a few of these but if you'd like to send me your requests for groups. So who has tried out that class? We're crew member on your courses page. This one I'm not a member of any crew that seemed like an effective way to because to me this was a new feature a helpful way to discover your group numbers sometimes they do really good stuff. With Moodle. So
+          </li><li>
+            
+            I think for the sport, actually. Chat area will be more appreciated during message because we have logs and we can send everything to share with the others.
+          </li><li>
+            
+            Okay, here let me I was thinking about that. So let me just set up one set it up here so don't think I wonder what Chelsea would say. So we could do a chat I could set up a chat and I can also set up a forum
+          </li><li>
+            
+            so let's. Group mode separate groups I suppose this could be a solution for people who are I'm just thinking we could do the chat when we have a group discussion today
+          </li><li>
+            
+            but I don't want to discourage you from getting together and talking
+          </li><li>
+            
+            and they have masks here now forum Okay. So for me because I'm I'm a teacher I consent to everybody. Change to a student I'm going to go you won't be able to see anything I think so.
+          </li><li>
+            
+            From my screen okay, so then class group and members. Yes. Are we gonna be required
+          </li><li>
+            
+            to use this in class group chat in order to communicate to gauge our progress and participation or to have a chat through other means or other platforms? We have something set
+          </li><li>
+            
+            up. Yeah, if you want to use discord or something else, that's fine. And I'm really thinking about most of the discussions are gonna happen in class anyway.
+          </li><li>
+            
+            So I would encourage you to talk to people but communicate however you'd like to do that. We can set up a group form for the project but you don't have to use that you can
+          </li><li>
+            
+            use discord or whatever you like best okay. I thought I put the link Oh, I guess I fixed it here
+          </li><li>
+            
+            so I would encourage you to have a peek at this video. This is on the last days page. David Kelly is one of the principals that IDEO which is an industrial design firm.
+          </li><li>
+            
+            And so it's an interesting discussion about building creative confidence and overcoming the fear of doing creative things so, the link for the because this is on Vimeo, the marble answering machine video. It was an unhappy face over the weekend. So
+          </li><li>
+            
+            because you cannot put iframe to push it into the page, right?
+          </li><li>
+            
+            Well, that might be the issue but I certainly gave it the wrong URL for that. So I just did the usual regular year off so here's a two minute video to refresh your memories. So what I'd like to do is spend some time in groups today to think about a few questions. And I'll write the questions down on the board. afterwards.
+          </li><li>
+            
+            Well, that might be the issue but I certainly gave it the wrong URL for that. So I just did the usual regular year off so here's a two minute video to refresh your memories. So what I'd like to do is spend some time in groups today to think about a few questions. And I'll write the questions down on the board. afterwards.
+          </li><li>
+            
+            your flight be a 6213 at 1230 Monday 15 October drop number is 46 to one five including for Canada mentioned. At 5pm Simon is George, could you give us a ring my turn number is talk to you later. See you okay, don't want to. So
+          </li><li>
+            
+            various efforts to search the web. For more details of that. I think
+          </li><li>
+            
+            the marble answering machine only made it to that stage of concept video So three questions. So what's good about the marble answering machine design? What's the value of this design?
+          </li><li>
+            
+            What contribution does it make? The conversational design of answering machines for example, and then can you see ways to apply the concepts from the video in modern voices, modern voicemail systems so it makes sense. Okay, so now is our test of in class groups and discussions so
+          </li><li>
+            
+            see are all buzzing with excitement?
+          </li><li>
+            
+            Can you arrange yourselves into group discussions? Or take this opportunity to test the chat that we just set up?
+          </li><li>
+            
+            Okay, so we'll take
+          </li><li>
+            
+            10 or 15 minutes to think about these issues. Okay. You ever going on just joined the class today. Not in any? way what's up yo yo, yo, why YouTube? Yeah. Shut up evening to have you here the way that you're
+          </li><li>
+            
+            going to change your life between C and C does not see worse. So yeah, but this
+          </li><li>
+            
+            just goes here. This video
+          </li><li>
+            
+            anyone else who was indoctrinated? Just, I just asked because I see somebody who shouldn't be in a different group. So yeah, sure. Free today and now you can watch the show all day much. What's up I cannot wait to walk all the way down right we'll call it so they don't need any more
+          </li><li>
+            
+            so excited to live
+          </li><li>
+            
+            some information and that's also the highlight important achievements. So once your values are so you can go on up can answer the question however you want.
+          </li><li>
+            
+            Maybe you're working for the Department. We know some of the discussion on this and say, well this is this was an issue for us. That makes sense. Right well design and labor are saying why and why lions Lions Gate know what's not mean that poor people at the US Embassy missions pays more than ever sex contributions especially if you have that desire to pass through now it
+          </li><li>
+            
+            was like six years the answer was we have to find a hybrid three are starting to run out everyone. Accent argument and they still didn't know what I was thinking the question so what I was thinking about how does it make sense to wait based on the voicemail service again when it rains rather than rather than what you're going to be speaking whether they get sent to Wi Fi or not a little touch on some data you're working on right now. You have to keep going Good afternoon some worship verbal skills so what was he like he may have been right let's see how do I know you're? Good to go I'd like to talk lot more interest on what we do and what once again right you think this product or life was offered to the wider order that one because we disagree with what we found over the years we need to go out and meet
+          </li><li>
+            
+            people what's going on here once again thing you need to say
+          </li><li>
+            
+            okay, so we're out of time today so thank you for attending today's
+          </li><li>
+            
+            date on Wednesday. please jot down a few things I mean discussion into the class right now. Under your mom thank you I will respond to the class.
+          </li><li>
+            
+            I got I missed the first three because I didn't know what was happening. I thought you saw the advertisements that you already gave. But then I realized, like feedback and support but that was the first okay. Oh, I didn't realize that.
+          </li><li>
+            
+            Okay, sorry. Don't just do them from now on. Okay. You get your MacBook Air vertical super fast and you're like oh I don't have any strong feelings. Not bad revenue depends on the network connection I'd be interested to hear what's your experience. I'll send you an email. I'll see you later then. Number two you are
+          </li><li>
+            
+            for the wiki. The wiki like put it or email me on digital, which because I love that I put it
+          </li><li>
+            
+            on. Okay, that's fine. Okay, well, today we have the full 90 see us?
+          </li><li>
+            
+            Yes. Okay.
+          </li><li>
+            
+            Good. So, yeah, I know I know
+          </li><li>
+            
+            your names familiar I'll just I'll show you.
+          </li><li>
+            
+            Yeah, like the previous classes that I missed anything important i.
+          </li><li>
+            
+            Saw online. Okay. So you can just look these guys so this is available now. Pick a spot for your presentation. So, based on the slot you select them they'll be different due dates. Okay, based on this selected presentation you will see that the vegetable which is
+          </li><li>
+            
+            basically everything is on that lake for the seminar for the seminar and for this class to everything is on the UL courses.
+          </li><li>
+            
+            Well for this class on my website, it's all it's linked together.
+          </li><li>
+            
+            I have a look and if I have any questions I just send out an email to you. Thank you.
+          </li><li>
+            
+            You're welcome. Just send a note to make sure people know that they can select your presentation Okay, thanks. Take care. The last one was Salesforce personality submitted by Excuse me a second later. COVID Okay, see you next. Video important topics last year okay. Okay, all right
+          </li><li>
+            
+            can you scan the code or enter the past?
+          </li><li>
+            
+            Yeah, I remember saying something about each group is going to have to make some notes on every class or something. At least four meetings.
+          </li><li>
+            
+            Every discussion needs to because in the class we keep one of the group membership post. Like we had one more discussion previously and after the emphasis the second decision
+          </li><li>
+            
+            Yeah, but I don't remember where it was.
+          </li><li>
+            
+            It's like It's like the individual activity.
+          </li><li>
+            
+            So is there just one group member who? Oh, off the memory. Okay. Okay, gotcha. Thank you. Oh, well, you're gonna say something. So
+          </li><li>
+            
+            however, you want to work it out. I mean, somebody should do it. Yeah. And maybe maybe different people will do it for each of the four meetings.
+          </li><li>
+            
+            Yeah. I guess
+          </li><li>
+            
+            it's up to the group that a group is in charge. Summarizing the meeting on the wiki.
+          </li><li>
+            
+            Gotcha. Okay. Okay. Thank you.
+          </li><li>
+            
+            You're welcome. Have a good day.
+          </li><li>
+            
+            I just want to ask related to the project like do I need to do private meeting with you for the group members and everything or for the topics? Like what kind of topics we are actually we need to because I'm unsure about that. And I don't know many members in the class. I have just one shrined in my discussion.
+          </li><li>
+            
+            So I can I can add
+          </li><li>
+            
+            people to your group.
+          </li><li>
+            
+            So 2428 or 828 28? And are you doing research Okay, so you can talk to people.
+          </li><li>
+            
+            And related to the topic, we are able to choose any topic we want.
+          </li><li>
+            
+            A topic. I'm asking you to find a website that you use amongst your group members you have some experience with and
+          </li><li>
+            
+            find a website with which you have some experience and then look at opportunities for through redesign, find some unmet needs, things that it doesn't do. Well. So the idea is you're going to go through a design cycle.
+          </li><li>
+            
+            website and just redesign and we just go through like what kind of things we want to redesign it or wanted to make it more efficient, or like quick for the customers for like us.
+          </li><li>
+            
+            Well, there might be some bigger issues than making things more efficient can be one part of it.
+          </li><li>
+            
+            So maybe, Friday or Monday next week, we'll talk about the group stuff. The project.
+          </li><li>
+            
+            Thank you. Have a nice
+          </li><li>
+            
+            thanks you too.
+          </li><li>
+            
+            thanks you too.
+          </li></ul>
+    
+  
+    
+  <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Marble answering machine has the modern implementation of the voice main answering service in the mobile phone. It is asynchronous communication for the medium of exchange. So it is very important for the people who we are trying to find for a certain period of the time but we can not find that person as our expected time. We can also see the email commutation which has the written but the voice communication has the audio. So it is also important for the people whom are blind and can not read or write.
+    </li><li>We continued our discussion regarding Marble Answering Machine by Durrell Bishop and discussed how good of a design it was for its time. Easy and simple to use being one of it&#039;s best future as new phones these days too complex for elderly and people with disabilities (eg. Blind people). However the downside of the phone being is: lack of security causes less privacy as anyone who has access to the marbles can access your voicemails which sometimes can contain private and personal information. easy to lose a
+    </li><li>Today in class, we expanded on the marble voicemail video we watched on Friday. By getting together in groups, I was able to see some other flaws or benefits of the marble voicemail system that members of my group pointed out that I was not able to notice on my own.
+    </li><li>I understood the value of implementing knowledge of regular physical activities into the design process, bearing the user in mind, thus enhancing the UX and the usability of the product. The proposed user&#039;s location of use, identity and age group are also crucial to the design process. Lastly, the product must be simple, elegant and enjoyable to use, while ensuring the privacy of the users interacting with it.
+    </li><li>The important thing I encountered today was the useful concepts of the marble machine. Even though the machine has many limits (such as the number of marbles, and the likelihood of losing marbles), the machine does give the idea of using an array for choosing voicemails, instead of the queue which we see in many voicemail systems these days. An array approach would very useful for some users, especially offices and big organizations who will receive many voicemails.
+    </li><li>Today my group members and I discussed the positives about the marble answering machine: it has tactile design, there is a visual indication of the number of voice mails, it is intuitive, physically strong structure, different colors of marbles for different voice messages. One feature that could be implemented in today&#039;s voice mailing system is labelling and organization of voice messages.
+    </li><li>The most important thing I encountered today was in our group discussions. The Marble Answering Machine has some good features; you can play your messages in any order. You can place the marbles on your phone to call back instantly. The machine is overall simple and easy to understand. However, it would be very ineffective in practice since the marbles can easily get lost, and the amount of physical storage for your saved voicemails can build up.
+    </li><li>watched video and group discuss
+    </li><li>The most important thing that I encountered today is the group discuss
+    </li><li>During group discussions, some useful features of the marble answering machine were identified such as ease of use and interactive design. Potential problems were identified as well such as loss of information from losing the marbles and privacy issues. I don&#039;t use the voice mail system much but labelling the message for intended receiver on a shared voice mail system would be useful if this feature does not exist already.
+    </li><li>It gave me an opportunity to think about the pros and cons of voice messages. It doesn&#039;t send voice mail well. I prefer text messages. This is because, while voice allows for more subtle emotional transfer, noise can make it difficult to understand exactly what is being said, which is imprecise. It should be converted directly to text through speech recognition so that the sender can confirm and send it. This will bring the benefits of both voice and text messaging.
+    </li><li>In this session, the first individual assignment was postponed. Once again Dr. Hepting played the Marble answering machine video. After that, he asked us to discuss 3 questions in class groups. What’s good about the &amp;quot;Marble Answering Machine Design&amp;quot; and what is the value? The last question was about the tangible user interface and integration to current voice mail systems that had been discussed in our group.
+    </li><li>The new thing for me was to know if a possible marble machine existed and there could be a lot of advantages like easy to use, interactive, tangible and buttonless. This type of machine could be really helpful for elderly people or people with disabilities
+    </li><li>This answering Machine uses some simple objects that indicate simply how many messages have been left. It is not complicated and it has just one step to perform task. It is simple so that it is perfect for all people with any ability (Good design and value). RFID tags can help this answering machine to be modern. Also, privacy should be considered in this design so that everybody cannot listen to the other’s messages.
+    </li><li>The most interesting thing I encountered in todays meeting was that the messages left on the marble answering machine can be in any order. The messages are not heard in order. It allows efficiency.
+    </li><li>What good about the design? The marbles come out in order. And requires one step action to perform steps.   What is the value of the design? It uses physical objects which and we can see the number of voicemails we have.   Concepts from the video in modern voice mail system? We can listen to the voicemails multiple times.
+    </li><li>Working of marble answering machine.
+    </li><li>started with happy monday and discussed about the first individual assignment and group project, asked for requests to be sent this week, added a new feature called in-class group discussion chat to urcourses, and with this option one can better interact. played a video of the marble answering machine, asked groups to discuss about what&#039;s good about design,value and how can we apply this concept in real world. With this, our group had a nice discussion, and I want to learn more about how to use this in the
+    </li><li>Dear Prof. Hepting. Today we had our group discussion and discussed how we could use marble answering machine concepts in new voicemail systems. We thought we could use the air tag idea to implement the concept of the marble machine. Thanks
+    </li><li>By scrutinizing the three questions, I was able to encounter one of the most important things: We can implement one of the fucntionalities of marble answering machine in current voicemail system. We can have an option of listening to the voicemail received in a particular timeframe.
+    </li><li>Today we checked to see if anyone was absent, then watched the video and had a group discussion about how the design was, whether it had any use, and what we could use it for
+    </li><li>discussions were held about the first indivisual assignment and also a group discussion about the video that we saw.
+    </li><li>The functions of marble answering machine and how we can use this basic idea in voice mail. Like auto dial facility can be used from that old idea into new voice mail systems.
+    </li><li>Disscussed about an updated design for voice mail application.
+    </li><li>the most important thing that I encountered that the marbles answering machines that can be tangible which mean it could provides the value of the physical interaction and performance can actually interact with marbles physically. Also, buttonless could encapsulates the intuitive aspect of the device as there are no buttons or displays.
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>While the marble answering machine displays a nice idea of familiarity and potential ease of use, I&#039;m not sure why it is offered as an example of &amp;quot;good design&amp;quot; in a modern sense.  While it might have been relevant 20 years ago, nowadays the very idea of it is inferior to any current technology we have.  When I see this design, it just reminds me of the spectacular failure of Microsoft Bob.
+    </li><li>The number of people in my group that didn&#039;t know what an answering machine is or its purpose
+    </li><li>Todays Class was just about the discussion from the previous sessions in which the professor had shown the video about the marble answering machine where the marbles were being used to transfer the messages and today we actually had a discussion about it in the groups in class. It was a good discussion. We were being asked to discuss about &amp;quot;what is good about the design and the value of the design and can we apply those concepts in the modern world etc.&amp;quot; I want to know more about it.
+    </li><li>The most difficult thing for me to understand was the fact that this is somehow more efficient than a normal answering machine or even a web interface. Mostly since I was born during the internet age and I don&#039;t know of a time when the internet didn&#039;t exist.
+    </li><li>The way marble answering machine works. I think the only good thing about the machine is we can choose which message we want to hear and skip.Unlike the ones on these days where we have to hear every message as there is no way to skip.
+    </li><li>For todays lecture most difficult thing I encountered was a question related to Durrell Answer machine. The question was &amp;quot;what is the value of this design ?&amp;quot;.  I was not able to understand the meaning of question.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>I most important thing I want to know more from today’s class that how an old concept can be applied to fill up the loopholes for now a days service. Some devices from earlier days can be outdated today, but in terms of logic and effectiveness they can perform best if they can be updated. Today I have gone through how the concepts of marble answering machine can be applied into our today’s voice mail system. In the similar way we can think of some other technologies too.
+    </li><li>In today&#039;s class professor played a video on marble answering machine. It can be used in voicemail mailing systems. I would like to know more about this.
+    </li><li>During group discussion we only focused on positive aspects of the marble answering machine from the textbook however I really wanted to trash talk it and bring up negatives
+    </li><li>In today&#039;s class we have discuss about machine working flow. The good things about machine learning is that it is interactive and easy to use. It help the blind people to identify physical things.  In this process no manual is need. I would like to learn more about this topic.
+    </li><li>In todays lecture we did a group activity where we discussed about the video we watched previous class which was about &amp;quot;Marvel Answering Machine&amp;quot;. The most important features that I noticed which are kind of useful are the user friendly and easy to learn. And the thing that I want to see in the new answering machines is that it would be great if it is possible to share that marble so that it is easy to share, also it would be great if it had password so that no stranger can access the information.
+    </li><li>I would like to know the design concepts of the marbel answering machine which we looked over today in the class
+    </li><li>Should interfaces have an acceptible level of difficulty? With the ball voicemail system it provided ease of use in order to receive and look at your messages. With such a system however one might argue for how it might hinder the use of the system. Voicemails can contain vital information so casualizing the interaction might make the response to the information less important to the user. However by being easy it might help notify users quicker to specific vital information. What is the correct balance?
+    </li><li>I would like to know more about the design concepts about the answering machine viewed in the class.
+    </li><li>The idea of the marble answering machine and how it had some important features such as being user firendly and easy to learn. There are some other features that I would like to see in modern answering machines, such as segregation of the voice notes based on a tag, portability in the sense that I can send/give the voice note to anyone for listening, etc. I will read more into this and if I find some good content, I&#039;ll also update the Class Wiki.
+    </li></ul>
+
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=wiki">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/05_Mon-12-Sep-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

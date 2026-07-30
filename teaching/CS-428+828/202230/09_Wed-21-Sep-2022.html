@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202230/09_Wed-21-Sep-2022.html" />
+    
+    <title>Mtg 09 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 09 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/09_Wed-21-Sep-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/",
+        
+          "name": "202230"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/09_Wed-21-Sep-2022.html",
+        
+          "name": "09 (Wed-21-Sep-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202230/">
+        202230
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      09 (Wed-21-Sep-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 9/36: Wed-21-Sep-2022
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="08_Mon-19-Sep-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="10_Fri-23-Sep-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I encountered
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+          Administration
+        </h4>
+        <ul><li>
+                Happy Wednesday
+              </li><li>
+                <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1900809&amp;view=1">
+                  Attendance
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1663740000&amp;course=24538">
+                  Class calendar for today
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=24538">
+                  Upcoming events
+                </a>
+              </li><li>
+                Project Groups
+              </li><li>
+                Intuition
+              </li><li>
+                <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">
+                  10 Usability Heuristics
+                </a>
+              </li><li>
+                <a href="https://www.nngroup.com/articles/two-ux-gulfs-evaluation-execution/">
+                  The Two UX Gulfs -- Evaluation and Execution
+                </a>
+              </li></ul><h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><ul>
+      <li>
+        <a href="https://dl.dropboxusercontent.com/s/9mv9jfyz3hqmmh6/9%20-%20Password.pdf?dl=0">
+          9 - Password.pdf
+        </a>
+      </li></ul>
+      <div>
+        <video width="400" controls="" autoplay="">
+            <source src="https://dl.dropboxusercontent.com/s/w7gftr2xe0mfp0c/9%20-%20img-8.mov?dl=0" type="video/mp4" />
+        </video>
+      </div><div id="mtg_pix_09" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_09" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_09" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_09" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_09" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_09" data-bs-slide-to="4"></li>
+      <li data-bs-target="#mtg_pix_09" data-bs-slide-to="5"></li>
+      <li data-bs-target="#mtg_pix_09" data-bs-slide-to="6"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/rqfc4hv0q2oo0p7/9%20-%20img-1.png?dl=0" alt="9 - img-1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/t14a50wqur75sk3/9%20-%20img-2.png?dl=0" alt="9 - img-2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/26j05ehslgok8f4/9%20-%20img-3.png?dl=0" alt="9 - img-3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/e9ic0jcdbkrucnb/9%20-%20img-4.png?dl=0" alt="9 - img-4.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/wg8npk6mvcainzn/9%20-%20img-5.png?dl=0" alt="9 - img-5.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/kf2z15xff2vjw8f/9%20-%20img-6.png?dl=0" alt="9 - img-6.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/oynxllex56nul7t/9%20-%20img-7.png?dl=0" alt="9 - img-7.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_09" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_09" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Now I want to distribute this papers between you. If you don't want to participate into a study or you are not a third year or fourth year undergraduate student, you can pass it to your next classmate.
+          </li><li>
+            
+            Okay, great. Yeah, sure, go ahead.
+          </li><li>
+            
+            Any questions? Yeah.
+          </li><li>
+            
+            If you have any question you can ask me right now. you Yeah. You. gains to use Good. Good evening the students please keep in mind if you want to participate into my study, my email you can find my email address at the end of this paper, so you can easily send an email to me. Just send me just tell me if you want participate into my study after that. Right cable wasn't there no that's. 17 was
+          </li><li>
+            
+            thank you so much, everybody. Thank you so much Hepting for giving me this opportunity to present my work into your class. Have a good day.
+          </li><li>
+            
+            2014 Anyway so here's my public service announcement for today. Don't cook chicken and nightfall I was reading a bit more about that
+          </li><li>
+            
+            so my wife told me
+          </li><li>
+            
+            she heard about it again yesterday and I said I was speaking to the anchor on the news but apparently it's been around since 2007. Theory sports
+          </li><li>
+            
+            Well, the issue is cooking.
+          </li><li>
+            
+            Whether the chicken safe to eat and another question but cooking with NyQuil changes, vaporizing some ingredients which could be harmful for your lungs just a bad idea. So maybe a question is
+          </li><li>
+            
+            that's the best security. Don't believe
+          </li><li>
+            
+            so maybe a question from a user interface. Perspective. Even computer based perspective is out. People respond this stuff be empowered to stop spraying
+          </li><li>
+            
+            Okay, so
+          </li><li>
+            
+            I want to talk a bit about so I've I've made visible the projects. I think I think things have the correct dates now but I'll double check that the Gradebook matches up with this so the Gradebook doesn't have strange entries in it. I believe so that's in case you can let me know about that. But so if you go to this page, this part of the page and look for project group and members and click there, you should be able to if you have a project group set up, you should be able to see a project group. If you don't see anything here send me a note. I got a note or two yesterday. Maybe I still have I still have to process.
+          </li><li>
+            
+            So if you aren't in a group and let me know. And after today I'll fix up people who aren't in groups using my own superior skill of putting groups together randomly. I wouldn't say it's a superior skill but I know I can do that.
+          </li><li>
+            
+            Okay, so let me read that. So project groups, please check that you are in the group do spec. And you can do that by clicking on this link private group and members so if you don't see yourself in a group or the group isn't what you expect. So it's not what you expect. Let me know. I'll fix it. If you don't see a group, but you have an idea for a group let me know and I'll set that up. And by the end of today, I will have gone through all the requests and then I will make adjustments I will finish to fill up the groups so ever it'll be in a group aside from people in a 28 who are doing an individual project
+          </li><li>
+            
+            Okay, so
+          </li><li>
+            
+            if you're in a 28 and you have you'd like to work on your own research, let me know and I'll put you in a group with one. I know it sounds fine to be a group of one but groups is the way it's organized in your course itself. It can be one can be more than one person.
+          </li><li>
+            
+            Does that seem okay?
+          </li><li>
+            
+            Okay. So we do. So that's the link on the webpage so I want to talk about some ideas related to. Bigger Okay, so the first individual assignment I've asked you to take on the beta teacher for learning role in your courses, any questions and so I want to talk about some ideas related or how we can approach the idea of empathizing with somebody else how we can think about evaluating an interface
+          </li><li>
+            
+            so I wanted to thank first of all. So maybe user friendly is a bit too. too broad. Just description for the users and what are what are being friendly to all users or. And, and we can think of some more particular things about user what user friendly is as you get into a more specific case.
+          </li><li>
+            
+            So the other
+          </li><li>
+            
+            term that we had came up in our discussion the other day was intuition or whether an interface is intuitive and so what what does that mean in practical terms? Am I still speaking loud enough for the back? Yep. Back row. Can you hear me? Okay? Say How can you get the door we're not getting contradictory so Norman doors aren't intuitive because the Norman door is one that behave behaves in a way different from what's indicated.
+          </li><li>
+            
+            So, if we can
+          </li><li>
+            
+            operate the door without thinking about it, if we see a push a panel on a door that says push and push it, and we go through and we don't encounter a locked door, we don't cover it and kind of resistance and go bang our head against the door because expecting it to open properly that's intuitive. Maybe.
+          </li><li>
+            
+            Does that make sense? So what are we doing dealing with computer software? How do we think about an interface being intuitive?
+          </li><li>
+            
+            Or do you have something you're laughing with? Me or or neither? Okay, thanks. That's allowed. Well, the others allowed to that anyway,
+          </li><li>
+            
+            so maybe something like self explanatory. So, for example, it can go through designing website is one where you can maybe like just drag elements. So you can sign up
+          </li><li>
+            
+            yeah. So
+          </li><li>
+            
+            So we'll talk about that in a minute. So we might say computer interfaces with direct manipulation so as my writing should i What's what's the lowest point on the board? I should right? So so. live above Okay, I'll try and keep that in mind.
+          </li><li>
+            
+            Okay
+          </li><li>
+            
+            so computer faces allow us to directly manipulate things like drag icons around the screen or a touchscreen, you can move things around, so on. So that's a particular style of interaction that we can can use so the question is how do we develop intuition
+          </li><li>
+            
+            so Okay.
+          </li><li>
+            
+            So now we can see the outcome of good design is consistent Okay, so the question is if it's consistent with what the rest of the standards I guess results system Yeah, but like yeah, like almost the same thing. everywhere so,
+          </li><li>
+            
+            what standards are so maybe we can say, we have an idea of what's an intuitive interface
+          </li><li>
+            
+            based on our experience with other interfaces. Control V. Control C and control V for cut and paste. It's developed over the years it didn't happen on the first
+          </li><li>
+            
+            1940s When the first computer system and they said let's make a ctrl v. control c control v has cut and paste. It didn't show it exist as a concept so it came about over time.
+          </li><li>
+            
+            So, so when we develop new interfaces of new concepts it's a process of trial and error. So some might be better than others anyway.
+          </li><li>
+            
+            Could you make the argument of time because some stuff wasn't necessarily intuitive when it came over just over time and got accepted like those designs I think it can be pretty well defined how to use the left click or right click and sometimes the school or extra buttons on the sides but for the most part, every mouse is now left to right click but I remember back in the day used to have like, balls that you can stand there the buttons around the balls and some things didn't even have mice baby computer by example. Tradition so
+          </li><li>
+            
+            on the Mac, the most handy one so I'm not sure I know. I know there's a trackpad on my on my MacBook Air. And I don't have the latest version of the mouse. The mouse. So it's an accessory has a couple of buttons that are real, so they can swipe. Yeah. And so I have a trackpad and I can configure one finger, two fingers, three fingers.
+          </li><li>
+            
+            I get some unexpected behavior from it. Sometimes I've tried to fix it a little bit with settings but it's it's a little difficult to do I want to tell you the story about the first mouse I didn't even know that the person who developed the mouse to begin with
+          </li><li>
+            
+            I thought IBM was the first the first people to make the kind of first business
+          </li><li>
+            
+            and maybe the first commercial PC mouse was IBM that wasn't the first design of that anyone heard the name Doug Engelbart before I don't remember the year Exactly. Do you hear you g duck Engelhardt? Yeah. If it's not going to make it better for you if I write Douglas make sure that she is. On so the way it was designed to add some buttons with the bottom and two wheels, one
+          </li><li>
+            
+            in the x direction and one in the y direction. So it wasn't maybe as smooth as some of the current designs. So you didn't make a ton of money off that.
+          </li><li>
+            
+            But the idea was that's what the idea was from the late 60s So
+          </li><li>
+            
+            thanks he gave the mother of all demos. I think it was called The Fall joint Computer Conference in 1968.
+          </li><li>
+            
+            We demonstrate a system with a mouse and then for the other the other input devices according keyboard. Anyway and he he later won ACM Turing Award
+          </li><li>
+            
+            okay. So I think interpret. So
+          </li><li>
+            
+            that brings up the issue of intellectual property and I think that there are some designs that are promoted. Not because they're good but because French and other people's patents are required licenses. So you could
+          </li><li>
+            
+            you could see this peculiar ways of being and maybe even pick up your own examples for that
+          </li><li>
+            
+            so, intuition is is a good concept to have when we're thinking about interfaces. But it's not it's not separated from context. So our intuition comes from other tools that we're using. So I want to mention. So they're showing you the link. an attendee is really heuristics. Yeah. 9094. So, when we think about using an interface, we can we can have
+          </li><li>
+            
+            a measuring stick, so a metric to evaluate design and see whether the interface is good or bad or whether it's just a personal me there are some things that my wife says, or just my my particular ideas about things. So it won't necessarily translate to everybody else.
+          </li><li>
+            
+            But using this list, so I'll just read through the list and then we can
+          </li><li>
+            
+            so visibility system status. design should always keep users informed about what's going on through appropriate feedback within a reasonable amount of time. There's a match between the system and the real real world. The design should speak the user's language use words phrases, concepts familiar to the familiar to the user rather than internal jargon. should follow real world conventions making information appear in a natural logical order.
+          </li><li>
+            
+            user control and freedom. So the users often perform actions by mistake. They need a clearly marked emergency exit to leave the unwanted action without having to go through an extended process so
+          </li><li>
+            
+            I using my phone to take pictures and then send them to Dropbox made me feel like I didn't have much control because I had to go through the process of selecting the photos and moving them
+          </li><li>
+            
+            and it's a nice feature but I made some mistakes and I did couldn't go back to undo them. I had to start again. So that's an example. So you may be able to think of examples of interfaces that don't follow these heuristics. Consistency and standards. Well, we've mentioned it here. On the last board users should not have to wonder whether different words situations or actions mean the same thing. Follow platform and industry conventions.
+          </li><li>
+            
+            Here error prevention, good error messages that are important but the best designs carefully to prevent problems from occurring in the first place. either eliminate error prone conditions or check for them and present users with a confirmation option before they commit to the action. So when you see when you get a series of alert boxes that said, Do you want to confirm and 99 times out of 100 Is it just needs to have a but the ok button clicked. But it's the one time out of 100 where it's really doing something that you need to think about that gets gets hidden in the in the mass of alert boxes that can cause problems. So that's what I think of when I see we'll hear prevention. So recognition rather than recall. So instead of having to recall a command for a certain function we just it's much easier to recognize it. flexibility and efficiency of use shortcuts hidden from novice users may speed up the interaction for the expert users such that the design can cater both to inexperienced and experienced users. aesthetic and minimalist design. interfaces should not can contain information that is relevant, irrelevant, or rarely needed. Every extra unit of information in an interface competes with the relevant units of information and diminishes the relative visibility.
+          </li><li>
+            
+            I don't know I think that is that clear. So a bit about the alert box example. We don't want to
+          </li><li>
+            
+            we don't want to put more importance information. So that can obscure the really important information. help users recognize, diagnose and recover from errors. Error messages should be expressed in plain language, no error codes and precisely indicate the problem and constructively suggest a solution
+          </li><li>
+            
+            and help and documentation. It's best if the system doesn't need any additional explanation. However, it may be necessary to provide documentation to help users understand how to complete their tasks Okay. In the last two minutes, I just want to introduce this concept of the Gulf of execution and evaluation the example here is in the textbook as well. So we'll talk about it in more detail. On Friday. So we have the user the person using the computer or the artifact So, this is supposed to be allowed to talk so there's information that flows two ways. So the person starts with the idea of accomplishing something they have a goal they like to accomplish maybe recording attendance in your courses. So they have that goal and they can convert that into steps into commands that can be executed on the interface. And then once those steps are taken, or alternatively you just hold on for one minute please for the conversations didn't help very much. Anyway, so the other direction so we can see that the interface is in a particular state. Whether we're on the right page or we have to use navigation but the flow of information this way. The user understands what's going on or what the impact of the commands were. So I think that's one minute late. I apologize for keeping your extra on a Wednesday. Anyway, so we'll pick up there on Friday. Okay. Thanks very much. For today. Is anyone for office hours? I was trying to be good about three and when I say I'm gonna be available I
+          </li><li>
+            
+            and help and documentation. It's best if the system doesn't need any additional explanation. However, it may be necessary to provide documentation to help users understand how to complete their tasks Okay. In the last two minutes, I just want to introduce this concept of the Gulf of execution and evaluation the example here is in the textbook as well. So we'll talk about it in more detail. On Friday. So we have the user the person using the computer or the artifact So, this is supposed to be allowed to talk so there's information that flows two ways. So the person starts with the idea of accomplishing something they have a goal they like to accomplish maybe recording attendance in your courses. So they have that goal and they can convert that into steps into commands that can be executed on the interface. And then once those steps are taken, or alternatively you just hold on for one minute please for the conversations didn't help very much. Anyway, so the other direction so we can see that the interface is in a particular state. Whether we're on the right page or we have to use navigation but the flow of information this way. The user understands what's going on or what the impact of the commands were. So I think that's one minute late. I apologize for keeping your extra on a Wednesday. Anyway, so we'll pick up there on Friday. Okay. Thanks very much. For today. Is anyone for office hours? I was trying to be good about three and when I say I'm gonna be available I
+          </li></ul>
+    
+  
+    
+  <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>The user interface Design is the most effecful for any person who is designing the websites or the Interfaces what is for the people understanding and it is the effectful tool for the person who is working on it. If the websites interfaces is very intutive then everything is very clear but the think which is not visible then it is very complex. So my understanding is to deploy such type of UI that will be easy for the understaning but remaining the user privacy policy.
+    </li><li>The most important thing I learned in this meeting was the 10 Usability Heuristics for User Interface Design. These rules will be very useful when we create or built a good and successful product to get the best customer satisfaction, such as the system being error free or giving the user the freedom &amp;amp; control such as if they placed an order by mistake, they should be able to modify or cancel it before it&#039;s shipped. This access will give the user sense of security and make them feel like they&#039;re in control
+    </li><li>I have learned about the concept of creating intuitive design today. It gives the chance to think about user centric design by maintaining some standards. I have also gone through some heuristics for interface designing. We can always give the user some control over the interface so that we can get some feedback for improving. But the system should be error preventive and maintain some consistency.
+    </li><li>Today in class we learned about the important concepts of intuition and heuristics for interfaces. I thought the concept of inution was especially interesting as sometimes designs can be confusing for users such as Norman Doors.
+    </li><li>The different heuristics for designing a good interface.
+    </li><li>Today our teacher took about Empathize in UI UX  as well user friendly and Intuitive (intuition) and we understand How to do we develop intuition in ui ux :  out come of good design if its consistent with standards other example and …
+    </li><li>Today we discussed about assignment 1, what is intuitive design and 10 heuristic design principles
+    </li><li>Today&#039;s lecture was on the 10 Usability Heuristics for User Interface Design wherein, I&#039;d understood the following concepts in the designing of a system&#039;s interface, namely, Visibility of system status, Match between system &amp;amp; the real world, User control and freedom, Consistency and standards, Error prevention, Recognition rather than recall, Flexibility &amp;amp; efficiency of use, Aesthetic and minimalist design, Help users recognize, diagnose, and recover from errors &amp;amp; Help &amp;amp; documentation.
+    </li><li>We learned about the important concepts of intuition and heuristics of interfaces. Also learned about gulf of execution and evaluation.
+    </li><li>A website can and should be made intuitive for easy navigation for the users. This can be achieved when one sympathizes with the user and the developer thinks McDonald’s the user’s point of view and sticks to the norm. New features can still be adde for innovation and creativity if the new functionality can make the process easier and better.
+    </li><li>In Today’s lecture we spoke about Assignment 1 (Empathize with Teachers). Also we focused mainly intuition and some examples. Then we wen on to Talk about the 10 Usability Heuristics of an Interface. Also the Two UX Gulfs, Evaluation and Execution.
+    </li><li>The balance of the Two UX Gulfs. Today&#039;s class examined the challenges people go through in order to interact with different technology environments with their user interfaces. Through an article, two gulfs were brought out of the Gulf of Evaluation and Gulf of Execution. These work in tandem with each other as the system state takes evaluation for the world(system) to connect to the state and evection works in taking a person&#039;s actions and connecting to the system.  They work together to create a loop.
+    </li><li>The most important and new thing I learned today is the gulf of execution and evaluation. The gulf of execution is what the user thinks they can do with the system versus what the system actually does for them. The gulf of evaluation is figuring out how well the system can support the user through the given information of the system state.
+    </li><li>The most important thing about today was intuitive and interactive websites
+    </li><li>The process in which we develop intuition: if it is considered standard or something we are used to then its considered intuitive design. If we see a software that has a function which is not doing what is suppose to do on other software then it creates a usability issue for users. There will be an agreement over time but until then it is going to create confusion.
+    </li><li>Norman door and intuition was very informative. Had a new concept.
+    </li><li>In the 9th Mtg Dr. Hepting talked about “Empathize with Teacher” and he asked whether this is user friendly or not? This can be too broad for thinking of specific  case and people. Also he mentioned some features of intuitive design like invisible empathy. At the last part the way to develop intuition like: out come of the good design, consistent with standards, and agreement overtime.
+    </li><li>10 Usability Heuristics for User Interface Design is very important. Designs should keep users informed about what is going on. Designs should be clear enough to users about what they want easily and also be standard. In a good design it is so important to prevent errors. All the information in a good design are relevant. It is so perfect to give the users help and documentations. In this way, they can find everything fast. Intuitive can help the design well. Norman Doors are not intuitive!
+    </li><li>I learned how the design of interface cam effect personal emotions like intuition and empathy. I would also like to learn more that how can an interface attract users.
+    </li><li>In today’s class we discussed about how can user be empowered to stop misinformation and after that had more details about our first individual assignment which is empathize with teachers. Should it be user friendly or intuitive?. For it to be user friendly we should think about specific cases and people. The Norman doors are not intuitive. The doors should be invisible means we don’t get distracted by it and get through it easily.
+    </li><li>In today&#039;s meeting we have learned some points about the empathy map which is our first assignment and then we seen the 10 usability heuristics after that we seen some points on evaluation and execution that we will discuss in detail in our next class.
+    </li><li>Making Empathy Map
+    </li><li>Heuristic design principles and what is intuitive design.
+    </li><li>The most important thing I learnt was about intution and how we can develop it. I learnt different ways it can be possible.  Just to add on that also saw an example for invention of mouse
+    </li><li>Today we learned about the intuitive user interface and how can one create intuitive user interface.
+    </li><li>I learnt about empathy and sympathy in the previous lesson, and today I learned how to execute execution and evaluation, which are both crucial in any ux design. The class began with &amp;quot;happy Wednesday&amp;quot; and discussed heuristics and their usefulness.  and I want to learn more about how to perform out and evaluate tasks more quickly.  and smarter
+    </li><li>Hello Prof. Hepting. Today you talked about the user friendliness of interface design and said that it is too general. Then, you introduced the usability heuristics and specially you discussed about user control and freedom. Finally, you talked about the two UX gulfs which are evaluation and execution. Thanks
+    </li><li>Today I learnt how to develop intuition among users while designing the interfaces. Better the self explained and intuitive the design, the user doesn’t have to care about the execution of interface, they can know just by looking at it. Also got to know about important heuristics for user interfaces.
+    </li><li>Today we checked attendance and then learned about 10 Usability Heuristics for User Interface Design and The Two UX Gulfs: Evaluation and Execution
+    </li><li>We discussed a few points about Empathising with teachers which included:
+    </li><li>today some discussions regarding discovery of mouse, intudition and the first assignment was done. in the beginning, prof.abbas came shared his new program for third and fourth year computer science students
+    </li><li>The ten heuristic usability and how it is useful but goes unnoticed in everyday designs and several interfaces. Besides that, I also came to know the gulf of execution and evaluation. Moreover, I want to know more about development of intuitive designs.
+    </li><li>In this lesson, we mainly discuss The 10 Usability Heuristics and The Two UX Gulfs -- Evaluation and Execution, as well as The directions of The assignment.
+    </li><li>The most important heuristic in my opinion is the error prevention one. I usually don&#039;t even read the buttons on the &#039;confirm&#039; alert that comes up when I delete something, I just automatically assume that it is going to be in the same location every time. So, the alert boxes should not switch the position of the &#039;confirm&#039; button each time just in case I accidentally click the wrong one.
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>The most difficult thing in today&#039;s meeting for me is the empathize with teachers
+    </li><li>The most difficult thing for me to understand is the concept of user friendly. We need to consider carefully to design the UI to be as friendly as possible for user.
+    </li><li>gulf of execution was a bit tough to understand for me
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>Today Professor discuss about empathy map, and I would like to discuss more about that.
+    </li><li>So in today’s meeting we discussed about the user-friendly interface which are easy to use because of the design being so simple. The UI is so interactive and friendly that a user can figure out the functions just by going through it. We also discussed about how to develop intuition, also I would like to know more about how to build an intuitive interface and how to make it more effective..
+    </li><li>I would like to learn about the concept of User control and freedom. I thought it was very interesting as it referred to the “emergency exit.” As Dr. Hepting mentioned, even though we might only use these exits 1% of the time, they are incredibly essential in these situations. I remember a time when I accidentally unenrolled myself from a course on UR-self service. I wished there was a confirmation prompt so that I would have gone through the hassle of enrolling again (the class had a big waiting list).
+    </li><li>I would like to more about the intuitiveness of the computer interface design as it turns out be really interesting after todays session. In simple words an intuitive design is the one that is easy to use and the user knows what to do right after they start using the product itself. So basically an intuitiveness geneally refers to the unser friendliness design patterns that we are comfortable in navigating stuff through the browsers and able to access the information without any kind or hinderances.
+    </li><li>I&#039;d ilke to know more about the answers to the question of how to empower users to stop viral misinformation. More education is one way of preventing misinformation. Censorship on social media like Twitter and Facebook was effective in stopping the spread of viral misinformation. We also discussed about developing intuition. I agree that documenting user experience over time is the best method of developing intuition.
+    </li><li>I am curious about knowing the 2 UX gulfs evaluation and execution as it was end of lecture meeting.
+    </li><li>Today, we had a discussion about how some interfaces are user-friendly and easy to use because the design is very intuitive. By just looking at the interface, the user can intutively figure out what and where they need to click and/or look. I would like to know more about what the UI/UX design phase looks like in order to build such an intuitive interface. What priorities/goals do the designers have when they are designing an interface that has to be accessible and intuitive at the same time?
+    </li><li>About empathy mapping.
+    </li><li>Execution and Evaluation are both very important. I feel like in the practical world, compared to the physical responses, people would prefer more visual ones. I would like to know more about the basic theorem related to user experience like these 2 gulfs.
+    </li><li>the thing about which I would most like to know more is 10 Usability Heuristics for User Interface Design and how each usability can benefit us and benefit out interface for the better. Also, I would like to know more about the empathy map and how could we feel, say, think and understand the role of teacher and introduce a better delivery for the users without letting them suffer while using our interface.
+    </li></ul>
+
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=wiki">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/09_Wed-21-Sep-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

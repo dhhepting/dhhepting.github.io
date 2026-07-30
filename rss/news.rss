@@ -1,8 +1,3 @@
----
-layout: rss
-redirect_from:
-  - /rss/news.xml
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
   xmlns:atom="http://www.w3.org/2005/Atom"
@@ -10,27 +5,28 @@ redirect_from:
 >
 <channel>
   <feed>News Feed for D. H. Hepting</feed>
-  <title>News Feed for {{ site.title | xml_escape }}</title>
-  <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-  <sy:updatePeriod>{{ site.feed_update_period | default: "daily" | xml_escape }}</sy:updatePeriod>
-  <sy:updateFrequency>{{ site.feed_update_frequency | default: 1 | xml_escape }}</sy:updateFrequency>
-  <link>{{ site.url | absolute_url }}</link>
-  <atom:link href="{{ page.path  | absolute_url }}" rel="self" type="application/rss+xml" />
-  <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-{% for sp in site.posts %}
-  {% if sp.url %}
+  <title>News Feed for D. H. Hepting, Ph.D.</title>
+  <description></description>
+  <sy:updatePeriod>daily</sy:updatePeriod>
+  <sy:updateFrequency>1</sy:updateFrequency>
+  <link>http://www2.cs.uregina.ca/</link>
+  <atom:link href="http://www2.cs.uregina.ca//~hepting/rss/news.rss" rel="self" type="application/rss+xml" />
+  <lastBuildDate>Wed, 29 Jul 2026 23:32:30 -0600</lastBuildDate>
+
+  
     <item>
-      <title>{{ sp.title | xml_escape }}</title>
-    {% if sp.excerpt %}
-      <description>{{ sp.excerpt | xml_escape }}</description>
-    {% else %}
-      <description>{{ sp.content | xml_escape }}</description>
-    {% endif %}
-      <pubDate>{{ sp.date | date_to_rfc822 }}</pubDate>
-      <link>{{ sp.url | escape }}</link>
-      <guid isPermaLink="true">{{ sp.url | absolute_url }}</guid>
+      <title>New Website</title>
+    
+      <description>&lt;p&gt;My new website, made using &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;
+with support from &lt;a href=&quot;https://travis-ci.org/dhhepting/dhhepting.github.io&quot;&gt;Travis CI&lt;/a&gt; and &lt;a href=&quot;https://github.com/dhhepting/dhhepting.github.io&quot;&gt;github.com&lt;/a&gt;, is now live.&lt;/p&gt;
+</description>
+    
+      <pubDate>Wed, 05 Sep 2018 00:00:00 -0600</pubDate>
+      <link>/news/website-deployed.html</link>
+      <guid isPermaLink="true">http://www2.cs.uregina.ca//~hepting/news/website-deployed.html</guid>
     </item>
-  {% endif %}
-{% endfor %}
+  
+
 </channel>
 </rss>
+

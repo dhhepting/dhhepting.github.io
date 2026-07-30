@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202230/14_Wed-05-Oct-2022.html" />
+    
+    <title>Mtg 14 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 14 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/14_Wed-05-Oct-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/",
+        
+          "name": "202230"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/14_Wed-05-Oct-2022.html",
+        
+          "name": "14 (Wed-05-Oct-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202230/">
+        202230
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      14 (Wed-05-Oct-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 14/36: Wed-05-Oct-2022
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="13_Mon-03-Oct-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="15_Fri-07-Oct-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I encountered
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+          Administration
+        </h4>
+        <ul><li>
+                Happy Wednesday
+              </li><li>
+                <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1900809&amp;view=1">
+                  Attendance
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1664949600&amp;course=24538">
+                  Class calendar for today
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=24538">
+                  Upcoming events
+                </a>
+              </li></ul><h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_14" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_14" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_14" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_14" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_14" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_14" data-bs-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/tdu2oiddu72jpwp/14%20-%20img-1.png?dl=0" alt="14 - img-1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/kch5a193nvjimxj/14%20-%20img-2.png?dl=0" alt="14 - img-2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/0jpbcb7vly0w6ck/14%20-%20img-3.png?dl=0" alt="14 - img-3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/zhewwx35n5f3vks/14%20-%20img-4.png?dl=0" alt="14 - img-4.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/gcw4x1p7rp5pxzi/14%20-%20img-5.png?dl=0" alt="14 - img-5.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_14" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_14" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            emigrants? Your pastor this second monitoring I kept trying to pull tap I can see I just like to reopen Okay Is everyone doing today so there's our QR code for today you can make the QR code on Windows eight titled puzzles or you have to shuffle the pieces to get the right code. You can do attendance to prevent people at home from
+          </li><li>
+            
+            don't make it so hard for people because I know they Well, depending on what kind of QR code it is, there's a block and we we did these cards for the binary guessing game. We've seen those cards, four cards. So the idea was to show you four cards you told me if you could remember you guess the number between zero and 50 and you tell me whether I show you a card you tell me what your numbers on that card. And then once you answer those four questions added the psychic energy in the room and guess your number
+          </li><li>
+            
+            I'll bring up next time and there's there's a few sets in the office if you want to pick them up anyway.
+          </li><li>
+            
+            seemed funny when I started writing it out but so there isn't a driverless cars because we designed them we put a QR code on. On Demand. We tried adding different graphics to the QR code. So some places we put the graphics you can still get the data from the QR code and other places are impossible. So I think I don't think you can mess with these corners.
+          </li><li>
+            
+            Okay, so
+          </li><li>
+            
+            you can excited for the binary guessing game on Friday. I am okay. That's good to hear. You seem to be a little bit short on students today. Anyway.
+          </li><li>
+            
+            So we'll talk about the exam questions so we've got this handled. So let's talk about the due date first. And so it's due a week from today. Is that all right for everybody or would you like a little bit more time? No, that's not it's too late. You do Friday and then
+          </li><li>
+            
+            we could do Monday. The 17th. Stover I met Chairman Friday of that week okay. So
+          </li><li>
+            
+            the current session of members of your group select an existing website or software application. So the idea is to look at something that's publicly available, because you're gonna want something that people have had experience with, or your group at least has had experience with and because you're going to have some people test, we're going to arrange it so that people will be testing your interface designs. So it'd be nice and people have experience with it as well. So and the reason you do something that's existing instead of designing something from scratch, it's a there are a lot of lots of opportunities out there for improvements. So we're not proud of the Golden project isn't to code something new or you build something from scratch, but it's the focus on looking at areas for improvement and making designs and so the first one will do a paper and pencil sketch. So that's the design you'll be testing with other people from class. And then based on your feedback and your experience in dealing with the tests you'll make some refinements to come up with two interfaces that you passed and then based on the feedback and your your insights in the process, accomplish one interface that you're looking for was to be
+          </li><li>
+            
+            Canada that you'll advance and we'd like you to do is make it more of a high fidelity prototype so kind of a mock up and you can use some of the tools that are available. You can do HTML you can do PowerPoint with buttons. So the idea is to illustrate your design, something that looks like it could be running on a computer. So you're not right. You're not creating the whole functionality interface. You're creating a mock up, it's running on the looks like it's running on the computer and giving feedback to people that you're not sure just demonstrating this higher fidelity prototype. Okay, so that's part four. The project.
+          </li><li>
+            
+            So the first part is is about understanding the issues so we're going to focus on empathizing, conducting research and to develop an understanding your users
+          </li><li>
+            
+            and to maybe understand the meaning of the speaker that's why I'm getting feedback.
+          </li><li>
+            
+            See that's hard to define is to combine your observations and observe where your user problem users problems exist. So I made a comment here that you can choose my website because we use it for examples of meetings. So we're, I think we're doing quite well with your courses with the attendance function as an example. So we do like that freedom to choose something on my website. I won't be upset if you did.
+          </li><li>
+            
+            I don't want to put you on the spot now to say your website sucks. It really needs
+          </li><li>
+            
+            it really needs some work so so I think I've I fixed that today. Page. So a combination of me update, using strict and cleaning up some of my JavaScript and then also browsers being updated to the current version. It seems to work so if you're please have a peek at at some time and let me know if you're still having if it shows up correctly or if it doesn't. Gonna get to the today
+          </li><li>
+            
+            so it's HTTP okay. So continuing is teaching.
+          </li><li>
+            
+            I'll check this one to see if it's. So notice this is working now. So let's come up with the links
+          </li><li>
+            
+            do you have a Mac? I think it would sneak so far it was working before anyway. So please let me know if you find problems. On this page or other ones. Working for me
+          </li><li>
+            
+            Well, that's good you don't have to do it now. Okay, so basically there are three phases in our design thinking approach.
+          </li><li>
+            
+            So about understanding what's going on exploring alternatives. So we're generating ideas about possibilities creating a prototype represents some expressions of our ideas. And then we're testing and implementing. So understand, explore and materialize so each of those has two parts.
+          </li><li>
+            
+            So the idea of the double diamond is imagine he's like diamonds first of all. So you start out and then you run your thinking you use divergent thinking to gather ideas, and you refine those ideas and then
+          </li><li>
+            
+            and then you diverge and converge again. So this is the first part that we're give me a link, or a better source for this then my poorly drawn diamonds
+          </li><li>
+            
+            Okay, so does that make sense? So there's three parts three things one should do. So first of all, so understand this involves at the empathize and define stages. So in your group so everybody in your group will describe a sufficient detail to be relatable, an activity and a user wanting to complete that activity. So if we want to take attendance then it's about making sure that you can scan the QR code or enter the password and then it might be a student who sits in the front row of the class every day. It's very engaged, but maybe doesn't have a computer or somebody who's not always coming to class or say, to see it when when the QR code comes up for right so the idea of being specific about who we envision as users of our interface. So that makes sense. Shows zoom in a bit for this.
+          </li><li>
+            
+            Okay, so
+          </li><li>
+            
+            you have an activity and to use a wind group activity. So on the 31st, we're going to have a guest from Center for Continuing Education, the Dean of that unit, because they've undertaken a review of their programs. Use personas and journey mapping as part of their process. So that's the kind of stuff that we're interested in doing here. So have you Christy shorts, I think. I will make sure that I have her name right before she comes. Okay. So describe and then empathize. So everyone in your group will create an empathy map for each activity and user. So if there are four people in your group each person will need for empathy maps and your group's mission will have 16 in total. So if the four of you are in a group, each of you describes an activity and a user you have in mind for that activity and then each of you do an empathy map. for that. Do we all have to choose a different user
+          </li><li>
+            
+            can that be overlapping the user we're envisioning?
+          </li><li>
+            
+            There can be overlap
+          </li><li>
+            
+            so we'll refine things a bit before going into the next stage. This is sort of getting some ideas so over time, you won't have to you feel refine your ideas of users
+          </li><li>
+            
+            and activities.
+          </li><li>
+            
+            So together as a group, identify specific aspects of the current interface that cause problems for the users, and look to examine the roots of those problems. Identify whatever user needs may be unmet. So don't worry about solutions or fixes or just trying to illustrate a word or some issues. You don't have to solve the problem. You just want identify it and solving the problem as part of the process.
+          </li><li>
+            
+            Does that make sense? Okay, so seem okay. All right. So I thought maybe we would just continue our discussion on attendance, and think about how we might approach design improvements. And then also talk about the today page. So what's attendance? Let me switch to that okay.
+          </li><li>
+            
+            So that's anyone else? have different experiences? With this? Page? So, what would what would be the downside? If I can go to this page and say see the QR code and then scan it or
+          </li><li>
+            
+            I think we need to establish what our goal is within 10 minutes because is our tracks two minutes are shoring up? How do we How much do we care about false positives and how much does it matter if people are getting into the systems who are skipping class? Because it's our goal to get into people who are in class and will lead a more intrusive whatever our goal is just a slight reward than it needs to be. unintrusive and seamless.
+          </li><li>
+            
+            Yeah, so why not? So why don't we get the QR
+          </li><li>
+            
+            code
+          </li><li>
+            
+            so that reminds me, let me come back to editing. I think I feel like it should know that I've switched roles and not giving permission there.
+          </li><li>
+            
+            Okay
+          </li><li>
+            
+            so I think I've disabled the password. Switch back into the role Yeah, so
+          </li><li>
+            
+            maybe it's
+          </li><li>
+            
+            maybe it's just an added layer of complication to do the password. at all
+          </li><li>
+            
+            just to present right. Reason not changing.
+          </li><li>
+            
+            Well, the thing we're changing is the administration so that I don't have to show you the password.
+          </li><li>
+            
+            I don't have to show the password because you already posted the password on your website, right. So we can just do it ourselves without you. You know, presenting it to us. Yeah, okay. I prefer to having the password because this shows that students are still recommended to show up instead of just presenting or showing up, the faster they can just click on present say, Am I doing something else?
+          </li><li>
+            
+            This is not really an interface solution, but it is a solution. So what you can do is you can either like that so it's just you just enter like what your status is. Maybe once or twice per semester. You do a random check data like paper so he's pass out the paper and Yes, everyone should write their name. And then if it doesn't match at the student will close attendance for the whole semester.
+          </li><li>
+            
+            Yes, that's right. Like there so you can see each student just reading like what
+          </li><li>
+            
+            if I broke my leg on the way to school or riding my bike and somebody gave me or something.
+          </li><li>
+            
+            Right the your it says here your presence and there is a field over there which says excused. So what do people use that excuse I don't know because you shouldn't even if it's like a thing so yeah, excuse yourself
+          </li><li>
+            
+            yeah, I don't think these are valuable to different
+          </li><li>
+            
+            states I
+          </li><li>
+            
+            think excused absence should be only available for the professor. Even the late
+          </li><li>
+            
+            reward honestly like if you're honest, like they are off.
+          </li><li>
+            
+            Give this is for participation. Participate in class. We have main cards you know who's participating you can just go after. Remember airstone wouldn't shut up. I'm not giving them any participation rights for a stupid game and jokes but some distance and stuff I'll get to participation so
+          </li><li>
+            
+            talking about trade, trade on us is the password and important it's worth the pain of having the password. Whereas if I don't have a password, you can log in your courses and when the class starts at 930 You can register you can click so the way it said with a password is different than punching a time card because time cards you have. They're usually in the break room or your independent employee area. Can you punch that you don't have to ask the boss for a timecard so removing the password seems like a reasonable way to do this. And it is a trade off between making
+          </li><li>
+            
+            right there's more sectors or tanks are like tight for the company. You actually get paid. You're not paying to go to work.
+          </li><li>
+            
+            Yeah, okay. So it's not a perfect metaphor. So we just saw what was our discussion and metaphors. We don't necessarily think we take everything from the metaphor though. We wanted to get some some essential ideas that are useful
+          </li><li>
+            
+            because we need to have an IP address restriction to do an activity there is a function in your courses for an idea.
+          </li><li>
+            
+            Yeah. I seem to come across that in the past. So the other thing is, if I'm giving you record attendance during the class
+          </li><li>
+            
+            these aren't
+          </li><li>
+            
+            so valuable, I think it's just if you click a 930 or 935
+          </li><li>
+            
+            or you click at 1015
+          </li><li>
+            
+            That's a good indicator zone I think so. trade offs. trade off is really encouraging just like with the time punching the time clock or time cards in here that you're tracking, you're giving the way to indicate they were here.
+          </li><li>
+            
+            So we want to focus on on that and not being here. Getting paid to come to class
+          </li><li>
+            
+            which is which doesn't work very well. So let's see All right. So and at the minimum, if I take off the password
+          </li><li>
+            
+            people can still people who want to record attendance. Start off to log into our courses. For a minute or two
+          </li><li>
+            
+            and do that
+          </li><li>
+            
+            so I think maybe we exhausted all possibilities was attendance. To do it, there was an opportunity for an improvement here that instead of recording
+          </li><li>
+            
+            status present late and these, these aren't really mutually exclusive either. Anyway, so there could be other ways. So just not require an answer here but requires some different thing. So you just record the time okay.
+          </li><li>
+            
+            So I thought maybe it's useful to discuss this page so the question it says Anyway, now that it's working seems to be working reliably. Is this useful?
+          </li><li>
+            
+            I can see myself using it.
+          </li><li>
+            
+            To be truthful. I can gather most information I need about the classroom, the Euro courses calendar page, which is quicker to access to jump to your list. It's not so much your page design and more so a factor of convenience. Because if I have to go through your courses to get to your page and when I'm once I'm already in your courses and the calendar is there I kind of already have a little summary of the calendar stuff coming up. So
+          </li><li>
+            
+            Can people access my web page?
+          </li><li>
+            
+            I find the most
+          </li><li>
+            
+            beneficial part of this assignment portion of your website plays out the assignments nicely and the countdown is also nicely
+          </li><li>
+            
+            put together. I was
+          </li><li>
+            
+            if there's an assignment due to the issue
+          </li><li>
+            
+            seven pages to display the most
+          </li><li>
+            
+            recent are like the nearest assignment coming up. So if we've done assignment one now
+          </li><li>
+            
+            we have this new project coming out. If I go out today, it'd be nice to have a reminder that hey, this is coming up.
+          </li><li>
+            
+            But you should be aware that you need to deal with insurance.
+          </li><li>
+            
+            So if so sticking with the today page
+          </li><li>
+            
+            would I indicate what did you get
+          </li><li>
+            
+            would it begin to show the length assignment here
+          </li><li>
+            
+            or at the end of the day?
+          </li><li>
+            
+            And then what about what about the structure in terms of half hours? So I I'm just reading the data from I'm exposing the way I've organized the data because I miss scheduled in half hour increments.
+          </li><li>
+            
+            So it'd be better to not have two entries for the course. Just have it go from 930 to 1030. And then, I could have three to noon time
+          </li><li>
+            
+            so well, we'll pick up the discussion on Friday. Again. If you have a chance to think about things that are on my website may see us Department website and
+          </li><li>
+            
+            how they can be more useful. That would be helpful. So I have office hours a day but I haven't appointment so try this afternoon Yes, we'll talk about the midterm. Before where would you say thank you for today one mentioned there tried to
+          </li><li>
+            
+            how they can be more useful. That would be helpful. So I have office hours a day but I haven't appointment so try this afternoon Yes, we'll talk about the midterm. Before where would you say thank you for today one mentioned there tried to
+          </li></ul>
+    
+  
+    
+  <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Similar to writing, metaphors are employed in web design to link real-world concepts and objects to the website&#039;s pixels. Time is of the essence when exploring a website because web readers have a shorter attention span than print readers. It may appear extremely little and something that can be neglected. A straightforward metaphor just has one connection between the subject and the metaphorical object. As a result, the subject receives a single meaning from the vehicle.
+    </li><li>In today&#039;s class we discussed the usefulness of password for attendance and Dr. Hepting suggested to remove the password altogether so students can submit their attendance without a password like clocking in for work which does not requires a password from their boss. One of the students also suggested to restrict the attendance so only people with IP address from UofR can submit it and we continued the discussion with the tradeoffs. He also discussed more about project and extended the Due date to Oct. 17f
+    </li><li>Today’s discussion was quite interesting as we had to discuss about the pros and cons of having a password and not having a password for online attendance marking. Also we had few discussions about pros and cons of professors website. Overall enjoyed the class.
+    </li><li>In today&#039;s class we discuss about the Project part I, its due date is extended to October 17. He tries to explain with the example of website and discuss its flaws.
+    </li><li>I thought the discussion of having a password was interesting as an agency vs security issue. Although I feel like the password is unnecessary as students who are not here can easily get the password through their friends.
+    </li><li>With interfaces, it is better to lay out what your end result should be (e.g., attendance: restrict who? What are we trying to capture) prior to developing the interface.
+    </li><li>The most important thing I&#039;d learnt today was about the concept of tradeoffs. Tradeoffs are basically the limitations or the compromises that a developer would be faced with, in exchange for offering/ modifying/ deleting a feature from a product. I&#039;d learnt this through the illustration of the attendance system, where the dilemma between an agency vs security style of attendance marking was discussed. The metaphors for the agency &amp;amp; security are &amp;quot;too general&amp;quot; &amp;amp; &amp;quot;too specific&amp;quot; respectively.
+    </li><li>Personally the attendance system works fine as it should they only thing is that honesty is the best policy so keep it open for the first 15 minutes of the class and the students can do the attendance without needing to tell them but with a password so that student who are absent cannot which in some cases they still can get the password or the alternative way would be to write the students name down in class but that is time consuming during the lecture time.
+    </li><li>The most important thing I learned today is assessing the necessity of each part of our functions. I had not considered the real necessity of having a password for the attendance activity. The password takes a considerable amount of time to be posted on the website and shown in class. However, it does not serve much protection, since it can easily be shared between students. Therefore, it might be more beneficial to have no password at all.
+    </li><li>In todays class, we discussed about the project assignment that’s due next week. We need to select a website and draw empathy maps for different roles.
+    </li><li>The most important thing I learned today is the trade-offs of having to use a password for attendance. No password means it will be easier and more convenient for people to log in to their attendance, but having no password also means that there is less security for blocking those who are not in class.
+    </li><li>The most important thing that I learned was that Attendance is a great cause of concern for students as counts towards your class participation. And there are different ways the attendance can be recorded both manually and online, but some students take an advantage of it by marking their attendance from outside the class while skipping the lectures which is not acceptable at any learning institution. Students must be asked to provide evidence whether they have attended the lecture or not.
+    </li><li>The attendance system works fine as it is set up now. I don&#039;t think much improvement can be made to it unless the professor decides to check everyone&#039;s student ID to confirm it. The professor&#039;s website is useful. I can find all of the course information on there easily. Some students made find some information on there to be redundant because they are available on UR Courses as well.
+    </li><li>How to improve tge attendance system in UR courses.
+    </li><li>In the 14th session, Dr. Hepting more talked about attendance and group project. The first thing he suggested was a new date for part 1. A few minutes later, he explained how students keep attendance records. He then suggested showing the attendance password/QR code directly to students. He challenged this issue with this question. Again using a few metaphors he tried to overcome the problem. In the end, he wrapped up the session with headlines.
+    </li><li>We resumed our discussion of UR Course attendance, particularly the use of passwords, in this class. He proposed attendance without a password, while other students preferred limited participation by IP address. We also spoke about how an attendance without a password is less safe.
+    </li><li>In the meeting, the importance of password to attendance was discussed. is it necessary or not. Privacy for password is important too.
+    </li><li>Today we discussed how to improve UR Courses website attendance metaphors. We also discussed how to make DR heptings website more user friendly.
+    </li><li>The most important thing which I learned today was Design thinking, trade off and about the attendance
+    </li><li>Today we discussed about metaphors of attendence and how can we make the webpage better and more accurate. We also discussed about group project and briefly about empathy maps.
+    </li><li>In today&#039;s meeting we discuss about group projects.
+    </li><li>started with &amp;quot;happy wednesday,&amp;quot; talked about the group project and extended it to October 17, and I learned that we had to create interfaces and select, and we had to compare our website using html or Powerpoint.proffesor also talked about some ideas related to the attendance, and the steps were for students to click on an attendance, be asked for a password, and why not display the qr code/passcode for the students.
+    </li><li>Dear Prof. Hepting. Today you talked a little about the course project and the process of doing it. Afterward, you discussed how the attendance system of the URcourses works and what we can consider to make a better experience for the users. Thanks
+    </li><li>Today, we could dive more deep into the attendance issue and the most important thing I learnt from it was the scrutiny of the issue itself. After exploring different solutions, there were two trade offs that could be identified: Security and Metaphor being too specific/to general.
+    </li><li>Today we discussed the timing of midterms and then discussed the details of the next group project.
+    </li><li>Today, we discussed more about the metaphors for attendance and whether passwords are useful. The metaphors have some tradeoffs, they can never be too general or too specific and need to be balanced. We also discussed about the projects and Dr. Hepting mentioned that we can use his website for the project.
+    </li><li>How to improve the attendance and disccussed about the project.
+    </li><li>the most important thing that I learned Is how we should the form the project and the UR Course attendance and especially the usefulness of password. He suggested attendance without a password while some students were more in-favor of restricting the attendance with IP address. We also discussed the trade of such as an attendance without a password is less secure.
+    </li><li>Today&#039;s discussion continues based on a group project and the role of metaphor. After that, we exchanged different views in the group and determined some ideas and directions for implementation
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>If we want to cheat on attendance, we can do anyhow. I like classic way calling everyone&#039;s name, so instructor can remember students&#039; names ang faces.
+    </li><li>The thing I found difficult to understand was about the tradeoffs. I could not really understand what are tradeoffs and how it works in terms of attendance when you discussed in class.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>The thing about which I would most like to know more is actual design philosophy.  Having to ride a bus to university to get an attendance mark just to spend the whole class debating on how that attendance should be taken is getting very exhausting.
+    </li><li>In today’s meeting we continued our discussion on the metaphors for attendance and also added if the password is useful or not. We also discussed about the Project and also DR. Hepting gave us permission to use his website for the project.
+    </li><li>I learned different ways to make website more interactive today
+    </li><li>The thing about which I would most like to know more is another example besides Attendance that we can explore more. Also what is agency vs security in trade offs that we talked about in class.
+    </li><li>I don’t understand why do we need “Today” section anyway?, When we have a daily meeting section already.  I would like to know how we could make it more useful?
+    </li><li>I would like to know more about how to analyze an interface.
+    </li><li>I want to know more about project section how it’s going to be also discussion on attendance is going on while Professor website is good as we can get details from there.
+    </li><li>Somebody mentioned that there should be a restriction regarding IP addresses for the attendance code. I&#039;m interested in learning if that is possible and if it would help with our problem of balancing participation marks and difficulty.
+    </li></ul>
+
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=wiki">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/14_Wed-05-Oct-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

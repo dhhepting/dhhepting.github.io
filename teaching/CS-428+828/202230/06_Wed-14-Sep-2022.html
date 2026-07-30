@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202230/06_Wed-14-Sep-2022.html" />
+    
+    <title>Mtg 06 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 06 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/06_Wed-14-Sep-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/",
+        
+          "name": "202230"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/06_Wed-14-Sep-2022.html",
+        
+          "name": "06 (Wed-14-Sep-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202230/">
+        202230
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      06 (Wed-14-Sep-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 6/36: Wed-14-Sep-2022
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="05_Mon-12-Sep-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="07_Fri-16-Sep-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I encountered
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+          Administration
+        </h4>
+        <ul><li>
+                Happy Wednesday
+              </li><li>
+                <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1900809&amp;view=1">
+                  Attendance
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1663135200&amp;course=24538">
+                  Class calendar for today
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=24538">
+                  Upcoming events
+                </a>
+              </li><li>
+                Individual Assignment update
+              </li><li>
+                Marble Answering Machine (and the class wiki)
+              </li><li>
+                User Experience v Usability
+              </li></ul><h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><ul>
+      <li>
+        <a href="https://dl.dropboxusercontent.com/s/ptyongg34oiwozr/6%20-%20Password.pdf?dl=0">
+          6 - Password.pdf
+        </a>
+      </li></ul><div id="mtg_pix_06" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_06" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_06" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_06" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_06" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_06" data-bs-slide-to="4"></li>
+      <li data-bs-target="#mtg_pix_06" data-bs-slide-to="5"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/dgr9kntt82dgnha/6%20-%20wb-01.png?dl=0" alt="6 - wb-01.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/6uebn5kavo57o78/6%20-%20wb-02.png?dl=0" alt="6 - wb-02.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/ca1ay6wqqw2vu26/6%20-%20wb-03.png?dl=0" alt="6 - wb-03.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/joy0q19wrgr20u6/6%20-%20wb-04.png?dl=0" alt="6 - wb-04.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/57tcuhn8fnzqr76/6%20-%20wb-05.png?dl=0" alt="6 - wb-05.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/oxl2cpwucwauyly/6%20-%20wb-06.png?dl=0" alt="6 - wb-06.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_06" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_06" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            classes canceled. No good try case six today so I remember now there's a hyphen in the Yamo file that is preventing this from splitting
+          </li><li>
+            
+            all this stuff but so what I've done here not to take away or stuns your name not to take away your material for the responses, but somewhat what I've done
+          </li><li>
+            
+            so I don't have to put the password up every day. I've made a PDF of it so you can access it from the webpage so you can not rely on me to put it on the screen or have it on the screen you can access it and if you want the password the password is still there
+          </li><li>
+            
+            you think fire at the end of the day or?
+          </li><li>
+            
+            No it's it's during class time. It works during class time. So I invite you to consider whether this is a good alternative
+          </li><li>
+            
+            to attendance so I want to mention about so we had 43 of 67 answers or 43 of you voted for the midterm. He tried to say again how sad is that better? Okay, so I'm asking is the sound better? I'm not asking for the front two rows, maybe the back two rows.
+          </li><li>
+            
+            Can you hear me okay? Okay, thanks. So you may have heard that September 19 is a federal holiday
+          </li><li>
+            
+            Yeah, I was curious about another one.
+          </li><li>
+            
+            So there's no holiday in Saskatchewan. It's it's declared a day of remembrance and commemoration Guys. So a question for you to consider is, is there something we might do to
+          </li><li>
+            
+            commemorate the queen? Remember the Queen Anyway, okay, so that's September 19. So we're still meeting.
+          </li><li>
+            
+            Now midterm date so I can display well, I guess I can change the settings but anyway, I didn't change the settings here. So we had four dates. Start with Friday the 14th. Monday, the 75th Wednesday Friday the 21st for votes 16.
+          </li><li>
+            
+            Yeah, so those of you who voted can see the results so I didn't change them to make them just available after the choice closed. So I made another run off choice I changed the setting. Change is saying so as a Friday noon whoever whatever whoever scored is
+          </li><li>
+            
+            not voted everyone will be able to see the results here. So So drop this one off the ballot. This one so because we had 16 People choose Monday and 23 people not choose part 27 You will not choose Monday the choice between Monday and Friday so that starts after class so we finished the finals. Yeah, well I just championship. Yeah, this is like this is all on September, October.
+          </li><li>
+            
+            Yes. Not talking about dates. This September talking about October. Okay, so I saw some people come in since we showed this so I'm trying something new for the passwords and the QR code. So I created an image here. You can go to the My my website for the meeting today and get the information yourself so you don't have to rely on me to put it up on the screen. That's the idea and I welcome your feedback about this as well. Okay, so things should be ready on Friday. I need to conclude a conversation with somebody on the fifth floor. About this on site. I want to make sure that things are resolved. But it support created this new role so that seems to have handled all the concerns. Okay, so we'll take some time on Friday to talk about answering questions about that individual assignment just the due date maybe. Still okay, it's Can you hear me now? Yes.
+          </li><li>
+            
+            Okay. So that that's that so I wanted to just talk about the wiki as well.
+          </li><li>
+            
+            Meeting for the eighth comes from eight groups for in class. So, for each meeting, starting competing for not the midterm. It'll take us to the end of the semester. So
+          </li><li>
+            
+            for each meeting, there's a group who I liked it I'm designating taking care of the summary of what's discussed in the meeting. So for meeting for group A, for meeting five Group B, and for meeting six, Group C, and so on.
+          </li><li>
+            
+            So there's I mean, you don't want other groups to add anything to that would get all that specific group.
+          </li><li>
+            
+            No. So I'd like all groups to add their discussions. So when we have in class group discussions, each in class group can post their discussion.
+          </li><li>
+            
+            What about different group deletes?
+          </li><li>
+            
+            There'll be a trade there'll be history edits. Here
+          </li><li>
+            
+            for our group as well, after meeting, like I posted it, but then it wasn't there but
+          </li><li>
+            
+            okay. That's it meaning five. Okay. So cut the history Yeah, well I'm wondering how to select two okay. So I can only compare.
+          </li><li>
+            
+            I think if you click for example, my name at the bottom, it'll let you move to the top one as well.
+          </li><li>
+            
+            It might just be that you're in teacher view and
+          </li><li>
+            
+            you can call today a very different view on mine.
+          </li><li>
+            
+            Okay, let me switch to student. So there's a question mark here. Let's click on the question mark to see what excellent help as you provided to our courses. Selected versions of the page may be compared in order to find differences. I think the
+          </li><li>
+            
+            radio button needs to be after the left hand radio button because it has to be a change that comes after the left turn radio button.
+          </li><li>
+            
+            Yeah, you can just convergence forward instead of having an experiment the little number of people and just see what it means. Okay, hey
+          </li><li>
+            
+            yeah, so it's not clear this is a separate link
+          </li><li>
+            
+            so there we compare two different versions. Each version independently as well. Yeah, it seems like the comparison elected is almost like a git push or merge where it shows you the differences. And the for versions.
+          </li><li>
+            
+            Now let's see what happens when I click Next.
+          </li><li>
+            
+            Those Americans seem to just voice their radio buttons. Which selecting prior now All right.
+          </li><li>
+            
+            Okay, so it's not Group B to the exclusion of other groups.
+          </li><li>
+            
+            So there's this view. I don't know who said you're seeing something different. Do you see this now but I'm hearing as a student All right. I can't. History
+          </li><li>
+            
+            I can only see I can't see all this. I can't get what I
+          </li><li>
+            
+            think you're looking at the right. It was acquired. Is that make sense? So having said that, I will. I don't know how to reliably get the table of contents to come up in the wiki page.
+          </li><li>
+            
+            So I don't know if I want to make this a group activity or not but let me go back to right so let me create a place. Okay, so by entering text inside double brackets, that'll create a link so, the read I think it's read I tell like says there's a link here. But the file
+          </li><li>
+            
+            the destination file hasn't been created yet. So if we click on that create a page okay, that's far so good. To go. But if we want to create it, think about a template for the meetings. So do you want to create a heading for class discussions and then everybody add something under that heading
+          </li><li>
+            
+            for example, okay. Okay, figure that out. Actually, let me test something that was a word, okay. So it's a problem with
+          </li><li>
+            
+            with the last one Okay. Okay, so just to review a little bit. You can see. So, it's a representation of all messages that are in the system.
+          </li><li>
+            
+            So we don't have to go through the wall to find one that is interesting. To us
+          </li><li>
+            
+            then the other things dimension I didn't mean to make this a tough question, when asked what the value is, but there's some lack of clarity about that I suppose. So. I was thinking why is it useful to go through the process of having conceptualizing and as you wish she was marbles
+          </li><li>
+            
+            because that presents the idea of using like an array instead of the normal answering machine we were it's like a queue. So you have to go the first one to get to the last one. But in a format you can just take one, two, whatever you want.
+          </li><li>
+            
+            Yeah, so I was thinking a bit more generally. I mean that that's a that's a specific example of the benefit. But going outside the usual paradigm for voice message systems or answering machines so does anyone has anyone seen this example also? Does that look great? I wasn't sure if it was three by three or four by four the problem has it Yeah. There's this okay. So before you look it up on the internet so the challenge is to connect all the dots without lifting your pen and use them those four lines Anyone want to take a shot at it? Okay. Someone who may not be familiar with it. That's one of the statements on the first statement
+          </li><li>
+            
+            123456. Okay, so what we notice about your potential solution is that we didn't go outside the boundary of the box. So think
+          </li><li>
+            
+            outside inside
+          </li><li>
+            
+            okay. Does that make sense? Okay. So now when people say things outside flies you know these that's the box I think of comes up so, in terms of implications for modern systems, I thought there's some interesting thinking outside the box. That we might use Apple, Apple air tags or tags,
+          </li><li>
+            
+            some arfid technology. But thinking less specifically about marbles that might get lat or arfid things that might get lost or just the issues of managing those physical representations, but there could be a web based interface you could see messages align for different people. Anyway, bro, the time people are giving me the universal signal, we're out of time because they're putting books away and eagerly trying to depart so thank you very much for today. have office hours and we'll talk about the group stuff on Friday take care
+          </li><li>
+            
+            I can just imagine like children eating or losing an order no question. For the individual project. I was thinking of doing like an HTML page that contain the important dates and create a web page it's easier access
+          </li><li>
+            
+            whether it be a database
+          </li><li>
+            
+            or a low yet, that was fun to work on. As my project for the ability to track your
+          </li><li>
+            
+            goals. So you want to do it individually that would be my project for the project. Oh all right. Right. Okay. Was kind of fighting.
+          </li><li>
+            
+            Thinking there wasn't.
+          </li><li>
+            
+            That sounds interesting. Yeah. Okay. You're all cuz you
+          </li><li>
+            
+            were crashing because the final final be like nine to 12 That'd be like a 24 hour
+          </li><li>
+            
+            topic. It's it's a chance to we'll be in here. So it will be I'll give you a paper and I'll be invigilating
+          </li><li>
+            
+            I gotta be like an open because I have another guys that final exams not the 14th. So I have to choose. If I should say both of them are like my mic as well as my practice and I just want to know because I remember do it we did or was mechanochemical practice
+          </li><li>
+            
+            Yeah, so decided essay format that was. past two years online so we can learn more. But it won't necessarily. Just because it was done a certain way in the past doesn't mean those are the kinds of questions we'll have future in this semester. We'll discuss. Thank you. You're welcome. We'll have to see
+          </li><li>
+            
+            if we can continue
+          </li><li>
+            
+            so over to you. I'm trying to create a template. And so what I've done so far is done all this and I also tried to change it so that the headings like match so hopefully the Table of Contents will so much I'm trying to make Oh, never mind. I think it's worth trying to make this a paragraph and it was just like okay let me just get the one thing I'm gonna say
+          </li><li>
+            
+            thanks, YouTube.
+          </li><li>
+            
+            thanks, YouTube.
+          </li></ul>
+    
+  
+    
+  <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>I think marble answering machine is so important in the sense of blind people and the disable people who are not able to capture all the scenario in the real time. It is also good for the people whom are the memory loos patient and who have to do lot of tasks. But it is difficult for the people who are not comfortable with this scenario. Most of the modern voice messaging service has been built based on this marble answering machine. This is not the user friendly for all.
+    </li><li>By the end of the class we had a discussion and learned the importance of thinking outside the box and not to limit our creativity. In this class Dr. Hepting also uploaded the QR code and passcode for the attendance to the website which will be very helpful and we also discussed the midterm date and will have an run off to finalize the result on Friday. .
+    </li><li>The most important thing I learned today that the marble answering machine is tangible and we can see all the messages at once instead of listening to them sequentially. Sometimes it gives better feelings than any abstract service. Any value can be added to any services if we can thin out of the box.
+    </li><li>From what I could gather today, it looks like the URCourses wikis are awful, and difficult to work with even when switching roles between teacher and student.  Given the nature of the posts the groups make, I wonder if forums would work better so that there can never be multiple students trying to edit at the same time.
+    </li><li>Today we did an interesting activity  where we had to connect a series of 9 dots using only 4 lines and without lifting our pen. It was an interesting experiment about thinking “outside the box”.
+    </li><li>today we talk about midterm again.and we want again choose a day between Oct 17 or Oct 21 after that we discuss about Marbel answering machine :  Good things :  -tangible  -can see all message at once  after that vale We solved a question by drawing!
+    </li><li>Today we discussed mid term exam dates, summary of meetings by group and also about out of the box puzzle.
+    </li><li>Today&#039;s lecture enabled me to understand the value of having a marble voice mail system in terms of thinking outside the box. Although conventional systems possess a set of instructions to access the messages, they could pose as a challenge at times, in terms of ease of use, familiarity and general usability. However approaches like the RFID voice messaging technique as mentioned could solve this issue by offering a more user friendly and secure approach for the user to interact with the system.
+    </li><li>The most important thing I learned today was thinking outside the box, and how this methodology allows one to formulate and create solutions which are both simple and effective. A good example is the new Attendance QR code distribution method. I only considered sending the link, but a file solution is both simpler and more effective. A link could have issues with confidentiality, but a pdf file is much safer. A file is also easier for students to access through any browser.
+    </li><li>When adding to class wiki, it is important to make sure you are not overwriting other students work. Make sure to only add and not modify other additions so everyone’s work stays visible.
+    </li><li>We spoke about the video we watched in the last meeting, the marble machine that is user friendly as well as efficient. The midterm date was also discussed. And the fact each group will now have to write down the classroom discussion in class wiki
+    </li><li>The most important thing I learned today is what value something like the Marble Machine brings. Sure, the machine has a lot of flaws, but it has creative ideas that people can implement. Most answering machines output messages through a queue; the marble machine lets the user pick out the messages in any order. The value that it brings is out-of-box thinking.
+    </li><li>discuss content
+    </li><li>Thinking of out the box can sometimes help us get solutions to a tricky problem. Like the example of connecting 6 dots with 4 straight lines without lifting the pen. It was pretty intersting.
+    </li><li>Today meeting was just about the discussion from the previous session about the Marble Answering Machine. Professor discussed the merits of using the Marble Answering Machine that is tangible and all the messages can be seen at once instead of listening them sequentially. Later, the professor has given a 3x3 puzzle. Our task was to join the dots with just 4 lines without lifting the pen. He asked us to think outside the box  in order to solve it. After all failed attempts, professor himself drew it.
+    </li><li>I learned that some features of UR Courses website has poor user interface design. The professor and the students were struggling to figure out how the Wiki page works on UR Courses. It could not be viewed in consistent format and the table of contents could not be consistently displayed.
+    </li><li>The date for the midterm was discussed in class today. It appears that either October 17 or October 21 are the final dates for our midterm. Due to an ongoing issue with showing our student ID, we were not able to discuss the first assignment, but we may have more information on Friday. We did an interesting activity at the end of class that challenged us to think &amp;quot;outside the box&amp;quot; by connecting all 9 dots using only 4 lines without lifting our pen.
+    </li><li>Today we did an interesting &amp;quot;thinking outside the box&amp;quot; activity near the end of class where we had 9 dots in a 3x3 grid pattern and had to connect all of them without lifting our pen and using only 4 lines. This was a very interesting concept that I got to learn which made me think a closely about this question in an interesting way.
+    </li><li>Marble answering machine has good things. It is tangible and all the messages are seen at once instead of listening to them sequentially. Also, We had the interesting activity “Outside the box”!
+    </li><li>We discussed about the marble answering machine and about the machine design, it&#039;s value and application. I would like to know more about the application of the machine in real life.
+    </li><li>I have not attend the class due to some reasons so I don&#039;t know about today&#039;s meeting.
+    </li><li>In today’s lecture I learned about the new place where I can find the password for my attendance. Also few instructions about the First individual assignment in which the student id will be hidden which is beneficial for all.
+    </li><li>The wiki and how it would benefit all the groups were the most important thing I learnt, and it was also beneficial for students to express their views on a weekly basis and assign each group the task of summarising the class.encouraged to solve a puzzle outside of the box, and spoke about the marble answering machine. attendance passcode using PDF helped the students seated on the back benches.
+    </li><li>Today we checked attendance and then watched the class wiki to see what other groups thought about design. Then we discussed a lot of issues
+    </li><li>Started with a happy Wednesday. Talked about the nature of the class. Also mentioned to talk about the individual assignments the next Friday. It was an interesting class as always. Thanks.
+    </li><li>Today, the most important thing I learned while discussing the Marble Answering Machine was that it is important to think outside the box. The whole design of the machine is non-conventional and inspires us to think outside the box. The example of covering all the points of a 3*3 grid with 4 straight lines also shows how there are some elegant and innovative solutions if you can try and think outside the box.
+    </li><li>About the good design in marble answering machine and even the new puzzle-thinking outside the box.
+    </li><li>the most important thing that I learned is about think outside of the box and how we can think critically that will help us for this class.
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>I struggled at first with the wiki history system but with a little help from the prof and my friends I figured it out. It was also hilarious how he showed the entire class a dude who randomly deleted everything off the wiki.
+    </li><li>Marbel answering machine was a very interesting eachtime an incoming voice is recorded. topic I learned today. The most interesting thing I learned today is it&#039;s working pattern, it spits out marble. The aim was to create a phone answering but lack of privacy is biggest disadvantage here as anyone at home can listen to anybody&#039;s private message.
+    </li><li>I&#039;m just starting to attend classes, and I&#039;m figuring out what to do and how to do it. I first heard of the marble answering machine, so I looked it up on the internet. I still do not understand the contents of the figure created by connecting the dots described last. I think Dr. Hepting explained something in the sense of breaking away from the existing stereotypes, but I still don&#039;t get it.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>In today’s class we discussed about the possible mid term dates. Then professor explained how to respond to the meetings to summarise the group discussions. Then we studied the characteristics of good design for marble answering machine and values.
+    </li><li>In today&#039;s class we discuss about midterm date it can be conducted on17 or 21 October. Next we do the out of the box activity, we need to used all the 9 dots and without lifting our pen and only 4 lines are allowed to use. It will be fun to do this kind of activity more.
+    </li><li>Learning to use UR Courses and all the different options available.
+    </li><li>Good things about the marble machine are that it is Interactive, User friendly and Tangible. The value of the marble answering machine is that it help the people who are not tech savvy, the voice messages can be played back easily, it arranges the message in order it was received and also it determines who the message is for and can directly call back the person if needed.  Also narrowed down the Midterm dates October 17th or 21st.  did a puzzle in which we have to connect 9 dots using 4 lines.
+    </li><li>I would like to know more about implementing the marble answering machine in real world and we talked about midterm.
+    </li><li>At the end of today’s class, Dr Hepting showed us how to connect a 3*3 square of dots using only 4 lines. This helped to think outside the box. I want to know about how we can apply that kind of thinking when building designs for our interfaces.
+    </li><li>To what extent should ingenuity be a factor in user interfaces? Problem-solving and the way you complete tasks have creative action in thinking outside the box. With the marble machine, the tangibility can be considered ingenuity when considering voice mail interfaces and with the dot puzzle, you had to draw outside the box to connect the entire 3x3 grid.  Is there value in having some ingenuity in any design or are there instances that should only follow proper interface design patterns?
+    </li><li>I would like to more about the implementation of the marble answering machine in the real world and with user interfaces.
+    </li><li>I would like to know more about how to use the course wiki?
+    </li><li>I would love to know more about the group project and assignment 1 so I can get a head start on it.
+    </li><li>Today we discussed about midterm and then continued our discusison on Marble answering machine. I would like to learn more about the value of marble answering machine.
+    </li><li>In todays meeting we discussed about midterm dates almost finalize from 2 now also individual assignments and project will be discussed on Friday. I learned today something new connecting 3*3 dots with only 4 lines.I would like to know more about assignment and project in upcoming meeting.
+    </li><li>Dear Prof. Hepting. Actually I want to discuss different types of user interfaces and the users experience. I appreciate it if you consider it more in the class. Thanks
+    </li><li>I would like to know more about the value added by marble answering machine. Since most of the values and importance were identified by the group discussion, I am curious to know more about this.
+    </li><li>Today we mainly discussed the meeting wiki. I created a template that is formatted so the Table of Contents shows up properly. I am interested in knowing whether people are open to using the template and if it makes life easier for them or if I just wasted an hour :)
+    </li></ul>
+
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=wiki">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/06_Wed-14-Sep-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

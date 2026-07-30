@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-733/202330/meetings/20_Wed-15-Nov-2023.html" />
+    
+    <title>Mtg 20 &bull; CS-733 (202330) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 20 &bull; CS-733 (202330) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/20_Wed-15-Nov-2023.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/",
+        
+          "name": "CS 733"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/",
+        
+          "name": "202330"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/20_Wed-15-Nov-2023.html",
+        
+          "name": "20 (Wed-15-Nov-2023)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-733/">
+        CS 733
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-733/202330/">
+        202330
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-733/202330/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      20 (Wed-15-Nov-2023)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 20/25: Wed-15-Nov-2023
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="19_Mon-13-Nov-2023.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="21_Mon-20-Nov-2023.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=9124">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_20" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_20" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_20" data-bs-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/62bjoslon1fom1kcdfbyh/20-1.png?rlkey=gez0ioixt5rp70ep8kljh9slf&amp;dl=0" alt="20 - 1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/hsnntxys94xnklxm88e8l/20-2.png?rlkey=16m3ujj1an6vi3maw15ok9nrd&amp;dl=0" alt="20 - 2.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_20" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_20" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Okay, so we're at meeting 20 of
+25. Yes, time flies when you're
+          </li><li>
+            
+            having fun right yesterday
+          </li><li>
+            
+            so I've done some updating on
+the website.
+          </li><li>
+            
+            So when we create a web GL to
+context we get a frame buffer
+          </li><li>
+            
+            but we can declare additional
+lengths or use additional lens
+          </li><li>
+            
+            to do different things, so I
+thought I would take a look at a
+          </li><li>
+            
+            few examples from Chapter Eight
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            so you can make use of
+additional frame buffers to
+          </li><li>
+            
+            create
+          </li><li>
+            
+            interesting effects
+          </li><li>
+            
+            so the memory for the frame
+buffers and the textures these
+          </li><li>
+            
+            are on the GPU.
+          </li><li>
+            
+            Morning
+          </li><li>
+            
+            So maybe let's start looking at
+some things I'm gonna do start
+          </li><li>
+            
+            with an interesting example. I
+think
+          </li><li>
+            
+            so another thing
+          </li><li>
+            
+            morning
+          </li><li>
+            
+            so we'll look at look at a few
+examples. That illustrate these
+          </li><li>
+            
+            different things.
+          </li><li>
+            
+            So I look interesting
+          </li><li>
+            
+            Okay, so
+          </li><li>
+            
+            J I can still see it
+          </li><li>
+            
+            okay
+          </li><li>
+            
+            so let's look at the code so we
+have two shader, two sets of
+          </li><li>
+            
+            shaders and lead program. Pardon
+me. We have two sets of shaders
+          </li><li>
+            
+            are going to have two programs
+that are going to switch between
+          </li><li>
+            
+            them.
+          </li><li>
+            
+            So the first vertex shader takes
+a two dimensional position which
+          </li><li>
+            
+            is an attribute of vertex
+attributes. So we're going to
+          </li><li>
+            
+            get a position in 2d and then
+put it into 3d homogeneous
+          </li><li>
+            
+            coordinates. So we have a four
+four dimensional or a four bit
+          </li><li>
+            
+            for Apple or for vector x y Zed
+w. And then we're passing a pass
+          </li><li>
+            
+            through for the texture
+coordinate. That's one shader
+          </li><li>
+            
+            vertex shader and the other
+vertex shader is setting the
+          </li><li>
+            
+            point size based on the uniform
+that's passed, and then we're
+          </li><li>
+            
+            doing the same with a position
+          </li><li>
+            
+            fragment shader one is taking
+          </li><li>
+            
+            texture coordinate from
+          </li><li>
+            
+            first vertex shader
+          </li><li>
+            
+            and then creating a fragment
+color based on texture mapping.
+          </li><li>
+            
+            So we're going to supply it with
+a texture map in 2d and we're
+          </li><li>
+            
+            going to sample and then we have
+a couple other parameters and
+          </li><li>
+            
+            we're going to apply use those
+in determining the fragment
+          </li><li>
+            
+            color now the second fragment
+shader is just a pass through
+          </li><li>
+            
+            it's not actually passing
+through. We're setting the color
+          </li><li>
+            
+            in our Java Script. And we're
+assigning that to the fragment
+          </li><li>
+            
+            color does that make sense
+generally.
+          </li><li>
+            
+            Karen said seem
+          </li><li>
+            
+            I missed the last point.
+          </li><li>
+            
+            So we're talking about two sets
+of shaders. The first fragment
+          </li><li>
+            
+            shaders during the texture
+mapping based on the vertex
+          </li><li>
+            
+            extra coordinates and then we're
+using the texture function in
+          </li><li>
+            
+            GLSL. To determine the fragment
+color, and then the fragment
+          </li><li>
+            
+            shader to we're taking the color
+from a uniform that's passed in
+          </li><li>
+            
+            our JavaScript and we're using
+that to set the fragment color
+          </li><li>
+            
+            so with that, yes CMRA.
+          </li><li>
+            
+            Okay, so we're setting up
+          </li><li>
+            
+            or making a texture size of 1024
+and 24 by 1024 texture
+          </li><li>
+            
+            coordinates golf between zero
+and one or vertices. So r
+          </li><li>
+            
+            squared is minus one minus one,
+two plus one plus one. You have
+          </li><li>
+            
+            to frag two programs. Two
+textures one frame buffer we're
+          </li><li>
+            
+            going to use
+          </li><li>
+            
+            so the first few lines are as we
+would expect them to be
+          </li><li>
+            
+            so these are referencing texture
+registers on the GPU. So you can
+          </li><li>
+            
+            query your own setup to see what
+your capability is for my
+          </li><li>
+            
+            computer there are 16 vertex 16
+threads.
+          </li><li>
+            
+            Extra registers
+          </li><li>
+            
+            so we go from zero to 31 so we
+can start with zero and
+          </li><li>
+            
+            these turn out into an index so
+he can do textures zero plus I
+          </li><li>
+            
+            for example, select different
+textures
+          </li><li>
+            
+            so, the main texture one
+creating texture one and
+          </li><li>
+            
+            assigning it to texture zero. I
+think it would be more
+          </li><li>
+            
+            straightforward to call this
+texture zero but I'm strange
+          </li><li>
+            
+            that way I guess so, we're going
+to create the first texture
+          </li><li>
+            
+            and finding the texture so we're
+going to be working with texture
+          </li><li>
+            
+            one to start with
+          </li><li>
+            
+            so then we're talking about data
+the RGB a format so for use for
+          </li><li>
+            
+            each element of the array, so
+text size, so 1024 by 1024.
+          </li><li>
+            
+            And then we're setting different
+parameters for the texture or
+          </li><li>
+            
+            texture to D can use.
+          </li><li>
+            
+            Filters for magnifying and
+minifying. And then, this is
+          </li><li>
+            
+            this talks about how we can wrap
+the texture. So here we're
+          </li><li>
+            
+            clapping to the edge so
+stretches we're ending right on
+          </li><li>
+            
+            the edges will do you could do a
+repeat and there's another
+          </li><li>
+            
+            option as well.
+          </li><li>
+            
+            Gmail dot text image today we
+are taking RGB values twice in
+          </li><li>
+            
+            that was the second time and
+it's both of them are the exact
+          </li><li>
+            
+            same
+          </li><li>
+            
+            yeah
+          </li><li>
+            
+            let me consult the manual page
+for that.
+          </li><li>
+            
+            So we have a target. So,
+texture, texture 2d level zero
+          </li><li>
+            
+            internal format it's RGBA with a
+border format. So that is why it
+          </li><li>
+            
+            appears again. And then the
+internal the type is unsigned
+          </li><li>
+            
+            byte. And we're not passing data
+to it at this point. So pixels
+          </li><li>
+            
+            are null.
+          </li><li>
+            
+            So the level talks about mipmaps
+and we haven't mentioned that
+          </li><li>
+            
+            really so the idea of providing
+texture images. So we're going
+          </li><li>
+            
+            to create a hierarchy of levels.
+So level zero is the base so
+          </li><li>
+            
+            that's 1024 by 1024. And level
+one would be a 512 by 512 256 or
+          </li><li>
+            
+            creating a range of resolutions
+to with the goal of improving
+          </li><li>
+            
+            the quality of the texture
+mapping
+          </li><li>
+            
+            Okay, so.
+          </li><li>
+            
+            We're setting up texture one
+with these parameters and then
+          </li><li>
+            
+            we're setting up texture to with
+the same parameters.
+          </li><li>
+            
+            So we're going so we're binding
+so when we're talking about a
+          </li><li>
+            
+            texture 2d we're binding it to
+this one. So that's what we're
+          </li><li>
+            
+            working on. Here, we're
+specifying that again, and then
+          </li><li>
+            
+            we're creating the two programs.
+Vertex one shader fragment one
+          </li><li>
+            
+            shader. fragment shader one.
+program two has vertex shader to
+          </li><li>
+            
+            fragment shader two and then
+we're creating a frame buffer
+          </li><li>
+            
+            now the framebuffer texture 2d
+We're setting up
+          </li><li>
+            
+            genetic color or attaching
+          </li><li>
+            
+            me like a straw. Man feature and
+best
+          </li><li>
+            
+            Yeah, so we're using
+          </li><li>
+            
+            so we're saying what we're going
+to do with texture two, in this
+          </li><li>
+            
+            case is attach it or use it to
+modify the color values in the
+          </li><li>
+            
+            frame buffer. So we're doing a
+status check to make sure the
+          </li><li>
+            
+            frame buffer is complete. There
+weren't any problems
+          </li><li>
+            
+            I didn't looking at his code,
+the author's code here
+          </li><li>
+            
+            I will work on a better version
+for you to look at.
+          </li><li>
+            
+            So the number of points we're
+dealing with is 1000.
+          </li><li>
+            
+            So this is Creating.
+          </li><li>
+            
+            So I'm gonna say that this is
+adding to the vertices surging
+          </li><li>
+            
+            for plus I make sure we're not
+overriding these initial values
+          </li><li>
+            
+            and then we're creating so in
+these extra positions, we're
+          </li><li>
+            
+            assigning points randomly
+          </li><li>
+            
+            within the
+          </li><li>
+            
+            within the space range of minus
+one to plus one.
+          </li><li>
+            
+            Okay, so buffer we're going to
+create a buffer so many use
+          </li><li>
+            
+            program to pass
+          </li><li>
+            
+            a color, the point size and the
+color
+          </li><li>
+            
+            so this color is a bluish one
+          </li><li>
+            
+            we're going to use program one
+and we're
+          </li><li>
+            
+            binding to create a buffer here.
+We're binding it.
+          </li><li>
+            
+            Now we're setting up the size of
+the data.
+          </li><li>
+            
+            So let's check the math here.
+          </li><li>
+            
+            So we had four vertices.
+          </li><li>
+            
+            Okay, so if there are four
+vertices
+          </li><li>
+            
+            they each have to VAT two values
+x and y.
+          </li><li>
+            
+            Snap makes eight and if there
+          </li><li>
+            
+            math seem right
+          </li><li>
+            
+            so 64 would mean we have eight
+bytes per values which seems to
+          </li><li>
+            
+            be.
+          </li><li>
+            
+            So I have to check this by the
+64 here and 32 here
+          </li><li>
+            
+            could be a typo Should we try
+changing that
+          </li><li>
+            
+            So, the rest of it makes sense
+because we're doing eight times
+          </li><li>
+            
+            number of points
+          </li><li>
+            
+            to float values four bytes each.
+          </li><li>
+            
+            Okay we'll go through the rest
+of it. First.
+          </li><li>
+            
+            They may be putting
+          </li><li>
+            
+            the two sets of data together
+that's fine
+          </li><li>
+            
+            looks like they're doing
+          </li><li>
+            
+            because when you set the
+position or the attributes
+          </li><li>
+            
+            we're doing
+          </li><li>
+            
+            during the same buffer
+          </li><li>
+            
+            know it's different offsets
+          </li><li>
+            
+            So when it comes to rendering
+          </li><li>
+            
+            so we're going to switch between
+programs. So here's program one.
+          </li><li>
+            
+            And we're going to bind our
+frame buffer to the one we've
+          </li><li>
+            
+            created with a texture you were
+going to switch between texture
+          </li><li>
+            
+            one and texture two.
+          </li><li>
+            
+            Now we're going to use program
+          </li><li>
+            
+            we're going to.
+          </li><li>
+            
+            Switching between so using
+program to set the attribute,
+          </li><li>
+            
+            location and then send it to
+color which is red and green so
+          </li><li>
+            
+            that's yellow
+          </li><li>
+            
+            and we're drawing the points
+          </li><li>
+            
+            switching colors so drawing half
+the points and switching colors
+          </li><li>
+            
+            and then we're switching to
+using program one regenerating
+          </li><li>
+            
+            the map for texture
+          </li><li>
+            
+            This is still in there rendering
+or running program and we're
+          </li><li>
+            
+            changing the values
+          </li><li>
+            
+            minds
+          </li><li>
+            
+            are swapping the textures and
+we're getting a new frame to
+          </li><li>
+            
+            render
+          </li><li>
+            
+            I apologize I got thrown by that
+putting two two sets of data in
+          </li><li>
+            
+            one array
+          </li><li>
+            
+            just correcting a mistake there
+it looks like referencing the
+          </li><li>
+            
+            variable you texture here
+          </li><li>
+            
+            in the shader is texture map.
+          </li><li>
+            
+            Change the day of scale and
+texture
+          </li><li>
+            
+            okay
+          </li><li>
+            
+            I apologize for the slow pace
+today. So I'm trying to make
+          </li><li>
+            
+            sense of they're not very
+readable code. I thought I had
+          </li><li>
+            
+            it figured out but then. Anyway,
+the buffer mask sidetrack me a
+          </li><li>
+            
+            little bit. Anyway, I'm going to
+create a better version of this
+          </li><li>
+            
+            and I'll post it online. I'll
+let you know when I've gotten a
+          </li><li>
+            
+            better version available. So let
+me show a couple other examples
+          </li><li>
+            
+            so this one is doing some image
+processing.
+          </li><li>
+            
+            So here was the vertex shaders
+passing through the vertex, the
+          </li><li>
+            
+            texture coordinates we're
+getting the position as soon as
+          </li><li>
+            
+            position is an X and Y then
+we're adding Zed and W for GL
+          </li><li>
+            
+            position and then we're taking
+the texture coordinate from the
+          </li><li>
+            
+            vertex or creating a fragment
+color the idea here is we're
+          </li><li>
+            
+            doing some edge enhancement.
+          </li><li>
+            
+            Here's the image data
+          </li><li>
+            
+            you're using
+          </li><li>
+            
+            This is not illustrating frame
+buffers as much as it is
+          </li><li>
+            
+            textures and processing in GPU
+          </li><li>
+            
+            last one I want to look at
+picking
+          </li><li>
+            
+            let's do a different one that
+has a better display
+          </li><li>
+            
+            so they can see where it is.
+We're clicking and we're seeing
+          </li><li>
+            
+            which phase we're in
+          </li><li>
+            
+            first one was just doing console
+log messages.
+          </li><li>
+            
+            So what we're doing with picking
+is recruiting the image in a
+          </li><li>
+            
+            separate buffer
+          </li><li>
+            
+            so we're rendering into this
+other frame buffer. And then
+          </li><li>
+            
+            when we're reading pixels, we're
+testing the value returned by
+          </li><li>
+            
+            color so we can decide. Bottom
+left, front back
+          </li><li>
+            
+            top bottom left, right back and
+then we can also see it for the
+          </li><li>
+            
+            background.
+          </li><li>
+            
+            So if you look at the shader
+again
+          </li><li>
+            
+            so we have these
+          </li><li>
+            
+            values are we're setting
+          </li><li>
+            
+            so that's what we're accessing
+in the Excellent
+          </li><li>
+            
+            so it's allowing us to create
+some extra data
+          </li><li>
+            
+            and access it with the mouse can
+read the pixels and then based
+          </li><li>
+            
+            on what the pixel value says we
+          </li><li>
+            
+            have to take this call sorry
+          </li><li>
+            
+            yeah
+          </li><li>
+            
+            I will also fix this one up
+          </li><li>
+            
+            so I think you can wrap it up
+there. I don't know if I've
+          </li><li>
+            
+            helped your understanding about
+these things yet or not. So
+          </li><li>
+            
+            thanks for your attention today.
+You're gonna say something
+          </li><li>
+            
+            carefully but
+          </li><li>
+            
+            I was a little confusing right
+now. Probably just go through
+          </li><li>
+            
+            it.
+          </li><li>
+            
+            Okay, so I'll fix up these the
+codes to make them a little more
+          </li><li>
+            
+            readable and to add some
+documentation
+          </li><li>
+            
+            anyway, thank you for your
+attention today. And marks for
+          </li><li>
+            
+            assignment two will be posted
+today. And regrade requests I'll
+          </li><li>
+            
+            deal I'm dealing with them so
+don't worry about that. Okay.
+          </li><li>
+            
+            Thanks again.
+          </li><li>
+            
+            Everyone
+          </li><li>
+            
+            Everyone
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>The most important thing that I learned is frame buffer and in the today&#039;s code I understand the functions of fragments and vertex shaders.
+    </li><li>The most important thing about today&#039;s lecture was the new chapters itself. It was really interesting for me to get to know what we can do more with the Frame buffers and not just simple they can also be used to do additional interesting effects. So basically it was really interesting and exciting to know that frame buffers can be used for interactions as well.
+    </li><li>I found the class active today. The code was explained by shaders and fragments.
+    </li><li>today i learned about the gl.texture and also learned about the framebuffer use in interaction.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/20_Wed-15-Nov-2023.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

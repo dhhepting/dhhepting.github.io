@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-205/202110/meetings/08_Thu-04-Feb-2021.html" />
+    
+    <title>Mtg 8 &bull; CS-205 (202110) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 8 &bull; CS-205 (202110) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-205/202110/meetings/08_Thu-04-Feb-2021.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-205/",
+        
+          "name": "CS 205"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-205/202110/",
+        
+          "name": "202110"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-205/202110/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-205/202110/meetings/08_Thu-04-Feb-2021.html",
+        
+          "name": "8 (Thu-04-Feb-2021)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-205/">
+        CS 205
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-205/202110/">
+        202110
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-205/202110/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      8 (Thu-04-Feb-2021)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 8/26: Thu-04-Feb-2021
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="07_Tue-02-Feb-2021.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="09_Tue-09-Feb-2021.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_08" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_08" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_08" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_08" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/rmc2nhif6dqcb0w/08%20-%20anti-aliased-text-nozoom.png?dl=0" alt="08 - anti-aliased-text-nozoom.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/jiye4aa0w6a8hl0/08%20-%20anti-aliased-text-zoom.png?dl=0" alt="08 - anti-aliased-text-zoom.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/4jcirghly6803hc/08%20-%20wb-1.png?dl=0" alt="08 - wb-1.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_08" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_08" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ss0">
+        0
+      </h4>
+      <ul></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Hello. today. So I thought i'd start today by showing a couple of things i've done on your course. Your courses page. You would see. So I mentioned recent activity so just take a peek at that first sentence up here. On the right. So I deleted a file. Is a video resource actually moved it. I deleted it on the spot, that it was originally. And I updated this page raw video transcripts from meetings. They have to the URL and they added another URL. going to fill in the section here with the links to all the meetings as well. So do you like, would you like a list of 26 meetings here. Or should. shorten it the. reason I say that is because I learned a way to make this list go this begins from you. And then activities would still be there. But the. Human see the. Of these. 26 forums here 25 forums. And the reason, though, can work is because they're all calendar events. So let's say. Okay, now I switch to students I can't do this right this minute, but I love. I can make it available to hidden from students. And then I go to the counter. Next Wednesday. comes up as a course event. And then I go to activity. And it goes right to the. Spot so you don't. You don't have to have that on the on the homepage. Is it. still better down on the homepage or not. yeah. We can. You can leave those. Only that for discussions about. Your courses page, you can have them participation discussion. audio transcripts from meetings. I haven't quite finished yet. Okay, there we go. So these are the audio file. So this there's nothing to see unless you go and turn on the caps closed captions. chair, right here, so if I go and turn on. caption say English. So these are the captions. Courses video managing system. So you don't need to hear me talking to you. Anyway, so if you want to see the if you only hear the audio and see the transcript Jerry by cultura. that's what you do just turn on the English captions. And then you can see a transcript that cultural transcript to the text as a blog. here. Something in particular than that's the way to do it. Anyway, because then these other two files are from zoom So this is the chat from zoom. zoom generated audio transcript. This vtt so it's an html standard so. or wcc standard for. generating. Closed captions. If you saw this zoom then these periods like they do encounter times with the audio playback. But I just thought this is maybe a nicer way, if you want to look at the transcript it's a nicer way to look at it than just as a blob of. kilter. Well that's really helpful messages this web page requires data that you entered earlier, in order to properly displayed you can send us data again, but by doing so you're repeat any action, the stage previously before. Anyone say immediately Oh, I know what happened. zoomed in here because.
+          </li><li>
+            
+            I can get over there.
+          </li><li>
+            
+            I just want to show this little image here. So, the more we zoom in the more obvious, it is these are made of. The screen pixels. So the. return to topic. idea that the normal resolution a little bit less obvious. anyway. we'll talk about that more. Okay, so here's the description of what the files are so to see the idea transfer to the audio playback make sure the CC set the English see the chat transcript click on the dot txt file to do transcript via zoom click on the vtt file. Okay.
+          </li><li>
+            
+            he's still doing the engagements or is that all going to be done through them. Because I think.
+          </li><li>
+            
+            i'm sorry I didn't quite you're breaking up just enough for me to not quite get what you meant So yes, you're still doing engagement.
+          </li><li>
+            
+            Am I am I breaking so.
+          </li><li>
+            
+            A little bit, but go ahead.
+          </li><li>
+            
+            Oh was asking about all we had last class I thought that the engagement would be doing. Like zoom calls kind of thing.
+          </li><li>
+            
+            Oh well, no this engagement is a separate thing. This is just writing a. response to what happened.
+          </li><li>
+            
+            During the meeting.
+          </li><li>
+            
+            i'm just trying to. say yes, if I see a cat. peyton's cat is making an appearance. My puppy is not getting bigger is not so. he's not missing his mom today, so he won't be singing in the background, I hope. As. As a matter of course, if there are things that. require feedback i'll do a zoom call instead of a your courses feedback or anything like that. I keep saying i'm going to check the settings for this. And I forget about it and then happens again, and I say i'm going to check. Changes settings for this trackpad but. I haven't done it yet Okay, so I think everything all the assignments are. There okay. This is anything that comes up with assignments. there's a forum here for individual assignments discussions so. And then project. plan for project discussions. So there's two parts for proposal and deliverable. don't look. I don't know that I need to have any of this year, because. there's now a lab. Is the your courses class for the lab. which you know. And then participation discussion so. Each of these links to different discussion inside this forum up here. or down here for participation do the. s word for them attendance. As a student now, I have to go back to regular role. Okay, so that's the password for attendance. For today. Any other questions or concerns about what i've. done in your courses. you noticed any problems, you can just post them to that. bug report to your courses and off or fixed or not. i'm not quite sure I understand your comment, if you want to. clarify it helped me to understand what that is. Oh OK. So the vtt file structures. is nice okay. Thanks and i'll use that to make a summary. of our topics as well. Anyway, okay. Let me just check my. laptop here. Even if I don't link to them directly go get posted that picture that I scribble. will be here in the media. anyway. I didn't. show that it's there. So any questions about what we talked about, for we resume. Let me share the screen, we can. Let me see. here. Post production. Another here. So we started with. These filled in. We had a five by five. Five by five grid. And we know which pixels to turn on. So I said there's squares. squares. element or pixel does that have a shape. This is a square. I guess, this would be the time to do a poll. Okay. So let's talk about ellen's comments said three color elements of mean it's either a straight line. or a triangle. OK, so the connection of color isn't. is somewhat separate from. The value on the screen at a particular location.
+          </li><li>
+            
+            So.
+          </li><li>
+            
+            When I think about colors are triangles with red green and blue. Is we have a position for red. Green. defines a triangle. triangle, are the colors that can be represented by a combination of red green and blue. called a gamma. can be represented on the device. And linear combination of these reds greens and blues. So whatever the screen, whatever the color of the screen. So now there are standard, these are standardized but. And they all older car keys and different monitors might have. Different reds greens and blues in terms of the. Blue that they represented as a primary color. Because they would be. put onto the inside of the screen was a. phosphorus. and electron. It spot with a certain intensity if it was a red red green or blue, then it would that would glow. So there are some some differences between. The colors. That each monitor might be able to. generate. Based on the physical. description of. The materials. That variability is. Generally removed now. Because we have profiles for different devices. So that we can standardize the colors we see. pixels on the screen. When I said the grid of square. Square. me. Does that make sense.
+          </li><li>
+            
+            Okay.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            hello!
+          </li><li>
+            
+            I’m pretty good! How are you?
+          </li><li>
+            
+            Hello!
+          </li><li>
+            
+            hello everyone
+          </li><li>
+            
+            Hi
+          </li><li>
+            
+            the line separation is very nice to see
+          </li><li>
+            
+            Student password
+          </li><li>
+            
+            when you were showing the transcripts
+          </li><li>
+            
+            3 color elements would mean its either a straight line or a triangle
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            less coding and memory?
+          </li><li>
+            
+            Easy to display
+          </li><li>
+            
+            bitmaps have more colour options
+          </li><li>
+            
+            In the typeface video they said you can determine where the breaks are in a character's pixels so it's more symmetrical.
+          </li><li>
+            
+            fast and easy to render
+          </li><li>
+            
+            I checked the internet yesterday and that was a pro listed. not sure why unfortunately.
+          </li><li>
+            
+            Can someone confirm what’s written in brackets? …easy to display (??)
+          </li><li>
+            
+            Already computed I think
+          </li><li>
+            
+            Thanks
+          </li><li>
+            
+            rgb
+          </li><li>
+            
+            Colours
+          </li><li>
+            
+            precise
+          </li><li>
+            
+            ?
+          </li><li>
+            
+            ?
+          </li><li>
+            
+            8 bit question mark
+          </li><li>
+            
+            Yes when trying to enlarge small bitmap images
+          </li><li>
+            
+            anti
+          </li><li>
+            
+            I think you can use two fingers while drawing a line to draw against a ruler for straight lines
+          </li><li>
+            
+            Are we talking about Anti Aliasing? it seems related to that...
+          </li><li>
+            
+            Yes ^
+          </li><li>
+            
+            ok
+          </li><li>
+            
+            Thanks!  Have a good weekend.
+          </li><li>
+            
+            thank you! have a good weekend!
+          </li><li>
+            
+            thank you
+          </li><li>
+            
+            you too
+          </li><li>
+            
+            Thanks. You too
+          </li><li>
+            
+            you too. Thanks
+          </li></ul>
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-205/202110/meetings/08_Thu-04-Feb-2021.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

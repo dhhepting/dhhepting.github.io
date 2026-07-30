@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-315+733/202430/17_Wed-13-Nov-2024.html" />
+    
+    <title>Mtg 17 &bull; CS-315+733 (202430) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 17 &bull; CS-315+733 (202430) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-315+733/202430/17_Wed-13-Nov-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-315+733/",
+        
+          "name": "CS 315+733"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-315+733/202430/",
+        
+          "name": "202430"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-315+733/202430/17_Wed-13-Nov-2024.html",
+        
+          "name": "Mtg 17 (Wed-13-Nov-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-315+733/">
+        CS 315+733
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-315+733/202430/">
+        202430
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 17 (Wed-13-Nov-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 17/23: Wed-13-Nov-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="16_Wed-06-Nov-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="18_Mon-18-Nov-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Texture Mapping
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Wednesday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=2735311&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1731477600&amp;course=33616" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=33616" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li>midterm exam grades posted and the marked exams will be available on gradescope later today (you will receive an email)</li>
+  <li>Assignment 2 marks posted</li>
+  <li>Assignments 3 and 4 now available on UR Courses</li>
+  <li>2 opportunities to give me feedback are open until 23:59 today</li>
+  <li><a href="https://interactivecomputergraphics.com/8E/Code/07/">Chapter 7 code samples</a></li>
+</ul>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2734611" target="_blank">Submit your response to this meeting before noon tomorrow</a></li>
+  <li>Read the rest of Chapter 7</li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2739535" target="_blank">Take the quiz before the start of our next meeting</a></li>
+</ul>
+<h5><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2739535">ACTION: Take quiz before next meeting</a></h5><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=9513">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_17" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_17" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_17" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_17" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_17" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_17" data-bs-slide-to="4"></li>
+      <li data-bs-target="#mtg_pix_17" data-bs-slide-to="5"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/km8jzio6sv8j75dxkqe0q/17-1.png?rlkey=k0lql7lh5vceumssk3hitjjvt&amp;dl=0" alt="17 - 1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/btj4ex9hu8wvouo5k47kt/17-2.png?rlkey=w2bo4yk9r8k9j31dvmsd2lltu&amp;dl=0" alt="17 - 2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/ct89z8fy0anyvcepse2tc/17-3.png?rlkey=c6ceyxiu0ncyavhivn2zb27cm&amp;dl=0" alt="17 - 3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/ufr4vo24iflbjzb5masj4/17-4.png?rlkey=3tzs8g27tdsh1so1xfcjtvqx4&amp;dl=0" alt="17 - 4.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/apjot5i5eulyxdjrtiyot/17-5.png?rlkey=b1kcwrf0hk1zcpjepqpew2d0e&amp;dl=0" alt="17 - 5.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/dz8pfwkb95ejlyorpubz6/17-6.png?rlkey=009n0apal3iawzitk2k0g4hvl&amp;dl=0" alt="17 - 6.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_17" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_17" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            That good. Hey, I
+          </li><li>
+            
+            I didn't charge over the
+weekend,
+          </li><li>
+            
+            so I'll see what that will help
+to plug in. I'll just stand
+          </li><li>
+            
+            right here for the whole time I
+          </li><li>
+            
+            may then get a few minutes worth
+of charge.
+          </li><li>
+            
+            So have you found your midterm
+marks online? I
+          </li><li>
+            
+            so I've adjusted them
+          </li><li>
+            
+            so it's out of 15, so the lowest
+marks are between 7.5 and 15.
+          </li><li>
+            
+            Does that make sense?
+          </li><li>
+            
+            So what you'll get from grade
+scope will be a mark out of 77
+          </li><li>
+            
+            and
+          </li><li>
+            
+            I've done some adjustment from
+the grade, from the exam and
+          </li><li>
+            
+            grade scope to your courses,
+acknowledging the fact that it
+          </li><li>
+            
+            may have been a bit long. Who
+agrees with that statement? It
+          </li><li>
+            
+            was too long.
+          </li><li>
+            
+            Yeah. Well,
+          </li><li>
+            
+            so I want everyone to not I
+don't want anyone to be
+          </li><li>
+            
+            discouraged by the exam, but
+it's it's meant to be formative
+          </li><li>
+            
+            feedback for You, and if you do
+better on the
+          </li><li>
+            
+            final I will wave the final more
+heavily towards Your final
+          </li><li>
+            
+            grade.
+          </li><li>
+            
+            Any questions or concerns about
+that I
+          </li><li>
+            
+            so also Simon
+          </li><li>
+            
+            two has been created and marks
+release, and
+          </li><li>
+            
+            I have assignments three and
+four posted as well. So the idea
+          </li><li>
+            
+            is you'll build on the code from
+assignment Two. We'll talk about
+          </li><li>
+            
+            that In just a second. I
+          </li><li>
+            
+            so a reminder that there are two
+opportunities for feedback
+          </li><li>
+            
+            to me about the mentoring plan
+and about me
+          </li><li>
+            
+            that are going to close at
+midnight, one minute to midnight
+          </li><li>
+            
+            tonight. So if you want to give
+your input, that would be much
+          </li><li>
+            
+            appreciated. The one about the
+midterm exam, I'll count out
+          </li><li>
+            
+            words of participation so it's
+not the feedback is anonymous,
+          </li><li>
+            
+            But the forward evaluation of
+the class is anonymous.
+          </li><li>
+            
+            Okay?
+          </li><li>
+            
+            And thanks to the people who
+pointed out I had not had last
+          </li><li>
+            
+            week's dates on the quiz,
+          </li><li>
+            
+            so I hope everyone had A chance
+to complete it.
+          </li><li>
+            
+            Okay, let's see whether I have
+enough battery
+          </li><li>
+            
+            to last.
+          </li><li>
+            
+            Oh, it says less than an hour.
+So,
+          </li><li>
+            
+            okay, so,
+          </li><li>
+            
+            based on the midterm I was, I've
+been thinking about assignments,
+          </li><li>
+            
+            so I want to focus on the things
+that we've been doing.
+          </li><li>
+            
+            So fly by this will give you
+some practice With specifying
+          </li><li>
+            
+            camera coordinates and
+          </li><li>
+            
+            so I'm asking for
+          </li><li>
+            
+            A two things in terms of Flying
+Wild, smoking And
+          </li><li>
+            
+            I will make,
+          </li><li>
+            
+            I will prepare a version of
+assignment two code for
+          </li><li>
+            
+            for those who have a chance To
+do
+          </li><li>
+            
+            assignment reviews,
+          </li><li>
+            
+            they've Got a starting point for
+          </li><li>
+            
+            so fly by in two ways.
+          </li><li>
+            
+            One, all the line, so
+          </li><li>
+            
+            let's say we have
+          </li><li>
+            
+            Looking at the plot of our
+assignment two and
+          </li><li>
+            
+            this is the one that's a lid
+that opens,
+          </li><li>
+            
+            but we might have
+          </li><li>
+            
+            some other objects the
+          </li><li>
+            
+            then we can specify a line.
+          </li><li>
+            
+            Let's add
+          </li><li>
+            
+            a reasonable height so We don't
+          </li><li>
+            
+            hit The boxes and
+          </li><li>
+            
+            so you
+          </li><li>
+            
+            might say, here's The camera,
+and let's look at just a little
+          </li><li>
+            
+            bit ahead of us, or
+          </li><li>
+            
+            maybe look at 45 degrees
+          </li><li>
+            
+            in front of us. Then as we step
+along the line, we're changing
+          </li><li>
+            
+            the lookout point
+          </li><li>
+            
+            so we'll see this
+          </li><li>
+            
+            box first, And then this one and
+Then the Third One. The
+          </li><li>
+            
+            Okay, does that make sense? So
+the look at point, it's fixed in
+          </li><li>
+            
+            relation to the eye point. And
+as we move along the line,
+          </li><li>
+            
+            removing the eye point, so that
+the look at point,
+          </li><li>
+            
+            you can feel kind of imagine the
+piece of chalk pointing to The
+          </li><li>
+            
+            place where we're looking.
+          </li><li>
+            
+            Does that make sense? Do
+          </li><li>
+            
+            This is the first way,
+          </li><li>
+            
+            second way travel along. I
+          </li><li>
+            
+            kind of along A circular,
+circular spiral and
+          </li><li>
+            
+            so this time,
+          </li><li>
+            
+            We're going to always look at
+the middle and
+          </li><li>
+            
+            So we start out at
+          </li><li>
+            
+            a point here and
+          </li><li>
+            
+            and all the time we're looking
+at the middle.
+          </li><li>
+            
+            So maybe that's enough. So do
+two rotations,
+          </li><li>
+            
+            and at the starting point,
+          </li><li>
+            
+            just a different height.
+          </li><li>
+            
+            Does that make sense?
+          </li><li>
+            
+            So it should spiral upwards,
+          </li><li>
+            
+            not outwards. But should you be
+moving further away, like as
+          </li><li>
+            
+            you're rotating around or just
+moving up? I
+          </li><li>
+            
+            I was thinking of just moving up
+or down if you want to have an
+          </li><li>
+            
+            option To fly closer, further
+away. You can do that. You
+          </li><li>
+            
+            So that's assignment three and
+          </li><li>
+            
+            so For fly by option one,
+          </li><li>
+            
+            move The leg with The camera and
+          </li><li>
+            
+            so the length can be stationary
+when we're going In the spiral.
+          </li><li>
+            
+            So I do
+          </li><li>
+            
+            I use the Same material and
+          </li><li>
+            
+            same material For the whole
+scene And
+          </li><li>
+            
+            so does that make sense? What
+I'm asking?
+          </li><li>
+            
+            Okay,
+          </li><li>
+            
+            so I think we can be flexible on
+the due dates.
+          </li><li>
+            
+            I've said Monday the 25th for
+the for assignment Three and
+          </li><li>
+            
+            Friday, December 6 for
+assignment four. You
+          </li><li>
+            
+            I would say Friday, December 6.
+We don't want to make it later
+          </li><li>
+            
+            than that. But if you wanted
+some flexibility to submit
+          </li><li>
+            
+            assignment three later or closer
+to December 6, that would be
+          </li><li>
+            
+            fine. Does that make sense? Does
+that seem like a good idea?
+          </li><li>
+            
+            So I don't want to discourage
+you from the I'm submitting
+          </li><li>
+            
+            assignment three on the 25th
+          </li><li>
+            
+            but if you need some
+flexibility, I think we can
+          </li><li>
+            
+            provide it. Does that seem okay?
+I
+          </li><li>
+            
+            Okay, I
+          </li><li>
+            
+            so let's take a look At the
+shaded cube.
+          </li><li>
+            
+            Example,
+          </li><li>
+            
+            chapter six and
+          </li><li>
+            
+            so just
+          </li><li>
+            
+            so Let's look at the shaders
+first and
+          </li><li>
+            
+            so we have in we get the
+position of the vertices through
+          </li><li>
+            
+            a position which we're
+connecting to our buffer in the
+          </li><li>
+            
+            JavaScript,
+          </li><li>
+            
+            then we're also getting a normal
+vector, not a single normal
+          </li><li>
+            
+            vector, but a vertex attribute.
+So we get normal associated with
+          </li><li>
+            
+            the vertex and then we have a
+vertex color that's passed on to
+          </li><li>
+            
+            the fragment shader. So then we
+have uniform variables. So we
+          </li><li>
+            
+            have the ambient product, the
+diffuse product and the specular
+          </li><li>
+            
+            product. So these are the
+different contributions in our
+          </li><li>
+            
+            lighting model. So ambient is
+just background light.
+          </li><li>
+            
+            Diffuse
+          </li><li>
+            
+            is the
+          </li><li>
+            
+            light that gets scattered,
+          </li><li>
+            
+            in general, and then the
+specular is when we're dealing
+          </li><li>
+            
+            with a shiny surface, and we're
+close to the reflected ray of
+          </li><li>
+            
+            the light, then we'll see a
+specular highlight.
+          </li><li>
+            
+            So we have those terms to
+          </li><li>
+            
+            configure into our computation,
+then we have the wall view
+          </li><li>
+            
+            Matrix, projection matrix, light
+position and a shininess
+          </li><li>
+            
+            coefficient and
+          </li><li>
+            
+            B, so we compute the position,
+          </li><li>
+            
+            so we get X, Y and Z of the
+position. That's what this
+          </li><li>
+            
+            operator does at the end here,
+and we're changing the sign.
+          </li><li>
+            
+            Then we get our fixed light
+position
+          </li><li>
+            
+            that comes from the uniform of
+the JavaScript.
+          </li><li>
+            
+            So we get
+          </li><li>
+            
+            a vector l, which we normalize,
+is a difference between the
+          </li><li>
+            
+            light and position, and
+          </li><li>
+            
+            the i
+          </li><li>
+            
+            vector is normalized minus pause
+and H, the half wave vector, The
+          </li><li>
+            
+            half vector.
+          </li><li>
+            
+            So we normalize L plus E.
+          </li><li>
+            
+            Then
+          </li><li>
+            
+            we take
+          </li><li>
+            
+            the normal X, Y, Z,
+          </li><li>
+            
+            and we add
+          </li><li>
+            
+            a zero for w, and it's zero
+because It's a vector.
+          </li><li>
+            
+            So we transform normal n of two
+I coordinates and
+          </li><li>
+            
+            we compute our
+          </li><li>
+            
+            illumination equation. We have
+ambient
+          </li><li>
+            
+            and the diffuse and specular and
+          </li><li>
+            
+            so we're testing here.
+          </li><li>
+            
+            If the angle is greater than 90,
+we're not going to have
+          </li><li>
+            
+            a color for specular.
+          </li><li>
+            
+            Then the position
+          </li><li>
+            
+            we take our vertex attribute
+multiply by our wall of V
+          </li><li>
+            
+            matrix, then our projection
+matrix and our V color becomes
+          </li><li>
+            
+            sum of ambient, diffuse and
+specular, and then we set so
+          </li><li>
+            
+            that's three terms, and the
+Alpha we set to one. So that's
+          </li><li>
+            
+            doing
+          </li><li>
+            
+            the modified
+          </li><li>
+            
+            the blin Fong using the
+          </li><li>
+            
+            blin Fong model,
+          </li><li>
+            
+            and then in the fragment shader,
+we're just passing through the
+          </li><li>
+            
+            vertex color to the fragment
+color.
+          </li><li>
+            
+            So we're getting the computation
+at the vertices with the
+          </li><li>
+            
+            normals, and then we're
+interpolating the intensity
+          </li><li>
+            
+            across,
+          </li><li>
+            
+            in to the Vertice, to the
+fragments between the vertices.
+          </li><li>
+            
+            We're just interpolating the
+intensities so we're not we're
+          </li><li>
+            
+            we're not recomputing the
+lighting for every fragment.
+          </li><li>
+            
+            So what
+          </li><li>
+            
+            kind of shading is This?
+          </li><li>
+            
+            No, it's not flat. I
+          </li><li>
+            
+            There are two kinds,
+          </li><li>
+            
+            anyone like a vowel or whatever
+It's called,
+          </li><li>
+            
+            yes,
+          </li><li>
+            
+            grow
+          </li><li>
+            
+            and who's the other one? I've
+mentioned him already.
+          </li><li>
+            
+            Yeah,
+          </li><li>
+            
+            so in the row we're calculating,
+doing the calculation the
+          </li><li>
+            
+            vertices and then interpolating
+the intensities of Quang
+          </li><li>
+            
+            shading. We're interpolating the
+vector so we have, we can do the
+          </li><li>
+            
+            full computation for each
+fragment. For
+          </li><li>
+            
+            we're still doing an
+approximation to the normals,
+          </li><li>
+            
+            but we it's a better
+approximation than we're Getting
+          </li><li>
+            
+            with the Grow shading. Does that
+make sense? I
+          </li><li>
+            
+            so we in our JavaScript, we have
+vertices for the cue, plate,
+          </li><li>
+            
+            position, ambient, diffuse,
+specular, light parameters and
+          </li><li>
+            
+            then we have the material
+specified in terms of ambient,
+          </li><li>
+            
+            diffuse, specular and China's
+and
+          </li><li>
+            
+            so we're computing the normal
+vectors For the triangles here,
+          </li><li>
+            
+            so we get t1 is t,
+          </li><li>
+            
+            is vertex B
+          </li><li>
+            
+            and A and
+          </li><li>
+            
+            vertex C and B And
+          </li><li>
+            
+            anyway, he has strange ways of
+organizing parameters. Sometimes
+          </li><li>
+            
+            these function calls, so we get
+two vectors based on the edges
+          </li><li>
+            
+            of the triangle, and then the
+normal vector is the cross
+          </li><li>
+            
+            product. We
+          </li><li>
+            
+            so we push
+          </li><li>
+            
+            the normal to our normal brain
+And so
+          </li><li>
+            
+            he's assigning the same normal
+to the squad. So it's making the
+          </li><li>
+            
+            assumption that it's flat, which
+may not be the case.
+          </li><li>
+            
+            So we get the color cube.
+          </li><li>
+            
+            So here's the new stuff with
+          </li><li>
+            
+            the normal array.
+          </li><li>
+            
+            Here we're doing three bytes or
+three values per normal vector.
+          </li><li>
+            
+            We're
+          </li><li>
+            
+            so we're doing the
+multiplication. Take the ambient
+          </li><li>
+            
+            light, and we multiply it by the
+materials, ambient properties,
+          </li><li>
+            
+            and the diffuse product is the
+diffuse light times the material
+          </li><li>
+            
+            property diffuse properties of
+the material and the specular
+          </li><li>
+            
+            product is the specular specular
+light times the specular
+          </li><li>
+            
+            properties of the material.
+          </li><li>
+            
+            Then we set the ambient, we set
+uniforms. We need a key here,
+          </li><li>
+            
+            and
+          </li><li>
+            
+            we flatten the matrix
+          </li><li>
+            
+            pass associated with The
+projection matrix uniform in the
+          </li><li>
+            
+            vertex shader, and we're
+          </li><li>
+            
+            and we're changing the model V
+matrix based on The rotation
+          </li><li>
+            
+            that we set. Does
+          </li><li>
+            
+            that make sense? I
+          </li><li>
+            
+            I wanted To
+          </li><li>
+            
+            tell COVID.
+          </li><li>
+            
+            So I thought maybe we could
+start by looking at some code
+          </li><li>
+            
+            samples from chapter seven. I
+          </li><li>
+            
+            so what is the purpose of
+texture mapping? Let's start
+          </li><li>
+            
+            with that Question. I
+          </li><li>
+            
+            any thoughts i
+          </li><li>
+            
+            What if you want to capture
+          </li><li>
+            
+            the details,
+          </li><li>
+            
+            the feeling of a chalkboard that
+has that's been written on a Few
+          </li><li>
+            
+            times and erased The
+          </li><li>
+            
+            so we might take a picture, a
+picture of the board
+          </li><li>
+            
+            that captures the
+          </li><li>
+            
+            swirls of the eraser,
+          </li><li>
+            
+            and We might map that on
+          </li><li>
+            
+            to
+          </li><li>
+            
+            polygon
+          </li><li>
+            
+            for our small
+          </li><li>
+            
+            that's going to represent the
+blackboard In our ball.
+          </li><li>
+            
+            So we may do environment
+Mapping. I
+          </li><li>
+            
+            So An environment man, I it
+          </li><li>
+            
+            has anyone seen Terminator two?
+That was when the
+          </li><li>
+            
+            first exam was on, because the
+robot
+          </li><li>
+            
+            was sent to kill a
+Schwarzenegger. This robot,
+          </li><li>
+            
+            there's a new version who can
+become liquid metal. So that's a
+          </li><li>
+            
+            shiny blob. So then the details
+of the environment are visible
+          </li><li>
+            
+            in that computer generated
+object.
+          </li><li>
+            
+            So there is
+          </li><li>
+            
+            a sense that we have involved
+          </li><li>
+            
+            the environment that gets
+          </li><li>
+            
+            mapped on to the the surface of
+the object. And then there's
+          </li><li>
+            
+            also what's happening. And
+          </li><li>
+            
+            so the idea is we can add
+complexity to
+          </li><li>
+            
+            a smooth, polygonal surface
+          </li><li>
+            
+            if we perturb the normal vectors
+and
+          </li><li>
+            
+            is so instead of the normal
+vector being normal, we can
+          </li><li>
+            
+            change the direction of the
+normal vectors and thereby
+          </li><li>
+            
+            create the impression of a more
+complex surface and the idea is
+          </li><li>
+            
+            that we're going to Get more
+complexity in the image in
+          </li><li>
+            
+            inexpensive ways. And
+          </li><li>
+            
+            so here's a Simple bump Mapping
+          </li><li>
+            
+            example. I
+          </li><li>
+            
+            so
+          </li><li>
+            
+            we're creating a texture,
+          </li><li>
+            
+            256, So then we have the bump
+data to
+          </li><li>
+            
+            it's basically creating a
+          </li><li>
+            
+            two by two array, 256 by 256, of
+zeros and ones that correspond
+          </li><li>
+            
+            to that shape.
+          </li><li>
+            
+            If you can see the Can you see
+the inset
+          </li><li>
+            
+            square?
+          </li><li>
+            
+            So then we set the normals based
+on the data.
+          </li><li>
+            
+            Then we have the idea of texture
+coordinates, which is going to
+          </li><li>
+            
+            describe
+          </li><li>
+            
+            how to
+          </li><li>
+            
+            map the texture that we have the
+image that we want to paste onto
+          </li><li>
+            
+            the model. How the texture gets
+mapped on to the surface. I
+          </li><li>
+            
+            so we configure the texture, we
+pass the image, create a
+          </li><li>
+            
+            texture, and we're
+          </li><li>
+            
+            going to say it's active, the
+texture zero is active, and
+          </li><li>
+            
+            we're going to make a texture
+imaged. So for the
+          </li><li>
+            
+            mesh, we're putting the vertices
+as well as the texture
+          </li><li>
+            
+            coordinates and
+          </li><li>
+            
+            so here We have a texture
+coordinates array and we
+          </li><li>
+            
+            have an attribute variable in
+the sheet that's connected to
+          </li><li>
+            
+            the shader for The texture
+coordinates.
+          </li><li>
+            
+            Then we have all the same
+uniform set up and
+          </li><li>
+            
+            so the Configure texture
+normals, So we're passing
+          </li><li>
+            
+            normals, and
+          </li><li>
+            
+            we Set up here.
+          </li><li>
+            
+            U n8
+          </li><li>
+            
+            array and
+          </li><li>
+            
+            so what is that? What is the
+effect of this?
+          </li><li>
+            
+            So you end
+          </li><li>
+            
+            eight array is an array of
+unsigned integers. So
+          </li><li>
+            
+            eight bits,
+          </li><li>
+            
+            256, values, 255, character.
+          </li><li>
+            
+            So yeah,
+          </li><li>
+            
+            I don't know that they have
+          </li><li>
+            
+            unsigned character. I
+          </li><li>
+            
+            Yeah, it's one byte, eight bits.
+So we're allocating three bytes
+          </li><li>
+            
+            for each point in the texture.
+So it's
+          </li><li>
+            
+            we're creating, we're going to
+pass the normals
+          </li><li>
+            
+            into
+          </li><li>
+            
+            the Configure and
+          </li><li>
+            
+            so the parameter in for the
+function configure
+          </li><li>
+            
+            texture is an image.
+          </li><li>
+            
+            So this is a line where we're
+converting the image into a
+          </li><li>
+            
+            texture and
+          </li><li>
+            
+            the generated bitmap. That's
+idea of having different
+          </li><li>
+            
+            resolutions of the texture.
+          </li><li>
+            
+            So we can choose the one that's
+more most appropriate for the
+          </li><li>
+            
+            application. Let's go ahead
+          </li><li>
+            
+            and see what
+          </li><li>
+            
+            can you See The Light moving A
+little bit? I
+          </li><li>
+            
+            me. So we had the impression of
+death because of the way that
+          </li><li>
+            
+            the way that set up. So now, if
+we
+          </li><li>
+            
+            change the light position, you
+          </li><li>
+            
+            so first blush, that doesn't
+seem like a flat
+          </li><li>
+            
+            surface, doesn't I
+          </li><li>
+            
+            so here we're loading an image.
+          </li><li>
+            
+            We're pasting it on to the
+queue. Let's
+          </li><li>
+            
+            Take a quick look at this code.
+Hello.
+          </li><li>
+            
+            So here we're passing.
+          </li><li>
+            
+            So we're taking input of
+          </li><li>
+            
+            the bay position,
+          </li><li>
+            
+            which is x, y, z and w,
+          </li><li>
+            
+            a color, which is RGBA, and text
+coordinate, which is s and t.
+          </li><li>
+            
+            So it's two dimensional. The
+image is 2d so we're just
+          </li><li>
+            
+            specifying coordinates and the
+image to
+          </li><li>
+            
+            cube.
+          </li><li>
+            
+            So you're doing rotation and
+we're saying texture coordinates
+          </li><li>
+            
+            based on but we're doing a
+similar pass through we're doing
+          </li><li>
+            
+            we're assigning
+          </li><li>
+            
+            V color, the value of a color
+and assigning V tech quart,
+          </li><li>
+            
+            value of A tech quart.
+          </li><li>
+            
+            So then we have input
+          </li><li>
+            
+            of the vertex color
+          </li><li>
+            
+            and the texture coordinate,
+          </li><li>
+            
+            then we have a sampler that
+          </li><li>
+            
+            makes association between the
+texture map and the texture
+          </li><li>
+            
+            coordinate,
+          </li><li>
+            
+            so the fragrance color is
+texture is accessing the
+          </li><li>
+            
+            texture, universal texture,
+uniform, texture map, texture
+          </li><li>
+            
+            coordinate. Does that make
+sense? You?
+          </li><li>
+            
+            Set up the image and
+          </li><li>
+            
+            so here's Some of the image is
+loaded from H to ml so
+          </li><li>
+            
+            right? So that's where the image
+is located. The
+          </li><li>
+            
+            so when we're initializing or
+configuring the texture with the
+          </li><li>
+            
+            image. Then the last line is the
+          </li><li>
+            
+            tech texture map,
+          </li><li>
+            
+            mutex map we're looking to our
+shading To
+          </li><li>
+            
+            it seems to be a typo. Here
+          </li><li>
+            
+            you text you tech map. Here you
+text your map in the
+          </li><li>
+            
+            code, in the HTML, you
+          </li><li>
+            
+            so I suspect it's doing some
+good defaults. I'll check on
+          </li><li>
+            
+            that.
+          </li><li>
+            
+            Report back.
+          </li><li>
+            
+            Okay, we're out of time today.
+Any questions or concerns before
+          </li><li>
+            
+            we say goodbye? I
+          </li><li>
+            
+            it? No, I'm gonna, I just have
+to draft an email so it'll be
+          </li><li>
+            
+            sent shortly. I
+          </li><li>
+            
+            Okay, thank you for today. Have
+a great Wednesday and a good
+          </li><li>
+            
+            weekend, and I'll see you on
+Monday.
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Digital image representation seemed like an important topic 
+    </li><li>Today I learned about the importance of texture mapping. It allows for cool abd realistic effects when line shines on an object.
+    </li><li>Different types of mapping to make the surface look more comlex than it actually is. Types we encountred were bump, texture, and environement mapping.
+    </li><li>Texture mapping! 
+    </li><li>Assignment3,4 and Gouraud and phone Shading and Texture Mapping
+    </li><li>Bump mapping essentially is perturbing the normal vector of a surface to be rendered
+    </li><li>More samplw codes for textures
+    </li><li>The concept of texture mapping provides a way to add rich surface details to 3D objects, achieving a sense of complexity that would be difficult to model directly. Environment mapping captures surrounding environmental details to simulate reflections, while bump mapping adds perceived depth and texture to surfaces.
+    </li><li>learn assignment 3, 4 and bump mapping
+    </li><li>the type of shading, flat, Gouraud shading and phong shading
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-315+733/202430/17_Wed-13-Nov-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

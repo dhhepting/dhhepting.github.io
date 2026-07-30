@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+730/202410/10_Thu-08-Feb-2024.html" />
+    
+    <title>Mtg 10 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 10 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/10_Thu-08-Feb-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/",
+        
+          "name": "CS 428+730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/",
+        
+          "name": "202410"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/10_Thu-08-Feb-2024.html",
+        
+          "name": "Mtg 10 (Thu-08-Feb-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/">
+        CS 428+730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/202410/">
+        202410
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 10 (Thu-08-Feb-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 10/26: Thu-08-Feb-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="09_Tue-06-Feb-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="11_Tue-13-Feb-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Empathy
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Thursday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=2507968&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1707372000&amp;course=31184" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=31184" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Response to Responses
+  </h4>
+  <p>Course organization concerns?</p>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li><a href="https://www.theverge.com/2024/2/2/24059114/tesla-recall-brake-system-font-size-power-steering" target="_blank">Tesla recall</a></li>
+  <li>My car climate controls revisited
+    <ul>
+      <li><a href="https://dictionary.cambridge.org/dictionary/english/dual" target="_blank">‘Dual’ from a dictionary</a></li>
+    </ul>
+  </li>
+  <li><a href="https://www.nngroup.com/articles/design-thinking/" target="_blank">NNgroup Design Thinking 101</a></li>
+  <li><a href="https://www.designcouncil.org.uk/our-resources/framework-for-innovation/" target="_blank">Design Council Double Diamond</a></li>
+</ul>
+<h4>
+    Summary
+  </h4>
+  <p>Summary</p>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2543060" target="_blank">Submit your response to this meeting before noon tomorrow</a></li>
+  <li>Read ID-Book Chapter 3, DoET Chapter 4</li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2543062" target="_blank">Take quiz before the start of our next meeting</a></li>
+</ul>
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_10" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_10" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_10" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_10" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_10" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_10" data-bs-slide-to="4"></li>
+      <li data-bs-target="#mtg_pix_10" data-bs-slide-to="5"></li>
+      <li data-bs-target="#mtg_pix_10" data-bs-slide-to="6"></li>
+      <li data-bs-target="#mtg_pix_10" data-bs-slide-to="7"></li>
+      <li data-bs-target="#mtg_pix_10" data-bs-slide-to="8"></li>
+      <li data-bs-target="#mtg_pix_10" data-bs-slide-to="9"></li>
+      <li data-bs-target="#mtg_pix_10" data-bs-slide-to="10"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/uxa2dwn7w69h4o3pvypmr/10-1.png?rlkey=6gla429rbokbwasq9xjaa9src&amp;dl=0" alt="10 - 1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/p7cs6k094u5qwpiec1yu5/10-10.png?rlkey=0vr4n1so04znclhgz3prenmmx&amp;dl=0" alt="10 - 10.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/jm65kk015mlm6d2x58wj1/10-11.png?rlkey=ldu0pi45s63dkno873zvd6m0d&amp;dl=0" alt="10 - 11.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/qur89fhfnxx6n2tbvr105/10-2.png?rlkey=m2v9e9uhy86bos9a3vgu8oh4v&amp;dl=0" alt="10 - 2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/kt34kknkmdb721thb8ve3/10-3.png?rlkey=6vbhekyuzpugedfjn3tosgpca&amp;dl=0" alt="10 - 3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/giwxqbomiknje2gf782x6/10-4.png?rlkey=a1hg7zu4z4qa4fnec5w8c880v&amp;dl=0" alt="10 - 4.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/r0lbthdflet6kmdti1hzl/10-5.png?rlkey=v44sg47griej7pn7zzkrztnt3&amp;dl=0" alt="10 - 5.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/7d8fuhfk3yfe1liia6dnh/10-6.png?rlkey=9w8vi3hshfpfg21sjhzmtjv76&amp;dl=0" alt="10 - 6.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/i3dmxdtqdc4jgnipxypov/10-7.png?rlkey=8swkawnjvm6ahrwto4bc7gqzl&amp;dl=0" alt="10 - 7.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/gd1ztgr20p6gh0a61p888/10-8.png?rlkey=q50xo043aavsmpzzjp792t2qc&amp;dl=0" alt="10 - 8.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/pelomvbh0zj0a26gcq2hd/10-9.png?rlkey=05997bxlnlrkm0s1ij6do66sy&amp;dl=0" alt="10 - 9.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_10" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_10" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Good morning.
+          </li><li>
+            
+            Good morning.
+          </li><li>
+            
+            So winter seems to be back again for a while. Yes, minus 4 is better than minus 4 d. So I'm concern. Now go walk, my dog. It depends which side of the street they're on. So some people's the snow melted and they didn't clean the ice off when it was nice. and now the ice is going to be under snow. Well, I'm going to test that out tonight. so if I, if you don't hear from me again. That didn't go well. or maybe I am in the hospital, or something. I have Grippy's shoes fur de winter, so that should help. Okay. let me let me share my screen. Okay. so today, I wanted to talk about empathy. That's the name of the assignment. And it's also the question I asked you. or the answer to the question I asked you in the quiz. So I gave you 3 options. for what a designer or a good designer needs empathy. sympathy, or apathy. So how will. I think design happens from all those perspectives? What do you think? A design from a designer? With apathy comes a what? Yeah, what kind of design comes from apathy? Yeah. So you may encounter lots of designs that come up this way. So the designer thinks they have a great solution. They don't engage users. and so they don't care. They they think their work is fine as it is. and sometimes maybe it's not bad, but chances are it's gonna be poor. And what about sympathy? Sympathy isn't bad. So the designer might have the viewpoint of oh, the poor user. Let me let me take care of them, and oh! And and might be a little paternalistic. So I know what what's the best thing here, and I'll take care of your needs. So that's not treating the users as okay. I'm just reading the chat here a little bit. Yeah. So sympathy is not bad. But it's not taking the full advantage of people's experience. listening to users. to the people using the software or the device and taking their concerns to heart. So I don't know that you need to start with sympathy. It's possible just to. I think it's possible to start with an open mind that the designer doesn't have the answers. To begin with. it's like in that article, the designer stance from David Kelly at Ideo. You talk to people understand their perspective and and value their input. Okay? So that was a good discussion about that. Any other questions or concerns regarding the value of empathy. So I looked at the responses. and one stood stood out to me. There was a comment about the course organization being a bigger issue. Then the person thought so are there concerns about the course organization. If there are, can you send me a note? So I don't want you to feel like you have to. I don't wanna put you on the spot and communicating in front of the class. So please send me an email, and you are courses. If you'd like to discuss that further. So. assignment one is, do after the break. I'd encourage you to well, to treat it like it's due before the break, I guess. So you get in involved. Yep. you. So you tackle the issues and identify questions or concerns that need more clarification need clarification before the break starts. And so the midterm will be online. We'll be doing. We'll be doing zoom breakout rooms. So I just want to extend an invitation for you to suggest midterm exam questions. That will be fair assessments of our learning to date. So the midterm is March fifth. So that's a little waysen that into the future. But I'd like you to think about it. So read a question, and well, you can write more than one question, but for each question suggestion indicate what you think is a good answer. Does that make sense? So I would say. I would encourage you to put them in the class discussion Forum. Okay? So you can do it as well. That's let me start.  Let me start a discussion about midterm questions. You can see me typing right? I'm
+          </li><li>
+            
+            yep.
+          </li><li>
+            
+            Okay. I just wondered if I had to narrate this as well. Okay, so thinking about assignments and housekeeping here, let's okay. So we have a few students looking to find others to work within groups. so to reiterate. there will be 2 assignments. This empathet they empathize is one of them, and there'll be one more that can be done individually or in groups. and then there'll be 3 parts together will be more of a project. and those I would like to be done in groups of 4 with the caveat they might have to make a group of 3. So if you. if you're interested in
+          </li><li>
+            
+            working alone on the assignment
+          </li><li>
+            
+            assignments. that's fine. But can you indicate a preference? If you have a preference for the project groups. please let me know that. Otherwise I'll so what I'm gonna do is I'm gonna take the assignment groups so 4 and make them into oh. copy them into the project groups. and then groups of less than 4 individuals or pairs. I will makeup groups a 4 from them. So if you'd like to have a say in the project, groups are formed, let me know. Does that make sense. Okay?  So I'll have the details of the project posted next week. So you can get everything. So you're clear about expectations for the rest of the semester. Okay. so let's go back to. Has anyone heard about the Tesla recall that was just in the news? So test this is. I find the headline interesting? Yeah. So Company asked to recall 2.1 9 million vehicles. It sold to correct the mistake on font size. I'm not sure what the pizza store has to do with the font size recall. But it's interesting. I suppose maybe Tesla's yeah. So I think it's. I'm not sure. Yeah, requires a software update, but they may have to be done at the dealership. I'm not sure whether individuals can download their own download and apply their own updates to the car. I don't think that the recall means physically taking. Well, let me. I'm not sure what's details of recall. Mean, I just think it's a mechanism to ensure that everyone gets the software update. So I just want to show you this picture. This is the difference. So this might be the update. So here's the update. So just reading these release notes at the end. you are the driver as the driver. You must be vigilant to the road. Keep your hands on the wheel and be ready to intervene to maintain safety. So an issue with lots of these updates is related to whether whether the fix doesn't break anything else. So I didn't an advantage of having the touch screen. So everything is fixable with softer updates. There's also a potential disadvantage, because there might be errors in the code that are introduced and go unnoticed until something bad happens like the Therac. 25 example we talked about. I am curious whether this is a testless sight or not. it's interesting. So the first one we looked at, not at Tesla app seems to be. not the test. That site. anyway. let's not dwell on this. So there's there are web accessibility standards that are related to this. and I'll post a link to that as well that we can discuss further. Okay, so I have more pictures from my car. I'm not sure what order they're in. Okay. So auto. if it's blue. it's on. So? If so, this means that dual is off. So I was thinking about dual. and I found this this definition on an encyclopedia that seemed to be reputable. But then, looking at all the ads. I'm not so sure but with 2 parts, or combining 2 things. So I wondered, with that sense of duel? Does it make sense that we are combining the 2 controls? Or are we operating them separately? But then they have an example with dual controls? And this seems really relevant to our discussion here. 2 sets of controls in a vehicle, one for the person who is learning to operate a vehicle and one for the teacher. Yeah. So the passenger, the instructor in the passenger seat. could have a brake pedal to use as required. For example. so it seems clear that dual controls mean they're separate. So what's a way that we can make this more clear? Is it sufficiently clear? Or is there a way to improve it. So that's an interesting idea that we have separate controls. This is really the only one that needs to be separate. It's the question of identifying to me. It's a question of identifying is. is the temperature controlled together or separately? So I thought, maybe changing the text here, depending on what the state of this button is. I could delete that one. I think so. Here is a situation where the climate control is off, so nothing is highlighted because nothing is turned on. Does this screen give you any ideas about improving the feedback about the dual temperature controls? Let me show you the rest of them. So duel is off, and so the temp temperatures are the same. Duel is on. and they can be different. So if I, if I adjust the temperature with these arrows and it becomes different. Then the dual gets turned on. Okay, some interesting comments. I thought about doing a video. Maybe I should try that. So there's an issue with the auto being above the temperature control, because Otto really deals with the centre 2 columns. So this is what happens with the menu button. Let me show you. Okay. So here you can see, auto is reflected. and at least 2 areas that are the fan speed and and the fan output, whether it's at your feet. in your face or on the windshield. So here I've adjusted the fan speed manually. so. Auto only applies to the place of output. So how can we improve this? So my suggestion relates to when the duel is off. instead of showing the temperature here. adjust the display to say off. So this temperature would say 20, and if the dual was not active. then it would say off. what do you think about my idea? So if we called it. if we call it temp sync. I think we need to stick with a 4 letter word here. not not a 4 letter word that. anyway. not just any kind of 4 letter word, but one that would fit on the label. So maybe if we said sync for this. then the sense would change. So Sync would be off when we want that control to be active. so maybe that there could be another solution than the one I proposed. If we go with that. So the comment that maybe people would think that they're not getting any any heating if their control is off. If the if the passenger sees the screen and says it's off. I'm not sure what how to convey that more clearly. I would think they would be able to. since the temperature and feel the air moving on their side of the vehicle. I would say that maybe before I adjusted things I would feel the temperature, the air blowing out of the out of the vents. Yeah. So passenger might be. Might be a good good label. Yeah. So there's a few options there. I think so. On the one hand. original display doesn't give us a lot of doesn't give us a lot of maybe enough clues to understand it fully. But we can interact with a display and get some feedback. So lots of good ideas here, I think so. What I and invite you to do is to think about how you might redesign the screen to make it clear when the control. when the dual control is active. when the passenger side control is active. and people have suggested other rearrangements. So if you. I invite you to make a sketch of an interface, and I was, gonna say, put it in the wiki. But no, let's do a class discussion topic about that. and maybe I'll include this screen here as as an inspiration for you. so we can think about discoverability and feedback as a way to to interact with this. So the display might not be cleared just to look at it. But we can. we can interact with it and understand how it operates. Okay. please reply. it's okay. So one thing that we haven't talked about is an empathy map. So here's the template for an empathy map. I'm asking to do so as you're doing the the activities well. as you're going through creating the activity and the resource in your own section of the version. In in that experimental you are courses. Course I want you to think about. Reflect on how you're going through things and what you're feeling. what you're doing, what you're thinking and what you're saying. And so you might think this is easy or this is hard. You might feel frustrated or empowered. and and then the things that you're doing like adding. clicking here and clicking there to accomplish a task. And if you click on the wrong thing and have to go. Then how do you correct that? And what you say might be once you verbalize. So that's a little between what you say and what you think or what user says, and thinks that might be a little difficult to distinguish. There's a little bit of guidance in the article. But you might say. What do I do here? Even if you're by yourself, and you're not doing something. Does anyone ever talk to themselves when you're frustrated with an interface or or just talk to yourself. Anyway. it depends. Anyway, I won't go into that. I won't attempt  sidetrack there. So the idea is to understand. get a sense of what the issues are. We might also think about dude. the heuristics that we have those 10 heuristics and trying to make sense of where there are issues. But idea here is not to propose a solution. It's to understand the issue from the perspective of the user, to say so. Part of listening to the users is not saying, Oh. you're having problems with this, then you just need to do the following. So, coming back with a ready answer. Maybe without even the impression of listening is is not really empathizing. So we're trying to understand the perspective of the user. And this is a tool. There are other tools as well that we can think of. This is a tool to help us understand things from the user's perspective. So it's about defining the problem. And then from there we can. or understanding the problem. And from there we can start designing things. So I have a couple links to processes for design. So one is. And I just wanted to show this graphic. So we start to emphasize. understand. explore alternatives and then materialize. And this is a iterative process. So we empathize, to begin with and define. And then another model of design design processes the Double Diamond. So we discover. So think about the designer stance article we we start from. We have a starting point, and then we do a breath search search. So we look at. we think in a breadth-first kind of way to understand the problem broadly and the user issues. And then we begin to define a solution. So we're expanding. And during discovery discover phase. And then. as we define a solution. we're narrowing down to think of what are the important pieces. And then we develop. And we're looking at alternatives. So we're thinking expansively here looking for ways to develop the solution. And then, as we get to deliver. then we're focusing on one that's going to meet our needs. So we start from the challenge and go to the outcome. And there's lots of errors to go back. So design principle number 4 is iterate, iterate, iterate. So lots of iteration here as well. So I'm out of time here. Any questions or concerns. Okay, so have a good weekend. I've have a couple things to read, a look at for reading. and we'll see you on Tuesday. Have a good weekend, and take care. Bye.
+          </li><li>
+            
+            thanks, Darrell have a good weekend.
+          </li><li>
+            
+            Thanks you, too. Okay. How's the wedding?
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            Good morning!
+          </li><li>
+            
+            good morning!
+          </li><li>
+            
+            Good Morning
+          </li><li>
+            
+            Good Morning
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            still better than -40 weather
+          </li><li>
+            
+            weather is always crazy and unexpected here in Regina
+          </li><li>
+            
+            weather has its own mood in this city
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            please be safe prof
+          </li><li>
+            
+            lets hope that doesn't happen lol
+          </li><li>
+            
+            It will go well
+          </li><li>
+            
+            hopefully all goes well
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            A bad one
+          </li><li>
+            
+            probably that gold plated juicer
+          </li><li>
+            
+            hard to understand design
+          </li><li>
+            
+            Reacted to "probably that gold p..." with 😂
+          </li><li>
+            
+            a bad design I assume, because it does not take into account the user
+          </li><li>
+            
+            An application that might work but is very user hostile
+          </li><li>
+            
+            Reacted to "probably that gold p..." with 😂
+          </li><li>
+            
+            Reacted to "probably that gold p..." with 😂
+          </li><li>
+            
+            Put yourself in user’s shoes
+          </li><li>
+            
+            sympathy is good
+          </li><li>
+            
+            Sympathy would be better but would still lack understanding of the needs of the user
+          </li><li>
+            
+            There's a distance or separation from the designer to the user if they are relying only on sympathy
+          </li><li>
+            
+            Reacted to "There's a distance o..." with ☝️
+          </li><li>
+            
+            either sympathy or empathy takes the user's experience into account which is always something important to consider during design
+          </li><li>
+            
+            So true Moaz, I feel like they need to start with sympathy to figure out what impact/problems other people have and then find ways to empathize to have a deeper understanding of what is needed for the actual design
+          </li><li>
+            
+            Reacted to "So true Moaz, I feel..." with 💯
+          </li><li>
+            
+            empathy because the designer has to connect with the user in order to gain a perspective from their end to ultimately deliver a good design according to needs of the user
+          </li><li>
+            
+            I feel like we almost take a sympathy approach when dealing with clients, as the project continues to develop we switch to empathy once the user get evolved.
+          </li><li>
+            
+            Good point Daryl, I guess they dont NEED to sympathize, I meant they CAN if the designers aren't personally connected to the problem initially
+          </li><li>
+            
+            Empathy is the aways the end goal :)
+          </li><li>
+            
+            Yes, do we email them to you?
+          </li><li>
+            
+            Sounds good to me
+          </li><li>
+            
+            no
+          </li><li>
+            
+            No, what is it about?
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes - alert icons/fonts too small as per required norms
+          </li><li>
+            
+            i heard about a pizza store that got fined for having tesla in its name
+          </li><li>
+            
+            Reacted to "i heard about a pizz..." with 😂
+          </li><li>
+            
+            why did they need to recall the cars couldn't they fix it via a software update?
+          </li><li>
+            
+            i think it can be fixed via a software update - one of the perk of having software buttons i think
+          </li><li>
+            
+            Reacted to "i heard about a pizz..." with 😂
+          </li><li>
+            
+            yeah Tesla owners can do that. It's like a phone update basically where they roll the update to everyone and they can download it from the car
+          </li><li>
+            
+            yeah i think its has to be done at dealership cause not everyone can update or are aware of it and having tesla do it is a good measure to make sure maximum vehicles are updated
+          </li><li>
+            
+            Yeah, usually a recall just involves a very fancy letter in the mail lol. I got one for my car because there's a common problem with the steering analog buttons.
+          </li><li>
+            
+            The article says "As per usual, this is not a recall in the traditional sense. Tesla says it will push out an over-the-air software update to correct the font size to comply with FMVSS, which is how it typically corrects these mistakes."
+          </li><li>
+            
+            They had to do this before with the Autopilot issues.
+          </li><li>
+            
+            Maybe separating the controls by passenger, if they're meant to be separate? Driver vs. Passenger, or P1 vs. P2, rather than Dual?
+          </li><li>
+            
+            For temperature controls, it's often preferred to have physical buttons or scroll wheel so it doesn't distract the driver and just the value shows on the screen
+          </li><li>
+            
+            To be honest I feel that the climate controls are a bit too cluttered for a screen that is this small and responsible for controlling multiple things
+          </li><li>
+            
+            the word dual makes me think both are controlled and would be the same when it is turned on, rather than when it is off
+          </li><li>
+            
+            dual and auto are too ambiguous of words in my opinion
+          </li><li>
+            
+            Reacted to "dual and auto are to..." with 👍
+          </li><li>
+            
+            Yeah overall to me the distinction is weird tbh. Why does it matter whether dual and auto are on? To me the temperature is really the only thing that matters here.
+          </li><li>
+            
+            That's what I was saying the layout could use some cleaning/decluttering
+          </li><li>
+            
+            my idea: reorder the buttons in a more appealing/easy-to-understand way and use less vague words to describe functionality
+          </li><li>
+            
+            That to me makes sense, but then I wonder if people would think that there is no air blowing on the second passenger at all.
+          </li><li>
+            
+            Your idea sounds good. We could also rename DUAL to something like TEMP SYNC, since all it does is synchronizes the temperatures.
+          </li><li>
+            
+            Reacted to "Your idea sounds goo..." with 👍
+          </li><li>
+            
+            Replying to "Your idea sounds goo..."
+          </li><li>
+            
+            what about passenger
+          </li><li>
+            
+            Reacted to "my car has a button ..." with 👍
+          </li><li>
+            
+            maybe just sync then, since we already know its temperature controls
+          </li><li>
+            
+            Replying to "what about passenger"
+          </li><li>
+            
+            Instead of Off we can say Synced for the passenger side, or remove the passenger controls altogether when SYNC is on.
+          </li><li>
+            
+            Reacted to "Instead of Off we ca..." with ☝️
+          </li><li>
+            
+            Reacted to "Instead of Off we ca..." with ☝️
+          </li><li>
+            
+            Reacted to "Instead of Off we ca..." with ☝️
+          </li><li>
+            
+            another one i think is that it should have 2 buttons on top like SYNC and DUAL to quickly switch between modes
+          </li><li>
+            
+            Yes haha
+          </li><li>
+            
+            Have a good weekend  thank you
+          </li><li>
+            
+            Thanks Daryl!
+          </li><li>
+            
+            Bye!
+          </li><li>
+            
+            You too. Thanks.
+          </li><li>
+            
+            Have a good one!
+          </li><li>
+            
+            thank you! you as well
+          </li><li>
+            
+            thank you! be careful walking your dog
+          </li><li>
+            
+            Thank you. Take care
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Thank you Sir
+          </li><li>
+            
+            have a good weekend
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Thank you, have a good weekend!
+          </li><li>
+            
+            Thank you, have a good weekend!
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Today we  have encountered the concept of Empathy in relation to design. And how emphasizing with potential end user and understanding their point of view can help in generating useful and intuitive design ideas.
+    </li><li>I liked the idea that the professor asked students for suggestions on the mid term questions.
+    </li><li>Empathy 
+    </li><li>The empathetic design aspects of designing an interface for a user
+    </li><li>Midterm issues
+    </li><li>Design of the air conditioning on the ford
+    </li><li>The empathy map
+    </li><li> Dr.Hepting listens to feedback such as course organization complaints and works with students to make it work better. I appreciate that and to me that is an important concept because it shows that our professor cares.
+    </li><li>The difference between sympathy and empathy in regards to design
+    </li><li>the important concept or perspective we learnt today is, even seemingly minor aspects like font size can have safety implications, especially in modern vehicles where controls are often displayed digitally.
+    </li><li>Proper attention product design with example of Tesla's recall. 
+    </li><li>The empathy map and why designer should use it
+    </li><li>design in technology specially cars
+    </li><li>I see the perspective of designers, to try to have empathy for users while designing
+    </li><li>The four quadrants of the empathy map was particularly interesting
+    </li><li>Today I learned about the importance of Empathy rather than sympathy in the design process. I also learned about the two diamond design principals, and thought a little more about the design of the climate control in the Ford Edge.
+    </li><li>nothing 
+    </li><li>Today we discussed Empathy vs. Sympathy vs. Apathy in design, and how to properly use an empathy map to assess problems in design, because being apathetic or only sympathetic aren't enough in terms of human-centered design. 
+    </li><li>The example that you explained
+    </li><li>That the automotive industry sucks at intuitive design!
+    </li><li>I have realized the importance of user interface, as well as how do we name things on the interface, so that users can easily understand.
+    </li><li>We leanr tabout sympathy, empathy and epathy and and discussed about the car board designs.
+    </li><li>I got to see the class's thoughts on the car's design. I also really enjoyed learning about empathy as it relates to designers.
+    </li><li>In todays lecture we learned about a technical designing issue which called a tesla recall, we also revisited car climate control and tried to correct some of the designing issues and tried to make it more user friendly for that professor started a class discussion. 
+    </li><li>Today, I learned about empathy in design. It's all about understanding how people feel and what they need when creating things like apps or products. By focusing on empathy, we can make designs that really connect with users and make their experiences better.
+    </li><li>Evolution and evaluation for perfect design as well as climate control discussion and group project as well as group assignments
+    </li><li>About empathy
+    </li><li>I encountered the concept of how important good planning is in designing anything technology based
+    </li><li>using empathy when coming up with designs
+    </li><li>Looking at the Ford design and considering how this major car brand could change their climate design based on empathy
+    </li><li>Concept of empathy maps, how to make them and how they can help
+    </li><li>An important concept I encountered is that design thinking should follow an overall flow of understand, explore, and materialize.
+    </li><li>gulf of execution and evaluation, Tesla Recall, design thinking 101, Framework for innovation 
+    </li><li>concept of empathy in designing 
+    </li><li>how much technology cars pack and how they can be recalled for simple thigs as well.
+    </li><li>In today's lecture the discussion on empathy that designers have and put in everytime during their work. Tesla's call regarding their front size being too small for the brakes. The car climate control revisited, design thinking 101 and design council double diamond. 
+    </li><li>How a car dashboard (climate controls) can be improved.
+    </li><li>we discussed about the design.
+    </li><li>Empathy Map, Tesla Recall
+    </li><li>Empathy
+    </li><li>The concept of Empathy map
+    </li><li>We discussed the value of empathy of how to help designer to understand user needs. In addition, we looked at the Tesla recall case and the car climate controls, and we ideated to improve the climate controls. Lastly, we briefly looked at a couple of design processes, including Design Thinking and Double Diamond.
+    </li><li>The capacity of design thinking to improve a particular area of the end user's life is what makes it successful.
+    </li><li>Design thinking's success comes on its capacity to alter an element of the end user's life.
+    </li><li>The concept of empathy and the car climate control design
+    </li><li>map and structure (flow)
+    </li><li>Learnt good opinions regarding the Ac Controls and ideas to improve it - learnt about the  importance of empathy 
+    </li><li>Design and empathy 
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>Whether each member of assignment group should submit the same PDF file, or only one member should submit for the whole group?
+    </li><li>very engaging
+    </li><li>No.
+    </li><li>Sympathetic design was a little harder to understand but I feel like I do 
+    </li><li>no
+    </li><li>No
+    </li><li>Nothing
+    </li><li>not in particular
+    </li><li>NO
+    </li><li>No, It was straightforward. 
+    </li><li>no it was easy
+    </li><li>I had to do a little bit of reading to understand the difference between sympathy and empathy
+    </li><li>How the map could relate to the assignment
+    </li><li>No, the only difficulty I had understanding was ways to improve the climate control system without practically remaking it. I find it fairly difficult to use and somewhat backwards that there are two different places to control the climate. One should display the current settings, and the other should modify the settings. With both of them doing the same thing, it seems redundant which is not required in this scenario.
+    </li><li>no
+    </li><li>no
+    </li><li>No, there wasn't anything to difficult to understand.
+    </li><li>No
+    </li><li>No, there was nothing I found difficult to understand.
+    </li><li>No I didn't find anything difficult to understand today.
+    </li><li>No
+    </li><li>No
+    </li><li>Nothign today!
+    </li><li>no
+    </li><li>No.
+    </li><li>N/A
+    </li><li>no
+    </li><li>no
+    </li><li>Not really, just need some self study for the discussed topics in the class and it should work.
+    </li><li>No
+    </li><li>Not really!
+    </li><li>No
+    </li><li>Nothing
+    </li><li>No
+    </li><li>There was no difficulties to understand today's content.
+    </li><li>no 
+    </li><li>No
+    </li><li>no
+    </li><li>Yes. I am not quite familiar with car climate control system because i don't drive. Need to learn more about it.
+    </li><li>allover it was understandable !
+    </li><li>not particularly
+    </li><li>Nope
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>How decisions are made about which design to accept and take into production. For example who decided to name the button DUAL.
+    </li><li>looking forward to the mid term questions discussion.
+    </li><li>How can we prepare for the midterm? The readings mentioned in the syllabus are not all brought up in lectures.
+    </li><li>If there is any real checks or a checklist that one can use to ensure a design is more empathic rather than sympathetic 
+    </li><li>no
+    </li><li>No
+    </li><li>More about how emotions are used by designers to design better products
+    </li><li>im content with what i learned today
+    </li><li>Everything was good
+    </li><li>Evolution of product design. 
+    </li><li>What kind of design counts as a sympathic design and does that kind of design belittle the user?
+    </li><li>no but just wanted to know how designs fails 
+    </li><li>I wonder about how current software is tested for usability to gague the experience of the users.
+    </li><li>mostly about our midterms
+    </li><li>Nope, I think everything that was covered today was in good detail.
+    </li><li>no 
+    </li><li>no
+    </li><li>No, there wasn't anything today that I would like to know more.
+    </li><li>I'm excited to learn more about designing good software and about Human-Computer Communication 
+    </li><li>No all the topics were well covered in the class. 
+    </li><li>Ideas to make perfect design.
+    </li><li>no
+    </li><li>More about the midterm please!
+    </li><li>more on example of how apathy, sympathy, and empathy come into play with common designs
+    </li><li>No.
+    </li><li>I would like to know more about midterm exams and projects.  
+    </li><li>no
+    </li><li>more or different companies similar to framework for innovation
+    </li><li>Yes, the designing topic about the council double diamond will study about it and let know if there are any further questions.
+    </li><li>No
+    </li><li>No. 
+    </li><li>Tesla Recall
+    </li><li>More about empathy
+    </li><li>Empathy maps and Frameworks for innovation
+    </li><li>I would like to know more about other design processes that might be applied depending on different design scenario.
+    </li><li>no
+    </li><li>No
+    </li><li>no
+    </li><li>a little guidance on assignment .
+    </li><li>we talk about car user interface and something which increase my ideas .So overall, i got interested toward this new approach of learning.
+    </li><li>will learn more about design process and double diamond process via internet
+    </li><li>I want to do a little more reading about the Tesla recall seems very interesting 
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/10_Thu-08-Feb-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

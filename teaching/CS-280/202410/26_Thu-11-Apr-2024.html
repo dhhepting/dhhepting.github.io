@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-280/202410/26_Thu-11-Apr-2024.html" />
+    
+    <title>Mtg 26 &bull; CS-280 (202410) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 26 &bull; CS-280 (202410) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/26_Thu-11-Apr-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/",
+        
+          "name": "CS 280"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/",
+        
+          "name": "202410"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/26_Thu-11-Apr-2024.html",
+        
+          "name": "Mtg 26 (Thu-11-Apr-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-280/">
+        CS 280
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-280/202410/">
+        202410
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 26 (Thu-11-Apr-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 26/26: Thu-11-Apr-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="25_Tue-09-Apr-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a role="button" class="btn btn-outline-primary disabled">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Review for Final
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Thursday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1740941&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1712815200&amp;course=31085" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=31085" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Response to Responses
+  </h4>
+  <ul>
+  <li>too picky about choosing words to be more inclusive?</li>
+  <li>why bother with humane interfaces? Can’t we automate that?</li>
+</ul>
+<h4>
+    Results from Last Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/report.php?instance=3352&amp;group=0" target="_blank">final exam input</a>
+    <ul>
+      <li>99/123 agree that final should be all MCQs – so it will be all MCQ!</li>
+      <li><a href="https://en.wikipedia.org/wiki/Information_wants_to_be_free" target="_blank">Information wants to be free</a></li>
+    </ul>
+  </li>
+</ul>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li>Infographic submissions
+    <ul>
+      <li>share yours by adding an image to a post on the <a href="https://urcourses.uregina.ca/mod/oublog/view.php?id=2578433" target="_blank">Infographic Viewer blog</a></li>
+      <li>if you have your infographic as a pdf, please try to export it as a jpg or png file @ 300 dots/pixels per inch, save it, upload it, and so forth</li>
+      <li>See posts already there for examples</li>
+    </ul>
+  </li>
+  <li><a href="https://www.coursera.org/articles/computer-science-jobs-for-the-future" target="_blank">What Can You Do with a Computer Science Degree? 10 In-Demand Fields</a></li>
+  <li>Final exam preparation: bring a pencil and eraser and leave your electronics (phones, watches, ear buds, etc.) at home</li>
+  <li>Review (<a href="https://www2.cs.uregina.ca/~hepting/teaching/CS-280/202410/13_Tue-27-Feb-2024.html" target="_blank">Meeting 13 contains review suggestions for material before the midterm</a>, the following covers from the midterm until the end of the semester. Supplement these summaries with a review of the class meeting pages and materials linked there, such as photos):
+    <ul>
+      <li>Videos:
+        <ul>
+          <li><a href="https://www.ted.com/talks/douglas_rushkoff_how_to_be_team_human_in_the_digital_future?language=en" target="_blank">Team Human</a></li>
+          <li><a href="https://www.ted.com/talks/eli_pariser_what_obligation_do_social_media_platforms_have_to_the_greater_good" target="_blank">Obligation of social media platforms?</a></li>
+          <li><a href="https://www.youtube.com/watch?v=LscTx6DHh9I" target="_blank">Digital Social Innovation to Empower Democracy</a></li>
+          <li><a href="https://www.ted.com/talks/kathy_kleiman_the_pioneering_women_who_helped_create_modern_computing" target="_blank">The pioneering women who helped create modern computing</a></li>
+          <li><a href="https://www.youtube.com/watch?v=B6rKUf9DWRI" target="_blank">The Mother of All Demos</a></li>
+          <li><a href="https://www.youtube.com/watch?v=5AvtUrHxg8A" target="_blank">Surveillance Capitalism and Democracy</a></li>
+        </ul>
+      </li>
+      <li>Podcasts:
+        <ul>
+          <li><a href="https://www.humanetech.com/podcast/future-proofing-democracy-in-the-age-of-ai-with-audrey-tang" target="_blank">Future-proofing Democracy in the Age of AI with Audrey Tang</a></li>
+          <li><a href="https://www.humanetech.com/podcast/chips-are-the-future-of-ai-theyre-also-incredibly-vulnerable-with-chris-miller" target="_blank">Chips are the future of AI. They’re also incredibly vulnerable. With Chris Miller</a></li>
+        </ul>
+      </li>
+      <li>Web resources:
+        <ul>
+          <li><a href="https://humsci.stanford.edu/feature/study-finds-chatgpts-latest-bot-behaves-humans-only-better" target="_blank">Study finds ChatGPT’s latest bot behaves like humans, only better</a></li>
+          <li><a href="https://www.acm.org/diversity-inclusion/words-matter" target="_blank">Words Matter, from the ACM</a></li>
+          <li><a href="https://www.thesocialdilemma.com/the-dilemma/">The Dilemma</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Information_wants_to_be_free" target="_blank">Information wants to be free (wikipedia)</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/ELIZA" target="_blank">ELIZA (wikipedia)</a></li>
+        </ul>
+      </li>
+      <li>Presentations:
+        <ul>
+          <li><a href="https://dl.dropboxusercontent.com/scl/fi/ht3sin0nutysc3banbhrd/20-CIPS-CS280.pdf?rlkey=hfdx17za6yphq09wb5ns6st0b&amp;dl=0" target="_blank">CIPS from March 21</a></li>
+        </ul>
+      </li>
+      <li>In the News:
+        <ul>
+          <li><a href="https://www.technologyreview.com/2024/03/13/1089729/lets-not-make-the-same-mistakes-with-ai-that-we-made-with-social-media/" target="_blank">Let’s not make the same mistakes with AI that we made with social media</a></li>
+          <li><a href="https://www.engadget.com/heres-a-video-of-the-first-human-neuralink-patient-controlling-a-computer-with-his-thoughts-235659486.html" target="_blank">Neuralink</a></li>
+          <li>Apple Antitrust Case and the Green Bubble: <a href="https://www.wired.com/story/antitrust-case-against-apple-weaponizes-the-cult-of-cupertino/" target="_blank">WIRED</a> &amp; <a href="https://www.npr.org/2024/03/28/1241473453/why-green-text-bubble-stigma-is-part-of-the-anti-trust-case-against-apple" target="_blank">NPR</a></li>
+          <li>How quickly do large language models learn unexpected skills?: <a href="https://www.wired.com/story/how-quickly-do-large-language-models-learn-unexpected-skills/" target="_blank">WIRED</a> &amp; <a href="https://www.quantamagazine.org/how-quickly-do-large-language-models-learn-unexpected-skills-20240213/" target="_blank">Quanta</a></li>
+          <li><a href="https://www.cbc.ca/news/canada/photo-editing-media-royal-family-1.7149755" target="_blank">Photo manipulation not new</a></li>
+          <li><a href="https://www.cbc.ca/listen/live-radio/1-63-the-current/clip/16051960-dynamic-pricing-groceries" target="_blank">Dynamic pricing (for groceries)?</a></li>
+          <li><a href="https://www.cbc.ca/listen/live-radio/1-63-the-current/clip/16050855-why-happiness-rates-falling-among-younger-generations" target="_blank">Happiness</a></li>
+          <li><a href="https://www.cbc.ca/listen/live-radio/1-63-the-current/clip/16050853-kategate-birth-celebrity-conspiracies" target="_blank">Kategate and information nihilism</a></li>
+          <li><a href="https://www.cbc.ca/player/play/1.7150960" target="_blank">3D printed guns in Canada</a></li>
+          <li><a href="https://www.cbc.ca/news/business/vending-machine-facial-analysis-invenda-waterloo-1.7126196" target="_blank">Vending machines</a></li>
+          <li><a href="https://www.cbc.ca/news/canada/e-transfer-abuse-1.7125623" target="_blank">Interac e-Transfer messaging abuse</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2510547" target="_blank">Submit your response to this meeting before noon tomorrow</a></li>
+  <li>prepare for final on Tuesday</li>
+</ul>
+<h5><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2511305">ACTION: Take quiz before next meeting</a></h5><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=9253">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_26" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_26" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_26" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_26" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_26" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_26" data-bs-slide-to="4"></li>
+      <li data-bs-target="#mtg_pix_26" data-bs-slide-to="5"></li>
+      <li data-bs-target="#mtg_pix_26" data-bs-slide-to="6"></li>
+      <li data-bs-target="#mtg_pix_26" data-bs-slide-to="7"></li>
+      <li data-bs-target="#mtg_pix_26" data-bs-slide-to="8"></li>
+      <li data-bs-target="#mtg_pix_26" data-bs-slide-to="9"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/1rmlss26cmidxqa31hlwi/26-10.png?rlkey=cq5k7c5a3bxfb9pundov0vrb8&amp;dl=0" alt="26 - 10.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/yhoregltlj2ecyx5tvhs6/26-11.png?rlkey=2ndzlkhi4sd8e0qbw579zcsps&amp;dl=0" alt="26 - 11.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/k4bvmh5d2szi7824yu26j/26-12.png?rlkey=hk347pc8jhn3ej8y4r2yd9zwo&amp;dl=0" alt="26 - 12.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/063xlwtzmaqivdp9x5ee2/26-13.png?rlkey=f9lpesooqmhrfcpung6524iz2&amp;dl=0" alt="26 - 13.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/9skbv0lz5xh541mkm8owg/26-2.png?rlkey=3h35g3ynv6mtsa1078nbxsi4c&amp;dl=0" alt="26 - 2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/w10giu1lgkw1pfhal8jcc/26-5.png?rlkey=10b16i59kycjbwiz813r5rh5q&amp;dl=0" alt="26 - 5.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/ox4c1zx98scwhphi2n2v1/26-6.png?rlkey=47rdn6uggw1xyuas7kazuwwgk&amp;dl=0" alt="26 - 6.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/k69bck1zpajux8uks17ss/26-7.png?rlkey=m769c1oe8cea59d7qnq6p4b93&amp;dl=0" alt="26 - 7.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/5khrqqajnwbk8076e4pf4/26-8.png?rlkey=mr7k599mmmj3n8sbgwgulqd4t&amp;dl=0" alt="26 - 8.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/11exgqdm1j9ggoxkrd04m/26-9.png?rlkey=g2cr7bo9jijqon7lxh2aaxy7o&amp;dl=0" alt="26 - 9.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_26" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_26" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Happy last day of class
+          </li><li>
+            
+            so we'll still see
+          </li><li>
+            
+            each other. We have an
+appointment on Tuesday
+          </li><li>
+            
+            afternoon
+          </li><li>
+            
+            So good news.
+          </li><li>
+            
+            We're going to be in Gym 2
+all by ourselves. I guess that it is a
+          </li><li>
+            
+            sign of how big our class is that we can we
+get the gym for ourselves! So
+          </li><li>
+            
+            I'm going to have a C I reserve
+the right to change seating and
+          </li><li>
+            
+            move you around during the exam
+that I'm going to add a seating
+          </li><li>
+            
+            plan not for your desks. But by
+extension of send an email
+          </li><li>
+            
+            beforehand This is
+          </li><li>
+            
+            see you wherever important
+          </li><li>
+            
+            anyway.
+          </li><li>
+            
+            Morning Okay, so
+          </li><li>
+            
+            I need to create today the the
+summary of our resources that
+          </li><li>
+            
+            we've done over the time since
+the midterm
+          </li><li>
+            
+            so I promised to do that I'll
+get it done today. I've been
+          </li><li>
+            
+            struggling with you our courses
+a bit yesterday and today.
+          </li><li>
+            
+            Anyone else been struggling with
+your courses? No.
+          </li><li>
+            
+            So from last day
+          </li><li>
+            
+            here let me
+          </li><li>
+            
+            me see if your course is going
+to cooperate now. Okay, so
+          </li><li>
+            
+            here's the summary.
+          </li><li>
+            
+            show you this. So by popular
+demand 99 out of 123 responses
+          </li><li>
+            
+            said an exam should be all
+multiple choice.
+          </li><li>
+            
+            So the word suggestions for
+questions
+          </li><li>
+            
+            so everyone should be able to
+see the this questionnaire
+          </li><li>
+            
+            report
+          </li><li>
+            
+            the summary Can anyone confirm
+that they've been able to look
+          </li><li>
+            
+            at this
+          </li><li>
+            
+            so I'll use the suggestions in
+          </li><li>
+            
+            in questionnaire kinds of
+questions the last exam so, all
+          </li><li>
+            
+            the different suggestions I will
+give them and craft them into
+          </li><li>
+            
+            multiple choice questions okay.
+          </li><li>
+            
+            So because the exam is on
+Tuesday I need to finalize it
+          </li><li>
+            
+            quickly so that's why I'm not
+gonna take any more
+          </li><li>
+            
+            stress questions
+          </li><li>
+            
+            so one comment one suggestion
+for a question was about
+          </li><li>
+            
+            information wants to be free
+they haven't heard that
+          </li><li>
+            
+            expression before.
+          </li><li>
+            
+            You so the full version
+          </li><li>
+            
+            Well, it's a quote from the
+conference where it is
+          </li><li>
+            
+            originally were said to occur.
+Conversation between Stuart
+          </li><li>
+            
+            Brand and Steve Wozniak and he
+ended those two names either of
+          </li><li>
+            
+            those two names are familiar to
+anyone. Steve Wozniak was the
+          </li><li>
+            
+            other person behind the Apple
+Apple computers. Anyway, not
+          </li><li>
+            
+            quite as famous as Steve Jobs, I
+think. So on the one hand, you
+          </li><li>
+            
+            have the point you're making was
+is that information sort of
+          </li><li>
+            
+            wants to be expensive? Because
+it is so valuable. The right
+          </li><li>
+            
+            information in the right place
+just changes your life. On the
+          </li><li>
+            
+            other hand, information also
+wants to be free because the
+          </li><li>
+            
+            cost is getting it out. is
+getting lower and lower all the
+          </li><li>
+            
+            time. So you have these two
+things fighting against each
+          </li><li>
+            
+            other. So that simplified the
+information wants to be free.
+          </li><li>
+            
+            Information also wants to be
+expensive. And that tension will
+          </li><li>
+            
+            never go not go away.
+          </li><li>
+            
+            So how does this
+          </li><li>
+            
+            play? Into the politics in
+assessing the semester
+          </li><li>
+            
+            How is it really?
+          </li><li>
+            
+            A class discussion?
+          </li><li>
+            
+            Intellectual property in general
+          </li><li>
+            
+            I should have done the slides I
+could do the copy left on the
+          </li><li>
+            
+            left and copyright on the right.
+          </li><li>
+            
+            Miss Moore says a lot of things
+that go into the open source
+          </li><li>
+            
+            umbrella
+          </li><li>
+            
+            so, it's not all about making
+information free any other
+          </li><li>
+            
+            thoughts? about this?
+          </li><li>
+            
+            I should say. So encryption is
+also an issue here.
+          </li><li>
+            
+            So that belongs there. But also
+here
+          </li><li>
+            
+            Is So encryption is a way to
+protect intellectual property.
+          </li><li>
+            
+            And it's also used by people who
+are live free information as a
+          </li><li>
+            
+            way to keep information private
+and away from authorities
+          </li><li>
+            
+            right so about two thirds 1/3 In
+terms of
+          </li><li>
+            
+            an afternoon somewhere not
+sending stonecrop questions and
+          </li><li>
+            
+            accepting to me exactly
+          </li><li>
+            
+            but that's what I'll be aiming
+for.
+          </li><li>
+            
+            So social dilemmas movie is
+available for you to review on
+          </li><li>
+            
+            your own so that's.
+          </li><li>
+            
+            There were three short clips,
+negative particular topics and
+          </li><li>
+            
+            they they are available So.
+          </li><li>
+            
+            So the Kemp's presentation
+          </li><li>
+            
+            PowerPoint is available both as
+a PowerPoint PDF
+          </li><li>
+            
+            on March 21
+          </li><li>
+            
+            Meeting page.
+          </li><li>
+            
+            The media has been updated so
+the pictures of the whiteboard
+          </li><li>
+            
+            so finish up today
+          </li><li>
+            
+            so, today's
+          </li><li>
+            
+            so I posted
+          </li><li>
+            
+            I posted the midterm
+          </li><li>
+            
+            anyone see an email about that
+          </li><li>
+            
+            okay
+          </li><li>
+            
+            so I want to talk just a bit
+about the infographic
+          </li><li>
+            
+            submissions. So I wanted to
+share them
+          </li><li>
+            
+            with the class. Not sure if the
+way that I'm sharing is breaking
+          </li><li>
+            
+            your course or just because
+people are using your courses
+          </li><li>
+            
+            too server sensibly. Anyway, as
+I was trying to do this was not
+          </li><li>
+            
+            the sickness whether or not
+these energies
+          </li><li>
+            
+            but I notice that not all the
+submissions are in a single page
+          </li><li>
+            
+            image format. So some people
+submitted PDF so PDF can be
+          </li><li>
+            
+            posted as an image. So I
+converted I began to convert
+          </li><li>
+            
+            them at 300 Dots Per Inch to
+JPEG files. But then some of
+          </li><li>
+            
+            them were not in one page. So I
+didn't put I didn't share the
+          </li><li>
+            
+            ones that weren't in one page.
+So
+          </li><li>
+            
+            let me see if I can show you
+what I did. So far with that.
+          </li><li>
+            
+            There's 12345
+          </li><li>
+            
+            Nope. Still 45678
+          </li><li>
+            
+            So if you want
+          </li><li>
+            
+            So I thought about having
+infographics. Infographics as a
+          </li><li>
+            
+            topic for some exam questions.
+But I think that may be a bridge
+          </li><li>
+            
+            Too. Far.
+          </li><li>
+            
+            seemed more fair. So they saw
+you have some
+          </li><li>
+            
+            great observations about your
+exam question.
+          </li><li>
+            
+            So I said if you if you're not
+on one page, fix it and
+          </li><li>
+            
+            resubmit. So I would say don't
+worry about that either.
+          </li><li>
+            
+            If you'd like to do it well
+nobody is short. of things to do
+          </li><li>
+            
+            at this time. of year.
+          </li><li>
+            
+            Okay, so
+          </li><li>
+            
+            I'll just take some time to go
+through the suggestions and we
+          </li><li>
+            
+            can talk about things from the
+class in general. related to
+          </li><li>
+            
+            those suggestions.
+          </li><li>
+            
+            So the first one assuming your
+team designed a software and is
+          </li><li>
+            
+            planning to launch it but they
+decide to not give you credit
+          </li><li>
+            
+            for the work you've done. What
+can you do in the situation so
+          </li><li>
+            
+            the inspiration I take from that
+          </li><li>
+            
+            is
+          </li><li>
+            
+            So, this was imagine a scenario
+so maybe
+          </li><li>
+            
+            I'll lay out a situation a case
+study, perhaps and then give you
+          </li><li>
+            
+            some options to how we might
+approach it with the
+          </li><li>
+            
+            implications are
+          </li><li>
+            
+            Does that seem fair?
+          </li><li>
+            
+            Comprehensive question
+concerning ethics it should not
+          </li><li>
+            
+            be to should not revolve around
+definitions and keywords but
+          </li><li>
+            
+            rather the main idea. Question
+should concern the big ideas we
+          </li><li>
+            
+            learned in class and details of
+how to understand and take
+          </li><li>
+            
+            action against them.
+          </li><li>
+            
+            So that doesn't necessarily look
+like a multiple choice question,
+          </li><li>
+            
+            but it's maybe like the first
+one. What would you do in this
+          </li><li>
+            
+            situation? What is
+          </li><li>
+            
+            for this? It came in with the
+code of ethics and what is.
+          </li><li>
+            
+            And the other formulations that
+are appealing.
+          </li><li>
+            
+            I suggest mainly all important
+topics that help in our future.
+          </li><li>
+            
+            So, how many people
+          </li><li>
+            
+            forecast around vertical for the
+reason any urgent forecast
+          </li><li>
+            
+            there was a joke a few years ago
+          </li><li>
+            
+            that came up in
+          </li><li>
+            
+            Fortran was assessed in the
+programming languages section of
+          </li><li>
+            
+            the Warrens oral exam last year
+C stands for Formula
+          </li><li>
+            
+            translation. That was one of the
+first ones first line high level
+          </li><li>
+            
+            language was developed and the
+job was even years and gray
+          </li><li>
+            
+            soccer to get back to a soccer
+she was involved with COBOL
+          </li><li>
+            
+            COBOL common business oriented
+language so, these are very
+          </li><li>
+            
+            early languages and groups joke.
+Here's the honest COBOL and non
+          </li><li>
+            
+            use of Fortran but you're still
+with us. So.
+          </li><li>
+            
+            That's me trying to be a bit
+more positive
+          </li><li>
+            
+            comments of recent days so.
+          </li><li>
+            
+            I suppose I can have some true
+and false questions
+          </li><li>
+            
+            don't have to use all five
+responses for the Scantron sheet
+          </li><li>
+            
+            who would be in favor of true
+and false questions
+          </li><li>
+            
+            okay. Thank you for raising your
+hands
+          </li><li>
+            
+            all right
+          </li><li>
+            
+            ethics, AI and encryption
+          </li><li>
+            
+            so one thing that came to me the
+other day was what if we
+          </li><li>
+            
+            google accepted search strings
+and if it didn't find any
+          </li><li>
+            
+            results it would pass on to the
+general AI and create what you
+          </li><li>
+            
+            requested so the lines vary
+between the things that exist
+          </li><li>
+            
+            that we can search and we can
+know about and of the things
+          </li><li>
+            
+            that are fabricated
+          </li><li>
+            
+            think I did this already.
+          </li><li>
+            
+            Maybe there's a question there.
+          </li><li>
+            
+            Oh,
+          </li><li>
+            
+            just start over.
+          </li><li>
+            
+            So it's ethics are important for
+computing but ethics are
+          </li><li>
+            
+            important also because computing
+casts such a large shadow and
+          </li><li>
+            
+            impacts every aspect of our
+lives.
+          </li><li>
+            
+            So when we're talking about
+financial services or
+          </li><li>
+            
+            applications talking about
+convenience, but what if the
+          </li><li>
+            
+            people who need to have access
+to these accessory services
+          </li><li>
+            
+            don't have access to the
+computing power they need. So
+          </li><li>
+            
+            that's in general the digital
+divide
+          </li><li>
+            
+            I'm not sure the title is called
+Robots ramblings.
+          </li><li>
+            
+            Yeah, by the way, but Sir talk
+to Yes I think so.
+          </li><li>
+            
+            up so in general Blair
+remembered is some of the film
+          </li><li>
+            
+            was the company went on to sell
+the latest and greatest products
+          </li><li>
+            
+            and so the she's an actress saw
+the supply of cards that allow
+          </li><li>
+            
+            owner loves to repair themselves
+          </li><li>
+            
+            so in the non animated world we
+have something similar
+          </li><li>
+            
+            expressions of a directory pair
+          </li><li>
+            
+            Okay. fallacies.
+          </li><li>
+            
+            So I think I can work with that
+fallacies and the ethical issue
+          </li><li>
+            
+            that are related or we could
+apply fallacies or
+          </li><li>
+            
+            maybe an example of ethical
+analysis required to root out
+          </li><li>
+            
+            fallacies. So maybe. Second look
+at some examples of fallacies
+          </li><li>
+            
+            and arguments that were made and
+then you can identify the
+          </li><li>
+            
+            fallacy.
+          </li><li>
+            
+            So dark patterns lists the
+levels of Bloom's Taxonomy.
+          </li><li>
+            
+            Find dark patterns
+          </li><li>
+            
+            so, there is a common
+          </li><li>
+            
+            one of the responses is
+cognitive if we need to why we
+          </li><li>
+            
+            need to make those patterns more
+inclusive and not use
+          </li><li>
+            
+            not to be too sensitive a
+phrase?
+          </li><li>
+            
+            What are the issues there? So,
+that's in the ACM droid words
+          </li><li>
+            
+            matter.
+          </li><li>
+            
+            So, another example of this I
+remember I was meeting for FIRST
+          </li><li>
+            
+            Robotics FIRST LEGO League and
+talking about the challenge for
+          </li><li>
+            
+            the year and one of them they
+talked is on collecting garbage
+          </li><li>
+            
+            waste represent the waste they
+take black
+          </li><li>
+            
+            I know what shame was I thought
+then maybe that was a poor
+          </li><li>
+            
+            choice. So, I'm not saying
+          </li><li>
+            
+            saying things are wrong, but I
+think there's room to broaden
+          </li><li>
+            
+            our horizons and realize that
+words aren't the same way
+          </li><li>
+            
+            everyone competing more
+inclusive and more
+          </li><li>
+            
+            representative of the
+demographics of the population
+          </li><li>
+            
+            around us than we have to be.
+          </li><li>
+            
+            That helps our cause if we are
+mindful of messages that are
+          </li><li>
+            
+            communicated to other groups.
+Does that make sense? Just for
+          </li><li>
+            
+            practical point of view,
+diversity in computing helps
+          </li><li>
+            
+            improve computing. So the thing
+is facial recognition example
+          </li><li>
+            
+            if we have people of all
+different skin colors involved
+          </li><li>
+            
+            in the process and then the
+technology gets better and the
+          </li><li>
+            
+            uses are maybe more thoughtfully
+considered as well.
+          </li><li>
+            
+            Okay, the next question here is
+what can we do to mitigate bias
+          </li><li>
+            
+            in AI?
+          </li><li>
+            
+            Oh, that's about all of them.
+          </li><li>
+            
+            So that leaves to the feedback
+that another questions at a time
+          </li><li>
+            
+            we're about right so.
+          </li><li>
+            
+            So keep roughly the same ratio.
+          </li><li>
+            
+            100 to 120 questions. That's
+what I'm looking at.
+          </li><li>
+            
+            Okay, one last response. I want
+to mention was paraphrase and
+          </li><li>
+            
+            you can look at the response
+yourself.
+          </li><li>
+            
+            Why do we need to worry about
+creating negative cases why on
+          </li><li>
+            
+            just that
+          </li><li>
+            
+            invisible hand where our API
+czar create the interface works
+          </li><li>
+            
+            best and
+          </li><li>
+            
+            so why do you need interfaces?
+It's important to engage humans
+          </li><li>
+            
+            in the process
+          </li><li>
+            
+            not just because computers are
+more trustworthy by nature. So
+          </li><li>
+            
+            it's better to be human and work
+with human interface design
+          </li><li>
+            
+            should be working on routine.
+Anyway, so last few minutes
+          </li><li>
+            
+            here. Do you have any questions
+or concerns
+          </li><li>
+            
+            Okay, well thank you very much
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Today I learnt about the concept 'Information wants to be free.'
+    </li><li>not really
+    </li><li>about the contents of the final exam
+    </li><li>The important concept today is what important topics will be on the exam
+    </li><li>Today we learned about what the final exam would be on and what to review for it to prepare.
+    </li><li>That as a society we should harmonize machine and human made interfaces.
+    </li><li>Today we discuss about final exam
+    </li><li>about finals 
+    </li><li>how overnment-granted monopolies conflict with  public domain of information is one important perspective i have encountered.
+    </li><li>Final Examination Review
+    </li><li>All the directive details and guidelines I needed for the final examinations
+    </li><li>ethic
+    </li><li>I learned more about human relationship with technology
+    </li><li>about final exam
+    </li><li>Today we mostly talked about the final exam pattern, responses, etc.
+    </li><li>After looking through the link provided with what I could do with my CS degree, I discovered that computer forensics is something I could potentiall get into. It sounds intesting and I didn't know it could be a career option for me. 
+    </li><li>Final exam 
+    </li><li>An important concept I encountered in class was the example of the movie Robots with the narrative of constantly needing to upgrade yourself or society will deem you obsolete. I see thing happening with cellphones where they stop working after some time, prompting users to buy the newest cellphone.
+    </li><li>An important concept is that information is expensive because it if valuable but it also wants to be free, as in freely accessible to people
+    </li><li>Keeping the human involved in computing allows us to stay grounded and maintain a safer relationship with technology
+    </li><li>talk about the final exam question 
+    </li><li>nothing
+    </li><li>A large portion of the class was focused on the final exam but the topics on dark patterns were interesting
+    </li><li>Information wants to be free
+    </li><li>final exam discussions
+    </li><li>Final exam syllabus 
+    </li><li>The different paths that a computer science major can take. I liked the video game design and cybersecurity aspects.
+    </li><li>An important perspective I encountered today was “free information” and the tradeoffs that come with free information and how many people are not willing to put their info in front of a paywall because they have no other way to monetize their work
+    </li><li>not really
+    </li><li>One thing that I found important was the idea that information wants to be free or expensive. It is interesting to think of it this way since I always considered it to either be information we wanted to share or data that we wanted to hide.  
+    </li><li>Final exam
+    </li><li>finals
+    </li><li>Final exam
+    </li><li>Final exam review 
+    </li><li>important concept was What Can You Do with a Computer Science Degree? 10 In-Demand Fields
+    </li><li>The final review of the course and the importance of ethics in the computer science field.
+    </li><li>Discussion about Information wants to be free, humane interfaces, exam topics review
+    </li><li>It's better to be on team human. Thank you for teaching the course.
+    </li><li>Review on Final Examination areas of concentration
+    </li><li>Today we learned about the topic of whether information should be free or expensive and discussed the type of questions to be asked in final exam.
+    </li><li>Review on the final exam
+    </li><li>about final
+    </li><li>none
+    </li><li>Mainly, the finals and the format
+    </li><li>no
+    </li><li>I think it was about the final exam information.
+    </li><li>More detailed discussion about final exam and course content.
+    </li><li>nothing as there was final exam and infographic discussion.
+    </li><li>social dilemma
+    </li><li>In today's class, we discussed our infographics, and how we can post them to share with the class. We aslo talked about our final exam which is on Tuesday. It will take place in the gym. We discussed the responses for the final exam, and what kinds of questions will be there, along with some of the topics that will be present as well.
+    </li><li>no
+    </li><li>Today in class we discussed the phrase “Information wants to be free, but information also wants to be expensive”. We talked about how information will have that implication as in the digital world, information is widely accessible, but can also be easily locked behind things such as paid services, encryption, etc. We talked about how this relationship will always seem to coexist in our current society.
+    </li><li>Today talked about finals and the pattern of the finals.
+    </li><li>An important concept I have encountered today was acknowledging how much material there is to study for the final exam.
+    </li><li>Review for Final
+    </li><li>taking about the Final exam.
+    </li><li>Learned about final exam
+    </li><li>The topics were discussed the one’s which will be coming in the finals
+    </li><li>discussion on final exam
+    </li><li>Today's important concept consisted of the final exam contents and details. It is the last day of classes. We recapped some material and went over the student suggestions for the final exam and went into detail about what some of the questions might look like or where they might come from. We finished up the topics and all we have left to do is post today's lesson and we are done!
+    </li><li>No
+    </li><li>Discussions on the final exam and what areas to concentrate on
+    </li><li>Information 
+    </li><li>no
+    </li><li>I don't know really. It was the last day of class... what can I say?
+    </li><li>we just went through the final exam
+    </li><li>today we talked about information wants to be free (wikipedia), where it the phrase encapsulated the idea that information, like a force of nature, desires both freedom and value. It also has been advocated for open access and criticized by those who argue for IP rights. Another thing we talked about today in class was what to prepare for the exam and what the format is kind of like. Another thing we talked about was the infographics. 
+    </li><li>Expensive vs free information 
+    </li><li>We revised the concepts that have come so far, as well as continuing the topic on equality
+    </li><li>final related 
+    </li><li>I got to know about how the questions gonna be in the final term.
+    </li><li>About the final exam and what should be the question.
+    </li><li>discussed about finals
+    </li><li>Review for finals
+    </li><li>Yes I encounter how important this class is I am grateful to have this.
+    </li><li>It was a farewell class and we discussed about Final exam
+    </li><li>What Can You Do with a Computer Science Degree? 10 In-Demand Fields
+    </li><li>Nothing
+    </li><li>It was the last lecture so mostly the focus was on the finals, hence I learned about the finals which was important.
+    </li><li>What Can You Do with a Computer Science Degree? 10 In-Demand Fields
+    </li><li>Ethical background in comuter science
+    </li><li>Discussion  on important topics on the final 
+    </li><li>No
+    </li><li>it all about exam summary 
+    </li><li>Final exam decision 
+    </li><li>human interface
+    </li><li>Advanced technology 
+    </li><li>Discussion On final exam and its pattern.
+    </li><li>Final exam review, and what topics will likely appear on the exam.
+    </li><li>Today we got the idea about questions that will come in final exam.
+    </li><li>An important concept I encountered today was the duality of information. Although information wants to be free, information wants to be expensive as well. Knowledge comes at a price, and often times if we do not have to pay for the product, then we are the product.
+    </li><li>Talked about the final
+    </li><li>Importance of ethics to computing and the world.
+    </li><li>We discussed some responses and made some discussions about information wants to be free
+    </li><li>No
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>No, it was last class of the semester, it was great.
+    </li><li>no
+    </li><li>no
+    </li><li>The handwriting on the board were a bit too difficult to see or read, but nonetheless everything was well understood today.
+    </li><li>No. 
+    </li><li>Nothing of particular difficulty today as we went over material for the final and finishing the semester. 
+    </li><li>Nothing
+    </li><li>no 
+    </li><li>no
+    </li><li>No
+    </li><li>How the cost of information is reducing everyday.
+    </li><li>N/A
+    </li><li>I don't fully understand how information wants to be expensive
+    </li><li>everything was understandable
+    </li><li>No
+    </li><li>No
+    </li><li>N/A
+    </li><li>no
+    </li><li>Not particularily
+    </li><li>No
+    </li><li>no
+    </li><li>No
+    </li><li>No, but I wondered if we sould get the midterm answers.
+    </li><li>no
+    </li><li>No
+    </li><li>no
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>Nothing was difficult to understand.
+    </li><li>No
+    </li><li>Nothing was difficult to understand today
+    </li><li>No
+    </li><li>Nothing 
+    </li><li>NO
+    </li><li>no
+    </li><li>no
+    </li><li>No
+    </li><li>NO
+    </li><li>no
+    </li><li>There was nothing difficult to understand today.
+    </li><li>No
+    </li><li>no.
+    </li><li>not really
+    </li><li>No. everything made sense to me.
+    </li><li>no
+    </li><li>Not entirely.
+    </li><li>What are we going to get in finals- MCQs or question-answer based questions
+    </li><li>Nothing today was difficult to understand.
+    </li><li>No
+    </li><li>NOPE
+    </li><li>no
+    </li><li>Not really 
+    </li><li>No, today was straightforward.
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>no
+    </li><li>Absolutely not.
+    </li><li>nothing much as we just went through the finals
+    </li><li>n/a
+    </li><li>Nothing 
+    </li><li>I understood the class
+    </li><li>nothing 
+    </li><li>I don't think there was anything hard to understand.
+    </li><li>no
+    </li><li>no
+    </li><li>no 
+    </li><li>No
+    </li><li>Nope
+    </li><li>Nope
+    </li><li>Nothing at all
+    </li><li>Nothing in particular 
+    </li><li>Nope
+    </li><li>There was nothing that was difficult to understand in todays lecture
+    </li><li>No
+    </li><li>no
+    </li><li>No
+    </li><li>no
+    </li><li>No
+    </li><li>No, everything was clear today!
+    </li><li>No
+    </li><li>Nope, I was able to understand everything that happened in class today.
+    </li><li>No
+    </li><li>No.
+    </li><li>No
+    </li><li>No
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>I would like to know how diversity can make computing more affective.
+    </li><li>yes
+    </li><li>no
+    </li><li>I'd like to know more about what specific topics will be on the exam.
+    </li><li>I would like to more was wheter I can do with a computer science degree, what fields would good areas for me
+    </li><li>Nothing I'd like to know more right now but study and become more familiar with current material. 
+    </li><li>No, all good
+    </li><li>about finals
+    </li><li>more on the side effect of intellectual property on the development of public domain of information 
+    </li><li>No
+    </li><li>Nothing in particular.
+    </li><li>final exam
+    </li><li>I like to know more about how we can relate better to computers or technology
+    </li><li>nothing specific
+    </li><li>No
+    </li><li>No
+    </li><li>N/a
+    </li><li>no
+    </li><li>I think all topics were well explained
+    </li><li>How does the principle of “Information wants to be free” balance the need for open access with the protection of intellectual property rights?
+    </li><li> I wanna take more classes in the future with Professor Daryl
+    </li><li>Final exam pattern
+    </li><li>Within video game design does one need to be good at art for that.
+    </li><li>no
+    </li><li>No
+    </li><li>no . thank you for the semester 
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>Thank you, Daryl - for the great semester.
+    </li><li>No
+    </li><li>I would like to learn more about this course in general by taking a following class after this one 
+    </li><li>No
+    </li><li>Nothing 
+    </li><li>NO
+    </li><li>no
+    </li><li>nope
+    </li><li>No
+    </li><li>NO
+    </li><li>yes
+    </li><li>As we finished our course today i think it is one of the good course in Computer Science as under the professor Hepting it showed us how to built future career in IT + lots of knowledge on current situation.
+    </li><li>No
+    </li><li>no.
+    </li><li>the final exam
+    </li><li>I would like to learn more about potential careers in computer science.
+    </li><li>no
+    </li><li>Not really.
+    </li><li>No
+    </li><li>I would like to know more about the Robots movie.
+    </li><li>No
+    </li><li>N/A
+    </li><li>nothing
+    </li><li>No
+    </li><li>This class was great. I thoroughly enjoyed it.
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>no
+    </li><li>Nope, we can't anymore anyways...
+    </li><li>nothing much
+    </li><li>n/a
+    </li><li>Nothing 
+    </li><li>I am satisfied with the end of this course
+    </li><li>nothing 
+    </li><li>I don't think so!
+    </li><li>no
+    </li><li>no
+    </li><li>no
+    </li><li>I would like to take the next level of the course with daryl hepting only.
+    </li><li>No
+    </li><li>More about these fields.
+    </li><li>Nothing 
+    </li><li>No. 
+    </li><li>Nope
+    </li><li>I would like to learn more about The final riview
+    </li><li>No
+    </li><li>no
+    </li><li>No
+    </li><li>nothing
+    </li><li>No
+    </li><li>There is nothing more that I would like to know about from today. Thank you for a great semester!
+    </li><li>No
+    </li><li>Nope, there is nothing in particular. I think we are at a good pace.
+    </li><li>No
+    </li><li>No.
+    </li><li>No
+    </li><li>I would like to thank you for all the classes professor. 
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/26_Thu-11-Apr-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

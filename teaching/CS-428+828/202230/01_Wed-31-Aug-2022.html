@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202230/01_Wed-31-Aug-2022.html" />
+    
+    <title>Mtg 01 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 01 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/01_Wed-31-Aug-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/",
+        
+          "name": "202230"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/01_Wed-31-Aug-2022.html",
+        
+          "name": "01 (Wed-31-Aug-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202230/">
+        202230
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      01 (Wed-31-Aug-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 1/36: Wed-31-Aug-2022
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a role="button" class="btn btn-primary disabled">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="02_Fri-02-Sep-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I encountered
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+          Administration
+        </h4>
+        <ul><li>
+                Happy Wednesday
+              </li><li>
+                <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1900809&amp;view=1">
+                  Attendance
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1661925600&amp;course=24538">
+                  Class calendar for today
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=24538">
+                  Upcoming events
+                </a>
+              </li><li>
+                Midterm?
+              </li><li>
+                <a href="http://www2.cs.uregina.ca/~hepting/teaching/today">
+                  /teaching/today
+                </a>
+              </li></ul><h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_01" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_01" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_01" data-bs-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/8svj6bsv4dp3g1h/1%20-%20wb_1.png?dl=0" alt="1 - wb_1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/1wutlmnfw792o0o/1%20-%20wb_2.png?dl=0" alt="1 - wb_2.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_01" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_01" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Okay. So starting a bit
+late for our first meeting, but
+          </li><li>
+            
+            I'm just making a transcript for
+myself that I can share online
+          </li><li>
+            
+            Okay. So here's our
+          </li><li>
+            
+            page for the meeting today. It's
+the first of 36 meetings. So in
+          </li><li>
+            
+            a normal semester we'd have 39
+meetings because of the Truth
+          </li><li>
+            
+            and Reconciliation Day and Labor
+Day and semester break and
+          </li><li>
+            
+            different things that come up.
+We've got 36 meetings, so that
+          </li><li>
+            
+            should be okay. So I talked
+about attendance already. So
+          </li><li>
+            
+            this should go to the your
+courses page. Let's see. And
+          </li><li>
+            
+            that that it did do that. Yay.
+And then the class calendar for
+          </li><li>
+            
+            today so you've started the fall
+class fall term classes. It's
+          </li><li>
+            
+            interesting that classes start
+at midnight, but the term only
+          </li><li>
+            
+            starts at 7am. Excuse me. So
+here's, here's a link to the
+          </li><li>
+            
+            attendance event for today.
+          </li><li>
+            
+            Excuse me.
+          </li><li>
+            
+            That exercise that brisk ride
+here in the morning
+          </li><li>
+            
+            takes it's a little bit harder
+to
+          </li><li>
+            
+            well, it's not hard but I got a
+tickle in my throat. I don't
+          </li><li>
+            
+            think I'm
+          </li><li>
+            
+            sick for you at all. So speaking
+about being sick, I brought
+          </li><li>
+            
+            masks in case anyone. I'll try
+and remember to bring masks in
+          </li><li>
+            
+            case someone is uncomfortable
+with not having a mask or you'd
+          </li><li>
+            
+            like me to wear a mask.
+          </li><li>
+            
+            So I have these
+          </li><li>
+            
+            that's the ones I brought today.
+But I also have ones that have a
+          </li><li>
+            
+            little window so you can see my
+mouth I don't. I didn't. I
+          </li><li>
+            
+            didn't do a study. I'm not aware
+of study to see whether the
+          </li><li>
+            
+            little window is more conducive
+to learning or not. But I'll
+          </li><li>
+            
+            bring them along one day too. So
+I have this set D of respond to
+          </li><li>
+            
+            meeting one and that opens right
+after class and it closes at one
+          </li><li>
+            
+            minute to midnight. So it's one
+minute to midnight so that it
+          </li><li>
+            
+            always appears as today. So
+that's that's the latest I can
+          </li><li>
+            
+            make it appear. Have a show up
+as today's date. So the idea is
+          </li><li>
+            
+            you can take a minute, five
+minutes to reflect on what we
+          </li><li>
+            
+            did today. And I'll show you
+that in a second here. So, what
+          </li><li>
+            
+            I'd like you to do in response
+to the meeting, think about,
+          </li><li>
+            
+            pick one of these three things.
+What's the most important thing
+          </li><li>
+            
+            that you discussed? That you
+discussed or that you
+          </li><li>
+            
+            encountered during the meeting?
+What was the most difficult
+          </li><li>
+            
+            thing for you to understand if
+there's a question you have, and
+          </li><li>
+            
+            the thing about what you'd like
+to know more about, about what
+          </li><li>
+            
+            you'd like to know more so pick
+one of those and write a few
+          </li><li>
+            
+            lines so
+          </li><li>
+            
+            512 characters is the most and
+so if you if you submit
+          </li><li>
+            
+            something before midnight, so
+we'll lot two marks for each
+          </li><li>
+            
+            response. So this is another
+participation thing. So if you
+          </li><li>
+            
+            write something, but it's and
+it's related to fits with
+          </li><li>
+            
+            what we talked about, and follow
+the instructions and you get a
+          </li><li>
+            
+            two for that. If you write what
+something but it's not clearly
+          </li><li>
+            
+            related to that doesn't clearly
+follow the instructions are
+          </li><li>
+            
+            related to the meeting and give
+one for that and if you don't
+          </li><li>
+            
+            write anything, you get zero
+marks
+          </li><li>
+            
+            so this one is set up the other
+ones aren't. Don't have the
+          </li><li>
+            
+            correct dates. yet. I'll fix
+that before next meetings No
+          </li><li>
+            
+            wonder here I can do like a TED
+Talk that doesn't look strange
+          </li><li>
+            
+            at all. Anyway, I'll get some
+advice from audio visual about
+          </li><li>
+            
+            how to arrange the microphone
+okay.
+          </li><li>
+            
+            So upcoming events should also
+give you a list of things from
+          </li><li>
+            
+            the calendar
+          </li><li>
+            
+            so this
+          </li><li>
+            
+            so part of what we're gonna do
+this semester is talk about the
+          </li><li>
+            
+            design of user interfaces.
+That's it Good thing I'm not
+          </li><li>
+            
+            concerned about how I look for
+the sounds better, I think of
+          </li><li>
+            
+            shooting with my wife and kids
+          </li><li>
+            
+            okay
+          </li><li>
+            
+            so what I was gonna say is we're
+talking about human computer
+          </li><li>
+            
+            communications in this class and
+design of interfaces. And so we
+          </li><li>
+            
+            have a textbook that talks about
+interaction design. And part of
+          </li><li>
+            
+            that is being observant
+          </li><li>
+            
+            of what people do
+          </li><li>
+            
+            and how things can be done
+better. That's why I think is
+          </li><li>
+            
+            interesting is always to think
+about ways not just to make it
+          </li><li>
+            
+            something possible but make it
+satisfying for people to use. So
+          </li><li>
+            
+            if people have to figure out so
+I know there's a way to do this.
+          </li><li>
+            
+            And they spend five or 10
+minutes just deciphering how to
+          </li><li>
+            
+            how to achieve their goal.
+That's not necessarily very
+          </li><li>
+            
+            satisfying. And so, what I'd
+like you to think about is this
+          </li><li>
+            
+            semester, looking around and
+seeing being observant of
+          </li><li>
+            
+            interfaces around you and seeing
+if they're good interfaces if
+          </li><li>
+            
+            they can be improved and and
+what what would make them
+          </li><li>
+            
+            better. So I took a class as an
+undergraduate student, it was
+          </li><li>
+            
+            called math 231. And this isn't
+it think it was a special
+          </li><li>
+            
+            offering. But anyway, basically,
+we studied wallpaper patterns.
+          </li><li>
+            
+            Do you know there are 17 ways to
+have a wallpaper pattern repeat
+          </li><li>
+            
+            on people knew that anyone? So
+what I found is that over the
+          </li><li>
+            
+            semester, I spent a lot of time
+looking at wallpaper outside of
+          </li><li>
+            
+            class and thinking, Oh, that's a
+glide reflection or that's some
+          </li><li>
+            
+            other kind of I know they're
+setting teams when I'm hard
+          </li><li>
+            
+            pressed. Glider flexion is my
+favorite something I shouldn't
+          </li><li>
+            
+            have anyway. But just the idea
+that I want you to come approach
+          </li><li>
+            
+            this is looking at interfaces
+more critically.
+          </li><li>
+            
+            So there's
+          </li><li>
+            
+            I don't have the link here. But
+there was a commencement speech
+          </li><li>
+            
+            by I say David Wallace, but
+actually let me go to the web
+          </li><li>
+            
+            page and I'll find the quote so
+I can read it. in dramatic
+          </li><li>
+            
+            fashion.
+          </li><li>
+            
+            David Foster Wallace said
+there's ever commencement speech
+          </li><li>
+            
+            in 2005. He said, there are
+these two young fish swimming
+          </li><li>
+            
+            along and they happen to meet an
+older fish swimming the other
+          </li><li>
+            
+            way. And the only fish nods at
+them and says Morning boys.
+          </li><li>
+            
+            How's the water? The two young
+fish Sivan for a bit and then
+          </li><li>
+            
+            eventually one of them looks
+over at the other and goes What
+          </li><li>
+            
+            the hell is water so pardon my
+my racy language here
+          </li><li>
+            
+            it's so the idea is
+          </li><li>
+            
+            to think about what's going on.
+And being being aware of the
+          </li><li>
+            
+            surroundings and not being aware
+of what the assumptions are that
+          </li><li>
+            
+            we're making, so that we can
+question them and come up with
+          </li><li>
+            
+            something better if if need be.
+So the other code that I've
+          </li><li>
+            
+            mentioned here, I'll put the
+link to this page. So this is
+          </li><li>
+            
+            from JCR Licklider, who was the
+head of DARPA in the night in
+          </li><li>
+            
+            1960s. This is from 1960. So in
+short, it seems worthwhile to
+          </li><li>
+            
+            avoid argument with other
+enthusiasts for artificial
+          </li><li>
+            
+            intelligence by conceding
+dominance in the distant future
+          </li><li>
+            
+            of celebration to machines.
+Alone. There will nevertheless
+          </li><li>
+            
+            be a fairly long interim during
+which the main intellectual
+          </li><li>
+            
+            advances will be made by humans
+and computers working together
+          </li><li>
+            
+            and intimate Association, a
+multidisciplinary study group
+          </li><li>
+            
+            examining future research and
+development problems of the
+          </li><li>
+            
+            United States Air Force
+estimated that would be 1980s.
+          </li><li>
+            
+            Before developments, artificial
+intelligence make it possible
+          </li><li>
+            
+            for machines a lot to do much
+thinking and problem solving of
+          </li><li>
+            
+            military significance that would
+leave say five years to develop
+          </li><li>
+            
+            human computer symbiosis in 15
+years to use it. The 15 may be
+          </li><li>
+            
+            10 or 500. But those years
+should be intellectually the
+          </li><li>
+            
+            most creative and exciting in
+the history of humankind. So if,
+          </li><li>
+            
+            if military significance if
+computers could solve problems
+          </li><li>
+            
+            of military significance in the
+1980s, then Skynet would be
+          </li><li>
+            
+            running things by now. Now many
+people got the Terminator
+          </li><li>
+            
+            reference only say that that's
+way before my time but it's not
+          </li><li>
+            
+            really because they keep making
+Terminator movies every few
+          </li><li>
+            
+            years to get some more bucks out
+of the franchise. Anyway, for
+          </li><li>
+            
+            those who aren't familiar with
+Terminator, you can look up you
+          </li><li>
+            
+            can do some searching on the
+internet. To find out more
+          </li><li>
+            
+            details. About that reference
+          </li><li>
+            
+            so here's
+          </li><li>
+            
+            here's my semester schedule. I
+have to do a little bit of
+          </li><li>
+            
+            tweaking still, but today's the
+first day of the term and it
+          </li><li>
+            
+            goes until the classes go to the
+center sixth. And last day, the
+          </li><li>
+            
+            terms the 22nd.
+          </li><li>
+            
+            There was a page and so these
+are my office hours for the
+          </li><li>
+            
+            semester. So an hour and a half.
+Immediately after meetings
+          </li><li>
+            
+            Mondays and Wednesdays
+          </li><li>
+            
+            and then Tuesdays and Thursdays
+one to two ferry. So you can
+          </li><li>
+            
+            actually come and see me in
+college west through your
+          </li><li>
+            
+            waypoint, you too. They used to
+be in the alphabetical section.
+          </li><li>
+            
+            That's gotten messed up now.
+          </li><li>
+            
+            They're all all the H's were in
+a row But time flies I mean that
+          </li><li>
+            
+            was at one point in time, but
+it's, it's near the tee. So if
+          </li><li>
+            
+            you come around I'll see if I
+get some WD 40 for this tool as
+          </li><li>
+            
+            well.
+          </li><li>
+            
+            So CS and math
+          </li><li>
+            
+            This is North. Here's the men's
+washroom you go around that's
+          </li><li>
+            
+            approximately where I am so when
+when you have to get into this
+          </li><li>
+            
+            hallway, then when you turning
+in the hallway, three branches
+          </li><li>
+            
+            to the left then you turn right
+in you should very firmly door
+          </li><li>
+            
+            when's the last time you were on
+campus for four months
+          </li><li>
+            
+            okay
+          </li><li>
+            
+            so this should so this should be
+getting getting back to my
+          </li><li>
+            
+            website for the course DHH link
+and your courses should bring
+          </li><li>
+            
+            you to the your courses page.
+And this one will connect you to
+          </li><li>
+            
+            the zoom that I have set up for
+the office time so you can come
+          </li><li>
+            
+            and see me in person or you can
+join join the Zoom call for
+          </li><li>
+            
+            office hours okay? And then if
+you're not able to if you need
+          </li><li>
+            
+            to get a hold of me but not
+You're not available during the
+          </li><li>
+            
+            times I've set aside for Office.
+Send me a note this will create
+          </li><li>
+            
+            a note let's see it should work
+          </li><li>
+            
+            we'll say it works
+          </li><li>
+            
+            okay so last year. We talked
+talked to I talked to students
+          </li><li>
+            
+            about creating something that's
+maybe a little more accessible
+          </li><li>
+            
+            in terms of linking things so
+I've I present the following for
+          </li><li>
+            
+            your consideration
+          </li><li>
+            
+            so this is
+          </li><li>
+            
+            today is going to tell you
+what's going on today in terms
+          </li><li>
+            
+            of semester. The fall semester
+for 2022. So this is a link
+          </li><li>
+            
+            these are the same links so
+          </li><li>
+            
+            this is one aspect of things
+where you can give me some
+          </li><li>
+            
+            comments and kick the tires so
+to speak, and see if this is
+          </li><li>
+            
+            helpful and what could make it
+more helpful
+          </li><li>
+            
+            I have divided it up into half
+hour slots so the first one goes
+          </li><li>
+            
+            from midnight to 830 which
+doesn't have anything scheduled
+          </li><li>
+            
+            in it and then it goes from
+838 30 to 530 and a half hour
+          </li><li>
+            
+            increments and then from 530 to
+2359. So I did that so that I so
+          </li><li>
+            
+            when we're not in a time for
+something going on it'll show
+          </li><li>
+            
+            you the time which segment of
+the schedule will be that
+          </li><li>
+            
+            doesn't make sense. Let me try
+that again. So whatever time it
+          </li><li>
+            
+            is, you'll see if the JavaScript
+is working okay. You'll see a
+          </li><li>
+            
+            highlighted with the half hour
+or the if it's a stone before
+          </li><li>
+            
+            the start of the day or after
+the end of the day. Then it'll
+          </li><li>
+            
+            just be a larger block but
+during during the day at
+          </li><li>
+            
+            university that will be half
+hour increments. So you can see
+          </li><li>
+            
+            whether that's useful or not or
+we can have a discussion about
+          </li><li>
+            
+            what would make it more useful
+and so forth.
+          </li><li>
+            
+            Okay, so
+          </li><li>
+            
+            instead of going to navigate to
+this page, which is longer you
+          </li><li>
+            
+            can go to this page and should
+be a jumping off point for what
+          </li><li>
+            
+            you need to see for the day.
+          </li><li>
+            
+            That's similar right. I was
+going to also in the
+          </li><li>
+            
+            participation I wasn't sure
+where to put this so I've been a
+          </li><li>
+            
+            class wiki so I originally
+          </li><li>
+            
+            call it your responses wiki and
+then of course your courses
+          </li><li>
+            
+            Moodle win. Let me change that.
+So it has this page has two
+          </li><li>
+            
+            titles.
+          </li><li>
+            
+            Anyway, I've made a list of
+meetings I don't know why. I got
+          </li><li>
+            
+            double headings there but
+          </li><li>
+            
+            so I would say and here's an
+opportunity to make some notes
+          </li><li>
+            
+            about what happened in the
+meeting today. So I didn't set
+          </li><li>
+            
+            up breakout groups. Yeah, but
+what I'm due for Friday is
+          </li><li>
+            
+            breaking into groups and then
+all assign a group per meeting
+          </li><li>
+            
+            to be in charge of writing a
+summary of what we just
+          </li><li>
+            
+            discussed. And then, when
+there's breakout group
+          </li><li>
+            
+            questions, we can record
+responses. Groups can record
+          </li><li>
+            
+            their responses on the wiki as
+well.
+          </li><li>
+            
+            So to not give you too many
+places to manage, but we'll just
+          </li><li>
+            
+            we'll just try and keep the wiki
+as a place to record discussions
+          </li><li>
+            
+            and things that happen. So we'll
+put one group in charge of each
+          </li><li>
+            
+            meeting and then we assume that
+different groups can also add
+          </li><li>
+            
+            their own material from their
+discussions that seem okay, so
+          </li><li>
+            
+            we'll we'll start that on Friday
+as well. Oh, the other question.
+          </li><li>
+            
+            Was about
+          </li><li>
+            
+            how do you feel about midterms?
+          </li><li>
+            
+            Even better than final exams. So
+when we're doing things online,
+          </li><li>
+            
+            I hadn't had a midterm for the
+past couple of years. So
+          </li><li>
+            
+            now we have the opportunity to
+and I guess who knows what will
+          </li><li>
+            
+            happen within the next by the
+end of the semester if things
+          </li><li>
+            
+            will still be as they are here
+today or not? But I I'm thinking
+          </li><li>
+            
+            that maybe a midterm is good
+          </li><li>
+            
+            so here's
+          </li><li>
+            
+            how it relates to class content.
+So we'll talk about evaluation
+          </li><li>
+            
+            of user interfaces and so we can
+talk also about evaluation of
+          </li><li>
+            
+            other things so we can do a
+formative evaluation as a way to
+          </li><li>
+            
+            give you some feedback to see if
+you're on the right path. If
+          </li><li>
+            
+            you're
+          </li><li>
+            
+            if you're that is a way to check
+if you're comfortable with the
+          </li><li>
+            
+            material and so far, and if
+there's some issues it was the
+          </li><li>
+            
+            midterm. The formative
+evaluation will be so much
+          </li><li>
+            
+            weighed on your mark, but an
+opportunity to say here are some
+          </li><li>
+            
+            things they need to work on. So
+I'll work on them and then the
+          </li><li>
+            
+            formative summative evaluations
+at the final.
+          </li><li>
+            
+            So I'd say that the midterm end
+assignments and so forth are
+          </li><li>
+            
+            parts of the farm evaluation of
+your work. And then the final
+          </li><li>
+            
+            exam is a summative evaluation.
+So the final exam won't be it'll
+          </li><li>
+            
+            be worth about 20% of your final
+grade or you'll still need to
+          </li><li>
+            
+            pass it and that's not good to
+scare you. It's not for me to
+          </li><li>
+            
+            have a way to fail people
+because I don't want to having
+          </li><li>
+            
+            to pass everybody and have
+everyone. Happy that everybody
+          </li><li>
+            
+            does well. But it's about
+          </li><li>
+            
+            it, their
+          </li><li>
+            
+            final exam is a way for you to
+demonstrate your own
+          </li><li>
+            
+            understanding of the material.
+So whereas we'll be doing things
+          </li><li>
+            
+            in groups and and then
+discussions with colleagues or
+          </li><li>
+            
+            peers in the class here. So the
+final exam is just the sudden
+          </li><li>
+            
+            evaluation of your work or your
+learning over the semester. So I
+          </li><li>
+            
+            look forward to engaging you in
+designing and how to format the
+          </li><li>
+            
+            midterm and final exams, so that
+they're fair evaluations of what
+          </li><li>
+            
+            we've done in class.
+          </li><li>
+            
+            Okay, so
+          </li><li>
+            
+            So I'm inclined to have for now
+we'll say that we'll have we'll
+          </li><li>
+            
+            be in class
+          </li><li>
+            
+            sometime in October. Yes.
+          </li><li>
+            
+            No, I would say not. But it we
+might ask you to do something
+          </li><li>
+            
+            not so much. Write an essay. But
+other than that, a mix of short
+          </li><li>
+            
+            answer questions and something
+some kind of application sort of
+          </li><li>
+            
+            question.
+          </li><li>
+            
+            We'll figure it out.
+          </li><li>
+            
+            We'll make sure together we
+reach some consensus of roles
+          </li><li>
+            
+            and so on will be on the exam
+Farben before the exam takes
+          </li><li>
+            
+            place. Does this makes sense?
+formative and summative
+          </li><li>
+            
+            evaluation. So in terms of
+interface, you might say I like
+          </li><li>
+            
+            to do this. You have an idea for
+an interface and you say, here
+          </li><li>
+            
+            are some ideas that we might
+employ to realize the interface
+          </li><li>
+            
+            and then you can do some
+formative evaluations with
+          </li><li>
+            
+            people who might be using the
+interface to see if you're on
+          </li><li>
+            
+            the right track. And this
+different evaluations help you
+          </li><li>
+            
+            along the process and then at
+the end, we do a summative
+          </li><li>
+            
+            evaluation to say, this is where
+this is where I said it was
+          </li><li>
+            
+            gonna go. Then I get that. And
+so that's how we can think of it
+          </li><li>
+            
+            in terms of user interface
+design. Anyway, I'm actually not
+          </li><li>
+            
+            I know when you go over time
+today,
+          </li><li>
+            
+            so
+          </li><li>
+            
+            thank you very much for today.
+          </li><li>
+            
+            So look forward to our semester
+together and have a good day and
+          </li><li>
+            
+            see you on Friday. Evening so
+are our hands on all right.
+          </li><li>
+            
+            Gonna get onto your log, you're
+registered in the course if you
+          </li><li>
+            
+            miss
+          </li><li>
+            
+            anything think you have a good
+day. You're welcome. Thank you
+          </li><li>
+            
+            Oh, nice. Day. Thanks.
+          </li><li>
+            
+            You too. See you Friday. Thank
+you.
+          </li><li>
+            
+            Actually, I have one question
+about the process of grouping
+          </li><li>
+            
+            for assignments and the other
+team you mentioned. I was just
+          </li><li>
+            
+            curious to know about can we
+select the group by ourselves or
+          </li><li>
+            
+            you do it for for grouping.
+Grouping Yeah,
+          </li><li>
+            
+            previous time for the project.
+You can do your own group.
+          </li><li>
+            
+            Okay. How about the assignments?
+Yeah.
+          </li><li>
+            
+            So the project is the
+assignment. But for breakout
+          </li><li>
+            
+            groups on I'll just make them up
+randomly. Okay.
+          </li><li>
+            
+            Because, you know, it's, for
+example, some of us are, somehow
+          </li><li>
+            
+            work in a laboratory. So it's
+easier to catch each other for
+          </li><li>
+            
+            because it's in person. It's
+hard to for example, then
+          </li><li>
+            
+            because they graduate, graduate
+and findings person in
+          </li><li>
+            
+            undergraduate, maybe some have
+class. That's why I'm asking if
+          </li><li>
+            
+            it's possible to do that. Maybe
+maybe in some way or maybe some
+          </li><li>
+            
+            change or
+          </li><li>
+            
+            Yeah. So
+          </li><li>
+            
+            the breakout group stuff will
+just be for
+          </li><li>
+            
+            stuff in class.
+          </li><li>
+            
+            So initialization,
+          </li><li>
+            
+            so get I'll get you to get
+together in a group and have a
+          </li><li>
+            
+            discussion.
+          </li><li>
+            
+            So that's that
+          </li><li>
+            
+            part of the group and then
+there'll be groups that you can
+          </li><li>
+            
+            form yourselves for the project.
+Okay. Okay, and if you're doing
+          </li><li>
+            
+            research where there's an
+interface component, then maybe
+          </li><li>
+            
+            you want to do your,
+          </li><li>
+            
+            your product
+          </li><li>
+            
+            individually. See, yeah,
+          </li><li>
+            
+            we'll talk about that. Okay.
+          </li><li>
+            
+            That's a good thank you.
+Appreciate that. You're welcome.
+          </li><li>
+            
+            Have a nice day.
+          </li><li>
+            
+            Thanks. You too.
+          </li><li>
+            
+            Thanks. You too.
+          </li></ul>
+    
+  
+    
+  <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>The most difficult thing for me to understand was what was happening on the projector.  I could not see what was being done to navigate between pages or where information was coming from.  Hopefully in the future, the page can be full screen, and the password for attendance can be written with a larger font.  Hopefully the microphone will also work in future meetings, as I could barely hear parts of the explanations .
+    </li><li>Actually I came to classroom, You introduced yourself to us, we understand that this course is between undergraduate and graduate students. After introducing with professor and his course, we understand after this class we have time before 11:59 P.M to do assignment and submit it to urcource university of regina, Most important and interesting that is this course is about UI UX design and I love that. I understand we have midterm and Project that we do as a team work.
+    </li><li>Today we discussed course outlines, midterm, final exam and also discussed about marking criteria and etc.
+    </li><li>The most important thing I’d learnt today, was to be observant about various interfaces in my surroundings and to be aware about the same. Furthermore, I’d learnt that I’ve to think critically and improvise on the interfaces as well; and most importantly, to not work on the basis of assumptions. These learnings were supplemented with an illustration of fish in the water, learning about their surroundings and understanding about the same. Besides this, there was a SKYNET reference, with regards to the advanc
+    </li><li>A good start in making a user interface is to look at how people interact with your software and what you can do to make that interaction better. Depending on your environment, you should observe if making something better means adaptability to screen sizes, less user input from point A to b, or a more minimalist design. A good user interface helps the customers complete their goals efficiently for said environment.
+    </li><li>The outline and class topic
+    </li><li>The most important thing that I learned in today&#039;s class is the Syllabus, let me understand the class content.
+    </li><li>Today was the first of class. There were not much dept in the discussion other than going over the syllabus of the class, professor&#039;s website and some introductory topics about human computer communication. We have been given some ideas as to what human computer communication is about.
+    </li><li>I would like to know more about group projects and assignments. Also, I am confused about what “Class Wiki” section will be used for.
+    </li><li>The most important thing that I learned today was the course syllabus. I learned what the course is about and the grading scheme. I was glad to learn that there is a project in this class with a midterm.
+    </li><li>I was unable to attend class because my flight was canceled due to the COVID-19 infection in my family.
+    </li><li>The most important thing i learned today was how to use the UR Courses homepage for this class. The other important things I learned was how to use the attendance system so that I can get my attendance marks. The other important thing I learned was how to respond to the meeting questions. This has allowed me to write these messages.
+    </li><li>* Introduction to course CS 828+428 and Syllabus      * Dr. Hepting talked about the importance of midterm and why it would be better to have midterm alongside the final rather than only the final exam.     * Intro to the Dr. Hepting website      * Talking about the groups for assignments and class discussions     * Position of HCC in the road map of learning Human-Computer Interaction
+    </li><li>In the first session of the class, I learnt that this class would be about interaction design. It is the way to satisfy people to use program and how to make them better. It was explained about J.C.R. Licklider who worked in how human mind and computer work together and make the decision making better. Also, some pages in the UR courses were explained. Furthermore, it is introduced Dr. Hepting&#039;s email and website. Midterm, class content, doing groups and final exam were explained.
+    </li><li>Today&#039;s lecture was super fun. We got introduction of the course and what to expect from his course. Dr. Hepting got us familiar with his website/URCourses and things we need to pay attention to. I really enjoyed it. The thing that I liked most is the way Dr. Hepting makes meetings fun and enjoyable.
+    </li><li>Today was just the introduction of the course. We went through the syllabus and some inspirational quotes. Also at the end of the class we had a discussion about Midterms. So I think it will be a good class to attend. Looking forward to it.
+    </li><li>Today in class I learned about the syllabus. We learned some stuff also and we heard a joke of fish that was funny. The behaviour of our professor is also very funny and I find it cute also. I feel like learning with Dr heating will be fun!
+    </li><li>Dear Prof. Hepting. Today&#039;s class was the first one, and you generally introduced us to the course. The important thing I noticed was having just a midterm exam instead of a final one, which is good. I am looking forward to participating in this class. Thanks
+    </li><li>What stood out today was how much human communication can resemble TCP vs UDP. At the beginning of class you began writing (ie. &amp;quot;sending&amp;quot;) vital information regarding the next 14 weeks - your name, the number/section of the class, the attendance password. Before long it crossed your mind that simply writing these things down on the board was essentially UDP protocol for humans - and you switched to TCP by asking everyone if they had received your package (to which you got a sluggish but affirmative response
+    </li><li>I have learned information in the syllabus today, and I have got some basic ideas about this class and some knowledge about human-computer communication, hope we will have a good semester.
+    </li><li>Today was the first day of class so it was mostly just an introduction to the layout of the course. We mainly discussed Dr. Hepting’s website and how to get in touch if we need, as well as a little bit of a URCourses tour.
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>I missed the meeting today because of COVID-19 but I can make the next class on wednesday
+    </li><li>I learned about planning, course evaluation, and break rooms in the first lecture. Overall, the lecture is interesting, and I&#039;m looking forward to the upcoming ones.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>I have learned about course outlines and exams today. This subject will be fascinating, and I hope to acquire the best possible knowledge about how to interact with different systems through the user interface. While going through today’s lecture, I learned about different ways the course can be more exciting and interactive, but I think this is also a way of knowing how we can cope with computer technology.
+    </li><li>Sorry Professor, I couldn&#039;t attend today&#039;s lecture but I would like to know about what was discussed.
+    </li><li>As today was the very first class, there was not much to discuss about the class topic itself. However, based on the class description, I am most excited to learn about user interface design. As the “middle man” between a user and the computer, a good user interface is a very important aspect of technology. As such, I would very much like to learn more about this aspect of computer science especially since I feel like I have not learned a lot about this topic yet in my studies.
+    </li><li>I would like to know more about the assignments and projects. I would like to know how many of them we will have, the grade weight of each, and a rough deadline for each. I like to plan for assessments early and complete them early as well. I would also like to know more about the research credit, as I am interested in research. I would also like to know what the requirements for this research credit is. Lastly, I would like to know about the midterm and its weight, which I believe will be discussed later.
+    </li><li>After today’s class, I would love to know more about what kind of assignments will we have and also what kinds of topics will we learn during this course.
+    </li><li>What is the project worth 40% about? Based on looking at other items on URCourses it will be a group project based on the bit in participation on &amp;quot;rating group members&amp;quot; and the 20% above it being &amp;quot;Individual Assignments&amp;quot;. It wasn&#039;t discussed today so I&#039;d like to know more about the structure of it as&amp;quot;Project as Assignments&amp;quot; indicates its layered.
+    </li><li>As talked in the class about wallpaper group, it intrigued me a lot to know and learn more about the concept. I would love to take that class and learn about the structure and formations within the seventeen wallpaper groups and their similarities and differences. Concepts like this excite me and learning about their compositions and structure is very satisfying.
+    </li><li>Today&#039;s class was just about the course objectives and the introduction. The professor introduced himself, although I already took a class with before with Dr. Hepting and indeed I must admit that he is an amazing professor. I would like to know a lot about the human computer communication and how humans and machines interact with each other. What are the different technologies that are responsible in creating these bonds and the consequences of these interactions. Whether it is a boon or a bane?
+    </li><li>I would really like to know more about the format of the upcoming assignments/projects and the things we are going to learn over the period of next months. Topics we are going to cover every week until the end of semester. This would better help me understand and plan ahead of what will I be doing. So, I can manage my time efficiently.
+    </li><li>I would like to know more about the assignments and what will they be based on. Plus the introduction was informative looking forward to this semester.
+    </li><li>The topics that will be covered in this class (regarding user interface design) seem interesting and I would like to learn and know more about them.
+    </li><li>Since it was the first class, I am looking forward to know what this course has to offer.
+    </li><li>Glide reflections and other interaction designs that are being used.
+    </li><li>Today was the first day of classes and we went over the class martials and how the class will be formed and what will learn in this class. I would like to know more about the class syllabus and the midterm and the assignments.
+    </li></ul>
+
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=8827">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/01_Wed-31-Aug-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

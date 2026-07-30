@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202230/22_Wed-26-Oct-2022.html" />
+    
+    <title>Mtg 22 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 22 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/22_Wed-26-Oct-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/",
+        
+          "name": "202230"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/22_Wed-26-Oct-2022.html",
+        
+          "name": "22 (Wed-26-Oct-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202230/">
+        202230
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      22 (Wed-26-Oct-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 22/36: Wed-26-Oct-2022
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="21_Mon-24-Oct-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="23_Fri-28-Oct-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I encountered
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+          Administration
+        </h4>
+        <ul><li>
+                Happy Wednesday
+              </li><li>
+                <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1900809&amp;view=1">
+                  Attendance
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1666764000&amp;course=24538">
+                  Class calendar for today
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=24538">
+                  Upcoming events
+                </a>
+              </li></ul><h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_22" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_22" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_22" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_22" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_22" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_22" data-bs-slide-to="4"></li>
+      <li data-bs-target="#mtg_pix_22" data-bs-slide-to="5"></li>
+      <li data-bs-target="#mtg_pix_22" data-bs-slide-to="6"></li>
+      <li data-bs-target="#mtg_pix_22" data-bs-slide-to="7"></li>
+      <li data-bs-target="#mtg_pix_22" data-bs-slide-to="8"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/5mfpco151uw3ba2/22%20-%20img-1.png?dl=0" alt="22 - img-1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/u1if7faftfcdda9/22%20-%20img-2.png?dl=0" alt="22 - img-2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/vb9v7m86sgxyuky/22%20-%20img-3.png?dl=0" alt="22 - img-3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/4ervt91sl4tqdtm/22%20-%20img-4.png?dl=0" alt="22 - img-4.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/iihhut4zywo19en/22%20-%20img-5.png?dl=0" alt="22 - img-5.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/cwoohpu8k319c10/22%20-%20img-6.png?dl=0" alt="22 - img-6.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/u5m1yr79im6gugo/22%20-%20img-7.png?dl=0" alt="22 - img-7.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/0xs028xy3g0iz5l/22%20-%20img-8.png?dl=0" alt="22 - img-8.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/xttj9g3n3kui06x/22%20-%20img-9.png?dl=0" alt="22 - img-9.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_22" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_22" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            You. Wednesday today Happy Wednesday so I just want to mention some of you have noticed an email about the flag being and half mast on Friday
+          </li><li>
+            
+            so, Larry Saxton Professor Emeritus of computer science was one of the first hires in Parliament. He passed away on the 13th.
+          </li><li>
+            
+            So, Friday is a day of service for him. So I'm gonna go to the service and it's gonna be live streams as well. So anyway, I just wanted to share something. stories posted today about Larry. So he retired in 2011. I mean he'd been on campus more recently than that so maybe there are a lot of connections with him in the serum aside from me, but I just want to let you know
+          </li><li>
+            
+            so we're talking about evaluation yesterday lastly. So you can think of different ways or different types of evaluations and what were the ones that we've talked about so far.
+          </li><li>
+            
+            Start over here. Actually, let me turn on I think yeah, formative and summative
+          </li><li>
+            
+            I think there were two more so
+          </li><li>
+            
+            yes. Yes, those as well. So fixed help us with turn the projector on. As well I guess.
+          </li><li>
+            
+            So what are some kinds of qualitative data we can So, again you don't need the QR code because there's no password something Something will happen
+          </li><li>
+            
+            so what what are some kinds of data we can? Some data that asks you what did you like about the interface or What didn't you like? So those are qualitative sorts to get some some open ended text responses that we can analyze in a different way. It's not just a matter of calculating the average quantity and then we can do some more standard things and look at averages and standard deviations and so on.
+          </li><li>
+            
+            Right so time to complete is something we can look at, called quantitative data. To a count the number of errors we'll make gonna say something. Okay, I realize I'm writing too small. I apologize. We'll be back next time. It's time to leave the number of errors the user
+          </li><li>
+            
+            user makes and maybe the numerical average satisfaction. Are you satisfied with the the interface strongly disagree, strongly agree. And the range that we talked about like a Likert scale
+          </li><li>
+            
+            Okay, so, yes, last day I left you two words, or two blanks. One starts today and one starts at the knee.
+          </li><li>
+            
+            Any thoughts about that? Yes, if I wrote the right number of blanks so, we can do evaluation by collecting data from users for example, is that a word
+          </li><li>
+            
+            something like analog or at all analogous
+          </li><li>
+            
+            because it sounds like that
+          </li><li>
+            
+            because it's like empirical data is usually like digital one or zero true or false but analog is all the in between something you
+          </li><li>
+            
+            get twisted on or something's getting now political analytical
+          </li><li>
+            
+            collect the screen loves the best we get to film the details, like continuous, discrete and continuous we can talk about those in terms of data All right now we're blanks. Okay, so you're collecting data from users? So we can analyze an interface without having people use it and so this might be useful
+          </li><li>
+            
+            so that we get a sense of the issues in an interface before we present it to users.
+          </li><li>
+            
+            So what kinds of analytical evaluation are possible so I think we've talked about one already this heuristics so we can do we might do a walk through sort of do a heuristic evaluation and say,
+          </li><li>
+            
+            here with this list of heuristics, this is what I observed about the interface. So that's done without users. So the expert is making judgments about the interface based on what they see. And so this is this can be helpful because we're using these time tested heuristics. But it can be a negative because we're not observing people using the interface. We don't we might put too much weight or too little weight on some features that we notice in a static interface and not take into account our being used by actual users of the interface. So there's also another it's part of a larger part of a larger model. Called gums. I'm 95% sure that I've written the proper have expanded that acronym properly because there's just seems like a lot of words that could fit with a review. Anyway. So in particular, we have the kale LEM, which is not the Dutch airline, but the keystroke level model thank you for the knowledge front of my Kaylynn. Or, or maybe it was repulsion from my comment, but anyway, I'll take it. So the idea is
+          </li><li>
+            
+            so which of these as if I like this are from user data? So if we have like a design company already built, someone says before, and I'm building something else, and I already have some user data, which is a bit about others.
+          </li><li>
+            
+            So if we have easier data, then we would be doing some analysis we that would be an empirical evaluation. So the general idea of our analysis is to describe interactions with the year face is key with these different quantified so for typing a 10 character password then we have 10 K's in a row. So we might choose values with an average, some average typing speed so maybe point one seconds for the key press. But switching between those keyboard is more expensive. It's at the point four seconds. And then we have to run the mouse and we have to target it still. So there's an increased cost for that. And then also thinking that's an important element as well. So it's not so important. If we're comparing two interfaces. And not it's not so important to say
+          </li><li>
+            
+            that we have timings that are representative for computer science students. Whether they're under your pet, how many people type like this. I just want to how many people are touched typists I remember, my mom took typing lessons when I was 10 or so. So just the other day and she's she convinced me she strongly encouraged me to go through her book that's really helped. Most days, I can do pretty well typing. Anyway, so it's not so important to take an individual person's speeding speeds of typing. The idea is to compare one interface with the other. So if one is
+          </li><li>
+            
+            what is the amount of time it takes me to delete it at random letters? Until autocorrect figures out what I'm trying to say
+          </li><li>
+            
+            is that yeah, okay, so in that case, like on my Mac, I get these suggestions sometimes. I think I don't want the suggestions I just keep on but what I realized is that I have to hit the X to not take the suggestion
+          </li><li>
+            
+            otherwise, I have to go back and mental effort and a good portion of my goodwill towards try to have a second question and there's a cost to uncorrect to correct the corrections that we can model that AMI by saying we might have a probability of having the correct solution that we have to refuse so that's
+          </li><li>
+            
+            the mouse need that happens tempers time. So this is a flexible, fairly powerful way to describe interactions with some probabilities so that we get on average, a good expression of the time it takes to process a good level of what's required to interact interface.
+          </li><li>
+            
+            So we have one interface that involves a lot of typing. And one that involves a lot of what I was pointing clicking. So one aspect of our comparison is to say, what if we run the computation we find that the key keyboard based interfaces better has a shorter time to completion than was spaced one. But is that a reason to pick on compact keyboard interface? Think I did this already
+          </li><li>
+            
+            depends on how we implement this website and I don't remember which I think it's set verification just put it in it will automatically submitted.
+          </li><li>
+            
+            So if you put in like basically like a password, or a verification code, instead of going and pressing submit, in Turkey, I remember correctly just submits it for you. So if it's, I think it's if it's a seven character thing, and then we'll just as long as as long as you have seven characters and it does work most of the time, but maybe four or five.
+          </li><li>
+            
+            I'm gonna make a bold assumption, say that most people here are aware of programming and have done at least a little bit of computer programming. And I think most people are aware of techspace editors in command prompt because that's where everyone kind of starts at CS 110. And so it's a bit of a running joke of if you need to generate a txt file full of random nonsense, just get somebody to equip them. But after looking into them, it's kind of purely keyboard based. There's a keyboard shortcut for any possible thing you can think of go between brackets, go to the end of the line, find the second set of quotation marks and insert the cursor between them. You can jump to line numbers, so it's entirely keyboard pressing, and there's no most control however, it's a big trade off in intuition and when I think that's something we didn't consider too much with the last point, just keep prices and most pressing is how intuitive the key presses and most input is. Because if I have to click around for 10 minutes to find the thing that I wanted probably a little bit more than 0.4 seconds.
+          </li><li>
+            
+            Right. So I was good. These things sorry, but thank you for bringing them up.
+          </li><li>
+            
+            So with them I knew it when I was three I how it's been improved. I think that's a big step. Anyway so J small J is a cursor this is this is the one that catches me when I'm not paying attention from time to time, so I'm happily moving the cursor around but then if I accidentally have a CapsLock key on then I see my file shrinking because all the lines are being joined together and then I swear to myself join levels my mentoring join lines. So a keyboard interface that just lets us put in commands may be great for experienced users.
+          </li><li>
+            
+            So the question is, do we have experienced users are we targeting this for people who
+          </li><li>
+            
+            do do this stuff every day for hours each day? So if user community isn't this isn't native experienced users then maybe the efficient keyboard interface isn't the one to choose.
+          </li><li>
+            
+            So most basic interface. I apologize. They're hiding. Good for novice users. But they may get tired of it quickly.
+          </li><li>
+            
+            So this is my feeling in your courses or Moodle is that there are some things when I'm making groups the groups interface and you're welcome to do look at that as being teachers for learning in the experiment course. So this is these are some trade offs. How do we design things for
+          </li><li>
+            
+            I mean, so maybe we'd like maybe the keyboard interface was appropriate for very experienced users. But we'd like to
+          </li><li>
+            
+            maybe the question if it's a mouse based interface, where people are clicking a lot, maybe there's a way to think of a different metaphor, organized differently so that we're not doing so much clicking Does that make sense?
+          </li><li>
+            
+            Most basic input. Where do we start? Because there's a few different types of
+          </li><li>
+            
+            devices we have today. Like obviously we have a contract that has some different functionality than normal noses. And then do we consider mobile phone touches it touches on those considered? Input or is that a separate time
+          </li><li>
+            
+            whatever the style is?
+          </li><li>
+            
+            No, we care. So I'm not sure all of them have significant differences in terms of timings and interaction with them.
+          </li><li>
+            
+            More realistic. People don't use phones, but there might be devices I'm not familiar with that people with disabilities use or interact with computers. I don't ever want to see a close up blind fellow would still fall on your face.
+          </li><li>
+            
+            So we see that the speed with which we can accurately hit a target on screen depends on the size of the target and the distance to the target. So this is expressed as Fitts Law those of you with a textbook I want you to find Fitts Law in the index.
+          </li><li>
+            
+            So on a Mac we just gonna knock me so we might think. Well, okay, if there was a map because we have the menu bar at the top of the screen. Regardless of where we are, we know that we can just move up quickly. And we can't overshoot it because it stops at the beginning as a matter of clicking on the right button. So that helps us I have had frustrating experiences with word in the past where I tried to adjust the margins the margin and try to use the graphical interface. It's Pixlr two wide target it seems like to me to get the second tab or two similar manipulation that it's very time consuming. So I think I didn't check this, but I think that they've updated the web page up to just the last meeting and I read through the comments about the exam. So I want to just touch on one thing about my feedback instrument
+          </li><li>
+            
+            so I'm aware there's a potential as you get giving me information that I might not want to hear. Well, if I if I didn't want to hear it, I wouldn't ask for it.
+          </li><li>
+            
+            So I suppose that there's an implication there that you express the information in ways that I I can.
+          </li><li>
+            
+            I can hear it more easily. Instead of calling me a bunch of names. Not that anyone does. But I frequently get responses like what would what do you like best about the class? Nothing. What would you change everything and so on. So I'm asking for feedback in the middle of the semester so that I can so that we may
+          </li><li>
+            
+            benefit for the remaining time with the feedback so in a give you the option of having or giving me some feedback at the exam because that's a good time. I found
+          </li><li>
+            
+            if people have a minute or two after the exam to fill out some feedback. And in fact everyone who wrote the exam submitted some feedback so so I asked you, I reminded you to not make any marks any identifying marks on the paper but anyway, in light of comments about the ethical issues so I'm I'm not look my interest is is just to to solicit your feedback in a non threatening way and give you the option to not to not give me feedback so you could give me your feedback form. You could give me a blank feedback form because
+          </li><li>
+            
+            I asked you to put them face down or you could not return a form at all and so I just want to do you think there's should I? Is there room for me to make a more clear statement about the purpose of the feedback and the precautions?
+          </li><li>
+            
+            I was talking about this with my friend recently. And while they realized when I was preparing for the midterm that we had much more material than I thought when I was going through the textbook I know I remember this Oh, I remember this too. And so I think the biggest drawback of this class in terms of within the class itself is that we're always learning to smoothly it's under the radar. It's almost like you expect some resistance and because the operation so smooth, if there was some indication of where in the textbook we are, that might help a little bit but that's just my opinion and others may disagree.
+          </li><li>
+            
+            Okay, thanks. So that's why I give you the chance to give me feedback so you can I can get those opinions, those suggestions from you without having to solicit them in front. I mean, you're sitting in the front row of the class. So that means that you will be interested in talking to begin with, but I don't want to put pressure on everyone to make comments in class. So my question was about, is there a way to modify the instrument to put some language at the top to make it more clear about the purpose of collecting the feedback and and other details. So for the final exam, I'll collect some summative feedback from from you, but I won't look at those until after the exams are marked. So any thoughts about the feedback stuff?
+          </li><li>
+            
+            It'd be nice to have an indication of the feedback we're providing a strictly for the course material as you present it or is it going to play into assignments or play into the exam?
+          </li><li>
+            
+            Like are you looking for feedback specifically to influence the lectures or is it influencing the entire class? Performance
+          </li><li>
+            
+            so it's about the class if you have particular quit suggestions about assignments or something so I'm not trying to make it about everybody a particular thing, I guess I'm just get I will am trying to provide a way for you to give me some feedback about whatever thing in the class you would need to give me feedback about that you want to give me feedback about and do it in a way that doesn't require you to do speak up in class about it just those I was thinking having another batch of the test the feedback you get will be less than number of feedbacks. More helpful. Like it takes initiative initiative
+          </li><li>
+            
+            yeah
+          </li><li>
+            
+            so I guess I can make clear. Here, here's a survey. You can complete it or not. It's anonymous and voluntary. Some of us that's creating something online. Yeah, I recognize that. That I will so the trade off there is giving you something online to do to the participation rate would decrease. So during an in class increase participation rate and I can make
+          </li><li>
+            
+            all the assurances in the world but that I'm not matching handwriting to exams or other samples I have. So I wrote a time here, but I just I want to
+          </li><li>
+            
+            say that I welcome your input about improving that process. So we can think about my feedback instrument as an interface and we can improve the design of it that event and the process other option would be to for the hospital to have a six year mark
+          </li><li>
+            
+            so let's have a discussion about the final exam. We'll start that online and
+          </li><li>
+            
+            so if you need to go Ryan especially in the back he seemed primed to get up didn't mean to anyway was it gonna save of let's just keep the discussion going. Okay, and let's pick this up again on Friday.
+          </li><li>
+            
+            Thanks again for your attention today. Have a great day and we'll see you on Friday.
+          </li><li>
+            
+            Thanks again for your attention today. Have a great day and we'll see you on Friday.
+          </li></ul>
+    
+  
+    
+  <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<p class="text-muted">
+   No Responses
+ </p>
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=wiki">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/22_Wed-26-Oct-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

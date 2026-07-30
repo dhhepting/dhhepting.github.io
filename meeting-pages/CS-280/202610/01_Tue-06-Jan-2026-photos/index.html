@@ -1,0 +1,36 @@
+<div class="meeting-photos-page">
+  <h1>CS-280 Mtg 1 Photos</h1>
+  <p class="text-muted">
+    <a href="">
+      Back to the main meeting page
+    </a>
+  </p>
+
+  <div class="alert alert-info">
+    This page is 100% generated and always safe to fully regenerate — it has no
+    hand-authored content. That's the whole point: updating photos here never
+    risks clobbering anything students have written on the main meeting page.
+  </div>
+
+  <h3>Photo gallery</h3>
+  <div class="mb-3">
+  </div>
+
+  <h3>Copy this into the Moodle photos page</h3>
+  <div class="mb-3">
+    <textarea id="creole-photos" class="form-control" rows="12" readonly>== Photos: CS-280 Mtg 1 (Tue-06-Jan-2026) ==</textarea>
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyPhotos()">
+      Copy to clipboard
+    </button>
+  </div>
+</div>
+
+<script>
+  function copyPhotos() {
+    const ta = document.getElementById('creole-photos');
+    ta.select();
+    navigator.clipboard.writeText(ta.value).then(() => {
+      console.log('Photos Creole copied to clipboard');
+    });
+  }
+</script>

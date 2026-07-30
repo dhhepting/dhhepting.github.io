@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-280/202410/11_Tue-13-Feb-2024.html" />
+    
+    <title>Mtg 11 &bull; CS-280 (202410) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 11 &bull; CS-280 (202410) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/11_Tue-13-Feb-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/",
+        
+          "name": "CS 280"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/",
+        
+          "name": "202410"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/11_Tue-13-Feb-2024.html",
+        
+          "name": "Mtg 11 (Tue-13-Feb-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-280/">
+        CS 280
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-280/202410/">
+        202410
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 11 (Tue-13-Feb-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 11/26: Tue-13-Feb-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="10_Thu-08-Feb-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="12_Thu-15-Feb-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Privacy, Assignments
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Tuesday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1740941&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1707804000&amp;course=31085" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=31085" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Response to Responses
+  </h4>
+  <p>Response to responses</p>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li>Dark Patterns research paper
+    <ul>
+      <li><a href="https://dl.acm.org/doi/10.1145/3411764.3445610" target="_blank">Page in ACM DL</a></li>
+      <li><a href="https://dl.acm.org/doi/pdf/10.1145/3411764.3445610" target="_blank">pdf of paper</a></li>
+      <li><a href="https://foundation.mozilla.org/en/campaigns/microsoft-ai/" target="_blank">Microsoft example?</a></li>
+    </ul>
+  </li>
+  <li>Answers to Quiz: all true</li>
+  <li>Professional Skills Assessment:
+    <ul>
+      <li>Part 1 submission (5):
+        <ul>
+          <li>CIPS student membership card (2)</li>
+          <li>Certificate from completion of SkillsTX course (2)</li>
+          <li>Your Self-Rated Skills Profile Report (pdf file emailed to you from SkillsTX.com (1)</li>
+        </ul>
+      </li>
+      <li>Part 2 submission (10):
+        <ul>
+          <li>Edited version of Self-Rated Skills Profile Report (from Planner view – may not work in firefox, issue submitted)(1)</li>
+          <li>Select 2 job descriptions (use ‘current’ and ‘future’ for these) that you would like to pursue and generate skill gap reports(2)</li>
+          <li>Create action plans to address the skill gaps(5)</li>
+          <li>Reflect on the process and the importance of ethics in your chosen job descriptions(2)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Group discussion about what is needed to support privacy (focus on an example - from the text or the news</li>
+</ul>
+<h4>
+    Summary
+  </h4>
+  <p>Summary</p>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2510323" target="_blank">Submit your response to this meeting before noon tomorrow</a></li>
+  <li>Read Dark Patterns paper (link above)</li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2511225" target="_blank">Take quiz before the start of our next meeting</a></li>
+</ul>
+<h5><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2511224">ACTION: Take quiz before next meeting</a></h5><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=9238">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_11" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_11" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_11" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_11" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_11" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_11" data-bs-slide-to="4"></li>
+      <li data-bs-target="#mtg_pix_11" data-bs-slide-to="5"></li>
+      <li data-bs-target="#mtg_pix_11" data-bs-slide-to="6"></li>
+      <li data-bs-target="#mtg_pix_11" data-bs-slide-to="7"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/ffhyu55h26oc5mtqfo1ak/11-1.png?rlkey=9nzwuhyfp2qpc0okx3l7jaqza&amp;dl=0" alt="11 - 1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/3qv69gxxwpgjon7t4hvbe/11-2.png?rlkey=v2qi1567cvtntls7hw1rb209b&amp;dl=0" alt="11 - 2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/v34gvtbo0r19yre01ludi/11-3.png?rlkey=tpeb5vpf0dj9lt7so1tnh7akl&amp;dl=0" alt="11 - 3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/vvwat0t0r1fxwlgg8opke/11-4.png?rlkey=1fjd5j1v5rc36o7ykppp4sz20&amp;dl=0" alt="11 - 4.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/snfuc1taxcmgt2g9n911b/11-5.png?rlkey=o54dx3bj89bo1rizuchg5vf8t&amp;dl=0" alt="11 - 5.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/t7yil5po237alechhizcx/11-6.png?rlkey=zstbof8ctfilsbl54slbrkw62&amp;dl=0" alt="11 - 6.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/4jwmf9ve9nmnhnsop9ify/11-7.png?rlkey=s4cgr3lffgn6sl9aeygw4n2kn&amp;dl=0" alt="11 - 7.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/b65u9c4kbxskkohkdpoej/11-8.png?rlkey=5877ur3d3k7sqbx4u57o282em&amp;dl=0" alt="11 - 8.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_11" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_11" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Hi I'm
+          </li><li>
+            
+            James
+          </li><li>
+            
+            Good afternoon
+          </li><li>
+            
+            how's that?
+          </li><li>
+            
+            I'm glad to hear the first three
+rows can hear me about the back.
+          </li><li>
+            
+            Okay, how's everybody doing?
+Today?
+          </li><li>
+            
+            You want to try to see him
+today?
+          </li><li>
+            
+            assignments
+          </li><li>
+            
+            before I get to that I want to
+let you know about the
+          </li><li>
+            
+            opportunity or my encouragement
+of your suggestions for victory
+          </li><li>
+            
+            exact questions.
+          </li><li>
+            
+            Choice
+          </li><li>
+            
+            welcome
+          </li><li>
+            
+            your suggestions about questions
+          </li><li>
+            
+            masters
+          </li><li>
+            
+            so since the exam was on the
+29th powder won't recover until
+          </li><li>
+            
+            the end of this week so today
+and there's okay so that makes
+          </li><li>
+            
+            sense so if you don't my
+questions and sound but I would
+          </li><li>
+            
+            appreciate your input into with
+questions that
+          </li><li>
+            
+            you could make for a fair
+assessment of learning to date
+          </li><li>
+            
+            so what we've talked about in
+class and the things that I've
+          </li><li>
+            
+            asked you to look at that seem
+okay so Scantron sheets for the
+          </li><li>
+            
+            answers so that means instead of
+waiting for for me to mark 266
+          </li><li>
+            
+            It sounds okay feedback a little
+quicker
+          </li><li>
+            
+            so let's say when seen the forum
+post I made about midterm exam
+          </li><li>
+            
+            suggestions you should get email
+about that. I think I forced you
+          </li><li>
+            
+            to be subscribed to the forum
+          </li><li>
+            
+            so
+          </li><li>
+            
+            let me let's see I can.
+          </li><li>
+            
+            So here is in the class
+discussions forum
+          </li><li>
+            
+            so you can reply here
+          </li><li>
+            
+            so if you reply to my original
+message, then the answers will
+          </li><li>
+            
+            be at the same level instead of
+replying to other people's
+          </li><li>
+            
+            replies deeply nested chain of
+best responses
+          </li><li>
+            
+            so the quiz answer. The quiz is
+based on the three social rules
+          </li><li>
+            
+            of privacy in the tech guys so
+chapter three
+          </li><li>
+            
+            so the first one is great to
+have some protection of personal
+          </li><li>
+            
+            information and
+          </li><li>
+            
+            is part of the rate of self
+preservation.
+          </li><li>
+            
+            So what's your feeling about the
+amount of stuff you post on
+          </li><li>
+            
+            social media and do you think
+about this forming permanent
+          </li><li>
+            
+            record of your your life for
+everyone to see. Maybe was a
+          </li><li>
+            
+            little bit before maybe doesn't
+come up? First thing on Google
+          </li><li>
+            
+            search and it's there for other
+people to see and to use.
+          </li><li>
+            
+            Anyone concerned about that?
+          </li><li>
+            
+            So I'll put up participation I'd
+love for you, sir. After class
+          </li><li>
+            
+            so this is.
+          </li><li>
+            
+            Anyone heard of reputation
+defender.com.
+          </li><li>
+            
+            I saw the ad yesterday. It's
+been an all around for a number
+          </li><li>
+            
+            of years. And maybe it's
+          </li><li>
+            
+            because I was watching CNN I was
+curious to hear about the
+          </li><li>
+            
+            reactions. Trump statement about
+starting World War three on both
+          </li><li>
+            
+            sides. But the statement that
+Russia could do whatever the
+          </li><li>
+            
+            hell they want. To NATO
+countries that don't pay their
+          </li><li>
+            
+            share.
+          </li><li>
+            
+            We live in a time so anyway, I
+was watching and
+          </li><li>
+            
+            sad came up and said we had two
+people talking about they're
+          </li><li>
+            
+            going to one potential client
+was talking to a potential
+          </li><li>
+            
+            service provider and said I just
+have one question. Why do you
+          </li><li>
+            
+            have bad reviews online? Garbage
+is still there. So?
+          </li><li>
+            
+            What about the dragon pirate
+story
+          </li><li>
+            
+            maybe I should give a brief
+brief Colorado Story
+          </li><li>
+            
+            So this is one serious
+application of social media or
+          </li><li>
+            
+            putting material on social media
+because even though it was only
+          </li><li>
+            
+            intended for her friends, the
+social worker discretion was
+          </li><li>
+            
+            working out about it. Then she
+she's encouraging greetings to
+          </li><li>
+            
+            minors. The recorder and
+university decided to not get a
+          </li><li>
+            
+            different education
+          </li><li>
+            
+            So this is the second social
+role.
+          </li><li>
+            
+            So it can lead to the evolution
+and development of social norms.
+          </li><li>
+            
+            or societal norms.
+          </li><li>
+            
+            So you can privacy allows us to
+test societal norms
+          </li><li>
+            
+            so any examples?
+          </li><li>
+            
+            Privacy being undermined in
+relation to certain societal
+          </li><li>
+            
+            norms
+          </li><li>
+            
+            this role is not respected
+          </li><li>
+            
+            Yeah, with kids being posted
+without their consent, like what
+          </li><li>
+            
+            do parents post about their kids
+or just post pictures of their
+          </li><li>
+            
+            kids, their kids are consenting
+necessarily so privacy being
+          </li><li>
+            
+            opened up kind of on those
+lines.
+          </li><li>
+            
+            So I have enlace you tag me in
+photographs and I use.
+          </li><li>
+            
+            So, what about the pronoun
+policy in Saskatchewan undermine
+          </li><li>
+            
+            the societal growth of privacy.
+Yeah,
+          </li><li>
+            
+            I would say in a way like if
+they have family that's not
+          </li><li>
+            
+            supportive. Their feelings and
+privacy by having to go through
+          </li><li>
+            
+            their parents
+          </li><li>
+            
+            any other any comments.
+          </li><li>
+            
+            place for kids to be allowed to
+express themselves
+          </li><li>
+            
+            okay and the third anything
+else?
+          </li><li>
+            
+            Even watch the football game on
+Sunday. Did you watch for the
+          </li><li>
+            
+            football or swim or for Usher's
+ABS I didn't last time show. So
+          </li><li>
+            
+            that was a comment that other
+people have made you know, I
+          </li><li>
+            
+            know the use of roller skates
+          </li><li>
+            
+            so maybe related to the second
+principle The third principle is
+          </li><li>
+            
+            partially encouraged. So we can
+write ideas and solve without
+          </li><li>
+            
+            develop them on our own before
+they become public knowledge
+          </li><li>
+            
+            so I wanted to talk about it.
+          </li><li>
+            
+            Dark patterns in relation to
+privacy
+          </li><li>
+            
+            so these are patterns that
+appear in interfaces that impact
+          </li><li>
+            
+            the way people behave, change
+          </li><li>
+            
+            can change the way that they
+decisions and the way they can
+          </li><li>
+            
+            gather information?
+          </li><li>
+            
+            can think of them they might
+impact autonomy. So, the ability
+          </li><li>
+            
+            of someone to make their own
+decisions
+          </li><li>
+            
+            and one one that I mentioned is
+          </li><li>
+            
+            privacy is occurring before Mark
+Zuckerberg
+          </li><li>
+            
+            so the idea is this pattern
+hides the privacy protecting
+          </li><li>
+            
+            options behind several layers of
+screens.
+          </li><li>
+            
+            So, this is the paper. I'm
+asking you to look out for
+          </li><li>
+            
+            tomorrow or next day. So this
+might be an example of Microsoft
+          </li><li>
+            
+            using a dark pattern by
+obscuring their intent to use
+          </li><li>
+            
+            personal data to train AI. So
+Mozilla asked a number of
+          </li><li>
+            
+            experts to look at the service
+agreement and none of them could
+          </li><li>
+            
+            answer whether personal data was
+the is very existence.
+          </li><li>
+            
+            So I want to bring out the
+detail about the professional
+          </li><li>
+            
+            skills assessment assignment so
+there's I'll make this available
+          </li><li>
+            
+            on your courses
+          </li><li>
+            
+            so there's two parts that we
+agreed on. So Monday, February
+          </li><li>
+            
+            26 is part one and part two is
+due March 25. So for part one
+          </li><li>
+            
+            submission, so the KIPP student
+membership card
+          </li><li>
+            
+            so that's two marks so that's
+          </li><li>
+            
+            an easy three marks
+          </li><li>
+            
+            then another two marks for a
+certificate of completion of the
+          </li><li>
+            
+            skills TX course so then when
+you complete the questionnaire
+          </li><li>
+            
+            you'll get a self rated skills,
+your profile report. So this is
+          </li><li>
+            
+            the preliminary version that
+gets emailed to you.
+          </li><li>
+            
+            So attached to the assignment
+for submission. That's one mark.
+          </li><li>
+            
+            Because it's related to part two
+submission. The edited version
+          </li><li>
+            
+            of yourself reading skills
+profile report from the planner
+          </li><li>
+            
+            view. So if you're using Firefox
+I had an issue
+          </li><li>
+            
+            when I tried to load this in
+Firefox, just kept refreshing
+          </li><li>
+            
+            the screen flashing pretty
+quickly so many people are using
+          </li><li>
+            
+            Firefox Chrome
+          </li><li>
+            
+            you stage you can use Safari
+          </li><li>
+            
+            Chrome does the market share
+          </li><li>
+            
+            suddenly the ACC will be
+resigning recently
+          </li><li>
+            
+            so I'm using Firefox again.
+Support open source and really
+          </li><li>
+            
+            foundation and I know for all
+these ideas
+          </li><li>
+            
+            so there may be maybe to use a
+different browser when you get
+          </li><li>
+            
+            to the planning stage. And so
+you can create an edited version
+          </li><li>
+            
+            of your skills profile your self
+assess skills
+          </li><li>
+            
+            so that's the other part of the
+three marks.
+          </li><li>
+            
+            So then the next see there
+there's a spot for your current
+          </li><li>
+            
+            position and your future
+position. So you don't have to
+          </li><li>
+            
+            turn it down as current and
+future you can just build it as
+          </li><li>
+            
+            a job one and job to identify
+two job descriptions the CPU as
+          </li><li>
+            
+            clean as you'd like to do.
+          </li><li>
+            
+            So the number of Canadian job
+descriptions that I wanted to
+          </li><li>
+            
+            give you I think is 300 or some
+need your job descriptions. So I
+          </li><li>
+            
+            hope that gives you enough
+          </li><li>
+            
+            so you can find something that
+speaks to you in those job
+          </li><li>
+            
+            descriptions. So then
+          </li><li>
+            
+            once you've identified those job
+descriptions then you can
+          </li><li>
+            
+            generate skill gap reports
+          </li><li>
+            
+            so that's another two marks and
+then five marks for generate for
+          </li><li>
+            
+            creating action plans to address
+the skill gaps
+          </li><li>
+            
+            and then
+          </li><li>
+            
+            appoint two marks for reflecting
+on the process and the
+          </li><li>
+            
+            importance of ethics in your
+chosen job descriptions.
+          </li><li>
+            
+            So that lasts for the last two
+items or the ones that require
+          </li><li>
+            
+            you're being asked for something
+other than just me just using
+          </li><li>
+            
+            the interface to the seals, dx,
+Sofia, tools,
+          </li><li>
+            
+            courses for beginners,
+intermediate advanced all of
+          </li><li>
+            
+            those surveys and they each take
+a different amount of time which
+          </li><li>
+            
+            one was the one that you want it
+          </li><li>
+            
+            doesn't matter. So So I did them
+all myself and I blocked out a
+          </li><li>
+            
+            little bit with that. Wish my
+horse before I put it into a bit
+          </li><li>
+            
+            more perspective.
+          </li><li>
+            
+            So I think he could choose an
+early anymore you are in the
+          </li><li>
+            
+            program. beginner version media
+because this this gives you a
+          </li><li>
+            
+            preliminary least supportive
+          </li><li>
+            
+            so it's it's a starting point.
+Makes sense.
+          </li><li>
+            
+            Somebody submit the first part
+of the graphic so I want you to
+          </li><li>
+            
+            when you submit the clear
+yourself or with a group of up
+          </li><li>
+            
+            to four
+          </li><li>
+            
+            about the submission of part
+one. But just so you know that
+          </li><li>
+            
+            we'll have a mechanism to get
+your feedback about your whole
+          </li><li>
+            
+            your group work together.
+          </li><li>
+            
+            So once you pick a topic that is
+saturated and timely. Some
+          </li><li>
+            
+            sources if you choose will be
+within the last six months.
+          </li><li>
+            
+            So I wanted to say
+          </li><li>
+            
+            don't want to do good way to
+much quantify the difference
+          </li><li>
+            
+            between three to four times as
+many work orders, sources or
+          </li><li>
+            
+            anything like that, but except a
+little bit more in depth. So if
+          </li><li>
+            
+            you're in a group then you
+should have five sources.
+          </li><li>
+            
+            more deaths current Cold War.
+          </li><li>
+            
+            So groups should also plan for
+division of labor. So, therefore
+          </li><li>
+            
+            we say this is the non binary
+plan. Just a little sense of
+          </li><li>
+            
+            Yeah. Do you want our sources
+like listed on the infographic
+          </li><li>
+            
+            or can they be on a separate
+page for submission?
+          </li><li>
+            
+            Or you can see me where they
+make sense. They fit otherwise
+          </li><li>
+            
+            Okay, I just wanted to lay that
+out for you. I said I was gonna
+          </li><li>
+            
+            have that information. I haven't
+don't have it in your courses
+          </li><li>
+            
+            yet. I will get that done today
+and tomorrow.
+          </li><li>
+            
+            So I thought for now that we
+have groups so that we might
+          </li><li>
+            
+            have another group discussion
+          </li><li>
+            
+            so does that make sense what
+I've said
+          </li><li>
+            
+            so it's not a practices
+          </li><li>
+            
+            this is an absolute so what can
+we do to support a workable
+          </li><li>
+            
+            definition of privacy in the
+sage maker, some of the examples
+          </li><li>
+            
+            that are listed in that chapter
+or something it shouldn't be us
+          </li><li>
+            
+            Tim Burton's was a previous
+version of
+          </li><li>
+            
+            reset any questions? On that
+          </li><li>
+            
+            you can save for the session
+          </li><li>
+            
+            Yes, it says what is discussed
+needed to support privacy do you
+          </li><li>
+            
+            mean like to help protect
+someone's privacy? Yeah, tools
+          </li><li>
+            
+            or or laws or enforcement
+mechanisms
+          </li><li>
+            
+            what what can we do to support
+what was important about privacy
+          </li><li>
+            
+            in this day and age?
+          </li><li>
+            
+            For example to preserve our
+autonomy or agency the idea that
+          </li><li>
+            
+            if everybody knows everything
+about us, and we can choose to
+          </li><li>
+            
+            reveal some things, some people
+other than other people managing
+          </li><li>
+            
+            who gets to see what you create
+information about us. For
+          </li><li>
+            
+            example
+          </li><li>
+            
+            I feel more I need less clear
+the idea.
+          </li><li>
+            
+            Less time to talk. So we have 10
+minutes so you can begin to
+          </li><li>
+            
+            groups and have a discussion
+about
+          </li><li>
+            
+            seven summarize.
+          </li><li>
+            
+            Up to say
+          </li><li>
+            
+            evening think I'm like halfway
+          </li><li>
+            
+            through so
+          </li><li>
+            
+            much. Just I was
+          </li><li>
+            
+            just
+          </li><li>
+            
+            in case anything's.
+          </li><li>
+            
+            Wrong check it out
+          </li><li>
+            
+            you what's going
+          </li><li>
+            
+            on name is right know like how
+do we get so many people boy boy
+          </li><li>
+            
+            crystal sight
+          </li><li>
+            
+            my
+          </li><li>
+            
+            god evening I'd
+          </li><li>
+            
+            like to do this
+          </li><li>
+            
+            allowing users
+          </li><li>
+            
+            to watch Stanford
+          </li><li>
+            
+            because they just want to make
+and then it's pretty you're
+          </li><li>
+            
+            going to take
+          </li><li>
+            
+            notes which are individually
+assesses the Bronze Age
+          </li><li>
+            
+            tribulation
+          </li><li>
+            
+            like this story
+          </li><li>
+            
+            no snake
+          </li><li>
+            
+            you going to share something but
+this guy's obsession
+          </li><li>
+            
+            for privacy I should
+          </li><li>
+            
+            say hold on a
+          </li><li>
+            
+            second yeah I know it's like a
+television show
+          </li><li>
+            
+            I already know your story
+          </li><li>
+            
+            us the day bye
+          </li><li>
+            
+            let's get to
+          </li><li>
+            
+            it looking forward
+          </li><li>
+            
+            to is a great question.
+          </li><li>
+            
+            Brother in law
+          </li><li>
+            
+            so as we did like I say because
+          </li><li>
+            
+            of welcome going to insert data
+          </li><li>
+            
+            last one
+          </li><li>
+            
+            okay
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            you certainly on both sides
+          </li><li>
+            
+            right it Right
+          </li><li>
+            
+            right it Right
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Dangers of sharing private information on public platforms.
+    </li><li>Privacy and Civil Liberties
+    </li><li>All the concepts discussed today is important.
+    </li><li>Learn how Microsoft's new Service Agreement have delightfully ignore what they are planning to do with the data collected from the user
+    </li><li>Talked more about assignment and group discussion on privacy
+    </li><li>We talked about the midterms and assignments. Midterm discussions were helpful and informative, as well as clear instructions regarding the assignment details and submissions.
+    </li><li>About the Dark Pattern Research Paper
+    </li><li>Nothing in particular I have encountered today I thought is important.
+    </li><li>There are 3 rights to privacy
+    </li><li>we learnt about dark patterns in the privacy. 
+    </li><li>Today we discussed about infographic project on group and reviewed darkside of social media example
+    </li><li>Midterm, personal skill assessment and privacy
+    </li><li>How personal data is used to train ai 
+    </li><li>How do we regulate personal privacy in the age of social media
+    </li><li>Privacy 
+    </li><li>privacy making people independent though significant was one of the most significant perspective i have encountered
+    </li><li>Dark patterns in relation to privacy 
+    </li><li>Everything was important
+    </li><li>We learned about the 3 different types 3 social roles of privacy with an example of drunken pirate 
+    </li><li>We encountered the important concept of when we draw the line between privacy and data collection. We went over things like when people's data should or can be violated for the greater good of a system or technology. Its not clear, and every situation seems to be different on where and how we decide when somebody's privacy should be violated, and when it important to protect somebody's privacy.
+    </li><li>no
+    </li><li>Privacy and boundary regarding it
+    </li><li>Blown to bits, etc
+    </li><li>Supporting privacy requires a combination of legal protections, technological solutions, ethical practices, awareness and education, accountability mechanisms, and international cooperation. These elements collectively establish a comprehensive framework to safeguard individuals' privacy rights in a digitalized world.
+    </li><li>Today I learned about the 3 social roles of privacy. 1) The right to privacy of personal information is part of right to self-preservation. 2) Privacy is society's mechanism to allow for deviation from societal norms. 3) Privacy encourages independent thought.
+    </li><li>Everything was important 
+    </li><li>An important concept was considering how privacy should be respected for children when it opposes the beliefs of their parents, especially on social media.
+    </li><li>About privacy and why we should care
+    </li><li>Privacy is a societal mechanism for incubating new ideas outside of the public eye. 
+    </li><li>Talking about exam and its questions for it and then the group assigning for the assignment 
+    </li><li>no
+    </li><li>childrens rights to privacy
+    </li><li>The right to self preservation
+    </li><li>The Lack of Conceptual Foundation in defining and understanding dark patterns.
+    </li><li>We followed up on the previous topic of privacy. 
+    </li><li>Privacy 
+    </li><li>Today, I discussed how privacy can be regulated and in which ways that privacy can be proven.
+    </li><li>An important perspective I encountered today was the effect of social media on one’s life, especially with the drunken pirate story. I did not realize that an Instagram post that was meant for friends could have that much of an impact that the university decided she wouldn’t be able to graduate with her education degree. It puts it into perspective that “nothing goes away” like the koans covered in blown to bits chapter 1. 
+    </li><li>The important concept I encountered today was the expansion of the three social roles of privacy. This was important since it provided me with information I could not have gathered from the textbook.
+    </li><li>Dark pattern research paper 
+    </li><li>the privacy according to blownto bit chapter 3
+    </li><li>Privacy is essential to independent thought because with no privacy no independent thinking occurs. You need privacy to formulate independent opinions because independent means to be by ones self. Everyone is subject to their own thought and without privacy it is hard for that to happen. 
+    </li><li>privacy 
+    </li><li>The research paper on dark patterns.
+    </li><li>The perspective I encounter today was What Makes a Dark Pattern... Dark?: Design Attributes, Normative Considerations, and Measurement Methods this research paper 
+    </li><li>today I learned about privacy and why its important that we have it for cs 
+    </li><li>An important concept we went over today was the 3 Privacy Roles of Society.  One role: Privacy is important for independent think and I think that is very important for anyone. It is hard enough to find opinions online when a lot of people either bandwagon or do not want to be deemed as "wrong". So online its hard to speak freely with your own thoughts without those people who want to ruin your day. So, overall privacy is very important for independent thinking.  
+    </li><li>I found it interesting that there were more measures needed to insure privacy, I never thought too hard on what it meant to implement it.
+    </li><li>The concept of privacy of personal information and the right to self preservation.
+    </li><li>About Privacy
+    </li><li>Privacy is something that should be looked at closely because everyone has the right to keep their lives private if they choose
+    </li><li>We talked about the importance of privacy and how it promotes new ideas. We talked about how someones image can be ruined over social media posts like the "Drunk Pirate" example.
+    </li><li>3 social roles of privacy
+    </li><li>Today we saw key points on rights, discussed about assignment and midterm 
+    </li><li>An important perspective i learnt today was about privacy and the three social rules of privacy in the information. 
+    </li><li>Everything
+    </li><li>about midterm
+    </li><li>About Privacy and How social media affects it
+    </li><li>We focused more in depth about privacy and the midterm question types
+    </li><li>Professional skills assessment 
+    </li><li>I dont find anything important today.
+    </li><li>Regarding privacy professor explained in detail and also about assignments, midterm etc.
+    </li><li>About the 3 privacy rules
+    </li><li>Today we discussed about midterm and more on privacy.
+    </li><li>Syllabus for midterm 
+    </li><li>We talked more in detail about the three different social roles of privacy. One of the overarching ideas of social privacy is that it allows people to "have a life" outside the public eye. Furthermore, it can allow more independant thought or a way to be more personal.
+    </li><li>Today we discussed about the quiz question and everything was true few points about what do we need to submit the assignment 
+    </li><li>In my group, we talked about the importance of restricting a company's access to their user's information and creating more laws that will benefit the general public but might not be liked by tech companies.
+    </li><li>Thinking about privacy in more of a conceptual way changes my understanding of what privacy truly means. I never considered the possibility of privacy to deviate from social/societal norms. In this regard, privacy is more one's own internal wants. 
+    </li><li>Dark pattern in relation to the privacy
+    </li><li>Privacy
+    </li><li>about midterms and assignments
+    </li><li>Privacy and its 3 types
+    </li><li>Today's lesson covered Privacy. We were taught the 3 Social Roles of Privacy and some related terms, like "Privacy Zuckering," named after Mark Zuckerberg. We were also informed about the implications of social media and how we should take caution on what we post ("Drunken Pirate" incident). We learned some of the pros of privacy, such as how it can facilitate evolution and development of societal norms as a response to new situations, as well as facilitating independent thought.
+    </li><li>3 SOCIAL RULES OF PRIVACY, 
+    </li><li>An important concept I encountered today is the right to privacy of personal information
+    </li><li>The format of the mid term and assignment 1
+    </li><li>things about Dark Patterns
+    </li><li>About research paper
+    </li><li>About Midterm and privacy concepts
+    </li><li>Midterm discussion was informative and important.
+    </li><li>Dark Concepts Research Paper 
+    </li><li>security
+    </li><li>infographic part 1
+    </li><li>Blooms taxonomy
+    </li><li>Today we learned about privacy and its importance to consumers with private information.
+    </li><li>Good things takes time
+    </li><li>An important concept we encountered today was the 3 social rules of privacy; 1. rights to privacy of personal information is part of right to self-preservation, 2. privacy is society's mechanism to allow for deviation from norms., 3. privacy encourage independent thoughts. Another thing we encountered today was the dark patterns that relate to privacy, and how it impacts autonomy.
+    </li><li>What people do in private can permit the evolution of societal norms 
+    </li><li>Nothing stood out
+    </li><li>from chapter 3 of blown to bits
+    </li><li>First, right to primacy of personal information is part of right to self-presentation. Second, primary is society's mechanism to allow for deviation from social norms. Third, privacy encourages independent thought.
+    </li><li>Privacy
+    </li><li>The tactics and methods to support a user's privacy on any given software or platform, and the negative ethical implications of doing otherwise
+    </li><li>I learned about digital footprint
+    </li><li>privacy as society's mechanism
+    </li><li>What is needed to support privacy.
+    </li><li>Privacy, and its importance towards the rights of citizens. With privacy being infringed upon, its a violation of one’s right to one’s agency and reputation
+    </li><li>I got to know different types of dark patterns for research.
+    </li><li>Dark Patterns research paper.
+    </li><li>Not that much
+    </li><li>Administration 
+    </li><li>About the privacy of ours, Like an example of Microsoft one
+    </li><li>Three rules of privacy.
+    </li><li>we discussed about midterm patterns and question
+    </li><li>We learned about privacy and the importance of understanding it in relation to software.
+    </li><li>midterm and assignment 
+    </li><li>Privacy
+    </li><li>about privacy in the internet world.
+    </li><li>information regarding midterm
+    </li><li>Dark Patterns
+    </li><li>Three rules of privacy
+    </li><li>Reacher paper of dark pattern
+    </li><li>What makes a dark pattern dark?
+    </li><li>Privacy
+    </li><li>Privacy
+    </li><li>Dark Patterns research paper
+    </li><li>ICT
+    </li><li>Everything taught was important 
+    </li><li>Three rules of privacy.
+    </li><li>I learned about how the design and patterns of interfaces can persuade a user into doing certain things
+    </li><li>I learned more about privacy and some concerns regarding invasion of privacy, more specifically for children that are posted on social media.
+    </li><li>The concept of 3 social rules of privacy mentioned by fano is important to know the perfect meaning of privacy 
+    </li><li>The important concepts I encountered today were the 3 social roles of privacy. I learned about how the right to privacy of one's personal information is part of the right to self preservation. I also learned how privacy is society's mechanism to allow deviation from the social norms, and encourages independent thought for trying out new ideas.
+    </li><li>The three important parts of privacy mentioned by fano were very important. This concept is very important as it illustrates perfect privacy
+    </li><li> It was interesting to hear my colleagues' perspective on what is needed to support privacy.
+    </li><li>About dark pattern
+    </li><li>I learned more concepts about the privacy and examples of it
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>No, it made sense.
+    </li><li>not really
+    </li><li>Everything is good
+    </li><li>No
+    </li><li>Nope, today was very informative and helpful.
+    </li><li>Nothing today was too difficult to understand
+    </li><li>Nothing was too difficult to comprehend today.
+    </li><li>nothing today was hard to understand no everything made sense.
+    </li><li>no 
+    </li><li>Everything was understandable 
+    </li><li>No
+    </li><li>The assignment part is still confusing
+    </li><li>No
+    </li><li>no there was not in today lecture
+    </li><li>No
+    </li><li>No it was understandable
+    </li><li>no
+    </li><li>How tagging someone in the post disturb their privacy
+    </li><li>No
+    </li><li>No, I didn't encounter any difficulties understanding the tasks or information today. Everything was quite straightforward and easy to follow.
+    </li><li>No 
+    </li><li>Tool to protect privacy 
+    </li><li>I found it a little bit difficult to understand exactly what is required for the first submission for the infographic. I felt the instructions were very broad and I would like more clarity on how much and which parts of the infographic need to be submitted for march 11.
+    </li><li>N/a
+    </li><li>no
+    </li><li>all the extra rules that come with 
+    </li><li>No
+    </li><li>No, everything is explained fully!
+    </li><li>maybe on how to do the infographic assignment 
+    </li><li>No
+    </li><li>No. 
+    </li><li>No
+    </li><li>the infographic
+    </li><li>none 
+    </li><li>No
+    </li><li>The assignment was hard to understand and want need explanation on it 
+    </li><li>nothing was difficult to understand today 
+    </li><li>nope
+    </li><li>The left side of the board was hard to read though I did follow along and will catch up with the notes later if possible.
+    </li><li>No
+    </li><li>Nothing was difficult to understand today
+    </li><li>Dark pattern in relation to privacy but I will read it up
+    </li><li>I was not able to understand which membership card we need to submit
+    </li><li>NO
+    </li><li>Nothing
+    </li><li>no
+    </li><li>no
+    </li><li>No
+    </li><li>No
+    </li><li>No, I understand everything.
+    </li><li>No, everything was easy.
+    </li><li>Rule 1. Right to privacy of personal information is a part of right to self preservation
+    </li><li>No 
+    </li><li>Dark Patterns in Relation to Privacy 
+    </li><li>The definition privacy zuckering didn't seem too clear to me.
+    </li><li>I didn’t understand the assignment thing
+    </li><li>Nothing was difficult to understand today.
+    </li><li>no
+    </li><li>No
+    </li><li>Nope there was nothing difficult today to understand
+    </li><li>Not really 
+    </li><li>Until what day does the Midterm cover up to again?
+    </li><li>NO
+    </li><li>No there was nothing difficult for me to understand
+    </li><li>No
+    </li><li>no
+    </li><li>Not really 
+    </li><li>no
+    </li><li>No, it was great class today.
+    </li><li>Nothing 
+    </li><li>no
+    </li><li>not really 
+    </li><li>No
+    </li><li>Not really today.
+    </li><li>No
+    </li><li>today it was a bit difficult to see the right side of the white boards
+    </li><li>No
+    </li><li>No
+    </li><li>nope 
+    </li><li>There was nothing difficult to understand.
+    </li><li>No
+    </li><li>I took the topic well and understood due to the combination of the lecture and the group discussions
+    </li><li>no
+    </li><li>the cips activation and which one to do for assessment the beginner or intermidate
+    </li><li>No.
+    </li><li>I don't think there was anything difficult to understand.
+    </li><li>nope.
+    </li><li>No
+    </li><li>No
+    </li><li>Not really.
+    </li><li>nope, everything was pretty good to understand
+    </li><li>Nope, everything made sense.
+    </li><li>no
+    </li><li>Nothing at all
+    </li><li>nothing
+    </li><li>no
+    </li><li>Nope
+    </li><li>Nothing
+    </li><li>No.
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>No everything was pretty easy to understand
+    </li><li>There wasn't anything difficult to understand in today's lecture.
+    </li><li>no
+    </li><li>Nope, I was able to understand everything that happened in class today.
+    </li><li>no not really.
+    </li><li>No, nothing was difficult to understand today.
+    </li><li>no
+    </li><li>not at all
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>I would like to know how to share private information on social media safely.
+    </li><li>more details about Privacy and Civil Liberties
+    </li><li>Just the next topics of our class
+    </li><li>Wondering if maximum people use Chrome, and most of us save their password, address, name, contact info and much more for quick filing the form, how badly it can impacts humanity, or in other words, how easily that much data can be trained to AI and how it will impact in future
+    </li><li>More about midterm
+    </li><li>Privacy Zuckering is unethical and people/company that implements it should be penalize. I feel like almost all apps do this trick, what can be done or options to limit them from doing this? There should be steps users can do to protect us against it. 
+    </li><li>I am good for now
+    </li><li>Nothing I'd like to know more. I am personally burnt out.
+    </li><li>how much protection you hav ehave on you relectronic devices.
+    </li><li>no 
+    </li><li>I think today’s information was enough and understandable
+    </li><li>No
+    </li><li>More details on mid term and assignment 
+    </li><li>More about privacy 
+    </li><li> i would like to know more privacy and open-sources effect on each other.
+    </li><li>Privacy zuckering
+    </li><li>No It was all understandable
+    </li><li>no
+    </li><li>What will be the questions on the midterm?
+    </li><li>No
+    </li><li>I'm interested in learning more about the characteristics and tactics that differentiate dark patterns from standard design practices, as well as their impact on user behavior and ethics in user interface design
+    </li><li>No
+    </li><li>I would've loved to see more applications to the three principles surrounding privacy. While there were a good portion of relevant examples happening right now, I think adding in some more recent examples would have helped some people grasp the idea a bit more.
+    </li><li>None
+    </li><li>N/a
+    </li><li>no
+    </li><li>specific ins and outs and why the laws are the way they are
+    </li><li>Is the right to self-preservation inherent, or does it depend on legal and societal contexts?
+    </li><li>Probably more questions on assignments but I'll probably be covered next class.
+    </li><li>not really
+    </li><li>Yes. I want to known more about privacy
+    </li><li>I would like to know more about why certain companies can provide less information about their users privacy than others. 
+    </li><li>Skill assessment 
+    </li><li>more about the infograpgic
+    </li><li>none
+    </li><li>No
+    </li><li>As above need more information about assignment and midterm
+    </li><li>I would like to know more about the outline of the midterm and what type of questions are on it
+    </li><li>Is there a way to purge data after a certain amount of time?
+    </li><li>I was unaware of websites like ReputationDefender.com and was curious about how they accomplish their services.
+    </li><li>No
+    </li><li>Requirements for the Infographic
+    </li><li>i would like to learn more about the privacy and legality .
+    </li><li>If one happens to appear on the background of a picture posted online, do you have the right to sue whoever posted the picture for violating your privacy?
+    </li><li>I would like to know few things about midterm
+    </li><li>I would like to no more on Professional Skills in the information society.
+    </li><li>Nothing
+    </li><li>no
+    </li><li>all things were clear enough
+    </li><li>Syllabus on the material to read for midterm
+    </li><li>Part 1 and 2 submission 
+    </li><li>Nothing important I saw today, which I like to know more.
+    </li><li>No, thank you.
+    </li><li>About dark patterns of research papers
+    </li><li>Yeah I would like to know more about what kind of questions would be on midterm.
+    </li><li>Midterm exam Questions 
+    </li><li>I would like to more about dark patterns and privacy zuckering and how common these things are in the digital space.
+    </li><li>I want to look more into what company's in the past have had issues surrounding the topic of privacy, and what they have done to solve these issues if they have tried to do so. The early version of the Tim Hortans app for example. 
+    </li><li>I would like to know more about midterms 
+    </li><li>I would like to know more about what privacy looks like. Since privacy is broad and conceptual, what other ideas might arise when referring to privacy?
+    </li><li>no
+    </li><li>No
+    </li><li>yes like what topic will come in the midterms and expain more about the individual assignment
+    </li><li>No
+    </li><li>I am excited for the content that will be presented to us in the class!
+    </li><li>NO
+    </li><li>Nothing really.
+    </li><li>Not reallt
+    </li><li>ACM web, really has some interesting thing there
+    </li><li>About The partition of assignments
+    </li><li>what sections are neccesay for midterms
+    </li><li>Everything seems perfect and understandable.
+    </li><li>Dark concept research paper 
+    </li><li>no
+    </li><li>more on the assignment part 2
+    </li><li>No
+    </li><li>No, not really.
+    </li><li>No
+    </li><li>more about dark patterns relating to privacy 
+    </li><li>Other ways privacy is not being respected  
+    </li><li>No
+    </li><li>nothing
+    </li><li>I want to know more about the questions will be included in midterm.
+    </li><li>Privacy
+    </li><li>I would like to look into more examples of privacy misconduct in prominent companies
+    </li><li>no
+    </li><li>more about midterm syllabus before the reading week
+    </li><li>No.
+    </li><li>I'd like to know more details about dark patterns for research.
+    </li><li>i would like to know more about Dark paper pattern.
+    </li><li>No
+    </li><li>Not really I understood the concept
+    </li><li>I want to know more about the privacy things
+    </li><li>yes, i would like to know more about the question of midterm
+    </li><li>Learning about more examples would be helpful to really grasp the understanding of it, and also give different perspectives on different ideas of privacy and what could be improved.
+    </li><li>no
+    </li><li>I would like to know more abut the roles of privacy
+    </li><li>no there was less attractive topics today ,so none.
+    </li><li>no
+    </li><li>Nope
+    </li><li>Dark pattrens
+    </li><li>Not much
+    </li><li>No.
+    </li><li>Privacy
+    </li><li>Privacy
+    </li><li>No
+    </li><li>No
+    </li><li>No I understood most of the part
+    </li><li>I would just like to look further into some more examples of where this might be seen
+    </li><li>I would like to know more about the dark patterns in privacy, and possibly some other case studies regarding privacy.
+    </li><li>I would like to know about the third social rule of privacy. Privacy is essential to the development of independent thought
+    </li><li>I would like to learn more about privacy encrypting and dive into how it works. I am also interested in the benefits and the consequences of relying on such a technology.
+    </li><li>is our information we put online really secured?
+    </li><li>The repercussions of the "Drunken Pirate" story.
+    </li><li>about cips assignment.
+    </li><li>More examples pls 
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/11_Tue-13-Feb-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

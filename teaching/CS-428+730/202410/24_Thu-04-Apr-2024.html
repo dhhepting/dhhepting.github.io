@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+730/202410/24_Thu-04-Apr-2024.html" />
+    
+    <title>Mtg 24 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 24 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/24_Thu-04-Apr-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/",
+        
+          "name": "CS 428+730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/",
+        
+          "name": "202410"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/24_Thu-04-Apr-2024.html",
+        
+          "name": "Mtg 24 (Thu-04-Apr-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/">
+        CS 428+730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/202410/">
+        202410
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 24 (Thu-04-Apr-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 24/26: Thu-04-Apr-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="23_Tue-02-Apr-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="25_Tue-09-Apr-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Security and Privacy
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Thursday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=2507968&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1712210400&amp;course=31184" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=31184" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Response to Responses
+  </h4>
+  <ul>
+  <li>How the other group would actually test our low fidelity prototypes, which are not actually prototypes, but drawings?
+    <ul>
+      <li><em>aren’t they actually prototypes?</em></li>
+    </ul>
+  </li>
+  <li>I do not understand why there needs to be 2 people for the testing process. Why can’t the person testing write down the things that confuse them instead?</li>
+  <li>I would like to know more about the collected data during the testing stage of the Materialize assignment. Do we have to record during testing, or are taking notes are enough?</li>
+  <li>more about last assignment and final exam?</li>
+</ul>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li>Review of <a href="https://urcourses.uregina.ca/mod/questionnaire/report.php?instance=3333&amp;group=0" target="_blank">feedback about midterm exam</a>
+    <ul>
+      <li>would you like me to reopen it so that more people can reply?</li>
+    </ul>
+  </li>
+  <li>Another opportunity for feedback (5 responses so far, closes tomorrow night): <a href="https://urcourses.uregina.ca/mod/questionnaire/report.php?instance=3339&amp;group=0" target="_blank">Formative feedback for Dr. Hepting</a></li>
+  <li>For those in 428, I encourage any students who are interested in HCI and designing/building user interfaces to take CS 490AP. Building an interface in May/June will be a good tie-in to evaluating one for those taking CS 490DG in July/August</li>
+  <li>research credit questions?</li>
+  <li>How do you feel about your security and privacy with UR Courses?</li>
+  <li><a href="https://arxiv.org/abs/2305.05004" target="_blank">How WEIRD is Usable Privacy and Security Research?</a></li>
+  <li>Let’s spend 5 minutes in the paired breakout rooms (1 - 9, join the room the corresponding to your ‘paired groups for testing’ membership</li>
+</ul>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2567374" target="_blank">Submit your response to this meeting before noon tomorrow</a></li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2544706" target="_blank">Take quiz before the start of our next meeting</a></li>
+</ul>
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Good morning. I'm dressed for spring. I have a t-shirt on, but in my office it's cool. They've got the air conditioner on, I think. and I have a decorative thermostat in my office, but it doesn't seem to do much. so I have a sweater usually doesn't get cold until the afternoon. So I don't know what happened today. I guess they're working on the as temperature gets warmer then things are changing. anyway. So how's everyone today? So not every office in computer science has a thermostat. So I'm one of the lucky ones who has the appearance of control. I think the thermostat is set to about 20, which should be a generally a good temperature. But I'm not sure what temperature it actually is in here. anyway. Yeah, okay. so let me share my screen, and we can start going through some things. So I wanted to touch on the issue of security and privacy a little bit more in interfaces today. But there are a few questions that came up in the responses. So I thought maybe I'd answer them first. But first I wanted to check our class discussions. So if there are any comments. what's it about what I posted yesterday. and I don't see any. So okay. have you seen my post about paired groups for testing and the materialized portion of the project. This one right here. hey? So how? The question was how the other group would actually test our low fidelity prototypes which are not actually prototypes but drawings. And then I. So my response is, aren't they actually prototypes? So the drawings that's the low fidelity part of prototype. So our sketches can help us to understand. to to convey ideas about how we would organize the interface. So we don't have to expend a lot of effort creating the low Fidelity prototype. If we're drawing it by hand. we should be somewhat neat about it, I guess. and print legibly. But we don't have to use a piece of software to create code to populate it, an interface design with widgets. So one that's not so low fidelity anymore. And 2, we get attached to the design, and then we're maybe less inclined to change it. Does that make sense? Anyone like to give me a yes or a no in the chat. So what would you like me to explain again the idea of a low fidelity prototype? So the low fidelity prototype is one that's easy to create. So sketching with pencil and sketching on paper with pencil. Or now, where is I? Yeah. So the low fidelity part makes it easy to create. So we're not attached to it. and it's easier to explore new ideas. But the sketches can still convey a lot of information about how we see the interface working in terms of how we're going to interact with a system so it can be quite valuable, as especially as a way to get some early input into the design process. Okay? So another question was, I don't. I do not understand why there needs to be 2 people for the testing process. Why can't the person testing write down the things that confuse them instead? So I understand this to mean, why can't we just say. here's the interface. Look at it. So I would say we want we want to. The idea of giving them consistent instructions is important. So have a script to say. Hello, imagine you're a teacher. You want to create groups in a grouping for an assignment in this particular class. or you want to put pair 2 groups together in your human computer interaction class that you're teaching. whatever the task is. So imagine you're the instructor in the class. Here's what you want to do. Now, here's an interface that we've designed to let you do that. So you want to set it up and present it to them. So when they say what they would. If there are 2 screens. then you need to navigate between the first screen and the second screen. based on what they do. So it allows the person giving you the feedback on with whom you're testing the interface, to have more of the illusion that they're working with an interface, instead of then having to follow instructions that they read. okay, if I did this I should. I would get an error message. If I do something else I would get onto this next screen and see what you're not. I should back up and ask if that makes sense. So so the person running the test is pretending to be the computer system. Instead of making the person say, Here's. here's all the information you need. Do this yourself. questions about that. So it's actually. if everyone can meet. then it's really 4 people, 2 people presenting the test and 2 people responding to the test. And the reason I've done that is. to give people the experience of running and participating in a test. but and make it less onerous than everyone doing their own test. So, seeing no questions. I'll move on. So another person asked. I would like to know more about the collected data during the testing stage of materialized assignment. Do we have to record during testing or taking notes enough. So taking notes are enough so you might ask them questions. What do you like best about the interface? What do you like least about the interface? Or you have a rating on a scale of one to 5, one being. let's see, very unusable. 2 being unusable. 3 don't know for being usable, and 5 being very usable. for example, so that that's often called a liquored scale. And the idea is that we have the scale centered about immediate middle point. So there the ratings are balanced around a center. So whether or not we include the center or not. we could have a 4 point scale and leave out the don't know or undecided option at 3, so we'd have. So the advantage there is. People are always going to come down on one side or the other of usable or not usable. Even the disadvantage is that we don't give people the chance to say they don't know. So both scales are balanced around the center. and when we put the center as a choice and the other one, we don't. So an example of that. So I think there examples in the the Zip Care test documentation that I link to. But there's also an example in the formative feedback for Dr. Hepting that I'm going to talk about in a minute. So that's the way you can collect quantitative and qualitative data. So to answer the question in chat. Oh, can you please send it to everyone instead of just me? So are the 2 people supposed to do the test together, or do we test one person and then test the second person. If you want to to do the test separately with 2 people. and you agree to that, then that's fine. but I don't have that in mind as a requirement, so you could do one test. So pair group one pair, one. Tess gives presents, their interface A to group 2 pair one and gets feedback and then group 2 pair. One presents their interface, A to group one pair, one. Okay. So, Patrick, do you want to just repost your. you know. Direct messages to me to the chat, please. Banks. Okay. So then there was a question I'm paraphrasing a bit here more about last assignment and final exam. So the last assignment is about preparing to do proctor track for the final exam. So yeah, I believe even if you've done onboarding for other classes. it's still a good idea, for it's maybe even necessary for you to do onboarding the onboarding quiz for this class. So I want you to go through that process and send me proof that you've completed it not send me submit with your assignment. proof that you've completed it. And then let me maybe bring it up here. So basically, you're asked to compare your experience using zoom breakout rooms for the midterm with your experience of being of being on boarded for proctor track for the final exam. To prepare this. to prepare to do this comparison, to take the final exam. All instructions for proctor track onboarding and practice exam. At this link. I think those links are correct. Let me check them. So this one is a UR. Course. Okay, prepare practice. Exam an onboarding quiz at this link. I guess I didn't make it open in a new window. That's why it's overwritten the assignment. So I want you to describe the steps you you perform to to do the the onboarding for proctor track and share your user experience from completing them. So provide proof that your onboarding has been completed. Reflect on usability and user experience goals that you find applicable to your experience of completing the activities. So that's from the I interaction design book. It's section 1.9 in chapter in the sixth edition and section 1.7 in the fifth edition. So the last bit is to compare your proctor track experience with using with your experience using zoom breakout rooms during the midterm. So I need to fill these in. But basically you. then the 2 marks for doing the on. we're completely onboarding 2 marks for the Usability and user experience questions and then suggested improvements. And then comparison with zoom breakout rooms used for the midterm. Okay, does that make sense? Okay, for the final? It's on the 20 third of April. It'll be online. So I've I've gotten some good feedback from review of the midterm. Is everyone. Did everyone who wanted to complete that that questionnaire? Were you able to do it, or should I reopen it for a bit longer? I got 25 responses. So that means 22 of you up thereabouts who are here didn't respond. Would you like to respond to the questionnaire about the midterm? Exam. Anyone? Yes or no? Okay. So I'll take that as no. So, thanks to those of you who are in the class and who responded to the quiz. We'll go over that shortly. How about right now? In fact, so review of the feedback about the midterm exam. So this is anonymous. So I can show you this without without reviewing any secrets here. So one suggests this is the note I send about instructions. and after reading it again this morning I realized I did mention that we need to use 2 Zoom Meetings. but I could have made it more explicit about having. It's a grouping for meeting for Midterm A and Midterm. B. I just made those up at random to accommodate the need for 2 Zoom Meetings for invigilation. But I should have. So of the 25 people who responded the minority. 40%. So 80% people responded this question. and only 40 said, yes, they'd seen the announced me before joining the exam. So it email sent via your courses would have been the preferred option. But also there were comments about sending it. Okay, so the email. But then maybe also my website and doing a post about it in the class. making sure that everything was covered. then, also putting on the exam page. So that's what I'll do for the final. I'll put instructions on the exam page. So for those who saw the instructions. and maybe those who read the instructions. they were clear enough. So any improvements that you can make to the midterm instructions. Yes, I could have talked about how the exam will be conducted, which I think I did, that. How many questions will there be? And all the others. Yeah, I could have given you more and information about the structure of the exam. Send instructions earlier. previous lecture or previous day. Yeah. So I send them in the morning of the Exam. About 8 a. M. So I could do it before, or talk about them in our last meeting for the exam. So maybe what I didn't do was say. because how many people are logged into your courses right now. and do you log into your courses before you log into the view. Startup, zoom, or after. Let me do a poll for that. So that's hard to express in a thumbs up. So question one is, do you? But you generally sign into the Zoom Meeting. Join the Zoom Meeting before signing into your courses. during our Zoom Meetings. That clicking you here for me is trying to select the whole, the all the text that they've put in as a sample. not in a way that I can just type in have the sample disappear. But I have to edit. I have to remove the sample first. which is another issue with Zoom. Let's try that as a questionnaire. so we won't have Zoom to contend with for the final. But for the instructions for the midterm, I could have made it more clear you should sign into your courses first. and then you'd be directed to a different Zoom Meeting to to attend. I'll give another 15 s or so for people to complete the quiz. only 31 of 46 have participated so far. And that's 34, 46. Okay? So I understand the question to say that you sign into. Well. we sign it to you our courses first. and you most people access your courses during our Zoom Meetings. So anyway. so I'm not sure what the comments were not constructive. Is that the marked exam? Why they lost marks in the discord. I don't think you lost marks in the discord. But you're discussing after the fact. So that's a different issue. More ways to distribute them. Maybe ask how to ask help. ask for help from the vigilator. So fairness of assessment. Most of the questions did all right except for the match in question. which was on the only one on the didn't make somewhat fair. so I'll take that into consideration when creating the final exam. and I also asked for clarity. So I'll try and improve the clarity of those questions as well. So one of the questions had a word limit, and I don't think there should have been. I meant to. How that'd be a feature, not a a bug, and I didn't realize that it wasn't being communicated to you. And then I didn't realize that people saw the message that your answers too long without seeing a word count as you're typing your answer. so I'll I'll need to review that those features so that I I don't. They don't cause extra stress for that. Questions required answers that were way too long. Yeah, okay. I'll try and and deal with them. So I encourage you again as I did for the midterm to suggest final exam questions in different styles. So you have access to the viewer courses. If the experiment you are courses, you can. You can make up your own questions and the different styles that you think would be appropriate. So I'm not asking you to do the work for me. but I think that would also help you to prepare for the exam. So was was the the template that I added to that sample quiz. Is that helpful. So let me go to that. So I realize you can remove things from the template. so maybe it's more helpful to leave it in. But I can't require that. So here I've given a maximum word, count. I'm not sure that's helpful. If I if you can't see what your word count is as you go along. Oh. here's a word, count at the bottom who noticed that before. So maybe it is helpful thing to do that. So if I start with. So that leaves you 680 words about with the template in place. so I can give. Make sure that I highlight that the word count shows up at the bottom of the textbooks. Okay, does that make sense? So I propose is, we'll we'll do a a test next week so that we can see what it's like to do the exam in Proctor track and or me as much as we can do a test. So everyone's familiar and clarify any issues before before we leave our class meetings next week. Okay. so here's that formative feedback for me that quiz. Oh, 4 more people have replied. So that's good. So there are rating questions and open-ended questions. So the quantitative and qualitative data that's being collected would anyone like to have that open longer. It closes tomorrow night. It's set to close then, anyway. Okay. they, when is anyone interested in those research credit that research credit opportunity I posted in does anyone I'm not in. I don't wanna have anyone tell me what whether they did it or not. But are there questions about it? So the idea is, if you participate. Oh, okay. sorry we'll we'll have more opportunities in the future, I think. as a matter of course. So if you're able to do that. Then you can earn a bonus mark in a class in this class, for example. Okay, I just want to mention also about those who are interested in designing and building interfaces. those students in 4, 28, who are taking 4, 90 DG. In July and August. to also consider taking 4, 90 A. P. In May and June. because building an interface which should be done in 4 90 A. P. Would be a good tie into evaluating one. If you're if you're taking dg, maybe to Ap. Is a good one to add in May and June, if you're able to. So how do you feel about security and privacy at the York courses any big concerns. So do you know which communications in your courses are private, or which ones I can see. and which ones are private and which ones I can see. So in in which way does it, monitor browser behavior? Oh. yeah. So I I have. I have a setting for read tracking the only, and I never turned that on. But I I do 4 subscriptions. So you get emails about forum posts. Anything else that comes up. So would you like to see in a message saying that this group communication form is visible to the instructor? If that's the case. yeah. So yeah, so security is better because it's open source. And people can get into the code. But a downside is that it's maybe not the most. it's not the easiest software to get set up to contribute to. because it's using a different version of Ph. P. Then is current. So I tried to get the development environment going on. My Mac. And there were just a few frustrations. Because it's using. Ph, yeah. Ph, P. And the version we had this summer last summer was using an earlier version of PHP. And I think. than than I could get with Homebrew. So I guess that's a question of whether it's open source in in name only. Well, that's not. I'm not suggesting that either. But maybe if we can think about the openness of a project is being more the accessibility of, or the practicality or feasibility of contributing to, open source projects. As a as an interesting, interesting aspect of open source. Projects like we talk about usable privacy and security. We can talk about usable, open source contributions, I suppose. So. What about you? Security and privacy in zoom? So were, are there any issues about knowing? When I join a zoom breakout room with you? I can't lurk. I don't think so. The one feature that I found interesting. and this was suggested. What the midterm question was that the broadcast messages that appear in breakout rooms are transient. and perhaps a useful feature would be to see the log of messages that were sent to the breakout room to review them. because they only last for a few seconds. maybe not long enough. So you need to switch your attention to see the breakout room message and then have time to read it. So those are some issues, I think. go with with regards to the usability. And if you see messages about security and privacy in Zoom. Jen being able to read them and act on them is important. So I found this. I did a search for usable privacy and security. and the conference comes up. It's called soups symposium. Symposium on usable privacy and security. and I think that's about the twentieth. They've been holding them for 20 some years now. So what's in it? Have you encountered examples of interfaces that don't provide usable privacy and security. Does anyone ever had problems changing her password because some interfaces have rules that they don't necessarily make clear. To begin with. I've never heard of that game. Oh, okay, thanks for the link. See? Let's click on it and see. Can you see the screen now? Am I sharing it with? I think I am. Okay. Let's do a secure password here. Okay, let's see. Month of the year. Okay. okay, I need some help with this one. okay, so I don't think we could go on for a while there, I think. Anyway, thanks for that, that link. That's quite fun. So this is not quite so such a good example of usable privacy and security. Yeah, it's very relevant. Thanks again. So anyway, I was going to say that I did a search for usable privacy and security. and I came up with the acronym weird. Has anyone heard that before? So W. Is Western? Anyway, here's here's just the abstract merged countries are western. educated, industrialized, rich. and democratic. So that's not necessarily very representative population. So the researchers found a skew towards weird countries and usable privacy and security greater than in HCI. So that's an important aspect to think about. because we want to design things, not just for the people who are who who are just like us. Perhaps. I mean, we don't want to just focus on Canadians because these issues come up in on a global basis. anyway, any comments on that. Any questions, other questions about the materialize portion of the assignment of the project and the last assignment. Okay, so let's take a minute to do the breakout rooms just to check in. And you can let me know if you have questions. Okay, you can ask for help. so I'll do the breakout rooms like I did before our last day with 9 breakout rooms and let you join the one corresponding to your paired group for testing. And so so, Cono, of that, I made the pairs with the hope that I've not. You're not. But both groups in the pair aren't working on exactly the same thing. Okay, that was the rationale for making the pairs that I did. Okay. So I'm going to open the rooms and join them, and take a minute to coordinate and ask questions if get me involved, if you need some questions answered. Okay. So the rooms are open now. Hello! This is me! Broadcasting my voice to the breakout rooms. Maybe I have to. Let's see. Okay, now I'm Hi. This is me. Broadcasting my voice to all breakout rooms. Is this a better way for me to communicate to breakout rooms? Important information? I'll put a quiz about this on you. Our courses. Thanks. and we're almost out of time, so you can leave when you're done in your breakout room. Take care everyone have a good weekend, and I'll see you Tuesday. Bye, everyone have a good day.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            good morning!
+          </li><li>
+            
+            Morning
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            Good morning!
+          </li><li>
+            
+            I hate building controlled thermostats
+          </li><li>
+            
+            they feel useless
+          </li><li>
+            
+            The illusion of control
+          </li><li>
+            
+            It's a wonderful thing lol
+          </li><li>
+            
+            Reacted to "The illusion of cont..." with ☝️
+          </li><li>
+            
+            I got the email notification for them this morning so I only saw them today
+          </li><li>
+            
+            Can you please explain it again?
+          </li><li>
+            
+            yes, that makes sense. Making it anything more than a low-fidelity builds attachment and unwillingness to change things that might need changing. You're more willing to put up with shortcomings because you've put time into it.
+          </li><li>
+            
+            Reacted to "yes, that makes sens..." with 👍🏼
+          </li><li>
+            
+            Any questions about why I’m asking you to present your interface to the other pair?
+          </li><li>
+            
+            So are the 2 people supposed to do the test together or do we test 1 person and then test the 2nd person?
+          </li><li>
+            
+            yep
+          </li><li>
+            
+            already responded
+          </li><li>
+            
+            It was filled up by the time I checked it out :(
+          </li><li>
+            
+            I know that URCourses monitors browser behaviour, which I don't really appreciate.
+          </li><li>
+            
+            How long I hang out on a page, what links I click, if I navigate away, etc.
+          </li><li>
+            
+            Message like that would definitely help
+          </li><li>
+            
+            I think secure because it’s open source
+          </li><li>
+            
+            have you ever heard of password game? it is a game that critiques those password rules
+          </li><li>
+            
+            https://thepasswordgame.com/
+          </li><li>
+            
+            Reacted to "have you ever heard ..." with 👍🏼
+          </li><li>
+            
+            it's quite funny tbh
+          </li><li>
+            
+            Replying to "have you ever heard ..."
+          </li><li>
+            
+            yeah
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            XXXIIII
+          </li><li>
+            
+            need to remove the D because it represents 500
+          </li><li>
+            
+            Reacted to "need to remove the D..." with 💀
+          </li><li>
+            
+            seemed relevant hahahah
+          </li><li>
+            
+            W=Western
+          </li><li>
+            
+            Please join the breakout room that corresponds to your paired-group-for-testing group number (Group 1, Group 2, … Group 9)
+          </li><li>
+            
+            Please don’t send me direct messages - repost them for everyone in the chat, then I can answer
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Talked more about interfaces and prototypes, their similarities. Comparison between Proctortrack and Zoom for exam, as well as Usable Privacy and Security concept.
+    </li><li>Thanks for going over the Materialize assignment tasks and what to do on there and answering the questions.
+    </li><li>We talked about the materialize assignment
+    </li><li>Improvements to the final exam
+    </li><li>Review of the feedback and final project structure
+    </li><li>intresting thing i learned was h ow do i  feel about my security and privacy with UR Courses
+    </li><li>The breakdown for the last 2 assignments
+    </li><li>More discussion on the final assignment and on the final  was helpful 
+    </li><li>important concept today was How WEIRD is Usable Privacy and Security Research
+    </li><li>Today we talked about the WEIRD acronmym (for western, educated, industrialized, rich, and democratic)
+    </li><li>The concept of usable privacy and security research
+    </li><li>talked about materialize assignment, security and privacy with urcourses, spent some minutes in the breakout rooms
+    </li><li>I learned that some people had a bit more trouble than me when it came to understanding the midterm and how it was going to work. While I was still confused, I was surprised to see all of the responses.
+    </li><li>nothing
+    </li><li>Today we talked about Usable Privacy and Security Research, which I think is a really interesting concept -- basically making security and privacy more accessible to users for better security and privacy outcomes. Also enjoyed the discussion of WEIRD research samples.  
+    </li><li>We have gone through midterm feedbacks and do some polls related to Zoom and URCourses.
+    </li><li>We discussed about the previous response questions then we discussed about the final exam and the last assignment and then we discussed about the security and privacy of ur courses
+    </li><li>In todays lecture we discussed about previous responses from students and professor tried to answer few of those questions. Then we discussed about final exam and last assignment and then we discussed about the security and privacy of Urcourses and then read an article on security and privacy and the we discussed about the Martialize assignment in break out rooms. 
+    </li><li>Reading everyones’s responses and answering those questions really helped in understanding the project requirements.
+    </li><li>We discussed about midterm interface. Also talked about upcoming assignments
+    </li><li>That people thought the midterm did not properly get graded haha
+    </li><li>I understood everything
+    </li><li>We went over the responses related to students' doubts regarding the midterm, did a breakdown of the Zoom v Proctortrack assignment, discussed more doubts and details regarding the materialize assignment and questions regarding groupings and how tests should be conducted within a group.
+    </li><li>more on project (materialize), password game, zoom v proctortrack, zoom voice broadcasting
+    </li><li>Usability of the midterm, adjustments that need to be made for the final. The password game looked very interesting, good example for usability.
+    </li><li>Usable Privacy and Security Research
+    </li><li>That the testing has to have a consistent script across all test subjects.
+    </li><li>The usable privacy and security field papers sampled more WEIRD participants than the human-computer interaction field.
+    </li><li>today we looked at the password game and talked about the assignment and the projects that are due in the coming week.
+    </li><li>The extra stuff 
+    </li><li>In today's lecture we discussed about review about midterm feedback, formative feedback, security and privacy with UR courses, and at last the breakout rooms.
+    </li><li>WEIRD, Privacy and Security of UR Courses discussion about midterm, group assignment approach.
+    </li><li>Useable privacy and security research
+    </li><li>Testing
+    </li><li>usability testing
+    </li><li>We discussed the assignment questionnaires and reviewed the exam feedback, after which we looked at the topic of security and privacy.
+    </li><li>Today, we discussed the midterm feedback, the final exam, the last assignment, security and privacy in URcourse, and had a discussion with the group in the breakout room.
+    </li><li>nothing
+    </li><li>discussions regarding security of URCourses
+    </li><li>It was great to see the feedback results for the midterm and seeing how everyone thought about it who participated. 
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>Was a little difficult to understand the last concept about Usable Privacy and Security. Does it mean the website can be either highly usable or highly secure, and developer must find a compromise between the two?
+    </li><li>None
+    </li><li>Everything was well easy explained.
+    </li><li>no
+    </li><li>No
+    </li><li>no todays class was good
+    </li><li>No everything described today was helpful 
+    </li><li>no clas wa s easy 
+    </li><li>No
+    </li><li>Nothing was difficult to understand
+    </li><li>everything was to the point
+    </li><li>No, everything today seemed relatively easy to understand and straight forward.
+    </li><li>no
+    </li><li>No, everything was easy to understand.
+    </li><li>No pretty much everything was clear to me 
+    </li><li>No there was nothing difficult to understand
+    </li><li>No
+    </li><li>No I didn't find anything difficult in todays class. 
+    </li><li>No
+    </li><li>Nothing today!
+    </li><li>everything was good
+    </li><li>no
+    </li><li>I didn't find anything difficult to understand. 
+    </li><li>No.
+    </li><li>NO
+    </li><li>No
+    </li><li>I did not attend today's breakout session as had another assignment due, had a few doubts regarding testing with groups and materialize project, nothing difficult as such.
+    </li><li>No
+    </li><li>No
+    </li><li>None
+    </li><li>No
+    </li><li>There were no difficulties.
+    </li><li>no
+    </li><li>no
+    </li><li>No
+    </li><li>no
+    </li><li>n/a
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>I guess just a bit more clarification on how to make privacy and security usable.
+    </li><li>It was great for professor Hepting for going over the midterm survey results.
+    </li><li>The final exam
+    </li><li>no
+    </li><li>No
+    </li><li>want  to know more about my final exam 
+    </li><li>If the due date for the zoom can be moved to April 12th
+    </li><li>What topics may be on the final
+    </li><li>more about the format for finals 
+    </li><li>I would like to know what the WEIRD acronym is used for, and who invented it in the first place.
+    </li><li>Feedback for the course
+    </li><li>no not at all
+    </li><li>I wouldn't say so, meeting with the groups was a good use of the last bit of class time. We have organized a time for us to proceed with the testing.
+    </li><li>no
+    </li><li>Yes, I would like to know if there would be any adjustment for final based on feedbacks of midterm.
+    </li><li>I would like to know more about the final exam
+    </li><li>No
+    </li><li>Yes I would like to know more about final exam. 
+    </li><li>No
+    </li><li>What was the midterm average? 
+    </li><li>adequately explained
+    </li><li>i dont know where else to put this but i think the zoom broadcast across the breakout rooms was effective, much more than the “announcements” that gave no audio cue
+    </li><li>I would like to know more about WEIRD research participants and ways to break this bias in HCI research
+    </li><li>No.
+    </li><li>NO
+    </li><li>No
+    </li><li>The paired groups testing, for that I have a few queries about the groups testing or does it include groupings as well?
+    </li><li>No
+    </li><li>No
+    </li><li>More about Usability
+    </li><li>How to setup usability tests
+    </li><li>I don't quite understand the security and privacy topic, so it would be nice if you could elaborate more in the next class.
+    </li><li>no
+    </li><li>no
+    </li><li>No
+    </li><li>would look into books for help with final project stage usability testing
+    </li><li>Reading up on Proctortrack, still bothers me what their application has access to and the information they are holding on to.  ex. a picture of my license
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/24_Thu-04-Apr-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202230/13_Mon-03-Oct-2022.html" />
+    
+    <title>Mtg 13 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 13 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/13_Mon-03-Oct-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/",
+        
+          "name": "202230"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/13_Mon-03-Oct-2022.html",
+        
+          "name": "13 (Mon-03-Oct-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202230/">
+        202230
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      13 (Mon-03-Oct-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 13/36: Mon-03-Oct-2022
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="12_Wed-28-Sep-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="14_Wed-05-Oct-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I encountered
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+          Administration
+        </h4>
+        <ul><li>
+                Happy Monday
+              </li><li>
+                <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1900809&amp;view=1">
+                  Attendance
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1664776800&amp;course=24538">
+                  Class calendar for today
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=24538">
+                  Upcoming events
+                </a>
+              </li></ul><h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><ul>
+      <li>
+        <a href="https://dl.dropboxusercontent.com/s/xifr68rz2i4quxw/13%20-%20Password.pdf?dl=0">
+          13 - Password.pdf
+        </a>
+      </li></ul><div id="mtg_pix_13" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_13" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_13" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_13" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_13" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_13" data-bs-slide-to="4"></li>
+      <li data-bs-target="#mtg_pix_13" data-bs-slide-to="5"></li>
+      <li data-bs-target="#mtg_pix_13" data-bs-slide-to="6"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/vrs4i2f1vacqwp2/13%20-%20img-1.png?dl=0" alt="13 - img-1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/9khedusr14f6lgl/13%20-%20img-2.png?dl=0" alt="13 - img-2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/go17r9nqf0laai7/13%20-%20img-3.png?dl=0" alt="13 - img-3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/zwmg6vacudhn8kx/13%20-%20img-4.png?dl=0" alt="13 - img-4.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/51k1wngeqgv6xfm/13%20-%20img-5.png?dl=0" alt="13 - img-5.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/y8eisw7qcfvnj06/13%20-%20img-6.png?dl=0" alt="13 - img-6.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/k5w1d3yubgszgqo/13%20-%20img-7.png?dl=0" alt="13 - img-7.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_13" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_13" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            oh seven figured out why it's not recognizing my schedule meetings for class constantly notetaking anyway so, we have the individual assignment one do today are there any questions? Yeah.
+          </li><li>
+            
+            They're required number of items.
+          </li><li>
+            
+            Now I don't think there are more than one has that So, I gave you the target page. Yeah. So I don't mean you have to have a full page but more than one sentence and not another full page with 14 like fun either. So just use judgment on the target. Page lengths are just to be valid for you. So there's not a hard and fast rule. You had a question for you. The the goal is the bottom at the bottom so just focus on the quadrants or empathy mafia. I've gotten a couple of notes about some security issues where people can see other people's student numbers. So if you'd like to report those to me, I'll send them along and we can we can tweet being a teacher for learning roles. So we send a lot to me somehow. I would appreciate that. Okay. You can use the participation discussion forum. For example.
+          </li><li>
+            
+            By saying or thinking while doing your process, or like what do you mean by saying like this is a project, but you're just like
+          </li><li>
+            
+            confused. About that. Say When You Want me to show the barcode the QR code for attendance,
+          </li><li>
+            
+            I'll do that first. Pretty close to the false bottom of the window so anyone happy the Alouettes beat the MTA Elks on the weekend
+          </li><li>
+            
+            Okay, that's sorry You're excused. That means the rays can still make the playoffs are nice. I guess.
+          </li><li>
+            
+            Anyway, okay empathy. Okay, so those are the four quadrants right now in a particular order. So, does is probably the easiest one I mean, it's the most straightforward as you say. Take the cap off my marker and write on the board. That's what I'm doing. So that, that's pretty straightforward. So we can observe that. And when you're observing yourself, you have to take a step. Back to say okay, now I'm doing this you know, there are many things maybe that you riding a bike or something you don't always think about all the steps involved because you just know how to do it. So to speak, or whatever else when I'd rather activity and pick up the comes naturally to you. You don't think about the steps that you didn't think about when you were learning to do that activity.
+          </li><li>
+            
+            So as asking yourself, what you're doing to accomplish something in the interactive interface. That's fairly straightforward. I think
+          </li><li>
+            
+            that what's next maybe that's maybe easiest. And maybe says it's also on the easy side because you can just say
+          </li><li>
+            
+            suppose if you're really a method actor, perhaps or something, you're really getting into the role of being a teacher of the interface. Maybe you just turn your voice recorder on and then you can just imagine yourself getting into the role and then they'd see what you say and as you work through that. I'm not saying you need to do that. I'm just as an example, is that example, helping or causing me to scratch your head further? Okay, any one scratch? No. No Okay. All right. So what what you're doing so maybe recall the steps that you're going through okay, now I have to do this. I wish I didn't have to click so much. You can see this as my experience with your courses. Like that. I glad to be a wish I didn't have to click so much.
+          </li><li>
+            
+            Because everything seems to need to have 10 times as many mouse clicks as I would like to
+          </li><li>
+            
+            use so when we're dealing with other people. When we're giving, asking them to use an interface to do something we might ask him to think user think aloud protocol.
+          </li><li>
+            
+            Imagine what that is right. So when you're doing something explain what you're thinking about when you're doing that. So if you get if you get in the habit of thinking about what you're doing and talking about it for yourself and imagine what it'd be like for you or I'm not sure if he's becoming more helpful or less helpful, so you've helped me so imagine that someone else is giving you this. You can think about someone else giving you the task to complete as well the failing teacher per learning user in your courses. And then you imagine yourself taking that on and then speaking so the says part for them female may not not at all just your inner voice but some things you might say out loud, like we're clicking. For example, that's what I might say. Like any state would say, in common but using certain interfaces on your courses
+          </li><li>
+            
+            so that feels it's a little bit less subjective. It's about what you're feeling. I'm feeling frustrated and are feeling dissatisfied because I can just I have a goal in mind and I can just accomplish that goal by setting things up in your courses. Right, so that's more here. That's more of a user experience, kind of
+          </li><li>
+            
+            description so if I help you so questions not sure. Okay. Anyone else have questions? Okay, so I have an office hours today. How many people have tried to reach me on my office hour and have not been successful?
+          </li><li>
+            
+            Well, it's good and bad. Good that I haven't missed anybody, but I'm just sitting there. are still anyway. Feel like I'm somewhat off topic now. Let me. So where do we end up last? Day with metaphor discussion in our discussion of metaphors? We talked about cavemen
+          </li><li>
+            
+            Yes. And the writing on bathroom stalls. So we can think of what's possible the goal of the metaphor is to help people understand what's possible. So if I say it's like punching a timecard or it's like, creating cave art leaving the cave art one is a little bit less and less practical, let's say the name maybe punching a timecard is a little bit more, more straightforward. Maybe that's more easily transferable to the idea of taking attendance.
+          </li><li>
+            
+            What about the fingerprint? fingerprint? I would say that's not necessarily a metaphor. Let's write it down anyway. Let's think about it using
+          </li><li>
+            
+            are face ID maybe. So maybe what we need is a metaphor to describe that
+          </li><li>
+            
+            it's a secure server the only person only the person who's in attendance can record their attendance. So since this isn't here to apologize again. So if you are going to indicate that synthesis was here so that you could do that as a punching a timecard you grab her card for her but if it's if it's a secure timecard that requires some biometrics. It's much harder to do.
+          </li><li>
+            
+            So let's think about it. Do you have a comment? Say that
+          </li><li>
+            
+            sort of like a fossil
+          </li><li>
+            
+            fossil paper here so dinosaurs are here then the issue is when are they here? They are probably here before class started. And they were gone before class started as well. So what are the things we can do as a tenants in your courses. Or what does the attendance in your courses provide us and what could it provide us?
+          </li><li>
+            
+            That maybe? Maybe isn't, isn't clear from the way we talk about. So once a new way of talking about attendance that
+          </li><li>
+            
+            we could support advanced functions. Does that make sense? So it's more than just saying you're here because we can say
+          </li><li>
+            
+            so maybe it's more it's more like a punch card. punching a card because we can indicate when when we said we are here we can also not only attendance allows for this but we can say I was a lot I started here and I'm punching out a certain time as well.
+          </li><li>
+            
+            So what other functions could be possible with your course attendance function? And what kind of metaphors can we think of to describe how to access those functions for people? I think the idea of signing out for attendances a big can of worms I don't want to get into actually but this is a little bit like a discussion from last week about the system keep track of us so you know when we're locked in. So we know when just to notice when you're gaudy and nice, so to speak, when we log in and what we're doing with the system or your course session and then when we log out. So a little bit of a group discussion so. So how do we describe it was a metaphor Okay, so those two things to think about Does that make sense? Well, so, attendance could could provide some kind of extra function. So just so right now you can record attendance and it doesn't matter when you do it during the session.
+          </li><li>
+            
+            So maybe that's all right. But I'm asking if there are if there are things that instruction could do that would be helpful to you.
+          </li><li>
+            
+            Saving features does that make sense? It's 10 o'clock. So I'm gonna spend five minutes talking about that. That'll get back together and then we'll get into project groups. So we'll talk about project groups. Make sure I was clear about that before at the end of our session today okay, discuss you sorry. It you You think about duct tape right that have to do with you take a picture from time to time to have to change the world right So, basically I want to talk to you You ever seen LSVT loud guys that work on Patreon morning day been waiting for more than two hours elementary school there are lawsuits or similar things think this video most likely be for the fire going on literally on still don't like want to get out my door
+          </li><li>
+            
+            sound
+          </li><li>
+            
+            okay should we get together last year was a very I don't have the outdoor you are the shirt okay everyone. So if you're comfortable or you are let's just say in our positions we'll have a quick a quick recap of our group discussions and then I'll ask you to get into your project groups. So everyone's familiar with your project groups. Okay, so anything that came up from your discussion about the possibilities for your course attendance. Yeah.
+          </li><li>
+            
+            This isn't just your ability to mark yourself as present to the first 15 minutes of class. Figure out if you can do it but then I got mad at your courses because it sucks gonna do it when you get to class before you get to us. files the odds are once you get to class you're going to take a picture
+          </li><li>
+            
+            see seems to be so maybe I mean I can do I can. I can do something like that by saying from 939 45 I could do it
+          </li><li>
+            
+            but then I have to remember to show you the attendance between that range of time and if I don't have a QR code or don't have a password then that's another issue as time goes
+          </li><li>
+            
+            on, from President to late so when I saw a fight, I show you the QR codes and maybe five minutes the next five minutes you need to design an app is a tiny little bit of something
+          </li><li>
+            
+            that nobody looks
+          </li><li>
+            
+            at Okay, so. Okay, so how about some good discussions? Maybe we'll talk for a few minutes on Wednesday morning. Now, what I want you to do is so everybody should be in a project group. Maybe not everyone's aware of the project group you're in
+          </li><li>
+            
+            so some of you are I think so you should be able to I'm not in a project group I dislike for project group and members. You shouldn't be able to see the three people or four people in your group
+          </li><li>
+            
+            Okay, so is that as everyone access that is Are you clear about that? So if there are some changes that you want me to make, you just need to talk to everybody and make sure that's okay. And then telling me I can I can make the switch. So the first part of the project is due on the 12th. So it's a week from Wednesday. So we'll talk about that in more detail on Wednesday also. Is there a deadline?
+          </li><li>
+            
+            There's always a possibility we'll talk about that again. So everyone's happy with the project group or you're gonna tell me today
+          </li><li>
+            
+            okay, and if you want me to make changes, make sure you talk to everybody involved. So I still end up with groups of 416 groups of four plus one. Okay, so I didn't expect everyone to be so happy with the way things are set up. I thought there'd be more discussion. Okay. So we want to talk more about attendance. Last four minutes. Yeah.
+          </li><li>
+            
+            So this feature Firstly, it's bound by the last time and what it is to take a selfie. So you have to take a picture, attach a picture. And so record the picture and the timestamp. So what the metaphor for that is just like showing up I guess the professor was no everyone to check the names. We think it was required. The fact that professor to check the selfies to make sure it's in the classroom
+          </li><li>
+            
+            yeah
+          </li><li>
+            
+            as timestamps.
+          </li><li>
+            
+            When you I heard you talked about this earlier I thought about the P real. So, these are posts these posts on the geekly fun options right. People wouldn't say proper track is fun. I think you're gonna say
+          </li><li>
+            
+            probably encryption of the attendance password along with limiting the time.
+          </li><li>
+            
+            About people in the back and the ideas their garage your name properly. Anyway. Any ideas in the back?
+          </li><li>
+            
+            Yeah, we are talking about summarization of companies out there any other last thoughts about attendance? Yeah, so
+          </li><li>
+            
+            maybe like sort of awkward every time and you don't have that much been said beforehand? I'd say like the five minutes answer to my friends I can because I'm doing
+          </li><li>
+            
+            okay. So that you in the back there.
+          </li><li>
+            
+            We can discuss avoiding loss and then added as a response. To the meeting in this recording class Okay, last
+          </li><li>
+            
+            one here.
+          </li><li>
+            
+            Like you can make us watch your video informative video and we can respond to it within like two to three minutes. So that those who are not here
+          </li><li>
+            
+            okay, as an answer question I'll take a better picture. Thanks. Anyway, so think around a time maybe some clothes anyway. Okay, so we'll continue our discussion on Wednesday. Have a good Monday. Take care Thank you for today it's other chairs. You're
+          </li><li>
+            
+            okay, as an answer question I'll take a better picture. Thanks. Anyway, so think around a time maybe some clothes anyway. Okay, so we'll continue our discussion on Wednesday. Have a good Monday. Take care Thank you for today it's other chairs. You're
+          </li></ul>
+    
+  
+    
+  <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>An interface metaphor in user interface design is a collection of user interface images, actions, and procedures that take advantage of the specialized subject knowledge that users already possess. The interface metaphor&#039;s main goal is to instantly inform the user on how to interact with the user interface. It can be created in many ways. Like we have the different keywords for it and different user matrix for it.
+    </li><li>Today we continued our discussion about improving the attendance in our class. In our group discussion, our group decided that taking a selfie and uploading it to the urcourse to prove that you attended the classs or a quick quiz after the class is a great way to make sure someone attended the class or not. A quick quiz will be most helpful as it will check if the student paid attention to the class or not. Having a time limit (like 5-15 min in the start of the class) to do the attendance was another great
+    </li><li>I learned today what types of metaphor can be attached to the attendance system and how it can me implemented.
+    </li><li>In Today&#039;s class we have discuss about the empathy map one more time. We also discuss metaphor about cave art and punching time. For example, faced ID, open window for specific time in which student have to entered attendance code.
+    </li><li>Today we further discussed improvements and metaphors for UR Courses attendance. My group came up with the idea of students having to submit some sort of passcode to our class wiki as an attendance. We also looked at the option of not having any passcode but students would need to submit their attendance within the first 10 or 15 minutes or so of class. It will be similar to punching in at work where if you do not punch in within a certain timeframe, you will be marked late or absent.
+    </li><li>Empathy map and additional features that can be added to your courses were discussed.
+    </li><li>Today i’d learnt more about the concept of empathy maps and their role in UI/ UX design. The empathy map was described as a 4 quadrant map with the labels, Says, Thinks, Does, Feels for each quadrant. Thinks and Says is almost similar, with Thinks referring to asking yourself what you’ve to do to achievw something. Says technically means thinking aloud. Does refers to your actions involved in your interaction with the software. Feels refers to your emotional status, whild interacting with the software.
+    </li><li>The most important thing I learned today was to be more realistic in offering alternatives and new features to a problem. This is specifically for my suggestion of using a selfie feature to record attendance, which is very similar to how proctor track worked. This is somewhat not realistic, considering the technical difficulties with it.
+    </li><li>In today&#039;s class we discussed about metaphors regarding attendance that have more features. I think giving small timed pop quizzes can be helpful in marking attendance as well as seeing if the students have been paying attention to the material taught in the class.
+    </li><li>I really liked the idea of having a random code or statement used as the attendance password so that it is something specific that is said only in class. A response to a joke or something similar would be great
+    </li><li>Again today we discussed more about the metaphors regarding class attendance and how we can change the possible ways of recording it. In our group we discussed how we could add a Quiz at the beginning, during the course of the lecture and at the end of the lecture to make sure that attendance has been recorded only for the students that are actually present in the class. Also spoke about the Empathy Map which we came across in the First Individual Assignment.
+    </li><li>The most important thing I learned today is to make a student want to show up more for class; the attendance for &amp;quot;present&amp;quot; should be unavailable after some time has passed. That way, they&#039;ll need to show up at starting time.
+    </li><li>The most important thing that I learned today is we discussed the new feature of UR course attendance.
+    </li><li>I liked the discussion of different metaphors for attendance like using fingerprint scanner, unique password for each student, secure timecard, etc
+    </li><li>In our discussion group, the metaphor for UR Courses that we came up with was apps that use GPS to track our location. It is a good metaphor because it can accurately track our location whenever the app is active. Turning the app on to confirm our location could be useful in taking attendance.
+    </li><li>How to use metaphors to explain software
+    </li><li>Daryl continues the metaphor topic. He clarified the order of difficulty for each of the four elements of this map. The elements of the empathy map are Does, Say, Feel, and Think (easiest to hardest). So, when dealing with others, we should always ask them to use a think-aloud protocol to reduce the difficulty. He also mentioned a couple of metaphors from the previous day. Daryl explained secure time cards like: fingerprint scanners, Face IDs, and retinal scans. Consider what URCourse at attendance might be
+    </li><li>We mainly talked about metaphors for UR courses attendance which could give new features. As a class we came up answers like restricting the time to mark attendance, pop quiz, tap feature in class, etc.
+    </li><li>In the meeting we talked about metaphors from last day include cave art, punching time card, using finger print scanner to identify yourself or face ID and so on. In group discussion we conclude some results. Trade-offs, limiting ability to record attendance, encription, pop quiz an so on.
+    </li><li>Today in class we continued the discussion regarding metaphors. We also had a brief review about the empathy maps which we are supposed to hand in with the assignment due today.
+    </li><li>Today we discussed more about the metaphors of attendance and understood what other methods can be used as alternatives for attendance. We also had group discussion about it and get to know others point of view. As an example we thought that an interactive exercise on topics discussed on classes with small time frame would be a good alternative for both attendance and class interactions too.
+    </li><li>In today&#039;s meeting we asked question related to assignment 1 after that we have discussed the metaphors about recording attendance. in next meeting professor will talk about group projects.
+    </li><li>The most importanat thing that I leraned today was about different metaphors about attendance and then we had a discussion about empathy map.
+    </li><li>In today&#039;s class we did group discussion regarding options or what features we can add to ur courses for attendance. In group we discussed both traditional method and modern method to do it. Traditional method is the one when professor can make excel sheet and take attendance by taking names in class and other way to add authentication through which student are allowed to register only if they are logged in to university wifi
+    </li><li>started with happy Monday, the most important thing I learned was some depth about empathy maps, as it is segmented as thinks, says easier, does easiest, and what we feel, and discussed about metaphors and the examples of them are purchasing a time card, cave art, and there is a group discussion about the new techniques that can be implemented in your courses attendance, like using a fingerprint scanner to identify yourself, face id and scan, and how can we implement the metaphors to reveal these featu
+    </li><li>Hello Prof. Hepting. Today, you talked about the empathy map and guided us on how to write it for assignment 2. Then you gave us two questions about replacements for taking attendance in the URcourses to discuss. Thanks
+    </li><li>Today in group discussion, I could think of the ways for attendance issue in terms of metaphors. We could think of a solution for attendance: as students we can take our selfie which will be uploaded with the timestamp. However, the professor needs to verify the pictures manually.
+    </li><li>today we group discussion about how can we describe the attendence QR_code and design a new way to find how it upgrade.
+    </li><li>today we started with reminding of the assignment 1 being due today at 11:59, then we learned more about metaphor and then we had group discussions on what way attendance should be taken on urcources.
+    </li><li>Today, we continued our discussion about the metaphors for attendance. We had to have a group discussion about the metaphors and come up with a better solution for attendance on UR Courses. A number of viable ideas were discussed and my group came up with the idea of having the attendance code discussed in class and then submitting it in the response to meeting. Only people in class would know the discussed code and it&#039;ll also engage the students with the course material every meeting.
+    </li><li>New ways to integrate attendance into urcourses.
+    </li><li>the most important thing that I learned is the best metaphor for recording attendance could be made through doing a quiz with timed password so the people who do not attend cannot see the password since will be timed. Or we could use QR codes with encrypted codes so no one will be see it because we can time it as well.
+    </li><li>Today&#039;s class mainly discusses the problem of Attendance on homework 1, and discusses various forms of Attendance
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>Perhaps instead of trying to ascribe potential benefits to an interface or feature, it is best to consider what that interface actually provides in the first place.  Taking attendance is good for trying to indicate if someone was present, but nothing else.  It will not show if they paid attention, understood the content, ect.  Making up potential uses for something just to justify it is the opposite of good user design.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>Different types of attendance formats (using a unique keyword that must be included in response, having the QR code automatically decide your type of attendance, or something of that sort)
+    </li><li>In today’s meeting we discussed about the metaphors for the attendance. We also performed the group discussion for the same and also came up with the alternative for the attendance. Many viable ideas were discussed such as taking a real time photo in the class and submitting it, proving answer to the question at the very moment during the class etc. Also there was a discussion of the empathy map for todays’ individual assignment.
+    </li><li>I would like to know more of how we can make the UR Courses attendance better without needing to login to UR Courses and a put a password in because it takes about 5-10 minutes during the class time for the attendance.
+    </li><li>What extent is security an important factor in design? In today&#039;s discussion we were looking at different methods for attendance. A general consensus revolved around discussing the level of security of the attendance. The current system right now allows for students to count for attendence without attending the class.  Items like require photos and pop quizzes help eliminate that risk at the cost of being time consuming. Which interface interactions value security over convivence?
+    </li><li>Discussion about the attendance metaphor was a kind of brainstorming topic. I am not sure if we can have &amp;quot;Roll numbers&amp;quot; as a metaphor. As in, each student can be assigned a roll number and teacher can just take attendance in the class. I would like to get reviews on that. Also, it was a bit hard for me to understand the empathy map quadrant - &amp;quot;Feel&amp;quot;.
+    </li><li>The thing about which I would most like to know more is about Empathy Maps - how to build one using an example, what it means, and why do we have to do them. Another thing I would like to know more is the metaphors and what is the importance of it (why are we exactly learning about them because it is a bit hard to understand)
+    </li><li>I would like to know more about metaphors in connection to taking everyday&#039;s class attendence
+    </li><li>The most important thing that I would like to know about is that I have learned that an empathy map is indeed a very crucial componenet if we are planning any sort of activitied because I allows us to have a good understanding of how the things are going to work and what will be the views or the judgements of others towards your work and your agenda. As though this course entirely revolved around empathizing towards ones approached so a deeper knowledge would help in getting good results in the future.
+    </li><li>What is the most complete and simple way to check attendance? It&#039;s best to have them monitor each other. Some sort of giving extra points for finding someone&#039;s absence.
+    </li><li>Metaphors. I&#039;m not sure what&#039;s happening in here. Most of the metaphor doesn&#039;t even makes sense to me.
+    </li><li>The most important thing that I learned today was the Empathy Map which we have been discussing since last week. It was a nice group discussion to continue for the Attendance Metaphors with different perspectives. Discussing about metaphors is a good topic but I would like to focus more about the ideas and solutions for design layouts which will get more practical practice for real time projects.
+    </li><li>we are on great discussion right now that how we can change the attendance portal with some new features as per my point of view we can go with small quiz in anytime on class so that prof can check the students participation and involvement with minimum time period so code sending to other team mates chances are decreased though I am looking out for more options how to improve system.
+    </li><li>I would like know more about Empathy maps. where, when and how to use them as it is a part of assignment 1.
+    </li><li>Various ways to take attendance and integrate it in urcourses.
+    </li><li>Today we discussed about different metaphors for the attendence site. I would like to know more on how to identify or on basis we can use metaphors to make our design better and useable.
+    </li><li>I learned on how there can be an metahpor to attendence on UR courses
+    </li><li>About caveman and door as I missed the class
+    </li><li>I&#039;m interested in learning more about how empathy maps are used by professionals as part of their design process.
+    </li></ul>
+
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=wiki">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/13_Mon-03-Oct-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

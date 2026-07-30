@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-730/202210/meetings/21_Tue-29-Mar-2022.html" />
+    
+    <title>Mtg 21 &bull; CS-730 (202210) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 21 &bull; CS-730 (202210) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/21_Tue-29-Mar-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/",
+        
+          "name": "CS 730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/",
+        
+          "name": "202210"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/21_Tue-29-Mar-2022.html",
+        
+          "name": "21 (Tue-29-Mar-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/">
+        CS 730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/">
+        202210
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      21 (Tue-29-Mar-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 21/24: Tue-29-Mar-2022
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="20_Thu-24-Mar-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="22_Thu-31-Mar-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=8510">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Tuesday Last Tuesday of March. So I. I didn't learn French and Regina well I did, I guess, a little bit. When I was growing up. I had French class in grade, seven and eight that was required. And then I took it in high school because I was interested in. And then I went to spend three centers and Quebec. The Federal Government had summer language bursary program that's what they call it. Let me they sent me to. live with the francophone family for six weeks take some classes and. Be immersed in French language. Which is quite quite fun so that was. 8384 85 I did that. And so I can still say stuff I began. and So, other things so. it's good to have another language. reminds me of. When I went. In the past, and i've gone to conferences and other countries like Denmark and so on. I get a phrase book can try and. say a few things to the locals in their language. So I did that, until I went to Prague. And even saying hello, was a real challenge. And the locals just expected. Visitors speak English so. So I guess for the check languages, I guess it's a bit like Russian. Maybe has a high barrier of entry, at least for me as an English speaker, it was a high barrier of entry. So. Speaking of languages. I was doing some things in Ruby this week, well, I didn't do too much Ruby but the things I was working on were written in Ruby are written in Ruby. So I think for me to make some more contributions to. The development of these tools i'll have to do some writing and Ruby. So my feeling is that. Python and Ruby. So. Do similar things but different. Different approaches, I guess, so. Python there's. Some many people are familiar with Python and Ruby. So my laptop seems good now. I was able to update my website. and Building my website with jackal has not crashed my computer since there's day. So, good news all around. Let me get to the page here. know something went wrong here. Trying to send. just give me a second. Okay, see. You first share my screen, so you can see. What i'm up to here. i'll just share my desktop. site on my local computer. something extra. OK so. The Clean was to clean up intermediate stuff. Now, building from scratch. Okay. So I should. show it to you locally. can transfer, let me try and get publish it to the main site. I think. it's. made it over successful yeah. Okay, so happy Tuesday or happy Wednesday depending where you are. let's look at the attendance. So Terry count my. My journey from broken compared to one that's not broken. So I began by. doing a brew update so homebrew is the package manager for the MAC or they say the missing package manager for the MAC. So it's not the only one. there's MAC ports and. I think homebrew is one is taking. The most. biggest share now. So when I checked. The homebrew version 3.4 point three. and Last commit the project so it's it's linked to the. That tells me that i'm up to date. Go fix that in your courses. Which one's the need that I need to fix. So I should. expect it. This upcoming. See if we could add. coming in events so. snaps. So, meaning cause today. But 22 1820. What happened in 19. should be there. let's check the calendar. yeah so here this. I don't know why. The order is to what it is, but. it's done. Okay. here. So I was. going to take you on a tour of what I went through. So I got to the point where I was down to one. message, so I cleaned up. My directory on. That i'm using to. build the website so I had some things collected in the vendor folder or directory. That we're not. Current so I cleaned it all out. You add that left us one problem still. So here's the question I asked. stack overflow. yeah so.
+          </li><li>
+            
+            The.
+          </li><li>
+            
+            doctor says. So my system is ready to prove that took a long time to. deal with all the error messages. Not error messages, but there are lots of warnings. in particular. There were some things some node related items in. In user local. live. And then. Related to node so. I found a way to clean clean those all up. And then I did. My installed version manager. I removed it. installed it using brew. Which. version manager people don't support but seemed to work fine. This is just a script. Okay, so I have 16. Which is the long term support. version. And i've used Ruby environment also part of group to get the language. So 3.0 Point two wasn't latest Ruby, but when I tried to build the latest Ruby I got an error so. Unless. i'm happy with that for now. yeah so. Ruby minus p. So the version through last July. So I did. Follow the story of the setup for using Jackals bundler. And I did bundle exec serve and then minus T is retrace. And then I got to this point. Where is giving me a permission air. On this directory created by my collection. So I check. jacqueline's their. path, where it says couldn't open it. To the minus T give me this extra air about the bundler failing to load the. This is. The page that was built today. Well, we were talking while we've been talking. So that works all right. i've simplified, since I wrote the question of supply this little bit. So I don't have collections as a list and then as. it's it's called. escapes me now but I don't think this is causing problems but i've heard this first version. And i've also simplified the gem file. So, really, I just have jackal and web wreck. And i've taken up the other three because I don't use them. kept these three plugins. So I have the bundle config to say put. The gems. For this project into that. directory inside. The main directory. So, because i've simplified things now i'm down to 32. gems. So all agrees so i've gotten rid of. The mini port file. So the Mitch mismatch between the list of things that gem file and what was being installed was due to the gem file dot lock not being up to date, so I remove that and we ran it. So, finally, it came down, so it wasn't the redirects. We should. So there. are a number of other URLs that aren't on the new site, but using this jam to redirect from. I can create pages that will. catch the references to the those outdated pages and redirect to something. more promising. So I thought, maybe this was what was going on with the this might have been the problem but. My. My test so far. don't indicate that this is the problem. So I had a subdirectory inside my. works collection. So I took all the contents of the sub directory and put it into the main works collection directory. And that seemed to work. So things are building more quickly. and behaving just a little better all around. I think. I can be so bold as to say that. Question on it. I just. wanted to ask. question of jackal to see whether or not they agree with my analysis of. Sub directories inside a collection directory that's. That was the problem. So I don't think i've gotten any. Any comments on this yet. Anyway, so i've made that post as well. seems to me that it's useful to have sub directories inside. Just. Just for organization. Well i'll see what I can a response to that. So, then, I. need a pull request on the jackal repository. For. This really simple change the documentation. Which amounts so Michelle you. So this is the works collection. I had some doubts about. But what if I made an error and specifying this. perma link path. So there is a discussion elsewhere on the jackal side of of. Title being. The name of the file. Replacing spaces with hyphens and so forth. The title. preserves the case, so the file name has upper and lowercase in it. Then. The perma link will have upper and lowercase lowercase in it. I may maybe should have gone further, to say that title is not. The title from the front matter of the post, but its title case. Of the file name.
+          </li><li>
+            
+            anyway.
+          </li><li>
+            
+            So that's that's what i've done. Over the past few days so think of on a better track now with things. caught up. With transcripts. So. Switching gears. So the question so. title is to title. Is the case sensitive file name slugger fide. As they say that's just substituting spaces with hyphens basically. So anyway. Switching. To the assignment that we talked about last week. So I just thought i'd go through it. from scratch, so I created a new directory. package manager. So this is. So react and node js. Are. presented as an easy way to get up and running. But then. We get messages like these, and. Very. Not. Not very helpful, I would say. let's just look at one of these. So. hey anyway. So the idea is. To get the react bootstrap. Environment setup. Then i'd like you to.
+          </li><li>
+            
+            Could.
+          </li><li>
+            
+            create a repository on github. and give some explanation about how to get things. going. In. Some introduction to the web accessibility initiative. The aria. labels and so on with. can be used in. In react. bootstrap application, the sample application that demonstrates. uses the accessibility features. As we've talked about. So. kind of at the end of the day today. I have an office hour, starting at 230 to 330 if. you'd like to discuss anything further with me. So, now that i've got two web issues resolved i'll get the details of the assignments on the webpage. And we'll go from there. And we'll talk about exam stuff on Thursday. As we're. get to the end of getting close to the end of the Semester. So I hope you have a good day thanks for your engagement today. And we'll see you Thursday okay.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            Good day!
+          </li><li>
+            
+            Bonjour
+          </li><li>
+            
+            Happy *day to everyone
+          </li><li>
+            
+            Hi sir good afternoon
+          </li><li>
+            
+            Bonjour ça va?
+          </li><li>
+            
+            Ca va bien , merci . Et vous?
+          </li><li>
+            
+            Oui, merci!
+          </li><li>
+            
+            Ca va. comment ça va?
+          </li><li>
+            
+            😃
+          </li><li>
+            
+            How is your laptop now?
+          </li><li>
+            
+            I cloned the dhhepting.github.io repo after our last meeting. It’s 5.34 GB in size.
+          </li><li>
+            
+            It likely has some extra things in it :-(
+          </li><li>
+            
+            Student password
+          </li><li>
+            
+            Meeting response time hasn’t been extended 🙁
+          </li><li>
+            
+            Will fix that right now!
+          </li><li>
+            
+            18-20
+          </li><li>
+            
+            Can you fix for 18,19 and 20
+          </li><li>
+            
+            should be fixed now! :-)
+          </li><li>
+            
+            I’m not so concerned  about attendance
+          </li><li>
+            
+            If you miss one…
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Could you share the link of that post?
+          </li><li>
+            
+            Wow! 👏🏻
+          </li><li>
+            
+            So, it’s taking title from the filename (case sensitive) and not from the front matter?
+          </li><li>
+            
+            yes. “slug” in the front matter will supersede it.
+          </li><li>
+            
+            I’m verifying that — will discuss on Thursday, OK?
+          </li><li>
+            
+            (final exam date)
+          </li><li>
+            
+            Missing comma
+          </li><li>
+            
+            you beat me to it :-)
+          </li><li>
+            
+            Thank you very much!
+          </li><li>
+            
+            thanks sir !
+          </li><li>
+            
+            thank you...
+          </li><li>
+            
+            thanks
+          </li><li>
+            
+            thank you sir bye
+          </li><li>
+            
+            thank you
+          </li><li>
+            
+            Thank you.
+          </li><li>
+            
+            my pleasure. Take care
+          </li><li>
+            
+            bye
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Hi sir.today we are talking about  macos 12.3,  create react app and also Bundle config,sub directory inside just for organizations. create react app start with one command.you can write some codes such as npx create _react_app  ,npm uninstall, npm update,...
+    </li><li>about react.js and how to use git with it.
+    </li><li>The most important thing i learn about github command that how these little mistakes in command make thongd do not work even coma in command make whole file stop loading.
+    </li><li>In this session I learnt about the fundamentals of react js app and github.
+    </li><li>How to set up bootstrap environment and npm command
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>I am not familiar with jekyll and ruby, I haven&#039;t worked with them but would like to learn about it. It was very difficult to understand things today because of it.
+    </li><li>steps to create a new site in order to compare it to old site that has been crashing on Mac OS
+    </li><li>I was facing a lot confusion to understand the points.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>we have been talking a lot about React Js, bootstrap and ruby, would like to know and understand that aspect more
+    </li><li>I would like to learn more about Jekyll.
+    </li><li>Today we encountered an issue while setting up a project with &amp;quot;Create React App&amp;quot;. It was more of a warning than anything else caused by an outdated tar package. I would like to know how to fix it.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/21_Tue-29-Mar-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

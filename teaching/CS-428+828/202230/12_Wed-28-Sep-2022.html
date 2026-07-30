@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202230/12_Wed-28-Sep-2022.html" />
+    
+    <title>Mtg 12 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 12 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/12_Wed-28-Sep-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/",
+        
+          "name": "202230"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/12_Wed-28-Sep-2022.html",
+        
+          "name": "12 (Wed-28-Sep-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202230/">
+        202230
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      12 (Wed-28-Sep-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 12/36: Wed-28-Sep-2022
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="11_Mon-26-Sep-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="13_Mon-03-Oct-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I encountered
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+          Administration
+        </h4>
+        <ul><li>
+                Happy Wednesday
+              </li><li>
+                <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1900809&amp;view=1">
+                  Attendance
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1664344800&amp;course=24538">
+                  Class calendar for today
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=24538">
+                  Upcoming events
+                </a>
+              </li><li>
+                <a href="https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/construction-industry/building-codes-and-standards/guides/building_accessibility_handbook_updatedjune2021.pdf">
+                  BC Building Accessibility Handbook (updated June 2021)
+                </a>
+              </li></ul><h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><ul>
+      <li>
+        <a href="https://dl.dropboxusercontent.com/s/we5v2drtwnfg93u/12%20-%20Password.pdf?dl=0">
+          12 - Password.pdf
+        </a>
+      </li></ul><div id="mtg_pix_12" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_12" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_12" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_12" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_12" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_12" data-bs-slide-to="4"></li>
+      <li data-bs-target="#mtg_pix_12" data-bs-slide-to="5"></li>
+      <li data-bs-target="#mtg_pix_12" data-bs-slide-to="6"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/428cx4tny8ewlfl/12%20-%20img-1.png?dl=0" alt="12 - img-1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/jzy003z2v7sc93q/12%20-%20img-2.png?dl=0" alt="12 - img-2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/defic10g5dz7qjn/12%20-%20img-3.png?dl=0" alt="12 - img-3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/8kh9zcnthscqxuv/12%20-%20img-5.png?dl=0" alt="12 - img-5.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/ogd7gs9swhiyihf/12%20-%20img-6.png?dl=0" alt="12 - img-6.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/ou79tet6nuwmeo7/12%20-%20img-7.png?dl=0" alt="12 - img-7.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/zj834p2he152qf0/12%20-%20img-8.png?dl=0" alt="12 - img-8.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_12" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_12" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            If there was an artifact, the projects would disband and ask them to use a concrete example to go one thing there that I say I do but i don't i up Morning, Morning everyone can you hear me all right better now oh I didn't turn director on there we go refer the content but also mine is very you can tell exactly what the big content is technically Friday. Technically if your classes tomorrow tomorrow will be Friday I woke up thinking today was Friday and then realize it's Wednesday and you're disappointed but I made it better. But actually it's on Monday you know, I was really concerned.
+          </li><li>
+            
+            Either you're very tired or you've been traveling
+          </li><li>
+            
+            long distances
+          </li><li>
+            
+            well, anyway Thursday's don't buy the rest, other other weeks. So we're also going to be Friday. But so remember that Friday is the National Day for truth and reconciliation. So you're being encouraged to wear orange shirts tomorrow before them. Before Friday, the bookstore may have some they're giving the first nation so it's not a happy Friday and try to pay for reflection Okay, so. Now just see that the Right, exactly, see. See the whole screen every second I want to point out on it. It works on certain browsers but on others so I'm going to try and still work on that. And if you have suggestions about how to fix the JavaScript let me know what's happening with your JavaScript? Well, it's not this hard should come up with something.
+          </li><li>
+            
+            Oh, as you said your next meeting date.
+          </li><li>
+            
+            Yeah, and then over here? recognizes it's Wednesday. But it doesn't put the Lincoln for the meeting today. So there are a few issues. an iMac so now I have I got created. I started I tested Firefox on my Mac and it didn't work and it wasn't okay I couldn't find it. I thought it was going on and I upgraded to Firefox this edition got fixed. So then I downloaded Microsoft Edge for my
+          </li><li>
+            
+            MacBook
+          </li><li>
+            
+            so I could find a case that didn't work on my MacBook. I think Microsoft Edge has this PDF viewer is
+          </li><li>
+            
+            drawn to do whatever you want. It's pretty robust as a PDF editor.
+          </li><li>
+            
+            Just different
+          </li><li>
+            
+            that's good okay, well that's good to know. That Microsoft Edge on my Mac on my MacBook showed the page correctly as well. So I'm going to sit here after class for a little bit and track down some issues here. Anyway so let me go back to our meeting here
+          </li><li>
+            
+            I had a link in the outline for the day but I guess I didn't remove it. It's not showing obviously there's a password for today.
+          </li><li>
+            
+            History is everything teammates. Seems to me students which is children
+          </li><li>
+            
+            me now so we had a few students and I had discussion after class on Monday about attendance. And I said I was going to put a choice activity up but I thought I'll still do that but maybe a group discussion today dependents take. So the framing of the choice or the question I was going to ask on your courses which I'll put on the website today. is would you rather Evening? session
+          </li><li>
+            
+            so I apologize I'm writing a smile on the board here. I make somebody come up to the second row in the back of the class for the game board and so the question is Would You Rather record your own attendance each meeting? Or like the house, how would you like the system would monitor your access and when you're logged in during the meeting times. The giant computer down the central computer will record your attendance
+          </li><li>
+            
+            automatically
+          </li><li>
+            
+            or is there another idea? No attendance. Don't take attendance or
+          </li><li>
+            
+            I could just keep everything
+          </li><li>
+            
+            when you finish my idea so far I could meet everyone's names.
+          </li><li>
+            
+            Old school school
+          </li><li>
+            
+            take a lot of time. We have more than 65 students.
+          </li><li>
+            
+            We can get each other's secrets that he can treat with a handshake. You can verify me.
+          </li><li>
+            
+            All right, good. Go. Announce sounds fun. Low on the practicality scale.
+          </li><li>
+            
+            I was doing this like you just posted maybe if basketball
+          </li><li>
+            
+            so are we gonna keep the status quo doing so let's stick with the first two options reduce the
+          </li><li>
+            
+            amount of time that the attendance is opened up first aid
+          </li><li>
+            
+            Yeah, I guess we could do that. The advantage
+          </li><li>
+            
+            to me it's worth I spent 3000 More than $3,000 to be here if I don't show up in class. That's because I've already kind of already taken a hit wasting my money on some client we're having we're already having a lot of discussions in this class. So people are posting the discussions and you've seen them in class and document class names you've ever seen before. Editing the wiki and just copy what other people said it may be pretty obvious to them.
+          </li><li>
+            
+            Okay, so the question is what? What's appropriate nouns so there can be something that I'm giving a little bit of reward for terms of participation to make sure that you're to get it to give you an incentive to record attendance and not make it so much that it's putting undue strain on you. Think the only thing
+          </li><li>
+            
+            you have to consider with the current system as far as I'm aware I can get a phone right now.
+          </li><li>
+            
+            Yeah, so I think we address that issue already. If you're at home, and you just waiting you can text somebody. Like send this to say, give me the password or if you'd send me the QR code
+          </li><li>
+            
+            that was before enforcing this online. So now if you go to my web page, you can see it without asking sinless and then you can just enter the password and go back to sleep.
+          </li><li>
+            
+            So previously, before posting this case, you'd have to ask us to save your password. And then you log into your
+          </li><li>
+            
+            courses and password. Go back to sleep.
+          </li><li>
+            
+            So I don't think this is that that's always a risk of people. Not in not stay awake for the whole class. Anyone here not saying wait. Anyway, seemed like that was gonna be funnier. So when we talk about last name, we can relate to this discussion. Start talking
+          </li><li>
+            
+            about metaphors. Right so what are what are some ways that we can think about recording attendance? What are the what are some metaphors for that, that we can use to take an electronic signature
+          </li><li>
+            
+            so I'm gonna ask for five or 10 minute group discussion here. We'll use our groups to discuss this issue
+          </li><li>
+            
+            so let's also consider there any issues that come up okay. Does that make sense? So what are some what are some metaphors we can
+          </li><li>
+            
+            use to indicate use to help people take their attendance using your courses and then are there any issues that come up? And like maybe the metaphor we have? And exactly, maybe there's some room for improvement. So those two aspects of the question makes sense. Any questions or the questions? Questions? No questions about the questions? Yes, you're taking you're taking on the role of the teacher. We're not a real teacher who can see under student student numbers. That's that's the adjustment. You're like a teacher but you're better teachers for learning. Effectively teachers, yes. Okay, so, can we have a discussion about that? You can see your computers and messaging. Tuned our
+          </li><li>
+            
+            last piece
+          </li><li>
+            
+            when you actually want to have. Right like Okay, bye. What I did the I did on here you just do a count of like whatever the nature of who you are all need somebody you have to say the picture fitness without mixing across all genres. Yeah, but like it'd be nice to just talk to you are learning Haskell in response to everyone in our team forget everyone how are you training joining us? So we did that so basically just think about the secretary right are there hello, everyone what's going on? Ready
+          </li><li>
+            
+            yes next year alright guys let's hop right in Sure. You get it so.
+          </li><li>
+            
+            Attached to like reading the title now
+          </li><li>
+            
+            I have a folder on your web store. Or
+          </li><li>
+            
+            an IP are
+          </li><li>
+            
+            no data privacy. Wait they weren't done
+          </li><li>
+            
+            what can we do now?
+          </li><li>
+            
+            Kidding yeah no one of you thank you now it's always been a long week indicate the issues we're discussing today those are short like this was all so, so. Good. Right now. Not a lot.
+          </li><li>
+            
+            So you can imagine some other interfaces. So, think about kind of far as this so recording attendance is like something so that's how we can phrase it metaphor. And I'm aware that we've been told similes are like and metaphors. There's some subtlety there that we're not going to get into.
+          </li><li>
+            
+            We'll just stipulate to that. potential conflict. Anyway, does that make more sense? Okay, let's take a look at a couple of minutes and then we'll get get together to discuss what's going on here and you've signed up. Up you Sure? You want to
+          </li><li>
+            
+            do that I guess. Gate out of sight out. Basically so what we can do is make sure that
+          </li><li>
+            
+            we can just use our student student data
+          </li><li>
+            
+            we Okay, shall we wrap up and then get back together as a group as as the class do you want to do something
+          </li><li>
+            
+            okay so can we get get get back together in the class setting please.
+          </li><li>
+            
+            So, just a quick comment about what I put on the screen here. This is a document that I thought I had like to make and make it available to you. But it'd be seen as of June 2021. These are some standards for cars this the doors so interesting.
+          </li><li>
+            
+            That switch should be
+          </li><li>
+            
+            not more than 1.5 meters from the door and then as the height tighter range of values words position so that hallway in education building doesn't meet those. Curious what are the standards for Saskatchewan? So when I was talking to the Saskatchewan buildings Council, they said oh maybe check with the city. So, Senator, maybe they just started they don't have a nice stocking your diagrams that comes up with
+          </li><li>
+            
+            Google search
+          </li><li>
+            
+            so anyway, we can keep that in the back burner. See how we can anyway I just wanted to show that this is what I was. There's some resource hours, there are some resources. So this is a metaphor. It's good like to share a metaphor Yeah, signing and. Right, okay, thanks. You had your hand up our stuff
+          </li><li>
+            
+            is actually a metaphor
+          </li><li>
+            
+            Yeah, so I'm sorry. About that
+          </li><li>
+            
+            like clocking in for work. Okay. Yes, participation award
+          </li><li>
+            
+            Okay. Attendance has likely been some graffiti and another.
+          </li><li>
+            
+            Two apps so for a good time, call
+          </li><li>
+            
+            just showing
+          </li><li>
+            
+            me maybe say saying that you were here without because showing up as is not quite the
+          </li><li>
+            
+            metaphor. It's
+          </li><li>
+            
+            letting people know I showed up. Okay. Okay, okay. Rogers secondary fingerprinted? I guess you could say registering a TNA satellite TV show. Morning so for those who don't know, v match is public database and use Track identify for this one I think serial so your information is not public, but it's not private.
+          </li><li>
+            
+            Could you also say registering your ancestry?
+          </li><li>
+            
+            Door 23 and not as more elderly
+          </li><li>
+            
+            man putting his handprint on
+          </li><li>
+            
+            okay all right.
+          </li><li>
+            
+            Opposite of collecting autographs at a theme park and book
+          </li><li>
+            
+            like other people's attention, it's not your own.
+          </li><li>
+            
+            Well, you, me like getting the same sense as your art and it's true. Right so I apologize I don't want to discourage anybody. Sometimes
+          </li><li>
+            
+            like taking a picture okay.
+          </li><li>
+            
+            Okay Is it like renting a house or like paying for a ticket in a parking lot?
+          </li><li>
+            
+            Okay, so now we have two minutes left so, are there other So, if we think about attendance, these being reports for attendance taking in New York courses
+          </li><li>
+            
+            okay. Be real. Where everyone? Yeah, everyone's given a notification at the same time and you have two minutes to take a selfie and then a picture with the other camera on your phone. Show wherever you are doing.
+          </li><li>
+            
+            That that still pops up
+          </li><li>
+            
+            according to my brother Yes, he's a younger person
+          </li><li>
+            
+            okay, just so So are any anything that would count as an improved? So these are ways we can think about the current
+          </li><li>
+            
+            metaphor any improvements.
+          </li><li>
+            
+            Came up in discussion anyone have some improvements said already odds 21 After sorry. Too much fun talking about so these are these are good discussions to have. So I'm not trying to
+          </li><li>
+            
+            I don't want to cut off brainstorming because we can thinking outside the box. It's a healthy way to approach these issues. So anyway, having said that Wednesday, and 21 It's time for people to get to the next classes and so on. So thank you for today.
+          </li><li>
+            
+            I don't want to cut off brainstorming because we can thinking outside the box. It's a healthy way to approach these issues. So anyway, having said that Wednesday, and 21 It's time for people to get to the next classes and so on. So thank you for today.
+          </li></ul>
+    
+  
+    
+  <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>The metaphor for the class attendance is very from user to user. But which method will be the best for the recording system it depends on the system requirements and the facility of the system. In the traditional process the system is not friendly as for the teacher and student. In the other hand the building entrance rules and regulation depends on the requirements of the people demands. Every metaphor is connected to the use of the system reliability.
+    </li><li>In this class we had discussion about how to record our attendance and what are some other best alternatives. We also had a group discussion about the metaphor for recording our attendance such signing in, clocking in for work, getting an award, letting people know that you showed up, getting a celeb. signature and etc. In the group discussion we also talked about what might be a better metaphor for our attendance and our group thought it&#039;s like voting in an election or updating our status on social media
+    </li><li>Today in the lecture I learnt about thinking something outside the box for a situation. Like in todays lecture we could think of different ways for marking attendance which should be in a proper way and also what alternative ways we can come across.
+    </li><li>Today we explored the concepts of gulfs in an interface and related it with the attendance. After getting into our discussion groups, we discussed what metaphors we could use in relation to the attendance. Our group came up with casting votes. I found some of the ideas the other groups thought up quite interesting and unique such as clocking in at work, participation award, paying for parking or caveman putting in handprint.
+    </li><li>today we are going to talk about what might be better metaphor some examples discussed in the class : signing in clock in for a shift at the work participation award leaving graffiti in public washroom letting people know I showed up getting fingerprinted by police registering your DNA at GED match caveman putting handprint on cave wall collecting autographs of Disneyland character taking a picture paying for parking BeReal app
+    </li><li>Attendance is a important key thing to be succesful in class. Best way to learn is by going to the class and watching examples and learning new things and that can only be done by attending the lecture.
+    </li><li>The most important thing I learned today was how important metaphors are to improving the user interface, and relating to users’ past experiences. Metaphors make it more obvious to the user what the components of the interfaced are, and how they operate. For example, windows make folders look like physical folders, and one could drag and drop files into them like one would do so with physical folders and files.
+    </li><li>Today’s discussion of metaphors for the marking of attendance was very fun. Attendance is like a caveman putting their hand print on a wall.
+    </li><li>Today we spoke about metaphors where the goal is to rpovide context to a new activity. NFC Reader in each class should be introduced so students can scan or tap their Uregina Ids for the use of attendance.
+    </li><li>The most important thing that I learned today is the discussion of metaphor
+    </li><li>The most important thing that I learned is the different ways we maybe use later for attendances
+    </li><li>Gulf of execution is the gap between the user’s goal for action and their means to execute it. Metaphorically recording attendance is like signing in, clocking in for a shift, participation award, letting people know you showed up, etc.
+    </li><li>Attendence was the topic that has been discussed in today&#039;s class. Although we are all well aware of the fact that attendance in a class is a very important aspect of an individual&#039;s presence and a mark of participation of in-class activities that are being conducted in the class. So showing up in class on a regular basis is a must to get yourself updated of what is going on in the class rather than getting marked absent and losing the grace marks that carries a lot of importance for calculating the total.
+    </li><li>That I can relate the analysis of interfaces to any problem
+    </li><li>Today’s class was about how to describe a problem as a metaphor and what is the best way to improve it. At first, Daryl described the normal ways of attendance recording like Calling out the names, Writing down the names, and Signing in the class sheet. As a group discussion, students named some metaphors like getting fingerprinted by police, clocking for work, and registering your DNA @ GED Match, …. There are many ways that can be employed instead of the traditional attendance registration for example log
+    </li><li>Today in class we learned about metaphors on attendance. Different metaphors for attendance were clocking in for work, signing in, letting people know I showed up, getting fingerprint by police, or bereal app.
+    </li><li>What might be better metaphor  &amp;quot;Recording attendance is like ...&amp;quot; ? We have discussed some examples. Signing in clock in for a shift at the work, participation award, leaving graffiti in public washroom, letting people know I showed up, getting fingerprinted, registering your DNA at GED match, taking a picture, paying for parking. Also we can use an application to scan barcode on student id to record attendance.
+    </li><li>Today in class we brainstormed different ideas for taking attendance. The idea about scanning our ID cards seems pretty cool and hassle free compared to putting in the attendance code. It&#039;s interesting to look at common activities such as clocking in to work as a metaphor.
+    </li><li>Today we learnt about the metaphors and what alternatives are poss For taking our attendance. But all of the methods had flaws and were not feasible. I would like to explore more and find a more feasible and efficient option
+    </li><li>In today’s class I learned about the different metaphors which we can do for attendance such as signing in, participation awards, fingerprint sensor. And also learned about the size of the doors.
+    </li><li>Different options for recording the attendance. I still don&#039;t know why we need it but good to know what options we have.
+    </li><li>In today&#039;s meeting we discuss about recording attendance topic in a group and with class also. we discuss what we can do to make it better for the one who attend the class and the one who don&#039;t.
+    </li><li>The most important thing I learned today was different possible ways to record attendance and if there can be issues which we should take into consideration and if so can it be resolved by different metaphor
+    </li><li>I learned today how attendance is required and different ways what attendance is like..as we know its important to note we attend lecture and prof can look on it anytime for grades.But i would still like to know about metaphors.
+    </li><li>started with &amp;quot;happy wednesday,&amp;quot; the most important thing I learned today was about the alternative techniques of taking attendance. Normally, we have traditional methods like writing names down or calling them out, and talked about some alternative methods like using a face scan or inserting a card etc,
+    </li><li>Today I was able to scrutinize the attendance issue in terms of metaphores. For recording attendance, several metaphores were discussed in the class. From all of those, I could feel the most important one was to enable the location of student and then record the attendance. This way, the attendance issue can be solved.
+    </li><li>Discussions on theory topics, videos and debates with each other on the same
+    </li><li>There was a group discussion about the different metaphors we can think of for attendance and maybe find a better alternative metaphor for attendance. Our group came up with the metaphor of casting a vote. The attendance system that we currently use has options to mark yourself present, absent, excused, etc. This is similar to a parliamentary vote where you either vote for, against or abstain from voting. This can be implemented in class if everyone writes their name on a piece of paper for attendance.
+    </li><li>Finding metaphors for the physical system that would be relatable and  easily understood by the user while using the digital systems.
+    </li><li>How to take attendance.
+    </li><li>For the question mentioned in class: which kind of way to record attendance? I would prefer taking attendance automatically in meeting times. In this case, the system would be a fair tool for recording all users&#039; login and logout time, so that the attendance would be more reliable and trust-worthy.
+    </li><li>the most important thing that I learned is that how we can think of metaphor in regard od the recoding the attendance. We learned and viewed lots of examples that illustrated our knowledge in recording the attendance.  Also, Alternatives and corresponding problem that can arise Above approach can be adopted using RFID tags rather than barcode scanning.
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>I don&#039;t understand how taking attendance for grades hasn&#039;t been banned post pandemic.  It does nothing to reflect the skill or commitment of a student to a subject.  All it does is pressure students to go to class, regardless of whether they are sick or weather conditions are dangerous and they would be safer staying home.
+    </li><li>Translating my ideas into metaphors was much more difficult than I anticipated
+    </li><li>Today we discussed about the way of taking attendance
+    </li><li>The most difficult thing for me to understand is the metaphors discussed in class. Not quite clear on the topic. I think it would be great to clarify some things out regarding metaphors and perhaps use a different example.
+    </li><li>I just want to stay in the old way of doing things that we&#039;ve been doing without too much difficulty. e.g) attendance.
+    </li><li>The metaphors didn&#039;t match with the topic.
+    </li><li>Dear Prof. Hepting. Today you introduced the word metaphor to us. In the beginning, it was hard for me to understand what it meant, but you explained it more briefly and now I know what it is. Thanks
+    </li><li>Today we checked attendence, and then we had a group discussion that Metaphors -&amp;gt; Goal is to provide context to new activity by relating it to past experience? NFC Reader in each class. So you have to tap in or scan when you come in the class.
+    </li><li>It was a little hard for me to come up with metaphors for design when starting out, because I was mainly thinking of abstract ideas instead of real-life examples. It was easier to come up with ideas once we had some examples to take a look at.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>We have worked on the attendance system today. We discussed some metaphors by which we can make our class system more effective. But the main problem is that without involving the biometric, we cannot remove the misuse of it. I would like to know more about whether it is possible involving any biometric involvement in URCourses, so that it can detect the exact person who is giving the attendance. For example, it can be a device that will be pressed, capture the fingerprint,match and update URCourses.
+    </li><li>In today&#039;s lecture we discuss about the metaphor of recording lecture. Some of the points came out in class is signing in, taking pictures or by app. I would like to discuss more about this topic.
+    </li><li>Different ways to handle attendance, the good and the bad of each
+    </li><li>In today’s meeting we did a group discussion where we have to think and come up with different metaphors for attendance and come up with alternative metaphor for it. So the attendance system that we are currently using for CS 428 has options to mark ourselves as present, absent, late etc. So this can be also implemented by just writing down the names and signing it so that there is no redundancy.
+    </li><li>I would like to know more about the metaphors that could be utilized for recording attendance in a typical classroom setting .
+    </li><li>Today in class we discussed metaphors related to attendance. It is something that is a reward for students attending the class but a small penalty for those who don’t attend. So I think the professor should give an individual password to every student attending the class. This password would be random, one time use and only one per student. This can be done quickly so lecture time won’t take much time. However this would require a bit of behind the scenes preparation but it’s worth a try.
+    </li><li>How does one judge consent when it comes to interface design? The majority of the articles related to privacy in the discussion of attendance were related to forms of privacy. clocking in, fingerprint is taken, BeReal are all different degrees of privacy being taken. Attendance taking is a personable action but its severity is regulated more to accountability than consentful data points. Should consent always be asked or is there some aspects of privacy that are not needed for interface actions to discuss?
+    </li><li>I thing that I would like to know more about is what are the improvements for recording attendance?
+    </li><li>I would like to learn more about metaphors and its applications to many daily activities.
+    </li><li>The best way to record attendance is to have the professor scan the barcode of the student ID as students enter the classroom, similar to when entering the gym at the university. This would be the most time efficient method and it would prevent dishonest students from taking advantage of the password available online. One of the metaphors for taking attendance is getting your ID checked.
+    </li><li>Discussed many other ways in which attendance can be taken. I would like to know more about ways to take accurate attendance. In every possible way there is either privacy issue or task becomes too tedious just to take attendance.
+    </li></ul>
+
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=wiki">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/12_Wed-28-Sep-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

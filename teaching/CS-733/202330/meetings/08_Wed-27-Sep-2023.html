@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-733/202330/meetings/08_Wed-27-Sep-2023.html" />
+    
+    <title>Mtg 8 &bull; CS-733 (202330) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 8 &bull; CS-733 (202330) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/08_Wed-27-Sep-2023.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/",
+        
+          "name": "CS 733"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/",
+        
+          "name": "202330"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/08_Wed-27-Sep-2023.html",
+        
+          "name": "8 (Wed-27-Sep-2023)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-733/">
+        CS 733
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-733/202330/">
+        202330
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-733/202330/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      8 (Wed-27-Sep-2023)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 8/25: Wed-27-Sep-2023
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="07_Mon-25-Sep-2023.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="09_Mon-02-Oct-2023.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=9112">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_08" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_08" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_08" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_08" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/xv8ow1ksu78zl4x12siqp/08-1.png?rlkey=4n0055haa15jv96ip6o0xwf81&amp;dl=0" alt="08 - 1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/d9aj24rvvls8o80jxt68n/08-2.png?rlkey=pzaikne58gncl03ncgbe0skyo&amp;dl=0" alt="08 - 2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/i5zokzsxqkrg5i43qsg13/08-3.png?rlkey=71pe04tfejapwdctsitmv2ezm&amp;dl=0" alt="08 - 3.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_08" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_08" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            So my new laptop is in the works now so I can say goodbye to this the 2017 version that I have. Remember that problem I had about not having a more recent enough computer to update the software so
+          </li><li>
+            
+            I'll be able to deal with that. As well.
+          </li><li>
+            
+            Meeting 825.
+          </li><li>
+            
+            Questions from our previous meeting. Did you look at that example I
+          </li><li>
+            
+            the code that I posted actually improved it a little bit since our meeting.
+          </li><li>
+            
+            That's right.
+          </li><li>
+            
+            It's worth more better attendance today.
+          </li><li>
+            
+            Eight 813
+          </li><li>
+            
+            Anyway, okay, let's look at that first.
+          </li><li>
+            
+            Let's look at the example from yesterday.
+          </li><li>
+            
+            Gonna move us down.
+          </li><li>
+            
+            Oh, great. Thanks.
+          </li><li>
+            
+            That's exactly I'm going to show today.
+          </li><li>
+            
+            Okay.
+          </li><li>
+            
+            Pardon my messy desktop here
+          </li><li>
+            
+            okay
+          </li><li>
+            
+            so remember we did the rotation on the triangle
+          </li><li>
+            
+            right good so you can see the little triangle so I added a control to do a toggle rotation. So turn rotation on and off
+          </li><li>
+            
+            and then I have reset center. So if you remember I did
+          </li><li>
+            
+            well, it wasn't
+          </li><li>
+            
+            rotating around this.
+          </li><li>
+            
+            It was rotating
+          </li><li>
+            
+            was retaining at this point? Because I had said
+          </li><li>
+            
+            minus high
+          </li><li>
+            
+            minus,
+          </li><li>
+            
+            minus zero. And given the point zero minus 0.5. Well, anyway, it was this point
+          </li><li>
+            
+            for trying, four because there's one upside down. So in the middle, the bottom line here is the distance between the bottom and the top back with two
+          </li><li>
+            
+            triangles here.
+          </li><li>
+            
+            That isn't the center of the triangle. So the triangle is here.
+          </li><li>
+            
+            So this is so this is 60 degrees here, this angle
+          </li><li>
+            
+            so that 30 degrees this right here so that's the point
+          </li><li>
+            
+            for centering rotation so how do we center rotation? What did we do in our code
+          </li><li>
+            
+            to do the rotation the other day? For those of you that are here, do you remember what we did?
+          </li><li>
+            
+            I'm not sure that we did a translation.
+          </li><li>
+            
+            So the vertex render.
+          </li><li>
+            
+            We took the positions that were set from
+          </li><li>
+            
+            the vertex buffer
+          </li><li>
+            
+            and then did a multiplication to do
+          </li><li>
+            
+            effective rotation. So we're rotating
+          </li><li>
+            
+            we're gonna rotate around the origin if we don't do any translation. So the origin here because this is minus one, plus one, y minus one plus one and x
+          </li><li>
+            
+            is going to be around here are just
+          </li><li>
+            
+            some how do we adjust the center of the rotation
+          </li><li>
+            
+            How can we specify transformation to do that?
+          </li><li>
+            
+            I'm not sure the name of the file
+          </li><li>
+            
+            thinks that's.
+          </li><li>
+            
+            Anyway, so if we do a rotation, rotating about the origin How can we specify different points rotate around
+          </li><li>
+            
+            let's say here's the origin. Let's say we have a triangle over here and here's the center of the triangle
+          </li><li>
+            
+            so intuitively what do we need to do is change.
+          </li><li>
+            
+            Nancy or Nancy?
+          </li><li>
+            
+            See this, this helps me because I
+          </li><li>
+            
+            know you're both here and
+          </li><li>
+            
+            I can see I can see both of your names
+          </li><li>
+            
+            covered. I seem like I know.
+          </li><li>
+            
+            I'm doing better than that. Anyway,
+          </li><li>
+            
+            I tried to get a laugh every now.
+          </li><li>
+            
+            So that's my attempt today. Let's keep it so
+          </li><li>
+            
+            if I want to rotate the triangle around at center
+          </li><li>
+            
+            so here's the
+          </li><li>
+            
+            origin
+          </li><li>
+            
+            and here's this seat for center.
+          </li><li>
+            
+            So what happens if we translate the center to the origin?
+          </li><li>
+            
+            That can help a bit. Because we're gonna rotate
+          </li><li>
+            
+            and rotate it the triangle around the center but the center is not with the origin. So if you want to rotate it in place what do we have to do? XYZ.
+          </li><li>
+            
+            Okay, so we're
+          </li><li>
+            
+            getting five plays
+          </li><li>
+            
+            well, we don't
+          </li><li>
+            
+            want to have it's good to have some numbers to work, work out specific examples. But let's just talk about
+          </li><li>
+            
+            the general principle.
+          </li><li>
+            
+            So if I want to rotate around the center of the triangle I'm going to move the center of the triangle to the origin.
+          </li><li>
+            
+            So we're going to translate
+          </li><li>
+            
+            this point the origin
+          </li><li>
+            
+            now
+          </li><li>
+            
+            now that we've got rotating about the center of the triangle,
+          </li><li>
+            
+            how do we get the triangle back where it was to begin with
+          </li><li>
+            
+            could we do another translation? Yeah.
+          </li><li>
+            
+            So we have those three steps. So let's
+          </li><li>
+            
+            try move moving the center around
+          </li><li>
+            
+            Okay, so
+          </li><li>
+            
+            what if I change the X what do we expect to happen? Do you have some intuition about that?
+          </li><li>
+            
+            So we're not rotating around the center anymore.
+          </li><li>
+            
+            So the center of rotation is
+          </li><li>
+            
+            is about here
+          </li><li>
+            
+            Okay, so let's we'll take a quick look at the code for this version.
+          </li><li>
+            
+            Okay
+          </li><li>
+            
+            so we have uniform variables and for those who are here what are the uniform variables for from Monday
+          </li><li>
+            
+            so, we have the attributes the positions and those are changing with so every vertex has its own position.
+          </li><li>
+            
+            When we have a uniform variable we don't change it for each vertex. We're just providing a value to the shader So, it makes sense. So, here we're going to specify a theta for the rotation and a plot an xy point for the center
+          </li><li>
+            
+            so, the first two lines there we're getting it. We're doing the translation of the point to the center to the value in the center
+          </li><li>
+            
+            excuse me, then we're getting a sine and cosine for that angle and then we're computing a new X and Y position. So we do the rotation first, and then we're adding. So this is step two and three that we just talked about. So here's the rotation and an x and then we're translating back to the center
+          </li><li>
+            
+            that same okay
+          </li><li>
+            
+            can you see that alright or should I let me see if I can make it Bigger?
+          </li><li>
+            
+            Okay, so we're setting up the buffer was data from the positions array that we computed and then we're making the connection between the eight position variable in the shader with the buffer
+          </li><li>
+            
+            and then we just have these two
+          </li><li>
+            
+            the these are simpler for the uniform variables. We're just giving the location
+          </li><li>
+            
+            so if we're right in the render if we're rotating the gasket then we're changing theta. And then we
+          </li><li>
+            
+            set we pass the value of fader to our shader
+          </li><li>
+            
+            and I forgot rotate rotating we just
+          </li><li>
+            
+            well
+          </li><li>
+            
+            here we're resetting, resetting the value of the center and then we're drawing triangles.
+          </li><li>
+            
+            So this is a fun click handler for the reset button.
+          </li><li>
+            
+            That seem okay
+          </li><li>
+            
+            so here we have animation and interaction
+          </li><li>
+            
+            I just want to
+          </li><li>
+            
+            flip down to the render function again.
+          </li><li>
+            
+            Best animation frames that
+          </li><li>
+            
+            so what does that mean prepares smooth the next frame so the transmission is smooth
+          </li><li>
+            
+            so
+          </li><li>
+            
+            if we're rotating this So, here's the images on the screen
+          </li><li>
+            
+            so, remember we're we're simulating animation or we're giving a sense of animation.
+          </li><li>
+            
+            we're animating
+          </li><li>
+            
+            like creating
+          </li><li>
+            
+            a number of static static images showing them
+          </li><li>
+            
+            at a high enough rate that we have a sense of motion.
+          </li><li>
+            
+            So if we see this
+          </li><li>
+            
+            image and then we request
+          </li><li>
+            
+            another frame and the Rotate and the animation
+          </li><li>
+            
+            so we're not going to switch to the new frame until it's rendered in the buffer.
+          </li><li>
+            
+            So we don't see things being drawn on the stream draw them
+          </li><li>
+            
+            off screen and enemies just switch the buffer
+          </li><li>
+            
+            little bit more clear.
+          </li><li>
+            
+            This make sense so far.
+          </li><li>
+            
+            Okay.
+          </li><li>
+            
+            So we're dealing with interaction.
+          </li><li>
+            
+            How do we know when the user interacts with the application?
+          </li><li>
+            
+            How do we know when
+          </li><li>
+            
+            something happens?
+          </li><li>
+            
+            So I've indicated that there's
+          </li><li>
+            
+            two ways to do this one is the original approach
+          </li><li>
+            
+            when I started writing code
+          </li><li>
+            
+            for the Silicon Graphics workstations
+          </li><li>
+            
+            that we had
+          </li><li>
+            
+            in the lab in the late 80s and early 90s
+          </li><li>
+            
+            I was using the original approach.
+          </li><li>
+            
+            So we had a big there's a big loop.
+          </li><li>
+            
+            So we're just while one that kind of
+          </li><li>
+            
+            approach so we're just.
+          </li><li>
+            
+            So we have a big loop,
+          </li><li>
+            
+            and then we're testing for different kinds of events.
+          </li><li>
+            
+            And then we're handling them
+          </li><li>
+            
+            from this loop that loop is the organizing structure of the application.
+          </li><li>
+            
+            So what's
+          </li><li>
+            
+            a modern approach? To maybe?
+          </li><li>
+            
+            Have you written applications that
+          </li><li>
+            
+            interact with
+          </li><li>
+            
+            the user or the user interacts with the application and how do you?
+          </li><li>
+            
+            I mentioned an example
+          </li><li>
+            
+            on the screen right now.
+          </li><li>
+            
+            events I believe.
+          </li><li>
+            
+            No
+          </li><li>
+            
+            this is more like Wheel of Fortune here we'll play
+          </li><li>
+            
+            you to give us some vowels
+          </li><li>
+            
+            Okay, I'll give you a vowel.
+          </li><li>
+            
+            Dress rasterization. Is
+          </li><li>
+            
+            design one eight and rasterization no that's not right. That's a longer word.
+          </li><li>
+            
+            A consonant we'd like to see if there's a constant.
+          </li><li>
+            
+            Call out some choices for constants. And I'll fill him in there
+          </li><li>
+            
+            no tea
+          </li><li>
+            
+            Oh no
+          </li><li>
+            
+            What about
+          </li><li>
+            
+            oh, I forgot
+          </li><li>
+            
+            I missed a letter I'm sorry.
+          </li><li>
+            
+            Good thing we're not playing for a new car. Or something.
+          </li><li>
+            
+            callbacks, yeah.
+          </li><li>
+            
+            So
+          </li><li>
+            
+            the events are interested in creating a callback function register that so the system
+          </li><li>
+            
+            calls that event handler that's registered for the event. And that's a little more efficient
+          </li><li>
+            
+            or a lot more
+          </li><li>
+            
+            so. Maybe I should show you here.
+          </li><li>
+            
+            Yeah. Me
+          </li><li>
+            
+            so this application is allowing us to draw rectangles by specifying two points and then we fill in the other vertices
+          </li><li>
+            
+            Oh, that's
+          </li><li>
+            
+            why
+          </li><li>
+            
+            I'm zoomed in.
+          </li><li>
+            
+            So this code
+          </li><li>
+            
+            we're getting a mouse event and we're translating into the coordinates that we're drawing from the minus one to plus one minus one to plus one.
+          </li><li>
+            
+            So this code
+          </li><li>
+            
+            is limited because it needs the canvas to be at the top left
+          </li><li>
+            
+            Excuse me.
+          </li><li>
+            
+            Let's look at
+          </li><li>
+            
+            this vert Shin so
+          </li><li>
+            
+            here I'm
+          </li><li>
+            
+            I'm using the bounding box rectangle to get the get the points relative to the canvas.
+          </li><li>
+            
+            So
+          </li><li>
+            
+            display here
+          </li><li>
+            
+            start counting at zero rectangles zero
+          </li><li>
+            
+            as
+          </li><li>
+            
+            the points the vertices minus point eight 4.69.
+          </li><li>
+            
+            Excuse
+          </li><li>
+            
+            me again. minus point eight 4.17 minus point two 3.17 and minus point two 3.69. And then I'm also displaying the color for the rectangle.
+          </li><li>
+            
+            So the vertex shader is just getting the position and then
+          </li><li>
+            
+            vertex color is set to be the attribute color value that we get from the color buffer.
+          </li><li>
+            
+            I've
+          </li><li>
+            
+            given the code a facelift from the one that's on the website
+          </li><li>
+            
+            with the idea of making it more readable so, I'm saying that we could specify up to 200 rectangles and a rectangle has four vertices. So the max number of positions are the number of vertices times the max number of rectangles so
+          </li><li>
+            
+            are going to create space for 800 vertices and then
+          </li><li>
+            
+            well, let's go through it. A little more.
+          </li><li>
+            
+            So here's a variable to keep track of the rectangles. And we're distinguishing between the first click so if it's the first click or getting starting a new rectangle if it's
+          </li><li>
+            
+            if it's not the first click, which means is the second click. Then we're finishing completing the rectangle
+          </li><li>
+            
+            and we're going to store the rectangle is an array
+          </li><li>
+            
+            so this is
+          </li><li>
+            
+            well some very well we'll just deal with the variables later.
+          </li><li>
+            
+            So we have an array for colors and then our in our init function
+          </li><li>
+            
+            setting up the context and the color so we're doing a light gray as the fill color or loading our shaders and using that and then here I have the variables. So
+          </li><li>
+            
+            I have variables so it's a bit more readable as you go through for the GL commands. So now we're dealing with vertices. We have x and y so the so each vertex has two components
+          </li><li>
+            
+            as I've indicated here, component size is four. So a floating point number has four bytes, or 32 bits. So we create a buffer and we're going to bind to that buffer
+          </li><li>
+            
+            now
+          </li><li>
+            
+            the size we're going to allocate for that buffer is two times four times.
+          </li><li>
+            
+            That's not right. Two times four eight times 800 vertices. So we're going to allocate 64 for 6400.
+          </li><li>
+            
+            Locations
+          </li><li>
+            
+            bytes
+          </li><li>
+            
+            we're going to connect a position with the buffer and then we're gonna do the same here for a color buffer
+          </li><li>
+            
+            so here I am specifying the event handlers.
+          </li><li>
+            
+            Here I'm getting using the DOM to get the text area. I'm going to record some things there.
+          </li><li>
+            
+            So we're going to add a listener function for most down and we're going to attach it to the canvas so we don't care about most down events outside the canvas but if it's happens inside the canvas, then we're going to
+          </li><li>
+            
+            do this and so again, and get the bounding client rectangle for the canvas. And then so from our event, we get client x and y.
+          </li><li>
+            
+            So we subtract the x position from the left of the bounding box and y we subtract the top of the bounding box
+          </li><li>
+            
+            so event, client x and y will be in the range of
+          </li><li>
+            
+            the canvas size so we set it up to be 512 by 512. So that's what we're getting.
+          </li><li>
+            
+            So we're multiplying the x the relative x by two
+          </li><li>
+            
+            and we're divided by Canvas width. So we have numbers in the range of the canvas, multiply it by two. So now we have in the case of 512 by 512. We have a range zero to 1023. And then we're gonna divide here by 512.
+          </li><li>
+            
+            So then because we've multiplied by two
+          </li><li>
+            
+            so we've gotten values between zero and two. And we subtract. Minus we subtract one so then the range is minus one.
+          </li><li>
+            
+            To one.
+          </li><li>
+            
+            Does that make sense?
+          </li><li>
+            
+            So and we're flipping y, so we're not coming from the top left or going from the bottom left, when we're drawing
+          </li><li>
+            
+            so when we ever first click, we store the two points.
+          </li><li>
+            
+            Then we computed here
+          </li><li>
+            
+            in position zero of the array, and then said first click is a false so we're not we're done processing. The first click once we assign that first position in the rectangle array
+          </li><li>
+            
+            and then
+          </li><li>
+            
+            so for not on the first click, so or the second click we set it back to be
+          </li><li>
+            
+            first click and then we're dealing with
+          </li><li>
+            
+            the new point we're putting in position to the array and then we're filling in positions one and three.
+          </li><li>
+            
+            With combinations of those input points. So here I'm modifying the text content of the text area on the interface so I print them the rectangle the coordinates with two decimal places.
+          </li><li>
+            
+            Then here we're adding service originally, we set up this buffer to be 6400 bytes. Right 200 rectangles, each with four vertices, each vertex with x and y and each x, y value, taking four bytes. So we've allocate that block of memory and now we're going to add to it
+          </li><li>
+            
+            so we bind to the vertex buffer and then we're going to compute an offset. And the offset is the number of vertices so there's four vertices two components for each vertex so that's
+          </li><li>
+            
+            Yeah, so we have x and y so so num vertices is four. And there's two components each vertex. So there's eight components, per the rec, each rectangle and we have four bytes for each of them. So that's 32. So we need to store 32 bytes for each rectangle. So we start rectangles, zero so we have zero offset. And then for a second rectangle. We have a 32 or offsets, 32 and 64. Yeah, so we can see 32 Bytes times 200 equals the size that we've allocated. For our buffer.
+          </li><li>
+            
+            I should really test that we don't exceed the maximum number of triangles here
+          </li><li>
+            
+            I'll add that
+          </li><li>
+            
+            okay,
+          </li><li>
+            
+            so then we're going to do the color buffer.
+          </li><li>
+            
+            So
+          </li><li>
+            
+            we're assigning the same color to each vertex
+          </li><li>
+            
+            so
+          </li><li>
+            
+            I just have a loop to repeat the values for each vertex
+          </li><li>
+            
+            and then
+          </li><li>
+            
+            so the offset for colors
+          </li><li>
+            
+            for vertices.
+          </li><li>
+            
+            Each vertex needs four, four components because we're dealing with RGB A. So that's 16. times is four. That's 64. So we need 64. bytes to specify the Virtus, vertex colors
+          </li><li>
+            
+            so the color I'm outputting I'm just recording one of the colors since they're the same
+          </li><li>
+            
+            and then
+          </li><li>
+            
+            at the end of the loop, we add increment rectangles. So we're dealing with the next rectangle
+          </li><li>
+            
+            and then, when we render.
+          </li><li>
+            
+            We're doing a triangle fan so we're going through the number of rectangles.
+          </li><li>
+            
+            So this is this the primitive redrawing and then the starting point and
+          </li><li>
+            
+            and the number we're drawing it that from that starting Point
+          </li><li>
+            
+            So
+          </li><li>
+            
+            I just want to talk about triangles. Oh boy sorry
+          </li><li>
+            
+            no one started closing books which I thought was a generally approved sign for
+          </li><li>
+            
+            this makes sense.
+          </li><li>
+            
+            I invite you to look at the code for cat ones. And then look at my version and see if you have
+          </li><li>
+            
+            if you think I've done a better and improved the readability and if there are things that could still be improved
+          </li><li>
+            
+            anyway, so
+          </li><li>
+            
+            this gives you have a sense of how to use.
+          </li><li>
+            
+            Events for input.
+          </li><li>
+            
+            So things you might explore, what about assigning different colors to different vertices and what does that look like? I don't want to keep o'clock or so
+          </li><li>
+            
+            thank you. Very much for today.
+          </li><li>
+            
+            Any questions before
+          </li><li>
+            
+            Thank you very much for today.
+          </li><li>
+            
+            So we're not
+          </li><li>
+            
+            we don't meet on Friday. Friday is the
+          </li><li>
+            
+            national truth and
+          </li><li>
+            
+            reconciliation. the
+          </li><li>
+            
+            opportunity to look at history
+          </li><li>
+            
+            So,
+          </li><li>
+            
+            have a good weekend and Monday. I'll get website updated. Have a look at chapter four.
+          </li><li>
+            
+            have a good weekend and Monday. I'll get website updated. Have a look at chapter four.
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>The most important thing that I learned today is how to work with animations and how to manipulate interaction to produce different colors to geometrical objects.
+    </li><li>It was good to know how to know when user interacts with the application
+    </li><li>Today I learnt about User interaction with system( original and modern approach), input rectangles code and learnt about rotation of triangles code.
+    </li><li>The most important thing that I learned was original and modern approach to how user interact with the application plus how to rotate a triangle around it&#039;s center in three-day steps.
+    </li><li>Today the code was improved was improved as compared to the last lecture. I got to know about users interaction with the help of callbacks.
+    </li><li>the most important thing which I learned today was how to rotate the Sierpinski triangle , how to trace the axis point for that and then I also tried to do it in 3D which didn&#039;t work because it will have another formula.
+    </li><li>The original approach of using loop inside of polling fir interaction.
+    </li><li>all about vertexes, creating triangles and filling colours
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>When trying to rotate the 2D Triangle it was so interesting for me and I was wondering how we can rotate the 3D sierpensli Triangle. I should be fascinating too.
+    </li><li>Modern approach for interaction, I was about to fill &quot;listener&quot; in the blanket but the answer was &quot;callback&quot;, because I was doing mobile development and normally have been using events and listener. Furthermore, rotating the triangle based on different xis is quit interesting.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/08_Wed-27-Sep-2023.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

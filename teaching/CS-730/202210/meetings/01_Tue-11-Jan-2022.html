@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-730/202210/meetings/01_Tue-11-Jan-2022.html" />
+    
+    <title>Mtg 01 &bull; CS-730 (202210) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 01 &bull; CS-730 (202210) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/01_Tue-11-Jan-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/",
+        
+          "name": "CS 730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/",
+        
+          "name": "202210"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/01_Tue-11-Jan-2022.html",
+        
+          "name": "01 (Tue-11-Jan-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/">
+        CS 730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/">
+        202210
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      01 (Tue-11-Jan-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 1/24: Tue-11-Jan-2022
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a role="button" class="btn btn-primary disabled">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="02_Thu-13-Jan-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=8490">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_01" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_01" data-bs-slide-to="0" class="active"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/icha5afjjslv926/01%20-%20breakout_question.png?dl=0" alt="01 - breakout_question.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_01" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_01" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Good afternoon, everyone.
+          </li><li>
+            
+            Good afternoon.
+          </li><li>
+            
+            Good.
+          </li><li>
+            
+            So it's all great if you want to turn your cameras on for a bit anyway say hello. My resolution, my shirt is a bit too noisy and seeing a lot of interference patterns going on.
+          </li><li>
+            
+            And also.
+          </li><li>
+            
+            hi.
+          </li><li>
+            
+            How you doing today.
+          </li><li>
+            
+            Great how are you.
+          </li><li>
+            
+            pretty good thanks it's been a bit of a hectic day getting things sorted out. yeah. But. we'll get through it all together. So. This is an online class, even though we're not. We don't have any other options at the beginning of the Semester there. So we're going to be using zoom and you our courses. So when we have our or synchronous meetings at this time Tuesdays and Thursdays. Throughout the Semester. here's something that will help me and and you as well, I hope. So i'm going to ask you to rename your. yourselves. To the the for me the name you'd like others to call you and then in parentheses. what's your your vagina email address ID so the part that goes before the at your giant.ca and your email address. So that will help me. Well, I won't help me with my pronunciation you can you can help me with that. But it will help to identify you. And what i'm going to do over the Semester is each day i'm going to record the audio. And I didn't mean to have a waiting room set up by I must have. missed clicking on that option to. be selected so i'll fix that for next time. and So i'm going to record the audio. And i'm going to have a transcript. So. If your net if you rename it. If you put in parentheses just your user ID you don't need the are you regina.ca part. that'll help me identify you. In. The chat and in the transcript.
+          </li><li>
+            
+            Of the audio from zoom.
+          </li><li>
+            
+            So all these things together will just help me. keep track of. participation. So all together all the participation. will be worth 10% of your mark. So I don't have the syllabus on your courses yet. But i'll have it sorted out by Thursday so we'll talk about the details of it, then. Okay. So for those. Who don't know me i'm my name is Darrell Epping professor in computer science. event here i'm well, I was born and raised in China, I went to Simon fraser University on the west coast of Canada for my PhD and then i've been back at the university faculty. will be 21 years. In July. So my wife and I have a pandemic puppy who's just what a year just over a year old. And two kids one of them is energized and the other one is living in Riga, Latvia is dancing with the. National opera and ballet come. Company of lot PA. So. We certainly certainly appreciate being able to. Use facetime and whatsapp to keep in touch with them see his picture on the screen. And kinda time. anyway. let's see how we doing. So people are introducing themselves that's good. So what I wanted to say first of all, is or ask is a way of introduction. So how many people are in Regina. Right now, you raise. So in on your courses pardon me in zoom. there's a reactions. Do you have those reactions button on your zoom client. So if you. If you there's a button to raise your hand. Okay, so first question is. Good today. Okay, so two. One me and the ash kumar. So i'm. Sorry. I realized I didn't send I send it to the waiting room, my comment, we ask that again raise your hand if you're in saskatchewan. If any more takers one more. Okay. Now you can put those hands down. If anyone's. If you're in Canada. I realize that if you're in saskatchewan you're also in Canada. But that's no men to ask if you're elsewhere in Canada. Direct a good question or. Okay, so by my calculation, so we had three people in saskatchewan and now I have mine outside of Canada. So that leaves a couple of people who haven't replied. If you haven't replied, can you. If you haven't been able to raise your hand, can you. Type in the chat a message. If you didn't raise your hand for the other earlier questions. So if you weren't able to raise your hand. I invite you to. rate a. Quick message in the chat. Okay. So. So thank you for your participation in that. Okay let's move on to. i'm going to share my screen no show you the are you are courses web page and give you a little bit of an introduction to that. So you can put your hands down, if you like. Okay, so here, I have started on. web page for the class and we'll talk about in more detail. On Thursday. So I have. office hours from 230 to 330 on Tuesdays and Thursdays. office hours from 230 to 330 on Tuesdays and Thursdays. on Tuesdays and Thursdays and you can find me at this zoom office link so we're in the middle class now so that's not good. very helpful but later on, if you want to find me in. My office that's the link. And here's so under meetings here is our. zoom meeting link that will bring us to this meeting on Tuesdays and Thursdays. And i'll change the settings so that doesn't require you to wait in the waiting room. So I have a list of meetings here for the Semester. I have a feeling I need to fix the html there but. Some of the links are not working right now we'll fix that today. we're on our first meeting here. So i'd like to practice of keeping attendance for the meetings. So you can record your your own attendance. My screen is i'm on a laptop and it's not big enough to. Okay. So. As the instructor i'm going to give you a password for the attendance. To the chat. Okay, so. Okay, so. I mentioned.
+          </li><li>
+            
+            The.
+          </li><li>
+            
+            So we have a plan for. Each day for each each meeting will have a plan the things will go through and links we can check out. don't wanna. go too far from this page. Okay. Here we go, so this is the calendar for today and in your courses so. Everything will be. Showing here. So here's the. The. So for every everything that's in your courses, you can go the activity from the calendar page. You Okay, with the attendance. Okay. So there are a couple of. So there are a couple of. and open till midnight central standard time. we're utc minus six. we're not. We don't go on daylight savings time so we're. we're the same. Time all year round. Although most every else in Canada and the states, I suppose. Changes on daylight savings time. So right now it's two hours to Vancouver one hour to Toronto. And then in summer it's two hours to Toronto, and one hour to Vancouver the time difference so. Anyway, Okay, then we. Get back to. Okay. So I have a class ricky. That i'm. would like to use to. share some. notes for what's going on. In class. So made an entry for each meeting. So here's familiar as wikis. Well, the your courses is not quite or it's actually it's more commonly known as moodle isn't really. As its own flavor wiki stuff. So this is can be done in html. The only thing that we're doing is we're putting. New pages in the wiki inside. pairs of brackets like a like you can see, with meetings here. If you want to see the source code. You have to click on the down arrow. The top left hand corner. And then. Using. code like that. So you can see how. it's just open bracket open bracket and then the name of the page and then close bracket close bracket. So i'm going to add page. A link to an existing page. Second. Meeting. OK. So now, you can see the link to go to the second page. So we can just. If we have pages. So you can see what files, we have. So we have pages for each of the meetings, then one called home and the other one for meetings. And so, if we just put the name of this these pages inside of Paris square brackets. Then we get a link to them. So i'm going to take this opportunity to put a link to go back to. we're starting point. So, because that page existed, we can just add. The link is there, like doing. Would. You use bankers and a traps. In html so it's a bit of shorthand. So if I want to add another a new page here. So this new page doesn't exist yet. So we can see when we're reviewing the page we get. The different color and and and in italics so if we click on that, then we have the opportunity, create a new page. And then. We have different formats available, but I think html is a reasonably good one. To use it's only the syntax with those double brackets are going to be new. Or, in addition to the html that we may or may not be familiar with. Anyway, it's not. intended to. Be too onerous to do this. So we can add headings, the a. different kinds of texts at different sizes of headings pre formatted or paragraph. All the bulleted list. or an order to this session state ordered list and then these are links. and add it's. images. And then, if you click on this down arrow you get a few more options. Just occasion and so, and you can look at this a bit more detail, if you like. added. So the idea is that this is a shared space where we can all collaborate on. Creating. Extended resources from our discussions. Class about what's going on and. The meetings and. Things things that are worthwhile. So if you have any questions feel free to ask me or somebody else in class about. The book them.
+          </li><li>
+            
+            Yes, Sir, I have a question. Sure yeah I don't want to know what is the video marks in the subject means, what is the village of examine assignments.
+          </li><li>
+            
+            Well, so i'll go through details. In detail on Thursday OK. OK, so the there'll be midterm and final exam. You, which will be the bulk of the marks they'll be a little bit of some marks or participation and then some assignments throughout the Semester. and that's how the marks will be yeah you know. we'll we'll break down.
+          </li><li>
+            
+            That Thank you.
+          </li><li>
+            
+            Okay.
+          </li><li>
+            
+            So many. groups here that everyone get an email from me about this. it's a class work. In the Group number. Okay. So here's a list of their of the four groups that i've made for the class. So we're going to use these groups for. breakout sessions during our zoom meetings. and Also i'm. going to assign one one group per meeting discern take charge of putting things into the wiki. Okay. So. So, following our meeting today i'm going to post the transcript the audio transcript. of our of our meeting. and also the chat transcript. and If there are pictures that screen captures I take during. The session then also post those So those are console be the raw materials. and So if they're come. there. So, so the ricky can be server. record after the fact that combines all the pieces. Raw materials and any. additional work that you might do to find exam links for examples and so forth. But I don't want this to to be a source of. Concern So if you have any questions about it, let me know as we go along. Okay. Anyway, so class class work group one. asked you to. Take that on says 24 meetings over the Semester so each group would have. Six meetings. To look to supervise take the lead on editing content for that meeting or a. So when we have breakout activities like will do today. Then, if vendor if everyone can keep track of their own breakout rooms. thoughts about things. Then you can post them under a heading for a breakout activity. Okay. And I should just point out that the the emails that I. sent to you were generated in the class work group forum so. If you go to this link. you'll only see the group that you're in. So you can communicate with group members, if you like. What post. Post anything it's your classwork group activities in here. So I can see them. But none of the other groups can. Okay. that's a help for communication. So I didn't say start out with. Happy Tuesday. that's my. Only day that we're all here together, no matter what the circumstances to call us for some celebration, I think. so happy Tuesday and also. it's more exciting with his classes, the first time this class 730 has been offered. so happy first. First ever class meeting at 730. See, if I have an appropriate action for. Video window. last one. We didn't show before because I didn't have the video panel on. There okay anyway. So this is a class about human computer interaction fundamentals. And so. it's good to. it's good to think about interfaces and our experience with the interfaces so i've given you a few different interfaces. So there's the organization of the material on my website, which we will talk about in more detail on Thursday. there's the ui courses page. Now that's organized. And then there's the zoom. client that you're using and connecting with. With all of us here. And whether or not you're able to raise your hand. In the interface to have. And then there's inside of your courses there's also the wiki. And editing. The particular flavor of the. Of the syntax for you our Court for moodle. So these are all different interfaces. and So we want to think think critically about. interfaces and the impact of interfaces and. What. things that we can. How we can analyze interfaces and design them. So that they're wide some of the pitfalls. That we. likely all in spirit experience too often. So i'm just going to show you my. I have a copy the textbook here. Is everyone does everyone have access to a copy of the textbook or whether it's in print or online.
+          </li><li>
+            
+            Okay.
+          </li><li>
+            
+            So I will. give you. Talk about that in more detail on. On Thursday. So there's a website for the book, let me show you that. Think it's going to yes okay they're going. To the has some interesting resources here. So here's another interface that we have. The website for the next book. The main textbook. Okay, so make sure this is like an hour. We put in the chat. The following. go on to our breakout session here. So I i'd like to give you the opportunity to respond to meetings. So, this would. count towards participation. So if you want like if a response to today's meeting which you can write a not more than 512 characters 100 words indicate. The type of response to making. Whether it's, the most important thing that you learned at the meeting. The most difficult thing for you understand in the meeting. Where the thing in the meeting about which you'd most like to know more. So that come becomes available at. The end of class. So it's a multiple choice for which which type of response. you're giving and then. And then space to enter the 512 characters. Okay, so we'll have one for each in meetings. Okay.
+          </li><li>
+            
+            whoa.whoa.
+          </li><li>
+            
+            So i'd like to do breakout room. Activity now. So let me first. read on the screen in big letters here, so we can. Does that make sense, can you see that all right. Okay. Can everyone see that all right on the screen. Anyone give me a. Yes, in the chat please.
+          </li><li>
+            
+            Okay.
+          </li><li>
+            
+            Well, you don't have to say, sir. not required. anyway. Thanks thanks for your response. So that's our breakout question, so let me go. Gregor room so i'm going to make for breakout rooms and i'm going to give you the chance to select your own. crew. Okay, so i'm going to open the rooms and then, if you if you're in class work one and choose a room line if you're in class work to choose to. If you're in. class work three twos Room three if you're in class record choose room for. Okay i'm going to open them, and if you have problems. getting into your room. Let me know no help okay. Okay, I think we're all back now from the breakout rooms. Is that a positive first experience. Hello. So, was it a positive experience.
+          </li><li>
+            
+            Yes, okay.
+          </li><li>
+            
+            So I apologize I started moving people around with then. I saw you jumping back and forth between groups. I started moving people around when I saw there's a couple groups one person in them. I should have left that alone. So I hope we will have more. Stronger attendance on Thursday. And will build from there. Any. Any questions or concerns that came up. Okay. So let's leave it there, for now, for today we'll see you on Thursday. So I invite you to in the meantime, have a look at the resources for Chapter one and the book website, the ID dash book website. Okay. Thanks, very much for today take care stay well. and we'll see you on Thursday and i'm going to an office are coming up shortly. Look at that other zoom link. If you have some questions. Also Thursday morning as well. So get going from there on Thursday so see you, then, if not before okay thanks again I.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            Yashkumar Patel  ymp351@gmail.com
+          </li><li>
+            
+            My name is Hoang Duc Cong - dhx496
+          </li><li>
+            
+            great sir
+          </li><li>
+            
+            Ayon Khan (akc381)
+          </li><li>
+            
+            my name is mozhgan badnava
+          </li><li>
+            
+            Harpreet Singh Chahal (HCD061)
+          </li><li>
+            
+            Micaiah Marcus - mm045
+          </li><li>
+            
+            Vaibhav Tripathi vtw819
+          </li><li>
+            
+            Tarun Bharatkumar Thakor (ttf681)
+          </li><li>
+            
+            ✋
+          </li><li>
+            
+            Antara Newaz (anc812)
+          </li><li>
+            
+            Romiben Jitendrabhai Patel (rpb642)
+          </li><li>
+            
+            Hussain Ahmed Wahid Ahmed Pirzada (hpn423)
+          </li><li>
+            
+            Raise your hand if you are in Saskatachewan
+          </li><li>
+            
+            Mehmood Ul Hasan Pirzada (mpr092)
+          </li><li>
+            
+            Riase your hand if you are in canada
+          </li><li>
+            
+            Raise your hand if you are elsewhere in Canada
+          </li><li>
+            
+            Raise your hand if you are not in Canada
+          </li><li>
+            
+            I am not in Canada🤚
+          </li><li>
+            
+            Anyone not able to “raise hand”? Please type in chat
+          </li><li>
+            
+            I am in Canada
+          </li><li>
+            
+            I am not in Canada currently
+          </li><li>
+            
+            Student password
+          </li><li>
+            
+            done sir
+          </li><li>
+            
+            Student password
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Yes sir
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes sir
+          </li><li>
+            
+            yes sir
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            👏🏻
+          </li><li>
+            
+            Not yet sir
+          </li><li>
+            
+            Not yet sir
+          </li><li>
+            
+            http://www.id-book.com/
+          </li><li>
+            
+            yes sir
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Those still in the main room — can I help get you into your breakout rooms?
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            We can hear you
+          </li><li>
+            
+            yeah, couldn't figure out initially
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            ok sir
+          </li><li>
+            
+            Thank you very much
+          </li><li>
+            
+            thank you
+          </li><li>
+            
+            thank you
+          </li><li>
+            
+            Thank you. See you.
+          </li><li>
+            
+            Thank you sir 😇
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Most importantly I understood how to use the dashboard and activities on the UR Courses portal , mainly about the wiki and resources available.
+    </li><li>Thank you so much for the first class meeting. I learned basic elements of UR courses such as attendance, class wiki, etc. Sometimes, I did not hear very clearly and I think it&#039;s my own problem in listening. I hope I can improve it in the next meetings and there are a lot of things ahead. Thank you again ^^
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>I participated in a break-out session on Zoom in today&#039;s meeting with my fellow classmates. First, we introduced ourselves and discussed certain things related to the good and bad interfaces from our own experiences. The purpose of this session was to come up with answers to some interesting questions. One of the questions was to identify some features that are common to both good and bad interfaces. I found this question a bit tricky to answer. So, I would like to know more about this.
+    </li><li>Today I faced trouble figuring out what to do after entering the classroom while we were assigned a task, which was given near the end of the class. Maybe this happened because I was overwhelmed as this was the very first class. I would like to know more about how to convey work in assigned classroom.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/01_Tue-11-Jan-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

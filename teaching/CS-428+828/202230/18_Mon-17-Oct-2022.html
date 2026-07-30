@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202230/18_Mon-17-Oct-2022.html" />
+    
+    <title>Mtg 18 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 18 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/18_Mon-17-Oct-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/",
+        
+          "name": "202230"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/18_Mon-17-Oct-2022.html",
+        
+          "name": "18 (Mon-17-Oct-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202230/">
+        202230
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      18 (Mon-17-Oct-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 18/36: Mon-17-Oct-2022
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="17_Fri-14-Oct-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="19_Wed-19-Oct-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I encountered
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+          Administration
+        </h4>
+        <ul><li>
+                Happy Monday
+              </li><li>
+                <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1900809&amp;view=1">
+                  Attendance
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1665986400&amp;course=24538">
+                  Class calendar for today
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=24538">
+                  Upcoming events
+                </a>
+              </li></ul><h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_18" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_18" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_18" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_18" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_18" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_18" data-bs-slide-to="4"></li>
+      <li data-bs-target="#mtg_pix_18" data-bs-slide-to="5"></li>
+      <li data-bs-target="#mtg_pix_18" data-bs-slide-to="6"></li>
+      <li data-bs-target="#mtg_pix_18" data-bs-slide-to="7"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/j6cheim893fmkwu/18%20-%20img-1.png?dl=0" alt="18 - img-1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/r625pun1rppx0lu/18%20-%20img-2.png?dl=0" alt="18 - img-2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/3w67gy7jrkvi4xw/18%20-%20img-3.png?dl=0" alt="18 - img-3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/oc0rltuuou5xgro/18%20-%20img-4.png?dl=0" alt="18 - img-4.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/81pvkzh27zwh9yb/18%20-%20img-5.png?dl=0" alt="18 - img-5.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/yelvwuct03h6dk6/18%20-%20img-6.png?dl=0" alt="18 - img-6.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/3rwl4otgqqadfme/18%20-%20img-7.png?dl=0" alt="18 - img-7.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/iywuy1atq3zojf2/18%20-%20img-8.png?dl=0" alt="18 - img-8.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_18" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_18" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            So this is one thing about consistency I can just click a box to say no password once it's set up a password an ethical believe them all anyway so there's that if you're interested and being benefited display
+          </li><li>
+            
+            doesn't feel like a four to eight lecture unless I started off by suggesting a cure
+          </li><li>
+            
+            Okay, so maybe anyone have other ideas about an interface is like blank any ideas
+          </li><li>
+            
+            what's important to you? Over the budget for two year old like it should be straightforward
+          </li><li>
+            
+            Yes, I'm still trying to say that this interface is like,
+          </li><li>
+            
+            positive for 200 Okay
+          </li><li>
+            
+            thank you any other
+          </li><li>
+            
+            degree they can be
+          </li><li>
+            
+            a bridge Any other thoughts in the back evening? was supposed to be a railing but now it kind of
+          </li><li>
+            
+            like the rage surface, but anyway so, what if this is like a diagram we've drawn before so, how would you describe the concepts Who did we discussed earlier? In terms of a bridge but perhaps Okay, so yeah, there's execution well maybe. Does that look like golf, like bottom a very deep pit that we're crossing
+          </li><li>
+            
+            execution to Oh,
+          </li><li>
+            
+            thank you very much so, we're gonna go this way deciding how to take our or wet and translate into So, we say I want to do something we have a goal that we want to accomplish. So that's a restart and then we can cross the bridge
+          </li><li>
+            
+            and end up with commands we can execute on the interface so once we execute the commands we can interpret the state of the system after the commands or we might also interpret the state before we decide the next thing that commands might say it looks like I met this. I'm in this situation and I want to get into certain situations so I'm going to execute these commands
+          </li><li>
+            
+            so there might be some evaluation or back off as
+          </li><li>
+            
+            well. There's another it looks like it's only one but there's two here and then we get them and that this you interpret the state of the system and we evaluate it and we understand them come to understand the impact of our commands or
+          </li><li>
+            
+            the state of the interface on which we're going to execute the commands. So Umbridge could be very small. It could be very sturdy.
+          </li><li>
+            
+            Or it could be very long and very rickety. Like in those movies where it's a rope, bridge and flanks are falling out so in that case so we might think of the interface as being well, we can think about the quality of the bridge I guess as a way that we're crossing. We're dealing with the Gulf of execution and evaluation. So if it's an easy journey across the bridge then that's another way to say it's a good interface
+          </li><li>
+            
+            is the bridge metaphor to our discussion of the costs of execution and evaluation Okay, good to know So before we talk about the midterm questions for the project.
+          </li><li>
+            
+            For the submission of it says I don't have a group so does the group members just completely blind or do we submit a paper PDF but just
+          </li><li>
+            
+            know if people don't have to do anything
+          </li><li>
+            
+            I mean, they've worked hard. Ideally, they've worked with us and document billing one person needs to submit it I think that maybe fix a date for this
+          </li><li>
+            
+            website is now looking at more fathers policy thing for the radio.
+          </li><li>
+            
+            networks they just have to press environments. Seeing not teaching
+          </li><li>
+            
+            so when you click the link on your courses where it says policy, that one just says that this page doesn't exist. But if you go into your website and then work it works,
+          </li><li>
+            
+            okay. I will fix broken links if you find broken links let me know. So the idea is to divide 100 points. So if this far and you're in the group, and everything's fine give everybody 25 And a thumbs up so I have a little JavaScript there on that page.
+          </li><li>
+            
+            To format it for your online texts. Okay. I apologize. I've not kept to my mind so I'll be right that last one on the other side. So it's going to be in class on Friday. Three minutes application All right
+          </li><li>
+            
+            cool. Just like you cannot read and write short answer MCQ
+          </li><li>
+            
+            and medium length application of ideas that look like okay looks like okay so what are some good topics for questions closed book
+          </li><li>
+            
+            empathy maps I didn't catch that. Attendance.
+          </li><li>
+            
+            You this Canada not to see is to be kept separate and can be understood as two in binary should that be a question in the exam gonna have lots of pictures today. On. Design equity versus appetit. trade off
+          </li><li>
+            
+            trade offs so the first thing we talked about formative and summative evaluations remember that so in the last half of the class we'll talk about other kinds of evaluations that we can do
+          </li><li>
+            
+            going I remember I talked about is the midterm is a form of evaluation. So it gives you some indication of where you are in relation to the concepts for studying in class. And the final exam would be a summative evaluation. So did you do you have a good understanding of the concepts we've covered?
+          </li><li>
+            
+            So designing an interface do some formative evaluation to get ideas so we might ask people what they think they need even though they're not sure what they want.
+          </li><li>
+            
+            So we start with conversations and less you get an understanding of what needs to be built and then are we on the right track? towards? So there's a good example. Sam the textbook was also in Nielsen Norman Group, web pages vote to golf execution and evaluation and Bluetooth controls on your Windows 10. Right people received under a version of Windows since training the Texas also online so that gets heuristics and the golf course of execution and evaluation anything else? More than 150
+          </li><li>
+            
+            So my goal is not cause you to cramp cramps in your and so I'm gonna would say less than 10 Questions writing. The midterm exam will be like walk your walk in the park. So watch my wife and I watched Top Gun Maverick on the weekend anyone seen that? You say a long time ago. Well, this is the new one. Yeah, well it just it just became available for rent on Apple. Not too long ago. No, it was released in May. Yeah. But yeah, but for a long time. You only could buy it for $25 and not rent it. So anyway. So many people have seen Star Wars A New Hope
+          </li><li>
+            
+            so people who have seen both movies who see recognizes some similarities between the two. Star Wars the first Star Wars and a lot of second talk and movie. We were very, very similar. So that discussion came up, point comes up thinking about a metaphor for the midterm exam. Saying it's like hitting the exhaust fan on the desk that that's a good that's not an accurate that wouldn't be a good metaphor to describe the exam. But it would not be correct. It's not a good metaphor because it's not I'm not trying to make it impossible for the target. So let me throw it open to your suggestions for two minutes. Here. What's what would be a metaphor for the midterm you would like
+          </li><li>
+            
+            to be true for the exam. Maybe I should put that on the exam okay think about that we can maybe touch on at the beginning of class on Wednesday. Okay, any final questions or concerns for today? Thank you for today we'll see you on Wednesday right question about the group.
+          </li><li>
+            
+            to be true for the exam. Maybe I should put that on the exam okay think about that we can maybe touch on at the beginning of class on Wednesday. Okay, any final questions or concerns for today? Thank you for today we'll see you on Wednesday right question about the group.
+          </li></ul>
+    
+  
+    
+  <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>The most important thing that the midterm exam and the topics of the midterm exam has been discussed today. The reference book chapter 1 to chapter 4 and the class discussion topics like Norman door, Marvell ball answering, gulf execution and evaluation and so on. So the preparation for the midterm exam is important.
+    </li><li>Today we learned that the interface could be a metaphor for a bridge which is used so a user can accomplish a task. Dr. Hepting also provided info about midterm and what to expect. It will be from chapter 1 - 4 and we have a time limit of 50 min.
+    </li><li>The most important thing I have gone through today is about midterm exam, the question pattern and about the syllabus.
+    </li><li>Today, I learned the terms formative and summative evaluation.  Apparently, this had been talked about on the first day, but I do not recall discussing these terms, although it could have been because the microphone hadn&#039;t been working so I just didn&#039;t hear anything.  In terms of agile programming, formative evaluation seems much more important.
+    </li><li>To read chapters 1-4 for the midterm
+    </li><li>In today&#039;s Lecture we discuss about Why interface is joke. Professors ask us to give metaphor for an interface. The midterm is on 21 October. Duration is 50min and we discuss that what are the topic are coming in exam.
+    </li><li>Today we discussed more details about the midterm. We also looked at metaphors for user interfaces. I liked the metaphor of an interface is like a joke, if you have to explain it, it isn’t good. Like a joke, an interface should be easy to understand without having it explained to you.
+    </li><li>Not all students are good at writing or creating exam questions. Also, there are some that have no desire to.
+    </li><li>Discussed about mid-terms and other things.
+    </li><li>Today i understood that an interface could be a metaphor of a bridge, wherein the bridge serves as means to accomplish the tasks that the user wants to do. The river under the bridge and the distance between the 2 ends of the brudge could be seen as the gulf of evaluation and execution. The bridge could be either sturdy/ weak/ built completely or partially, indicative of the way in which a typical interface would function.
+    </li><li>In today&#039;s class we talked about the midterm and what we are going to cover for it. We also talked about the project due date and what&#039;s needed to be handed in tonight. Dr. Hepting told us about the topics and material which will be needed for our midterm exam on Friday.
+    </li><li>The most important thing I learned today was the metaphors we discussed in preparation for the midterm. It is not quite easy to find metaphors, especially since imperfect metaphors can drive the user away from the intended purpose, rather than bringing him closer. For example, if designing for an OS, files and folders look similar, and hold different purposes.
+    </li><li>In today&#039;s class we learned how a bridge can be considered as a metaphor for an interface. An interface can be thought as a bridge between human and machines. If the bridge is short and sturdy, it means the interface is fairly easy to use. If the bridge is long, rickety and has a few missing planks, the  same analogy can be taken for an interface that is hard to navigate around and lacks user-friendliness.
+    </li><li>Today we discussed the midterm that will be on Friday. I am hoping some of the multiple choice are some of Dr. Hepting’s amazing jokes!
+    </li><li>The construction of the midterm. Part of today&#039;s discussion dealt with discussing the midterm for Friday&#039;s class. Even though it&#039;s obvious anything could be tested up to the midterm day it&#039;s nice to have some mental confirmation about the topics present and what the format for the exam looks like. Previous midterms were able to be run for 75 minutes while the class runs for 50 minutes so I&#039;m curious as to how that affects the exam as with a more constrained timeframe, the scope of questions has limitations.
+    </li><li>The most important thing I learned today is the topics for the midterm; topics such as Norman Doors, Empathy Maps, Marble Answering Machine, Metaphors, Usability, and more.
+    </li><li>Midterm information and review.
+    </li><li>The most important thing that I learned today is about what we should do in midterm.
+    </li><li>The most important thing that I learned in today&#039;s meeting is about the midterm such as the format of the exam and types of questions or topics it will ask because preparation is most important for the exam. Similarly to when you are building an interface design, you have to prepare, and evaluate what you want to have in the interface.
+    </li><li>I learned about the gulfs of execution and evaluation.
+    </li><li>Since the Midterm is approaching, so the most important thing for me is to get the required information about all the topics that has been covered so far in order to be able to attempt the questions in the midterm properly.  It would be better to do a little bit of research by going through those topics and plan accordingly.
+    </li><li>A good interface like Google does not require explanation on how to use it. The search engine is in the middle with popular features like Gmail and Image search options at the top right corner. As explained in class, a good metaphor for interface is a bridge that connects the user to the computer. The metaphorical bridge would be shorter and better built depending on the quality of the interface.
+    </li><li>What was on the midterm on Friday
+    </li><li>midterm
+    </li><li>In the 18th meeting, Daryl talked about the similarity between an interface and a joke :) If you have to explain it, it is not good. Then Dr. Hepting asked us to give metaphors for an interface. An interface is like a bridge between a person and a computer. An interface can be seen as the link connecting the worlds of execution and assessment. The bridge&#039;s quality can be viewed as the interface&#039;s quality. The interface is fairly simple to use if the bridge is compact and reliable.
+    </li><li>Today we discussed about a point made in our previous sessions that why is an interface like a joke? if there is a need to explain it then its not good. Furthermore, Dr Hepting asked us to give metaphors for an interface. We also went over the types of questions that could be asked in the exam.
+    </li><li>We mainly discuss about Mid-term exam. The bridge example for the gulfs between execution and evaluation is easy to understand. The shorter the bridge, the less gulfs between a user and a computer.
+    </li><li>In today&#039;s meeting we discussed the topics of the midterms. The midterm is going to be 50 minutes and consists of everything discussed in the class.
+    </li><li>Today we discussed about the project submission and midterm topics. We also learned about the midterm topics. Moreover, we discussed about interfaces and what they are like.
+    </li><li>Today in class we learned about the syllabus which will be covered in midterm exam.
+    </li><li>Interface is like joke, if you have to explain it then it is no good.
+    </li><li>I lerned today related to midterm quetions also we had what interface is like.Discussion forms are included with quetions and answers suggestion for midterms.
+    </li><li>Today we discussed about what type of questions will be asked in midterm like short answers,multiple choice,etc and what topics will be covered
+    </li><li>Today we learned about midterm. We discussed about the type of questions and topics that will be asked for midterm.
+    </li><li>Overview of topics covered till now and discussed few topics regarding saskpower presentation.
+    </li><li>started with &amp;quot;happy Monday,&amp;quot; discussed about the midterm questions and what type of questions might be expected in midterm tests, then asked us to give examples of  metaphors for an interface.
+    </li><li>Dear Prof. Hepting. Today first, you started by considering interfaces as a bridge and explained why it is like that. Then you discussed the midterm exam: The date, type of exam, and probable topics. Thanks
+    </li><li>Today&#039;s lecture was mostly focused on topics which will be included in midterm. It was nice to have idea of all the potential topics that can be asked in midterm. By this, a good summary could be formulated about what we have learnt so far.
+    </li><li>We discussed midterms today, and then we checked attendance
+    </li><li>today we discussed about the projects and the midterm. We also talked about the gulf concept and theory.
+    </li><li>In today&#039;s meeting, we discussed about the midterm and all the topics that would be covered in the midterm. We also discussed about the group project and the requirements for this project.
+    </li><li>Finding a similarity between the interface designs what things it can be compared to.. like as discussed in class &amp;quot;interface is like a joke -- if it has to be explained, it&#039;s not good&amp;quot;. This is kind of brain-storming activity where I can relate interfae and designs to so many other things that are around me.
+    </li><li>Listed and discovered already studied topics and discussed about rate my group.
+    </li><li>the most important thing that I learned is about the midterm topics and also the metaphor for the attendance. Based on example in class, We can consider an interface as a bridge between human and machine.  It can also be thought of as the bridge over gulfs of execution and evaluation. We can think about the quality of the bridge as the quality of the interface. If the bridge is small and sturdy, the interface is fairly easy to use. If the bridge is long and rickety with missing planks, this means that the
+    </li><li>The main task was to discuss the last questions of project 1 with the group and finish it
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>It is really hard to get the direction for how to study.
+    </li><li>The hardest thing to wrap my head around is the metaphor for the midterm exam, so I&#039;ll probably have to practice that at home
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>In today’s meeting we discussed about the interface, gulf curves, also discussed about the midterm questions.
+    </li><li>I would like to get more information about the trade offs topic and mental models.
+    </li><li>If previous midterms were 75 minutes long, and our midterm is only 50 minutes; how will we complete about 10 questions in this time since even for 75 minutes exam there were approx. 10 questions.
+    </li><li>About top gun
+    </li></ul>
+
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=wiki">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/18_Mon-17-Oct-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

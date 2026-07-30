@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-730/202210/meetings/17_Tue-15-Mar-2022.html" />
+    
+    <title>Mtg 17 &bull; CS-730 (202210) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 17 &bull; CS-730 (202210) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/17_Tue-15-Mar-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/",
+        
+          "name": "CS 730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/",
+        
+          "name": "202210"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/17_Tue-15-Mar-2022.html",
+        
+          "name": "17 (Tue-15-Mar-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/">
+        CS 730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/">
+        202210
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      17 (Tue-15-Mar-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 17/24: Tue-15-Mar-2022
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="16_Thu-10-Mar-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="18_Thu-17-Mar-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=8506">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Okay, so. anyway. What I noticed is that. When we spring ahead or never what else springs ahead and March. Then the shows that i'm interested in watching on TV. Come on an hour earlier, in general, so. I appreciate that, especially in my. it's my ears advance. Yes to four questions I can't tell which one you answer guest. I guess the idea is that we're saving daylight, the whole year around. Google is telling me. Japan, India and China are the only major industrialized countries that do not observe so far of daylight savings time. And i'm not sure about that. We have exhibits.org um. I don't know what that is. here's an interesting article titled Daylight Saving Time it's super unpopular. Washington Post. Here I should. share my screen. So it was very. i'm just reading this about. The time switch has been somewhat odd front page topic for years it's was. an odd front page topic here for years as well. But then person who. Newspaper sports editor who. kept, making it an issue. retired and and passed well. I don't know how much he passed away a few years ago. And it's been less less of a hot topic sense them. here's interesting tidbit the Russian scientists claim the risk of a heart attack jump 50% and the suicide rate climbed when the clocks changed. um. So I wanted to. First. they're actually. Let me go to our attendance piece and. Do that first. So there's lots of individual differences so. So, if you remember, I showed you this picture and I told you, the story about my. Warm coke. Zero from Thursday. So here's my call this number today. So. When I call the number. It seemed to be not. geared to consumers, but I persevered and they took my report of the warm coke zero. And what happened, so the first directing we do a website, I think. I remember it was my coke. So these Can you see the my coke.ca. And it redirects to this. My coke St aol.com. feels not sure. For customers with people who have vending machines or want to sell coke in their restaurant or. Somebody right away. Excuse me. Okay, so. i'm. Talking about accessibility. Any questions. Just Mike came on inadvertently. Diverse diversity equity inclusion and accessibility, important. So I want to. start off by looking at the Web consortiums web accessibility initiatives. and accessibility fundamentals. So here's a interesting. here's a quick video that introduces it. I think we can watch it together that's okay. Can you see that okay.
+          </li><li>
+            
+            hi.My name is shadi.i'm the accessibility strategy and technology specialist at wpc the World Wide Web consortium, and today i'd like to tell you about web accessibility, the web is, for many people, an essential part of daily life at work.at home.And on the road.web accessibility means that people with disabilities can use the web, equally, for example, somebody who cannot use their arms and uses a mouse stick to type.or someone who cannot hear well and uses captions to watch videos or someone who cannot see well and uses a screen reader.To read aloud what's on the screen accessibility has many benefits for example captions benefit anyone in allowed or in a quiet environment.and good color contrast works better, when there's glare also people with age related impairments, such as reduced dexterity benefit.In fact, everyone has a better user experience with an improved layout and design a lot of accessibility can be built into the underlying code of websites and applications web technologies from wpc such as html provide support for many accessibility features.For example.features, to provide text alternatives for images which are read aloud by screen readers and also use by search engines.Also headings labels and other code supports accessibility and improves the quality overall.Good authoring tools such as wikis content management systems and code editors help create accessible code.Either automatically or with input from the author.Also web browsers media players and Apps need to support accessibility features.wcc provides standards to help make the Web accessible, which are internationally recognized by governments and businesses most well known, is the web content accessibility guidelines wc ag.
+          </li><li>
+            
+            WCs also ISO standard 4500 and adopted in the European standard called E n 301549 it is built around four core principles first receivable, for example, so people can see the content or hear.
+          </li><li>
+            
+            operable, for example, so people can use the computer by typing or by voice.understandable, for example, so people get clear and simple language and robust, so people can use different assistive technologies.Besides wc ag wcc also provides the authoring tool access vt guide at AG, which defines requirements for content management systems code editors and other software.And the user agent accessibility guidelines you a defined requirements for web browsers and media players, there are over 1 billion people disabilities or around 15 to 20% of the population.
+          </li><li>
+            
+            The UN Convention on the Rights of Persons with Disabilities defines access to information, including the Web as a human rights.
+          </li><li>
+            
+            Most countries around the world have ratified this UN Convention and several have adopted binding policies to.
+          </li><li>
+            
+            Get regardless of any laws and regulations for implementing accessibility standards is essential for people with disabilities and useful for all. For more information on web accessibility and use it w.org slash w. Oh sorry about that I forgot my. wasn't plugged in. So this is a list of those principles. So there's one more. set of videos of it, maybe it's useful to watch it's only seven and a half minutes. So we'll try that and then we'll discuss. week, we have an ad you're working feel much smoother with monday.com work os this smooth.
+          </li><li>
+            
+            web accessibility perspectives video captions video isn't just about pictures it's also about sound without the audio you'd have to guess what this film is about.frustrating isn't it not knowing what's going on.that's the situation for everyone who can't hear.captions make videos accessible.Which is also handy for people who want to watch video in loud environments.or where you need to be very, very quiet.colors with good contrast.there's something about great design that allows it to go practically unnoticed.
+          </li><li>
+            
+            But it doesn't take much to make things confusing and frustrating choosing colors with poor contrast makes navigating reading and interacting a real pain. Good design means sufficient contrast between foreground and background colors that's not just text and images, but links icons and buttons. If it's important enough to be seen, needs to be clear, and this is essential that people with low contrast sensitivity which becomes more common, as we age with good colors websites and applications can be easier to use in more situations.
+          </li><li>
+            
+            Like in different lighting conditions.voice recognition imagine if you could only communicate with your family by writing.Sometimes it's just easier to speak.One of the advances of technology is voice recognition, whether it's searching the Web 19th century architecture dictating emails email.or controlling your navigation APP.Many people with physical disabilities rely on voice recognition to use the computer both order, but for that to happen websites and Apps needs to be properly coded.To answer voice recognition can help lots of other people with temporary limitations to like an injured arm face order, it could also prevent injuries becoming worse like RSI repetitive stress injuries all for people simply for invoice.text to speech, some people can't see the text on the screen fortunately computers can convert text to speech it's technology that many people who are blind have been relying on for years.But it's also important for many people with dyslexia and very useful for people with difficulty reading text.As well as some people who, just like to multitask.But for this to work websites and Apps have to be properly coded which has the added benefit of helping search engines index websites contents better.Clear layout and design.Poor layout can be very frustrating.And the same applies to the web good design involves good layout and that means a better user experience this includes clear headings navigation bars and consistent styling.
+          </li><li>
+            
+            Any web user will get frustrated with bad layout and design.
+          </li><li>
+            
+            Complex layouts also make finding information difficult or impossible for people with visual disabilities.And they are confusing for people with cognitive and learning disabilities who need clarity and consistency of the presentation by design also impacts, anyone who isn't particularly confident around computers.notifications and feedback.All the right gears can be put in motion the hands can be at the exact place, they need to be, but if you don't get the response that you're expecting you'll end up wondering if there's some sort of problem.it's the same on the web, without clear notifications and feedback people are quickly disoriented and confused.Especially error messages which are often complex and confusing.Yet, making them understandable is usually quite simple.Making websites and Apps predictable and understandable makes them accessible to people with cognitive and learning disabilities.And more usable for everyone, especially for people with lower computer skills.Large links buttons and controls trying to hit a small target requires lots of effort, many websites and applications try to thread the needle.But on the web, we can make areas for clicking and tapping larger and easier to use.Which is handy on mobile devices, especially when we might be moving around at the time.Which is critical for people with reduced dexterity.And customizable text what's right for you doesn't necessarily work for the next person.customization isn't always just a question of preference though sometimes it's a necessity.Being able to adjust the text is crucial for people with low vision and dyslexia.Properly coded websites and applications allow the text to be customized, for example, to change it sighs spacing font and colors without loss of functions or clarity.Understandable content, instead of saying to postulate a conceit more irksome the being addressed in sesquipedalian syntax is elemental and it is better to say being spoken to in unnecessarily long and complicated language is a pain.Yet many websites like structuring using headings lists and separation.or they use overly complex language jargon and unexplained acronyms.It makes them difficult and an appealing to us for many people, including non native speakers and makes them unusable for people with cognitive and learning disabilities.keyboard compatibility not being able to use your computer because your mouse doesn't work is frustrating.Many people use only the keyboard to navigate websites, either through preference or circumstance.
+          </li><li>
+            
+            Whether it's temporarily limited mobility, a permanent physical disability or simply a broken mouse, the result is the same.
+          </li><li>
+            
+            websites and Apps need to be operable by keyboard.web accessibility, essential for some useful for all.visit w three.org slash w Ai slash perspectives.
+          </li><li>
+            
+            Okay, so what I notice about, that is. perspectives will go. To the perspective videos like that we just started from. So that means that I posted. Just this part of it. So looking for standards. I came across. web experience toolkit it's done by the government of Canada. Okay, there we go I was gonna say I wasn't sure what the French acronym stood for, but there is what. You did experience. A oh. Look at. Those of you. Trying my French. Anyway, so you can go into the. So this is a github.io web page. And this seems to be quite up to date. it's lots of stuff here. No post, the link to that. Okay, so this is. Accessibility page. Construction strap which is. Mobile first. tool kit. framework. Was began at Twitter. But now it's. it's a solo project its own technology its own life here. So where w chg 2.1 is the web content accessibility guidelines. And you'll see. Currently version three point O is in draft. I want to also show you this. So section five weight is related to. American or us. requirements and so. Looking at. Those same four things that we talked about earlier, but in a different order. Diversity equity inclusion and accessibility. Interesting links here collectively. So. team working on an interface. Anyway, so we should. regularly we assess interface against successfully standards support equitable access. So that we can remove potential barriers. So design and development festival products. course you all here. Testing baseline. So this gives this. specific criteria so let's look at contrast. visual presentation of text and images of text as a contrast ratio of at least 4.5 to one. So test contrast with web aim color contrast checker let's try that. Try. sure. says how did. I get my. color from. web page tested. For the appropriate contrast. So this is. i'd say similar problem to that. pizza ordering web page. You know the you can do something on the web page. I know that I can. measure the contrast. But I don't know how to. make it work. So let's say we have a foreground color of yellow. Which is. How do we make yellow. Anyone. red and green, I think. So let's read. background color is white. So. There was once a set of signs, I think it was a classroom building. that's not important.
+          </li><li>
+            
+            well.
+          </li><li>
+            
+            done choosing to color codes. Information and no particular building one buildings color scheme was. Wait. On a yellow background, which. is really hard. To do so, you can see. 4.5 to one not close to that is 107. So we can do some market plus do structural markup. interactive components. and information about rules. And attributes. For screen readers and so on. So there's. preference for reduced motion. So with these additional resources. there's the web content accessibility guidelines 2.1 is the current current version of the standard. A one one why project. So you understand that abbreviation. So it starts with accessibility starts with the day ends with why, and there are 11 letters in between so that's why the 11. So if i'm looking for a way to verify my validate my html. i'm. I clicked on this link. with high hopes of being able to find. A way to evaluate my website. it's not clear how to do that. Anyway, I see that we're two minutes over time. Let me post a. link from bootstrap. chat. Okay, well, thank you very much for today. Take care and see you on Thursday.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            How are you today?
+          </li><li>
+            
+            All is well sir!
+          </li><li>
+            
+            HI sir good morning.fine
+          </li><li>
+            
+            Good Sir
+          </li><li>
+            
+            Good day
+          </li><li>
+            
+            good morning sir...fine...what about you sir?
+          </li><li>
+            
+            good sir
+          </li><li>
+            
+            In Regina, we are supposed to get rain and sun and snow and ice. For those of you on Daylight Savings Time, our meeting time has changed — Regina does not change times.
+          </li><li>
+            
+            yaaa
+          </li><li>
+            
+            I’m good - thanks. Our dog woke me up at 2:30 this morning to let him out. I would have liked those extra minutes of sleep :-)
+          </li><li>
+            
+            I got to know just today
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Is that good or bad or neither?
+          </li><li>
+            
+            or both?
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes to which? good, bad, neither, both?
+          </li><li>
+            
+            why all the provinces don't have daylights savings?
+          </li><li>
+            
+            I guess the idea is that we are saving daylight the whole year round :-) It is not only Saskatchewan that doesn’t switch. Though I don’t have a complete list.
+          </li><li>
+            
+            yaa sir ! Yukon,  some areas of British columbia
+          </li><li>
+            
+            earlier they were using
+          </li><li>
+            
+            I think its bad, due the problems waking up an hour early affects the sleep cycle.
+          </li><li>
+            
+            Bangladesh, Pakistan have different timezone
+          </li><li>
+            
+            Nigeria doesn’t practice daylight saving
+          </li><li>
+            
+            In  Bangladesh, we also do not have DST. Bangladesh switched to DST once in 2009.
+          </li><li>
+            
+            How can it cause suicide tho?
+          </li><li>
+            
+            I don’t know that it does - the author of this article seems skeptical.
+          </li><li>
+            
+            https://www.washingtonpost.com/world/2018/11/03/daylight-saving-time-is-super-unpopular-here-are-countries-trying-ditch-it/
+          </li><li>
+            
+            Student password
+          </li><li>
+            
+            Our brain doesn't accept everything smoothly... There are a few people , their brain doesn't believe in transition Because of practicing and following new time table they feel some mental trauma
+          </li><li>
+            
+            Aha!
+          </li><li>
+            
+            Yes, there are individual differences between us. Hard to talk about “normal” or “typical”.
+          </li><li>
+            
+            That is why equity, diversity, inclusion, accessibility are important for society and with technology especially
+          </li><li>
+            
+            First an update on my warm coke zero.
+          </li><li>
+            
+            Yes I have the full picture explaining the or death part. 🙂
+          </li><li>
+            
+            Sir! do you mix coke with something?
+          </li><li>
+            
+            not during the day!
+          </li><li>
+            
+            I occasionally have a rum and coke (but not coke zero). How about you?
+          </li><li>
+            
+            oooo I see
+          </li><li>
+            
+            Yes! I also don't prefer
+          </li><li>
+            
+            global website
+          </li><li>
+            
+            mycoke.ca — not customer-facing
+          </li><li>
+            
+            I will bring you one old monk(indian rum) cantt. edition.
+          </li><li>
+            
+            I spoke with someone almost immediately and they asked me about the location — and address: 3737 Wisconsin Parkway! Which I corrected . They pronounced Regina correctly (Reej-eye-na)
+          </li><li>
+            
+            So I guessed that they were in Toronto, not somewhere in the USA.
+          </li><li>
+            
+            They thanked me for my report but they didn’t offer me a coupon (and I didn’t ask)
+          </li><li>
+            
+            okkay
+          </li><li>
+            
+            Interacting via the phone was pleasant enough. I can only suggest that it might be nice to have a way to encode the the
+          </li><li>
+            
+            “asset number” in a QR code as we discussed last day…
+          </li><li>
+            
+            Yes, agreed
+          </li><li>
+            
+            It seems https://mycokedsdol.force.com/ has a contact form. But for inquiries. Not for report.
+          </li><li>
+            
+            Why is diversity, equity, inclusion, accessibility important for HCI?
+          </li><li>
+            
+            absolutely
+          </li><li>
+            
+            volume OK?
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            https://www.w3.org/WAI/videos/standards-and-benefits/
+          </li><li>
+            
+            https://www.w3.org/WAI/
+          </li><li>
+            
+            sir can we have the link of this article?
+          </li><li>
+            
+            *website
+          </li><li>
+            
+            https://www.section508.gov/manage/deia-guidance/
+          </li><li>
+            
+            https://getbootstrap.com/docs/5.0/getting-started/accessibility/
+          </li><li>
+            
+            Thank you sir!!
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            thank you
+          </li><li>
+            
+            thanks sir , you too take care
+          </li><li>
+            
+            thank sir bye
+          </li><li>
+            
+            thanks
+          </li><li>
+            
+            thank you
+          </li><li>
+            
+            have a good day - see you next meeting!
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>It was a good discussion on the behaviour of the website design and responsiveness for good UI.
+    </li><li>Today, we started the meeting by discussing why certain places do not have daylight saving times. We also looked at some articles to understand what people think of it. Later, we discussed the importance of diversity, equity, inclusion, accessibility in the HCI.
+    </li><li>diversity, equity, inclusion and accessibility are very important for HCI
+    </li><li>Is how to design for the feedback for the coke dispenser machine
+    </li><li>How design works in real world i leran today many things about designing is connected with real life people and made life easier and smoothing
+    </li><li>In this meeting, I have learned about the accessibility and how it is crucial in Interfaces especially for people with disabilities.
+    </li><li>In this meeting, we discussed accessibility and how websites are designed so that websites can be used by a variety of people as possible.
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>hi sir, the most difficult thing for me to understand are about accessibility.it has many advanteges.also we are talking about coke,daylight saving.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>In today&#039;s session we watched video on Accessibility and its features and learnt more on this topic.
+    </li><li>Sir! If some more examples of same type will be there. I would be able to understand the topic deeply. Sometimes I get confused when the class is over.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/17_Tue-15-Mar-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

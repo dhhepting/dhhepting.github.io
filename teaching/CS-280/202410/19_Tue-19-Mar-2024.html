@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-280/202410/19_Tue-19-Mar-2024.html" />
+    
+    <title>Mtg 19 &bull; CS-280 (202410) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 19 &bull; CS-280 (202410) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/19_Tue-19-Mar-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/",
+        
+          "name": "CS 280"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/",
+        
+          "name": "202410"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/19_Tue-19-Mar-2024.html",
+        
+          "name": "Mtg 19 (Tue-19-Mar-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-280/">
+        CS 280
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-280/202410/">
+        202410
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 19 (Tue-19-Mar-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 19/26: Tue-19-Mar-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="18_Thu-14-Mar-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="20_Thu-21-Mar-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      History
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Tuesday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1740941&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1710828000&amp;course=31085" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=31085" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li>Part 2 of Skills Assessment assignment</li>
+  <li><a href="https://www.youtube.com/watch?v=B6rKUf9DWRI" target="_blank">Mother of All Demos VIDEO</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/The_Mother_of_All_Demos" target="_blank">Mother of All Demos</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/ELIZA" target="_blank">ELIZA</a></li>
+  <li><a href="https://www.ted.com/talks/kathy_kleiman_the_pioneering_women_who_helped_create_modern_computing" target="_blank">TEDx Video</a></li>
+  <li><a href="https://www.ted.com/talks/george_dyson_the_birth_of_the_computer" target="_blank">TED talk</a></li>
+  <li><a href="https://www.youtube.com/watch?v=oE2uls6iIEU" target="_blank">Grace Hopper (who spoke on campus in 1972) on Letterman</a></li>
+</ul>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2510543" target="_blank">Submit your response to this meeting before noon tomorrow</a></li>
+  <li><a href="https://humsci.stanford.edu/feature/study-finds-chatgpts-latest-bot-behaves-humans-only-better" target="_blank">Read this</a></li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2511236" target="_blank">Take quiz before the start of our next meeting</a></li>
+</ul>
+<h5><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2511236">ACTION: Take quiz before next meeting</a></h5><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=9246">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_19" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_19" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_19" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_19" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_19" data-bs-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/vptozxg1sitwodwv4uhp1/19-1.png?rlkey=jpsj8e7muh2l516cfv0qanzlt&amp;dl=0" alt="19 - 1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/ltzzpnhzk4zolf2d94g14/19-2.png?rlkey=r8ude74lbjydehhtfmdhso4gp&amp;dl=0" alt="19 - 2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/v1fy3ocia8yd4onmjd19p/19-3.png?rlkey=t1qea5ydej4lwhbx0sglgumow&amp;dl=0" alt="19 - 3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/h1fbtzkslcprfdt3yfgh6/19-4.png?rlkey=rinvm6oejac51kztzvvfegclt&amp;dl=0" alt="19 - 4.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_19" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_19" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<p class="text-muted">
+    No Transcripts
+  </p>-->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Today I learnt about history of computing.
+    </li><li>Human-Computer Interaction
+    </li><li>the mother of all demos was interesting
+    </li><li>I encountered the importance of empathy and mirroring in ELIZA's conversational design.
+    </li><li>How "THE MOTHER OF ALL DEMOS"  changed the world forever 
+    </li><li>There is a shorter hsitory of computers then i thought there was.
+    </li><li>Mother of all demos and ELIZA program
+    </li><li>Today we learned about motion of all lens
+    </li><li>That women were the first people to run code on the NEIAC the first working computer.
+    </li><li>CIPS meeting and topics and social dilemma and risks and rewards
+    </li><li>No, we just watched a show
+    </li><li>That the history of computing is largely attributed to white men when, in reality, there were many other contributors of diverse backgrounds including women and people of colour.
+    </li><li>The Mother of All Demos is a profound concept that i have encountered today.
+    </li><li>Women were part of the team that invented the first ENIAC Computers
+    </li><li>Getting to know about different milestones in computing history helps to understand the exponential growth of technology we talked about in other class.
+    </li><li>The contribution of Women in history of analog computer development and need to recognize their efforts.
+    </li><li>no
+    </li><li>Women were the first programmers
+    </li><li>The mother of all demos video
+    </li><li>We talked about computer history, Ted talk, etc..
+    </li><li>The concept of "bootstrapping," which involves each experimental transformation of a socio-technical system feeding back into the system itself, fostering continuous evolution and improvement.
+    </li><li>Today, I learned about "The Mother of all Demos" which was a live demo that introduced the key components of our digital world today: hypertext, video conferencing, word processing, mouse, etc. It's a pivotal moment in history that truly embodies the power of computers as tools for collaboration and augmentation of our collective intelligence. 
+    </li><li>The concept which we covered today was related to the human computer interaction 
+    </li><li>Problem associated with social dilemma 
+    </li><li>Something important that I encountered in this class is how the first computer programmers were women. Women who are never mentioned nor credited for their contribution to the creation of computation. I think this is important to know, not just so more women can have female role models to look up to, but also to pay more attention to how gender bias these industries are such as the computing industry.
+    </li><li>An important concept was talking about Ada Lovelace, credited as the first computer programmer, and then personally considering her impact on gender ethics in computer science. 
+    </li><li>the history of the computer
+    </li><li>Today I learned that many women were involved in the development and programming of computers during war times. 
+    </li><li>The beginnings of tech/computers
+    </li><li>I found it important to learn about the diversity that was there in the early days of computing. I think it’s crazy how a lot of that diversity was hidden from the public and it’s only coming out years later because of revisionist historians that are bringing recognition to these pioneers.
+    </li><li>Mother of all demos video
+    </li><li>nothing
+    </li><li>the lack of representation of women in the development of computing
+    </li><li>Document Editing
+    </li><li>.
+    </li><li>Mother of all demos 
+    </li><li>Mother of All Demos
+    </li><li>I encountered the concept of women's names not being mentioned in old computer creations, and how the lack of representation affects women today.
+    </li><li>An important perspective that I encountered today was the fact that such intricate machines that we have now stemmed from vacuum pipes and the whole world revolves around that technology. Having said that, about the women in STEM I knew women often did not get credit but it was really great to see Kathy shed light on the brilliant women who helped create the field that I am studying.
+    </li><li>not found anything that important 
+    </li><li>No
+    </li><li>compputer history
+    </li><li>Mother of all Demos , the beginning of computing 
+    </li><li>the history of how computer was originated 
+    </li><li>Eliza
+    </li><li>About ted talks
+    </li><li>The first “computers” were woman. Woman were the first people to program the computer. Their contribution to the first computer was “hidden” or “forgotten” in the past. Only recently those woman have gotten credit for their hard work and discovery.
+    </li><li>Computing history, demos of different hardware and software, role of women in building computers
+    </li><li>none
+    </li><li>The introduction of the NLS, and how it changed computers.
+    </li><li>THE GOOD THING TODAY I LEARNED WAS THE VIDEO ABOUT 1968 “Mother of All Demos” by SRI’s Doug Engelbart and Team
+    </li><li>The history of computer (as a whole)
+    </li><li>Today a important concept I encountered was the very first computer and showing how it operated and all the features 
+    </li><li>Today we started talking about the history about computing and we watched videos about the first programmers. I think its very important to learn about where computing came from and how far its come! It shows how much we have learned and developed. It shows that we can always improve. 
+    </li><li>Women in STEM being forgotten in history
+    </li><li>That it is important to study history, to know how far we have come, how much has changed, and how little has changed.
+    </li><li>History of Computing, Mother of All Demos, ELIZA
+    </li><li>I learned about the history of technology such as the computer and the nuclear bombs
+    </li><li>We watched a few videos and one of them was about the women coders that helped build one of the first computers.
+    </li><li>Milestones in Computer History
+    </li><li>ELIZA
+    </li><li>We discussed about assignment and about mother of all demos`
+    </li><li>We watched on a movie on social dilemma
+    </li><li>Everything
+    </li><li>discussed Part 2 of Skills Assessment assignment Mother of All Demos VIDEO Mother of All Demos ELIZA
+    </li><li>No
+    </li><li>Today was about the part 2 of the 1st assignment and also videos about the invention of mouse etc
+    </li><li>Yes
+    </li><li>I think it was about the assignment's grades and the next assignment for individuals skills assesment part 2.
+    </li><li>Some information regarding skill assignment part two.
+    </li><li>Today we learned about Eliza a natural learning processing program.
+    </li><li>We had members from the CSSS come to class today to talk about the upcoming elections. Today, we talked about the mother of all demos. The first public demonstration of the mouse, and modern computing. We also talked about ELIZA, which is an early computer language.  We also watched a TED Talk, which talked about the role of women in the computer society.
+    </li><li>No
+    </li><li>got to know about eliza which was the best part of today's class
+    </li><li>An important perspective today is that learning about history is important, as it makes aware of the figures behind many of the things we have today. In particular, we looked at the birth of the computer and ENIAC and the diversity of its team. One of the speakers of the TedTALK mentioned that we should be acknowledging this diversity show that anyone can be like them, and how anyone can go into STEM.
+    </li><li>Today we discussed about ELIZA
+    </li><li>The most important perspective I encountered today was the TED talk we watched on how women were hidden from the computer science field. Especially early on, women didn't get credit for the work they accomplished.
+    </li><li>Watch some movie and discuss skills assignment 
+    </li><li>We talked about Charles Babbage and why is it important to study history
+    </li><li>we watched a video in class today. there were a couple of computer jokes but i didnt understtand it.
+    </li><li>Today's important concept was breakthroughs in technology and its history. We discussed some names that were fundamental to the development of today's knowledge of technology (Charles Babbage and Ada Lovelace), and other less known names (ENIAC Women) that contributed to the early computers.
+    </li><li>Everything 
+    </li><li>ELZIA
+    </li><li>No
+    </li><li>Watched a video from the social dilemma and it speaks about how notifications can be positive as well as how it can be negative
+    </li><li>Mother of All Demos VIDEO
+    </li><li>I think about assignment.
+    </li><li>Mother of all Demos
+    </li><li>user
+    </li><li>Social dilemma
+    </li><li>Today we watched videos about the women who helped build the first computer. We also watched a video about the beginnings of computation during the manhattan project.
+    </li><li>The mother of All demos
+    </li><li>An important concept we talked about today in class was the history of computers, what are the milestones and when did we start keeping track. One milestone we talked about was ELIZA, how it paved the way for human-computer interactions. Not only did it pave the way of technology, it was also invented by women in stem; thus now, empowering other women to go into stem.
+    </li><li>Reviewing important inventions in technology. 
+    </li><li>Something important I came across in today's lecture was a piece of computing history that I did not previously know about.
+    </li><li>Mother of All Demos Video Notes (Map of all the milestones) - the mouse - 1968? Had 2 wheels perpendiculat to each other right, very inefficient could only move left right up and down - chording keyboard - learning curve was not small (kind of like going from a tricycle to a bicycle)
+    </li><li>not much
+    </li><li>Eliza
+    </li><li>Today’s lecture reminded me about Charles Babage and initial computing inventions.
+    </li><li>attention span is a price in and of itself 
+    </li><li>The history of computing and the untold stories behind computer engineering and computer science.
+    </li><li>I got to know about mother of demos today
+    </li><li>Regulations and laws are needed to protect users' privacy and data collection
+    </li><li>We watched video of mother of all demons
+    </li><li>more about ai 
+    </li><li>Today lecture was very interesting...
+    </li><li>History
+    </li><li>ELIZA is an early natural language processing computer program developed from 1964 to 1967[1] at MIT by Joseph Weizenbaum
+    </li><li>History of Computing
+    </li><li>I learnt a bit about computing history 
+    </li><li>Nothing 
+    </li><li>Nothing 
+    </li><li>video on mother of all demons
+    </li><li>Part 2 of Skills Assessment assignment
+    </li><li>Second part of assignment 
+    </li><li>The impact that technology and information has on new generations.
+    </li><li> 
+    </li><li>Assignment
+    </li><li>Assignment discussion 
+    </li><li>ELIZA
+    </li><li>Eliza
+    </li><li>The concept which we covered today was related to the human computer interaction 
+    </li><li>History of computing 
+    </li><li>I learned about the first time demonstration of fundamental personal computing was done, and how it was called the mother of all demos
+    </li><li>I learned about the history of computing, and watched several videos, one of them being "The Mother of All Demos".
+    </li><li>So many
+    </li><li>The concept of mother of all language and how it was a major landmark for computer demonstration and development. This demonstration's underlying concepts and technologies influenced both the Apple Macintosh and Microsoft Windows graphical user interface operating systems in the 1980s and 1990s.
+    </li><li>Today we watched different videos. one was regarding history of computing while one was a ted talk video explaining women's role in computing.
+    </li><li>An important concept I encountered today is various milestones in computing history and how different parts of the computer first started out. For example, I learned that the mouse only had 2 perpendicular wheels at the time of creation, and that the keyboard first started out as a chording keyboard that had a fairly large learning curve. As technology began to advance, more features and optimizations were added to the computer, which helped develop the modern computers we have today.
+    </li><li>The idea of "mother of all languages" and how it marked a significant turning point in the development and display of computers.  The fundamental ideas and technology of this demonstration affected the graphical user interface operating systems of Microsoft Windows and Apple Macintosh in the 1980s and 1990s.
+    </li><li>no
+    </li><li>The first public demonstration of the computer mouse and fundamentals of modern computing
+    </li><li>We discussed when computers were invented and wacthed a video on mother of all demos.
+    </li><li>Women in Computer History.
+    </li><li>About the risks
+    </li><li>I learned concepts about the women role in the development of computers
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>No, the lecture was helpful.
+    </li><li>no
+    </li><li>Had no trouble understanding things today.
+    </li><li>None
+    </li><li>Nothing was too difficult to understand in today's lecture. 
+    </li><li>No! 
+    </li><li>There wasn't anything hard to understand in the lecture.
+    </li><li>No
+    </li><li>no
+    </li><li>No, nothing of particular difficulty was discussed as we watched videos for most of the class.
+    </li><li>no
+    </li><li>Doing good so far
+    </li><li>no
+    </li><li>No
+    </li><li>Everything was very clear to me.
+    </li><li>no
+    </li><li>Not really, except for how old computers work
+    </li><li>everything was understandable
+    </li><li>No
+    </li><li>No, there wasn't anything particularly difficult to understand
+    </li><li>no it was an easy lecture
+    </li><li>No
+    </li><li>nope
+    </li><li>Nope!
+    </li><li>Nothing much everything was good so far 
+    </li><li>no
+    </li><li>not particularly 
+    </li><li>No
+    </li><li>.
+    </li><li>nothing
+    </li><li>no
+    </li><li>No.
+    </li><li>no
+    </li><li>Something that was difficult to understand was why those 6 women did not receive proper acknowledgement for their contributions. It took over 30 years for their work to be noticed and appreciated. How unfortunate.
+    </li><li>Nothing 
+    </li><li>the videos 
+    </li><li>no
+    </li><li>nothing 
+    </li><li>no
+    </li><li>No
+    </li><li>No
+    </li><li>none
+    </li><li>No
+    </li><li>NO I DID NOT FIND ANYTHING DIFFICULT
+    </li><li>Not really, everything was pretty clear
+    </li><li>Something difficult to understand was the written log about the bomb 
+    </li><li>No
+    </li><li>Why they came up with such a impractical design for the first mouse prototype. It makes you appreciate the modern mouse and the fact that we don't have to clean balls or deal with those roller wheels.
+    </li><li>No
+    </li><li>Nothing was difficult to understand today.
+    </li><li>No
+    </li><li>Why mother of all demos is such extraordinary 
+    </li><li>No
+    </li><li>NO
+    </li><li>no
+    </li><li>no
+    </li><li>No 
+    </li><li>No
+    </li><li>NO
+    </li><li>No
+    </li><li>There was nothing difficult to understand today.
+    </li><li>Not at all
+    </li><li>No
+    </li><li>Nothing 
+    </li><li>No, everything was straightforward and easy to understand.
+    </li><li>No
+    </li><li>no everything was explained very nicely and with clarity.
+    </li><li>Not really.
+    </li><li>No
+    </li><li>The wording on the quiz was a bit difficult to understand.
+    </li><li>No
+    </li><li>Not really 
+    </li><li>i did not understand the video at all
+    </li><li>Could you explain further how to do the second part of the Skills assignment?
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>no 
+    </li><li>Nup
+    </li><li>No 
+    </li><li>no
+    </li><li>No
+    </li><li>Not today.
+    </li><li>ELIZA was interesting but confusing too
+    </li><li>n/a
+    </li><li>Everything was super simple and easy to grasp. 
+    </li><li>Everything was clear in today's lecture
+    </li><li>No, there was not.
+    </li><li>no
+    </li><li>not particularly 
+    </li><li>No.
+    </li><li>I don’t think there was anything difficult to understand 
+    </li><li>No
+    </li><li>No 
+    </li><li>no
+    </li><li>No
+    </li><li>Nope 
+    </li><li>Not really
+    </li><li>No
+    </li><li>Nothing at all
+    </li><li>No 
+    </li><li>Nope
+    </li><li>no
+    </li><li>nope
+    </li><li>No
+    </li><li>No
+    </li><li> 
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>no it was an easy lecture so there was nothing difficult to understand
+    </li><li>Nope, everything was clear in today's lecture.
+    </li><li>No
+    </li><li>No
+    </li><li>no
+    </li><li>I was still a little confused about the ELIZA and what its purpose was in computing history.
+    </li><li>no
+    </li><li>No.
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>I would like to know more about ENIAC, the first programmable, electronic, general-purpose digital computer.
+    </li><li>more example and details about Human-Computer Interaction
+    </li><li>I thought the Mother of All Demos was pretty interesting, it would be cool to learn more of that.
+    </li><li>None
+    </li><li>Maybe dig deeper into ELIZA's historical significance and its impact on the development of natural language processing.
+    </li><li>I would like to know more about ELIZA
+    </li><li>I would hav eliked to know more about what could hav ebeen on those cards from bacardi.
+    </li><li>No
+    </li><li>no
+    </li><li>More about the history of the first computers designed for specific tasks.
+    </li><li>no
+    </li><li>Nothing comes to my mind, but maybe more about assignment 
+    </li><li>more depth about eliza would be great for future.
+    </li><li>The milestones in Computing History
+    </li><li>How the 6 female led program was made before any compilers or coding knowledge in general. Could be helpful in creating undiscovered  programs  or algorithms.
+    </li><li>Are all these women (referred to as computers) recognize equally?
+    </li><li>no
+    </li><li>I would like to know more about computer history.
+    </li><li>I want to learn about ELIZA
+    </li><li>No
+    </li><li>No, I was satisfied with what i learned today.
+    </li><li>No
+    </li><li>No
+    </li><li>nope
+    </li><li>I find the history of computers and coding to be very interesting so I always like to learn more about that!
+    </li><li>Uptil now Assignment 2 is going good but if i have any question will email you 
+    </li><li>no
+    </li><li>more on this subject would be interesring
+    </li><li>How do the digital ink strokes we leave behind while editing documents silently reveal more than we intend?  What to do about this?
+    </li><li>.
+    </li><li>Eliza programming language 
+    </li><li>yes... I want to know more about Eliza
+    </li><li>I woul'd like to know more about how the integral components of a computer differ today than in the past.
+    </li><li>no
+    </li><li>Nope
+    </li><li>more about the early computert stages 
+    </li><li>Maybe more about the ENIAC during the WW2
+    </li><li>everything is straight forward 
+    </li><li>It would definitely be enlightening to learn more about the people that have been "forgotten" in the development of the computer science field. The women who programmed the ENIAC, the topic brought up in class, had a crazy impact on the field of programming, and it would be awesome to see what other people have been forgotten in favour of the typical white dudes we see in the written records.
+    </li><li>no
+    </li><li>No
+    </li><li>No
+    </li><li>none
+    </li><li>No
+    </li><li>YES THERE IS NO TRANSCRIPT POSTED AND ALSO WANT TI KNOW ASSIGNMENT DETAILS 
+    </li><li>I would like to know more/ discover more of the journals of older computer scientist/engineers, as I found the one showed in class pretty funny
+    </li><li>I would like to know more about ELIZA and how it resembled an early AI before AI was even thought of 
+    </li><li>If there are any ways to recover lost history of women being involved in technological novation
+    </li><li>The concept of tricycle vs bicycle vs unicycle. The pros/cons of each was interesting to talk about.
+    </li><li>No
+    </li><li>The reason behind the video name "Mother of all Demos"
+    </li><li>About ELIZA
+    </li><li>I would like to know more about assignment part 2, how to do it on advance level
+    </li><li>NO
+    </li><li>no
+    </li><li>no
+    </li><li>Nope 
+    </li><li>Yes
+    </li><li>Final exam pattern
+    </li><li>No
+    </li><li>I would like to know more about the infographic society.
+    </li><li>Probably no
+    </li><li>No
+    </li><li>Sure
+    </li><li>I would like to learn more about women who made a difference in the computer science society.
+    </li><li>Yes
+    </li><li>Would love to know more about eliza as it was the most interesting thing i learned in today's class.
+    </li><li>Not really.
+    </li><li>I want to know more about the first computers that were built as well as the timeline of major technological breakthroughs in history. 
+    </li><li>No
+    </li><li>I would like to know more about ENIAC.
+    </li><li>No
+    </li><li>No
+    </li><li>I think it would be cool to see more evidence of women in early computing/programming!
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>no
+    </li><li>Nup
+    </li><li>Mother of all Demos 
+    </li><li>no
+    </li><li>No
+    </li><li>I was really interested in the history of the beginning of computers, and I would like to know more about it.
+    </li><li>I would love to know about ARPANET too
+    </li><li>n/a
+    </li><li>Nothing particular. 
+    </li><li>I would absolutely like to learn more about computing history; more particularly about the math behind early computing.
+    </li><li>I may watch more similar TED videos. 
+    </li><li>no
+    </li><li>about the skill assessment part 2
+    </li><li>I would like to know more about the history of inventions in computing.
+    </li><li>More stories about women and people of colour in the history of computing
+    </li><li>I would like to know more about mother of demos
+    </li><li>No
+    </li><li>I’ll would like to research more about that
+    </li><li>no
+    </li><li>I think the knowledge given by professor was sufficient for us.
+    </li><li>Not really
+    </li><li>The underlying concepts and technologies influenced both the Apple Macintosh and Microsoft Windows graphical user interface operating systems.
+    </li><li>No
+    </li><li>Nothing
+    </li><li>No
+    </li><li>No
+    </li><li>no
+    </li><li>nope
+    </li><li>The auto regerating automton
+    </li><li>None
+    </li><li>What strategy’s are to balance between safety and usability.
+    </li><li> 
+    </li><li>No
+    </li><li>No
+    </li><li>Not particularly 
+    </li><li>No
+    </li><li>The todays lecture was easy to understand and nothing else i want to know
+    </li><li>No, there is nothing else that I would like to know more about from today. 
+    </li><li>No
+    </li><li>I would like to know more about Eliza which is an early natural language processing computer program developed from 1964 to 1967 at MIT by Joseph Weizenbaum. It was created to explore communication between humans and machines, ELIZA simulated conversation by using a pattern matching and substitution methodology that gave users an illusion of understanding on the part of the program, but had no representation that could be considered really understanding what was being said by either party
+    </li><li>no
+    </li><li>I would like to learn more about how modern technology came to be and how it was invented (such as the touch screen, face ID recognition, virtual reality, etc.)
+    </li><li>no
+    </li><li>About ELIZA.
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/19_Tue-19-Mar-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

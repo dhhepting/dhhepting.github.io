@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+730/202410/08_Thu-01-Feb-2024.html" />
+    
+    <title>Mtg 8 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 8 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/08_Thu-01-Feb-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/",
+        
+          "name": "CS 428+730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/",
+        
+          "name": "202410"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/08_Thu-01-Feb-2024.html",
+        
+          "name": "Mtg 8 (Thu-01-Feb-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/">
+        CS 428+730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/202410/">
+        202410
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 8 (Thu-01-Feb-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 8/26: Thu-01-Feb-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="07_Tue-30-Jan-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="09_Tue-06-Feb-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Assignments
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Thursday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=2507968&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1706767200&amp;course=31184" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=31184" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Response to Responses
+  </h4>
+  <p>Response to responses</p>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li>Designing assignments
+    <ul>
+      <li><a href="https://urcourses.uregina.ca/course/view.php?id=31546">Experiment with UR Courses</a></li>
+    </ul>
+  </li>
+  <li>Revisiting and evaluating course features
+    <ul>
+      <li>is everything easy to find?</li>
+    </ul>
+  </li>
+  <li>Answers:
+    <ul>
+      <li>which gulf asks about system state? Evaluation</li>
+      <li>Don Norman’s (gold-plated) juicer doesn’t work well because it can’t be used for juicing (acid in juice would destroy finish</li>
+      <li>cognitive frameworks:
+        <ul>
+          <li>mental models</li>
+          <li>gulfs of execution and evaluation</li>
+          <li>information processing</li>
+          <li>distributed cognition</li>
+          <li>external cognition</li>
+          <li>embodied interaction</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<h4>
+    Summary
+  </h4>
+  <p>Summary</p>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2539826" target="_blank">Submit your response to this meeting before noon tomorrow</a></li>
+  <li>Read DoET Chapter 3 and IDFE Chapter 5</li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2539846" target="_blank">Take quiz before the start of our next meeting</a></li>
+</ul>
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Good morning.
+          </li><li>
+            
+            Good morning.
+          </li><li>
+            
+            Good morning.
+          </li><li>
+            
+            How are you today
+          </li><li>
+            
+            doing? Alright. I realized, once I got here, I forgot my phone
+          </li><li>
+            
+            hopefully. You don't have any two-step authentication you have to do.
+          </li><li>
+            
+            Funny you should mention that. So I have to authenticate myself for your courses. And then I thought, oh, I had these past, these passcode saved. and I tried to enter one, and I tried to enter 2 of them, and they weren't accepted. so I had to call it services it support. And he said, Oh, yes, we. They're only good for 24 h. Didn't mention that on the on the download screen that I had saved. anyway. So they gave me a new pass code for to day. So let's I was checking. That was going to be much more difficult than it was to get sorted out so happily. I didn't run into too many problems that way. So first day of February. Still, summer out, spring out today
+          </li><li>
+            
+            looks like it.
+          </li><li>
+            
+            Okay. I guess I'll share my screen here, and then we'll get into our agenda for today. Okay. okay, so I want to focus on assignments first so happy! First day of February. Remember, do your attendance that's up to you. And then the our upcoming events for class. So the quiz closed at 1130. Talk about the answers there! Velcro closes. That sounds funny somehow. And here's the response for today's meeting. I'm sorry I didn't post the responses. Yet from last day's meeting oh, end of penalty! Free payment period for the winter term. and then we have that. So I think everything is set up properly. Let me know if it's to encounter problems. I wanted to show you. An event may be of interest to you on the 20 ninth of February. So just about 4 weeks. not just about 4 weeks. Today's Thursday. It's on a Thursday. So 4 weeks from today. Oh, I didn't have to do that. So Tim Belsher, who was born in in Regina and moved to BC. And when he was about 12, I think I knew him at Sfu. and he's been in film and games. He's gonna come and talk. It's gonna talk on Zoom. But his career in film and games. merging tech and art. So that's part of our that's the seventh lecture in our virtual public lecture series called Computer Science Alumni and friends. So there's a Facebook event page for it. It's also on the U. Of R. Events, calendar. So there's a link to register for the zoom Zoom Meeting. So I encourage you to check that out on the fair. But in 4 weeks time. okay. you can read a bit more about his. his resume, which is quite impressive. Okay. does that sound interesting to anyone.
+          </li><li>
+            
+            I think it could be potentially interesting.
+          </li><li>
+            
+            Okay. anyway, I just wanted to draw your attention to that. So I wanted to. I haven't got things set up in your courses. But this is what I propose to do for assignments. We have 40 marks allocate to assignments. and 2 of them. I'd like to be assignments kind of standalone assignments. I'll give you something to do. and then you would submit a response. Submit your answers. and then the other 3 parts of it would be a project related. so they would build on each other. To get a to have a deliverable for a project. so 40 marks would be divided in 5 ways. 2, 4, so 16 marks would be per individual, not individual, but more. one off assignments. and the others 3, 24 marks would be related to a project. and they would build on each other. So the first assignment I have would related to this experiment with your courses course. So, has anyone seen this in their ur courses?
+          </li><li>
+            
+            Yeah, I was taking a peek at it earlier today.
+          </li><li>
+            
+            Okay, so let me see if I I'm noticing something here that I don't not loving here. I thought this was addressed before. Okay. so give me a second here to figure something out too many things going on here. and so that the the issue was. Oh. issue was that I'm seeing give, showing you something more than you should be able to see, because I have to be a teacher. So what I'm going to do is no, no, I'm not sure if I have to be the teacher or not.
+          </li><li>
+            
+            Are you talking about for you our courses? Yeah, the experiment with your courses. Believe, if you drop down the Dropdown arrow by your profile up at the top, you can switch your role to. And I think you can choose. Student.
+          </li><li>
+            
+            Yeah, no, that's I'm going to have to redo this. It seems. Darn that student role isn't what I was trying to do. I wanted to add my student account. but I tried to remove myself as a teaching role and keep myself as a beta teacher for learning as the rest of you were. And then it's I'll show you what it looks like now. So it's taken out all the rules. There weren't any groups before, but there aren't any roles, either. So I'm going to have to get this reset. Is it still available to you.
+          </li><li>
+            
+            Yes, it's still available. I can see it.
+          </li><li>
+            
+            Okay.
+          </li><li>
+            
+            find it weird because I have access to the edit mode. And though it shows that we don't have roles.
+          </li><li>
+            
+            This might be a better way to do it actually. while I have to investigate. So the purpose of setting this up for you was to, or is to give you a chance to experience. You are courses as a teacher. although now I'm not sure what you are. You can edit the class without you can enter the class without having a role. So that's I'm gonna have to check that out. So see if I can get that resolved. Today I'll send an email or a post to the class discussion about that. So the the goal is with this assignment is to get you to do some set up in you our courses. and and think about the implications of the interface design that lets you do what you set out to do, and so to reflect on it and think about opportunities for improvements in the interface. So what I wanted to my idea for assignments is to make all 5 parts of the assignment. so the assignments and the project parts make them available as to work on as groups in groups. And so what I will do is set up. so we might have different groups for the assignment pieces and the project pieces. So would that be a good option to have, and I'll put some polls up here in a minute. So would you like the option of having to 2 different sets of groups. or one set of one set of groups. One grouping for the assignments is the idea of group assignments. Appealing and well, those are the 2 questions, I guess. So let me put a pull up for that. Yeah, I'm still working on the poll. Okay? So I'm asking 3 questions. And here's the poll. Think that's been published. Now. okay, so we've got 82% participation was creeping up there. Okay, so we've got 45 out of 46. That's pretty good. So let me end the poll. and then we can. I'll share it. And then you can see what you what you think about that any thoughts about that. any discussion.
+          </li><li>
+            
+            got one question. With group work. Would there be a peer review with that as well, or just kind of go for it?
+          </li><li>
+            
+            Can you give me a little more detail about your question. I didn't. What do you mean by peer Review?
+          </li><li>
+            
+            Well, I mean depending on certain situations. Some may do more than others. XYZ. Kind of a way, just for us to voice our opinions to you. If things didn't go so well in the group.
+          </li><li>
+            
+            Yes, I'll I'll give you the option to tell me about that. You can. I want to revamp it a bit from what I've done in the past. But basically. So if we have group of 4, I'll ask you to rate give each person in the group a share of 100 points. So if 4 people in the group, and they all all did their share. No complaints then. that each get 25 from you. including yourself. So I. So I realize that some people prefer to do individual work. So this is what I propose to do. So for the first assignment about in experimenting with you. R. Courses. Once I get sorted out again. it seemed like a good idea to remove myself as a teacher. But then so this is an example where, as an aside. This is an example where undo would have been a helpful thing. or maybe a message saying. this is really going to mess things up. Are you sure you want to do this? That would have been helpful for me? So the a couple of the heuristics have been valued. violated are not followed in moodle slash UR. Courses. But I'll get it sorted out anyway. So what I propose is, I'll create groups with with one person in every group. So the groups I'll ask you to stick to your class. So 4, 28 students can get together with other 4, 28 students if they want. and 7 30 students can get together with another 7 30 students. So for the project pieces, I would like to have ideally a group of 4, I believe there's that would be 15 groups of 4 in CS. 4, 28, and 2 groups of 4, plus one group of 3 in 7, 30. So for the so for the the Simon parts. I'll put it up. I'll create 2 sets of groups. so one for the assignments, so everybody will get put into the group of one their own group. And then. if you want to work with other people, you can. You can specify. You can send me a note about which groups you'd like to which individual groups we like to work together. So I'll edit the list of groups. So I'll collapse up up to 4 of those individual groups into one group. and then that's what you'll use for it. The 2 pieces of assignments. so you can work on your own. or with one other or 2 other or 3 other people. Does that make sense? But for the project, I'd like to try and stick with 4 people. So I think that if my math is correct, based on the last enrollment numbers, I think we can do 17 groups of 4, plus one group of 3 for the project. So so any thoughts about that should I do that right now. let's try that. Okay. So now, what I'm going to do for my next. the next step. Okay. So so another thing I notice about creating groups is I can I can do an add sign for letters or pound sign or hash for numbers, but I can't use multiple numbers to get 0 0 padded numbers, so they show the groups will show up in numerical order. If I try to put more than one. I say, you're only allowed to do one. Okay, so now we're creating groups or 4, 28. Okay? So. So the idea is this gives you a way to choose whether you want to work by yourself or with the larger group for the assignments. So if you want to work together with a group for the assignment that I will fix up again and let you know before the end of tomorrow. So send me a note. And you are courses email and give me the group numbers you want to consolidate. So here let me join a group, and I can show you what it looks like. Oops. No. my math is wrong, so I think there's only 59 students and 4, 28, because I am listed as a student, I believe. So I apologize, Dane, that I'm going to it. Add myself to your group just for quick demonstration. Then I'll remove myself again. Okay, so if you go in. if you click on assignment group membership. you'll be able to see your group. And then so if you send me an email that says, I want 4, 28, assign 1, 2, 3, and 4 to be together. Then I'll I will consolidate those 4 groups into one. and that'll be the the group for the assignments. Okay, if you want to stay on your own for the assignment that then you're set. Does that make sense. And so, if you want to keep the same group for assignments. As for the project. if you want to have the same group for the assignment and the project assignments and the project. Then make a group of 4, a group of 3 or 4. Well, let's let's try to make a group of 4 for the assignment. and then I'll copy those over for the project groups. So don't email me the person. the name of the person I want you to email me the groups that you want to consolidate. So if you're in Group 13, 4, 28, assignment 13 group. and you want to work with 1415, 16. So that's 4. So you give me the group numbers and I'll put those together into one. Okay, so not the name of the people, but the name name of the group. I will put all this into instructions here under assignments. Okay. okay. So I I wonder if there are thoughts at this point after we've had this is our eighth meeting. What are things that work well, and what things are not working so well with the way I'm presenting this material to you. and I'll I'll add a try, a an opportunity to give me some feedback after the class in your courses, so let me anyone like to make a comment with the microphone or in the chat about this. Okay? So I'm saying it to be anonymous. Okay, so there's the feedback. Okay, so that's open now until noon tomorrow. So I don't mean to put you on the spot. Ask by making you make comments in public, I guess. So this is set up to be anonymous. So take it from there. So things like I'm wondering about is there a better way to incorporate the wiki into things. Should I put something? Should I make a habit of putting something onto the wiki after the meeting. or or do something else? So about the answers from the quiz which Gulf asks about system state. So we're looking at the Gulf of evaluation. We're trying. The question is, what's the current system state? So from the video, Don Norman talked about a juicer which is very striking. but it doesn't work well, because the one he has is gold-plated. and they can't make juice with that one, because the acid wouldn't. The juice would destroy the finish on the to you, sir. the the person who designed that choose, sir. as a I think, a Ted Talk, I can add a link to that as well. So I guess, in terms of feedback. I'd be interested to say. see what you think about where to put new links, and so on, that come up in discussions in the course of a meeting. Should I add that on the wiki. Should I add it to another heading on the same meeting page? Or should I add that on to the next meeting page things like that. I'd be interested in learning what you think about. So the cognitive frameworks. mental models, gulfs of execution and valuation. information processing. distributed cognition, external cognition and embodied interaction. So I believe these links are correct. Let me just try them out. That's for the response. Take the quiz before the start of our next meeting. I don't know how there's an attempt on that quiz already. I'll check that out. anyway. I'm gonna so here's a this is a reference in the text where they have the picture, I think the picture's here. Yes, you see that this is appears in the textbook. the user and the world. So when we're faced with the gulf of execution. we're asking, How do I use the system? So if the gulf so the gulfs of execution and evaluation. or the conceptual distance between the user and the the thing they are trying to operate system, we're trying to operate. So if it's not clear upon inspection, how do I use a system? I have a goal I want to accomplish. How do I go about achieving that goal? So you might think of ways that seem reasonable to do it. but if those don't bear fruit. then we're in a difficult position. If what seems reasonable to do is easy to make is easy to specify. and has a desired effect than the gulf of execution is minimal. Similarly, for looking at something trying to decide what we need to do. So we understand the current state of the system. and it's not clear to us what state the system is in, so that we can execute our plans to achieve our goal. then that Gulf evaluation is very large. But if it's clear immediately what the system state is. and we can see how to make a plan to achieve our goals. then the Gulf evaluation is minimal. so the the goal is to make them as the these gulfs as small as possible. So the bridge we need to build between the user and the world is as small as possible. So they talk about the example of Bluetooth headset. and I don't have it here. I'll see if I can add a link. But I encountered a website yesterday. They had to worst possible cookie settings interface that I have seen to date. I'll see if I can share that with you as well. so that it was not clear at all how to use that to achieve my goal of ignoring all non-essential cookies. Okay, so we're but out of time. any questions or concerns. So have we made progress on the assignment situation. So there's a couple more things I want you to read. So let's say, if you can send me an email. your courses with the group numbers. you'd like to work with. So not the People's email addresses, but their group numbers as we talked about. If you can do that before class on Tuesday. that would be sufficient, I think. Okay. I'll put a note on. I'll put a note in you. Our courses about that as well. Okay. So we're out of time. Thank you for today. and so I welcome your feedback. constructive as as possible. and let's have a good weekend. We'll see you on Tuesday. Take care, everyone.
+          </li><li>
+            
+            Take care, Darryl, have a good weekend. See you Tuesday.
+          </li><li>
+            
+            Bye.
+          </li><li>
+            
+            Thanks, Joe, take care of it.
+          </li><li>
+            
+            You're welcome. Thanks. Youtube.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            Good morning!
+          </li><li>
+            
+            good morning daryl
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            Good morning!
+          </li><li>
+            
+            morning
+          </li><li>
+            
+            morning
+          </li><li>
+            
+            good morning! happy February!
+          </li><li>
+            
+            Good Morning Sir
+          </li><li>
+            
+            Good moring
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            Sounds good
+          </li><li>
+            
+            Dr. Hepting didn’t get the poll yet?
+          </li><li>
+            
+            My personal preference is to work individually. When given the choice between group work or individual work, usually even if it gives me more work I prefer to work alone in an academic setting.
+          </li><li>
+            
+            Can we do groups of 2 or 3 or does it have to be 4?
+          </li><li>
+            
+            So do we have to select group members or its auto allocated ?
+          </li><li>
+            
+            Reacted to "So do we have to sel..." with ✋
+          </li><li>
+            
+            yea makes sense
+          </li><li>
+            
+            so we email you with our chosen group members and you will add us together into one group?
+          </li><li>
+            
+            Reacted to "My personal preferen…" with 👍
+          </li><li>
+            
+            Ok that makes sense. Thanks for the clarification
+          </li><li>
+            
+            For the groups for projects, Do we need to email you with our chosen group members today?
+          </li><li>
+            
+            Okay sir
+          </li><li>
+            
+            Thank you sir
+          </li><li>
+            
+            Thank You Sir
+          </li><li>
+            
+            Thanks Daryl. Have a good weekend.
+          </li><li>
+            
+            Thank you Sir
+          </li><li>
+            
+            thank you
+          </li><li>
+            
+            thank you have a good weekend!
+          </li><li>
+            
+            Thank you sir
+          </li><li>
+            
+            Thank you, have a nice weekend!
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Have a good weekend
+          </li><li>
+            
+            thank you!
+          </li><li>
+            
+            Thank you, have a good weekend!
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>That tool tips and warning messages are important when it comes to software design. An example of this was when Dr. Hepting created new UR Courses experimental class, then removed his role as a Teacher, which complicated things. A warning message would have been helpful in this situation.
+    </li><li>Very interactive session.
+    </li><li>Gulf of evaluation 
+    </li><li>The mention of the cognitive frameworks was an important concept
+    </li><li>assignment group
+    </li><li>How to create groups on Ur courses
+    </li><li>I learned about class assignments and project
+    </li><li>how some designs, while elegant, are not friendly towards someone using it
+    </li><li>Today, we understood the perspective of course design and evaluation from the standpoint of user experience on URcourses. It's crucial to consider how students interact with course materials, navigate through online platforms like UR Courses, and process information to optimize their learning experience.
+    </li><li>I found UR courses interesting to interact with..
+    </li><li>Explanation of assignments
+    </li><li>The important concept I encounter today was the new experiment with ur courses and its features and is it convenient to us or not 
+    </li><li>A key concept from class was relating functionality and appearance. Like the juicer made of gold, the appearance was improved, but at too much cost to the functionality.
+    </li><li>Mostly about Gulf of Execution and Evaluation
+    </li><li>talked about assignments and project that will have groups in it. In terms of class, we talked about quizzes  and Chapter 4 of design and frameworks
+    </li><li>Today I learned that I am losing more and more hope for Moodle (UR Courses) every time I watch Daryl try and use it for something. It seems poorly designed for general use, and should really be easier to use and have appropriate warning when it comes to making administrative decisions, such as removing one's self from the teacher role of a class.
+    </li><li>We talked about the gulf of evaluation and execution near the end of the class and how it impacts interface design and how to design better user interfaces. Essentially, evaluation is whether the system is functional is providing accurate feedback/responses and execution refers to the complexity of usability of the system (how easy it is to use/run). 
+    </li><li>nothing important for me 
+    </li><li>juicer (design with sustainability in mind)
+    </li><li>That the course layout on URCourses could perhaps be optimized 
+    </li><li>we discussed about assignment and group projects.
+    </li><li>An important perspective that I encountered was learning about the Gulf of Execution and the Gulf of Evaluation and their differences. I also enjoyed watching the TED talk.
+    </li><li>We discussed about assignment 1 and assigned groups.
+    </li><li>We discussed about first assignment and we also discussed about how to form groups for the assignment and project.
+    </li><li>Today in class, we talked about assignments and how we can approach them. I learned that we have the option to work on assignments either individually or in a group. It was interesting to know that we have flexibility in how we tackle our assignments.
+    </li><li>Ux gulf: execution and evaluation. Also got to know teammates for the project and assignments.
+    </li><li>Today's class was all about assignment and project discussion
+    </li><li>Dan Norman’s concept on different daily products and their usability.
+    </li><li>I learned that this class will have group work in it actually! i did not know that when signing up for this class but it was a pleasant surprise!
+    </li><li>We discussed information about assignments and projects and began our group formations, to be used for upcoming course activities.
+    </li><li>cognitive frameworks, ways to predict user behaviour
+    </li><li>An important concept I learned today is that knowledge is both in the head and in the world.
+    </li><li>We encountered important information regarding the assignments and working on assignments in groups or individually.  
+    </li><li>Design concepts and the Dan Norman’s emotional design book, different perspectives on using innovative methods.
+    </li><li>The new ur course was nice to know
+    </li><li>For today’s meeting experiment with ur courses was done, a poll for assignments and projects was given to students for choosing unanimously for the further assignments and projects in groups and included with their weightage.
+    </li><li>About Assignments, cognitive frameworks, and insights on Don Norman's juicer
+    </li><li>It was more of a making groups and discuss about the assignment. 
+    </li><li>Gulf and execution of design process
+    </li><li>The flexibility of the UR courses platform
+    </li><li>I learnt about new features available on UR Courses.
+    </li><li>We discussed the assignment details and grouping. We also looked at the quiz answers and a brief detail with Gulf of Execution and Evaluation.
+    </li><li>Navigating UR courses
+    </li><li>I think I was only be able to see how to do assignments and projects
+    </li><li>Teamwork makes the dream work.
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>I was a little confused on the structure of the assignments, how groups would function and what exactly is the goal of the Experimental Class. What do we need to accomplish with it?
+    </li><li>None, great video discussions to have.
+    </li><li>Everything was easy to understand.
+    </li><li>Some of the frameworks were initially hard to understand
+    </li><li>no
+    </li><li>No
+    </li><li>I am a bit unsure on what the requirements will be for the project
+    </li><li>nope
+    </li><li>No
+    </li><li>No I think today's lecture was straightforward. 
+    </li><li>The urcourses teaching role
+    </li><li>No everything was made clear
+    </li><li>The most difficult task I encounter was the discussion about don Norman ted talk video because I still did not got about the juicer working 
+    </li><li>No
+    </li><li>Maybe about the cognitive frameworks
+    </li><li>No at all.
+    </li><li>The only thing I had any difficulty understanding at first was the groups for the assignments and project. While I thought it was confusing at first, by the time class wrapped up it all managed to make sense and I understood. It seemed to me like UR Courses might need a bit of work when it comes to making random groups.
+    </li><li>no
+    </li><li>no
+    </li><li>NO
+    </li><li>No, there was nothing I found difficult to understand.
+    </li><li>No
+    </li><li>No I didn’t find anything difficult to understand
+    </li><li>Nothing. 
+    </li><li>It was tough to understand group creation for assignment and project, but discord channel helped to pass it.
+    </li><li>I would like to know more about the group projects and assignments 
+    </li><li>No
+    </li><li>Nothing today! I understood it all well!
+    </li><li>Formation of groups was a bit difficult for me to understand at first, but after the professor clarified some of the doubts I had, it became clear to me.
+    </li><li>no
+    </li><li>No
+    </li><li>No.
+    </li><li>N/A
+    </li><li>No 
+    </li><li>No just it will take sometime to get useto
+    </li><li>Yes, the site for experiment with the ur courses is still a bit not in parallel with the other context provided on the site.
+    </li><li>No
+    </li><li>No. 
+    </li><li>About the assignment
+    </li><li>Nothing
+    </li><li>No
+    </li><li>There was no difficulties to understand today's content.
+    </li><li>No
+    </li><li>Nothing is difficult for todays lecture. Moreover ,It seems interesting to have group assignment in this subject which help us to grow new possible thought related to our subject. 
+    </li><li>No
+    </li><li>A little unclear with the assignments, assuming more info to come in the upcoming days.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>Would like to know more about the deadlines for the assignments and the projects, how extensive they will be, how much time we will have to complete and in what format our submission should be. Thank you.
+    </li><li>Looking forward to working on the project and find some good team members.
+    </li><li>No there’s nothing I would like to know more about 
+    </li><li>no
+    </li><li>No
+    </li><li>I would like to know if the marking criteria will be different if assignments are done alone or in groups.
+    </li><li>not really
+    </li><li>No
+    </li><li>I think everything was clear!!
+    </li><li>The assignments and why it needs a team
+    </li><li>More about the group project I am excited to begin it
+    </li><li>Yes I want to learn and explore more about the new urcourses 
+    </li><li>I will look for more examples in my own life for how appearance affects the functionality of different things
+    </li><li>About the revalution of the course features
+    </li><li>Everything was on par. 
+    </li><li>No, Today felt pretty self explanatory when looking back at what was covered.
+    </li><li>no
+    </li><li>I want to know more about the assignment schedule, and what the assignments and project will entail. 
+    </li><li>Why do so many people dislike group work?
+    </li><li>I'm excited to learn more about designing good software and about Human-Computer Communication
+    </li><li>No
+    </li><li>I would like to know more about assignment1.
+    </li><li>Ux design for designers to build conceptual model.
+    </li><li>No
+    </li><li>I would like to know more about these assignments and project :)
+    </li><li>personally curious about the design process of that juicer, is it supposed to be purely decorative?
+    </li><li>I would like to know more about how the gulfs between the user and world can be reduced.
+    </li><li>I would like to know more about the assignments and projects, I didn't quite understand the details that we'll be touching on
+    </li><li>No.
+    </li><li>I would like to know more about the project submission that professor talked about today 
+    </li><li>No today I don't had more questions
+    </li><li>Yes, I want to know more about the further assignments and projects that will be provided in the coming time.
+    </li><li>No
+    </li><li>No. 
+    </li><li>no
+    </li><li>The UR courses platform
+    </li><li>I'd like to learn more about features available to students on UR courses and how that can improve my productivity
+    </li><li>I would like you to elaborate more and give more examples about each cognitive framework.
+    </li><li>No
+    </li><li>I would like to know more about asignment and group members.
+    </li><li>No
+    </li><li>Design :)
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/08_Thu-01-Feb-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

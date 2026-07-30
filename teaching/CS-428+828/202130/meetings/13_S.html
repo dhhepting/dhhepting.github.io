@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202130/meetings/13_S.html" />
+    
+    <title>Summary of Mtg 13 &bull; CS-428+828 (202130) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Summary of Mtg 13 &bull; CS-428+828 (202130) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202130/meetings/13_S.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202130/",
+        
+          "name": "202130"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202130/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202130/meetings/13_S.html",
+        
+          "name": "Summary of Mtg 13"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202130/">
+        202130
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202130/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Summary of Mtg 13
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div class="card">
+  <div class="card card-header lightcthru">
+    <h1>
+      Summary of Meeting 13
+    </h1>
+  </div>
+
+  <div class="card card-body">
+        
+          
+          
+          
+          
+          
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+
+
+
+
+
+
+
+<div class="card" id="Administration-pd-card">
+  <h6 class="mb-0">
+    <div class="card card-header" role="tab" id="heading_Administration">
+      <a class="xtra collapsed" data-toggle="collapse" href="#collapse_Administration" aria-expanded="false" id="Administration" aria-controls="collapse_Administration">
+        Administration
+      </a>
+    </div>
+  </h6>
+  <div id="collapse_Administration" class="collapse " role="tabpanel" aria-labelledby="heading_Administration">
+    <div class="card card-body">
+      
+
+
+<ul><li>
+      <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1553667">
+        Attendance
+      </a>
+    </li><li>
+      <a href="https://urcourses.uregina.ca/mod/page/view.php?id=1550611">
+        Complete list of project groups -- please check that you are listed there correctly.
+      </a>
+    </li></ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+      
+        
+          
+          
+          
+          
+          
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+
+
+
+
+
+
+
+<div class="card" id="Designer-Perspective-pd-card">
+  <h6 class="mb-0">
+    <div class="card card-header" role="tab" id="heading_Designer-Perspective">
+      <a class="xtra collapsed" data-toggle="collapse" href="#collapse_Designer-Perspective" aria-expanded="false" id="Designer-Perspective" aria-controls="collapse_Designer-Perspective">
+        Designer Perspective
+      </a>
+    </div>
+  </h6>
+  <div id="collapse_Designer-Perspective" class="collapse " role="tabpanel" aria-labelledby="heading_Designer-Perspective">
+    <div class="card card-body">
+      
+
+
+<ul><li>
+      <a href="https://hci.stanford.edu/publications/bds/8-kelley.html">
+        The Designer's Stance (Chapter 8, Bringing Design to Software, 1996)
+      </a>
+    </li><li>
+      <a href="https://www.designcouncil.org.uk/news-opinion/what-framework-innovation-design-councils-evolved-double-diamond">
+        Double Diamond
+      </a>
+    </li><div class="m-2 p-2 border">
+      
+      
+      <div class="card card-body">
+  <div class="ratio ratio-16x9">
+    <iframe src="https://embed.ted.com/talks/lang/en/malcolm_gladwell_choice_happiness_and_spaghetti_sauce" title="Video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+  </div>
+  <p class="text-align-center">
+    Malcolm Gladwell -- Choice, happiness, and spaghetti sauce
+  </p>
+</div>
+
+    </div></ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+      
+        
+          
+          
+          
+          
+          
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+
+
+
+
+
+
+
+<div class="card" id="Zoom-Audio-Transcript-pd-card">
+  <h6 class="mb-0">
+    <div class="card card-header" role="tab" id="heading_Zoom-Audio-Transcript">
+      <a class="xtra collapsed" data-toggle="collapse" href="#collapse_Zoom-Audio-Transcript" aria-expanded="false" id="Zoom-Audio-Transcript" aria-controls="collapse_Zoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </a>
+    </div>
+  </h6>
+  <div id="collapse_Zoom-Audio-Transcript" class="collapse " role="tabpanel" aria-labelledby="heading_Zoom-Audio-Transcript">
+    <div class="card card-body">
+      
+
+
+<ul><li><strong>DHH:</strong>&nbsp;Good afternoon. reserve and doing today. Okay, so. I think everything's up to date on web page, this is my public CS web page i'm looking at. So there when I send an email out about the talk this afternoon by nevin Krugman who's an alumnus from the University and he's at uc San Francisco I think. he's going to talk about his work on. Sorry school V2. Once at 130 so. not sure if you can still register to go in person, if you're on campus but. We can register to participate with the zoom link, if you like, and I think that's available. Until 130 so. it's kind of exciting. Okay. So let's do our attendance. Okay. All right. put on the right one. last meeting in September. So it's meeting 13 so we're about a third, the way through our semester. So here is the completed list of project groups. And I should really. do is make sure that I can. keep my meeting outline. available and. Its own tab and open everything else and new tabs. Anyway, so I put. Good members names and email addresses not hyperlinked so you can copy the email address here if you need to. So everyone should be represented in the group they think. they're in so we made two groups yesterday of people who didn't have groups before. So. Any questions or comments about the groups that we've made up. The 13 groups, the 10 groups of four three groups of three that we have. Okay, so we're going to take that lack of response in chat to say that everyone's happy with the groups that are set up. Okay, so we'll go into our groups today again spend a bit of time. So today, because my the talk by nevin crow gun is at 130 to 230. In my office hours supposed to be from two to three. let's make my office hour from. three to four. So I have people come to my office hour yesterday. Which. which was a nice change of pace for people to come and see me during my office hour. and I was glad, not only to. Have you come and talk to me. But to realize that I had not messed up the links. were at least not messed up all the links. If you've been trying to reach me in my office hour. And haven't had luck, let me know. Okay, so. i'm going to tell you. So let's go.
+    </li><li><strong>???:</strong>&nbsp;well.
+    </li><li><strong>DHH:</strong>&nbsp;So if you have questions about the project, please post them to the project assignment discussion forum here. Because that. That saves duplication of. asking me separately and i'm applying to you separately and. Maybe a question that people have. So there is a question, the other day about. Responsibility or how how many things. to submit. So if you are four members in your group each group member. describes a user of the interface. which may be quite similar to themselves. And then, a task that here that they would do with the interface. So they're going to if a group before they're going to be for tasks. and I guess try for a little bit of coordination amongst your group members so that you don't all pick the same task. So there's some variety. mean, even if you pick the same task they may not all be the same. All the details may not be the same, but. So four different tasks, one for each before group members or three different tasks want to feature three group members and then each group member will. Take the tasks that. Each. To the three or four group members have defined and do an empathy map. For that task and user. So there are four tasks. But because each of each group member. In a group of four will be doing the empathy map for each task. Each group member we're doing for maps one for their own in three for the other group members so that'll be a total of 16 empathy maps. So you have four maps for each task. For each user and task combination. That make sense.
+    </li><li><strong>S02:</strong>&nbsp;Yes, Professor okay.
+    </li><li><strong>DHH:</strong>&nbsp;Thank you. So. So I encourage you to. Post comment questions here, so we can have a. record of them. and So there's the project group list. And so, based on the group list i've created within group communication forums. So there's one way for your groups to coordinate. So you. You may end up with choosing a different way, for your group to communicate like discord or teams or whatsapp. But i'd like you to think about. Why you make those different choices and. Think about what would what each of those interfaces. provides. And it may be that. Your group is all your all of your group members are familiar is one interface say discord and that's that's what you're going to use. But there might be some other reasons that you make that choice. So just an opportunity to think about. Think critically about that choice you're making. So i'm not sure why changed to dark Gray here because I changed the due date. Hope that's Okay, I made it to the eighth of October, so instead of Monday it's now Friday. One minute to midnight. So anyone sad about that triple it back to Monday.
+    </li><li><strong>S03:</strong>&nbsp;Well that's great.
+    </li><li><strong>DHH:</strong>&nbsp;I didn't think anyone was gonna object. So I think I had. This setup. So it's doing nine days now. So i've also. Put in links here I there may be a few things to fix up in these descriptions but. you're gonna. understand some of the issues with the interface in that first part let's do on the eighth of October and then three weeks later we'll have. The next phase do the 29th of October. And then, three weeks later we'll have. materialize. So understand explorer materialize Part One The 19th of November and then materialize part two, is going to be do on the theory of December, which is last Friday that meeting. So this last part is. Creating a high fidelity version of the interface. Did you would create after testing your too low fidelity prototypes. get into all that language is semester goes on. it's basically a high fidelity video showing your high fidelity. prototype. simulation. and serve a description of your product presentation of. All the steps of your project. That last piece. So I have to connect those up to your courses page and didn't quite get that done before. Our meeting today. sampson I. put this under the heading of designer perspective. Some of the conversations we had yesterday when alpha sour. encouraged me to think about these things, these resources. they're not new. But these are more. Say retrospective on. Why we're. Looking at different users and different tasks beginning at the interface. process and our understanding foods. So the double diamond. is discussed in the UK design Council Minutes discussed in the textbook little bit. So the double diamond so we diverge and then converge. And then we converge again and converge finally get the outcome. So in our from our perspective. we're. Trying to understand broadly some of the issues of the interface. That we have. That you've selected and then, when we explore. The next part we're going to focus on. One subset one task. And reason. Why suggests suggest doing. doing a bit of breath first first. To do a bit of divergent thinking, to begin with. there's a description here. The text that. highlight for you. So here's the. piece. We can't read all. These. Okay, so David Kelly says their company comes in and says we want you to build it we want you to design a new toaster, and I say we're going to study bread crisping and it's generic sense and they say look I just I told you just to design a toaster get going. They think that the world of what a toaster could be as small, we might say look out. For me look our job is to be in by looking at the history of bread. Maybe maybe we want to see whether we they had a better way to make toast in Renaissance, France or on space shuttle. don't want to just design the curlicues in the side of the clients next toaster. Maybe what we're going to find from looking at the history is that the best solution is to work are the keystones out loud say think about how much more comfortable you're going to feel that we are doing the right thing, if you do a broad search and then narrow down. So bread takes extra effort to beginning but that's the best time right at the outset of the product development process. take a step back to see the situation design part of the product process takes small portion of ton of next steps after design at 10 times. The cost time, effort and emotional stress and manufacturing crews 10 times that so invested time so time invested the beginning is wasted we make up the cost and later stages easily by doing the design right. So anyone find that amusing or an indoor inspirational. me so the rest of the whole chapters good. Well, the whole book is good. I. I this chapter and that. example the history of read crisping. stuck with me most clearly. Over the years. Okay. Well i've always do break up groups that. will do breakout rooms, but not with our breakout groups, but our project groups. And then you can still take 10 minutes or so. 10 or 15 minutes redo. i'll check in with you at 10 minutes. Okay. Anyone give me a thumbs up or yes. That sounds good.
+    </li><li><strong>S04:</strong>&nbsp;Okay.
+    </li><li><strong>DHH:</strong>&nbsp;All right. So i'm gonna let you choose you choose your number based on your. Number okay. So clear. Alright let's say it's clear. Alright, so we'll see. we'll check in on you over this time and. we'll open the rooms and get started. i'm gonna find out. belongs to which group of. People were still not in their. magic groups. There we go. breakout room so that's why I got muted when I came back.
+    </li><li><strong>S05:</strong>&nbsp;To the person on and with his name is not here here's North enter the classroom and so.
+    </li><li><strong>DHH:</strong>&nbsp;yeah so there's three people who aren't with. Just two.
+    </li><li><strong>S05:</strong>&nbsp;But I was reading the blog of Derek Kelly, and I was looking through it and so you're talking about design thinking.
+    </li><li><strong>DHH:</strong>&nbsp;that's good. Are you making progress on deciding the interface you're going to look at.
+    </li><li><strong>S05:</strong>&nbsp;yeah i'm just looking at it yeah.
+    </li><li><strong>DHH:</strong>&nbsp;Okay, so I see that. The rooms are not i'm not sure if they're. closed or not. anyway. So, is that a productive discussion to get used to speaking about your inner the interface, you want to look at.
+    </li><li><strong>S06:</strong>&nbsp;Yes, it was.
+    </li><li><strong>DHH:</strong>&nbsp;that's good. So I heard from some students that they're concerned about. Your PIC a well known interface, then. Of the big issues have been dealt with through well known interfaces and I. i've challenged that idea. I think there's lots of things. That the room for improvement, and I was just navigating the SAS tell.com website yesterday and. it's feeling very frustrated by that. And you know this has got shrink government website has some issues I had already. Your courses. So I think there's a lot of possibilities. To look at. If you have questions. that's let's post them to the. To the. Project discussion forum okay. So it's one minute before our time to. The end today, so I guess because i've gone over a few times that can. Stopping one minute early won't be too bad either. Any questions or concerns that come up. From our discussions here. No okay. All right, so take care and. Maybe i'll see you virtually at the presentation at 130. And otherwise. So I won't have an office hour tomorrow because of the national Truth and Reconciliation day. So the university is closed tomorrow. it's time to reflect on some big issues. And we'll see you on Friday and. go from there okay take care thanks for today, see you on Friday, or maybe at three o'clock from my office our. Special time today okay thanks again bye.
+    </li><li><strong>S07:</strong>&nbsp;Thank you welcome.
+    </li><li><strong>???:</strong>&nbsp;Thank you.
+    </li><li><strong>:</strong>&nbsp;thanks you too. bye bye.
+    </li></ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+      
+        
+          
+          
+          
+          
+          
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+
+
+
+
+
+
+
+<div class="card" id="Zoom-Chat-Transcript-pd-card">
+  <h6 class="mb-0">
+    <div class="card card-header" role="tab" id="heading_Zoom-Chat-Transcript">
+      <a class="xtra collapsed" data-toggle="collapse" href="#collapse_Zoom-Chat-Transcript" aria-expanded="false" id="Zoom-Chat-Transcript" aria-controls="collapse_Zoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </a>
+    </div>
+  </h6>
+  <div id="collapse_Zoom-Chat-Transcript" class="collapse " role="tabpanel" aria-labelledby="heading_Zoom-Chat-Transcript">
+    <div class="card card-body">
+      
+
+
+<ul><li><strong>S08:</strong>&nbsp;good
+    </li><li><strong>S09:</strong>&nbsp;Great
+    </li><li><strong>S08:</strong>&nbsp;good afternoon prof
+    </li><li><strong>S10:</strong>&nbsp;gr8
+    </li><li><strong>DHH:</strong>&nbsp;Student password
+    </li><li><strong>DHH:</strong>&nbsp;Office hour today from 3-4. OK?
+    </li><li><strong>S11:</strong>&nbsp;okay
+    </li><li><strong>S12:</strong>&nbsp;Ok
+    </li><li><strong>S13:</strong>&nbsp;ok
+    </li><li><strong>S14:</strong>&nbsp;Ok
+    </li><li><strong>S05:</strong>&nbsp;I cant hear you sir
+    </li><li><strong>DHH:</strong>&nbsp;can you hear me now?
+    </li><li><strong>S05:</strong>&nbsp;no sir
+    </li><li><strong>S05:</strong>&nbsp;your mic is mute
+    </li><li><strong>S15:</strong>&nbsp;Yes
+    </li><li><strong>S16:</strong>&nbsp;yes
+    </li><li><strong>S02:</strong>&nbsp;Thank you
+    </li><li><strong>S17:</strong>&nbsp;thanks
+    </li><li><strong>S18:</strong>&nbsp;Thank you
+    </li><li><strong>S14:</strong>&nbsp;Thank you Professor!
+    </li><li><strong>S16:</strong>&nbsp;thank you
+    </li></ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+      
+        
+      </div>
+  </div>
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202130/meetings/13_S.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

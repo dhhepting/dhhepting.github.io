@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-205/202110/meetings/22_Thu-01-Apr-2021.html" />
+    
+    <title>Mtg 22 &bull; CS-205 (202110) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 22 &bull; CS-205 (202110) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-205/202110/meetings/22_Thu-01-Apr-2021.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-205/",
+        
+          "name": "CS 205"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-205/202110/",
+        
+          "name": "202110"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-205/202110/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-205/202110/meetings/22_Thu-01-Apr-2021.html",
+        
+          "name": "22 (Thu-01-Apr-2021)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-205/">
+        CS 205
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-205/202110/">
+        202110
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-205/202110/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      22 (Thu-01-Apr-2021)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 22/26: Thu-01-Apr-2021
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="21_Tue-30-Mar-2021.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="23_Tue-06-Apr-2021.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ss0">
+        0
+      </h4>
+      <ul></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Good afternoon.
+          </li><li>
+            
+            known as April fool's day. Technically pranks are only supposed to happen before noon. So zoom cut out on me a couple of times. I think it was before noon today in my other than our other meeting. To check chalk that up. assignment. The assignment that was due on Tuesday. There may have been an issue with the. For some, because I didn't have it set up to receive the same type of submission. So I corrected that after it was pointed out to me. That If anyone was. thrown by that. Please let me know and make. So you won't get penalized for being late, if you were if you hesitated to submit something, because it looked unfamiliar to you. As a way to submit the link to the editor. Does that make sense. Get that out of the way. Open here. So I thought I would. Take a little bit of time today to show you some works by Norman mclaren. Who is famous for mixing media that's a national film board. crying on film dry painting on film to create soundtracks and so forth. You won an academy Award for. neighbors which I think is here as well. called pixelation pii X la CIO and. is using stop motion live action photography. anyway. So I showed that because it's. More famous. he's famous for that work, I think. Anyone seen that before or a part of it. an explanatory video. About. This process. going on.
+          </li><li>
+            
+            Sound looks like.an artist might picture it this way.musician sees it differently.The sound engineer has an oscilloscope to help him see sounds let's have a few notes in the guitar.And there's another way these notes can be seen.The vibrating strings set up vibrations in the air, which travel to the microphone and then an electronic device translates them into vibrations of light.
+          </li><li>
+            
+            This narrow beam of light is photographed on movie film and gives you the soundtrack which doesn't appear on the screen but let's bring it out of hiding where we can see it come on.
+          </li><li>
+            
+            All right now give us that guitar again.So that's a picture of the guitar notes well, can you show us some other instrument.What else can you do.Cry again.You know that's a mighty fine looking voice wonder what you could do with my voice, shall we try it.This is my voice it wait a minute.let's hold that still and look at it again.So that's how my voice looks like every other sound it has its own distinct pattern of light and dark running down the side of the film.Well, if a sound will make a pattern on film a pattern and film will make a sound, you can even create your own sounds by drawing directly on the film.Norman McClaren the motion picture artist has been making some hand drawn sounds and now he's going to hear them for the first time, played on the movie on it and sort of miniature movie projected.it's not just guesswork the sound of any of these patterns of lines can be calculated the size controls the loudness a row of small marks would sound like this.Larger mike's a louder sound.that's simple enough, then there's the tone quality it's controlled by the shape of the marks this series of thin straight lines gives a sharp rather unpleasant.But these rounded sort of it's smooth it.The marks can be any shape you like and how about this, using the brush Norman tries a row of small triangles.These sharp angular forms, what would they sound like.The distance the lines are apart controls pitch with the lions for a pride a low pitch note.A medium.And a high note.Now, what can they be used for these hand drawn sounds well Norman mclaren finds that they are a perfectly natural accompaniment to some of his hand drawn motion pictures each movement of the screen can have its own specially designed sound.Making movies, this way the artist has direct personal control at every stage of the film's production sound and picture I planned and closely related to each other, as they are drawn.Now Norman is checking to make sure that each bit of sound is perfectly matched to its accompanying screen action.Finally, the picture and the sound will be printed together on one length of film and color will be added during the process.
+          </li><li>
+            
+            doing some animation without necessarily calling it that. So I thought it might be interesting to look at a. An analog approach to doing animation and film.
+          </li><li>
+            
+            The national film Board of Canada presents.animated motion.By Norman mclaren and grant Monroe.Part one of a series of films in which mclaren comments on demonstrates and classifies aspects of motion which the animator employs in his everyday work.This is motion picture film.And here is one frame of film.The difference between one frame of film and the next is the essence of all motion picture and animation.24 such frames make one second.Here is a simple animation stand.The camera.The table top.The button which when pressed.takes one frame of film.The counter that keeps track of the number of frames shot.In how many ways can something be animated from A to B.Industry straight line.10 ways.hundred.thousand or more.Using a cutout disk as a symbol for anything we wish to move that is see the animator first takes a few frames, there will be no movement.In one frame from A to B again some frames of the distressing.The result.Another way of going from A to B.In two moves.Still, another way.Equal size, a ruler, maybe used the faint marks are called calibrations to find for the camera to see, they are visible to the animator who made us pre plan, the action rather than improvise it.With or without a ruler and experienced animator realized greatly on the muscular memory of the hand for the size of the moves.As cut out often such that calibrations cannot be used developing muscular memory is important.16 moves, this time from A to B.This animator develops speed in shooting for it helps maintain the feel of the motion as a whole.32 moves from A to B.64 moves, but only 32 calibrations between each she makes a move, simply by field.128 moves from A to B twice as many as before, and each move half the size.256 moves from A to B.512 moves from A to B.Each tempo has its own character or mood.Compared with the earlier frantic tempos this one is peaceful.1000 moves from A to B.tempos appear to be modified by context and association, for example, if this disc is associated with a large object, such as the sun, it appears to be traveling very fast.If seen as a tennis ball its motion seems unbearably slow.tempos can be much slower than this so slow in fact that the desk would appear stationary.let's just review with the range of tempos the animator is most likely to use.Motion maybe testified in different ways.What we have illustrated so far is motions main characteristic temple.All temples are part of an infinity graded spectrum.In conclusion, the size of the move is the animators chief concern, whether he is animating a cutout an object a substance, a person or a series of drawings.Part one and.
+          </li><li>
+            
+            Part two as well.
+          </li><li>
+            
+            The national film Board of Canada presents.animated motion.By Norman mclaren and grant Monroe.Part two of a series of films in which mclaren comments on demonstrates and classifies aspects of motion which the animator employs in his everyday work.In addition to temple there are five categories, into which all motion falls, the first of these categories is constant motion.The one and only feature of constant motion is that the distance between each calibration is the same.For anyone temple the animators moves are identical.All the illustrations of temple in Part one of this series had equal calibrations and therefore constant motion.The second category is accelerating motion or acceleration.The one and only characteristic of acceleration is that each move is always bigger than the previous move.There are many degrees of acceleration.In this acceleration each move is very much bigger than the previous move.A steep acceleration.any particular acceleration may be classified as a percentage increase of the previous move.The first move.To get the second move add 10% of the first move.To get the third move at 10% of the second move.To get the fourth move at 10% of the third.and so on.If 25% of the previous move is added each time the acceleration will be steeper.If the increases 50% of the previous move we get an extremely steep acceleration.Such acceleration accelerations if arranged systematically form a spectrum, ranging from gradual to steep.If the moves are shown stage by stage the internal anatomy of different accelerations can be compared.or contrast the single acceleration and the constant motion both going from A to B, in the same number of frames.The third category is decelerating motion or deceleration.When the move between each frame is smaller than the preceding move, we have deceleration.Here is a steeper deceleration.steeper still.There are other types of acceleration and deceleration, for example, where the moves get bigger or smaller by a single fixed amount and not by a proportion of the previous move.The result.Similar Labor deceleration.acceleration and deceleration together with constant motion can be arranged into one large spectrum starting steep.Each deceleration is replaced.By deceleration less steep.deceleration is now so slight that at the middle of the spectrum, it becomes constant motion.The constant motion switches over into a gentle acceleration.Which progressively turns into steeper and steeper accelerations.Without the use of these factors, the animator could not portray even such basic things as wait.Like.A punch.Violent punch.punch.A cautious.cautious push.A thrust.gravity.A bounce.Another form of gravity.perspective, where different tempos are needed to create the illusion of travel at a uniform speed.These factors are of prime importance in animation, no matter what technique is used.Part two and.
+          </li><li>
+            
+            I don't recall how many parts are, but you can really. Interesting you can review some more than. final version of that sketches I put up yesterday last day. Good. Doing is. Moving the camera position. Around. The draft function so i'm getting. i'm doing the same. cousin air. Okay, so i'm. coloring from black to white. start out with black. Well i'm sitting still equal to. I divided by four so. black and goes to white. But the box is. Black outline. And the size of the box is also related to. The spectrum. divided by four. So i'm doing. camera movement cosine and sine. So i'm making. The camera. Change, based on the frame count. So it's going around in a circle. And X and y and zed position is 128 so it's out a little bit from the origin. Try that again. Let me change the frame rate to be a little slower. one. To open then we're changing the. Up direction of the camera well we're not changing it, but the camera orientation changes. As we go around. The y direction in the positive. So that's a little bit. Cleaner version than I had before. And maybe without the sound itself. anyway. So you could add some sliders perhaps to control. frame rate or something like that. Or maybe change the camera direction. Maybe go around the exit direction, instead of X, Y direction. And the XY plane pardon me. We could. write some sketches to. emulate mclaren. animation videos. as well. not going to attempt that today. Anyway, any questions. Maybe we can a little bit early for the long weekend. And I have an office hours at 330. Let me just check the chat upstairs really. Canadians working in animation I know quite a few.
+          </li><li>
+            
+            Do you have any connections at Disney. They tend to not want to sponsor visas for Canadians, because they have Americans that can do the work.
+          </li><li>
+            
+            isn't there a studio in Vancouver.
+          </li><li>
+            
+            And there is a Lucas films in Vancouver but I really want to get into like Disney or pixar animation studios. club penguin was NBC but then they closed so.
+          </li><li>
+            
+            yeah. So. Someone who did her PhD here in the 90s worked on a bug's life and toy story.
+          </li><li>
+            
+            But nothing more recent than that I don't think for like you have our grads especially there aren't a ton.
+          </li><li>
+            
+            Well, I would say. Maybe. And I have a friend who is a Disney, I believe, is still there. I do have a few people who I know. And i'm trying to get some of them to come and talk like the guy from NASA it last month or last two weeks wait no one week ago, when we go yesterday.
+          </li><li>
+            
+            Names I would. Get in contact with them.
+          </li><li>
+            
+            I was gonna say that it's not just. Not just that Disney or somebody I mean Disney, yet they have people doing animation and things. But they also is also, if you look at the credits for movies, you see that there's lots of. Different shops that do different pieces.
+          </li><li>
+            
+            yeah.
+          </li><li>
+            
+            So this, this is a wide. I would think about casting your net wider than. Just Disney or pixar ilm.
+          </li><li>
+            
+            yeah they're, just like the top tier of what i'm hoping for.
+          </li><li>
+            
+            yeah definitely so. i'll try and. See, who I can tap for some career advice.
+          </li><li>
+            
+            That would be.
+          </li><li>
+            
+            Good really appreciate that.
+          </li><li>
+            
+            Maybe have them come and do a talk about. visual effects and. zoom in for a talk about that yeah yeah. anyway. Well yeah. i'm dating myself a little bit, but. there's somebody who knew another person for the of our worked on. movies, with whether digital in New Zealand. I think he's a steam now. In Seattle. Never friend from SF you who. works at ilm worked. On the new star on the latest Star Wars movies. I think so. yeah so not to not to get. there. Maybe post pandemic the little bit easier to. Anyway, any other questions. Okay, so try out the. The new online text version of their response to meetings. That OK.
+          </li><li>
+            
+            OK.
+          </li><li>
+            
+            I like seeing other people's responses, but if this works better, I feel like that's a okay.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            hello!
+          </li><li>
+            
+            yep
+          </li><li>
+            
+            Student password
+          </li><li>
+            
+            What kind of dandelion is that?
+          </li><li>
+            
+            my dreams be like:
+          </li><li>
+            
+            When the 1st grade teacher gave you the wrong sticker
+          </li><li>
+            
+            me and the boys after 4 joints
+          </li><li>
+            
+            is this how the wizards in Harry Potter got their magic? from a flower?
+          </li><li>
+            
+            😂
+          </li><li>
+            
+            *loud dumbledoor noises *
+          </li><li>
+            
+            becomes darker quickly
+          </li><li>
+            
+            Oh no😱
+          </li><li>
+            
+            and that is why you don't do acid kids
+          </li><li>
+            
+            it's nice that they each had a flower on their grave at the end
+          </li><li>
+            
+            does that mean that their bodies fertilized the flower though???
+          </li><li>
+            
+            Nah that should be more on greed
+          </li><li>
+            
+            please anyone send me the attendance password
+          </li><li>
+            
+            Student password
+          </li><li>
+            
+            85zsu1
+          </li><li>
+            
+            thanks
+          </li><li>
+            
+            is there the Hiroshima bomb on there
+          </li><li>
+            
+            ?
+          </li><li>
+            
+            oh interesting!
+          </li><li>
+            
+            my 2021 techno remix
+          </li><li>
+            
+            I wonder how many frames were in Disney's 1900s movies...
+          </li><li>
+            
+            2112ish frames in snow white
+          </li><li>
+            
+            1 hour 28 minutes at 24 frames per minute
+          </li><li>
+            
+            That was 1937
+          </li><li>
+            
+            pretty much drew each one right? tedious as hell im sure
+          </li><li>
+            
+            They used painted layers where background drawings were separated from foreground layers
+          </li><li>
+            
+            sure!
+          </li><li>
+            
+            thanks Payton!
+          </li><li>
+            
+            I wonder if Disney is willing to revisit 2D animation
+          </li><li>
+            
+            im sure with today's technology it can still be profitable without the tediousness
+          </li><li>
+            
+            Ball, "float like a butterfly, sting like a bee"
+          </li><li>
+            
+            The last hand drawn Disney animation was 2011’s Winnie the Pooh. They still do 2D animation, it is just done digitally now
+          </li><li>
+            
+            They still use artists to draw out the characters, backgrounds, etc. but rather than using paint for the final product, they use programs like photoshop
+          </li><li>
+            
+            The preliminary art is still done by hand by painters, sculptures, and other artists
+          </li><li>
+            
+            I saw this Netflix movie called Klaus which was a mix of the two.
+          </li><li>
+            
+            cool!
+          </li><li>
+            
+            I am a bit of a Disney nerd if you haven’t noticed
+          </li><li>
+            
+            I could tell XD
+          </li><li>
+            
+            I went to Epcot once, it was fun
+          </li><li>
+            
+            I was supposed to work at Walt Disney World last summer but then covid happened
+          </li><li>
+            
+            Oh wow.
+          </li><li>
+            
+            what would have been your position?
+          </li><li>
+            
+            if you don't mind me asking
+          </li><li>
+            
+            I would have worked in merchandise but I hope to be in imagineering
+          </li><li>
+            
+            If only they hired canadians
+          </li><li>
+            
+            soon...Wolverine from the marvel universe will appear from Disney im sure
+          </li><li>
+            
+            opening the doors for all Canadians XD
+          </li><li>
+            
+            Club Penguin studios (RIP and also owned by Disney) was headquartered in Kelowna BC until it closed a couple years ago
+          </li><li>
+            
+            I may have had a tour and left my resume but they closed 6 months later
+          </li><li>
+            
+            Club Penguin the online game and community right?
+          </li><li>
+            
+            Yup!!
+          </li><li>
+            
+            I wish the Way Back machine kept running it somehow...that would be nice
+          </li><li>
+            
+            Poptropica is still here right?
+          </li><li>
+            
+            yup, still here
+          </li><li>
+            
+            Ryan Renolds is one
+          </li><li>
+            
+            don't be shocked Payton, Disney will conquer half of the galaxy at their accquirsition rate
+          </li><li>
+            
+            have not tried it yet
+          </li><li>
+            
+            Prof can you convince Disney+ to be NOT 30 bucks still
+          </li><li>
+            
+            the new Raya movie I mean
+          </li><li>
+            
+            Its cheaper to go to the theatre if they were open
+          </li><li>
+            
+            yeah I know! im already paying 8 dollars for Disney+
+          </li><li>
+            
+            thank you professor
+          </li><li>
+            
+            Have a good weekend!
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            have a good long weekend! and happy early Easter!
+          </li></ul>
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-205/202110/meetings/22_Thu-01-Apr-2021.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

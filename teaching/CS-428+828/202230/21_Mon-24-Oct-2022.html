@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202230/21_Mon-24-Oct-2022.html" />
+    
+    <title>Mtg 21 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 21 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/21_Mon-24-Oct-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/",
+        
+          "name": "202230"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/21_Mon-24-Oct-2022.html",
+        
+          "name": "21 (Mon-24-Oct-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202230/">
+        202230
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      21 (Mon-24-Oct-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 21/36: Mon-24-Oct-2022
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="20_Fri-21-Oct-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="22_Wed-26-Oct-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I encountered
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+          Administration
+        </h4>
+        <ul><li>
+                Happy Monday
+              </li><li>
+                <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1900809&amp;view=1">
+                  Attendance
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1666591200&amp;course=24538">
+                  Class calendar for today
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=24538">
+                  Upcoming events
+                </a>
+              </li></ul><h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_21" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_21" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_21" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_21" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_21" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_21" data-bs-slide-to="4"></li>
+      <li data-bs-target="#mtg_pix_21" data-bs-slide-to="5"></li>
+      <li data-bs-target="#mtg_pix_21" data-bs-slide-to="6"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/0iqvljc8f6otufx/21%20-%20img-1.png?dl=0" alt="21 - img-1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/ic3syexzddig96g/21%20-%20img-2.png?dl=0" alt="21 - img-2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/j1l4nochdo7x6kq/21%20-%20img-3.png?dl=0" alt="21 - img-3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/it5vc35d0ar11rq/21%20-%20img-4.png?dl=0" alt="21 - img-4.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/cpp4rllkeagd7xe/21%20-%20img-5.png?dl=0" alt="21 - img-5.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/02bsry09m356w9m/21%20-%20img-6.png?dl=0" alt="21 - img-6.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/3btqrkqvs07q8zl/21%20-%20img-7.png?dl=0" alt="21 - img-7.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_21" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_21" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Have you interpret instead of Oh, that was no oh yes I get a couple of old me monotone I don't remember what. Year I wish she had the funny thing is like, this is important this is just like you say this is a corporate event with me and want to be one of the right What did you see I'm the worst I said because they're 15
+          </li><li>
+            
+            passwords from the date of the midterm until I got home and I was like oh, I didn't get any attendance.
+          </li><li>
+            
+            No, there is no explicitly turned off attendance.
+          </li><li>
+            
+            There is still a response to me. And I just wrote in
+          </li><li>
+            
+            I apologize for that. I moved to change the week
+          </li><li>
+            
+            I would have been easy with fingers these are the questions.
+          </li><li>
+            
+            So one comment on my feedback for me was the mic isn't working how's that? Is that better? All the controls are going if I turn this up now it seems like oh, there we go. Professor Kevin used to be barred from discerning our graduate if he doesn't watch this teachers are all busy final thesis this video really just a temperature too. Hard to just talk to me see chapters of the. Constitution
+          </li><li>
+            
+            I have not just like all over the place. I swapped from engineering to like computer science and I suddenly have like, my friends like Hey, Jason like Okay, it's time to do
+          </li><li>
+            
+            that oh, okay. It's getting gradually brighter so I know either there's some comments I'm not the best at using time effectively. So I I'm mindful that again, that's a challenge for me. So
+          </li><li>
+            
+            I went through the textbook.
+          </li><li>
+            
+            Going through it, I felt we covered everything.
+          </li><li>
+            
+            Simultaneously, using the textbook and explanation we feel that we have not done anything but a lot of the topics were covered. Thank you for that.
+          </li><li>
+            
+            It's not obvious that we're going through the textbook it's obviously screenplay learning.
+          </li><li>
+            
+            So I want ascension today. well. So I realized I'm ready to go to small there.
+          </li><li>
+            
+            So I'm thinking about our project. And we have done some work to understand what where people are having problems. Clarify where you're having problems because we're, people hear. Hear the users of the application or exploring that you're seeking understand. So we don't wish to so there's a sir. I would like for it again. Sir David Kelly, who I've mentioned before, as the one of the people involved in ideal industrial design for he talked about say imagine the customer comes to you and said, we'd like you to redesign your toaster and what we need is an needs more curlicues on the side. So we understand what's needed but we would like you to do the design.
+          </li><li>
+            
+            So if we just look at these cosmetic changes to the design. We're just focusing on narrow area. If we just go to a solution too quickly, you might
+          </li><li>
+            
+            completely miss an opportunity for spatially improving design so that not just everyone who wants to these toasters or toasters and new new settings because this is your wonderful job of making bread Chris.
+          </li><li>
+            
+            So he said that instead of having the design instead of having the kind of the client say what the design should be, so we have to take the veterans taking responsibility as designers so that we're not just putting a rubber stamp on somebody else's idea or contributing to the process of validating or verifying this is the most the most practical way to achieve our ends. And so how do we do that?
+          </li><li>
+            
+            So his approach is to take a look at the history of red crisping examples of Renaissance France and the space shuttle. So there might be different things that are maybe not to be adopted wholeheartedly, but there are maybe pieces of ideas of this and other designs and ideas from other sources that can be applied productively to our design.
+          </li><li>
+            
+            Call it the history of bad crispy but that's not so that double diamond approach. shape that looks like this Imagine those are squares turn 45 degrees those of you in Canada to Shreddies turn to shreddy diamonds. He did that. Anyway, so the cereal is square. They said they've made it now they've made diamonds so this shirt, swear cereal. Rotated
+          </li><li>
+            
+            okay. So I wanted to talk about a bit of this evaluation today. Okay so we've talked about two ways to think about it, talk about it say one dimension of valuation. So what were the two words that we've used? For evaluation? Thanks so we might apply formative evaluation when we're talking with users to see if
+          </li><li>
+            
+            we're on the right track and then once we get some assurance that we have a good design work implemented, and then we're not testing if it's a good idea anymore. Testing computing summative evaluation to make sure that we're we've reached our goal afterwards okay, so that's a little bit when and a little bit why
+          </li><li>
+            
+            our summative evaluation does not give us a positive result. Should we then do a formative evaluation
+          </li><li>
+            
+            well I guess a negative summative evaluation. Shouldn't you shouldn't you shouldn't do a farm evaluation say yes. Using like some feature x.
+          </li><li>
+            
+            And then at the end you get a test and there's four results because there could be many more costs involved depending on what the gap is.
+          </li><li>
+            
+            Does that make sense? So so for a summative evaluation might be that on a rating scale if Sophia, we have a Likert scale. So Likert scale gives you a range of values. So on my formative on my feedback instrument that there are nine questions that have a Likert scale. So it gives you five values. So you can have a different number of values on the Likert scale. You might do for you might say strongly disagree, disagree, agree and strongly agree. The idea of Likert scale is that you have these items
+          </li><li>
+            
+            equal just and scale so let me so we have a five point scale. The middle is so we're looking at we have the middle occurring at a player the sale so sometimes is the fuse in Indian English so you can sit on the spot and sit on the fence and not have an opinion one way or the other can take and same sometimes or I don't know maybe. But some never and always are. I think have the same conceptual distance from the and rarely and often are also. So what's another scale? Do the cost per station what kind of so we did for frequency, the first one the agreements and the second? Thinking about it. Let's just make a bad example of agreement.
+          </li><li>
+            
+            Any kind of skill whatsoever. The first skill that comes to mind is the sad face. To happy face in terms of pain you're experiencing when you're at the hospital.
+          </li><li>
+            
+            Anyway. I'm so that's another example
+          </li><li>
+            
+            very unsatisfied, unsatisfied. Satisfied. Very satisfied.
+          </li><li>
+            
+            Yeah, that can be so now I want if I just say let's just for simplicity is that another descriptor on the one hand so as this same quality just added the idea that the scale is balanced. So we have to take care of that if you want to make some we want to collect data and use it. We should make sure the sales are balanced so when you mentioned the faces of pain, I remember watching dope sick and part of those scales or those evaluation tools came from pharmaceutical companies that are trying to sell more pain medication. But anyway, that's another yes on some scales
+          </li><li>
+            
+            you have. So you have those on the left you have any because I don't know if it's just you but I rarely use that
+          </li><li>
+            
+            survey or the questionnaire usually. And so my understanding of that arrangement is that you're not answering the question about the scale so then isn't on the scale. It's, here's the scale or, you know, I don't think it's appropriate. It's not applicable. So the again, a number doesn't factor in scales. Although you might think about how many people are saying na when you ask the question, like, you could go the opposite way you just have
+          </li><li>
+            
+            one or zero. Strikers result and you don't want to go the way of
+          </li><li>
+            
+            me sometimes. Yeah it's just always if you want a more decisive
+          </li><li>
+            
+            Well, I think that has its drawbacks to Sony Does that make sense? In the back there and if you're having trouble hearing me please let me know. Or yeah, I can hear you
+          </li><li>
+            
+            wait for the next feedback
+          </li><li>
+            
+            Okay, so I would say an answer to your question earlier. We're not doing for evaluation then going away and working on our own and then at the end saying this is what you want, right? This is what you want it. So we might come back. We want to engage users in a discussion
+          </li><li>
+            
+            so in that SAS car side, I think I have to check whether I got a reply but i Last of all what I can share with you the SAS presentation but one of the slides said, why do we ask users what they want when you just don't know what they want? That was the gist of that. Any thoughts? If we're not sure what we want, how can we answer your question or that you don't want Okay?
+          </li><li>
+            
+            We get a perspective like the users spend on solar. So disconnected from them
+          </li><li>
+            
+            okay so what about the may start out not knowing what they want, but it's through conversation
+          </li><li>
+            
+            some ideas might emerge. Okay, so that's another contribution. A designer can make. So it's not just about everybody can do this. We don't need designers. We don't need programmers. We can just
+          </li><li>
+            
+            go on the website and do all this stuff ourselves. So I think the textbook criticizes the idea of design thinking and making design thinking available to everyone because the associated then is the evaluation of signers skills. But I think the arguments made another way is to it's not just because people can do things on their own doesn't mean that they don't need professional input and guidance. direction. The law is one thing so people can represent themselves in court, but probably that's quite rare. Because they benefit from having somebody who has been trained and understands the system. That was an argument made. As Eric Raymond spoke about open source software, so it's not about your by make source code available. You're not
+          </li><li>
+            
+            devaluing programming but you're getting more eyes on the problem and you think you're getting a better solution or better code because you have input from people who aren't
+          </li><li>
+            
+            so gonna write the code for a living that. least contribute ideas that are helpful. So we get that perspective.
+          </li><li>
+            
+            Anything else about? Well, I asked users when they go into what they want
+          </li><li>
+            
+            it's Monday afternoon okay. Okay, does that make sense? I mean. So we're thinking about formative evaluation as a way to to check that we're on the right track. And then finally we've been moving in the right direction all along, and then suddenly, we're off track. That some evaluation shouldn't be a surprise. Results shouldn't be a surprise. So if we get something unexpected then then we're gonna we're not just the
+          </li><li>
+            
+            perspective of users the same as me.
+          </li><li>
+            
+            Sorry, I didn't hear that is gaining the
+          </li><li>
+            
+            perspective of users
+          </li><li>
+            
+            gain their perspective or exporting feedback differently, of course, feedback or separately
+          </li><li>
+            
+            Well, I I don't mean as a separate thing from getting feedback. We might be engaging in conversations. So if we understand who the user is and understand their perspective
+          </li><li>
+            
+            and so on by asking them what they want, we get get to know them better. If they say they don't know what they want I don't know if I'm helping defend answering the question or
+          </li><li>
+            
+            clarifying the answer or not. The general idea is that it's useful, even if they don't know what they want to talk to users because we can understand more about users. And in talking with them and what they do. They may not articulate ideas to us but from the conversations we might be able to suggest alternatives to them that
+          </li><li>
+            
+            are really helpful if that makes sense. So some of them are formative and summative. Talk about why when. So thinking about pairs of terms what other we think of other axes of valuation that we can use.
+          </li><li>
+            
+            So without getting without requiring both both words in a pair, what are some adjectives? Help help us frame other kinds of evaluation
+          </li><li>
+            
+            question location just thinking
+          </li><li>
+            
+            yeah, this is this is me it's not all right. So that's good. Not to run some thinking. Yeah, that's one that I was thinking. So we might say I spelled that wrong start off with a quantitative and qualitative so we might say if we have numbers, and then we have some objective truth and we have
+          </li><li>
+            
+            open ended, answers that it's subjective. It's not a string so we have a tendency to value objective or subjective.
+          </li><li>
+            
+            Same age think an average score. Know I'm sorry. The other one that you can think about on Wednesday is. Thank you very much for today. We'll see you on Wednesday. That's an A maybe you're fine dining. For the second part of the project. like to talk about it when the second part of the assignment is due we will talk about it too.
+          </li><li>
+            
+            Same age think an average score. Know I'm sorry. The other one that you can think about on Wednesday is. Thank you very much for today. We'll see you on Wednesday. That's an A maybe you're fine dining. For the second part of the project. like to talk about it when the second part of the assignment is due we will talk about it too.
+          </li></ul>
+    
+  
+    
+  <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<p class="text-muted">
+   No Responses
+ </p>
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=wiki">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/21_Mon-24-Oct-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

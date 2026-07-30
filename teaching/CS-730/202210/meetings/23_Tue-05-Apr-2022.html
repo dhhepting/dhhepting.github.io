@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-730/202210/meetings/23_Tue-05-Apr-2022.html" />
+    
+    <title>Mtg 23 &bull; CS-730 (202210) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 23 &bull; CS-730 (202210) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/23_Tue-05-Apr-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/",
+        
+          "name": "CS 730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/",
+        
+          "name": "202210"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/23_Tue-05-Apr-2022.html",
+        
+          "name": "23 (Tue-05-Apr-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/">
+        CS 730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/">
+        202210
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      23 (Tue-05-Apr-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 23/24: Tue-05-Apr-2022
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="22_Thu-31-Mar-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="24_Thu-07-Apr-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=8512">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            me. You got a haircut yesterday so. Trying to keep it. Organized little bit of fear that I do have left. how's everyone today. Can you hear me okay. Oh thanks. So who's happy his iPhone I wonder. Can you rename yourself. So following from our discussion last day. I would say. That. Then I will work on the. format, the way them phrasing questions. So that. The way to write that. sell a good answer is more clear. We talked about or two principles of good design or two most important principles. And instead of saying it that way, I could say. Why does don Norman. identify. discover ability and understanding, as the two most important principles of good design. So when we're. So i'd say in the in the questions from. That mid term. When certain keywords are used in the question, try and. deal with. With them and as directly as possible. That makes sense. Does that make sense.
+          </li><li>
+            
+            Is.
+          </li><li>
+            
+            Oh somebody use the microphone. i'm very happy to hear that. Sorry, I don't mean to be facetious. So I have a big much bigger class in the morning and. and very few people it's a hybrid class. and very few people in the classroom with me and then. Very few people. Well, there are lots of people on zoom but very few people were interacting with me some people would type into the chat window. And I don't think anyone well there's one person who made a comment during our meeting this morning. So it's. it's nice to hear that. as well. anyway. Let me. bring up the question. Let me share my screen first. This one always gets me so it looks like it's filled in from my password manage. But. I better make sure so i'm using the current one. I think. it's never quite clear whether it's using last pass. My password manager or it's using. The chrome passwords. So if I don't. If i'm not carefully end up getting login and then it ends up saying my credentials are not correct. And another interesting thing here keep on interfaces right. So there's two factor authentication. If you can read that says logging in from Regina saskatchewan. So I I did this from my tablet earlier today and it came up as Calgary Alberta. Those interesting but I didn't. It seemed it seemed correct otherwise, so I accepted it. Because I was logging in at the time. So I didn't I didn't track that one down. let's do attendance while we're here. So that means instead of doing this. To. Well let's see. So the two plus two is okay to do, I think, even for me, I did two plus two is four. But then, if you say 21 times 19. So we have to do a bit more reflection there. That maybe we maybe we can do. do without. paper. So what. What variation of this could be easier to figure out. So how about. 20 times would be 380 that's fairly easy to figure out, and then we have to add 1920. So that would be 399 right. So if you did that. You got to your so the system can mark could mark correct. If you typed in that. That number. If you typed in some text along with a number, then. I believe I reviewed them enough. If the answer looked good, then I gave you the mark for it. And if you had a different answer. If it seemed like it was clear why you had that answer, perhaps you misread the question. You came up with a number that looked. looked like it was the right answer to a slightly different question that maybe you. saw. You, so my question. is asking. So anyway. What I wanted to say about. OK so. The place where a. What I wanted to say generally about. The raw marks. that are listed there. That I may still. still thinking of doing some adjustments to in your favor. In general, for the Marks and then secondly. As I said last week. If you do well in the final. Final can count. score, the final can replace the mid term score. Okay. just give me a second here to look at that. Okay let's see. Okay. Sorry. got off track there a little bit. So this is fast versus slow the way we answered that approach, the answering the two questions. experiential. versus reflective. So here's The thing that I. Find frustrating about your courses. Is that it gives me these breadcrumbs. We don't necessarily match up to. What I want, where I want to go. So, to me it seems like. The midterm exam would be the place to go, but I think, maybe question bank is a better place. that's not right either. I would like to see the midterm exam. So. I would like, maybe here let's try preview. Excuse me. Okay. So the next question is about a paper based map compared to. The smartphone based APP. map map APP. So i'd like to go through this a little bit more detail. So what are the main concepts and metaphors that have been used for paper based map and for smartphone map APP.
+          </li><li>
+            
+            Sir, I like to ask is there a certain way you want us to answer the questions that would help us get like for Max. yeah maybe something we didn't do right cuz I checked my. review and I saw like some of them were maybe I go. to less than the full score So is there, we want us to answer their questions, help us get homework.
+          </li><li>
+            
+            Now. So this and. I tried to address that early well anyway thanks jt. So I see where. Some of the questions were a little. could have given you more direction, I guess, in terms of. What I thought was a good answer. So. So take that on over the next two weeks. So that. You have a final exam. That is a more fair evaluation of our learning this semester. With questions on which you can score well. and be confident about your answers. How does that sound.
+          </li><li>
+            
+            sounds good, thank you.
+          </li><li>
+            
+            you're welcome. So. So what comes to mind when you think about. Meta a metaphor for each of these maps. So maybe the question is finding. directions on our paper based map is like.dot.so isn't. Can you say, is it like flying over. The area. You know, maybe hundreds of meters above. The roads, you want to navigate. Okay, so there aren't. i'm honestly interested in your. input here, how do you think about using a map. A paper based map or maybe I should ask the question how many people have used a paper based map in the past. Like to raise your hand if you've. navigated was a paper map. So it's a little hard to even see them up there in the corner. But the nice thing about the hand in zoom. And so, if your hand up. Then you could go the top list of participants online display. But getting to the hand is not easy, because on my screen. It just appears so. So it appears under the more dot dot dot icon. And they have to click on that. then get two reactions. And now I can lower my hand. And then. The interface doesn't. adapt to me raising and lowering my hand. Because the reactions are still hidden under bar they don't come out. So I still have to go look for them. Okay. So there's a comment about an extension for the assignment. i'm okay to make it. To a bit later. So I would. respectfully request. That you talk about yourselves. So if you, you would like to have an extension, say, I would like to have an extension. Instead of invoking. We. and not be clear. Who is represented by the way. So that makes sense. sounds that car you don't need. I didn't mean to. call you out there, so much that you needed three exclamation points in your response. anyway. i'm not. I won. My goal is that everyone has a good experience with this class. So i'm not. i'm encouraging everyone. that's my goal anyway. You may not feel encouraged I realized that. And you may not communicate to me that you don't feel encouraged I realized that as well. So when is your exam. so on. The 700 is that on. The 14th. Is in the morning, or the afternoon. So how about. 2359. On April 19 so that'll be. The end of the day. you're writing our final exam. Excuse me, Nice. So that would be for for four more days. Okay. So let's make that change. So let's talk about. How, you would explain. To somebody who hadn't used a smartphone based map APP. And they said. i've never used an APP like that. How can I. How can I make use of it to navigate. To my friends house. And you'd say well it's just like. So good document stations important. But I would be a little bit sad if. I was I had downloaded this APP on your recommendation let's say that's a story. Have you downloaded the. APP and. said Okay, so how raise it well. here's the manual. So it could be a very nice manual and maybe it's. What do I want to say. yeah so maybe it's two very well done manual but. A metaphor. So. Remember the purpose of metaphor does is. The purpose of the metaphor is to. connect people so that new experiences with new interface. are anchored to. Some previous real world experience. Or you. Excuse me, doing something in in the real world. or. Using another kind of APP. We might say doing online shopping is like. going to your favorite store and when you go in the door, you pick up a basket. And you browse the shelves and you put into your basket the things that. You want to purchase and then you go to the checkout pay for them and then you leave. Did I carry with me from my cross continent journey no I didn't. i'm trying to think if my car had an indication. of directions in the dashboard. I had a 1991 1990. Somewhere in that area. A turd asleep. So on recent vehicles. it's built into the dash display. The compass heading. I remember my parents car. When I was young, we were traveling. They had a compass of this got stuck on to the. dashboard. and It was like a cup those liquid and. The directions would. I can see it in my mind's eye about describing it very well, he would stick on the dashboard. and The directions would spin around. So thinking about that. User experience that that was my experience I wasn't. The user of it so much, I thought it was very nice looking very. very nice compass. So any thoughts about. The metaphor that's used with a smartphone map APP. So here's. can't see my camera. So here's what pops up on my display. so little blue.is blinking where i'm located. So map on a mobile phone is kind of it's a kind of dynamic map that show different levels of detail in the areas so. i'm zooming in on the map and I can see my location is. wandering around quite a bit. It seems. Now it's in the trees next to the next, of the College West building now it's hovering over. The Gabriel du monde library behind me. it's quite interesting. So. Oh. No went off the screen altogether not come back. So if I open maps and I can. Oh, I want to go there off leash dog Park, which I did on the weekend. And I can say get directions. and get a few different three different routes. will take me 1216 or 18 minutes estimated. And it gives me the most fuel efficient route. that's up, which is also the fastest route. yeah so it's got all the real time data. or estimates of. current situation, based on past data. So using smartphone APP is like. I want to say doing knowing where you are. is knowing where where you are at any given time. And how to get someplace else. I see we're out of time today. So i'll. Post some things. To our discussion forum today and tomorrow. So we can have will have something to talk about on Thursday. And I encourage you to think about. questions. You think questions with your. answers to the questions. That would help. Or that would represent. fair evaluation of our work this semester. Okay. Anything else.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            Hello!
+          </li><li>
+            
+            Can you hear me ok?
+          </li><li>
+            
+            hello sir ,good afternoon
+          </li><li>
+            
+            Hi sir good afternoon
+          </li><li>
+            
+            Good Afternoon
+          </li><li>
+            
+            Yes, good afternoon. Nice haircut 🙂
+          </li><li>
+            
+            yes, good afternoon sir
+          </li><li>
+            
+            I have marks for the midterm - they should be visible in UR Courses, I think. I would like to talk about a few of the questions today.
+          </li><li>
+            
+            I'm sorry for sending you the message directly instead of for everyone.
+          </li><li>
+            
+            If you can’t see the marks, I will make sure that they are posted later today…
+          </li><li>
+            
+            Message referenced above: Kindly introduce some techniques to write answers for theory questions.
+          </li><li>
+            
+            yes sir
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            I thought in this subject like human interaction, we have to explain the reason and brief description of question . I did the same in mathematical question(2*2)  but I did not know we have to do calculation sir.
+          </li><li>
+            
+            I thought I gave credit for your mathematical question answers…
+          </li><li>
+            
+            Student password
+          </li><li>
+            
+            i explained the different cognition happened to both question
+          </li><li>
+            
+            i did not write 4 or number
+          </li><li>
+            
+            so should not i get marks ? sir
+          </li><li>
+            
+            it wrote about reflexive or experimental cognition
+          </li><li>
+            
+            experiential, not experimental
+          </li><li>
+            
+            yes sir!!
+          </li><li>
+            
+            thanks sir
+          </li><li>
+            
+            Not me
+          </li><li>
+            
+            Only learnt to read in high school
+          </li><li>
+            
+            👍anyone else like to comment on your experience with paper maps?
+          </li><li>
+            
+            it is cluttered sometimes
+          </li><li>
+            
+            I am sure I’ve used a paper based map at some point but can’t seem to recall when and why.
+          </li><li>
+            
+            Let me share a story about my experience with paper maps.
+          </li><li>
+            
+            I guess with paper based map we need scan the map. Maybe find the landmarks near the destination. Then follow the lines.
+          </li><li>
+            
+            A paper based map contains show all information at once (road, buildings, etc)
+          </li><li>
+            
+            physical maps is now bygone way for exploring according to me
+          </li><li>
+            
+            In 1991, after I finished my M.Sc., I went from Regina to Yorktown Heights, New York.
+          </li><li>
+            
+            To accomplish this trip by car, I got a number of maps from the local Motor Club and proceeded to draw out my route with a highlighter.
+          </li><li>
+            
+            I think that the metaphor of floating or hovering about the territory modelled by the map is a good starting place…
+          </li><li>
+            
+            sir can we get some more time for assignment ?? we are very worried as we have only few days left for final exam
+          </li><li>
+            
+            OK. Let’s think about a metaphor for using a smartphone based app. It’s like … ?
+          </li><li>
+            
+            sorry sir !!!
+          </li><li>
+            
+            I too could benefit from an extension. 🙂
+          </li><li>
+            
+            14th April
+          </li><li>
+            
+            apil 14
+          </li><li>
+            
+            april
+          </li><li>
+            
+            Morning
+          </li><li>
+            
+            9-12
+          </li><li>
+            
+            Same here, an extension will be great.
+          </li><li>
+            
+            ok
+          </li><li>
+            
+            That’d be perfect
+          </li><li>
+            
+            More than perfect
+          </li><li>
+            
+            giving showing them basic tutorials or manual
+          </li><li>
+            
+            Did you carry a compass with you?
+          </li><li>
+            
+            A map on mobile phone is a kind of dynamic map that can show different level of details/area…
+          </li><li>
+            
+            It can show live traffic or congestion on the road, give estimation for different vehicle types, has good accessibility feature
+          </li><li>
+            
+            Yes sir
+          </li><li>
+            
+            Will make some posts
+          </li><li>
+            
+            🙂
+          </li><li>
+            
+            Are we supposed to keep the GitHub repository public?
+          </li><li>
+            
+            As a student, you should be able to make it private… just give access as required :-)
+          </li><li>
+            
+            Last question, could you suggest some chapters that we should read from the Norman book?
+          </li><li>
+            
+            Chapter 2 will be included?
+          </li><li>
+            
+            what are the chapters we need to do from id-book or don norman book?
+          </li><li>
+            
+            Chapters 1-6 in Norman, Chapters 1-7 in id-book (syllabus said 1-6, but 7 has some interesting material too.
+          </li><li>
+            
+            OK?
+          </li><li>
+            
+            done sir
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Yeah!! Syllabus is long enough.
+          </li><li>
+            
+            thank you
+          </li><li>
+            
+            you’re welcome! Take care.
+          </li><li>
+            
+            see you Thursday
+          </li><li>
+            
+            thanks for today. Bye.
+          </li><li>
+            
+            thank you bye
+          </li><li>
+            
+            Thank you sir. Have a good day.
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Hi sir today we are talking about questions of midterm exam also about paper based app and smartphone app.i think smartphone app can show area,roads,....
+    </li><li>In today&#039;s session we discussed the questions of mid term and how questions should be answered for particular questions.
+    </li><li>I got some explanation and discussion about some questions of the mid term exam.
+    </li><li>Today we got the midterm grades. Then we looked at some of the challenging questions from the exam. Later, we briefly talked about the assignment and final exam.
+    </li><li>a metaphor for using a smartphone based app
+    </li><li>discuss the questions about the final exam and about the course last assignment.
+    </li><li>We discussed about answering the theoretical questions.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/23_Tue-05-Apr-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

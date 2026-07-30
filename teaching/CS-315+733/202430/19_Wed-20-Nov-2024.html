@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-315+733/202430/19_Wed-20-Nov-2024.html" />
+    
+    <title>Mtg 19 &bull; CS-315+733 (202430) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 19 &bull; CS-315+733 (202430) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-315+733/202430/19_Wed-20-Nov-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-315+733/",
+        
+          "name": "CS 315+733"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-315+733/202430/",
+        
+          "name": "202430"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-315+733/202430/19_Wed-20-Nov-2024.html",
+        
+          "name": "Mtg 19 (Wed-20-Nov-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-315+733/">
+        CS 315+733
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-315+733/202430/">
+        202430
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 19 (Wed-20-Nov-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 19/23: Wed-20-Nov-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="18_Mon-18-Nov-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="20_Mon-25-Nov-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Texture Mapping
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Wednesday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=2735311&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1732082400&amp;course=33616" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=33616" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li><a href="https://uregina-ca.zoom.us/j/98978532193?pwd=WCbc0b6RZVoHcAdyFC13eLj6mpdxzV.1">Zoom meeting link for today</a></li>
+  <li>Missed quiz before today’s meeting – I will add extra question(s) to the next one</li>
+  <li>I have added more detail and some sample code to Assignments 3 and 4
+*Sample code: ShadedTexturedCube</li>
+  <li><a href="https://webgl2fundamentals.org/webgl/lessons/webgl-qna-apply-a-displacement-map-and-specular-map.html">specular map example</a></li>
+</ul>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2734620" target="_blank">Submit your response to this meeting before noon tomorrow</a></li>
+  <li>Read Chapter 8</li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2739542" target="_blank">Take the quiz before the start of our next meeting</a></li>
+</ul>
+<h5><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2739542">ACTION: Take quiz before next meeting</a></h5><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=9515">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Hello!
+          </li><li>
+            
+            Hello!
+          </li><li>
+            
+            How are you dealing with the snow? It seems very wet hard to shovel. Sorry for the short notice about this, but I thought it better to be on the safe side, so I don't get anyone else sick. And then the roads aren't great, either, I hear. So so if you hear the doorbell again. That's just people coming in, so not to worry about it. So I missed the quiz before today's meeting, so I'll add an extra question or 2 to the next quiz before Monday's meeting. Did the announcement work? Okay to alert you to the Zoom Meeting today?
+          </li><li>
+            
+            Yeah, but it was a little late.
+          </li><li>
+            
+            Yeah, I apologize for that.
+          </li><li>
+            
+            Yeah, it's fine. Thank you, though, for the announcement.
+          </li><li>
+            
+            So I've added some more detail on some sample code, 2 assignments, 3 and 4. Any questions about those. Okay? So I want, oh. I wanna go back to the can. You see the screen? Is that sharing properly.
+          </li><li>
+            
+            Yes.
+          </li><li>
+            
+            Thanks. So this example I've made by taking the shaded cube code and adding texture, 4, yeah. So we have 2 textures on the shaded cube. So I don't have this posted yet because I wanted to edit it. And I will share some. I will share the code with some interface. some interactive elements to select things. Okay. So here we have the cube rotating. So we get can see a bit of the highlights from the shading. And it's I realize the doorbell rings after somebody's been admitted. which is strange. Okay. so I'm opening the editor. Let me share that with you. So I've change the texture coordinates a bit. So it goes from point one to point 2 instead of 0 0, and instead of 1 1 it goes to point 8.9. Let me change those back. So I'm glad you can't hear the doorbell. Okay? So I've changed texture texture coordinates there. So here it's back. So we see the whole texture on the face of the cube. So we're not. We don't necessarily one to distort the texture in the mapping process, but we can adjust the coordinates so we can see the effect of the texture coordinates with the texture mapping. Oh, the other thing. There are 2 textures defined in texture. Cube 4, a checkerboard, and the sign. So I've applied texture one twice. So here's the checkerboard. Okay? What are? Let's change the texture coordinates again, or the checkerboard any suggestions for values? What do you expect if we change this to minus one minus point 1, let's change this to point 9 and point 9 any other suggestions. Oh, did I switch to that? Okay, let's do one more change there. Okay, so that's that's the values for that's what happens with these texture coordinates. Well, let's just make one more change there, and let's switch back to. So this was caused because I put instead of 0. I put point 9. So now there just should be just smaller, smaller region. But equally okay. Here, let me share this screen. So I had put mine at point 9 instead of a 0. So that's that's the effect of that. But now let's see what I've so they're instead of 0. 0. They're point 1. They're point one smaller than the original coordinates. So let's see what happens there. So let's look at the code again. Here. see the effect of I think it's here. No, sorry I'm not keeping up switches. Very well here. so we have a repeat there, let's change that to clap to edge. So what I was doing is changing the wrapping method in. I will document this a little bit better. And the example that I'm going to post to the code directory. Okay. does that make sense? So what if we wanted to make the gold parts reflective and the black part's matte? So let me go back to the code here. And so that's with both textures applied with those the same coordinates. So we could have different coordinates. And the question was, How do we make this code. How can we get a a sharper highlight on the gold pieces instead of the black pieces? Any ideas or questions about that typing into the chat is just fine. So what is the shaded cube code doing? So we're doing the lighting calculation and vertex shader. So this is grow shading right? We're getting the intensity. Sorry I didn't switch again. So we're calculating the intensity at the vertex. And then we're interpolating the intensities across. So then we're we're accessing the color. We're accessing the textures and multiplying by the vertex color that's determined in the vertex shader. And they're passing that assign that to a fragment color a bit. And so we're not doing anything with the and with the lighting calculations in the fragment Shader, we're applying the texture, and that's it, or multiplying the vertex color with the the texture, sample, sample of the texture textures. Pardon me, there's 2 of them. So what would happen if we used fong shading instead. So if we're doing fong shading, the the lighting calculation is in the fragment shader, right? So if we sample the texture in the fragment shader, and we're doing the lighting calculation there. We could have have the texture impact the shininess. Does that make sense? So I have this one other example. This is from the web fundamental web Webgl, 2 fundamentals. I don't think these links work. So they have different maps of the planet Earth. So he, this is part of the question. He talks about his code. So then it's hard to see if that's rotating or not, anyway. So this is the fong shader. And so that's computing inside the fragment shader. And then you apply the the specular map so you can modulate the the surface based on this, the map that we apply here, let's open in a separate window. Oh, I'm not sharing with you, am I? It's been a while since I've done this. So here's the Fong shader. And then we add, we sampled the specular map to to change the the reflectivity of the surface, the specular highlights that we see. Okay. So in the and the vertex shader. We're getting the position made. Position of the points transformed by the model of you. Matrix one of you. Well, so the vertex position is the the model matrix times a position. and the vertex normal is normalizing the. So we get normals for the surface. And then the texture coordinates are passed along as well. So here we can see the specular factor assignment here. So we're sampling the specular map. So we pass that as a uniform sampler. 2D. The specular map. So you determine the specular factor by applying the texture, applying the specular map as a texture with the vertex coordinates. So we're getting the radius. So the specular is then light spec like light, specular times, specular factor, times. the shininess, coefficient expression with the with the shininess. Oh, not shyness, anyway. And then we're passing out the fragment color there. So here's an example with, I think this is the sun in the earth. They're not all the same size, I think. Think the scale is off, if I remember from what I read about the question. So here we have a surface color sampler, a bump map sampler and a specular map sampler. So has anyone looked at these codes like samples from Webgl. 2 fundamentals you can't type today. Maybe I can't type anymore. Anyway. my eyes are watering. It wasn't supposed to be, anyway. So the question is, have you used web fundamentals? Web gl 2 fundamentalist code. So I will take on creating an example that's in the style that we've used from the set textbook examples because they're using a library here to do a lot of things that makes it a little less clear what's going on this TWGL. I used to remember I used to know the name that stood for a tiny webgl helper library. There's the page for the library. So it's I know in the lab examples. Alex is doing things a little differently. and what the textbook is doing, and the and there are a lot of good examples in Webgl, 2 fundamentals. But they're not in maybe easily convertible to are familiar organization of the programs. So I would say, try and take away the the concepts rather than the code per se. Does that make sense. So those of you who have looked at the code from Webgl, 2 fundamentals. what's your been your experience? Is it easy to work with, easy to get what you need from it any questions or comments. so shall we adjourn for today? Do I have a motion from the floor? Sorry if it's if there aren't any questions or comments, shall we say. should we end end today's meeting? And I wish you a good weekend. and we'll see you on Monday. I hope in person I'll be in better shape and send me email if you need it. If you have any questions or concerns about stuff that comes up in the class. Okay. thanks. Take care. Everyone bye.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            Hello
+          </li><li>
+            
+            Happy Snowy Wednesday!
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            can't hear the doorbell
+          </li><li>
+            
+            You are lucky!
+          </li><li>
+            
+            Anyone?
+          </li><li>
+            
+            sorry, im not really sure
+          </li><li>
+            
+            That’s OK
+          </li><li>
+            
+            not yet
+          </li><li>
+            
+            Any questions or comments?
+          </li><li>
+            
+            none so far :)
+          </li><li>
+            
+            Shall we adjourn for today?
+          </li><li>
+            
+            Thank you. Get better soon!
+          </li><li>
+            
+            Get well soon
+          </li><li>
+            
+            Thank you Dr. Hepting. Hope you have a speedy recovery
+          </li><li>
+            
+            Thank you. Take care.
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Get well soon sir
+          </li><li>
+            
+            Thanks!
+          </li><li>
+            
+            thanks
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Blending the textures using specular mapping 
+    </li><li>I thought that the way that the cube was changed with different textures and shaders was very important to understand with how the different values in the code work together
+    </li><li>In this meeting, I got a look at how texture mapping works. I found it really cool to see all the different ways one can form their textures just by changing lighting, positioning, color, etc. 
+    </li><li>Mapping: texture, environmental in detail
+    </li><li>We looked at the code of mapping texture to a cube.
+    </li><li>Lighting Scenes, Mapping
+    </li><li>we looked at textures, and ways to modify them such as by using coordinates 
+    </li><li>The concept of applying texture mapping and Phong shading to a cube with a checkerboard pattern, as well as utilizing WebGL2 fundamentals for implementation.
+    </li><li>learn about webgl helper library: TWGL, shadedTexturedCube program
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-315+733/202430/19_Wed-20-Nov-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

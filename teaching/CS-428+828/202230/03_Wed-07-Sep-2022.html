@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202230/03_Wed-07-Sep-2022.html" />
+    
+    <title>Mtg 03 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 03 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/03_Wed-07-Sep-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/",
+        
+          "name": "202230"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/03_Wed-07-Sep-2022.html",
+        
+          "name": "03 (Wed-07-Sep-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202230/">
+        202230
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      03 (Wed-07-Sep-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 3/36: Wed-07-Sep-2022
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="02_Fri-02-Sep-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="04_Fri-09-Sep-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I encountered
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+          Administration
+        </h4>
+        <ul><li>
+                Happy Wednesday
+              </li><li>
+                <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1900809&amp;view=1">
+                  Attendance
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1662530400&amp;course=24538">
+                  Class calendar for today
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=24538">
+                  Upcoming events
+                </a>
+              </li></ul><h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_03" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_03" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_03" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_03" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/j4s2vdw2xi9857x/3%20-%20mask%2Bwindow.png?dl=0" alt="3 - mask+window.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/n14s4p1osku4m3l/3%20-%20wb_1.png?dl=0" alt="3 - wb_1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/6rg5az5t7aaknsd/3%20-%20wb_2.png?dl=0" alt="3 - wb_2.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_03" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_03" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            theory the concepts are
+samples okay
+          </li><li>
+            
+            so i think i fixed some problems
+so here's the test to see
+          </li><li>
+            
+            whether the QR code helps with
+attendance and whether you can
+          </li><li>
+            
+            and how far back in the room can
+you use the QR code to take your
+          </li><li>
+            
+            attendance? Anyone want to try
+it? I'll just take it
+          </li><li>
+            
+            Okay, front row works how about
+further back? Second last row is
+          </li><li>
+            
+            the last row working okay
+          </li><li>
+            
+            is that a better way to do it
+than giving you the password?
+          </li><li>
+            
+            Yeah okay. evening I was editing
+this page and I guess I didn't
+          </li><li>
+            
+            save it. I was
+          </li><li>
+            
+            using the group guys so I didn't
+mention Happy Wednesday to begin
+          </li><li>
+            
+            with. Yeah, so it's not quite
+the hump day for the week, this
+          </li><li>
+            
+            week, but so if you have
+something some comments, please
+          </li><li>
+            
+            share them with the class.
+          </li><li>
+            
+            Put your hand get my attention
+and that were asked me
+          </li><li>
+            
+            questions. Okay, thanks. I will
+review the the edit here to give
+          </li><li>
+            
+            the group letters based on what
+I've created in your courses
+          </li><li>
+            
+            so I just say Happy Wednesday
+but it's not as happy as it
+          </li><li>
+            
+            could be after instance of the
+weekend
+          </li><li>
+            
+            Sure so it's it's here as CX i e
+t, one Okay, so there's a limit
+          </li><li>
+            
+            to the QR code the very back row
+did that work? Yes. Is
+          </li><li>
+            
+            this just an HTML page? If it's
+possible, because the right hand
+          </li><li>
+            
+            side is just one space, you can
+put the password super big text
+          </li><li>
+            
+            on one side of the screen for
+those who are having trouble in
+          </li><li>
+            
+            the future.
+          </li><li>
+            
+            So your courses page so that
+would be well, here. Let's
+          </li><li>
+            
+            explore that. So let's make a
+full size can make it a little
+          </li><li>
+            
+            bigger so a noodle I think this
+this is not just to you of our
+          </li><li>
+            
+            future
+          </li><li>
+            
+            Yes. So cute. You can recognize
+the QR code as your phone can
+          </li><li>
+            
+            your phone scan the QR code or
+not? Works some other speakers
+          </li><li>
+            
+            dropping off first I just want
+to say. A big fan of this super
+          </li><li>
+            
+            Odyssey chose virtual virtual
+function static functions like
+          </li><li>
+            
+            time labor relations
+          </li><li>
+            
+            so I found this interesting when
+I had CarPlay with my phone
+          </li><li>
+            
+            running iOS 15.6 I weren't I
+thought I'll just send a smiley
+          </li><li>
+            
+            face emoji. So I
+          </li><li>
+            
+            so I said smiley face emoji knew
+I guess what I came up with was
+          </li><li>
+            
+            a translation I mean most the
+time I'd like to get this but I
+          </li><li>
+            
+            always get autocorrected to the
+emoji anyway, I thought that was
+          </li><li>
+            
+            something fun. So maybe if you
+want a technical
+          </li><li>
+            
+            solution just inspect element
+make it flow right. Adobe Hi
+          </li><li>
+            
+            rejectable.
+          </li><li>
+            
+            Yeah, well, I have to download
+it.
+          </li><li>
+            
+            You can edit it. I can show you
+after class or we did edit the
+          </li><li>
+            
+            page in real time without having
+to download anything
+          </li><li>
+            
+            I didn't think that was
+possible. Okay. Sure. Let's see
+          </li><li>
+            
+            whether we can make our own
+small improvements. I was
+          </li><li>
+            
+            thinking of maybe doing a couple
+of columns so that we and maybe.
+          </li><li>
+            
+            Check it out
+          </li><li>
+            
+            Check it out
+          </li></ul>
+    
+  
+    
+  <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>The most important lesson for me today was that when we design something we have to be mindful of our design. Like the example from the video in the class our design should make sense and people should be able to use it easily without any issue and need of written instruction; for example if a door needs to be pushed we should not install a handle as it will have the opposite response from the end user as they will think it needs to be pulled.
+    </li><li>The most important thing I learned today about the ease of usability of a design. The design can be well equipped, but if it does not comfort the user, it will be a bad design. There was a difficulty in understanding the QR code for attendees, which was resolved. Then I learned about Norman&#039;s door. The video about it reflects how bad design can be. Make user puzzled is not the goal of user-centric design.
+    </li><li>Staring at a QR code for thirty minutes made me reflect on how a feature that should have a positive change on user experience, such as easier attendance, can be anchored into a negative experience when it is overshadowed by other significant negative experiences, such as no syllabus or assignment information being posted.
+    </li><li>I taught the professor about dev tools in web browsers to modify the layout of the QR code page for attendance
+    </li><li>In today&#039;s class we discuss about the group formation. In which group what people are involve. We also discuss about the QR scan for attendance, it could be better.
+    </li><li>I was really interested in learning about Norman Doors. It is interesting how something that seems rather insignificant such as the design of a door handle can have an impact on a person’s experience using that device/object. These are important things that a designer can easily misunderstand.
+    </li><li>Some classes insist on placing students into teams
+    </li><li>The most important concept learned today is the Norman door concept. Many items that we use everyday are not designed with a human centered design (user experience in mind). Therefore, we run into many inconveniences which can be easily avoided (such as push/pull doors). An ideal design is one where the user is immersed and is not reminded that he is using an interphase. For example, if there is a door that is easily operated from both sides, we will not be reminded that we are using a door because our shor
+    </li><li>In class today we saw Don Norman’s video on bad doors. This video cleared up the definition of good design when he said that when a person going through a door should not feel like a task but an involuntary activity. So a good design at the least should be intuitive.
+    </li><li>In Today&#039;s meeting we encountered a video about the Human Centered Design, and the example we used was that of a Door, A bad door is that which has a handle (used to pull), that requires us to push the door. Using a handle to push the door is just uncanny. Don Norman was the speaker who says that its not us, its the door. A door that does not need a sign is an ideal door. Example, push a door without it saying &#039;Push&#039;.
+    </li><li>The most important thing I encountered today is the idea of obvious design. The Norman door video showed that if you make a door with a pull handle, the door should open through pulling. If the handle is just a flat surface, the door should open through a push. In a user-interface setting, obvious design features increase usability and help people instantly understand what the functions do.
+    </li><li>The way that today&#039;s attendence password changed has let me have a better understanding of how design pattens can improve user experiences.
+    </li><li>Made a tentcard, the design issue about the attendance page
+    </li><li>Today I learned about how a human-centered interface helps people to enjoy the use of an object better. In class we had the example of doorknobs. Had they applied a human centered design to the doorknobs, it would have been easier to use. I also learned about what aspects of human centered design are the most important.
+    </li><li>Happy Wednesday too. In this session you talked about the re grouping and asked us to write our name on the paper desk name. The next concept you Talked about was Norman Door that accompany with a great video clip. A Norman door is a poorly designed door that confuses or fails to give you an idea whether to push or pull. It was named after Don Norman, the author of The Design of Everyday Things which explored the phenomenon.
+    </li><li>I thought the explanation I encountered today in terms of design of doors was certainly very interesting to know. How Don Norman changed how everyone thinks about design. It was an interesting thing to learn about today.
+    </li><li>We submitted our attendance by scanning QR code in UR course and then we wrote our names on the special papers which were put on the table. The short video about designing was shown. It was named &amp;quot;Norman Door&amp;quot;. Don Norman was a professor and he started complaining about doors. He believed that Doors shouldn&#039;t need instructions. The shape of them can guide you through just fine. Why do doors need instruction? Don Norman thought about, and wrote the book and he changed the world.
+    </li><li>The video we watched today regarding doors was very relatable. The most important thing I encountered was the logic behind opening doors. I guess I never thought about it but it makes sense for the push door to have flat handles and pull door to have handles because in the end its all about convinience.
+    </li><li>Today I learned about the interface . The first example was of the Attendance password which has a very small area for letters and the qr code was good enough to scan. The second thing which I learned today was about the bad doors. I learned that the doors doesn’t have to be complex and you should not think about push and pull and just go through the door. I saw a video about the bad doors.
+    </li><li>By visiting Norman&#039;s Door idea I understood that it is very important to design anything keeping Psychology of human in mind.
+    </li><li>Today is the third meeting of our class where we discuss about the groups and attendance code and then we watch a YouTube video related to doors and I think we will discuss something related to this in our next class.
+    </li><li>In todays class Dr Hepting headed up with new way to remember Names of the students by giving each of them with papers and fold it as if he can see the name you want to call by on our tables.We also discuss about the new style for meeting passwords with QR code that would directly fill up the code and redirect on URcourses adding up to that we have checked names of our class groups and verified.
+    </li><li>It&#039;s not you Bad doors are every where. ), a clip about the confusing doors, was projected by the professor during the class. Pushing or pulling to open the door often causes confusion among people. I learned about good and bad design through this, such as how locking doors can cause confusion while trying to lock various types of doors.In upcoming lectures, I want to learn more about good and bad designs.
+    </li><li>Dear Prof. Hepting. Today you showed us the video of Norman doors which was related to the design of doors, and It was an excellent example for me to understand how much the design of an interface is essential for the users with this example. Also, we talked about the design of the QR code page of URcourses, which was good practice for understanding a good design for me. Thanks
+    </li><li>Today saw a good example of one of the important designing problem in daily life but getting overlooked. The pull or push option on doors are
+    </li><li>Today we wrote our business cards, then we divided into groups, then we learned about QR codes, how to quickly submit our attdence, then we watched the norman door video, and learned about norman door news and insights.
+    </li><li>today was my first day in class as i had registered late for  the subject. we scanned the qr code for attendence and professor hepting explained why recording attendence with qr code was more reliable than manually typing the password. we also saw a video of human centric designs on the basis of the principles of discoverability and feedback like the doors should have flat plates instead of handles so there is no confusion about pushing and pullling
+    </li><li>How bad and good designs that we come across in day-to-day life are being ignored or goes unnoticed, until brought to note like the Norman doors! I also have faced trouble with the doors in malls and kept waiting because it said &amp;quot;Automatic: caution&amp;quot; but didn&#039;t open on its own.  This subject will teach more observation skills.
+    </li><li>I totally agree with the concept of Norman doors being a fault of the design and not of the human using the doors. It&#039;s important that the products we design make people&#039;s lives easier, and not become a source of frustration (as seen with the office door shown in the video).
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>In today&#039;s meeting we saw the confusion between push and pull for doors and what&#039;s more confusing than understanding is using it. I personally have pushed the door when it said pull and vise versa but the one thing that these doors can be neatral and open both ways which is what we don&#039;t see anywhere. All doors are either push or pull otherwise if a door works both ways it wouldn&#039;t create so much confusion for people.
+    </li><li>What makes &amp;quot;bad&amp;quot; user interfaces a thing? When considering the bad doors video, there are a lot of doors that are confusing to use called Norman doors and points out their commodity. When considering it in relation to interfaces, both have similarities in the production phase. Both a door and an interface would have to have had an approval process but why doesn&#039;t that process &amp;quot;sniff&amp;quot; out obvious design flaws that would prevent you from using the product correctly? How do companies generally test interfaces?
+    </li><li>It&#039;s about to fly now. I can join the class soon. BTW, I cannot access to the syllabus link. Am I the only one having that kind of problem?
+    </li><li>It was kind of hard to hear from the back. Also It is kind of hard for me to understand the class orientation and what the things we need to submit/learn?
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>Today we discussed about bad doors also called as Norman doors. And a question arises that human centered design is important or people centered design is important?
+    </li><li>So in today meeting first we were provided a piece of paper to write our names so that Dr. Hepting can know us all by names and then we watched the video of Norman Doors. Basically, Norman doors are the doors which are confusing to use for example while using doors in any entrance it is of a commonsense that the doors will be generally opening by pushing them but instead we have to pull them which creates the chaos.
+    </li><li>Today we watch video from YouTube that about design and the guy was Desiger in England and apple he talked about design he loves design and before that we watch this video we write out name on the paper and And we put it in front of the table.
+    </li><li>I&#039;d like to know more about the real world applications of interaction design principles. My curiosity in this aspect sparked from the Norman Doorman video.
+    </li><li>I would like to see the concept of norman door in design principles related to software and computer applications and also how to resolve the issues.
+    </li><li>Today lecture was an interesting one as we saw a video about the Norman door. The Norman Door is the one where the design tells you to do the opposite. It talks about the principle of Discoverability. It talks about the ability of how simple things work and we our incapable if discovering it. The video was literally amazing as it talks about how simple things can even get overcomplicated for the users to use. So I would like to know more about the principles and application of how I can utilize them.
+    </li><li>We discussed about interface involving the QR code for attendance. Some of the findings were that it does not work well for students sitting near the back of the class. Some potential improvements were displaying instruction on the screen and bigger QR code. It was also beneficial to receive feedback from the students. I’d like to learn more about interface testing.
+    </li><li>I have learnt today about the norman doors through a video which discusses how important it is to consider user experience in designing products. I would like to learn more about the design methodologies
+    </li><li>The Norman&#039;s Door concept was very intriguing. So, I really want to know more about the Psychology behind the designing concepts and therefor I am searching for the book by Norman to understand more about this.
+    </li><li>Discussed about UR Course class information and Breakroom Groups.
+    </li><li>the thing about which I would most like to know more is why the designers do not really satisfy what users need. In other words why do users need to struggle to perform simple tasks. For example, the video we watched today in the class, illustrated that simple design such as doors make it too difficult and confusing to the users to use. Which needs clear instructions o make it easy.
+    </li></ul>
+
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=8829">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/03_Wed-07-Sep-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

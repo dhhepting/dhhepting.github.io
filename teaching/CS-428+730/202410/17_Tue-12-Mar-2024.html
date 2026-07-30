@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+730/202410/17_Tue-12-Mar-2024.html" />
+    
+    <title>Mtg 17 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 17 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/17_Tue-12-Mar-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/",
+        
+          "name": "CS 428+730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/",
+        
+          "name": "202410"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/17_Tue-12-Mar-2024.html",
+        
+          "name": "Mtg 17 (Tue-12-Mar-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/">
+        CS 428+730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/202410/">
+        202410
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 17 (Tue-12-Mar-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 17/26: Tue-12-Mar-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="16_Thu-07-Mar-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="18_Thu-14-Mar-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Attention, Project, Metaphors, Mental Models
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Tuesday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=2507968&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1710223200&amp;course=31184" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=31184" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li>Attention, locus of attention</li>
+  <li>Project and project groups</li>
+  <li>Metaphors</li>
+  <li>Mental models</li>
+</ul>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=" target="_blank">Submit your response to this meeting before noon tomorrow</a></li>
+  <li>Read ID-Book Chapter 2</li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=" target="_blank">Take quiz before the start of our next meeting</a></li>
+</ul>
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Good morning. How's everyone doing today? So is winter over. or maybe now we're in the season of freezing rain. I was talking with a friend about the old saying about how. if March comes in like a lamb, and it goes out like a lion. or vice versa. So it kind of came in like a lion. but I don't know whether it'll go out like a lamb or something else. Maybe we need new things. and we also used to have a saying that April showers bring May flowers. so maybe we'll have, say some sayings about freezing rain in March or April brings trips trips to the emergency room. Anyway, I digress. Okay, so let me share my screen here. So what I have presently the Graphic is in Spanish. But it's pretty easy. I think it's easy to see what's being intended. The rest of the Texas in English. Here the differences between exclusion, segregation, integration, and inclusion. So exclusion is. people with other abilities are excluded from the main group. Segregation is. we put people with other abilities into a separate group integration is that we bring the people with other abilities into the main group. But there's still some differentiation and inclusion is when we remove those barriers. We don't distinguish people on on what makes real distinguish between people or on the differences between people, but rather on their abilities. And so inclusion is. we're not. You treat each one, each person as an individual. So this is our our goal. We're talking about accessibility. Okay? Oh, one other thing I wanted to mention is. so we're going to. If you're available. On Thursday afternoon, between 2, 30 and 3, 45, we're going in the CS. 2, 80 class. We're going to have a screening of the classroom version of
+          </li><li>
+            
+            speaking, how can I help you? Good, good. Good. How about you?
+          </li><li>
+            
+            Okay. To occur to cur that. So we're going to have a screening of the classroom version of the social dilemma. So if you're available at around 2 30, well. we'll start the screening shortly after 2 30. So and it's about 45 min long. So I expect there to be a few seats available if you're interested in seeing them that movie. So I'm going to try and arrange that full the screening of the full-length movie later on in the spring. so you can keep an eye out for that. so that the social dilemma addresses some issues about interface design and dark patterns, and how we how technology is getting people to do things they don't want to do. which really, which is essentially what those dark patterns are anyone interested in going to see that if you haven't seen it already? Okay? So, Dorcas. you said, you think there's an error with assignments on you, our courses? Can you let me know what that is? Okay. I will look into that. Okay, so let's look at the assignment. Hey? See? Did I say something? Well. so maybe a paragraph or 2. So maybe a page or 2 about describing the activity and and a bit about the user wanting to complete that activity.  so a couple paragraphs for the one or 2 paragraphs for the activity and a paragraph for the user and for the define. Maybe that's a page. So we're just focusing on the problem is that just to identify the the problems and unmet user needs. So no solutions. Okay? So I can add. I can add something to the assignment about the length. Would that be okay? Does does those comments make sense. So I gave you more than 3 choice. So the question was, should we focus on understanding any of one of the interfaces? Okay. let me see. focus on understanding any of the 3 interfaces. groups, groupings or overview. or should we aim to empathize and define all 3? So I gave you more choices, then those 3 interfaces. because groups appear in different places. So so there's a question about whether you can do the same activity from the empathized assignment. So the empathized assignment wasn't dealing specifically with groups. If if you focus on groups. you can do something similar to what you did in the first assignment. but the focus should be on group, the groups interfaces. The idea of groups in you are courses. Does that make sense? So questions? So can we just pick any functionality, facet activity described Miss Simon? Or does each group have to do a different activity? So I'm I am inclined to say every one can pick their own. and I hope that not everybody's going to do the same one. But we can. We'll come to that bridge will cross that bridge when we come to it. I guess I welcome your suggestions about how to organize things. We get coverage of the different aspects. and when we get feedback about the last. the Simon before this to being the next one. I hope so.  we can move the just to make that more likely we can move the due date to Monday instead of Friday. Would that be okay? Okay. So I'm not sure about your responses to that. That was me trying to be funny. so I can see that you don't have to type in. Yes, any more. I got the message, so we'll adjust. I'll adjust the due date to Monday. Okay? So since we get lot, lots of activity in the chat. I put a question in the chat. So any thoughts about ensuring some variety of coverage of group interface issues. Hey? I can. I can do something like that for today. A sign up sheet. I think I can use a scheduler to do that. or we can use discussion forum. So if you've already picked an activity, and so maybe it's easier to just to just declare what you're interested in doing. Maybe we can use the wiki for that. and then if there's overlap, we can. Well. I don't want to put put anyone off of doing what what they'd like to do. So we'll manage that, so I'll put a I'll put the list of suggest. Oh, put the list of suggestions, suggestions that I came up with. and then groups can indicate what they're doing that way. That'll help us do a pairing of the groups where the the the testing phase that we're going to do. So we'll try and match groups with this that aren't tackling the same ideas that makes sense. Does that make sense? So I'm I'm really tired of the current groups interface. So I'm I'm excited that there's lots of opportunities to to identify some issues in the present system. So if I can maybe mention a little bit about the current groups interface or the ways I've used the current groups interface to make up the project groups. So if you had a group of 4 for the assignment. I kept that group in the project. If you had a group of less than 4 in the assignment. Then I and I put your name into the hat to generate project groups. and I didn't see it. There wasn't an easy way for me to preserve the groups that were established for the assignment, say groups of 2 or 3, and add one person at random to make it to fill out the group so that could be something to explore. So I think I did this advertised with the groups. I said. if you. if you have the group of 4 for the assignment. Then you can continue that group for the project. If you don't have a group of 4 you'll be put into one for the project. So I had a couple notes about people saying they forgot to submit the tenants during the midterm exam. So that's that's not a thing to be concerned about. Okay, let me put your mind's at ease about that. Okay, is everyone at ease about that. There are other. There's another way for me to tell that you attended by having the exam. So does that comment about the project. Groups make sense any issues that need to be dealt with or errors that I made along the way. So I I am hesitant to open the group's interface, because then you'll see. maybe if I switch to the experiment with viewer courses. so you won't. You'll see names, but not so if we turn on editing
+          </li><li>
+            
+            this way.
+          </li><li>
+            
+            I,Lauren.
+          </li><li>
+            
+            like the jump.
+          </li><li>
+            
+            Okay. I don't remember doing this myself or not. Do we do this in class. anyway? Let's look at. Let's look at that interface to see. And let's see about switching people around participants. So let's say, we're gonna move some people around in these groups and we'll make another group. Okay. so I want to make another group. So I have to go. Let me duplicate this tab. Then I went. I want to have actually all 3. Somebody's turned their audio on. So I'm just going to type in the chat. Please please feel free to unmute yourself when you have something to say to class and hope. That's clear.  okay, so I want to see. Let me do one more duplicate tab for this. So then, I can see groups so that the my email about the problem with the the problem I was trying to show you at the end of last meeting that makes sense where there was an error on the assignment that said. not everyone's in a group. or they're somebody's in more than one group. Let me show you the okay. Let me try. And since I brought that up, let me show you the picture from the other day. So this Eric comes up when I say, require students to be in a group and give a grouping. But the grouping. So the the setting required to group to make submission is enabled. and some uses are either not a member of any group or a member of more than one group, so are unable to make submissions. So the way to debug I debug, that is to, or to find out what the problem is. I have to view all submissions and then look in the group column or a message that indicates if they're not in a group, or if they're in more than one group. so it doesn't tell me that. So there's no there's no way to specify or to correct the grouping in the group's interface. There's no way to specify. Then I'm going to use this group for assignments. and or that I need to have this. Everyone has to be in a group and only one group. Okay. so I'm getting direct messages. So please, if you want me to talk about them. post them to everyone. So it seems like the root cause of this messages the problem with specification of the groups in the groupings in the grouping. So the I would rather deal with this when I'm creating the grouping instead of at the point of having the assignment and realizing there's a problem with it. Does that make sense? So there's a comment about the groups were shuffled a bit after fixing the error. Well, that this error was unrelated, I I had fixed the well the screen. Listen, let's see from the air, I recreated. I guess, an error. There were some problems with groups. but I've just discussed the reason for the shuffling. and I believe I had made the groups as advertised. So I indicated a way as a possible focuses how to preserve small groups and add members to them.
+          </li><li>
+            
+            You don't hold a trigger
+          </li><li>
+            
+            a. So let me get back to this. This is the overview page. even though it says groups. It's the overview page. And this one is groupings. Oh. sorry. Okay. So the question is, is it possible to keep the same group as assignment for the project as well? So if you were in a group of 4 for the assignment. your group of where the assignment has been preserved. If you weren't in a group of 4, I have put you into a group of 4 for the project. If I've made an error in that that you add. for in your group for the assignment. and didn't have that group transferred to the project. Let me know. I'll fix that.
+          </li><li>
+            
+            Do we need to email you for that?
+          </li><li>
+            
+            Sure.
+          </li><li>
+            
+            Okay? Because I had a group of 4, and all the 4 participants, participants have been randomly assigned to different groups. That's why.
+          </li><li>
+            
+            Okay, I'll fix that.
+          </li><li>
+            
+            I'll just mention all the student numbers and the the students names, so you can rearrange the group, then for me.
+          </li><li>
+            
+            Well, it should be. You should have. Just tell him. Just tell me the group.
+          </li><li>
+            
+            Okay, Sharon. Okay, okay. it makes sense to me, thanks.
+          </li><li>
+            
+            anyway. Yeah. Okay. okay. so here I have groupings. So this screen, it lets me add groups to change the membership of groupings. And here's the group screen. So this is all the groups that have been created in the course. So I want to create a new group. We'll call it DHAA. And then we'll move some people around. So what if I want to make sure this is in the grouping. DH. Any way to do that. So edit group settings is that the comment? Is that what you mean? Let's see what edit group settings brings us. No, there's nothing here for grouping. And I think so. I have a feeling that's it. There's no grouping specified, because groups could be put into different groupings. like the project grouping that I made for the our class contains groups that are labeled that are called project and groups that are labeled assignment. But that distinction isn't a distinction about a group being able to be put into multiple groupings is lost. So or maybe there's a way to present prevent present that the choice of putting it into a grouping by default. Or maybe there's some other way to deal with it. I don't know. It's just. I'm not sure which grouping I'm creating a group into. But II get. let's put a couple people in here. So we get a bit of information about. But who's in which group? So so let's add. well. effectively, want to move. So I know as to this selected user, members user's membership doesn't always show up. But if you want to move yes. person. and into the group. So which if I wanted to the person we've added ESMA beer.  that's showing more information than it should. But which group should I remove if I want to keep. say that dh, H. Grouping was set up so that everyone is in one and only one group. Which group do I need to delete now? Anyone, remember. So I think I remember. But let me check. So that's group Q, so go back here. So we don't have to delete the group. but we should remove the person. That's we want to remove. So it so clicking on the name doesn't affect it. There. now, let's check on this DH. Grouping. So we need to add the new group that we've created. So let's think about if we wanted to say we went for trying to communicate the process of managing groups to somebody. But would you say, it's like. so what is group management like? Complicated for? Sure? Okay. so that's not necessary. Metaphor. Maybe kin say it's like a Rube Goldberg machine.
+          </li><li>
+            
+            It's kind of like the game of perfection you need to find which space or where to put things. you're back and forth, trial and error.
+          </li><li>
+            
+            Okay, I'm I don't. I don't mean I'm not sure that I'm familiar with that game. So that's an effective metaphor for some people or it but has a possibility of being an effective metaphor. But that doesn't help me. So let's what are some familiar elements. So a designer can't influence the mental model. Pardon me, they can influence it. but they can't specify it. So we can encourage people to have a mental model that that the designer think this will help help the user navigate things, but and the metaphor. So this is like like something like a stack of cards. So the add and Remove interface has some familiar aspects. but it seems blankets slightly more difficult because we can't. because we can't operate on the list. We have to click the button to add and remove at the bottom. There are extra steps involved in view our course's version. So I've added my group. DHAA. Cause. It's not here. But why don't I see it at the top. but I can see that it was added at the bottom. So have you done groups like this in other classes? Have you from other instructors. Have you had experience with groups? So the thing about groups in your courses is the ability to create groups from a Csv file. from external input is reserved to the system administrators. They can do that at course, creation time. So that's how we have 2 groups, the CS. 4, 28 and the CS. 7, 30 groups. So I can't specify group membership with a Csv file which complicates things. So, Nasar, can you give us some more detail about your comment that they were much less complicated and easier to understand.
+          </li><li>
+            
+            Yep, yep, like. first off, when I first emailed you for the groups you replied to us, saying that there should be just 2 members for the assignments and 4 members for the project. and then we segregated our group to 2 and 2, and then there was trouble for us, for assignment, submission. And then now, when we are trying to analyze the project. the groups are shuffled again. So that's why they were much less complicated and easier to understand.
+          </li><li>
+            
+            So I don't recall saying that you had to have groups of 2 for the assignment. I will review the correspondence and see where that message was miscommunicated. So.
+          </li><li>
+            
+            okay, okay.
+          </li><li>
+            
+            so anyway. I was wondering if your comment was about your experience with groups on you are courses in in other courses.
+          </li><li>
+            
+            Oh, okay. So like, you were asking about making the groups and
+          </li><li>
+            
+            so have other instructors used groups. and there you are courses.
+          </li><li>
+            
+            Yep, yep. Other instructors have used groups. Yep. we had groups for assignments, and we had groups for project. As well. Yeah.
+          </li><li>
+            
+            okay.
+          </li><li>
+            
+            they The only thing different was they never had a group submission link. They had individual submission links. So we had to submit for each group member, and it kept it kept it easier, or else other instructors also suggested that any one member of the group can submit to the UR. Courses. and he will consider it for the whole group.
+          </li><li>
+            
+            Yeah. that's the way it's set up.
+          </li><li>
+            
+            Yeah. But
+          </li><li>
+            
+            yeah, I understand there is some issues. So I'll work to resolve those
+          </li><li>
+            
+            we're out of time today.
+          </li><li>
+            
+            So any questions. So the question that we have to add delete for our own group interface or other groups as well on the experiment. Your courses. I was just using this as an example. So you're free in the experiment with your course's course. to explore the interface, so it's not to have to do something in particular, but it gives you a place to experiment. Yes, I I missed the quiz yesterday. I will add a quiz. I'll set up the next quiz. and I'll I'll give you 2 quizzes for the the price of one for the next meeting. Okay. thank you for today. Have a good day.
+          </li><li>
+            
+            I proof I have a question here regarding the group project.
+          </li><li>
+            
+            Yes.
+          </li><li>
+            
+            So for the groups, do we need to follow the groups you assigned, or we can choose our own members. Hello.
+          </li><li>
+            
+            yes.
+          </li><li>
+            
+            Do we not need to choose the groups? Can we choose our own members for the group, or we need to go with the groups assigned by you.
+          </li><li>
+            
+            Yes, I understand the question we've been talking about this to day. So
+          </li><li>
+            
+            did you have a group of 4 for the assignment? No.
+          </li><li>
+            
+            Did you have a group of more than
+          </li><li>
+            
+            did you work with anyone else? Yeah, we were, too.
+          </li><li>
+            
+            I'll see what I can do.
+          </li><li>
+            
+            Okay.
+          </li><li>
+            
+            thanks.
+          </li><li>
+            
+            thank you.
+          </li><li>
+            
+            You're welcome. Take care. Everyone have a great rest of your Tuesday, and will see you on Thursday.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            Good morning!
+          </li><li>
+            
+            Morning
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            good morning
+          </li><li>
+            
+            Good morning!
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            good morning!
+          </li><li>
+            
+            Good morning!
+          </li><li>
+            
+            not bad
+          </li><li>
+            
+            doing pretty good
+          </li><li>
+            
+            Doing good, yourself?
+          </li><li>
+            
+            Hopefully :)
+          </li><li>
+            
+            I doubt we'll have another cold snap but I bet we'll get at least one more good dump of snow
+          </li><li>
+            
+            I have a question!
+          </li><li>
+            
+            Almost, might be another snow though
+          </li><li>
+            
+            hahaha
+          </li><li>
+            
+            I think there's an error with the assignments on urcourses
+          </li><li>
+            
+            I'm interested
+          </li><li>
+            
+            the empathize submission is now showing under the zoom vs protorack submission
+          </li><li>
+            
+            For the assignment for the describe and define part how much are you expecting for both of those?
+          </li><li>
+            
+            Should we focus on understanding any one of the interfaces from the three choices: groups, groupings, and overview? Or should we aim to empathize and define all three: groups, groupings, and overview?
+          </li><li>
+            
+            Also, two questions: 1. can we just pick any functionality/facet/activity described in the assignment or does each group have to do a different activity? 2. will we get feedback on our last empathy assignment before submitting this next one?
+          </li><li>
+            
+            Can we continue with the same activity from the Empathize assignment?
+          </li><li>
+            
+            Reacted to "Can we continue with..." with 👍
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Yes please.
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Yes!
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            Yes please
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Yes please
+          </li><li>
+            
+            Yes please
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            Any thoughts about ensuring some variety of coverage of group interface issues?
+          </li><li>
+            
+            You could maybe provide a signup sheet with the different activities? But that would need to be provided by like the end of today to give people enough time to coordinate with their team and complete the assignment by Monday.
+          </li><li>
+            
+            Between groups
+          </li><li>
+            
+            Or groups can declare a activity which they gonna work on in the discussion forum
+          </li><li>
+            
+            What if were done, do we need to sign up?
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Please feel free to unmute yourself when you have something to say to the group, otherwise leave yourself muted to avoid distracting background noises.
+          </li><li>
+            
+            Yes actually our groups were a bit shuffled after fixing that glitch
+          </li><li>
+            
+            Is it possible to keep the same group as assignment for the Project as well please?
+          </li><li>
+            
+            I think we're looking at the wrong screen Daryl
+          </li><li>
+            
+            We're still on the Understand your Project image
+          </li><li>
+            
+            Edit group?
+          </li><li>
+            
+            should be under the add/remover user
+          </li><li>
+            
+            it's a very interesting process, I do agree
+          </li><li>
+            
+            Anyone?
+          </li><li>
+            
+            Am I still connected?
+          </li><li>
+            
+            Yep, you're still connected
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            If you asked a question though I missed what it was
+          </li><li>
+            
+            complicated for sure😅
+          </li><li>
+            
+            What is group management like, if you were to explain the process to someone?
+          </li><li>
+            
+            Not very intuitive
+          </li><li>
+            
+            Looks like you need some sort of certification to be a subject matter expert
+          </li><li>
+            
+            It kind of feels like folders, or maybe stacks of cards
+          </li><li>
+            
+            Is not familiar metaphor… difficult to figure it out to use
+          </li><li>
+            
+            Not in this way, no
+          </li><li>
+            
+            This is my first experience with groups on ur courses
+          </li><li>
+            
+            Yes and they were much less complicated and easier to understand.
+          </li><li>
+            
+            I have the question that we have to add/delete for our own group interface or other groups as well on the experiment ur courses?
+          </li><li>
+            
+            Also from past few classes we are not having quizzes questions available in the section quizzes before meetings, can you please add the questions to the quizzes?
+          </li><li>
+            
+            Do we need to follow the assigned by you or we can choose our own members for the group.?
+          </li><li>
+            
+            yes thank you professor
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Have a good day!
+          </li><li>
+            
+            Thanks Daryl, have a great day!
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            thank you!
+          </li><li>
+            
+            Thanks, have a nice day!
+          </li><li>
+            
+            thank you!
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Thank you
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Today the discussion was mostly about Groups feature of UR Courses.
+    </li><li>Learned that how frustrating moodle groups can be.
+    </li><li>Locus of Attention
+    </li><li>The mental models 
+    </li><li>find groups
+    </li><li>An important concept is that Daryl talked about the assignment, a question was asked that answered one of mine that I was wondering about.
+    </li><li>how urcourses group management module works
+    </li><li>Mental model: Mental models are frameworks or representations of how the world works. They are cognitive tools that help us understand, analyze, and interpret information. These models shape how we perceive situations, make decisions, and solve problems. Mental models can be derived from various sources such as personal experiences, education, culture, and social interactions.
+    </li><li>Intresting topic today was about metaphors and mental models 
+    </li><li>detailed Info about HCL
+    </li><li>How the assignment and activitiy focus will be arranged 
+    </li><li>Today’s important concept was Attention, locus of attention and got to learn more about it
+    </li><li>Today I learned about the group I will be working with for the upcoming project.
+    </li><li>Adding people to groups or modifying groups of 3 or less in Moodle is difficult. I was confused trying to follow what was happening
+    </li><li>We discussed more about the assignments and Daryl showed us examples of navigating through the components of the interface.
+    </li><li>Today we looked at some of the differences between exclusion, segregation, integration and inclusion when it comes to considering all users in design. 
+    </li><li>It was interesting to learn about groups and the groupings for the assisgnment
+    </li><li>In todays lecture we discussed about the project. Professor also discussed about the groups created for the project and discussed what is expected from the group to submit.   
+    </li><li>Today's class was all about group project discussion.
+    </li><li>Mental models and Locus of attention
+    </li><li>The movie on thuesday!!
+    </li><li>accessibility, urcourses groups and groupings
+    </li><li>An important concept was considering segregation and exclusion in terms of design and how to avoid it.
+    </li><li>Discussed assignment, existing issues with URCourses groups
+    </li><li>An important concept I encountered today are the differences between exclusion, segregation, inclusion, and integration.
+    </li><li>today we discussed about the group project
+    </li><li>learning more in details about info related to assignment
+    </li><li>In today's lecture we discussed about Attention, locus of attention, Project and project groups, Metaphors and Mental models. The more important things we had discussion on was the doubts that occurred in formation of the groups for the projects and assignments.
+    </li><li>Groupings of groups, Discussion on the interface issues and mental model of users. 
+    </li><li>It was a general review!
+    </li><li>About the group project
+    </li><li>The challenges that come with creating groups on UR Courses
+    </li><li>We looked at the differences between exclusion, segregation, integration, and inclusion. Next, we explored the groups and groupings interface within UR Courses.
+    </li><li>Group member of group project 
+    </li><li>About the groups interface issues and assignment
+    </li><li>i realize how UR courses making group is difficult to use when Dr Hepting share his perspective. And it same goes to me.
+    </li><li>understood some concepts of metaphors 
+    </li><li>No matter effort one puts into their designs, there will always be something people don't agree with.
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>The rules behind some of the Groups features and how to implement them. In which situations they would be useful.
+    </li><li>there was nothing that was difficult to understand. 
+    </li><li>Eveyrthing  was easy to understand.
+    </li><li>no
+    </li><li>the group management UI
+    </li><li>No
+    </li><li>Class was good nothing difficult 
+    </li><li>No
+    </li><li>Todays class was easy and basic
+    </li><li>It was a bit difficult to understand how the topics of project are being assigned, adn how the groups are put together
+    </li><li>Some of the requirement changes and stuff that took place with the assignments and projects I found somewhat confusing. I have since clarified with my group however.
+    </li><li>No, there was nothing I found difficult to understand.
+    </li><li>No I didn't find anything difficult to understand in todays class. 
+    </li><li>No
+    </li><li>No
+    </li><li>Nothing today
+    </li><li>no
+    </li><li>No.
+    </li><li>how to create groups was a difficult task to understand
+    </li><li>no
+    </li><li>For today again I would bring up the same thing of group formation, and request that to keep our previous groups that we created on our own, because there would be easy enough for every student to work in their respective groups.
+    </li><li>No
+    </li><li>Not really
+    </li><li>No
+    </li><li>How to allow one submission per group on UR courses
+    </li><li>There were no difficulties for today.
+    </li><li>Yes
+    </li><li>no
+    </li><li>no
+    </li><li>Nothing is difficult every thing is understandable 
+    </li><li>no
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>Which Group or Groupings interface we should focus more when we attempt to design some solutions.
+    </li><li>Looking forward to the ongoing project
+    </li><li>Not at this moment.
+    </li><li>I would like to learn more about the mental models as they are interesting to think about how people's minds work when interacting with things
+    </li><li>no
+    </li><li>how to navigate the UI
+    </li><li>No
+    </li><li>More details regarding groups and group projects
+    </li><li>No
+    </li><li>When the empathize submission will be fixed 
+    </li><li>Want to know more about group projects
+    </li><li>no
+    </li><li>I would like to know a little more about how all of the assignments and projects are going to fit into the semester so I can better plan my time.
+    </li><li>How to go about properly promoting inclusion in design.
+    </li><li>I'm excited to learn more about designing good software and about Human-Computer Interaction
+    </li><li>Yes I would like to know more about project submission and what is expected from the group to submit. 
+    </li><li>No
+    </li><li>No
+    </li><li>🤔 how long is the full movie 
+    </li><li>how can things be more accessible? why is accessibility often not thought of in designs?
+    </li><li>No.
+    </li><li>nothing much, only would like to know when can we expect our midterm grades to be out.
+    </li><li>no if required I will ask in forum 
+    </li><li>Yes, as we now proceed ahead to our finals and for the preparation of the final exam, if we can get the exact syllabus to prepare for our finals would be really helpful, and help in achieving higher grades as this course contributes a major part towards graduation in last year.
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>When would the midterms and first assignments be graded?
+    </li><li>I would like to know more about how to apply the idea of exclusion, segregation, integration, and inclusion into designing interfaces.
+    </li><li>Yes
+    </li><li>assignment
+    </li><li>no
+    </li><li>yes would learn more about today's topics
+    </li><li>Would like to know more about the people who made UR Courses... just seems like the design and development process fell on deaf ears.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/17_Tue-12-Mar-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

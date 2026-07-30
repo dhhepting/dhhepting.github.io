@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202230/07_Fri-16-Sep-2022.html" />
+    
+    <title>Mtg 07 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 07 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/07_Fri-16-Sep-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/",
+        
+          "name": "202230"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/07_Fri-16-Sep-2022.html",
+        
+          "name": "07 (Fri-16-Sep-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202230/">
+        202230
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      07 (Fri-16-Sep-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 7/36: Fri-16-Sep-2022
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="06_Wed-14-Sep-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="08_Mon-19-Sep-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I encountered
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+          Administration
+        </h4>
+        <ul><li>
+                Happy Friday
+              </li><li>
+                <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1900809&amp;view=1">
+                  Attendance
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1663308000&amp;course=24538">
+                  Class calendar for today
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=24538">
+                  Upcoming events
+                </a>
+              </li></ul><h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><ul>
+      <li>
+        <a href="https://dl.dropboxusercontent.com/s/aq3l86zo0um1rre/7%20-%20Password.pdf?dl=0">
+          7 - Password.pdf
+        </a>
+      </li></ul><div id="mtg_pix_07" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_07" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_07" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_07" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_07" data-bs-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/pgsr4irp53u9p8s/7%20-%20img-1.png?dl=0" alt="7 - img-1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/7std6nbf140g0kn/7%20-%20img-2.png?dl=0" alt="7 - img-2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/k720c1m769a9957/7%20-%20img-3.png?dl=0" alt="7 - img-3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/147l955jxb4kbw5/7%20-%20img-4.png?dl=0" alt="7 - img-4.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_07" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_07" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            seen you have no physical danger theory to use in a positive or negative direction not sure what I wanted us to quantify but I don't know how appreciate that okay
+          </li><li>
+            
+            so far so good
+          </li><li>
+            
+            right Okay very good we have to make sure that makes sense going to get to Chapter
+          </li><li>
+            
+            Four okay here we are that's interesting I was gonna say how do you like this today? Ah and
+          </li><li>
+            
+            it's not doing very good information as the right day but it's not okay, so I'll work on that how many people have like the page until it stopped working? How many people have looked at the page see if I know
+          </li><li>
+            
+            the meetings counter.
+          </li><li>
+            
+            Yeah the page about what's going on today. This shouldn't be linked to meeting seven I guess I didn't test the right cases Okay, so attendance I'll show you this page as well as the QR code and then of course you can also access it here for people.
+          </li><li>
+            
+            So there are comments, concerns that if I put the picture up they'll discourage people. From coming to class. And I appreciate that concern. But I'm wondering so I'd like your feedback on that. Does it discourage you from coming to class
+          </li><li>
+            
+            if someone is gonna go to that leg? I think you can just ask someone in class to send me a text. Yeah, that was
+          </li><li>
+            
+            if you wanted a foolproof method, you could ask them in paper. Or they could just write their friend's name, the most surefire way but he had to give to each and every single person at the door, check their student ID devices.
+          </li><li>
+            
+            Maybe I'll get I'll get the university's RF ID scanner so you can read your chips that have been implanted in here
+          </li><li>
+            
+            Yeah, so anyway, I thought that was people were not going to be here. They could ask somebody who's here to see it. So the password to send them password in chat or discord or whatever. So this way, the pictures on is still only valid for the class time. So people will have to log in. They don't want to talk to their friends. People who don't come to class who didn't go to talk to their friends have to log in to my website or visit my website and then log into your courses during our class time to be able to record their attendance that seemed to me to be a reasonably high barrier for
+          </li><li>
+            
+            or dishonesty. So you can let me know what you think about that.
+          </li><li>
+            
+            As we go on. Okay
+          </li><li>
+            
+            so I said we're going to talk about the projects and the assignments today. Let me first show you this experiment with your courses so, there's been a new role created called beta teacher for learning. I can name that role. I think it's not a bad name.
+          </li><li>
+            
+            So it's essentially a teaching role, but it obscures your student numbers. So if I show you the list of participants with my normal role that would defeat the purpose of me going through this exercise Well, partly defeat the purpose so I can switch my role and so I can switch to beta teacher for learning so you're only going to be this role
+          </li><li>
+            
+            Okay, so the magic is that there's no student ID and because your your role, so this is where the beta comes in. It says you have no roles but you do have a role you have a beta teacher for learning role.
+          </li><li>
+            
+            Because there's I searched for it. I suspect that I made a spelling mistake. Vaccination at the end didn't help. Okay, I tried this earlier. No, it worked. So I may have tried it from my teacher role. That I could list participants from the
+          </li><li>
+            
+            beta teacher for learning role. You can see that role administered as the top right so, I'll take this as a good sign that you don't have permission enough to see things like compromise the information you're trying to protect. Protecting, we can just change your role. Role Can you change to change? I tried to
+          </li><li>
+            
+            support staff that it shows the same for everyone. It goes down into the efficiency
+          </li><li>
+            
+            okay. I didn't need I did a little bit of testing and I I didn't think about that case.
+          </li><li>
+            
+            I thought maybe I thought maybe okay
+          </li><li>
+            
+            so everyone behaved themselves. And I'll get this I'll get this fixed I'm curious Okay, so now I can look for fighting go back to my own role that I can look for.
+          </li><li>
+            
+            So then I can look for Oh, no. Okay. Yeah. So it finds them Yeah, okay, so you shouldn't have the role of non editing instructor. Curious going to have any lab instructors teaching I am good. Going guys up okay, Mark let's try that. Once more.
+          </li><li>
+            
+            Morning. Evening next time Okay, so I don't know how I managed to get zero when I ran the same query earlier
+          </li><li>
+            
+            so Oh, isn't that cute? I'm gonna guess that's not a standard animation and somebody added that
+          </li><li>
+            
+            Okay, so just remember you're doing this for everybody. And so be responsible Okay, so I can diagnose this problem. I can guess what the problem is, is that a teacher role has includes teaching assistant and non editing teacher rules so that I can have the same capabilities as markers and assistance in my class. So I'm going to put this to information search, support it support and ask them to make a change to the beta so there aren't any included roles underneath that.
+          </li><li>
+            
+            Bless you. So what I this was a lie. I tried many times to add these. It's by having those cognitive student numbers over and then a few times the page would go blank on you so I'd have to start over again. So I don't want to erase everybody from this view again. So
+          </li><li>
+            
+            if we just could you switch on off to students that wants it's like switches that?
+          </li><li>
+            
+            Okay, let me try that. That's a reasonable idea. Let's see what I can do. Think that I can edit does for everybody. Let's see and it's like okay, so I can just remove everybody. Like nothing better to do than sit for hours on these point and click User you are courses interfaces, so let me do that.
+          </li><li>
+            
+            evening gentlemen Okay, I'll put you back hopefully later today so maybe this is goodbye for today. Good goodbye for now. To change it from
+          </li><li>
+            
+            me come back on to the course. You say hello again okay so I've gotten some, okay. Let me some other things in your courses. To date. Choice closes at noon so unless we have a tie, I haven't looked. I don't want to influence the process.
+          </li><li>
+            
+            We should have an arm wrestle. representative from each.
+          </li><li>
+            
+            She sounds similar to our wrestling Oh, look. Fine Okay. Set up a few project groups based on email. So if you send me an email about a project group, and you haven't noticed those come set up at honor in your courses. I will do that today.
+          </li><li>
+            
+            But if you know people you'd like to work with on the project so we're looking for groups of four
+          </li><li>
+            
+            maybe five maybe three in special cases. So if you know people you'd like to work with send them to me. And I'll take that into consideration. And also, if you're an 828, and you're doing research for a project or thesis, and that research involves user interfaces you know, the opportunity to continue to work on your research on the interface as of course project in this class. So let me know if you want to do that. So one person's talk to me about that already. So I know some people when they turn eight, don't have a research project going on so that you can just create a group with anyone else in the class. Okay,
+          </li><li>
+            
+            can you have something on your courses to check out four person group I can only see on your courses currently. I might just be missing the in class discussion groups but I can see the purchase or it could be just
+          </li><li>
+            
+            so not we cannot see. I'm focusing on beta learning teacher learning, teaching teacher for learning role and getting that
+          </li><li>
+            
+            I thought set up that was my priority little work on revealing all the project stuff today as well. And if you have other questions or concerns about your courses stuff
+          </li><li>
+            
+            then I'll encourage you to post an hour again Okay, so I guess we're not on track for tie yet because we will have 41 votes
+          </li><li>
+            
+            so participation discussions, that might be a good place to put questions about things that aren't working or could be improved.
+          </li><li>
+            
+            Okay you could not see the result.
+          </li><li>
+            
+            So I changed that. So the first one I said, after you've answered you can see the results. Now this one I said that once closes you can see the results. So trouble one today you'll be able to see the results Okay. Project is four pieces especially.
+          </li><li>
+            
+            The names I have on the website so the first first part is to understand So, what I'm asking for groups
+          </li><li>
+            
+            or for for anyone, whether you're doing it individually or in a group is to if again, not your research, find a website that your group is somewhat familiar with and may have some issues with say it's always very frustrating when they log into your self service.
+          </li><li>
+            
+            Portal change the picture to a stupid waving
+          </li><li>
+            
+            Yeah, so I don't know about concerning your self service but so maybe it's your self service your courses a website that you're you're familiar with and there are some issues so then the first phase of the project is to understand some opportunities for redesign. Talk about the process for doing that. So once you look at some opportunities for design, unmet needs in the current website. And you undertakes a design activity to come up with a couple of determinative interfaces. So we're going to think about metaphors and how they can influence the interface that we create, present to users. So for example, this is an example it's used a lot and it's in the textbook as well. Say somebody is not familiar with online shopping so the interface for online shopping for us borrows some ideas from a bricks and mortar store so when you go into the online store you can you might have a card because people are familiar with taking a cart and going down the aisles and putting things you want to buy into the cart and then going to checkout to pay for the items. So these are metaphors and if metaphors are done well. They can encourage people to transfer the behaviors they know from the online from the bricks and mortar store to guideline case. So when we're trying to address the unmet needs in webpage, you're you're selecting you want to approach it with one or two different metaphors that might be appropriate. And then sketch interfaces with paper and pencil. low fidelity prototypes are sometimes known
+          </li><li>
+            
+            to sketch on different screens and then in the third part we're going to get you to look at other groups interfaces so So they do idea is so if I take somebody from the Project group one
+          </li><li>
+            
+            I know I'm gonna make these testing groups largely of three people. So person one presents May and then person to some of the people from different groups person from group one person from group two and then person
+          </li><li>
+            
+            three. Is your intention with this that each group would have essentially one representative intermingling with other individual representatives or the groups who just split up and mingle amongst each other? Just every single member will be talking with every single other member of other groups about what's being worked on.
+          </li><li>
+            
+            So in my head, that picture is going to be less complicated. So I'm going so I'm not mingling I'm carefully creating groups where each the member of each of these testing groups is going to be from a different project group. And so three people can make. So person one would pair with person two, and they would present their interface first interface to the second person. So, person one person two would present, say their interface a to each other and run a test that way. And then person two and person three would pair up and they might present. Your face be to each other and then person one and person three would pair up and Persona presenter face B and person three will present interface a so the idea is that you get experience running a test and experience being the test subject and then get some exposure. Two other work being done in class. Yes,
+          </li><li>
+            
+            this is going to be more of a informal sort of test where we can just it's always going to be more formal and we should set up some performance PowerPoint tests
+          </li><li>
+            
+            so the company collecting some data and we'll talk about that as the time comes. The whole big thing that helps clear things up. My explain that and drawing it. So then the fourth part is to cater your experience to tests and then make higher fidelity version presenting Do you progress on the project over the semester? Now the first assignment which will get on track soon I call it empathize with teachers. So the idea is that you can empathize
+          </li><li>
+            
+            with somebody setting up things in your courses and I think we're out of time plenty after Have a great rest of your Friday and have a great weekend.
+          </li><li>
+            
+            I should also apologize briefly I was going to put the little waving thing but I thought it was cute I wanted to arouse innocent just saw the upward picture and I thought I could have some honest fun with this. And thank you be offended.
+          </li><li>
+            
+            I was I was just wanted to remind people to be responsive. To get to the other questions here I want to thank you so I appreciate
+          </li><li>
+            
+            it. So my name is Kate and this is the second offense of trees and you will come out of detention centers project is always regarded by authorities whenever should happen
+          </li><li>
+            
+            right now. Both of the lecture classes actually we're going to do sounds very interesting. So I mean, for starters, I kind of like in Android phones you only have like
+          </li><li>
+            
+            one button How many of you people are like why they purchase decisions and stuff like that coming from the Presidency of
+          </li><li>
+            
+            the Republic Yeah, so the first step is activate this design. So we'll take a look at one baby. Step three is organizing stuff and it's becoming clear to be making my
+          </li><li>
+            
+            tax free Thank you. Thanks you too. So let's say the three of you are really into it. Testing. So that would be I would do that because you're in three different project groups.
+          </li><li>
+            
+            You got one person is to design
+          </li><li>
+            
+            and, you know, know everything everybody's happy to do this is a group project.
+          </li><li>
+            
+            So you do it together. I was talking about our test tested the voice interfaces sketched out you would say? Three of us. So I'm in a project, different project. So I would say what do you think?
+          </li><li>
+            
+            Why basically give me the feedback.
+          </li><li>
+            
+            And then so so we do that pair and then we would send a pair I would present my other interface. Is one your project grows together with you to design or testing all that you will take on issues faced by adding cables soliciting input for bonus ideas or something for that started which is perfect for
+          </li><li>
+            
+            me weeks too long for us to design to design and that we will share with each
+          </li><li>
+            
+            other designed to and that's based on what feedback you get
+          </li><li>
+            
+            based on can recover for
+          </li><li>
+            
+            food 28 and 28 or
+          </li><li>
+            
+            no I don't think so. But still, like she's asking for 28 and he can make a Chromebook. That's okay. Thank you for taking the time. You're welcome. We have a question. Like what do we have to do?
+          </li><li>
+            
+            I was unable to hear you at the end. Also I do so can access
+          </li><li>
+            
+            if you don't can't hear me, let me know when I'm talking. So I can turn up the volume. I can do a couple of things. So the individual Simon is about taking on a teacher's role in our courses.
+          </li><li>
+            
+            The 26th one right, the nearest 26
+          </li><li>
+            
+            No not be due on the 26th because we haven't started so I have to go back. I have to fix something with still
+          </li><li>
+            
+            and what to do teachers
+          </li><li>
+            
+            like there's a description there
+          </li><li>
+            
+            a great day as you How do I access my role as a teacher because I tried it yesterday but I was unable to access the that thing.
+          </li><li>
+            
+            a great day as you How do I access my role as a teacher because I tried it yesterday but I was unable to access the that thing.
+          </li></ul>
+    
+  
+    
+  <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>In this class today we discussed about how the project will be marked and how to test the interface of out project. We also figured out that the Experiment with UR Courses site had an issue/bug that allowed the students to change their role from beta teacher to a non-editing teacher which give them access to view student&#039;s ID numbers. Dr. Hepting will consult with IT Office and will have it resolved by the next class.
+    </li><li>In today&#039;s class we discussed about experimental course. We also discussed about 4 parts of the project and what should be done in each of this phase.
+    </li><li>In todays meeting we discussed about the Experimental course, basically how some private things get leaked due to the same (e.g. SID). Also discussed how redesigning worked. Also each person in the class will test their A, B interfaces with other 2 people and act as a participant for other groups interface. [Design A: B, Test A: B (Reflect + Present)]
+    </li><li>we are talking about midterm date again, the Survey about is done today and The final decision will be made today with survey or coin and we have to email to Dr. Hepting to choose a Project: It’s about UI UX Design Test A-B
+    </li><li>Today&#039;s lecture enabled me to understand the manner in which the group project was to be executed in. I understood the way in which I would have to work with my project team on understanding the opportunities for redesigning an existing website, then coming up with a design, testing it and then, finally reflecting on it by means of a presentation.
+    </li><li>I was able to go into editing mode in the fake class for the assignment and I am excited to look into the assignment more.
+    </li><li>In Today&#039;s Lecture we discussed the Experimental course and how it might reveal private information about students.  We also talked about the project, which has 4 parts.
+    </li><li>More depth was given to handling group project assignments. I particular was fond of the 1st activity in breaking apart and understanding an interface. It&#039;s logically placed at the first as in order to construct an interface one must first understand the logistics behind what makes interfaces work. The process seemed straightforward in dividing into groups though there may be some unbalance with the management of simple to complex features. I understand the objectives and how they apply to the assignments.
+    </li><li>The most important thing for today&#039;s meeting is the group project things and its four part.
+    </li><li>The most important thing that I learned today is that I understand the mark distribution of our group project, also the mark distribution gives me a guide of what is important in interface design and interface development.
+    </li><li>The most important thing that I have learned from today&#039;s lecture is that it very important to understand the people around you and the because interacting with people makes you aware of what is exactly going around the world, it helps to understand of opportunities are available to you if we try to intertact with our classmates as every individaul I talked to so far in the class has something incredible in them. And I would like to keep learning the human computer as well as the human human interaction .
+    </li><li>The individual project is almost ready for us to do.
+    </li><li>In meeting 7, we discussed the Experimental course and how it had a way of revealing some private information about students (STID). We also discussed the project, which consists of four components. 1- Recognize design and redesign possibilities 2- Create systems A and B. 3- Test AB: Each person will test their group&#039;s A and B interfaces with two different people and act as a participant for other group interfaces. The teams will be divided into three (each from a different project group) and each will
+    </li><li>In today&#039;s class, we talked about a 4 part assignment. Designs A and B (make an alternative User Interface). Here each participant will test the two interface A and B of their group with two different people and participate in the testing of other group interfaces. These are new groups of three people (each from a different project group), in which each person will present and test the interface, and so on. Reflection from past design and enhance/improve future design
+    </li><li>In the meeting, we talked about the Experimental course, and how it may reveal the information of students. We talked about the project (4 pieces of 10 marks each). Understand opportunities for (re)design + Design A, B and test A,B. reflect and present. Dr. Hepting&#039;s website has more information.
+    </li><li>We talked about the project requirements and contributions required. It would be helpful if a project outline is provided.
+    </li><li>In today’s meeting I learned about the important things which will be in our group assignments such as presenting our interfaces and be a participant when other present their interface. And group assignments are divided into four parts in which we will be working over this semester.
+    </li><li>There was nothing important today in lecture other than discussion about projects.
+    </li><li>In today&#039;s meeting professor explain us about our projects assignment and we have done some experiments with the roles of everyone in our participant section, we done some discussion about the attendance code also.
+    </li><li>The assignments, the group project, the discussion over whether attendance should be in PDF, and the concept of testing designs with other team members were the most crucial things I learnt. Through these interactions, we may learn about other participants designs and also develop more complicated designs.
+    </li><li>Hello Prof. Hepting. Today you talked about our project. You mentioned that we should do it with our group members and start with low-fidelity prototypes, which are sketches. Thanks
+    </li><li>started with a happy friday and talked about the regina public interest research group, its values, acknowledgement, operations, projects and many more. it was a great class today
+    </li><li>Today, there was discussion about the group project and how the marks will be distributed between the project requirments.
+    </li><li>In this lesson we discussed the problem of grouping, the progress of the personal work, and the rules of the check-in
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>When anything is not answered by the directly then it is treated the most difficulties to me. In the marble answering machine if we think like a GUI for the users that would be very realistic and the modern technological solution for it.  Or is the UI just for the keypad when accessing the voicemail that will work, but it&#039;s not labeled and the options have to be repeated a couple times when it is missed.
+    </li><li>I didn&#039;t really understand the explanation of the group project, specifically the discussion part.  Is each group going around and talking to each other in cycles, are they just supposed to meet one other group, and how exactly does this work when there are potentially different amounts of people in each group, such as solo graduates?
+    </li><li>The group project and what should be done exactly. Need lengthier information about the project.
+    </li><li>the most difficult thing for me to understand the midterm date seems to be not fair as many students have exams on 21st. Also, we talked about the project today in class and its component.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>We didn&#039;t do much today except continue to deal with the emphasize we with teachers assignment. I took the time to put a silly picture as the class photo of a cute lil guy waving hello. Other than that I coded a particle system for another class as hepting was busy with other things with the class.
+    </li><li>Today, Professor explain about the Project that will divided in 4 Parts. He also discusses about the activity of designing A and b that is alternative UI.
+    </li><li>I am interested I  learning more about the class group project and the individual assignments. I would like to know more details on those.
+    </li><li>What is required for the first individual assignment and what is required for the first part of the group assignment
+    </li><li>Today we discussed about projects and everything
+    </li><li>We discussed about the midterm and group and the individual assignment which I would like to know more abou the group project.
+    </li><li>I would like to learn more about the tools and techniques we will be using to assess interphases. For example, are there preferred distances (in pixels) between different components? Or, are such matters stylistic in nature and should be left to the discretion of the designer.
+    </li><li>I would like to know more about the individual assignments and their deadlines. I would like to know how can we approach the assignment and go about doing it.
+    </li><li>The thing that I would like to know more about is what exactly we&#039;re supposed to do on our first assignment. I know it&#039;s supposed to help us emphasize with teachers, but what will we do with our new temporary roles? and how will we show our work?
+    </li><li>I would like to know more about the group project and the empathize with teachers project.
+    </li><li>I would like to know more about the Group project that we discussed today. We saw the 4 required steps in class but I am confused how the testing with take place. If we have group of 4 members, does each member need to test two other group&#039;s work?
+    </li><li>I&#039;d like to know more about the details and expectation of the project. I understand the first part of the project to critique the design of an interface and suggest improvement. When discussing interfaces between groups, I&#039;m not sure if we are expected to create an improved interface on a website or a software.
+    </li><li>Today we discussed about individual assignment and group project. I would like to learn more about the approach towards group project and what do we need to focus on?
+    </li><li>Nice to know about creative way to do project collaborating not only within team but also among teams.
+    </li><li>I would like to know more about new Experiment course which is going to be our individual assignment by some technical cases we were not able to discuss today but probably in next lecture.
+    </li><li>Today was just deciding upon assignment 1 and elaboration on project. For assignment 1, the solution for roles issue is yet to be found and we had a high level idea of the project we will be doing.
+    </li><li>Today&#039;s meeting was based on the discussion about the group project or the group assignment that we have to work on with 4 group members and we also discussed that there are 4 main topics for the assignment.
+    </li><li>Nothing important just discussed about the project and groups.
+    </li><li>Today we learned about the difficulties in creating a teacher type role that does not have access to sensitive information, so I&#039;m interested in seeing how IT support will resolve that.
+    </li></ul>
+
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=wiki">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/07_Fri-16-Sep-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

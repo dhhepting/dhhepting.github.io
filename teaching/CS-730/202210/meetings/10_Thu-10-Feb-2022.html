@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-730/202210/meetings/10_Thu-10-Feb-2022.html" />
+    
+    <title>Mtg 10 &bull; CS-730 (202210) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 10 &bull; CS-730 (202210) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/10_Thu-10-Feb-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/",
+        
+          "name": "CS 730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/",
+        
+          "name": "202210"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/10_Thu-10-Feb-2022.html",
+        
+          "name": "10 (Thu-10-Feb-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/">
+        CS 730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/">
+        202210
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      10 (Thu-10-Feb-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 10/24: Thu-10-Feb-2022
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="09_Tue-08-Feb-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="11_Tue-15-Feb-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=8499">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Hello. event. that's coming up tomorrow. Around about 24 hours from now. Well, I don't know what's going on and trying to paste some text into the chat window. Lets. You see if I can. tap you then. Let me see if I can make a bigger piece. know you can hear that beeping I think. anyway. So i'm the EPI coordinator. For the department so. This is the third seminar in the series. So any. Any questions. To discuss. vdi. Is that abbreviation. That abbreviation familiar to you. So. i'm wondering if you're if you're familiar with the abbreviation. E di. So okay that's good to know. i'm. smashes into chat and. My representation. Oh no okay nice you. know. I spelled it wrong, initially, but now I have a correct reason. representation seems that. So that's an interface issue. Okay i'm typing representation again. I made a mistake it suggested a correction I accepted it. And it still. looks like it's got some kind of problem. So we should enter okay. hmm interesting. Maybe there are some rules if it's. A capital R to begin a word, for example. Then it's treated as a proper noun and. Maybe it's. The misspelling is. intentional. That could be. But about representation so. In terms of computer science, we should encourage people to. Do computer science. Okay, anyway. So I think it's interesting. Looking at the interface. For chat here, so if I take. There it was happy. So in our comments there about. A presentation and whether it's spelled correctly or not or. Or what have you. So. So the discussion in the chat turn to. Understanding the behavior and making a model about how the. spelling correction is. is implemented right so say well. If we write up the capital R doesn't come up with the media correction. And then we switch the our back to lower case it's fine so we're. Talking about and an explanation for the behavior. So. We might. So we might have an idea of the system, the system. Of this chat window as part of zoom. So we're users. And we're trying to. Think of a way to make sense. of it, so we have this mental model. That allows us to predict. The behavior the system. So. Is is there one correct mental model. That we may. adopt as users. As humans, using a computer. A computer tool. We use a song software. So that makes sense. My question to you here. Okay, so I have the gallery view open on my screen so. i'm going to ask everybody to user reaction. A motor car. emoji. In response to my question is there. Okay, so, first of all, does that make sense. who feels like choosing that emoji for reaction. So what is that reaction so i've been a coffee Cup. How do we, how do you interpret that just by looking at the screen. yeah so zoom said think that's i'm way. But it could be. I think quite reasonably school for a coffee or I need a coffee or. It could be. A request Oh yes, because it's. Because it's a status change, I guess. Then it doesn't just fade out a few seconds. So here's a comment post it to chat. To me, as a direct message. didn't. Use the thing that I thought. So here's a student's response to my question, what is your single. model that's correct. So it may not be that everyone. has their own mental model of an interface but. There might be some differences as well. So we can think of. With the way that zoom is really implemented. So we have this idea of. The system. And then the programmers. Or the designers. Different people involved in creating the software. will have a model of how everything fits together and works. And we hope to that model is elegant. And, and the way the different things fit together. creates a satisfying experience. For the users. So the people who are designing and building implementing the software, they have. A very fairly complete. model of the entire system. And they have. A lot to say about how. The model is. But how elegant the model is they. They can make. improvements. starting point. Is what we're thinking about. designers and builders well the designer of a system. What are some first steps. towards creating an elegant. model of the system. Okay. So when we first encounter system so comment here that says single user might have multiple mental models. So you might think of. As we. begin to interact with the system. Some function, or some behavior the system encourages. A certain mental model so. The user. In an ad hoc way, so they don't start out thinking, this is the way it works, but they're collecting evidence. about how the system, about how the interface works and what's going to happen when they do certain things. That they may. see that are not. A different request of the system. Might. elicit a second behavior. And that behavior. encourages. A different mental model so. The point. We might. still have these different models. The same one user might have. Two different theories without systems organized and with. So. Future or further interaction system might clarify things and. being created and mental model that. unifies both the earlier behave. It explains both the earlier behaviors. And so the ability. Of a user to. develop a practical. model of the system through interaction. So. If we. can encourage. and resign users can encourage users of the system. To develop. A unified mental model of the actions. that the system can perform. And how to access and and so forth. Then we get. Then we're helping the user. And maybe. For most people. If the interface design is. consistent. that a lot of people will get. To model that. We might encourage them to have. And, which seems to be helpful for their use of the system. We have an ad hoc. and complete mental model. And if it's hard. it's hard to decide if we seem to have competing models. how things are going to work. And our predictions don't. lead us to the same. And answers. Then we're in. A bit of trouble, and people are not going to be satisfied. That makes sense. So I mentioned about. designer having a. role to play in. Encouraging. A mental model for the user. To adopt. So can designers. dictate the model, the mental model that the easier. develops through this interaction. don't know why that always comes up is not found. Our attendance for today. let's get back to the question here. Excuse me, sorry. Okay, so that's interesting. that's an an apple feature. i'm not sure if it's. Okay, so let me go back to the. auto correcting and the zoom chat. it's not really even auto correcting it's strange the indicating.
+          </li><li>
+            
+            This.
+          </li><li>
+            
+            i'm looking. I don't see a text. system preference. Oh keyword okay. yeah okay. So it wasn't the automatic correction. And I was concerned about it was. appearance. That a problem has been found. When it looked like it was fine to me. So maybe does. In that case, it is the line underneath the word. indicating. That a correction was made. So and i'm not sure whether. i'm not sure whether. that's completely dependent upon the apple setting here. So that's a nursing question. When. piece of code is being turned on is being activated. Is it. The MAC os system. And if it's part of the MAC os, why not.
+          </li><li>
+            
+            Okay.
+          </li><li>
+            
+            let's try that as well. Trying to simulate a right click and hold control down. No i'm not having any luck. good suggestions and. So it's an example. We might have different models. So, from my years of fiddling with Microsoft word. and seeing a line under words highlighted highlighted in the interface. makes me think of. Their errors. Rising her. hair is being indicated. By a line under text. And my. color vision is not great. So. The subtlety of a blue or green or red line. may be lost on me. So when I see him a squiggle under a word like that I think there's a problem. And why can't I fix it, whereas. The model of the designers to say. i'm going to give feedback to the person that the sword has been corrected. So the question would be. Our question would be. Does anyone. Has anyone requesting information but we're corrections are made. Could we think of. The desires of that feature thinking that people will appreciate. When we indicate to them that they've made a mistake. But we've gone ahead and fixed it for them. So they're better off with. A MAC. will do these things for them and. and point out. The mistakes, they made just so. They can feel. Most capable of your own abilities. So i'm making a bit of a story there, but that I don't think that's too far. misses the mark by too much. Okay, so let's get back to the idea of the mental model. That users developed through their interaction with a system. So. We made very well. might very well have in mind. A mental model that helps to under stand system, and we want. To reinforce that in our design. So we can encourage a mental model, but we can't. say this is the mental model, you will use that you will have while using the system, the software. In depends on the user. So this is similar. To talk about user experience. and
+          </li><li>
+            
+            well.
+          </li><li>
+            
+            As we talk about user experience we can't say people will be happy when they use the software. They will have fun. Where they will be miserable. You might attend them to be happy. But it's not guaranteed, because people are going to experience things in the way they are going to experience them. So I think I talked about my. Mental model of Twitter. The other day and got me into trouble. So some you anyway. I had a mental model of Twitter that was closer to email. Then. Then the SMS sending SMS messages. or microblogging or. Whatever else. So I. I was clearly. Not. I clearly did not get what. Twitter was encouraging me to. The understanding of the system that Twitter was encouraging me to develop. So I suspect, though, that i'm. I was in the minority. That after that experience, I decided that I didn't need to use Twitter. I mean, I could use Twitter if. I was required to do it again. But I. But to me. Two way of sending messages on Twitter. So I might I can figure it out. And maybe over time, I could. develop some ease with the platform. But I decided that. I have enough things going on, that I don't need to. deal with Twitter as well. So, if my opinion was in the majority. Twitter would not be the popular. Service than it is today. So going on with the idea. of understanding that designers aren't users. So the thing. As designers, we need to understand. What users, want to accomplish. And how they think about the things that they want to accomplish. and A good way to do that is to. empathize with the users. and Try to. walk in their shoes. So the way. way to. Understand users in. more detail. to embrace. issues around equity diversity and inclusion. so that the people on the teams. We could we assemble to design interfaces and software. If those teams are representative and they understand the issues.
+          </li><li>
+            
+            Of.
+          </li><li>
+            
+            getting people from different perhaps marginalized communities. engaged and understanding what barriers, there are. towards engagement of those communities. Those people then. And we can begin to really make some progress. And the fact that we have. represent the teams, we assemble are representative of the diversity that exists in society. That helps. In a number of ways, I guess, one way is that if people from marginalized. Communities or underrepresented communities. See. themselves. In the teams that are creating the software and the interfaces. Then there may be. Some. Some additional trust. and buy in, so to speak, so. don't. don't take on. will participate in. The process of designing.
+          </li><li>
+            
+            In.
+          </li><li>
+            
+            The conversations about design. designing the software and the interface. Because. Two people who are creating the technology are representative of. Their own communities so. Okay, so i've been talking for a long time, if I made sense to the questions.
+          </li><li>
+            
+            Okay.
+          </li><li>
+            
+            Thanks. Alright, so. we're getting close to the end here, I, I want to share with you. From December. This is kind of this is not a. Well, I guess it's sort of a commentary on technical tech news going going. it's a blogging site. I think i'm not describing it incorrectly that with that. I had this in mind, the other day we're talking about. perception. interfaces based on perception. Researchers event likeable screen to display you mentioned flavor. Seen video yet so. Why don't we. Let me. encourage it to work properly. Video.
+          </li><li>
+            
+            Japanese university professor, or has invented a machine that could change the way we eat or maybe not the Professor invented this machine that can create the flavor of any food that you then.lick off the screen was as Greg.He calls it, the T T T T TV or the taste the TV, he says any flavor can be broken down into 10 basic tastes like salty sweet sour bitter spicy and savory.The machine uses a carousel of 10 flavor canisters and has programmed recipes to recreate the flavor of 20 different food yeah good luck on that one folks.I think more than that, the question is, is why, why would you want wait why, why would you need this, why would you want this Okay, you know it's one of those things i'm creating it because I can just can't Oh, you know.Oh OK OK sorry last paragraph, Professor says it can be used for distance learning for Somali a's so like if you're teaching a chef or a cook right and you're having to do you know virtual stuff yeah.or tasting game.taste test Tuesday.Hope it's a day that Dave is back you're all here.screen.
+          </li><li>
+            
+            Well i'm. Anyway, I don't want to go too far with this. that's a remark that I remember about personal computers saying well. No one's ever going to need more than 640 kilobytes of memory. Anyway, so we're at the end of our meeting today so. Have a good weekend and. See you on Tuesday. Take care everyone. stay well. Okay. bye. Okay, thanks again. to Tuesday.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            Good Morning Sir
+          </li><li>
+            
+            Good morning sir
+          </li><li>
+            
+            good morning sir
+          </li><li>
+            
+            Seminar tomorrow @ 2:30 CST
+          </li><li>
+            
+            https://www.eventbrite.com/e/the-importance-of-queer-visibility-of-stem-tickets-252362602337
+          </li><li>
+            
+            Title: The Importance of Queer Visibility of STEM
+          </li><li>
+            
+            Could you please repeat that?
+          </li><li>
+            
+            Are you familiar with the abbreviation EDI?
+          </li><li>
+            
+            No Sir haven't heard about EDI
+          </li><li>
+            
+            no sir
+          </li><li>
+            
+            No Sir
+          </li><li>
+            
+            EDI in this case is the abbreviation for Equity Diversity and Inclusion.
+          </li><li>
+            
+            okk sir
+          </li><li>
+            
+            Oh yes, it was included in GRSt 800
+          </li><li>
+            
+            yes sir
+          </li><li>
+            
+            yes sir
+          </li><li>
+            
+            In 800AA
+          </li><li>
+            
+            yes sir
+          </li><li>
+            
+            I think about it terms of representation
+          </li><li>
+            
+            the interface was giving me the indication that representation was misspelled but I van
+          </li><li>
+            
+            *can’t see any problems with it.
+          </li><li>
+            
+            Same issue here
+          </li><li>
+            
+            It doesn’t correct it if R is written in capslock
+          </li><li>
+            
+            If you correct and return it  back to small ‘r’  from ‘ R ’it doesn’t show a correction line
+          </li><li>
+            
+            Anyway representation — in the sense that we should encourage people to enter computing science studies so that the makeup of computer scientists is the same as the entire population.
+          </li><li>
+            
+            representation
+          </li><li>
+            
+            Representation
+          </li><li>
+            
+            our explanations for the behaviour we observe become part of our mental model of that thing.
+          </li><li>
+            
+            Is there just one mental model for users?
+          </li><li>
+            
+            Drinking coffee?
+          </li><li>
+            
+            It is stating I'm away
+          </li><li>
+            
+            break time
+          </li><li>
+            
+            It says “I’m away” next to the icon
+          </li><li>
+            
+            On break
+          </li><li>
+            
+            repres
+          </li><li>
+            
+            Not sure if there’s one mental model for users.
+          </li><li>
+            
+            I think different users have different thoughts so each has their own mental model
+          </li><li>
+            
+            It can be multiple models
+          </li><li>
+            
+            i think a mental model one for each user
+          </li><li>
+            
+            I think single user can have multiple mental model
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Student password
+          </li><li>
+            
+            Can a designer dictate the mental model that a user will adopt?
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            I don't think Zoom is auto-correcting these texts but system-wide spell correction feature implemented by Apple on macOS. It can be disabled from System Preference > Text > (Uncheck) Correct spelling automatically
+          </li><li>
+            
+            I don't think that a designer can predict
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            text tab
+          </li><li>
+            
+            System Preference > Keyboard > Text (tab)
+          </li><li>
+            
+            Designer can give the user a point of view to adopt to his model
+          </li><li>
+            
+            Yes , the possibility of a user adopting a mental model from a designer is high.
+          </li><li>
+            
+            you’ll see a blue line if it gets changed automatically
+          </li><li>
+            
+            Also this auto correct can also be disabled for the current prompt by right clicking on the chat window and then unchecking “Correct Spelling Automatically” under Spelling and Grammar settings.
+          </li><li>
+            
+            well, that’s my guess 🙂
+          </li><li>
+            
+            tap with two fingers
+          </li><li>
+            
+            no sir
+          </li><li>
+            
+            makes sense
+          </li><li>
+            
+            no sir
+          </li><li>
+            
+            I remember I read about this
+          </li><li>
+            
+            Yea! I heard about it
+          </li><li>
+            
+            yes definitely
+          </li><li>
+            
+            I watched the news about it on republic TV
+          </li><li>
+            
+            interesting
+          </li><li>
+            
+            I’m surprised by that video clip being included here!
+          </li><li>
+            
+            they said the same thing with personal computers 😄
+          </li><li>
+            
+            who would ever need more than 640K!
+          </li><li>
+            
+            haha
+          </li><li>
+            
+            I think that invention is very innovative, the people in that video don’t seem open-minded. In my opinion.
+          </li><li>
+            
+            true
+          </li><li>
+            
+            thank you very much Sir ! Thanks
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            thank you very much. have a nice day.
+          </li><li>
+            
+            Thank you sir, was an interesting class
+          </li><li>
+            
+            thank you sir bye
+          </li><li>
+            
+            thank you
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            thank you sir ,bye
+          </li><li>
+            
+            thank you
+          </li><li>
+            
+            Thank you sir...Have a good weekend!
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>the most important thing that I learned about mental models. we are talking about interface and design.in my idea mental models makes very well for understand system.
+    </li><li>Interesting thing I learnt today was that a designer can give the user a point of view to adopt to his mental model and also that recently a Japanese professor develops lickable tv screen which can imitate food flavors.
+    </li><li>I learned about mental models and their importance in human-computer interaction in today&#039;s meeting. It is interesting to see how users perceive the world around them. Moreover, their previous experience of using an interface can significantly influence how they interact with similar-looking interfaces. Therefore, designers should use mental models in their UI/UX designs.
+    </li><li>i learnt about the Japanese researchers who invented lickable screen to display images with flavor.
+    </li><li>We watch an video of a man invented licking TV and had an great discussion on this and as well as we also had an discussion on Zoom auto-correcting text.
+    </li><li>We discussed the STEM Seminar Series about EDI and mental structures on how different people think on the same issue.
+    </li><li>I have learned about the interface, behavior and the mental models.
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>It was a wonderful discussion on different types of models and its merits and demerits.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>I learned about mental models in software and want to know more about this to apply in reality.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/10_Thu-10-Feb-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

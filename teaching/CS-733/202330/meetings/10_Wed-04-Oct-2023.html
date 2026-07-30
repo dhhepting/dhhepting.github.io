@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-733/202330/meetings/10_Wed-04-Oct-2023.html" />
+    
+    <title>Mtg 10 &bull; CS-733 (202330) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 10 &bull; CS-733 (202330) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/10_Wed-04-Oct-2023.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/",
+        
+          "name": "CS 733"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/",
+        
+          "name": "202330"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/10_Wed-04-Oct-2023.html",
+        
+          "name": "10 (Wed-04-Oct-2023)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-733/">
+        CS 733
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-733/202330/">
+        202330
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-733/202330/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      10 (Wed-04-Oct-2023)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 10/25: Wed-04-Oct-2023
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="09_Mon-02-Oct-2023.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="11_Mon-16-Oct-2023.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=9114">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_10" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_10" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_10" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_10" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_10" data-bs-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/p3685psj1z8639fo8luc9/10-1.png?rlkey=mt898irax4tabpu07hm8fep29&amp;dl=0" alt="10 - 1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/ktyzilptpyicif64izme1/10-2.png?rlkey=r83vqh36fns1kq9rz4fqi6jiy&amp;dl=0" alt="10 - 2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/h2hfi9y51kyl1es7uunwf/10-3.png?rlkey=6mowtwhtj1l8z9dmpinzz835u&amp;dl=0" alt="10 - 3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/mcv2qw5a5e0blb6bbxlwa/10-4.png?rlkey=sww5uin5gs3nxb9bcbz7jbvuf&amp;dl=0" alt="10 - 4.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_10" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_10" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Okay
+          </li><li>
+            
+            How's everybody doing today?
+          </li><li>
+            
+            I see you embracing the winter now.
+          </li><li>
+            
+            I've got a sweater. Yeah. It's not my park. That will come hopefully not too soon
+          </li><li>
+            
+            so happy Wednesday everybody. So this is our last day before the fall break after years of fall break has been around Remembrance Day so it was much later in the semester so first time for everything
+          </li><li>
+            
+            okay, so midterm is on Monday, October 23. So that's Monday is one week after we come back from our break.
+          </li><li>
+            
+            So I will post
+          </li><li>
+            
+            last year is
+          </li><li>
+            
+            likely today this week
+          </li><li>
+            
+            so we were talking last day where we looked at a program to draw a cube and spin it around.
+          </li><li>
+            
+            One of them had a Call of Duty fix it. Yeah. It was pretty easy. It was pretty easy to find.
+          </li><li>
+            
+            So we'll look at some code for that
+          </li><li>
+            
+            so how do we go
+          </li><li>
+            
+            about constructing a cube
+          </li><li>
+            
+            so why don't we start with Nick.
+          </li><li>
+            
+            Even before that, how do we make a square or? Yeah, so start with vertices.
+          </li><li>
+            
+            Did you see points or parts? I just said God's point. Okay.
+          </li><li>
+            
+            We'll give you half a plan for that.
+          </li><li>
+            
+            Points positions
+          </li><li>
+            
+            vertices
+          </li><li>
+            
+            Okay, so then what can we do? From that? You know, we don't see points very easily
+          </li><li>
+            
+            so we make a
+          </li><li>
+            
+            point about the points.
+          </li><li>
+            
+            Unless you're drawing points
+          </li><li>
+            
+            so we have to say we're drawing and we're going we're going to use draw, draw mode, set the points and we have to have a point size
+          </li><li>
+            
+            one
+          </li><li>
+            
+            instead of interrupting the class or whatever that is across the hallway, just easier to close the door. You seem to be playing a video quite loud
+          </li><li>
+            
+            next
+          </li><li>
+            
+            Okay, does that make sense?
+          </li><li>
+            
+            So the one where I have all the input rectangles code from in chapter three, I have the way to select the menu to select the different kinds of drawing modes. So in our code, you'll notice in the shader it has a line to set the point size to four.
+          </li><li>
+            
+            So you get this we can see them
+          </li><li>
+            
+            if we don't set if we don't have a Value for points size. We won't see them even if we have drawing mode set to be fights.
+          </li><li>
+            
+            Anyway, so let's
+          </li><li>
+            
+            see the points but drawing points isn't a very good way to get a sense of geometry.
+          </li><li>
+            
+            And doesn't scream out a cube desert. Or even Raven's speaks say it softly it doesn't say cube.
+          </li><li>
+            
+            Sorry, that's my sense of humor.
+          </li><li>
+            
+            And if we connect, we draw the thesis. And because it's a cube just consider that
+          </li><li>
+            
+            these are all square
+          </li><li>
+            
+            so that says more of a cuboid helped to make this more of a cube still.
+          </li><li>
+            
+            Or give the impression of a cube instead of a collection of lines.
+          </li><li>
+            
+            missing one edge
+          </li><li>
+            
+            will that do it? Does that say cube now or does it still say some lines? Some point maybe parallel lines
+          </li><li>
+            
+            okay, what what way could I improve it still?
+          </li><li>
+            
+            So I don't want to see this line
+          </li><li>
+            
+            because that's blocked by the face. So again, just consider these little squares I'm drawing
+          </li><li>
+            
+            It's better. It's a little more rectangular cubish Right. So we could if we do if we set the depth buffer been suffering for keeping track of the depth, so we're doing some hidden surface elimination this gives us a better sense of the geometry of the cube
+          </li><li>
+            
+            so to draw squares and WebGL
+          </li><li>
+            
+            because surfaces
+          </li><li>
+            
+            we're going to use triangles. So why are triangles better than planes or quadrilaterals or rectangles is a guaranteed that we can put up
+          </li><li>
+            
+            is a guaranteed that for dry wreck if we specify a rectangle that all points are going to be coplanar
+          </li><li>
+            
+            well, we might wish it to be that way but it doesn't have to be right
+          </li><li>
+            
+            me say explain to you.
+          </li><li>
+            
+            Lines and rectangles quadrilaterals are not necessarily.
+          </li><li>
+            
+            Right. So if we specify two points, what does what a two points specify for us?
+          </li><li>
+            
+            Two points.
+          </li><li>
+            
+            Two points are in basically a line. Thanks. I heard that a few few different people. So that's a line. So
+          </li><li>
+            
+            if we specify a line
+          </li><li>
+            
+            we have a choice of all if the line is like this than the planes that we specify can be anywhere that passes through that line.
+          </li><li>
+            
+            So we specify a third point that fixes the orientation of the plane. So the third point is it makes the triangle so
+          </li><li>
+            
+            so triangles are coplanar. So if we have a rectangle or face it isn't coplanar we have to make a choice of how to triangulate it. So if
+          </li><li>
+            
+            I mean, another circle I want to do another circle they're looking for my camera
+          </li><li>
+            
+            so the idea is we can use triangles to represent a face. Q But in general,
+          </li><li>
+            
+            if the four points aren't
+          </li><li>
+            
+            the same plane then we have to make a decision about how to break it into two triangles.
+          </li><li>
+            
+            Soon as we have
+          </li><li>
+            
+            definitely not keeping them up
+          </li><li>
+            
+            so we can break up
+          </li><li>
+            
+            so we can see three phases here. So, that's six triangles, but altogether there'll be 12 I want to see if I can draw
+          </li><li>
+            
+            draw something that's clearly not
+          </li><li>
+            
+            in the plane.
+          </li><li>
+            
+            So the idea is this one is higher, the second is higher than that and
+          </li><li>
+            
+            so if we do it this way
+          </li><li>
+            
+            the center line is the lower altitude.
+          </li><li>
+            
+            We can maybe think of it
+          </li><li>
+            
+            like this
+          </li><li>
+            
+            but then if we divide it the other way.
+          </li><li>
+            
+            Then we're getting
+          </li><li>
+            
+            that kind of shaped twice
+          </li><li>
+            
+            Does that make sense?
+          </li><li>
+            
+            We should write some code like this
+          </li><li>
+            
+            should we take that on today? Okay.
+          </li><li>
+            
+            Okay
+          </li><li>
+            
+            so before that
+          </li><li>
+            
+            let's think about the queue.
+          </li><li>
+            
+            So we can in WebGL we can draw triangles
+          </li><li>
+            
+            so the basic approach you can do is just give the coordinates of each of these vertices and say, here are the triangles
+          </li><li>
+            
+            and together they make up the cube
+          </li><li>
+            
+            but that's not terribly efficient.
+          </li><li>
+            
+            So you can do
+          </li><li>
+            
+            so instead of a face
+          </li><li>
+            
+            I mean draw a bigger fan.
+          </li><li>
+            
+            FBI says a circle
+          </li><li>
+            
+            if you squint a little
+          </li><li>
+            
+            Sabian Nightingale rows of data plot.
+          </li><li>
+            
+            Anyway the idea is so we have
+          </li><li>
+            
+            one vertex here. So we specify the center and then we say make a triangle. So this is C was called C for center
+          </li><li>
+            
+            and then.
+          </li><li>
+            
+            So we
+          </li><li>
+            
+            you can specify
+          </li><li>
+            
+            the fan as see
+          </li><li>
+            
+            and the way we understand that as role is using C
+          </li><li>
+            
+            then we're using D and E
+          </li><li>
+            
+            and E and F
+          </li><li>
+            
+            then she and so on
+          </li><li>
+            
+            So, for doing a face
+          </li><li>
+            
+            square
+          </li><li>
+            
+            we do this triangle, so,
+          </li><li>
+            
+            see
+          </li><li>
+            
+            and we use those two and then we use the last two
+          </li><li>
+            
+            so what does it say? Triangle? Tangent
+          </li><li>
+            
+            fan
+          </li><li>
+            
+            fans
+          </li><li>
+            
+            alternatively we can do triangle strip
+          </li><li>
+            
+            what is the upper line triangle? That the
+          </li><li>
+            
+            triangles detached separately
+          </li><li>
+            
+            with three words are defined
+          </li><li>
+            
+            Thank you My apologies.
+          </li><li>
+            
+            I was listening to a story of what how teachers have had to buy news supplies for the students every year and out of their own pocket and when school board and told the teachers to try to get the students not to sharpen their pencils too. Often because he only had one for the year. Anyway, that reminds me of sharpening my piece of chalk. So I might have an easier time writing on the board.
+          </li><li>
+            
+            Although I'm not sure that I would have an easier time so long as I'm not testing it with having access to a chalk sharpener I'll just say that's that's the magic solution. And my handwriting would be wonderfully legible that okay, triangle strips so
+          </li><li>
+            
+            I'm gonna take a cube
+          </li><li>
+            
+            and make it look like an elephant a little bit or a letter T.
+          </li><li>
+            
+            So there's a way to make a cube from a single triangle strip.
+          </li><li>
+            
+            So the idea is I'm not sure let me try
+          </li><li>
+            
+            so we start here
+          </li><li>
+            
+            don't know why they had to make the line squeak?
+          </li><li>
+            
+            So this is much more efficient I think that comes
+          </li><li>
+            
+            so that's 14
+          </li><li>
+            
+            So that's 14 indices to specify an ordering for the eight vertices. So we don't have let's write some other fakery.
+          </li><li>
+            
+            On the board here.
+          </li><li>
+            
+            Illustration there so
+          </li><li>
+            
+            six faces times two triangles per face
+          </li><li>
+            
+            three
+          </li><li>
+            
+            C's
+          </li><li>
+            
+            So, that means we have
+          </li><li>
+            
+            12 times 12 144
+          </li><li>
+            
+            Now if we just specify the vertices once
+          </li><li>
+            
+            so, we have eight vertices
+          </li><li>
+            
+            scratch my nail on the chalkboard just ever so slightly so, it gave me I got the Harrison I got them back my neck, my neck. I hope it didn't extend far into the audience was just a very localized effect eight vertices trying in the cube pardon me.
+          </li><li>
+            
+            Is enough just specify the eight vertices
+          </li><li>
+            
+            do we
+          </li><li>
+            
+            have the saving of
+          </li><li>
+            
+            about 75% is do we have enough information to draw the cube with this
+          </li><li>
+            
+            oh
+          </li><li>
+            
+            okay, we're drawing two squares, which we said isn't a good way to proceed. And we're not drawing squares or drawing triangles. triangles
+          </li><li>
+            
+            so we can get
+          </li><li>
+            
+            if we specify indices
+          </li><li>
+            
+            let's just start
+          </li><li>
+            
+            if we say
+          </li><li>
+            
+            okay, we'll do that
+          </li><li>
+            
+            so we can think of this as
+          </li><li>
+            
+            I'm Fred face zero
+          </li><li>
+            
+            then connected to two three. And let's label these 4567.
+          </li><li>
+            
+            So two, three are connected to six seven
+          </li><li>
+            
+            and then six,
+          </li><li>
+            
+            seven are connected to four, five and four five are connected to 01.
+          </li><li>
+            
+            And then one three are connected 257
+          </li><li>
+            
+            and
+          </li><li>
+            
+            02 are connected to four six.
+          </li><li>
+            
+            So if we
+          </li><li>
+            
+            use this path
+          </li><li>
+            
+            then you can specify indices
+          </li><li>
+            
+            0123
+          </li><li>
+            
+            So got to three and then go across to seven
+          </li><li>
+            
+            and then why one,
+          </li><li>
+            
+            five
+          </li><li>
+            
+            and you see here we've got one five or connecting to one five there
+          </li><li>
+            
+            think it's 1404
+          </li><li>
+            
+            Isn't the Zealand?
+          </li><li>
+            
+            No, I drew this this one the other way.
+          </li><li>
+            
+            Here we're connecting to four zero
+          </li><li>
+            
+            and then we get to
+          </li><li>
+            
+            23456 7/14 14.
+          </li><li>
+            
+            Okay,
+          </li><li>
+            
+            so I'm gonna give you I'll send this post a link to the paper where this triangle strip came from. They have different numbers. I'm not sure why they started where they did. Anyway
+          </li><li>
+            
+            so there's 14
+          </li><li>
+            
+            If we're going to specify a triangle strip, we need to specify 14 indices.
+          </li><li>
+            
+            Now for us an unsigned in like a one one bite
+          </li><li>
+            
+            I guess. Unsigned character. So how many indices can represent using one byte?
+          </li><li>
+            
+            No
+          </li><li>
+            
+            no
+          </li><li>
+            
+            one day test for
+          </li><li>
+            
+            memory space know as a four
+          </li><li>
+            
+            in the CFA so.
+          </li><li>
+            
+            Do for each in this index
+          </li><li>
+            
+            I didn't follow
+          </li><li>
+            
+            if there are eight memory spaces in one byte and we take two for each index. So, is it four indices?
+          </li><li>
+            
+            So,
+          </li><li>
+            
+            using one byte to store one index value so, using one byte how many values can I represent
+          </li><li>
+            
+            one byte how many values of it any other questions
+          </li><li>
+            
+            anyone else be able to restate the question so it's more clear
+          </li><li>
+            
+            so, as an aside, we talked about colors being
+          </li><li>
+            
+            what color is that?
+          </li><li>
+            
+            Yeah, let's read so we have.
+          </li><li>
+            
+            So,
+          </li><li>
+            
+            the hexadecimal digit can represent 16 values because we're doing
+          </li><li>
+            
+            so we have
+          </li><li>
+            
+            four beds. A hexadecimal digit means regrouping four bits. So that means we can have between we have value 01 all the way to 15 because we have capacity for 16 values in four bits
+          </li><li>
+            
+            What do you think about that
+          </li><li>
+            
+            so, remember card trick for bits for yes or no questions? I guess quote unquote your number that was between zero and six between zero and 15 inclusive.
+          </li><li>
+            
+            So, 16 times 16
+          </li><li>
+            
+            is how many values
+          </li><li>
+            
+            256 Yeah.
+          </li><li>
+            
+            So, in this case, we don't need more than eight index values so 256 is fine. If we needed more than 256 indices, we could use a 216 bit storage or two bytes
+          </li><li>
+            
+            so,
+          </li><li>
+            
+            we're adding 14 here
+          </li><li>
+            
+            so this
+          </li><li>
+            
+            requires 47 Pardon me 46 By switches about a third of the costs. If we just did it
+          </li><li>
+            
+            plainly.
+          </li><li>
+            
+            Just didn't triangles
+          </li><li>
+            
+            triangle fan is a bit more because we need to specify the fan for each.
+          </li><li>
+            
+            And for each face.
+          </li><li>
+            
+            So each face
+          </li><li>
+            
+            so
+          </li><li>
+            
+            six times
+          </li><li>
+            
+            for indices. Plus we need Sony say don't make the whole thing into it's not just one triangle fan because we need to change the center of the fan from each face. So we need to
+          </li><li>
+            
+            so
+          </li><li>
+            
+            six times four that's 24 529
+          </li><li>
+            
+            So we had that
+          </li><li>
+            
+            that makes sense.
+          </li><li>
+            
+            So we're going to use element arrays to give the extra information about the indices you that we need to construct the geometric primitive so if we're talking about bytes, but maybe megabytes then these differences are more important.
+          </li><li>
+            
+            So let me go to the two examples
+          </li><li>
+            
+            no that's not the one I wanted.
+          </li><li>
+            
+            May be it is.
+          </li><li>
+            
+            Let's see.
+          </li><li>
+            
+            Okay,
+          </li><li>
+            
+            let's do the plane
+          </li><li>
+            
+            so the colors are not
+          </li><li>
+            
+            gonna say very helpful for interpreting the shape
+          </li><li>
+            
+            but anyway that we
+          </li><li>
+            
+            let's just, yeah, that's the technical problem. I had.
+          </li><li>
+            
+            Go away. Go away.
+          </li><li>
+            
+            Okay. So.
+          </li><li>
+            
+            Okay, so this first one we're defining a function called Color Cube and we're drying the six quad six faces
+          </li><li>
+            
+            and then we have indices
+          </li><li>
+            
+            so the indices say how to make the two triangles out of the quadrilateral. That we've input. And so we're putting the positions together according to the indices.
+          </li><li>
+            
+            So we're drawing arrays. Using draw arrays, which are drawing triangles. Zero to the we were drawing all 36 triangles. Does that make sense?
+          </li><li>
+            
+            That's what we've done before.
+          </li><li>
+            
+            Now to draw the triangle fans. So we can see triangle fan and we're doing num elements but instead here we're specifying the right hand side unsigned unsigned bytes. So this, they can store up to 246 values and serve draw arrays reusing draw elements Does that make sense?
+          </li><li>
+            
+            So to go up to the top here.
+          </li><li>
+            
+            So
+          </li><li>
+            
+            you are the vertices and I've indicated the index value for each of them.
+          </li><li>
+            
+            And then
+          </li><li>
+            
+            I have indicated the plane that they represent. So we have four indices to specify the face of the cube and then a fifth one to say that's the end of the triangle fan. So we're specifying six fans and we don't need this the Terminator at the end
+          </li><li>
+            
+            so in order to enable this understanding of the 255 in the data here, we enable primitive restart fixed index
+          </li><li>
+            
+            so we're creating a third buffer for the indices and we're making it unsigned int eight bit array
+          </li><li>
+            
+            we're making a color buffer which is pretty standard, and then our vertex array. So we're just storing the eight vertices, not 36 vertices. So just the eight there
+          </li><li>
+            
+            and then we have
+          </li><li>
+            
+            dry elements triangle fan, number of elements. So we have num elements is 29. We're using that.
+          </li><li>
+            
+            Size of our element is an unsigned byte. So specify those parameters. And we draw again
+          </li><li>
+            
+            now let's go to let's show
+          </li><li>
+            
+            first.
+          </li><li>
+            
+            So you can see it's fixed.
+          </li><li>
+            
+            There's no hole here. We'll take a look at the original in a second. Here.
+          </li><li>
+            
+            But our third example
+          </li><li>
+            
+            is.
+          </li><li>
+            
+            I've
+          </li><li>
+            
+            worked on the interface a little bit here. You can tell me what you think about it.
+          </li><li>
+            
+            Basically
+          </li><li>
+            
+            I reordered the vertices a little bit. But the indices that we have
+          </li><li>
+            
+            in the code
+          </li><li>
+            
+            I think they should have been similar to the ones we came up with.
+          </li><li>
+            
+            So we don't need any
+          </li><li>
+            
+            and he breaks in that triangle strip. Because we're just specify as opposed to the Triangle, triangle strip are just see sequencing them. So we use the first three vertices, or the first three indices to draw a triangle and then we use the next V and the next three and the next three. So that's a distinction. Like with the drawing modes, we have lines and line loops, or line strip. So if we're drawing triangles, we take three vertices and then we want the next three vertices. We don't overlap. So for drawing lines compared to a line strip, taking two vertices drawing the line, then moving on to the next two, with a blind strip between two and then moving. One doing those two vertices moving one doing the next two vertices Does that make sense?
+          </li><li>
+            
+            Either
+          </li><li>
+            
+            that makes sense. Okay. All right. Any questions about that?
+          </li><li>
+            
+            Know it's not my one.
+          </li><li>
+            
+            Okay, triangle strip
+          </li><li>
+            
+            elements.
+          </li><li>
+            
+            leaves a little bit to be desired, but
+          </li><li>
+            
+            here we go.
+          </li><li>
+            
+            So what I've done here is I colored one face read from the initial from the initial eight vertices I did. One face red and one face blue and then as a go between them is blending.
+          </li><li>
+            
+            was working for me to begin with and then start have some problems.
+          </li><li>
+            
+            So you can
+          </li><li>
+            
+            think about this as well?
+          </li><li>
+            
+            So whichever one I type into them becomes the one that's animated the X who gets animated
+          </li><li>
+            
+            let's see if that's true.
+          </li><li>
+            
+            Yeah
+          </li><li>
+            
+            oh
+          </li><li>
+            
+            okay so we
+          </li><li>
+            
+            have here the vertices of vertex colors
+          </li><li>
+            
+            and then the indices
+          </li><li>
+            
+            Can you see where the problem is?
+          </li><li>
+            
+            Compare the first and second triangle fan specifications here
+          </li><li>
+            
+            what do you notice about these four numbers compared to these four numbers
+          </li><li>
+            
+            is the repetition of this number. Yeah 372
+          </li><li>
+            
+            That's the problem
+          </li><li>
+            
+            that was the one that was creating the whole yeah
+          </li><li>
+            
+            I'm
+          </li><li>
+            
+            over time here. So, I don't want to keep you but the thought I had was just to modify one of these faces to not not be coplanar
+          </li><li>
+            
+            you can experiment with that over the break any questions? This makes sense about the geometry and how we can specify geometry and the trade offs we get.
+          </li><li>
+            
+            Okay, well,
+          </li><li>
+            
+            I won't keep you any longer. Thank you very much for today and have a good break. And need to get in touch with me. I'm available. Thank you. You're welcome. Happy Thanksgiving. Thanks. Yeah. So there's Thanksgiving. And then my 40th high school reunion.
+          </li><li>
+            
+            Okay, and maybe against
+          </li><li>
+            
+            my better judgment. I decided to go.
+          </li><li>
+            
+            Before you go since you
+          </li><li>
+            
+            know 40 Since I graduated high school
+          </li><li>
+            
+            was 48 years I'd really be old.
+          </li><li>
+            
+            Thank you, Doctor have a good
+          </li><li>
+            
+            Thank you, Doctor have a good
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>The most important thing that I learned toaday is creating a cube using a triangles. and also I learn about triangle fan and triangle trips.
+    </li><li>is about the geometric transformation (cube from rectangle)
+    </li><li>The most important thing I learned in today&#039;s class was all the animations we can do via rectangle and triangle. More specifically cube drawn using triagnle fans in Webgl.
+    </li><li>Discussed the code furthermore as compared to the last lecture and discussed the assignment.
+    </li><li>Making a cube out of triangles can be done by using single triangle strips. Each face of the cube can be broken down into two triangles.
+    </li><li>I learned about the converting a cube using a triangle in webgl.
+    </li><li>Was about geometries and how triangle strips are more efficient than triangle fans
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>It was difficult for me to understand how can we make cube out of triangle fan. Apart from that it was okay.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>I did notice that when a cube is rotating Y, the lines between vertices seems incorrect. Since it is in 3D, I think that the lines (vertical) behind should be shorter than the lines (vertical) in front.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/10_Wed-04-Oct-2023.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

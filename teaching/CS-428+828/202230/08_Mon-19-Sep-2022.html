@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202230/08_Mon-19-Sep-2022.html" />
+    
+    <title>Mtg 08 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 08 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/08_Mon-19-Sep-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/",
+        
+          "name": "202230"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/08_Mon-19-Sep-2022.html",
+        
+          "name": "08 (Mon-19-Sep-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202230/">
+        202230
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      08 (Mon-19-Sep-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 8/36: Mon-19-Sep-2022
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="07_Fri-16-Sep-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="09_Wed-21-Sep-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I encountered
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+          Administration
+        </h4>
+        <ul><li>
+                Happy Monday
+              </li><li>
+                <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1900809&amp;view=1">
+                  Attendance
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1663567200&amp;course=24538">
+                  Class calendar for today
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=24538">
+                  Upcoming events
+                </a>
+              </li></ul><h4>
+          Assignments
+        </h4>
+        <ul><li>
+                <a href="https://www.nngroup.com/articles/two-ux-gulfs-evaluation-execution/">
+                  The Two UX Gulfs -- Evaluation and Execution
+                </a>
+              </li><li>
+                Empathy maps
+              </li></ul><h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><ul>
+      <li>
+        <a href="https://dl.dropboxusercontent.com/s/f5pn5e31lwq4fkp/8%20-%20Password_8.pdf?dl=0">
+          8 - Password_8.pdf
+        </a>
+      </li></ul><div id="mtg_pix_08" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_08" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_08" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_08" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_08" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_08" data-bs-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/bvixzkzejz8pme2/8%20-%20img-1.png?dl=0" alt="8 - img-1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/6h5t1lattcjcnt5/8%20-%20img-2.png?dl=0" alt="8 - img-2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/jybwdzfyun6h36c/8%20-%20img-3.png?dl=0" alt="8 - img-3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/50asjf2iap0bjpa/8%20-%20img-4.png?dl=0" alt="8 - img-4.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/09ujwldkyr6j36i/8%20-%20img-5.png?dl=0" alt="8 - img-5.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_08" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_08" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Today Okay, thanks. Anyone catch some watch the TV this morning no TV or for our online videos of the funeral this morning a year for the humans anyway forward to today's visit she was
+          </li><li>
+            
+            okay, so happy Monday and we have a guest presenter this morning. Send us who's the board member from our perk okay so we welcome send us
+          </li><li>
+            
+            over here thank you everyone. Okay. All right. Hello everyone. My name is Cindy us and I'm from the Regina Public Interest Research Group here on campus also known as arburg, which is how I'll refer to it in the rest of my presentation. But I'm here today just to talk a little bit about what we do, how we interact with you guys on campus and why it's so important for get to know about this. So before we begin, I'd like to acknowledge that we are based on treaty for territory and the homeland of the maytee people. The Cree the Soto, Dakota, Lakota, Dakota and maytee. Peoples continue to be in kinship and practice reciprocity with a sled that has sustained them for countless generations. So it's very important for us at our product that we acknowledge that and that we try to be active in dismantling all the harm that has been done. Alright, so on to what our product does. Has anybody here heard of Hartford before? Just raise your hand? Oh, awesome. That's more than I expected. Okay. So we're a student run nonprofit here at the U bar, we operate as a resource center for students interested in social and environmental justice. So as computer science students, we don't typically get a lot of experience with that kind of stuff in our classes. And so this is a really good way to supplement that part of your university experience which might be missing and I'll talk about those resources as I could go on. So we focus on research, education and action. So research. There's an example that was done recently, so we helped someone do a study on our green patch garden. So we help somebody do a study on our green patch garden just to how to make it more sustainable. We do a lot of education. I don't know if any of you guys have heard of the disorientation week that happened this this past week can get a lot of guys have heard about it. And then action. So putting those initiatives and those things that we learned into action to make our campus more sustainable. So how do we operate? It's run by students. I'm a student myself. We have a board of directors that gets elected every two years or every one year depending on how many vacancies we have. And applications are available all year long. So if you're interested, go to Rp irg.org. And make sure you either sign up for our newsletter or you sign up to become a board member. And we're also funded by students. So every semester we collect a small fee from your tuition, and then we give back as much as we can in the form of funding in the form of events for our students. So definitely check us out because you guys are the ones that are funding us. These are some of our values. I won't read them all out but if any of these are interesting to you definitely check us out on our website. And then we have two major projects that we do every year so most of you guys have probably heard of the art period, green patch garden is just right outside classroom building in that little area over there. We also have an orchard over there and it's free for students to come and pick whenever they want. If you want to volunteer, this is also a really good place to get your volunteer hours into. And then we have a leadership camp called generating momentum every year. We didn't have it this year due to COVID. But it's usually around the end of August for anybody from the ages of 18 to 35. Interested in learning more about activism and gaining those necessary skills. So if you're interested in that, I think I put or this signup sheet will start up in the beginning of July next year. Probably. And if you sign up for our newsletter, we'll definitely be sending out reminders for that too. This is just a little bit more information about our garden. This is definitely one of our biggest projects that we put into place. And I think September 28 and 29th There's going to be a harvest celebration. So definitely come check us out there too. And then funding for students. This isn't the most important part to most students here. So if you're thinking of you know, putting any sort of project in place that aligns with our values, come and visit us online. We have many different funds available right here as you can see, and if you or even your like student group, if you guys are interested in putting a project in place and you don't have the funds. We're definitely one of the people that you can come check us out as a board member every month or every time we have one of these funding cycles. Sorry every time we have one of these funding cycles, we check out these applications and we make sure that we either you know fund as many of them as we can or we give advice to people on how they can make their applications more strong.
+          </li><li>
+            
+            And we have more resources too. So we have an alternative library. Our office is located if any of you guys know where the Women's Center is or the Student Union. It's in that same area you just have to go down a small hallway. We have a button maker some of you guys might have seen us on the Greens making buttons for people. If you or your student group are interested in renting that out. We can definitely help with that. We have a parents on campus. So if you are a parent, we have lots of support for that as well. And then we have training so if you're ever interested in going to a workshop or something and you can't afford the plane ticket or anything like that, we can help out with that as well. And then our final thing is just major events in fall. So from the 12th to 16th. This already happened this orientation week was put on by us and then on the 22nd at 1pm. If you guys are available, come down to rebel center multipurpose room, or will also be live streaming the AGM and the workers rights workshop. If you guys are available, please attend because unless you've opted out specifically, which is one of the options for you guys, you guys can definitely do that. But if you haven't opted out then you are a artpark member and you can vote at our annual general meeting and we need to have as many people attend as possible so we can so we can put those actions into place. That we need to get done. All right. Are there any questions? All right, I will just make a if it's okay with you. I'll make a small note about our website on the whiteboard so you guys can go check it out. We have a newsletter like I mentioned several times. That's where you will get all the information about what we're doing. And then these are also our Facebook handles and Instagram and Twitter. Awesome. Thank you so much.
+          </li><li>
+            
+            It's not just you Avara that has a look interesting research group. Talk about there's a larger
+          </li><li>
+            
+            Sure. So every university typically has a Public Interest Research Group. There was a I think it's called the L PERT. That's one of the ones that we collaborated with in the fall with the Lethbridge University of Lethbridge Public Interest Research Group. So we definitely collaborate with these groups all over the country. And they're a good way to just get involved in these social advocacy schemes or anything that you guys are interested in bettering about your university as well.
+          </li><li>
+            
+            So this is maybe just started by Ralph Nader, or I get the information to awesome thank you so much for letting me speak turned on to a microphone so let's see what we get.
+          </li><li>
+            
+            So is it alright to fail it so we're gonna leave the PowerPoint on here? Yeah, so the PowerPoint is on the website under Files. So you can have a peek at it and get more if you want to get in
+          </li><li>
+            
+            some more details there as well. Okay
+          </li><li>
+            
+            so today we're meeting aid of Six. Thanks so there's there's the QR code for today All right. I didn't know if people planned it this way, or whether I jinxed it by mentioning it before noon on Friday, when there was 41 votes, but after 44 people voted that was equal split.
+          </li><li>
+            
+            And I I flipped I took a penny from my desk that's been there for a while and I flipped it and decided on Friday. October
+          </li><li>
+            
+            21 I didn't put the microphone thanks Can everybody hear me now? Can you Oh Wait Can you hear me now? Can you hear me? Now?
+          </li><li>
+            
+            Testing testing let's try that the base station was turned off I think I think that's on now.
+          </li><li>
+            
+            Can you hear? me okay. Okay so you're enrolled in the experiment with your courses.
+          </li><li>
+            
+            Anyone want to? So I'm not going to delete people again from this but if there are problems that we observed, I'll just I'll get them fixed. Okay.
+          </li><li>
+            
+            So let me switch to my role is look at this. Didn't change my role was going on there so magically so it says you have no roles but you really do have a beta teacher for learning role.
+          </li><li>
+            
+            And I know people who are locked in before say like Laura, for example. Says you can have never been logged in. That's because I deleted Hugo on Friday. And then you've been restored since then. So
+          </li><li>
+            
+            so if you if you observe any other issues with this role, let me know. The assignment is to claim a topic that's even creepier floor cuter I suppose. However you feel about it so Laura cleaned the first one. There's a few others Okay, so let me so we had this empathise of teachers due on September 26, which is a week from today. So how about we make made it a week later? I shouldn't really sorted by date. So make it a week later. October 3. So let's see him okay. All right any thoughts about what we've done? As
+          </li><li>
+            
+            I wouldn't like a marble. You want one? It's all fine. To have to hold your dog and guests get to hear your messages
+          </li><li>
+            
+            and I guess some people will leave messages to your dog you can maybe have a scented waterboy everyone, first a cartoon or something really professional checking his phone. The owner checking his phone for messages and the dog sniffing the fire hydrant. For his message.
+          </li><li>
+            
+            So we have one vote for no. Anyone. Would you like? Would you consider having a marble latching machine in your home?
+          </li><li>
+            
+            Not at all. So there's two aspects we like to think about is usability issues more practical issues about what to do with the marbles and how to organize them and keep them color coded, sorted and if you run out of marbles and different things like that,
+          </li><li>
+            
+            yeah. Functional issue as well that occurred to me is that how do you stop a message if you don't want to keep playing it? There's no buttons or interface at all. You just have marbles that you push around the machine on my phone even though there's 30 different venues I have to go through if a telemarketer leaves me a message all I got to do is press the seventh one and it's
+          </li><li>
+            
+            I guess you could just take the marble
+          </li><li>
+            
+            My first guest would be take it out and then but then you put it back into the inbox or do you have a special erase block, have some other functionality read bits off the message to not take messages from that number again.
+          </li><li>
+            
+            So there's also something called user experience which is important. So good thanks the barbel answer she might be fun to
+          </li><li>
+            
+            work to Avature home. So is that an important part? Okay, so right now the fun aspects don't overwhelm a way the usability aspects and issues of keeping track of marbles.
+          </li><li>
+            
+            So we usability issues we can address in a more practical way we have some we have some heuristics and but we also have theory that can guide us in terms of creating usable interfaces in terms of color contrasts and speaking of color contrasts, I have to deal with this bar at the top fails and the color. I do pretty well other places but that's one spot where I need to improve it. So we can deal with usability issues in a more direct way. Use user experience issues we can say. We can say that the interface is going to be fun to use or enjoyable experience but we can't make people say here's here's the marble answer sheet. You're going to have fun with that. You're going to enjoy it and you're going to be happy all the time and you're using it. I mean that could be our goal but that doesn't mean it's going to happen. So so we can encourage. So we can we as designers can encourage an experience what we can force people to have a certain experience with the interface. Does that seem okay? And I was volume with my microphone. Good. Okay. Throw that out so, what is empathy and is it important for user interface designers have empathy for users so, what are some other other options instead of empathy? Oh we can also go out and say well telepathy but
+          </li><li>
+            
+            that's that's not a very good I think it's good to get a laugh in class and then let's move on. Anyway so empathy is. CMRA Camille, we can everyone apathy Do you agree with that error Stan
+          </li><li>
+            
+            and sympathy understanding someone else's perspective is really too busy too expensive before getting to someone else feeling
+          </li><li>
+            
+            I'm not sure that it's so much understanding.
+          </li><li>
+            
+            My understanding of the difference between empathy and sympathy is good or not. You've experienced the same thing before.
+          </li><li>
+            
+            So let me write out some put something down and see how this works. Maybe sadness.
+          </li><li>
+            
+            Maybe sympathy is like college, someone's perspective and the other one is empathy is I looked at
+          </li><li>
+            
+            it Okay, well so if we approach design problems with empathy we get to the goal is to put ourselves in the others position and understand their perspective.
+          </li><li>
+            
+            Now, what else we designed with apathy will say that's good good. Design with accuracy. Don't generally Yeah. So we're just gonna say here's what the requirements say. I'm gonna do that in a way that makes no sense to me and I don't care.
+          </li><li>
+            
+            Yes, because we use it or is always wrong.
+          </li><li>
+            
+            Yeah. reading comments, user forums and so on. I get that some people have that new users ever right?
+          </li><li>
+            
+            Maybe if it's more of like a sophisticated software like you're trying to teach the most efficient way of something you want the user to rise to a specific level and that way you like the user to like learn a lot.
+          </li><li>
+            
+            So we have a user interface so it's a challenge that we're setting so that the user can develop themselves
+          </li><li>
+            
+            that's pretty generous. I think. Many people feel like they see this idea that it builds character. And designers are forcing you to build character when you're using their software. Anyone. Does anyone know not clear? And what I mean by builds character is kind of an idiom. And you either prefer professor who told me and builds character and for us would put hair on my chest.
+          </li><li>
+            
+            That wasn't recently so don't times have changed what's appropriate anyway, for I get you fired or remade say it's a badge of honor for people to accomplish a task. It was difficult to program should be difficult to use. These are these are statements and you can have interface design maybe comes from an apathy towards users. And one unless we approach design with sympathy towards users
+          </li><li>
+            
+            all those like question mark symbols where it says like it's trying to help people but it doesn't.
+          </li><li>
+            
+            So that reminds me. So Dave Palmer who who's alumnus of the department, who went on to write Windows Task Manager. He told us I told a variation of this joke before that. I thought maybe I should. I shouldn't I shouldn't stop using it. But then he's he told the version of it and I thought maybe it was okay for me to use it again. So his version someone's flying a helicopter around Seattle. And it's foggy, very low visibility. But he sees an office building there was a wet winter sun was on deck with windows open. He could communicate with somebody and he said you know, I can't I can't see I'm not sure I'm right. Can you please help me out?
+          </li><li>
+            
+            He said while you're in a helicopter anyway, so took that information and made a course correction and found where he needed to go.
+          </li><li>
+            
+            It said because information was correct. And completely unhelpful. The use of Microsoft?
+          </li><li>
+            
+            Tough crowd Okay. Thank you not so, before user, I know what I can do, what I know what you need in the interface. I don't have to really focus on advertising, whatever you like and just I'll take care of you. So have those so say no.
+          </li><li>
+            
+            No there. I went to the football game on Friday night. And they had a piece of film to put over the flashlight on phones so that you could do like the turn the lights out and then see all these green lights in the stadium.
+          </li><li>
+            
+            There weren't that many people there to begin with. But then it took me quite a long time to get the film off my camera case. So I think that promotion was not designed with empathy
+          </li><li>
+            
+            just wanted to really easy to put on and then to get it off. That's sort of what
+          </li><li>
+            
+            wasn't easy to put on either. It was difficult to peel the film off because they gave him a piece of the game. A little card with a film on it
+          </li><li>
+            
+            can reserve work on the assignment and or?
+          </li><li>
+            
+            Well, I was just going to cover the last bit here so something that can help us in three minutes
+          </li><li>
+            
+            so. So there's a
+          </li><li>
+            
+            link in the assignment to a template for this. So a map is just the we're going to record
+          </li><li>
+            
+            what a user might say or do when they're using an interface to complete a task when they're completing a task, so I'm asking you to empathize with teachers by using your courses to create little activity with a couple of constraints. So imagine as you go through this, that you say, Are you be mindful of what you say and do and record that. And then also, what you're thinking about and what you're feeling. While you're using this and say I can't believe I have to prep so much. That's my general feeling of requests
+          </li><li>
+            
+            especially when you're getting stuck making this so many places to work
+          </li><li>
+            
+            okay, so you might feel
+          </li><li>
+            
+            confused.
+          </li><li>
+            
+            All right. So there are right or wrong answers. For this is a way for you to put yourself in the shoes of somebody else trying to understand why some things might be difficult for other people who think this is better of course if we're designing for a particular group, say senior citizens. Then instead of trying to imagine like if your senior citizens Nice to talk to somebody from the people from the group of people who will be like to use software I was 20 athletes. So in a way better with my time anyway, thank you for today. I'll catch up responses actually thank you very much for joining
+          </li><li>
+            
+            All right. So there are right or wrong answers. For this is a way for you to put yourself in the shoes of somebody else trying to understand why some things might be difficult for other people who think this is better of course if we're designing for a particular group, say senior citizens. Then instead of trying to imagine like if your senior citizens Nice to talk to somebody from the people from the group of people who will be like to use software I was 20 athletes. So in a way better with my time anyway, thank you for today. I'll catch up responses actually thank you very much for joining
+          </li></ul>
+    
+  
+    
+  <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Today we had a student who was representative from RPIRG, and we learned about RPIRG, it&#039;s action and research education. In this class we learned about the three PATHY; empath when we take on someone else&#039;s perspective, apathy when we don&#039;t care about others perspective and sympathy when we pity for others perspective and how we can make a better design/product to give our user a good experience by understanding and implement these.
+    </li><li>I have learned about empathy mapping today. It includes what user says, thinks, does, and feels about a design. If we think of the user’s perspective when we create a design for an interface, then it will make our work useful and beneficial to the user.
+    </li><li>In today&#039;s class we discussed about marble answering machine practical issues, usability issues and user experience. Later we discussed about empathy, apathy, sympathy. Empathy map consists of 4 parts: feels, says, thinks, does.
+    </li><li>Today in class we discussed the three concepts of empathy, apathy, and sympathy. All three of which are very important to understand when designing user interfaces. I was always confused between empathy and sympathy but today I finally understand the difference. Both are similar but empathy is generally more active while sympathy is more passive.
+    </li><li>In today’s meeting we discussed that why users are not ready to use the marble answering machine, few of the reasons are that it has issues with practicality and security and also some users might find it as a repetitive task and get bored with it and might miss something important, we also discussed, usability, user experience, empathy map, Apathy, sympathy of the same.
+    </li><li>Today we realized several important issues about  Empathy, apathy, sympathy in UI/UX. We learn and understand Empathy, apathy, sympathy is very important to ui ux that build. Empathy Map in ui ux design It consists of four elements : fells, says, thinks, dose.
+    </li><li>Today we discussed about empathy, sympathy and apathy while designing interface
+    </li><li>Today&#039;s class helped me understand the benefits &amp;amp; disadvantages of owning a marble answering machine. I learnt that although it provides a good user experience, it has practical issues. Also, a certain experience in the form of a design can&#039;t be enforced, rather it must be designed with empathy, wherein the designers take on the user&#039;s perspective. Thus, designing with apathy (ignoring user&#039;s perspective) and sympathy (merely showing pity for the user&#039;s perspective) is NOT to be done in the design process
+    </li><li>Important thing I learned was empathy, sympathy and apathy. Empathy is something that you need to experience a user&#039;s perspective even if we don&#039;t share experience with them that way we know what a user&#039;s perspective is and how it can be made better.
+    </li><li>The most important thing I learned today was the difference between Empathy, Sympathy, and Apathy in relation to Userinterphase. We should always use Empathy (putting oneself in someone else’s shoes). This could be, in some cases, very difficult. Therefore, testing is an important part of designing the interphase to make sure it suits the users’ needs.
+    </li><li>The Microsoft helicopter joke was amazing and I hope to share it with others in the future.
+    </li><li>We spoke about the user interfaces as well as user experiences, also what RPIRG is after 3 years at the University. Most importantly what empathy, apathy and sympathy are. Also what is an empathy map.
+    </li><li>The most important thing I learned today is the importance of empathy in design. Even if you do not share any experience with the user, it is important to view the experience from their perspective; that way, you have a better idea of how they will react to your design choices.
+    </li><li>The most important thing that I learned today is design with enpathy.
+    </li><li>I learned the difference in empathy, apathy, and sympathy in reference to interface designs and user interactions.
+    </li><li>Today we learnt more about Marble Answering Machine. It has usability issues as the marbles need to be sorted and organized. User experience is also important as it might be a fun experience for many but not practical or it could end up being a frustrating experience for some. We need to design using empathy in mind.
+    </li><li>The most crucial thing that I learned about is how beneficial is the concept of Empthy, Apthy and Sympathy for the an user interface desing is. All these components are quite essential in creating an interface that is very effective in presenting the application friendly to user. Empathy is a deep connection and understanding of the target user, their needs and their problems, with the aim of provding a tailor-made solution. Also the presentation about RPIRG was really helpful and want to explore more.
+    </li><li>I would not like a marble answering machine because of security reasons and the risk of losing information. Fun is not important to me when choosing an answering machine. I agree that empathy is important in interface design because testing the interface as a user is an important part of testing. In some cases, I think apathy is important as well because caring too much about user experience can become problematic.
+    </li><li>The assignment
+    </li><li>UX teams can achieve a deeper understanding of users&#039; attitudes and behaviors by visualizing them in an empathy map, according to Dr. Hepting today. The mapping process also reveals any holes in existing user data. It has 4 sections, which are Feels, Says, Thoughts, and Does. Also, he talked about the exact meaning of empathy, apathy, and sympathy, which clarifies the whole idea.  Empathy: taking on someone else’s perspective  Apathy: don’t care about others&#039; perspectives  Sympathy: pity for others&#039; perspec
+    </li><li>We discussed various &#039;PATHY&#039;  Empathy is the ability to see things from another person&#039;s point of view. Apathy is to disregard for the opinions of others Sympathy which means that feeling sorry for others
+    </li><li>It was talked about empathy, Apathy and Sympathy. The first one is taking on someone else’s perspective . The second one is don’t care about others perspective and the last one is pity for others perspective. For example if there is a ‘?’ Mark on a site such as UrCourses or somewhere else, it can be Sympathy.Empathy Map has 4 sections which are Feels, Says, Thinks and Does.
+    </li><li>The most important thing I learned today was the differences between Apathy and Empathy.  Empathy is taking in someone else&#039;s perspective whereas Apathy is when you don&#039;t care about others&#039; perspective. Looking forward to building the empathy maps!
+    </li><li>In today’s meeting an RPIRG representative came and talk about their union and they do research and also fund students. And also talk about different pathy such as empathy apathy and sympathy. And also compared them with few examples. The last thing I learned was empathy map l.
+    </li><li>one should be empathetical towards user while designing the interface.
+    </li><li>Git to know about various options available in ur courses with teacher access.
+    </li><li>In today&#039;s meeting one of our classmate explained us about some program in which she is a member of then professor discuss  with us about the empathy map what we have to do in it.
+    </li><li>In today&#039;s meeting I learnt about difference between empathy,apathy and sympathy. I was fascinated by the fine line of understanding which separates them. I would to know more about it and I feel this is most important thing I have learnt I felt and also would like to know a bit more about user experience.
+    </li><li>Dear Prof. Hepting. Before designing the user experience, we should understand the users. Today you talked about empathy map. A visualization tool that we can use to understand the end user. Thanks
+    </li><li>Today I learnt how empathy designing is a way for UX designing. Also got to know why apathy and sympathy designing are not apt for UX designing.
+    </li><li>Today, we discussed about how, even after having a lot of features that we would want in a modern answering machine, the marble answering machine is something very few people would want to use. This is because of issues with the practicality and the usability of such a machine. If the user ends up feeling frustrated while doing a menial task of listening to voicemails, they would rather miss an important call than go through the process of the marble.
+    </li><li>In this tutorial, we will focus on the specific application of Assignment1 and the use of MAP
+    </li><li>The most important thing that I learned today is the difference between empathy, sympathy, and apathy. Apathy is not good for design because it means you don&#039;t care about the user, and sympathy is not good either because you pity the user. Empathy is the best because you take on the user&#039;s perspective when designing.
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>Why is apathy a negative thing?  Today&#039;s discussion looked at the different pathy&#039;s in empathy apathy and sympathy and empathy was the one given the checkmark of the three. Discussion about apathy was centered around it &amp;quot;builds character&amp;quot; which I&#039;m somewhat mixed with the concept. All programs have a specific audience in mind and a certain level of capability to complete tasks.  Why is building character a bad thing when a program is built for an audience? An interface shouldn&#039;t need to appeal to everyone.
+    </li><li>It&#039;s been a while since I&#039;ve heard of &#039;empathy&#039;. In counseling, empathy is the stage of going beyond understanding and entering into the person&#039;s feelings and circumstances. Isn&#039;t it a bit excessive to require that much for UI/UX?
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>I wish the marble answering machine was more flushed out and we got more information about the specifics of its workings given how much we talk about it in class.
+    </li><li>In today&#039;s class we have discuss about Marbel answering machine. We also discuss about Empathy that is taking about other perspective. Apathy that means who don&#039;t care about other people thoughts and Sympathy means pity for other perspective. I would like to discuss more about this Definitions.
+    </li><li>I would like to discuss more about why people supported apathy in UI and stated that the user is always wrong. I strongly disagree with it because one of the primary qualities a website should have is user friendliness and accessibility. If Uber decides to build the character of the user, it is pushing away old people and several other users who use the app for its user friendliness and convenience .
+    </li><li>The concept today about empathy, sympathy and apathy about the website designing was very interesting. But I think instead of using just one to be the core of the design, it should be the combination of all 3. I would like to get more information on this. Also, I would like to know the syllabus of the mid-term to start preparing for it. I would like to get information about the topics that were taught before Sept 14 because I joined class after Sept 14
+    </li><li>We only briefly touched on doing empathy maps and I wish we had learned a little bit more about it.
+    </li><li>Today I learned about design principles based on one example of EMPATHY, APATHY AND SYMPATHY
+    </li><li>i would love to know about norman door concept more and also do praticals which include interacting with computers
+    </li><li>Designing with empathy and about empathy map.
+    </li><li>Learned about empathy, sympathy and apathy.
+    </li><li>the thing about which I would most like to know more is about empathy and how we can understand the user make our interfaces less  apathy and easy to use for the user so the user does not have to suffer using the interface being implemented. Also, I would like to know more about how apathy can relate to sympathy and empathy when is related to user interface.
+    </li></ul>
+
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=wiki">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/08_Mon-19-Sep-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

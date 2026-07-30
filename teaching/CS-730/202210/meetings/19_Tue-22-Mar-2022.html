@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-730/202210/meetings/19_Tue-22-Mar-2022.html" />
+    
+    <title>Mtg 19 &bull; CS-730 (202210) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 19 &bull; CS-730 (202210) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/19_Tue-22-Mar-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/",
+        
+          "name": "CS 730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/",
+        
+          "name": "202210"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/19_Tue-22-Mar-2022.html",
+        
+          "name": "19 (Tue-22-Mar-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/">
+        CS 730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/">
+        202210
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      19 (Tue-22-Mar-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 19/24: Tue-22-Mar-2022
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="18_Thu-17-Mar-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="20_Thu-24-Mar-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=8508">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            today. Okay, so i'm going to share my screen. The whole screen. i'm doing all right, thanks to happy Tuesday everyone or Wednesday, I guess, depending where you are. So we started talking last day about or we're talking more detail about the. web accessibility initiative. Accessible rich Internet applications. standards. So what i'd like to do is go through an example. How many of you are familiar with used react js and node js. Let me make a poll. i've given you four choices there. Try to make them somewhat equidistant but. it's really there's not an alternative for no definitely not not. Really, not a lot. anyway. There you go, so if you can. can answer the question, please. Looking for for more people to answer. No wrong answer. Okay i'll give another 30 seconds. So you can get the other two people to answer. Okay. almost everybody answered. Some have quite a bit of experience and then. Otherwise, no. That seems fair. So I thought we'd go through an example of how to get. Get set up with. react yes and no js. We do want things for forget. share my screen. Oh, they didn't share the results of the poll either. My bed there sorry. OK, so now, you can see, the whole thing. One other thing I wanted to share with you is. The link to the video from last week. My friend Ross Mitchell, who is. copy what aim for precision health care. there's a YouTube link for that. Again, talk so very good explanation of the things he's doing related to. Applying Ai for healthcare. So it's probably an hour long. him talking and then. 15 minutes for questions at the end. Talk about sitting up react, but let's go through a step about. Getting. The chess set up. So how many of you have. Anyone. Little windows here. Okay, so. start with I guess. You need to install it then go to the website. Sorry just occurred to me it's. about getting that first step done. anyway. So i've got mpm is node package manager. And so let's say we've got. That installed So if you want to create a. An application react. So i'll put all this information in a file. So NPs is that's. That runs a command so there's the script to create a react APP. So react is the front end and no jess is the back end. So. Together we can get a website running quite quickly here. So i'm calling the. The new so i'm doing NP axis i'm going to execute a command to create react APP as a script and then react bootstrap APP is a directory that's going to be created so inside that directory i'll. put some other stuff and. And we'll. go from there. Okay. So it's going to load everything into this directory that it needs to. have to run. So. it's called react bootstrap because we're going to use bootstrap for the. Mobile first. To us, to create a mobile first. interface. And then we can use the aria. Labels or the aria keywords properties. associated with. The different user interface elements. To. To create our interface, so this is going to be a little bit easier. A little more straightforward than writing. html code and so forth. Once again. This directory setup. sure you. know. So if you go visit this website yourselves. And you'll see. See the version, for your operating system. Okay, so that basic installation is done now. So it created a new react APP in this directory that's packages. This is the react. stuff it's needed. So we can look at npr audit. see what the issues are. So we can try and fix them just by doing fix. can do. X minus force or dash that's force. Before some. OK, so now that is it's all installed. scroll back up here to see now we can go back. To that directory and type mtn start. it's not quite started yet that's fine. Look. login servers running so we can see, we have a web application running on our computer so. let's see Mari. Okay, so. here's a reasonable tutorial setting up whoa. Okay, so we've got. Great creating the. So now, the next thing is to install react bootstrap. Which is. version of the bootstrap. Libraries written in react. So we can see things are still. Looking at. Jason. So miserable mcs we're using bootstrap by 1.3. react 17. and so forth. These are the scripts. So you say mpm start. Writing react scripts start. there's not too much. here. source directory. So there's that. let's go back to. web page. Alright, so let's put some. So we have header. text. So let's put a button on the page as well. So this way we're not. importing the whole. library we're just importing specific. pieces there components so we're going to use the button so important button from react bootstrap button.
+          </li><li>
+            
+            Oh.
+          </li><li>
+            
+            it's. If you hover over it styling changes, a little bit. So, how does that seem. feel like I. didn't quit. anyway. having trouble getting to my chat window. So, since. Thursday I will i've had some problems with my MAC book. So I upgraded the operating system. It seems to have helped. But i'm still having some strange behavior. So that's put me behind on the things I wanted to do. Like. Like the exam marks. and so on. So my apologies there. This is one example of a problem, having is not getting the focus. just getting beeps. Okay. So we'll get that sorted out. So I think that's working. better than. My access to the chat window and zoom. So the idea with the lts is. Get the long term support long term stability. version. Little little bit behind. recurring so we're at 17.8 for the current. With the 16 point 14.2 is. Very that'll be supported over time. I really wish I could take them Swindon. Okay. how's this for. people other than a on. So. I guess my answer to the question was never used an end vm no burn version management. I didn't think so, but. Looking at the active path. seems like I have. Those are wise words. I feel like. very useful program would be not just sure node in mpm. throw or mpm. For. Other environments for Python Ruby. I feel like I have more than one. one set of. binaries installed and. that's not helping my computer run any better. So I meant to. give you a bit of introduction today to note and react js. So. mind. an assignment that will. Let you build on the example that we did today in class. So that's one part of it, and the other part, is to. Think about your experience and in installing the different pieces that are required. To. Get the application running. So have it written up for Thursday. Then we can discuss it further than. You see, the chat again. yeah that helps. So there's a node js website. Years react website.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            Hello!
+          </li><li>
+            
+            Good thank you.
+          </li><li>
+            
+            hi sir.good,,how are you?
+          </li><li>
+            
+            https://youtu.be/2Q8glNkMY3M
+          </li><li>
+            
+            Yes, on a Mac. But I don’t like installing Node.js on the local machine. I use Docker instead or Vagrant. Also, not a fan of npm.
+          </li><li>
+            
+            I’m somewhat familiar with docker. Which package manager do you use?
+          </li><li>
+            
+            For node.js? npm
+          </li><li>
+            
+            Have you used nvm?
+          </li><li>
+            
+            For managing different versions?
+          </li><li>
+            
+            no…
+          </li><li>
+            
+            You need to install it globally
+          </li><li>
+            
+            Currently it’s installed on the project
+          </li><li>
+            
+            npm install -g n
+          </li><li>
+            
+            It’s trying to pull in the packages within /usr directory
+          </li><li>
+            
+            If you don’t want to use sudo, please set N_PREFEIX
+          </li><li>
+            
+            N_PREFIX
+          </li><li>
+            
+            Long term support
+          </li><li>
+            
+            This is why I prefer docker or VM. It’s quite easy to throw everything away and start from scratch. Otherwise, it’s very easy to mess up the system. Also, regular installation often breaks with OS upgrades.
+          </li><li>
+            
+            https://nodejs.org/en/
+          </li><li>
+            
+            https://reactjs.org/
+          </li><li>
+            
+            I didn’t quite get what are we supposed to do.
+          </li><li>
+            
+            Create a simple app using react-bootstrap that illustrates the ARIA best practices applied to some bootstrap components.
+          </li><li>
+            
+            And consider your process and experience in creating the app…
+          </li><li>
+            
+            I will have a full version for discussion on Thursday…
+          </li><li>
+            
+            https://react-bootstrap.github.io/getting-started/introduction/https://react-bootstrap.github.io/getting-started/introduction/
+          </li><li>
+            
+            https://www.pluralsight.com/guides/how-to-set-up-a-react-bootstrap-app
+          </li><li>
+            
+            ok? it looks like we are out of time for today. See you Thursday?
+          </li><li>
+            
+            Attendence?
+          </li><li>
+            
+            right
+          </li><li>
+            
+            Student password
+          </li><li>
+            
+            ok?
+          </li><li>
+            
+            Take care and see you in 2 days :-)
+          </li><li>
+            
+            goodbye?!
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            thank you
+          </li><li>
+            
+            thank you .bye
+          </li><li>
+            
+            Have a nice day.
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Today, I learned how to use the Accessible Rich Internet Applications attribute, more commonly known as ARIA, to enable users with disability. We did some experiments by building a web application with Node.js, React, and Bootstrap.
+    </li><li>important details about the web accessibility initiative.
+    </li><li>Is how to use git and it functions.
+    </li><li>Got in touch with node.js and react is wonderful experience . I learn how node.js worked in asynchronous mode of operation. This event driven input-output make work not only user-friendly but also its developer friendly
+    </li><li>I have learned about the fundamentals of React and Node js for design purpose.
+    </li><li>On the beginning of the session sir made a pol asking how many of us know node js or react js . And then sir explained the difference of both .sir also took us to his github and showed his repository
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>hi, we are talking about  using react-bootstrap.also about macbook ,updating nade on mac.I prefer docker.it is very easy
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>same bootstrap and node js. seems like i would need to do exclusive reading and practicing. but i don&#039;t know where to start.
+    </li><li>Todays session was all about react and node and ARIA practices and went through the issues sir was experiencing after updating his mac system
+    </li><li>In the meeting it was discussed about the installation and error solving in mac
+    </li><li>about using nodeJS, bootstrap
+    </li><li>The working with mac os and the working of node with npm.
+    </li><li>Some topic for breakout room discussion should be there.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/19_Tue-22-Mar-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

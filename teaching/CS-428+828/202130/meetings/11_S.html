@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202130/meetings/11_S.html" />
+    
+    <title>Summary of Mtg 11 &bull; CS-428+828 (202130) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Summary of Mtg 11 &bull; CS-428+828 (202130) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202130/meetings/11_S.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202130/",
+        
+          "name": "202130"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202130/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202130/meetings/11_S.html",
+        
+          "name": "Summary of Mtg 11"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202130/">
+        202130
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202130/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Summary of Mtg 11
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div class="card">
+  <div class="card card-header lightcthru">
+    <h1>
+      Summary of Meeting 11
+    </h1>
+  </div>
+
+  <div class="card card-body">
+        
+          
+          
+          
+          
+          
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+
+
+
+
+
+
+
+<div class="card" id="Zoom-Audio-Transcript-pd-card">
+  <h6 class="mb-0">
+    <div class="card card-header" role="tab" id="heading_Zoom-Audio-Transcript">
+      <a class="xtra collapsed" data-toggle="collapse" href="#collapse_Zoom-Audio-Transcript" aria-expanded="false" id="Zoom-Audio-Transcript" aria-controls="collapse_Zoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </a>
+    </div>
+  </h6>
+  <div id="collapse_Zoom-Audio-Transcript" class="collapse " role="tabpanel" aria-labelledby="heading_Zoom-Audio-Transcript">
+    <div class="card card-body">
+      
+
+
+<ul><li><strong>S00:</strong>&nbsp;Good afternoon, Professor.
+    </li><li><strong>DHH:</strong>&nbsp;doing well it's Friday so that's a good sign right. log into my bank. Banking APP. every Friday, it says happy Friday and it just. doesn't say that for the other days just. Friday should be especially happy for some reason. I tend to agree, I guess. So I thought I would do my second screen and we'll twice as long as it usually does. He needs me to sit in front of it and. Since like need to hit the occasion return he in the process of negotiating. share my screen with you. i'm just gonna mute everyone. You can unmute yourself to. This to catch any microphones that are empty.
+    </li><li><strong>???:</strong>&nbsp;or.
+    </li><li><strong>DHH:</strong>&nbsp;are open or Nice. Okay, so you can see the web page here.
+    </li><li><strong>???:</strong>&nbsp;Yes.
+    </li><li><strong>DHH:</strong>&nbsp;So do attendance. We have. response to meeting and then individually assignment one is do today that one minute to midnight. alright. I know that some people have been submitting on me questions or. Concerns about sign one. raise your hand if you're having. You have a question about it. What highlight on that webpage is changing i'm trying to grab the gallery and pull it out, so I can see more names. don't think you can see the gallery just just. Wait I think you can now because i'm showing the desktop. yeah okay. Alright, so let's go back to. Okay, so first let's do it. Okay, so that's that up. So how is. You. were doing an empathy map for the vaccines vaccination certificate process yesterday. we're getting on to you my son getting on to one's my SAS health record. So we can. Look at the same here in terms of. us look at the. instructors interface you're using it then. You cannot see what i'm seeing with my interface but. yeah. Do with a student one as well. So one thing I noticed, especially when the system is. slow. That. clicking and the shift. and moving between. screens is. slows down the pace of interaction. So is there, another way, we might do that. Could. This be an issue.
+    </li><li><strong>???:</strong>&nbsp;I guess.
+    </li><li><strong>DHH:</strong>&nbsp;i'm not sure. We got to password windows up. anyway. So if we're looking at this screen. With the interface, should we try and do an empathy map for that. Maybe what i'll do is i'll keep the screen up. On the board right away. I won't put the camera on. As i'm sketching. So I have a picture of the last the last days map, we did in class. Well, make sure that all get posted. I didn't hit the publish button with the push button. which will lead. To a laptop right now but. Okay. So let's uh first thing. let's let something you notice about this interface.
+    </li><li><strong>S00:</strong>&nbsp;Oh.
+    </li><li><strong>DHH:</strong>&nbsp;let's see if I can get a password. someone's gonna comment. Maggie. See. The border border of your rectangles lit up.
+    </li><li><strong>???:</strong>&nbsp;You have something to say.
+    </li><li><strong>DHH:</strong>&nbsp;Okay, so i'm able to click on. The icon for monday's session. Does that do us any good. On. I can thank. might feel pressured because I could save there's lots of flipping. Anything else come to mind. Then there's the fact that I like click I open the separate window I don't have a choice to get. You can just copy the pastor to my clipboard. which might be a helpful thing you're. losing track of. It is. The point too much. Yes, got it gotten the past password taken care of and I made it I started an empathy map I filled in an empathy map to this, as I was writing on the board, while you were. So on the agreeing with me. Okay. Wait so. I mentioned about project groups and i've seen some. discussion in the. Project assignments forum so that's good now i've seen one email sent to me about project groups. So this link. should open an email in your in your favorite email client. With the subject. Then opens one. In the different screen, of course. it's going to send me an email that's why address here. The same subject for 28 and 828 project group members. You can send send it to you as. You as zoom meetings so you can have the name you like, to be called. And then your. Your giant.ca email ID for your group members so just. One email per group is fine. So I am i'm on this discussion list, it seems to be putting my email. With messages. So I. feel like i've been missing some emails. So I. go through with a fine tooth comb over the weekend, make sure i've got everything. But if you send me an email. We. do it in a way that has worked for me and or a. subject. Like. I have that link on my you our courses page. So this is working, the eight plus 818 email contact. or. So I just made the link here with it, so it makes it easier to create a. subject that i'll recognize. If you put for 28 and we're 828 in the subject and should be able to find it, as was strangled search for. Messages like that today. tonight. So I apologize if. If you send me an email and I haven't replied. And if it's something urgent, please send it to me again. Okay. and probably will will discuss on Monday we'll do some project. Time on Monday and we'll discuss timing for the rest of the project as well. Okay. So what. does seem all right.
+    </li><li><strong>S03:</strong>&nbsp;Yes.
+    </li><li><strong>DHH:</strong>&nbsp;Okay, so i've gotten two yeses one and chatting one. Over the lights so that's good. And a thumbs up. thumbs up in oh geez okay. well. So. Now Abbas. student. In it, for me, for me, ago. Steady they're doing so this isn't research credit. If you're doing studies, with your studies in the future we'd like participants. You should Hello Lisa export farm. In the case you. can use the computer science purpose football. So they're using a different approval method. And last, we want to mention something here. And if you want to send me an email.
+    </li><li><strong>S04:</strong>&nbsp;And can I explain my study, right now, or students.
+    </li><li><strong>DHH:</strong>&nbsp;Take a couple minutes to explain it and then since then send me. The details and i'll. Post a few announcements. as well.
+    </li><li><strong>S04:</strong>&nbsp;yeah for sure.
+    </li><li><strong>DHH:</strong>&nbsp;Okay, so just take a couple minutes gado gado.
+    </li><li><strong>???:</strong>&nbsp;Russia.
+    </li><li><strong>DHH:</strong>&nbsp;Whenever you're ready.
+    </li><li><strong>S04:</strong>&nbsp;Let me. Thank Thank you so much. About for allowing me to type two o'clock class about. My situation in my research project Hello everyone, my name is that was that list you know, working on the supervision of like there, however. We are conducting a study to evaluate the Academy digital library, while conducting exploratory browsing activities and seeking participants among undergraduate students in CS department to participate. You must have completed at least once a year, computer science course. and have a reliable. Internet connection on practicing camera on your computer. If you if it was up there, instead, he will be conducted. remotely via zoom you will be given for search. scenarios each of. them has an element that makes the search that complex, you will be guided, through the steps of performing exploratory browsing using a specific search interface, we will also ask you. To complete pretty steady question yeah and the pre and post test questionnaire for each of. course our stats. So you may participate in our study in any location, that you feel comfortable working at your computer for for one hour, we suggest quite location, so that you. can focus your attention on search that and the interesting part is that you might end up this is study you will receive that $30 gift card. as compensation for participation in our study, so I will put my email address in to the class chat if you are willing to participate into my study, please just send me an email, I will schedule time with you and we like. Set the meeting for this study it won't take more than one hour. Thank you so much.
+    </li><li><strong>DHH:</strong>&nbsp;Okay, thanks to boss.
+    </li><li><strong>S04:</strong>&nbsp;Thank you so much for giving this opportunity.
+    </li><li><strong>DHH:</strong>&nbsp;you're welcome.
+    </li><li><strong>S04:</strong>&nbsp;I just put my email address out.
+    </li><li><strong>DHH:</strong>&nbsp;yeah okay. So if you're interested in that the snake, none of the email address, and you have questions you can send an email to a boss, and he will answer your questions. Okay, so last day. My SAS health record of that. And from there, I suggested. Looking at mental model. there's a link and then. Looking at chapters five through seven. So I want to talk about mental models, a little bit today. it's work yesterday. Access the link and have proper get a performance check that.
+    </li><li><strong>S00:</strong>&nbsp;yeah same same goes for me.
+    </li><li><strong>S05:</strong>&nbsp;Yes, Professor also had the same problem, although able to fetch for the link, since I got another link to the same documents.
+    </li><li><strong>DHH:</strong>&nbsp;Go, this is the one that I had.
+    </li><li><strong>S00:</strong>&nbsp;This counseling Professor I can share.
+    </li><li><strong>DHH:</strong>&nbsp;i'm sharing my screen and I still. This is another picture of our. This is my sketch last day. Make sure that we looked at it first. Yes. copy from lengthen not the right information. Well, maybe I. didn't get the whole. beginning. So sometimes. website would be. Pending on what kind of servers running would. change at the lowercase so. You don't. have to watch the caps lock you. In type in a URL. That that didn't happen here so make sure that we have war case s at the end when we find the article. So we think of. Think of the picture, with the two bolts of. execution and evaluations and systems. One side and users, on the other side. The way the user can. understand. Why the application works is by. getting information about the current state of the system so that's. One part. And then. deciding which commands to execute that's the execution part. and If somebody is coming. coming on to our new piece of software isn't familiar. So they don't have experience with the interface. But they may have experienced other pieces of software which is likely likely people are. Not. have experienced with. The software interfaces that are. Not well your website or not, the website we're dealing with here. So we have some expectations about. what's going to happen. And so the inner through the process of. Looking at the system state and trying commands to. run honors and what commands need to execute to. me tranquil. That interaction that process of. vibration and execution. Of back and forth. Do that right understand the develop. A model of how the interface works. So we can allow the user to have a certain level of benefits. We can encourage it. And when we. do things like the empathy map and see where. Frustration arises. When we can see where. Where the model. Users developing may have. made me feel that with the system model. So this is really. You think of the user having a model system based on which is. ad hoc and develop new little interaction with the interface. And then the designers can have a model. That system where where they see all the pieces fit together. Look, the designers have the knowledge that model when things are. Or how the system provides services to the users. So, then, I suppose, we also have. The third model. The way the things are really in the system. So it might be that. The designers model isn't quite. Quite a natural consistent so that then they get plans for errors as well. The mental model for the user. Is. Like. User experience, so we can encourage. users to have a model and system.
+    </li><li><strong>???:</strong>&nbsp;That.
+    </li><li><strong>DHH:</strong>&nbsp;We. put together we. As designers together. Then we use that provide the consistency in the interface. So we'd like to encourage users to adopt that model. We can't you can't force it. Like we can't force them to have positive experience. With your face. That makes sense. Okay. So. They haven't heard of the fallacy of misplaced completeness. To that that's a logical fallacy what happens when. We take long. We. We are thing. So when the user has a mental model. We make some incorrect. decision because, why do we have this within. The system. So. we're saying that there is a capsule times that we fall into. computer scientists talk about. We forget that model that we have. Another system like the one. Is. The system itself. So we need. We think that. We take model to be the system we. Forget to distinguish between them. so that I can be that simple simple problems. That makes sense.
+    </li><li><strong>S03:</strong>&nbsp;Could you repeat the last sentence sorry it's it's a microphone issue. wow.
+    </li><li><strong>:</strong>&nbsp;whack wrong mice my mom was needed. well. So we can get in trouble, and we. We forget that model that we have all system listen. Is. it's different from the system that. We represent so models representation of the system. So. So the model that we. develop your interactions. may not match up. The wrong in all situations, so might leave out some important details. So we'd like to encourage. users to develop. And then to model, the system. That. uses the chances. reduces the risk of these mismatches. I will go through and Edit my comments on the transcript so. Sooner couple. Mental model mismatch. So we can make the system to conform to the user's mental model. model to reflect your system. So these are. All the ways that. You see, the interaction between the system and the user. I see i'm. Over time now. So. To speak more loudly. You can give you some feedback on. Why the Guardian that can lead to fire away from my. my microphone now. Anyway, regardless of that. Have a good weekend and. The Lincoln. Video free to watch. it's about. happiness happiness and design. And paraphrasing anyway take care. See you on Monday.
+    </li></ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+      
+        
+          
+          
+          
+          
+          
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+
+
+
+
+
+
+
+<div class="card" id="Zoom-Chat-Transcript-pd-card">
+  <h6 class="mb-0">
+    <div class="card card-header" role="tab" id="heading_Zoom-Chat-Transcript">
+      <a class="xtra collapsed" data-toggle="collapse" href="#collapse_Zoom-Chat-Transcript" aria-expanded="false" id="Zoom-Chat-Transcript" aria-controls="collapse_Zoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </a>
+    </div>
+  </h6>
+  <div id="collapse_Zoom-Chat-Transcript" class="collapse " role="tabpanel" aria-labelledby="heading_Zoom-Chat-Transcript">
+    <div class="card card-body">
+      
+
+
+<ul><li><strong>S06:</strong>&nbsp;Good afternoon professor
+    </li><li><strong>S07:</strong>&nbsp;hello
+    </li><li><strong>S08:</strong>&nbsp;Good Afternoon.
+    </li><li><strong>S09:</strong>&nbsp;afternoon guys
+    </li><li><strong>S10:</strong>&nbsp;yes
+    </li><li><strong>S11:</strong>&nbsp;yes
+    </li><li><strong>DHH:</strong>&nbsp;Student password
+    </li><li><strong>S10:</strong>&nbsp;Yes
+    </li><li><strong>S12:</strong>&nbsp;yes5
+    </li><li><strong>S13:</strong>&nbsp;yes
+    </li><li><strong>S14:</strong>&nbsp;yes
+    </li><li><strong>S15:</strong>&nbsp;yes
+    </li><li><strong>S16:</strong>&nbsp;yes
+    </li><li><strong>S17:</strong>&nbsp;yes
+    </li><li><strong>S04:</strong>&nbsp;abbaspirmorady@uregina.ca
+    </li><li><strong>S00:</strong>&nbsp;https://www.nngroup.com/articles/mental-models/
+    </li><li><strong>S09:</strong>&nbsp;yep
+    </li><li><strong>S00:</strong>&nbsp;yes
+    </li><li><strong>S18:</strong>&nbsp;Yup
+    </li><li><strong>S19:</strong>&nbsp;can you repeat?
+    </li><li><strong>S10:</strong>&nbsp;Thank you :)
+    </li><li><strong>S05:</strong>&nbsp;Thank you
+    </li><li><strong>S20:</strong>&nbsp;Thank you
+    </li><li><strong>S14:</strong>&nbsp;Thanks
+    </li><li><strong>S03:</strong>&nbsp;Take care! Have a good weekend!
+    </li><li><strong>S21:</strong>&nbsp;Thank you
+    </li></ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+      
+        
+      </div>
+  </div>
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202130/meetings/11_S.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

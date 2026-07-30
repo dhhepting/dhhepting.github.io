@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/notes/" />
+    
+    <title>Notes | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Notes | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/notes/" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/notes/",
+        
+          "name": "Notes"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Notes
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    <hr />
+<p>layout: bg-image
+group:</p>
+<ul>
+  <li>category</li>
+  <li>
+    <h2 id="project">project</h2>
+  </li>
+</ul>
+<h1>
+	Notes
+</h1>
+
+<ul>
+  
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M01.html">CS 205 Meeting 1</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M10.html">CS 205 Meeting 10</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M11.html">CS 205 Meeting 11</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M12.html">CS 205 Meeting 12</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M13.html">CS 205 Meeting 13</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M14.html">CS 205 Meeting 14</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M15.html">CS 205 Meeting 15</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M16.html">CS 205 Meeting 16</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M17.html">CS 205 Meeting 17</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M18.html">CS 205 Meeting 18</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M19.html">CS 205 Meeting 19</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M02.html">CS 205 Meeting 2</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M20.html">CS 205 Meeting 20</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M21.html">CS 205 Meeting 21</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M22.html">CS 205 Meeting 22</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M23.html">CS 205 Meeting 23</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M24.html">CS 205 Meeting 24</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M25.html">CS 205 Meeting 25</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M26.html">CS 205 Meeting 26</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M03.html">CS 205 Meeting 3</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M04.html">CS 205 Meeting 4</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M05.html">CS 205 Meeting 5</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M06.html">CS 205 Meeting 6</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M07.html">CS 205 Meeting 7</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M08.html">CS 205 Meeting 8</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-205-M09.html">CS 205 Meeting 9</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M01.html">CS 280 Meeting 1</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M10.html">CS 280 Meeting 10</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M11.html">CS 280 Meeting 11</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M12.html">CS 280 Meeting 12</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M13.html">CS 280 Meeting 13</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M14.html">CS 280 Meeting 14</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M15.html">CS 280 Meeting 15</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M16.html">CS 280 Meeting 16</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M17.html">CS 280 Meeting 17</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M18.html">CS 280 Meeting 18</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M19.html">CS 280 Meeting 19</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M02.html">CS 280 Meeting 2</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M20.html">CS 280 Meeting 20</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M21.html">CS 280 Meeting 21</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M22.html">CS 280 Meeting 22</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M23.html">CS 280 Meeting 23</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M24.html">CS 280 Meeting 24</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M25.html">CS 280 Meeting 25</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M26.html">CS 280 Meeting 26</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M03.html">CS 280 Meeting 3</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M04.html">CS 280 Meeting 4</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M05.html">CS 280 Meeting 5</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M06.html">CS 280 Meeting 6</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M07.html">CS 280 Meeting 7</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M08.html">CS 280 Meeting 8</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-280-M09.html">CS 280 Meeting 9</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/designing-interaction.html">Designing Interaction</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/fred.html">Designing Interaction</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/encoding-decoding.html">Encoding and Decoding</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/foundations-interaction.html">Foundations of Interaction</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/HCI-introduction.html">Introduction to HCI</a>
+    
+  
+    
+      
+      <li><a href="/~hepting/teaching/notes/CS-499_900-M01.html">Seminars</a>
+    
+  
+&lt;/ul&gt;
+</li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></ul>
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/notes/">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

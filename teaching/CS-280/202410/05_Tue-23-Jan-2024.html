@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-280/202410/05_Tue-23-Jan-2024.html" />
+    
+    <title>Mtg 5 &bull; CS-280 (202410) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 5 &bull; CS-280 (202410) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/05_Tue-23-Jan-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/",
+        
+          "name": "CS 280"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/",
+        
+          "name": "202410"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/05_Tue-23-Jan-2024.html",
+        
+          "name": "Mtg 5 (Tue-23-Jan-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-280/">
+        CS 280
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-280/202410/">
+        202410
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 5 (Tue-23-Jan-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 5/26: Tue-23-Jan-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="04_Thu-18-Jan-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="06_Thu-25-Jan-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Methods for Ethical Analysis
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Tuesday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1740941&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1705989600&amp;course=31085" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=31085" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Response to Responses
+  </h4>
+  <p>Groups are not for projects, but class discussions (inside and outside of class meetings)</p>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li>We have a TA who will be having availability outside of class to supplement my office hours</li>
+  <li>I am still behind on administrative tasks (e-mail) but this will be resolved soon</li>
+  <li>Groups will be set up after class today. Thank you for the contributions to the wiki. How did that go?</li>
+  <li>more about assignments</li>
+  <li>Ethical theories and principles are the foundations of ethical analysis because they are the viewpoints which can provide guidance along the pathway to a decision. Each theory emphasizes different assumptions and methods for determining the ethicality of a given action. It is important for students to recognize that decisions in different contexts may require different ethical theories to arrive at ethically acceptable outcomes, and what constitutes ‘acceptable’ depends on a variety of factors such as cultural context. Applying methods for ethical analysis requires both an understanding of the underlying principles and assumptions guiding a given tool and an awareness of the social context for that decision. Traditional ethical frameworks as provided by western philosophy can be useful, but they are not all-inclusive. Effort must be taken to include decolonial, indigenous and historically marginalized ethical perspectives whenever possible. No theory will be universally applicable to all contexts, nor is any single ethical framework the ‘best’. Engagement across various ethical schools of thought is important for students to develop the critical thinking needed in judiciously applying methods for ethical analysis of a given situation.</li>
+</ul>
+<h4>
+    Summary
+  </h4>
+  <p>Summary</p>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2510330" target="_blank">Submit your response to this meeting before 11pm tonight</a></li>
+  <li>Watch <a href="https://www.youtube.com/watch?v=PFcHX0Menno&amp;t=330s" target="_blank">this video</a> starting at 5:30 until 23:00</li>
+  <li>Listen to most recent episode of Your Undivided Attention <a href="https://www.humanetech.com/podcast/can-myth-teach-us-anything-about-the-race-to-build-artificial-general-intelligence-with-josh-schrei" target="_blank">Episode 82</a></li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2511219" target="_blank">Take quiz before the start of our next meeting</a></li>
+</ul>
+<h5><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2511218">ACTION: Take quiz before next meeting</a></h5><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=9232">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_05" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_05" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_05" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_05" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_05" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_05" data-bs-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/1ipq48i20x524x2t7t6df/05-1.png?rlkey=mxgwl6f76rj92rd20vjv80q6a&amp;dl=0" alt="05 - 1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/p5vh75cmx7r0gc1l7gt9q/05-2.png?rlkey=w8q4hhg74cnc9k5c4cxfdnqb6&amp;dl=0" alt="05 - 2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/9qcz5tkmoq8lxry7gx39y/05-3.png?rlkey=aw6oht7lt0htyqzx4jvukg29d&amp;dl=0" alt="05 - 3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/nzn9a698j0toeh234lutv/05-4.png?rlkey=uri7o3qnx7pffjwupegis2bfh&amp;dl=0" alt="05 - 4.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/rnca1vjcbfhxjonco1sos/05-5.png?rlkey=jq62rqnrm1g6ztxbbpmzveqcb&amp;dl=0" alt="05 - 5.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_05" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_05" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Yeah
+          </li><li>
+            
+            okay, I got the excuse me, I was
+gonna get some water which would
+          </li><li>
+            
+            have helped a bit. I'm going to
+try and do my best to project
+          </li><li>
+            
+            even without the microphone. So
+I'd appreciate your attention
+          </li><li>
+            
+            now please.
+          </li><li>
+            
+            How's everyone doing today? I'm
+sorry. I'm a few minutes late
+          </li><li>
+            
+            I'm use I have another class and
+some food. So I just zoom into
+          </li><li>
+            
+            that call and I don't have to
+walk five minutes down the
+          </li><li>
+            
+            hallway.
+          </li><li>
+            
+            So I'll do a better job of
+watching my time. Before I. So
+          </li><li>
+            
+            I'm here five minutes before and
+not five minutes later. Anyway,
+          </li><li>
+            
+            so I appreciate your patience.
+          </li><li>
+            
+            So this is meeting clients today
+          </li><li>
+            
+            English from Hungary and again,
+just to remind you
+          </li><li>
+            
+            this happened to me once I was
+taking it when I was a grad
+          </li><li>
+            
+            student here some years ago.
+          </li><li>
+            
+            I won't say how long ago, but it
+was a small grad class we're
+          </li><li>
+            
+            talking about. Something about
+operating systems, I think and
+          </li><li>
+            
+            then someone said after one or
+two minutes
+          </li><li>
+            
+            so that stuck with me
+          </li><li>
+            
+            I should or shouldn't die
+          </li><li>
+            
+            so I have honor sorted out
+today.
+          </li><li>
+            
+            So I'll get the transcript of
+the recording then.
+          </li><li>
+            
+            So I think what the only thing
+that happened was
+          </li><li>
+            
+            they're going to collect Drupal
+the price that I'm paying for
+          </li><li>
+            
+            the service, but I think it's
+still valuable to have that
+          </li><li>
+            
+            transcription. So has anyone
+checked? Well, that first
+          </li><li>
+            
+            transcript I posted so far? I
+think it does a fairly good job.
+          </li><li>
+            
+            So this is.
+          </li><li>
+            
+            Okay anyway, the APA seems to be
+happier today. So
+          </li><li>
+            
+            that's the main thing
+          </li><li>
+            
+            so how does the group activity
+go? Up people were able to get
+          </li><li>
+            
+            something onto the wiki
+          </li><li>
+            
+            Nobody
+          </li><li>
+            
+            I know there's some because I
+checked yesterday. And there
+          </li><li>
+            
+            were 11 groups at something
+there. So to give you an idea,
+          </li><li>
+            
+            we're looking at something like
+27 groups for the class.
+          </li><li>
+            
+            You get an email about my
+addition to your courses
+          </li><li>
+            
+            so we had this discussion in my
+earlier class, so I thought I'd
+          </li><li>
+            
+            bring it up here as well. So
+everything is in the calendar.
+          </li><li>
+            
+            So the quiz for today closer to
+30 response for today. opens at
+          </li><li>
+            
+            345 and closes at 11pm.
+          </li><li>
+            
+            So some things
+          </li><li>
+            
+            are listed as opening and
+closing times. But the quiz for
+          </li><li>
+            
+            tomorrow. Our next meeting
+pardon me. Our next meeting on
+          </li><li>
+            
+            Thursday opens tomorrow at 6pm
+and closes the class time on
+          </li><li>
+            
+            Thursday. So the idea with the
+quizzes is to get give me a
+          </li><li>
+            
+            chance to reflect on what we did
+in the class in today's class
+          </li><li>
+            
+            and have a look at what's coming
+up in the material for the next
+          </li><li>
+            
+            meeting.
+          </li><li>
+            
+            So that's why you it's I'm I'm
+doing that's why it closes at
+          </li><li>
+            
+            the start of class the next day.
+          </li><li>
+            
+            And it opens I'm opening at 6pm
+So you have some time in the
+          </li><li>
+            
+            evening. Before so you don't
+have to rush over. I don't know
+          </li><li>
+            
+            what your schedule is like
+before 230 in the afternoon.
+          </li><li>
+            
+            Anyway so it's almost it's about
+18 hours. That's open. So
+          </li><li>
+            
+            anyway, that's the idea. So how
+many people are using the course
+          </li><li>
+            
+            calendar I'll show you a place
+where you can see it as well. So
+          </li><li>
+            
+            let me go back here
+          </li><li>
+            
+            so but I think they start out at
+being closed. So the left menu
+          </li><li>
+            
+            is sort of the table of contents
+for the webpage. And the right
+          </li><li>
+            
+            menu or the right drawer has a
+calendar in it at the top so you
+          </li><li>
+            
+            can go the full calendar
+          </li><li>
+            
+            you can choose your course and
+what kind of view you want. So
+          </li><li>
+            
+            what I've done
+          </li><li>
+            
+            there's no way for me to I don't
+see the way for me to navigate
+          </li><li>
+            
+            back to the homepage
+          </li><li>
+            
+            I don't think home is going to
+do it. We'll see. Yeah.
+          </li><li>
+            
+            So how many people have used
+Moodle over the years? Is it
+          </li><li>
+            
+            getting better?
+          </li><li>
+            
+            I mean it's you our course is
+based on shingle.
+          </li><li>
+            
+            Anyway, so I want to show you
+          </li><li>
+            
+            under the heading of general
+I've added the upcoming events
+          </li><li>
+            
+            in the course calendar so that
+link will take you to a new page
+          </li><li>
+            
+            that opens the course calendar
+set up for this course. Upcoming
+          </li><li>
+            
+            events so you get the quiz for
+the next meeting included.
+          </li><li>
+            
+            Anyway,
+          </li><li>
+            
+            so there were lots of good
+responses.
+          </li><li>
+            
+            But I just want to focus on one
+comment about projects. So I'm
+          </li><li>
+            
+            not saying I didn't need to
+indicate that we're going to be
+          </li><li>
+            
+            I didn't mean to indicate
+they're going to be group
+          </li><li>
+            
+            projects are the proofs
+          </li><li>
+            
+            for in class
+          </li><li>
+            
+            and outside of class.
+          </li><li>
+            
+            Okay, so we'll get into groups
+again today. How's my volume?
+          </li><li>
+            
+            Good, good. I'm glad to hear the
+front row can hear me about the
+          </li><li>
+            
+            back row. Okay.
+          </li><li>
+            
+            So you may notice that well,
+will you notice when you send
+          </li><li>
+            
+            email and you are courses that
+there's another person listed on
+          </li><li>
+            
+            the two line
+          </li><li>
+            
+            anyway, this is we have a TA
+Harris a skill is going to
+          </li><li>
+            
+            holding some office hours to
+supplement mine and helping with
+          </li><li>
+            
+            the administration of your
+courses so.
+          </li><li>
+            
+            I'll get him to send an email or
+post to make a post to the class
+          </li><li>
+            
+            discussion so you get to know
+who he is. So I apologize I'm
+          </li><li>
+            
+            still a bit behind on
+administrative tasks like email.
+          </li><li>
+            
+            But I'm hoping this is I'm
+expecting this will be resolved
+          </li><li>
+            
+            soon. So some of you may have
+gotten an email from me last
+          </li><li>
+            
+            night early this morning.
+          </li><li>
+            
+            So I got through some of the the
+backlog. And for those of you
+          </li><li>
+            
+            who haven't heard from me, but
+you may have noticed that your
+          </li><li>
+            
+            grade for the quiz on Thursday
+improved
+          </li><li>
+            
+            try and as I get further along
+in the semester I'll be better
+          </li><li>
+            
+            at writing the answers for
+matching
+          </li><li>
+            
+            so set up the groups in your
+courses after today
+          </li><li>
+            
+            yeah, so.
+          </li><li>
+            
+            So thank you for the
+contributions to the wiki. Let
+          </li><li>
+            
+            me look at that.
+          </li><li>
+            
+            See how many groups we have
+posted there
+          </li><li>
+            
+            and
+          </li><li>
+            
+            in the documentation for the
+wiki, there's nothing about how
+          </li><li>
+            
+            to get the table of contents to
+appear or to appear correctly or
+          </li><li>
+            
+            consistently. So this is
+different than the table of
+          </li><li>
+            
+            contents that was there
+yesterday.
+          </li><li>
+            
+            It has something to do with
+headings but I'm not sure what.
+          </li><li>
+            
+            This happens more than you
+realize and you are courses. So
+          </li><li>
+            
+            it's not the it's not a top
+secret text they're
+          </li><li>
+            
+            communicating well, here's
+here's what we wrote. But we
+          </li><li>
+            
+            can't show it to you.
+          </li><li>
+            
+            It's actually
+          </li><li>
+            
+            its background color.
+          </li><li>
+            
+            It's like riding in lemon juice
+on a piece of paper. And then
+          </li><li>
+            
+            holding it over a candle to
+reveal that.
+          </li><li>
+            
+            So just be aware that this can
+happen and
+          </li><li>
+            
+            I'm bad at it. So I wanted to
+thank you for following my
+          </li><li>
+            
+            instructions about giving the
+user ID for the group members
+          </li><li>
+            
+            you want to have in your group.
+That's very helpful. So we'll
+          </li><li>
+            
+            set up groups based on this
+          </li><li>
+            
+            you. So as of today, there's 269
+people
+          </li><li>
+            
+            so the target is to have 27
+groups
+          </li><li>
+            
+            too. Small.
+          </li><li>
+            
+            Tiny seven groups of 10
+          </li><li>
+            
+            Sell
+          </li><li>
+            
+            decide whether I had too much
+coffee or not enough coffee
+          </li><li>
+            
+            today
+          </li><li>
+            
+            so Okay, so that there and
+          </li><li>
+            
+            in groups that are close to me
+          </li><li>
+            
+            I don't upset the avatar so to
+speak. It doesn't matter. We got
+          </li><li>
+            
+            a few more virgins.
+          </li><li>
+            
+            Now
+          </li><li>
+            
+            so let's go into
+          </li><li>
+            
+            groups today a bit later and if
+you want to add some people to a
+          </li><li>
+            
+            group or if you're new today,
+and you want to get in, get
+          </li><li>
+            
+            associated with some people who
+are already in groups you can
+          </li><li>
+            
+            add to the list of the groups on
+the page from yesterday's
+          </li><li>
+            
+            meeting
+          </li><li>
+            
+            if that make sense
+          </li><li>
+            
+            okay, so I'm happy that we have
+had such good participation.
+          </li><li>
+            
+            So more about assignments.
+          </li><li>
+            
+            Is bye
+          </li><li>
+            
+            up. So there's
+          </li><li>
+            
+            two assignments one would be to
+create an infographic above
+          </li><li>
+            
+            photosphere some aspect of our
+course discussion.
+          </li><li>
+            
+            So I'm wondering if maybe we can
+make an individual or
+          </li><li>
+            
+            an option to work in small
+groups
+          </li><li>
+            
+            small groups that if you want to
+work on your own, you can do
+          </li><li>
+            
+            that as well.
+          </li><li>
+            
+            And then I'm still working on
+the title of this but
+          </li><li>
+            
+            looking at a few ways to
+          </li><li>
+            
+            score your path.
+          </li><li>
+            
+            So
+          </li><li>
+            
+            I'm working on the details of
+getting you access to do some to
+          </li><li>
+            
+            some resources with Sofia skills
+for the Information Age. Related
+          </li><li>
+            
+            campus.
+          </li><li>
+            
+            Canadian information processing
+society
+          </li><li>
+            
+            I had booked them for me and
+then I realized I thought just
+          </li><li>
+            
+            for the first Tuesday box from
+the great community
+          </li><li>
+            
+            today suggested date, which is
+intervening week. And also has
+          </li><li>
+            
+            to be a Friday. So I have a few
+patents. So when I was going to
+          </li><li>
+            
+            add that to our webpage to the I
+realized that it wasn't going to
+          </li><li>
+            
+            work so. So we're not going to
+see the presentation of cats on
+          </li><li>
+            
+            February 23 Because it's Friday
+          </li><li>
+            
+            and we'll figure out another
+date that are top
+          </li><li>
+            
+            so I'll get the details posted.
+On the website.
+          </li><li>
+            
+            So our next topic on the
+syllabus is methods of ethical
+          </li><li>
+            
+            analysis methods of ethical for
+ethical analysis
+          </li><li>
+            
+            so this is an excerpt This is
+from the curriculum 2023 report.
+          </li><li>
+            
+            The preamble to the topic.
+ethical theories and principles
+          </li><li>
+            
+            are the foundation of ethical
+analysis because they are
+          </li><li>
+            
+            viewpoints which can provide
+guidance along the pathway. To a
+          </li><li>
+            
+            decision. Each theory emphasizes
+different assumptions.
+          </li><li>
+            
+            Each theory emphasizes different
+assumptions and methods for
+          </li><li>
+            
+            determining the ethicality of a
+given action. It is important
+          </li><li>
+            
+            for students to recognize that
+decisions in different contexts
+          </li><li>
+            
+            may require different ethical
+theories to arrive at ethically
+          </li><li>
+            
+            acceptable outcomes. And what
+constitutes acceptable depends
+          </li><li>
+            
+            on a variety factors such as
+cultural context. Applying
+          </li><li>
+            
+            methods for for ethical analysis
+requires both an understanding
+          </li><li>
+            
+            of the underlying principles and
+assumptions given a tool and an
+          </li><li>
+            
+            awareness of a social context
+for that decision, traditional
+          </li><li>
+            
+            ethical frameworks as provided
+by Western philosophy can be
+          </li><li>
+            
+            useful, but they are not all
+inclusive. effort must be taken
+          </li><li>
+            
+            to include decolonial,
+indigenous and historically
+          </li><li>
+            
+            marginalized ethical,
+marginalized ethical
+          </li><li>
+            
+            perspectives. Wherever possible.
+No theory will be universally
+          </li><li>
+            
+            accepted applicable to all
+contexts, nor is any single
+          </li><li>
+            
+            ethical framework the best
+engagement across various
+          </li><li>
+            
+            ethical schools of thought is
+important for students to
+          </li><li>
+            
+            develop the critical thinking
+needed in judiciously applying
+          </li><li>
+            
+            methods for ethical analysis. of
+a given situation.
+          </li><li>
+            
+            Okay
+          </li><li>
+            
+            so this is not mentioned here,
+but I want to raise it again.
+          </li><li>
+            
+            What is the public good public
+Yes?
+          </li><li>
+            
+            Guess I remember asking some
+kind of question rates not on
+          </li><li>
+            
+            the final exam in this class
+some years ago and a student
+          </li><li>
+            
+            wrote
+          </li><li>
+            
+            I'm a member of the public
+          </li><li>
+            
+            interest in doing so, therefore,
+it's in the public interest.
+          </li><li>
+            
+            Right. I don't buy it
+          </li><li>
+            
+            or I didn't buy it, either.
+          </li><li>
+            
+            But what are some ways we can
+think about what's in the public
+          </li><li>
+            
+            interest?
+          </li><li>
+            
+            Okay, let's let's try a group
+discussion now. We'll see how
+          </li><li>
+            
+            well
+          </li><li>
+            
+            Well, we made groups last day.
+And if you're not in a group
+          </li><li>
+            
+            see if you can attach yourself
+to
+          </li><li>
+            
+            one of these groups in here.
+Update the wiki page
+          </li><li>
+            
+            accordingly.
+          </li><li>
+            
+            So the TED Talk by David
+Horowitz about meeting a moral
+          </li><li>
+            
+            operating system is out the code
+to this discussion
+          </li><li>
+            
+            okay
+          </li><li>
+            
+            let's get back together at well,
+we'll try. See how it's going.
+          </li><li>
+            
+            In 10 minutes, so let's try and
+take 10 minutes for this can you
+          </li><li>
+            
+            get yourselves into groups now?
+          </li><li>
+            
+            Right RIGHT. Show Well, my
+friends last night in
+          </li><li>
+            
+            Mexico
+          </li><li>
+            
+            you could show me that'd be
+awesome. Please. Thank you
+          </li><li>
+            
+            Okay,
+          </li><li>
+            
+            then I can add shoes. elect to
+get it right as you're used to
+          </li><li>
+            
+            hearing Chinese press
+          </li><li>
+            
+            much
+          </li><li>
+            
+            Guys
+          </li><li>
+            
+            right. You You Evening up is.
+          </li><li>
+            
+            Is Great
+          </li><li>
+            
+            Right you right? This is Mary
+          </li><li>
+            
+            today's teaching
+          </li><li>
+            
+            soon as you
+          </li><li>
+            
+            up gentlemen
+          </li><li>
+            
+            you it you yourself?
+          </li><li>
+            
+            Sounds
+          </li><li>
+            
+            good decisions talk about
+          </li><li>
+            
+            driving in a factory video.
+          </li><li>
+            
+            Talk about arguments in relation
+to the TED Talk
+          </li><li>
+            
+            morning. Now,
+          </li><li>
+            
+            question
+          </li><li>
+            
+            is yeah
+          </li><li>
+            
+            trading joke on that
+          </li><li>
+            
+            so, was the question clear
+enough
+          </li><li>
+            
+            Okay, so in the future
+          </li><li>
+            
+            if I say that discusses some
+groups the question isn't clear
+          </li><li>
+            
+            enough to begin with. Don't go
+into groups and spend 15 minutes
+          </li><li>
+            
+            talking about the question
+doesn't make sense
+          </li><li>
+            
+            okay, that's a valuable lesson
+          </li><li>
+            
+            for you and for me
+          </li><li>
+            
+            so
+          </li><li>
+            
+            all the damn Hornets thought a
+need a moral operating system
+          </li><li>
+            
+            how do you make decisions about
+whether this guy is gay? Or
+          </li><li>
+            
+            leave us alone? And then make
+those kinds of decisions
+          </li><li>
+            
+            regular utilitarian approach
+where we maximize benefit and
+          </li><li>
+            
+            minimize harm. Didn't have to
+deal with the ontological
+          </li><li>
+            
+            approach where we say this is
+the way it is. Always we should
+          </li><li>
+            
+            never use this data or do we
+have another approach?
+          </li><li>
+            
+            So when there are difficult
+decisions approach?
+          </li><li>
+            
+            So last year I mentioned a prop
+          </li><li>
+            
+            browser it's not hard to make a
+decision about whether it's
+          </li><li>
+            
+            right or wrong something's right
+or wrong. It's difficult to make
+          </li><li>
+            
+            the decision to make the
+decision
+          </li><li>
+            
+            to ignore the question.
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            in my own course of action to
+decide like that kind of
+          </li><li>
+            
+            decision would be for a vote. It
+doesn't seem like any other way
+          </li><li>
+            
+            would be morally correct.
+          </li><li>
+            
+            Okay. So, if we want to vote
+          </li><li>
+            
+            do we have required
+          </li><li>
+            
+            do we require people to be
+informed to make a decision yes.
+          </li><li>
+            
+            So should we
+          </li><li>
+            
+            do that with our elections?
+          </li><li>
+            
+            Should there be a test
+          </li><li>
+            
+            for you get a ballot to say yes
+I know who the federal party
+          </li><li>
+            
+            leaders are an older physicians
+and I'm qualified. I have
+          </li><li>
+            
+            these the payment
+          </li><li>
+            
+            I'm going to express my girl
+          </li><li>
+            
+            is going very well.
+          </li><li>
+            
+            I mean, but it's just one
+person. Doing it. It's not much
+          </li><li>
+            
+            better. When it's just one
+person deciding the like if it's
+          </li><li>
+            
+            one person deciding if they
+should keep someone's data and
+          </li><li>
+            
+            use it for information compared
+to a bunch of people to sign up
+          </li><li>
+            
+            for it. It's no matter what so
+hard decisions
+          </li><li>
+            
+            Yeah.
+          </li><li>
+            
+            Scope
+          </li><li>
+            
+            so anyone has an earlier version
+of a Tim Hortons app
+          </li><li>
+            
+            is? tract many
+          </li><li>
+            
+            details which weren't required
+          </li><li>
+            
+            supposed to be business. Try it
+out again.
+          </li><li>
+            
+            I'll find a link for the story.
+          </li><li>
+            
+            Dangerzone is
+          </li><li>
+            
+            we're gonna work on everything.
+Not only use the key in the
+          </li><li>
+            
+            population
+          </li><li>
+            
+            it's like the dialog box. You
+want to do this. There's only
+          </li><li>
+            
+            one option? Yes.
+          </li><li>
+            
+            So we ended up having people get
+conditioned it Yes. Until the
+          </li><li>
+            
+            decision is something really
+important. And then we have to
+          </li><li>
+            
+            make the efforts to read the
+message and click no only
+          </li><li>
+            
+            realize after the fact that he's
+got to say yes, the things we
+          </li><li>
+            
+            were trying to say now sure good
+luck.
+          </li><li>
+            
+            So are there other alternatives
+to voting as a way to decide?
+          </li><li>
+            
+            voting public opinion polls a
+second public opinion polls for
+          </li><li>
+            
+            incorrect can be public opinions
+in charges best interest Yes.
+          </li><li>
+            
+            We ran out of time
+          </li><li>
+            
+            Okay, so 345 You got up a few
+seconds theory Yeah. So the
+          </li><li>
+            
+            question is what is probably
+          </li><li>
+            
+            a great day
+          </li><li>
+            
+            you. Morning
+          </li><li>
+            
+            you. Morning
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Today I learnt about the importance of decision making in computing professions.
+    </li><li>Nothing. I dont know ehats going on in this class.
+    </li><li>The importance of learning ethics as no single theroies is best acceptable for all scenario. Also loved watching video from ACM and learning more about ACM
+    </li><li>Course calendar
+    </li><li>The important concept/perspective I encountered today was minimizing harm while maximizing benefit. For me this is important because I believe that the riskier it is, the higher/maximum the benefit will be returned. I believe that its a delicate balance we must go through, and its extremely diffucult to minimize harm while maximizing benefit. Furthermore, in research, acedamic, or whatever in may be the case people should always aim for minimizing harm even though the benefit may not be as high. 
+    </li><li>The different methods for Ethical Analysis
+    </li><li>An important perspective I have encountered today is that everyone has different opinions with ethics in regards of the information world/actions.
+    </li><li>we learnt about Ethical theories and principles from today's lecture.
+    </li><li>I encountered today methods for ethical analysis and assignment 2 details
+    </li><li>Today's important concept was ethical theories and ethical analysis. Ethical theories help us analyze and make our decisions. In our groups we discussed what the public good is, which is what benefits the public. We also learned that no single theory can be applied to all situations, because different situations need different approaches. 
+    </li><li>We learned about the Ethical analysis today which I think is really important in our daily practice while handling confidential information or using multiple tech tools 
+    </li><li>Nothing important, we just discussed about group project. 
+    </li><li>Who gets to decide about collecting people’s data? Where is the line between privacy and security?
+    </li><li>group work 
+    </li><li>Ethical theories and principles.
+    </li><li>One was the method of ethical analysis which was utilitarianism which defines that to choose the right action that leads to maximum overall well-being.
+    </li><li>The methods of Ethical Analysis 
+    </li><li>ethical analysis
+    </li><li>I learnt how to make descisions using ethical theories
+    </li><li>ethical analysis on the privacy of someone's data
+    </li><li>We talked about the assignment, team work, etc
+    </li><li>I learned that voting or public opinion polls may be problematic in terms of ways on how to approach difficult decisions. They can go wrong when the public opinion in not in their best interest. Deciging to decide is better than ignoring a difficult question.
+    </li><li>That there is no single theory applicable in all situations. Before ultimately deciding, we must consider the public opinion but sometimes, this opinion isn't in the public interest. So we have to look at different approaches so we can decide on what maximizes benefit yet minimizes harm.
+    </li><li>Methods of ethical analysis 
+    </li><li>When speaking with my group, we decided to talk about applying ethics to technology through minimizing risks and maximizing benefits. One solution one of my group members offered was by restricting how online platforms are used as a solution to stopping the spread of misinformation. I found this interesting because while I can get by social media companies censoring fake news online, I think defining what "restrictions" we should have would start a more interesting conversation.
+    </li><li>A compelling perspective was considering how in society you must give up a level of privacy in order to ensure safety/security. Although, that level of privacy is difficult to decide as a collective. 
+    </li><li>While discussing with our group, we agreed on needing a common ground when it comes to any kind of decision making. The decisions cannot be made for benefit of one and loss of another. So, when putting out any content for the public, with their interest in mind, the intentions of the product, and all risks and rewards associated with it must be public knowledge. In that way, the product can reach the right audience. It will also act as a public poll(benefit/use/what works/what does not).
+    </li><li>Our group discussion touched on moral ethics problems, such as the way that the USA handled air travel before and after 9/11. We related these issues back to those of data collection/storage by trying to understand where a "line" was drawn with regards to the safety of the people involved. This line is hard to define, as there is never a universally correct framework to decide where it should lie.
+    </li><li>I found it really interesting the perspective that in an ethical situation voting may not always be the best options. The reasoning for this was something I’d not really considered much before this discussion.
+    </li><li>About the assignment that we can do in groups or individual 
+    </li><li>the idea about how to make decision and is it viable to use a voting system
+    </li><li>trying to understand how to make difficult decision 
+    </li><li>Egalitarianism
+    </li><li>Single theory application.
+    </li><li>4 topic were given for discussion in which we need to choose one talk about that in group.
+    </li><li>I learnt about ethical theories which are the foundations of ethical analysis
+    </li><li>That understanding what power you have when knowing how technology works requires ethical decisions that may not be easy
+    </li><li>Today we discussed how decisions are made and the implications of what society’s interests are, and how these affect each other. 
+    </li><li>Nothing much I liked the separation between the classmates and divided group and discussion regarding class
+    </li><li>One important perspective I encountered today was the idea that the public does not always know what is right for society. Simply because a certain portion of the population agrees upon something (through voting, etc), does not mean it has positive benefits for everyone. We often see this idea emerge in politics.  
+    </li><li>Ethical theories and principles 
+    </li><li>Methods for Ethical Analysis
+    </li><li>An important perspective is whether we should vote for one person to take important decisions which affect many people
+    </li><li>how to decide what to do when making ethical decisions 
+    </li><li>Ethical principles and analysis, case studies
+    </li><li>The idea of how ethical analysis are made to create decisions.
+    </li><li>Today I encountered methods of ethical analysis where we discussed about is single theory applicable in all situations or not and many more public interaction things 
+    </li><li>the methods of ethical concepts that we should consider.
+    </li><li>I learned that there are multiple takes on policing technology in order to benefit the public interest.
+    </li><li>The concept of having a common moral operating system so that we can decide what moral ethics should be considered when developing technology.
+    </li><li>Importance of ethical analysis in decision making and their methods.
+    </li><li>Sitting down with my groupmates and discussing our interpretations on the questions for ethical analysis really helped me understand the importance of having different views on the same topic.  Where one of us consider focusing on maximizing benefit, another cared more about minimalizing harm.  I liked seeing the two views not opposed but rather working together.
+    </li><li>I learned about the questions we may ask to help us come to an ethical conclusion when dealing with other user's data
+    </li><li>How to make moral decisions. Voting? Minimize drawbacks and maximize benefit? etc..
+    </li><li> the concept of  the "public good" or the"public interest"  usualy being part of decision making, minimizing harm and maximising benifits.
+    </li><li>Ethical Analysis, it's theories and methods.
+    </li><li>Ethical Analysis
+    </li><li>How when making a tough decision, voting on the decision isn’t the best way to decide
+    </li><li>Today we talked about ethical analysis and about the assignments.
+    </li><li>he most essential topic I learned today was about ethical theories and how they guide us through the decision-making process.
+    </li><li>The lecture
+    </li><li>About the number of assignments and the distribution of the marks
+    </li><li>It was a good time discussing about the methods of ethical analysis, and getting in depth about voting in several methods that do not count
+    </li><li>About group Assignments and it worth 40 percent of course total
+    </li><li>I think that high profile software project disasters have been commonplace for decades, which I think , is going to be continued that think in the video I like the most.
+    </li><li>Today we learned about analysis of situations and when what decisions are to be made. We also learned about how certain situations demand special actions..
+    </li><li>Today we had discussions in groups regarding Ethical Analysis different aspects of it like the theories and rationality of those theories.
+    </li><li>In today's class, we got into our groups and discussed ethical theories and principals, and how they are known as the foundations of ethical analysis. In our group, we answered a few questions, including "what is considered public good". The answer we came up with was something that can take society forward and help it grow, along with something that improves society for everyone involved.
+    </li><li>Thinking of how we make decisions and how to deal with hard to answer questions, do you cast a vote or have a council decide.
+    </li><li>When it comes to ethics and how society deals with broad problems, it is important to note that a singular solution cannot be applied to everything. Every problem is specific to its own needs and requires different or multiple perspectives and ideas to solve them.
+    </li><li>Within Ethical Analysis, the idea of minimizing harm while maximizing effort is very important. What becomes too harmful for society while their personal information is still being collected. 
+    </li><li>Today, I came to know about ethical theories and they are helpful in the world of technology.
+    </li><li>Today we discussed about ethical theories and principles in the group
+    </li><li>a bit about ethical analysis
+    </li><li>In our group discussion we talked about how the tach industry as a whole would be better is it was not such a monopoly and more people/ companies had a power over discussions that have on all of our lives. However, we couldn’t think of many ways of achieving this other than encouraging/ supporting young developers through financial means. 
+    </li><li>Nothing new today.
+    </li><li>Today in the video learned about Bloom's taxonomy
+    </li><li>Ethical analysis 
+    </li><li>today, i encounter diversity and contextuality of ethical theories and principles.
+    </li><li>I learner how one should discuss about topics in group.
+    </li><li>Today we discuss on 4 random topic and assignments too.
+    </li><li>Today got a quick brief about ethical analysis and its importance.
+    </li><li>Today we learned methods used for ethical analysis as a class. It was brought up that sometimes, businesses analyze more user data than what is required for their business. This is an ethical dilemma in the information society that I am glad people are becoming more aware of. It is flaws like these that we should learn from and avoid. Our group also had an insightful discussion about methods used for ethical analysis.
+    </li><li>Definitions of SFIA and CIPS, Ethnical analysis 
+    </li><li>An important concept I encountered today is the methods for ethical analysis and the public's interests.
+    </li><li>Ethical theory 
+    </li><li>Today we learn about methods of ethical analysis.
+    </li><li>start mindstorm about ethic thing on public good or public interest
+    </li><li>Today, we encounter different methods for ethical Analysis.
+    </li><li>An important concept that i learned today was "Methods for Ethical Analysis",  Ethical theories guide decision-making, but their applicability varies across contexts. Cultural factors influence acceptability, and ethical analysis demands an understanding of principles and social context. Traditional Western frameworks are valuable, but inclusive perspectives, including decolonial and indigenous views, are essential. No single theory is universally applicable, emphasizing the importance of engaging with dive
+    </li><li>decision making
+    </li><li>Who can our technology affect
+    </li><li>The importance of working within a group, especially a big group, which allows many ideas to flow.
+    </li><li>Getting to discuss with my group about the questions asked to us today.
+    </li><li>today we learned about ethical analysis which was really interesting 
+    </li><li>Practice can teach you anything 
+    </li><li>The idea of ethic in technology.
+    </li><li>Today we talked about Methods for Ethical Analysis. Then we got into groups and discussed the questions given in class, such as in different situations may require different approached and theories.
+    </li><li>That my interests might not necessarily be the public interest 
+    </li><li>that sometimes public opinion does not equal the public interest
+    </li><li>An important perspective I learned today is that there is countless approaches to issues regarding ethics. Another thing I realized is that if a public poll is issued, the results of that public poll might not be a result that appeals to the public interest. 
+    </li><li>Today I learned about ethical theories and principles
+    </li><li>Ethical analysis.
+    </li><li>I learned the importance of learning in groups.
+    </li><li>Minimizing harm while maximizing benefits
+    </li><li>ethical theory and their principles
+    </li><li>Methods for ethical analysis is one of the important concepts I get to know more about today.
+    </li><li>Today, I learned about the significance of using diverse ethical theories in decision making. This approach involves not only traditional Western frameworks but also decolonial, indigenous, and marginalized perspectives
+    </li><li>We consider the previous topic and it was very important to learn it today.
+    </li><li>In today's lecture we learnt about methods of ethical analysis
+    </li><li>yes
+    </li><li>That you can approach an ethical dilemma from many different angles.
+    </li><li>The ethical analysis is the most important thing in this world and specially in tech world. It seems to be very effective in our daily life and to take important decisions.
+    </li><li>Today we learned how to handle different situations by different ways to handle it.
+    </li><li>In the class today I have learned how you encountered different things in different scenarios and how you manage it.
+    </li><li>skills for the Information Age
+    </li><li>Today we got to know about ethical analysis.
+    </li><li>Risk about society
+    </li><li>today, I encountered the term ethical analysis
+    </li><li>About assignments.
+    </li><li>Methods for ethical analysisi
+    </li><li>Ethical theories and principles
+    </li><li>An important concept I learned today on the lesson of Method of Ethical Analysis was that there is no one solution to a situation. By looking at multiple different perspectives and views onto a situation, we are able to find many solutions. The importance is deciding the solution that maximizes the benefits and that prevents harm.
+    </li><li>Ethical Manners in a human is the important concept that i encountered today
+    </li><li>Can voting be a viable option to get public opinion on what decisions in the technology world.
+    </li><li>Ways to apply ethical analysis and different ways to approach a discussion 
+    </li><li>Methods for ethics analysis
+    </li><li>How no one theory can be used in machines to make the best choices.
+    </li><li>Ethical Theories and Principles
+    </li><li>The ethical challenges that arrise when companies collect user data risking the privacy of the consumer.
+    </li><li>The most important perspective I learned during the lecture today was how the choice between having the public interest or the public good in mind can drastically change how people handle tough decisions.
+    </li><li>Discussion about Ted talk of horowitz and how technological app makes us take toll of decisions 
+    </li><li>Today in class we learned about methods for ethical analysis.
+    </li><li>The most important concept I encountered during today's lecture was the ethics behind decision making, and how there are many factors that play a role in making a decision.
+    </li><li>The choice between the public interest and public good was interesting to learn.
+    </li><li>We dicussed the topic given by the professor in our group. I also got more details about assignments for this course.
+    </li><li>An important concept I encountered today is how every culture has their own idea of what should be considered 'acceptable'. Taking into account these varying perspectives in their respective social contexts, we will be able to better formulate our decisions in a moral manner.
+    </li><li>I thought of siding with public good instead of public interest because it benefits all the people in the society. Nobody is excluded for benefiting from the goods. On the other hand, public interest could only be beneficial for some parts of the society which means that not everybody can benefit from it.
+    </li><li>I learned the difference between the public good and the public interest. The public interest is frequently decided by an individual or group based on personal opinions or ideals. Meanwhile, the public good is a society's common benefit, which is generally defined by an objective examination of its needs. Personally, I believe that the public good should be the standard when it comes to decision making as there are many unfair/biased factors that roots from the public interest.
+    </li><li>What makes an ethical decision right and wrong based on ones morals
+    </li><li>How to decide to decide 
+    </li><li>Today, an important concept encountered was "the public good".
+    </li><li>foundations of ethical analysis
+    </li><li>I encountered fundamental frameworks and topics to take into consideration when making a decision. 
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>No. The instructor was very informative and we discussed more in groups.
+    </li><li>Everything is unorganized
+    </li><li>The groupwork was confusing
+    </li><li>No, everything in class was great. Group meetings were successful, and the video was very clear and informative
+    </li><li>Nothing on today's lecture was too difficult to understand
+    </li><li>I find it difficult to comprehend on what shall be done during group discussion. My group and I were kidn of lost on what to discuss. Most of us don't remember the video or TEDtalk from the first lecture.
+    </li><li> everything was understandable from today's class
+    </li><li>Everything was understandable 
+    </li><li>Everything was quite clear today. 
+    </li><li>No
+    </li><li>Nothing so far
+    </li><li>nothing 
+    </li><li>The group work isn't very clear 
+    </li><li>The question of how do you decide what to do (either take someone data or not)? 
+    </li><li>not yet
+    </li><li>I was confused about some concept of the theory
+    </li><li>Everything seemed good
+    </li><li>No
+    </li><li>The content was clear. Nothing was difficult to understand. 
+    </li><li>How Universal application of theories are difficult to implement in every context    
+    </li><li>No
+    </li><li>I found it difficult to understand how the in class discussion groups are going to relate to the graded portion of the class. Will the topics we discussed in groups be part of our exams?
+    </li><li>The question you gave us to discuss in group with no proper info but then you said it was joke or some which was a good one 
+    </li><li>no
+    </li><li>No
+    </li><li>No, everything was pretty smooth. 
+    </li><li>No everything was pretty much straight forward.
+    </li><li>No, not really
+    </li><li>How one decides if something is ethical to do or not (what defines "ethical" universally)
+    </li><li>No. 
+    </li><li>Not really we just made groups 
+    </li><li>Ethical theories 
+    </li><li>A little bit. I’m will just study more tonight.
+    </li><li>No, everything was clear
+    </li><li>the theory that says for no single theory is applicable in all situations is a bit confusing for me
+    </li><li>No
+    </li><li>No
+    </li><li>I think the starting points were difficult for me 
+    </li><li>Should one decide to decide?
+    </li><li>Nope
+    </li><li>There is still some confusion about group members and the expectations surrounding the Wiki page.
+    </li><li>It was hard to understand the questions asked for the group discussions.
+    </li><li>I found myself not understanding what was being asked of us when you mentioned starting points.
+    </li><li>Nothing was difficult to understand today
+    </li><li>The task to be be done for the group work.
+    </li><li>The questions were little complex
+    </li><li>Again, a lot of what was discussed was very difficult to understand as other students were too loud. Especially near the end of the lecture.
+    </li><li>I wasn’t able to understand few things about the assignment part and question about the ethical analysis like how we are getting analysed 
+    </li><li>No 
+    </li><li>Not really
+    </li><li>no 
+    </li><li>something that you told about one task that we have to do individually or in smaller groups?
+    </li><li>I am still a little unclear on the 2 assignments and its rubric
+    </li><li>How to make new Group for discussion
+    </li><li>There was nothing hard in the today's lecture to understand.
+    </li><li>Nope.
+    </li><li>The difficult part about today’s discussion was to how to decide ? 
+    </li><li>No, everything was straightforward and clear.
+    </li><li>It was difficult to understand where to begin when discussing the question of “How to decide what to do?” when it comes to ethics and ethical technologies.
+    </li><li>The information about the assignments 
+    </li><li>No
+    </li><li>need more depth about the topic
+    </li><li>The questions Dr. Hepting wrote on the board were a bit confusing. They seemed vague and I didn't know what to discuss with my group. "How do you decide what to do" To do for what exactly? The best ethical analysis approach? I was a bit confused trying to understand what approach to answer these questions from. 
+    </li><li>Everything was preety straight-forward
+    </li><li>No
+    </li><li>no, there was not any thing that was difficult to understand today.
+    </li><li>It was kind of difficult to understand methods of ethical analysis 
+    </li><li>No, I guess discussion it nothing difficult every one were just sharing their thoughts.
+    </li><li>No everything was understandable.
+    </li><li>I am just wondering if we are supposed to post the group discussion to the wiki again? Are there due dates for these?
+    </li><li>The note on the board where we were to discuss in groups
+    </li><li>There was nothing difficult to understand today
+    </li><li>No
+    </li><li>I personally didn’t find it difficult to understand. Every think look clear.
+    </li><li>start point of that,  who should i represent. 
+    </li><li>No, the class was going smooth and everything was understandable.
+    </li><li>No there was not.
+    </li><li>no
+    </li><li>not really 
+    </li><li>No
+    </li><li>I struggled to form my own opinions about the questions asked in class today.
+    </li><li>Today was easy going 
+    </li><li>No
+    </li><li>The questions that were listed for the group discussion as well as the purpose of the groups assignments.
+    </li><li>None
+    </li><li>The group discussion 
+    </li><li>would have preferred automatic groups as finding a group in a class of 270 was chaos
+    </li><li>The initial topic of what we were supposed to discuss in our groups was kind of unclear, Was not sure in what context I should think of the questions.
+    </li><li>The discussion question was difficult to understand at first but eventually our group came up with some ideas.
+    </li><li>I understood the lecture materials today
+    </li><li>Ethical theories and priniples.
+    </li><li>no
+    </li><li>Infographic 
+    </li><li>no
+    </li><li>How do we decide if something  is good or bad  in methods of ethical analysis if we cannot decide by pubic opinions etc was paricularly difficult to understand.
+    </li><li>I don't think there was anything particularly difficult to understand.
+    </li><li>No, everything I learn was easy and i did not find anything difficult.
+    </li><li>there was nothing as such different in today's class, everything was crystal clear
+    </li><li>no
+    </li><li>The discussion question took a while to understand as it was very broad.
+    </li><li>Not really , but I want to know more of how do we decide what to do!
+    </li><li>Nope, it went well.
+    </li><li>Not really everything was straight forward
+    </li><li>methods of ethical analysis
+    </li><li>No it was smooth lecture.
+    </li><li>No
+    </li><li>There was nothing difficult to understand 
+    </li><li>Everything was understandable so far.
+    </li><li>nope
+    </li><li>Nope
+    </li><li>N/A
+    </li><li>Nothing today was difficuklt was i not able to understand
+    </li><li>Nothing
+    </li><li>No
+    </li><li>No I understood everything that happened during the lecture.
+    </li><li>No, not really.
+    </li><li>No it was all clear and easy to understand
+    </li><li>There wasn't anything too difficult to understand during the lecture.
+    </li><li>Not particularly 
+    </li><li>No everything was good.
+    </li><li>There were not any difficult topics covered in today's lecture meeting.
+    </li><li>Nope
+    </li><li>No.
+    </li><li>One thing I wish we had more clarification on was how to approach these difficult decisions, as well as what was meant by the question "Do you decide to decide?"
+    </li><li>Not that I could think of
+    </li><li>I had a bit of difficulty understanding the assignments and the group discussions.
+    </li><li>No
+    </li><li>no 
+    </li><li>Nothing was difficult to understand today; everything was easy to grasp.
+    </li><li>Some Questions wrote on the board were little difficult to understand.
+    </li><li>I still don’t understand when the assignments are due and if we can decide between working individually or in groups. 
+    </li><li>Everything was pretty clear
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>Yes, I would like to know more about the factors that we consider while making decisions in computing.
+    </li><li>The important topics since we are still discussing basics
+    </li><li>Are these in-class groupworks going to be graded and do we form the same group everytime or different for each time? Will we be assigned a new group for assignments?
+    </li><li>Judgement in Software Engineering due to its importance of choosing technology paths, best design approached, and projects that supports a businness's objectives. Judgement is very diffucult to make a decision on and if you are working in groups like in Software Engineering people may have different types of judgements than yours and working on a common ground can be complicated.
+    </li><li>About how ethics affect how we use technology in our society
+    </li><li>If there are ethics that are harmless but somewhat is unacceptable to people.
+    </li><li>no there is a nothing i would like to know more from today's class.
+    </li><li>I will like to know more about assignment grading distribution based on group work
+    </li><li>I would like to know more about how we make decisions. Is there a way we can always make the correct decision through ethical analysis?
+    </li><li>No
+    </li><li>Everything about group project posted in ur course would make lot of sense. 
+    </li><li>more about group work 
+    </li><li>I will like more information on the group work and assignments to enable me get started.
+    </li><li>There were a lot of question that were listed on the board in todays lecture however the question that ask "Do you decide to decide?" was an interesting one even after thinking it through I was confused as to whether the question had any solid answer to it.
+    </li><li>Nothing in particular apart from the above question
+    </li><li>ethical analysis
+    </li><li>I would like to know more on how to the theories help in ethical descision making especially the one that says no theory is applicable in all situations
+    </li><li>why early Tim Horton were using data of the people which are not helpful for their business
+    </li><li>No
+    </li><li>I would like to know more about how to approach a difficult question. what is actually the correct approach?
+    </li><li>Is there going to be daily group discussions in class from now on?
+    </li><li>Marginalized ethical perspective
+    </li><li>How do we truly determine what to do?
+    </li><li>I would like to study more about how these ethical decisions are made, and what ultimately informs these decisions.
+    </li><li>I would like to know more about when the assignments will be due and why they are worth 20% each. 
+    </li><li>Alittle more detail explaination about the assignment will be good 
+    </li><li>diversity in decision making
+    </li><li>No
+    </li><li>About starting points in methods for ethical analysis.
+    </li><li>Yeah I would like to know more about the assignment infographic.
+    </li><li>More in real life applications and examples of how ethical theories are applied
+    </li><li>How do people plan on governing these decisions
+    </li><li>I would like to know more about how the general society views computers and what types of information they store about each of us. 
+    </li><li>Just wanted to know more about the group discussion topics in detail
+    </li><li>What is best in public interest 
+    </li><li>I will like to know more about the Methods for Ethical Analysis
+    </li><li>I would like to know more about the laws and the rules of protecting or sharing personal details, and maybe discuss what is happening with Meta facebook about this point
+    </li><li>I would love to understand more of the theory that says the theory that says for no single theory is applicable in all situations
+    </li><li>No
+    </li><li>No
+    </li><li>Yes i need to get more in detailed with the starting points 
+    </li><li>How something like the tim's app can track other user details that were not required by the app
+    </li><li>Different theories that can be applied to determine what is the greater good
+    </li><li>The ethical frameworks of decolonial, indigenous and historically marginalized people. 
+    </li><li>Ethical theories and principles as they are essential for ethical analysis
+    </li><li>I would like to learn more about the different ethical theories and how they are able to guide us to make the right decision
+    </li><li>More information on the group work and assignments would be helpful.
+    </li><li>about how the topics that we learned today are applicable in Computer Science.
+    </li><li>How we can minimize risk and maximize benefits in terms of security on the web.
+    </li><li>I would like to know more about the topic which we discussed today, and I would like to request Dr Hepting to go in detail about the topic, so we can understand the overview and discuss with our group
+    </li><li>No
+    </li><li>Not really
+    </li><li>no
+    </li><li>How much time we will get to submit the assignment?
+    </li><li>Maybe a written document of what exactly the assignments ask would be an asset
+    </li><li>About Transcript
+    </li><li>In the today's video, the author called Steve McConnell who wins the award uses " Four Core Influences " , which I like to know more about his upcoming book.
+    </li><li>Yeah I would like to know more about how we can choose the right course of action for any particular situations.
+    </li><li>Would like to know more about the way analysis are carried out that would amazing 
+    </li><li>I would like to know more about how do you know what you have do. I think there is not any method that can truly show what the consequences will be for each move/action, and I would like to know more about how these decisions are made and what the process is.
+    </li><li>There is nothing much I would like to know more about from today’s lecture.
+    </li><li>More about the topic-ethical theories
+    </li><li>No
+    </li><li>We did a lot of brainstorming about ethical decisions but never really settled on a clear decision. I would like to know more about what specific ethical analysis methods are best. 
+    </li><li>I dont think so
+    </li><li>i would like to discuss about ethical analysis more.
+    </li><li>No, I do not think that i learned new that i want to know more about it.
+    </li><li>I would like to know more about today’s topic ethical analysis 
+    </li><li>Not sure, about this because it was just topic group discussion.
+    </li><li>No 
+    </li><li>I am open to anything that will be introduced into our class, and I look forward to learning more about our topic.
+    </li><li>Public group and public interest of ethical analysis
+    </li><li>I would like to know more of the public's good/interest.
+    </li><li>No
+    </li><li>Yes it would me more interesting to learn about efficient way of ethical analysis.
+    </li><li>wanna know others answer
+    </li><li>Some more information about ethical analysis.
+    </li><li>I would like to learn more about "Do we require ppl to be informed to make a decision?" as it emphasizes the importance of intent vs meaning. 
+    </li><li>no
+    </li><li>no 
+    </li><li>I would like to know about the risk and reward
+    </li><li>The questions asked today seem interesting enough and I would like to learn more about it.
+    </li><li>Ill make sure to research more on ethical analysis
+    </li><li>No
+    </li><li>The points presented were not really clear, especially about the ethics regarding technology and such
+    </li><li>I would like to know more on the about the ethics and how we can implement the methods we learned today into the real world.
+    </li><li>How the public interest controls the technological world 
+    </li><li>how technology takes more info than needed for its purpose
+    </li><li>I would like to get familiar with situations in which I should think of these ethical issues. 
+    </li><li>I will find more information about the ethical principles 
+    </li><li>Underlying principles, and ethical theories.
+    </li><li>I would like to know more of the koans.
+    </li><li>Computing professional
+    </li><li>yes want go deep into ethical theories
+    </li><li>I would like to know more about the best methods of ethical analysis.
+    </li><li>what the equilibirum of ethics is? where do we draw the line for voting for everything vs efficency. 
+    </li><li>Is there a stark difference to how smaller companies approach ethical theories to employ on their web applications versus large corporations? If so, what are the factors that would cause this divide?
+    </li><li> I am indeed interested in delving deeper into how decolonial, indigenous, and historically marginalized ethical perspectives can be effectively integrated into our current understanding of ethics
+    </li><li>I am looking forward to learn more new things further.
+    </li><li>yes, i would love to learn more about the methods of ethical analysis.
+    </li><li>no
+    </li><li>I'd like to know how applying different ethical frameworks to problems changes the outcome.
+    </li><li>As I mentioned before I want to know more about or decision making abilities is their any ethics on behalf of which we decide things.
+    </li><li>Nope for today’s lecture i don’t have anything to know more about today
+    </li><li>As mentioned above everything was simple and easy to understand, so nothing to discuss much.
+    </li><li>skills for the Information Age
+    </li><li>Yes about ethical analysis 
+    </li><li>No .Everything was great 
+    </li><li>I would like to know more about the standardised methods of ethical analysis 
+    </li><li>Are there any grades for the group discussion? 
+    </li><li>nope
+    </li><li>Everything was understandable
+    </li><li>I would like to understand more about the different Methods of Ethical Analysis available for technology and how this can be used to protect data on the internet
+    </li><li>I would like to learn more about concepts of ethical behaviour
+    </li><li>Information about traditional ethical framework
+    </li><li>No
+    </li><li>I would like to know what the best theory’s are there for something like artificial intelligence algorithms.
+    </li><li>Why are theories not universally applicable to al conexts?
+    </li><li>More examples of companies collecting unwanted data to better understand ethical guidelines.
+    </li><li>I'd like to know about what counts as the public good vs the public interest in terms of data privacy and whatnot.
+    </li><li>About the decision taking concept in technolical apps like Tim Hortons  app etc.
+    </li><li>Nothing more, Thank you!
+    </li><li>I would like to learn more about ethical analysis and how other group's perceive the question asked during today's lecture.
+    </li><li>I would like to know more about different methods of ethical analysis 
+    </li><li>No.
+    </li><li>I would like to know more examples of how these methods for ethical analysis can be seen in the real world, and what we can do as informed members of the information society to make ethical decisions.
+    </li><li>I would like to know more about other's perspective/opinion on this topic matter.
+    </li><li>No
+    </li><li>how to decrease harm while increasing benefit 
+    </li><li>I would like to know more about if voting was not a good method for ethical analysis then what would be. And how exactly voting does not work in this scenario, would it not be the best way to know what the public interest is?
+    </li><li>I would like to know more about the assignments.
+    </li><li>Can you explain the questions that we did today in class with little more details.
+    </li><li>Assignments 
+    </li><li>Examples of how we should analyze these cases and how to ethically respond to them.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/05_Tue-23-Jan-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

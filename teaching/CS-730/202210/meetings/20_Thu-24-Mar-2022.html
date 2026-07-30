@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-730/202210/meetings/20_Thu-24-Mar-2022.html" />
+    
+    <title>Mtg 20 &bull; CS-730 (202210) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 20 &bull; CS-730 (202210) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/20_Thu-24-Mar-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/",
+        
+          "name": "CS 730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/",
+        
+          "name": "202210"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/20_Thu-24-Mar-2022.html",
+        
+          "name": "20 (Thu-24-Mar-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/">
+        CS 730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/">
+        202210
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      20 (Thu-24-Mar-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 20/24: Thu-24-Mar-2022
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="19_Tue-22-Mar-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="21_Tue-29-Mar-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=8509">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Hello. So. Let me just type in the chat may be easier. For you, you can feel free to ask me questions with your MIC. So. You know the problems haven't been completely resolved, but. I think i'm making progress, so there is so the effort to install the upgrade was. More than I expected. So I made sure I had a backup and the system. So I was. Sick his big Sir I don't know like names ran together. was what I was upgrading from. 11.6 I was at. This is 12.3. So let me see if I can. it's still Intel let's see, let me tell you what it is it's a 2017 macbook. They have. it's. Seven dual core I seven 2.2 gigahertz. So i'm just looking through I just upgraded. realizing that I was woefully out of date. And lots of things got broken on Monterey I fixed. Okay, so. i'm just checking my homebrew. installation for Ruby and all these other things. Here I should share my screen, so you can see what i'm. I just thinking we should do attendance flyer number. So i'm trying to be good here and keep up to date with everything. I just I didn't even think about. It being so very broken after the upgrade. To Monterey to. So i'm wondering. What kind of. approach could we use to. warn people about. out of date applications, they may still need to upgrade after. Updating the operating system. So, can you see my screen here with the terminal window. Thank you can. This happened to me yesterday to in a different setting. So we're doing the seminars for computer science. and They can share that. With you see a few like if you're. interested in. Is a couple tomorrow afternoon about this time between 130 and 220. Anyway, so I went to one of the classrooms and they're set up. To for hybrid so they have the two screens and the projector. So the idea is that you can have people in class and and also people on zoom. coming in remotely. So I logged into my account and I thought everything. was going to be just smooth sailing because I was. familiar with my because i've done this with. Because I have. Another class at 830 on Tuesdays and Thursdays, in one of the few lecture theatres on the main floor the classroom building For those of you who. can relate to that, but anyway. So the process between that computer. And the one in the seminar room. setups are a little bit different. But anyway, anyway, what I noticed was when I logged in. It said preparing windows, for a long, long time so. That was a sign of trouble and then. Student in class came. up and said we should restart it Nice that sounds good, with the press the power button on the computer on the hour or whatever if you'd like to call it. And that restarted the computer, but the problem is still persistent. And then another student. restarted it by hitting the power button. And to boot from the server. Not not from workstation. So that seem to be okay, but then, when I connected with zoom didn't connect with zoom and that was 20 minutes of very slow. very slow video and so forth. So, then, the technician came and talked about this and. He said that because zoom. Well it's largely zoom and it's not it not playing well with other things, and maybe leaving some things around. So he advised me to restart the computer when I come into the room. So I have a much better chance. restart from the canal. on the screen, not using the power button. And then go into that process. Okay, so now i've gotten. Through updated start any messages for me. When I tried group doctor just to see anything comes up https now again after i've upgraded. looks much more. Calm than I did before. seemed like there really weren't problems identified. Okay, so just checking here. The command line tools are to do that. let's see what happens. For the first advice so system software update in system preferences and. let's try this. yeah so there's an issue. With looking for how many times bumper occurs. So I did earlier was fine. yeah so i've been using. Or the movie environment or the end. Will attack live stuff that's not. Even that's just. Their formatting code. But anyway. Should I try. I didn't know anyway. So the. The question I wanted to ask you, before I, as I do this, and I might. have to reboot my system but. If I if i'm upgrading to a new version of. software. what's the mechanism that that could help users understand or to remember when. They have outdated. versions of software. Around so they might be able to clean it up or. Be warned if there's. Running that command with this current setup is going to cause the system to break. Unless hope for things you're going to work out.
+          </li><li>
+            
+            Hello Hello.
+          </li><li>
+            
+            So I tried to say anyone there. I realized my microphone was turned off. So when I say anyone anyone their mind through the movie called Ferris bueller's day off it was done 19 early 80s. Who is a professor in class. Saying anyone anyone. In like an error response it so. i'm just trying to. Encourage. typing or talking is. is equally fine. Okay, so I don't want to focus too much on Ruby in this particular issue but. let's think about windows systems. Linux. Well, be required to. Let people know what's going on. So, on the one hand. there be a list of. Applications that. Were installed. Not just in the system applications. folder. Also. executable some users slash local band or some other places. So if we understood all of the different applications that were. run the system, you could. Then, what if there was. way. i'm just working on this. Trying to encourage. Your ideas here as well, but it seems to me, if there was a. was a list of. Applications on a system and then. say. site. Where source of information on the web. That could indicate. What where there are possible problems so. there's an application that doesn't work with the latest operating system. I don't have a place where that's reported. So that might. Not requiring central Florida important but. Maybe we have a. Each application that's. runs under the operating system as a. As a URL to indicate that there are some issues. So, going to be some analysis. Another program to go through the lesson see if there are any issues. properties to clean up. Now. well. So I appreciate the conversation with a on here today, but i'm just wondering if anyone else has. Something to contribute. More questions about. what's being discussed.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            Hello!
+          </li><li>
+            
+            Good afternoon Sir
+          </li><li>
+            
+            Good afternoon sir
+          </li><li>
+            
+            How are you today?
+          </li><li>
+            
+            Good afternoon
+          </li><li>
+            
+            Hi sir. fine
+          </li><li>
+            
+            I continue to be having computer problems! Fingers crossed that I am close to resolving them
+          </li><li>
+            
+            Good Morning sir
+          </li><li>
+            
+            I was having problems with my computer and so I decided that I should upgrade the operating system to macOS 12.3 (Monterey)…
+          </li><li>
+            
+            okk sir
+          </li><li>
+            
+            So, the problem has been resolved?
+          </li><li>
+            
+            Any hardware related issue?
+          </li><li>
+            
+            What were the problems?
+          </li><li>
+            
+            That was an effort in itself — I had to restart my computer in safe mode (any mac users out there?)
+          </li><li>
+            
+            You don’t have time machine backup?
+          </li><li>
+            
+            I am using macOS Sierra (10.12.6)
+          </li><li>
+            
+            Yes, I do have a backup which I was very sure to update before trying the upgrade :-)
+          </li><li>
+            
+            Yes, it was Big Sur
+          </li><li>
+            
+            What exactly are the problems the system is giving ?
+          </li><li>
+            
+            So I thought that this upgrade would have been sufficient. However, different applications have been causing me grief since I upgraded.
+          </li><li>
+            
+            Today, I realized that my jekyll installation was out of date and when I tried to run “bundler exec jekyll serve” that became the latest problem!
+          </li><li>
+            
+            Apple Silicon or Intel?
+          </li><li>
+            
+            I know, time to upgrade! :-)
+          </li><li>
+            
+            I thought you were using MacBook Air
+          </li><li>
+            
+            But from the spec it looks like Pro
+          </li><li>
+            
+            I am! MacBook Air 13-inch, 2017
+          </li><li>
+            
+            The problem is Monterey ships with Ruby and bundler. So I guess when you upgrade, it makes changes to the path and installs the latest versions.
+          </li><li>
+            
+            Student password
+          </li><li>
+            
+            Could you run which ruby / which bundler and see which binary is being picked?
+          </li><li>
+            
+            So you are using rbenv?
+          </li><li>
+            
+            Could you check which gem package you are using? which gem
+          </li><li>
+            
+            Cause bundler is installed via gem
+          </li><li>
+            
+            I think your Ruby setup is all good
+          </li><li>
+            
+            Jekyll should work
+          </li><li>
+            
+            please
+          </li><li>
+            
+            Any ideas regarding my question?
+          </li><li>
+            
+            I think Mac users are used to it by now. 🙂
+          </li><li>
+            
+            They lost hope and stopped complaining about these issues. 😄
+          </li><li>
+            
+            Yes, but that’s not a good reason for keeping the status quo!
+          </li><li>
+            
+            Anyone else want to join the discussion?
+          </li><li>
+            
+            How many md files are there?
+          </li><li>
+            
+            Site says that it still generating — and I amI may have to restart
+          </li><li>
+            
+            A few. This is taking too long...
+          </li><li>
+            
+            I will restart and rejoin you shortly
+          </li><li>
+            
+            I’m back!
+          </li><li>
+            
+            Did you seem much of my demise onscreen?
+          </li><li>
+            
+            🙁
+          </li><li>
+            
+            Any thoughts about how to prevent problems like that (my earlier question)?
+          </li><li>
+            
+            Unless Apple stops shipping Ruby, Python etc. with their OS, I don’t think there’s much they can do it prevent it. Sadly, this is how *nix systems work. But they sure can warn the users about it.
+          </li><li>
+            
+            Linux can mostly avoid these issues as they have central repositories. However, this also limit the users from upgrading a package to a specific version as package dependencies are shared.
+          </li><li>
+            
+            Ok. Something easier: show me an emoji :-)
+          </li><li>
+            
+            please
+          </li><li>
+            
+            😌
+          </li><li>
+            
+            🧐
+          </li><li>
+            
+            That’s better. Why don
+          </li><li>
+            
+            System packages are usually reside within /usr/bin. On the other hand packages installed by the users are installed in /usr/local directory. So, most of these breakage after OS upgrade should be fixed easily. Maybe it requires some changes in the PATH variable etc. Another problem I have seen, people run the sudo command without understanding its impact.
+          </li><li>
+            
+            don’t we end it here and I will get my system back on track and post the details of the assignment. Any questions, please share them online in our discussion forum — OK?
+          </li><li>
+            
+            Ok, thank you.
+          </li><li>
+            
+            Could you please extend the meeting response time? It seems we need to write 3 responses.
+          </li><li>
+            
+            Sure! :-)
+          </li><li>
+            
+            Thanks everyone. Take care and have a good weekend.
+          </li><li>
+            
+            Thank you very much
+          </li><li>
+            
+            thank sir bye
+          </li><li>
+            
+            See you Tuesday - or sooner? Bye!
+          </li><li>
+            
+            Thank you sir
+          </li><li>
+            
+            thanks
+          </li><li>
+            
+            thank you
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>hi sir .today we are talking about ruby,bundley,OS, also having  problem in  upgrading system.maybe it needs some  change in path .
+    </li><li>Upgrading an operating system can sometimes break a functioning system. Therefore, experts recommend having a system backup before performing an upgrade. In today&#039;s meeting, we explored ways to minimize or prevent such incidents.
+    </li><li>the kind of approach we could use to warn people about out of date applications so that they may know that the application needs to be upgraded
+    </li><li>After attending this lecture i got little interest in ruby language how this is dynamic and object oriented language and also get information about linux
+    </li><li>In this meeting we discussed and learned about troubleshooting and how to warn people about out of date applications they may still need to upgrade after updating the OS.
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>It was discussed about the installation of react and node js projects
+    </li><li>problem related about  the problem that Apple stops shipping Ruby, Python etc. with their OS.
+    </li><li>Today we came across the different types of operating system.  Sir has some issue in his laptop and then he shared it where we know about different kind of operating system and also Mac os  for example  Macos Sierra.
+    </li><li>In this meeting, I was facing some internet connection issue. Therefore, I was a bit late like 3-4 minutes and then faced some disconnection issues.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>Understand a bit more about Accessibility and inclusiveness as it is a huge part of interaction design.
+    </li><li>The session was all about the issues sir was facing after updating mac to Monterey and he fixed some of them but was facing issues like jekyll installation was out of date and few others
+    </li><li>about using bootstrap
+    </li><li>was to identify how the mac operating system works for different software as i am a windows user and windows does provide a rollback to previous versions by creating system restore points with every major software update.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/20_Thu-24-Mar-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

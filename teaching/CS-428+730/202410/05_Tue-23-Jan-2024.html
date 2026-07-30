@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+730/202410/05_Tue-23-Jan-2024.html" />
+    
+    <title>Mtg 5 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 5 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/05_Tue-23-Jan-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/",
+        
+          "name": "CS 428+730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/",
+        
+          "name": "202410"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/05_Tue-23-Jan-2024.html",
+        
+          "name": "Mtg 5 (Tue-23-Jan-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/">
+        CS 428+730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/202410/">
+        202410
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 5 (Tue-23-Jan-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 5/26: Tue-23-Jan-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="04_Thu-18-Jan-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="06_Thu-25-Jan-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Industrial Design and Interface Design
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Tuesday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=2507968&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1705989600&amp;course=31184" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=31184" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Response to Responses
+  </h4>
+  <p>Response to responses</p>
+<h4>
+    Results from Last Meeting
+  </h4>
+  
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li>Meet our TA who will be joining our Zoom meetings and having availability outside of class to supplement my office hours</li>
+  <li>I am still behind on administrative tasks (e-mail) but this will be resolved soon</li>
+  <li>Toasters</li>
+  <li>Tire pressure warnings</li>
+  <li>Case studies of famous interface issues: Therac, Apollo 13</li>
+</ul>
+<h4>
+    Summary
+  </h4>
+  <p>Summary</p>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2520587" target="_blank">Submit your response to this meeting before 11pm tonight</a></li>
+  <li>Read <a href="https://www.nngroup.com/books/design-everyday-things-revised/" target="_blank">DoET</a> Chapter 1 and <a href="https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/industrial-design" target="_blank">IDFE Chapter 6</a></li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2534184" target="_blank">Take quiz before the start of our next meeting</a></li>
+</ul>
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Good morning. I apologize. I wasn't keeping an eye on the clock. and then I had to log in again to zoom. So how's everyone doing.
+          </li><li>
+            
+            Morning, sir.
+          </li><li>
+            
+            Good morning. happy Tuesday. So it seems like spring almost again after last week,  okay. So let me do one thing here first, and then I'll share my screen OK. So I've just made heresus a co-host. He's gonna be our ta who will join us on Zoom calls. It'll have some availability during the semes during the week to supplement my office hours. So maybe heresys if you can turn your camera on and say, Hello.
+          </li><li>
+            
+            Hi, sorry. I just woke up.
+          </li><li>
+            
+            No worries. Yeah. I'll share my camera.
+          </li><li>
+            
+            100 it's obligated. Yeah, I'll turn my camera on and be next meeting a day. Okay, yeah.
+          </li><li>
+            
+            alright. So will figure out a schedule for his office hours. and I'll put that on  on my office hour's schedule as well. So it's in a easy to reference spot, and then we'll add the links as required. Okay. so he'll be. And monitoring the chat for questions. So help our discussion. So I'm not looking at 3 or 4 different windows, just one or 2 during the our meetings. Does that sound? Okay? Okay? Well, an animated thumbs up the this new Zoom client is really making great strides. Speaking of Zoom. Or let me share my screen. let me see if I'm on the right screen first. and I'm not so, I mean. or I share my your desktop here. I'll okay. I got that going now. Okay, so please don't send me direct messages. because then I have to reset to send to everybody. so can. If you're sending a direct message to me. can you please post it to the. to everyone. Okay. so this is speaking of Zoom. This is what I want to show you. So I wanted to let you know. First of all, there's a an event coming up on February 20 ninth. We're having another installment of our computer science alumni and Friends Virtual Lecture series. It's open to the public and  I'll show you the I'll share. I'll get the Facebook event link here as well. But I wanted to show you this because I wanted to get some information. So you notice if I scroll if I mouse over the title. it turns blue like it's an active link. and then it's got. So this also turns blue the same time the timing between 7 and 8 PM. CST, and then I also have options to do to start. start the meeting, edit it and or delete it. I definitely don't want to delete it. but I wanted to get some information about the event and see how many people have registered already. So I so because so what would I? What do you think I should do to get some more information about the event. Any thoughts? Okay. But where should I click on it? So what I? What I tried to do? I clicked on the time. So the time, the time the clicking on the time isn't doing what I thought I would do, either. I thought I was gonna give me something. Yeah, that's right. I noticed the icon is different. So I have a feeling I don't remember exactly. I'm not going to stop our Zoom Meeting to test this. but because I have a zoo meeting going already. I can't start another one. It seemed to me yesterday, when I was looking at this clicking on the Times would start that would would try and start the meeting. It was. It was more frustrating yesterday. Now talking with you about it. It seems little bit more reasonable. but if if this is disabled because I the start because I have a meeting going already. then it shouldn't turn blue. and it shouldn't. Rolling over the title shouldn't activate the other link. or if it's not a link, if I just imagined that it was a link. it shouldn't turn blue like its link. anyway. So I just wanted to say that I'm still behind on some administrative things. and I'm I'll get this resolved soon with Harris's help and and other things. So I appreciate your patience on that. So you got some. Some of you got some email from me earlier or last night or early this morning. so I think I'm caught up on our email. And you are. Chorus is. So please let me know if there are any issues in that. And so Heresys will also get those emails. And there are some things. If those are things he can address, he'll take care of them as well. So what did anyone have any thoughts about after reading the designer's stance. Yes. I'm very impressed with the way they do things at ideal. There was also, that reminds me of a couple things that they've done on video. one is designing a shopping cart. and they did it for a news program. I think one was for 60 min. I think that the 60 min thing was the shopping cart. And another time they did a video about designing a cubicle inspired by Dilbert. So I'll look for those things and make those links available. So before okay. again, please don't send me a direct message, because I end up. I end up replying only to you if I don't lodge it. anyway. So I was just going to say. But there's a comment about the quizzes timing for the quizzes. So. whereas I had originally had the opening at midnight of the day of the meeting. I've changed them to be 6 PM. The day before the meeting and the timing. The events should be listed in the course calendar. Let's just check the course calendar for today. So their sorting algorithm is at least something to be desired here, because you'd think that the thing that closes would go before the event that continues the closest at 1130 goes before the one that starts at 1130. So here's the response. So between the end of class in 11 PM. To night. an then the quiz does. Oh, I guess it's not to day cause it opens tomorrow. So let's look at the upcoming events. Okay, so the next quiz is opening tomorrow at 6 PM. And do at 11 by 1130 before last time. So I'm just curious. Let me see if I can do a all about that. Nope. me see how quickly I can get this done. Okay? So I got 2 questions. Okay, sorry. There, there's 2 questions about the quiz. so we'll leave that open for a little bit. Let's see if we can do better than two-thirds participation. So this. So when I get stuck at 40, 46 of 57. We're 56, excluding heresys and me. and I wonder if some people are not at their at the Zoom Meeting are not actively engaged in the meeting. so I know it's not always a a joy to listen to me. I say, Ivan, do an extreme William Shatner impersonation with pauses, but I try and do some hope to hope to make this worthwhile your time in the Zoom Meeting. Okay. anyway. So common about the quizzes and the timing. So okay, so let me talk about that, and then I'll talk about. Answer how the quizzes get marked. So the idea is to encourage you to pass it. to reflect on what we've done in in the today, in the current in today's let me back up before the start. The next meeting a quiz gives you a chance to reflect on what was done in the previous meeting. and look at the materials I am asking you to look at for the next meeting. If I left it open til the end of the class meeting. then I think that people will have a tendency to do the quiz during the meeting instead of instead of focusing on the meeting. I'm not saying that people would do that maliciously. but it's just. It's just the way things go sometimes to root. Well. you have the best intentions, but maybe they don't always work out that way. Okay, so I'm going to end the poll and share that with you. Okay, so is 6 pm. The day before the meeting until the start of the until the start of the meeting. Enough time. So 84% said, yes. 16% said no. And then I asked about checking the course calendar for opening and closing times and days. So 76% said, yes, they do? 16% said No. And then. and then 4 people answered, What is the course calendar? So I'm going to say we're looking at it right now on the screen like that old, old commercial that will really date me. anyway. No, I'm I'm discretion is a bare part of valor. I'm not going to bring it up anyway. So this is the course calendar. and let me see. I'll show you. It's also on the home page if you want to look at directly. Why can't I move so can you see the yeah courses home screen homepage so we can look at full calendar. And then this is really helpful here that it's got all the classes that are that have ever set up in you our courses. There's choices there, but here's our course. So here we are today. So yesterday quiz 5, the quiz for today's meeting opened and it closed today, and then tomorrow quiz for meeting, 6 will open and it'll close at the start of the meeting time. Okay, so that's the calendar. So you can click on the links to the meeting, or you can from the course home page. you can access it. So so you open the drawer on the right side of the screen. Let's go back to the homepage here, so next we'll close the drawer. open the drawer on the right pate right side of the screen. and the calendar's the first thing. So I also have links. And I thought, there is something taping it. Okay? So one time only thing, I will extend the time of the availability for this quiz. Okay, so that's you're not trying. I don't want to be unreasonable. so have we discussed it to exhaustion. So everyone's clear on the policy and the rationale. and they know where the calendar is now. but it'd help if I put a link in. Would it help if I put a link on the in the general section to the course calendar. Okay? So that's let's enjoy watching me add something to your courses. I was going to say enjoy might be, not the right word. But so we want to add an activity or resource. And then I'm going to add a Yeah, URL, okay, so let me. So I don't want to lose that screen. Oh. duplicate this tab so I can select upcoming events and select this course. So you can see this is the the arguments to the URL that will generate it'll get to this page. So I'll copy that and last, then title so upcoming. Yeah. So I find there's no way to sometimes finding the way back is difficult. Just look under, general. So I'm gonna put upcoming events just under to day's schedule. Okay? So it wasn't too bad, I think. Let's try and see it. Oh. okay, we'll leave it there. So just test it again. So it opens in a new tab calendar upcoming events. And from here you can adjust it to see month or today or upcoming events. Okay? And you should get an email about the fact that it's been added to the page. does that seem all right? Anyone give me a thumbs up. Can anyone do that? If that's if that's what you'd like to communicate? Okay. so we'll let Yash speak for everybody. Just kidding. That's an ethical issue we have to be concerned with when we're thinking about. Okay. got another hand in the sense that if we're trying, if we want to design an interface for a particular group of people, maybe senior citizens or or kids. So this goes when, if we're trying to have conversations about what needs to be done. and we want to test whether our interface designs are appropriate. then we need to talk to people from the group we're dealing with, and we want to make sure that we have a representative sample as well. So if we, if I ask you to tell me. how well I did with my interface for my senior citizen friends. I don't think that I am a senior citizen yet, so just do it to make that clear. If I went on to get your you might be able to give me some feedback about it. according to the heuristics and and things you can observe about principles for interface design design. But you can't represent the group to which you don't belong. and it's not fair for me to put that on you as well. Does that make sense? So it's in the syllabus there's a comment about you are not your user. So this is a little bit of the same thing. We can't just substitute anybody for the our intended users cause that can get, give us misleading information. And ultimately we don't want you like. we, if we can get, have to have less information. but more trustworthy information from people we know who might be using the this interface design. Then that's better. Does that make sense of that post comments? Nothing about us without us is a good principle to work from. says Dane. And that's I agree. Thank you for sharing that.  okay. so toasters. So that brings me back to the the quiz marking. So the way I'm doing setting up the marking is if it's a short answer question. I I have a few keywords mixed in with wildcards. so I'm not trying to get. I'm trying to give as much flexibility as possible to match key phrases from the the text. So I'm I'm trying to  build in appropriate flexibility for you. but sometimes I can see that I haven't done that. So if you're concerned about a correct answer. You think, is the correct answer. But you've been. It's been marked incorrect. Please send me a note on your courses email. and I'll adjust the template as required. The yeah, the I'll adjust the quiz settings and regrade them. Does that seem? Okay?
+          </li><li>
+            
+            Sounds good.
+          </li><li>
+            
+            Okay. So in the text, in that favorite story of mine about, we have to look at the history of bread crisping in Renaissance, France, and on the space shuttle. And after that we might decide that we just need what we really need to do is put more acerly keys on the side. But so it's a breadth-first. So it's looking at the problem in  in a wide sense. and then narrowing down instead of starting narrow, and then and then having little room to maneuver. so in terms of costs. So if we spend time on design and do a a thorough job of our analysis. understanding the design, opportunities. and the possibilities that exist from different sources of inspiration. But if we're doing that at a time when we haven't committed anything to code. then that's the most cost effective time to do it. If we realize. after the after we've committed some design time to building screens and having code to work with them. So we're become attached to the code. And we also. So even if we're not attached. I guess it still means we've put effort into that which could have been better spent in in design, where we're working with in the design time we spend before we get to writing code or building prototypes of toasters, or anything like that. Does that make sense? So you don't have to people you're not obliged to say yes, it makes sense. But if you have a question. please let me know. Okay. So I wanted to get back to the tire pressure warning example from last day. and it occurred to me we'll talk about this in more detail, but it's also interesting to think about how our understanding of how the sensors work. Effects are use of that information. So if we think that the pressure it that's displayed on the screen is accurate, then we can use it to. We can use as a tire pressure gauge. If it's just an indication that it seems low, then we can. We can. You might use it in different ways. So another example is maybe a thermostat which is good to think about in winter. So if we think about coming home in. maybe coming home early, and we have the thermostat set to be cooler because we're we've been away. We want to heat up the room quickly. Then how we. the model we have, or our mental model or understanding of the system as users. might affect, how we interact with the thermostatin. If there's a way to get to her out quickly. so you might turn it up very high. so that the furnaces where the heater is running full blast. and then we can turn it back to our desired temperature once we've gotten warm. So that that depends on how we think about how the if we understand how the thermal. how the furnace or the heater works. If there is a high setting. if if setting it to a a desired temperature to be, say 32. I'm saying 32, because that's the highest temperature I can get in my 2,011 Ford fusion. So I turn it up to the to the maximum. So maybe that's a well. maybe I should think about the car example as a little bit easier. so I can turn it up to 32 in my fusion. and I have another Ford vehicle where I can hit Max. and I just turns it to high. so that, and encourages the model that I can turn things on  at a high setting to heat it up quickly. So that's evidence that I might take with me to my home. But the heater or the furnace, or whatever amusing to get heat is. may not be operating in the same way. So make sense. Okay. we'll talk about that in more detail coming up. So I wanted to mention a couple interface design issues that are somewhat famous. Has anyone heard of the therac 25? So the idea was that was a radiotherapy device made by atomic energy. Canada Limited. I think it was in the 70 s. And 80 s. So radiotherapy is when you're giving radiation treatment to cancer patients. So it was based on an earlier model that had physical interlocks that would prevent dangerous settings. And so they were developing software. For this. the they had developed software to run on the machine that had also the physical interlocks. But then the new version. they did it away with the with the physical safety measures and relied on the software. So they thought the software was working fine in the earlier version. But really it was. They were being saved by the mechanical interlocks from doing harm to patients. And so there were a number of deaths of patients who received lethal doses of radiation and things like input buffer overflows. Those were the things that cause strange settings to be and convey to the whether the machine and because there were no more physical interlocks. The the patients we're not protected anymore. So the other example I wanted to mention briefly today. and we'll talk about some more after we look at. Look, look at the meetings for next meeting. Okay. So with Apollo 13. Anyone familiar with that that flight that was in. I think it was in 1970. I believe that was when I was in kindergarten. My memory serves me. Anyway, that won't be on the final exam. or maybe I maybe that would be a fun exam fun question. nor see. Anyway, the idea was there was an accident in space on their way to the moon. They were going to land on the moon in and do some research. But there was a problem when there's a spark in one of their oxygen tanks on the. and they stirred it. I think they were doing some routine procedures. And okay, again, I've gotten a direct message. So please. we send that to the bowl to everyone. anyway. So I'll I'll put a link for this. But the the issue was. they changed the mission from landing on the moon to getting everyone back home safely. and so there was 2 parts to the vehicle. At that point they had Lunar Lander, and then the the crew capsule that would take them back to Earth. So they had to conserve power. and they also had to make the CO. 2 scrubbers from one part of the ship of the Configuration, the from the lunar lander work in the command module. But even though they were. you would think they would be interoperable. they were made by different contractors. so they didn't fit 1. One was square and one was round, I believe. So. This was depicted in the movie, Apollo 13 that's already some years old, but it's still a an interesting movie. anyway. So the the engineers I don't know if I would call it a documentary. I'm sure there's a documentary about it. But anyway.  So they had to. Happily they had some duct tape. They had enough  materials in in their craft that they could fashion away to make the CO. 2 scrubbers work so they didn't die because of. They had no had no oxygen to breathe. anyway. So it's a happy ending. And I will put some links up for that as well. Okay. so we're about at a time here. So we've started to think about industrial designs will be looking at not a bit more. We'll look at a few more case studies next day. So the ideal chapter is a good example of the industrial design approach. So also put some links up about ideal. I can find those videos online. anyway, any other comments or questions before we go. so is everyone clear about the quizzes. So the responses are due. Starting now until 11 PM. And in the quiz starts at 6 Pm. Tomorrow and ends at the start of class time to the next day on Thursday. Okay. thanks for today. If anyone wants to put the camera on and wave feel free to do so. Oh, wait! Oh, I'm not in the frame. Very well. Okay. Have a great day. Take care. See you on Thursday. Okay, take care. Everyone bye.
+          </li><li>
+            
+            Have a good one.
+          </li><li>
+            
+            Thanks. Youtube.
+          </li><li>
+            
+            Thank you.
+          </li><li>
+            
+            You're welcome.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            Good morning!
+          </li><li>
+            
+            morning daryl 👋
+          </li><li>
+            
+            morning
+          </li><li>
+            
+            Morning
+          </li><li>
+            
+            Morning everyone!
+          </li><li>
+            
+            Good morning!
+          </li><li>
+            
+            sleepy
+          </li><li>
+            
+            good
+          </li><li>
+            
+            good
+          </li><li>
+            
+            Good morning!
+          </li><li>
+            
+            Good morning!!
+          </li><li>
+            
+            good morning!
+          </li><li>
+            
+            it's a Tuesday that feels like a Monday lol
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            Yeah
+          </li><li>
+            
+            yup!
+          </li><li>
+            
+            -5C
+          </li><li>
+            
+            hello sir
+          </li><li>
+            
+            Many of us have a scheduling conflict with the current quiz timings as they overlap with another lecture. This consistently leads to us missing quizzes. Could we kindly request a timing adjustment to better accommodate our schedules?
+          </li><li>
+            
+            ok sir !
+          </li><li>
+            
+            can we please make HCC quiz timing after our lec ?
+          </li><li>
+            
+            click on it?
+          </li><li>
+            
+            click the title link?
+          </li><li>
+            
+            not the time the title
+          </li><li>
+            
+            The title
+          </li><li>
+            
+            the title yeah
+          </li><li>
+            
+            click the title because it shows as a hyperlink
+          </li><li>
+            
+            click the title as the arrow cursor becomes a finger pointer
+          </li><li>
+            
+            I liked the quote "dream beyond what exists, as opposed to fixing what exists"
+          </li><li>
+            
+            I really liked his perspective on design, especially how his teams work on a new project
+          </li><li>
+            
+            Broad and diverse teams working smaller sounds like an interesting way to approach a problem, and also allowing a leader to emerge naturally.
+          </li><li>
+            
+            I also liked how they research a new design project from a broad perspective and then narrow it down to the specific details and information.
+          </li><li>
+            
+            I thought it was interesting how engineers were compared to designers, I always just thought engineers did both aspects, but they have contrasting approaches
+          </li><li>
+            
+            Please,Sir can again open today quiz so remaining  students like me can attempt quiz.
+          </li><li>
+            
+            the quiz answer was quite varied and would be between joy of creativity through the perspective of design, however if you can consider those answers as well, sir?
+          </li><li>
+            
+            it will be great if it closes after the HCC lec ...
+          </li><li>
+            
+            The specified correct answer for the today's quiz seems too specific. If those exact words are not in the answer then quiz is marked wrong.
+          </li><li>
+            
+            Sir can please open for us remaining students to attempt today quiz ?
+          </li><li>
+            
+            It's clear to me, but I can't speak for anyone else.
+          </li><li>
+            
+            would be helpful ya
+          </li><li>
+            
+            "Nothing about us without us" is a good principle to work from imo
+          </li><li>
+            
+            Yes professor
+          </li><li>
+            
+            The warning should be taken as not much more than just a warning, the readings are never 100% accurate since they aren’t plugged into the tire via the valve stem, it’s an estimate at best.
+          </li><li>
+            
+            I have, yes
+          </li><li>
+            
+            Nope
+          </li><li>
+            
+            Yup!
+          </li><li>
+            
+            There are a couple different examples specifically related to radiation therapy and older designs. They are all very interesting
+          </li><li>
+            
+            Wasn't that the situation where they had the engineers all stay in the same room till the issue was solved?
+          </li><li>
+            
+            I've seen the Apollo 13 documentary with Tom Hanks.
+          </li><li>
+            
+            Best documentary of all time 😂
+          </li><li>
+            
+            Reacted to "Best documentary of ..." with 👍
+          </li><li>
+            
+            Reacted to "I've seen the Apollo..." with 😅
+          </li><li>
+            
+            Reacted to "Best documentary of ..." with 👍
+          </li><li>
+            
+            sounds good
+          </li><li>
+            
+            Thanks Daryl! 😊
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Thank you, you as well!
+          </li><li>
+            
+            thanks have a great day
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Thank you, have a great day!
+          </li><li>
+            
+            Thank you.
+          </li><li>
+            
+            thank you, take care
+          </li><li>
+            
+            thank you!
+          </li><li>
+            
+            Thankyou professor
+          </li><li>
+            
+            Thank You
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>That design phase of the project is important, it's best to analyze the design and come up with the best solution before committing to the work on other aspects, such as writing code or building prototypes.
+    </li><li>Reading through the article mentioned in the class enabled me to be a whole different thought process which I was otherwise unaware of. I learned how designers need to take risks and make creative leaps into uncharted territories and differences between designers and engineers. 
+    </li><li>I did not know Apollo 13, and Therac-25 had interface issues, I just thought it was programming errors!
+    </li><li>About the timing of the quiz
+    </li><li>went over the course calendar and upcoming events as well as a bit about the article
+    </li><li>I llearned more about hinking critically especially when it comes to design. Tire pressure warnings are not always 100% accurate and there are some patterns that can be followed to improve these warnings.
+    </li><li>That although we design layouts for the user, we are not the user
+    </li><li>I found Tire pressure monitoring system very interesting. As in a better UI way of representation it provides accurate, timely info. , continuous and reliable monitoring. Its better for safety and user experience.
+    </li><li>Today we learned about toast
+    </li><li>the course calender
+    </li><li>Software failing and the reasons it didnt work
+    </li><li>The important concept i learned today was interface design issues regarding patients
+    </li><li>Broad and diverse teams working smaller is a better way to approach a problem
+    </li><li>talked about designer stance and calendar on urcourses 
+    </li><li>The importance of having feedback on a design - Generally the designer cannot think of all the possible uses for a product that many different consumers might have. I also learned about the Apollo 13 and the radiation-therapy mishaps that took place that showed oversights into the oversight that can often take place during the design phase.
+    </li><li>having a schedule/routine  is important 
+    </li><li>I did enjoy learning more about what went wrong with Apollo-13, because I knew only that it happened, not any specifics about what went wrong. It is really interesting how the desire to make a task more efficient by breaking it into pieces among teams can create issues with compatibility and interoperability. 
+    </li><li>nothing much
+    </li><li>Nothing really that dificult
+    </li><li>That poor design can be solved and remedied with ingenuity and perseverance
+    </li><li>After reading "The Design's stance", I have realized that creativity is not a matter of talent but it's a thing that can be trained and developed. Successful design depends on a design mindset that is open to possibilities and ready to take risks
+    </li><li>I really enjoyed leaning about creative ideas and how motivation works with the creative ideas of new tools and applications. 
+    </li><li>This section of the passage that we read was really interesting, and it showed me a different way of creative thinking when making designs. ““Look, our job is to begin by looking at the history of bread." Maybe we want to see whether they had a better way to make toast in Renaissance France or on the Space Shuttle. We don’t want just to design the curlicues on the side of the client's next toaster. Maybe what we’re going to find from looking at this history is that the best solution is to put more curlicue"
+    </li><li>case studies of famous interface issues. Eg: the tire pressure sensor
+    </li><li>Today we discussed about the big interface issues. I got to know what big projects have faced this kind of interface issues. And checked how the issue was solved by Apollo 13 astronauts. 
+    </li><li> We discussed about couple of things in today's lecture.  We talked about zoom ui. How zoom link for upcoming events appears when you hover on it, when you are already in a meeting. I found David Kelley's take on design to be quite interesting in the Toaster article, particularly the way his teams approach a fresh project. Your suggestion to design the screens before programming them was also a good one, as it makes it difficult to separate the code later on. 
+    </li><li>nothing for us, without us. the importance of including and considering those you are designing for 
+    </li><li>The concept of looking at design not just on the small scope but looking at the design history of the thing and see if the past had something better.
+    </li><li>Important concept was the case studies of famous interface issues: Therac, Apollo 13
+    </li><li>We discussed the assigned reading "The Designer’s Stance" and shared our opinions on it, as a class. In addition to that, we talked about some of the case studies that involved technical/practical failures such as the Apollo 13 and the Therac-25. 
+    </li><li>approach to design, the mindset of it, applying diff perspectives
+    </li><li>It was really interesting learning the more practical/serious importance of this sort of stuff, particularly with the Therac and Apollo 13 cases
+    </li><li>That designers need to be confident in making mistakes and need to tons of research about users and use cases to make a product that serves its function well but also is accessible in the way that the user is most comfortable with.
+    </li><li>I learned that designers create solutions which creates a lot of uncertainty while engineers solve solutions with certainty.
+    </li><li>how important  are car features like tire pressure system and how better UI will create overall batter customer saticfication.
+    </li><li>The important concept about today's lecture was about tire pressure warnings and also interface design issues regarding patients.
+    </li><li>We looked at some famous interface issues like Therac, Apollo 13 along with the toaster examples form the reading 
+    </li><li>We met with the TA and the professor to discuss the toaster's tire pressure warnings and famous interface issues such as Therac and Apollo 13 case studies.
+    </li><li>Tire pressure warning, case study of famous interface like apollo 13
+    </li><li>Middle point between engineering and design
+    </li><li>I discovered about the THERAC 25 incident as well as the implications involved with bad design.
+    </li><li>We looked at the case that if we need to design an interface, we have to talk to the people who may use the design in order to get trusty information and avoid misleading information in the design. In addition, spending time in design to look broadly and then narrow down to get a solution is the idea of analyzing problems and understanding design opportunities. Lastly, we looked at some brief examples of interface issues, such as Therac and Apollo 13.
+    </li><li>small design changes have big impact on various things on our day to day life.
+    </li><li>Small design modifications in different objects can have a significant impact on our daily routine.
+    </li><li>The concept of product design - using the example of a toaster. Prior to designing a new toaster, it is essential to understand the history of bread making to enhance the quality of the final product
+    </li><li>concept of tiers and it directly related to designing ,which is something i like go through like this type of discussion  
+    </li><li>learn about user playing an important role in design decisions as the are the ones who will actually use a product or service
+    </li><li>No matter how much information we have there will always be some who are uninformed
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>Material was fairly easy to understand.
+    </li><li>Everything was well layed out and it wws interesting to have those discussions in the class. 
+    </li><li>Everything covered today was easy to understand.
+    </li><li>no
+    </li><li>not really
+    </li><li>Nothing, class material was easy to follow.
+    </li><li>I found that the class flowed well and that there wasn't anything too difficult to understand
+    </li><li>It was easy to understand.
+    </li><li>Nothing
+    </li><li>why the time of the quiz was difficult for others
+    </li><li>I struggled to understand why the software issues were not discovered in testing
+    </li><li>I think the tire pressure warnings were difficult for me
+    </li><li>Design modules
+    </li><li>everything was understood and upto the point.
+    </li><li>The only difficulty I had today was people asking for the quiz to be reopened during class. It's week 3 and I figured people would have it figured out by now. Aside from that, what we discussed during the lecture was all good.
+    </li><li>no
+    </li><li>How 17 hours isn't enough time to write a 2 minute quiz
+    </li><li>What was difficult to understand was that a company could overlook dangerous levels of radiation due to poor design choices!
+    </li><li>No, there wasn't anything too difficult to understand
+    </li><li>No
+    </li><li>No, there was nothing I found difficult to understand.
+    </li><li>No I feel I was able to understand everything. 
+    </li><li>No I didn’t find any topic hard to understand.
+    </li><li>Nothing content based that was hard to understand, I do not understand why students are complaining that 17 hours to complete a one question quiz is too little time!
+    </li><li>Everything was adequately explained.
+    </li><li>no
+    </li><li>No.
+    </li><li>no everything was easy to understand and good 
+    </li><li>Yes, this time the article about the designer's stance and the question about toaster was mainly and deeply about creativity and design perspective but the quiz did confuse me and made me rethink about the same from a different perspective.
+    </li><li>No
+    </li><li>I was not able to catch up with the last things which were discussed. 
+    </li><li>No
+    </li><li>Nothing at all
+    </li><li>No
+    </li><li>I found that the case studies of interface issues are the difficult part to follow for me because I do not have background knowledge on those stories, so I think it would be better if you could provide us materials or videos to get some general ideas about the stories.
+    </li><li>No 
+    </li><li>No 
+    </li><li>no
+    </li><li>I am not quite sure about the last thing "Apollo 13" which Professor Hepting mentioned. May be i google about it later.
+    </li><li>no - not something particularly difficult to understand
+    </li><li>The only thing I found difficult to understand was the quiz answer,  I felt like there were a couple different "possible" sources of inspiration
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>Possibly about how to analyze the potential design and understand if it meets the future users' needs.
+    </li><li>I appreciate how professor created an example out of his course design when the students were mentioned they miss quizzes, he asked the question as to how everyone likes his design, I felt its the small things around us that we can improve. But it was interesting how it turned out that the design was good on the professors part but the lack of usability on the students ends who missed the tasks. 
+    </li><li>From the topics covered today, there is none I would like to know more.
+    </li><li>no
+    </li><li>-
+    </li><li>I think it would be interesting to learn about more case studies of famous interface issues such as the therac, Apollo 13
+    </li><li>I would love to know more about the Apollo 13 interface issues. I feel like that is such a huge event that may be overlooked by some people and it is something that people may not even be aware of. It is a very interesting topic.
+    </li><li>I would now like to read more about the Apollo 13 incident
+    </li><li>I would like to discuss more on case study of Apollo 13.  
+    </li><li>Not right now
+    </li><li>no
+    </li><li>More about the testing phase and what goes down
+    </li><li>i need to get more details regarding the workings of making CO2 and apollo 13 case study
+    </li><li>More about what to pay attention to in regards to the article
+    </li><li>read more about the topics 
+    </li><li>I would like to learn a little more about the radiation therapy design issue problems - I know there have been numerous issues, especially in 3rd world countries where poor management and operational practices have led to over-exposure of patients. It's a very interesting topic in my opinion, because radiation is a silent killer.
+    </li><li>We discussed briefly near the end about the Apollo 13, and more specifically the malfunction/demise of it. I would like to know more about this and what specific interface errors caused this.
+    </li><li>cs flim and alumni night 
+    </li><li>Looking forward to hearing about how Harasis will be supporting the class.
+    </li><li>no
+    </li><li>Nope
+    </li><li>Is there other designs throughout history that were exceptionally bad?
+    </li><li>Yes, I would like to read more articles, interviews like this so I can understand more about the importance of creativity
+    </li><li>I'm excited to learn more about designing good software and about Human-Computer Communication
+    </li><li>More case studies would be good. It will help us understand better.
+    </li><li>I would like to know more about interface issues and would like to learn more about this kind of failures.
+    </li><li>how to come up with or develop the ability to come up with new ideas, how to become more creative if you are not creative 
+    </li><li>I would like to explore design history of some things as well! Maybe go over iterations of tire pressure on car dashes and see if they used to have better at some point!
+    </li><li>I would like to know more about the Therac, Apollo 13.
+    </li><li>it would be cool to see more into the design process at IDEO
+    </li><li>I would like to learn more about how to prevent deathly mistakes in computing, like Therac-25
+    </li><li>I would like to further explore the perspective of how an engineer solves problems and how designers solve problems. It's interesting to think that the training we get in school has determined if we solve problems in a more mathematical sense or if we are well rounded and can do both. 
+    </li><li>No.
+    </li><li>no we have got enough information about UI if we include previous classes 
+    </li><li>The accident in the space occurred, that was discussed in the last part of lecture, about conserving power and making CO2 scrubbers work, also more to the Apollo 13 case study.
+    </li><li>No
+    </li><li>A summary of the last topic.
+    </li><li>yes about the apollo 13
+    </li><li>Approach to design
+    </li><li>I'd like to know more about the THERAC 25 and Apollo 13
+    </li><li>I definitely would like to know more about those two stories of interface issues on the problems and solutions.
+    </li><li>No
+    </li><li>No
+    </li><li>no
+    </li><li>want to know more about collaborative design discipline
+    </li><li>I would like to know more about the Apollo 13 mission, I've seen the movie and I don't know if they followed it to the exact events that happened. 
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/05_Tue-23-Jan-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

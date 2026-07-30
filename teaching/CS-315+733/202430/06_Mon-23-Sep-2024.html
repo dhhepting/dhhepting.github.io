@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-315+733/202430/06_Mon-23-Sep-2024.html" />
+    
+    <title>Mtg 06 &bull; CS-315+733 (202430) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 06 &bull; CS-315+733 (202430) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-315+733/202430/06_Mon-23-Sep-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-315+733/",
+        
+          "name": "CS 315+733"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-315+733/202430/",
+        
+          "name": "202430"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-315+733/202430/06_Mon-23-Sep-2024.html",
+        
+          "name": "Mtg 06 (Mon-23-Sep-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-315+733/">
+        CS 315+733
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-315+733/202430/">
+        202430
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 06 (Mon-23-Sep-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 6/23: Mon-23-Sep-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="05_Wed-18-Sep-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="07_Wed-25-Sep-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Animation and Interaction
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Monday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=2735311&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1727071200&amp;course=33616" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=33616" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Response to Responses
+  </h4>
+  <ul>
+  <li>Responses are to be submitted by noon the following day. Thoughtful is not just a list of topics discussed</li>
+</ul>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li>assignment 1 questions?</li>
+  <li>painters’ terminology - mixing pure colour with white is a tint, with grey is a tone, with black is a shade</li>
+  <li><a href="https://en.wikipedia.org/wiki/HSL_and_HSV" target="_blank">More detail about colour – from wikipedia</a></li>
+  <li><a href="https://interactivecomputergraphics.com/8E/Code/03/" target="_blank">Chapter 3 code</a></li>
+</ul>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li>Will discuss picking (Chapter 3)</li>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2733992" target="_blank">Submit your response to this meeting before noon tomorrow</a></li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2739478" target="_blank">Take the quiz before the start of our next meeting</a></li>
+</ul>
+<h5><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2739478">ACTION: Take quiz before next meeting</a></h5><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=9502">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_06" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_06" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_06" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_06" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_06" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_06" data-bs-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/suisqriyfz9ac18ovrmob/06-1.png?rlkey=nhh5u8vie963gelyi80t9l86n&amp;dl=0" alt="06 - 1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/1jhpx2h2wzixmk3y3xf7a/06-2.png?rlkey=no1hbhw0rcanjjjqlt5ups03q&amp;dl=0" alt="06 - 2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/76vj7p5v2im773obkl30r/06-3.png?rlkey=b02t5ws3454unrkduadm0ohgp&amp;dl=0" alt="06 - 3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/73wekxjvg2z9srep6h354/06-4.png?rlkey=su3p28rihi1bq9d8b03bwopqm&amp;dl=0" alt="06 - 4.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/8dr0vnht3k617ble7t1pa/06-5.png?rlkey=jacy7afjnok88wa6x0uc863c6&amp;dl=0" alt="06 - 5.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_06" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_06" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Okay, it's fourth. It's
+not fourth period time for the
+          </li><li>
+            
+            thanks
+          </li><li>
+            
+            for that true excitement. So
+it's our sixth meeting.
+          </li><li>
+            
+            This is Chapter
+          </li><li>
+            
+            Three
+          </li><li>
+            
+            about animation in the
+          </li><li>
+            
+            direction, oh,
+          </li><li>
+            
+            I wondered why the scooter was
+blank. I didn't plug it into the
+          </li><li>
+            
+            HDMI. I
+          </li><li>
+            
+            and I didn't save the changes. I
+          </li><li>
+            
+            Yes, let me do that.
+          </li><li>
+            
+            It looks like It's been saved. I
+          </li><li>
+            
+            well, I put
+          </li><li>
+            
+            it In the wrong me. I
+          </li><li>
+            
+            Oh, yes, I did.
+          </li><li>
+            
+            I'll fix that shortly. Anyway,
+assignment, one questions,
+          </li><li>
+            
+            that's the first time I made
+that. I guess it's the first
+          </li><li>
+            
+            time for everything. Yeah, how
+much of a
+          </li><li>
+            
+            code from examining the textbook
+Are we allowed to use? We
+          </li><li>
+            
+            allowed
+          </li><li>
+            
+            to use, like we like
+boilerplate,
+          </li><li>
+            
+            everything, textbook and just
+build right
+          </li><li>
+            
+            on top of it? Yes. So
+          </li><li>
+            
+            you should make comments and
+make it be clear about what
+          </li><li>
+            
+            you're using from the textbook
+code, but
+          </li><li>
+            
+            I'm not going to make you
+pretend to have come up with
+          </li><li>
+            
+            things on your own, because
+we're going to use the textbook
+          </li><li>
+            
+            code
+          </li><li>
+            
+            as our examples for how to
+          </li><li>
+            
+            do things,
+          </li><li>
+            
+            It's not the only way to do it,
+and some of the code samples are
+          </li><li>
+            
+            a little bit dated, like var for
+example, isn't a lot. That is a
+          </li><li>
+            
+            better way to handle things,
+handle variable declarations and
+          </li><li>
+            
+            but
+          </li><li>
+            
+            there's enough in the assignment
+for you to add on yourselves
+          </li><li>
+            
+            that you can take what You can
+take the sample of the starting
+          </li><li>
+            
+            point And
+          </li><li>
+            
+            did you see my additions to the
+assignment?
+          </li><li>
+            
+            So here's a generic here's the
+Genesis sequence from Star Trek,
+          </li><li>
+            
+            Wrath of Khan. That's not it.
+And and I didn't realize that
+          </li><li>
+            
+            the Wrath of Khan came up before
+I graduated high school.
+          </li><li>
+            
+            No thanks. I
+          </li><li>
+            
+            so here we go.
+          </li><li>
+            
+            Let me get the audio for you. I
+          </li><li>
+            
+            Okay, that should do it. I
+          </li><li>
+            
+            instantaneously causing what we
+call the Genesis effect. Matter
+          </li><li>
+            
+            is reorganized with life
+generally. Tip of living
+          </li><li>
+            
+            breathing time
+          </li><li>
+            
+            came. Capable of sustaining
+whatever life forms we see, that
+          </li><li>
+            
+            the reforming what we celebrate
+here represents the nearest
+          </li><li>
+            
+            traction of the chances
+potential. Should the Federation
+          </li><li>
+            
+            wish to fund these experiments
+to their logic when we consider
+          </li><li>
+            
+            the cosmic problems of
+population and food supply. The
+          </li><li>
+            
+            usefulness of this process
+becomes clear. This includes
+          </li><li>
+            
+            early there are
+          </li><li>
+            
+            three simple changes. That's how
+all fire stations make. Number
+          </li><li>
+            
+            one, you
+          </li><li>
+            
+            have to start treating you
+          </li><li>
+            
+            do you want to share you stopped
+at where it said you go to
+          </li><li>
+            
+            surgery. Oh, great. Yeah. I
+          </li><li>
+            
+            most days I'm drinking more
+water and maybe more coffee.
+          </li><li>
+            
+            You might be drinking other
+things anyway You Yeah,
+          </li><li>
+            
+            just hide that video screen.
+          </li><li>
+            
+            I So would you see the mountains
+that popped up? So the way
+          </li><li>
+            
+            they're using the triangle
+subdivision, perturbing the the
+          </li><li>
+            
+            midpoints of the triangles,
+we're taking a surface or a
+          </li><li>
+            
+            height field, and then we're
+displacing it in, well, if we
+          </li><li>
+            
+            think of it in x and y, and Then
+we're displacing it in Z to
+          </li><li>
+            
+            create the mountains, and we fly
+over. But if we think about z in
+          </li><li>
+            
+            the distance, then we can think
+of it as the x said plane. And
+          </li><li>
+            
+            we're changing y and
+          </li><li>
+            
+            so if you look closely enough,
+you can see there are some
+          </li><li>
+            
+            straight lines, some scenes in
+the in the mountains that don't
+          </li><li>
+            
+            look quite so natural. But for
+1982 this was a big thing.
+          </li><li>
+            
+            Anyway, that's the reference I
+made to the Wrath of Khan and
+          </li><li>
+            
+            the assignments. So I have added
+two images the samples of output
+          </li><li>
+            
+            here is with the random
+approach. So the idea is the
+          </li><li>
+            
+            three triangles in this if three
+sub triangles in this lower left
+          </li><li>
+            
+            triangle are colored red,
+          </li><li>
+            
+            a little more pink and a little
+more,
+          </li><li>
+            
+            just a hint of Red in the white,
+          </li><li>
+            
+            and then we have green the fully
+saturated green, less saturated
+          </li><li>
+            
+            green, and this is a white with
+a hint of green and then blue at
+          </li><li>
+            
+            the top. Does that make sense? I
+          </li><li>
+            
+            Okay, so that's,
+          </li><li>
+            
+            that's the sample for the random
+one. Here's the recursive
+          </li><li>
+            
+            subdivision sample. So it's the
+same colors, red, green and blue
+          </li><li>
+            
+            in the lower right, lower left
+corners of the sub triangles and
+          </li><li>
+            
+            then the other versions.
+          </li><li>
+            
+            So a difference between the
+subdivision approach and the
+          </li><li>
+            
+            random one is, if we did more
+subdivisions, we could see the
+          </li><li>
+            
+            structure repeated at a finer
+level, so we would see the same
+          </li><li>
+            
+            nine triangles
+          </li><li>
+            
+            in to subdivide each of these
+triangles, for example, does
+          </li><li>
+            
+            that make sense? So the coloring
+would be preserved within the
+          </li><li>
+            
+            nine triangles, and we can
+generate to a greater love of
+          </li><li>
+            
+            detail. So in the random case,
+we're just going to see those
+          </li><li>
+            
+            nine colors,
+          </li><li>
+            
+            because there's no we don't have
+a information like we do in the
+          </li><li>
+            
+            subdivision case, in the
+recursive subdivision case. Does
+          </li><li>
+            
+            that make sense? Okay, any, Any
+other questions? Let me know. I
+          </li><li>
+            
+            Okay, so there's a link for
+attendance for today.
+          </li><li>
+            
+            So I mentioned tints and tones
+the other day. So painters
+          </li><li>
+            
+            terminal eye for mixing colors.
+If you take a pure color and mix
+          </li><li>
+            
+            it with white, that's a tint. If
+you mix the pure color with
+          </li><li>
+            
+            gray, that's a tone, and if you
+mix it with black, then you get
+          </li><li>
+            
+            a shade. And that's that's in
+the Wikipedia reference. In the
+          </li><li>
+            
+            Next line, I
+          </li><li>
+            
+            so the title of the article is
+not more detailed about color,
+          </li><li>
+            
+            but it's HSV and HSL. So those
+are some transformations we can
+          </li><li>
+            
+            use on RGB to make them a little
+bit more intuitive to pick
+          </li><li>
+            
+            colors. But it's an interesting
+article, if you article, if you
+          </li><li>
+            
+            want to look at it, that sun can
+be a focus of our, of our
+          </li><li>
+            
+            efforts in class. But there's,
+there's lots of issues about
+          </li><li>
+            
+            creating a perceptually base
+colors, color ball that we can
+          </li><li>
+            
+            use to select colors and
+          </li><li>
+            
+            so we talked about they're
+presented as perceptually based,
+          </li><li>
+            
+            but they're not exactly accurate
+In all the perceptual parameters
+          </li><li>
+            
+            and
+          </li><li>
+            
+            so I want to get into chapter
+Three. I
+          </li><li>
+            
+            Let's try rotating square One
+and
+          </li><li>
+            
+            let's stop that.
+          </li><li>
+            
+            Okay, Let me introduce Some
+ideas. First. I
+          </li><li>
+            
+            I didn't turn out too Bad.
+          </li><li>
+            
+            Does it look like a circle.
+          </li><li>
+            
+            Now that doesn't look squared,
+but Let's imagine that It is a
+          </li><li>
+            
+            So cosine, if we think of the
+angle at zero, cosine of zero is
+          </li><li>
+            
+            one, sine of zero is zero. So
+          </li><li>
+            
+            so you get minus One. So
+          </li><li>
+            
+            you have a comment, okay,
+          </li><li>
+            
+            so for interaction, we're
+dealing With the DOM and we're
+          </li><li>
+            
+            setting up callback functions,
+event listeners for different
+          </li><li>
+            
+            things that happen interaction
+with the web browser window, and
+          </li><li>
+            
+            then we use that to trigger
+events. So we define a callback
+          </li><li>
+            
+            for each event in the graphic
+system the callbacks is executed
+          </li><li>
+            
+            when the event occurs. So
+          </li><li>
+            
+            we can see
+          </li><li>
+            
+            in our browser, we're
+interacting with the web server,
+          </li><li>
+            
+            and then on the local computer,
+we have the JavaScript engine,
+          </li><li>
+            
+            and our CPU and GPU, and then
+the canvas. And inside the
+          </li><li>
+            
+            associated with the canvas is
+the frame buffer. That's the GL
+          </li><li>
+            
+            context,
+          </li><li>
+            
+            so we have the HTML file that
+has describes the look of the
+          </li><li>
+            
+            page, and it does contain the
+shaders in our cases, in the
+          </li><li>
+            
+            cases we're looking at, we're
+putting The shaders inside the
+          </li><li>
+            
+            HTML file with script tags, and
+then it loads the JavaScript
+          </li><li>
+            
+            files that are needed or that
+are specified.
+          </li><li>
+            
+            So in our JavaScript files, we
+have things in init and render,
+          </li><li>
+            
+            and those two functions are
+controlling the interaction with
+          </li><li>
+            
+            the soft all the graphics that
+are going to go on.
+          </li><li>
+            
+            So if we don't call init,
+nothing's going to happen. So
+          </li><li>
+            
+            then we use the onload event to
+start the init, and then The
+          </li><li>
+            
+            init calls render, and then it
+keeps going. And
+          </li><li>
+            
+            so we can generate points,
+location of the vertices by
+          </li><li>
+            
+            evaluating the angles. I
+          </li><li>
+            
+            I didn't just labeling makes
+sense with this diagram, but
+          </li><li>
+            
+            I they're different
+          </li><li>
+            
+            here, So we can cosine and sine
+minus sine and cosine. Minus
+          </li><li>
+            
+            cos
+          </li><li>
+            
+            minus sine of
+          </li><li>
+            
+            so we can continue to do this.
+We could just calculate the
+          </li><li>
+            
+            vertices as we're changing The
+angle, and we can substitute the
+          </li><li>
+            
+            buffer data and
+          </li><li>
+            
+            does that seem like a good
+approach? It's straightforward,
+          </li><li>
+            
+            but are we using the
+capabilities of our graphics
+          </li><li>
+            
+            processing unit? I
+          </li><li>
+            
+            so we have the vertices in the
+buffer. How about can transform
+          </li><li>
+            
+            the vertices in The GPU and
+          </li><li>
+            
+            so let's just Send
+          </li><li>
+            
+            the angle of rotation and
+          </li><li>
+            
+            so uniform variable isn't
+changing isn't linked to
+          </li><li>
+            
+            vertices or other things. So we
+can still change it, but it's
+          </li><li>
+            
+            not associated with each vertex.
+For example, I
+          </li><li>
+            
+            So
+          </li><li>
+            
+            like we've done with the
+position attributes, we get a
+          </li><li>
+            
+            location for that uniform angle
+input,
+          </li><li>
+            
+            how do we indicate or help
+ourselves remember that it's a
+          </li><li>
+            
+            uniform variable.
+          </li><li>
+            
+            Yeah, we put u in front of the
+variable name.
+          </li><li>
+            
+            So in the render function, we
+clear the color bit, we
+          </li><li>
+            
+            increment theta by point 01,
+          </li><li>
+            
+            then we set the value of the
+theta, theta location to, excuse
+          </li><li>
+            
+            me, please, to that variable. We
+make that connection. Then we
+          </li><li>
+            
+            draw the triangles and render.
+          </li><li>
+            
+            Any issues there? I
+          </li><li>
+            
+            maybe the render is a problem
+that we're calling render inside
+          </li><li>
+            
+            the render function, we might
+end up with a stack overflow
+          </li><li>
+            
+            condition, because we can
+request the renders faster than
+          </li><li>
+            
+            we can create The images. So the
+new addition is request
+          </li><li>
+            
+            animation frame for
+          </li><li>
+            
+            so how Can we conceptualize
+creating? Frames in this
+          </li><li>
+            
+            animation. I
+          </li><li>
+            
+            Maybe that's not A good
+question. I
+          </li><li>
+            
+            so If we have two sequential
+frames, how do we make the
+          </li><li>
+            
+            animation smooth? It might not
+take
+          </li><li>
+            
+            very much time for us to draw a
+square, a triangle, stripper
+          </li><li>
+            
+            forward a seats and
+          </li><li>
+            
+            much more complicated, And we're
+trying to make them appear
+          </li><li>
+            
+            smoothly on the
+          </li><li>
+            
+            comment,
+          </li><li>
+            
+            no, okay, do
+          </li><li>
+            
+            so let's say we have two frames,
+and we say, request animation
+          </li><li>
+            
+            frame, and
+          </li><li>
+            
+            we're going from one to two.
+What's the condition we have for
+          </li><li>
+            
+            frame two? Before we switch to
+it has to be done Dry. Yeah, I
+          </li><li>
+            
+            want to have it finished drying.
+I'm
+          </li><li>
+            
+            so in OpenGL, we have a command
+called swap buffers. So we have
+          </li><li>
+            
+            a
+          </li><li>
+            
+            so When we want to have a
+          </li><li>
+            
+            smoothly rotating square or
+other animated model.
+          </li><li>
+            
+            What? What do we need? I
+          </li><li>
+            
+            let me put that other way, if we
+want a smoothly animated
+          </li><li>
+            
+            graphic, can we wait an
+arbitrary amount of time for the
+          </li><li>
+            
+            great to finish drawing. Say it
+takes five minutes. Are you
+          </li><li>
+            
+            going to get an Animation?
+          </li><li>
+            
+            Not in Real Time. I
+          </li><li>
+            
+            so in a traditional film we
+take, we have 24 frames per
+          </li><li>
+            
+            second, and that I
+          </li><li>
+            
+            that is a fairly,
+          </li><li>
+            
+            fairly good animation. It's
+          </li><li>
+            
+            CMT, North American broadcasting
+standard is three frames per
+          </li><li>
+            
+            second. The
+          </li><li>
+            
+            modular displays.
+          </li><li>
+            
+            Senator Brandon, Senator 72
+hertz per modern display.
+          </li><li>
+            
+            What 60 Hertz to like 122,
+          </li><li>
+            
+            44 depending on the
+          </li><li>
+            
+            we do animation. We get some of
+them. You may see the frames per
+          </li><li>
+            
+            second. So for refreshing, 120
+times a second. That would be
+          </li><li>
+            
+            very smooth animation, if you
+could do 120, frames per second.
+          </li><li>
+            
+            You
+          </li><li>
+            
+            so there is a term critical
+fusion frequency you
+          </li><li>
+            
+            and that's much lower than the
+top speed that we can get out of
+          </li><li>
+            
+            our GPU. I
+          </li><li>
+            
+            So should we try? Let's take a
+look at that rotating square
+          </li><li>
+            
+            again. Let's
+          </li><li>
+            
+            finish the so
+          </li><li>
+            
+            that's our render function. So
+we've added the request
+          </li><li>
+            
+            animation frame to make sure we
+don't stop workflow condition.
+          </li><li>
+            
+            So this is the vertex shader.
+          </li><li>
+            
+            So as input, we
+          </li><li>
+            
+            have the four position vector
+eight position which is a vertex
+          </li><li>
+            
+            attribute we've set up in the
+JavaScript because it started in
+          </li><li>
+            
+            A and then we're dealing with
+the uniform theta and n. So
+          </li><li>
+            
+            we're calculating the new
+position x and y.
+          </li><li>
+            
+            So we take minus theta minus u,
+theta times a position x, plus
+          </li><li>
+            
+            cos theta times a position y, to
+get the x coordinate.
+          </li><li>
+            
+            And then we do a similar
+calculation for the new y
+          </li><li>
+            
+            coordinate, the z coordinate is
+set to zero and W set to one.
+          </li><li>
+            
+            We'll talk about W shortly. The
+          </li><li>
+            
+            it so the buffer swap is done
+either with a request animation
+          </li><li>
+            
+            frame, or we can set up an
+interval timer.
+          </li><li>
+            
+            So we can set an interval timer
+for the render function and
+          </li><li>
+            
+            interval interval greater than
+zero, so we don't run into the
+          </li><li>
+            
+            Stack Overflow problem. Again,
+we
+          </li><li>
+            
+            so here we have set timeout
+function and the function we
+          </li><li>
+            
+            were doing for the timeout is
+the body of the render, so we
+          </li><li>
+            
+            have the request animation,
+frame, Clear the clear the
+          </li><li>
+            
+            screen, increment, U, theta, and
+draw the strip, and the interval
+          </li><li>
+            
+            is 100 milliseconds, so 1/10 of
+a second will trigger A new
+          </li><li>
+            
+            grand tree and
+          </li><li>
+            
+            Okay, let's look At the
+          </li><li>
+            
+            code. Okay,
+          </li><li>
+            
+            so We have a vertex here. We're
+          </li><li>
+            
+            degree. So we're getting sine
+and cosine of d theta. And this
+          </li><li>
+            
+            is
+          </li><li>
+            
+            this, our
+          </li><li>
+            
+            transformation for the X and Y
+take minus sign u theta times a
+          </li><li>
+            
+            position y plus cosine u theta
+times a partition x, then for so
+          </li><li>
+            
+            that's the new x. The new y is
+sine u theta times x to the x
+          </li><li>
+            
+            position and cosine u theta
+times the y position, so that
+          </li><li>
+            
+            does what was advertised in the
+slide. And then F color fragment
+          </li><li>
+            
+            color is going to be red. So
+let's
+          </li><li>
+            
+            take a look at how that plays
+          </li><li>
+            
+            out in JavaScript. So this is
+the onload to make sure the init
+          </li><li>
+            
+            gets called. So we're getting
+the Canvas ID by using the dog
+          </li><li>
+            
+            and then getting a contact with
+the count from the campus so
+          </li><li>
+            
+            that we can use GL two, we have
+a GL two set up the display. So
+          </li><li>
+            
+            here are the vertices. So the
+first section here is loading
+          </li><li>
+            
+            the vertices into the ray buffer
+so,
+          </li><li>
+            
+            so we have the square 01 minus
+10100, minus one. So that's
+          </li><li>
+            
+            centered at the origin.
+          </li><li>
+            
+            Minus Zero. I
+          </li><li>
+            
+            01, minus 101,
+          </li><li>
+            
+            I must need some more coffee.
+It's not a square, it's a
+          </li><li>
+            
+            diamond. Anyone remember the
+shreves commercials from a few
+          </li><li>
+            
+            years ago? I
+          </li><li>
+            
+            it's basically shreddings are
+squares, but they turned them on
+          </li><li>
+            
+            the side, and then, oh, they're
+diamonds.
+          </li><li>
+            
+            Okay, anyway, so that was my
+struggle with doing math on
+          </li><li>
+            
+            the board for the day, I think.
+          </li><li>
+            
+            So we connect, you load the
+vertices, so that's our starting
+          </li><li>
+            
+            position, and then we connect
+the buffer with the eight
+          </li><li>
+            
+            position variable in the
+shaders.
+          </li><li>
+            
+            And then we're also getting
+we're making the connection with
+          </li><li>
+            
+            new data,
+          </li><li>
+            
+            So then the rendering is as in
+the slide. So
+          </li><li>
+            
+            so we have rotating square so
+that's set up so that we're
+          </li><li>
+            
+            making the most of the GPU.
+We're just we're just sending
+          </li><li>
+            
+            four coordinates for the
+vertices of the square, and then
+          </li><li>
+            
+            we're doing a transformation in
+the shaders on the GPU,
+          </li><li>
+            
+            so we're Not having to send a
+great deal of information you
+          </li><li>
+            
+            Okay, so the controls didn't
+show up because I had zoomed out
+          </li><li>
+            
+            too much. Zoomed in too much. So
+then we have the ability.
+          </li><li>
+            
+            I'm not sure why he has two left
+to Do the same thing. He
+          </li><li>
+            
+            Spin faster and slower and
+          </li><li>
+            
+            Okay, so we have a couple
+controls There. Let's look at
+          </li><li>
+            
+            how we set those up.
+          </li><li>
+            
+            So in the HTML file we have the
+          </li><li>
+            
+            the button ID called direction,
+change the rotation direction,
+          </li><li>
+            
+            and then we have a select
+control. So zero, an input of
+          </li><li>
+            
+            zero gives us change of
+direction. One makes spin
+          </li><li>
+            
+            faster. Two controls Spin
+decreases the speed of spinning.
+          </li><li>
+            
+            I
+          </li><li>
+            
+            Okay, so you we've named these
+so we can access them in the
+          </li><li>
+            
+            JavaScript you
+          </li><li>
+            
+            so we can see that
+          </li><li>
+            
+            we have a
+          </li><li>
+            
+            so we're initializing
+          </li><li>
+            
+            the event handler for the
+direction button, so we get the
+          </li><li>
+            
+            album via key and we see On
+Click function. So we're
+          </li><li>
+            
+            changing the direction. We're
+negating the previous version
+          </li><li>
+            
+            value for the direction, so it's
+either zero or one.
+          </li><li>
+            
+            Then the controls once you click
+on the controls, we have an
+          </li><li>
+            
+            event handler.
+          </li><li>
+            
+            So, case zero is direction
+changes, case one for
+          </li><li>
+            
+            so this is a little confusing, I
+think, because so we can click
+          </li><li>
+            
+            on so the first one is clicking
+on a display
+          </li><li>
+            
+            and 01, and two, and then on key
+down, switching through, using
+          </li><li>
+            
+            one, two and 3s case to enter.
+So anyone
+          </li><li>
+            
+            else think that's a little
+confusing? I mean, you don't see
+          </li><li>
+            
+            the 01, and two, I think it's so
+you can use your keyboard as
+          </li><li>
+            
+            well as just clicking on it.
+Yeah, I'm just talking about the
+          </li><li>
+            
+            values.
+          </li><li>
+            
+            So the first one, we're going
+01, and two, and then we've
+          </li><li>
+            
+            changed to the white. Then the
+key values are one, two and
+          </li><li>
+            
+            three. There's nothing stopping
+this, using 01, and two as a
+          </li><li>
+            
+            key. Key presses and
+          </li><li>
+            
+            I think that would trip me up at
+one point, when I'm looking at
+          </li><li>
+            
+            the code, I see 01, and two, one
+place night, thinking that's the
+          </li><li>
+            
+            values that I want. That's what
+I want to input. Anyone else
+          </li><li>
+            
+            think that's a possible
+opportunity for problems? Okay?
+          </li><li>
+            
+            So we can body that's okay. Do
+          </li><li>
+            
+            that still counts for
+participation anyway. I think
+          </li><li>
+            
+            we're at the end of the day
+today, and I'm going to make a
+          </li><li>
+            
+            note of everybody who, no, I'm
+not any questions or concerns
+          </li><li>
+            
+            from today? Yeah, What
+          </li><li>
+            
+            is The critical
+          </li><li>
+            
+            number?
+          </li><li>
+            
+            I'm Just curious.
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Various animation framerates
+    </li><li>We learned about the different types of events that can be used to change something about the code in yyesterdays class it was the different speeds and ways that we could spin the square and how we could apply those to other functionalities
+    </li><li>In this class, I learned about how complex it is to create an animation frame by frame. I used to think each frame would be displayed one at a time all at once, but today I learned that there is a delay in time before the next frame occurs.
+    </li><li>Some important concepts I encountered in the last meeting were how to rotate a square, what requestAnimationFrame does, the different framerates for animation in film and for modern displays, what critical fusion frequency is, and then we looked at the code for rotatingsquare1 and rotatingsquare2.
+    </li><li>I think kthe most important concept was the introduction of requestAnimationFrame() so that we can achieve a consistent and smooth framerate.
+    </li><li>Interaction + Animation 
+    </li><li>Recursion
+    </li><li>Critical Fusion Frequency and the concept of fps and hz for displays.
+    </li><li>We learned how to create a rotating square. In addition, introducing the requestAnimationFrame to avoid stack overflow and make the smooth animation.
+    </li><li>Animations
+    </li><li>Interaction
+    </li><li>Tints/Tones/Shades , RequestAnimationFrame function, Rotating square code and approach, use of double buffers, Frame rates of animations, Critical Fusion Frequency
+    </li><li>The key concept for animating a rotating square involves using a uniform variable theta to control the square’s rotation and using requestAnimationFrame to ensure smooth synchronization of the animation with the browser's refresh rate.
+    </li><li>I learned about the rotating square programm which applies a constant rotation through an animation loop.
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-315+733/202430/06_Mon-23-Sep-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

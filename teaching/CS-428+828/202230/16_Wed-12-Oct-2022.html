@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+828/202230/16_Wed-12-Oct-2022.html" />
+    
+    <title>Mtg 16 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 16 &bull; CS-428+828 (202230) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/16_Wed-12-Oct-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/",
+        
+          "name": "CS 428+828"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/",
+        
+          "name": "202230"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/16_Wed-12-Oct-2022.html",
+        
+          "name": "16 (Wed-12-Oct-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/">
+        CS 428+828
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+828/202230/">
+        202230
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      16 (Wed-12-Oct-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 16/36: Wed-12-Oct-2022
+  </h1>
+  <div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="15_Fri-07-Oct-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="17_Fri-14-Oct-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a>
+
+               
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  Responses
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    The most important thing that I encountered
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    The most difficult thing for me to understand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    The thing about which I would most like to know more
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+          Administration
+        </h4>
+        <ul><li>
+                Happy Wednesday
+              </li><li>
+                <a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1900809&amp;view=1">
+                  Attendance
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1665554400&amp;course=24538">
+                  Class calendar for today
+                </a>
+              </li><li>
+                <a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=24538">
+                  Upcoming events
+                </a>
+              </li></ul><h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_16" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_16" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_16" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_16" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_16" data-bs-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/3g0dazv53jvfnnx/16%20-%20img-1.png?dl=0" alt="16 - img-1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/x8lu4zvdybmwppf/16%20-%20img-2.png?dl=0" alt="16 - img-2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/uix7yjofrfnw38j/16%20-%20img-3.png?dl=0" alt="16 - img-3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/s/nfwcf2n1xub0uhw/16%20-%20img-4.png?dl=0" alt="16 - img-4.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_16" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_16" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            So this is really frustrating that when I switch between roles I get error messages because they don't have the right permissions
+          </li><li>
+            
+            right error message is made some sort of logging activity so if the students somehow got on a session like the IPS and trying to go in I tend to log on
+          </li><li>
+            
+            Yeah.
+          </li><li>
+            
+            If you go to status set click on the top and status set. It will should allow you to change the settings No
+          </li><li>
+            
+            Oh status set and then scroll down to a new set of statuses
+          </li><li>
+            
+            that you scroll down a little further to show you the status is there. Okay. So you can remove them or change them or make them available for students first, a certain period of time
+          </li><li>
+            
+            Okay, so what I noticed Okay, so clicking on the question mark for available for students I can you read that all right
+          </li><li>
+            
+            so, thing that I want to point out or I want to do consider is
+          </li><li>
+            
+            makes sense but the titles available for students
+          </li><li>
+            
+            Yeah. Yeah, so, this one isn't too bad? I guess the question I get very So, is this consistent so, I want to hide I want to hide something for the students I set two minutes to zero and we noticed another way to hide things from students. So, there's an eyeball and maybe there's some other ones. So important is consistency or the lack of consistency in your courses for Moodle it's not. So the other thing I noticed about just a little too big now. automatically set when not mark so speaking of surfing people don't record it let's say so now how do we get rid of it?
+          </li><li>
+            
+            Did your available for me?
+          </li><li>
+            
+            Yeah, so the other thing I notice, so we just went read through the instructions if you do want to hide it from students enter zero minutes
+          </li><li>
+            
+            where it's blank,
+          </li><li>
+            
+            then it's always available. That was that was the part of the documentation that was good. So to explain that. But then on the other hand. We said well, why not just use the eyeball. But here's the eyeball. So let's Okay, so that removes the option so, and why is there a delete icon here but not on the other ones.
+          </li><li>
+            
+            Did you add delete? I mean did you add delete was late one that you've added yourself or
+          </li><li>
+            
+            no I did not do that excuse
+          </li><li>
+            
+            me, they probably have a couple of fields that cannot be deleted, specifically because the form probably will crash if you delete all the fields and try and run it and they don't want to do error checking.
+          </li><li>
+            
+            Yeah, so any any markers, any pupil, any students who have done marking error?
+          </li><li>
+            
+            So you notice if you download a worksheet you have you can't just it's not clear which columns you need. So it's better to keep them all
+          </li><li>
+            
+            and just add the grade adding. And then if you don't, if instructor hasn't clicked on feedback, comments it won't just give you that column and the download and grading worksheet. You have to go back and add it so I or the instructor has to add it so that it appears in the way that your course is or Moodle wants to read it should we set
+          </li><li>
+            
+            a time for President to make lady available for that entire session?
+          </li><li>
+            
+            So what I'm curious now is if I say 90 minutes or less to update it doesn't mind having the status available for longer than the class time.
+          </li><li>
+            
+            Can you set up for negative things? That means it's available for but as soon as we start the session
+          </li><li>
+            
+            it'd be interesting to see how that how it interprets it so can you I think you can add an attendance feature in the experimental course.
+          </li><li>
+            
+            So really, maybe you want to say for the first half of class you can be present and then
+          </li><li>
+            
+            see, I would like to say you get to be present for the if you click on the first 25 minutes late if you click on the last 25 minutes, but it's not clear that that's what is being conveyed in the interface. Anyway, so this sounds like a good midterm question. stumped the van
+          </li><li>
+            
+            25
+          </li><li>
+            
+            Yeah, so let's read the comment again. So it's not clear to me. So present might like to have that option. So I suppose if we set this, set it like this. Then the screen would come up with and we didn't just have
+          </li><li>
+            
+            so another one that sticks out here is. That's another heuristic that seems to be because I can set things up here like it seems to me the system was helping me that it wouldn't let me make the status available for longer than the attendance is open. And I wouldn't be able to enter negative numbers would have a better explanation of what
+          </li><li>
+            
+            perhaps is the valence. I have class objects because each category can have different so yeah, it doesn't make sense to make the present available outside of class but say absent that you can find yourself absent notes under class hours. If you're not in classes over, you can still Saturday or work their classes over you can say that you weren't there. It he said the timer for each different
+          </li><li>
+            
+            that makes sense that he would still you could still get a participation. You should suffer you're still participating and marking yourself apps class
+          </li><li>
+            
+            icon because when you access it has, of course instructor you can have options. That's the That's it. But does the icon also hide it from your interface? Because the no just said if you put zero in high school students
+          </li><li>
+            
+            switch roles
+          </li><li>
+            
+            Okay submit
+          </li><li>
+            
+            attendance okay 45 minutes Yeah, sure. I think the minute that 25 minutes is working late. summaries are common right now. Maybe QR code. So much latency Oh
+          </li><li>
+            
+            I thought we put 25 And I guess it didn't leave isn't available because I made it invisible excuses. So those two are not available in that I have apps as my other option
+          </li><li>
+            
+            excused as a default option. It's an interesting default option considering itself mark so it's I've decided that I was excused on doing it up like yeah, you know what I think they would excuse me to put a password on that. So
+          </li><li>
+            
+            you give them a password then they fix
+          </li><li>
+            
+            themselves so it wouldn't be so, present option because it's not hidden, but it's it's not 40 minutes before class time. would be helpful to have a note there to say
+          </li><li>
+            
+            you can only record if you're present. If you can 40 minutes before class or whatever it misinterprets imagery independent of that can or it could just not show it all. Anyway
+          </li><li>
+            
+            because assuming this activity is only available once it's an option, it might ever be difficult. So maybe a preview or some kind of explanation. would be helpful. Okay, just checked the patient for oh, are you able to get one
+          </li><li>
+            
+            that plays into consistency
+          </li><li>
+            
+            that it might be because I can't believe present
+          </li><li>
+            
+            maybe because they accept because
+          </li><li>
+            
+            that started and people have chosen them. I mean people also test a theory
+          </li><li>
+            
+            who can't be a class just to say they're absent.
+          </li><li>
+            
+            Don't want to download a spreadsheet.
+          </li><li>
+            
+            Maybe it is a few because as yourself as you can delete excuse me, so maybe if you just enter as a student.
+          </li><li>
+            
+            So what I see is that there are only present and absent options in the data file. For in their responses that I've received so far. So that that seems to shoot down the theory that that we had data that's why we couldn't remove the option
+          </li><li>
+            
+            well I just spent not today so it's okay
+          </li><li>
+            
+            Evening Okay, so I invite your suggestions for questions, and you can suggest answers as well. If nobody suggests questions and answers that doesn't mean you won't have to
+          </li><li>
+            
+            submit negative questions
+          </li><li>
+            
+            if we submit a certain number of questions let's say 20. We know for sure that of those questions like the midterm questions will be one of those
+          </li><li>
+            
+            Okay, so the midterm is going to be 50 minutes long in class. So chances are there won't be 20 questions.
+          </li><li>
+            
+            Yeah, but I mean like, if we put a lot, a lot of work into this, then you can say okay, I will choose from these questions. Outside
+          </li><li>
+            
+            What if we just have random questions from random others? Yes.
+          </li><li>
+            
+            Okay
+          </li><li>
+            
+            that could work. I wouldn't say random questions but you might find it example from another class we talked about interface design or our discussion about Unicode and jets on Friday might be a good source of questions.
+          </li><li>
+            
+            For short answer
+          </li><li>
+            
+            yes. So you can have different you're willing to Okay, so I said that. I believe that at the start a class you mentioned stores. I was just gonna say that. So let's end our formal portion of class now and a few minutes before we have to run off to your next class
+          </li><li>
+            
+            should be or your groups Okay, so see you on Friday. Thank you for today and we'll see you on Friday. For presentation cool cool stuff. I think it's there's two people so anyway, thank you for today and I'll be here if you have questions.
+          </li><li>
+            
+            should be or your groups Okay, so see you on Friday. Thank you for today and we'll see you on Friday. For presentation cool cool stuff. I think it's there's two people so anyway, thank you for today and I'll be here if you have questions.
+          </li></ul>
+    
+  
+    
+  <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>This is very important that the empathy map is the Empathy is the initial stage in creative thinking, as it is a skill that enables us to comprehend and share the same emotions as others. Our ability to empathize with others allows us to understand their problems, circumstances, and situations from their point of view.
+    </li><li>In this class Dr. Hepting informed us that the Midterm will on Oct. 21 as scheduled and part one of project is due next Monday, Oct. 17. We also discussed the importance of consistence and tried to change the attendance time limit so student can only mark themselves present for the first 20 min of the class however the setting and instruction were so clear about how to implement that in UofR Course. We also discussed the importance of knowing what settings we chose and the impact it will have on the enduse
+    </li><li>I have learned about consistency and why it is so important in system designing. To make a system consistent we need to make sure that they will look and perform in a same way. Maintaining consistency is one of the key indicators for user centric design. For today, professor tested the attendance system for its different options, and found that it is not that much consistent, so it needs to be modified a bit.
+    </li><li>In today’s class, we discussed about the importance of consistency in system designing. We considered attendance as an example and came out with an idea on how to make it consistent. One example is ‘Time of Submission’. If attendance is marked within 25 min after the class started then considering it as present else late. We also discussed about visibility settings.
+    </li><li>In today&#039;s class we discuss that in empathy map at least one entry should be there per quadrant. Group assignment is due on 17 and midterm is on 21. consistency is very important when we are performing any tasks.
+    </li><li>today we are talking about Empathy Map, how many entire per quadrant for each part And after that we are talking about ability of attendees. Finally we discussed about midterm questions.
+    </li><li>The important things I&#039;d learnt today was about deciding the number of entries that would be reasonable to fill up an empathy map quadrant, wherein the minimum was set to 1,
+    </li><li>The most important thing I learned was that the due date for project assignment was extended and someone from saskpower will be coming on Friday.
+    </li><li>The most important thing I learned today was how important consistency is to an interface, and how lack of consistency in an interface can be very confusing for a user. Today we examined the UR courses&#039; attendance feature. It had many inconsistencies, like how the eye icon and the 0 value in the attendance time appear to have the same meaning, which is very confusing to a user.
+    </li><li>Today we spoke more about the project and the Empathy Map. Midterm will cover chapter 1 to 4. How important is (lack of) consistency? Consistency is important in every task we do. For example we talked about attendance and how can we make it consistent. How do we know the impact of the setting we choose?
+    </li><li>One of the important things we discussed today is, &amp;quot;how important is (lack of) consistency?&amp;quot; I would say that consistency is very important because it keeps the user familiar with the controls. They will be less likely to feel confused or overwhelmed with various options.
+    </li><li>The most important thing that I learned today is the midterm date and project part 1 due time.
+    </li><li>The attendance resource on Urcourses lacks consistency.  When we set a time range of first 25 mins of the class as &amp;quot;present&amp;quot; and want to set &amp;quot;absent&amp;quot; to the rest of the class time. It is very complex and does not give preview option to test or see how the changes would look like.
+    </li><li>As demonstrated by the professor today, the UR Courses webite could be made more user-friendly for the instructor. Consistency between modules is important to improve user experience and to make the interface easier to learn and use. Preview of the changes to settings would be very helpful for the instructor as well.
+    </li><li>How attendance system works in UR courses and how we can change it
+    </li><li>Daryl started this meeting by listing the number of quadrants that should have at least one entry. Three entries per quadrant, we believe, is a reasonable number. Then he emphasized the importance of (lack of) consistency. He stated that consistency is critical in all of our endeavours. We talked about how we can improve attendance. One suggestion was to limit present to 25-30 minutes and then only have other options available. Also, He discussed the significance of the setting that someone chooses.
+    </li><li>How important is (lack of) consistency? And what about error prevention? In the meeting, we learn that consistency is so important in activities. The attendance was explained in details that how it could be consistent. We set time on present on 25min and we saw the result. We should consider preview of setting or some instructions for users.
+    </li><li>Today in class I learned Consistency is important in every task we do. For example we talked about attendance and how can we make it consistent. One idea was to set the time limit on ‘present’ for maybe 25 or 30 minutes then just have other options available.
+    </li><li>In today&#039;s meeting we discuss about the midterm question related to attendance and also some guest is coming on Friday from sasktel we need to do a group discussion about it. So for the midterm question ** suggest some ideas that will help students to record their attendance who attend the lecture only?**
+    </li><li>In today&#039;s meeting we continued discussion in attendance topic and tried to dig out answers to questions like what is the meaning of interface control and some information on error presentation
+    </li><li>There is a way to add events based on time. Today we discussed to add time based attendance system where student will not get option to mark present if he/sher opens it after 25 mins. There will be only option to mark absent.
+    </li><li>Nothing note worthy but excited about next lectures visit from saskpower.
+    </li><li>began by wishing everyone a happy Wednesday and bringing up that there will be a few guests from the Saskatchewan Power Digital Design Lab this Friday. I learned that the midterm syllabus is from chapters 1-4, and that for empathy maps for each group in the project, evey entry per quadrant can be greater than or equal to 1 and also talked about the midterm exam and were asked to post any thoughts on the question types.
+    </li><li>Hello Prof. Hepting. Today you talked a little bit about the project part 1 that how we have to complete it as well as the midterm exam. Also, You discussed some features of the URcourses related to the attendance part form the perspective of UX design. Thanks
+    </li><li>Today while setting up the attendance module in ur courses, got a chance to scrutinize the consistency within UR Courses. It was a nice example of visibility settings of UR courses modules being different per module. I.e. In some it has an eyeball and in some need to type manually to have it visible/invisible to students.
+    </li><li>Today we checked attendance, then discussed how homework should be written, and then talked about the midterm
+    </li><li>The processes and techniques of how to make attendance more efficient
+    </li><li>The most important thing that was done today was the project 1 submission due date was extended to October 17.
+    </li><li>Today we had a group discussion with our project groups and decided on what we need to do for the project for this course.
+    </li><li>How important is consistency within the modules of a website and what impacts it makes when we decide to put any settings or particular designs. It is after all the user who suffers when the designs are not properly selected and it can create great confusion for the individual while using our application.
+    </li><li>the most important thing that I learned is that Consistency is important in every task we do. For example we talked about attendance and how can we make it consistent. One idea was to set the time limit on ‘present’ for maybe 25 or 30 minutes then just have other options available.
+    </li><li>In this lesson, we mainly discussed some previous content and confirmed that the assignment will be postponed to 17th
+    </li><li>I learned that URCourses has surprisingly a lot of options and customizations for attendance, it&#039;s just hard to find all of them.
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>Attendance feels like a weird example to hang on to and it seems strange it will be in the midterm
+    </li><li>The most important thing for me to understand at this point is the upcoming  midterm and the group assignment. I would need to pay a lot of heed to both them as both are approaching nearly together. I would really interesting to get a good experience by working under pressure, and I would be happy deal with. But overall this importance and the interface of attendance in today&#039;s class discussion was really good.
+    </li><li>I noticed today there’s no longer QR code or password for attendance I don’t know why because now anyone can fill present in attendance by staying home it’s demotivating to attend class in morning specially in winter anyways currently focusing on midterms to have good grades.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>I&#039;m most interested in the guest presentations happening soon.  We are on week three of &amp;quot;discussing&amp;quot; attendance, and I have nothing left to say about it.  It will be nice to have something else to think about and react to, and perhaps we might learn something.  Attendance has been completely overdone, and I hope we can finally move on after this week.
+    </li><li>Today we discussed more about the class attendance. An idea was that we could implement a timing mechanism where the user will be marked as present if they submit attendance within the first 25 minutes of class, otherwise they will be marked as late if they submit within the second half of class. We also discussed the types of questions for the midterm. I am very interested to see what types of questions the other students come up with.
+    </li><li>How can we modify the attendance module for the different desired settings? Is it best to set the default settings, or should these settings be required in setup?
+    </li><li>So today we did the project group discussion and also learned about what should we provide for the assignment.
+    </li><li>I have a suggestion for a midterm question. The professor should give us two or three essay topics before hand and then the students are supposed to write an essay of probably 200-250 Words based on an essay topic selected by Dr. Hepting. This way the students will have to learn about the two or three or four important topics discussed in the class uptil now.
+    </li><li>What makes good consistency in interface design? In today&#039;s class there was discussion about conistency particular in regards to how attendence shows options that aren&#039;t useful (i.e marking yourself absent). Consistency can create uniformity in following through with logic of the design but it could also be considered a weakness like needing to draw attention on the layout of a page. How does one find proper balance with consistency such that function remains intact?
+    </li><li>I heard that we&#039;ll meet someone from Saskpower on Friday, which I&#039;m so excited and looking forward to the meeting on Friday. I would like to know more about what we have learned can be used in really life work, so the meeting on Friday will be a good opportunity for me to get familiar to the experts.
+    </li><li>The think abouto which I would most like to know more is about the midterm questions and also other functions in UR Courses like the attendance we did in class
+    </li><li>How important consistency is throughout an interface.
+    </li><li>Today we got to know about midterm and details of our project.
+    </li></ul>
+
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=wiki">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+828/202230/16_Wed-12-Oct-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

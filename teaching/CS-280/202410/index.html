@@ -1,0 +1,2313 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-280/202410/" />
+    
+    <title>CS 280 in Winter 2024 | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="CS 280 in Winter 2024 | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/",
+        
+          "name": "CS 280"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/",
+        
+          "name": "202410"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-280/">
+        CS 280
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      202410
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div class="w-auto h-100">
+  <div class="bg-light mb-2 p-3">
+    <h1>
+      CS 280 in Winter 2024
+    </h1>
+  </div>
+<!-- Make the navigation -->
+  <div class="card" style="height: 85%">
+    <div id="offhdr" class="card-header bg-info">
+      <ul class="nav nav-pills" id="navbar-scrollspy"><li class="nav-item">
+          <a class="nav-link" href="#ssWeekly">
+            Weekly Schedule (Tentative)
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="#ssOffice">
+            Office Hours
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="#ssLinks">
+            Links
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            Assignments
+          </a>
+          <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="#ssAsgn_SFIA_1">
+              Professional Skills Assessment - Part 1 (due: 26-Feb-2024)
+            </a>
+          </li><li>
+            <a class="dropdown-item" href="#ssAsgn_INFOG_1">
+              Infographic - Part 1 (due: 11-Mar-2024)
+            </a>
+          </li><li>
+            <a class="dropdown-item" href="#ssAsgn_SFIA_2">
+              Professional Skills Assessment - Part 2 (due: 26-Mar-2024)
+            </a>
+          </li><li>
+            <a class="dropdown-item" href="#ssAsgn_INFOG_2">
+              Infographic - Part 2 (due: 9-Apr-2024)
+            </a>
+          </li></ul>
+        </li>w<li class="nav-item">
+          <a class="nav-link" href="#ssExams">
+            Exams
+          </a>
+        </li></ul>
+    </div>
+    <div id="cbss" class="card-body cbss mh-100" data-bs-spy="scroll" data-bs-target="#navbar-scrollspy" data-bs-offset="0" tabindex="0">
+
+      <!-- Create the content --><h3 id="ssWeekly" class="bg-dark text-white">
+        Weekly Schedule (Tentative)
+      </h3><table class="table table-striped-columns">
+  <thead>
+    <th>Week of</th>
+    <th>Meetings</th>
+    <th>Topics</th>
+    <th>Items of Note</th>
+  </thead>
+  <tbody><tr>
+      <td>Mon-08-Jan-2024</td>
+      <td><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/01_Tue-09-Jan-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          01
+        </a><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/02_Thu-11-Jan-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          02
+        </a></td>
+      <td><p>Welcome</p>
+</td>
+      <td><p>First class meeting January 9</p>
+</td>
+    </tr><tr>
+      <td>Mon-15-Jan-2024</td>
+      <td><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/03_Tue-16-Jan-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          03
+        </a><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/04_Thu-18-Jan-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          04
+        </a></td>
+      <td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td>Mon-22-Jan-2024</td>
+      <td><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/05_Tue-23-Jan-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          05
+        </a><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/06_Thu-25-Jan-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          06
+        </a></td>
+      <td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td>Mon-29-Jan-2024</td>
+      <td><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/07_Tue-30-Jan-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          07
+        </a><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/08_Thu-01-Feb-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          08
+        </a></td>
+      <td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td>Mon-05-Feb-2024</td>
+      <td><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/09_Tue-06-Feb-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          09
+        </a><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/10_Thu-08-Feb-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          10
+        </a></td>
+      <td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td>Mon-12-Feb-2024</td>
+      <td><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/11_Tue-13-Feb-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          11
+        </a><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/12_Thu-15-Feb-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          12
+        </a></td>
+      <td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td>Mon-19-Feb-2024</td>
+      <td></td>
+      <td>
+</td>
+      <td><p>Reading Week (Monday is Family Day). No class meetings.</p>
+</td>
+    </tr><tr>
+      <td>Mon-26-Feb-2024</td>
+      <td><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/13_Tue-27-Feb-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          13
+        </a><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/14_Thu-29-Feb-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          14
+        </a></td>
+      <td>
+</td>
+      <td><p>Midterm (in-class) February 29</p>
+</td>
+    </tr><tr>
+      <td>Mon-04-Mar-2024</td>
+      <td><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/15_Tue-05-Mar-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          15
+        </a><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/16_Thu-07-Mar-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          16
+        </a></td>
+      <td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td>Mon-11-Mar-2024</td>
+      <td><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/17_Tue-12-Mar-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          17
+        </a><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/18_Thu-14-Mar-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          18
+        </a></td>
+      <td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td>Mon-18-Mar-2024</td>
+      <td><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/19_Tue-19-Mar-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          19
+        </a><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/20_Thu-21-Mar-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          20
+        </a></td>
+      <td>
+</td>
+      <td><p>CIPS visit on March 21</p>
+</td>
+    </tr><tr>
+      <td>Mon-25-Mar-2024</td>
+      <td><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/21_Tue-26-Mar-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          21
+        </a><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/22_Thu-28-Mar-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          22
+        </a></td>
+      <td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td>Mon-01-Apr-2024</td>
+      <td><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/23_Tue-02-Apr-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          23
+        </a><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/24_Thu-04-Apr-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          24
+        </a></td>
+      <td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td>Mon-08-Apr-2024</td>
+      <td><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/25_Tue-09-Apr-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          25
+        </a><a href="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/26_Thu-11-Apr-2024.html" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
+          26
+        </a></td>
+      <td>
+</td>
+      <td>
+</td>
+    </tr></tbody>
+</table>
+<p></p><h3 id="ssOffice" class="bg-dark text-white">
+        Office Hours and Semester Schedule
+      </h3><p></p><h3 id="ssLinks" class="bg-dark text-white">
+        Links
+      </h3>
+      <ul>
+        <li><a href="/~hepting/assets/teaching/pdf/CS-280-202410_syllabus.pdf" target="_blank">
+            Syllabus (pdf)
+          </a>
+        </li>
+        <li>
+          <a href="https://urcourses.uregina.ca/course/view.php?id=" target="_blank">
+            UR Courses
+          </a>
+        </li><li>
+    <a href="https://www2.cs.uregina.ca/~hepting/teaching/CS-280/202410/meetings.ics">
+      Meetings Calendar file (meetings.ics)
+    </a>
+  </li>
+  <li>
+    <a href="https://www.bitsbook.com/">
+      Blown to Bits (2nd edition)
+    </a>
+  </li>
+  <li>
+    <a href="https://www.acm.org/code-of-ethics">
+      ACM Code of Ethics
+    </a>
+  </li>
+  <li>
+    <a href="https://ethics.acm.org/">
+      ACM Ethics
+    </a>
+  </li>
+  <li>
+    <a href="https://csed.acm.org">
+      CS2023 -- ACM/IEEE-CS/AAAI Computer Science Curricula
+    </a>
+  </li>
+  <li>
+    <a href="https://csed.acm.org/wp-content/uploads/2023/09/Version-Gamma.pdf">
+      CS2023 Report (Version Gamma)
+    </a>
+  </li>
+  <li>
+    <a href="https://www.humanetech.com/">
+      Center for Humane Technology
+    </a>
+  </li>
+  
+
+</ul>
+      <p></p><h3 id="ssAssignments" class="bg-dark text-white">
+        Assignments
+      </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssAsgn_SFIA_1" class="bg-primary text-white">
+      Professional Skills Assessment - Part 1 (<span id="SFIA_1-timer"></span>)
+    </h4>
+    <script>
+      $(document).ready(
+        function(){
+          var duedate_SFIA_1 = '26-Feb-2024'
+          var duetime_SFIA_1 =
+            new Date(duedate_SFIA_1).getTime() + 86340000
+          $('#SFIA_1-timer').countdown(duetime_SFIA_1,
+            function(event) {
+              $(this).html(event.strftime('due in: <span>%D d %H h %M m</span>'))
+          })
+      })
+    </script>
+    <ul>
+      <li>
+        Marks: 5
+      </li>
+      <li>
+        Due Date: 26-Feb-2024 @ 23:59
+      </li>
+      <li>
+        <a href="https://urcourses.uregina.ca/mod/forum/discuss.php?d=2524839">
+          Discuss
+        </a>
+      </li>
+      <li>
+        <a href="https://urcourses.uregina.ca/mod/assign/view.php?id=2543853">
+          Submit
+        </a>
+      </li>
+    </ul>
+    <h3 id="professional-skills-assessment">Professional Skills Assessment</h3>
+
+<h3 id="part-1">Part 1</h3>
+
+<p>For this part of the assignment, do the following 3 things:</p>
+
+<ol>
+  <li><a href="https://cips.ca/studentmembershipapplication/" target="_blank">Join CIPS as a student member (free of charge)</a> - you will get a membership card from the CIPS office</li>
+  <li>Once you are a CIPS student member, <a href="https://cips.ca/skills-assessment/" target="_blank">access the skills assessment tool</a>. Use the link <a href="https://cips.skillstx.app/loginmembee" target="_blank">“Get Started: Assess your IT Skills and Plan your IT Career”</a> (may not work in Firefox) - you will get your preliminary profile report emailed to you upon completion</li>
+  <li><a href="https://licensed-skillstx.talentlms.com/catalog/info/id:13" target="_blank">Take the online course about SFIA for personal career development</a> - you will get a certificate of completion when you have finished the course</li>
+</ol>
+
+<h3 id="submission">Submission</h3>
+
+<p>Upload your required files as 3 separate attachments to the assignment:</p>
+
+<ul>
+  <li>CIPS student membership card (2)</li>
+  <li>Certificate of completion from SkillsTX course (2)</li>
+  <li>Your Self-Rated Skills Profile Report (pdf file emailed to you from SkillsTX.com) (1)</li>
+</ul>
+
+<h5 id="grading">Grading</h5>
+
+<div class="border text-light px-4 pt-3 mx-4 mt-3 bg-dark border-primary">
+  Grade penalties will be applied in the following situations for assignment submissions:
+  <ul>
+    <li>on time but the written instructions for the submission were not followed: deduct 10% of the earned grade</li>
+    <li>Within 24 hours of the due date and time): deduct 20% of the earned grade</li>
+    <li>More than 24 and less than 48 hours late: deduct 40% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 48 and less than 72 hours late: deduct 60% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 72 and less than 96 hours late: deduct 80% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 96 and less than 108 hours late: deduct 90% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 108 hours late: deduct 100% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+  </ul>
+</div>
+
+<p>This assignment is worth 5 marks, according to the following rubric:</p>
+
+<h5 id="rubric">Rubric</h5>
+
+<p>DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of
+<a href="https://resources.depaul.edu/teaching-commons/teaching-guides/feedback-grading/rubrics/Pages/creating-rubrics.aspx">creating rubrics</a>.
+Your comments about the following rubric are welcome <a href="mailto:daryl.hepting@uregina.ca?subject=Rubric at /teaching/assignments/CS-280/sfia-01-5m/sfia-01-5m.html">via email</a></p>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+		  <tr>
+        <th><em>Criterion and Weight</em></th>
+        <th> Exemplary</th>
+        <th> Sufficient</th>
+        <th> Developing</th>
+        <th>Needs Improvement</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th>
+          CIPS membership card (2)
+        </th>
+        <td>
+          (+) Membership card attached
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          No membership card attached
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          SkillsTX course completion certificate (2)
+        </th>
+        <td>
+          (+) Completion certificate attached
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          No completion certificate attached
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Preliminary Self-Rated Skills Profile Report (1)
+        </th>
+        <td>
+          (+) Preliminary report attached
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          No preliminary report attached
+        </td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>
+
+<h5 id="calculator">Calculator</h5>
+
+<form name="calculator_SFIA_1">
+
+  <!-- rubric criteria -->
+  <div class="border bg-info m-2 p-4">
+    <strong>Rubric Criteria</strong>
+
+
+
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion1">CIPS membership card (2)</label>
+      <select class="col-sm-9 form-control" name="criteria_SFIA_1" id="rcriterion1">
+        criteria_SFIA_1
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): (+) Membership card attached</option>
+        <option value="9"> Exemplary: (+) Membership card attached</option>
+        <option value="8"> Exemplary (-): (+) Membership card attached</option>
+        <option value="7"> Sufficient (+): </option>
+        <option value="6"> Sufficient: </option>
+        <option value="5"> Sufficient (-): </option>
+        <option value="4"> Developing (+): </option>
+        <option value="3"> Developing: </option>
+        <option value="2"> Developing (-): </option>
+        <option value="1">Needs Improvement: No membership card attached</option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion2">SkillsTX course completion certificate (2)</label>
+      <select class="col-sm-9 form-control" name="criteria_SFIA_1" id="rcriterion2">
+        criteria_SFIA_1
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): (+) Completion certificate attached</option>
+        <option value="9"> Exemplary: (+) Completion certificate attached</option>
+        <option value="8"> Exemplary (-): (+) Completion certificate attached</option>
+        <option value="7"> Sufficient (+): </option>
+        <option value="6"> Sufficient: </option>
+        <option value="5"> Sufficient (-): </option>
+        <option value="4"> Developing (+): </option>
+        <option value="3"> Developing: </option>
+        <option value="2"> Developing (-): </option>
+        <option value="1">Needs Improvement: No completion certificate attached</option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion3">Preliminary Self-Rated Skills Profile Report (1)</label>
+      <select class="col-sm-9 form-control" name="criteria_SFIA_1" id="rcriterion3">
+        criteria_SFIA_1
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): (+) Preliminary report attached</option>
+        <option value="9"> Exemplary: (+) Preliminary report attached</option>
+        <option value="8"> Exemplary (-): (+) Preliminary report attached</option>
+        <option value="7"> Sufficient (+): </option>
+        <option value="6"> Sufficient: </option>
+        <option value="5"> Sufficient (-): </option>
+        <option value="4"> Developing (+): </option>
+        <option value="3"> Developing: </option>
+        <option value="2"> Developing (-): </option>
+        <option value="1">Needs Improvement: No preliminary report attached</option>
+      </select>
+    </div>
+
+
+  </div>
+  <!-- penalties -->
+  <div class="form-group border bg-info m-2 p-4" id="pen">
+    <strong>Penalties</strong>
+
+    <div class="form-check" id="p0">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_1" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_SFIA_1">None (on-time and followed instructions)</label>
+    </div>
+    <div class="form-check" id="p1">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_1" id="penalty-1" value="10" />
+      <label class="form-check-label" for="penalty-1">Instructions not followed</label>
+    </div>
+    <div class="form-check" id="p2">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_1" id="penalty-2" value="20" />
+      <label class="form-check-label" for="penalty-2">Assignment submitted late, within 24 hours</label>
+    </div>
+    <div class="form-check" id="p3">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_1" id="penalty-3" value="40" />
+      <label class="form-check-label" for="penalty-3">Assignment submitted late, within 48 hours</label>
+    </div>
+    <div class="form-check" id="p4">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_1" id="penalty-4" value="60" />
+      <label class="form-check-label" for="penalty-4">Assignment submitted late, within 72 hours</label>
+    </div>
+    <div class="form-check" id="p5">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_1" id="penalty-5" value="80" />
+      <label class="form-check-label" for="penalty-5">Assignment submitted late, within 96 hours</label>
+    </div>
+    <div class="form-check" id="p6">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_1" id="penalty-6" value="90" />
+      <label class="form-check-label" for="penalty-6">Assignment submitted late, within 108 hours</label>
+    </div>
+    <div class="form-check" id="p7">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_1" id="penalty-7" value="100" />
+      <label class="form-check-label" for="penalty-7">Assignment NOT submitted within 108 hours</label>
+    </div>
+  </div>
+  <div class="border bg-info m-2 p-4">
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
+
+
+      <textarea class="col-sm-9 form-control" id="comments_SFIA_1" rows="5" readonly="true"></textarea>
+  
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-9">
+        <button class="btn btn-primary" onclick="process_SFIA_1(); return false;">Evaluate</button>
+        <a id="clipboard_SFIA_1" href="#clipboard_SFIA_1" class="m-2 btn btn-primary" aria-label="Copy comments" data-clipboard-action="copy" data-clipboard-target="#comments_SFIA_1">
+          Copy Output to Clipboard
+        </a>
+        <button class="btn btn-primary" onclick="clearform_SFIA_1(); return false;">Clear Form</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<script>
+  function process_SFIA_1()
+  {
+    var weights = ["","2","2","1"]
+    console.log(weights)
+    var mult = 1.0
+    // get multiplier from penalty radio buttons
+    /*if (document.querySelector('input[name=penalties_SFIA_1]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_SFIA_1]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
+    console.log("mult: ",mult)
+
+    // find comment span
+    // BETTER: find the end of the text area content
+    // for additional comments?
+    var commentspan = document.getElementById("comments_SFIA_1");
+    console.log(commentspan)
+    commentspan.textContent = "";
+    console.log(commentspan.textContent)
+    // get grades for each rubric criterion
+    var sumgrade = 0;
+    var critname = "criteria" + "_" + "SFIA_1";
+    var crits = document.getElementsByName(critname);
+    for (var i = 0, length = crits.length; i < length; i++)
+    {
+      // output information for each criterion
+      commentspan.textContent = commentspan.textContent +
+        crits[i].parentNode.querySelector("label").textContent + ":\n";
+      if (crits[i].value >= 0 && crits[i].value <= 10)
+      {
+        var cw = weights[i+1];
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(commentspan.textContent)
+        console.log(cv,sumgrade)
+
+        commentspan.textContent = commentspan.textContent +
+          "\t ( " + cv.toFixed(2) + " / " + cw + " ) " +
+          crits[i].options[crits[i].selectedIndex].text + "\n";
+      }
+      else
+      {
+        commentspan.textContent = commentspan.textContent +
+          "\tNOT GRADED\n";
+      }
+      console.log(commentspan)
+    }
+    // output earned grade and the grade after penalty, if there is one
+    var eg = Math.round(sumgrade * 100) / 100;
+    var pg = Math.round(mult * sumgrade * 100) / 100;
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toFixed(2) +"\n";
+    // output penalty information
+    if (mult < 1.0)
+    {
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
+      commentspan.textContent = commentspan.textContent +
+        "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
+      commentspan.textContent = commentspan.textContent +
+        "After Penalty: " + pg.toFixed(2) + "\n";
+    }
+  }
+
+  function clearform_SFIA_1()
+  {
+    document.forms["calculator_SFIA_1"].reset();
+    var commentspan = document.getElementById("comments_SFIA_1");
+    commentspan.textContent = "";
+  }
+</script>
+
+<h4 id="ssAsgn_INFOG_1" class="bg-primary text-white">
+      Infographic - Part 1 (<span id="INFOG_1-timer"></span>)
+    </h4>
+    <script>
+      $(document).ready(
+        function(){
+          var duedate_INFOG_1 = '11-Mar-2024'
+          var duetime_INFOG_1 =
+            new Date(duedate_INFOG_1).getTime() + 86340000
+          $('#INFOG_1-timer').countdown(duetime_INFOG_1,
+            function(event) {
+              $(this).html(event.strftime('due in: <span>%D d %H h %M m</span>'))
+          })
+      })
+    </script>
+    <ul>
+      <li>
+        Marks: 11
+      </li>
+      <li>
+        Due Date: 11-Mar-2024 @ 23:59
+      </li>
+      <li>
+        <a href="https://urcourses.uregina.ca/mod/forum/discuss.php?d=2524839">
+          Discuss
+        </a>
+      </li>
+      <li>
+        <a href="https://urcourses.uregina.ca/mod/assign/view.php?id=2543854">
+          Submit
+        </a>
+      </li>
+    </ul>
+    <h3 id="infographic---part-1">Infographic - Part 1</h3>
+
+<p>An <a href="https://en.wikipedia.org/wiki/Infographic" target="_blank">infographic</a> is a graphic visual representation of “information, data, or knowledge intended to present information quickly and clearly”.</p>
+
+<p>Individually, or in groups of up to 4, prepare and submit an infographic that deals with a topic that is course-related (related to course themes, course resources, and/or course discussions) timely (1 or more of your sources should be published within the last 6 months), and to which you have a personal connection.</p>
+
+<p>The infographic will be submitted in the final part of the assignment. In this first part of the assignment, you will decide if you will work alone or in a group, choose a topic, indicate your sources, and provide a tentative plan for realizing your infographic. You must work with the group and the topic with which you submit this first part of the assignment for the final part of the assignment.</p>
+
+<p>See <a href="https://www.humanetech.com/infographic-dark-side-social-media" target="_blank">this link for a sample infographic</a>. The target medium for display of this infographic is the web, so design your infographic for vertical scrolling as required. For your reference, the dimensions (width x height) for the sample are 2190 × 12292. Other samples can be found <a href="https://infographics.umwblogs.org/about/" target="_blank">here</a> and <a href="https://andrealivismith.com/wp-content/uploads/2011/06/Infographics-Syllabus.pdf" target="_blank">here</a>. Particular dimensions are not required but you are to create a single infographic, not a collection (of slides, for example).</p>
+
+<p>You may use any of a variety of tools that you are able to access legitimately. These include, but are not limited to, <a href="https://www.canva.com/infographics/" target="_blank">canva</a> and <a href="https://piktochart.com/" target="_blank">piktochart</a>.</p>
+
+<p>You are to create your infographic without the use of AI.</p>
+
+<p>Your infographic should contain research from 3-5 excellent sources (as evaluated using the <a href="https://hapgood.us/2019/06/19/sift-the-four-moves/" target="_blank">SIFT</a> method). Individuals may use 3 sources, groups must use 5 sources.</p>
+
+<p>When planning your infographic, you might consider (but not be limited by):</p>
+
+<ul>
+  <li>starting with a resource that you’ve encountered in class</li>
+  <li>addressing issues around Society, Ethics, and Professionalism that relate to and could be presented in one of your other CS classes</li>
+  <li>finding a news story that illustrates issues or themes that are related to this class</li>
+  <li>creating a guide that people can use to become aware of important course-related issues that impact their daily lives (and take some action)</li>
+</ul>
+
+<h3 id="submission">Submission</h3>
+
+<p>Create (and submit) a single pdf document that:</p>
+
+<ul>
+  <li>explains your topic, its relevance to the course, and your personal connection to it</li>
+  <li>your list of sources and the results of the 4 moves (SIFT) for each source</li>
+  <li>your plan for creating your infographic (including a division of labour for groups)</li>
+</ul>
+
+<h5 id="grading">Grading</h5>
+
+<div class="border text-light px-4 pt-3 mx-4 mt-3 bg-dark border-primary">
+  Grade penalties will be applied in the following situations for assignment submissions:
+  <ul>
+    <li>on time but the written instructions for the submission were not followed: deduct 10% of the earned grade</li>
+    <li>Within 24 hours of the due date and time): deduct 20% of the earned grade</li>
+    <li>More than 24 and less than 48 hours late: deduct 40% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 48 and less than 72 hours late: deduct 60% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 72 and less than 96 hours late: deduct 80% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 96 and less than 108 hours late: deduct 90% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 108 hours late: deduct 100% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+  </ul>
+</div>
+
+<p>This assignment is worth 11 marks, according to the following rubric:</p>
+
+<h5 id="rubric">Rubric</h5>
+
+<p>DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of
+<a href="https://resources.depaul.edu/teaching-commons/teaching-guides/feedback-grading/rubrics/Pages/creating-rubrics.aspx">creating rubrics</a>.
+Your comments about the following rubric are welcome <a href="mailto:daryl.hepting@uregina.ca?subject=Rubric at /teaching/assignments/CS-280/infographic-01-11m/infographic-01-11m.html">via email</a></p>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+		  <tr>
+        <th><em>Criterion and Weight</em></th>
+        <th> Exemplary</th>
+        <th> Sufficient</th>
+        <th> Developing</th>
+        <th>Needs Improvement</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th>
+          Topic that Engages Course-related issue(s) Intellectually and Personally (4)
+        </th>
+        <td>
+          Demonstrates intellectual engagement with important course-related issues and provides strong evidence of a personal connection to the topic
+        </td>
+        <td>
+          Makes some reference to important course-related issues and provides some evidence of a personal connection to the topic
+        </td>
+        <td>
+          Makes little reference to important course-related issues and provides little evidence of a personal connection to the topic
+        </td>
+        <td>
+          Makes no reference to important course-related issues and provides no evidence of a personal connection to the topic
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Sources (5)
+        </th>
+        <td>
+          Thorough application of the SIFT moves for all sources
+        </td>
+        <td>
+          Thorough application of the SIFT moves for most of the sources
+        </td>
+        <td>
+          Application of the SIFT moves for some of the sources
+        </td>
+        <td>
+          No evidence that sources were evaluated using the SIFT moves
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Tentative Plan (including division of labour amongst group members as applicable) (2)
+        </th>
+        <td>
+          Ambitious, feasible, and thorough
+        </td>
+        <td>
+          Reasonably thorough and feasible
+        </td>
+        <td>
+          Somewhat thorough
+        </td>
+        <td>
+          Not thorough
+        </td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>
+
+<h5 id="calculator">Calculator</h5>
+
+<form name="calculator_INFOG_1">
+
+  <!-- rubric criteria -->
+  <div class="border bg-info m-2 p-4">
+    <strong>Rubric Criteria</strong>
+
+
+
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion1">Topic that Engages Course-related issue(s) Intellectually and Personally (4)</label>
+      <select class="col-sm-9 form-control" name="criteria_INFOG_1" id="rcriterion1">
+        criteria_INFOG_1
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): Demonstrates intellectual engagement with important course-related issues and provides strong evidence of a personal connection to the topic</option>
+        <option value="9"> Exemplary: Demonstrates intellectual engagement with important course-related issues and provides strong evidence of a personal connection to the topic</option>
+        <option value="8"> Exemplary (-): Demonstrates intellectual engagement with important course-related issues and provides strong evidence of a personal connection to the topic</option>
+        <option value="7"> Sufficient (+): Makes some reference to important course-related issues and provides some evidence of a personal connection to the topic</option>
+        <option value="6"> Sufficient: Makes some reference to important course-related issues and provides some evidence of a personal connection to the topic</option>
+        <option value="5"> Sufficient (-): Makes some reference to important course-related issues and provides some evidence of a personal connection to the topic</option>
+        <option value="4"> Developing (+): Makes little reference to important course-related issues and provides little evidence of a personal connection to the topic</option>
+        <option value="3"> Developing: Makes little reference to important course-related issues and provides little evidence of a personal connection to the topic</option>
+        <option value="2"> Developing (-): Makes little reference to important course-related issues and provides little evidence of a personal connection to the topic</option>
+        <option value="1">Needs Improvement: Makes no reference to important course-related issues and provides no evidence of a personal connection to the topic</option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion2">Sources (5)</label>
+      <select class="col-sm-9 form-control" name="criteria_INFOG_1" id="rcriterion2">
+        criteria_INFOG_1
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): Thorough application of the SIFT moves for all sources</option>
+        <option value="9"> Exemplary: Thorough application of the SIFT moves for all sources</option>
+        <option value="8"> Exemplary (-): Thorough application of the SIFT moves for all sources</option>
+        <option value="7"> Sufficient (+): Thorough application of the SIFT moves for most of the sources</option>
+        <option value="6"> Sufficient: Thorough application of the SIFT moves for most of the sources</option>
+        <option value="5"> Sufficient (-): Thorough application of the SIFT moves for most of the sources</option>
+        <option value="4"> Developing (+): Application of the SIFT moves for some of the sources</option>
+        <option value="3"> Developing: Application of the SIFT moves for some of the sources</option>
+        <option value="2"> Developing (-): Application of the SIFT moves for some of the sources</option>
+        <option value="1">Needs Improvement: No evidence that sources were evaluated using the SIFT moves</option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion3">Tentative Plan (including division of labour amongst group members as applicable) (2)</label>
+      <select class="col-sm-9 form-control" name="criteria_INFOG_1" id="rcriterion3">
+        criteria_INFOG_1
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): Ambitious, feasible, and thorough</option>
+        <option value="9"> Exemplary: Ambitious, feasible, and thorough</option>
+        <option value="8"> Exemplary (-): Ambitious, feasible, and thorough</option>
+        <option value="7"> Sufficient (+): Reasonably thorough and feasible</option>
+        <option value="6"> Sufficient: Reasonably thorough and feasible</option>
+        <option value="5"> Sufficient (-): Reasonably thorough and feasible</option>
+        <option value="4"> Developing (+): Somewhat thorough</option>
+        <option value="3"> Developing: Somewhat thorough</option>
+        <option value="2"> Developing (-): Somewhat thorough</option>
+        <option value="1">Needs Improvement: Not thorough</option>
+      </select>
+    </div>
+
+
+  </div>
+  <!-- penalties -->
+  <div class="form-group border bg-info m-2 p-4" id="pen">
+    <strong>Penalties</strong>
+
+    <div class="form-check" id="p0">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_1" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_INFOG_1">None (on-time and followed instructions)</label>
+    </div>
+    <div class="form-check" id="p1">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_1" id="penalty-1" value="10" />
+      <label class="form-check-label" for="penalty-1">Instructions not followed</label>
+    </div>
+    <div class="form-check" id="p2">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_1" id="penalty-2" value="20" />
+      <label class="form-check-label" for="penalty-2">Assignment submitted late, within 24 hours</label>
+    </div>
+    <div class="form-check" id="p3">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_1" id="penalty-3" value="40" />
+      <label class="form-check-label" for="penalty-3">Assignment submitted late, within 48 hours</label>
+    </div>
+    <div class="form-check" id="p4">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_1" id="penalty-4" value="60" />
+      <label class="form-check-label" for="penalty-4">Assignment submitted late, within 72 hours</label>
+    </div>
+    <div class="form-check" id="p5">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_1" id="penalty-5" value="80" />
+      <label class="form-check-label" for="penalty-5">Assignment submitted late, within 96 hours</label>
+    </div>
+    <div class="form-check" id="p6">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_1" id="penalty-6" value="90" />
+      <label class="form-check-label" for="penalty-6">Assignment submitted late, within 108 hours</label>
+    </div>
+    <div class="form-check" id="p7">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_1" id="penalty-7" value="100" />
+      <label class="form-check-label" for="penalty-7">Assignment NOT submitted within 108 hours</label>
+    </div>
+  </div>
+  <div class="border bg-info m-2 p-4">
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
+
+
+      <textarea class="col-sm-9 form-control" id="comments_INFOG_1" rows="5" readonly="true"></textarea>
+  
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-9">
+        <button class="btn btn-primary" onclick="process_INFOG_1(); return false;">Evaluate</button>
+        <a id="clipboard_INFOG_1" href="#clipboard_INFOG_1" class="m-2 btn btn-primary" aria-label="Copy comments" data-clipboard-action="copy" data-clipboard-target="#comments_INFOG_1">
+          Copy Output to Clipboard
+        </a>
+        <button class="btn btn-primary" onclick="clearform_INFOG_1(); return false;">Clear Form</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<script>
+  function process_INFOG_1()
+  {
+    var weights = ["","4","5","2"]
+    console.log(weights)
+    var mult = 1.0
+    // get multiplier from penalty radio buttons
+    /*if (document.querySelector('input[name=penalties_INFOG_1]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_INFOG_1]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
+    console.log("mult: ",mult)
+
+    // find comment span
+    // BETTER: find the end of the text area content
+    // for additional comments?
+    var commentspan = document.getElementById("comments_INFOG_1");
+    console.log(commentspan)
+    commentspan.textContent = "";
+    console.log(commentspan.textContent)
+    // get grades for each rubric criterion
+    var sumgrade = 0;
+    var critname = "criteria" + "_" + "INFOG_1";
+    var crits = document.getElementsByName(critname);
+    for (var i = 0, length = crits.length; i < length; i++)
+    {
+      // output information for each criterion
+      commentspan.textContent = commentspan.textContent +
+        crits[i].parentNode.querySelector("label").textContent + ":\n";
+      if (crits[i].value >= 0 && crits[i].value <= 10)
+      {
+        var cw = weights[i+1];
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(commentspan.textContent)
+        console.log(cv,sumgrade)
+
+        commentspan.textContent = commentspan.textContent +
+          "\t ( " + cv.toFixed(2) + " / " + cw + " ) " +
+          crits[i].options[crits[i].selectedIndex].text + "\n";
+      }
+      else
+      {
+        commentspan.textContent = commentspan.textContent +
+          "\tNOT GRADED\n";
+      }
+      console.log(commentspan)
+    }
+    // output earned grade and the grade after penalty, if there is one
+    var eg = Math.round(sumgrade * 100) / 100;
+    var pg = Math.round(mult * sumgrade * 100) / 100;
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toFixed(2) +"\n";
+    // output penalty information
+    if (mult < 1.0)
+    {
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
+      commentspan.textContent = commentspan.textContent +
+        "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
+      commentspan.textContent = commentspan.textContent +
+        "After Penalty: " + pg.toFixed(2) + "\n";
+    }
+  }
+
+  function clearform_INFOG_1()
+  {
+    document.forms["calculator_INFOG_1"].reset();
+    var commentspan = document.getElementById("comments_INFOG_1");
+    commentspan.textContent = "";
+  }
+</script>
+
+<h4 id="ssAsgn_SFIA_2" class="bg-primary text-white">
+      Professional Skills Assessment - Part 2 (<span id="SFIA_2-timer"></span>)
+    </h4>
+    <script>
+      $(document).ready(
+        function(){
+          var duedate_SFIA_2 = '26-Mar-2024'
+          var duetime_SFIA_2 =
+            new Date(duedate_SFIA_2).getTime() + 86340000
+          $('#SFIA_2-timer').countdown(duetime_SFIA_2,
+            function(event) {
+              $(this).html(event.strftime('due in: <span>%D d %H h %M m</span>'))
+          })
+      })
+    </script>
+    <ul>
+      <li>
+        Marks: 10
+      </li>
+      <li>
+        Due Date: 26-Mar-2024 @ 23:59
+      </li>
+      <li>
+        <a href="https://urcourses.uregina.ca/mod/forum/discuss.php?d=2524839">
+          Discuss
+        </a>
+      </li>
+      <li>
+        <a href="https://urcourses.uregina.ca/mod/assign/view.php?id=2542796">
+          Submit
+        </a>
+      </li>
+    </ul>
+    <h3 id="professional-skills-assessment-part-2">Professional Skills Assessment Part 2</h3>
+
+<p>This part of the assignment is meant to have you think about your career possibilities in Information Technology.</p>
+
+<h4 id="the-skills-you-have-review-and-refine-edit">The Skills You have: Review and Refine (edit)</h4>
+
+<p>After you completed the initial self-assessment of your skills, you have the opportunity to edit your profile to add skills or adjust levels so that your profile reflects your current situation as accurately as possible. Don’t forget to include skills that you have gained in the classes that you have taken so far. When you are satisfied with your profile, choose to print a version from the planner view (appears to be working in Firefox now): this will create a pdf file that will form part of your submission.</p>
+
+<h4 id="the-skills-you-need-assign-current-and-future-skill-requirements">The Skills You Need: Assign Current and Future Skill requirements</h4>
+
+<p>Select 2 job descriptions (use ‘current’ and ‘future’ for these) that you would like to pursue and generate a skill gap report for each by selecting your chosen job descriptions (using the ‘Choose Requirement Type’ dropdown) in turn. There does not seem to be a satisfactory way to get the skills gap report into pdf form without some sacrifices. Please use either of these 2 options: 1) zoom out in your browser window so that you can see the whole skills gap report and take a screenshot of that and convert it to a pdf 2) take a few screenshots of the report as you scroll through without zooming and assemble them in a Word (or similar) document which you can then convert to a pdf.</p>
+
+<h4 id="career-development-build-your-action-plan">Career Development: Build your Action Plan</h4>
+
+<p>Create actions (using custom actions) to address your skill gaps. Here you can list the classes that you will be taking to complete your program, certifications that you want to complete, and so on. The action plan/list that will be generated won’t distinguish between your 2 job description requirements.</p>
+
+<h4 id="reflect">Reflect</h4>
+
+<p>Reflect on the assessment process and the importance of ethics in your chosen job descriptions – target length of 1 page (pdf)</p>
+
+<h3 id="submission">Submission</h3>
+
+<p>Upload your required files as attachments to the assignment:</p>
+
+<ol>
+  <li>profile from planner (pdf)</li>
+  <li>skills gap report for ‘current’ job description (screen capture converted to pdf)</li>
+  <li>skills gap report for ‘future’ job description (screen capture converted to pdf)</li>
+  <li>action plan/list from planner (pdf)</li>
+  <li>reflections (pdf)</li>
+</ol>
+
+<h5 id="grading">Grading</h5>
+
+<div class="border text-light px-4 pt-3 mx-4 mt-3 bg-dark border-primary">
+  Grade penalties will be applied in the following situations for assignment submissions:
+  <ul>
+    <li>on time but the written instructions for the submission were not followed: deduct 10% of the earned grade</li>
+    <li>Within 24 hours of the due date and time): deduct 20% of the earned grade</li>
+    <li>More than 24 and less than 48 hours late: deduct 40% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 48 and less than 72 hours late: deduct 60% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 72 and less than 96 hours late: deduct 80% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 96 and less than 108 hours late: deduct 90% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 108 hours late: deduct 100% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+  </ul>
+</div>
+
+<p>This assignment is worth 10 marks, according to the following rubric:</p>
+
+<h5 id="rubric">Rubric</h5>
+
+<p>DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of
+<a href="https://resources.depaul.edu/teaching-commons/teaching-guides/feedback-grading/rubrics/Pages/creating-rubrics.aspx">creating rubrics</a>.
+Your comments about the following rubric are welcome <a href="mailto:daryl.hepting@uregina.ca?subject=Rubric at /teaching/assignments/CS-280/sfia-02-10m/sfia-02-10m.html">via email</a></p>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+		  <tr>
+        <th><em>Criterion and Weight</em></th>
+        <th> Exemplary</th>
+        <th> Sufficient</th>
+        <th> Developing</th>
+        <th>Needs Improvement</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th>
+          Edited version of Self-Rated Skills Profile Report (1)
+        </th>
+        <td>
+          (+) profile from planner attached
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          profile from planner not attached
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Generated skill gap reports for 2 job descriptions ('current' and 'future') (2)
+        </th>
+        <td>
+          (+) both skill gap reports attached
+        </td>
+        <td>
+          (-) one skill gap report attached
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          no skill gap report attached
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Create action plan to address the skill gaps (5)
+        </th>
+        <td>
+          Done thoroughly for both selected job descriptions
+        </td>
+        <td>
+          Done for both selected job descriptions
+        </td>
+        <td>
+          Done for one selected job description
+        </td>
+        <td>
+          Substantially not complete or not included
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Reflect on the assessment process and the importance of ethics in your chosen job descriptions (2)
+        </th>
+        <td>
+          Thoughtful reflection about the assessment process and the role of ethics
+        </td>
+        <td>
+          Reflection about the assessment process and the role of ethics
+        </td>
+        <td>
+          Some reflection about either the assessment process or the role of ethics
+        </td>
+        <td>
+          Substantially not complete
+        </td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>
+
+<h5 id="calculator">Calculator</h5>
+
+<form name="calculator_SFIA_2">
+
+  <!-- rubric criteria -->
+  <div class="border bg-info m-2 p-4">
+    <strong>Rubric Criteria</strong>
+
+
+
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion1">Edited version of Self-Rated Skills Profile Report (1)</label>
+      <select class="col-sm-9 form-control" name="criteria_SFIA_2" id="rcriterion1">
+        criteria_SFIA_2
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): (+) profile from planner attached</option>
+        <option value="9"> Exemplary: (+) profile from planner attached</option>
+        <option value="8"> Exemplary (-): (+) profile from planner attached</option>
+        <option value="7"> Sufficient (+): </option>
+        <option value="6"> Sufficient: </option>
+        <option value="5"> Sufficient (-): </option>
+        <option value="4"> Developing (+): </option>
+        <option value="3"> Developing: </option>
+        <option value="2"> Developing (-): </option>
+        <option value="1">Needs Improvement: profile from planner not attached</option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion2">Generated skill gap reports for 2 job descriptions ('current' and 'future') (2)</label>
+      <select class="col-sm-9 form-control" name="criteria_SFIA_2" id="rcriterion2">
+        criteria_SFIA_2
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): (+) both skill gap reports attached</option>
+        <option value="9"> Exemplary: (+) both skill gap reports attached</option>
+        <option value="8"> Exemplary (-): (+) both skill gap reports attached</option>
+        <option value="7"> Sufficient (+): (-) one skill gap report attached</option>
+        <option value="6"> Sufficient: (-) one skill gap report attached</option>
+        <option value="5"> Sufficient (-): (-) one skill gap report attached</option>
+        <option value="4"> Developing (+): </option>
+        <option value="3"> Developing: </option>
+        <option value="2"> Developing (-): </option>
+        <option value="1">Needs Improvement: no skill gap report attached</option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion3">Create action plan to address the skill gaps (5)</label>
+      <select class="col-sm-9 form-control" name="criteria_SFIA_2" id="rcriterion3">
+        criteria_SFIA_2
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): Done thoroughly for both selected job descriptions</option>
+        <option value="9"> Exemplary: Done thoroughly for both selected job descriptions</option>
+        <option value="8"> Exemplary (-): Done thoroughly for both selected job descriptions</option>
+        <option value="7"> Sufficient (+): Done for both selected job descriptions</option>
+        <option value="6"> Sufficient: Done for both selected job descriptions</option>
+        <option value="5"> Sufficient (-): Done for both selected job descriptions</option>
+        <option value="4"> Developing (+): Done for one selected job description</option>
+        <option value="3"> Developing: Done for one selected job description</option>
+        <option value="2"> Developing (-): Done for one selected job description</option>
+        <option value="1">Needs Improvement: Substantially not complete or not included</option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion4">Reflect on the assessment process and the importance of ethics in your chosen job descriptions (2)</label>
+      <select class="col-sm-9 form-control" name="criteria_SFIA_2" id="rcriterion4">
+        criteria_SFIA_2
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): Thoughtful reflection about the assessment process and the role of ethics</option>
+        <option value="9"> Exemplary: Thoughtful reflection about the assessment process and the role of ethics</option>
+        <option value="8"> Exemplary (-): Thoughtful reflection about the assessment process and the role of ethics</option>
+        <option value="7"> Sufficient (+): Reflection about the assessment process and the role of ethics</option>
+        <option value="6"> Sufficient: Reflection about the assessment process and the role of ethics</option>
+        <option value="5"> Sufficient (-): Reflection about the assessment process and the role of ethics</option>
+        <option value="4"> Developing (+): Some reflection about either the assessment process or the role of ethics</option>
+        <option value="3"> Developing: Some reflection about either the assessment process or the role of ethics</option>
+        <option value="2"> Developing (-): Some reflection about either the assessment process or the role of ethics</option>
+        <option value="1">Needs Improvement: Substantially not complete</option>
+      </select>
+    </div>
+
+
+  </div>
+  <!-- penalties -->
+  <div class="form-group border bg-info m-2 p-4" id="pen">
+    <strong>Penalties</strong>
+
+    <div class="form-check" id="p0">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_2" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_SFIA_2">None (on-time and followed instructions)</label>
+    </div>
+    <div class="form-check" id="p1">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_2" id="penalty-1" value="10" />
+      <label class="form-check-label" for="penalty-1">Instructions not followed</label>
+    </div>
+    <div class="form-check" id="p2">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_2" id="penalty-2" value="20" />
+      <label class="form-check-label" for="penalty-2">Assignment submitted late, within 24 hours</label>
+    </div>
+    <div class="form-check" id="p3">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_2" id="penalty-3" value="40" />
+      <label class="form-check-label" for="penalty-3">Assignment submitted late, within 48 hours</label>
+    </div>
+    <div class="form-check" id="p4">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_2" id="penalty-4" value="60" />
+      <label class="form-check-label" for="penalty-4">Assignment submitted late, within 72 hours</label>
+    </div>
+    <div class="form-check" id="p5">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_2" id="penalty-5" value="80" />
+      <label class="form-check-label" for="penalty-5">Assignment submitted late, within 96 hours</label>
+    </div>
+    <div class="form-check" id="p6">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_2" id="penalty-6" value="90" />
+      <label class="form-check-label" for="penalty-6">Assignment submitted late, within 108 hours</label>
+    </div>
+    <div class="form-check" id="p7">
+      <input class="form-check-input" type="radio" name="penalties_SFIA_2" id="penalty-7" value="100" />
+      <label class="form-check-label" for="penalty-7">Assignment NOT submitted within 108 hours</label>
+    </div>
+  </div>
+  <div class="border bg-info m-2 p-4">
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
+
+
+      <textarea class="col-sm-9 form-control" id="comments_SFIA_2" rows="5" readonly="true"></textarea>
+  
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-9">
+        <button class="btn btn-primary" onclick="process_SFIA_2(); return false;">Evaluate</button>
+        <a id="clipboard_SFIA_2" href="#clipboard_SFIA_2" class="m-2 btn btn-primary" aria-label="Copy comments" data-clipboard-action="copy" data-clipboard-target="#comments_SFIA_2">
+          Copy Output to Clipboard
+        </a>
+        <button class="btn btn-primary" onclick="clearform_SFIA_2(); return false;">Clear Form</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<script>
+  function process_SFIA_2()
+  {
+    var weights = ["","1","2","5","2"]
+    console.log(weights)
+    var mult = 1.0
+    // get multiplier from penalty radio buttons
+    /*if (document.querySelector('input[name=penalties_SFIA_2]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_SFIA_2]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
+    console.log("mult: ",mult)
+
+    // find comment span
+    // BETTER: find the end of the text area content
+    // for additional comments?
+    var commentspan = document.getElementById("comments_SFIA_2");
+    console.log(commentspan)
+    commentspan.textContent = "";
+    console.log(commentspan.textContent)
+    // get grades for each rubric criterion
+    var sumgrade = 0;
+    var critname = "criteria" + "_" + "SFIA_2";
+    var crits = document.getElementsByName(critname);
+    for (var i = 0, length = crits.length; i < length; i++)
+    {
+      // output information for each criterion
+      commentspan.textContent = commentspan.textContent +
+        crits[i].parentNode.querySelector("label").textContent + ":\n";
+      if (crits[i].value >= 0 && crits[i].value <= 10)
+      {
+        var cw = weights[i+1];
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(commentspan.textContent)
+        console.log(cv,sumgrade)
+
+        commentspan.textContent = commentspan.textContent +
+          "\t ( " + cv.toFixed(2) + " / " + cw + " ) " +
+          crits[i].options[crits[i].selectedIndex].text + "\n";
+      }
+      else
+      {
+        commentspan.textContent = commentspan.textContent +
+          "\tNOT GRADED\n";
+      }
+      console.log(commentspan)
+    }
+    // output earned grade and the grade after penalty, if there is one
+    var eg = Math.round(sumgrade * 100) / 100;
+    var pg = Math.round(mult * sumgrade * 100) / 100;
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toFixed(2) +"\n";
+    // output penalty information
+    if (mult < 1.0)
+    {
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
+      commentspan.textContent = commentspan.textContent +
+        "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
+      commentspan.textContent = commentspan.textContent +
+        "After Penalty: " + pg.toFixed(2) + "\n";
+    }
+  }
+
+  function clearform_SFIA_2()
+  {
+    document.forms["calculator_SFIA_2"].reset();
+    var commentspan = document.getElementById("comments_SFIA_2");
+    commentspan.textContent = "";
+  }
+</script>
+
+<h4 id="ssAsgn_INFOG_2" class="bg-primary text-white">
+      Infographic - Part 2 (<span id="INFOG_2-timer"></span>)
+    </h4>
+    <script>
+      $(document).ready(
+        function(){
+          var duedate_INFOG_2 = '9-Apr-2024'
+          var duetime_INFOG_2 =
+            new Date(duedate_INFOG_2).getTime() + 86340000
+          $('#INFOG_2-timer').countdown(duetime_INFOG_2,
+            function(event) {
+              $(this).html(event.strftime('due in: <span>%D d %H h %M m</span>'))
+          })
+      })
+    </script>
+    <ul>
+      <li>
+        Marks: 14
+      </li>
+      <li>
+        Due Date: 9-Apr-2024 @ 23:59
+      </li>
+      <li>
+        <a href="https://urcourses.uregina.ca/mod/forum/discuss.php?d=2524839">
+          Discuss
+        </a>
+      </li>
+      <li>
+        <a href="https://urcourses.uregina.ca/mod/assign/view.php?id=2542466">
+          Submit
+        </a>
+      </li>
+    </ul>
+    <h3 id="infographic---part-2">Infographic - Part 2</h3>
+
+<p>An <a href="https://en.wikipedia.org/wiki/Infographic" target="_blank">infographic</a> is a graphic visual representation of “information, data, or knowledge intended to present information quickly and clearly”.</p>
+
+<p>Individually, or in groups of up to 4, prepare and submit an infographic that deals with a topic that is course-related (related to course themes, course resources, and/or course discussions) timely (1 or more of your sources should be published within the last 6 months), and to which you have a personal connection.</p>
+
+<p>The infographic will be submitted in this final part of the assignment. You must work with the group and the topic with which you submitted the first part of this assignment.</p>
+
+<p>See <a href="https://www.humanetech.com/infographic-dark-side-social-media" target="_blank">this link for a sample infographic</a>. The target medium for display of this infographic is the web, so design your infographic for vertical scrolling as required. For your reference, the dimensions (width x height) for the sample are 2190 × 12292. Other samples can be found <a href="https://infographics.umwblogs.org/about/" target="_blank">here</a> and <a href="https://andrealivismith.com/wp-content/uploads/2011/06/Infographics-Syllabus.pdf" target="_blank">here</a>. Particular dimensions are not required but you are to create a single infographic, not a collection (of slides, for example).</p>
+
+<p>You may use any of a variety of tools that you are able to access legitimately. These include, but are not limited to, <a href="https://www.canva.com/infographics/" target="_blank">canva</a> and <a href="https://piktochart.com/" target="_blank">piktochart</a>.</p>
+
+<p>You are to create your infographic without the use of AI.</p>
+
+<p>Your infographic should contain research from 3-5 excellent sources (as evaluated using the <a href="https://hapgood.us/2019/06/19/sift-the-four-moves/" target="_blank">SIFT</a> method). Individuals may use 3 sources, groups must use 5 sources. These sources are to appear on the final infographic.</p>
+
+<h3 id="submission">Submission</h3>
+
+<p>Submit your infographic as a single high-resolution image.</p>
+
+<h5 id="grading">Grading</h5>
+
+<div class="border text-light px-4 pt-3 mx-4 mt-3 bg-dark border-primary">
+  Grade penalties will be applied in the following situations for assignment submissions:
+  <ul>
+    <li>on time but the written instructions for the submission were not followed: deduct 10% of the earned grade</li>
+    <li>Within 24 hours of the due date and time): deduct 20% of the earned grade</li>
+    <li>More than 24 and less than 48 hours late: deduct 40% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 48 and less than 72 hours late: deduct 60% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 72 and less than 96 hours late: deduct 80% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 96 and less than 108 hours late: deduct 90% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+    <li>More than 108 hours late: deduct 100% of the earned grade until the cut-off date, after which no grade can be earned.</li>
+  </ul>
+</div>
+
+<p>This assignment is worth 14 marks, according to the following rubric:</p>
+
+<h5 id="rubric">Rubric</h5>
+
+<p>DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of
+<a href="https://resources.depaul.edu/teaching-commons/teaching-guides/feedback-grading/rubrics/Pages/creating-rubrics.aspx">creating rubrics</a>.
+Your comments about the following rubric are welcome <a href="mailto:daryl.hepting@uregina.ca?subject=Rubric at /teaching/assignments/CS-280/infographic-02-14m/infographic-02-14m.html">via email</a></p>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+		  <tr>
+        <th><em>Criterion and Weight</em></th>
+        <th> Exemplary</th>
+        <th> Sufficient</th>
+        <th> Developing</th>
+        <th>Needs Improvement</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th>
+          Main Message (2)
+        </th>
+        <td>
+          The infographic effectively informs and convinces the reader of its intended purpose, which demonstrates intellectual engagement with important course-related issues and provides strong evidence of a personal connection
+        </td>
+        <td>
+          The infographic informs the reader of its intended purpose, makes some reference to important course-related issues, and provides some evidence of a personal connection
+        </td>
+        <td>
+          The infographic does not clearly inform the reader of its intended purpose, makes little reference to important course-related issues and provides little evidence of a personal connection
+        </td>
+        <td>
+          The infographic does not inform the reader of its intended purpose, akes no reference to important course-related issues, and provides no evidence of a personal connection
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Information (2)
+        </th>
+        <td>
+          accurate and detailed information is provided and supports the purpose of the infographic
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Focus (2)
+        </th>
+        <td>
+          All content concisely complements the purpose of the infographic
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Visual Appeal (2)
+        </th>
+        <td>
+          fonts, colours, layouts, and visual elements meaningfully contribute to the infographic’s ability to convey the main message
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Organization (2)
+        </th>
+        <td>
+          Information is systematically organized and supports readers’ comprehension of the main message
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Citation (2)
+        </th>
+        <td>
+          Full bibliographic citations are included for all sources referenced, including sources for images along with an indication that you have permission to use those images
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+			</tr>
+
+      <tr>
+        <th>
+          Mechanics (2)
+        </th>
+        <td>
+          Shows a good command of Standard English. No problems for your audience.
+        </td>
+        <td>
+          Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your infographic.
+        </td>
+        <td>
+          Shows some evidence of correct spelling, grammar, and punctuation. Audience will have some trouble reading your infographic.
+        </td>
+        <td>
+          Incorrect grammar and spelling are apparent throughout, making it difficult for others to follow.
+        </td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>
+
+<h5 id="calculator">Calculator</h5>
+
+<form name="calculator_INFOG_2">
+
+  <!-- rubric criteria -->
+  <div class="border bg-info m-2 p-4">
+    <strong>Rubric Criteria</strong>
+
+
+
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion1">Main Message (2)</label>
+      <select class="col-sm-9 form-control" name="criteria_INFOG_2" id="rcriterion1">
+        criteria_INFOG_2
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): The infographic effectively informs and convinces the reader of its intended purpose, which demonstrates intellectual engagement with important course-related issues and provides strong evidence of a personal connection</option>
+        <option value="9"> Exemplary: The infographic effectively informs and convinces the reader of its intended purpose, which demonstrates intellectual engagement with important course-related issues and provides strong evidence of a personal connection</option>
+        <option value="8"> Exemplary (-): The infographic effectively informs and convinces the reader of its intended purpose, which demonstrates intellectual engagement with important course-related issues and provides strong evidence of a personal connection</option>
+        <option value="7"> Sufficient (+): The infographic informs the reader of its intended purpose, makes some reference to important course-related issues, and provides some evidence of a personal connection</option>
+        <option value="6"> Sufficient: The infographic informs the reader of its intended purpose, makes some reference to important course-related issues, and provides some evidence of a personal connection</option>
+        <option value="5"> Sufficient (-): The infographic informs the reader of its intended purpose, makes some reference to important course-related issues, and provides some evidence of a personal connection</option>
+        <option value="4"> Developing (+): The infographic does not clearly inform the reader of its intended purpose, makes little reference to important course-related issues and provides little evidence of a personal connection</option>
+        <option value="3"> Developing: The infographic does not clearly inform the reader of its intended purpose, makes little reference to important course-related issues and provides little evidence of a personal connection</option>
+        <option value="2"> Developing (-): The infographic does not clearly inform the reader of its intended purpose, makes little reference to important course-related issues and provides little evidence of a personal connection</option>
+        <option value="1">Needs Improvement: The infographic does not inform the reader of its intended purpose, akes no reference to important course-related issues, and provides no evidence of a personal connection</option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion2">Information (2)</label>
+      <select class="col-sm-9 form-control" name="criteria_INFOG_2" id="rcriterion2">
+        criteria_INFOG_2
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): accurate and detailed information is provided and supports the purpose of the infographic</option>
+        <option value="9"> Exemplary: accurate and detailed information is provided and supports the purpose of the infographic</option>
+        <option value="8"> Exemplary (-): accurate and detailed information is provided and supports the purpose of the infographic</option>
+        <option value="7"> Sufficient (+): </option>
+        <option value="6"> Sufficient: </option>
+        <option value="5"> Sufficient (-): </option>
+        <option value="4"> Developing (+): </option>
+        <option value="3"> Developing: </option>
+        <option value="2"> Developing (-): </option>
+        <option value="1">Needs Improvement: </option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion3">Focus (2)</label>
+      <select class="col-sm-9 form-control" name="criteria_INFOG_2" id="rcriterion3">
+        criteria_INFOG_2
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): All content concisely complements the purpose of the infographic</option>
+        <option value="9"> Exemplary: All content concisely complements the purpose of the infographic</option>
+        <option value="8"> Exemplary (-): All content concisely complements the purpose of the infographic</option>
+        <option value="7"> Sufficient (+): </option>
+        <option value="6"> Sufficient: </option>
+        <option value="5"> Sufficient (-): </option>
+        <option value="4"> Developing (+): </option>
+        <option value="3"> Developing: </option>
+        <option value="2"> Developing (-): </option>
+        <option value="1">Needs Improvement: </option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion4">Visual Appeal (2)</label>
+      <select class="col-sm-9 form-control" name="criteria_INFOG_2" id="rcriterion4">
+        criteria_INFOG_2
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): fonts, colours, layouts, and visual elements meaningfully contribute to the infographic’s ability to convey the main message</option>
+        <option value="9"> Exemplary: fonts, colours, layouts, and visual elements meaningfully contribute to the infographic’s ability to convey the main message</option>
+        <option value="8"> Exemplary (-): fonts, colours, layouts, and visual elements meaningfully contribute to the infographic’s ability to convey the main message</option>
+        <option value="7"> Sufficient (+): </option>
+        <option value="6"> Sufficient: </option>
+        <option value="5"> Sufficient (-): </option>
+        <option value="4"> Developing (+): </option>
+        <option value="3"> Developing: </option>
+        <option value="2"> Developing (-): </option>
+        <option value="1">Needs Improvement: </option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion5">Organization (2)</label>
+      <select class="col-sm-9 form-control" name="criteria_INFOG_2" id="rcriterion5">
+        criteria_INFOG_2
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): Information is systematically organized and supports readers’ comprehension of the main message</option>
+        <option value="9"> Exemplary: Information is systematically organized and supports readers’ comprehension of the main message</option>
+        <option value="8"> Exemplary (-): Information is systematically organized and supports readers’ comprehension of the main message</option>
+        <option value="7"> Sufficient (+): </option>
+        <option value="6"> Sufficient: </option>
+        <option value="5"> Sufficient (-): </option>
+        <option value="4"> Developing (+): </option>
+        <option value="3"> Developing: </option>
+        <option value="2"> Developing (-): </option>
+        <option value="1">Needs Improvement: </option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion6">Citation (2)</label>
+      <select class="col-sm-9 form-control" name="criteria_INFOG_2" id="rcriterion6">
+        criteria_INFOG_2
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): Full bibliographic citations are included for all sources referenced, including sources for images along with an indication that you have permission to use those images</option>
+        <option value="9"> Exemplary: Full bibliographic citations are included for all sources referenced, including sources for images along with an indication that you have permission to use those images</option>
+        <option value="8"> Exemplary (-): Full bibliographic citations are included for all sources referenced, including sources for images along with an indication that you have permission to use those images</option>
+        <option value="7"> Sufficient (+): </option>
+        <option value="6"> Sufficient: </option>
+        <option value="5"> Sufficient (-): </option>
+        <option value="4"> Developing (+): </option>
+        <option value="3"> Developing: </option>
+        <option value="2"> Developing (-): </option>
+        <option value="1">Needs Improvement: </option>
+      </select>
+    </div>
+
+  
+  
+  <!---->
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="rcriterion7">Mechanics (2)</label>
+      <select class="col-sm-9 form-control" name="criteria_INFOG_2" id="rcriterion7">
+        criteria_INFOG_2
+        <option selected="" disabled="">Choose...</option>
+        <option value="10"> Exemplary (+): Shows a good command of Standard English. No problems for your audience.</option>
+        <option value="9"> Exemplary: Shows a good command of Standard English. No problems for your audience.</option>
+        <option value="8"> Exemplary (-): Shows a good command of Standard English. No problems for your audience.</option>
+        <option value="7"> Sufficient (+): Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your infographic.</option>
+        <option value="6"> Sufficient: Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your infographic.</option>
+        <option value="5"> Sufficient (-): Demonstrates evidence of correct spelling, grammar, and punctuation. Audience will have little trouble reading your infographic.</option>
+        <option value="4"> Developing (+): Shows some evidence of correct spelling, grammar, and punctuation. Audience will have some trouble reading your infographic.</option>
+        <option value="3"> Developing: Shows some evidence of correct spelling, grammar, and punctuation. Audience will have some trouble reading your infographic.</option>
+        <option value="2"> Developing (-): Shows some evidence of correct spelling, grammar, and punctuation. Audience will have some trouble reading your infographic.</option>
+        <option value="1">Needs Improvement: Incorrect grammar and spelling are apparent throughout, making it difficult for others to follow.</option>
+      </select>
+    </div>
+
+
+  </div>
+  <!-- penalties -->
+  <div class="form-group border bg-info m-2 p-4" id="pen">
+    <strong>Penalties</strong>
+
+    <div class="form-check" id="p0">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_2" id="penalty-0" value="0" checked="" />
+      <label class="form-check-label" for="penalties_INFOG_2">None (on-time and followed instructions)</label>
+    </div>
+    <div class="form-check" id="p1">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_2" id="penalty-1" value="10" />
+      <label class="form-check-label" for="penalty-1">Instructions not followed</label>
+    </div>
+    <div class="form-check" id="p2">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_2" id="penalty-2" value="20" />
+      <label class="form-check-label" for="penalty-2">Assignment submitted late, within 24 hours</label>
+    </div>
+    <div class="form-check" id="p3">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_2" id="penalty-3" value="40" />
+      <label class="form-check-label" for="penalty-3">Assignment submitted late, within 48 hours</label>
+    </div>
+    <div class="form-check" id="p4">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_2" id="penalty-4" value="60" />
+      <label class="form-check-label" for="penalty-4">Assignment submitted late, within 72 hours</label>
+    </div>
+    <div class="form-check" id="p5">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_2" id="penalty-5" value="80" />
+      <label class="form-check-label" for="penalty-5">Assignment submitted late, within 96 hours</label>
+    </div>
+    <div class="form-check" id="p6">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_2" id="penalty-6" value="90" />
+      <label class="form-check-label" for="penalty-6">Assignment submitted late, within 108 hours</label>
+    </div>
+    <div class="form-check" id="p7">
+      <input class="form-check-input" type="radio" name="penalties_INFOG_2" id="penalty-7" value="100" />
+      <label class="form-check-label" for="penalty-7">Assignment NOT submitted within 108 hours</label>
+    </div>
+  </div>
+  <div class="border bg-info m-2 p-4">
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label text-right" for="commentstext">Output</label>
+
+
+      <textarea class="col-sm-9 form-control" id="comments_INFOG_2" rows="5" readonly="true"></textarea>
+  
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-9">
+        <button class="btn btn-primary" onclick="process_INFOG_2(); return false;">Evaluate</button>
+        <a id="clipboard_INFOG_2" href="#clipboard_INFOG_2" class="m-2 btn btn-primary" aria-label="Copy comments" data-clipboard-action="copy" data-clipboard-target="#comments_INFOG_2">
+          Copy Output to Clipboard
+        </a>
+        <button class="btn btn-primary" onclick="clearform_INFOG_2(); return false;">Clear Form</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<script>
+  function process_INFOG_2()
+  {
+    var weights = ["","2","2","2","2","2","2","2"]
+    console.log(weights)
+    var mult = 1.0
+    // get multiplier from penalty radio buttons
+    /*if (document.querySelector('input[name=penalties_INFOG_2]:checked'))
+    {*/
+    var penalty = document.querySelector('input[name=penalties_INFOG_2]:checked')
+    console.log("penalty: ",penalty)
+    mult = (100.0 - penalty.value)/100.0
+    //}
+    console.log("mult: ",mult)
+
+    // find comment span
+    // BETTER: find the end of the text area content
+    // for additional comments?
+    var commentspan = document.getElementById("comments_INFOG_2");
+    console.log(commentspan)
+    commentspan.textContent = "";
+    console.log(commentspan.textContent)
+    // get grades for each rubric criterion
+    var sumgrade = 0;
+    var critname = "criteria" + "_" + "INFOG_2";
+    var crits = document.getElementsByName(critname);
+    for (var i = 0, length = crits.length; i < length; i++)
+    {
+      // output information for each criterion
+      commentspan.textContent = commentspan.textContent +
+        crits[i].parentNode.querySelector("label").textContent + ":\n";
+      if (crits[i].value >= 0 && crits[i].value <= 10)
+      {
+        var cw = weights[i+1];
+        var cv = (crits[i].value / 10.0) * cw
+        sumgrade += cv
+        console.log(commentspan.textContent)
+        console.log(cv,sumgrade)
+
+        commentspan.textContent = commentspan.textContent +
+          "\t ( " + cv.toFixed(2) + " / " + cw + " ) " +
+          crits[i].options[crits[i].selectedIndex].text + "\n";
+      }
+      else
+      {
+        commentspan.textContent = commentspan.textContent +
+          "\tNOT GRADED\n";
+      }
+      console.log(commentspan)
+    }
+    // output earned grade and the grade after penalty, if there is one
+    var eg = Math.round(sumgrade * 100) / 100;
+    var pg = Math.round(mult * sumgrade * 100) / 100;
+    console.log(cv,sumgrade,eg,pg)
+    commentspan.textContent = commentspan.textContent + "Earned Grade: " + eg.toFixed(2) +"\n";
+    // output penalty information
+    if (mult < 1.0)
+    {
+      commentspan.textContent = commentspan.textContent + "Penalty:\n";
+      commentspan.textContent = commentspan.textContent +
+        "\t" + penalty.parentNode.querySelector("label").textContent + "\n";
+      commentspan.textContent = commentspan.textContent +
+        "After Penalty: " + pg.toFixed(2) + "\n";
+    }
+  }
+
+  function clearform_INFOG_2()
+  {
+    document.forms["calculator_INFOG_2"].reset();
+    var commentspan = document.getElementById("comments_INFOG_2");
+    commentspan.textContent = "";
+  }
+</script>
+
+<p></p><h3 id="ssExams" class="bg-dark text-white">
+        Exams
+      </h3>
+
+
+
+
+
+
+<ul>
+  
+  
+  <li>
+    <a href="/~hepting/assets/teaching/pdf/CS-280-202410_exam-1-midterm.pdf">
+      202410 Midterm
+    </a>
+  </li>
+  <li>
+    <a href="/~hepting/assets/teaching/pdf/CS-280-202010_exam-1-midterm.pdf">
+      202010 Midterm
+    </a>
+  </li>
+  <li>
+    <a href="/~hepting/assets/teaching/pdf/CS-280-201910_exam-2-final.pdf">
+      201910 Final
+    </a>
+  </li>
+  <li>
+    <a href="/~hepting/assets/teaching/pdf/CS-280-201910_exam-1-midterm.pdf">
+      201910 Midterm
+    </a>
+  </li>
+  <li>
+    <a href="/~hepting/assets/teaching/pdf/CS-280-201710_exam-2-final.pdf">
+      201710 Final
+    </a>
+  </li>
+  <li>
+    <a href="/~hepting/assets/teaching/pdf/CS-280-201710_exam-1-midterm.pdf">
+      201710 Midterm
+    </a>
+  </li>
+  <li>
+    <a href="/~hepting/assets/teaching/pdf/CS-280-201610_exam-2-final.pdf">
+      201610 Final
+    </a>
+  </li>
+  <li>
+    <a href="/~hepting/assets/teaching/pdf/CS-280-201610_exam-1-midterm.pdf">
+      201610 Midterm
+    </a>
+  </li>
+  <li>
+    <a href="/~hepting/assets/teaching/pdf/CS-280-201510_exam-2-final.pdf">
+      201510 Final
+    </a>
+  </li>
+  <li>
+    <a href="/~hepting/assets/teaching/pdf/CS-280-201510_exam-1-midterm.pdf">
+      201510 Midterm
+    </a>
+  </li>
+  <li>
+    <a href="/~hepting/assets/teaching/pdf/CS-280-201210_exam-2-final.pdf">
+      201210 Final
+    </a>
+  </li>
+  <li>
+    <a href="/~hepting/assets/teaching/pdf/CS-280-201210_exam-1-midterm.pdf">
+      201210 Midterm
+    </a>
+  </li>
+  <li>
+    <a href="/~hepting/assets/teaching/pdf/CS-280-201010_exam-2-final.pdf">
+      201010 Final
+    </a>
+  </li>
+  <li>
+    <a href="/~hepting/assets/teaching/pdf/CS-280-201010_exam-1-midterm.pdf">
+      201010 Midterm
+    </a>
+  </li></ul><p></p><div id="offftr" class="card-header bg-info">
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

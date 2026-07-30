@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-730/202210/meetings/15_Tue-08-Mar-2022.html" />
+    
+    <title>Mtg 15 &bull; CS-730 (202210) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 15 &bull; CS-730 (202210) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/15_Tue-08-Mar-2022.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/",
+        
+          "name": "CS 730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/",
+        
+          "name": "202210"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/15_Tue-08-Mar-2022.html",
+        
+          "name": "15 (Tue-08-Mar-2022)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/">
+        CS 730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/">
+        202210
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-730/202210/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      15 (Tue-08-Mar-2022)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 15/24: Tue-08-Mar-2022
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="14_Thu-03-Mar-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="16_Thu-10-Mar-2022.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=8504">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Okay, so. I made some. edits to the data on the. website. So. i'll do a mix of both.
+          </li><li>
+            
+            let's see.
+          </li><li>
+            
+            So about the data. We have versus catch one gardening covered. Last week, my first. attempt at this was to comment about. The update schedule changing from daily to weekly. So in links own data night. Some new things. number of new cases. recorded deaths. And then I added a comments when next report was out. So I. This was done before the. thing until the 26th. This data was added to the display which you can see now, if you look at that page. two pages see that the cases went down to zero. For a week. The same with deaths. That I would be happy to make a pull request, if I could get a bit of direction. about it. So. This issue is close. there's a column made. About they've updated the review to reflect the schedule so. They addressed. It should, I pointed out. Brian did weekly updates. So realizing that. correction of the data pointed out. it's likely something like this better position to do then. They were. So I cloned the repository and made the changes. So I looked at all four parts. And they realized. So I realized that I needed to do was go into the. daily reports folder directory and change. I changed my file so let's. See. here. I started on february's second in February. If they're six. files to show. show the. or not. Go back to the code here. reports. So this is February. six. So. Each day. These two numbers here. Which is the total number of confirmed cases, since the start of the pandemic. On number of deaths attributed to cope with. So I made changes to each of the files. February 6 to. March. seven. So that's one set of changes. And then. The time series. So then there's two files, the global cases confirmed. and global deaths confirm. attributed so. Show me that file. Let me open. My computer and i'll show you the false. Shared screen. On your services was turned my laptop so every day is. These are all days I changed. Well, now it's excel. we're trying to open excel. A good idea. Little computer that's going. off again. Will screen. Okay, so. This is. This is the time series for confirmed cases. So it has country. This column is province or state so some of the. Countries have a broken down by provinces. States so Australia is Canada is. China is. Not all the other ones are. Anyway, so. 956 Scotch one. So they start recording dates. January 22 20. And then. For each one which dates. Anyone. And then there's some strange formatting here, it goes from June 30 21. And then the sides take. seven as the year 2007. and makes it into January. January 21 2007. So. I could suggest an edit for that, but that's not. anyway. So dash six dash 22. looks like June 22nd 2002. But I believe it's February 6 2022. So it makes sense from context. So. started on that date. Go back to the line. or sketch one here. So. i've updated. updated cases there. So is anyone familiar with github. Okay, so i'm just looking to see if there any instructions about making changes.
+          </li><li>
+            
+            hey.
+          </li><li>
+            
+            i'm just. Thinking about another possible change suggest. There is a table of contents so. You think so far. Yes, let's do that. want to let you know that I extended formative feedback until Friday. and quickly here. So I don't have to reset it. Any suggestions for. Do you think this is a good thing to add. Okay.
+          </li><li>
+            
+            He.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            Will be right with you :-)
+          </li><li>
+            
+            How are doing today?
+          </li><li>
+            
+            it's all good sir..
+          </li><li>
+            
+            Good Morning... doing good sir
+          </li><li>
+            
+            hi sir ,fine
+          </li><li>
+            
+            Good Morning Sir
+          </li><li>
+            
+            How was your experience with proctortrack?
+          </li><li>
+            
+            I won’t penalize anyone for problems with technology.
+          </li><li>
+            
+            I have some mixed feelings about proctortrack... some positive and negative experiences
+          </li><li>
+            
+            it had many issue when on dark mode
+          </li><li>
+            
+            Is it advanced in terms of security or poorly designed or both?
+          </li><li>
+            
+            for first time ,my proctrack has issue .i can connect it
+          </li><li>
+            
+            yes! I would say highly advanced in security but lagging far behind in designing
+          </li><li>
+            
+            Designed was poor and the security was of advanced level
+          </li><li>
+            
+            in terms of security it was up to the mark but in terms of design still it could be more user friendly
+          </li><li>
+            
+            Did anyone have anxiety about completing the exam?
+          </li><li>
+            
+            Onboarding was quite smooth but at the starting of mid term the proctor track app was open but the exam tab was not showing any questions
+          </li><li>
+            
+            Noticed some errors on the proctotrack with the security
+          </li><li>
+            
+            I know from my experience of trying to understand the dashboard that I had that it was not clear
+          </li><li>
+            
+            I couldn't see the time on my dashboard
+          </li><li>
+            
+            I look forward to seeing your assignments that will explore your own experience with proctortrack
+          </li><li>
+            
+            my proctrack is not work very well.
+          </li><li>
+            
+            Did anyone have anxiety about completing the exam? Because of proctortrack
+          </li><li>
+            
+            ?
+          </li><li>
+            
+            Any questions about the assignment?
+          </li><li>
+            
+            No anxiety
+          </li><li>
+            
+            OK
+          </li><li>
+            
+            I just want to ask if the assignment could be extended a little bit?
+          </li><li>
+            
+            i wasn't anxious
+          </li><li>
+            
+            yes questions not loading at the very beginning of the test gave a little anxiety.
+          </li><li>
+            
+            yes ,me.because I can not see the exam,
+          </li><li>
+            
+            What do you think about an extension for the assignment. Until Thursday or Friday?
+          </li><li>
+            
+            Yes, please 😀
+          </li><li>
+            
+            I like the idea of the extension, it would be helpful
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            it's all upto you! I can't decide between Thursday and Friday
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            OK. I’ll make it Friday.
+          </li><li>
+            
+            What about them, who has submitted in a hurry!!! 😟
+          </li><li>
+            
+            thanks sir
+          </li><li>
+            
+            Thank you sir
+          </li><li>
+            
+            thank you sir
+          </li><li>
+            
+            thank you
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            thank you sir
+          </li><li>
+            
+            This video came to mind when talking about proctortrack: https://www.youtube.com/watch?v=jajduxPD6H4
+          </li><li>
+            
+            If you’ve submitted the assignment, I will let you submit a new version if you would like
+          </li><li>
+            
+            Thank you sir
+          </li><li>
+            
+            thank you sir
+          </li><li>
+            
+            In the exam I couldn't see the time remaining on UR Courses as I was using a dark theme. The contrast was off. Proctortrack had also put this bar on the top blocking the clock on my system.
+          </li><li>
+            
+            As a result I rushed through the exam and could not utilize the full time. Also realized the time was extended after completing the exam. :(
+          </li><li>
+            
+            I will get the exams marked this week. Some of the questions were auto-marked incorrectly and I will fix up those issues.
+          </li><li>
+            
+            I also thought time extension was some sort of bug as it changed while giving exam.
+          </li><li>
+            
+            Did the questions on the exam seem to fairly assess your learning so far?
+          </li><li>
+            
+            I was anxious. Felt like added pressure. Couldn't move or stretch the legs.
+          </li><li>
+            
+            Yes, it did fairly access current learnings
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            I wrote an email about the extension to 100 minutes. There was no clear way (in my opinion) to message each of you inside proctortrack.
+          </li><li>
+            
+            Sir! we should look towards any alternative of proctortrack. because I don't think it is the only option for online exam.
+          </li><li>
+            
+            Proctortrack is what we are using at the University of Regina. That is fairly well settled I believe
+          </li><li>
+            
+            I will do a better job of setting it up for the final exam. :-)
+          </li><li>
+            
+            If the exam will be conducted without proctortrack, there are plethora of reasons to do good in exams as many of us were feeling an extra pressure about uncertainties.
+          </li><li>
+            
+            I want to show you something that I have been working on this past week (off and on).
+          </li><li>
+            
+            Ok
+          </li><li>
+            
+            I didn't have properly working webcam in my system, So I went to University for appearing in exam from there. But I got to know that we should book our exam cabin before a day.
+          </li><li>
+            
+            Is it better or worse if I type instead of speaking?
+          </li><li>
+            
+            It's ok sir... in both of cases.
+          </li><li>
+            
+            Yes sir
+          </li><li>
+            
+            Anyone familiar with GitHub?
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            We use it in CS700
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Ok, do you find it usable?
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Yes sir .. extremely
+          </li><li>
+            
+            Of course!
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            How would you describe your experience with it?
+          </li><li>
+            
+            “extremely”  “Of course!” wow!
+          </li><li>
+            
+            In starting, It was tough to understand the functionality...but in few days, after having some practices I learnt many useful things there.
+          </li><li>
+            
+            I love it. Recently I became a fan of its codespaces features.
+          </li><li>
+            
+            how much time did it take to understand a pull request ? :-)
+          </li><li>
+            
+            Extremely
+          </li><li>
+            
+            At the time of developing projects, I was using TFS which was irregular in many cases.
+          </li><li>
+            
+            it take less than one day to understand pull request
+          </li><li>
+            
+            It was very simple to understand the pull/push and commit... It took few minutes
+          </li><li>
+            
+            “t is  still confusing to me !!” — I empathize with this view
+          </li><li>
+            
+            I can also understand it can be confusing to someone who doesn't have any prior knowledge of Git.
+          </li><li>
+            
+            git knowledge is not required if u used desktop or any ide
+          </li><li>
+            
+            Also features such as Fork as exclusive to GitHub. Not part of Git. I have seen many people confuse Git and GitHub.
+          </li><li>
+            
+            ide do git commands for us
+          </li><li>
+            
+            Is exclusive*
+          </li><li>
+            
+            Let’s propose an addition to the README file that explains how to modify the data.
+          </li><li>
+            
+            OK.  Can you still see my desktop?
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Yes...
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            So far so good?
+          </li><li>
+            
+            Attendance
+          </li><li>
+            
+            Student password
+          </li><li>
+            
+            THanks
+          </li><li>
+            
+            1. Fork the repo 2. Make the change 3. Create a pull request
+          </li><li>
+            
+            :)
+          </li><li>
+            
+            right. cloning is not enough!
+          </li><li>
+            
+            ok - out of time for today! Thank you. See you Thursday
+          </li><li>
+            
+            Can't submit the attendance
+          </li><li>
+            
+            Guess it's not open
+          </li><li>
+            
+            try it now! :-)
+          </li><li>
+            
+            Working :)
+          </li><li>
+            
+            Have a great day. See you Thursdaty
+          </li><li>
+            
+            Thursday!
+          </li><li>
+            
+            thank you .bye
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Thank you.
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Hi sir today we are talking about proctortrack experience and also git hub.
+    </li><li>In todays session we discussed about the mid term and how was the experience while in the midterm exam
+    </li><li>I learnt to detect UX issues of tasks like Github pull requests that I do not notice when using them daily.
+    </li><li>In today&#039;s meeting, we discussed our mid-term exam experiences. I learned how it was uneasy for some of the students to take the exam with Proctortrack as it was their first exam using an online proctoring tool. I was a bit anxious during the exam because of it, too.
+    </li><li>different user experience when using the online proctortrack for the midterms.
+    </li><li>The  most important thing i learn is that how proctrotrack is working and how many will faces problem initially and got anxious also the design of git hub that how git hub is working and how to send request to collaborator.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>Git and Github.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-730/202210/meetings/15_Tue-08-Mar-2022.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

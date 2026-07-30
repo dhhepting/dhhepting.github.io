@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-733/202330/meetings/23_Mon-27-Nov-2023.html" />
+    
+    <title>Mtg 23 &bull; CS-733 (202330) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 23 &bull; CS-733 (202330) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/23_Mon-27-Nov-2023.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/",
+        
+          "name": "CS 733"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/",
+        
+          "name": "202330"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/",
+        
+          "name": "Meetings"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 6,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/23_Mon-27-Nov-2023.html",
+        
+          "name": "23 (Mon-27-Nov-2023)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-733/">
+        CS 733
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-733/202330/">
+        202330
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-733/202330/meetings/">
+        Meetings
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      23 (Mon-27-Nov-2023)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 23/25: Mon-27-Nov-2023
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="22_Wed-22-Nov-2023.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="24_Wed-29-Nov-2023.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=9127">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_23" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_23" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_23" data-bs-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/rkxhfzjdprscvwqwlll7s/23-1.png?rlkey=pqdlcbiwsp5va058zstgvqhc3&amp;dl=0" alt="23 - 1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/3wn9l78c2oc58aawh0xta/23-2.png?rlkey=m5vx4x35fzumg2e312g8ovqis&amp;dl=0" alt="23 - 2.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_23" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_23" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Questions about
+          </li><li>
+            
+            any questions about assignment
+three?
+          </li><li>
+            
+            Let's do tonight.
+          </li><li>
+            
+            So it did say like, make changes
+to the material like parameters
+          </li><li>
+            
+            of the, the rendering. So how
+many parameters were supposed to
+          </li><li>
+            
+            be changed because I just added
+to changed the way that the
+          </li><li>
+            
+            light diffusers with the cube
+and I also changed the angle of
+          </li><li>
+            
+            collect that hits the cube. Okay
+but there are like shininess and
+          </li><li>
+            
+            specular or ambient light or do
+we have to we have to change
+          </li><li>
+            
+            everything or was to just enough
+          </li><li>
+            
+            so I guess I would say it's up
+to you. So so maybe things that
+          </li><li>
+            
+            will highlight the difference
+between the two shaders.
+          </li><li>
+            
+            If you if you think Gee, I
+wonder what would happen if I
+          </li><li>
+            
+            did this?
+          </li><li>
+            
+            I did. Most of them were working
+but some of them were just too
+          </li><li>
+            
+            difficult. To get them running.
+          </li><li>
+            
+            Using a judgment about how many
+parameters
+          </li><li>
+            
+            you expose in the interface
+          </li><li>
+            
+            maybe think about
+          </li><li>
+            
+            shows off
+          </li><li>
+            
+            the differences
+          </li><li>
+            
+            so it shows up the differences
+between the shaders.
+          </li><li>
+            
+            So, remember to document and
+explain your code
+          </li><li>
+            
+            use Bootstrap and WebGL to.
+          </li><li>
+            
+            Follow instructions
+          </li><li>
+            
+            in the assignment.
+          </li><li>
+            
+            Include a readme file
+          </li><li>
+            
+            that explains
+          </li><li>
+            
+            how to use your code
+          </li><li>
+            
+            so maybe we'll say that a readme
+file is not just for the marker
+          </li><li>
+            
+            for me but for people who might
+come across your code and say
+          </li><li>
+            
+            some make the descriptions clear
+enough and detailed enough so
+          </li><li>
+            
+            that people who don't have
+specific background I was late
+          </li><li>
+            
+            to
+          </li><li>
+            
+            welcome everyone
+          </li><li>
+            
+            Okay, so I'm going assignment
+three is due tonight. Use your
+          </li><li>
+            
+            judgment about how many
+parameters to expose in the
+          </li><li>
+            
+            interface. If you think about
+what shows off the differences
+          </li><li>
+            
+            between the shaders. Document
+and explain your code. use
+          </li><li>
+            
+            Bootstrap and letter WebGL to
+follow instructions in the
+          </li><li>
+            
+            assignment description and
+include a readme file that
+          </li><li>
+            
+            explains how to use your code to
+anyone so people who might just
+          </li><li>
+            
+            come across your your code and
+say so give them enough details
+          </li><li>
+            
+            that they can run your code and
+if you have questions about
+          </li><li>
+            
+            the questions about how to do
+avoid pitfalls from assignment
+          </li><li>
+            
+            to maybe if you have time you
+can stop and talk to me after
+          </li><li>
+            
+            class
+          </li><li>
+            
+            and
+          </li><li>
+            
+            yeah, okay.
+          </li><li>
+            
+            So these are some general things
+to keep in mind. So it makes
+          </li><li>
+            
+            sense.
+          </li><li>
+            
+            So I thought about trying to fix
+the tea pot and
+          </li><li>
+            
+            I thought that was not a good
+use of my time. Especially after
+          </li><li>
+            
+            reading a common for Americans
+who seems to supply the
+          </li><li>
+            
+            the data for
+          </li><li>
+            
+            every every
+          </li><li>
+            
+            no skin
+          </li><li>
+            
+            Changes.
+          </li><li>
+            
+            Made some major change Isn't.
+          </li><li>
+            
+            Okay, so these are a couple
+teapot examples which are I
+          </li><li>
+            
+            think using Eric Haynes data
+set. Sara Caine's has a long
+          </li><li>
+            
+            history in computer graphics and
+he teaches or he taught you
+          </li><li>
+            
+            Udacity course.
+          </li><li>
+            
+            Anyway, so this is using
+          </li><li>
+            
+            so originally the teapot didn't
+have a bottom Oh yeah. So this
+          </li><li>
+            
+            was added color by hurricanes
+was that the bottom is a flat
+          </li><li>
+            
+            so there might be not a
+          </li><li>
+            
+            transcription error by the
+authors of our text but it may
+          </li><li>
+            
+            just be a part of the dataset
+anyway
+          </li><li>
+            
+            so that's this is one example
+using
+          </li><li>
+            
+            this is using three js
+          </li><li>
+            
+            here's an example in three Jas,
+          </li><li>
+            
+            so this is what the teapot
+looked like originally.
+          </li><li>
+            
+            Then as a demonstration of how
+they could manipulate the model
+          </li><li>
+            
+            by scaling it they flattened it
+out a little bit and this is
+          </li><li>
+            
+            decided like this one better
+than the original teapot. So
+          </li><li>
+            
+            history of computer graphics
+          </li><li>
+            
+            anyway,
+          </li><li>
+            
+            so we looked at last day three
+cubes
+          </li><li>
+            
+            Why is not working it wasn't
+working.
+          </li><li>
+            
+            Like a couple of designs, even
+for sign for.
+          </li><li>
+            
+            The entered shaders weren't
+available.
+          </li><li>
+            
+            I tried it as it was
+          </li><li>
+            
+            I just don't know. Right WT X
+only created a folder for the
+          </li><li>
+            
+            same folder. It's still empty
+          </li><li>
+            
+            so do i do i need to do
+something different to encourage
+          </li><li>
+            
+            communication about issues like
+this.
+          </li><li>
+            
+            I did. I did it very late in the
+night
+          </li><li>
+            
+            because I realized the sample
+that I put into the directory
+          </li><li>
+            
+            didn't wasn't I didn't have all
+the pads Correct. Yeah, I guess
+          </li><li>
+            
+            that could be for the robotic
+arm. For example.
+          </li><li>
+            
+            So if you are telling me and I'm
+not responding us another issue.
+          </li><li>
+            
+            I think it's set up your course
+and stuff is set up so that I
+          </li><li>
+            
+            see everything that comes in
+          </li><li>
+            
+            but maybe not make complete
+sense
+          </li><li>
+            
+            make the nation
+          </li><li>
+            
+            humans
+          </li><li>
+            
+            so I'm not sure when I
+introduced that error but I'll
+          </li><li>
+            
+            I'll post it again after class
+          </li><li>
+            
+            so this is an example where
+we're using that cube data
+          </li><li>
+            
+            we're just creating different
+instances of the cube where
+          </li><li>
+            
+            we're creating three separate
+cubes by three separate calls to
+          </li><li>
+            
+            the cube functions that are in
+the cube data.
+          </li><li>
+            
+            See if this one works better
+Okay, so there's
+          </li><li>
+            
+            anyone getting a seizure?
+          </li><li>
+            
+            I close my eyes. Nice to see you
+          </li><li>
+            
+            Okay, so what I've done here, so
+the text has instance t pods.
+          </li><li>
+            
+            But the code for the T pod is
+beyond our beyond what we're
+          </li><li>
+            
+            covering so I wanted to make it
+with
+          </li><li>
+            
+            to build on the Cube example. So
+what I've done here is created
+          </li><li>
+            
+            one so we have one copy of the
+cube and we're instancing it
+          </li><li>
+            
+            several times.
+          </li><li>
+            
+            So this involves a change to the
+vertex shader
+          </li><li>
+            
+            so what what do we notice? About
+this vertex shader? Can you you
+          </li><li>
+            
+            want to say anything that's
+          </li><li>
+            
+            different from what we've done
+before.
+          </li><li>
+            
+            About the
+          </li><li>
+            
+            vertex attributes are the
+instance attributes
+          </li><li>
+            
+            protects vertex attributes
+that's
+          </li><li>
+            
+            so position and color are
+usually the taking the A matrix
+          </li><li>
+            
+            that's a new matrix
+          </li><li>
+            
+            Okay, so that's one thing
+          </li><li>
+            
+            and what else so you have GL
+position that's familiar. What
+          </li><li>
+            
+            about GL instance? Id
+          </li><li>
+            
+            used here for laugh.
+          </li><li>
+            
+            fragment shader doesn't have
+much to do. It's just doing a
+          </li><li>
+            
+            pass through the vertex color
+but certain GL instant ID
+          </li><li>
+            
+            identify which instance sense
+which instance so we're
+          </li><li>
+            
+            so the instance part will be
+used in the visible here more
+          </li><li>
+            
+            clear here.
+          </li><li>
+            
+            So give me a number of essences
+more than 36 for you.
+          </li><li>
+            
+            Not nothing bigger than that.
+4096
+          </li><li>
+            
+            Okay, let's try 4096
+          </li><li>
+            
+            implemented
+          </li><li>
+            
+            much more simplistic, more
+restrained one. This should turn
+          </li><li>
+            
+            out to be a cube
+          </li><li>
+            
+            cube of cubes
+          </li><li>
+            
+            okay
+          </li><li>
+            
+            so we're just we're not making
+4096 or 216 copies of the data
+          </li><li>
+            
+            we're using the same data over
+and over again.
+          </li><li>
+            
+            Okay, so we're setting up the
+cube
+          </li><li>
+            
+            we're setting up the callbacks.
+Initializing the ship program
+          </li><li>
+            
+            with the shaders.
+          </li><li>
+            
+            So we're creating the vertex
+buffer.
+          </li><li>
+            
+            And the color buffer
+          </li><li>
+            
+            and then
+          </li><li>
+            
+            creating matrix data. So we're
+just allocating space. So that's
+          </li><li>
+            
+            so we're doing we're creating a
+matrix for each instance. So we
+          </li><li>
+            
+            take the number of instances
+multiply by 16. So that's the
+          </li><li>
+            
+            number of float values that
+we're going to add per matrix.
+          </li><li>
+            
+            So I took this example from a
+modified example for Web GL two
+          </li><li>
+            
+            fundamentals
+          </li><li>
+            
+            and I
+          </li><li>
+            
+            combined it with libraries that
+we're using what the textbook
+          </li><li>
+            
+            anyway, so we're creating that
+space for beta.
+          </li><li>
+            
+            matrix structure and binding to
+it. We're using a different
+          </li><li>
+            
+            usage here. Same dynamic draw to
+indicate that this data will be
+          </li><li>
+            
+            changing
+          </li><li>
+            
+            now here's something else that's
+new. Because we have seen the
+          </li><li>
+            
+            matrix as an attribute. We need
+to use four indices instead of
+          </li><li>
+            
+            just one to encode or connect
+the matrix attribute to the
+          </li><li>
+            
+            data.
+          </li><li>
+            
+            Is when we get these locations
+the matrix lock or the position
+          </li><li>
+            
+            lock or the color lock. Those
+are all indices. So those come
+          </li><li>
+            
+            up as integers.
+          </li><li>
+            
+            So we're using frozen indices to
+make the connection between the
+          </li><li>
+            
+            program and the shader. So for
+the matrix, we need to have many
+          </li><li>
+            
+            to use for indices. So loop is
+dry equals zero, i less than
+          </li><li>
+            
+            four. So then, we're taking the
+original matrix location based
+          </li><li>
+            
+            on the variable names that we
+locate a matrix
+          </li><li>
+            
+            individually, enabling the
+vertex attribute array for
+          </li><li>
+            
+            logical for the next one
+location or lock
+          </li><li>
+            
+            so we're setting up that
+connection. And then the other
+          </li><li>
+            
+            thing that we're doing here is
+using vertex attribute divisor
+          </li><li>
+            
+            so we're saying
+          </li><li>
+            
+            the attribute changes once per
+instance.
+          </li><li>
+            
+            So here, we're going through the
+instances and we're updating the
+          </li><li>
+            
+            matrix at random
+          </li><li>
+            
+            and then we're we're updating
+the buffer with the new matrix
+          </li><li>
+            
+            and then here we're going back
+to the vertex buffer. So here we
+          </li><li>
+            
+            say, start at zero. Draw 36
+vertices in here the number of
+          </li><li>
+            
+            instances. So the difference is
+draw arrays instanced instead of
+          </li><li>
+            
+            just draw arrays.
+          </li><li>
+            
+            Okay, so let me show you one
+other thing that we can do.
+          </li><li>
+            
+            Okay, so this is going to say
+          </li><li>
+            
+            now, we're going to use one
+color the color that we're going
+          </li><li>
+            
+            to use is going to change with
+every instance.
+          </li><li>
+            
+            So we're having an air here
+          </li><li>
+            
+            vertex buffers not big enough
+for the draw call. So we changed
+          </li><li>
+            
+            it so we're using one color per
+instance.
+          </li><li>
+            
+            So what's the issue
+          </li><li>
+            
+            so we have 36 vertices 36 colors
+          </li><li>
+            
+            so it's running out of colors
+          </li><li>
+            
+            which took me a little bit to
+put together
+          </li><li>
+            
+            so if we have 216 instances 36
+colors
+          </li><li>
+            
+            let's change this to six
+          </li><li>
+            
+            six times 36 should be to 16 So
+we should see a result here
+          </li><li>
+            
+            this is less seizure inducing.
+          </li><li>
+            
+            Okay, so that's.
+          </li><li>
+            
+            It that's drying instanced.
+          </li><li>
+            
+            Arrays
+          </li><li>
+            
+            questions rather
+          </li><li>
+            
+            similar right
+          </li><li>
+            
+            so now I have the robotic arm
+working
+          </li><li>
+            
+            so the geometry.js file is not
+in common directory it's in
+          </li><li>
+            
+            chapter nine.
+          </li><li>
+            
+            So I correct that
+          </li><li>
+            
+            it seems like it would be a good
+place to put it in the common
+          </li><li>
+            
+            directory. So I should I'll make
+a copy of it there as well.
+          </li><li>
+            
+            The figure dot HTML is also is
+not happy you can choose to
+          </li><li>
+            
+            choose but
+          </li><li>
+            
+            yeah
+          </li><li>
+            
+            bye Okay, let
+          </li><li>
+            
+            me go to that one first.
+          </li><li>
+            
+            Thought
+          </li><li>
+            
+            I posted corrections to this
+          </li><li>
+            
+            it let me see.
+          </li><li>
+            
+            I'm not sure why I didn't update
+maybe I hadn't saved before. I
+          </li><li>
+            
+            published it posted again after
+class.
+          </li><li>
+            
+            Remember the original one to the
+one that I showed you last time.
+          </li><li>
+            
+            These were squares instead or
+cubes instead of cylinders
+          </li><li>
+            
+            she'll get to know.
+          </li><li>
+            
+            So here we just have our usual
+          </li><li>
+            
+            vertex shader.
+          </li><li>
+            
+            And fragment shader.
+          </li><li>
+            
+            Okay, so here we're just
+specifying some constants for
+          </li><li>
+            
+            the shape of robotic arm
+          </li><li>
+            
+            indicating so we have three
+angles for the base for the
+          </li><li>
+            
+            lower arm and for the upper arm
+          </li><li>
+            
+            so I didn't change the name of
+my cube Let change into a
+          </li><li>
+            
+            cylinder here so we can change
+it back to cube and see.
+          </li><li>
+            
+            John tree we also have these
+materials so we can access let's
+          </li><li>
+            
+            look at the geometry js file.
+          </li><li>
+            
+            So now I have gold to find
+          </li><li>
+            
+            I think there's only one life
+yes.
+          </li><li>
+            
+            They also have a texture to
+find.
+          </li><li>
+            
+            Switching to the cylinder margin
+since we have a different number
+          </li><li>
+            
+            of vertices are the object
+          </li><li>
+            
+            so we got the length of the
+triangle vertices so this is a
+          </li><li>
+            
+            feature of each primitive
+          </li><li>
+            
+            so we can even change to the
+sphere here let's try that.
+          </li><li>
+            
+            Looks better than I thought it
+would.
+          </li><li>
+            
+            Okay, so we're getting the data
+from
+          </li><li>
+            
+            data structure here. Sorry,
+surgery in one cube
+          </li><li>
+            
+            we're setting a setting of the
+uniforms
+          </li><li>
+            
+            shader
+          </li><li>
+            
+            render we're doing this rotation
+on we're changing the angles
+          </li><li>
+            
+            displaying angles on the
+sliders. So we
+          </li><li>
+            
+            change the modelview matrix to
+be to do the rotation around the
+          </li><li>
+            
+            Y axis and then we call the base
+function when you're under the
+          </li><li>
+            
+            lower arm we're changing
+          </li><li>
+            
+            we're updating the slider and
+then the modelview matrix
+          </li><li>
+            
+            includes so we're doing a
+translation and then the
+          </li><li>
+            
+            rotation. So situating the lower
+arm on top of the vase and then
+          </li><li>
+            
+            rotating and then drying the
+lower arm. And then last part
+          </li><li>
+            
+            we're updating the model view
+matrix again by translating
+          </li><li>
+            
+            floor arm height and rotating
+the upper arm and then the drive
+          </li><li>
+            
+            the upper arm.
+          </li><li>
+            
+            So we've got the modelview
+matrix that sort of sets up the
+          </li><li>
+            
+            base the starting point and then
+we're drawing in. We're doing a
+          </li><li>
+            
+            matrix to describe the instance
+and that's based on the
+          </li><li>
+            
+            parameters so the width and the
+height.
+          </li><li>
+            
+            So then we multiply the
+incidence matrix with the
+          </li><li>
+            
+            modelview matrix that's passed.
+Along that's current. And then
+          </li><li>
+            
+            we update the uniform matrix in
+the shader this product instance
+          </li><li>
+            
+            matrix and model the matrix when
+we're drawing the vertices that
+          </li><li>
+            
+            are required.
+          </li><li>
+            
+            So each time we render we start
+with a ModelView matrix based on
+          </li><li>
+            
+            the rotation of the base around
+the Y axis
+          </li><li>
+            
+            so if we change the order of
+these drawings, pieces and they
+          </li><li>
+            
+            would be
+          </li><li>
+            
+            there would be a problem they
+wouldn't be connected anymore
+          </li><li>
+            
+            so that's the idea of
+          </li><li>
+            
+            of working with matrices to do
+transformation so we can start
+          </li><li>
+            
+            with single primitive and
+transform it and that's the same
+          </li><li>
+            
+            idea that's in the figure that
+HTML file
+          </li><li>
+            
+            so in both those examples today
+with the robotic arm and
+          </li><li>
+            
+            instance cubes, we're working
+with one set of data and we're
+          </li><li>
+            
+            transforming it so we can get
+more complexity.
+          </li><li>
+            
+            And when without,
+          </li><li>
+            
+            with some efficiency as well.
+          </li><li>
+            
+            Does that make sense? Any
+questions?
+          </li><li>
+            
+            Okay, thank you for today.
+          </li><li>
+            
+            Okay, thank you for today.
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>For me the most important thing  for me in today&#039;s class was the difference of vertex shaders for the instance cube HTML and the vertex shaders of previous programs. Actually we  are using matrix as an attribute in it and for that we need to use 4 indices instead of just one to make a connection between program and shades.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>I would like to know more about how I can use more indices to make a connection between program and shaders because today&#039;s example vertex shader was different from the other.
+    </li><li>Robotic Arm&#039;s body has a lighting shininess. Is it possible to add shininess in arm as well. The reason is I noticed that tea pot 1 lid has that shininess.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-733/202330/meetings/23_Mon-27-Nov-2023.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

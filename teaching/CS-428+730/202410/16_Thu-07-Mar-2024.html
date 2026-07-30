@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+730/202410/16_Thu-07-Mar-2024.html" />
+    
+    <title>Mtg 16 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 16 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/16_Thu-07-Mar-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/",
+        
+          "name": "CS 428+730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/",
+        
+          "name": "202410"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/16_Thu-07-Mar-2024.html",
+        
+          "name": "Mtg 16 (Thu-07-Mar-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/">
+        CS 428+730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/202410/">
+        202410
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 16 (Thu-07-Mar-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 16/26: Thu-07-Mar-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="15_Tue-05-Mar-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="17_Tue-12-Mar-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Attention, Project
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Thursday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=2507968&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1709791200&amp;course=31184" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=31184" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li>did the broadcast messages to the zoom breakout rooms get your attention?</li>
+  <li>introducing the project in 3 parts</li>
+</ul>
+<h4>
+    Summary
+  </h4>
+  <p>Summary</p>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2557623" target="_blank">Submit your response to this meeting before noon tomorrow</a></li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2544698" target="_blank">Take quiz before the start of our next meeting</a></li>
+</ul>
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><p class="text-muted">
+  No Media
+</p><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Good morning. So is there any questions about the questions I am asking in the poll? So 3 people haven't responded yet. so I'll give you another few seconds here. Well, I guess people are coming in still. so maybe we'll leave it open for a little while. So a couple things to report about zoom is that even when I'm so, when I have the zoom open for my office hours. it doesn't give me the. There's no dialogue box to say, Are you still? Are you still there? It just sense. It just tells me my zoom room was closed after 40 min of inactivity. So that's not so great. I think so. The other thing I notice is when I have my zoom office open and I have my microphone on so that I can hear audio. It doesn't. doesn't automatically tell me when people are entering the waiting room. I thought I had a doorbell set, but I must have turned it off somewhere. Okay, so let me end the poll and we can. I'll share it and we can talk about it. I realized I should have asked one more question, so I'll make another poll for that. See how quickly I can do that. I bet I can't do it until I let's see. Is that still being shared? Can you still see the results? Okay, cause I had to. I had to go away from the display to make another quiz. So anyway.  okay, I can't have the second pull open while I'm sharing the first. Okay? So any thoughts about broadcast message. may I stop the stop sharing, so I can start the other one. So that was the first time on Tuesday that there jeez it was the first time that I I've individualated an exam using breakout rooms. I'm curious. Well. I didn't ask this and pull, but and that says there's 2 questions, but you can tell there's not really a second question. There is just one. And I'm surprised. That choice one and question 2 is slightly ahead. Well, it's it's it's got a substantial lead, I think. significant lead. Wait for another few minutes to see if other people are going to reply. We have about 78% of participants participating in the in this poll. Okay, let's end it. And we'll talk about it. So only 5 of 36 saw the email when it arrived. Yeah, okay. So we had a bit of an issue before the exam. And so I just okay. So you notice the timer changed when I had with the cutoff time at at one Pm. Instead of 1245. So that was helpful. So what I realized. So I apologize for causing stress for people. I tried very hard to get the instructions right. But then I realized. after I had opened the meeting. that I had not made the exams visible. so I had to do something there. but I didn't leave the meeting, so I was getting help requests and trying to send broadcast messages. and then I finally left the meeting for a minute to get that sorted out, and then then I hope it was fairly smooth sailing from there. Okay. we'll talk. We'll talk about the midterm next week. and I just wanted I wanted to talk about that one issue, about communication, that getting the broadcast messages in having a way to communicate to everybody. So I'm I'm not clear whether this is a feature that zoom markets or not. Anyway. let's talk about. So I if you've noticed, I've got some the project details on the website. Oh, I didn't do that. I didn't update. There's bit of information on the website. There'll be more in a second. Okay. so I don't have all the assignments here. But the first part of the project has a description on the website. So I've spaced the due dates about 10 days apart. So I know this is a there's other things going on at the end of the semester. so I propose that some flexibility for the due dates. So I've made them the fifteenth of March. the 20 fifth of March and the fifth of April. I'm not sharing my screen. Sorry. Okay. so understand your project. So they understand. explore and materialize phases of that design thinking process from the Nielsen Norman group that we talked about recently. So we'll we'll do a targeted version or a light version of that over 3 asant installments, 3 pieces. So I want Egypt. Use the experiment with your courses, course. of course and look at a single aspect of the groups within moodle or yeahr courses. So we'll look at some examples of that again in a minute. So remember, just to choose one use of or interface to groups. you will find groups under the participants menu on the main course page and under and under participants. You'll find selections for groups, groupings and overview. So there occur in the assignment setting assignment setting page and on the submission page for assignments in the group members resource. That's what we've used on the your courses page in the enrolled users list. That's also under participants. And it's not an exhaustive list. I think so. I will be happy to provide stories about using groups in your courses. You may also check moodle documentation and moodle forms for information. You might identify issues with consistency, efficiency, or missing functionality to name cannot make an exclusive, exhaustive list. So here we are the understand all right. So your group will describe a sufficient detail to be related. relatable in activity and a user wanting to complete that activity. So each member of your group will create an empathy map for that activity for that user. So then, as a group, identify with all the members in your group, identify specific aspects of the current interface. Cause problems for the user and look to examine the roots of those problems identify would ever use. These may be unmet. Remember that this stage is concerned with understanding the opportunities for redesign. Your selected aspect of groups of the newer courses don't provide solutions or fixes right now. that'll come in the next piece that seem okay. Okay, so there should be a a link shown here. So I'm going to edit the settings. So I've made that link. But I have to make sure that Austin says display description on page. So groups are mentioned in the group submission settings. So the student, you'll submit in groups. require a group to make submission. Yes. don't require all group members to submit. No grouping for student groups project. So that's set up. But there's also groups here. and this may be a little confusing. add group grouping access restriction. So if I say, add a group access. add a grouping access restriction here. click on it, then then it's not clear what happens if this isn't open the the feedback and this is not great. and if it's not open, you don't realize that it. Something's been added here. I can click on this again to remove it. So let's save that and return to course. So think of for the explorer part. Then we want to think about metaphors that would help to help users understand activities. the kinds of types of interaction that would best support the activities and and whether different interaction types suggest alternative design insights or options. So we went. So think of 2 different metaphors. and design an interface for each of the metaphors that you choose. So for both interfaces create a low fidelity prototype and write. A scenario includes the detail of the information presented and interaction undertaken. So analyze your scenario for positive and negative aspects. then include your findings. So setting up a group is like or creating a group for assignments is like assigning a marker to a group is like. and so on. So think about 2 different ways to think about what it might be like, 2 different ways to conceptualize. but activity, so that the user and make sense of it. So blue fidelity, prototypes. paper and pencil. Well. I made a mistake there. I only Yasha, the 4 things should be worth 2 marks each. So together with your in your group, you create 2 sketches and 2 scenarios that describe how it's used. And then what are the positives and negatives you can see in your sketches? I'll fix that up. Okay, let me go over this last part of the project. So. and then I'll talk about metaphors so based on your designs, test and refine. So so I want you to do a bit of testing. So divide your group evenly into 2 into 2 subgroups. There's only one group of 3. So everybody else is gonna have 2 2 subgroups with 2 each. So you have 2 interfaces, so each subgroup of test, one will conduct one test with one of your 2 low fidelity interface prototypes. so that you have both of your low fidelity prototypes tested. Use your courses to coordinate a subgroup on it. The different project group focusing on a different aspect of your courses. Each subgroup should run a test and be the subject for the other's test. So what I mean is so for 17 of the 18 groups we'll have 2 pairs in each group. So one pair from Roger Group one, let's say. coordinates with another with a pair from Project Group 2, and then the coordinate, and one does a test project the subgroup from Project Group one have. I'm mindful of saying, group every 2 s here the subgroup from Project Group one test the interface with the subgroup from Project Group 2. So the people in the subgroup from Project Group 2 act as participants and then the switch roll. So Project Group 2 subgroup is testing their interface. either A or B with the subgroup from Project Group one acting as participants. We can discuss that in a bit more detail as as you have experience with it. So we'll talk about testing and having a script. So you I'm asking for a scrip that you'll so the scripted materials. So that's 2 marks. data and notes from test sessions. So there'll be 2 sets of data and notes. and then 4 marks. So based on your tests. together with your group members. decide what would be your next iteration based on your interface? A and B, so that can come from the the tests, but also from year own experience and insights about and thinking about the interfaces, so so that I didn't say this. So a sketch of the single interface that combines the best ideas from your 2 low fidelity prototypes and any other sources. Okay, so so what I think about that, maybe after we decide on after you decide on which aspect of the group's interface you're going to focus on. Then we can identify groups to work with. So maybe to make it simpler. because there's 2 subgroups in each project group. and there's one there's going to be one subgroup with one person in it. Only I'm sorry for to single that person out. I don't know who it will be. but based on the aspect of your courses. Group interface that you choose to work on. We'll try and pair up the groups so that you're not dealing with the same aspect. the same aspect of the interface. So you're bringing bringing a bit of some fresher eyes to the problem. The other group is tackling. so if I pair the groups. then the subgroups one subgroup with 2 interface. A and the other subgroup will do interface B, and they'll test it with the subgroup from the other, from the paired sub project group. and then switch. So I hope that I'm gonna figure out a way to to write this out a bit more clearly. Okay, so based on what you choose to do in the first part of the project will make a will. Set up some pairings of the project groups for the testing phase. So then you can. We'll work with that other group to evaluate your low fidelity prototypes. Does that make sense? Okay? So metaphors. So have I told, I think I feel like I've told you the story about my experience with Twitter some years ago. and I didn't understand. I guess the the metaphor. the mental model that I developed from my experience was based on email. So I was sending the same tweet to different people. I was mentioning where I sent like send naming people in the Tweet. So now that Twitter is called X. What do you call messages. do you say? X's just curious. This is probably a sign that I'm not meant to use Twitter, or what was formerly known as Twitter. Anyway. I had. I had an incorrect model. I was thinking about email. So I was sending tweets to people. and before long my account was disabled. because it seemed like I was sending spam to Twitter. That's what Twitter detected my pattern of tweets to be so posting on X, where Twitter is like. it's like something else. It's not email. So how would you describe? So are any ideas about? So how would you describe Twitter, or for what was formerly known as Twitter? If you say to me. Darryl, it's not like email, it's like. and how would you film that blank. Would anyone like to take a stab at it? Okay, so we have a cesspool as a metaphor for Twitter. So that helps me understand that I should avoid it. which I have been for years, although. So I stopped using it. I still get emails from Twitter. which I ignore. Okay, so so maybe it's like broadcasting text message to the world. Does that seem like a good metaphor? So, aside from the content for those who use it, what? What might be a good description for somebody who's never used Twitter before. Okay, so that's about reading Twitter. I think. So. We have some nice ideas about what reading Twitter is is like. So that helps to understand how to to read it. But what about posting messages? So maybe a public form with limited post length that's getting  a chat room for the world to see. Okay. so something about these are getting to be more helpful. I think maybe something about. Don't repeat yourself. Don't send the same Tweet. because they all end up in the same place. It's like the website where it says, Don't press this submit button more than once. You might be charged more than once. So, anyway, just to bring this back to our discussion of metaphors. So I didn't have. I didn't understand the metaphor for Twitter. I didn't have a metaphor for Twitter that helped me to understand that what I was doing was going to get me suspended. So the idea of a metaphor is to help people connect the new experience with through previous experience. So the one that I think that I like to think about is online shopping. So you might think.  a place where you can do online shopping has the metaphor or makes the connection. or many of them do. makes a connection with going to a brick and mortar store. You go in and you get a cart or a basket. You go through the aisles and pick out what you want. Then you go O, the check out. So that process isn't quite the same in an online store. But the idea of putting things in a cart and then going to checkout helps the new user to understand how to interact with the website. Does that make sense. They're kind. Okay? Yes, metaphors are a bit subjective, I suppose. So we might think of a desktop metaphor on a computer. So we think about files and folders and trash cans. so that might help to organize that that might help people to understand how to operate that interface. That's quite an old one now. But the idea is you designed the interface so that it's and so you you're consistent in in reinforcing that metaphor, that idea of how to operate things. So if we have a an appropriate metaphor for the interface, then we develop things that are consistent. Yeah, okay? So so when you've started using things from a young age. So this is what you know. Then you might use these apps or services as metaphors for other things as you develop new as new things are developed. So just like I was saying, it's like. it's like email, or it's not like email. The metaphor that might be appropriate for new messaging applications are. It's like Twitter. Yes. the graphic of the floppy disk, the 3.5 inch floppy disk. It doesn't. The connection with a floppy disk. There's long since gone away. But the the icon just comes to mean, Save that's in. You are courses as well. I think so. being an older person. When. So when video editing first became or nonlinear, video editing on computers first became a thing. So the applications and metaphors that related to the physical process where you'd have we store film clips and you'd splice them. And so everything related back to the the manual physical process of editing film. But now many people don't have that knowledge. So to to use that metaphor, to continue using that metaphor. it's not appropriate. So now we see in video editing applications. I use Imovie mostly. so we don't have. So we have the idea of clips or media. and it's a drag and drop interface. And so we don't have a connection with the physical editing process. It's just more of a direct manipulation kind of approach. I think so. They're only the metaphors are only as good as Brazil. Well. they're not. They're not the silver bullet that's going to solve the problem. But they're a help help to get the new user partway there anyway with the new application. So if we make that so in and working with metaphors, we don't want to make them too specific. because maybe then we're not going to be able to generalize things. So in a parking machine where it had pictures of coins. So the message there was that though only those coins are accepted, the loonies and twonies and quarters. but if we wanted to just indicate any coins, so you could have nickels and dimes as well. then we will have a more general picture for coins. and if we make it too, general. then it's not clear where the if we just but a currency sign. ascent sign, or a dollar sign? Maybe that's not specific enough to indicate what kinds of things could be put in. Used to pay for parking. Does that make sense? Okay? So cadence had a comment about the first part. And why are we doing it? Cause this is an awful like the empathize assignment. So yes, it is. but I think it's useful to go through the process of thinking about that or focusing your your efforts on this different aspect of the interface. So could we not, just to the understand assignment as as a class. So I'm thinking about the dot, everybody's gonna be focusing on the same aspect of the group interface. That was the thought. So we can have a discussion. And on the in in the this class discussion Forum about who's choosing what? Perhaps. So here's my. this is my group membership. So I had to add myself here so I could see the assignment because I clicked on that add access restriction. So let me quickly. well. very quickly show you the problem here. If I take myself, if I take my student self out of that group. So here's the group, and I want to remove this student. So I click on it. But I can't do anything with their I have to add, remove users. flip it over. then remove. and I was expecting a message to come up here that there's a problem. because not everybody's in the in a group. But I'm out of time here. So did that make sense the reason I want you to do the okay? So we can. We'll have discussions about this and cadence if you can let me know if I've answered your concern. and we'll have discussions about this  in the Forum before club. Our next meeting. Okay. thanks. Everyone for today. Take care.
+          </li><li>
+            
+            Thanks, Darryl. You have a good one.
+          </li><li>
+            
+            Thanks you, too.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            Good morning Dr Hepting
+          </li><li>
+            
+            morning
+          </li><li>
+            
+            did anyone else's quiz have no questions?
+          </li><li>
+            
+            Replying to "did anyone else's qu..."
+          </li><li>
+            
+            Replying to "did anyone else's qu..."
+          </li><li>
+            
+            Replying to "did anyone else's qu..."
+          </li><li>
+            
+            i think so
+          </li><li>
+            
+            Replying to "did anyone else's qu..."
+          </li><li>
+            
+            Replying to "did anyone else's qu..."
+          </li><li>
+            
+            good morning, happy thursday
+          </li><li>
+            
+            Morning, Daryl
+          </li><li>
+            
+            Good morning!
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            Morning!
+          </li><li>
+            
+            good morning
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            Good morning!
+          </li><li>
+            
+            Good morning!
+          </li><li>
+            
+            I would agree
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            I didn't even know we had broadcast messages during the Zoom call.
+          </li><li>
+            
+            the broadcast messages went by a little fast and were a bit too small where they didn't capture my attention right away
+          </li><li>
+            
+            I was off from Zoom's screen for the majority of the exam, so if there was a broadcast message that was sent when the exam started then I might have not seen it
+          </li><li>
+            
+            Nature of habit I tried to click the email notification during the exam, then realized I shouldn't do that  :)
+          </li><li>
+            
+            Reacted to "Nature of habit I tr..." with 👍
+          </li><li>
+            
+            Reacted to "Nature of habit I tr..." with 👆
+          </li><li>
+            
+            for the email, I saw it when it was sent but I did not open it until the end of the exam
+          </li><li>
+            
+            Reacted to "Nature of habit I tr..." with 👆
+          </li><li>
+            
+            Reacted to "Nature of habit I tr..." with 👆
+          </li><li>
+            
+            Replying to "Nature of habit I tr..."
+          </li><li>
+            
+            even though I was tempted at first, as Scott said 😂
+          </li><li>
+            
+            Reacted to "Nature of habit I tr..." with 👆
+          </li><li>
+            
+            i didn't see the email but i saw the notifications from the changes (additional time) made to the exam
+          </li><li>
+            
+            started exam in full screen, zoom was running background & capturing my screen , that’s it. Just focused on writing , as lots of questions. So didn’t see anything, still ran out of time
+          </li><li>
+            
+            i just noticed the time increase in the quiz - only saw the email after the exam
+          </li><li>
+            
+            I didn't even notice the time increase, I was so focused on writing
+          </li><li>
+            
+            Could you explain metaphors more clearly? I read the sections in the textbook but was kind of unclear on what the criteria is for that. All I got from it was "search engine" lol which I didn't find particularly helpful.
+          </li><li>
+            
+            Sorry I didn’t get it, do we have to coordinate with other groups in the class or just internal sub-group?
+          </li><li>
+            
+            Yes thank you
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            LOL who knows, I still call everything Twitter and tweets
+          </li><li>
+            
+            Just posts
+          </li><li>
+            
+            Reacted to "LOL who knows, I sti..." with 👆
+          </li><li>
+            
+            xeets lol
+          </li><li>
+            
+            i still call it twitter and tweets. ive seen some people call it xwitter though
+          </li><li>
+            
+            a cesspool 😂
+          </li><li>
+            
+            Reacted to "a cesspool 😂" with 😂
+          </li><li>
+            
+            100%
+          </li><li>
+            
+            I don't use it, cant stand the keyboard warriors
+          </li><li>
+            
+            on the other hand, if you curate who you follow and the content you interact with, it can be a pretty nice dynamic newspaper or magazine on things you're interested in
+          </li><li>
+            
+            a curated message board? a public form with limited post length?
+          </li><li>
+            
+            Replying to "a curated message bo..."
+          </li><li>
+            
+            This is unrelated, but I have a suggestion about the assignment I'd like addressed before the end of class, whenever you have a moment. The "Understand Your Project" assignment seems very similar (if not identical) to the first "Empathize" assignment. I'm curious why we are doing it again? Is there a specific reason? Could we, as a class, not do the "understand" assignment and just have Explore and Materialize to formally hand-in? Especially since these assignments are being given to us fairly late in the semester and we need to coordinate time together as a group (and with other groups??) for them.
+          </li><li>
+            
+            basically a chat room for the world to use
+          </li><li>
+            
+            before the 140 character limit was increased it felt like sticky notes on a wall or bulletin board
+          </li><li>
+            
+            yes, it's a bit abstract but it makes sense.
+          </li><li>
+            
+            so in other words these metaphors can be kind of subjective
+          </li><li>
+            
+            Somehow it never clicked with me before that desktop was a metaphor for a desk top
+          </li><li>
+            
+            Replying to "Somehow it never cli..."
+          </li><li>
+            
+            Replying to "Somehow it never cli..."
+          </li><li>
+            
+            Gotcha, makes sense.
+          </li><li>
+            
+            Yes
+          </li><li>
+            
+            Ok. Thank you.
+          </li><li>
+            
+            ok! See you next time
+          </li><li>
+            
+            Have a nice weekend!
+          </li><li>
+            
+            Thank you, have a great weekend!
+          </li><li>
+            
+            thank you!
+          </li><li>
+            
+            thank you Daryl have a good weekend!
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            The before meeting quizzes, questions were not included for today's, can you please add them
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Thank you! Have a great day
+          </li><li>
+            
+            Thank you
+          </li><li>
+            
+            Thanks, have a good weekend!
+          </li><li>
+            
+            thank you, have a good weekend
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Learned about our next upcoming group projects and also that Twitter is a cesspool based on someone's opinion
+    </li><li>Metaphors and Twitter spam emails
+    </li><li>talked about the project
+    </li><li>I learned more about the project and how to possibly organize it 
+    </li><li>nothing new today
+    </li><li>The concept i got to know was about broadcast messages which was often used in zoom get everybody’s attention and get know how it works
+    </li><li>Poor design in Zoom i.e sending out broadcast messages and us not being able to see/view them properly
+    </li><li>The good concept i learned was that did the broadcast message to the zoom breakout room caught our attention or not for me it did as i had use this breakout rooms very less
+    </li><li>The 3 part assignment about redesign
+    </li><li>talked about the project details in class and the broadccast message
+    </li><li>I learned some of the things that didn't go so well about the midterm
+    </li><li>We went over the upcoming series of projects and Daryl went over in detail the requirements and instructions. There was also a poll at the beginning which asked for students' feedback on the notification system through the midterm; for example the broadcast system used in Zoom when we were in our breakout rooms and how that went for everyone.
+    </li><li>Today we had a helpful discussion about metaphors and how they relate to design.
+    </li><li>I would you say everyting
+    </li><li>We have talked about the broadcast and email during midterm exam, and also the way to configure the assignment properly. 
+    </li><li>we discussed about new assignment 
+    </li><li>It was interesting to learn about the upcoming assignments 
+    </li><li>We discussed about the project and went through the requirement. And we discussed modules
+    </li><li>In todays lecture we discussed about the project and we gone through all the requirements for the project and also discussed what the groups are supposed to do in the project. We also did two polls related to midterm. And then we discussed little bit about modules. 
+    </li><li>Today we discussed about Project description.
+    </li><li>The idea of metaphors ans how similar things in real life are replicated for apps 
+    </li><li>We learned about metaphors and in the class we discussed it with the examples of twitter.
+    </li><li>The complexity of dealing with design philosophy of a twitter-esque app!
+    </li><li>zoom broadcasting, metaphors (email -&gt; letter; desktop -&gt; literal desk top)
+    </li><li>an important concept was how metaphors are used to explain the functionality of an app, like tweets on twitter.
+    </li><li>Upcoming group project, midterm issues
+    </li><li>An important concept I encountered today is the design thinking process: understand, explore, and materialize.
+    </li><li>Introduction to the three parts of the project understand, materialize and explore and professor also asked us about the broadcast of messages 
+    </li><li>Comparison perspective of how designs can impact user 
+    </li><li>In today's lecture we discussed about the broadcast messages during the meeting provided but I never noticed them because first place I was facing a lot of technical issues and I was just so panicked that couldn't attend few questions in that situation. However, today's we learnt about the project which is distributed in three parts, understand, explore and materialize. 
+    </li><li>zoom breakout rooms form exams and discussion around group project
+    </li><li>introducing the project in 3 parts
+    </li><li>Some Design Metaphors and about exam topics
+    </li><li>The Project assigned for us to work on
+    </li><li>We looked at the assignment details and discussed interface metaphors and a couple of examples.
+    </li><li>Broadcast message to zoom breakout rooms
+    </li><li>Project assignments,zoom broadcast messages, metaphor
+    </li><li>UI of Urcourses and project details
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>A little confused as to what type of activity we need to create. Sounds like it's a group activity. I'll read the instructions in more detail to hopefully understand better.
+    </li><li>Everything was well explained.
+    </li><li>I didn't understand the error message part earlier
+    </li><li>No
+    </li><li>nope
+    </li><li>Noo everything was on point
+    </li><li>The assignment and the organization behind it. Still a lot of unanswered questions 
+    </li><li>I am a little confused on the format of the assignment and what we will be doing, so a bit more discussion of it would be nice.
+    </li><li>Today’s class was pretty basic
+    </li><li>Yes mostly the group assignments
+    </li><li>not at all
+    </li><li>I had a bit of difficulty following the new assignment and project outlines and whatnot, but I think with enough time and thought it will all come together all right.
+    </li><li>I was a bit unclear on the section where we were talking about subgroups for the project. I was under the impression that each group was being broken down into subgroups and the conversation regarding possibly needing to use other groups was only for the single group of 3, so I thought it didn't apply to my group, but I'm worried I misunderstood. 
+    </li><li>No it was all good 
+    </li><li>Yes, I have found that configuring URCourse was a bit more complicated than I thought.
+    </li><li>No
+    </li><li>No, there was nothing I found difficult to understand.
+    </li><li>No everything was understandable 
+    </li><li>No I didn't find anything difficult to understand. 
+    </li><li>What project description is saying.
+    </li><li>The navigation of the urcourses for setup
+    </li><li>No there was nothing that was difficult to understand.
+    </li><li>Nothing today!
+    </li><li>no
+    </li><li>No.
+    </li><li>The materialize part of the project was difficult to understand 
+    </li><li>No
+    </li><li>There is difficulty that I'm facing on UR courses of this course as the quizzes are not coming up and because of that I might lose grades. The midterm was very lengthy as I had to type all answers which were in long paragraphs, for the final we can have quizzes like multiple choice questions and one world only so that it is interactive and not lengthy for long typing. 
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>I am still unclear on the "Materialize" assignment about the sub-group testing.
+    </li><li>No
+    </li><li>no
+    </li><li>no
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>About different types of metaphors that are used in the design process.
+    </li><li>I would like to know more aboot the exam
+    </li><li>The prof explained what the error message was later in the mail
+    </li><li>Nothing, everything discussed was clear and concise. 
+    </li><li>I would like to know more about the project and the 3 individual parts. I think it should be discussed more to get a better understanding.
+    </li><li>not really
+    </li><li>To my notice i want to get details about project
+    </li><li>If more time can be given for thr assignment 
+    </li><li>as stated before I would like to be informed more about the assignment and given more of a breakdown on what we are supposed to do
+    </li><li>Want to knows more about project
+    </li><li>How to create empathy maps
+    </li><li>quite not
+    </li><li>I found it interesting to discuss things that our generation might understand that the next generation might fail to understand, simply because we grew up with certain things and the younger generation will not be able to grow up with the same things.
+    </li><li>It was pretty good
+    </li><li>Yes, I would like to know more about the process of teachers creating activities for students on URCourse.
+    </li><li>I'm excited to learn more about designing good software and about Human-Computer Interaction 
+    </li><li>More information on the project would be appreciated 
+    </li><li>Yes I would like to know more about the project as I found the instructions complicated. 
+    </li><li>About project
+    </li><li>Elaboration on the assignments and exactly what is expected for each one 
+    </li><li>Want to learn more about metaphors with day to day life examples.
+    </li><li>What would Don Norman say about what we learned today 🤔
+    </li><li>more on metaphors, metaphors when the original becomes obsolete 
+    </li><li>No.
+    </li><li>I wish to know more about the understand and explore parts of the project 
+    </li><li>No today everything was good and easy r understand
+    </li><li>For today I would like to know more on the final exam content because the midterm was overall not good and I request professor to provide more practice for the coming final exam, at least to say the book materials that is included for the finals so we can prepare from now onwards.
+    </li><li>No
+    </li><li>Not really!
+    </li><li>About the research bonus credit 
+    </li><li>The link between the project and if it's possible to work with other groups
+    </li><li>I would like to know more about the tools to create the low-fidelity prototype, or we can just sketch is good enough?
+    </li><li>No
+    </li><li>about assignment
+    </li><li>will try to explore URCourses regarding project work
+    </li><li>Reading more on the upcoming projects, just trying to understand them more.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/16_Thu-07-Mar-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

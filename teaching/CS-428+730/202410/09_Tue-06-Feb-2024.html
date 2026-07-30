@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-428+730/202410/09_Tue-06-Feb-2024.html" />
+    
+    <title>Mtg 9 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 9 &bull; CS-428+730 (202410) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/09_Tue-06-Feb-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/",
+        
+          "name": "CS 428+730"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/",
+        
+          "name": "202410"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/09_Tue-06-Feb-2024.html",
+        
+          "name": "Mtg 9 (Tue-06-Feb-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/">
+        CS 428+730
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-428+730/202410/">
+        202410
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 9 (Tue-06-Feb-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 9/26: Tue-06-Feb-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="08_Thu-01-Feb-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="10_Thu-08-Feb-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Dealing with Gulfs
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Tuesday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=2507968&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1707199200&amp;course=31184" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=31184" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Response to Responses
+  </h4>
+  <p>Response to responses</p>
+<h4>
+    Results from Last Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/feedback/view.php?id=2539950" target="_blank">08_revisiting-course-org</a></li>
+</ul>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2541977" target="_blank">questionnaire for 428 students</a> about future course offerings</li>
+  <li><a href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=9414&amp;group=0" target="_blank">Seeking groups?</a></li>
+  <li>Moodle groups reminds me of Apollo 13</li>
+  <li>Picture from my Ford Edge – what’s going on?</li>
+  <li><a href="https://www.nngroup.com/articles/two-ux-gulfs-evaluation-execution/" target="_blank">Two UX Gulfs</a></li>
+</ul>
+<h4>
+    Summary
+  </h4>
+  <p>Summary</p>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2541979" target="_blank">Submit your response to this meeting before noon tomorrow</a></li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2541980" target="_blank">Take quiz before the start of our next meeting</a></li>
+</ul>
+<h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_09" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_09" data-bs-slide-to="0" class="active"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/jnilfb9ypk3n6ro5xfxbv/09-climate.png?rlkey=2ycjzj6ywsnbzi8hy5dk3zur6&amp;dl=0" alt="09 - climate.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_09" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_09" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssZoom-Audio-Transcript">
+        Zoom Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Good morning.
+          </li><li>
+            
+            Good morning.
+          </li><li>
+            
+            How's everyone doing today?
+          </li><li>
+            
+            Good yourself?
+          </li><li>
+            
+            I'm pretty good. Thanks. It feels like winter again to day. A very brisk minus 4. I think it seems plenty to say that in February
+          </li><li>
+            
+            nothing to complain about, in my opinion.
+          </li><li>
+            
+            Yeah. sure beats minus 40. We might end up seeing a few more of those days yet before winter is officially done. Okay. so let me let me share my screen. There we go. Okay. so there are a few things I want to focus on looking at the results from the question I asked about revisiting the course. so maybe we can have a peek there first. So these are anonymous. So I think it's okay to show them like this in raw format. So the the response one didn't stick out to me before, but it does now. So I if you notice anything in the responses. let me know you can comment on them in the chat, or have a discussion about them. So the external web site does help keep things together and on track. But the reading material can sometimes be difficult to find. but just referring to the wiki. So yeah, sometimes I just give you. I say. look at Chapter 5 in the Interaction Design Foundation Encyclopedia, IDFE. Whereas I could give the link for that I don't have links for the design of everyday things. The only thing I link to is the is the article about the revised and expanded edition
+          </li><li>
+            
+            on the Nielsen Norman Group page.
+          </li><li>
+            
+            So I think there are some Pdf. Versions of maybe the first edition. But if you're able to get your hands on the revised and expanded edition, I think it's a good read. has lots of interesting stuff in it. and the textbook. Either the fifth or sixth edition is good. it's good to have. And the book's website also has some material on there that you can access. So they have Powerpoints for the different chapters. So for those of you who are interested in Powerpoints. you can have a look at the Id Book web site. So I'm trying to sprinkle in the the resources that are in the syllabus listed for the different topics. So I just 1, 2 keep you on track with with that today, I think it's enough. and we'll talk about the first assignment. and it's enough to get you to work on on the ideas we're talking about there. So I don't have another explicit reading or resource for you to look at. I'm gonna see if I can say, do not disturb. See if that helps the being. So. Yeah, there's lots of reference materials for the grad class at 7 30 that's more intended for. So the readings are aimed at the 7 30 class more than the 4, 28 class. So as an undergraduate student. you can. you have different expectations? But I would say. keep track of where we are in our discussions. and that will  that will help any other. So I asked about the wiki. and I'm curious if there's any any thoughts about using it in a better way. I wonder whether it's it may be more effective if maybe we have a summary with the links that I bring up in our discussion. not the transcript per se, but just some things that were brought up during the the meeting. and if there are some links that come up later on, I can add them. Does that seem, Mike? A good. a good way to use the wiki? Or where should I put. Where should we put things that come up after the meeting? That sounds like a good thing for a pole or a survey, I guess. Wiki page for that meeting. web page for that meeting or web page. and I'll also add another. Hey, here we go. Okay. leave it for another 30 s or so see if we can get the last. a people to participate. Okay, I think we can stop. So the person who said other to be discussed. would you like to see you put forward what you had in mind if you had something specific? I've lost the chat window. Okay? I found it again. hey? So a thought. Oh. I'm just wondering if maybe we could have a someone post to the Forum about things that are things that are mentioned that aren't clear. or the needle the yeah. URL, to go with it. I will try and come up with a way to do that in in a more reasonable way or more clear way. hey? Anyway, I don't want to spend all day thinking about this. Stop sharing that. Okay? So the 2 user experience golfs, evaluation and execution. So the gulfs are related. So we can think of a golf. Here's the Graphic that's in the textbook as well from the source. So the gulf of evaluation. Where, when we're trying to address or assess? What's the current system state and the gulf of execution? We went to answer the question, how do I use a system? So if it's clear. if there's if it's a good design. the interface is designed well. so the information, the the state of the system is clearly displayed, and the person using the system can can look at the interface and say. I understand how this is laid out. I based on that. I expect that if I click here it's going to have the desired effect. And if that works. then the golfs are minimized. So we. if, on the other hand. you know, you want to do something. but it's hard to figure out if that thing can be done in the interface. maybe try something, and there's little feedback. or it's not clear what happened when you clicked the thing that you thought would do what you want done. So you're not sure how to use a system, and you're not sure how to make sense of what happened or what state the system is currently in. Then the gulfs of execution and evaluation are very large. and it's difficult to bridge them. So we might think of Grand Canyon large. or some other other examples you can think of. So this is a nice selection for cookies. and I think I just selected the one that I didn't want to choose. I went, as say only necessary cookies. anyway. So the example from the book they talk about here is the Bluetooth settings. So, looking at the right. the left image. Pardon me. So how? How do we tell whether the Bluetooth is on or off? Okay, so let's if we look at the right image as well, then we can see what the difference is. But how could we just looking at the left image? How would it be possible to interpret that as Bluetooth being on? Yeah, it shows off. But off as on the other side of the switch. So if the off position is to the right. the on position is to the left. Does that make sense? Yeah. So let me see if we can add, here we want off. And here we want. Hmm, hmm! So that would be one. One way to do it. another way to do it might be. Let me see if I can get another one. Bluetooth is off. and then here we could also add. we could move the message. is that an improvement? Hey? One person says, yes, that's good. Anyone else care to venture a comment. So the idea is. we can we can use the idea of the goals of execution and evaluation to improve the design by thinking about how? How do we improve the the information display so that it's clear what operations can be done. And so the title of the screen, Bluetooth. Other devices. is all right now. I just wonder maybe we don't need the ad bluetooth or other device unless it's on. Or we could change this message. Add Bluetooth or other device. Turn on Bluetooth to add a Bluetooth device. So we get the sense that we're in the right spot to do the thing we want to do. But then it's not clear with the feedback. So the golf evaluation is. it's not communicating the system's status. Very well.  so I'm having to resolve this technical difficulties. Excuse me for a minute. Have a look at this screen from my board vehicle, and tell me what you think. what what the status is and what to do. If I want to change the temperatures in the vehicle. Okay, I'll be right back any thoughts. Yeah. Okay. So so if you look at the bottom. Here, there's let me see if I can. Let's squish this a little. I have to figure out how to save that with the image. so we'll just put it off to the side. For now can you see me moving that the text and the overlay that I just did?
+          </li><li>
+            
+            Yep.
+          </li><li>
+            
+            so the can. The thing about about this display. So the question is. okay. So auto auto is on and auto is on here as well. So if I clicked off auto on the button. Then this would change here. The thing that I can access from the buttons is whether it's duel or not. so it's hard to see. Let me see if I can zoom in a bit. There are minus and plus buttons here. so each side can control their temperature if they want. So the question is so dual is active, so I can have different temperatures on the driver's side and the passenger side. But it's not clear where I make a mistake with this, and I have to think about it is his dual. I'm controlling both temperature. Both temperatures are set to be the same. Well, in this case, when they're different. it's I should have taken a picture with the duel on was a duel turned off. I apologize. I'll do that for next meeting.
+          </li><li>
+            
+            Sorry is this for a car, or is this like a van? Because I know some vans have, like the dual setting for people in the back.
+          </li><li>
+            
+            No, this is well, it's not a. It's not a car, it's a it's a Ford edge, which is kind of a
+          </li><li>
+            
+            crossover. Okay.
+          </li><li>
+            
+            it's a big vehicle, anyway. but it's just is passenger side and driver's side. Soon. The label duel to me is yes, so the prevalence of touch screens is concerning, I think, as well.
+          </li><li>
+            
+            I know some vehicles have like warning systems in place that you're not supposed to touch the touch screens while driving.
+          </li><li>
+            
+            But anyway, so just to think about these gulfs of execution and evaluation. So it's not duel is on. But what does duel mean? This duel mean? I'm controlling both sides. We're not. And just the whole. This whole display is is confusing. I think it's just takes a lot to figure out what's going on. So some things. Some of these things are on buttons like the recircuting the air. And I think that's a rear defroster. Yeah. I will take a few more pictures, so I can give you the whole. I will do some homework there, so that I will put these pictures in in this meeting's pictures. and I will also figure out how to get the screenshot with my annotation on it as an image that I will put into our meetings today as well. But I am on the meeting for today. Okay, so a couple things I wanted to mention, there's a questionnaire for 4, 28 students. but a future course offering. So there is an opportunity, for there's a little preamble about the questionnaire. So this is only for people in 4, 28. So I've given you a few days for that Thursday at at after class. Let me just check that. I've done that properly. So. February eighth to one pm. So I think these courses are going to be offer co-scheduled because they'll be available and spring and summer. So it's just a question of. or they'd be interested in taking them. Does that make sense? Okay? So here's an and a use for Wiki that I came up with. So it's in the meetings, Wiki. But this is the home. No, it's not the home page, it's it's a link on the on the wiki. So students looking to find others to work within groups. So here's a page, and if you want to. if you're not in a group yet. do you want to be put into a group? Add your name here, and I will. I will facilitate that. Does that make sense about groups? So physic. So under assignments, there's a couple things that are more assignment related. and then there. So be 2 things that are classify as assignments than 3 things that are going to be not associated with the project. So I'm asking for groups of 4 for the project. We may need to have 2 groups of 3 for the project. but were looking for groups of 4 for the project and for the assignment you can work in groups of up to 4. So if you form a group of 4 now we can use I unless you specify differently. I'll use that group of 4 for the project piece as well. But if you have a group of 1, 2, or 3, I will add people to to make a group of 4 for the project portion. Does that make sense? Okay? So we talked about Apollo 13 the other day about how. when the Apollo. 13 Mission had to abort landing on the moon, but just getting people back. and they had. You're running out of oxygen because the CO. 2 filters were getting depleted, and and they had extra filters, but they didn't fit into the system, they into the into the housing where this crew were living. so they had to make do with that. So to me, this is how it's working for the the groups, so let me alright put my foot make myself less clear. Let me go back to the course page, and I'll show you an example. So I asked for group numbers to be put together. So I've done many of them already. or I've done the ones I received until last yesterday. So I asked for group numbers. So it seems like there's not a great process to use for this. I think it's going to be easier than so I want one with an overview. I apologize for sure showing information here. I won't show it very quick. Let's look at. So here I can get based on the group I know who's in the group. and then I can go here. And so let's say 1011, 12, and 13. We're going to. We were working together, so I would pick the the one that's first in the list. and I would add and remove users. So then I could say there would have to go and look at my list again. and then. so I won't go through this in great detail. But I couldn't. I can't. There's no screen to do it a consolidation. So I have to go and find the groups, and then after that. if I go back to groups. then I can select the group numbers, I added, and I can delete them. So I'm not going to do that now. But the reason I said it was like Apollo 13 is because the information there's no easy way to convert from user the user id like. from your email address to the names of the students in the list. So let me. And then I have to go back, and there's lots of clicking here. anyway. I don't know if I made my case very convincingly. I'll try and spell it out more clearly, and with some screenshots. So here's the first assignment. So this goes well, it worked on my laptop, and so I thought it would. I would just publish it. I have to figure out what went wrong. Okay. I don't see what the problem is. Maybe there isn't a problem. Yes, there was no problem. So here it is. So you've been made a teacher. Well, you're not really a teacher. You're a beta teacher for learning role. Now, I think this. But you actually have a role of beta teacher for learning. So if you can confirm that I would appreciate it anyway. So what I'm asking you to do is so what I want you to do in your individually or in groups. is to experiment with you. Our courses so describe an activity that a teacher could create for their students. That includes one. your courses activity. and allows a grade to be assigned upon completion. and when you are Course's resource. whose access is restricted based on the grade earned in the activity. As you complete your activity with viewer courses interface. reflect on your experience. So that gives you a bit more detail. So it's 8 marks. So I want you to. The idea is to focus on what opportunities for design there are in the activity. So you can think about what goes well and what doesn't go well. And so the things that I mean you don't ignore the things that go well, but focus on the opportunity the things that could be improved or problematic. So I I was going to have this due on Friday before the break. But since I had some issues with you are courses that course which you're enrolled. I've made it now Tuesday, after the break. so before the break, we'll have the other assignments in place. So you know what to expect or the rest of them. Okay, any questions or concerns as we're at the end of our time here to day. Okay? Well, seeing no questions. Let's call today, then thank you very much, for to day. Take care, and we'll see you on Thursday.
+          </li><li>
+            
+            Perfect. Take care, Darryl.
+          </li><li>
+            
+            Yeah, thanks, Darrell. Have a good rest of your day.
+          </li><li>
+            
+            Thanks you, too.
+          </li></ul>
+    
+  
+    
+      
+      
+      <h4 id="ssZoom-Chat-Transcript">
+        Zoom Chat Transcript
+      </h4>
+      <ul><li>
+            
+            good morning :)
+          </li><li>
+            
+            morning, daryl!
+          </li><li>
+            
+            Good Morning
+          </li><li>
+            
+            Good Morning
+          </li><li>
+            
+            Good morning!
+          </li><li>
+            
+            Good morning
+          </li><li>
+            
+            I haven't been outside yet today lol
+          </li><li>
+            
+            I personally like everything being accessible on your website, since that's where we have to go for pretty much everything anyway.
+          </li><li>
+            
+            🙂 that's the same thing I do
+          </li><li>
+            
+            Reacted to "I personally like ev..." with 👍
+          </li><li>
+            
+            Reacted to "I personally like ev..." with 👍
+          </li><li>
+            
+            Reacted to "I personally like ev..." with 👍
+          </li><li>
+            
+            Reacted to "I personally like ev..." with 👍
+          </li><li>
+            
+            Reacted to "I personally like ev…" with 👍
+          </li><li>
+            
+            the slider and the colour change
+          </li><li>
+            
+            The toggle is either greyed out or in colour and is paired with the word "on" or "off"
+          </li><li>
+            
+            slider shows off
+          </li><li>
+            
+            while the slider shows off, it still shows a device that has previously been connected which can be confusing
+          </li><li>
+            
+            Ah, I see why someone could get confused. If they assumed directionality mattered then they would assume that the rightmost position would mean off.
+          </li><li>
+            
+            the off should be labeled on left side whereas on should be right side
+          </li><li>
+            
+            yea off should be on the left side, they moved it to the right side for the pleasing aspect.  Having it on the left side would look not uniform
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            Improve a lot
+          </li><li>
+            
+            My first question is: why is there a digital display when there are buttons below? What is the purpose of having both?
+          </li><li>
+            
+            Also, are the temperatures under Auto and Dual referring to different purposes or the sides of the car?
+          </li><li>
+            
+            My car looks like this too, there are more options on the display than the buttons
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            but the buttons are easier to access while driving, especially if you have apple carplay on the screen or are in a different display section like Audio
+          </li><li>
+            
+            I'm honestly shook that so many cars have touch displays anyway, to me that seems weird and dangerous, because you get no tactile feedback. Analog means that I can make adjustments without looking, whereas touch screens mean I have to look away from the road to adjust them.
+          </li><li>
+            
+            Reacted to "I'm honestly shook t..." with 👍
+          </li><li>
+            
+            Reacted to "I'm honestly shook t..." with 👍
+          </li><li>
+            
+            Reacted to "I'm honestly shook t..." with 👍
+          </li><li>
+            
+            Reacted to "I'm honestly shook t..." with 👍
+          </li><li>
+            
+            Reacted to "I'm honestly shook t..." with 👍
+          </li><li>
+            
+            not sure how the climate control works since i haven't been in this car, but if the screen gives the option to select your own combination of airflow (eg. lower air + windshield fan thing) that seems easier to use than just cycling through the different options by pressing the button multiple times like many other cars. however, i would still prefer to use the analog dials/buttons while driving, the slight convenience doesn't override that for me.
+          </li><li>
+            
+            Reacted to "not sure how the cli..." with ☝️
+          </li><li>
+            
+            sound like it is on, you would think if it wasn't in use it would be grayed out
+          </li><li>
+            
+            yes
+          </li><li>
+            
+            yep
+          </li><li>
+            
+            Reacted to "I'm honestly shook t..." with 👍
+          </li><li>
+            
+            Have a great day!
+          </li><li>
+            
+            Thank you Sir
+          </li><li>
+            
+            Thank you. Take care
+          </li><li>
+            
+            thank you!
+          </li><li>
+            
+            thank you!
+          </li><li>
+            
+            thank you, have a great day!
+          </li><li>
+            
+            Thanks Daryl! See you Thursday.
+          </li><li>
+            
+            Thanks! See you later
+          </li><li>
+            
+            thank you have a good day!
+          </li><li>
+            
+            Thank you Dr. Hepting!
+          </li><li>
+            
+            Thanks
+          </li><li>
+            
+            Thank you, have a nice day!
+          </li><li>
+            
+            Thankyou Prof
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>User perspective when it comes to Bluetooth toggle switch in Windows and touch controls for climate control in Ford vehicles. What is working wall and what improvements can be made to them.
+    </li><li>How a car dash can be improved.
+    </li><li>gulf of evaluation, gulf of execution. 
+    </li><li>Evaluation and Execution
+    </li><li>There are courses beign oiffered that build on CS 428
+    </li><li>Learned more ab out the upcoming class assignments and the grouping structure.
+    </li><li>The concept of having either a touch screen or tactile dials and buttons on a car dashboard
+    </li><li>I always found topic on cars are interesting. 
+    </li><li>We talked about groups and then about design of auto function of car temperature control also about bluetooth on and off button which will make it easier to know whether it is turned on or off
+    </li><li>UI that can be misunderstood on what the user changed (I.e the bluetooth and car heating)
+    </li><li>About how one design flaw can expand and cause bigger issues throughout the entire system
+    </li><li>Car Dashboard
+    </li><li>I get to see the perspective of the teacher, creating the URCourses webpage.
+    </li><li>About peoples deliverys about the course organization
+    </li><li>talked about the picture from the dashboard display of ford edge and features of it. also talked about the group assignments
+    </li><li>The first assignment is going to be working with UR Courses, which I think is an awesome opportunity as a student to learn how to use a tool which we use and take advantage of as students on a daily basis. 
+    </li><li>We looked at the interface in Daryl's Ford Edge in one of the segments. I wanted to make a quick comment about it. All the necessary features from AC to temperature are present, however I feel as though some of the features would be hard to identify/navigate as you are the driver. M
+    </li><li>user interface is important 
+    </li><li>Today we talked about the gulfs of evaluation and execution, and looked over a couple of case studies in order to analyse what these gulfs can look like in practice. 
+    </li><li>About two gulfs
+    </li><li>Information being stored in the world being used as a part of design
+    </li><li>It was interesting to see all the behind the scenes of URCourses
+    </li><li>The important concept was improving the UI so that it can be easier to understand.
+    </li><li>We discussed about what was wrong with Dr Heptings car and talk about moodle groups.
+    </li><li>I enjoyed learning about the concepts of  knowledge in the head and world
+    </li><li>We learnt more information about the assignment 1. We discussed about the changes made in the ford edge control panel.
+    </li><li>In the lecture I learned about our first assignment and professor gave us brief description about the assignment and explained how we are gonna work in groups. 
+    </li><li>I learned a lot today! The anonymous feedback we did was really helpful for making our class better organized. Also, I found the details about two gulfs to be interesting.
+    </li><li>The main thing we discussed was gulf of evaluation and gulf of execution. The mismatch between our internal aims and the expectations and availability of information describing the state of the environment (or an artifact) and how we may modify it are referred to as the "gulfs of evaluation and execution."
+    </li><li>How design can be confusing to some and simple to others, ex: the blue tooth button 
+    </li><li>Dealing with gulfs
+    </li><li>While doing the quiz, encountered the concept of where Knowledge comes from that was very interesting! I would have said it was found in a library myself haha
+    </li><li>the ford edge climate controls, does innovation sometimes get in the way of user friendliness? the screen in a car is fairly new and innovative, but having the climate controls mainly on the screen makes things more difficult for when you are actually driving. with analog dials/buttons, you can feel your way around. you can’t do that on a screen. 
+    </li><li>Looking at how digital displays can be more informative and user friendly, like the Bluetooth settings or car climate controls
+    </li><li>Course organization still seems to be a bigger issue than I thought
+    </li><li>Its interesting that it is so normalized for touch screens to be readily avaliable to drivers even though it can be very dangerous. Although some might aregue that buttons are easier to use while driving and that you dont need to look at them while driving, you still need to search for the right button or knob just as you would on a touch screen. Its just interesting that a touch screen is now standard in a vehicle even though it is distracting
+    </li><li>I encountered the gulf of execution (people try to figure out how it operates) and the gulf of evaluation (people try to figure out what happened). 
+    </li><li>The important most important topic the professor explained was the assignment 1 that needs to be done. 
+    </li><li>Today we encountered the concept of gulf of evaluation and the gulf of execution.
+    </li><li>cars are always interesting for me 
+    </li><li>The important concept I understood in today's lecture was regarding two UX gulfs: evaluation and execution. The other was about windows 10 Bluetooth switch look. Also about the car dashboard picture regarding the temperature fluctuations.
+    </li><li>Assignment groups,  Apollo 13, and Design discussion on Ford Edge dashboard
+    </li><li>It was a review some concept and reviewed picture from prof's Ford Edge
+    </li><li>Ford Edge design and apollo 13 concept
+    </li><li>Norman knowledge source
+    </li><li>Potential options for improving the design of a car infotainment display
+    </li><li>We discussed Gulf Evaluation and Execution. Gulf Evaluation refers to users assessing the system state after users do action, and Gulf Execution refers to an action to be executed after users plan and determine the system state; this occurs as a cycle. In addition, we looked at a couple of examples, the on/off position of Bluetooth and the climate dashboard of a car.
+    </li><li>the two gulfs- execution and evaluation
+    </li><li>When Professor Hepting showed us the design of Bluetooth settings on a Windows computer, which I had seen before, I initially thought the original design was okay, but it still took me some time to grasp the concept from the past. However, when Professor Hepting changed the design of Bluetooth settings, I immediately understood how they worked at first glance. This made me realize that if something is difficult to understand, it's due to the fault of the design, and I can make it a lot better to improve.
+    </li><li>Came across different perspectives from other students regarding design of Bluetooth buttons and ford car ac controls
+    </li><li>The people who make vehicles really need to step back and get more human interaction in their designs.  They seem to get more and more complicated each time I see one. 
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>Still a little unclear about the first assignment.
+    </li><li>Great discussion.
+    </li><li>Everything was easy to understand. 
+    </li><li>no
+    </li><li>No
+    </li><li>Nothing
+    </li><li>nope!
+    </li><li>I think it was very simple. 
+    </li><li>No
+    </li><li>How the groups are set up and what are the assignment requirements 
+    </li><li>The assignment format is sort of difficult and need more clear format
+    </li><li>No, everything was easy.
+    </li><li>I am still having a difficult time creating a group for upcoming assignments
+    </li><li>What exactly to take from the Ford Edge picture
+    </li><li>not at all
+    </li><li>The multiple screens/displays to show the temperature controls in the ford was massively confusing. It seemed like they wanted to make things more difficult for the viewer by adding two different spots to control the vehicle climate. 
+    </li><li>Nothing difficult to understand. 
+    </li><li>no
+    </li><li>At the beginning of class you started going over some "course feedback", and at first I didn't know what course feedback you were talking about. I figured out that I missed a form to fill out under Participation that was put up last week, and I was a bit confused on how that slipped past me. 
+    </li><li>No
+    </li><li>Not really
+    </li><li>What the assignments and projects will entail
+    </li><li>No, nothing was too difficult to understand.
+    </li><li>No
+    </li><li>No, there was nothing I found difficult to understand.
+    </li><li>NO
+    </li><li>No I didn't find anything difficult to understand in the lecture. 
+    </li><li>No
+    </li><li>No there isn't anything difficult to understand.
+    </li><li>Nothing today! 
+    </li><li>no
+    </li><li>I'm still not entirely sure about the assignment and project information. It would help me greatly if clean, simple instructions for dates, group sizes, and expectations were posted somewhere
+    </li><li>No.
+    </li><li>N/A
+    </li><li>Everything was clear to understand 
+    </li><li>no
+    </li><li>Yes, it is 4th week probably and i'm still not clear with few designing and altercation about the car dashboard temperature discussion. However I'm still working on it after attending the lectures, and would visit office hours for more clarity. 
+    </li><li>No
+    </li><li>Not really!
+    </li><li>no
+    </li><li>Nothing
+    </li><li>No
+    </li><li>There was no difficulties to understand today's content.
+    </li><li>assignment
+    </li><li>No - not particularly anything difficult to understand in today's lecture
+    </li><li>Great class.
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>New design related classes that may be offered in the future.
+    </li><li>Looking further for followups.
+    </li><li>There is nothing I would like to know more of. 
+    </li><li>no
+    </li><li>More about the courses that are going to be added and who is teaching them
+    </li><li>Just more of new topics
+    </li><li>Overall, I think what should be talked about in future meetings is assignments and exam expectations. 
+    </li><li>Why car manufacturers are opting for much more dangerous touchscreens than just having analogue controls 
+    </li><li>No. 
+    </li><li>No
+    </li><li>More about the assignment and upcoming group project
+    </li><li>Temperature changes thing
+    </li><li>I will read more from the textbook to gain more perspective on the content
+    </li><li>About when we might be required to be in groups for a project
+    </li><li>everything was upto the point.
+    </li><li>No, I think today was a good and self explanatory 
+    </li><li>I want to delve into more complex interfaces, the Bluetooth example was quite simple and I'm interested in assessing other designs. 
+    </li><li>ford explorer 
+    </li><li>I will likely want to know a bit more about the first assignment after I have some time to look over it. 
+    </li><li>No
+    </li><li>How to better incorporate this as a part of UI design
+    </li><li>Yes, I would like to know more about how to create or improve the UI to be more meaningful and easy to understand for users.
+    </li><li>I'm excited to learn more about designing good software and about Human-Computer Communication
+    </li><li>No
+    </li><li>No I don't need any more information on any of the topic we discussed in the lecture. 
+    </li><li>No
+    </li><li>Can you explain more about the assingment, how will we be marked etc 
+    </li><li>No there isn't anything that I would like to know more.
+    </li><li>I want to know what kind of car you have that these pictures are coming from so I can avoid buying that vehicle bahahah
+    </li><li>I would like to start planning, with my group members, how we are going to start working on the first assignment and how we are going to distribute the work among ourselves.
+    </li><li>more on the testing process for things like the climate controls in the ford edge. who was the primary tester? was it designers or general public? were any suggestions from the general public taken into consideration?
+    </li><li>No.
+    </li><li>I would like to know more about the projects. 
+    </li><li>no things were easy today
+    </li><li>The same issue about the car dashboard picture discussion during class and also need more clarity on the assignments and project. Would request Dr. Hepting for further discussion and explanation over the assignments and projects in this course.
+    </li><li>No
+    </li><li>No.
+    </li><li>no
+    </li><li>The Assignment given
+    </li><li>None
+    </li><li>I would like to know more about whether we have the format for the assignment or not. It would be very appreciated if we have an example of the expected final result.
+    </li><li>assignment. 
+    </li><li>No- Today was mostly regarding case study type scenarios for windows 10 Bluetooth button and ford edge car
+    </li><li>I would really like to be a fly on the wall during the development of these newer vehicles, just so I could understand their madness.
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-428+730/202410/09_Tue-06-Feb-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+

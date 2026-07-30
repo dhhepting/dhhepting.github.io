@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="http://www2.cs.uregina.ca//~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-280/202410/09_Tue-06-Feb-2024.html" />
+    
+    <title>Mtg 9 &bull; CS-280 (202410) | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="Mtg 9 &bull; CS-280 (202410) | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/09_Tue-06-Feb-2024.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "http://www2.cs.uregina.ca//~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/",
+        
+          "name": "CS 280"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/",
+        
+          "name": "202410"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/09_Tue-06-Feb-2024.html",
+        
+          "name": "Mtg 9 (Tue-06-Feb-2024)"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-280/">
+        CS 280
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-280/202410/">
+        202410
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      Mtg 9 (Tue-06-Feb-2024)
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div>
+  <h1 id="mtgh1">
+    Mtg 9/26: Tue-06-Feb-2024
+  </h1>
+<div class="card">
+    <div id="mtghdr" class="card card-header w-100 bg-info">
+      <div class="row align-items-center">
+        <div class="col-4 text-start">
+          <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls"><a href="08_Thu-01-Feb-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-left-circle"></span>
+            </a><a href="." role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-up-circle"></span>
+            </a><a href="10_Thu-08-Feb-2024.html" role="button" class="btn btn-primary">
+              <span class="bi bi-arrow-right-circle"></span>
+            </a></div>
+        </div>
+        <div class="col-8 text-center">
+          <ul class="nav nav-pills" id="navbar-example2">
+            <li class="nav-item">
+              <a class="nav-link" href="#ssToday">Outline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssWiki">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ssMedia">Media</a>
+            </li>
+            <!-- <li class="nav-item"> 
+              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
+
+               
+            <!--
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">
+                  Responses
+              </a> 
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#ssR-Important">
+                    What important concept or perspective did you encounter today?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Difficult">
+                    Was there anything today that was difficult to understand?
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ssR-Know-More">
+                    Was there anything today about which you would like to know more?
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- class scrollspy-example -->
+    <div class="card card-body">
+      <div id="cbss" class="cbss" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+
+        <h3 id="ssToday" class="bg-dark text-white">
+          Outline for Today
+        </h3><h4>
+    <em>
+      Intellectual Property and Privacy
+    </em>
+  </h4><h4>
+    Administration
+  </h4>
+  <ul>
+  <li>Happy Tuesday</li>
+  <li><a href="https://urcourses.uregina.ca/mod/attendance/manage.php?id=1740941&amp;view=1" target="_blank">Attendance</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1707199200&amp;course=31085" target="_blank">Class calendar for today</a></li>
+  <li><a href="https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=31085" target="_blank">Upcoming events</a></li>
+</ul>
+<h4>
+    Response to Responses
+  </h4>
+  <p>Response to responses</p>
+<h4>
+    Results from Last Meeting
+  </h4>
+  <p>Which assignment should be due earlier?</p>
+<ul>
+  <li>Infographic: 61</li>
+  <li>Professional skills assessment: 105</li>
+</ul>
+<h4>
+    Today
+  </h4>
+  <ul>
+  <li><a href="https://www.theverge.com/2024/2/2/24059114/tesla-recall-brake-system-font-size-power-steering" target="_blank">Tesla recall because of font size</a></li>
+  <li>Has anyone seen <a href="https://www.google.com/search?client=firefox-b-d&amp;q=the+creator" target="_blank">The Creator</a>?</li>
+  <li>CIPS visit on March 21</li>
+  <li><a href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=9415&amp;group=0" target="_blank">Students looking for groups to join</a></li>
+  <li>I propose slightly different due dates than discussed in our last meeting: Monday, March 25 for the professional skills assessment and Monday, April 8 for the infographic (so students can view the work of others before the end of the semester). I am open to discussions about scheduling and breaking the assignments into pieces</li>
+  <li><a href="https://www.humanetech.com/infographic-dark-side-social-media" target="_blank">Sample infographic</a></li>
+  <li><a href="https://www.canada.ca/en/services/business/ip.html" target="_blank">IP in Canada</a></li>
+</ul>
+<h4>
+    Summary
+  </h4>
+  <p>Summary</p>
+<h4>
+    For Next Meeting
+  </h4>
+  <ul>
+  <li><a href="https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2510325" target="_blank">Submit your response to this meeting before noon tomorrow</a></li>
+  <li><a href="https://www.humanetech.com/podcast/taylor-swift-is-not-alone-the-deepfake-nightmare-sweeping-the-internet" target="_blank">Listen to this podcast</a></li>
+  <li><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2511223" target="_blank">Take quiz before the start of our next meeting</a></li>
+</ul>
+<h5><a href="https://urcourses.uregina.ca/mod/quiz/view.php?id=2511222">ACTION: Take quiz before next meeting</a></h5><h3 id="ssWiki" class="bg-dark text-white">
+          Wiki
+        </h3>
+        <p>
+          <a target="_blank" href="https://urcourses.uregina.ca/mod/wiki/view.php?pageid=9236">
+            Link to the UR Courses wiki page for this meeting
+          </a>
+        </p>
+
+        <h3 id="ssMedia" class="bg-dark text-white">
+          Media
+        </h3><div id="mtg_pix_09" class="m-2 carousel slide bg-light" data-bs-ride="false" data-bs-interval="false">
+    <ol class="carousel-indicators bg-dark mb-0">
+      <li data-bs-target="#mtg_pix_09" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#mtg_pix_09" data-bs-slide-to="1"></li>
+      <li data-bs-target="#mtg_pix_09" data-bs-slide-to="2"></li>
+      <li data-bs-target="#mtg_pix_09" data-bs-slide-to="3"></li>
+      <li data-bs-target="#mtg_pix_09" data-bs-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/eryay33gq9p70i4xqaby8/09-1.png?rlkey=zu92i2aq4nybqz36lu74pppri&amp;dl=0" alt="09 - 1.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/5cafyznnsnqsyoc6ke81r/09-2.png?rlkey=ih0uab5kj597xqe0f59mb88p2&amp;dl=0" alt="09 - 2.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/906w87w7cirb83pq9r73f/09-3.png?rlkey=7pm787p982iosvdcvsrhpyswo&amp;dl=0" alt="09 - 3.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/z4qx54btyt9ldr2zwv6ip/09-4.png?rlkey=1xkgzdngoprd17yvzws1lxmn9&amp;dl=0" alt="09 - 4.png" />
+      </div>
+    
+      <div class="carousel-item">
+        <img class="img-fluid d-block w-100" style="max-height: 600px; object-fit: contain;" src="https://dl.dropboxusercontent.com/scl/fi/j2u9um0j2ta468pzxeane/09-5.png?rlkey=dhtwdob1e0gcyjpz2yoaga189&amp;dl=0" alt="09 - 5.png" />
+      </div>
+    
+    </div>
+    <a class="carousel-control-prev bg-dark" href="#mtg_pix_09" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next bg-dark" href="#mtg_pix_09" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- <h3 id="ssTranscript" class="bg-dark text-white">
+          Transcript
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+
+    
+      
+      
+      <h4 id="ssAudio-Transcript">
+        Audio Transcript
+      </h4>
+      <ul><li>
+            
+            Okay, so have your
+colleagues say
+          </li><li>
+            
+            this you you
+          </li><li>
+            
+            Oh yes. Okay to get started
+          </li><li>
+            
+            Okay, so, happy Tuesday February
+6
+          </li><li>
+            
+            days are meant for attendance
+that our class calendar so it
+          </li><li>
+            
+            should be all set up I valued
+the responses you, you read. I'm
+          </li><li>
+            
+            a little bit behind and dealing
+with them so I will update the
+          </li><li>
+            
+            information here
+          </li><li>
+            
+            so the results from last meeting
+I want to mention were so the
+          </li><li>
+            
+            question was which assignment
+should we do earlier? So, we had
+          </li><li>
+            
+            100 and 166 responses out of
+267. So infographic should be
+          </li><li>
+            
+            earlier was voted was favored by
+61 and professional skills
+          </li><li>
+            
+            assessment will be 105 so
+          </li><li>
+            
+            so we'll take that I have down
+here so, I said about having due
+          </li><li>
+            
+            dates on Friday the 29th and the
+12th I believe so, I'm proposing
+          </li><li>
+            
+            a slightly different arrangement
+for due dates.
+          </li><li>
+            
+            So I'm going to suggest
+          </li><li>
+            
+            Blacknight brain
+          </li><li>
+            
+            lot more out here.
+          </li><li>
+            
+            Up.
+          </li><li>
+            
+            To see
+          </li><li>
+            
+            you Day okay so the reason to
+have the infographic due on
+          </li><li>
+            
+            Monday is so that students can
+understand this advice and see
+          </li><li>
+            
+            your work before the end of the
+semester
+          </li><li>
+            
+            see okay
+          </li><li>
+            
+            okay so we have our midterm.
+          </li><li>
+            
+            February 29 a very special day.
+          </li><li>
+            
+            Up plug for our CSI Miami fans
+lecture series
+          </li><li>
+            
+            so for the assignments so
+question I'm going to ask today
+          </li><li>
+            
+            discussed beforehand.
+          </li><li>
+            
+            Night should we schedule the
+assignment of the cases?
+          </li><li>
+            
+            Wish I Knew that feedback is
+kind of what it is this
+          </li><li>
+            
+            microphone
+          </li><li>
+            
+            really close to the microphone
+maybe that's
+          </li><li>
+            
+            it that's the question before
+Information Services I guess
+          </li><li>
+            
+            return address.
+          </li><li>
+            
+            US
+          </li><li>
+            
+            still alive
+          </li><li>
+            
+            so some of the questions I can
+ask or I can work with is Lisa's
+          </li><li>
+            
+            branch so she had to before the
+break last week or so
+          </li><li>
+            
+            Thursday
+          </li><li>
+            
+            is Thursday the week after the
+break?
+          </li><li>
+            
+            There a software update some
+questions for your class to to
+          </li><li>
+            
+            vote on for next time. Any
+thoughts about this?
+          </li><li>
+            
+            Okay
+          </li><li>
+            
+            professional skills assessment
+          </li><li>
+            
+            so Kemp's people from
+Saskatchewan Gibbs national
+          </li><li>
+            
+            because Jerry gets his hits the
+national organization from
+          </li><li>
+            
+            Saskatchewan the thermodynamic
+actually so, the am the
+          </li><li>
+            
+            personnel of Saskatchewan will
+come to class on the 21st
+          </li><li>
+            
+            successes.
+          </li><li>
+            
+            is crazy
+          </li><li>
+            
+            to use was.
+          </li><li>
+            
+            Anyone hear about that so recall
+of Tesla vehicles because the
+          </li><li>
+            
+            font size on display was too
+small
+          </li><li>
+            
+            anyone feel like putting up
+their hand today? Okay, a couple
+          </li><li>
+            
+            people. Story
+          </li><li>
+            
+            gonna have a link to it here
+          </li><li>
+            
+            so this isn't maybe a hard to
+say that it's not a bad place
+          </li><li>
+            
+            for technology use either. So
+the headline is go before my
+          </li><li>
+            
+            customers latest screw up
+involves making the font size
+          </li><li>
+            
+            it's big. It's a small
+          </li><li>
+            
+            cost to have you as a client on
+2.1 9 million vehicles sold to
+          </li><li>
+            
+            credit mistake so I think
+there's a picture here of what
+          </li><li>
+            
+            the differences so you can see.
+On the left is the way it is.
+          </li><li>
+            
+            And on the right is the way it
+needs to be. So you can see it's
+          </li><li>
+            
+            a little there's a little
+difference there. A noticeable
+          </li><li>
+            
+            difference
+          </li><li>
+            
+            so how do we how does this fit
+into our examination of
+          </li><li>
+            
+            professional ethics part of the
+code
+          </li><li>
+            
+            English in your expertise
+          </li><li>
+            
+            please
+          </li><li>
+            
+            other observations conforming to
+existing regulations in the
+          </li><li>
+            
+            area? Yeah
+          </li><li>
+            
+            anything else?
+          </li><li>
+            
+            This is code of ethics.
+          </li><li>
+            
+            Might see the light harm as well
+          </li><li>
+            
+            you? I want to just look at the
+professional leadership
+          </li><li>
+            
+            principles
+          </li><li>
+            
+            make comments about our
+discussion here some
+          </li><li>
+            
+            conversation so I wonder if you
+wanted to share them with the
+          </li><li>
+            
+            class.
+          </li><li>
+            
+            Looking for
+          </li><li>
+            
+            the personal is thinking about
+is standing up for the loss
+          </li><li>
+            
+            events
+          </li><li>
+            
+            evening. Think about his word.
+          </li><li>
+            
+            Any other comments about this
+          </li><li>
+            
+            and other huge signs you've
+heard that this federal focus
+          </li><li>
+            
+            sessions in our class you have
+anyone
+          </li><li>
+            
+            so if I miss a new story I
+invite you to bring the class of
+          </li><li>
+            
+            assessment
+          </li><li>
+            
+            so I did some research into the
+class so much to be the creator
+          </li><li>
+            
+            has anyone seen
+          </li><li>
+            
+            nobody said
+          </li><li>
+            
+            okay now that sounds very good.
+It had a 66% on Rotten Tomatoes.
+          </li><li>
+            
+            I think that was I think that
+was quite harsh. So it's it's an
+          </li><li>
+            
+            interesting discussion about AI
+          </li><li>
+            
+            Well, given the fact that I've
+seen it so it's interesting
+          </li><li>
+            
+            because of the story and I think
+it's about more than just the
+          </li><li>
+            
+            director the writer, the
+director, the writer, camera
+          </li><li>
+            
+            operator. character's name the
+Behringer global watch
+          </li><li>
+            
+            so when you grow it, it was a it
+was a pressing issue than it is
+          </li><li>
+            
+            today. So it has I think it's
+even more meaningful in our
+          </li><li>
+            
+            current climate. So there's a
+story that's interesting and
+          </li><li>
+            
+            thought provoking, because it's
+also the way he produced when
+          </li><li>
+            
+            they shot the film produced that
+was interesting. So we talked
+          </li><li>
+            
+            about
+          </li><li>
+            
+            so I started on Disney plus so
+there's a documentary wow the
+          </li><li>
+            
+            game
+          </li><li>
+            
+            different locations and did a
+lot of shooting and then ended
+          </li><li>
+            
+            up with lots of footage which
+they edited and then they decide
+          </li><li>
+            
+            which shots you're going to have
+the CGI treatment and so I get a
+          </li><li>
+            
+            lot of like natural like to hear
+successful big budget films.
+          </li><li>
+            
+            This was at a much, much smaller
+budget and was able to produce
+          </li><li>
+            
+            very, very realistic high
+quality images
+          </li><li>
+            
+            so.
+          </li><li>
+            
+            So I think it's interesting to
+where if you had the opportunity
+          </li><li>
+            
+            two reasons to look at it. One
+for housemaid and one for the
+          </li><li>
+            
+            story
+          </li><li>
+            
+            so is it clear about how about
+making give you the option to
+          </li><li>
+            
+            create groups for the
+infographics assignments are
+          </li><li>
+            
+            groups of up to four. So if
+you're
+          </li><li>
+            
+            looking to form a group, but you
+don't know people will not let
+          </li><li>
+            
+            you use a wiki today some age
+and a lengthy list your name if
+          </li><li>
+            
+            you're looking at form a group
+from infographics. So I've got
+          </li><li>
+            
+            an instruction here. So that is
+this game you need to this page
+          </li><li>
+            
+            you're looking for a group to
+join. Once you've navigated you
+          </li><li>
+            
+            choose data from the drop down
+menu above will be set to view
+          </li><li>
+            
+            when you arrive at this page. So
+is that clear? Select Edit here
+          </li><li>
+            
+            and while I'm editing I'll fix
+the missing parenthesis
+          </li><li>
+            
+            ready to go.
+          </li><li>
+            
+            there anything else?
+          </li><li>
+            
+            Okay any questions? Or concerns
+about setting up groups?
+          </li><li>
+            
+            So here's a sample infographic
+from the Center for humane
+          </li><li>
+            
+            technology to give you an idea
+of
+          </li><li>
+            
+            what might be possible so I was
+looking for format
+          </li><li>
+            
+            and you can download this as an
+example.
+          </li><li>
+            
+            So that's what comes up when you
+download it. So you can see us
+          </li><li>
+            
+            very tall and skinny. So I think
+there's different choices but I
+          </li><li>
+            
+            think this is a preferred
+format. You can have your
+          </li><li>
+            
+            patients be able to scroll
+through so this is 2000 by
+          </li><li>
+            
+            12,000.
+          </li><li>
+            
+            So that gives you an idea of
+          </li><li>
+            
+            what might be possible or how to
+think about organizing things.
+          </li><li>
+            
+            Okay so I
+          </li><li>
+            
+            said we talked about
+intellectual property and
+          </li><li>
+            
+            privacy. So let's start with
+what it says. In the code. Here.
+          </li><li>
+            
+            So let's go as part of the code
+of ethics. Principle 1.5 says we
+          </li><li>
+            
+            should respect the work required
+to produce good ideas and
+          </li><li>
+            
+            inventions created worse than
+computing artifacts, developing
+          </li><li>
+            
+            new ideas inventions, creating
+worse and competing artifacts
+          </li><li>
+            
+            creates value for society.
+          </li><li>
+            
+            So as always true
+          </li><li>
+            
+            So, given that we have the
+assumption that we're creating
+          </li><li>
+            
+            value for society
+          </li><li>
+            
+            so maybe not so caching with
+always keep the public interest
+          </li><li>
+            
+            in mind in the forefront. Some
+of the things that we're doing
+          </li><li>
+            
+            to go in and create value for
+society.
+          </li><li>
+            
+            So those who send the effort
+should suddenly gain value from
+          </li><li>
+            
+            their work. professionals should
+therefore we should therefore
+          </li><li>
+            
+            credit the creative ideas. Since
+so on, and respect Congress has
+          </li><li>
+            
+            trade secrets, license
+agreements and other protected
+          </li><li>
+            
+            office works. For the customer
+the law recognizes some
+          </li><li>
+            
+            exceptions to creative control
+work are necessary for the
+          </li><li>
+            
+            public. Refreshments should not
+unduly impose reasonable use of
+          </li><li>
+            
+            intellectual words and risks and
+help others like in keeping time
+          </li><li>
+            
+            and energy to process and help
+society illustrate the positive
+          </li><li>
+            
+            aspect as its principal.
+          </li><li>
+            
+            So Jack is really free and open
+source software and were put
+          </li><li>
+            
+            into the public domain. The
+professional should not be
+          </li><li>
+            
+            private ownership of work. They
+are as a share of public
+          </li><li>
+            
+            resources.
+          </li><li>
+            
+            So we want to encourage you
+encouraged to continue to
+          </li><li>
+            
+            progress in health society in
+open source or Public domain
+          </li><li>
+            
+            because moving on we're not
+always being helpful or creating
+          </li><li>
+            
+            value for society.
+          </li><li>
+            
+            So maybe we have two different
+ideas or theories. So
+          </li><li>
+            
+            there's
+          </li><li>
+            
+            there's some questions about
+solar one kind of protection we
+          </li><li>
+            
+            have is creating a patent on
+software so creating a board
+          </li><li>
+            
+            that requires examination of
+prior art
+          </li><li>
+            
+            Is
+          </li><li>
+            
+            Maybe it's an issue of hands as
+one side that somebody has to do
+          </li><li>
+            
+            justice
+          </li><li>
+            
+            some years ago Amazon got a
+patent for the one click shop
+          </li><li>
+            
+            and is that what kind of tests
+are being applied to these
+          </li><li>
+            
+            ideas?
+          </li><li>
+            
+            So patents are very compact
+ideas. So the creators can
+          </li><li>
+            
+            benefit from the ideas and
+commercialize them, place to
+          </li><li>
+            
+            some and so forth.
+          </li><li>
+            
+            So on the other hand, we have
+other options to protect ideas
+          </li><li>
+            
+            we can use our license Creative
+Commons.
+          </li><li>
+            
+            Very common zero is about to
+sign things to the public
+          </li><li>
+            
+            domain.
+          </li><li>
+            
+            And then also have creative
+power generally attribution then
+          </li><li>
+            
+            licenses some means to say that
+these ideas should remain open
+          </li><li>
+            
+            to creativity
+          </li><li>
+            
+            using these factors we can
+          </li><li>
+            
+            we can leverage a larger
+infrastructure to protect.
+          </li><li>
+            
+            The question we have here also
+is great to have things open
+          </li><li>
+            
+            and do some things.
+          </li><li>
+            
+            So the idea of open AI
+          </li><li>
+            
+            everybody needs work
+          </li><li>
+            
+            we need geniales model to
+quickly here. So, is there
+          </li><li>
+            
+            something I'm sure we can use
+to.
+          </li><li>
+            
+            Bow Violence
+          </li><li>
+            
+            So, respecting privacy, the
+responsibility of responsibly
+          </li><li>
+            
+            resetting privacy advice
+professionals in particularly
+          </li><li>
+            
+            profound way acknowledging names
+collection monitoring,
+          </li><li>
+            
+            exchanging personal information
+quickly and expensively handled
+          </li><li>
+            
+            the knowledge of people
+affected. Therefore, a
+          </li><li>
+            
+            professional should be
+conversant in the various
+          </li><li>
+            
+            definitions and forms of privacy
+in exchange standard Greg's
+          </li><li>
+            
+            responsibilities associated with
+the collection and use of
+          </li><li>
+            
+            personal information so this is
+an example and ties into the Tim
+          </li><li>
+            
+            Hortons staff investigation
+where we discussed a few
+          </li><li>
+            
+            meetings ago. Professional
+should only use personal
+          </li><li>
+            
+            information for legitimate ends
+and without violating the rights
+          </li><li>
+            
+            of individuals and groups. This
+requires taking precautions to
+          </li><li>
+            
+            prevent re identification of
+anonymized data or not proceed a
+          </li><li>
+            
+            collection ensuring the accuracy
+data, understanding the
+          </li><li>
+            
+            provenance of the data, and
+protecting it from unauthorized
+          </li><li>
+            
+            access and accidental accidental
+disclosure. Keeping professional
+          </li><li>
+            
+            should establish transparent
+policies and procedures and
+          </li><li>
+            
+            allowed images to understand
+what data is being collected and
+          </li><li>
+            
+            how it's being used to give
+informed consent for automated
+          </li><li>
+            
+            data collection and to review
+obtain correct inaccuracies in
+          </li><li>
+            
+            and delete your personal data.
+minimum amount of personal
+          </li><li>
+            
+            information necessary should be
+left in a system. The retention
+          </li><li>
+            
+            and disposal periods code
+information should be clearly
+          </li><li>
+            
+            defined, enforced and
+communicated data subjects
+          </li><li>
+            
+            personal information gathered
+for a specific purpose should
+          </li><li>
+            
+            not be used for other purposes.
+Those persons consent, merge
+          </li><li>
+            
+            share collections and compromise
+privacy features present in the
+          </li><li>
+            
+            original collections. Therefore
+containing freshmen should take
+          </li><li>
+            
+            special care for privacy when
+we're looking at collections.
+          </li><li>
+            
+            Neither right we should be
+forgotten
+          </li><li>
+            
+            so does anyone know offhand.
+They don't have experience and
+          </li><li>
+            
+            deleting themselves from a
+social media platform or other.
+          </li><li>
+            
+            Yeah,
+          </li><li>
+            
+            I tried to delete myself on
+Facebook and created my account.
+          </li><li>
+            
+            So that I didn't have access to
+the account.
+          </li><li>
+            
+            So they actually didn't have a
+fight.
+          </li><li>
+            
+            It took a month. So is a point
+of view. You don't need to
+          </li><li>
+            
+            recall them to do it. But there
+was just a real struggle to try
+          </li><li>
+            
+            to make you accountable. For
+whatever.
+          </li><li>
+            
+            Is there not a common experience
+that they smoke like that?
+          </li><li>
+            
+            So in some ways, conflict of
+interest. They shouldn't be
+          </li><li>
+            
+            managing data but they want to
+have as much data about us as
+          </li><li>
+            
+            possible.
+          </li><li>
+            
+            So we don't necessarily they're
+not selling unnecessary selling
+          </li><li>
+            
+            data to advertisers, but they're
+selling the capability to target
+          </li><li>
+            
+            individuals. On the platform.
+They want to try get a Facebook
+          </li><li>
+            
+            ad or something
+          </li><li>
+            
+            yeah, what's your what's your
+experience like?
+          </li><li>
+            
+            A particular example but I know
+that people have tried to do
+          </li><li>
+            
+            stuff on social media. Or
+through traffic.
+          </li><li>
+            
+            Maybe you don't say this is
+definitely happening. Location,
+          </li><li>
+            
+            as well as things that were on
+the slide are being sold at that
+          </li><li>
+            
+            location.
+          </li><li>
+            
+            Tried to do a buying ads on
+Facebook. We once did this event
+          </li><li>
+            
+            in computer science and it was a
+little creepy, how specific in
+          </li><li>
+            
+            terms of the people you want to
+show the ad to be able to show
+          </li><li>
+            
+            the ad and.
+          </li><li>
+            
+            This was created
+          </li><li>
+            
+            so
+          </li><li>
+            
+            So we have that's the answer to
+one of the questions as well.
+          </li><li>
+            
+            PGP for pretty good privacy
+          </li><li>
+            
+            the other answer to the question
+is
+          </li><li>
+            
+            asked the question asked
+together question was a
+          </li><li>
+            
+            question.
+          </li><li>
+            
+            So how many people here makes
+better use of encryption
+          </li><li>
+            
+            it's perfectly our hard drive.
+By my laptop was convenience.
+          </li><li>
+            
+            How many people are these
+encryption on their license?
+          </li><li>
+            
+            Over here but I can check on the
+rest of the rest of
+          </li><li>
+            
+            it can use password managers to
+draft the encryption key back
+          </li><li>
+            
+            into your computer
+          </li><li>
+            
+            Okay, do you encourage your
+email that's another possibility
+          </li><li>
+            
+            so what about the rest of you
+who are still interested in
+          </li><li>
+            
+            printing hands up, but didn't
+have a choice didn't respond to
+          </li><li>
+            
+            the choice stateless?
+          </li><li>
+            
+            Whether you're at overkill
+temperature, or not.
+          </li><li>
+            
+            I don't think it's overkill to
+encrypt something but if you're
+          </li><li>
+            
+            going to be used like I would
+say, encryption would be nice to
+          </li><li>
+            
+            have like let's say on my laptop
+but on my home computer where
+          </li><li>
+            
+            the only access is going to be
+through my Wi Fi rather encrypts
+          </li><li>
+            
+            how my Wi Fi is access rather
+than encrypting my entire.
+          </li><li>
+            
+            What things are most most
+vulnerable
+          </li><li>
+            
+            so it did a university course
+show that sadly, security
+          </li><li>
+            
+            insurance and so I went through
+a lot of
+          </li><li>
+            
+            well, it was a course so six or
+seven videos to go through and
+          </li><li>
+            
+            messages
+          </li><li>
+            
+            the age that are aware of being
+engaged and aware of security
+          </li><li>
+            
+            issues is the most important
+defense against attacks.
+          </li><li>
+            
+            Known as the eighth production
+to the thing Sudan One
+          </li><li>
+            
+            University of Regina and I'm
+aware of most of them
+          </li><li>
+            
+            seem like
+          </li><li>
+            
+            so she can be nice it has to be.
+          </li><li>
+            
+            Because if we end up with a
+system that is not clear how to
+          </li><li>
+            
+            configure it if we're not sure
+what we're doing is worse or
+          </li><li>
+            
+            make more informed information
+unprotected.
+          </li><li>
+            
+            Okay going to end of our time
+here. Any questions or concerns
+          </li><li>
+            
+            packed down
+          </li><li>
+            
+            everyone
+          </li><li>
+            
+            you? Up you
+          </li><li>
+            
+            you? Up you
+          </li></ul>
+    
+  
+    
+  -->
+
+      <!--   <h3 id="ssResponses" class="bg-dark text-white">
+          Responses
+        </h3>
+  
+  
+  
+    
+  
+    
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+<h4 id="ssR-Important">
+    What important concept or perspective did you encounter today?
+  </h4>
+
+
+<ul><li>Privacy issues and policies on social media.
+    </li><li>i learned about the tesla recal for their font size of their warning being too small.
+    </li><li>The importance of intellectual property and how to protect it
+    </li><li>Everything discussed today is important.
+    </li><li>How small things can impact in long haul, like Tesla's braking system font. Which impacted the company a lot and have to recall all their vehicles back.
+    </li><li>Pretty Good Privacy (PGP) -  is an amazing program as it provided a robust method of protecting emails, files and basically other forms of a digital information through encryptions. As cyber attacks and threats constanlly rising and occurring, its serves as a defense and offers data integrity for all the users.
+    </li><li>Regarding the right to be forgotten/deleted on the internet.
+    </li><li>An important perspective I have a encountered today is how important is to to thoroughly discuss topics with the groups. It helps for better understanding.
+    </li><li>Encryption 
+    </li><li>we have learnt about tesla's recall and online social platform example.
+    </li><li>Today I learned about intellectual property and privacy, moreover we also discussed about other social media platforms
+    </li><li>The concept we talked about today was intellectual property and privacy. we talked about respecting intellectual protections, and if things like AI should be open. We also talked about PGP, and how encryption is a way to protect intellectual property.
+    </li><li>That you always need to follow regulations and posted rules or it can back fire on you.
+    </li><li>The intresting topic i learned about is the tesla recalling because of its font size  Like it was intresting tahy people were not conplaining about the sudden braking and driver monitoring alerts but about the font size been usedno mostly it was easy to understand
+    </li><li>encryption
+    </li><li>Intellectual Property &amp; Privacy 
+    </li><li>acm code of ethics, article of tesla, IPs in Canada
+    </li><li>Data encryption usefulness and the complexity of computation behind such data.
+    </li><li>We encountered how ethical regulations can be important when it comes to the design and production of certain things, especially tech and electronic systems. We have to make things safe and egnomic in ways that follow regulations so that our systems are simple and straightforward to create and operate. Failing to adhere to things like this can lead to inneficiency, loss of money, or even injury, death and property damage in worse cases.
+    </li><li>no
+    </li><li>The ACM code of conduct apply to all aspect of IT and it's really important.
+    </li><li>Encryption tool to protect the privacy and important data of an individual
+    </li><li>Talked about the assignment submission, blown to bits theory, etc.
+    </li><li>Prior to today's class, I have never heard of the concept PGP (pretty good privacy). I learned that it is an encryption program that provides secure data communication by encrypting/decrypting messages and other confidential information. 
+    </li><li>The digital intellectual property 
+    </li><li>Intellectual Property and Privacy
+    </li><li>Encryption is imperative to our individuality in the digital world, as it protects our digital property, and allows us to benefit from our own ideas. 
+    </li><li>The talk about assignement and there due date
+    </li><li>nothing
+    </li><li>Code of Ethics
+    </li><li>Probably just a more and clear idea about the assignments.
+    </li><li>.
+    </li><li>I learned about intellectual property 
+    </li><li>Contributing to project that helps the society 
+    </li><li>Example of Code of ethics 
+    </li><li>The tesla recall due to font size and how something as little as font size is very crucial to ensure safety.
+    </li><li>How important encription is
+    </li><li>I encountered the topic of privacy and how it can be exploited, yet also covered up.
+    </li><li>Encrytion is a necessary key to protect your data especially the mobile devices that connect to foreign networks.
+    </li><li>An important concept I encountered today was that platforms have a conflict of interest with allowing people to delete their data (deleting accounts) and using that data to be sold to advertisers so they can make a profit. I never realized that companies often times put up a fight when trying to delete your data because in turn they are losing money. The conflict of interest on data often times means that user has to be thrown in loops in order for their data to be removed which in my opinion is unethical. 
+    </li><li>Acm code of ethics number 3
+    </li><li>Infographic 
+    </li><li>Intellectual Property and Privacy
+    </li><li>Creating new computing artifact creates vale for society 
+    </li><li>pretty good privacy
+    </li><li>intellectual property and patents
+    </li><li>The importance of encryption and its different uses.
+    </li><li>The concept I encounter today was the dar side of social media which I was not aware about until today it has its own benefits and own disadvantages
+    </li><li>Today we talked about a question: "Do we have a right to be forgotten?". I think this question is quite significant in todays world because now matter what you post, it stays on the internet forever. Usually you are able to delete stuff from your accounts and you can even fully remove your account but regardless information about your account, posts, photos will forever be on the internet. 
+    </li><li>ai technology changes human beings
+    </li><li>I learned about security
+    </li><li>The important concept that I really noticed today was the fact that business models that companies use today rely on selling the users data, which makes it alot harder for these companies to change there models to protect the users data and to make sure that the pockets of the higher ups are lined with enough cash.
+    </li><li>that technology does not have to be necessarily faulty to be recalled. This is shown in the latest Tesla's recall, and shows how there are other variables that go into ensuring a technology can be used safely and for its intended use. 
+    </li><li>We learned how to brainstorm about which general ethical principles apply to certain situations.
+    </li><li>IP and Privacy
+    </li><li>I found myself leaving class with the thoughts of right to erasure and how they social media platforms like Facebook make it super hard to delete your data.  Really makes me wonder how we haven't had the right to erasure since the beginning.
+    </li><li>I learned that even the smallest design choices can lead to the biggest problems such as the Tesla recall with font size
+    </li><li>We talked about the different ways encryption is used in our life and the pros and cons of patents.
+    </li><li>Intellectual Property and Privacy
+    </li><li>Today we saw an video and discuss about the deadline of assignment 
+    </li><li>An important concept i learned today was the IP in Canada
+    </li><li>Everything
+    </li><li>Regarding Tesla recall
+    </li><li>We went more in depth about the case studies and finalized the dates for the assignments
+    </li><li>About assignment 
+    </li><li>I think it was about Tesla's latest new aout the font size of breaking.
+    </li><li>something related to tesla vehicles and detail explanation on regulations by the proffesor in today's lecture. 
+    </li><li>About the teslas latest screwup in the font size of the breaking system 
+    </li><li>Firstly we decided the dates of assignments and then we discussed about encryption 
+    </li><li>In today’s class, we discussed what the next few weeks/ classes will be about. We discussed our upcoming assignments and midterm, their content and the due dates for them. We also discussed the concept of “intellectual property and privacy” as well as a class. 
+    </li><li>An important concept encountered today is that there are multiple ways of claiming or keeping intellectual property digitally. There are things like creative commons, patents, copyright laws, etc.
+    </li><li>I learned about encryption and information regarding assignments 
+    </li><li>Today we discussed about the deadlines of the assignment 
+    </li><li>When discussing patents today, it reminded me of Shark Tank where you need a patent to protect your intellectual property/creation. It is interesting to see how this concept translates to technology as well. 
+    </li><li>Platforms on social media
+    </li><li>nope there was nothing important
+    </li><li>How important it is for us to encrypt our things.
+    </li><li>I got to know the concept on encryption and also got to the pattern of midterm and how the questions will be molded.
+    </li><li>Intellectual property + privacy
+    </li><li>Explanation on Intellectual Property and Piracy by professor and details over midterm.   
+    </li><li>Today's important idea is the question, do we have a right to be forgotten? This is a consequence of technology that we are only beginning to see. Why should there be policies or requirements for me to opt out? The Code of Ethics briefly mentions honouring confidentiality (Principle 1.1), but is that enough? Should there be a law dedicated to our right to be forgotten?
+    </li><li>The creatore"democratizing" film making with pro-sumer equipment and shorting schedule
+    </li><li>An important perspective I encountered in class today is the question (Do we have the right to be forgotten)?
+    </li><li>IP in canada
+    </li><li>The concept of encryption and how encryption has been restricted and liberated to the public
+    </li><li>I got to know the concept on encryption and also got to the pattern of midterm and how the questions on the mid term will be molded.
+    </li><li>about encrypt 
+    </li><li>About Infographic
+    </li><li>IP in Canada 
+    </li><li>No
+    </li><li>Information
+    </li><li>I learned more concept regarding ACM Ethics and an example that relates to the concept; Tesla Recalling Issue.  
+    </li><li>Talking about encryption, IP, and other various topics today were interesting to me
+    </li><li>Tesla recall was the most interesting for me
+    </li><li>Focused on lectures can teach you anything 
+    </li><li>More concepts regarding ethics with electric car as example+idea of intellectual property
+    </li><li>An important concept I encountered today was IP and how it is the abbreviation for Intellectual Property. How we need to encrypt basically everything (devices) to keep our privacy; if not, our information and what we do on the internet is out in the open for everyone to see
+    </li><li>That fewer people than I thought use encryption 
+    </li><li>People need to consider all the issues when releasing software
+    </li><li>I completely understood the assignment part.
+    </li><li>From viewing the Tesla story from today, the thing that stood out to me was that regulations are dealt with more seriously than I had previously thought
+    </li><li>Respecting privacy in computing means safeguarding personal information and only using it with permission. It involves collecting only necessary data and keeping it secure to uphold individuals' rights to privacy.
+    </li><li>Encryption and Ciphers
+    </li><li>Work expended adds value to society and therefore work should be respected
+    </li><li>I learned quite a bit
+    </li><li>IP in Canada
+    </li><li>encryption
+    </li><li>Assignment 
+    </li><li>i did not see anything to be important , per my thinking 
+    </li><li>I got to know about platforms like facebook have a conflict of interest because their basic models rely on other’s  data to be sold to advertisers.
+    </li><li>Data encryption, how to protect user’s data from being accessed by outsiders and how corporations must work with user’s data with privacy and protection
+    </li><li>I got to know an science fiction movies The Creator and I also learned about intellectual property in canada
+    </li><li>N/A
+    </li><li>learnt about tesla's stragery
+    </li><li>today's class was very interesting.
+    </li><li>Intellectual Property and Privacy
+    </li><li>I get to know that a small issue can create big problem in this world like Tesla experience .
+    </li><li>today we discussed about a little about encryption and also about assignment 
+    </li><li>Today in class we had discussion about encryption and assignment discussion 
+    </li><li>right of being forgotten
+    </li><li>Nothing
+    </li><li>I became familiar with the concept of encryption and understood the pattern of the midterm, including how the questions will be structured.
+    </li><li>I learnt about Intellectual property privacy
+    </li><li>Intellectual property plus privacy
+    </li><li>About assignments and sample inforgraphic
+    </li><li>I learned about the significance of Tesla’s technology, and the concerns that come with it, for example, coding self driving: How does the car know when to stop (safely) if there is an obstacle on the road?
+    </li><li>Due dates of assignments
+    </li><li>Recall of tesla vehicle
+    </li><li>nothing much
+    </li><li>Democracy " film making with pro-sumer equipment shorting schedule
+    </li><li>Why encryption is important 
+    </li><li>Today i learned about the bad sides of social media..For example facebook, Instagram etc.
+    </li><li>I learned that even a small technical issue, such as the one with the Tesla vehicles, can cause huge safety issues, and can raise concerns about ethics.
+    </li><li>I learned about conflicts of interest when it comes to social media platforms collecting data and users that wish to delete their data from that platform.
+    </li><li>PGP - Pretty Good Privacy, Do we had a right to be forgotten?, Intellectual property and privacy.
+    </li><li>The important concept was about the encryption to protect our data from getting misused.
+    </li><li>I learned the concept about the creator who creates this codes and softwares for the big companies like tesla and the privacy and encryptions for the applications we use for social media.
+    </li><li>One important concept I encountered today is the ethical principle of respecting privacy. In order to respect the intellectual property and personal information of others, computing professionals must only collect what is necessary. The data they collect must not only be outlined, but must also be used for legitimate ends in respect towards the user's rights and the computing professional's responsibilities. 
+    </li><li>I learned that encryption is important in our society to prevent datas from being stolen or deleted permanently.
+    </li><li>Today, I learned that encryption is the method of encoding data so that it is concealed from or unavailable to unauthorised users. It helps to safeguard private information and sensitive data, as well as improves communication security among mobile devices and servers. A comprehensive encryption system will safeguard private information at all stages of its process, ensuring that any files or documents are always protected from data theft or destruction.
+    </li><li>Went over the Tesla font incident and the movie "The Creator" about the discussion of destroying Ai
+    </li><li>AI learning
+    </li><li> Today, an important perspective encountered was the importance of encrypt data
+    </li><li>We learned about ACM code of ethics number 3
+    </li><li>Different ways we can make infographics assignments. 
+    </li><li>How small faults such as fonts can result in big consequences 
+    </li><li>Different concepts about encryption, rights for the user on social media, and some important policies to consider
+    </li></ul>
+<h4 id="ssR-Difficult">
+    Was there anything today that was difficult to understand?
+  </h4>
+
+
+<ul><li>No, the instructor was very informative.
+    </li><li>was difficult to understand some speech due to microphone feedback in class.
+    </li><li>no
+    </li><li>No, everything is good.
+    </li><li>Everything today was good and a successful meeting. 
+    </li><li>Unclear if the infographic assignment requires groups or if groups are optional.
+    </li><li>Nothing in particular was difficult to understand today.
+    </li><li>I have understood everything properly.
+    </li><li>no 
+    </li><li>Everything was understandable
+    </li><li>No. 
+    </li><li>No, not really anything of particular difficulty
+    </li><li>No it was easy for most of the parts 
+    </li><li>no
+    </li><li>No
+    </li><li>no
+    </li><li>no
+    </li><li>The assignment instruction is not clear
+    </li><li>About Pretty Good Privacy
+    </li><li>No
+    </li><li>No
+    </li><li>nope
+    </li><li>At first the assignment were but i feel its good now 
+    </li><li>no
+    </li><li>No
+    </li><li>No
+    </li><li>.
+    </li><li>Privacy topic was difficult. 
+    </li><li>No not really 
+    </li><li>No
+    </li><li>No not really
+    </li><li>How are we future proofing forms of encription that could end up obsolete
+    </li><li>No.
+    </li><li>The purpose of accountability that isnt maditory because one could argue that since they are just guidelines then there was no expectation of compliance.
+    </li><li>No
+    </li><li>No
+    </li><li>No not at the moment
+    </li><li>No
+    </li><li>no
+    </li><li>none
+    </li><li>No
+    </li><li>Still the concept of assignment is not understanable but might get more involved in groups and will be easier 
+    </li><li>What is the assignment about.
+    </li><li>Nothing
+    </li><li>I am still curious how encryptiuon really works since it can become fairly complicated in the technical side of things but I will continue to use it regardless.
+    </li><li>nope
+    </li><li>It seems that some of the ethical principles will sometimes overlap to an extent, making it somewhat difficult to pinpoint which one's apply to a given scenario.
+    </li><li>No
+    </li><li>There was nothing difficult to understand today
+    </li><li>None
+    </li><li>No, I have doubt about the midterm thing, from where do we need to study
+    </li><li>No 
+    </li><li>No
+    </li><li>No
+    </li><li>No, I don't think so
+    </li><li>There was nothing difficult to understand in today's lecture.
+    </li><li>No, everything was easy. 
+    </li><li>The concept of the movie The creator
+    </li><li>Nope everything was fairly simple
+    </li><li>No, there was nothing difficult to understand. Everything was straightforward and made sense.
+    </li><li>Nothing today was too difficult to understand.
+    </li><li>Nothing 
+    </li><li>No
+    </li><li>Nothing was difficult to understand today.
+    </li><li>How open source projects can be a negative.
+    </li><li>no, everything was easy
+    </li><li>No, today was nothing difficult to understand
+    </li><li>No everything was clear.
+    </li><li>Not really
+    </li><li>I was confused about the project that contribute to society.
+    </li><li>NO
+    </li><li>The writing on the board was a bit faint and is hard to see. 
+    </li><li>No
+    </li><li>There was nothing difficult to understand in the class
+    </li><li>No
+    </li><li>No
+    </li><li>also is encrypt things
+    </li><li>Yes, about infographic assignment.
+    </li><li>Assignments Stuff,but not hard, I have to research about that 
+    </li><li>No
+    </li><li>No
+    </li><li>There was none
+    </li><li>I found the lecture very not engaging… it felt very long.
+    </li><li>honestly not much
+    </li><li>No
+    </li><li>yes, it was difficult to read the board
+    </li><li>Not really 
+    </li><li>Nothing
+    </li><li>I understood everything.
+    </li><li>Today, it was kind of tough to understand what we were going over on the board in the second half of class. It was not clear what the overall topic of discussion was.
+    </li><li>There’s not any difficult to understand today 
+    </li><li>Ciphers
+    </li><li>Not particularly 
+    </li><li>no
+    </li><li>Infographic assignment
+    </li><li>no
+    </li><li>No
+    </li><li>no 
+    </li><li>Tesla example which is in the news was unclear I mean I could not understand why it was related to .
+    </li><li>I don't think there was anything hard to understand
+    </li><li>N/A
+    </li><li>nope
+    </li><li>No all the things were properly explained by professor.
+    </li><li>Not really 
+    </li><li>NO
+    </li><li>Nope, every thing was good
+    </li><li>Not everything was pretty easy
+    </li><li>pretty good privacy
+    </li><li>No
+    </li><li>No
+    </li><li> Nothing
+    </li><li>NO
+    </li><li>No there was not
+    </li><li>Nope
+    </li><li>N/A
+    </li><li>Nothing
+    </li><li>No
+    </li><li>no
+    </li><li>No
+    </li><li>No everything was good.
+    </li><li>It was a bit difficult to follow along with the lecture because some things were unclear to me.
+    </li><li>No. Everything was clear 
+    </li><li>NO
+    </li><li>About Intellectual Property
+    </li><li>Nope, I was able to understand most of the concepts taught in class today, especially once they were written down as notes. 
+    </li><li>No not really
+    </li><li>No
+    </li><li>No
+    </li><li>Nothing was difficult to understand today; everything was easy to grasp.
+    </li><li>No
+    </li><li>No
+    </li><li>Not really
+    </li></ul>
+<h4 id="ssR-Know-More">
+    Was there anything today about which you would like to know more?
+  </h4>
+
+
+<ul><li>I would like to know how our information is being sold online to advertisers.
+    </li><li>like to more on some laws about intellectual property and copyright 
+    </li><li>What to do if intellectual property has been stolen
+    </li><li>I want to know more about ethics and its importance
+    </li><li>Will like to learn deeper about Intellectual property and copyright and how it can impact AI side
+    </li><li>Intellectual property is such a controversial topic now with the development of AI, most people that are getting affected are writers, artist, and singers. I wonder what forms of technology can help them protect their intellectual properties
+    </li><li>Encryption was an interesting topic
+    </li><li>Nothing in particular. Kind of burnt out at the moment.
+    </li><li>Patents
+    </li><li>no 
+    </li><li>I will like to know more about different encryption methods 
+    </li><li>I would like to know more if there are more ways to protect our information. I would also like to know more about encryption, and if it’s actually something I should spend time doing for my computers.
+    </li><li>Not from today's lecture. 
+    </li><li>Dark side of online platforms
+    </li><li>Encryption and how secure it really is
+    </li><li>more about network security 
+    </li><li>Format for the mid-term exams
+    </li><li>no
+    </li><li>no
+    </li><li>I would like to know more about the ACM code of conduct
+    </li><li>vulnerability in the encryption
+    </li><li>No
+    </li><li>No 
+    </li><li>I would like to start more of a conversation on artificial intelligence portrayed in the movie "The Creator" mentioned in class. The movie seems try and humanize AI and portray it as a force for good. However, I personally think this could also be a message Disney might be pushing to convince people to use AI. This is dangerous because if this happens, Disney and other companies may start implementing AI to use for doing their work for shareholders.
+    </li><li>I would like to know more about current news events and how they could incorporate the Code of Ethics.
+    </li><li>nope
+    </li><li>N/a
+    </li><li> no
+    </li><li>No
+    </li><li>No
+    </li><li>.
+    </li><li>I want learn how to do patents which help in protecting software.
+    </li><li>Patents of software 
+    </li><li>Yes. I want more movie recommendations 
+    </li><li>Not really, I think I gained adequate knowledge from today's class.
+    </li><li>Are programmers doing anything to improve the technology, or has encription stayed relitively the same
+    </li><li>I would like to know more about what companies/websites/apps do with our data after we "delete" it.
+    </li><li>The different types/ways of encryption and how to keep your data safer.
+    </li><li>I would like to know more about what kind of pieces of information would need to be completed on each step when submitting our assignments if we did have to submit our assignment in steps?
+    </li><li>No
+    </li><li>I would like to know more about the advantages and disadvantages of encrypting your harddrive or your home wifi. I feel like with today's advancements there would still be ways to decrypt it.  
+    </li><li>Dark side of social media
+    </li><li>The tesla propaganda 
+    </li><li>No, but i would like to know about senate hearing with CEO of Facebook, Discord, Snapchat and TikTok ...
+    </li><li>I would definitely like to glean a little bit more info on the relationship between personal privacy (encryption) and the need for societal safety (surveillance). The crypto wars part of blown to bits was really cool, and I think that having a bit more discussion and debate on the topic would yield opinions that would be insightful to compare.
+    </li><li>no
+    </li><li>I would like to know more about the idea of do we have a right to be forgotten. I think it is an interesting concept because of the different views from a personal and company standpoint. The companies have a conflict of interest because they want to keep the data for future uses but the person who wants to be forgotten doesn’t want them to keep it.
+    </li><li>none
+    </li><li>Different types of encryption,
+    </li><li>Yes I would be instead to know act the recall for Tesla to its font size it seemed to be intrestering topic to learn about 
+    </li><li>More about AI technology
+    </li><li>I want to learn more about security
+    </li><li>I really do enjoy talking about business models and how everything today is shaped by the choices of our predeccesors allowing our data and information to be sold at the rate it is in the current era.
+    </li><li>other cases where technology had to be recalled due to mistakes that aren't related to the performance of the technology.
+    </li><li>It would be interesting to learn more about how certain ethical standards affect businesses such as Tesla hacving to recall their cars due to the font being to small on the braking system.
+    </li><li>No
+    </li><li>Are there any large platforms that are notably more open to data erasure regardless the region?
+    </li><li>The format to be used for the mid-term exams 
+    </li><li>I would like to know that for the Infographic assignment can we change our groups 
+    </li><li>No
+    </li><li>No
+    </li><li>No
+    </li><li>About the resources we need for midterm
+    </li><li>About the due dates for assignment 
+    </li><li>Not that mucg because I got my group of 4 for assignment. LOL.
+    </li><li>regarding, avoiding harm. 
+    </li><li>About the CIPS visit on march 21
+    </li><li>The topic of encryption was interesting and I would like to know more about the mechanism behind encryption technology 
+    </li><li>I would like to learn about encryption, and how it makes a difference when compared to someone who chooses not to use it. Is it possible to still see a person’s data even though they encrypt their information?
+    </li><li>I would like to know more about the policies of keeping user data. The concept of wanting to be forgotten or removed from the internet or digitally is not too uncommon, so I would like to know if there are any general policies or if they are mostly specific to a platform.
+    </li><li>Nothing 
+    </li><li>No
+    </li><li>I would like to learn more about the importance of encryption do the general public 
+    </li><li>I'm curious about The Creator. I would like to watch that movie possibly soon.
+    </li><li>about privacy and encryption 
+    </li><li>No, I feel like today to know more
+    </li><li>I would like to know more about code of ethics 
+    </li><li>I would like to know more encryption 
+    </li><li>What kind of patents are there in software.
+    </li><li>no
+    </li><li>I am excited for whatever this class brings!
+    </li><li>No
+    </li><li>I would like to know more on the policies and requirements to delete an account on social media or any other platforms
+    </li><li>About IP world wide
+    </li><li>No
+    </li><li>encrypt
+    </li><li>Yes, I want to lnow more about infographic assignment
+    </li><li>IP in Canada 
+    </li><li>No
+    </li><li>No
+    </li><li>I would like to learn more case studies related to the ACM Ethics and issues. 
+    </li><li>No, not really.
+    </li><li>Ill be watching the creator today
+    </li><li>No
+    </li><li>n/a
+    </li><li>How people choose what to be encrypted or not 
+    </li><li>More details about exactly what we will be testing on for the midterm
+    </li><li>There is nothing I would like to know more about.
+    </li><li>After today's lecture I have become more fascinated with how big corporations deal with regulations.
+    </li><li>I want to know more about the midterm
+    </li><li>Ciphers
+    </li><li>When does copyright go too far 
+    </li><li>no
+    </li><li>About the groups for assignment
+    </li><li>the infographic sample
+    </li><li>No
+    </li><li>no 
+    </li><li>I would like to know more about how email encryption can be done practically.
+    </li><li>More examples of companies recalls and how they messed up. I think it's interesting to see the consequences, and bring awareness to such a point. 
+    </li><li>I would like to know more about Ips in canada
+    </li><li>N/A
+    </li><li>no
+    </li><li>Nope all good with this much information.
+    </li><li>No I was able to get a good grasp of the concept today
+    </li><li>I want to know more about the risks Of AI and also about the assignment for sure.
+    </li><li>yes, i need to know more about encryption 
+    </li><li>Not really for now to discuss 
+    </li><li>encryption
+    </li><li>No
+    </li><li>No
+    </li><li>I will like to know more about encryption
+    </li><li>NO
+    </li><li>The information was enough.
+    </li><li>Nope
+    </li><li>I would love to dig deeper into the technology of Tesla, it’s actually really interesting 
+    </li><li>What is the process to develop a effective infographic?
+    </li><li>Infographics
+    </li><li>About tesla vehicles 
+    </li><li>no
+    </li><li>No
+    </li><li>No thank you!
+    </li><li>I would like to cover more case studies regarding intellectual property, and maybe some cases that don't follow the code of ethics. 
+    </li><li>No. 
+    </li><li>i would like to know more about the mysterious connection between our activities and and ads served to us.
+    </li><li>The intellectual property and the encryption I would like to know more.
+    </li><li>I was hoping to learn more about what to expect for the midterm. I was curious about the test format/outline, as well as what course concepts should be focused on in preparation of the exam.
+    </li><li>How would encryption work in the future.
+    </li><li>No
+    </li><li>No
+    </li><li>Encryption seems worth getting to know a little bit more.
+    </li><li>I would like to know more about such articles such as the one we discussed in class about Tesla
+    </li><li>Deepfakes 
+    </li><li>More examples
+    </li></ul>
+
+-->
+      </div>
+    </div>
+    <div id="mtgftr" class="card card-footer w-100 bg-info">
+    </div>
+  </div> 
+</div>
+<script>
+$(document).ready(function(){
+  var cbss = document.getElementById('cbss');
+  var scrollheight = document.getElementById('mcb').offsetHeight;
+  console.log('mcb',scrollheight)
+  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
+  console.log('-mcbftr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgh1').offsetHeight;
+  console.log('-h1',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtghdr').offsetHeight;
+  console.log('-mtghdr',scrollheight)
+  scrollheight = scrollheight - document.getElementById('mtgftr').offsetHeight;
+  console.log('-mtgftr',scrollheight)
+  scrollheight = scrollheight - 10;
+
+  cbss.style.height = scrollheight + 'px'
+  console.log('cbss.style.height',cbss.style.height )
+})
+</script>
+
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-07-29 23:32 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: http://www2.cs.uregina.ca//~hepting/teaching/CS-280/202410/09_Tue-06-Feb-2024.html">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
+
