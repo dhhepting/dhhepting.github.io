@@ -1,0 +1,117 @@
+Script started on Sat Aug  8 00:40:09 2026
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1001] Sites/dhhepting.github.io % [K[?2004hrruby -c c v [?2004l
+ruby 3.2.2 (2023-03-30 revision e51014f9c0) [arm64-darwin23]
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1002] Sites/dhhepting.github.io % [K[?2004h\[?2004l
+[0m[27m[24m[J> [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1002] Sites/dhhepting.github.io % [K[?2004hkkill %1[?2004l
+kill: %1: no such job
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1003] Sites/dhhepting.github.io % [K[?2004hjjobs[?2004l
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1004] Sites/dhhepting.github.io % [K[?2004h[7mbundle exec jekyll -v   [27m[24D[27mb[27mu[27mn[27md[27ml[27me[27m [27me[27mx[27me[27mc[27m [27mj[27me[27mk[27my[27ml[27ml[27m [27m-[27mv[27m [27m [27m [?2004l
+jekyll 4.4.1
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1005] Sites/dhhepting.github.io % [K[?2004h[7m  cat .ruby-version 2>/dev/null # does this file even exist?[27m
+[K[A[35C[27m [27m [27mc[27ma[27mt[27m [27m.[27mr[27mu[27mb[27my[27m-[27mv[27me[27mr[27ms[27mi[27mo[27mn[27m [27m2[27m>[27m/[27md[27me[27mv[27m/[27mn[27mu[27ml[27ml[27m [27m#[27m [27md[27mo[27me[27ms[27m [27mt[27mh[27mi[27ms[27m [27mf[27mi[27ml[27me[27m [27me[27mv[27me[27mn[27m [27me[27mx[27mi[27ms[27mt[27m?[1B[K[?2004l
+zsh: no matches found: exist?
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1006] Sites/dhhepting.github.io % [K[?2004h  cat .ruby-version 2>/dev/null # does this file even exist?
+[K[K[A[95C                       [?2004l[1B3.2.2
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1007] Sites/dhhepting.github.io % [K[?2004h[7m  grep -n ruby-version .github/workflows/*.yml   # what Ruby does [27m [K[A[35C[27m [27m [27mg[27mr[27me[27mp[27m [27m-[27mn[27m [27mr[27mu[27mb[27my[27m-[27mv[27me[27mr[27ms[27mi[27mo[27mn[27m [27m.[27mg[27mi[27mt[27mh[27mu[27mb[27m/[27mw[27mo[27mr[27mk[27mf[27ml[27mo[27mw[27ms[27m/[27m*[27m.[27my[27mm[27ml[27m [27m [27m [27m#[27m [27mw[27mh[27ma[27mt[27m [27mR[27mu[27mb[27my[27m [27md[27mo[27me[27ms[27m  [K[?2004l
+.github/workflows/deploy-gh-pages.yml:17:          ruby-version: '3.4.7'
+.github/workflows/site-checks.yml:16:        id: ruby-version
+.github/workflows/site-checks.yml:18:          if [ -f .ruby-version ]; then
+.github/workflows/site-checks.yml:19:            echo "version=$(cat .ruby-version)" >> $GITHUB_OUTPUT
+.github/workflows/site-checks.yml:27:          ruby-version: ${{ steps.ruby-version.outputs.version }}
+grep: #: No such file or directory
+grep: what: No such file or directory
+grep: Ruby: No such file or directory
+grep: does: No such file or directory
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1008] Sites/dhhepting.github.io % [K[?2004h  grep -n ruby-version .github/workflows/*.yml   # what Ruby does  [K[K[A[100C             [?2004l[1B.github/workflows/deploy-gh-pages.yml:17:          ruby-version: '3.4.7'
+.github/workflows/site-checks.yml:16:        id: ruby-version
+.github/workflows/site-checks.yml:18:          if [ -f .ruby-version ]; then
+.github/workflows/site-checks.yml:19:            echo "version=$(cat .ruby-version)" >> $GITHUB_OUTPUT
+.github/workflows/site-checks.yml:27:          ruby-version: ${{ steps.ruby-version.outputs.version }}
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1009] Sites/dhhepting.github.io % [K[?2004hccat Gemfile \ | grep jekyll[?2004l
+#     bundle exec jekyll serve
+gem "jekyll"
+group :jekyll_plugins do
+   gem 'jekyll-seo-tag'
+   gem 'jekyll-sitemap'
+   gem 'jekyll-redirect-from'
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1010] Sites/dhhepting.github.io % [K[?2004hcat Gemfile | grep jekyll      theme[?2004l
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1011] Sites/dhhepting.github.io % [K[?2004hcat Gemfile | grep theme     remote[?2004l
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1012] Sites/dhhepting.github.io % [K[?2004h[7mls -la .github/workflows/[27m[25D[27ml[27ms[27m [27m-[27ml[27ma[27m [27m.[27mg[27mi[27mt[27mh[27mu[27mb[27m/[27mw[27mo[27mr[27mk[27mf[27ml[27mo[27mw[27ms[27m/[?2004l
+total 16
+drwxr-xr-x@ 4 hepting  staff   128 Dec  1  2025 .
+drwxr-xr-x@ 5 hepting  staff   160 Jun  1 16:30 ..
+-rw-r--r--@ 1 hepting  staff   789 Jan  3  2026 deploy-gh-pages.yml
+-rw-r--r--@ 1 hepting  staff  1683 Jan  3  2026 site-checks.yml
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1013] Sites/dhhepting.github.io % [K[?2004h[7mgrep -rn -E "rsync|scp|ssh|deploy-pages|peaceiris|gh-pages" .githu[7mb[7m/workflows/[27m[K
+[K[A[A[35C[27mg[27mr[27me[27mp[27m [27m-[27mr[27mn[27m [27m-[27mE[27m [27m"[27mr[27ms[27my[27mn[27mc[27m|[27ms[27mc[27mp[27m|[27ms[27ms[27mh[27m|[27md[27me[27mp[27ml[27mo[27my[27m-[27mp[27ma[27mg[27me[27ms[27m|[27mp[27me[27ma[27mc[27me[27mi[27mr[27mi[27ms[27m|[27mg[27mh[27m-[27mp[27ma[27mg[27me[27ms[27m"[27m [27m.[27mg[27mi[27mt[27mh[27mub[27m/[27mw[27mo[27mr[27mk[27mf[27ml[27mo[27mw[27ms[27m/[1B[K[?2004l
+.github/workflows/deploy-gh-pages.yml:1:name: Build and Deploy (gh-pages)
+.github/workflows/deploy-gh-pages.yml:28:      - name: Deploy to gh-pages
+.github/workflows/deploy-gh-pages.yml:29:        uses: peaceiris/actions-gh-pages@v3
+.github/workflows/deploy-gh-pages.yml:32:          publish_branch: gh-pages
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1014] Sites/dhhepting.github.io % [K[?2004h[7mgrep -rn -E "rsync|scp|ssh|jekyll build|_site" Rakefile *.sh scrip[7mt[7ms/ 2>/dev/null[27m[K[A[20C[27mg[27mr[27me[27mp[27m [27m-[27mr[27mn[27m [27m-[27mE[27m [27m"[27mr[27ms[27my[27mn[27mc[27m|[27ms[27mc[27mp[27m|[27ms[27ms[27mh[27m|[27mj[27me[27mk[27my[27ml[27ml[27m [27mb[27mu[27mi[27ml[27md[27m|[27m_[27ms[27mi[27mt[27me[27m"[27m [27mR[27ma[27mk[27me[27mf[27mi[27ml[27me[27m [27m*[27m.[27ms[27mh[27m [27ms[27mc[27mr[27mi[27mpt[27ms[27m/[27m [27m2[27m>[27m/[27md[27me[27mv[27m/[27mn[27mu[27ml[27ml[?2004l
+Rakefile:9:#   2. rake build          — `jekyll build --trace`, fails loudly on any
+Rakefile:12:#   3. rake test:html      — runs html-proofer against the built _site/,
+Rakefile:96:  # Cleans _site/ and .jekyll-cache/ first — without this, output from a
+Rakefile:103:  sh 'bundle exec jekyll build --trace'
+Rakefile:120:      sh "bundle exec jekyll clean --destination _site_#{target}"
+Rakefile:121:      sh "bundle exec jekyll build --trace " \
+Rakefile:123:         "--destination _site_#{target}"
+Rakefile:132:  desc 'Check rendered _site/ for broken internal links and mismatched anchors'
+Rakefile:135:    run_htmlproofer('./_site', baseurl: '/~hepting')
+Rakefile:140:    run_htmlproofer('./_site_github', baseurl: '')
+Rakefile:141:    run_htmlproofer('./_site_uregina', baseurl: '/~hepting')
+Rakefile:166:    # exist at paths like _site/~hepting/teaching/index.html — which never
+scripts/test_links.py:4:Lightweight checker for `_site/` that validates presence of selected
+scripts/test_links.py:6:run after `bundle exec jekyll build`.
+scripts/test_links.py:15:SITE_DIR = os.environ.get("SITE_DIR", "_site")
+scripts/test_links.py:61:    abs_site = os.path.abspath(SITE_DIR)
+scripts/test_links.py:64:    if path_norm.startswith(abs_site):
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1015] Sites/dhhepting.github.io % [K[?2004hmmoe m more ue rbui     script/urbuilx=d   s d[?2004l
+[?1h=#!/usr/bin/env bash
+set -e # halt script on error
+
+bundle exec jekyll build --config "_config.yml,_config_uregina.yml" 
+rsync -avzh _site/ hepting@titan.cs.uregina.ca:public_html --delete
+[7mscript/urbuild (END)[27m[K[K[?1l>[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1016] Sites/dhhepting.github.io % [K[?2004h[7mssh-keygen -t ed25519 -C "gh-actions-deploy" -f titan_deploy -N ""[27m [K[A[35C[27ms[27ms[27mh[27m-[27mk[27me[27my[27mg[27me[27mn[27m [27m-[27mt[27m [27me[27md[27m2[27m5[27m5[27m1[27m9[27m [27m-[27mC[27m [27m"[27mg[27mh[27m-[27ma[27mc[27mt[27mi[27mo[27mn[27ms[27m-[27md[27me[27mp[27ml[27mo[27my[27m"[27m [27m-[27mf[27m [27mt[27mi[27mt[27ma[27mn[27m_[27md[27me[27mp[27ml[27mo[27my[27m [27m-[27mN[27m [27m"[27m" [K[?2004l
+Generating public/private ed25519 key pair.
+Your identification has been saved in titan_deploy
+Your public key has been saved in titan_deploy.pub
+The key fingerprint is:
+SHA256:zYheAiKNscl9QMoGe7hPHlxK3KxTfktEuILo712el2Y gh-actions-deploy
+The key's randomart image is:
++--[ED25519 256]--+
+|o .o ..          |
+|+Xooo.           |
+|O**.*o.          |
+|+*.Boo . +       |
+|o B.. = S o      |
+| = o + +         |
+|  +   o.  .      |
+|   .. o .E       |
+|  .. . o+        |
++----[SHA256]-----+
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1017] Sites/dhhepting.github.io % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1017] Sites/dhhepting.github.io % [K[?2004h[7mssh-copy-id -i titan_deploy.pub hepting@titan.cs.uregina.ca[27m[59D[27ms[27ms[27mh[27m-[27mc[27mo[27mp[27my[27m-[27mi[27md[27m [27m-[27mi[27m [27mt[27mi[27mt[27ma[27mn[27m_[27md[27me[27mp[27ml[27mo[27my[27m.[27mp[27mu[27mb[27m [27mh[27me[27mp[27mt[27mi[27mn[27mg[27m@[27mt[27mi[27mt[27ma[27mn[27m.[27mc[27ms[27m.[27mu[27mr[27me[27mg[27mi[27mn[27ma[27m.[27mc[27ma[?2004l
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "titan_deploy.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+stty: 'standard input': Inappropriate ioctl for device
+/home/h/hepting/.bashrc: line 63: alias: cs733: not found
+/home/h/hepting/.bashrc: line 63: alias: cd: not found
+/home/h/hepting/.bashrc: line 63: alias: public_html/teaching/CS-733/202230/code/mtgs: not found
+
+Number of key(s) added:        1
+
+Now try logging into the machine, with: "ssh -i ./titan_deploy 'hepting@titan.cs.uregina.ca'"
+and check to make sure that only the key(s) you wanted were added.
+
+[1m[7m%[27m[1m[0m                                                                                                     ]7;file://DHH-MBA-3/Users/hepting/Sites/dhhepting.github.io[0m[27m[24m[J[1018] Sites/dhhepting.github.io % [K[?2004h[?2004l
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+Deleting expired sessions...       8 completed.
+
+Script done on Sat Aug  8 01:25:58 2026

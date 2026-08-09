@@ -1,0 +1,53 @@
+# .github/workflows/deploy-uregina.yml
+# Builds the site and rsyncs _site/ to titan.cs.uregina.ca — the CI equivalent
+# of your script/urbuild. This is a SEPARATE workflow from your GitHub Pages
+# deploy; the two live side by side, one per host.
+
+name: Deploy to U of R server
+
+on:
+  push:
+    branches: [main]      # deploy automatically when main updates
+  workflow_dispatch:       # ...and give yourself a manual "Run workflow" button
+
+# If you push twice quickly, don't let two deploys race each other over rsync.
+concurrency:
+  group: deploy-uregina
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version   # single source of truth (see Phase 3 of the plan)
+          bundler-cache: true            # installs gems from Gemfile.lock and caches them
+
+      # This is your urbuild build line, unchanged.
+      - name: Build site
+        run: bundle exec jekyll build --config "_config.yml,_config_uregina.yml"
+
+      # SAFETY GUARD. Your rsync uses --delete, which mirrors _site/ onto the
+      # server: anything not in _site/ gets deleted on titan. If a build ever
+      # silently produces an empty/broken _site/, --delete would wipe your live
+      # site. This line refuses to deploy unless a real index.html exists.
+      - name: Sanity-check the build
+        run: test -s _site/index.html || { echo "Build looks empty — refusing to deploy."; exit 1; }
+
+      # Hand the runner the deploy key and teach it to trust titan.
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.TITAN_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan titan.cs.uregina.ca >> ~/.ssh/known_hosts
+
+      # Your urbuild rsync line, with -e added so rsync uses the deploy key.
+      - name: Deploy with rsync
+        run: |
+          rsync -avzh --delete \
+            -e "ssh -i ~/.ssh/id_ed25519" \
+            _site/ hepting@titan.cs.uregina.ca:public_html
