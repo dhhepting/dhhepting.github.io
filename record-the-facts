@@ -1,0 +1,29 @@
+Sun Aug 9 2026
+ruby -v:
+	ruby 3.2.2 (2023-03-30 revision e51014f9c0) [arm64-darwin23]
+bundle exec jekyll -v:
+	jekyll 4.4.1
+cat .ruby-version 2>/dev/null:
+	3.2.2
+grep -n ruby-version .github/workflows/*.yml:
+	.github/workflows/deploy-gh-pages.yml:17: ruby-version: '3.4.7'
+	.github/workflows/deploy-uregina.yml:26: ruby-version: .ruby-version # single source 
+		of truth (see Phase 3 of the plan)
+	.github/workflows/site-checks.yml:16: id: ruby-version
+	.github/workflows/site-checks.yml:18: if [ -f .ruby-version ]; then
+	.github/workflows/site-checks.yml:19: echo "version=$(cat .ruby-version)" >> $GITHUB_OUTPUT
+	.github/workflows/site-checks.yml:27: ruby-version: ${{ steps.ruby-version.outputs.version }}Open your Gemfile and read it. Note: 
+* is jekyll pinned to a version? 
+	NO 	
+* What plugins are listed? 
+	group :jekyll_plugins do
+   		gem 'jekyll-seo-tag'
+   		gem 'jekyll-sitemap'
+		gem 'jekyll-redirect-from'
+	end
+* Is there a theme gem or remote_theme?
+	NO
+Confirm the deploy mechanism. 
+* Does the university-server side just rsync the built _site/, or does it build Ruby on the server? (This decides whether the server's Ruby version matters at all.)
+	The university-server side just rsync's the built _site/
+

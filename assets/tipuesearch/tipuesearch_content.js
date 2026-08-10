@@ -3135,7 +3135,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/about/biography.html"
   },{
     "title": "Schedule",
-    "text": "Schedule for Current Semester (“current” as of 2026-07-30 01:21:24 -0600) The current semester is: undefined Important Dates First day of term: Last day of classes: Last day of term:",
+    "text": "Schedule for Current Semester (“current” as of 2026-08-10 01:26:56 -0600) The current semester is: undefined Important Dates First day of term: Last day of classes: Last day of term:",
     "tags": "",
     "url": "/~hepting/teaching/schedule/copy-index.html"
   },{
