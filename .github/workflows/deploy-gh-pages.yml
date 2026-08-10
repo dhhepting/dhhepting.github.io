@@ -15,7 +15,8 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.4.7'
+          ruby-version: .ruby-version   # single source of truth
+          bundler-cache: true           # installs gems + caches them
 
       - name: Install Bundler
         run: gem install bundler
