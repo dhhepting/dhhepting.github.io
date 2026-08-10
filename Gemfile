@@ -21,7 +21,7 @@ source "https://rubygems.org"
   # Needed for `jekyll serve` on Ruby 3.x (left stdlib back in Ruby 3.0)
   gem "webrick"
 
-gem "jekyll"
+gem "jekyll", "~> 4.4"
 gem 'nokogiri', '~> 1.15', '>= 1.15.4'
 gem 'racc', '~> 1.7', '>= 1.7.1'
 gem 'async', '~> 2.6', '>= 2.6.4'
