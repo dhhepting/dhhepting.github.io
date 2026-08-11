@@ -1,69 +1,30 @@
+# .github/workflows/site-checks.yml
+# Runs the Rake test pipeline (data:validate → wiki:validate → build → test:html).
+# Replaces the earlier Python-based version (generate_config.py / test_links.py),
+# which predated the per-offering model and the html-proofer Ruby API move.
+
 name: Site checks
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
   push:
-    branches: [ master ]
-  workflow_dispatch: 
+    branches: [ main, upgrade-2026 ]   # builds while you work on the branch
+  workflow_dispatch:                    # manual "Run workflow" button
 
 jobs:
   build-and-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - name: Read Ruby version
-        id: ruby-version
-        run: |
-          if [ -f .ruby-version ]; then
-            echo "version=$(cat .ruby-version)" >> $GITHUB_OUTPUT
-          else
-            echo "version=3.4.7" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ${{ steps.ruby-version.outputs.version }}
+          ruby-version: .ruby-version   # single source of truth (same as deploy-uregina.yml)
+          bundler-cache: true            # bundle install + gem cache, keyed on Gemfile.lock
 
-      - name: Install Bundler and gems
-        run: |
-          gem install bundler
-          bundle install --jobs 4 --retry 3
-
-      - name: Set up Python (for config generation)
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-
-      - name: Install Python deps (config generation)
-        run: |
-          python -m pip install --upgrade pip
-          pip install pyyaml
-
-      - name: Generate active Jekyll config
-        run: |
-          python3 scripts/generate_config.py
-
-      - name: Build site
-        run: |
-          bundle exec jekyll build --config _config_active.yml
-
-      - name: Run html-proofer
-        run: |
-          bundle exec htmlproofer ./_site --config-file _htmlproofer.yml
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-
-      - name: Install Python deps
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests beautifulsoup4
-
-      - name: Run Python site checks
-        run: |
-          python3 scripts/test_links.py
+      # `rake` with no args runs the default task:
+      #   data:validate  wiki:validate  build  test:html
+      # cheapest checks first, aborting on the first failure.
+      - name: Run the full check pipeline
+        run: bundle exec rake
