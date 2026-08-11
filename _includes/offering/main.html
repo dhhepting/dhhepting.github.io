@@ -156,35 +156,22 @@
       {%- endif -%}
 
       {%- if include.code == 1 -%}
-      <h3 id="ssCode" class="bg-dark text-white">
-        Code
-      </h3>
-        {%- capture code_url -%}/teaching/{{ crs_id }}/{{ page.sem }}/code/{%- endcapture -%}
-        {% assign folder_check = code_url | dir_exists? %}
-        {% if folder_check == false %}
-          <p>
-            No code directory exists for this offering.
-          </p>
-        {% endif %}
-      <p></p>
-      <p>
-        The code directory for this offering is available at:
-      </p>
-      <p>
-        <a href="{{ code_url | relative_url }}" target="_blank">
-          {{ code_url | relative_url }}
-        </a>
-      </p>
-
-        <ul>
-          <li>
-            <a href="{{ code_url | relative_url }}" target="_blank">
-              Code Directory
-            </a>
-          </li>
-          {%- include offering/code-body.html -%}
-        </ul>
-      {%- endif -%}
+<h3 id="ssCode" class="bg-dark text-white">Code</h3>
+  {%- capture code_url -%}/teaching/{{ crs_id }}/{{ page.sem }}/code/{%- endcapture -%}
+  {%- assign folder_check = code_url | dir_exists? -%}
+  folder_check = {{ folder_check }}
+  {%- if folder_check -%}
+    <p>The code directory for this offering is available at:</p>
+    <ul>
+      <li>
+        <a href="{{ code_url | relative_url }}" target="_blank">Code Directory</a>
+      </li>
+      {%- include offering/code-body.html -%}
+    </ul>
+  {%- else -%}
+    <p>No code directory exists for this offering.</p>
+  {%- endif -%}
+{%- endif -%}
 
       {%- if include.links == 1 -%}
       <h3 id="ssLinks" class="bg-dark text-white">
