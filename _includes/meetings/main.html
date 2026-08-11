@@ -34,9 +34,10 @@
         <div class="col-4 text-start">
           <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls">
           {%- if prvlnk == nil -%}
-            <a role="button" class="btn btn-primary disabled">
-              <span class="bi bi-arrow-left-circle"></span>
-            </a>
+          <a role="button" class="btn btn-primary disabled"
+   aria-disabled="true" tabindex="-1" href="#">
+            <span class="bi bi-arrow-left-circle"></span>
+          </a>
           {%- else -%}
             <a href="{{ prvlnk }}" role="button" class="btn btn-primary">
               <span class="bi bi-arrow-left-circle"></span>
