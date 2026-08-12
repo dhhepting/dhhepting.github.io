@@ -17,7 +17,7 @@
 
 require 'yaml'
 
-task default: %i[data:validate wiki:validate build test:html]
+task default: %i[data:validate wiki:validate structure:validate build test:html]
 
 namespace :meetings do
   desc 'Create new hand-authored meeting-page stubs for any meeting missing one (usage: rake meetings:generate[CS-280,202610]). Generated fields like weekday/links are computed automatically at build time — this only creates files, review + commit the result.'
@@ -56,6 +56,22 @@ namespace :data do
       puts 'Data validation passed.'
     else
       puts "Data validation FAILED (#{errors.size} problem#{'s' if errors.size != 1}):"
+      errors.each { |e| puts "  - #{e}" }
+      abort
+    end
+  end
+end
+
+namespace :structure do
+  desc 'Fail if any served course/offering directory under teaching/ lacks an index page'
+  task :validate do
+    require_relative 'lib/offering_index_validator'
+
+    errors = OfferingIndexValidator.new('teaching').run
+    if errors.empty?
+      puts 'Structure validation passed (every served landing directory has an index).'
+    else
+      puts "Structure validation FAILED (#{errors.size} problem#{'s' if errors.size != 1}):"
       errors.each { |e| puts "  - #{e}" }
       abort
     end
