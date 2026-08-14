@@ -1,21 +1,21 @@
 # Configuration for html-proofer
 check_html: true
-allow_hash_href: true
+check_internal_hash: true
 assume_extension: true
 disable_external: true
-ignore_urls:
-  - "/mailto:"
-  - "/tel:"
-# Ignore tipue search assets (these are sometimes generated or hosted elsewhere)
-  - "/~hepting/assets/tipuesearch"
-  - "/~hepting/assets/tipuesearch/"
-  - "/assets/tipuesearch"
-  - "/assets/tipuesearch/"
+#ignore_urls:
+#  - "/mailto:"
+#  - "/tel:"
+## Ignore tipue search assets (these are sometimes generated or hosted elsewhere)
+#  - "/~hepting/assets/tipuesearch"
+#  - "/~hepting/assets/tipuesearch/"
+#  - "/assets/tipuesearch"
+#  - "/assets/tipuesearch/"
 # Anchored regexes to ignore missing files under the assets prefix — the
 # baseurl segment (/~hepting) is optional here so the same pattern matches
 # both the uregina build (baseurl: /~hepting) and the github build
 # (baseurl: ""), rather than only ever matching one of the two targets.
-  - '^(/~hepting)?/assets/.*'
-  - '^(/~hepting)?/assets$'
+#  - '^(/~hepting)?/assets/.*'
+#  - '^(/~hepting)?/assets$'
 
 # You can add other ignores or patterns here when needed.

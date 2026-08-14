@@ -1,4 +1,9 @@
 {%- include teaching/url.html -%}
+{%- capture code_url -%}/teaching/{{ crs_id }}/{{ page.sem }}/code/{%- endcapture -%}
+{%- assign has_code = code_url | dir_exists? -%}
+{%- assign tlooff = site.data.teaching[jcrs_id][crs_sem].tlo -%}
+{%- assign has_tlo = tlooff and tlooff != empty -%}
+
 {%- assign asgnfile = site.data.teaching[jcrs_id][crs_sem]assignments -%}
 <div class="w-auto h-100">
   <div class="bg-light mb-2 p-3">
@@ -31,12 +36,12 @@
           </a>
         </li>
         {%- endif -%}
-        {%- if include.code == 1 -%}
-        <li class="nav-item">
-          <a class="nav-link" href="#ssCode">
-            Code
-          </a>
-        </li>
+        {%- if include.code == 1 and has_code -%}
+            <li class="nav-item">
+              <a class="nav-link" href="#ssCode">
+                Code
+              </a>
+            </li>
         {%- endif -%}
         {%- if include.links == 1 -%}
         <li class="nav-item">
@@ -45,7 +50,7 @@
           </a>
         </li>
         {%- endif -%}
-        {%- if include.topics == 1 -%}
+        {%- if include.topics == 1 and has_tlo -%}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle"
             data-bs-toggle="dropdown" href="#" role="button"
@@ -53,7 +58,7 @@
               Topics
           </a>
           <ul class="dropdown-menu">
-          {%- assign tlooff = site.data.teaching[jcrs_id][crs_sem]tlo -%}
+          {%- assign tlooff = site.data.teaching[jcrs_id][crs_sem].intlo -%}
           {%- for ku in tlooff -%}
             {%- assign kk = ku[0] | split: "/" -%}
             {%- assign kkd = ku[1] -%}
@@ -155,23 +160,16 @@
       <p></p>
       {%- endif -%}
 
-      {%- if include.code == 1 -%}
-<h3 id="ssCode" class="bg-dark text-white">Code</h3>
-  {%- capture code_url -%}/teaching/{{ crs_id }}/{{ page.sem }}/code/{%- endcapture -%}
-  {%- assign folder_check = code_url | dir_exists? -%}
-  folder_check = {{ folder_check }}
-  {%- if folder_check -%}
-    <p>The code directory for this offering is available at:</p>
-    <ul>
-      <li>
-        <a href="{{ code_url | relative_url }}" target="_blank">Code Directory</a>
-      </li>
-      {%- include offering/code-body.html -%}
-    </ul>
-  {%- else -%}
-    <p>No code directory exists for this offering.</p>
-  {%- endif -%}
-{%- endif -%}
+    {%- if include.code == 1 and has_code -%}
+      <h3 id="ssCode" class="bg-dark text-white">Code</h3>
+      <p>The code directory for this offering is available at:</p>
+      <ul>
+        <li>
+          <a href="{{ code_url | relative_url }}" target="_blank">Code Directory</a>
+        </li>
+        {%- include offering/code-body.html -%}
+      </ul>
+    {%- endif -%}
 
       {%- if include.links == 1 -%}
       <h3 id="ssLinks" class="bg-dark text-white">
@@ -194,7 +192,7 @@
       <p></p>
       {%- endif -%}
 
-      {%- if include.topics == 1 -%}
+      {%- if include.topics == 1 and has_tlo -%}
       <h3 id="ssTopics" class="bg-dark text-white">
         Topics
       </h3>
