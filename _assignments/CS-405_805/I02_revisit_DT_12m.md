@@ -1,4 +1,5 @@
 ---
+published: false
 title: "Revisit Desktop Tetrahedron"
 marks: 12
 aid: I02
