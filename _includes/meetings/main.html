@@ -1,4 +1,6 @@
 {%- include teaching/url.html %}
+{%- assign sresps = site.data.teaching[jcrs_id][crs_sem].responses -%}
+{%- assign has_sresps = sresps and sresps != empty -%}
 {% if site.data.teaching[jcrs_id][crs_sem]yplan %}
     {%- include meetings/mainyplan.html
       tm=page.total_meet
@@ -10,6 +12,7 @@
 {%- assign plan = site.data.teaching[jcrs_id][crs_sem]plan %}
 {%- assign prvmtg = include.mn | minus: 1 -%}
 {%- assign curmtg = include.mn | minus: 0 -%}
+{%- assign mtn = include.mn | prepend: '00' | slice: -2, 2 -%}
 {%- assign prvlnk = nil -%}
 {%- assign prevm = site.data.teaching[jcrs_id][crs_sem]meetings | find: "meeting", prvmtg -%}
 {%- assign currm = site.data.teaching[jcrs_id][crs_sem]meetings | find: "meeting", curmtg -%}
@@ -68,32 +71,16 @@
             <li class="nav-item">
               <a class="nav-link" href="#ssMedia">Media</a>
             </li>
-            <!-- <li class="nav-item"> {%comment%}dropdown{%endcomment%}
-              <a class="nav-link" href="#ssTranscript">Transcript</a> -->
-
-               {%comment%}
-               dropdown-toggle"
-                data-bs-toggle="dropdown" href="#" role="button"
-                aria-expanded="false">
-                  Transcript
-              </a>
-
+            {%- comment -%} Transcript nav — disabled pending transcript feature
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Transcript</a>
               <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#ssAudio-Transcript">
-                    Audio Transcript
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#ssZoom-Chat-Transcript">
-                    Zoom Chat Transcript
-                  </a>
-                </li>
+                <li><a class="dropdown-item" href="#ssAudio-Transcript">Audio Transcript</a></li>
+                <li><a class="dropdown-item" href="#ssZoom-Chat-Transcript">Zoom Chat Transcript</a></li>
               </ul>
-              
             </li>
-            {%endcomment%}
-            <!--
+            {%- endcomment -%}
+            {%- if has_sresps and sresps[mtn] -%}
             <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle"
                 data-bs-toggle="dropdown" href="#" role="button"
@@ -117,7 +104,9 @@
                   </a>
                 </li>
               </ul>
-            </li> -->
+            </li>
+            {%- endif -%}
+
           </ul>
         </div>
       </div>
@@ -156,22 +145,15 @@
             mtg=include.mn
         -%}
 
-        <!-- <h3 id="ssTranscript" class="bg-dark text-white">
-          Transcript
-        </h3>
+        {%- comment -%} Transcript body — disabled
+        <h3 id="ssTranscript" class="bg-dark text-white">Transcript</h3>
+        {%- include meetings/transcripts.html mtg=include.mn -%}
+        {%- endcomment -%}
 
-        {%- include meetings/transcripts.html
-            mtg=include.mn
-        -%} -->
-
-      <!--   <h3 id="ssResponses" class="bg-dark text-white">
-          Responses
-        </h3> 
-
-        {%- include meetings/responses.html
-            mtg=include.mn
-        -%}
--->
+        {%- comment -%} Responses body — disabled pending responses redesign
+        <h3 id="ssResponses" class="bg-dark text-white">Responses</h3>
+        {%- include meetings/responses.html mtg=include.mn -%}
+        {%- endcomment -%}
       </div>
     </div>
     <div id="mtgftr" class="card card-footer w-100 bg-info">
