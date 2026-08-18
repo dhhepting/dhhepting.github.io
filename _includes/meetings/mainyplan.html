@@ -1,17 +1,20 @@
 {%- include teaching/url.html %}
+{%- assign sresps = site.data.teaching[jcrs_id][crs_sem].responses -%}
+{%- assign has_sresps = sresps and sresps != empty -%}
+{%- assign mtn = include.mn | prepend: '00' | slice: -2, 2 -%}
 {%- assign planfile = site.data.teaching[jcrs_id][crs_sem]yplan %}
 {%- assign prvmtg = include.mn | minus: 1 -%}
 {%- assign prvlnk = nil -%}
 {%- assign prevm = site.data.teaching[jcrs_id][crs_sem]meetings | find: "meeting", prvmtg -%}
 {%- if prevm -%}
-  {%- assign prvlnk = prevm.file -%} 
+  {%- assign prvlnk = prevm.file -%}
 {%- endif -%}
 
 {%- assign nxtmtg = include.mn | plus: 1 -%}
 {%- assign nxtlnk = nil -%}
 {%- assign nextm = site.data.teaching[jcrs_id][crs_sem]meetings | find: "meeting", nxtmtg -%}
 {%- if nextm -%}
-  {%- assign nxtlnk = nextm.file -%} 
+  {%- assign nxtlnk = nextm.file -%}
 {%- endif -%}
 
 <div>
@@ -24,7 +27,8 @@
         <div class="col-4 text-start">
           <div class="btn-group" role="group" aria-label="Previous, Up, and Next controls">
           {%- if prvlnk == nil -%}
-            <a role="button" class="btn btn-primary disabled">
+            <a role="button" class="btn btn-primary disabled"
+   aria-disabled="true" tabindex="-1" href="#">
               <span class="bi bi-arrow-left-circle"></span>
             </a>
           {%- else -%}
@@ -36,7 +40,8 @@
               <span class="bi bi-arrow-up-circle"></span>
             </a>
           {%- if nxtlnk == nil -%}
-            <a role="button" class="btn btn-outline-primary disabled">
+            <a role="button" class="btn btn-outline-primary disabled"
+   aria-disabled="true" tabindex="-1" href="#">
               <span class="bi bi-arrow-right-circle"></span>
             </a>
           {%- else -%}
@@ -54,54 +59,29 @@
             <li class="nav-item">
               <a class="nav-link" href="#ssMedia">Media</a>
             </li>
-            <li class="nav-item"> {%comment%}dropdown{%endcomment%}
+            <li class="nav-item">
               <a class="nav-link" href="#ssTranscript">Transcript</a>
-
-               {%comment%}
-               dropdown-toggle"
-                data-bs-toggle="dropdown" href="#" role="button"
-                aria-expanded="false">
-                  Transcript
-              </a>
-
+              {%- comment -%} Transcript dropdown — disabled pending transcript feature
               <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#ssAudio-Transcript">
-                    Audio Transcript
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#ssZoom-Chat-Transcript">
-                    Zoom Chat Transcript
-                  </a>
-                </li>
+                <li><a class="dropdown-item" href="#ssAudio-Transcript">Audio Transcript</a></li>
+                <li><a class="dropdown-item" href="#ssZoom-Chat-Transcript">Zoom Chat Transcript</a></li>
               </ul>
-              {%endcomment%}
+              {%- endcomment -%}
             </li>
+            {%- comment -%} Responses nav — disabled pending responses/feedback redesign.
+                 Re-enable together with the Responses body block below. When re-enabling,
+                 gate each link on the SAME per-field condition responses.html uses to emit
+                 its matching id (e.g. only link #ssR-Know-More when rfile["know-more"] exists),
+                 or the links will dangle whenever a meeting is missing a field.
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown" href="#" role="button"
-                aria-expanded="false">
-                  Responses
-              </a>
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Responses</a>
               <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#ssR-Important">
-                    The most important thing that I encountered
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#ssR-Difficult">
-                    The most difficult thing for me to understand
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#ssR-Know-More">
-                    The thing about which I would most like to know more
-                  </a>
-                </li>
+                <li><a class="dropdown-item" href="#ssR-Important">The most important thing that I encountered</a></li>
+                <li><a class="dropdown-item" href="#ssR-Difficult">The most difficult thing for me to understand</a></li>
+                <li><a class="dropdown-item" href="#ssR-Know-More">The thing about which I would most like to know more</a></li>
               </ul>
             </li>
+            {%- endcomment -%}
             <li class="nav-item">
               <a class="nav-link" href="#ssWiki">Wiki</a>
             </li>
@@ -139,13 +119,11 @@
             mtg=include.mn
         -%}
 
-        <h3 id="ssResponses" class="bg-dark text-white">
-          Responses
-        </h3>
-
-        {%- include meetings/responses.html
-            mtg=include.mn
-        -%}
+        {%- comment -%} Responses body — disabled pending responses/feedback redesign.
+             Re-enable together with the Responses nav above (both gated consistently).
+        <h3 id="ssResponses" class="bg-dark text-white">Responses</h3>
+        {%- include meetings/responses.html mtg=include.mn -%}
+        {%- endcomment -%}
 
         <h3 id="ssWiki" class="bg-dark text-white">
           Wiki

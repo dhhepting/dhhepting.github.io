@@ -17,14 +17,14 @@
 {%- assign prevm = site.data.teaching[jcrs_id][crs_sem]meetings | find: "meeting", prvmtg -%}
 {%- assign currm = site.data.teaching[jcrs_id][crs_sem]meetings | find: "meeting", curmtg -%}
 {%- if prevm -%}
-  {%- assign prvlnk = prevm.file -%} 
+  {%- assign prvlnk = prevm.file -%}
 {%- endif -%}
 
 {%- assign nxtmtg = include.mn | plus: 1 -%}
 {%- assign nxtlnk = nil -%}
 {%- assign nextm = site.data.teaching[jcrs_id][crs_sem]meetings | find: "meeting", nxtmtg -%}
 {%- if nextm -%}
-  {%- assign nxtlnk = nextm.file -%} 
+  {%- assign nxtlnk = nextm.file -%}
 {%- endif -%}
 
 <div>
@@ -50,7 +50,8 @@
               <span class="bi bi-arrow-up-circle"></span>
             </a>
           {%- if nxtlnk == nil -%}
-            <a role="button" class="btn btn-outline-primary disabled">
+            <a role="button" class="btn btn-outline-primary disabled"
+   aria-disabled="true" tabindex="-1" href="#">
               <span class="bi bi-arrow-right-circle"></span>
             </a>
           {%- else -%}
@@ -80,33 +81,18 @@
               </ul>
             </li>
             {%- endcomment -%}
-            {%- if has_sresps and sresps[mtn] -%}
+            {%- comment -%} Responses nav — disabled pending responses/feedback redesign.
+                 Re-enable together with the Responses body block below, both gated on
+                 `has_sresps and sresps[mtn]`, once responses.html is finalized.
             <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown" href="#" role="button"
-                aria-expanded="false">
-                  Responses
-              </a> 
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Responses</a>
               <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#ssR-Important">
-                    What important concept or perspective did you encounter today?
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#ssR-Difficult">
-                    Was there anything today that was difficult to understand?
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#ssR-Know-More">
-                    Was there anything today about which you would like to know more?
-                  </a>
-                </li>
+                <li><a class="dropdown-item" href="#ssR-Important">What important concept or perspective did you encounter today?</a></li>
+                <li><a class="dropdown-item" href="#ssR-Difficult">Was there anything today that was difficult to understand?</a></li>
+                <li><a class="dropdown-item" href="#ssR-Know-More">Was there anything today about which you would like to know more?</a></li>
               </ul>
             </li>
-            {%- endif -%}
-
+            {%- endcomment -%}
           </ul>
         </div>
       </div>
@@ -145,12 +131,14 @@
             mtg=include.mn
         -%}
 
-        {%- comment -%} Transcript body — disabled
+        {%- comment -%} Transcript body — disabled pending transcript feature
         <h3 id="ssTranscript" class="bg-dark text-white">Transcript</h3>
         {%- include meetings/transcripts.html mtg=include.mn -%}
         {%- endcomment -%}
 
-        {%- comment -%} Responses body — disabled pending responses redesign
+        {%- comment -%} Responses body — disabled pending responses/feedback redesign.
+             Re-enable together with the Responses nav above, both gated on
+             `has_sresps and sresps[mtn]`.
         <h3 id="ssResponses" class="bg-dark text-white">Responses</h3>
         {%- include meetings/responses.html mtg=include.mn -%}
         {%- endcomment -%}
@@ -158,7 +146,7 @@
     </div>
     <div id="mtgftr" class="card card-footer w-100 bg-info">
     </div>
-  </div> 
+  </div>
 </div>
 <script>
 $(document).ready(function(){

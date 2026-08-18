@@ -32,7 +32,8 @@ class MeetingPhotosPageGenerator
   # Scans every offering under teaching_data_dir, same as
   # MeetingPagesDataGenerator. Returns { written: [...], errors: [...] }
   def generate_all
-    result = { written: [], errors: [] }
+    result = { written: [], errors: [], skipped: [] }
+    # result = { written: [], errors: [] }
 
     Dir.glob(File.join(@teaching_data_dir, '*', '*', 'meetings.yml')).each do |meetings_path|
       offering_dir = File.dirname(meetings_path)
@@ -50,12 +51,18 @@ class MeetingPhotosPageGenerator
         photos = media[mtg['meeting']] || []
         next if photos.empty?
 
+        slug = MeetingPageFields.meeting_slug(mtg)
+        meeting_src = File.join(@output_dir, crs_id, crs_sem, "#{slug}.creole")
+        unless tracked?(meeting_src)
+          (result[:skipped] ||= []) << "#{crs_id}/#{crs_sem}/#{slug}-photos (no committed meeting page)"
+          next
+        end
         write_photos_page(crs_id, crs_sem, mtg, photos, result)
-      end
-    end
+      end        # closes meetings.each
+    end          # closes Dir.glob(...).each   <-- THIS is the one to add
 
     result
-  end
+  end            # closes def generate_all
 
   private
 
@@ -65,6 +72,11 @@ class MeetingPhotosPageGenerator
     YAML.load_file(path)
   end
 
+  def tracked?(path)
+    system('git', 'ls-files', '--error-unmatch', path,
+           out: File::NULL, err: File::NULL)
+  end
+  
   def write_photos_page(crs_id, crs_sem, mtg, photos, result)
     slug = MeetingPageFields.meeting_slug(mtg)
     out_path = File.join(@output_dir, crs_id, crs_sem, "#{slug}-photos.creole")

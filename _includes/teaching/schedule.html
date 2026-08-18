@@ -185,10 +185,20 @@
         </td>
         {%- elsif clslab[0] == "O" -%}
           <td rowspan="{{sd}}" class="bg-secondary">
-            <a href="{{ office[0].zoom }}" class="btn btn-info btn-md"
-            role="button" target="_blank">
-              Office
-            </a>
+     {%- assign zoomid = "" -%}
+{%- for o in offs -%}
+  {%- if o.id == clslab[1] -%}
+    {%- assign zoomid = o.zoom -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if zoomid and zoomid != "" -%}
+  <a href="https://urcourses.uregina.ca/mod/zoom/view.php?id={{ zoomid }}" class="btn btn-info btn-md" role="button" target="_blank">
+    Office
+  </a>
+{%- else -%}
+  Office
+{%- endif -%}
           </td>
         {%- elsif clslab[0] == "R" -%}
           <td rowspan="{{sd}}" class="bg-info">

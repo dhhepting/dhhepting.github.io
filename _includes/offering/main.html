@@ -3,6 +3,9 @@
 {%- assign has_code = code_url | dir_exists? -%}
 {%- assign tlooff = site.data.teaching[jcrs_id][crs_sem].tlo -%}
 {%- assign has_tlo = tlooff and tlooff != empty -%}
+{%- assign sresps = site.data.teaching[jcrs_id][crs_sem][responses] -%}
+{%- assign has_sresps = sresps and sresps != empty -%}
+
 
 {%- assign asgnfile = site.data.teaching[jcrs_id][crs_sem]assignments -%}
 <div class="w-auto h-100">
@@ -193,7 +196,7 @@
       {%- endif -%}
 
       {%- if include.topics == 1 and has_tlo -%}
-      <h3 id="ssTopics" class="bg-dark text-white">
+     <h3 id="{{ site.anchors.tlo }}" class="bg-dark text-white">
         Topics
       </h3>
         {%- include offering/tlo-body.html -%}

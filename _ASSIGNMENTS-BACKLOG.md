@@ -1,0 +1,1 @@
+- [ ] Responses/feedback anchors (#ssR-*) ignored in _htmlproofer.yml pending section redesign — gate links+anchors on has_sresps properly then remove the ignore

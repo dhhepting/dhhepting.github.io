@@ -131,7 +131,7 @@ class MeetingPageGenerator
   end
 
   def create_hand_authored_file(crs_id, crs_sem, mtg, template:, force:, label:, result:)
-    slug = format('%02d_%s', mtg['meeting'], mtg['date'])
+    slug = MeetingPageFields.meeting_slug(mtg)
     out_path = File.join(@output_dir, crs_id, crs_sem, "#{slug}.creole")
 
     if File.exist?(out_path) && !force

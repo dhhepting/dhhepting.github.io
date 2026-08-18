@@ -1,34 +1,35 @@
 {%- include teaching/url.html -%}
+{%- assign sresps = site.data.teaching[jcrs_id][crs_sem].responses -%}
+{%- assign has_sresps = sresps and sresps != empty -%}
 {%- assign mtn = include.mtg | prepend: '00' | slice: -2, 2  -%}
-{%- assign rfile = site.data.teaching[jcrs_id][crs_sem]responses[mtn] -%}
-{%- if rfile != nil -%}
-  {%- if rfile.important != nil -%}
-  <h4 id="ssR-Important">
-    What important concept or perspective did you encounter today?
-  </h4>
-    {%-
-      include helper/yaml-unit-body.html
-      test=rfile.important
-    -%}
-  {%- endif %}
-  {%- if rfile.difficult != nil -%}
-  <h4 id="ssR-Difficult">
-    Was there anything today that was difficult to understand?
-  </h4>
-    {%-
-      include helper/yaml-unit-body.html
-      test=rfile.difficult
-    -%}
-  {%- endif %}
-  {%- if rfile.know-more != nil -%}
-  <h4 id="ssR-Know-More">
-    Was there anything today about which you would like to know more?
-  </h4>
-    {%-
-      include helper/yaml-unit-body.html
-      test=rfile.know-more
-    -%}
-  {%- endif %}
+  {%- if has_sresps and sresps[mtn] -%}
+    {%- assign rfile = sresps[mtn] -%}
+      {%- if rfile.important != nil -%}
+      <h4 id="ssR-Important">
+        What important concept or perspective did you encounter today?
+      </h4>
+        {%-
+          include helper/yaml-unit-body.html
+          test=rfile.important
+        -%}
+      {%- endif %}
+      {%- if rfile.difficult != nil -%}
+      <h4 id="ssR-Difficult">
+        Was there anything today that was difficult to understand?
+      </h4>
+        {%-
+          include helper/yaml-unit-body.html
+          test=rfile.difficult
+        -%}
+      {%- endif %}
+      {%- assign know_more = rfile["know-more"] -%}
+      {%- if know_more != nil -%}
+        <h4 id="ssR-Know-More">
+          Was there anything today about which you would like to know more?
+        </h4>
+        {%- include helper/yaml-unit-body.html 
+          test=know_more -%}
+      {%- endif %}
 {%- else -%}
  <p class="text-muted">
    No Responses
