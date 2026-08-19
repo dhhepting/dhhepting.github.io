@@ -46,7 +46,7 @@ you are welcome to consider other forms of deliverable that are more meaningful 
 
 It must deal with class themes in some way,
 and your ideas about that connection are important.
-You might focus your efforts on researching smaller assessment questions (from [Topics]({{ "/teaching/CS-428+828/202130/#" | append: site.anchors.tlo | relative_url }})),
+You might focus your efforts on researching smaller assessment questions (from [Topics]({{ "/teaching/CS-428+828/201930/#" | append: site.anchors.tlo | relative_url }})),
 examining the usability of software that you use,
 writing some code to test an idea, and so forth.
 

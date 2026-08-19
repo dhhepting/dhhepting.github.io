@@ -42,12 +42,8 @@ $(document).ready(function(){
     refresh = true
   }
   else if (typ == 'tlo') {
-    //alert('tlo')
-    //cu_str = cu.origin + cu.pathname + semid + '/tlo.html'
-    cu_str = cu.origin + cu.pathname + semid + '/#ssTopics'
+    cu_str = cu.origin + cu.pathname + semid + '/#' + {{ site.anchors.tlo | jsonify }}
     refresh = true
-    //newhash = 'collapse_OFF_TLO'
-
   }
   else if (asgn) {
     cu_str = cu.origin + cu.pathname + semid + '/#ssAsgn_' + asgn
