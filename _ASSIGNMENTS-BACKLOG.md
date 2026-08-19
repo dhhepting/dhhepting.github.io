@@ -7,3 +7,4 @@
 - [ ] Write file_exists? filter, gate syllabus link on it (3)
 - [ ] Two one-offs: #ssAsgn_I02 anchor (CS-405+805/202510), moved research link in projects/games (2)
 
+- [ ] _nonweb/ contains ~17 old archive files with special chars in names (en-dashes, non-breaking spaces, non-UTF-8 bytes). Harmless (excluded from build). Left as-is by choice. If ever a problem: lift _nonweb out to a tarball + gitignore, don't rename in place (risks breaking internal refs).
