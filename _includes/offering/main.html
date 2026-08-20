@@ -7,8 +7,8 @@
 {%- assign has_sresps = sresps and sresps != empty -%}
 
 
-{%- assign asgnfile = site.data.teaching[jcrs_id][crs_sem]assignments -%}
-<div class="w-auto h-100">
+{%- assign asgnfile = site.data.teaching[jcrs_id][crs_sem].assignments -%}
+{%- assign has_asgnfile = asgnfile and asgnfile != empty -%}<div class="w-auto h-100">
   <div class="bg-light mb-2 p-3">
     <h1>
       {{ include.title }}
@@ -81,21 +81,30 @@
         </li>
         {%- endif -%}
 
-        {%- if include.asgns == 1 -%}
+        {%- if include.asgns == 1 and has_asgnfile -%}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
             Assignments
           </a>
           <ul class="dropdown-menu">
-          {%- for aa in asgnfile -%}
-          <li>
-            <a class="dropdown-item" href="#ssAsgn_{{ aa.aid }}">
-              {{ aa.title }} (due: {{ aa.duedate }})
-            </a>
-          </li>
-          {%- endfor -%}
+            {%- for aa in asgnfile -%}
+  {%- assign msa = "" -%}
+  {%- for sa in site.assignments -%}
+    {%- if sa.aid == aa.aid -%}
+      {%- assign msa = sa -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if msa != "" and msa != empty -%}
+  <li>
+    <a class="dropdown-item" href="#ssAsgn_{{ aa.aid }}">
+      {{ aa.title }} (due: {{ aa.duedate }})
+    </a>
+  </li>
+  {%- endif -%}
+{%- endfor -%}
           </ul>
-        </li>w
+        </li>
         {%- endif -%}
 
         {%- if include.exams == 1 -%}

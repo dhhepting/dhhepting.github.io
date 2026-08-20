@@ -10,8 +10,9 @@
       {%- break %}
     {%- endif %}
   {%- endfor %}
-  {%- if msa != "" -%}
-    <h4 id="ssAsgn_{{ msa.aid }}" class="bg-primary text-white">
+  {%- assign has_asgn = msa != "" and msa != empty -%}
+  {%- if has_asgn -%}
+        <h4 id="ssAsgn_{{ msa.aid }}" class="bg-primary text-white">
       {{ aa.title }} (<span id="{{ msa.aid }}-timer"></span>)
     </h4>
     <script>

@@ -14,7 +14,7 @@ rubric:
 ### {{ page.title }}
 
 Start with [this image of the "Desktop Tetrahedron" from 1990](https://www2.cs.uregina.ca/~hepting/projects/fractals/gallery/1990-HepSni-Desktop-Tetrahedron.html) and create a modern version with pbrt. Some sample code to generate a model can be 
-[found here]({% link /teaching/CS-405+805/202510/code/gasket-recurse.py %}). Note that the code as-is generates a triangle not a tetrahedron.
+[found here](link /teaching/CS-405+805/202510/code/gasket-recurse.py ). Note that the code as-is generates a triangle not a tetrahedron.
 
 Your image should take inspiration from the original image done in 1990 and feature a fractal tetrahedron modelled with non-diffuse materials on a desktop surface. Include more than 1 light source, one of which is an area light source. You may add other objects on the desktop surface to help demonstrate shadows and other effects, including indirect (diffuse) lighting. The final image should be high resolution (smaller dimension at least 1024).
 
