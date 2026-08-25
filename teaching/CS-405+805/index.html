@@ -274,12 +274,8 @@ $(document).ready(function(){
     refresh = true
   }
   else if (typ == 'tlo') {
-    //alert('tlo')
-    //cu_str = cu.origin + cu.pathname + semid + '/tlo.html'
-    cu_str = cu.origin + cu.pathname + semid + '/#ssTopics'
+    cu_str = cu.origin + cu.pathname + semid + '/#' + "topics_learning_outcomes"
     refresh = true
-    //newhash = 'collapse_OFF_TLO'
-
   }
   else if (asgn) {
     cu_str = cu.origin + cu.pathname + semid + '/#ssAsgn_' + asgn
@@ -302,7 +298,7 @@ $(document).ready(function(){
 
   </div>
   <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
-  Site built: 2026-08-11 14:51 -0600
+  Site built: 2026-08-25 11:55 -0600
   &nbsp;&bull;&nbsp;
   <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: https://www2.cs.uregina.ca/~hepting/teaching/CS-405+805/">
     Give feedback <span class="d-none d-sm-inline">about page</span>
