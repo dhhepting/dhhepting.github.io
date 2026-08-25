@@ -7,7 +7,7 @@ name: Deploy to U of R server
 
 on:
   push:
-    branches: [main]      # deploy automatically when main updates
+    branches: [main,upgrade-2026]      # deploy automatically when main updates
   workflow_dispatch:       # ...and give yourself a manual "Run workflow" button
 
 # If you push twice quickly, don't let two deploys race each other over rsync.

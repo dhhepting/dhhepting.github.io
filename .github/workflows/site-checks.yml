@@ -18,6 +18,11 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - name: Set up Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24' # Forces the runner environment to Node 24
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: .ruby-version   # single source of truth (same as deploy-uregina.yml)
