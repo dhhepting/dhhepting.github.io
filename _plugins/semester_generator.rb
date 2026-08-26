@@ -35,7 +35,7 @@ module SemesterData
     priority :high
 
     def generate(site)
-      data = site.data.teaching.all["semesters"]
+      data = site.data['teaching']['all']['semesters']
       return if data.nil? # file absent in this build; nothing to do
 
       errors = validate(data)
