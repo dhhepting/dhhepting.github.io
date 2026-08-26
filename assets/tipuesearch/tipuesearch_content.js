@@ -3130,7 +3130,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/about/biography.html"
   },{
     "title": "Schedule",
-    "text": "Schedule for Current Semester (“current” as of 2026-08-25 13:06:19 -0600) The current semester is: undefined Important Dates First day of term: Last day of classes: Last day of term:",
+    "text": "Schedule for Current Semester (“current” as of 2026-08-26 17:18:03 -0600) The current semester is: undefined Important Dates First day of term: Last day of classes: Last day of term:",
     "tags": "",
     "url": "/~hepting/teaching/schedule/copy-index.html"
   },{
@@ -3569,6 +3569,16 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/~hepting/teaching/CS-325/"
   },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/"
+  },{
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/"
+  },{
     "title": "Today",
     "text": "Today in 202530 Today is . Classes in 202530 start on and end on . See my weekly schedule for this semester.",
     "tags": "",
@@ -3875,7 +3885,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-230/"
   },{
     "title": "Winter 2026 Schedule",
-    "text": "Important Dates First day of term: Tue-06-Jan-2026 Last day of classes: Mon-13-Apr-2026 Last day of term: Wed-29-Apr-2026 Courses Taught this Semester CS 280 : Risk and Reward in the Information Society CS 428 : Human Computer Communication Office Hours this Semester Monday from 10:00 until 12:00 Wednesday from 10:00 until 12:00 Wednesday from 13:00 until 15:00 During my office hours, I will be available in my office (CW 308.22) and via zoom. If you need to speak with me outside of my office hours, please request an appointment. Schedule Times Mon Tue Wed Thu Fri 00:00-08:3008:30-09:0009:00-09:3009:30-10:0010:00-10:30OfficeOffice10:30-11:0011:00-11:3011:30-12:0012:00-12:3012:30-13:0013:00-13:30 CS-280 DHH URC Office CS-280 DHH URC 13:30-14:0014:00-14:3014:30-15:00 CS-428 DHH URC CS-428 DHH URC 15:00-15:3015:30-16:0016:00-16:3016:30-17:0017:00-17:3017:30-23:59",
+    "text": "Important Dates First day of term: Last day of classes: Last day of term: Courses Taught this Semester CS 280 : Risk and Reward in the Information Society CS 428 : Human Computer Communication Office Hours this Semester Monday from 10:00 until 12:00 Wednesday from 10:00 until 12:00 Wednesday from 13:00 until 15:00 During my office hours, I will be available in my office (CW 308.22) and via zoom. If you need to speak with me outside of my office hours, please request an appointment. Schedule Times Mon Tue Wed Thu Fri 00:00-08:3008:30-09:0009:00-09:3009:30-10:0010:00-10:30OfficeOffice10:30-11:0011:00-11:3011:30-12:0012:00-12:3012:30-13:0013:00-13:30 CS-280 DHH URC Office CS-280 DHH URC 13:30-14:0014:00-14:3014:30-15:00 CS-428 DHH URC CS-428 DHH URC 15:00-15:3015:30-16:0016:00-16:3016:30-17:0017:00-17:3017:30-23:59",
     "tags": "",
     "url": "/~hepting/teaching/schedule/"
   },{
@@ -4095,7 +4105,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/teaching/CS-428+730/"
   },{
     "title": "Teaching",
-    "text": "Teaching General Information Courses Taught CS 110 : 201810 201810 201510 CS 205 : 202110 202110 202010 201910 201810 201710 201610 CS 215 : 201130 201130 201110 200910 200710 CS 230 : 200510 200510 CS 280 : 202610 202610 202410 202210 202110 202010 201910 201710 201610 201510 201410 201310 201210 201010 CS 305+828 : 201430 201430 201330 201210 CS 305 : 201230 201230 201030 200830 200630 200310 200230 200130 CS 315+733 : 202530 202530 202430 CS 325 : 201410 201410 201230 201110 200630 200530 200430 200330 200230 CS 330 : 201010 201010 200930 200610 200430 200330 CS 405+805 : 202510 202510 CS 428+730 : 202410 202410 CS 428+828 : 202230 202230 202130 202030 201930 201830 201730 201630 CS 428 : 202610 202610 CS 499+900 : 202230 202230 202210 202110 202010 201920 201810 CS 730 : 202210 202210 CS 733 : 202330 202330 202230 CS 828 : 201030 201030 200830 200610 200410 FILM 385AB : 201110 201110 200630 200530 200430 200330 200230",
+    "text": "Teaching General Information Courses Taught CS 110 : 201810 201810 201510 CS 205 : 202110 202110 202010 201910 201810 201710 201610 CS 215 : 201130 201130 201110 200910 200710 CS 230 : 200510 200510 CS 280 : 202610 202610 202410 202210 202110 202010 201910 201710 201610 201510 201410 201310 201210 201010 CS 305+828 : 201430 201430 201330 201210 CS 305 : 201230 201230 201030 200830 200630 200310 200230 200130 CS 315+733 : 202530 202530 202430 CS 315 : 202630 202630 CS 325 : 201410 201410 201230 201110 200630 200530 200430 200330 200230 CS 330 : 201010 201010 200930 200610 200430 200330 CS 405+805 : 202510 202510 CS 428+730 : 202410 202410 CS 428+828 : 202230 202230 202130 202030 201930 201830 201730 201630 CS 428 : 202610 202610 CS 499+900 : 202230 202230 202210 202110 202010 201920 201810 CS 730 : 202210 202210 CS 733 : 202330 202330 202230 CS 828 : 201030 201030 200830 200610 200410 FILM 385AB : 201110 201110 200630 200530 200430 200330 200230",
     "tags": "",
     "url": "/~hepting/teaching/"
   },{
