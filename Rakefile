@@ -62,21 +62,43 @@ namespace :data do
   end
 end
 
-namespace :structure do
-  desc 'Fail if any served course/offering directory under teaching/ lacks an index page'
-  task :validate do
-    require_relative 'lib/offering_index_validator'
 
-    errors = OfferingIndexValidator.new('teaching').run
-    if errors.empty?
-      puts 'Structure validation passed (every served landing directory has an index).'
+# Combined structural validation. Paste into your Rakefile (repo root), or save
+# as rakelib/structure_validate.rake (Rake auto-loads rakelib/*.rake) — if you
+# use rakelib/, prefix each require_relative path with "../".
+#
+# Folds three validators behind one entry point. Each is the same shape
+# (SomeValidator.new(dir).run -> [] or [errors]), so structure:validate runs
+# them all and prints ONE combined, source-tagged report before aborting.
+
+require_relative "lib/semester_validator"        # SemesterDataValidator (new)
+require_relative "lib/teaching_data_validator"   # existing
+require_relative "lib/offering_index_validator"  # existing
+
+namespace :structure do
+  # One list = the single place to register structural validators. Add future
+  # ones here (e.g. an LFS size-threshold check) and they join the run for free.
+  VALIDATORS = [
+    ["semesters",      -> { SemesterDataValidator.new("_data/semesters.yml").run }],
+    ["teaching data",  -> { TeachingDataValidator.new("_data/teaching").run }],
+    ["offering index", -> { OfferingIndexValidator.new("teaching").run }],
+  ].freeze
+
+  desc "Run every structural validator; fail with one combined report"
+  task :validate do                                                                                                                                                     
+    issues = VALIDATORS.flat_map { |name, run| run.call.map { |e| "[#{name}] #{e}" } }
+    if issues.empty?
+      puts "structure:validate OK (#{VALIDATORS.length} validators passed)"
     else
-      puts "Structure validation FAILED (#{errors.size} problem#{'s' if errors.size != 1}):"
-      errors.each { |e| puts "  - #{e}" }
-      abort
+      warn "structure:validate FAILED (#{issues.length} issue(s)):"
+      issues.each { |e| warn "  \u2022 #{e}" }
+      abort # non-zero exit -> fails CI
     end
   end
 end
+
+# CI runs `bundle exec rake`; make sure structure:validate is in your default:
+#   task default: %w[structure:validate build test:html]
 
 namespace :wiki do
   desc 'Validate every .creole wiki-seed file parses cleanly and has required front matter'

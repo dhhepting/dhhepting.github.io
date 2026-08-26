@@ -1,0 +1,87 @@
+
+# semesters.yml — hand-authored source of truth for semester-level detail.
+#
+# Conventions:
+#   * `semester` is the U of R term code: YYYY + term, where term is
+#       10 = Winter, 20 = Spring/Summer, 30 = Fall.
+#     year and the season name are NOT stored here — they are the one thing
+#     the code already encodes. _plugins/semester_generator.rb derives
+#     `year` and `semester_name` at build time and injects them, so Liquid can
+#     still use {{ s.year }} / {{ s.semester_name }}.
+#   * Dates are ISO 8601 (YYYY-MM-DD). YAML loads these as real Date objects,
+#     so Liquid/Ruby can compare and format them and they sort as plain text.
+#   * The class_end -> term_end span is the final-exam period.
+#   * Each no_class_days entry carries a `label` so a calendar or syllabus can
+#     caption it instead of showing a bare date.
+#   * office_hours are structured (day/start/end); times are quoted so YAML
+#     does not read "10:00" as a number.
+#
+# This file is validated at build time by _plugins/semester_generator.rb:
+# a bad edit fails `jekyll build`, and therefore fails CI, instead of
+# rendering wrong.
+
+- semester: 202610
+  term_start: 2026-01-06
+  class_end:  2026-04-13
+  term_end:   2026-04-29
+  no_class_days:
+    - date: 2026-02-16
+      label: Family Day / Reading Week
+    - date: 2026-02-17
+      label: Reading Week
+    - date: 2026-02-18
+      label: Reading Week
+    - date: 2026-02-19
+      label: Reading Week
+    - date: 2026-02-20
+      label: Reading Week
+    - date: 2026-02-21
+      label: Reading Week
+    - date: 2026-02-22
+      label: Reading Week
+    - date: 2026-04-03
+      label: Good Friday
+  classes_taught:
+    - CS-280
+    - CS-428
+  office_hours:
+    - day: Mon
+      start: "10:00"
+      end:   "12:00"
+    - day: Wed
+      start: "10:00"
+      end:   "12:00"
+    - day: Wed
+      start: "13:00"
+      end:   "15:00"
+  office_zoom: "https://uregina-ca.zoom.us/j/95186400120?pwd=aDFvTCswY3NlaTQ2OWI1NlZZMG50UT09"
+
+- semester: 202630
+  term_start: 2026-09-01
+  class_end:  2026-12-07
+  term_end:   2026-12-22
+  no_class_days:
+    - date: 2026-09-07
+      label: Labour Day
+    - date: 2026-09-30
+      label: National Day for Truth and Reconciliation
+    - date: 2026-10-12
+      label: Thanksgiving
+    - date: 2026-11-09
+      label: Fall Reading Week
+    - date: 2026-11-10
+      label: Fall Reading Week
+    - date: 2026-11-11
+      label: Remembrance Day
+    - date: 2026-11-12
+      label: Fall Reading Week
+    - date: 2026-11-13
+      label: Fall Reading Week
+    - date: 2026-11-14
+      label: Fall Reading Week
+    - date: 2026-11-15
+      label: Fall Reading Week
+  classes_taught:
+    - CS-315
+  # office_hours / office_zoom: TBD for Fall. Templates should guard on presence
+  # ({% if s.office_hours %}) so a term without them renders cleanly.
