@@ -74,18 +74,20 @@ end
 require_relative "lib/semester_validator"        # SemesterDataValidator (new)
 require_relative "lib/teaching_data_validator"   # existing
 require_relative "lib/offering_index_validator"  # existing
+require_relative "lib/courses_validator"         # new
 
 namespace :structure do
   # One list = the single place to register structural validators. Add future
   # ones here (e.g. an LFS size-threshold check) and they join the run for free.
   VALIDATORS = [
-    ["semesters",      -> { SemesterDataValidator.new("_data/semesters.yml").run }],
+    ["semesters",      -> { SemesterDataValidator.new("_data/teaching/all/semesters.yml").run }],
     ["teaching data",  -> { TeachingDataValidator.new("_data/teaching").run }],
     ["offering index", -> { OfferingIndexValidator.new("teaching").run }],
+    ["courses",        -> { CoursesValidator.new("_data/teaching/all").run }],
   ].freeze
 
   desc "Run every structural validator; fail with one combined report"
-  task :validate do                                                                                                                                                     
+  task :validate do
     issues = VALIDATORS.flat_map { |name, run| run.call.map { |e| "[#{name}] #{e}" } }
     if issues.empty?
       puts "structure:validate OK (#{VALIDATORS.length} validators passed)"

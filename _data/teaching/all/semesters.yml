@@ -1,25 +1,224 @@
-
-# semesters.yml — hand-authored source of truth for semester-level detail.
+# semesters.yml — single hand-authored source of truth for semester-level detail.
+# Path: _data/teaching/all/semesters.yml (read via site.data.teaching.all.semesters).
+# Migrated from the retired _data/teaching/semesters.csv on 2026-08-26.
 #
-# Conventions:
-#   * `semester` is the U of R term code: YYYY + term, where term is
-#       10 = Winter, 20 = Spring/Summer, 30 = Fall.
-#     year and the season name are NOT stored here — they are the one thing
-#     the code already encodes. _plugins/semester_generator.rb derives
-#     `year` and `semester_name` at build time and injects them, so Liquid can
-#     still use {{ s.year }} / {{ s.semester_name }}.
-#   * Dates are ISO 8601 (YYYY-MM-DD). YAML loads these as real Date objects,
-#     so Liquid/Ruby can compare and format them and they sort as plain text.
-#   * The class_end -> term_end span is the final-exam period.
-#   * Each no_class_days entry carries a `label` so a calendar or syllabus can
-#     caption it instead of showing a bare date.
-#   * office_hours are structured (day/start/end); times are quoted so YAML
-#     does not read "10:00" as a number.
-#
-# This file is validated at build time by _plugins/semester_generator.rb:
-# a bad edit fails `jekyll build`, and therefore fails CI, instead of
-# rendering wrong.
+# Schema: `semester` code + the three term dates are required. classes_taught,
+# no_class_days, and per-day label are optional; historical terms carry dates and
+# unlabelled no-class days only. See lib/semester_validator.rb for the full contract.
+#   * term code = YYYY + 10 (Winter) / 20 (Spring/Summer) / 30 (Fall).
+#   * dates are ISO 8601; year/semester_name are derived by _plugins/semester_generator.rb.
 
+- semester: 201830
+  term_start: 2018-09-05
+  class_end:  2018-12-06
+  term_end:   2018-12-21
+  no_class_days:
+    - date: 2018-10-08
+    - date: 2018-11-07
+    - date: 2018-11-08
+    - date: 2018-11-09
+    - date: 2018-11-10
+    - date: 2018-11-12
+
+- semester: 201910
+  term_start: 2019-01-08
+  class_end:  2019-04-11
+  term_end:   2019-04-29
+  no_class_days:
+    - date: 2019-02-18
+    - date: 2019-02-19
+    - date: 2019-02-20
+    - date: 2019-02-21
+    - date: 2019-02-22
+    - date: 2019-02-23
+    - date: 2019-04-19
+
+- semester: 201920
+  term_start: 2019-05-06
+  class_end:  2019-08-21
+  term_end:   2019-08-28
+  no_class_days:
+    - date: 2019-05-20
+    - date: 2019-07-01
+    - date: 2019-08-05
+
+- semester: 201930
+  term_start: 2019-09-04
+  class_end:  2019-12-06
+  term_end:   2019-12-21
+  no_class_days:
+    - date: 2019-10-14
+    - date: 2019-11-06
+    - date: 2019-11-07
+    - date: 2019-11-08
+    - date: 2019-11-09
+    - date: 2019-11-11
+
+- semester: 202010
+  term_start: 2020-01-06
+  class_end:  2020-04-09
+  term_end:   2020-04-25
+  no_class_days:
+    - date: 2020-02-17
+    - date: 2020-02-18
+    - date: 2020-02-19
+    - date: 2020-02-20
+    - date: 2020-02-21
+    - date: 2020-02-22
+    - date: 2020-04-10
+
+- semester: 202020
+  term_start: 2020-05-04
+  class_end:  2020-08-19
+  term_end:   2020-08-26
+  no_class_days:
+    - date: 2020-05-18
+    - date: 2020-07-01
+    - date: 2020-08-03
+
+- semester: 202030
+  term_start: 2020-09-02
+  class_end:  2020-12-08
+  term_end:   2020-12-23
+  no_class_days:
+    - date: 2020-09-07
+    - date: 2020-10-12
+    - date: 2020-11-09
+    - date: 2020-11-10
+    - date: 2020-11-11
+    - date: 2020-11-12
+    - date: 2020-11-13
+    - date: 2020-11-14
+
+- semester: 202110
+  term_start: 2021-01-11
+  class_end:  2021-04-15
+  term_end:   2021-04-30
+  no_class_days:
+    - date: 2021-02-15
+    - date: 2021-02-16
+    - date: 2021-02-17
+    - date: 2021-02-18
+    - date: 2021-02-19
+    - date: 2021-02-20
+    - date: 2021-04-02
+
+- semester: 202130
+  term_start: 2021-08-30
+  class_end:  2021-12-06
+  term_end:   2021-12-22
+  no_class_days:
+    - date: 2021-09-06
+    - date: 2021-09-30
+    - date: 2021-10-11
+    - date: 2021-11-08
+    - date: 2021-11-09
+    - date: 2021-11-10
+    - date: 2021-11-11
+    - date: 2021-11-12
+    - date: 2021-11-13
+
+- semester: 202210
+  term_start: 2022-01-10
+  class_end:  2022-04-11
+  term_end:   2022-04-29
+  no_class_days:
+    - date: 2022-02-21
+    - date: 2022-02-22
+    - date: 2022-02-23
+    - date: 2022-02-24
+    - date: 2022-02-25
+    - date: 2022-02-26
+    - date: 2022-04-15
+
+- semester: 202230
+  term_start: 2022-08-31
+  class_end:  2022-12-06
+  term_end:   2022-12-22
+  no_class_days:
+    - date: 2022-09-05
+    - date: 2022-09-30
+    - date: 2022-10-10
+    - date: 2022-11-07
+    - date: 2022-11-08
+    - date: 2022-11-09
+    - date: 2022-11-10
+    - date: 2022-11-11
+    - date: 2022-11-12
+
+- semester: 202330
+  term_start: 2023-08-30
+  class_end:  2023-12-05
+  term_end:   2023-12-21
+  no_class_days:
+    - date: 2023-09-04
+    - date: 2023-09-29
+    - date: 2023-10-09
+    - date: 2023-10-10
+    - date: 2023-10-11
+    - date: 2023-10-12
+    - date: 2023-10-13
+    - date: 2023-10-14
+    - date: 2023-10-15
+    - date: 2023-11-10
+
+- semester: 202410
+  term_start: 2024-01-08
+  class_end:  2024-04-12
+  term_end:   2024-04-29
+  no_class_days:
+    - date: 2024-02-19
+    - date: 2024-02-20
+    - date: 2024-02-21
+    - date: 2024-02-22
+    - date: 2024-02-23
+    - date: 2024-02-24
+    - date: 2024-02-25
+    - date: 2024-03-29
+
+- semester: 202430
+  term_start: 2024-09-04
+  class_end:  2024-12-06
+  term_end:   2024-12-21
+  no_class_days:
+    - date: 2024-09-30
+    - date: 2024-10-14
+    - date: 2024-10-15
+    - date: 2024-10-16
+    - date: 2024-10-17
+    - date: 2024-10-18
+    - date: 2024-10-19
+    - date: 2024-10-20
+    - date: 2024-11-11
+
+- semester: 202510
+  term_start: 2025-01-06
+  class_end:  2025-04-11
+  term_end:   2025-04-26
+  no_class_days:
+    - date: 2025-02-17
+    - date: 2025-02-18
+    - date: 2025-02-19
+    - date: 2025-02-20
+    - date: 2025-02-21
+    - date: 2025-02-22
+    - date: 2025-02-23
+    - date: 2025-04-18
+
+- semester: 202530
+  term_start: 2025-09-02
+  class_end:  2025-12-05
+  term_end:   2025-12-22
+  no_class_days:
+    - date: 2025-09-30
+    - date: 2025-10-13
+    - date: 2025-11-10
+    - date: 2025-11-11
+    - date: 2025-11-12
+    - date: 2025-11-13
+    - date: 2025-11-14
+    - date: 2025-11-15
+    - date: 2025-11-16
 - semester: 202610
   term_start: 2026-01-06
   class_end:  2026-04-13

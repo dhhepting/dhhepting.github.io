@@ -1,21 +1,26 @@
 # frozen_string_literal: true
 
-# _plugins/semester_validator.rb
+# lib/semester_validator.rb
 #
-# Pure validation + derivation logic for _data/semesters.yml, with NO Jekyll
-# dependency, so it can be required from two places:
+# Pure validation + derivation logic for the semesters data file, with NO
+# Jekyll dependency, so it can be required from two places:
 #   * _plugins/semester_generator.rb — runs it during `jekyll build`
 #   * Rakefile (structure:validate)  — runs it without a full build
 #
-# `validate(data)` returns an array of human-readable error strings (empty ==
-# valid) and never raises on bad input. `derive!(data)` injects the fields the
-# YAML deliberately does not store (`year`, `semester_name`).
+# Schema: the REQUIRED core of a semester is its `semester` code plus the three
+# term dates. `classes_taught`, `no_class_days`, and per-day `label` are
+# OPTIONAL enrichment — present for current terms, absent for migrated history
+# — and are validated only when present.
+#
+# `validate(data)` returns an array of error strings (empty == valid) and never
+# raises on bad input. `derive!(data)` injects the fields the YAML does not
+# store (`year`, `semester_name`).
 
 require "date"
 
 module SemesterData
   TERM_NAMES    = { 10 => "Winter", 20 => "Spring/Summer", 30 => "Fall" }.freeze
-  REQUIRED_KEYS = %w[semester term_start class_end term_end no_class_days classes_taught].freeze
+  REQUIRED_KEYS = %w[semester term_start class_end term_end].freeze
   DATE_KEYS     = %w[term_start class_end term_end].freeze
   VALID_DAYS    = %w[Mon Tue Wed Thu Fri Sat Sun].freeze
   CODE_RE       = /\A\d{6}\z/.freeze
@@ -24,9 +29,6 @@ module SemesterData
   module_function
 
   def validate(data)
-    # A stray second YAML document (a rogue `---`) makes the loader return only
-    # the first document, which will not be our list. Asserting "Array of
-    # Hashes" here is how we enforce the single-document, well-formed shape.
     unless data.is_a?(Array)
       return ["top level is #{data.class}, not a list \u2014 " \
               "did a stray '---' split the file into two documents?"]
@@ -75,11 +77,16 @@ module SemesterData
     end
 
     if dates.length == DATE_KEYS.length
+      # term_start of a semester must fall in the year its code encodes; this is
+      # what caught the corrupt 202310/202320 rows (2022 dates on 2023 codes).
+      if code.is_a?(Integer) && code.to_s.match?(CODE_RE) && dates["term_start"].year != code / 100
+        errs << "#{where}: term_start #{dates['term_start']} is not in the term's year (#{code / 100})"
+      end
       errs << "#{where}: term_start #{dates['term_start']} is after class_end #{dates['class_end']}" unless dates["term_start"] <= dates["class_end"]
       errs << "#{where}: class_end #{dates['class_end']} is after term_end #{dates['term_end']}"   unless dates["class_end"] <= dates["term_end"]
     end
 
-    errs.concat(validate_no_class_days(entry["no_class_days"], where, dates))
+    errs.concat(validate_no_class_days(entry["no_class_days"], where, dates)) if entry.key?("no_class_days")
 
     ct = entry["classes_taught"]
     if entry.key?("classes_taught") && (!ct.is_a?(Array) || ct.empty? || ct.any? { |c| !c.is_a?(String) })
@@ -99,19 +106,20 @@ module SemesterData
     errs = []
     list.each_with_index do |d, j|
       unless d.is_a?(Hash)
-        errs << "#{where}: no_class_days[#{j}] is #{d.class}, expected {date, label}"
+        errs << "#{where}: no_class_days[#{j}] is #{d.class}, expected {date[, label]}"
         next
       end
-      date  = d["date"]
-      label = d["label"]
+      date = d["date"]
       errs << "#{where}: no_class_days[#{j}].date is #{date.inspect}, not a date" unless date.is_a?(Date)
-      errs << "#{where}: no_class_days[#{j}].label is missing or blank" unless label.is_a?(String) && !label.strip.empty?
+      if d.key?("label") && !(d["label"].is_a?(String) && !d["label"].strip.empty?)
+        errs << "#{where}: no_class_days[#{j}].label is present but blank"
+      end
       next unless date.is_a?(Date)
 
       errs << "#{where}: duplicate no-class day #{date}" if seen[date]
       seen[date] = true
       if lo && hi && !date.between?(lo, hi)
-        errs << "#{where}: no-class day #{date} (#{label}) is outside the term #{lo}..#{hi}"
+        errs << "#{where}: no-class day #{date} is outside the term #{lo}..#{hi}"
       end
     end
     errs
@@ -152,13 +160,10 @@ end
 # --- Rake-friendly wrapper -------------------------------------------------
 # Same shape as TeachingDataValidator / OfferingIndexValidator:
 #   SemesterDataValidator.new(path).run  -> [] on success, else [errors]
-# so it slots into the structure:validate list uniformly. The pure logic above
-# stays shared with _plugins/semester_generator.rb.
 require "yaml"
-require "date"
 
 class SemesterDataValidator
-  def initialize(path = "_data/semesters.yml")
+  def initialize(path = "_data/teaching/all/semesters.yml")
     @path = path
   end
 
