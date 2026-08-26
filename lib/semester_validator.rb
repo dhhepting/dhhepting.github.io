@@ -176,6 +176,6 @@ class SemesterDataValidator
       rescue Psych::Exception => e
         return ["#{@path}: not valid YAML \u2014 #{e.message.lines.first&.strip}"]
       end
-    SemesterData.validate(data)
+    SemesterData::Generator.new.validate(data)
   end
 end
