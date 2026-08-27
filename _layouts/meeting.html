@@ -1,0 +1,31 @@
+---
+layout: default
+---
+{%- comment -%}
+  _layouts/meeting.html
+  Dumb template: all computation lives in the generator. This only renders
+  fields it was handed. The wiki link appears only when wiki_url is set,
+  so a meeting without an authored wikipage_id never emits a dangling link.
+{%- endcomment -%}
+<article class="meeting">
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p class="meta">
+      Meeting {{ page.meeting }} of {{ page.total_mtgs }} ·
+      Week {{ page.week }} of {{ page.total_wks }}
+      (week of {{ page.week_of }})
+    </p>
+  </header>
+
+  {%- if page.topic %}
+  <p class="topic"><strong>Topic:</strong> {{ page.topic }}</p>
+  {%- endif %}
+
+  {%- if page.wiki_url %}
+  <p class="wiki">
+    <a href="{{ page.wiki_url }}" rel="external">Open the wiki page for this meeting</a>
+  </p>
+  {%- endif %}
+
+  {{ content }}
+</article>
