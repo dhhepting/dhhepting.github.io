@@ -3130,7 +3130,7 @@ var tipuesearch = {"pages": [{
     "url": "/~hepting/about/biography.html"
   },{
     "title": "Schedule",
-    "text": "Schedule for Current Semester (“current” as of 2026-08-26 17:18:03 -0600) The current semester is: undefined Important Dates First day of term: Last day of classes: Last day of term:",
+    "text": "Schedule for Current Semester (“current” as of 2026-08-27 10:29:59 -0600) The current semester is: undefined Important Dates First day of term: Last day of classes: Last day of term:",
     "tags": "",
     "url": "/~hepting/teaching/schedule/copy-index.html"
   },{
@@ -4718,6 +4718,381 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/~hepting/teach/philosophy.html"
+  },{
+    "title": "Meeting 01 — Tue 06 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg01/"
+  },{
+    "title": "Meeting 02 — Thu 08 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg02/"
+  },{
+    "title": "Meeting 03 — Tue 13 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg03/"
+  },{
+    "title": "Meeting 04 — Thu 15 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg04/"
+  },{
+    "title": "Meeting 05 — Tue 20 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg05/"
+  },{
+    "title": "Meeting 06 — Thu 22 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg06/"
+  },{
+    "title": "Meeting 07 — Tue 27 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg07/"
+  },{
+    "title": "Meeting 08 — Thu 29 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg08/"
+  },{
+    "title": "Meeting 09 — Tue 03 Feb 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg09/"
+  },{
+    "title": "Meeting 10 — Thu 05 Feb 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg10/"
+  },{
+    "title": "Meeting 11 — Tue 10 Feb 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg11/"
+  },{
+    "title": "Meeting 12 — Thu 12 Feb 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg12/"
+  },{
+    "title": "Meeting 13 — Tue 24 Feb 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg13/"
+  },{
+    "title": "Meeting 14 — Thu 26 Feb 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg14/"
+  },{
+    "title": "Meeting 15 — Tue 03 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg15/"
+  },{
+    "title": "Meeting 16 — Thu 05 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg16/"
+  },{
+    "title": "Meeting 17 — Tue 10 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg17/"
+  },{
+    "title": "Meeting 18 — Thu 12 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg18/"
+  },{
+    "title": "Meeting 19 — Tue 17 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg19/"
+  },{
+    "title": "Meeting 20 — Thu 19 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg20/"
+  },{
+    "title": "Meeting 21 — Tue 24 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg21/"
+  },{
+    "title": "Meeting 22 — Thu 26 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg22/"
+  },{
+    "title": "Meeting 23 — Tue 31 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg23/"
+  },{
+    "title": "Meeting 24 — Thu 02 Apr 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg24/"
+  },{
+    "title": "Meeting 25 — Tue 07 Apr 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg25/"
+  },{
+    "title": "Meeting 26 — Thu 09 Apr 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-280/202610/Mtg26/"
+  },{
+    "title": "Meeting 01 — Wed 02 Sep 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg01/"
+  },{
+    "title": "Meeting 02 — Wed 09 Sep 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg02/"
+  },{
+    "title": "Meeting 03 — Mon 14 Sep 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg03/"
+  },{
+    "title": "Meeting 04 — Wed 16 Sep 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg04/"
+  },{
+    "title": "Meeting 05 — Mon 21 Sep 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg05/"
+  },{
+    "title": "Meeting 06 — Wed 23 Sep 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg06/"
+  },{
+    "title": "Meeting 07 — Mon 28 Sep 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg07/"
+  },{
+    "title": "Meeting 08 — Mon 05 Oct 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg08/"
+  },{
+    "title": "Meeting 09 — Wed 07 Oct 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg09/"
+  },{
+    "title": "Meeting 10 — Wed 14 Oct 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg10/"
+  },{
+    "title": "Meeting 11 — Mon 19 Oct 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg11/"
+  },{
+    "title": "Meeting 12 — Wed 21 Oct 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg12/"
+  },{
+    "title": "Meeting 13 — Mon 26 Oct 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg13/"
+  },{
+    "title": "Meeting 14 — Wed 28 Oct 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg14/"
+  },{
+    "title": "Meeting 15 — Mon 02 Nov 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg15/"
+  },{
+    "title": "Meeting 16 — Wed 04 Nov 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg16/"
+  },{
+    "title": "Meeting 17 — Mon 16 Nov 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg17/"
+  },{
+    "title": "Meeting 18 — Wed 18 Nov 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg18/"
+  },{
+    "title": "Meeting 19 — Mon 23 Nov 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg19/"
+  },{
+    "title": "Meeting 20 — Wed 25 Nov 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg20/"
+  },{
+    "title": "Meeting 21 — Mon 30 Nov 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg21/"
+  },{
+    "title": "Meeting 22 — Wed 02 Dec 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg22/"
+  },{
+    "title": "Meeting 23 — Mon 07 Dec 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-315/202630/Mtg23/"
+  },{
+    "title": "Meeting 01 — Tue 06 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg01/"
+  },{
+    "title": "Meeting 02 — Thu 08 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg02/"
+  },{
+    "title": "Meeting 03 — Tue 13 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg03/"
+  },{
+    "title": "Meeting 04 — Thu 15 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg04/"
+  },{
+    "title": "Meeting 05 — Tue 20 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg05/"
+  },{
+    "title": "Meeting 06 — Thu 22 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg06/"
+  },{
+    "title": "Meeting 07 — Tue 27 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg07/"
+  },{
+    "title": "Meeting 08 — Thu 29 Jan 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg08/"
+  },{
+    "title": "Meeting 09 — Tue 03 Feb 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg09/"
+  },{
+    "title": "Meeting 10 — Thu 05 Feb 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg10/"
+  },{
+    "title": "Meeting 11 — Tue 10 Feb 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg11/"
+  },{
+    "title": "Meeting 12 — Thu 12 Feb 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg12/"
+  },{
+    "title": "Meeting 13 — Tue 24 Feb 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg13/"
+  },{
+    "title": "Meeting 14 — Thu 26 Feb 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg14/"
+  },{
+    "title": "Meeting 15 — Tue 03 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg15/"
+  },{
+    "title": "Meeting 16 — Thu 05 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg16/"
+  },{
+    "title": "Meeting 17 — Tue 10 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg17/"
+  },{
+    "title": "Meeting 18 — Thu 12 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg18/"
+  },{
+    "title": "Meeting 19 — Tue 17 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg19/"
+  },{
+    "title": "Meeting 20 — Thu 19 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg20/"
+  },{
+    "title": "Meeting 21 — Tue 24 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg21/"
+  },{
+    "title": "Meeting 22 — Thu 26 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg22/"
+  },{
+    "title": "Meeting 23 — Tue 31 Mar 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg23/"
+  },{
+    "title": "Meeting 24 — Thu 02 Apr 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg24/"
+  },{
+    "title": "Meeting 25 — Tue 07 Apr 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg25/"
+  },{
+    "title": "Meeting 26 — Thu 09 Apr 2026",
+    "text": "",
+    "tags": "",
+    "url": "/~hepting/teaching/CS-428/202610/Mtg26/"
   },{
     "title": "Approximation and Visualization of Sets Defined by Iterated Function Systems (1991)",
     "text": "@mastersthesis{1991-03-Hep, Author = “Hepting, Daryl H.”, Title = “Approximation and Visualization of Sets Defined by Iterated Function Systems”, Url = \"https://www2.cs.uregina.ca/~hepting/research/works/1991-03-Hep-Approximation-and-Visualization-of-Sets-Defined-by-Iterated-Function-Systems.html\", Address = “Regina, Saskatchewan, Canada”, Doi = “10.13140/RG.2.2.34414.82244”, Keywords = “iterated function systems”, Month = “March”, School = “University of Regina”, Year = “1991”, }",
