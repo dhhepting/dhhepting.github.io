@@ -9,6 +9,12 @@ on:
   push:
     branches: [main,upgrade-2026]      # deploy automatically when main updates
   workflow_dispatch:       # ...and give yourself a manual "Run workflow" button
+  schedule:
+    # 12:00 UTC == 06:00 Regina (fixed -06:00, no DST).
+    # Daily, so the current -> next rollover is live by the morning a term starts.
+    - cron: "0 12 * * *"
+permissions:
+  contents: read
 
 # If you push twice quickly, don't let two deploys race each other over rsync.
 concurrency:

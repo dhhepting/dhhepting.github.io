@@ -1,0 +1,39 @@
+{%- comment -%}
+  Featured card: courses in the current (in-session) term and the upcoming
+  term. Driven entirely by site.data.teaching.all.featured_terms, precomputed
+  in _plugins/featured_offerings_generator.rb — so there is no logic here, no
+  `where`, and no JavaScript. Between terms only the upcoming term appears;
+  during a term the current term shows (with a Today link) and the next term
+  previews. A term is listed only if it actually has offerings, so no empty
+  sections; the whole card is omitted when there is nothing to feature.
+{%- endcomment -%}
+{%- assign featured = site.data.teaching.all.featured_terms -%}
+{%- if featured and featured.size > 0 -%}
+<div class="card my-2" id="featured-card">
+  <h3 class="card-header text-center">This Semester &amp; Next</h3>
+  <div class="card-body">
+    {%- for ft in featured -%}
+    <ul class="list-group list-group-flush mb-3">
+      <li class="list-group-item active">
+        {%- if ft.kind == "current" %}This Semester{% else %}Coming Up{% endif -%}
+        {%- if ft.term.semester_name %} &mdash; {{ ft.term.semester_name }} {{ ft.term.year }}
+        {%- else %} &mdash; {{ ft.code }}{% endif -%}
+      </li>
+      {%- if ft.kind == "current" -%}
+      <li class="list-group-item">
+        <a href="{{ "/teaching/today" | relative_url }}">Today</a>
+      </li>
+      {%- endif -%}
+      {%- for o in ft.offerings -%}
+      <li class="list-group-item">
+        {%- capture off_url -%}/teaching/{{ o.id }}/{{ ft.code }}{%- endcapture -%}
+        <a href="{{ off_url | relative_url }}">
+          {{ o.id | replace: "-", " " }} : {{ o.name }}
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+    {%- endfor -%}
+  </div>
+</div>
+{%- endif -%}

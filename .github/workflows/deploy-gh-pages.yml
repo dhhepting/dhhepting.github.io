@@ -4,7 +4,12 @@ on:
   push:
     branches: [ master, main, upgrade-2026 ]
   workflow_dispatch:
-
+  schedule:
+    # 12:00 UTC == 06:00 Regina (fixed -06:00, no DST).
+    # Daily, so the current -> next rollover is live by the morning a term starts.
+    - cron: "0 12 * * *"
+permissions:
+  contents: read
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
