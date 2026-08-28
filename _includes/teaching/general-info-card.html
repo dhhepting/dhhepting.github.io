@@ -2,7 +2,7 @@
   <h3 class="card-header text-center">General Information</h3>
   <div class="card-body">
     <ul class="list-group list-group-flush">
-      {% for gi in site.data.teaching.gen-info %}
+      {% for gi in site.data['teaching']['all']['general_info'] %}
       <li class="list-group-item">
         {% capture gi_url %}/teaching/{{ gi.url }}{% endcapture %}
         <a href="{{ gi_url | relative_url }}">

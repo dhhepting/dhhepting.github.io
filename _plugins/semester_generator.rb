@@ -20,7 +20,7 @@ module SemesterData
       data = site.data["semesters"]
       return if data.nil?
 
-      errors = SemesterData::Generator.new.validate(data)
+      errors = SemesterData.validate(data)
       unless errors.empty?
         report = (["semesters.yml failed validation (#{errors.length} issue(s)):"] +
                   errors.map { |e| "  \u2022 #{e}" }).join("\n")
@@ -28,7 +28,7 @@ module SemesterData
         raise InvalidSemesterData, report
       end
 
-      SemesterData::Generator.new.derive!(data)
+      SemesterData.derive!(data)
       Jekyll.logger.info("Semesters:", "validated and enriched #{data.length} semester(s)")
     end
   end
