@@ -28,7 +28,70 @@ module SemesterData
 
   module_function
 
-  def validate(data)
+  # ===========================================================================
+# ADD TO: lib/semester_validator.rb, inside `module SemesterData`
+# (anywhere after `module_function`, alongside validate/derive!).
+#
+# Computes the SEMESTER-OWNED CALENDAR: the ordered list of class weeks, each
+# with its Monday `weekof` and the no-class events that fall in it. This is a
+# property of the term — identical for every offering in it — so it is derived
+# once here and shared, rather than recomputed per course.
+#
+# The Monday anchor is IDENTICAL to _plugins/meeting_page_generator.rb
+# (first_monday / week = ((d - fmon)/7)+1), so a meeting page's `week`/`week_of`
+# and a semester `weeks[].weekof` can never disagree. Verified against
+# CS-280/202610: all 26 TuTh meetings index to the matching weekof.
+#
+# No new authored field and no new validation: validate_no_class_days already
+# rejects any no_class_day outside term_start..class_end, which is exactly the
+# range these weeks span — so no event can be silently dropped.
+# ===========================================================================
+
+  # Monday of the week containing d.  (wday: Sun=0..Sat=6)
+  # Same formula as meeting_page_generator's first_monday.
+  def monday_of(d)
+    d = coerce_to_date(d)
+    d - ((d.wday + 6) % 7)
+  end
+
+  # Accept a native YAML Date (the normal case) or an ISO string, defensively.
+  # If SemesterData already has a date coercer, delete this and use that one.
+  def coerce_to_date(v)
+    return v if v.is_a?(Date)
+    Date.strptime(v.to_s.strip, '%Y-%m-%d')
+  end
+
+  # -> Array of { 'week' => Integer, 'weekof' => Date(Monday),
+  #               'events' => [ { 'date' => Date, 'label' => String|nil }, ... ] }
+  # spanning the week of term_start through the week of class_end (class weeks;
+  # the exam period term_start..term_end is intentionally excluded).
+  def weeks_for(entry)
+    fmon = monday_of(entry['term_start'])
+    last = monday_of(entry['class_end'])
+
+    events_by_monday = Hash.new { |h, k| h[k] = [] }
+    Array(entry['no_class_days']).each do |nc|
+      d     = coerce_to_date(nc.is_a?(Hash) ? (nc['date'] || nc[:date]) : nc)
+      label = nc.is_a?(Hash) ? (nc['label'] || nc[:label]) : nil
+      events_by_monday[monday_of(d)] << { 'date' => d, 'label' => label }
+    end
+
+    weeks = []
+    mon   = fmon
+    n     = 0
+    while mon <= last
+      n += 1
+      weeks << {
+        'week'   => n,
+        'weekof' => mon,
+        'events' => events_by_monday[mon].sort_by { |e| e['date'] }
+      }
+      mon += 7
+    end
+    weeks
+  end
+
+ def validate(data)
     unless data.is_a?(Array)
       return ["top level is #{data.class}, not a list \u2014 " \
               "did a stray '---' split the file into two documents?"]
@@ -46,6 +109,18 @@ module SemesterData
       code = entry["semester"]
       entry["year"]          = code / 100
       entry["semester_name"] = TERM_NAMES.fetch(code % 100)
+      entry['weeks']         = weeks_for(entry)
+      # ===========================================================================
+# ADD TO: the same file, inside `def derive!(data)`, in the loop that already
+# injects year/semester_name onto each entry. One line:
+#
+#     entry['weeks'] = weeks_for(entry)
+#
+# After this, every offering can read its term's calendar at
+#   site.data.teaching.all.semesters | where:"semester", crs_sem | first | .weeks
+# and step 3 (the semester-schedule overlay) layers meetings + topics onto it.
+# ===========================================================================
+ 
     end
   end
 
