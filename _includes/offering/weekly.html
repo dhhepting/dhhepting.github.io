@@ -1,20 +1,32 @@
-{%- assign wklyplans = site.data.teaching[jcrs_id][crs_sem]plan.wklysched -%}
+{%- comment -%}
+  Weekly Schedule (Tentative) for one offering.
+
+  Reads the DERIVED node['wklysched'] built by _plugins/weekly_schedule_generator.rb
+  (semester weeks[] + this offering's meetings + plan.yml themes/overrides). No
+  parsing or date logic here — this is a pure renderer. Meeting links are baked
+  as m.url so they always match the generated Mtg pages.
+{%- endcomment -%}
+{%- assign wklysched = site.data.teaching[jcrs_id][crs_sem].wklysched -%}
+{%- if wklysched -%}
 <table class="table table-striped-columns">
   <thead>
-    <th>Week of</th>
-    <th>Meetings</th>
-    <th>Topics</th>
-    <th>Items of Note</th>
+    <tr>
+      <th scope="col">Week of</th>
+      <th scope="col">Meetings</th>
+      <th scope="col">Topics</th>
+      <th scope="col">Items of Note</th>
+    </tr>
   </thead>
   <tbody>
-  {%- for w in wklyplans -%}
+  {%- for w in wklysched -%}
     <tr>
-      <td>{{ w.weekof }}</td>
+      <td class="text-nowrap">{{ w.weekof | date: "%b&nbsp;%-d,&nbsp;%Y" }}</td>
       <td>
-      {%- for mw in w.mtgs -%}
-        {%- capture murl -%}teaching/{{ crs_id }}/{{crs_sem }}/{{ mw }}{%- endcapture -%}
-        <a href="{{ murl | absolute_url }}" target="_blank" role="button" type="button" class="m-2 btn btn-primary">
-          {{ mw | split: "_" | first }}
+      {%- for m in w.mtgs -%}
+        <a href="{{ m.url | relative_url }}" role="button"
+           class="m-1 btn btn-sm btn-primary"
+           {%- if m.theme %} title="{{ m.theme }}"{% endif %}>
+          {{ m.num }}
         </a>
       {%- endfor -%}
       </td>
@@ -22,5 +34,6 @@
       <td>{{ w.noteworth | markdownify }}</td>
     </tr>
   {%- endfor -%}
-</tbody>
+  </tbody>
 </table>
+{%- endif -%}
