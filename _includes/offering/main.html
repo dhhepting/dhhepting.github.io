@@ -194,11 +194,13 @@
             Syllabus (pdf)
           </a>
         </li>
+        {%- assign off = site.data.teaching[jcrs_id][crs_sem].offering -%}
+        {%- if off.mdays -%}
         <li>
-          <a href="https://urcourses.uregina.ca/course/view.php?id={{ crs_urc }}" target="_blank">
-            ICS        
-          </a>
+          {%- capture ics_url -%}/teaching/{{ jcrs_id }}/{{ crs_sem }}/meetings.ics{%- endcapture -%}
+          <a href="{{ ics_url | relative_url }}">Course calendar (.ics)</a>
         </li>
+        {%- endif -%}
         <li>
           <a href="https://urcourses.uregina.ca/course/view.php?id={{ crs_urc }}" target="_blank">
             UR Courses

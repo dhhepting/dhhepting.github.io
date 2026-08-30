@@ -3,19 +3,17 @@
 # _plugins/offerings_index_generator.rb
 #
 # Builds site.data.teaching.offerings by scanning every
-# _data/teaching/<crs_id>/<crs_sem>/offering.yml — one small, complete file per
-# offering, instead of a row in an ever-widening spreadsheet (the misaligned
-# offerings.csv header that started this whole thread).
+# _data/teaching/<crs_id>/<crs_sem>/ offering directory. Discovery now
+# enumerates the offering DIRECTORIES (course / 6-digit-semester) rather than
+# globbing offering.yml directly, so a directory that is missing its
+# offering.yml is reported instead of silently vanishing from the index.
 #
-# Referential integrity (course id + semester known) is checked here against
-# the course/semester lists, which now live in YAML and are auto-loaded by
-# Jekyll into site.data.teaching.all — so this reads site.data directly and
-# needs no file path or _config.yml key. The offline lib/teaching_data_validator
-# reads the same _data/teaching/all/*.yml files directly for the pre-build check;
-# one source, two access mechanisms, no CSV.
+# Referential integrity (course id + semester known) is checked against the
+# course/semester lists in site.data.teaching.all, so this reads site.data
+# directly and needs no file path or _config.yml key.
 #
-# priority :highest — must run before MeetingGridGenerator, which reads
-# site.data.teaching.offerings and needs it already populated.
+# priority :highest — must run before generators that read
+# site.data.teaching.offerings.
 
 require 'yaml'
 require 'date'
@@ -25,23 +23,43 @@ class OfferingsIndexError < StandardError; end
 class OfferingsIndexGenerator < Jekyll::Generator
   priority :highest
 
+  # A directory is an offering iff its own name is a 6-digit semester code.
+  # This is what distinguishes CS-280/202610 from the all/ and curricula/
+  # trees (whose second level is never a 6-digit code).
+  SEMESTER_RE = /\A\d{6}\z/
+
   def generate(site)
     all = site.data.dig('teaching', 'all') || {}
     known_course_ids = ref_ids(all['courses'],   'id',       'courses.yml')
     known_semesters  = ref_ids(all['semesters'], 'semester', 'semesters.yml')
 
     offerings = []
-    Dir.glob(File.join(site.source, '_data/teaching/*/*/offering.yml')).sort.each do |path|
-      # Path shape: .../_data/teaching/<crs_id>/<crs_sem>/offering.yml
-      crs_sem = File.basename(File.dirname(path))
-      crs_id  = File.basename(File.dirname(File.dirname(path)))
-      label   = "#{crs_id}/#{crs_sem}"
+    missing   = 0
+
+    Dir.glob(File.join(site.source, '_data/teaching/*/*')).sort.each do |dir|
+      next unless File.directory?(dir)
+
+      crs_sem = File.basename(dir)
+      crs_id  = File.basename(File.dirname(dir))
+      next unless crs_sem.match?(SEMESTER_RE) # only <course>/<NNNNNN>/ dirs
+
+      label = "#{crs_id}/#{crs_sem}"
+      path  = File.join(dir, 'offering.yml')
+
+      unless File.file?(path)
+        missing += 1
+        Jekyll.logger.warn 'offerings:',
+          "no offering.yml found for #{label} — directory skipped (not indexed)"
+        next
+      end
 
       unless known_course_ids.include?(crs_id)
-        raise OfferingsIndexError, "#{label}: course id #{crs_id.inspect} not found in _data/teaching/all/courses.yml"
+        raise OfferingsIndexError,
+          "#{label}: course id #{crs_id.inspect} not found in _data/teaching/all/courses.yml"
       end
       unless known_semesters.include?(crs_sem)
-        raise OfferingsIndexError, "#{label}: semester #{crs_sem.inspect} not found in _data/teaching/all/semesters.yml"
+        raise OfferingsIndexError,
+          "#{label}: semester #{crs_sem.inspect} not found in _data/teaching/all/semesters.yml"
       end
 
       data = YAML.safe_load_file(path, permitted_classes: [Date, Time]) || {}
@@ -50,6 +68,10 @@ class OfferingsIndexGenerator < Jekyll::Generator
 
     site.data['teaching'] ||= {}
     site.data['teaching']['offerings'] = offerings
+
+    summary = "indexed #{offerings.size} offering(s)"
+    summary += "; #{missing} directory(ies) missing offering.yml" if missing.positive?
+    Jekyll.logger.info 'offerings:', summary
   end
 
   private
