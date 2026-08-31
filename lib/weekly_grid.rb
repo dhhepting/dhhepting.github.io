@@ -93,13 +93,34 @@ module WeeklyGrid
             "collide):\n  - " + collisions.join("\n  - ")
     end
 
+    # Render-ready rows: merge each day's vertical run of the same block (or of
+    # free cells) into one cell with a rowspan, so the template emits a <td> once
+    # per block and skips the covered slots. This is the "no computation in
+    # Liquid" line — the template only checks render? and reads rowspan.
     rows = ruler.map do |s|
-      { "label" => s["label"],
-        "start" => s["start"],
-        "end"   => s["end"],
-        "cells" => DAYS.each_with_object({}) { |d, h| h[d] = cells[d][s["key"]] } }
+      { "label" => s["label"], "start" => s["start"], "end" => s["end"], "cells" => {} }
     end
+
+    DAYS.each do |day|
+      i = 0
+      n = ruler.size
+      while i < n
+        b = cells[day][ruler[i]["key"]]
+        j = i
+        j += 1 while j + 1 < n && same_block?(cells[day][ruler[j + 1]["key"]], b)
+        rows[i]["cells"][day] = { "render" => true, "rowspan" => (j - i + 1), "block" => b }
+        ((i + 1)..j).each { |k| rows[k]["cells"][day] = { "render" => false } }
+        i = j + 1
+      end
+    end
+
     { "days" => DAYS, "slots" => ruler, "rows" => rows }
+  end
+
+  # Two cells belong to the same run when they hold the same block object, or are
+  # both free (nil). Distinct blocks that merely share a category do not merge.
+  def same_block?(other, base)
+    base.nil? ? other.nil? : other.equal?(base)
   end
 
   def describe(b)

@@ -1,0 +1,41 @@
+// _sass/_weekly-grid.scss — personal weekly grid (calendar step 5, phase 3).
+//
+// Colours live in CSS variables so you can reconcile them with your existing
+// schedule palette (or per-theme) without touching the include. The defaults
+// below are placeholders — swap in the four colours your old schedule.html used.
+//
+// @import this from your main stylesheet:  @import "weekly-grid";
+
+.wk-grid {
+  // --- category colours, from your style.css (.C/.O/.M/.B, 0.75 alpha over bg-image) ---
+  --wk-class:    rgba(95, 158, 160, 0.75); // .C cadetblue
+  --wk-office:   rgba(128, 128, 0, 0.75);  // .O olive
+  --wk-research: rgba(128, 64, 0, 0.75);   // .M brown  (your "meetings")
+  --wk-reserved: rgba(245, 245, 220, 0.75); // .B beige (your "busy")
+
+  // --- the "default-busy" decision, as a one-line toggle ---
+  // Free cells default to transparent (unclaimed time reads as free). Note beige
+  // is now spoken for by `reserved`, so if you turn the wash on, give it its own
+  // shade rather than reusing beige, or the two won't be distinguishable.
+  --wk-busy: rgba(220, 220, 220, 0.6);
+  --wk-free: transparent;      // <- change to var(--wk-busy) to turn on the wash
+
+  table { table-layout: fixed; }
+  .wk-time { white-space: nowrap; width: 5.5rem; font-weight: 600; }
+  td { vertical-align: middle; }
+
+  .wk-class    { background: var(--wk-class); }
+  .wk-office   { background: var(--wk-office); }
+  .wk-research { background: var(--wk-research); }
+  .wk-reserved { background: var(--wk-reserved); }
+  .wk-free     { background: var(--wk-free); }
+
+  .wk-label { display: block; font-weight: 600; line-height: 1.1; }
+  .wk-sub   { display: block; font-size: .78em; opacity: .75; }
+
+  .wk-legend { margin-top: .35rem; }
+  .wk-swatch {
+    display: inline-block; width: .9em; height: .9em; border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, .15); vertical-align: -.1em; margin-right: .3em;
+  }
+}

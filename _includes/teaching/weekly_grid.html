@@ -1,0 +1,74 @@
+{%- comment -%}
+  _includes/teaching/weekly_grid.html — personal weekly grid (calendar step 5, phase 3).
+
+  Renders entry.weekly_grid, built by _plugins/weekly_grid_generator.rb. All the
+  computation (slot ruler, painting, rowspans, collision guard) already happened
+  in lib/weekly_grid.rb; this template only checks presence and reads values — no
+  parsing, no arithmetic.
+
+  Usage on the schedule page:  {% include teaching/weekly_grid.html sem=page.sem %}
+
+  Privacy: class and office cells show detail; research/reserved show colour only,
+  with a screen-reader label so a coloured box isn't blank to assistive tech.
+{%- endcomment -%}
+{%- assign want = include.sem | append: "" -%}{%- comment -%} codes load as Integer; stringify to match {%- endcomment -%}
+{%- for e in site.data.teaching.all.semesters -%}
+  {%- assign ecode = e.semester | append: "" -%}
+  {%- if ecode == want -%}{%- assign entry = e -%}{%- endif -%}
+{%- endfor -%}
+{%- assign grid = entry.weekly_grid -%}
+{%- if grid -%}
+<div class="table-responsive wk-grid">
+  <table class="table table-bordered align-middle text-center mb-2">
+    <thead>
+      <tr>
+        <th scope="col" class="wk-time">Time</th>
+        {%- for day in grid.days -%}<th scope="col">{{ day }}</th>{%- endfor -%}
+      </tr>
+    </thead>
+    <tbody>
+      {%- for row in grid.rows -%}
+      <tr>
+        <th scope="row" class="wk-time">{{ row.label }}</th>
+        {%- for day in grid.days -%}
+          {%- assign cell = row.cells[day] -%}
+          {%- if cell.render -%}
+            {%- assign b = cell.block -%}
+            {%- if b -%}
+              {%- if b.category == "class" -%}
+                <td class="wk-class" rowspan="{{ cell.rowspan }}">
+                  <span class="wk-label">{{ b.meta.course }}</span>
+                  {%- if b.meta.location %}<span class="wk-sub">{{ b.meta.location }}</span>{% endif -%}
+                </td>
+              {%- elsif b.category == "office" -%}
+                <td class="wk-office" rowspan="{{ cell.rowspan }}">
+                  {%- if entry.office_zoom -%}<a href="{{ entry.office_zoom }}">Office hours</a>
+                  {%- else -%}<span class="wk-label">Office hours</span>{%- endif -%}
+                </td>
+              {%- elsif b.category == "research" -%}
+                <td class="wk-research" rowspan="{{ cell.rowspan }}" aria-label="Research meeting time">
+                  <span class="visually-hidden">Research</span>
+                </td>
+              {%- elsif b.category == "reserved" -%}
+                <td class="wk-reserved" rowspan="{{ cell.rowspan }}" aria-label="Reserved time">
+                  <span class="visually-hidden">Reserved</span>
+                </td>
+              {%- endif -%}
+            {%- else -%}
+              <td class="wk-free" rowspan="{{ cell.rowspan }}"></td>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </tr>
+      {%- endfor -%}
+    </tbody>
+  </table>
+
+  <ul class="wk-legend list-inline small text-muted mb-0">
+    <li class="list-inline-item"><span class="wk-swatch wk-class"></span>Class</li>
+    <li class="list-inline-item"><span class="wk-swatch wk-office"></span>Office hours</li>
+    <li class="list-inline-item"><span class="wk-swatch wk-research"></span>Research</li>
+    <li class="list-inline-item"><span class="wk-swatch wk-reserved"></span>Reserved</li>
+  </ul>
+</div>
+{%- endif -%}

@@ -91,6 +91,7 @@ class WeeklyScheduleGenerator < Jekyll::Generator
             'week'      => n,
             'weekof'    => wk['weekof'],
             'mtgs'      => mtgs,
+            'mtgs_by_day' => bucket_by_day(mtgs, offering['mdays'], course, sem),
             'topics'    => topics,
             'noteworth' => noteworth
           }
@@ -100,6 +101,25 @@ class WeeklyScheduleGenerator < Jekyll::Generator
   end
 
   private
+
+  # Split one week's meetings into a column per meeting day, keyed by the
+  # offering's mdays and preserving their order via empty arrays. Fail loud if a
+  # meeting somehow lands on a weekday not in mdays (can't happen while dates come
+  # from MeetingCalendar.meeting_dates(mdays), but the guard documents the
+  # invariant instead of silently dropping the link).
+  def bucket_by_day(mtgs, mdays, course, sem)
+    days   = Array(mdays)
+    by_day = days.each_with_object({}) { |d, h| h[d] = [] }
+    mtgs.each do |m|
+      wd = m['weekday']
+      unless by_day.key?(wd)
+        raise "weekly schedule: #{course}/#{sem} meeting #{m['num']} falls on " \
+              "#{wd}, not in offering mdays #{days.inspect}"
+      end
+      by_day[wd] << m
+    end
+    by_day
+  end
 
   def present(v) = (v.nil? || v.to_s.strip.empty?) ? nil : v
 
