@@ -1,6 +1,8 @@
 # [dhhepting.github.io](https://dhhepting.github.io)
 
-[![Build Status](https://travis-ci.org/dhhepting/dhhepting.github.io.svg?branch=master)](https://travis-ci.org/dhhepting/dhhepting.github.io)
+# [www2.cs.uregina.ca/~hepting/](https://www2.cs.uregina.ca/~hepting/)
+
+[![Deploy to U of R server](https://github.com/dhhepting/dhhepting.github.io/actions/workflows/deploy-uregina.yml/badge.svg?branch=upgrade-2026)](https://github.com/dhhepting/dhhepting.github.io/actions/workflows/deploy-uregina.yml)
 
 My personal website, built with Jekyll.
 
