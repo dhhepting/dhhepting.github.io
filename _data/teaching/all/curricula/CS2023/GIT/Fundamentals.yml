@@ -1,0 +1,131 @@
+# _data/teaching/curricula/CS2023/GIT/Fundamentals.yml
+#
+# Knowledge Unit: GIT-Fundamentals (Fundamental Concepts).
+#
+# The outline numbers you see in the ACM PDF (1, a, i) are NOT stored here —
+# they are rendered from list position and nesting depth (arabic / lower-alpha /
+# lower-roman). Author the tree; compute the numbers. What IS authored:
+#   * a stable `id` on each top-level topic and each outcome (what tlo.yml
+#     selects via spectop / speclo — survives even if ACM errata renumber);
+#   * `core: CS | KA`   (CS2023 coreness tier; replaces the old `import`);
+#   * `see_also:`       (cross-references, as KA-KU tokens);
+#   * `items:`          (nested sub-topics — recursive; no id, they are detail).
+# Numbering is continuous across the CS/KA tiers (topics 1..11, outcomes 1..14),
+# so the renderer numbers by position and just prints a tier divider.
+
+ku: GIT-Fundamentals
+title: Fundamental Concepts
+description: >
+  For nearly every computer scientist and software developer, an understanding
+  of how humans interact with machines is essential.
+
+topics:
+  - id: uses
+    core: CS
+    text: "Uses of computer graphics and interactive techniques and their potential risks and abuses."
+    items:
+      - text: "Entertainment, business, and scientific applications: e.g., visual effects, generative imagery, computer vision, machine learning, user interfaces, video editing, games and game engines, computer-aided design and manufacturing, data visualization, and virtual/augmented/mixed reality"
+      - text: "Intellectual property, deep fakes, facial recognition, privacy"
+        see_also: [SEP-DEIA, SEP-Privacy, SEP-IP, SEP-Professional-Ethics]
+  - id: output
+    core: CS
+    text: "Graphic output"
+    items:
+      - text: "Displays (e.g., LCD)"
+      - text: "Printers"
+      - text: "Analog film"
+      - text: "Concepts"
+        items:
+          - text: "Resolution (e.g., pixels, dots)"
+          - text: "Aspect ratio"
+          - text: "Frame rate"
+  - id: vision
+    core: CS
+    text: "Human vision system"
+    items:
+      - text: "Tristimulus reception (RGB)"
+      - text: "Eye as a camera (projection)"
+      - text: "Persistence of vision (frame rate, motion blur)"
+      - text: "Contrast (detection, Mach banding, dithering/aliasing)"
+      - text: "Non-linear response (dynamic range, tone mapping)"
+      - text: "Binocular vision (stereo)"
+      - text: "Accessibility (color deficiency, strobing, monocular vision, etc.)"
+        see_also: [SEP-DEIA, HCI-User]
+  - id: formats
+    core: CS
+    text: "Standard image formats"
+    items:
+      - text: "Raster"
+        items:
+          - text: "Lossless (e.g., TIF)"
+          - text: "Lossy (e.g., JPG, GIF, etc.)"
+      - text: "Vector (e.g., SVG, Adobe Illustrator)"
+  - id: digitization
+    core: CS
+    text: "Digitization of analog data"
+    items:
+      - text: "Rasterization"
+      - text: "Resolution"
+      - text: "Sampling and quantization"
+  - id: color-models
+    core: CS
+    text: "Color models: additive (RGB), subtractive (CMYK), and color perception (HSV)"
+  - id: storage-tradeoffs
+    core: CS
+    text: "Tradeoffs between storing image data and re-computing image data"
+  - id: spatialization
+    core: CS
+    text: "Spatialization: coordinate systems, absolute and relative positioning"
+  - id: animation
+    core: CS
+    text: "Animation as a sequence of still images"
+  - id: applied-interactive
+    core: KA
+    text: "Applied interactive graphics (e.g., processing, python)"
+  - id: display-characteristics
+    core: KA
+    text: "Display characteristics (protocols and ports)"
+
+outcomes:
+  - id: o01
+    core: CS
+    text: "Identify common uses of digital presentation to humans (e.g., computer graphics, sound)."
+  - id: o02
+    core: CS
+    text: "Describe how analog signals can be reasonably represented by discrete samples, for example, how images can be represented by pixels."
+  - id: o03
+    core: CS
+    text: "Compute the memory requirement for storing a color image given its resolution."
+  - id: o04
+    core: CS
+    text: "Create a graphic depicting how the limits of human perception affect choices about the digital representation of analog signals."
+  - id: o05
+    core: CS
+    text: "Indicate when and why you should use each of the following common file formats: JPG, PNG, MP3, MP4, and GIF."
+  - id: o06
+    core: CS
+    text: "Describe color models and their use in graphics display devices."
+  - id: o07
+    core: CS
+    text: "Compute the memory requirements for a multi-second movie (lasting n seconds) displaying at a specific framerate (f frames per second) at a specified resolution (r pixels per frame)."
+  - id: o08
+    core: CS
+    text: "Compare and contrast digital video to analog video."
+  - id: o09
+    core: CS
+    text: "Describe the basic process of producing continuous motion from a sequence of discrete frames (sometimes called \u201cflicker fusion\u201d)."
+  - id: o10
+    core: CS
+    text: "Describe a possible visual misrepresentation that could result from digitally sampling an analog world."
+  - id: o11
+    core: CS
+    text: "Compute memory space requirements based on resolution and color coding."
+  - id: o12
+    core: CS
+    text: "Compute time requirements based on refresh rates and rasterization techniques."
+  - id: o13
+    core: KA
+    text: "Design a user interface and an alternative for persons with color perception deficiency."
+  - id: o14
+    core: KA
+    text: "Construct a simple graphical user interface using a graphics library."

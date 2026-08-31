@@ -75,6 +75,9 @@ require_relative "lib/semester_validator"        # SemesterDataValidator (new)
 require_relative "lib/teaching_data_validator"   # existing
 require_relative "lib/offering_index_validator"  # existing
 require_relative "lib/courses_validator"         # new
+require_relative "lib/busy_block_validator"
+sems = Psych.safe_load_file("_data/teaching/all/semesters.yml", permitted_classes: [Date])
+BusyBlockValidator.validate!(sems)   # raises with all offending entries listed
 
 namespace :structure do
   # One list = the single place to register structural validators. Add future
