@@ -1,0 +1,12 @@
+# _data/teaching/CS-315/202630/tlo.yml
+# Offering-level TLO selection. Declares the standard and, per KA/KU, what this
+# offering covers. A selector value is the literal `all` (whole set) or a YAML
+# list of canonical ids (subset; the rest render greyed). Omitting a selector
+# key means `all`. Selectors use the SAME words as the canonical file:
+# `topics` and `learning_outcomes`. Meeting ⊆ offering ⊆ canonical is enforced
+# at build time by lib/tlo_validator.rb.
+standard: CS2023
+kaku:
+  GIT/Fundamentals:
+    topics: all
+    learning_outcomes: all
