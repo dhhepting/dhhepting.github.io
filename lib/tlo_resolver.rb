@@ -147,6 +147,98 @@ module TLOResolver
     end
   end
 
+  # ---- flatten for rendering ---------------------------------------------
+
+  # Pre-order flatten of a resolved list (topics or learning_outcomes) into a
+  # flat array of rows the Liquid renderer walks with a single loop — no
+  # recursion, no depth cap. Row kinds:
+  #   { "kind" => "tier_break" }                          <- CS->KA divider
+  #   { "number","text","depth","covered","see_also",... } <- content row
+  # depth 0 = top-level, 1 = items, 2 = items-of-items, ...
+  # Nested items inherit their top-level entry's `covered` (grey the block).
+  #
+  # covered_only:
+  #   false (offering view) — show the whole KU; non-covered entries are greyed.
+  #   true  (meeting view)  — show only covered entries; nothing greyed.
+  # The CS->KA divider is recomputed over the rows actually shown, so it appears
+  # only when both a CS-core and a KA-core entry are present.
+  def flatten_for_render(entries, covered_only: false)
+    shown = Array(entries)
+    shown = shown.select { |e| e["covered"] } if covered_only
+
+    rows = []
+    cs_shown = false
+    ka_started = false
+    shown.each do |e|
+      if e["core"] == "KA" && !ka_started && cs_shown
+        rows << { "kind" => "tier_break" }
+      end
+      ka_started = true if e["core"] == "KA"
+      cs_shown = true if e["core"] == "CS"
+      rows << {
+        "kind"     => "row",
+        "number"   => e["number"],
+        "text"     => e["text"],
+        "depth"    => 0,
+        "covered"  => e["covered"],
+        "core"     => e["core"],
+        "id"       => e["id"],
+        "see_also" => nil
+      }
+      flatten_items(e["items"], 1, e["covered"], rows)
+    end
+    rows
+  end
+
+  def flatten_items(items, depth, covered, rows)
+    Array(items).each do |it|
+      rows << {
+        "kind"     => "row",
+        "number"   => it["number"],
+        "text"     => it["text"],
+        "depth"    => depth,
+        "covered"  => covered,
+        "see_also" => it["see_also"]
+      }
+      flatten_items(it["items"], depth + 1, covered, rows)
+    end
+  end
+
+  # ---- meeting BOK resolution (shared by both meeting systems) ------------
+
+  # Resolve a meeting's `BOK:` list against the canonical curriculum. Callers
+  # differ only in HOW they find a KU (System A reads site.data; System B reads
+  # disk), so they pass a lookup proc  ->(ka, ku) { canonical_ku_hash_or_nil }.
+  # Returns one render-ready unit per BOK entry, with covered-only rows (a
+  # meeting shows what it covers, not the whole KU greyed).
+  #
+  #   bok_list: [ { "kaku"=>"GIT/Fundamentals",
+  #                 "topics"=>[...]|"all", "learning_outcomes"=>[...]|"all" }, ... ]
+  def resolve_meeting_bok(bok_list, &canonical_lookup)
+    Array(bok_list).map do |entry|
+      kaku = entry["kaku"]
+      ka, ku = kaku.to_s.split("/", 2)
+      if ka.nil? || ku.nil? || ku.empty?
+        raise ArgumentError, "meeting BOK: kaku #{kaku.inspect} is not \"KA/KU\""
+      end
+      canon = canonical_lookup.call(ka, ku)
+      raise ArgumentError, "meeting BOK: no canonical data for #{kaku}" if canon.nil?
+
+      t_sel = entry.key?("topics") ? entry["topics"] : "all"
+      l_sel = entry.key?("learning_outcomes") ? entry["learning_outcomes"] : "all"
+      res = resolve(canon, topics: t_sel, learning_outcomes: l_sel)
+
+      {
+        "kaku"          => kaku,
+        "ka"            => ka,
+        "ku"            => ku,
+        "ku_title"      => res["title"] || ku,
+        "topics_rows"   => flatten_for_render(res["topics"], covered_only: true),
+        "outcomes_rows" => flatten_for_render(res["learning_outcomes"], covered_only: true)
+      }
+    end
+  end
+
   # ---- public entry point -------------------------------------------------
 
   def resolve(ku_data, topics: :all, learning_outcomes: :all)

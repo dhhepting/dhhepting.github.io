@@ -7,39 +7,34 @@
 # no wikipage_id -> no wiki link. Nothing dangling can ship.
 #
 # STABLE IDENTITY: the meeting NUMBER is the URL. The display NAME is the
-# authored `theme` and may change freely without moving the page. An explicit
-# permalink is set so the URL never drifts with global permalink config.
+# authored `theme` and may change freely without moving the page.
 #
-# Meeting DATES are a pure function of the semester calendar + the offering's
-# meeting days, now owned by lib/meeting_calendar.rb and SHARED with the
-# semester-schedule overlay so the two never recompute the calendar differently.
+# TLO/BOK: if a meeting authors a `BOK:` block in plan.yml, it is resolved here
+# (via the shared TLOResolver) into covered-only render rows and handed to the
+# page as `bok`, so _layouts/meeting.html can show this meeting's slice of the
+# Body of Knowledge. Resolution is the SAME engine the offering section uses.
 
 require 'date'
 require 'set'
 require_relative '../lib/meeting_calendar'
+require_relative '../lib/tlo_resolver'
 
 module Teaching
   WIKI_BASE = 'https://urcourses.uregina.ca/mod/wiki/view.php?pageid='
 
   module_function
 
-  # Candidate key spellings for each semester field. Your migrated
-  # semesters.yml may use any of these; the first present (non-nil) wins.
-  # Once you settle on one spelling, you can trim these to the single key.
   SEM_KEYS = {
     start:    %w[term-start term_start start first-day],
     finish:   %w[class-end  class_end  end  last-day classes-end],
     no_class: %w[no-class-days no_class_days no-class holidays]
   }.freeze
 
-  # First non-nil value among the given keys.
   def dig_first(hash, keys)
     keys.each { |k| v = hash[k]; return v unless v.nil? }
     nil
   end
 
-  # Field names to look for as a meeting's explicit number in plan.yml.
-  # Trim to your single real key once confirmed.
   MEETING_NUM_KEYS = %w[meeting number num n mtg].freeze
 
   def meeting_number(item)
@@ -47,11 +42,6 @@ module Teaching
     nil
   end
 
-  # plan.yml authors `meetings:` as a sequence of explicitly-numbered
-  # mappings (also accepts a number-keyed mapping). Normalize to a Hash
-  # keyed by Integer meeting number. Meetings are keyed by their authored
-  # number, never by position, so order and gaps in the list don't matter.
-  # An entry with no recognizable number is a build error, not a guess.
   def index_meetings(raw)
     case raw
     when Hash
@@ -88,8 +78,6 @@ class MeetingPageGenerator < Jekyll::Generator
   safe true
   priority :normal
 
-  # Slug prefix for generated meeting pages. Change here to change the
-  # convention everywhere at once (URL becomes /.../<PREFIX>NN/).
   MEETING_SLUG = 'Mtg'
 
   def generate(site)
@@ -142,6 +130,12 @@ class MeetingPageGenerator < Jekyll::Generator
         authored = Teaching.index_meetings(node.dig('plan', 'meetings'))
         dir      = File.join('teaching', course.to_s, sem.to_s)
 
+        # Canonical lookup for BOK resolution: the offering's standard scopes
+        # which curriculum to read from the shared `all` namespace.
+        std    = node.dig('tlo', 'standard')
+        std_curr = std && site.data.dig('teaching', 'all', 'curricula', std)
+        bok_lookup = ->(ka, ku) { std_curr && std_curr.dig(ka, ku) }
+
         dates.each_with_index do |d, i|
           n     = i + 1
           nn    = format('%02d', n)
@@ -150,8 +144,16 @@ class MeetingPageGenerator < Jekyll::Generator
           entry = authored[n]
           entry = {} unless entry.is_a?(Hash)
           wid   = entry['wikipage_id']
-          # authored display name: plan.yml uses `theme` (accept legacy `topic`).
           theme = entry['theme'] || entry['topic']
+
+          bok = nil
+          if entry['BOK'] && !entry['BOK'].empty?
+            if std_curr.nil?
+              raise "meetings: #{course}/#{sem} Mtg #{nn} authors BOK but the " \
+                    "offering has no tlo.yml `standard` / curricula to resolve against"
+            end
+            bok = TLOResolver.resolve_meeting_bok(entry['BOK'], &bok_lookup)
+          end
 
           site.pages << MeetingPage.new(site, site.source, dir,
             'meeting'     => nn,
@@ -166,10 +168,10 @@ class MeetingPageGenerator < Jekyll::Generator
             'total_mtgs'  => total,
             'total_wks'   => totwks,
             'theme'       => theme,
-            'topic'       => theme,   # keep `topic` populated for any template still reading it
+            'topic'       => theme,
+            'bok'         => bok,
             'wikipage_id' => wid,
             'wiki_url'    => (wid ? "#{Teaching::WIKI_BASE}#{wid}" : nil),
-            # display name: authored theme if present, else the date.
             'title'       => (theme || "Meeting #{nn} — #{d.strftime('%a %d %b %Y')}"))
         end
       end

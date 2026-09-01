@@ -19,8 +19,17 @@
 {%- if gen.BOK %}
 == Body of Knowledge ==
 {%- for b in gen.BOK %}
-* {{ b.kaku }}{% if b.spectop %}: {{ b.spectop }}{% endif %}
-{%- if b.outcomes %} — {{ b.outcomes | join: ", " }}{% endif %}
+* {{ b.ka }} / {{ b.ku_title }}
+{%- assign btops = "" %}
+{%- for r in b.topics_rows %}{% if r.kind == "row" and r.depth == 0 %}{% assign btops = btops | append: r.text | append: "; " %}{% endif %}{% endfor %}
+{%- if btops != "" %}
+** Topics: {{ btops | strip }}
+{%- endif %}
+{%- assign bouts = "" %}
+{%- for r in b.outcomes_rows %}{% if r.kind == "row" and r.depth == 0 %}{% assign bouts = bouts | append: r.text | append: "; " %}{% endif %}{% endfor %}
+{%- if bouts != "" %}
+** Outcomes: {{ bouts | strip }}
+{%- endif %}
 {%- endfor %}
 {%- endif %}
 == Administration ==
@@ -49,12 +58,17 @@
   {%- if gen.BOK %}
   <div class="mb-3">
     <h3>Body of Knowledge</h3>
-    <ul>
-      {%- for b in gen.BOK %}
-      <li><strong>{{ b.kaku }}</strong>{% if b.spectop %}: {{ b.spectop }}{% endif %}
-        {%- if b.outcomes %} — {{ b.outcomes | join: ", " }}{% endif %}</li>
-      {%- endfor %}
-    </ul>
+    {%- for b in gen.BOK %}
+    <h4>{{ b.ka }} / {{ b.ku_title }}</h4>
+    <div class="row">
+      <div class="col-md-6">
+        {%- include offering/tlo-column.html heading="Topics" rows=b.topics_rows -%}
+      </div>
+      <div class="col-md-6">
+        {%- include offering/tlo-column.html heading="Learning Outcomes" rows=b.outcomes_rows -%}
+      </div>
+    </div>
+    {%- endfor %}
   </div>
   {%- endif %}
 

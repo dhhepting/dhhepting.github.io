@@ -20,13 +20,17 @@
 
 require 'date'
 require 'csv'
+require_relative 'tlo_resolver'
 
 module MeetingPageFields
   module_function
 
   # meeting_plan is the per-meeting plan.yml row: {'meeting'=>N, 'theme'=>...,
-  # 'BOK'=>{...}, and whatever else you add to plan.yml's per-meeting hash}.
-  def compute(crs_id, crs_sem, offering, meetings, index, meeting_plan, tlo = {}, photos = [])
+  # 'BOK'=>[...], and whatever else you add to plan.yml's per-meeting hash}.
+  # `standard` + `canonical_lookup` come from the caller so BOK resolves through
+  # the shared TLOResolver (same engine as the offering section and MtgNN page).
+  def compute(crs_id, crs_sem, offering, meetings, index, meeting_plan,
+              standard = nil, canonical_lookup = nil, photos = [])
     mtg = meetings[index]
     date = parse_date(mtg['date'])
     has_photos = !(photos.nil? || photos.empty?)
@@ -37,7 +41,7 @@ module MeetingPageFields
       'date' => mtg['date'],
       'weekday' => date.strftime('%A'),
       'theme' => meeting_plan['theme'],
-      'BOK' => resolve_bok(meeting_plan['BOK'], tlo),
+      'BOK' => resolve_bok(meeting_plan['BOK'], standard, canonical_lookup),
       'photos' => has_photos ? photos : nil,
       # Path only (no baseurl) — the layout applies `| relative_url` so
       # this resolves correctly regardless of which deploy target
@@ -76,41 +80,28 @@ module MeetingPageFields
     (plan['meetings'] || []).each_with_object({}) { |m, h| h[m['meeting']] = m }
   end
 
-  # BOK entries reference a tlo.yml key via `kaku` ("knowledge area,
-  # knowledge unit", e.g. "SP/01-Social-Context") — this resolves each
-  # meeting's BOK list against that course's tlo.yml, merging the TLO's
-  # own spectop/speclo with any meeting-specific outcomes/topics from
-  # plan.yml.
+  # Resolve a meeting's BOK list into render-ready units via the shared
+  # TLOResolver — the SAME engine the offering section and the public MtgNN page
+  # use, so meeting ⊆ offering ⊆ canonical holds and there is no second,
+  # divergent resolution path. Returns nil when there's no BOK to show.
   #
-  # UNVERIFIED SCHEMA: every real example we've seen (plan.yml for
-  # CS-280/202110) has kaku/outcomes/topics all null, so this shape is
-  # reconstructed from field naming alone, not confirmed against a
-  # populated example. Treat as a first draft to correct once you have
-  # a real filled-in BOK entry to check it against.
-  def resolve_bok(bok_list, tlo)
+  # `standard` scopes which curriculum to read; `canonical_lookup` is
+  # ->(ka, ku){ canonical_ku_hash_or_nil }, supplied by the caller (it knows
+  # whether to read site.data or disk).
+  def resolve_bok(bok_list, standard, canonical_lookup)
     return nil if bok_list.nil? || bok_list.empty?
+    return nil if canonical_lookup.nil?
 
-    resolved = bok_list.filter_map do |entry|
-      kaku = entry['kaku']
-      tlo_entry = kaku && tlo[kaku]
-
-      next nil if kaku.nil? && entry['outcomes'].nil? && entry['topics'].nil?
-
-      {
-        'kaku' => kaku,
-        'spectop' => tlo_entry && tlo_entry['spectop'],
-        'speclo' => tlo_entry && tlo_entry['speclo'],
-        'outcomes' => entry['outcomes'],
-        'topics' => entry['topics'],
-      }
-    end
-    resolved.empty? ? nil : resolved
+    units = TLOResolver.resolve_meeting_bok(bok_list, &canonical_lookup)
+    units.empty? ? nil : units
   end
 
-  def load_tlo(tlo_path)
-    return {} unless File.exist?(tlo_path)
+  # The offering's TLO standard (e.g. "CS2023") from tlo.yml — scopes which
+  # curriculum BOK resolves against. Returns nil if absent.
+  def load_standard(tlo_path)
+    return nil unless File.exist?(tlo_path)
 
-    YAML.load_file(tlo_path) || {}
+    (YAML.load_file(tlo_path) || {})['standard']
   end
 
   # media.csv is written entirely by sharemedia.py (Dropbox share-link

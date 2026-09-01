@@ -165,9 +165,9 @@ class TLOValidator
 
     meetings.each do |mtg|
       mnum = mtg["meeting"] || mtg["mtg"] || "?"
-      Array(mtg["tlo"]).each do |entry|
+      Array(mtg["BOK"]).each do |entry|
         unless entry.is_a?(Hash) && entry["kaku"]
-          add("#{label}/plan.yml meeting #{mnum}: tlo entry missing `kaku`")
+          add("#{label}/plan.yml meeting #{mnum}: BOK entry missing `kaku`")
           next
         end
         kaku_key = entry["kaku"]

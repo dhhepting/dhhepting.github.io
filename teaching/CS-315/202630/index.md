@@ -10,10 +10,10 @@ layout: bg-image
   mtgs=0
   sched=1
   wkly=1
-  code=1
+  code=0
   links=0
-  asgns=1
-  topics=0
-  exams=1
+  asgns=0
+  topics=1
+  exams=0
   feedback=0
 -%}

@@ -61,7 +61,14 @@
               Topics
           </a>
           <ul class="dropdown-menu">
-          {%- assign tlooff = site.data.teaching[jcrs_id][crs_sem].intlo -%}
+          {%- assign tr = site.data.teaching[jcrs_id][crs_sem].tlo_resolved -%}
+          {%- for u in tr.units -%}
+            <li>
+              <a class="dropdown-item" href="#ssTLO_{{ u.ka }}_{{ u.ku }}">
+                {{ u.ka }} / {{ u.ku_title }}
+              </a>
+            </li>
+   {%- endfor -%}
           {%- for ku in tlooff -%}
             {%- assign kk = ku[0] | split: "/" -%}
             {%- assign kkd = ku[1] -%}
@@ -214,7 +221,7 @@
 
       {%- if include.topics == 1 and has_tlo -%}
      <h3 id="{{ site.anchors.tlo }}" class="bg-dark text-white">
-        Topics
+        Topics and Learning Outcomes
       </h3>
         {%- include offering/tlo-body.html -%}
       <p></p>

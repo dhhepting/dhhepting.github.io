@@ -39,14 +39,19 @@ class MeetingPagesDataGenerator < Jekyll::Generator
 
       meetings = (load_yaml(meetings_path) || []).sort_by { |m| m['meeting'] }
       meeting_plans = MeetingPageFields.load_meeting_plan(File.join(offering_dir, 'plan.yml'))
-      tlo = MeetingPageFields.load_tlo(File.join(offering_dir, 'tlo.yml'))
+      standard = MeetingPageFields.load_standard(File.join(offering_dir, 'tlo.yml'))
+      # Canonical KU lookup from the shared `all` namespace already loaded into
+      # site.data — same source the offering section and MtgNN page resolve from.
+      std_curr = standard && site.data.dig('teaching', 'all', 'curricula', standard)
+      canonical_lookup = ->(ka, ku) { std_curr && std_curr.dig(ka, ku) }
       valid_meetings = meetings.map { |m| m['meeting'] }
       media = MeetingPageFields.load_media(File.join(offering_dir, 'media.csv'), valid_meetings)
 
       generated = {}
       meetings.each_with_index do |mtg, i|
         generated[mtg['meeting']] = MeetingPageFields.compute(
-          crs_id, crs_sem, offering, meetings, i, meeting_plans[mtg['meeting']] || {}, tlo, media[mtg['meeting']] || []
+          crs_id, crs_sem, offering, meetings, i, meeting_plans[mtg['meeting']] || {},
+          standard, canonical_lookup, media[mtg['meeting']] || []
         )
       end
 
