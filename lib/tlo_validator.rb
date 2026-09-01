@@ -15,9 +15,10 @@ require_relative "tlo_resolver"
 # them — so one run reports every mistake, not just the first.
 #
 # Layout it expects under `dir` (default "_data/teaching"):
-#   curricula/<STD>/<KA>/<KU>.yml         canonical (authoritative full sets)
+#   all/curricula/<STD>/<KA>/<KU>.yml     canonical (shared; the `all` namespace)
 #   <COURSE>/<SEM>/tlo.yml                offering: { standard, kaku: {..} }
 #   <COURSE>/<SEM>/plan.yml               meetings[].tlo[] selections
+# Curricula live under all/; per-offering files do not. Both derive from `dir`.
 #
 # Rules enforced:
 #   * offering `standard` present; each "KA/KU" resolves to a canonical file
@@ -34,6 +35,7 @@ class TLOValidator
 
   def initialize(dir = "_data/teaching")
     @dir = dir
+    @curricula_root = File.join(dir, "all", "curricula") # shared `all` namespace
     @errors = []
     @canon = {} # "STD/KA/KU" => parsed hash (memoised)
   end
@@ -51,7 +53,10 @@ class TLOValidator
   end
 
   def offering_files
-    Dir.glob(File.join(@dir, "*", "*", "tlo.yml")).sort
+    # <COURSE>/<SEM>/tlo.yml only; never anything under the all/ namespace.
+    Dir.glob(File.join(@dir, "*", "*", "tlo.yml"))
+       .reject { |f| f.start_with?(File.join(@dir, "all") + File::SEPARATOR) }
+       .sort
   end
 
   def load_yaml(path)
@@ -66,7 +71,7 @@ class TLOValidator
     key = "#{std}/#{ka}/#{ku}"
     return @canon[key] if @canon.key?(key)
 
-    path = File.join(@dir, "curricula", std, ka, "#{ku}.yml")
+    path = File.join(@curricula_root, std, ka, "#{ku}.yml")
     unless File.exist?(path)
       add("#{context}: no canonical file for #{ka}/#{ku} under #{std} (expected #{path})")
       return @canon[key] = nil
