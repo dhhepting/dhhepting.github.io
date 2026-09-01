@@ -126,6 +126,13 @@ class TLOValidator
     label = off_dir.sub(@dir + File::SEPARATOR, "")
     data = load_yaml(tlo_path) or return
 
+    # Legacy (pre-CS2023) tlo.yml has no `kaku:` key. Containment doesn't apply
+    # to it, and migration is incremental, so skip it rather than block the
+    # build. The generator emits the migration warning. A file that HAS a
+    # `kaku` key is CS2023-format and validated strictly below (a malformed
+    # `kaku` value still errors).
+    return unless data.is_a?(Hash) && data.key?("kaku")
+
     std = data["standard"]
     add("#{label}/tlo.yml: missing `standard`") if std.nil? || std.to_s.empty?
     kaku_map = data["kaku"]

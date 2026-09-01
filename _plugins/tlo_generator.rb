@@ -43,11 +43,28 @@ module Jekyll
         sems.each do |sem, node|
           next unless node.is_a?(Hash) && node["tlo"]
           label = "#{course}/#{sem}"
+          tlo = node["tlo"]
+
+          # Legacy tlo.yml (pre-CS2023: flat "KA/KU" map, no `kaku:` key).
+          # Migration is incremental, so don't block the build — warn, flag,
+          # and skip. The section simply won't render until the file is moved
+          # to the CS2023 shape. A file that DOES have a `kaku` key is treated
+          # as CS2023 and validated strictly below (a malformed `kaku` errors
+          # rather than being mistaken for legacy).
+          unless tlo.is_a?(Hash) && tlo.key?("kaku")
+            Jekyll.logger.warn "TLOGenerator:",
+              "#{label}/tlo.yml is not in CS2023 format (no `kaku:` map) — " \
+              "skipping TLO resolution; section renders once migrated"
+            node["tlo_unmigrated"] = true
+            next
+          end
+
           if curricula.nil?
-            raise "TLOGenerator: #{label} has a tlo but no curricula at " \
+            raise "TLOGenerator: #{label} has a CS2023 tlo but no curricula at " \
                   "site.data.teaching.all.curricula — check the all/ namespace"
           end
-          node["tlo_resolved"] = resolve_offering(node["tlo"], curricula, label)
+          node["tlo_resolved"]  = resolve_offering(tlo, curricula, label)
+          node["tlo_unmigrated"] = false
         end
       end
 
@@ -63,26 +80,20 @@ module Jekyll
 
     def resolve_offering(tlo, curricula, label)
       std = tlo["standard"]
-      #raise "TLOGenerator: #{label}/tlo.yml missing `standard`" if std.nil?
+      raise "TLOGenerator: #{label}/tlo.yml missing `standard`" if std.nil?
       std_data = curricula[std]
-      #raise "TLOGenerator: #{label} references unknown standard #{std.inspect}" if std_data.nil?
+      raise "TLOGenerator: #{label} references unknown standard #{std.inspect}" if std_data.nil?
 
       kaku_map = tlo["kaku"]
-      if kaku_map.is_a?(Hash)
-      #raise "TLOGenerator: #{label}/tlo.yml missing `kaku:` map" unless kaku_map.is_a?(Hash)
-
-    #   if kaku_map.nil? || !kaku_map.is_a?(Hash)
-    #     Jekyll.logger.warn "TLOGenerator:", "#{label} has no valid `kaku` map"
-    #     return { "standard" => std, "units" => [] }
-    #   end
+      raise "TLOGenerator: #{label}/tlo.yml missing `kaku:` map" unless kaku_map.is_a?(Hash)
 
       units = kaku_map.map do |kaku_key, sel|
         ka, ku = kaku_key.to_s.split("/", 2)
         ka_node = std_data[ka]
-        #raise "TLOGenerator: #{label} unknown KA #{ka.inspect} in #{std}" if ka_node.nil?
+        raise "TLOGenerator: #{label} unknown KA #{ka.inspect} in #{std}" if ka_node.nil?
         ku_node = ka_node[ku]
-        #raise "TLOGenerator: #{label} unknown KU #{ka}/#{ku} in #{std}" if ku_node.nil?
-      end
+        raise "TLOGenerator: #{label} unknown KU #{ka}/#{ku} in #{std}" if ku_node.nil?
+
         # KA meta lives in _ka.yml -> key "_ka". If it didn't load (some Jekyll
         # setups skip underscore-prefixed data files), warn loudly rather than
         # silently dropping the KA preamble.
