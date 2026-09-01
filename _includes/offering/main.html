@@ -1,8 +1,8 @@
 {%- include teaching/url.html -%}
 {%- capture code_url -%}/teaching/{{ crs_id }}/{{ page.sem }}/code/{%- endcapture -%}
 {%- assign has_code = code_url | dir_exists? -%}
-{%- assign tlooff = site.data.teaching[jcrs_id][crs_sem].tlo -%}
-{%- assign has_tlo = tlooff and tlooff != empty -%}
+{%- assign tlores = site.data.teaching[jcrs_id][crs_sem].tlo_resolved -%}
+{%- assign has_tlo = tlores and tlores.units and tlores.units != empty -%}
 {%- assign sresps = site.data.teaching[jcrs_id][crs_sem][responses] -%}
 {%- assign has_sresps = sresps and sresps != empty -%}
 
@@ -61,29 +61,13 @@
               Topics
           </a>
           <ul class="dropdown-menu">
-          {%- assign tr = site.data.teaching[jcrs_id][crs_sem].tlo_resolved -%}
-          {%- for u in tr.units -%}
-            <li>
-              <a class="dropdown-item" href="#ssTLO_{{ u.ka }}_{{ u.ku }}">
-                {{ u.ka }} / {{ u.ku_title }}
-              </a>
-            </li>
-   {%- endfor -%}
-          {%- for ku in tlooff -%}
-            {%- assign kk = ku[0] | split: "/" -%}
-            {%- assign kkd = ku[1] -%}
-            {%- assign kkaa = kk[0] -%}
-            {%- assign kkuu = kk[1] -%}
-            {% assign kunum = kkuu | slice: 0,2 %}
-            {% capture kuti %}{{ kkuu | replace: "--",", " | replace: "-"," " | replace: "_","-" | slice: 3, kkuu.size }}{% endcapture %}
-            {% capture kakid %}{{ kkaa }}{{ kunum }}{% endcapture %}
-            <li>
-              <a class="dropdown-item"
-              href="#ssTLO_{{ kkaa }}_{{ kkuu }}">
-                {{ kkaa }} / {{ kuti }}
-              </a>
-            </li>
-          {%- endfor %}
+          {%- for u in tlores.units -%}
+          <li>
+            <a class="dropdown-item" href="#ssTLO_{{ u.ka }}_{{ u.ku }}">
+              {{ u.ka }} / {{ u.ku_title }}
+            </a>
+          </li>
+          {%- endfor -%}
           </ul>
         </li>
         {%- endif -%}

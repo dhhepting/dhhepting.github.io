@@ -1,0 +1,29 @@
+{%- comment -%}
+  Renders one column (Topics or Learning Outcomes) from pre-flattened rows built
+  by _plugins/tlo_generator.rb (via TLOResolver.flatten_for_render). Each row is
+  either { kind: "tier_break" } or a content row with number/text/depth/covered/
+  see_also. All numbering, nesting, greying, and the CS->KA split are decided
+  upstream in Ruby — this include only lays them out.
+
+  Params: heading (string), rows (array).
+{%- endcomment -%}
+<h5>{{ include.heading }}</h5>
+<div class="tlo-list">
+{%- for r in include.rows -%}
+  {%- if r.kind == "tier_break" -%}
+    <div class="tlo-tier-divider text-muted">
+      <hr class="my-1">
+      <small class="text-uppercase">KA Core</small>
+    </div>
+  {%- else -%}
+    {%- assign indent = r.depth | times: 1.5 -%}
+    <div class="tlo-row{% unless r.covered %} text-muted{% endunless %}" style="margin-left: {{ indent }}rem;">
+      <span class="tlo-num">{{ r.number }}.</span>
+      {{ r.text }}
+      {%- if r.see_also and r.see_also != empty -%}
+        <span class="tlo-see-also text-muted">(see {{ r.see_also | join: ", " }})</span>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+{%- endfor -%}
+</div>

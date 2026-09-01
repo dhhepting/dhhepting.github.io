@@ -37,7 +37,10 @@ This is an INDIVIDUAL assignment for undergraduate students.
 
 Consider the class themes that we have discussed and will consider.
 Please see the page of
+{% comment %}
 [Topics]({{ "/teaching/CS-428+828/201930/#" | append: site.anchors.tlo | relative_url }})
+{% endcomment %}
+Topics
 for a guide.
 
 Write approximately 1000 words (or equivalent)
@@ -46,7 +49,10 @@ you are welcome to consider other forms of deliverable that are more meaningful 
 
 It must deal with class themes in some way,
 and your ideas about that connection are important.
-You might focus your efforts on researching smaller assessment questions (from [Topics]({{ "/teaching/CS-428+828/201930/#" | append: site.anchors.tlo | relative_url }})),
+You might focus your efforts on researching smaller assessment questions (from Topics),
+{% comment %}
+[Topics]({{ "/teaching/CS-428+828/201930/#" | append: site.anchors.tlo | relative_url }})),
+{% endcomment %}
 examining the usability of software that you use,
 writing some code to test an idea, and so forth.
 
