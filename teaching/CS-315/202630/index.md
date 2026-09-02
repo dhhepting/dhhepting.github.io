@@ -9,9 +9,7 @@ layout: bg-image
   title=page.title
   mtgs=0
   sched=1
-  wkly=1
   code=0
-  links=0
   asgns=0
   topics=1
   exams=0

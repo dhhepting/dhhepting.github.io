@@ -1,14 +1,57 @@
 {%- include teaching/url.html -%}
+{%- comment -%}
+  Section visibility precedence (most specific wins):
+     page include-param  >  offering.yml `sections:` default  >  off (false)
+  On top of that, sections that link to real artifacts are ALSO hard-gated on
+  data presence (has_code, off.mdays, has_tlo) so a flag can never emit a link
+  to something that isn't there.
+
+  Optional offering.yml block (all keys optional; omitted => off unless the page
+  passes the toggle):
+     sections:
+       mtgs: false
+       weekly: true
+       office_hours: true
+       code: false
+       links: true
+       topics: true
+       assignments: true
+       exams: false
+       feedback: false
+{%- endcomment -%}
+{%- assign off = site.data.teaching[jcrs_id][crs_sem].offering -%}
+{%- assign sec = off.sections -%}
+
 {%- capture code_url -%}/teaching/{{ crs_id }}/{{ page.sem }}/code/{%- endcapture -%}
 {%- assign has_code = code_url | dir_exists? -%}
+
 {%- assign tlores = site.data.teaching[jcrs_id][crs_sem].tlo_resolved -%}
 {%- assign has_tlo = tlores and tlores.units and tlores.units != empty -%}
-{%- assign sresps = site.data.teaching[jcrs_id][crs_sem][responses] -%}
-{%- assign has_sresps = sresps and sresps != empty -%}
-
 
 {%- assign asgnfile = site.data.teaching[jcrs_id][crs_sem].assignments -%}
-{%- assign has_asgnfile = asgnfile and asgnfile != empty -%}<div class="w-auto h-100">
+{%- assign has_asgnfile = asgnfile and asgnfile != empty -%}
+
+{%- comment -%} Resolve + normalize each toggle to a strict boolean. {%- endcomment -%}
+{%- assign show_mtgs = include.mtgs | default: sec.mtgs -%}
+{%- if show_mtgs == 0 %}{% assign show_mtgs = false %}{% endif -%}
+{%- assign show_wkly = include.wkly | default: sec.weekly -%}
+{%- if show_wkly == 0 %}{% assign show_wkly = false %}{% endif -%}
+{%- assign show_sched = include.sched | default: sec.office_hours -%}
+{%- if show_sched == 0 %}{% assign show_sched = false %}{% endif -%}
+{%- assign show_code = include.code | default: sec.code -%}
+{%- if show_code == 0 %}{% assign show_code = false %}{% endif -%}
+{%- assign show_links = include.links | default: sec.links -%}
+{%- if show_links == 0 %}{% assign show_links = false %}{% endif -%}
+{%- assign show_topics = include.topics | default: sec.topics -%}
+{%- if show_topics == 0 %}{% assign show_topics = false %}{% endif -%}
+{%- assign show_asgns = include.asgns | default: sec.assignments -%}
+{%- if show_asgns == 0 %}{% assign show_asgns = false %}{% endif -%}
+{%- assign show_exams = include.exams | default: sec.exams -%}
+{%- if show_exams == 0 %}{% assign show_exams = false %}{% endif -%}
+{%- assign show_feedback = include.feedback | default: sec.feedback -%}
+{%- if show_feedback == 0 %}{% assign show_feedback = false %}{% endif -%}
+
+<div class="w-auto h-100">
   <div class="bg-light mb-2 p-3">
     <h1>
       {{ include.title }}
@@ -18,42 +61,42 @@
   <div class="card" style="height: 85%">
     <div id="offhdr" class="card-header bg-info">
       <ul class="nav nav-pills" id="navbar-scrollspy">
-        {%- if include.mtgs == 1 -%}
+        {%- if show_mtgs -%}
         <li class="nav-item">
           <a class="nav-link" href="#ssMeetings">
             Meetings
           </a>
         </li>
         {%- endif -%}
-        {%- if include.wkly == 1 -%}
+        {%- if show_wkly -%}
         <li class="nav-item">
           <a class="nav-link" href="#ssWeekly">
             Weekly Schedule (Tentative)
           </a>
         </li>
         {%- endif -%}
-        {%- if include.sched == 1 -%}
+        {%- if show_sched -%}
         <li class="nav-item">
           <a class="nav-link" href="#ssOffice">
             Office Hours
           </a>
         </li>
         {%- endif -%}
-        {%- if include.code == 1 and has_code -%}
+        {%- if show_code and has_code -%}
             <li class="nav-item">
               <a class="nav-link" href="#ssCode">
                 Code
               </a>
             </li>
         {%- endif -%}
-        {%- if include.links == 1 -%}
+        {%- if show_links -%}
         <li class="nav-item">
           <a class="nav-link" href="#ssLinks">
             Links
           </a>
         </li>
         {%- endif -%}
-        {%- if include.topics == 1 and has_tlo -%}
+        {%- if show_topics and has_tlo -%}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle"
             data-bs-toggle="dropdown" href="#" role="button"
@@ -62,17 +105,18 @@
           </a>
           <ul class="dropdown-menu">
           {%- for u in tlores.units -%}
-          <li>
-            <a class="dropdown-item" href="#ssTLO_{{ u.ka }}_{{ u.ku }}">
-              {{ u.ka }} / {{ u.ku_title }}
-            </a>
-          </li>
-          {%- endfor -%}
+            <li>
+              <a class="dropdown-item"
+              href="#ssTLO_{{ u.ka }}_{{ u.ku }}">
+                {{ u.ka }} / {{ u.ku_title }}
+              </a>
+            </li>
+          {%- endfor %}
           </ul>
         </li>
         {%- endif -%}
 
-        {%- if include.asgns == 1 and has_asgnfile -%}
+        {%- if show_asgns and has_asgnfile -%}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
             Assignments
@@ -98,7 +142,7 @@
         </li>
         {%- endif -%}
 
-        {%- if include.exams == 1 -%}
+        {%- if show_exams -%}
         <li class="nav-item">
           <a class="nav-link" href="#ssExams">
             Exams
@@ -106,7 +150,7 @@
         </li>
         {%- endif -%}
 
-        {%- if include.feedback == 1 -%}
+        {%- if show_feedback -%}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle"
             data-bs-toggle="dropdown" href="#" role="button"
@@ -136,7 +180,7 @@
       data-bs-offset="0" tabindex="0">
 
       <!-- Create the content -->
-      {%- if include.mtgs == 1 -%}
+      {%- if show_mtgs -%}
       <h3 id="ssMeetings" class="bg-dark text-white">
         Meetings
       </h3>
@@ -146,7 +190,7 @@
       <p></p>
       {%- endif -%}
 
-      {%- if include.wkly == 1 -%}
+      {%- if show_wkly -%}
       <h3 id="ssWeekly" class="bg-dark text-white">
         Weekly Schedule (Tentative)
       </h3>
@@ -155,7 +199,7 @@
       <p></p>
       {%- endif -%}
 
-      {%- if include.sched == 1-%}
+      {%- if show_sched -%}
       <h3 id="ssOffice" class="bg-dark text-white">
         Office Hours and Semester Schedule
       </h3>
@@ -164,7 +208,7 @@
       <p></p>
       {%- endif -%}
 
-    {%- if include.code == 1 and has_code -%}
+    {%- if show_code and has_code -%}
       <h3 id="ssCode" class="bg-dark text-white">Code</h3>
       <p>The code directory for this offering is available at:</p>
       <ul>
@@ -175,7 +219,7 @@
       </ul>
     {%- endif -%}
 
-      {%- if include.links == 1 -%}
+      {%- if show_links -%}
       <h3 id="ssLinks" class="bg-dark text-white">
         Links
       </h3>
@@ -186,7 +230,6 @@
             Syllabus (pdf)
           </a>
         </li>
-        {%- assign off = site.data.teaching[jcrs_id][crs_sem].offering -%}
         {%- if off.mdays -%}
         <li>
           {%- capture ics_url -%}/teaching/{{ jcrs_id }}/{{ crs_sem }}/meetings.ics{%- endcapture -%}
@@ -203,7 +246,7 @@
       <p></p>
       {%- endif -%}
 
-      {%- if include.topics == 1 and has_tlo -%}
+      {%- if show_topics and has_tlo -%}
      <h3 id="{{ site.anchors.tlo }}" class="bg-dark text-white">
         Topics and Learning Outcomes
       </h3>
@@ -211,7 +254,7 @@
       <p></p>
       {%- endif -%}
 
-      {%- if include.asgns == 1 -%}
+      {%- if show_asgns -%}
       <h3 id="ssAssignments" class="bg-dark text-white">
         Assignments
       </h3>
@@ -219,7 +262,7 @@
       <p></p>
       {%- endif -%}
 
-      {%- if include.exams == 1 -%}
+      {%- if show_exams -%}
       <h3 id="ssExams" class="bg-dark text-white">
         Exams
       </h3>
@@ -227,7 +270,7 @@
       <p></p>
       {%- endif -%}
 
-      {%- if include.feedback == 1 -%}
+      {%- if show_feedback -%}
       <h3 id="ssFeedback" class="bg-dark text-white">
         Feedback
       </h3>
@@ -248,24 +291,3 @@
     </div>
   </div>
 </div>
-{% comment %}
-<script>
-$(document).ready(function(){
-  var cbss = document.getElementById('cbss');
-  var scrollheight = document.getElementById('mcb').offsetHeight;
-  console.log('mcb',scrollheight)
-  var scrollheight = scrollheight - document.getElementById('mcbftr').offsetHeight;
-  console.log('-mcbftr',scrollheight)
-  scrollheight = scrollheight - document.getElementById('offh1').offsetHeight;
-  console.log('-h1',scrollheight)
-  scrollheight = scrollheight - document.getElementById('offhdr').offsetHeight;
-  console.log('-offhdr',scrollheight)
-  scrollheight = scrollheight - document.getElementById('offftr').offsetHeight;
-  console.log('-offftr',scrollheight)
-  scrollheight = scrollheight - 10;
-
-  cbss.style.height = scrollheight + 'px'
-  console.log('cbss.style.height',cbss.style.height )
-})
-</script>
-{% endcomment %}
