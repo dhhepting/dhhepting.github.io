@@ -159,6 +159,7 @@ class MeetingPageGenerator < Jekyll::Generator
             'meeting'     => nn,
             'slug'        => slug,
             'permalink'   => "/teaching/#{course}/#{sem}/#{slug}/",
+            'offering_url' => "/teaching/#{course}/#{sem}/",
             'course'      => course.to_s,
             'semester'    => sem.to_s,
             'date'        => d.iso8601,

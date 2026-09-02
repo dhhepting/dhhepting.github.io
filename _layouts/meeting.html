@@ -14,6 +14,11 @@ layout: default
       Meeting {{ page.meeting }} of {{ page.total_mtgs }} ·
       Week {{ page.week }} of {{ page.total_wks }}
       (week of {{ page.week_of }})
+      <br />
+      <a class="btn btn-outline-secondary btn-sm mb-2" href="{{ page.offering_url | relative_url }}">
+  &larr; Back to the {{ page.course }} ({{ page.semester }}) page
+</a>
+OFFERING URL: {{ page.offering_url }}
     </p>
   </header>
 
