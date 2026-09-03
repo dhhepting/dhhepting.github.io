@@ -8,6 +8,11 @@
 
   Usage on the schedule page:  {% include teaching/weekly_grid.html sem=page.sem %}
 
+  Each rendered <td> is stamped with data-day / data-start / data-category so a
+  consumer (e.g. today.html) can highlight the current slot. These attributes are
+  inert wherever the highlight script isn't loaded. The cell's true end is
+  start + (td.rowSpan * 30 min), computed by that script — not needed here.
+
   Privacy: class and office cells show detail; research/reserved show colour only,
   with a screen-reader label so a coloured box isn't blank to assistive tech.
 {%- endcomment -%}
@@ -36,26 +41,26 @@
             {%- assign b = cell.block -%}
             {%- if b -%}
               {%- if b.category == "class" -%}
-                <td class="wk-class" rowspan="{{ cell.rowspan }}">
+                <td class="wk-class" rowspan="{{ cell.rowspan }}" data-day="{{ day }}" data-start="{{ row.start }}" data-category="class">
                   <span class="wk-label">{{ b.meta.course }}</span>
                   {%- if b.meta.location %}<span class="wk-sub">{{ b.meta.location }}</span>{% endif -%}
                 </td>
               {%- elsif b.category == "office" -%}
-                <td class="wk-office" rowspan="{{ cell.rowspan }}">
+                <td class="wk-office" rowspan="{{ cell.rowspan }}" data-day="{{ day }}" data-start="{{ row.start }}" data-category="office">
                   {%- if entry.office_zoom -%}<a href="{{ entry.office_zoom }}">Office hours</a>
                   {%- else -%}<span class="wk-label">Office hours</span>{%- endif -%}
                 </td>
               {%- elsif b.category == "research" -%}
-                <td class="wk-research" rowspan="{{ cell.rowspan }}" aria-label="Research meeting time">
+                <td class="wk-research" rowspan="{{ cell.rowspan }}" data-day="{{ day }}" data-start="{{ row.start }}" data-category="research" aria-label="Research meeting time">
                   <span class="visually-hidden">Research</span>
                 </td>
               {%- elsif b.category == "reserved" -%}
-                <td class="wk-reserved" rowspan="{{ cell.rowspan }}" aria-label="Reserved time">
+                <td class="wk-reserved" rowspan="{{ cell.rowspan }}" data-day="{{ day }}" data-start="{{ row.start }}" data-category="reserved" aria-label="Reserved time">
                   <span class="visually-hidden">Reserved</span>
                 </td>
               {%- endif -%}
             {%- else -%}
-              <td class="wk-free" rowspan="{{ cell.rowspan }}"></td>
+              <td class="wk-free" rowspan="{{ cell.rowspan }}" data-day="{{ day }}" data-start="{{ row.start }}" data-category="free"></td>
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
