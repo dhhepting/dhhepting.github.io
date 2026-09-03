@@ -49,7 +49,7 @@ module Teaching
           if off.nil?
             raise "weekly_grid: #{sem_code} classes_taught lists #{course.inspect} " \
                   "but no offering was found at data key " \
-                  "teaching.#{course.tr('+', '_')}.#{sem_code}.offering " \
+                  "teaching.#{CourseId.data_key(course)}.#{sem_code}.offering " \
                   "(check the directory name and that offering.yml exists)"
           end
           blocks.concat(class_blocks(course, off, sem_code, site))
@@ -68,7 +68,7 @@ module Teaching
     # Mirrors Jekyll's data loading: _data/teaching/<jcrs_id>/<sem>/offering.yml
     # -> site.data["teaching"][jcrs_id][sem]["offering"].
     def offering_for(site, course, sem_code)
-      site.data.dig("teaching", course.tr("+", "_"), sem_code, "offering")
+      site.data.dig("teaching", CourseId.data_key(course), sem_code, "offering")
     end
 
     def class_blocks(course, off, sem_code, site)

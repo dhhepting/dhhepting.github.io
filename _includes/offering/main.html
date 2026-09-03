@@ -224,23 +224,6 @@
         Links
       </h3>
       <ul>
-        <li>
-          {%- capture syll_url -%}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{%- endcapture -%}
-          <a href="{{ syll_url | relative_url }}" target="_blank">
-            Syllabus (pdf)
-          </a>
-        </li>
-        {%- if off.mdays -%}
-        <li>
-          {%- capture ics_url -%}/teaching/{{ jcrs_id }}/{{ crs_sem }}/meetings.ics{%- endcapture -%}
-          <a href="{{ ics_url | relative_url }}">Course calendar (.ics)</a>
-        </li>
-        {%- endif -%}
-        <li>
-          <a href="https://urcourses.uregina.ca/course/view.php?id={{ crs_urc }}" target="_blank">
-            UR Courses
-          </a>
-        </li>
         {%- include offering/links-body.html -%}
       </ul>
       <p></p>

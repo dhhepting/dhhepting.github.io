@@ -1,20 +1,31 @@
 {%- assign semdat = "" -%}
-{%- assign semdat = site.data.teaching.all.semesters | where: "semester", include.cs -%}
+{%- assign cur = site.data.teaching.all.in_session_term -%}
+{%- assign semdat = site.data.teaching.all.semesters | where: "semester", cur.semester -%}
+
+<div class="card m-2">
+  <h3 class="card-header">
+    Schedule for this Semester
+  </h3>
+  <div class="card-body">
+    {% include teaching/weekly_grid.html %}
+  </div>
+</div>
+
 <div class="card m-2">
   <h3 class="card-header">
     Important Dates
   </h3>
   <div class="card-body">
     <ul>
-      <li>First day of term: {{ semdat[0].term-start | date: '%a-%d-%b-%Y'}}</li>
-    	<li>Last day of classes: {{ semdat[0].class-end | date: '%a-%d-%b-%Y'}}</li>
-      <li>Last day of term: {{ semdat[0].term-end | date: '%a-%d-%b-%Y'}}</li>
+      <li>First day of term: {{ semdat[0].term_start | date: '%a-%d-%b-%Y'}}</li>
+    	<li>Last day of classes: {{ semdat[0].class_end | date: '%a-%d-%b-%Y'}}</li>
+      <li>Last day of term: {{ semdat[0].term_end | date: '%a-%d-%b-%Y'}}</li>
     </ul>
   </div>
 </div>
 
 {%- assign offs = "" -%}
-{%- assign offs = site.data.teaching.all.offerings | where: "semester", include.cs -%}
+{%- assign offs = site.data.teaching.offerings | where: "semester", cur.semester -%}
 {% if offs.size > 0 %}
 <div class="card m-2">
   <h3 class="card-header">
@@ -25,7 +36,7 @@
     {% for o in offs %}
       <li>
         {%- assign crss = site.data.teaching.all.courses | where: "id", o.id -%}
-        {% capture off_url %}/teaching/{{ o.id }}/{{ include.cs }}{% endcapture %}
+        {% capture off_url %}/teaching/{{ o.id }}/{{ cur.semester }}{% endcapture %}
         <a href="{{ off_url | relative_url }}">
           {{ crss[0].id | replace: "-"," " }} : {{ crss[0].name }}
         </a>
@@ -36,18 +47,18 @@
 </div>
 {% endif %}
 
-{% if offs.size > 0 and page.officeblocks %}
+{% if semdat[0].office_hours %}
 <div class="card m-2">
   <h3 class="card-header">
     Office Hours this Semester
   </h3>
   <div class="card-body">
     <ul>
-    {%- for ob in page.officeblocks -%}
+    {%- for oh in semdat[0].office_hours -%}
       <li>
-        {{ ob.day }} from
-        {{ ob.open | date: '%H:%M'}} until
-        {{ ob.close | date: '%H:%M'}}
+        {{ oh.day }} from
+        {{ oh.start | date: '%H:%M'}} until
+        {{ oh.end | date: '%H:%M'}}
       </li>
     {%- endfor -%}
     </ul>

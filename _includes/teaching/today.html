@@ -28,10 +28,9 @@
   </h1>
   <p>
     Today is <span id="now"></span>.
-    Classes
-    {%- if cur.term_start %} start on {{ cur.term_start | date: "%a %b %-d" }}{% endif -%}
-    {%- if cur.term_end %} and end on {{ cur.term_end | date: "%a %b %-d" }}{% endif -%}.
-    <a href="{{ "/teaching/schedule" | relative_url }}">See my full weekly schedule for this semester.</a>
+    This semester runs from
+    {{ cur.term_start | date: "%a %b %-d" }}
+    until {{ cur.term_end | date: "%a %b %-d" }}.
   </p>
   <p id="wk-now" class="fw-semibold mb-0"></p>
 </div>

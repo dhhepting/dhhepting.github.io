@@ -1,5 +1,6 @@
 {%- assign offs = "" -%}
-{%- assign offs = site.data.teaching.offerings | where: "semester", include.cs -%}
+{%- assign cur = site.data.teaching.all.in_session_term -%}
+{%- assign offs = site.data.teaching.offerings | where: "semester", cur.semester -%}
 {% if offs.size > 0 %}
 <div class="card my-2" id="this-sem-card">
   <h3 class="card-header text-center">This Semester</h3>

@@ -16,7 +16,8 @@
   Privacy: class and office cells show detail; research/reserved show colour only,
   with a screen-reader label so a coloured box isn't blank to assistive tech.
 {%- endcomment -%}
-{%- assign want = include.sem | append: "" -%}{%- comment -%} codes load as Integer; stringify to match {%- endcomment -%}
+{%- assign cur = site.data.teaching.all.in_session_term -%}
+{%- assign want = cur.semester | append: "" -%}{%- comment -%} codes load as Integer; stringify to match {%- endcomment -%}
 {%- for e in site.data.teaching.all.semesters -%}
   {%- assign ecode = e.semester | append: "" -%}
   {%- if ecode == want -%}{%- assign entry = e -%}{%- endif -%}

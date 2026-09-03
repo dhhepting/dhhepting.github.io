@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 require 'set'
+require_relative 'course_id'
 
 # lib/offering_source_audit.rb
 # Pure comparison of the three offering sources, so the audit logic is testable
@@ -10,7 +11,9 @@ module OfferingSourceAudit
   module_function
 
   def key_of(row)
-    [row['id'].to_s, row['semester'].to_s]
+    # Normalize the course id so the readable + form and the data _ form of the
+    # same cross-listed course compare equal (CS-428+828 == CS-428_828).
+    [CourseId.data_key(row['id']), row['semester'].to_s]
   end
 
   def audit(csv_rows, index_rows, yml_pairs)
