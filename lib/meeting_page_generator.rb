@@ -31,6 +31,9 @@ require 'erb'
 require 'fileutils'
 require 'date'
 
+require_relative 'meeting_page_fields'
+require_relative 'meeting_calendar'   # add
+
 class MeetingPageGenerator
   def initialize(teaching_data_dir: '_data/teaching',
                  templates_dir: '_meeting_page_templates',
@@ -91,9 +94,9 @@ class MeetingPageGenerator
     (plan['meetings'] || []).each_with_object({}) { |m, h| h[m['meeting']] = m['theme'] }
   end
 
-  def parse_date(date_str)
-    Date.strptime(date_str, '%a-%d-%b-%Y')
-  end
+ def parse_date(date)
+  MeetingCalendar.coerce_date(date)
+end
 
   # Regina, Saskatchewan does not observe daylight saving time — it's a
   # fixed -06:00 offset year-round. Using Date#to_time here would pick up

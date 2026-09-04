@@ -27,6 +27,9 @@
 # `priority :high` just means "run this before lower-priority plugins" —
 # useful because other plugins/templates depend on the data we're adding.
 
+require 'date'
+require_relative '../lib/meeting_calendar'
+
 class MeetingGridError < StandardError; end
 
 class MeetingGridGenerator < Jekyll::Generator
@@ -98,7 +101,14 @@ class MeetingGridGenerator < Jekyll::Generator
     matched_days = meetings.filter_map do |mtg|
       date = mtg['date']
       raise MeetingGridError, "a meeting entry is missing 'date'" unless date
-      day_token = date.split('-').first
+
+      day = begin
+        MeetingCalendar.coerce_date(date)
+      rescue RuntimeError => e
+        raise MeetingGridError,
+          "#{e.message} — regenerate this offering's meetings.yml via `rake meetings:sync`"
+      end
+      day_token = day.strftime('%a')
       day_token if mtgdays.include?(day_token)
     end.uniq
 

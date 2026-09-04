@@ -230,3 +230,29 @@ namespace :test do
     sh 'bundle exec ruby -Ilib -Itest test/meeting_grid_test.rb'
   end
 end
+
+namespace :meetings do
+  desc 'Derive meetings.yml (calendar dates + plan.yml Moodle fields). usage: rake meetings:sync[CS-315,202630]'
+  task :sync, %i[crs_id crs_sem] do |_t, args|
+    require_relative 'lib/meetings_sync'
+    result = MeetingsSync.derive('_data/teaching', args[:crs_id], args[:crs_sem])
+    result.warnings.each { |w| warn "WARN: #{w}" }
+    path = "_data/teaching/#{args[:crs_id]}/#{args[:crs_sem]}/meetings.yml"
+    File.write(path, result.rows.to_yaml)
+    puts "wrote #{result.rows.size} meetings -> #{path}"
+  end
+end
+
+namespace :meetings do
+  desc 'Regenerate meetings.yml for every offering that already has one'
+  task :sync_all do
+    require_relative 'lib/meetings_sync'
+    Dir.glob('_data/teaching/*/*/meetings.yml').each do |path|
+      _, _, crs_id, crs_sem, _ = path.split('/')
+      result = MeetingsSync.derive('_data/teaching', crs_id, crs_sem)
+      result.warnings.each { |w| warn "WARN: #{w}" }
+      File.write(path, result.rows.to_yaml)
+      puts "wrote #{result.rows.size} -> #{path}"
+    end
+  end
+end

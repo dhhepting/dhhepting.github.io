@@ -21,6 +21,7 @@
 require 'date'
 require 'csv'
 require_relative 'tlo_resolver'
+require_relative 'meeting_calendar'   # add
 
 module MeetingPageFields
   module_function
@@ -169,9 +170,9 @@ module MeetingPageFields
     end
   end
 
-  def parse_date(date_str)
-    Date.strptime(date_str, '%a-%d-%b-%Y')
-  end
+def parse_date(date)
+  MeetingCalendar.coerce_date(date)
+end
 
   # Regina, Saskatchewan does not observe daylight saving time — fixed
   # -06:00 year-round. Date#to_time would pick up whatever timezone the
