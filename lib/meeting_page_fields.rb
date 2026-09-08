@@ -36,6 +36,8 @@ module MeetingPageFields
     date = parse_date(mtg['date'])
     has_photos = !(photos.nil? || photos.empty?)
     slug = meeting_slug(mtg)
+    prev_mtg = index.positive? ? meetings[index - 1] : nil
+    next_mtg = index < meetings.size - 1 ? meetings[index + 1] : nil
 
     {
       'meeting' => mtg['meeting'],
@@ -43,6 +45,11 @@ module MeetingPageFields
       'weekday' => date.strftime('%A'),
       'theme' => meeting_plan['theme'],
       'BOK' => resolve_bok(meeting_plan['BOK'], standard, canonical_lookup),
+      # The canonical Moodle wiki page name for THIS meeting — the same
+      # NN_YYYY-MM-DD stem used for the .creole file, photos_page_path, and
+      # every [[link]] that points here. Exposed so the layout can offer it
+      # as a copyable "name for this page" field, killing hand-typed drift.
+      'slug' => slug,
       'photos' => has_photos ? photos : nil,
       # Path only (no baseurl) — the layout applies `| relative_url` so
       # this resolves correctly regardless of which deploy target
@@ -51,13 +58,19 @@ module MeetingPageFields
       # The Moodle-internal wiki page name (not a URL) — [[PageName]] links
       # to a page that doesn't exist yet in the same wiki render red in
       # Moodle/MediaWiki-style wikis automatically, and clicking one lets
-      # you create it. Computed once here so the link text used every
-      # meeting and the actual page name you eventually create in Moodle
-      # can never drift apart.
-      'photos_wiki_page_name' => "Mtg #{mtg['meeting']} Photos",
+      # you create it. Standardized on the slug (`<slug>-photos`) so it
+      # matches the photos page's own copyable name and its file stem —
+      # one canonical string, no drift between the link and the page.
+      'photos_wiki_page_name' => "#{slug}-photos",
       'meeting_page_path' => "/meeting-pages/#{crs_id}/#{crs_sem}/#{slug}/",
-      'prev_page' => index.positive? ? meetings[index - 1]['date'] : nil,
-      'next_page' => index < meetings.size - 1 ? meetings[index + 1]['date'] : nil,
+      # prev/next kept as DATES for any existing consumer, plus the SLUG
+      # form the wiki nav links must use (the Moodle page is named by slug,
+      # so a bare-date [[link]] would never resolve). nil at the ends so the
+      # layout can omit the arrow instead of emitting an empty [[ | ...]].
+      'prev_page' => prev_mtg && prev_mtg['date'],
+      'next_page' => next_mtg && next_mtg['date'],
+      'prev_slug' => prev_mtg && meeting_slug(prev_mtg),
+      'next_slug' => next_mtg && meeting_slug(next_mtg),
       'wiki_ed_group' => mtg['wiki_ed_group'],
       'wiki_ed_url' => mtg['wiki_ed_asgn'] && "https://urcourses.uregina.ca/mod/assign/view.php?id=#{mtg['wiki_ed_asgn']}",
       'attendance_url' => "https://urcourses.uregina.ca/mod/attendance/manage.php?id=#{offering['attendance_id']}&view=1",
@@ -120,9 +133,13 @@ module MeetingPageFields
   #   - .HEIC entries (the real m22.txt only ever links the .jpg,
   #     never the HEIC original — HEIC doesn't render in browsers)
   #   - anything without a usable web image extension
-  # A file with no matching thumbnail (or vice versa) is skipped
-  # entirely rather than guessed at — every real example we've seen
-  # comes in tn/full pairs.
+  # A thumbnail is OPTIONAL: an image with no matching _tn falls back to
+  # serving itself as its own thumbnail (see pair_media_files). This lets
+  # an offering that pre-resizes its Dropbox images (CS-315: 800x600, no
+  # separate thumbs) render through the SAME single path as one that ships
+  # full-resolution originals with real _tn thumbnails (CS-280). A _tn
+  # with no full counterpart is still skipped — a thumbnail alone is
+  # useless.
   IMAGE_EXTS = %w[.jpg .jpeg .png .gif].freeze
 
   def load_media(media_csv_path, valid_meetings)
@@ -137,7 +154,7 @@ module MeetingPageFields
       next unless meeting && valid_meetings.include?(meeting)
       next unless row['file'] && row['URL']
 
-      by_meeting[meeting] << { 'file' => row['file'], 'url' => row['URL'] }
+      by_meeting[meeting] << { 'file' => row['file'], 'url' => embeddable_url(row['URL']) }
     end
 
     by_meeting.transform_values { |files| pair_media_files(files) }
@@ -164,10 +181,37 @@ module MeetingPageFields
 
     sorted_labels.filter_map do |label|
       g = groups[label]
-      next nil unless g['full_url'] && g['thumb_url']
+      # A full image is required; a thumbnail is not. When there's no _tn,
+      # the full image stands in as its own thumbnail so every offering
+      # renders through one path (see the load_media note above). A _tn
+      # with no full is dropped — a thumbnail with nothing to link to is
+      # useless.
+      next nil unless g['full_url']
 
-      { 'label' => label, 'thumb_url' => g['thumb_url'], 'full_url' => g['full_url'] }
+      { 'label' => label,
+        'thumb_url' => g['thumb_url'] || g['full_url'],
+        'full_url' => g['full_url'] }
     end
+  end
+
+  # Dropbox share links come out of sharemedia.py ending in `?...&dl=0`,
+  # which serves Dropbox's HTML preview page, not the raw bytes — an
+  # <img src> pointed at it renders nothing. On the dl.dropboxusercontent
+  # host (which sharemedia.py already rewrites to), `raw=1` serves the file
+  # inline, which is what <img> and Creole `{{...}}` image embeds need.
+  #
+  # Derived here at READ time rather than by rewriting media.csv, so
+  # media.csv stays the untouched output of sharemedia.py (single source)
+  # and this is the derived, embeddable view — same authored/derived seam
+  # as everything else. Strips any existing dl=/raw= param and forces
+  # raw=1, so a stray dl=1, raw=0, or param-less URL all normalize.
+  def embeddable_url(url)
+    return url if url.nil? || url.empty?
+
+    head, _, query = url.partition('?')
+    params = query.split('&').reject { |p| p.start_with?('dl=', 'raw=') }
+    params << 'raw=1'
+    "#{head}?#{params.join('&')}"
   end
 
 def parse_date(date)

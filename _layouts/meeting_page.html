@@ -8,12 +8,19 @@
 # the Creole-rendered HAND-AUTHORED body only (Outline, For Next
 # Meeting, Resources, Raw Transcript, Photos, Commentary, Fair Exam
 # Questions) — created once and never touched by regeneration again.
+#
+# Navigation and the photos link now use the canonical NN_YYYY-MM-DD
+# slug (gen.prev_slug/next_slug/photos_wiki_page_name) — the SAME string
+# the Moodle wiki page is named with — so [[links]] resolve instead of
+# pointing at a bare date that names nothing. The prev/next arrows are
+# omitted at the ends (first/last meeting) rather than emitting an empty
+# [[ | Previous]].
 ---
 {%- assign gen = site.data.teaching[page.course][page.semester].meeting_pages_generated[page.generated_from] %}
 {%- capture creole_preamble -%}
 = {{ page.course }} Mtg {{ gen.meeting }}: {{ gen.date }} =
 == Navigation ==
-[[ {{ gen.prev_page }} | Previous]] <-- [[Home]] --> [[ {{ gen.next_page }} | Next]]
+{% if gen.prev_slug %}[[{{ gen.prev_slug }} | Previous]] <-- {% endif %}[[Home]]{% if gen.next_slug %} --> [[{{ gen.next_slug }} | Next]]{% endif %}
 == Today's Theme ==
 {{ gen.theme }}
 {%- if gen.BOK %}
@@ -80,6 +87,13 @@
     {%- endif %}
   </div>
 
+  <h3>Name for this page</h3>
+  <p class="text-muted mb-1">Paste this as the Moodle wiki page title, so the name matches the [[links]] that point here.</p>
+  <div class="input-group mb-3">
+    <input id="wiki-page-name" type="text" class="form-control" readonly value="{{ gen.slug }}">
+    <button type="button" class="btn btn-secondary" onclick="copyPageName()">Copy</button>
+  </div>
+
   <h3>Copy this into the Moodle wiki page</h3>
   <div class="mb-3">
     <textarea id="creole-source" class="form-control" rows="20" readonly>{% creole_source %}</textarea>
@@ -95,6 +109,14 @@
 </div>
 
 <script>
+  function copyPageName() {
+    const el = document.getElementById('wiki-page-name');
+    el.select();
+    navigator.clipboard.writeText(el.value).then(() => {
+      console.log('Wiki page name copied to clipboard');
+    });
+  }
+
   function copyCreoleSource() {
     const ta = document.getElementById('creole-source');
     ta.select();

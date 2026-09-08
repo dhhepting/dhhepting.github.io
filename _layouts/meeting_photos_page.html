@@ -6,6 +6,13 @@
 # Deliberately separate from meeting_page.html so re-copying this page's
 # text into Moodle never touches the main meeting page students may
 # already be collaboratively editing.
+#
+# Full-as-thumb: when an image has no separate _tn, load_media sets
+# thumb_url == full_url, so the gallery <img> renders the full image
+# capped to a usable display width (max-width below) and still links to
+# full_url. Offerings that pre-resize their Dropbox images (CS-315:
+# 800x600, no thumbs) and offerings that ship originals + real _tn
+# thumbnails (CS-280) both render through this one path.
 ---
 {%- assign gen = site.data.teaching[page.course][page.semester].meeting_pages_generated[page.generated_from] %}
 {%- capture creole_photos -%}
@@ -31,10 +38,19 @@
   </div>
 
   <h3>Photo gallery</h3>
-  <div class="mb-3">
+  <div class="mb-3 d-flex flex-wrap">
     {%- for p in gen.photos %}
-    <a href="{{ p.full_url }}" target="_blank"><img src="{{ p.thumb_url }}" alt="Mtg {{ p.label }}" class="me-2 mb-2"></a>
+    <a href="{{ p.full_url }}" target="_blank" class="me-2 mb-2">
+      <img src="{{ p.thumb_url }}" alt="Mtg {{ p.label }}" style="max-width: 320px; height: auto;">
+    </a>
     {%- endfor %}
+  </div>
+
+  <h3>Name for this page</h3>
+  <p class="text-muted mb-1">Paste this as the Moodle wiki page title — it matches the [[{{ gen.photos_wiki_page_name }}]] link on the main meeting page.</p>
+  <div class="input-group mb-3">
+    <input id="photos-page-name" type="text" class="form-control" readonly value="{{ gen.photos_wiki_page_name }}">
+    <button type="button" class="btn btn-secondary" onclick="copyPhotosName()">Copy</button>
   </div>
 
   <h3>Copy this into the Moodle photos page</h3>
@@ -47,6 +63,14 @@
 </div>
 
 <script>
+  function copyPhotosName() {
+    const el = document.getElementById('photos-page-name');
+    el.select();
+    navigator.clipboard.writeText(el.value).then(() => {
+      console.log('Photos page name copied to clipboard');
+    });
+  }
+
   function copyPhotos() {
     const ta = document.getElementById('creole-photos');
     ta.select();
