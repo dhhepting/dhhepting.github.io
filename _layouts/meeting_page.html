@@ -9,12 +9,12 @@
 # Meeting, Resources, Raw Transcript, Photos, Commentary, Fair Exam
 # Questions) — created once and never touched by regeneration again.
 #
-# Navigation and the photos link now use the canonical NN_YYYY-MM-DD
-# slug (gen.prev_slug/next_slug/photos_wiki_page_name) — the SAME string
-# the Moodle wiki page is named with — so [[links]] resolve instead of
-# pointing at a bare date that names nothing. The prev/next arrows are
-# omitted at the ends (first/last meeting) rather than emitting an empty
-# [[ | Previous]].
+# Two kinds of navigation live here, deliberately kept apart:
+#   * creole_preamble's "== Navigation ==" — slug [[links]] that DO get
+#     pasted into Moodle (via {% creole_source %}).
+#   * page_nav below — on-site links between the AUTHORING pages, in the
+#     HTML chrome only, so you can click through every meeting and paste
+#     each into the wiki in one sitting. These never reach Moodle.
 ---
 {%- assign gen = site.data.teaching[page.course][page.semester].meeting_pages_generated[page.generated_from] %}
 {%- capture creole_preamble -%}
@@ -50,12 +50,22 @@
 
 {% endcapture -%}
 
+{%- capture page_nav -%}
+<nav class="d-flex justify-content-between align-items-center my-3">
+  {% if gen.prev_page_path %}<a class="btn btn-outline-secondary btn-sm" href="{{ gen.prev_page_path | relative_url }}">&larr; Prev: {{ gen.prev_slug }}</a>{% else %}<span class="text-muted">&larr; (first meeting)</span>{% endif %}
+  <a class="btn btn-outline-primary btn-sm" href="{{ '/meeting-pages/' | append: page.course | append: '/' | append: page.semester | append: '/table/' | relative_url }}">Index</a>
+  {% if gen.next_page_path %}<a class="btn btn-outline-secondary btn-sm" href="{{ gen.next_page_path | relative_url }}">Next: {{ gen.next_slug }} &rarr;</a>{% else %}<span class="text-muted">(last meeting) &rarr;</span>{% endif %}
+</nav>
+{%- endcapture -%}
+
 <div class="meeting-page">
   <h1>{{ page.course }} Mtg {{ gen.meeting }}: {{ gen.date }}</h1>
   <p class="text-muted">
     {{ gen.weekday }} &middot; Theme: {{ gen.theme | default: "(not yet set)" }} &middot;
     Wiki editors: Group {{ gen.wiki_ed_group }}
   </p>
+
+  {{ page_nav }}
 
   <div class="alert alert-info">
     Navigation/Theme/Administration above always reflect the current plan.yml and
@@ -106,6 +116,8 @@
   <div class="border p-3 meeting-page-preview">
     {{ content }}
   </div>
+
+  {{ page_nav }}
 </div>
 
 <script>

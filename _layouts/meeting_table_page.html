@@ -1,0 +1,82 @@
+---
+# _layouts/meeting_table_page.html
+#
+# Offering-level index: a single Creole table of every meeting, for
+# pasting into the wiki as a table of contents. 100% generated, no
+# hand-authored body — so it does NOT use {% creole_source %}; the
+# copyable text is built entirely here from the generated data (same
+# approach as meeting_photos_page.html's {{ creole_photos }}).
+#
+# The generated fields it reads (nn, slug, weekday_short, meeting_page_path)
+# all come from lib/meeting_page_fields.rb. meeting_pages_generated is a
+# Hash keyed by meeting number, built in meeting order, so iterating it
+# yields rows 1..N in order without an explicit sort.
+---
+{%- assign gens = site.data.teaching[page.course][page.semester].meeting_pages_generated -%}
+{%- capture creole_table -%}
+= {{ page.course }} {{ page.semester }} Meeting Index =
+|= Meeting Nbr |= Link |= Day of Week |
+{% for pair in gens -%}
+| {{ pair[1].nn }} | [[{{ pair[1].slug }}]] | {{ pair[1].weekday_short }} |
+{% endfor -%}
+{%- endcapture -%}
+
+<div class="meeting-table-page">
+  <h1>{{ page.title }}</h1>
+  <p class="text-muted">
+    <a href="{{ '/meeting-pages/' | append: page.course | append: '/' | append: page.semester | append: '/' | relative_url }}">Back to the offering</a>
+  </p>
+
+  <div class="alert alert-info">
+    100% generated — always safe to fully regenerate. Paste the Creole below into a
+    Moodle wiki page to get a clickable index of every meeting page.
+  </div>
+
+  <h3>Name for this page</h3>
+  <p class="text-muted mb-1">
+    Paste this as the Moodle wiki page title. Name it <code>Home</code> instead if you
+    want it to be the target of the [[Home]] link in every meeting page's Navigation.
+  </p>
+  <div class="input-group mb-3">
+    <input id="table-page-name" type="text" class="form-control" readonly value="Meeting Index">
+    <button type="button" class="btn btn-secondary" onclick="copyTableName()">Copy</button>
+  </div>
+
+  <h3>Copy this into the Moodle wiki page</h3>
+  <div class="mb-3">
+    <textarea id="creole-table" class="form-control" rows="{{ gens.size | plus: 5 }}" readonly>{{ creole_table }}</textarea>
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyTable()">Copy to clipboard</button>
+  </div>
+
+  <h3>Preview</h3>
+  <table class="table table-sm">
+    <thead><tr><th>Meeting Nbr</th><th>Link</th><th>Day of Week</th></tr></thead>
+    <tbody>
+    {%- for pair in gens %}
+      <tr>
+        <td>{{ pair[1].nn }}</td>
+        <td><a href="{{ pair[1].meeting_page_path | relative_url }}">{{ pair[1].slug }}</a></td>
+        <td>{{ pair[1].weekday_short }}</td>
+      </tr>
+    {%- endfor %}
+    </tbody>
+  </table>
+</div>
+
+<script>
+  function copyTableName() {
+    const el = document.getElementById('table-page-name');
+    el.select();
+    navigator.clipboard.writeText(el.value).then(() => {
+      console.log('Table page name copied to clipboard');
+    });
+  }
+
+  function copyTable() {
+    const ta = document.getElementById('creole-table');
+    ta.select();
+    navigator.clipboard.writeText(ta.value).then(() => {
+      console.log('Table Creole copied to clipboard');
+    });
+  }
+</script>

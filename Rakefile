@@ -135,7 +135,7 @@ namespace :wiki do
 end
 
 desc 'Build the Jekyll site, failing loudly on any Liquid/Ruby error'
-task build: 'photos:sync_all' do
+task build: %w[photos:sync_all table:sync_all] do
   # Cleans _site/ and .jekyll-cache/ first — without this, output from a
   # different command (e.g. `urserve`'s `jekyll serve`, which can bake in
   # a completely different site.url depending on Jekyll version) could
@@ -159,7 +159,7 @@ end
 namespace :build do
   %w[github uregina].each do |target|
     desc "Build the site for the #{target} deploy target"
-    task target => 'photos:sync_all' do
+    task target => %w[photos:sync_all table:sync_all] do
       sh "bundle exec jekyll clean --destination _site_#{target}"
       sh "bundle exec jekyll build --trace " \
          "--config _config.yml,_config_#{target}.yml " \
@@ -254,5 +254,17 @@ namespace :meetings do
       File.write(path, result.rows.to_yaml)
       puts "wrote #{result.rows.size} -> #{path}"
     end
+  end
+end
+
+namespace :table do
+  desc 'Regenerate the per-offering meeting-index table.creole pages. Always safe to run.'
+  task :sync_all do
+    require_relative 'lib/meeting_table_page_generator'
+    result = MeetingTablePageGenerator.new.generate_all
+    result[:written].each { |w| puts "wrote: #{w}" }
+    result[:skipped].each { |s| puts "skipped: #{s}" }
+    result[:errors].each  { |e| puts "ERROR: #{e}" }
+    abort if result[:errors].any?
   end
 end
