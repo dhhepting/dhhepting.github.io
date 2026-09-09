@@ -4,7 +4,7 @@
 #
 # Same two-file pattern as WikiStartGenerator, applied to regular class
 # meeting pages instead of special wiki-start pages:
-#   1. Generated fields (weekday, prev/next links, wiki-editor link,
+#   1. Generated fields (weekday, prev/next links, wiki-editor group,
 #      attendance/calendar/groupblog links) -> a data file, fully
 #      overwritten every run.
 #   2. The hand-authored body (Outline for Today, For Next Meeting,
@@ -119,11 +119,12 @@ end
       'prev_page' => index.positive? ? meetings[index - 1]['date'] : nil,
       'next_page' => index < meetings.size - 1 ? meetings[index + 1]['date'] : nil,
       'wiki_ed_group' => mtg['wiki_ed_group'],
-      'wiki_ed_url' => mtg['wiki_ed_asgn'] && "https://urcourses.uregina.ca/mod/assign/view.php?id=#{mtg['wiki_ed_asgn']}",
-      'attendance_url' => "https://urcourses.uregina.ca/mod/attendance/manage.php?id=#{offering['attendance_id']}&view=1",
+      #'wiki_ed_url' => mtg['wiki_ed_asgn'] && "https://urcourses.uregina.ca/mod/assign/view.php?id=#{mtg['wiki_ed_asgn']}",
+      #'attendance_url' => "https://urcourses.uregina.ca/mod/attendance/manage.php?id=#{offering['attendance_id']}&view=1",
+      'attendance_QR'   => "https://urcourses.uregina.ca/mod/attendance/password.php?session=#{mtg['attendance_session']}&view=1",
       'calendar_day_url' => "https://urcourses.uregina.ca/calendar/view.php?view=day&time=#{regina_timestamp(date)}&course=#{offering['urc_course_id']}",
       'calendar_upcoming_url' => "https://urcourses.uregina.ca/calendar/view.php?view=upcoming&course=#{offering['urc_course_id']}",
-      'groupblog_url' => offering['groupblog_id'] && "https://urcourses.uregina.ca/mod/oublog/view.php?id=#{offering['groupblog_id']}",
+      #'groupblog_url' => offering['groupblog_id'] && "https://urcourses.uregina.ca/mod/oublog/view.php?id=#{offering['groupblog_id']}",
     }
   end
 

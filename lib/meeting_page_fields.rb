@@ -41,8 +41,10 @@ module MeetingPageFields
 
     {
       'meeting' => mtg['meeting'],
+      'nn' => format('%02d', mtg['meeting']),
       'date' => mtg['date'],
       'weekday' => date.strftime('%A'),
+      'weekday_short' => date.strftime('%a'),
       'theme' => meeting_plan['theme'],
       'BOK' => resolve_bok(meeting_plan['BOK'], standard, canonical_lookup),
       # The canonical Moodle wiki page name for THIS meeting — the same
@@ -71,12 +73,21 @@ module MeetingPageFields
       'next_page' => next_mtg && next_mtg['date'],
       'prev_slug' => prev_mtg && meeting_slug(prev_mtg),
       'next_slug' => next_mtg && meeting_slug(next_mtg),
+      # On-site paths to the neighbouring AUTHORING pages (the rendered
+      # _meeting_pages, not the Moodle wiki). Used by the layout's HTML
+      # chrome to let you click straight through every page and paste each
+      # into the wiki in one sitting. Deliberately NOT in creole_preamble,
+      # so these never end up in the text pasted into Moodle.
+      'prev_page_path' => prev_mtg && "/meeting-pages/#{crs_id}/#{crs_sem}/#{meeting_slug(prev_mtg)}/",
+      'next_page_path' => next_mtg && "/meeting-pages/#{crs_id}/#{crs_sem}/#{meeting_slug(next_mtg)}/",
       'wiki_ed_group' => mtg['wiki_ed_group'],
-      'wiki_ed_url' => mtg['wiki_ed_asgn'] && "https://urcourses.uregina.ca/mod/assign/view.php?id=#{mtg['wiki_ed_asgn']}",
-      'attendance_url' => "https://urcourses.uregina.ca/mod/attendance/manage.php?id=#{offering['attendance_id']}&view=1",
+      #'wiki_ed_url' => mtg['wiki_ed_asgn'] && "https://urcourses.uregina.ca/mod/assign/view.php?id=#{mtg['wiki_ed_asgn']}",
+      #'attendance_url' => "https://urcourses.uregina.ca/mod/attendance/manage.php?id=#{offering['attendance_id']}&view=1",
+      'attendance_QR'   => "https://urcourses.uregina.ca/mod/attendance/password.php?session=#{mtg['attendance_session']}&view=1",
+
       'calendar_day_url' => "https://urcourses.uregina.ca/calendar/view.php?view=day&time=#{regina_timestamp(date)}&course=#{offering['urc_course_id']}",
       'calendar_upcoming_url' => "https://urcourses.uregina.ca/calendar/view.php?view=upcoming&course=#{offering['urc_course_id']}",
-      'groupblog_url' => offering['groupblog_id'] && "https://urcourses.uregina.ca/mod/oublog/view.php?id=#{offering['groupblog_id']}",
+      #'groupblog_url' => offering['groupblog_id'] && "https://urcourses.uregina.ca/mod/oublog/view.php?id=#{offering['groupblog_id']}",
     }
   end
 
