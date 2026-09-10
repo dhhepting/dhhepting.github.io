@@ -17,9 +17,23 @@
 {%- assign gen = site.data.teaching[page.course][page.semester].meeting_pages_generated[page.generated_from] %}
 {%- capture creole_photos -%}
 == Photos: {{ page.course }} Mtg {{ gen.meeting }} ({{ gen.date }}) ==
+
+[[{{ gen.slug }} | Back to the main meeting page (Mtg {{ gen.meeting }})]]
+
+=== Gallery ===
 {%- for p in gen.photos %}
 * {% raw %}{{{% endraw %}{{ p.thumb_url }} | Mtg {{ p.label }} Thumbnail{% raw %}}}{% endraw %}
 [[{{ p.full_url }} | Mtg {{ p.label }} Full Size]]
+{%- endfor %}
+
+=== Copy a photo into your transcript ===
+Copy one block below into your captioned-photograph section and type your caption after the colon.
+{%- for p in gen.photos %}
+
+Mtg {{ p.label }}:
+{% raw %}{{{
+{{{% endraw %}{{ p.full_url }} | Mtg {{ p.label }}: {% raw %}}}
+}}}{% endraw %}
 {%- endfor %}
 {%- endcapture -%}
 
