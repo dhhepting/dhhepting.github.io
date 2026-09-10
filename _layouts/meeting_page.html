@@ -1,13 +1,19 @@
 ---
 # _layouts/meeting_page.html
 #
-# Layout for pages in the meeting_pages collection. Navigation/Theme/
-# Administration are looked up live from
-# site.data.teaching[page.course][page.semester].meeting_pages_generated
-# — always current, regenerated on every run. {{ content }} below is
-# the Creole-rendered HAND-AUTHORED body only (Outline, For Next
-# Meeting, Resources, Raw Transcript, Photos, Commentary, Fair Exam
-# Questions) — created once and never touched by regeneration again.
+# Layout for the meeting_pages collection. The ENTIRE page is generated:
+# creole_preamble (below) builds the full Moodle-paste text — four
+# sections (meeting title/Navigation, Plan for today, Post-meeting
+# resources, WikiGroup Contributions) — from
+# site.data.teaching[page.course][page.semester].meeting_pages_generated,
+# always current, regenerated on every build. The .creole files are
+# front-matter only (see lib/meeting_page_generator.rb); there is no
+# hand-authored body, so {% creole_source %} emits creole_preamble alone.
+#
+# Outline / For Next Meeting come from plan.yml; the WikiGroup
+# Contributions section ships as generated seed text the group edits on
+# Moodle. Frozen at paste: paste once per meeting; student edits then
+# live on the wiki and are never overwritten by regeneration.
 #
 # Two kinds of navigation live here, deliberately kept apart:
 #   * creole_preamble's "== Navigation ==" — slug [[links]] that DO get
@@ -21,6 +27,8 @@
 = {{ page.course }} Mtg {{ gen.meeting }}: {{ gen.date }} =
 == Navigation ==
 {% if gen.prev_slug %}[[{{ gen.prev_slug }} | Previous]] <-- {% endif %}[[Home]]{% if gen.next_slug %} --> [[{{ gen.next_slug }} | Next]]{% endif %}
+
+= Plan for today =
 == Today's Theme ==
 {{ gen.theme }}
 {%- if gen.BOK %}
@@ -45,10 +53,47 @@
 * ACTION: [[{{ gen.attendance_QR }} | Click here to record your own attendance]]
 * [[{{ gen.calendar_day_url }} | Class calendar for today]]
 * [[{{ gen.calendar_upcoming_url }} | Upcoming events ]]
-* [[{{ gen.groupblog_url }} | Discussions on group blog]]
-* [[{{ gen.photos_wiki_page_name }}]]
+{%- if gen.outline %}
+== Outline for Today ==
+{%- for item in gen.outline %}
+* {% if item.url %}[[{{ item.url }} | {{ item.text }}]]{% else %}{{ item.text }}{% endif %}
+{%- endfor %}
+{%- endif %}
+{%- if gen.for_next_meeting %}
+== For Next Meeting ==
+{%- for item in gen.for_next_meeting %}
+* {% if item.url %}[[{{ item.url }} | {{ item.text }}]]{% else %}{{ item.text }}{% endif %}
+{%- endfor %}
+{%- endif %}
 
-{% endcapture -%}
+= Post-meeting resources =
+== photos ==
+[[{{ gen.photos_wiki_page_name }} | photos]]
+== audio transcript ==
+[[{{ gen.audio_wiki_page_name }} | audio transcript]]
+
+{% raw %}= WikiGroup Contributions =
+Please **do all of your editing here in the wiki** — not in a document you paste in at the end. The wiki keeps a full page history, so working here is what lets your contributions be recognized.
+
+To sign your work, make a **personal wiki page**: enclose your initials in double square brackets — Dr. Hepting's is DHH, so you would use your own:
+{{{
+[[DHH]]
+}}}
+When you save, a brand-new page shows as a **red** link (italic, in our wiki theme): that means the name is free and the page is yours — click it to start your page. The sure check is what you see when you click through: if the page is empty and asks you to create it, it's yours; if it already has text, someone else has that name, so back out and choose another. Ways to pick a free name: add a middle initial (DHHM), add a number (DHH2), or use part of your surname (DHHepting).
+
+== Edited Transcript with Captioned Photos ==
+//**Instructions — delete this block once your section is written.** Start from the audio transcript linked under "Post-meeting resources" above and tidy it into readable prose (fix obvious errors, drop filler; don't include the source word-for-word). Insert photos where they fit the discussion by copying a ready-to-paste snippet from the photos page (under "Post-meeting resources") and typing your caption after the colon. Your caption should represent what is on the board in the photo. If something in the photo is not clear, add your question as an action item. Sign this section with the personal wiki page of each person who worked on it.//
+
+== Action Items for Dr. Hepting ==
+//**Instructions — delete this block once your section is written.** List anything Dr. Hepting agreed to follow up on, one bullet each.//
+
+== Commentary and Discussion ==
+//**Instructions — delete this block once your section is written.** Add your group's reflections: what was confusing or surprising, how today connects to earlier meetings or other courses, and any questions worth raising next time. Two or three substantive points is plenty. Sign each contribution with your personal wiki page.//
+
+== Fair Exam Questions (with Answers) About Today's Meeting ==
+//**Instructions — delete this block once your section is written.** Write two or three exam-style questions a fair exam could ask about today's material, each with an answer. Aim to test understanding.//
+{% endraw %}
+{%- endcapture -%}
 
 {%- capture page_nav -%}
 <nav class="d-flex justify-content-between align-items-center my-3">
@@ -68,8 +113,11 @@
   {{ page_nav }}
 
   <div class="alert alert-info">
-    Navigation/Theme/Administration above always reflect the current plan.yml and
-    meetings.yml. The content below is hand-authored and is never regenerated once created.
+    This whole page is generated from plan.yml and meetings.yml — Outline and For
+    Next Meeting come from plan.yml; WikiGroup Contributions ships as a template
+    students complete on Moodle. Regenerating is always safe. Paste it into the
+    wiki once per meeting; after that, student edits live on Moodle and are never
+    overwritten.
   </div>
 
   {%- if gen.BOK %}
@@ -106,15 +154,10 @@
 
   <h3>Copy this into the Moodle wiki page</h3>
   <div class="mb-3">
-    <textarea id="creole-source" class="form-control" rows="20" readonly>{% creole_source %}</textarea>
+    <textarea id="creole-source" class="form-control" rows="24" readonly>{% creole_source %}</textarea>
     <button type="button" class="btn btn-secondary mt-2" onclick="copyCreoleSource()">
       Copy to clipboard
     </button>
-  </div>
-
-  <h3>Preview (rendered from the Creole above)</h3>
-  <div class="border p-3 meeting-page-preview">
-    {{ content }}
   </div>
 
   {{ page_nav }}
