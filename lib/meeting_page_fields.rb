@@ -22,6 +22,7 @@ require 'date'
 require 'csv'
 require_relative 'tlo_resolver'
 require_relative 'meeting_calendar'   # add
+require_relative 'plan_content_validator'
 
 module MeetingPageFields
   module_function
@@ -36,6 +37,10 @@ module MeetingPageFields
     date = parse_date(mtg['date'])
     has_photos = !(photos.nil? || photos.empty?)
     slug = meeting_slug(mtg)
+    # Validate + normalize plan.yml's authored content lists (outline,
+    # for_next_meeting). Raises loud at build time on malformed authoring
+    # rather than emitting a broken bullet into the Moodle paste.
+    plan_content = PlanContentValidator.normalize_meeting(meeting_plan, crs_id: crs_id, crs_sem: crs_sem)
     prev_mtg = index.positive? ? meetings[index - 1] : nil
     next_mtg = index < meetings.size - 1 ? meetings[index + 1] : nil
 
@@ -47,6 +52,12 @@ module MeetingPageFields
       'weekday_short' => date.strftime('%a'),
       'theme' => meeting_plan['theme'],
       'BOK' => resolve_bok(meeting_plan['BOK'], standard, canonical_lookup),
+      # Outline for Today / For Next Meeting — authored in plan.yml as a
+      # list of bare strings or { text, url } hashes, validated + normalized
+      # by PlanContentValidator into { 'text', 'url' } items (url may be nil).
+      # nil when unauthored, so the layout presence-gates the section.
+      'outline' => plan_content['outline'],
+      'for_next_meeting' => plan_content['for_next_meeting'],
       # The canonical Moodle wiki page name for THIS meeting — the same
       # NN_YYYY-MM-DD stem used for the .creole file, photos_page_path, and
       # every [[link]] that points here. Exposed so the layout can offer it
@@ -64,6 +75,11 @@ module MeetingPageFields
       # matches the photos page's own copyable name and its file stem —
       # one canonical string, no drift between the link and the page.
       'photos_wiki_page_name' => "#{slug}-photos",
+      # The cleaned audio transcript's Moodle wiki page name — same slug
+      # stem + the "-audio-txt" suffix the transcript pages are posted
+      # under. A slug [[link]] to it renders red until the page exists,
+      # same as photos. Section 3 (Post-meeting resources) links here.
+      'audio_wiki_page_name' => "#{slug}-audio-txt",
       'meeting_page_path' => "/meeting-pages/#{crs_id}/#{crs_sem}/#{slug}/",
       # prev/next kept as DATES for any existing consumer, plus the SLUG
       # form the wiki nav links must use (the Moodle page is named by slug,
@@ -87,7 +103,6 @@ module MeetingPageFields
 
       'calendar_day_url' => "https://urcourses.uregina.ca/calendar/view.php?view=day&time=#{regina_timestamp(date)}&course=#{offering['urc_course_id']}",
       'calendar_upcoming_url' => "https://urcourses.uregina.ca/calendar/view.php?view=upcoming&course=#{offering['urc_course_id']}",
-      #'groupblog_url' => offering['groupblog_id'] && "https://urcourses.uregina.ca/mod/oublog/view.php?id=#{offering['groupblog_id']}",
     }
   end
 
