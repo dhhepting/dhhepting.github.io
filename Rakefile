@@ -20,15 +20,14 @@ require 'yaml'
 task default: %i[data:validate wiki:validate structure:validate build test:html]
 
 namespace :meetings do
-  desc 'Create new hand-authored meeting-page stubs for any meeting missing one (usage: rake meetings:generate[CS-280,202610]). Generated fields like weekday/links are computed automatically at build time — this only creates files, review + commit the result.'
-  task :generate, %i[crs_id crs_sem] do |_t, args|
+  desc 'Regenerate all meeting-page .creole files for ONE offering (usage: rake meetings:pages[CS-315,202630]). Front-matter only, fully generated — the whole page is composed at build time from plan.yml/meetings.yml. Overwrites in full every run (no drift-detection); migrate any hand-authored body into plan.yml FIRST — stripped bodies are reported. Kept OUT of :build so offerings not yet migrated are never clobbered. Review + commit the result.'
+  task :pages, %i[crs_id crs_sem] do |_t, args|
     require_relative 'lib/meeting_page_generator'
 
-    force = ENV['FORCE'] == '1'
-    result = MeetingPageGenerator.new.generate_for(args[:crs_id], args[:crs_sem], force: force)
+    result = MeetingPageGenerator.new.generate_for(args[:crs_id], args[:crs_sem])
 
-    result[:created].each { |c| puts "created: #{c}" }
-    result[:skipped].each { |s| puts "skipped: #{s}" }
+    result[:written].each { |w| puts "wrote: #{w}" }
+    result[:stripped_body].each { |s| puts "STRIPPED BODY (already migrated to plan.yml?): #{s}" }
     result[:errors].each { |e| puts "ERROR: #{e}" }
     abort if result[:errors].any?
   end
