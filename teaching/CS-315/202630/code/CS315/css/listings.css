@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Workbench:BLED,SCAN@1,-2&display=swap');
+.file-tree {
+  list-style: none;
+  padding-left: 3em;
+}
+.file-tree li {
+  position: relative;
+  margin: .5em 0;
+}
+.file-tree li::before {
+  position: absolute;
+  left: -1.5em;
+  top: -.1em;
+}
+/* Folder Icon via Unicode */
+.file-tree li.dir::before {
+  content: "📁"; 
+}
+/* File Icon via Unicode */
+.file-tree li.file::before {
+  content: "📄"; 
+}
+
+a {text-decoration: none; color: #20A040}
+a:hover {text-decoration: none; color: #40FF80}
+a:visited {text-decoration: none; color: #20F040}
+
+
+body {font-family: "Workbench", monospace; color: #20F040; background-color: #202020;}
