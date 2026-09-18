@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colour Cube — WebGL2</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #26262e; overflow: hidden; }
+    #gl-canvas { display: block; width: 100vw; height: 100vh; }
+    #caption {
+      position: fixed;
+      left: 50%;
+      bottom: 1.25rem;
+      transform: translateX(-50%);
+      margin: 0;
+      padding: 0.4rem 0.9rem;
+      font: 14px/1.4 system-ui, sans-serif;
+      color: #e8e8ee;
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 6px;
+      pointer-events: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gl-canvas"></canvas>
+  <p id="caption"></p>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

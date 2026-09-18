@@ -1,1 +1,619 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2GZTQJMNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2GZTQJMNZ');
+  </script>
+
+  <!-- Links -->
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/normalize.css">
+  <link rel="stylesheet"
+    href="/~hepting/assets/tipuesearch/css/tipuesearch.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!--<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script> -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous">
+  </script>
+  <!-- p5.js CDNs
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  -->
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="/~hepting/assets/css/dhhepting.css" />
+  <!-- realfavicongenerator.net start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/~hepting/apple-touch-icon.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="32x32" href="/~hepting/favicon-32x32.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="194x194" href="/~hepting/favicon-194x194.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="192x192" href="/~hepting/android-chrome-192x192.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/png" sizes="16x16" href="/~hepting/favicon-16x16.png?v=ngJaaxNvlX">
+  <link rel="icon" type="image/x-icon" href="/~hepting/favicon.ico?v=ngJaaxNvlX" >
+  <link rel="mask-icon" type="image/svg" href="/~hepting/safari-pinned-tab.svg?v=ngJaaxNvlX" color="#5bbad5">
+  <link rel="manifest" href="/~hepting/site.webmanifest?v=ngJaaxNvlX">
+  <meta name="apple-mobile-web-app-title" content="DH Hepting">
+  <meta name="application-name" content="DH Hepting">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end realfavicongenerator.net -->
+    <link rel="alternate" type="application/rss+xml"
+      href="https://www2.cs.uregina.ca/~hepting/rss/news.rss"
+    />
+    <link rel="canonical" href="https://www2.cs.uregina.ca/~hepting/teaching/CS-315/202630/" />
+    
+    <title>CS 315 in Fall 2026 | D. H. Hepting, Ph.D.</title>
+    <meta property="og:title" content="CS 315 in Fall 2026 | D. H. Hepting, Ph.D." />
+    <meta property="og:url" content="https://www2.cs.uregina.ca/~hepting/teaching/CS-315/202630/" />
+    <meta property="og:type" content="website" />
+
+    <!-- <meta property="og:image" content="/~hepting/assets/bg/about.jpg" /> -->
+
+  
+    
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  
+      "@type": "WebPage",
+"breadcrumb":
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@type": "WebSite",
+          "@id": "https://www2.cs.uregina.ca/~hepting/",
+          "name": "D. H. Hepting"
+        }
+      
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "https://www2.cs.uregina.ca/~hepting/teaching/",
+        
+          "name": "Teaching"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "https://www2.cs.uregina.ca/~hepting/teaching/CS-315/",
+        
+          "name": "CS 315"
+        }
+      },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "item":
+        {
+          "@type": "WebPage",
+          "@id": "https://www2.cs.uregina.ca/~hepting/teaching/CS-315/202630/",
+        
+          "name": "202630"
+        }
+      }
+        ]
+  }
+
+  ,
+  "mainEntity":
+
+
+
+
+  {
+  }
+
+
+  
+}
+</script>
+
+  
+
+  
+</head>
+<body class="">
+
+
+<div class="card teaching w-100 h-100 bg-transparent"><div class="card-header bg-white text-dark bg-opacity-75">
+  <div class="row align-items-center">
+    <div class="col-9 text-start"><nav aria-label="breadcrumb">
+  <ol class="breadcrumb"><li class="breadcrumb-item">
+      <a href="/~hepting/">
+        D. H. Hepting
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/">
+        Teaching
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="/~hepting/teaching/CS-315/">
+        CS 315
+      </a>
+    </li><li class="breadcrumb-item active" aria-current="page">
+      202630
+    </li></ol>
+</nav>
+</div>
+    <div class="col-3 text-end"><div class="dropdown">
+  <button class="p-2 btn btn-primary dropdown-toggle"
+  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+  aria-expanded="false">
+    Site
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"><li><a class="dropdown-item" href="/~hepting/">Home</a>
+    </li><li><a class="dropdown-item" href="/~hepting/about/">About</a>
+    </li><li><a class="dropdown-item" href="/~hepting/projects/">Projects</a>
+    </li><li><a class="dropdown-item" href="/~hepting/research/">Research</a>
+    </li><li><a class="dropdown-item" href="/~hepting/teaching/">Teaching</a>
+    </li><li><a class="dropdown-item" href="/~hepting/OpenData/">OpenData</a>
+    </li><li><a class="dropdown-item" href="/~hepting/rss/">RSS&nbsp;<span class="bi bi-rss"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/search/">Search&nbsp;<span class="bi bi-search"></span></a>
+    </li><li><a class="dropdown-item" href="/~hepting/news/">News</a>
+    </li><li><a class="dropdown-item" href="/~hepting/trouble/">Trouble</a>
+    </li></ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="mcb" class="card-body bg-white text-dark bg-opacity-50 overflow-auto">
+    
+<div class="w-auto h-100">
+  <div class="bg-light mb-2 p-3">
+    <h1>
+      CS 315 in Fall 2026
+    </h1>
+  </div>
+<!-- Make the navigation -->
+  <div class="card" style="height: 85%">
+    <div id="offhdr" class="card-header bg-info">
+      <ul class="nav nav-pills" id="navbar-scrollspy"><li class="nav-item">
+          <a class="nav-link" href="#ssWeekly">
+            Weekly Schedule (Tentative)
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="#ssOffice">
+            Office Hours
+          </a>
+        </li><li class="nav-item">
+              <a class="nav-link" href="#ssCode">
+                Code
+              </a>
+            </li><li class="nav-item">
+          <a class="nav-link" href="#ssLinks">
+            Links
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+              Topics
+          </a>
+          <ul class="dropdown-menu"><li>
+              <a class="dropdown-item" href="#ssTLO_GIT_Fundamentals">
+                GIT / Fundamental Concepts
+              </a>
+            </li>
+          </ul>
+        </li></ul>
+    </div>
+    <div id="cbss" class="card-body cbss mh-100" data-bs-spy="scroll" data-bs-target="#navbar-scrollspy" data-bs-offset="0" tabindex="0">
+
+      <!-- Create the content --><h3 id="ssWeekly" class="bg-dark text-white">
+        Weekly Schedule (Tentative)
+      </h3><table class="table table-striped-columns">
+  <thead>
+    <tr>
+      <th scope="col" rowspan="2">Week of</th>
+      <th scope="colgroup" colspan="2" class="text-center">Meetings</th>
+      <th scope="col" rowspan="2">Topics</th>
+      <th scope="col" rowspan="2">Items of Note</th>
+    </tr>
+    <tr><th scope="col" class="text-center">Mon</th><th scope="col" class="text-center">Wed</th></tr>
+  </thead>
+  <tbody><tr>
+      <td class="text-nowrap">Aug&nbsp;31,&nbsp;2026</td><td class="text-center"></td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg01/" role="button" class="m-1 btn btn-sm btn-primary" title="Introduction to course, graphics fundamentals">
+          01
+        </a></td><td><p>Introduction to course, graphics fundamentals</p>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td class="text-nowrap">Sep&nbsp;7,&nbsp;2026</td><td class="text-center"></td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg02/" role="button" class="m-1 btn btn-sm btn-primary" title="Wiki, exams, more fundamentals">
+          02
+        </a></td><td><p>Wiki, exams, more fundamentals</p>
+</td>
+      <td><p>Labour Day</p>
+</td>
+    </tr><tr>
+      <td class="text-nowrap">Sep&nbsp;14,&nbsp;2026</td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg03/" role="button" class="m-1 btn btn-sm btn-primary">
+          03
+        </a></td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg04/" role="button" class="m-1 btn btn-sm btn-primary">
+          04
+        </a></td><td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td class="text-nowrap">Sep&nbsp;21,&nbsp;2026</td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg05/" role="button" class="m-1 btn btn-sm btn-primary">
+          05
+        </a></td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg06/" role="button" class="m-1 btn btn-sm btn-primary">
+          06
+        </a></td><td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td class="text-nowrap">Sep&nbsp;28,&nbsp;2026</td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg07/" role="button" class="m-1 btn btn-sm btn-primary">
+          07
+        </a></td><td class="text-center"></td><td>
+</td>
+      <td><p>National Day for Truth and Reconciliation</p>
+</td>
+    </tr><tr>
+      <td class="text-nowrap">Oct&nbsp;5,&nbsp;2026</td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg08/" role="button" class="m-1 btn btn-sm btn-primary">
+          08
+        </a></td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg09/" role="button" class="m-1 btn btn-sm btn-primary">
+          09
+        </a></td><td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td class="text-nowrap">Oct&nbsp;12,&nbsp;2026</td><td class="text-center"></td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg10/" role="button" class="m-1 btn btn-sm btn-primary">
+          10
+        </a></td><td>
+</td>
+      <td><p>Thanksgiving</p>
+</td>
+    </tr><tr>
+      <td class="text-nowrap">Oct&nbsp;19,&nbsp;2026</td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg11/" role="button" class="m-1 btn btn-sm btn-primary">
+          11
+        </a></td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg12/" role="button" class="m-1 btn btn-sm btn-primary">
+          12
+        </a></td><td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td class="text-nowrap">Oct&nbsp;26,&nbsp;2026</td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg13/" role="button" class="m-1 btn btn-sm btn-primary">
+          13
+        </a></td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg14/" role="button" class="m-1 btn btn-sm btn-primary">
+          14
+        </a></td><td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td class="text-nowrap">Nov&nbsp;2,&nbsp;2026</td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg15/" role="button" class="m-1 btn btn-sm btn-primary">
+          15
+        </a></td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg16/" role="button" class="m-1 btn btn-sm btn-primary">
+          16
+        </a></td><td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td class="text-nowrap">Nov&nbsp;9,&nbsp;2026</td><td class="text-center"></td><td class="text-center"></td><td>
+</td>
+      <td><p>Fall Reading Week; Remembrance Day</p>
+</td>
+    </tr><tr>
+      <td class="text-nowrap">Nov&nbsp;16,&nbsp;2026</td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg17/" role="button" class="m-1 btn btn-sm btn-primary">
+          17
+        </a></td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg18/" role="button" class="m-1 btn btn-sm btn-primary">
+          18
+        </a></td><td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td class="text-nowrap">Nov&nbsp;23,&nbsp;2026</td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg19/" role="button" class="m-1 btn btn-sm btn-primary">
+          19
+        </a></td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg20/" role="button" class="m-1 btn btn-sm btn-primary">
+          20
+        </a></td><td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td class="text-nowrap">Nov&nbsp;30,&nbsp;2026</td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg21/" role="button" class="m-1 btn btn-sm btn-primary">
+          21
+        </a></td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg22/" role="button" class="m-1 btn btn-sm btn-primary">
+          22
+        </a></td><td>
+</td>
+      <td>
+</td>
+    </tr><tr>
+      <td class="text-nowrap">Dec&nbsp;7,&nbsp;2026</td><td class="text-center"><a href="/~hepting/teaching/CS-315/202630/Mtg23/" role="button" class="m-1 btn btn-sm btn-primary" title="Review">
+          23
+        </a></td><td class="text-center"></td><td><p>Review</p>
+</td>
+      <td>
+</td>
+    </tr></tbody>
+</table><p></p><h3 id="ssOffice" class="bg-dark text-white">
+        Office Hours and Semester Schedule
+      </h3>---
+layout: default
+---
+# SCHEDULE STUB<div class="table-responsive wk-grid">
+  <table class="table table-bordered align-middle text-center mb-2">
+    <thead>
+      <tr>
+        <th scope="col" class="wk-time">Time</th><th scope="col">Mon</th><th scope="col">Tue</th><th scope="col">Wed</th><th scope="col">Thu</th><th scope="col">Fri</th></tr>
+    </thead>
+    <tbody><tr>
+        <th scope="row" class="wk-time">08:30–09:00</th><td class="wk-free" rowspan="3" data-day="Mon" data-start="08:30" data-category="free"></td><td class="wk-free" rowspan="6" data-day="Tue" data-start="08:30" data-category="free"></td><td class="wk-free" rowspan="3" data-day="Wed" data-start="08:30" data-category="free"></td><td class="wk-free" rowspan="18" data-day="Thu" data-start="08:30" data-category="free"></td><td class="wk-free" rowspan="2" data-day="Fri" data-start="08:30" data-category="free"></td></tr><tr>
+        <th scope="row" class="wk-time">09:00–09:30</th></tr><tr>
+        <th scope="row" class="wk-time">09:30–10:00</th><td class="wk-research" rowspan="16" data-day="Fri" data-start="09:30" data-category="research" aria-label="Research meeting time">
+                  <span class="visually-hidden">Research</span>
+                </td></tr><tr>
+        <th scope="row" class="wk-time">10:00–10:30</th><td class="wk-class" rowspan="3" data-day="Mon" data-start="10:00" data-category="class">
+                  <span class="wk-label">CS-315</span><span class="wk-sub">CL-126</span></td><td class="wk-class" rowspan="3" data-day="Wed" data-start="10:00" data-category="class">
+                  <span class="wk-label">CS-315</span><span class="wk-sub">CL-126</span></td></tr><tr>
+        <th scope="row" class="wk-time">10:30–11:00</th></tr><tr>
+        <th scope="row" class="wk-time">11:00–11:30</th></tr><tr>
+        <th scope="row" class="wk-time">11:30–12:00</th><td class="wk-office" rowspan="2" data-day="Mon" data-start="11:30" data-category="office"><span class="wk-label">Office hours</span></td><td class="wk-office" rowspan="2" data-day="Tue" data-start="11:30" data-category="office"><span class="wk-label">Office hours</span></td><td class="wk-office" rowspan="2" data-day="Wed" data-start="11:30" data-category="office"><span class="wk-label">Office hours</span></td></tr><tr>
+        <th scope="row" class="wk-time">12:00–12:30</th></tr><tr>
+        <th scope="row" class="wk-time">12:30–13:00</th><td class="wk-free" rowspan="10" data-day="Mon" data-start="12:30" data-category="free"></td><td class="wk-free" rowspan="10" data-day="Tue" data-start="12:30" data-category="free"></td><td class="wk-reserved" rowspan="10" data-day="Wed" data-start="12:30" data-category="reserved" aria-label="Reserved time">
+                  <span class="visually-hidden">Reserved</span>
+                </td></tr><tr>
+        <th scope="row" class="wk-time">13:00–13:30</th></tr><tr>
+        <th scope="row" class="wk-time">13:30–14:00</th></tr><tr>
+        <th scope="row" class="wk-time">14:00–14:30</th></tr><tr>
+        <th scope="row" class="wk-time">14:30–15:00</th></tr><tr>
+        <th scope="row" class="wk-time">15:00–15:30</th></tr><tr>
+        <th scope="row" class="wk-time">15:30–16:00</th></tr><tr>
+        <th scope="row" class="wk-time">16:00–16:30</th></tr><tr>
+        <th scope="row" class="wk-time">16:30–17:00</th></tr><tr>
+        <th scope="row" class="wk-time">17:00–17:30</th></tr></tbody>
+  </table>
+
+  <ul class="wk-legend list-inline small text-muted mb-0">
+    <li class="list-inline-item"><span class="wk-swatch wk-class"></span>Class</li>
+    <li class="list-inline-item"><span class="wk-swatch wk-office"></span>Office hours</li>
+    <li class="list-inline-item"><span class="wk-swatch wk-research"></span>Research</li>
+    <li class="list-inline-item"><span class="wk-swatch wk-reserved"></span>Reserved</li>
+  </ul>
+</div><p></p><h3 id="ssCode" class="bg-dark text-white">Code</h3>
+      <p>The code directory for this offering is available at:</p>
+      <ul>
+        <li>
+          <a href="/~hepting/teaching/CS-315/202630/code/" target="_blank">Code Directory</a>
+        </li>
+</ul><h3 id="ssLinks" class="bg-dark text-white">
+        Links
+      </h3>
+      <ul>
+
+  <li><a href="/~hepting/assets/teaching/pdf/CS-315-202630_syllabus.pdf" target="_blank">
+            Syllabus (pdf)
+          </a>
+        </li><li><a href="/~hepting/teaching/CS-315/202630/meetings.ics">Course calendar (.ics)</a>
+        </li><li>
+          <a href="https://urcourses.uregina.ca/course/view.php?id=42149" target="_blank">
+            UR Courses
+          </a>
+        </li>
+</ul>
+      <p></p><h3 id="topics_learning_outcomes" class="bg-dark text-white">
+        Topics and Learning Outcomes
+      </h3><div class="card m-2">
+  <div class="card-body">
+    <p>
+      The Topics and Learning Outcomes below, for the Knowledge Units within
+      each Knowledge Area explored in this course, are drawn from the
+      <a href="https://csed.acm.org/" target="_blank">
+        ACM/IEEE-CS/AAAI Computer Science Curricula (CS2023)
+      </a>.
+    </p>
+    <p>Reading this section:</p>
+    <ul>
+      <li>
+        Items are grouped by coreness. Those above the
+        <span class="text-uppercase">KA&nbsp;Core</span> divider are
+        <strong>CS&nbsp;Core</strong> (expected in every accredited program);
+        those below it are <strong>KA&nbsp;Core</strong> (core to this area,
+        typically covered when the unit is taught in depth).
+      </li>
+      <li>
+        <span class="text-muted">Grey text</span> marks Topics and Learning
+        Outcomes that are <em>not</em> covered in this course offering.
+      </li>
+      <li>
+        Nested sub-points are lettered and roman-numbered by depth; the
+        numbering is generated from the curriculum outline, not authored.
+      </li>
+    </ul>
+  </div>
+</div><h4 id="ssTLO_GIT_Fundamentals">
+      GIT / Fundamental Concepts
+    </h4><div class="row">
+        <div class="col-md-12"><h5>Graphics and Interactive Techniques</h5><p>Computer graphics is the term used to describe the computer generation and manipulation of images and can be viewed as the science of enabling visual communication through computation. Its application domains include animation, CGI and VFX; engineering; machine learning; medical imaging; scientific, information, and knowledge visualization; simulators; special effects; user interfaces; and video games. # … paste the rest of the cleaned preamble_GIT prose here as one block …</p>
+
+        </div>
+      </div><p><p>For nearly every computer scientist and software developer, an understanding of how humans interact with machines is essential.</p>
+</p><div class="row">
+      <div class="col-md-6"><h5>Topics</h5>
+<div class="tlo-list"><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">1.</span>
+      Uses of computer graphics and interactive techniques and their potential risks and abuses.</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">a.</span>
+      Entertainment, business, and scientific applications: e.g., visual effects, generative imagery, computer vision, machine learning, user interfaces, video editing, games and game engines, computer-aided design and manufacturing, data visualization, and virtual/augmented/mixed reality</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">b.</span>
+      Intellectual property, deep fakes, facial recognition, privacy<span class="tlo-see-also text-muted">(see SEP-DEIA, SEP-Privacy, SEP-IP, SEP-Professional-Ethics)</span></div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">2.</span>
+      Graphic output</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">a.</span>
+      Displays (e.g., LCD)</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">b.</span>
+      Printers</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">c.</span>
+      Analog film</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">d.</span>
+      Concepts</div><div class="tlo-row" style="margin-left: 3.0rem;">
+      <span class="tlo-num">i.</span>
+      Resolution (e.g., pixels, dots)</div><div class="tlo-row" style="margin-left: 3.0rem;">
+      <span class="tlo-num">ii.</span>
+      Aspect ratio</div><div class="tlo-row" style="margin-left: 3.0rem;">
+      <span class="tlo-num">iii.</span>
+      Frame rate</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">3.</span>
+      Human vision system</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">a.</span>
+      Tristimulus reception (RGB)</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">b.</span>
+      Eye as a camera (projection)</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">c.</span>
+      Persistence of vision (frame rate, motion blur)</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">d.</span>
+      Contrast (detection, Mach banding, dithering/aliasing)</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">e.</span>
+      Non-linear response (dynamic range, tone mapping)</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">f.</span>
+      Binocular vision (stereo)</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">g.</span>
+      Accessibility (color deficiency, strobing, monocular vision, etc.)<span class="tlo-see-also text-muted">(see SEP-DEIA, HCI-User)</span></div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">4.</span>
+      Standard image formats</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">a.</span>
+      Raster</div><div class="tlo-row" style="margin-left: 3.0rem;">
+      <span class="tlo-num">i.</span>
+      Lossless (e.g., TIF)</div><div class="tlo-row" style="margin-left: 3.0rem;">
+      <span class="tlo-num">ii.</span>
+      Lossy (e.g., JPG, GIF, etc.)</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">b.</span>
+      Vector (e.g., SVG, Adobe Illustrator)</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">5.</span>
+      Digitization of analog data</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">a.</span>
+      Rasterization</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">b.</span>
+      Resolution</div><div class="tlo-row" style="margin-left: 1.5rem;">
+      <span class="tlo-num">c.</span>
+      Sampling and quantization</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">6.</span>
+      Color models: additive (RGB), subtractive (CMYK), and color perception (HSV)</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">7.</span>
+      Tradeoffs between storing image data and re-computing image data</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">8.</span>
+      Spatialization: coordinate systems, absolute and relative positioning</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">9.</span>
+      Animation as a sequence of still images</div><div class="tlo-tier-divider text-muted">
+      <hr class="my-1" />
+      <small class="text-uppercase">KA Core</small>
+    </div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">10.</span>
+      Applied interactive graphics (e.g., processing, python)</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">11.</span>
+      Display characteristics (protocols and ports)</div></div></div>
+      <div class="col-md-6"><h5>Learning Outcomes</h5>
+<div class="tlo-list"><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">1.</span>
+      Identify common uses of digital presentation to humans (e.g., computer graphics, sound).</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">2.</span>
+      Describe how analog signals can be reasonably represented by discrete samples, for example, how images can be represented by pixels.</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">3.</span>
+      Compute the memory requirement for storing a color image given its resolution.</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">4.</span>
+      Create a graphic depicting how the limits of human perception affect choices about the digital representation of analog signals.</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">5.</span>
+      Indicate when and why you should use each of the following common file formats: JPG, PNG, MP3, MP4, and GIF.</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">6.</span>
+      Describe color models and their use in graphics display devices.</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">7.</span>
+      Compute the memory requirements for a multi-second movie (lasting n seconds) displaying at a specific framerate (f frames per second) at a specified resolution (r pixels per frame).</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">8.</span>
+      Compare and contrast digital video to analog video.</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">9.</span>
+      Describe the basic process of producing continuous motion from a sequence of discrete frames (sometimes called “flicker fusion”).</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">10.</span>
+      Describe a possible visual misrepresentation that could result from digitally sampling an analog world.</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">11.</span>
+      Compute memory space requirements based on resolution and color coding.</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">12.</span>
+      Compute time requirements based on refresh rates and rasterization techniques.</div><div class="tlo-tier-divider text-muted">
+      <hr class="my-1" />
+      <small class="text-uppercase">KA Core</small>
+    </div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">13.</span>
+      Design a user interface and an alternative for persons with color perception deficiency.</div><div class="tlo-row" style="margin-left: 0.0rem;">
+      <span class="tlo-num">14.</span>
+      Construct a simple graphical user interface using a graphics library.</div></div></div>
+    </div><p></p><div id="offftr" class="card-header bg-info">
+    </div>
+  </div>
+</div>
+</div>
+
+  </div>
+  <div id="mcbftr" class="card-footer bg-white text-muted bg-opacity-75">
+  Site built: 2026-09-18 12:44 -0600
+  &nbsp;&bull;&nbsp;
+  <a href="mailto:daryl.hepting@uregina.ca?subject=Feedback about webpage: https://www2.cs.uregina.ca/~hepting/teaching/CS-315/202630/">
+    Give feedback <span class="d-none d-sm-inline">about page</span>
+  </a>
+</div>
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous">
+</script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/~hepting/assets/tipuesearch/tipuesearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"
+  integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+  crossorigin="anonymous">
+</script><script>
+  var clipboard = new ClipboardJS('.btn')
+</script></body>
+</html>
 

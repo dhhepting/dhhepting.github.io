@@ -85,7 +85,7 @@ li li li{
  * style for home page
  */
 .splash {
-  background-image: url("/~hepting/assets/bg/home.jpg");
+  background-image: url("../bg/home.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -99,7 +99,7 @@ li li li{
  * style for news page
  */
 .HTTPerrors {
-  background-image: url("/~hepting/assets/bg/home.jpg");
+  background-image: url("../bg/home.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -110,7 +110,7 @@ li li li{
  * style for about pages
  */
 .about {
-  background-image: url("/~hepting/assets/bg/about.jpg");
+  background-image: url("../bg/about.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -125,7 +125,7 @@ li li li{
  * style for projects pages
  */
 .projects {
-  background-image: url("/~hepting/assets/bg/projects.jpg");
+  background-image: url("../bg/projects.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -140,7 +140,7 @@ li li li{
  * style for research pages
  */
 .research {
-  background-image: url("/~hepting/assets/bg/research.jpg");
+  background-image: url("../bg/research.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -155,7 +155,7 @@ li li li{
  * style for teaching pages
  */
 .teaching {
-  background-image: url("/~hepting/assets/bg/teaching.jpg");
+  background-image: url("../bg/teaching.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -171,7 +171,7 @@ li li li{
  * style for rss page
  */
 .rss {
-  background-image: url("/~hepting/assets/bg/rss.jpg");
+  background-image: url("../bg/rss.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -186,7 +186,7 @@ li li li{
  * style for teaching pages
  */
 .trouble {
-  background-image: url("/~hepting/assets/bg/trouble.jpg");
+  background-image: url("../bg/trouble.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -197,7 +197,7 @@ li li li{
  * style for search pages
  */
 .search {
-  background-image: url("/~hepting/assets/bg/search.jpg");
+  background-image: url("../bg/search.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -212,7 +212,7 @@ li li li{
  * style for news page
  */
 .news {
-  background-image: url("/~hepting/assets/bg/news.jpg");
+  background-image: url("../bg/news.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -272,6 +272,63 @@ li li li{
 
 .card-title[aria-expanded=true]::after {
   content: "\f106";
+}
+
+.wk-grid {
+  --wk-class: rgba(95, 158, 160, 0.75);
+  --wk-office: rgba(128, 128, 0, 0.75);
+  --wk-research: rgba(128, 64, 0, 0.75);
+  --wk-reserved: rgba(245, 245, 220, 0.75);
+  --wk-busy: rgba(220, 220, 220, 0.6);
+  --wk-free: transparent;
+}
+.wk-grid table {
+  table-layout: fixed;
+}
+.wk-grid .wk-time {
+  white-space: nowrap;
+  width: 5.5rem;
+  font-weight: 600;
+}
+.wk-grid td {
+  vertical-align: middle;
+}
+.wk-grid .wk-class {
+  background: var(--wk-class);
+}
+.wk-grid .wk-office {
+  background: var(--wk-office);
+}
+.wk-grid .wk-research {
+  background: var(--wk-research);
+}
+.wk-grid .wk-reserved {
+  background: var(--wk-reserved);
+}
+.wk-grid .wk-free {
+  background: var(--wk-free);
+}
+.wk-grid .wk-label {
+  display: block;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.wk-grid .wk-sub {
+  display: block;
+  font-size: 0.78em;
+  opacity: 0.75;
+}
+.wk-grid .wk-legend {
+  margin-top: 0.35rem;
+}
+.wk-grid .wk-swatch {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  vertical-align: -0.1em;
+  margin-right: 0.3em;
 }
 
 /*# sourceMappingURL=dhhepting.css.map */
