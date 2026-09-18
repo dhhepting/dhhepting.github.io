@@ -35,7 +35,7 @@ jobs:
         run: bundle install --jobs 4 --retry 3
 
       - name: Build site
-        run: bundle exec jekyll build -d _site --baseurl "/~hepting"
+        run: bundle exec jekyll build -d _site --baseurl ""
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
