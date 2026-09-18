@@ -2,7 +2,7 @@ name: Build and Deploy (gh-pages)
 
 on:
   push:
-    branches: [ master, main, upgrade-2026 ]
+    branches: [ master ]
   workflow_dispatch:
   schedule:
     # 12:00 UTC == 06:00 Regina (fixed -06:00, no DST).
@@ -36,6 +36,9 @@ jobs:
 
       - name: Build site
         run: bundle exec jekyll build -d _site --baseurl ""
+
+      - name: Generate static directory listings
+        run: bundle exec rake code:listings
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3

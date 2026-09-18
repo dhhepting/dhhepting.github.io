@@ -17,8 +17,7 @@
 
 require 'yaml'
 
-task default: %i[data:validate wiki:validate structure:validate build test:html]
-
+task default: %w[data:validate wiki:validate build code:listings test:html]
 namespace :meetings do
   desc 'Regenerate all meeting-page .creole files for ONE offering (usage: rake meetings:pages[CS-315,202630]). Front-matter only, fully generated — the whole page is composed at build time from plan.yml/meetings.yml. Overwrites in full every run (no drift-detection); migrate any hand-authored body into plan.yml FIRST — stripped bodies are reported. Kept OUT of :build so offerings not yet migrated are never clobbered. Review + commit the result.'
   task :pages, %i[crs_id crs_sem] do |_t, args|
@@ -265,5 +264,18 @@ namespace :table do
     result[:skipped].each { |s| puts "skipped: #{s}" }
     result[:errors].each  { |e| puts "ERROR: #{e}" }
     abort if result[:errors].any?
+  end
+end
+
+namespace :code do
+  desc "Write static directory-listing index.html files into the built code/ trees"
+  task :listings do
+    root = "_site/teaching/CS-315/202630/code"
+    css  = File.join(root, "CS315/css/listings.css")
+    if File.directory?(root)
+      sh "node", "scripts/gen-listings.mjs", root, css   # array form: no shell quoting
+    else
+      warn "code:listings — #{root} not in build, nothing to do"
+    end
   end
 end

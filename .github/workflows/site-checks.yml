@@ -7,9 +7,9 @@ name: Site checks
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
   push:
-    branches: [ main, upgrade-2026 ]   # builds while you work on the branch
+    branches: [ master ]   # builds while you work on the branch
   workflow_dispatch:                    # manual "Run workflow" button
 
 jobs:

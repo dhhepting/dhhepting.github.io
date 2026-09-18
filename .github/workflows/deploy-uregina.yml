@@ -7,7 +7,7 @@ name: Deploy to U of R server
 
 on:
   push:
-    branches: [main,upgrade-2026]      # deploy automatically when main updates
+    branches: [ master ]      # deploy automatically when main updates
   workflow_dispatch:       # ...and give yourself a manual "Run workflow" button
   schedule:
     # 12:00 UTC == 06:00 Regina (fixed -06:00, no DST).
@@ -40,6 +40,9 @@ jobs:
       # This is your urbuild build line, unchanged.
       - name: Build site
         run: bundle exec jekyll build --config "_config.yml,_config_uregina.yml"
+
+      - name: Generate static directory listings
+        run: bundle exec rake code:listings
 
       # SAFETY GUARD. Your rsync uses --delete, which mirrors _site/ onto the
       # server: anything not in _site/ gets deleted on titan. If a build ever
