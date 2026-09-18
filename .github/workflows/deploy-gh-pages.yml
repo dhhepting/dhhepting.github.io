@@ -9,7 +9,7 @@ on:
     # Daily, so the current -> next rollover is live by the morning a term starts.
     - cron: "0 12 * * *"
 permissions:
-  contents: read
+  contents: write
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
