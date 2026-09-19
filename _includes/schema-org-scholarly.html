@@ -52,7 +52,7 @@
   {% endif %}
   "pageStart": "{{ page.pagestart }}",
   "pageEnd": "{{ page.pageend }}",
-  "url": "{{ site.canonical }}{{ page.url }}",
+  "url": "{{ page.url | absolute_url }}",
   "isPartOf":
   {
     "@type": "PublicationIssue",
