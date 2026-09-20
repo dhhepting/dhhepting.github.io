@@ -4252,11 +4252,6 @@ var tipuesearch = {"pages": [{
     "title": "",
     "text": "",
     "tags": "",
-    "url": "/art/exhibits/parc1994algoart.html"
-  },{
-    "title": "",
-    "text": "",
-    "tags": "",
     "url": "/art/exhibits/teck1995mathart/"
   },{
     "title": "",
