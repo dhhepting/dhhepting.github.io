@@ -43,7 +43,7 @@
         {%- assign mtgnbr_str = mtg_nbr | prepend: '00' | slice: -2, 2 %}
         {%- assign mtg_idx = mtg_nbr | minus: 1 %}
         {%- capture murl -%}{{ murl_prefix }}{{ mtgsfile[mtg_idx].file }}{%- endcapture -%}
-        <a href="{{ murl | absolute_url }}" class="btn btn-primary" role="button">
+        <a href="{{ murl | relative_url }}" class="btn btn-primary" role="button">
           {{ mtgnbr_str }}
         </a>
       </div>

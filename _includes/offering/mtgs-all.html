@@ -96,7 +96,7 @@
   {%- endif -%}
   <li class="list-group-item list-group-item-action flex-fill w-25 p-3">
     {%- capture mtgurl %}/teaching/{{ crs_id}}/{{ crs_sem}}/{{ include.mtgdir}}{{ mm.file }}{% endcapture -%}
-    <a href="{{ mtgurl | absolute_url }}" id="{{ mm.meeting }}">
+    <a href="{{ mtgurl | relative_url }}" id="{{ mm.meeting }}">
         Mtg {{ mm.meeting | plus: 0 }} ({{ mm.date }})
     </a>
   </li>

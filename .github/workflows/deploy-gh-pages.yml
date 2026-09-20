@@ -35,7 +35,7 @@ jobs:
         run: bundle install --jobs 4 --retry 3
 
       - name: Build site
-        run: bundle exec jekyll build -d _site --baseurl ""
+        run: bundle exec jekyll build -d _site --config "_config.yml,_config_github.yml"
 
       - name: Generate static directory listings
         run: bundle exec rake code:listings

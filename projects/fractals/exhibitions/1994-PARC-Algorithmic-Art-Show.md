@@ -1,8 +1,6 @@
 ---
 breadcrumb: PARC Algorithmic Art Show (1994)
 title: PARC Algorithmic Art Show (1994)
-redirect_from:
-  - /art/exhibits/parc1994algoart.html
 layout: bg-image
 ---
 # {{ page.breadcrumb }}
@@ -66,7 +64,7 @@ R, G, and B values by a modulus.
 The PARC jury (Marshall Bern, Paul DeMarinis, Andrew Glassner, Rich Gold,
 and Natalie Jeremijenko) tried to avoid fractals
 &mdash; too cliche! &mdash; but we found
-<a href="{{ "/" | absolute_url }}">Daryl Hepting</a>'s
+<a href="{{ "/" | relative_url }}">Daryl Hepting</a>'s
 dragons and Eleanor Kent's fractal knit baby
 blankets irresistible.
 Similarly, we accepted a number of

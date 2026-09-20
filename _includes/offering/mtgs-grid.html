@@ -44,20 +44,20 @@
     {% assign month = mmf_parts[2] %}
   {% endif %}
         {%- capture mhtml -%}/teaching/{{ crs_id }}/{{ crs_sem }}/meetings/{{ mm.file }}{%- endcapture -%}
-        <a href="{{ mhtml | absolute_url }}">{{ mtg_date }} (<strong>{{ mm.meeting }}</strong>)</a>
+        <a href="{{ mhtml | relative_url }}">{{ mtg_date }} (<strong>{{ mm.meeting }}</strong>)</a>
         :
         {%- assign mtn = mm.meeting -%}
         {%- assign sfile = site.data.teaching[jcrs_id][crs_sem]summary[mtn] %}
         {%- assign rfile = site.data.teaching[jcrs_id][crs_sem]responses[mtn] %}
         {%- if 1 -%}
         {%- capture shtml -%}/teaching/{{ crs_id }}/{{ crs_sem }}/meetings/{{ mm.meeting }}_S.html{%- endcapture -%}
-        <a role="button" class="btn btn-primary m-1" href="{{ shtml | absolute_url }}">S</a>
+        <a role="button" class="btn btn-primary m-1" href="{{ shtml | relative_url }}">S</a>
         {%- else -%}
         <a role="button" class="disabled btn btn-primary m-1" href="">S</a>
         {%- endif -%}
         {%- if 1 -%}
         {%- capture rhtml -%}/teaching/{{ crs_id }}/{{ crs_sem }}/meetings/{{ mm.meeting }}_R.html{%- endcapture -%}
-        <a role="button" class="btn btn-primary m-1" href="{{ rhtml | absolute_url }}">R</a>
+        <a role="button" class="btn btn-primary m-1" href="{{ rhtml | relative_url }}">R</a>
         {%- else -%}
         <a role="button" class="disabled btn btn-primary m-1" href="">R</a>
         {%- endif -%}
