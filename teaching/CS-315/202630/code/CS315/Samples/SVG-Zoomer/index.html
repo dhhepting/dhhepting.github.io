@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG zoom — vector vs frozen raster</title>
+  <style>
+    :root {
+      --bg: #1c1c22;
+      --panel: #26262e;
+      --ink: #e8e8ee;
+      --dim: #a0a0ad;
+      --line: #3a3a44;
+      --accent: #4f8cff;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font: 15px/1.5 system-ui, -apple-system, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1.5rem 1rem 2rem;
+    }
+
+    h1 { font-size: 1.15rem; font-weight: 600; margin: 0; letter-spacing: 0.01em; }
+    h1 + p { margin: 0.25rem 0 0; color: var(--dim); max-width: 60ch; text-align: center; }
+
+    #stage {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+    figure {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    canvas {
+      display: block;
+      width: min(44vw, 460px);
+      height: min(44vw, 460px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      cursor: crosshair;
+      touch-action: none;
+    }
+    figcaption { color: var(--dim); font-size: 0.85rem; text-align: center; }
+    figcaption b { color: var(--ink); font-weight: 600; }
+
+    #controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      padding: 0.85rem 1.1rem;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+    #controls label { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--dim); }
+    #controls .val { color: var(--ink); min-width: 3.5ch; }
+    input[type="range"] { accent-color: var(--accent); width: 8rem; }
+    button {
+      font: inherit;
+      color: var(--ink);
+      background: #33333d;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      padding: 0.3rem 0.8rem;
+      cursor: pointer;
+    }
+    button:hover { border-color: var(--accent); }
+    button:focus-visible, input:focus-visible, canvas:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    #readout { color: var(--dim); font-variant-numeric: tabular-nums; }
+    .hint { color: var(--dim); font-size: 0.85rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Zooming into an SVG: vector vs frozen raster</h1>
+    <p>Both panels magnify the same artwork toward the same point. The left one
+      re-renders from the vector source every frame; the right one only ever saw
+      a small grid of pixels.</p>
+  </header>
+
+  <div id="stage">
+    <figure>
+      <canvas id="sharp-canvas"></canvas>
+      <figcaption><b>vector</b> — re-rasterized each frame, stays sharp</figcaption>
+    </figure>
+    <figure>
+      <canvas id="frozen-canvas"></canvas>
+      <figcaption id="frozen-cap"><b>frozen raster</b> — 32×32, magnified</figcaption>
+    </figure>
+  </div>
+
+  <div id="controls">
+    <label>frozen resolution
+      <input id="res" type="range" min="4" max="256" step="4" value="32">
+      <span id="res-val" class="val">32</span>
+    </label>
+    <label>max zoom
+      <input id="zoom" type="range" min="2" max="12" step="1" value="8">
+      <span id="zoom-val" class="val">8×</span>
+    </label>
+    <button id="pause">pause</button>
+    <button id="reset">reset</button>
+    <label>frozen filter <button id="filter">nearest</button></label>
+    <span id="readout"></span>
+  </div>
+
+  <p class="hint">Click either panel to move the focus point · space/P pause · R reset · F toggle frozen filter</p>
+
+  <script type="module" src="./main.mjs"></script>
+</body>
+</html>
