@@ -64,7 +64,41 @@ module MeetingsSync
 
     Result.new(rows, warnings)
   end
+  # --- on-disk I/O: split so CI can CHECK without OVERWRITING ------------------
 
+  # The one place the output path is decided (mirrors derive's dir join).
+  def path(teaching_dir, crs_id, crs_sem)
+    File.join(teaching_dir, crs_id.to_s, crs_sem.to_s, 'meetings.yml')
+  end
+
+  # WRITE path: derive → overwrite meetings.yml. Returns warnings to surface.
+  def write!(teaching_dir, crs_id, crs_sem)
+    result = derive(teaching_dir, crs_id, crs_sem)
+    File.write(path(teaching_dir, crs_id, crs_sem), YAML.dump(result.rows))
+    result.warnings
+  end
+
+  # CHECK path: derive → compare to the committed file → raise on drift.
+  # NEVER writes. Same offline guarantees as derive (no Jekyll, no network),
+  # so it's safe in the pre-push hook as well as CI.
+  def verify!(teaching_dir, crs_id, crs_sem)
+    result = derive(teaching_dir, crs_id, crs_sem)
+    file   = path(teaching_dir, crs_id, crs_sem)
+
+    unless File.exist?(file)
+      raise "meetings_sync: #{crs_id}/#{crs_sem}: #{file} missing — run " \
+            "`rake meetings:sync[#{crs_id},#{crs_sem}]` and commit it"
+    end
+
+    committed = YAML.safe_load_file(file, permitted_classes: [Date, Time])
+    unless committed == result.rows
+      raise "meetings_sync: #{crs_id}/#{crs_sem}: committed meetings.yml is STALE " \
+            "(differs from a fresh sync of plan.yml + calendar). Run " \
+            "`rake meetings:sync[#{crs_id},#{crs_sem}]` and commit the result."
+    end
+
+    result.warnings
+  end
   # --- date representation: the ONE place the on-disk format is decided --------
   # Native Date -> YAML emits `2026-09-08` (ISO), which reloads as a real Date
   # (so Liquid can format it with `| date: "%a %d %b %Y"`) and round-trips

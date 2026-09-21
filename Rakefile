@@ -17,7 +17,8 @@
 
 require 'yaml'
 
-task default: %w[data:validate wiki:validate build code:listings test:html]
+task default: %w[data:validate wiki:validate meetings:check_all build code:listings test:html]
+
 namespace :meetings do
   desc 'Regenerate all meeting-page .creole files for ONE offering (usage: rake meetings:pages[CS-315,202630]). Front-matter only, fully generated — the whole page is composed at build time from plan.yml/meetings.yml. Overwrites in full every run (no drift-detection); migrate any hand-authored body into plan.yml FIRST — stripped bodies are reported. Kept OUT of :build so offerings not yet migrated are never clobbered. Review + commit the result.'
   task :pages, %i[crs_id crs_sem] do |_t, args|
@@ -229,29 +230,62 @@ namespace :test do
   end
 end
 
-namespace :meetings do
-  desc 'Derive meetings.yml (calendar dates + plan.yml Moodle fields). usage: rake meetings:sync[CS-315,202630]'
-  task :sync, %i[crs_id crs_sem] do |_t, args|
-    require_relative 'lib/meetings_sync'
-    result = MeetingsSync.derive('_data/teaching', args[:crs_id], args[:crs_sem])
-    result.warnings.each { |w| warn "WARN: #{w}" }
-    path = "_data/teaching/#{args[:crs_id]}/#{args[:crs_sem]}/meetings.yml"
-    File.write(path, result.rows.to_yaml)
-    puts "wrote #{result.rows.size} meetings -> #{path}"
-  end
-end
+# namespace :meetings do
+#   desc 'Derive meetings.yml (calendar dates + plan.yml Moodle fields). usage: rake meetings:sync[CS-315,202630]'
+#   task :sync, %i[crs_id crs_sem] do |_t, args|
+#     require_relative 'lib/meetings_sync'
+#     result = MeetingsSync.derive('_data/teaching', args[:crs_id], args[:crs_sem])
+#     result.warnings.each { |w| warn "WARN: #{w}" }
+#     path = "_data/teaching/#{args[:crs_id]}/#{args[:crs_sem]}/meetings.yml"
+#     File.write(path, result.rows.to_yaml)
+#     puts "wrote #{result.rows.size} meetings -> #{path}"
+#   end
+# end
 
 namespace :meetings do
+  desc 'Regenerate meetings.yml from plan.yml + calendar (usage: rake meetings:sync[CS-315,202630])'
+  task :sync, %i[crs_id crs_sem] do |_t, args|
+    require_relative 'lib/meetings_sync'
+    MeetingsSync.write!('_data/teaching', args[:crs_id], args[:crs_sem])
+                .each { |w| warn "WARN: #{w}" }
+    puts "meetings:sync wrote #{MeetingsSync.path('_data/teaching', args[:crs_id], args[:crs_sem])}"
+  end
+
+  desc 'Fail if committed meetings.yml differs from a fresh sync (usage: rake meetings:check[CS-315,202630])'
+  task :check, %i[crs_id crs_sem] do |_t, args|
+    require_relative 'lib/meetings_sync'
+    MeetingsSync.verify!('_data/teaching', args[:crs_id], args[:crs_sem])
+                .each { |w| warn "WARN: #{w}" }
+    puts "meetings:check OK for #{args[:crs_id]}/#{args[:crs_sem]}"
+  end
+
   desc 'Regenerate meetings.yml for every offering that already has one'
   task :sync_all do
     require_relative 'lib/meetings_sync'
     Dir.glob('_data/teaching/*/*/meetings.yml').each do |path|
       _, _, crs_id, crs_sem, _ = path.split('/')
-      result = MeetingsSync.derive('_data/teaching', crs_id, crs_sem)
-      result.warnings.each { |w| warn "WARN: #{w}" }
-      File.write(path, result.rows.to_yaml)
-      puts "wrote #{result.rows.size} -> #{path}"
+      MeetingsSync.write!('_data/teaching', crs_id, crs_sem)
+                  .each { |w| warn "WARN: #{crs_id}/#{crs_sem}: #{w}" }
+      puts "wrote -> #{path}"
     end
+  end
+
+  desc 'CI gate: fail if ANY committed meetings.yml is stale'
+  task :check_all do
+    require_relative 'lib/meetings_sync'
+    stale = []
+    Dir.glob('_data/teaching/*/*/meetings.yml').each do |path|
+      _, _, crs_id, crs_sem, _ = path.split('/')
+      begin
+        MeetingsSync.verify!('_data/teaching', crs_id, crs_sem)
+                    .each { |w| warn "WARN: #{crs_id}/#{crs_sem}: #{w}" }
+      rescue RuntimeError => e
+        stale << e.message
+        warn "STALE: #{e.message}"
+      end
+    end
+    abort "meetings:check_all FAILED (#{stale.size} stale file(s))" unless stale.empty?
+    puts 'meetings:check_all OK'
   end
 end
 
