@@ -184,6 +184,15 @@ namespace :test do
     run_htmlproofer('./_site_uregina', baseurl: '/~hepting')
   end
 
+  desc 'Every built HTML page declares UTF-8 within the first 1024 bytes'
+  task :check_charset do
+    bad = Dir.glob('_site/**/*.html').reject do |f|
+      File.binread(f, 1024).match?(/<meta[^>]+charset=["']?utf-8/i)
+    end
+    abort("Missing <meta charset=utf-8>:\n  #{bad.join("\n  ")}") unless bad.empty?
+    puts 'charset: all pages OK'
+  end
+
   # Calls html-proofer's Ruby API directly rather than shelling out to the
   # `htmlproofer` CLI binary. This exists because the CLI's flag names have
   # changed across versions in ways that were hard to predict from docs
@@ -315,3 +324,4 @@ namespace :code do
     end
   end
 end
+
