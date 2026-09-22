@@ -41,6 +41,7 @@ namespace :photos do
     result = MeetingPhotosPageGenerator.new.generate_all
     result[:written].each { |w| puts "wrote: #{w}" }
     result[:errors].each { |e| puts "ERROR: #{e}" }
+    result[:skipped].each { |s| puts "skipped: #{s}" }
     abort if result[:errors].any?
   end
 end
@@ -203,7 +204,8 @@ namespace :test do
 
     options = (YAML.load_file('_htmlproofer.yml') || {}).transform_keys(&:to_sym)
     options[:ignore_urls] = (options[:ignore_urls] || []).map { |p| Regexp.new(p) }
-
+    options[:ignore_files] = (options[:ignore_files] || []).map { |p| Regexp.new(p) }
+    
     # Without this, html-proofer checks whether internal links literally
     # exist at paths like _site/~hepting/teaching/index.html — which never
     # exist, since ~hepting isn't a real directory, it's a URL prefix

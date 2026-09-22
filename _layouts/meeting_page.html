@@ -108,7 +108,7 @@ Sign each of the sections (Edited Transcript, Action Items, Commentary and Discu
 {%- capture page_nav -%}
 <nav class="d-flex justify-content-between align-items-center my-3">
   {% if gen.prev_page_path %}<a class="btn btn-outline-secondary btn-sm" href="{{ gen.prev_page_path | relative_url }}">&larr; Prev: {{ gen.prev_slug }}</a>{% else %}<span class="text-muted">&larr; (first meeting)</span>{% endif %}
-  <a class="btn btn-outline-primary btn-sm" href="{{ '/meeting-pages/' | append: page.course | append: '/' | append: page.semester | append: '/table/' | relative_url }}">Index</a>
+  <a class="btn btn-outline-primary btn-sm" href="{{ '/wiki/' | append: page.course | append: '/' | append: page.semester | append: '/table/' | relative_url }}">Index</a>
   {% if gen.next_page_path %}<a class="btn btn-outline-secondary btn-sm" href="{{ gen.next_page_path | relative_url }}">Next: {{ gen.next_slug }} &rarr;</a>{% else %}<span class="text-muted">(last meeting) &rarr;</span>{% endif %}
 </nav>
 {%- endcapture -%}

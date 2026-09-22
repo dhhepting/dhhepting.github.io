@@ -67,7 +67,7 @@ module MeetingPageFields
       # Path only (no baseurl) — the layout applies `| relative_url` so
       # this resolves correctly regardless of which deploy target
       # (github vs uregina, different baseurl) is building.
-      'photos_page_path' => has_photos ? "/meeting-pages/#{crs_id}/#{crs_sem}/#{slug}-photos/" : nil,
+      'photos_page_path' => has_photos ? "/wiki/#{crs_id}/#{crs_sem}/#{slug}-photos/" : nil,
       # The Moodle-internal wiki page name (not a URL) — [[PageName]] links
       # to a page that doesn't exist yet in the same wiki render red in
       # Moodle/MediaWiki-style wikis automatically, and clicking one lets
@@ -80,7 +80,7 @@ module MeetingPageFields
       # under. A slug [[link]] to it renders red until the page exists,
       # same as photos. Section 3 (Post-meeting resources) links here.
       'audio_wiki_page_name' => "#{slug}-audio-txt",
-      'meeting_page_path' => "/meeting-pages/#{crs_id}/#{crs_sem}/#{slug}/",
+      'meeting_page_path' => "/wiki/#{crs_id}/#{crs_sem}/#{slug}/",
       # prev/next kept as DATES for any existing consumer, plus the SLUG
       # form the wiki nav links must use (the Moodle page is named by slug,
       # so a bare-date [[link]] would never resolve). nil at the ends so the
@@ -94,8 +94,8 @@ module MeetingPageFields
       # chrome to let you click straight through every page and paste each
       # into the wiki in one sitting. Deliberately NOT in creole_preamble,
       # so these never end up in the text pasted into Moodle.
-      'prev_page_path' => prev_mtg && "/meeting-pages/#{crs_id}/#{crs_sem}/#{meeting_slug(prev_mtg)}/",
-      'next_page_path' => next_mtg && "/meeting-pages/#{crs_id}/#{crs_sem}/#{meeting_slug(next_mtg)}/",
+      'prev_page_path' => prev_mtg && "/wiki/#{crs_id}/#{crs_sem}/#{meeting_slug(prev_mtg)}/",
+      'next_page_path' => next_mtg && "/wiki/#{crs_id}/#{crs_sem}/#{meeting_slug(next_mtg)}/",
       'wiki_ed_group' => mtg['wiki_ed_group'],
       #'wiki_ed_url' => mtg['wiki_ed_asgn'] && "https://urcourses.uregina.ca/mod/assign/view.php?id=#{mtg['wiki_ed_asgn']}",
       #'attendance_url' => "https://urcourses.uregina.ca/mod/attendance/manage.php?id=#{offering['attendance_id']}&view=1",

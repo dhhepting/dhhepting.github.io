@@ -41,7 +41,11 @@ class MeetingTablePageGenerator
       crs_id = File.basename(File.dirname(offering_dir))
 
       offering = load_yaml(File.join(offering_dir, 'offering.yml'))
-      next if offering.nil?
+        next if offering.nil?
+        unless offering['wiki_pages']
+          result[:skipped] << "#{crs_id}/#{crs_sem} (wiki_pages not set)"
+          next
+        end
 
       meetings = load_yaml(meetings_path)
       if meetings.nil? || meetings.empty?
