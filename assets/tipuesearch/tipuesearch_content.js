@@ -9,16 +9,6 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/01_Mon-10-Jan-2022.html"
   },{
-    "title": "Mtg 01 • CS-499+900 (202110)",
-    "text": "Mtg 1/37: Mon-11-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/01_Mon-11-Jan-2021.html.html"
-  },{
-    "title": "Mtg 01 • CS-499+900 (202110)",
-    "text": "Mtg 1/37: Mon-11-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/01_Mon-11-Jan-2021.html"
-  },{
     "title": "Mtg 01 • CS-428+828 (202130)",
     "text": "Mtg 1/38: Mon-30-Aug-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
@@ -194,16 +184,6 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/02_Wed-12-Jan-2022.html"
   },{
-    "title": "Mtg 02 • CS-499+900 (202110)",
-    "text": "Mtg 2/37: Wed-13-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/02_Wed-13-Jan-2021.html.html"
-  },{
-    "title": "Mtg 02 • CS-499+900 (202110)",
-    "text": "Mtg 2/37: Wed-13-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/02_Wed-13-Jan-2021.html"
-  },{
     "title": "Mtg 03 • CS-428+828 (202130)",
     "text": "Mtg 3/38: Fri-03-Sep-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
@@ -213,16 +193,6 @@ var tipuesearch = {"pages": [{
     "text": "Mtg 3/37: Fri-14-Jan-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/03_Fri-14-Jan-2022.html"
-  },{
-    "title": "Mtg 03 • CS-499+900 (202110)",
-    "text": "Mtg 3/37: Fri-15-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/03_Fri-15-Jan-2021.html.html"
-  },{
-    "title": "Mtg 03 • CS-499+900 (202110)",
-    "text": "Mtg 3/37: Fri-15-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/03_Fri-15-Jan-2021.html"
   },{
     "title": "Mtg 3 • CS-733 (202330)",
     "text": "Mtg 3/25: Mon-11-Sep-2023 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -323,16 +293,6 @@ var tipuesearch = {"pages": [{
     "text": "Mtg 4/37: Mon-17-Jan-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/04_Mon-17-Jan-2022.html"
-  },{
-    "title": "Mtg 04 • CS-499+900 (202110)",
-    "text": "Mtg 4/37: Mon-18-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/04_Mon-18-Jan-2021.html.html"
-  },{
-    "title": "Mtg 04 • CS-499+900 (202110)",
-    "text": "Mtg 4/37: Mon-18-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/04_Mon-18-Jan-2021.html"
   },{
     "title": "Responses to Mtg 04 • CS-428+828 (202130)",
     "text": "No Responses",
@@ -494,30 +454,10 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/05_Wed-19-Jan-2022.html"
   },{
-    "title": "Mtg 05 • CS-499+900 (202110)",
-    "text": "Mtg 5/37: Wed-20-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/05_Wed-20-Jan-2021.html.html"
-  },{
-    "title": "Mtg 05 • CS-499+900 (202110)",
-    "text": "Mtg 5/37: Wed-20-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/05_Wed-20-Jan-2021.html"
-  },{
     "title": "Mtg 06 • CS-499+900 (202210)",
     "text": "Mtg 6/37: Fri-21-Jan-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/06_Fri-21-Jan-2022.html"
-  },{
-    "title": "Mtg 06 • CS-499+900 (202110)",
-    "text": "Mtg 6/37: Fri-22-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/06_Fri-22-Jan-2021.html.html"
-  },{
-    "title": "Mtg 06 • CS-499+900 (202110)",
-    "text": "Mtg 6/37: Fri-22-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/06_Fri-22-Jan-2021.html"
   },{
     "title": "Mtg 06 • CS-428+828 (202130)",
     "text": "Mtg 6/38: Mon-13-Sep-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -618,16 +558,6 @@ var tipuesearch = {"pages": [{
     "text": "Mtg 7/37: Mon-24-Jan-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/07_Mon-24-Jan-2022.html"
-  },{
-    "title": "Mtg 07 • CS-499+900 (202110)",
-    "text": "Mtg 7/37: Mon-25-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/07_Mon-25-Jan-2021.html.html"
-  },{
-    "title": "Mtg 07 • CS-499+900 (202110)",
-    "text": "Mtg 7/37: Mon-25-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/07_Mon-25-Jan-2021.html"
   },{
     "title": "Mtg 7 • CS-733 (202330)",
     "text": "Mtg 7/25: Mon-25-Sep-2023 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -789,16 +719,6 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/08_Wed-26-Jan-2022.html"
   },{
-    "title": "Mtg 08 • CS-499+900 (202110)",
-    "text": "Mtg 8/37: Wed-27-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/08_Wed-27-Jan-2021.html.html"
-  },{
-    "title": "Mtg 08 • CS-499+900 (202110)",
-    "text": "Mtg 8/37: Wed-27-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/08_Wed-27-Jan-2021.html"
-  },{
     "title": "Mtg 8 • CS-733 (202330)",
     "text": "Mtg 8/25: Wed-27-Sep-2023 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
@@ -808,16 +728,6 @@ var tipuesearch = {"pages": [{
     "text": "Mtg 9/37: Fri-28-Jan-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/09_Fri-28-Jan-2022.html"
-  },{
-    "title": "Mtg 09 • CS-499+900 (202110)",
-    "text": "Mtg 9/37: Fri-29-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/09_Fri-29-Jan-2021.html.html"
-  },{
-    "title": "Mtg 09 • CS-499+900 (202110)",
-    "text": "Mtg 9/37: Fri-29-Jan-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/09_Fri-29-Jan-2021.html"
   },{
     "title": "Mtg 9 • CS-733 (202330)",
     "text": "Mtg 9/25: Mon-02-Oct-2023 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -913,16 +823,6 @@ var tipuesearch = {"pages": [{
     "text": "Mtg 10/36: Fri-23-Sep-2022 Outline Media Transcript Wiki Outline for Today Administration Happy Friday Attendance Class calendar for today Upcoming events Media 10 - Password.pdf Previous Next Transcript Wiki Link to the UR Courses wiki page for this meeting",
     "tags": "",
     "url": "/teaching/CS-428+828/202230/10_Fri-23-Sep-2022.html"
-  },{
-    "title": "Mtg 10 • CS-499+900 (202110)",
-    "text": "Mtg 10/37: Mon-01-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/10_Mon-01-Feb-2021.html.html"
-  },{
-    "title": "Mtg 10 • CS-499+900 (202110)",
-    "text": "Mtg 10/37: Mon-01-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/10_Mon-01-Feb-2021.html"
   },{
     "title": "Mtg 10 • CS-499+900 (202210)",
     "text": "Mtg 10/37: Mon-31-Jan-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -1094,30 +994,10 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/11_Wed-02-Feb-2022.html"
   },{
-    "title": "Mtg 11 • CS-499+900 (202110)",
-    "text": "Mtg 11/37: Wed-03-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/11_Wed-03-Feb-2021.html.html"
-  },{
-    "title": "Mtg 11 • CS-499+900 (202110)",
-    "text": "Mtg 11/37: Wed-03-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/11_Wed-03-Feb-2021.html"
-  },{
     "title": "Mtg 12 • CS-499+900 (202210)",
     "text": "Mtg 12/37: Fri-04-Feb-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/12_Fri-04-Feb-2022.html"
-  },{
-    "title": "Mtg 12 • CS-499+900 (202110)",
-    "text": "Mtg 12/37: Fri-05-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/12_Fri-05-Feb-2021.html.html"
-  },{
-    "title": "Mtg 12 • CS-499+900 (202110)",
-    "text": "Mtg 12/37: Fri-05-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/12_Fri-05-Feb-2021.html"
   },{
     "title": "Mtg 12 • CS-428+828 (202130)",
     "text": "Mtg 12/38: Mon-27-Sep-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -1218,16 +1098,6 @@ var tipuesearch = {"pages": [{
     "text": "Mtg 13/37: Mon-07-Feb-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/13_Mon-07-Feb-2022.html"
-  },{
-    "title": "Mtg 13 • CS-499+900 (202110)",
-    "text": "Mtg 13/37: Mon-08-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/13_Mon-08-Feb-2021.html.html"
-  },{
-    "title": "Mtg 13 • CS-499+900 (202110)",
-    "text": "Mtg 13/37: Mon-08-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/13_Mon-08-Feb-2021.html"
   },{
     "title": "Mtg 13 • CS-733 (202330)",
     "text": "Mtg 13/25: Mon-23-Oct-2023 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -1384,16 +1254,6 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/14_Wed-09-Feb-2022.html"
   },{
-    "title": "Mtg 14 • CS-499+900 (202110)",
-    "text": "Mtg 14/37: Wed-10-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/14_Wed-10-Feb-2021.html.html"
-  },{
-    "title": "Mtg 14 • CS-499+900 (202110)",
-    "text": "Mtg 14/37: Wed-10-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/14_Wed-10-Feb-2021.html"
-  },{
     "title": "Mtg 14 • CS-733 (202330)",
     "text": "Mtg 14/25: Wed-25-Oct-2023 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
@@ -1418,16 +1278,6 @@ var tipuesearch = {"pages": [{
     "text": "Mtg 15/37: Fri-11-Feb-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/15_Fri-11-Feb-2022.html"
-  },{
-    "title": "Mtg 15 • CS-499+900 (202110)",
-    "text": "Mtg 15/37: Fri-12-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/15_Fri-12-Feb-2021.html.html"
-  },{
-    "title": "Mtg 15 • CS-499+900 (202110)",
-    "text": "Mtg 15/37: Fri-12-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/15_Fri-12-Feb-2021.html"
   },{
     "title": "Mtg 15 • CS-315+733 (202430)",
     "text": "Mtg 15/23: Mon-04-Nov-2024 Outline Wiki Media Outline for Today Midterm and Lighting and Shading Administration Happy Monday Attendance Class calendar for today Upcoming events Today Midterm Lighting and Shading Chapter 6 code For Next Meeting Submit your response to this meeting before noon tomorrow Take the quiz before the start of our next meeting Read Chapter 6 ACTION: Take quiz before next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -1508,16 +1358,6 @@ var tipuesearch = {"pages": [{
     "text": "Mtg 16/37: Mon-14-Feb-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/16_Mon-14-Feb-2022.html"
-  },{
-    "title": "Mtg 16 • CS-499+900 (202110)",
-    "text": "Mtg 16/37: Mon-22-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/16_Mon-22-Feb-2021.html.html"
-  },{
-    "title": "Mtg 16 • CS-499+900 (202110)",
-    "text": "Mtg 16/37: Mon-22-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/16_Mon-22-Feb-2021.html"
   },{
     "title": "Responses to Mtg 16 • CS-428+828 (202130)",
     "text": "No Responses",
@@ -1694,30 +1534,10 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/17_Wed-16-Feb-2022.html"
   },{
-    "title": "Mtg 17 • CS-499+900 (202110)",
-    "text": "Mtg 17/37: Wed-24-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/17_Wed-24-Feb-2021.html.html"
-  },{
-    "title": "Mtg 17 • CS-499+900 (202110)",
-    "text": "Mtg 17/37: Wed-24-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/17_Wed-24-Feb-2021.html"
-  },{
     "title": "Mtg 18 • CS-499+900 (202210)",
     "text": "Mtg 18/37: Fri-18-Feb-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/18_Fri-18-Feb-2022.html"
-  },{
-    "title": "Mtg 18 • CS-499+900 (202110)",
-    "text": "Mtg 18/37: Fri-26-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/18_Fri-26-Feb-2021.html.html"
-  },{
-    "title": "Mtg 18 • CS-499+900 (202110)",
-    "text": "Mtg 18/37: Fri-26-Feb-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/18_Fri-26-Feb-2021.html"
   },{
     "title": "Mtg 18 • CS-499+900 (202230)",
     "text": "Mtg 18/36: Mon-17-Oct-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -1853,16 +1673,6 @@ var tipuesearch = {"pages": [{
     "text": "Mtg 19/38: Fri-15-Oct-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-428+828/202130/meetings/19_Fri-15-Oct-2021.html"
-  },{
-    "title": "Mtg 19 • CS-499+900 (202110)",
-    "text": "Mtg 19/37: Mon-01-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/19_Mon-01-Mar-2021.html.html"
-  },{
-    "title": "Mtg 19 • CS-499+900 (202110)",
-    "text": "Mtg 19/37: Mon-01-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/19_Mon-01-Mar-2021.html"
   },{
     "title": "Mtg 19 • CS-733 (202330)",
     "text": "Mtg 19/25: Mon-13-Nov-2023 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -2034,16 +1844,6 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/20_Wed-02-Mar-2022.html"
   },{
-    "title": "Mtg 20 • CS-499+900 (202110)",
-    "text": "Mtg 20/37: Wed-03-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/20_Wed-03-Mar-2021.html.html"
-  },{
-    "title": "Mtg 20 • CS-499+900 (202110)",
-    "text": "Mtg 20/37: Wed-03-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/20_Wed-03-Mar-2021.html"
-  },{
     "title": "Mtg 20 • CS-733 (202330)",
     "text": "Mtg 20/25: Wed-15-Nov-2023 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
@@ -2053,16 +1853,6 @@ var tipuesearch = {"pages": [{
     "text": "Mtg 21/37: Fri-04-Mar-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/21_Fri-04-Mar-2022.html"
-  },{
-    "title": "Mtg 21 • CS-499+900 (202110)",
-    "text": "Mtg 21/37: Fri-05-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/21_Fri-05-Mar-2021.html.html"
-  },{
-    "title": "Mtg 21 • CS-499+900 (202110)",
-    "text": "Mtg 21/37: Fri-05-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/21_Fri-05-Mar-2021.html"
   },{
     "title": "Mtg 21 • CS-733 (202330)",
     "text": "Mtg 21/25: Mon-20-Nov-2023 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -2163,16 +1953,6 @@ var tipuesearch = {"pages": [{
     "text": "Mtg 22/37: Mon-07-Mar-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/22_Mon-07-Mar-2022.html"
-  },{
-    "title": "Mtg 22 • CS-499+900 (202110)",
-    "text": "Mtg 22/37: Mon-08-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/22_Mon-08-Mar-2021.html.html"
-  },{
-    "title": "Mtg 22 • CS-499+900 (202110)",
-    "text": "Mtg 22/37: Mon-08-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/22_Mon-08-Mar-2021.html"
   },{
     "title": "Responses to Mtg 22 • CS-428+828 (202130)",
     "text": "No Responses",
@@ -2339,30 +2119,10 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/23_Wed-09-Mar-2022.html"
   },{
-    "title": "Mtg 23 • CS-499+900 (202110)",
-    "text": "Mtg 23/37: Wed-10-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/23_Wed-10-Mar-2021.html.html"
-  },{
-    "title": "Mtg 23 • CS-499+900 (202110)",
-    "text": "Mtg 23/37: Wed-10-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/23_Wed-10-Mar-2021.html"
-  },{
     "title": "Mtg 24 • CS-499+900 (202210)",
     "text": "Mtg 24/37: Fri-11-Mar-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/24_Fri-11-Mar-2022.html"
-  },{
-    "title": "Mtg 24 • CS-499+900 (202110)",
-    "text": "Mtg 24/37: Fri-12-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/24_Fri-12-Mar-2021.html.html"
-  },{
-    "title": "Mtg 24 • CS-499+900 (202110)",
-    "text": "Mtg 24/37: Fri-12-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/24_Fri-12-Mar-2021.html"
   },{
     "title": "Mtg 24 • CS-499+900 (202230)",
     "text": "Mtg 24/36: Mon-31-Oct-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -2458,16 +2218,6 @@ var tipuesearch = {"pages": [{
     "text": "Mtg 25/37: Mon-14-Mar-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/25_Mon-14-Mar-2022.html"
-  },{
-    "title": "Mtg 25 • CS-499+900 (202110)",
-    "text": "Mtg 25/37: Mon-15-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/25_Mon-15-Mar-2021.html.html"
-  },{
-    "title": "Mtg 25 • CS-499+900 (202110)",
-    "text": "Mtg 25/37: Mon-15-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/25_Mon-15-Mar-2021.html"
   },{
     "title": "Responses to Mtg 25 • CS-428+828 (202130)",
     "text": "No Responses",
@@ -2604,30 +2354,10 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/26_Wed-16-Mar-2022.html"
   },{
-    "title": "Mtg 26 • CS-499+900 (202110)",
-    "text": "Mtg 26/37: Wed-17-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/26_Wed-17-Mar-2021.html.html"
-  },{
-    "title": "Mtg 26 • CS-499+900 (202110)",
-    "text": "Mtg 26/37: Wed-17-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/26_Wed-17-Mar-2021.html"
-  },{
     "title": "Mtg 27 • CS-499+900 (202210)",
     "text": "Mtg 27/37: Fri-18-Mar-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/27_Fri-18-Mar-2022.html"
-  },{
-    "title": "Mtg 27 • CS-499+900 (202110)",
-    "text": "Mtg 27/37: Fri-19-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/27_Fri-19-Mar-2021.html.html"
-  },{
-    "title": "Mtg 27 • CS-499+900 (202110)",
-    "text": "Mtg 27/37: Fri-19-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/27_Fri-19-Mar-2021.html"
   },{
     "title": "Mtg 27 • CS-499+900 (202230)",
     "text": "Mtg 27/36: Mon-14-Nov-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -2663,16 +2393,6 @@ var tipuesearch = {"pages": [{
     "text": "Mtg 28/37: Mon-21-Mar-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/28_Mon-21-Mar-2022.html"
-  },{
-    "title": "Mtg 28 • CS-499+900 (202110)",
-    "text": "Mtg 28/37: Mon-22-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/28_Mon-22-Mar-2021.html.html"
-  },{
-    "title": "Mtg 28 • CS-499+900 (202110)",
-    "text": "Mtg 28/37: Mon-22-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/28_Mon-22-Mar-2021.html"
   },{
     "title": "Responses to Mtg 28 • CS-428+828 (202130)",
     "text": "No Responses",
@@ -2724,30 +2444,10 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/29_Wed-23-Mar-2022.html"
   },{
-    "title": "Mtg 29 • CS-499+900 (202110)",
-    "text": "Mtg 29/37: Wed-24-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/29_Wed-24-Mar-2021.html.html"
-  },{
-    "title": "Mtg 29 • CS-499+900 (202110)",
-    "text": "Mtg 29/37: Wed-24-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/29_Wed-24-Mar-2021.html"
-  },{
     "title": "Mtg 30 • CS-499+900 (202210)",
     "text": "Mtg 30/37: Fri-25-Mar-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/30_Fri-25-Mar-2022.html"
-  },{
-    "title": "Mtg 30 • CS-499+900 (202110)",
-    "text": "Mtg 30/37: Fri-26-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/30_Fri-26-Mar-2021.html.html"
-  },{
-    "title": "Mtg 30 • CS-499+900 (202110)",
-    "text": "Mtg 30/37: Fri-26-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/30_Fri-26-Mar-2021.html"
   },{
     "title": "Mtg 30 • CS-499+900 (202230)",
     "text": "Mtg 30/36: Mon-21-Nov-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -2783,16 +2483,6 @@ var tipuesearch = {"pages": [{
     "text": "Mtg 31/37: Mon-28-Mar-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/31_Mon-28-Mar-2022.html"
-  },{
-    "title": "Mtg 31 • CS-499+900 (202110)",
-    "text": "Mtg 31/37: Mon-29-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/31_Mon-29-Mar-2021.html.html"
-  },{
-    "title": "Mtg 31 • CS-499+900 (202110)",
-    "text": "Mtg 31/37: Mon-29-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/31_Mon-29-Mar-2021.html"
   },{
     "title": "Responses to Mtg 31 • CS-428+828 (202130)",
     "text": "No Responses",
@@ -2844,30 +2534,10 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/32_Wed-30-Mar-2022.html"
   },{
-    "title": "Mtg 32 • CS-499+900 (202110)",
-    "text": "Mtg 32/37: Wed-31-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/32_Wed-31-Mar-2021.html.html"
-  },{
-    "title": "Mtg 32 • CS-499+900 (202110)",
-    "text": "Mtg 32/37: Wed-31-Mar-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/32_Wed-31-Mar-2021.html"
-  },{
     "title": "Mtg 33 • CS-499+900 (202210)",
     "text": "Mtg 33/37: Fri-01-Apr-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
     "url": "/teaching/CS-499+900/202210/meetings/33_Fri-01-Apr-2022.html"
-  },{
-    "title": "Mtg 33 • CS-499+900 (202110)",
-    "text": "Mtg 33/37: Mon-05-Apr-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/33_Mon-05-Apr-2021.html.html"
-  },{
-    "title": "Mtg 33 • CS-499+900 (202110)",
-    "text": "Mtg 33/37: Mon-05-Apr-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/33_Mon-05-Apr-2021.html"
   },{
     "title": "Mtg 33 • CS-499+900 (202230)",
     "text": "Mtg 33/36: Mon-28-Nov-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -2914,16 +2584,6 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/CS-428+828/202130/meetings/34_S.html"
   },{
-    "title": "Mtg 34 • CS-499+900 (202110)",
-    "text": "Mtg 34/37: Wed-07-Apr-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/34_Wed-07-Apr-2021.html.html"
-  },{
-    "title": "Mtg 34 • CS-499+900 (202110)",
-    "text": "Mtg 34/37: Wed-07-Apr-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/34_Wed-07-Apr-2021.html"
-  },{
     "title": "Mtg 34 • CS-499+900 (202230)",
     "text": "Mtg 34/36: Wed-30-Nov-2022 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
@@ -2943,16 +2603,6 @@ var tipuesearch = {"pages": [{
     "text": "Mtg 35/36: Fri-02-Dec-2022 Outline Media Transcript Wiki Outline for Today Administration Happy Friday Attendance Class calendar for today Upcoming events Media Previous Next Transcript No Transcripts Wiki Link to the UR Courses wiki page for this meeting",
     "tags": "",
     "url": "/teaching/CS-428+828/202230/35_Fri-02-Dec-2022.html"
-  },{
-    "title": "Mtg 35 • CS-499+900 (202110)",
-    "text": "Mtg 35/37: Fri-09-Apr-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/35_Fri-09-Apr-2021.html.html"
-  },{
-    "title": "Mtg 35 • CS-499+900 (202110)",
-    "text": "Mtg 35/37: Fri-09-Apr-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/35_Fri-09-Apr-2021.html"
   },{
     "title": "Mtg 35 • CS-428+828 (202130)",
     "text": "Mtg 35/38: Mon-29-Nov-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -2989,16 +2639,6 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/CS-428+828/202230/36_Mon-05-Dec-2022.html"
   },{
-    "title": "Mtg 36 • CS-499+900 (202110)",
-    "text": "Mtg 36/37: Mon-12-Apr-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/36_Mon-12-Apr-2021.html.html"
-  },{
-    "title": "Mtg 36 • CS-499+900 (202110)",
-    "text": "Mtg 36/37: Mon-12-Apr-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/36_Mon-12-Apr-2021.html"
-  },{
     "title": "Responses to Mtg 36 • CS-428+828 (202130)",
     "text": "No Responses",
     "tags": "",
@@ -3033,16 +2673,6 @@ var tipuesearch = {"pages": [{
     "text": "Summary of Meeting 37 Administration Happy Friday! No freezing rain last night! Attendance Due dates now Monday (project) and Tuesday (individual) New Features teaching/today Zoom Audio Transcript DHH:&nbsp;Good afternoon. S01:&nbsp;Professor. DHH:&nbsp;hey Peter, how are you doing. how's everyone doing today. S01:&nbsp;so good. DHH:&nbsp;Happy Friday indeed. And bonus, there is no freezing rain last night. So I realize I didn't push the last update. To the server to the server until. Well, I didn't push it when I thought I did so I did it before. Joining here, so let you be updated in a minute. So let me share my screen. and There we are but. let's go over to your courses and to the attendance. There we go that's what's in the chat. Okay, so. Any questions or concerns. So i've updated the due date for the project to Monday and individual assignment to Tuesday. S02:&nbsp;hello, Professor. Maybe I have missed a part of. of discussion, maybe you have mentioned it, so I was a bit confused about like. For the video recording is it Okay, if one of the group member just create the video or do all of them have to participate in the video for the last part of the project. DHH:&nbsp;So I said. of new a phrase that was something like. it's encouraged that everyone participates, but not required. S02:&nbsp;Okay, that sounds good. DHH:&nbsp;Okay. ???:&nbsp;yeah. DHH:&nbsp;Okay well. Maybe. We might be some problems here. Updating the page but. So. I had the idea proposed the idea, yes last meeting to. add the new feature of. Today URL. So here's. So what I did was I said teaching. today. S04:&nbsp;Professor me I. DHH:&nbsp;Certainly. S04:&nbsp;yeah so I had a question regarding that. Final assignment for the eight or nine students as or eight 800 level students. DHH:&nbsp;yeah. S04:&nbsp;So for that I saw that category says that the upper right at least 1000 lines and that paper should be recent year like 2021 or 20 years. My problem was well, I was going through the website for the suggested paper like what do you suggest it further, I found so many interesting papers and I chose. Like two of them, but the thing is it's the paper length is somehow between like from six and a half pages to seven pages, so there was a requirement not a requirement but association says that it should be a minimum of eight pages so, is it a hard requirement for that. DHH:&nbsp;Okay, so. Yes, i'm looking for pages papers eight pages long. At least eight pages long. So. I think there are plenty of. papers in the last year. That meet that requirement. So the link that i've added. The discussion. Is a bit more leeway, so the first link was just for the conference, the big conference. expand expanded it to lie to be able to look at see I sponsored publications. S04:&nbsp;Okay, my point was I was making I was also taking the three is 900 seminar as well, so I really like. I found like two papers that I was really interested in and like writing a review, as well as. You know, getting into depth of it, but the thing is on that topic I didn't find anything of eight pages, because I feel like. You know, to let that paper go for because of just just one page shy of them criteria would be ashamed, so I also wanted to ask. If I choose that paper is there any nearly marks for that, like, I can lose some monsters, and then because I really wanted to write my review on that specific topic that the Burberry farm. DHH:&nbsp;Okay, so let's. let's continue this outside of class so maybe we can just stick around for a few minutes after our meeting today and we can talk about this more detail. S04:&nbsp;Okay, thank you. DHH:&nbsp;Okay, any other questions. Okay. So here's what I came up with. I haven't. doesn't appear on. On as a link here on the teaching page but. it's live on the website. next meeting for today. Okay, so open the floor to. comments on this page. So. Just seemed like that might be a useful thing if you're. You can try it on your own in your own browsers now. We tried online mobile. So it seems to be okay on my iPhone. So what other information would be useful let's say if I came upon this page on a Thursday, where there was no meeting. suppose I could. advertise the office our link. What about on the weekend. The peaceful to. S02:&nbsp;I think there may be two columns and one for the class links, I mean media links and another column can represent the office hours that would actually. Help the users to find it more easy. and If. We can have all the link of the meetings. I mean, as a least. In a descending order, I mean the latest latest one will be at a fast. Then. DHH:&nbsp;So. Okay, so from here, I can. We can get to all the other link meeting links. Where is that maybe. So this this is pagination this control here at the top. Then, leaving here. S02:&nbsp;When I first. started this plus it took me a long time to realize that these numbers are actually presenting the depressing during the classes. I mean when I started the class was, but now I know that these numbers are actually present in the classes so. My suggestion was like if there is something that actually mentioning that is the link for the classes, I mean some note, possibly or a. Maybe yeah possibly a. Simple not that would actually help us to find when we are new to this class that yeah this is this is, this is the link for the classes and that will understand you see. I mean for the beginners class, they will not actually understand that yeah, this is the links. yeah. ???:&nbsp;Okay. DHH:&nbsp;So we better find maybe put. OK. OK, so I didn't understand that earlier. I think that was a common that was expressed. I didn't quite. make the connection there as much as I could. But I could put the meeting number here and the date. And then have the date. The appearance tool tip. Here as well, so. So maybe. This doesn't need to be. As a page that has only today's the current date on it, or maybe it was back to. The previous meeting in the next meeting was back to the previous meeting and ahead to the next meeting so maybe this would be. A kind of a calendar. That have all the days of the Semester. Well, the meeting days in the Semester. And then, if it. So in this case. Meeting Monday Wednesday Friday so Monday Wednesdays and Fridays that appear. and Tuesdays and Thursdays as well because of office hours. Well Tuesdays Wednesdays and Thursdays so there's because of office hours so there'd be two items and. The date for Wednesday. The class meeting and. office hour. and Then Saturday and Sunday. We just go to Monday, perhaps the net following Monday or the following last day. Does that sound like a better approach. Okay, so what, if I have. The date year. So all the days in the Semester. And then, based on the date I. point to the. I picked a card that's got. The most. that's the closest upcoming class day. or class activity day. Does that sound. So then i've got date and then have the meeting number 428. So this makes sense, this the title of this link. ???:&nbsp;OK. DHH:&nbsp;So the next semester, when I have. seminars and two classes, then. I can list all the things. And those days. So teaching two classes next semester, and both of them are Tuesday Thursday classes so. i'm not sure when the seminars are. So what if we do. breakout groups on. Where we can share the screen i'll let you share your screens. And then you can maybe come up with a sketch or. An interface to do. To give this information for. Our students. In the given semester. How does that sound. Okay, so. You can share your screen. breakout rooms. let's say for breakout rooms. See how that goes. And i'll let you assign yourselves. To the room so. Looking for both seven people in a room. Let me type in the chat. What i'm asking for we start that. Does that make sense. Okay, so. Anyone have some questions before we start. Okay. So i'm opening the breakout rooms now. hey Peter Amal. Precious. S05:&nbsp;i'm still here. ???:&nbsp;yeah. DHH:&nbsp;But please can you please join a breakout room. S05:&nbsp;I never got the option to join one. DHH:&nbsp;Okay, oh. Anyone. S05:&nbsp;Okay, thank you. ???:&nbsp;Welcome DHH:&nbsp;Zanna productive breakout session. S02:&nbsp;Yesterday it was so we discussed a few things. And we get, we discussed the diagram. DHH:&nbsp;You want to share. S02:&nbsp;yeah actually i'm not done with it, but he still I can share that but. DHH:&nbsp;Once you finish it. S02:&nbsp;While I mean when you are sharing your screen, I cannot share it. DHH:&nbsp;You could. Okay i'll stop sharing maybe that's why. S02:&nbsp;Okay. So this is just. This is the thought of our discussion so we think that when we are in the link for today's. Meeting, so we we don't think that we should actually click click again for our description of today's meeting. It should be already shown in somewhere here after today's meeting so description of today's meeting would should be there. And then there should be a link that will actually, let us to previous links, I mean meeting for link for the previous meetings that would be helpful in my in our I mean from our discussion waiting that. So in today, it should be, I mean it already should show the description of today's meeting, we should, I mean if i'm in the page of today and then i'm clicking the date and then again going to do this meeting, then it's kind of. To the same little. S01:&nbsp;is redundant, because if we're already today why don't I already just see the details for today, like upcoming events planned for the for this meeting, blah blah blah instead of me having to click on another link when i'm already on that would be. ???:&nbsp;yeah. S01:&nbsp;For sure. DHH:&nbsp;Okay, so I thought about doing that as well. So, in the case that Syria have another class. let's say I have. No. next semester, I have let's let's say we have the 282 80 is being offered this semester as well right taught by somebody else so let's say we have see us to at. S02:&nbsp;Good discussion. And it would be great if you can share the date, along with the meeting number, then there will be no confusion, which is the meeting number vision is that it. ???:&nbsp;yeah. DHH:&nbsp;Okay. So. Can you send me a copy of that picture. S02:&nbsp;Yes, you. Do you want me to make. DHH:&nbsp;sure it can send my mail that's that's good okay any other so there's a comment about the time of day, the meeting would be nice okay. that's right so. If if we check in at 2pm and realize that we've missed today's meeting. and That would be our next one is on Monday. Okay, so other breakout group. Did you like having. You to the groups that had. Well 15 and 12 I think 11 or 12 participants in each. were those two big or revolt right. S06:&nbsp;We were not anticipating that many people. We We talked just a wee bit about um. We didn't really do a sketch or anything but we did talk through some ideas. So we want to. Previous lectures feedback. So um so we could click the previous lecture link to the previous lecture read what what happened. So we could sort of anticipate what's going to happen today. We also wanted to see if there's a way to submit our own review. Of today's lecture. On to that, but there's all your ID that you, you are course this quiz that we get with every lecture so. sort of a. It would it would either or is OK. We were also talking about adding the zoom link, but that would be making the zoom class publicly available so that would probably not be good. DHH:&nbsp;yeah I mean it's it's not hidden but. S06:&nbsp;yeah and time of day that's The other thing that we went through. In our breakout room. ???:&nbsp;Okay. DHH:&nbsp;So what what. came up what I came up with for idea, so any other ideas thanks Jeffrey. My. S04:&nbsp;plan for the point that Jeffrey said was like for the reviews and the previous lecture feedback was kind of a little bit different than what he explained. My idea was because the webpage you showed was completely empty and have only one link. So we can like utilize all the spacious and have something useful in it, so I was like thinking, maybe you know. Put a chat box there so everyone can after the meeting or maybe during the meeting they can just chat like put some feedback they're like okay this thing is this I didn't understand. That concept. or anything that concept, or very, very useful, and this is some extra links that I found related to that content so. It will serve two purposes one, it will give the feedback for this lecture on either on the time of leisure or after the time of the lecture. And second anyone who may be, you know, sometimes they missed some topics, or maybe they didn't it in one class, they can always see that thing, and they can have an idea what well like what kind of topics, they are discussing on that day. And, and the rest feature what Jeffrey said was completely correct, to the point, so that was my point of suggesting that review and previous lecture feedback. DHH:&nbsp;Okay. So you don't think that. The responses are a good way to. So I guess that's another question about how to capture feedback and whether it's public or whether it's. Within you are course because I think there's some advantages to having. course stuff remaining in you our courses. So maybe maybe the responses. Are aren't filling that need as much as they could and. There could be some other ways to do it. S04:&nbsp;yeah exactly my point, because when i'm feeling the responses after class it's just me and what I understood from it, and the only person who can see it is you right, but if it was like a public. Like chat box or something like that, like a discussion forum type of stuff so not only i'm putting my response there, I can also see if. I missed some other response, or I could think of some other responses, maybe that might be very helpful for others, or something so I can gain some intellect from there as well. And even if I missed one response so that I can catch up on that too. DHH:&nbsp;yeah so i've been trying to keep up with publishing them anonymously on the web page. I didn't get your. S02:&nbsp;office after we started our own response, I think. DHH:&nbsp;Pardon me. S02:&nbsp;We can see other students response after we submit our response, I think. DHH:&nbsp;Okay. wow I didn't realize it's 23 after so. I guess i'll share i'll save my ideas for Monday. and we'll go from there. So Monday let's we'll do a review. Any any questions that come up. S06:&nbsp;One very quick question. Sure, and you our courses, we have a deadline coming up raiding our breakout rooms, how do we do that. DHH:&nbsp;So. I was thinking of using the same mechanism for. group work but. I think if you want to give a comment about your breakout groups and the idea of how to manage. Your idea about how to design that that would be. A helpful thing as well. S06:&nbsp;And just thinking, the Members are wildly different sometimes. ???:&nbsp;yeah. DHH:&nbsp;yeah so all. i'll update that okay it's a bit. of change that on your courses to reflect just talked about. S06:&nbsp;Okay, thank you. DHH:&nbsp;Thank you very much. S06:&nbsp;Have a good weekend. DHH:&nbsp;thanks you too. So if you have questions like seraph. And you want to stick around for a minute. try and deal with them now okay. thanks again everyone take care, have a good weekend and go writers. S04:&nbsp;Should I share my screen. DHH:&nbsp;sure. ???:&nbsp;Okay. S04:&nbsp;I hope you can see the screen. DHH:&nbsp;yeah. S04:&nbsp;Okay perfect so my only point of representing the paper was like I was. doing some of the other research paper topics on the particular subject virtual reality even my like i'm taking see as 900 calls this semester and i'm. Presenting on this topic link, not on this paper topic, but on virtual reality topics as well. So I was really into the virtual reality field and I found some of the interesting conference that's going on and that's very interesting because this thing we were actually. Trying to implement in January, when I was taking the virtual reality quotes so I found this paper and the thing is the only problem with it is just is, I think one and half page sharper than your eight page requirement, but I do think this paper is very good and in terms of is. DHH:&nbsp;It can just. Where is it from. S04:&nbsp;Is from the website is suggested. DHH:&nbsp;Just just scroll down to the bottom of the first page. S04:&nbsp;There we go. DHH:&nbsp;Okay, so it's extended abstracts yeah so it's not it's not exactly a paper. S04:&nbsp;So what would be your feedback on there, like. I should go ahead, or should I just. fulfill the criteria, yes that's what I was concerned about. DHH:&nbsp;So, can you post, the link in the chat please. S04:&nbsp;For the paper. yeah sure. ???:&nbsp;Give me a second. S04:&nbsp;i'm gonna stop sharing for a second. DHH:&nbsp;it's fine. S02:&nbsp;I heard it we. ???:&nbsp;Can a year. S02:&nbsp;So I was thinking a little bit about any tools that we can use for the hyper fidelity prototype so I went through some of them, but if you have any suggestion about the about any tool that would be helpful for me. for creating hypothetical. DHH:&nbsp;yeah so. I mean I. can do something, even with PowerPoint or something. where you can just programmed the. transition between screens okay. If you do screen captures and then. shift between them that might be. ???:&nbsp;Okay. S02:&nbsp;I mean thinking, the slides. DHH:&nbsp;yeah changing slides that Sir yeah. S02:&nbsp;I got it Thank you have a good weekend. DHH:&nbsp;thanks you too. S02:&nbsp;Thank you, on Monday. ???:&nbsp;Okay. S04:&nbsp;Give me just one minute i'm trying to search it on that website that he provided. I think I can share my screen again since no one is here. And their. DHH:&nbsp;perception of ritual objects using weight illusions. S04:&nbsp;Yes, this is, this is the one I can provide you the link. DHH:&nbsp;Well, I found it. ???:&nbsp;Okay. DHH:&nbsp;So i'm just. Extended abstracts aren't really papers, the sort of. work in progress or late breaking results are. So mean they're promising but they're not a full. Just. See. S04:&nbsp;ya. DHH:&nbsp;looking for. ???:&nbsp;Okay. DHH:&nbsp;Last year. S04:&nbsp;yeah. And this is very interesting for me, because this area is still like unlike a lot in in La always undiscovered so I was like sure why not, because. Most of the technologies are not available and Facebook is also releasing the new technologies and solving this kind of problems, so I thought, maybe it can be a very good idea to. DHH:&nbsp;One one. thing from last year came up when we just feel that it's. ???:&nbsp;Okay. S04:&nbsp;terms of other papers, I did, I do have like one or two other papers that I selected, just in case if this paper got rejected because of the six pages, or something like that. DHH:&nbsp;well. there's one plus one is a research paper but it's only two pages long. S04:&nbsp;I know the other thing with all the virtual reality technologies either the papers are too short or either it is like to old. Because that's the new thing right now, because it just jumped in 1990s, then it completely you know diet and then now right now with Facebook Meta and stop the oculus quest they are reintroducing and stuff. Especially for the cove area they're trying to do even the saskatchewan government tried to do. In January, to try to have a tourism thing for the virtual reality, because not nothing was visible So when I one of my classmate did a project on that as well. DHH:&nbsp;mm hmm. S04:&nbsp;yeah so did these things are like very, very new right now so that's why this kind of stuff Sir. kind of weird in terms of paper and writing. DHH:&nbsp;So. How about you do a little extra. justification of this choice, saying that. The all the keywords you looked at you that you're interested in yielded nothing. More than. Nothing eight pages or longer. S04:&nbsp;Okay, so like. What do I have to do in that case I do, I have to give a justification like why I chose this paper. I can do that. DHH:&nbsp;yeah. S04:&nbsp;yeah I can actually that's what that's my like that's why I was trying to talk to you because I can even write more than what you. gave the criteria for like what the people wanted to do what the what the methods or I can just say what the problem was and. Why, I chose this paper and how it can help me in the near future, when the technologies are available for virtual reality, I can add like a bunch of more points and. DHH:&nbsp;know what I asked, please. S04:&nbsp;Okay, so so just one why I chose this paper because of the six pages. DHH:&nbsp;No it's not why he chose his papers included in the list, I believe. Maybe maybe it's not a. and made a change. But explain why you. Have the topics of interest. Nothing else was. So. Perhaps some searches that you did. In the interface, and so on, but we didn't yield. Paper those eight pages or longer. Do you understand what I mean. S04:&nbsp;yeah, so I think what are you trying to say is kind of the motivation behind this exact thing. DHH:&nbsp;Not the motivation snake will no longer papers. In the. S04:&nbsp;In the exact topic that I chose there's no available like lenny or paper that's. DHH:&nbsp;yeah yeah. S04:&nbsp;I can do that. DHH:&nbsp;And so you're not doing so, what are you doing for your seminar. S04:&nbsp;I already uploaded my video it is how to like immersive Mr SCI fi user in virtual reality technology using different kind of methodology, so, as I said, it's a very. Like new topic so they're like immersion in virtual reality depends on fairy like various factors, so I choose three factors like that those are like the major factors, right now, in this era with the technology available to us. So it is the first one is the interaction method how virtual reality like how in virtual reality you're interacting with different objects and how you're walking and talking. Because you're just standing in place, but in the virtual reality you're walking so that's kind of a D synchronize and that's a very huge problem in vr. So that's one of the paper that I chose the second one was how to enhance the image quality to give the user, the perception of immersion and. presence in virtual reality to emulsify and make them more immersive in the content and the third paper that I chose was like to have the gaming. Had the neural engine and the underlying in the virtual reality to improve the processing speed so again, that also have correlate to the immersion. DHH:&nbsp;hmm. So it's not all brand new stuff no. S04:&nbsp;Yes, it is not the concept of this thing is very old, but the thing is the technologies available is very new that that's what it's kind of rising because of that, because in 1990s when. These kind of concepts were there, even the way the matrix movie came out the technology available to us was very. I would say not up to the mark that can accommodate those things so that's why it completely fail after nintendo's I think the red boy again and then like now, because of the oculus questions touch with their again rising because of that, because we are trying to accommodate those things. DHH:&nbsp;Okay well. So I. was just. Trying to help you out by encouraging to be more precise, and what you're what you're talking about. So. That That would be my suggestion you know. So. I you know, like, I think, with the instructions for the paper eight pages or more so. So I just want you to address. Why. you're not able to. receive with that. If you'd rather if you have another paper that interests you that's eight pages or longer. From the published in the last year. Maybe it's more straightforward to go with that. I don't know. So those are the choices, I guess. S04:&nbsp;yeah then works for me so just to clarify on last time, so if I choose another people that these eight pages and long that's fine, so I don't have to write any other criteria. But if I choose to go with this paper, so I should include a column artist section explaining why I am not able to proceed with other papers. For the similar topics and why I chose this paper, even though that is six pages long, like just to clarify that thing and that section, you would like me to include at the top, or at the end of the paper like review. DHH:&nbsp;well. it's not a part of the of your submission it's maybe it's more well. So I guess priests. haven't received the submission, if you choose to do that. S04:&nbsp;So i'm to write this section separately and send it to you before I write the review of the paper. DHH:&nbsp;No, I just said, put it first in the PDF. S04:&nbsp;OK. OK so like right this section in a PDF and also write my review and combine those two and send and submitted. ???:&nbsp;yeah. S04:&nbsp;Okay, that would work. Okay, thank you very much, Professor. you're welcome Okay, have a good weekend. DHH:&nbsp;thanks you too bye. :&nbsp;bye bye. Zoom Chat Transcript S07:&nbsp;Happy Friday! S08:&nbsp;good S09:&nbsp;Good Afternoon Everyone. Happy Friday!! S10:&nbsp;hmm DHH:&nbsp;Student password S11:&nbsp;All good S02:&nbsp;Student password S06:&nbsp;Useful link, especially if a student is taking more than one class with you a semester. S11:&nbsp;weekend - only email info maybe S06:&nbsp;Yup. And Seminars too maybe :) S02:&nbsp;I think putting the date corresponding to each meeting number would be helpful. DHH:&nbsp;Breakout rooms: can you come up with a sketch of how to improve this new feature of “today”? DHH:&nbsp;Does that make sense? S02:&nbsp;yes S04:&nbsp;yes S12:&nbsp;yes S06:&nbsp;Listing the time of day of the meeting would be nice S04:&nbsp;https://dl.acm.org/doi/10.1145/3411763.3451842 S04:&nbsp;motivation? S04:&nbsp;for this",
     "tags": "",
     "url": "/teaching/CS-428+828/202130/meetings/37_S.html"
-  },{
-    "title": "Mtg 37 • CS-499+900 (202110)",
-    "text": "Mtg 37/37: Wed-14-Apr-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/37_Wed-14-Apr-2021.html.html"
-  },{
-    "title": "Mtg 37 • CS-499+900 (202110)",
-    "text": "Mtg 37/37: Wed-14-Apr-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media No Media",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/37_Wed-14-Apr-2021.html"
   },{
     "title": "Mtg 38 • CS-428+828 (202130)",
     "text": "Mtg 38/38: Mon-06-Dec-2021 Outline Wiki Media Outline for Today Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -3245,7 +2875,7 @@ var tipuesearch = {"pages": [{
     "url": "/news/"
   },{
     "title": "Sitemap",
-    "text": "Sitemap OpenData ODCS2025 Evaluation of Teaching About Biography Education Elsewhere on the Web Personal Interests Saskatchewan Roughriders Website News Projects Computer Science Alumni and Friends Blogging The Bus Project Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Math of Art Nature’s Numbers Free Knowledge Games Genealogy Interaction Design Multimedia Open Data Community Survey 2025 Open Source Software Participant Pool People A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Library Rough Sets UR50CS (50th Birthday Party for CS @ U of R) Party Visualization Research Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201610 201710 201810 201910 202010 202110 CS 215 200710 200910 201110 201130 CS 230 200510 CS 280 200710 200710 201310 200710 201510 200710 201710 201910 202010 202110 202210 202410 202610 CS 305+828 201210 201330 201430 CS 305 200130 200230 200310 200630 200830 201030 201230 CS 315+733 202430 202530 CS 315 202630 CS 325 200230 200330 200430 200530 200630 201110 201230 201410 CS 330 200330 200430 200610 200930 201010 CS 325 CS 405+805 202510 CS 428+730 202410 CS 428+828 201630 201730 201830 201930 202030 202130 202230 Content Map Redesign Resources CS 428 202610 CS 325 CS 499+900 CS 499+900 201920 202010 202110 202210 202230 CS 730 202210 CS 733 202230 202330 CS 325 200410 200610 200830 201030 CS 325 FILM 385AB 200230 200330 200430 200530 200630 201110 Curriculum 2013 CS Curriculum Evaluation Group Work GWM Group Work Notes Group Work Participation Philosophy Schedule Today Wikipedia Zoom Trouble HTTP Errors Forbidden Access Not Found Unexpected Condition",
+    "text": "Sitemap OpenData ODCS2025 Evaluation of Teaching About Biography Education Elsewhere on the Web Personal Interests Saskatchewan Roughriders Website News Projects Computer Science Alumni and Friends Blogging The Bus Project Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Math of Art Nature’s Numbers Free Knowledge Games Genealogy Interaction Design Multimedia Open Data Community Survey 2025 Open Source Software Participant Pool People A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Library Rough Sets UR50CS (50th Birthday Party for CS @ U of R) Party Visualization Research Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201610 201710 201810 201910 202010 202110 CS 215 200710 200910 201110 201130 CS 230 200510 CS 280 200710 200710 201310 200710 201510 200710 201710 201910 202010 202110 202210 202410 202610 CS 305+828 201210 201330 201430 CS 305 200130 200230 200310 200630 200830 201030 201230 CS 315+733 202430 202530 CS 315 202630 CS 325 200230 200330 200430 200530 200630 201110 201230 201410 CS 330 200330 200430 200610 200930 201010 CS 325 CS 405+805 202510 CS 428+730 202410 CS 428+828 201630 201730 201830 201930 202030 202130 202230 Content Map Redesign Resources CS 428 202610 CS 325 CS 499+900 CS 499+900 201920 202010 202210 202230 CS 730 202210 CS 733 202230 202330 CS 325 200410 200610 200830 201030 CS 325 FILM 385AB 200230 200330 200430 200530 200630 201110 Curriculum 2013 CS Curriculum Evaluation Group Work GWM Group Work Notes Group Work Participation Philosophy Schedule Today Wikipedia Zoom Trouble HTTP Errors Forbidden Access Not Found Unexpected Condition",
     "tags": "",
     "url": "/search/sitemap/"
   },{
@@ -3729,16 +3359,6 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/schedule/"
   },{
-    "title": "CS-499+900 (202110) Meetings",
-    "text": "Meetings Month Meeting Dates (Numbers) with Summaries and Responses Jan Mon-11 (01) :SR &bull; Wed-13 (02) :SR &bull; Fri-15 (03) :SR &bull; Mon-18 (04) :SR &bull; Wed-20 (05) :SR &bull; Fri-22 (06) :SR &bull; Mon-25 (07) :SR &bull; Wed-27 (08) :SR &bull; Fri-29 (09) :SR Feb Mon-01 (10) :SR &bull; Wed-03 (11) :SR &bull; Fri-05 (12) :SR &bull; Mon-08 (13) :SR &bull; Wed-10 (14) :SR &bull; Fri-12 (15) :SR &bull; Mon-22 (16) :SR &bull; Wed-24 (17) :SR &bull; Fri-26 (18) :SR Mar Mon-01 (19) :SR &bull; Wed-03 (20) :SR &bull; Fri-05 (21) :SR &bull; Mon-08 (22) :SR &bull; Wed-10 (23) :SR &bull; Fri-12 (24) :SR &bull; Mon-15 (25) :SR &bull; Wed-17 (26) :SR &bull; Fri-19 (27) :SR &bull; Mon-22 (28) :SR &bull; Wed-24 (29) :SR &bull; Fri-26 (30) :SR &bull; Mon-29 (31) :SR &bull; Wed-31 (32) :SR Apr Mon-05 (33) :SR &bull; Wed-07 (34) :SR &bull; Fri-09 (35) :SR &bull; Mon-12 (36) :SR &bull; Wed-14 (37) :SR",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/meetings/"
-  },{
-    "title": "CS 499+900 in Winter 2021",
-    "text": "",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/"
-  },{
     "title": "CS 499+900",
     "text": "CS 499+900",
     "tags": "",
@@ -3785,7 +3405,7 @@ var tipuesearch = {"pages": [{
     "url": "/teaching/CS-499+900/201920/"
   },{
     "title": "CS 499+900",
-    "text": "CS 499+900 Seminars Calendar Description Seminars Semesters 202230 202210 202110 202010 201920 201810",
+    "text": "CS 499+900 Seminars Calendar Description Seminars Semesters 202230 202210 202010 201920 201810",
     "tags": "",
     "url": "/teaching/CS-499+900/"
   },{
@@ -4113,11 +3733,6 @@ var tipuesearch = {"pages": [{
     "text": "Home (current) About Projects Research Teaching OpenData RSS&nbsp; Search&nbsp; News Trouble &nbsp; D. H. Hepting PhD &bull; Simon Fraser University MSc &bull; University of Regina BSc (Hons) &bull; University of Regina &nbsp;",
     "tags": "",
     "url": "/"
-  },{
-    "title": "",
-    "text": "Graduate and Honours Seminar Course Background The Department of Computer Science runs a Colloquium and Seminar Series consisting of presentations and participation by: M.Sc. and Ph.D. students enrolled in the CS900 Graduate Seminar course. Fourth-year undergraduate honours students enrolled in the CS499 Honours Seminar course. Faculty members from the Department and visiting faculty members from other universities. A student enrolled in CS499 or CS900 is required to make one presentation in the Seminar Series, to attend presentations made by other students in the Seminar Series according to the guidelines provided, and to attend all presentations given by faculty members and visiting faculty members in the Colloquium Series. First Meeting All students enrolled in CS499 and CS900 must attend the first scheduled class meeting with the semester's coordinator. Requirements You must satisfy the following requirements by the specified deadlines. Failure to meet these deadlines may result in your presentation being cancelled, requiring you to complete your presentation in a subsequent semester. Materials must be submitted to UR Courses. Submit Presentation Title and Abstract The title of your presentation should be informative and accessible, in 10 words or less. Your abstract should provide a concise summary of the technical content of your presentation in 80-120 words (no more, no less). The intended audience for your abstract is the other participants in the Colloquium and Seminar Series (it may be distributed campus-wide and/or off campus to interested parties). If you have a research supervisor: they are expected to approve your title and abstract before you submit it on UR Courses. include their name in your submission (\"supervised by: Firstname Lastname\"). Points to check (with inspiration from this document ): Have you identified a topic and scope that can be presented in 18-20 minutes? Do your title and abstract capture the interest of potential attendees? Are your title and abstract well-written in terms of language, spelling, and grammar? Does your title clearly describe the topic being presented? In a way that is inviting? In 10 words or less? Does your abstract make a clear statement of the topic and the research question, if appropriate? If presenting research findings, does your abstract say how the research was/is being undertaken? Does your abstract indicate the value of the presentation for attendees?",
-    "tags": "",
-    "url": "/teaching/CS-499+900/202110/info.html"
   },{
     "title": "Inspirations",
     "text": "Inspirations In short, it seems worthwhile to avoid argument with (other) enthusiasts for artificial intelligence by conceding dominance in the distant future of cerebration to machines alone. There will nevertheless be a fairly long interim during which the main intellectual advances will be made by men and computers working together in intimate association. A multidisciplinary study group, examining future research and development problems of the [United States] Air Force, estimated that it would be 1980 before developments in artificial intelligence make it possible for machines alone to do much thinking or problem solving of military significance. That would leave, say, five years to develop man-computer symbiosis and fifteen years to use it. The fifteen may be ten or five hundred, but those years should be intellectually the most creative and exciting in the history of mankind. &nbsp; J. C. R. Licklider in Man-Computer Symbiosis, 1960 &nbsp; When we try to pick out anything by itself, we find it hitched to everything else in the Universe. &nbsp; John Muir in My First Summer in the Sierra, 1911 &nbsp; There are these two young fish swimming along, and they happen to meet an older fish swimming the other way, who nods at them and says, &lsquo;Morning, boys, how's the water?&rsquo; And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes, &lsquo;What the hell is water?&rsquo; &nbsp; David Foster Wallace in This is Water, 2005 &nbsp; When you grow up you tend to get told the world is the way it is and you're life is just to live your life inside the world. Try not to bash into the walls too much. Try to have a nice family, have fun, save a little money. That's a very limited life. Life can be much broader once you discover one simple fact: Everything around you that you call life was made up by people that were no smarter than you and you can change it, you can influence it, you can build your own things that other people can use. Once you learn that, you'll never be the same again. &nbsp; Steve Jobs in Video interview from Santa Clara Valley Historical Association, 1995 &nbsp; In our culture we spend a lot of time with the how. We've become a culture of technocrats and all we do is become technicians asking &lsquo;how do we do this?&rsquo;. Nobody stands back and asks &lsquo;why?&rsquo;. &nbsp; Joel Salatin in How to Eat Well AND Save Our Planet, 2008 &nbsp; There are no passengers on Spaceship Earth. We are all crew. &nbsp; Marshall McLuhan, 1911-1980",
