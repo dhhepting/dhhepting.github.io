@@ -27,10 +27,10 @@ layout: default
 {%- capture creole_preamble -%}
 = {{ page.course }} Mtg {{ gen.meeting }}: {{ gen.date }} =
 == Navigation ==
-{% if gen.prev_slug %}[[{{ gen.prev_slug }} | Previous]] <-- {% endif %}[[Home]]{% if gen.next_slug %} --> [[{{ gen.next_slug }} | Next]]{% endif %}
+{% if gen.prev_slug %}[[{{ gen.prev_slug }} | Previous]] <-- {% endif %}[[Meetings]] or [[Home]]{% if gen.next_slug %} --> [[{{ gen.next_slug }} | Next]]{% endif %}
 
-= Plan for today =
-== Today's Theme ==
+= Plan for Meeting =
+== Theme ==
 {{ gen.theme }}
 {%- if gen.BOK %}
 == Body of Knowledge ==
