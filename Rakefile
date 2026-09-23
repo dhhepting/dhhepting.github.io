@@ -333,3 +333,5 @@ namespace :code do
     end
   end
 end
+
+task "test:html" => "code:listings"
