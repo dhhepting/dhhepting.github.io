@@ -312,16 +312,24 @@ namespace :table do
   end
 end
 
+  # [root inside _site, required?]
+LISTING_ROOTS = [
+  ["_site/teaching/CS-315/202630/code", false], # only present when the offering has code: true
+  ["_site/wiki",                        true],  # always built; missing means the build is wrong
+].freeze
+LISTING_CSS = "_site/assets/css/listings.css"
+
 namespace :code do
-  desc "Write static directory-listing index.html files into the built code/ trees"
+  desc "Write static directory-listing index.html files into built directories that lack one"
   task :listings do
-    root = "_site/teaching/CS-315/202630/code"
-    css  = File.join(root, "CS315/css/listings.css")
-    if File.directory?(root)
-      sh "node", "scripts/gen-listings.mjs", root, css   # array form: no shell quoting
-    else
-      warn "code:listings — #{root} not in build, nothing to do"
+    abort "code:listings — #{LISTING_CSS} missing from build" unless File.file?(LISTING_CSS)
+    LISTING_ROOTS.each do |root, required|
+      unless File.directory?(root)
+        abort "code:listings — required #{root} missing from build" if required
+        warn  "code:listings — #{root} not in build, skipping"
+        next
+      end
+      sh "node", "scripts/gen-listings.mjs", root, LISTING_CSS
     end
   end
 end
-
