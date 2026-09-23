@@ -196,3 +196,661 @@ meetings:
   wikipage_id: 9900
   wiki_ed_group: 'None'
   attendance_session: 275024
+
+# ------------------------------------------------------------------
+# Transferred 2026-09-23 by import_old_plan.py from
+#   plan.json  (offering: CS-315_733-202430)
+# Archival: not read by the build. Derivable admin boilerplate
+# (attendance / calendar links) was dropped on purpose.
+# ------------------------------------------------------------------
+mtgs_202430:
+- meeting: 1
+  date: '2024-09-04'
+  week: 1
+  theme: Welcome
+  outline:
+  - Class structure overview
+  - Starting our discussion of computer graphics
+  moodle:
+    questionnaire: 2732019
+    quiz: 2732051
+- meeting: 2
+  date: '2024-09-09'
+  week: 2
+  theme: Introduction
+  week_notes:
+  - text: CS-315 Lab1
+    url: https://www.labs.cs.uregina.ca/315/WebGL2/Lab1/
+  admin_notes:
+  - Everyone who submitted a response received full marks, but making a thoughtful response means giving some thought to what you write and following the instructions.
+  r2r:
+  - text: _How is the discretization of a continuous phenomenon achieved with regards to understanding the pixels of a display or an image?_
+    items:
+    - Each pixel on a display of an image shows the value of a discrete sample of the continuous phenomenon
+  - text: _Do pixels have a specific size?_
+    items:
+    - 'No'
+  - text: _Can you provide a full course syllabus on UR Courses?_
+    items:
+    - 'Yes'
+  - text: _I had a hard time understanding some concepts_
+    items:
+    - Please don't hesitate to ask questions during the meeting (if you are comfortable with that), send me email using UR Courses, or post to the class discussion forum on UR Courses.
+  - text: _The concept of pixels being a continuous concept rather than a discrete concept. It seems to go against what I understood pixels to be before today._
+    items:
+    - Pixels are discrete samples of a continuous phenomenon
+  - text: _If a pixel can be any shape and size how do all screen appear to show non-stretched images?_
+    items:
+    - Pixels as discrete samples of a continuous phenomenon do not have size nor shape. On modern screens, these samples are displayed equally spaced in x and y (resulting in a grid of squares). To avoid stretching an image, preserve the aspect ratio
+  - text: _I would like to know more about what is aliasing_
+    items:
+    - Aliasing in computer graphics refers to jagged features apparent on what should be smooth lines and curves. It is a problem of insufficient sampling
+  - text: _It was mentioned that a part of our participation marks could be gained through wiki contribution. What is meant by this and how do we contribute to the wiki?_
+    items:
+    - text: I've added some information in UR Courses (under the Participation topic). It is not strictly necessary to sign up to edit the wiki, you can just do it (see Using Wiki for an introduction to wiki editing
+      url: https://docs.moodle.org/404/en/Using_Wiki
+  - text: _How can we get to volunteer to participate in research through the participant pool?_
+    items:
+    - Opportunities to participate in research will be advertised on UR Courses
+  - text: _Would it be possible to get the course lecture slides?_
+    items:
+    - Yes. I am adding the textbook slides in a folder under the Meetings topic in UR Courses. The meeting pages will have other information covered during our class meetings
+  outline:
+  - text: Textbook from Campus Store
+    url: https://www.bkstr.com/ureginastore/course-materials-results?shopBy=course&divisionDisplayName=%7C&departmentDisplayName=CS%7CCS&courseDisplayName=315%7C733&sectionDisplayName=001%7C001&programId=5086&termId=100085716
+  - text: Textbook from Pearson
+    url: https://www.pearson.com/en-ca/subject-catalog/p/interactive-computer-graphics-a-top-down-approach-with-webgl/P200000003526/9780135217160
+  - text: Pixel
+    url: https://en.wikipedia.org/wiki/Pixel
+  - text: Vector Graphics
+    url: https://en.wikipedia.org/wiki/Vector_graphics
+  - Chapter 1
+  for_next_meeting:
+  - Read Chapter 1 (and 2)
+  moodle:
+    questionnaire: 2732038
+    quiz: 2734703
+- meeting: 3
+  date: '2024-09-11'
+  week: 2
+  theme: Chapter 1
+  r2r:
+  - bitmap v. vector, discrete v. continuous
+  outline:
+  - Chapter 1
+  for_next_meeting:
+  - Read Chapter 2
+  moodle:
+    questionnaire: 2732040
+    quiz: 2739456
+- meeting: 4
+  date: '2024-09-16'
+  week: 3
+  theme: Graphics Programming
+  r2r:
+  - see Meeting 2 for a detailed response to responses
+  - text: for those interested in a career in film and games -- Tim Belsher video
+    url: https://www.youtube.com/watch?v=WNNz63oXnwA&list=PLYMokjh1_EOg3bjFUCcq7PeTu9FmOC5-U&index=7
+  - what was missing from our discussion of the parts involved in generating a high quality graphics image?
+  outline:
+  - text: First Class Assignment
+    items:
+    - setup folders as instructed in Lab 1
+    - text: https://interactivecomputergraphics.com/8E/Code/02/gasket1.html
+      url: https://interactivecomputergraphics.com/8E/Code/02/gasket1.html
+    - text: https://interactivecomputergraphics.com/8E/Code/02/gasket2.html
+      url: https://interactivecomputergraphics.com/8E/Code/02/gasket2.html
+  for_next_meeting:
+  - Keep reading Chapter 2
+  moodle:
+    questionnaire: 2732046
+    quiz: 2739467
+- meeting: 5
+  date: '2024-09-18'
+  week: 3
+  theme: Graphics Programming
+  outline:
+  - move the midterm?
+  - text: 3D Gasket - gasket4.html
+    url: https://interactivecomputergraphics.com/8E/Code/02/gasket4.html
+  - text: WebGL2 - How it Works
+    url: https://webgl2fundamentals.org/webgl/lessons/webgl-how-it-works.html
+  for_next_meeting:
+  - Read Chapter 3
+  moodle:
+    questionnaire: 2733945
+    quiz: 2739477
+- meeting: 6
+  date: '2024-09-23'
+  week: 4
+  theme: Animation and Interaction
+  week_notes:
+  - text: CS-315 Lab2
+    url: https://www.labs.cs.uregina.ca/315/WebGL2/Lab2/
+  r2r:
+  - Responses are to be submitted by noon the following day. Thoughtful is not just a list of topics discussed
+  outline:
+  - assignment 1 questions?
+  - painters' terminology - mixing pure colour with white is a tint, with grey is a tone, with black is a shade
+  - text: More detail about colour -- from wikipedia
+    url: https://en.wikipedia.org/wiki/HSL_and_HSV
+  - text: Chapter 3 code
+    url: https://interactivecomputergraphics.com/8E/Code/03/
+  for_next_meeting:
+  - Will discuss picking (Chapter 3)
+  moodle:
+    questionnaire: 2733992
+    quiz: 2739478
+- meeting: 7
+  date: '2024-09-25'
+  week: 4
+  theme: Animation and Interaction
+  r2r:
+  - Responses are to be submitted by noon the following day. Thoughtful is not just a list of topics discussed
+  outline:
+  - my apologies for not having a quiz before today's meeting
+  - text: more about critical fusion frequency --  the frequency at which a flickering light appears steady to the average human observer
+    items:
+    - text: 60 fps
+      url: https://en.wikipedia.org/wiki/Flicker_fusion_threshold
+    - Video 30fps or 60 fields per second (even and odd lines)
+    - Film 24fps but can appear as 48fps or 72fps with double or triple-bladed shutter to show each frame 2 or 3 times
+    - text: higher than 12fps perceived as motion
+      url: https://en.wikipedia.org/wiki/Frame_rate
+  - text: Assignment 1
+    items:
+    - _Do you need to use the colours that I have used?_ You can choose your own colours — think about what information can be conveyed with your colour choices.
+    - _is it ok all the subdivided triangles to be different random colours?_ Look at how the recursive calls to subdivide the triangle are made and see if something can be done differently there
+    - The perturbation of the midpoints only applies to the recursive subdivision method
+  - text: Window events resize
+    url: https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event
+  - text: Gesture and touch MSDN
+    url: https://developer.mozilla.org/en-US/docs/Web/API/Touch_events
+  - Picking (selecting an object onscreen) is difficult for several reasons - can draw simpler version offscreen and test for colours -- that comes up in a later chapter
+  - text: https://www.interactivecomputergraphics.com/8E/Code/03/cad1.html
+    url: https://www.interactivecomputergraphics.com/8E/Code/03/cad1.html
+  - text: https://www.interactivecomputergraphics.com/8E/Code/03/cad2.html
+    url: https://www.interactivecomputergraphics.com/8E/Code/03/cad2.html
+  for_next_meeting:
+  - Read Chapter 4
+  moodle:
+    questionnaire: 2733998
+    quiz: 2739484
+- meeting: 8
+  date: '2024-10-02'
+  week: 5
+  theme: Geometric Objects and Transformations
+  outline:
+  - Happy 1st meeting of October
+  - will be grading for thoughtfulness of responses from today forward
+  - text: October 11 will have 50th anniversary events related to Computer Science
+    items:
+    - Pierre Lemire (BSc '87), CEO of Kent Imaging will give a presentation at 3:30 in the Education Auditorium
+    - for a lunchtime event, would you prefer sandwiches and wraps or pizza?
+  - text: Chapter 4 Code
+    url: https://www.interactivecomputergraphics.com/8E/Code/04/
+  moodle:
+    questionnaire: 2734001
+    quiz: 2739490
+- meeting: 9
+  date: '2024-10-07'
+  week: 6
+  theme: Geometric Objects and Transformations
+  week_notes:
+  - text: CS-315 Lab3
+    url: https://www.labs.cs.uregina.ca/315/WebGL2/Lab3/
+  outline:
+  - text: Friday lunch
+    url: https://www.facebook.com/events/421828363917138/
+  - text: Friday seminar and reception
+    url: https://www.facebook.com/events/548131644367595/
+  - text: Chapter 4 Code
+    url: https://www.interactivecomputergraphics.com/8E/Code/04/
+  for_next_meeting:
+  - Start reading Chapter 5
+  moodle:
+    questionnaire: 2734008
+    quiz: 2739491
+- meeting: 10
+  date: '2024-10-09'
+  week: 6
+  theme: Math on the Board
+  outline:
+  - did you get an email about Friday's events?
+  - Math on the board revisited
+  - Assignment 2 will be posted later today, to be due October 25
+  - Enjoy the fall break
+  for_next_meeting:
+  - continue reading Chapter 5
+  moodle:
+    questionnaire: 2734012
+    quiz: 2739496
+- meeting: 11
+  date: '2024-10-21'
+  week: 8
+  week_notes:
+  - text: CS-315 Lab4
+    url: https://www.labs.cs.uregina.ca/315/WebGL2/Lab4/
+  - Midterm Oct. 23
+  moodle:
+    questionnaire: 2734016
+- meeting: 12
+  date: '2024-10-23'
+  week: 8
+  theme: Assignment 2 and Midterm Exam
+  outline:
+  - Assignment 2
+  - 'Midterm Exam: Chapters 1-5'
+  for_next_meeting:
+  - Finish reading Chapter 5
+  moodle:
+    questionnaire: 2734017
+    quiz: 2739514
+- meeting: 13
+  date: '2024-10-28'
+  week: 9
+  theme: Assignment 2, Chapter 5, and Midterm on Wednesday
+  admin_notes:
+  - (there are 2 -- one for today and one for last meeting)
+  outline:
+  - text: Sample output for Assignment 2 -- courtesy of Alex Clarke (CS 315 Lab Instructor) -- no lighting used
+    url: https://www.dropbox.com/scl/fi/epj3h3pcu9vtx6bwzjrbq/asgn2-sample.mp4?rlkey=4zo2llxxtsuuqcond25qnptvf&dl=0
+  - text: Slides from textbook
+    url: https://urcourses.uregina.ca/mod/folder/view.php?id=2744387
+  - 'Previous midterms: [1](https://www2.cs.uregina.ca/~hepting/assets/teaching/pdf/CS-733-202230_exam-1-midterm.pdf) and [2](https://www2.cs.uregina.ca/~hepting/assets/teaching/pdf/CS-733-202330_exam-1-midterm.pdf)'
+  - text: matrices.pdf
+    url: https://www2.cs.uregina.ca/~hepting/assets/teaching/pdf/matrices.pdf
+  - text: MDN WebGL2 Model View Projection
+    url: https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection
+  moodle:
+    questionnaire: 2734034
+- meeting: 14
+  date: '2024-10-30'
+  week: 9
+  theme: Midterm
+- meeting: 15
+  date: '2024-11-04'
+  week: 10
+  theme: Midterm and Lighting and Shading
+  week_notes:
+  - text: CS-315 Lab5
+    url: https://www.labs.cs.uregina.ca/315/WebGL2/Lab5/
+  outline:
+  - Midterm
+  - text: Lighting and Shading
+    items:
+    - text: Chapter 6 code
+      url: https://interactivecomputergraphics.com/8E/Code/06/
+  for_next_meeting:
+  - Read Chapter 6
+  moodle:
+    questionnaire: 2734435
+    quiz: 2739515
+- meeting: 16
+  date: '2024-11-06'
+  week: 10
+  theme: Lighting and Shading
+  outline:
+  - Reminder that our next meeting is Wednesday, November 13 (Monday is Remembrance Day)
+  - text: Opportunities for Feedback (open until 13 November at 1 minute to midnight)
+    items:
+    - text: Anonymous -- formative feedback for Dr. Hepting
+      url: https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2778270
+    - text: Not anonymous to Dr. Hepting -- for participation -- rate the midterm
+      url: https://urcourses.uregina.ca/mod/questionnaire/view.php?id=2778926
+  - I neglected to mention that I will be using gradescope.com for marking the exam -- you likely received a strange email from them -- it has a lot of nice features that protect you from having to read my handwritten comments. When I am finished marking next week, you will be able to ask questions about the marks you received using the platform
+  - text: shadedCube
+    url: https://interactivecomputergraphics.com/8E/Code/06/shadedCube.html
+  - text: shadedCube2
+    url: https://interactivecomputergraphics.com/8E/Code/06/shadedCube2.html
+  for_next_meeting:
+  - finish Chapter 6 and start on Chapter 7
+  moodle:
+    questionnaire: 2734436
+    quiz: 2739520
+- meeting: 17
+  date: '2024-11-13'
+  week: 11
+  theme: Texture Mapping
+  outline:
+  - midterm exam grades posted and the marked exams will be available on gradescope later today (you will receive an email)
+  - Assignment 2 marks posted
+  - Assignments 3 and 4 now available on UR Courses
+  - 2 opportunities to give me feedback are open until 23:59 today
+  - text: Chapter 7 code samples
+    url: https://interactivecomputergraphics.com/8E/Code/07/
+  for_next_meeting:
+  - Read the rest of Chapter 7
+  moodle:
+    questionnaire: 2734611
+    quiz: 2739535
+- meeting: 18
+  date: '2024-11-18'
+  week: 12
+  theme: Texture Mapping
+  week_notes:
+  - text: CS-315 Lab6
+    url: https://www.labs.cs.uregina.ca/315/WebGL2/Lab6/
+  outline:
+  - text: posted anonymized feedback ahout midterm exam
+    url: https://urcourses.uregina.ca/mod/page/view.php?id=2788142
+  - I will post assignment code tomorrow. Today at 23:59 is cutoff for Assignment 2 (late submission no longer accepted)
+  - text: Chapter 6 code samples
+    url: https://interactivecomputergraphics.com/8E/Code/06/
+  - text: Chapter 7 code samples
+    url: https://interactivecomputergraphics.com/8E/Code/07/
+  moodle:
+    questionnaire: 2734618
+    quiz: 2739536
+- meeting: 19
+  date: '2024-11-20'
+  week: 12
+  theme: Texture Mapping
+  outline:
+  - text: Zoom meeting link for today
+    url: https://uregina-ca.zoom.us/j/98978532193?pwd=WCbc0b6RZVoHcAdyFC13eLj6mpdxzV.1
+  - Missed quiz before today's meeting -- I will add extra question(s) to the next one
+  - I have added more detail and some sample code to Assignments 3 and 4
+  - 'Sample code: ShadedTexturedCube'
+  - text: specular map example
+    url: https://webgl2fundamentals.org/webgl/lessons/webgl-qna-apply-a-displacement-map-and-specular-map.html
+  for_next_meeting:
+  - Read Chapter 8
+  moodle:
+    questionnaire: 2734620
+    quiz: 2739542
+- meeting: 20
+  date: '2024-11-25'
+  week: 13
+  theme: Reflection Mapping and Working with Framebuffers
+  outline:
+  - text: Choice about Fly-by due date without penalty
+    url: https://urcourses.uregina.ca/mod/choice/view.php?id=2795224
+  - text: https://interactivecomputergraphics.com/8E/Code/07/reflectionMap.html
+    url: https://interactivecomputergraphics.com/8E/Code/07/reflectionMap.html
+  - text: https://interactivecomputergraphics.com/8E/Code/08/cubet.html
+    url: https://interactivecomputergraphics.com/8E/Code/08/cubet.html
+  for_next_meeting:
+  - Continue reading Chapter 8
+  moodle:
+    questionnaire: 2734633
+    quiz: 2739626
+- meeting: 21
+  date: '2024-11-27'
+  week: 13
+  theme: Working with Framebuffers
+  outline:
+  - text: https://interactivecomputergraphics.com/8E/Code/08/render2.html
+    url: https://interactivecomputergraphics.com/8E/Code/08/render2.html
+  - diffuser.html
+  - text: https://interactivecomputergraphics.com/8E/Code/08/particleDiffusion.html
+    url: https://interactivecomputergraphics.com/8E/Code/08/particleDiffusion.html
+  for_next_meeting:
+  - Read Chapter 9
+  moodle:
+    questionnaire: 2734634
+    quiz: 2739631
+- meeting: 22
+  date: '2024-12-02'
+  week: 14
+  theme: Modelling and Hierarchy
+  admin_notes:
+  - Happy Monday and Happy December
+  outline:
+  - text: added updated matrices pdf file
+    url: https://www2.cs.uregina.ca/~hepting/assets/teaching/pdf/CS-315+733_matrices.pdf
+  - text: toon shader example
+    url: https://webgl-shaders.com/toon-example.html
+  moodle:
+    questionnaire: 2734640
+    quiz: 2739632
+- meeting: 23
+  date: '2024-12-04'
+  week: 14
+  theme: Review
+  admin_notes:
+  - Happy Wednesday - Last Meeting
+  outline:
+  - review for final exam
+  - text: Past exams
+    url: https://www2.cs.uregina.ca/~hepting/teaching/CS-315+733/202430/#ssExams
+  - text: Suggestions for Final Exam Questions
+    url: https://urcourses.uregina.ca/mod/forum/discuss.php?d=1150723
+    items:
+    - please share your ideas before the end of day on Friday
+  - text: Code Directory
+    url: https://www2.cs.uregina.ca/~hepting/teaching/CS-315+733/202430/code/
+  - text: https://tsherif.github.io/webgl2examples/
+    url: https://tsherif.github.io/webgl2examples/
+  - text: http://webglsamples.org/WebGL2Samples/
+    url: http://webglsamples.org/WebGL2Samples/
+  - text: raytracing
+    url: https://developer.nvidia.com/discover/ray-tracing
+  - text: radiosity
+    url: https://en.wikipedia.org/wiki/Radiosity_(computer_graphics)
+  moodle:
+    questionnaire: 2734641
+
+# ------------------------------------------------------------------
+# Transferred 2026-09-23 by import_old_plan.py from
+#   plan.json  (offering: CS-315_733-202530)
+# Archival: not read by the build. Derivable admin boilerplate
+# (attendance / calendar links) was dropped on purpose.
+# ------------------------------------------------------------------
+mtgs_202530:
+- meeting: 1
+  date: '2025-09-02'
+  week: 1
+  theme: Welcome
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 2
+  date: '2025-09-04'
+  week: 1
+  theme: Introduction
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 3
+  date: '2025-09-09'
+  week: 2
+  theme: Fundamentals
+  week_notes:
+  - CS315 Lab1
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+  outline:
+  - text: CS 2023 Body of Knowledge (page 93)
+    url: https://csed.acm.org/wp-content/uploads/2024/04/3.1-Body-of-Knowledge-1.pdf
+  for_next_meeting:
+  - read the class wiki pages
+  - text: read the ppt (week 1, presentation 4) at interactivecomputergraphics.com
+    url: https://interactivecomputergraphics.com/8E/PPT/WEEK01/
+- meeting: 4
+  date: '2025-09-11'
+  week: 2
+  theme: Fundamentals
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+  outline:
+  - text: https://interactivecomputergraphics.com/8E/Code/02/
+    url: https://interactivecomputergraphics.com/8E/Code/02/
+  - text: https://interactivecomputergraphics.com/8E/PPT/WEEK01/
+    url: https://interactivecomputergraphics.com/8E/PPT/WEEK01/
+- meeting: 5
+  date: '2025-09-16'
+  week: 3
+  theme: Fundamentals
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+  outline:
+  - text: https://interactivecomputergraphics.com/8E/Code/02/
+    url: https://interactivecomputergraphics.com/8E/Code/02/
+  - text: https://interactivecomputergraphics.com/8E/PPT/WEEK01/
+    url: https://interactivecomputergraphics.com/8E/PPT/WEEK01/
+  - text: https://interactivecomputergraphics.com/8E/PPT/WEEK02/
+    url: https://interactivecomputergraphics.com/8E/PPT/WEEK02/
+- meeting: 6
+  date: '2025-09-18'
+  week: 3
+  theme: Fundamentals
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+  outline:
+  - bitmap and vector image formats
+  - Lossless and lossy compression
+  - text: Unraveling the JPEG
+    url: https://parametric.press/issue-01/unraveling-the-jpeg/
+- meeting: 7
+  date: '2025-09-23'
+  week: 4
+  theme: Image Formats
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+  outline:
+  - bitmap and vector image formats
+  - Lossless and lossy compression
+  - text: Unraveling the JPEG
+    url: https://parametric.press/issue-01/unraveling-the-jpeg/
+  - text: YCbCr
+    url: https://en.wikipedia.org/wiki/YCbCr
+  - text: JPEG Quantization
+    url: https://en.wikipedia.org/wiki/JPEG#Quantization
+  for_next_meeting:
+  - text: 'Linear algebra and Assignment 1: please watch videos 1-4 of the Essence of linear algebra'
+    url: https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
+- meeting: 8
+  date: '2025-09-25'
+  week: 4
+  theme: Linear Algebra and Assignment 1
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+  outline:
+  - text: September check-in anonymous feedback
+    url: https://urcourses.uregina.ca/mod/questionnaire/view.php?id=3112110
+  - text: Pixelated rotating line segment
+    url: https://webgl2fundamentals.org/webgl/webgl-10x15-canvas-400x300-css.html
+  - text: WebGL2 Fundamentals
+    url: https://webgl2fundamentals.org/webgl/lessons/webgl-fundamentals.html
+  - text: 2D Translation in WebGL2
+    url: https://webgl2fundamentals.org/webgl/lessons/webgl-2d-translation.html
+  - text: 2D Rotation in WebGL2
+    url: https://webgl2fundamentals.org/webgl/lessons/webgl-2d-rotation.html
+  - text: 2D Scaling in WebGL2
+    url: https://webgl2fundamentals.org/webgl/lessons/webgl-2d-scale.html
+  - text: 2D Matrices in WebGL2
+    url: https://webgl2fundamentals.org/webgl/lessons/webgl-2d-matrices.html
+  - text: Columns and rows
+    url: https://webgl2fundamentals.org/webgl/lessons/webgl-matrix-vs-math.html
+- meeting: 9
+  date: '2025-10-02'
+  week: 5
+  theme: Assignment 1, Linear Algebra,Rendering
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 10
+  date: '2025-10-07'
+  week: 6
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 11
+  date: '2025-10-09'
+  week: 6
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 12
+  date: '2025-10-14'
+  week: 7
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 13
+  date: '2025-10-16'
+  week: 7
+  theme: 3D models
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 14
+  date: '2025-10-21'
+  week: 8
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 15
+  date: '2025-10-23'
+  week: 8
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 16
+  date: '2025-10-28'
+  week: 9
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 17
+  date: '2025-10-30'
+  week: 9
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 18
+  date: '2025-11-04'
+  week: 10
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 19
+  date: '2025-11-06'
+  week: 10
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 20
+  date: '2025-11-18'
+  week: 12
+  theme: Lighting and Shading
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 21
+  date: '2025-11-20'
+  week: 12
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 22
+  date: '2025-11-25'
+  week: 13
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 23
+  date: '2025-11-27'
+  week: 13
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 24
+  date: '2025-12-02'
+  week: 14
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
+- meeting: 25
+  date: '2025-12-04'
+  week: 14
+  admin_notes:
+  - text: 'ACTION: Record your attendance'
+    url: https://urcourses.uregina.ca/mod/attendance/manage.php?id=3075230&view=1
