@@ -335,3 +335,20 @@ namespace :code do
 end
 
 task "test:html" => "code:listings"
+
+require_relative 'lib/creole_photo_block'
+require_relative 'lib/meeting_page_fields'
+
+namespace :wiki do
+  desc 'Print Creole photo block: rake wiki:photos[CS-315,202630,01]'
+  task :photos, [:course, :semester, :meeting] do |_t, args|
+    dir = File.join('_data/teaching', args.fetch(:course), args.fetch(:semester))
+    meetings = YAML.load_file(File.join(dir, 'meetings.yml'))
+    mtg = meetings.find { |m| m['meeting'].to_i == args.fetch(:meeting).to_i } or
+      abort "no meeting #{args[:meeting]} in #{dir}/meetings.yml"
+    media = MeetingPageFields.load_media(File.join(dir, 'media.csv'),
+                                         meetings.map { |m| m['meeting'] })
+    puts "#{MeetingPageFields.meeting_slug(mtg)}-photos-text", ''
+    print CreolePhotoBlock.block(media[mtg['meeting']] || [])
+  end
+end
