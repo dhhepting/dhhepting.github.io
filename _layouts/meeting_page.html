@@ -49,7 +49,7 @@ layout: default
 {%- endfor %}
 {%- endif %}
 == Administration ==
-* Today's Wiki Editors: {{ gen.wiki_ed_group }}
+* Today's Wiki Editors: [[{{ gen.wiki_ed_group }}]]
 * Happy {{ gen.weekday }}
 * ACTION: [[{{ gen.attendance_QR }} | Click here to record your own attendance]]
 * [[{{ gen.calendar_day_url }} | Class calendar for today]]
@@ -70,8 +70,9 @@ layout: default
 = Post-Meeting Resources =
 == Photos ==
 [[{{ gen.photos_wiki_page_name }}]]
-== Audio Transcript ==
-[[{{ gen.audio_wiki_page_name }}]]
+
+== Photos and Transcript ==
+[[{{ gen.photos_text_wiki_page_name }}]]
 
 {% raw %}= WikiGroup Contributions =
 Please **do all of your editing here in the wiki** — not in a document you paste in at the end. The wiki keeps a full page history, so working here is what lets your contributions be recognized.
@@ -83,19 +84,26 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 
 == Edited Transcript with Captioned Photos ==
 ==== Contributors' PWPs ====
+
+
 //**Instructions — delete this block once your section is written.** 
-**1.** Start by copying from the audio transcript linked under "Post-Meeting Resources" above and tidy it into readable prose (fix obvious errors, correct spelling, drop filler; don't include the source word-for-word). **2.**Insert photos where they fit the discussion by copying a ready-to-paste snippet from the photos page (under "Post-Meeting Resources") and typing your caption after the colon. Your caption should represent what is on the board in the photo. If something in the photo is not clear, add your question as an action item for Dr. Hepting. **3.** Link mentioned and other helpful URLs//
+**1.** Start by copying the photos-and-transcript page linked under "Post-Meeting Resources" above and paste it here. Tidy the transcript into readable prose (fix obvious errors, correct spelling, drop fillers, and remove comments not pertinent to the meeting). **2.**Move photo links from the top of this section to where they fit the discussion and typing your caption after the colon. Your caption should represent what is on the board in the photo. If something in the photo(s) or the transcript is not clear, add your question as an action item for Dr. Hepting. **3.** Link mentioned and other helpful URLs.//
 
 == Action Items for Dr. Hepting ==
-==== Contributors' PWPs ====
 //**Instructions — delete this block once your section is written.** List anything Dr. Hepting agreed to follow up on or questions that came up during your edits to the meeting record, one bullet each.//
+==== Contributors' PWPs ====
+
+
 
 == Commentary and Discussion ==
-==== Contributors' PWPs ====
 //**Instructions — delete this block once your section is written.** Add your group's reflections: what was confusing or surprising, how today connects to earlier meetings or other courses, and any questions worth raising next time. Two or three substantive points is plenty.//
+==== Contributors' PWPs ====
+
 
 == Fair Exam Questions (with Answers) About Today's Meeting ==
 ==== Contributors' PWPs ====
+
+
 //**Instructions — delete this block once your section is written.** Write two or three exam-style questions a fair exam could ask about today's material, each with an answer. Aim to test understanding.//
 {% endraw %}
 {%- endcapture -%}
@@ -165,6 +173,29 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
     </button>
   </div>
 
+  {%- comment -%}
+    Post-meeting: the combined photos + transcript wiki page. HTML chrome
+    only, outside creole_preamble, so none of it reaches the meeting's own
+    Moodle paste. Paste the photo block first, then the cleaned transcript
+    below it by hand.
+  {%- endcomment -%}
+  <h3>Photos and transcript page</h3>
+  {%- if gen.photos_creole %}
+  <p class="text-muted mb-1">Create the Moodle wiki page with this name, paste the photo block, then paste the cleaned transcript below it.</p>
+  <div class="input-group mb-3">
+    <input id="photos-text-page-name" type="text" class="form-control" readonly value="{{ gen.photos_text_wiki_page_name }}">
+    <button type="button" class="btn btn-secondary" onclick="copyFrom('photos-text-page-name')">Copy</button>
+  </div>
+  <div class="mb-3">
+    <textarea id="photos-creole" class="form-control" rows="10" readonly>{{ gen.photos_creole | escape }}</textarea>
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-creole')">
+      Copy photo block
+    </button>
+  </div>
+  {%- else %}
+  <p class="text-muted">No photos in media.csv for this meeting yet — re-run sharemedia.py once they're uploaded.</p>
+  {%- endif %}
+
   {{ page_nav }}
 </div>
 
@@ -182,6 +213,14 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
     ta.select();
     navigator.clipboard.writeText(ta.value).then(() => {
       console.log('Creole source copied to clipboard');
+    });
+  }
+
+  function copyFrom(id) {
+    const el = document.getElementById(id);
+    el.select();
+    navigator.clipboard.writeText(el.value).then(() => {
+      console.log(id + ' copied to clipboard');
     });
   }
 </script>

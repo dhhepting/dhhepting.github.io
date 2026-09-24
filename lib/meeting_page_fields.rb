@@ -23,6 +23,7 @@ require 'csv'
 require_relative 'tlo_resolver'
 require_relative 'meeting_calendar'   # add
 require_relative 'plan_content_validator'
+require_relative 'creole_photo_block'
 
 module MeetingPageFields
   module_function
@@ -75,11 +76,18 @@ module MeetingPageFields
       # matches the photos page's own copyable name and its file stem —
       # one canonical string, no drift between the link and the page.
       'photos_wiki_page_name' => "#{slug}-photos",
-      # The cleaned audio transcript's Moodle wiki page name — same slug
-      # stem + the "-audio-txt" suffix the transcript pages are posted
-      # under. A slug [[link]] to it renders red until the page exists,
-      # same as photos. Section 3 (Post-meeting resources) links here.
-      'audio_wiki_page_name' => "#{slug}-audio-txt",
+      # The combined photos + transcript Moodle wiki page name — same slug
+      # stem + "-photos-text". Replaces the separate "-audio-txt" transcript
+      # page. A slug [[link]] to it renders red until the page exists, same
+      # as photos. Section 3 (Post-meeting resources) links here.
+      'photos_text_wiki_page_name' => "#{slug}-photos-text",
+      # The Creole image block that heads the -photos-text page (the cleaned
+      # transcript is pasted in by hand below it). Built by CreolePhotoBlock
+      # from the SAME photos list as above, so URLs (raw=1), labels and order
+      # can't drift from the photos page. nil when there are no photos yet,
+      # so the layout presence-gates the copy box. Layout chrome only —
+      # never part of the text pasted into the meeting's own wiki page.
+      'photos_creole' => has_photos ? CreolePhotoBlock.block(photos) : nil,
       'meeting_page_path' => "/wiki/#{crs_id}/#{crs_sem}/#{slug}/",
       # prev/next kept as DATES for any existing consumer, plus the SLUG
       # form the wiki nav links must use (the Moodle page is named by slug,
