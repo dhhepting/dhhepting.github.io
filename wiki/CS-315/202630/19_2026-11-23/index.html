@@ -212,7 +212,7 @@
 == Theme ==
 
 == Administration ==
-* Today&#39;s Wiki Editors: WG-G
+* Today&#39;s Wiki Editors: [[WG-G]]
 * Happy Monday
 * ACTION: [[https://urcourses.uregina.ca/mod/attendance/password.php?session=&amp;view=1 | Click here to record your own attendance]]
 * [[https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1795413600&amp;course=42149 | Class calendar for today]]
@@ -223,8 +223,9 @@
 = Post-Meeting Resources =
 == Photos ==
 [[19_2026-11-23-photos]]
-== Audio Transcript ==
-[[19_2026-11-23-audio-txt]]
+
+== Photos and Transcript ==
+[[19_2026-11-23-photos-text]]
 
 = WikiGroup Contributions =
 Please **do all of your editing here in the wiki** — not in a document you paste in at the end. The wiki keeps a full page history, so working here is what lets your contributions be recognized.
@@ -236,25 +237,33 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 
 == Edited Transcript with Captioned Photos ==
 ==== Contributors&#39; PWPs ====
+
+
 //**Instructions — delete this block once your section is written.** 
-**1.** Start by copying from the audio transcript linked under &quot;Post-Meeting Resources&quot; above and tidy it into readable prose (fix obvious errors, correct spelling, drop filler; don&#39;t include the source word-for-word). **2.**Insert photos where they fit the discussion by copying a ready-to-paste snippet from the photos page (under &quot;Post-Meeting Resources&quot;) and typing your caption after the colon. Your caption should represent what is on the board in the photo. If something in the photo is not clear, add your question as an action item for Dr. Hepting. **3.** Link mentioned and other helpful URLs//
+**1.** Start by copying the photos-and-transcript page linked under &quot;Post-Meeting Resources&quot; above and paste it here. Tidy the transcript into readable prose (fix obvious errors, correct spelling, drop fillers, and remove comments not pertinent to the meeting). **2.**Move photo links from the top of this section to where they fit the discussion and typing your caption after the colon. Your caption should represent what is on the board in the photo. If something in the photo(s) or the transcript is not clear, add your question as an action item for Dr. Hepting. **3.** Link mentioned and other helpful URLs.//
 
 == Action Items for Dr. Hepting ==
-==== Contributors&#39; PWPs ====
 //**Instructions — delete this block once your section is written.** List anything Dr. Hepting agreed to follow up on or questions that came up during your edits to the meeting record, one bullet each.//
+==== Contributors&#39; PWPs ====
+
+
 
 == Commentary and Discussion ==
-==== Contributors&#39; PWPs ====
 //**Instructions — delete this block once your section is written.** Add your group&#39;s reflections: what was confusing or surprising, how today connects to earlier meetings or other courses, and any questions worth raising next time. Two or three substantive points is plenty.//
+==== Contributors&#39; PWPs ====
+
 
 == Fair Exam Questions (with Answers) About Today&#39;s Meeting ==
 ==== Contributors&#39; PWPs ====
+
+
 //**Instructions — delete this block once your section is written.** Write two or three exam-style questions a fair exam could ask about today&#39;s material, each with an answer. Aim to test understanding.//
 </textarea>
     <button type="button" class="btn btn-secondary mt-2" onclick="copyCreoleSource()">
       Copy to clipboard
     </button>
-  </div>
+  </div><h3>Photos and transcript page</h3>
+  <p class="text-muted">No photos in media.csv for this meeting yet — re-run sharemedia.py once they're uploaded.</p>
 
   <nav class="d-flex justify-content-between align-items-center my-3">
   <a class="btn btn-outline-secondary btn-sm" href="/wiki/CS-315/202630/18_2026-11-18/">&larr; Prev: 18_2026-11-18</a>
@@ -277,6 +286,14 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
     ta.select();
     navigator.clipboard.writeText(ta.value).then(() => {
       console.log('Creole source copied to clipboard');
+    });
+  }
+
+  function copyFrom(id) {
+    const el = document.getElementById(id);
+    el.select();
+    navigator.clipboard.writeText(el.value).then(() => {
+      console.log(id + ' copied to clipboard');
     });
   }
 </script>

@@ -212,7 +212,7 @@
 == Theme ==
 
 == Administration ==
-* Today&#39;s Wiki Editors: WG-B
+* Today&#39;s Wiki Editors: [[WG-B]]
 * Happy Monday
 * ACTION: [[https://urcourses.uregina.ca/mod/attendance/password.php?session=&amp;view=1 | Click here to record your own attendance]]
 * [[https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1789365600&amp;course=42149 | Class calendar for today]]
@@ -226,8 +226,9 @@
 = Post-Meeting Resources =
 == Photos ==
 [[03_2026-09-14-photos]]
-== Audio Transcript ==
-[[03_2026-09-14-audio-txt]]
+
+== Photos and Transcript ==
+[[03_2026-09-14-photos-text]]
 
 = WikiGroup Contributions =
 Please **do all of your editing here in the wiki** — not in a document you paste in at the end. The wiki keeps a full page history, so working here is what lets your contributions be recognized.
@@ -239,23 +240,50 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 
 == Edited Transcript with Captioned Photos ==
 ==== Contributors&#39; PWPs ====
+
+
 //**Instructions — delete this block once your section is written.** 
-**1.** Start by copying from the audio transcript linked under &quot;Post-Meeting Resources&quot; above and tidy it into readable prose (fix obvious errors, correct spelling, drop filler; don&#39;t include the source word-for-word). **2.**Insert photos where they fit the discussion by copying a ready-to-paste snippet from the photos page (under &quot;Post-Meeting Resources&quot;) and typing your caption after the colon. Your caption should represent what is on the board in the photo. If something in the photo is not clear, add your question as an action item for Dr. Hepting. **3.** Link mentioned and other helpful URLs//
+**1.** Start by copying the photos-and-transcript page linked under &quot;Post-Meeting Resources&quot; above and paste it here. Tidy the transcript into readable prose (fix obvious errors, correct spelling, drop fillers, and remove comments not pertinent to the meeting). **2.**Move photo links from the top of this section to where they fit the discussion and typing your caption after the colon. Your caption should represent what is on the board in the photo. If something in the photo(s) or the transcript is not clear, add your question as an action item for Dr. Hepting. **3.** Link mentioned and other helpful URLs.//
 
 == Action Items for Dr. Hepting ==
-==== Contributors&#39; PWPs ====
 //**Instructions — delete this block once your section is written.** List anything Dr. Hepting agreed to follow up on or questions that came up during your edits to the meeting record, one bullet each.//
+==== Contributors&#39; PWPs ====
+
+
 
 == Commentary and Discussion ==
-==== Contributors&#39; PWPs ====
 //**Instructions — delete this block once your section is written.** Add your group&#39;s reflections: what was confusing or surprising, how today connects to earlier meetings or other courses, and any questions worth raising next time. Two or three substantive points is plenty.//
+==== Contributors&#39; PWPs ====
+
 
 == Fair Exam Questions (with Answers) About Today&#39;s Meeting ==
 ==== Contributors&#39; PWPs ====
+
+
 //**Instructions — delete this block once your section is written.** Write two or three exam-style questions a fair exam could ask about today&#39;s material, each with an answer. Aim to test understanding.//
 </textarea>
     <button type="button" class="btn btn-secondary mt-2" onclick="copyCreoleSource()">
       Copy to clipboard
+    </button>
+  </div><h3>Photos and transcript page</h3>
+  <p class="text-muted mb-1">Create the Moodle wiki page with this name, paste the photo block, then paste the cleaned transcript below it.</p>
+  <div class="input-group mb-3">
+    <input id="photos-text-page-name" type="text" class="form-control" readonly value="03_2026-09-14-photos-text">
+    <button type="button" class="btn btn-secondary" onclick="copyFrom('photos-text-page-name')">Copy</button>
+  </div>
+  <div class="mb-3">
+    <textarea id="photos-creole" class="form-control" rows="10" readonly>{{https://dl.dropboxusercontent.com/scl/fi/pk6e12c84nbipcn46h9a2/03-1.jpg?rlkey=jxaxupcjv81uxn0yaoxnr6znk&amp;raw=1 | Mtg 03-1: }}
+
+{{https://dl.dropboxusercontent.com/scl/fi/j9rzkr36oa1ir9bn6llyl/03-2.jpg?rlkey=igomu5t52eczu5tlx2rq2jpmm&amp;raw=1 | Mtg 03-2: }}
+
+{{https://dl.dropboxusercontent.com/scl/fi/h5shaxk8k7gqmypley5nm/03-3.jpg?rlkey=ltp1f1rr9tzy47e6511g0xmz0&amp;raw=1 | Mtg 03-3: }}
+
+{{https://dl.dropboxusercontent.com/scl/fi/oz4cly1ez6sgc1kwitpfv/03-4.jpg?rlkey=eebotueowom8tg36cmip9fym8&amp;raw=1 | Mtg 03-4: }}
+
+{{https://dl.dropboxusercontent.com/scl/fi/e0ap05qqrf3p898ubc579/03-5.jpg?rlkey=ds3m0h45shmcs3lui77z8h1l6&amp;raw=1 | Mtg 03-5: }}
+</textarea>
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-creole')">
+      Copy photo block
     </button>
   </div>
 
@@ -280,6 +308,14 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
     ta.select();
     navigator.clipboard.writeText(ta.value).then(() => {
       console.log('Creole source copied to clipboard');
+    });
+  }
+
+  function copyFrom(id) {
+    const el = document.getElementById(id);
+    el.select();
+    navigator.clipboard.writeText(el.value).then(() => {
+      console.log(id + ' copied to clipboard');
     });
   }
 </script>
