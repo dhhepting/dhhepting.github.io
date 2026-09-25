@@ -25,7 +25,7 @@ module MeetingsSync
 
   # Fields authored in plan.yml that MUST survive a wholesale regenerate of
   # meetings.yml. Grow this list as the Moodle-sync surface grows.
-  CARRY = %w[wikipage_id wiki_ed_group wiki_ed_asgn].freeze
+  CARRY = %w[wiki_ed_group].freeze
 
   # plan.yml meeting-number keys — the SAME contract as
   # _plugins/meeting_page_generator.rb's Teaching.index_meetings. (See the note

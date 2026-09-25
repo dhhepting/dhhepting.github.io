@@ -20,8 +20,8 @@ require_relative '../lib/meeting_calendar'
 require_relative '../lib/tlo_resolver'
 
 module Teaching
-  WIKI_BASE = 'https://urcourses.uregina.ca/mod/wiki/view.php?pageid='
-
+  WIKI_VIEW = 'https://urcourses.uregina.ca/mod/wiki/view.php?wid=%s&title=%s&group=0'
+   
   module_function
 
   SEM_KEYS = {
@@ -143,7 +143,10 @@ class MeetingPageGenerator < Jekyll::Generator
           week  = ((d - fmon).to_i / 7) + 1
           entry = authored[n]
           entry = {} unless entry.is_a?(Hash)
-          wid   = entry['wikipage_id']
+          # old: wid   = entry['wikipage_id']
+          wiki_title = "#{nn}_#{d.iso8601}"
+          wiki_url   = (offering['wiki_pages'] && offering['wiki_id']) ?
+                         format(Teaching::WIKI_VIEW, offering['wiki_id'], wiki_title) : nil
           theme = entry['theme'] || entry['topic']
 
           bok = nil
@@ -171,8 +174,7 @@ class MeetingPageGenerator < Jekyll::Generator
             'theme'       => theme,
             'topic'       => theme,
             'bok'         => bok,
-            'wikipage_id' => wid,
-            'wiki_url'    => (wid ? "#{Teaching::WIKI_BASE}#{wid}" : nil),
+            'wiki_url'    => wiki_url,            
             'title'       => (theme || "Meeting #{nn} — #{d.strftime('%a %d %b %Y')}"))
         end
       end
