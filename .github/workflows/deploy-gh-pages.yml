@@ -21,6 +21,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24' # Forces the runner environment to Node 24
+          cache: npm
+          cache-dependency-path: teaching/CS-315/202630/code/CS315/package-lock.json
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -33,6 +35,17 @@ jobs:
 
       - name: Install dependencies
         run: bundle install --jobs 4 --retry 3
+
+      # Build the CS315 Vite samples to static files in code/CS315/dist/ BEFORE
+      # Jekyll runs, so Jekyll copies dist/ into _site like any other static dir.
+      # VITE_BASE is the deployed URL path of dist/ on this host (github.io).
+      - name: Build CS315 Vite samples
+        working-directory: teaching/CS-315/202630/code/CS315
+        env:
+          VITE_BASE: /teaching/CS-315/202630/code/CS315/dist/
+        run: |
+          npm ci
+          npx vite build
 
       - name: Build site
         run: bundle exec jekyll build -d _site --config "_config.yml,_config_github.yml"

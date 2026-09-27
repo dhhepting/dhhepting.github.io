@@ -31,11 +31,24 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24' # Forces the runner environment to Node 24
+          cache: npm
+          cache-dependency-path: teaching/CS-315/202630/code/CS315/package-lock.json
 
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: .ruby-version   # single source of truth (see Phase 3 of the plan)
           bundler-cache: true            # installs gems from Gemfile.lock and caches them
+
+      # Build the CS315 Vite samples to static files in code/CS315/dist/ BEFORE
+      # Jekyll runs, so Jekyll copies dist/ into _site like any other static dir.
+      # VITE_BASE is the deployed URL path of dist/ on this host (uregina).
+      - name: Build CS315 Vite samples
+        working-directory: teaching/CS-315/202630/code/CS315
+        env:
+          VITE_BASE: /~hepting/teaching/CS-315/202630/code/CS315/dist/
+        run: |
+          npm ci
+          npx vite build
 
       # This is your urbuild build line, unchanged.
       - name: Build site
