@@ -257,6 +257,8 @@
   </div>
 
   <h3>Copy this into the Moodle wiki page</h3>
+  <p class="text-muted mb-1">Whole page for the first paste. After that, pick one top-level section and paste it through Moodle's edit link for that section, so the rest of the page (including student edits) is left alone.</p>
+  <div id="section-picker" class="mb-2" role="radiogroup" aria-label="Part of the page to copy"></div>
   <div class="mb-3">
     <textarea id="creole-source" class="form-control" rows="24" readonly>= CS-315 Mtg 1: 2026-09-02 =
 == Navigation ==
@@ -292,28 +294,28 @@ For Creole wiki syntax, please see the [[https://docs.moodle.org/502/en/Creole_f
 Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to sign your contributions.
 
 == Edited Transcript with Captioned Photos ==
-==== Contributors&#39; PWPs ====
-
-
 //**Instructions — delete this block once your section is written.** 
-**1.** Start by copying the photos-and-transcript page linked under &quot;Post-Meeting Resources&quot; above and paste it here. Tidy the transcript into readable prose (fix obvious errors, correct spelling, drop fillers, and remove comments not pertinent to the meeting). **2.**Move photo links from the top of this section to where they fit the discussion and typing your caption after the colon. Your caption should represent what is on the board in the photo. If something in the photo(s) or the transcript is not clear, add your question as an action item for Dr. Hepting. **3.** Link mentioned and other helpful URLs.//
+**1.** Start by copying the photos-and-transcript page linked under &quot;Post-Meeting Resources&quot; above and paste it here. Tidy the transcript into readable prose (fix obvious errors, correct spelling, drop fillers, and remove comments not pertinent to the meeting). **2.**Move photo links from the top of this section to where they fit the discussion and typing your caption after the pipe (|) in the creole image markup. Your caption should represent what is on the board in the photo. If something in the photo(s) or the transcript is not clear, add your question as an action item for Dr. Hepting. **3.** Link mentioned and other helpful URLs.//
+
+**Contributors&#39; PWPs:**
+
 
 == Action Items for Dr. Hepting ==
 //**Instructions — delete this block once your section is written.** List anything Dr. Hepting agreed to follow up on or questions that came up during your edits to the meeting record, one bullet each.//
-==== Contributors&#39; PWPs ====
 
+**Contributors&#39; PWPs:**
 
 
 == Commentary and Discussion ==
 //**Instructions — delete this block once your section is written.** Add your group&#39;s reflections: what was confusing or surprising, how today connects to earlier meetings or other courses, and any questions worth raising next time. Two or three substantive points is plenty.//
-==== Contributors&#39; PWPs ====
+
+**Contributors&#39; PWPs:**
 
 
 == Fair Exam Questions (with Answers) About Today&#39;s Meeting ==
-==== Contributors&#39; PWPs ====
-
-
 //**Instructions — delete this block once your section is written.** Write two or three exam-style questions a fair exam could ask about today&#39;s material, each with an answer. Aim to test understanding.//
+
+**Contributors&#39; PWPs:**
 </textarea>
     <button type="button" class="btn btn-secondary mt-2" onclick="copyCreoleSource()">
       Copy to clipboard
@@ -363,6 +365,49 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
       console.log('Creole source copied to clipboard');
     });
   }
+
+  // Split creole text at top-level "= Heading =" lines (a single "=",
+  // never "=="). Each section runs from its heading to just before the
+  // next one, heading included — Moodle's per-section edit box includes
+  // the heading line too, so a section replaces its edit box exactly.
+  function splitTopLevelSections(text) {
+    const sections = [];
+    for (const line of text.split('\n')) {
+      const m = line.match(/^=(?!=)\s*(.*?)\s*=*\s*$/);
+      if (m) sections.push({ title: m[1], lines: [line] });
+      else if (sections.length) sections[sections.length - 1].lines.push(line);
+    }
+    return sections.map(s => ({ title: s.title, text: s.lines.join('\n').trimEnd() + '\n' }));
+  }
+
+  // Radio buttons above the textarea: "Whole page" plus one per top-level
+  // section, built from the rendered text so new sections appear without
+  // touching this code. Choosing one swaps what the textarea shows; the
+  // existing Copy button copies whatever is shown.
+  (function buildSectionPicker() {
+    const ta = document.getElementById('creole-source');
+    const picker = document.getElementById('section-picker');
+    if (!ta || !picker) return;
+
+    const full = ta.value;
+    const choices = [{ title: 'Whole page', text: full }].concat(splitTopLevelSections(full));
+
+    choices.forEach((c, i) => {
+      const id = 'section-choice-' + i;
+      const wrap = document.createElement('div');
+      wrap.className = 'form-check form-check-inline';
+      wrap.innerHTML = '<input class="form-check-input" type="radio" name="section-choice">' +
+                       '<label class="form-check-label"></label>';
+      const input = wrap.querySelector('input');
+      const label = wrap.querySelector('label');
+      input.id = id;
+      input.checked = i === 0;
+      input.addEventListener('change', () => { ta.value = c.text; });
+      label.htmlFor = id;
+      label.textContent = c.title;
+      picker.appendChild(wrap);
+    });
+  })();
 
   function copyFrom(id) {
     const el = document.getElementById(id);
