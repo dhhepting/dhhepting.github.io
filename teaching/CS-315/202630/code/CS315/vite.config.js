@@ -14,7 +14,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        threeJS: resolve(import.meta.dirname, 'ThreeJS/Lab6Sample.html'),
+        colourCube: resolve(import.meta.dirname, 'Samples/ColourCube/app.html'),
       },
     },
   },
