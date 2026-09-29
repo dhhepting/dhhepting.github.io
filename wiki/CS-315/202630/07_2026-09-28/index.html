@@ -192,7 +192,7 @@
   </div>
 
   <div class="mb-3">
-    <span class="text-muted">Photos page not created yet — [[07_2026-09-28-photos]] will show red in Moodle until photos are added</span>
+    <a href="/wiki/CS-315/202630/07_2026-09-28-photos/">View/copy this meeting's photos (separate page)</a>
   </div>
 
   <h3>Name for this page</h3>
@@ -204,11 +204,15 @@
 
   <h3>Copy this into the Moodle wiki page</h3>
   <p class="text-muted mb-1">Whole page for the first paste. After that, pick one top-level section and paste it through Moodle's edit link for that section, so the rest of the page (including student edits) is left alone.</p>
-  <div id="section-picker" class="mb-2" role="radiogroup" aria-label="Part of the page to copy"></div>
+  <div id="section-picker" class="mb-2" role="radiogroup" aria-label="Part of the page to copy">
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyCreoleSource()">
+      Copy to clipboard
+    </button>
+  </div>
   <div class="mb-3">
     <textarea id="creole-source" class="form-control" rows="24" readonly>= CS-315 Mtg 7: 2026-09-28 =
 == Navigation ==
-[[06_2026-09-23 | Previous]] &lt;-- [[Meetings]] or [[Home]] --&gt; [[08_2026-10-05 | Next]]
+[[06_2026-09-23 | Previous]] &lt;-- [[Home]] --&gt; [[08_2026-10-05 | Next]]
 
 = Plan for Meeting =
 == Theme ==
@@ -248,8 +252,10 @@ For Creole wiki syntax, please see the [[https://docs.moodle.org/502/en/Creole_f
 Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to sign your contributions.
 
 == Edited Transcript with Captioned Photos ==
-//**Instructions — delete this block once your section is written.** 
-**1.** Start by copying the photos-and-transcript page linked under &quot;Post-Meeting Resources&quot; above and paste it here. Tidy the transcript into readable prose (fix obvious errors, correct spelling, drop fillers, and remove comments not pertinent to the meeting). **2.**Move photo links from the top of this section to where they fit the discussion and typing your caption after the pipe (|) in the creole image markup. Your caption should represent what is on the board in the photo. If something in the photo(s) or the transcript is not clear, add your question as an action item for Dr. Hepting. **3.** Link mentioned and other helpful URLs.//
+//**Instructions — delete this block once your section is written.**\\
+**1.** Start by copying the photos-and-transcript page linked under &quot;Post-Meeting Resources&quot; above and paste it here. Tidy the transcript into readable prose (fix obvious errors, correct spelling, drop fillers, and remove comments not pertinent to the meeting).\\
+**2.** Move photo links from the top of this section to where they fit the discussion and typing your caption after the pipe (|) in the creole image markup. Your caption should represent what is on the board in the photo. If something in the photo(s) or the transcript is not clear, add your question as an action item for Dr. Hepting.\\
+**3.** Link mentioned and other helpful URLs.//
 
 **Contributors&#39; PWPs:**
 
@@ -270,12 +276,36 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 //**Instructions — delete this block once your section is written.** Write two or three exam-style questions a fair exam could ask about today&#39;s material, each with an answer. Aim to test understanding.//
 
 **Contributors&#39; PWPs:**
+
+=Progress Tracker
+|= Item |= Status |= Contributors&#39; PWPs |
+| Coordinate with members of WikiGroup | | |
+| Edited Transcript with Captioned Photos | | |
+| Action Items for Dr. Hepting | | |
+| Commentary and Discussion | | |
+| Fair Exam Questions (with Answers) About Today&#39;s Meeting | | |
+
 </textarea>
-    <button type="button" class="btn btn-secondary mt-2" onclick="copyCreoleSource()">
-      Copy to clipboard
-    </button>
+    
   </div><h3>Photos and transcript page</h3>
-  <p class="text-muted">No photos in media.csv for this meeting yet — re-run sharemedia.py once they're uploaded.</p>
+  <p class="text-muted mb-1">Create the Moodle wiki page with this name, paste the photo block, then paste the cleaned transcript below it.</p>
+  <div class="input-group mb-3">
+    <input id="photos-text-page-name" type="text" class="form-control" readonly value="07_2026-09-28-photos-text">
+    <button type="button" class="btn btn-secondary" onclick="copyFrom('photos-text-page-name')">Copy</button>
+  </div>
+  <div class="mb-3">
+    <textarea id="photos-creole" class="form-control" rows="10" readonly>{{https://dl.dropboxusercontent.com/scl/fi/eodqm4iyn6qcu1nuqfuuy/07-1.jpg?rlkey=7xi16xd8kpwwwtrg0na9v1h68&amp;raw=1 | Mtg 07-1: }}
+
+{{https://www.dropbox.com/scl/fi/55ltsllu93a0lh8pjw2l7/07-2.jpg?rlkey=ejubvz9fwe6t6sn1y25ggchhy&amp;raw=1 | Mtg 07-2: }}
+
+{{https://www.dropbox.com/scl/fi/mqhe6ra3sxofc7c4h0osr/07-3.jpg?rlkey=cwk5695kiyrq8h4w310ei3ozd&amp;raw=1 | Mtg 07-3: }}
+
+{{https://dl.dropboxusercontent.com/scl/fi/66dqsl4njmc6xoipt59jz/07-4.jpg?rlkey=v0yh7pnah5bsrcdimmkatv816&amp;raw=1 | Mtg 07-4: }}
+</textarea>
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-creole')">
+      Copy photo block
+    </button>
+  </div>
 
   <nav class="d-flex justify-content-between align-items-center my-3">
   <a class="btn btn-outline-secondary btn-sm" href="/wiki/CS-315/202630/06_2026-09-23/">&larr; Prev: 06_2026-09-23</a>
