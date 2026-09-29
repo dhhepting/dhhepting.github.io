@@ -38,6 +38,9 @@ module MeetingPageFields
     date = parse_date(mtg['date'])
     has_photos = !(photos.nil? || photos.empty?)
     slug = meeting_slug(mtg)
+    attendance_session = mtg['attendance_session']
+
+
     # Validate + normalize plan.yml's authored content lists (outline,
     # for_next_meeting). Raises loud at build time on malformed authoring
     # rather than emitting a broken bullet into the Moodle paste.
@@ -107,8 +110,8 @@ module MeetingPageFields
       'wiki_ed_group' => mtg['wiki_ed_group'],
       #'wiki_ed_url' => mtg['wiki_ed_asgn'] && "https://urcourses.uregina.ca/mod/assign/view.php?id=#{mtg['wiki_ed_asgn']}",
       #'attendance_url' => "https://urcourses.uregina.ca/mod/attendance/manage.php?id=#{offering['attendance_id']}&view=1",
-      'attendance_QR'   => "https://urcourses.uregina.ca/mod/attendance/password.php?session=#{mtg['attendance_session']}&view=1",
-
+      # in the hash:
+      'attendance_QR' => attendance_session && "https://urcourses.uregina.ca/mod/attendance/password.php?session=#{Integer(attendance_session)}",
       'calendar_day_url' => "https://urcourses.uregina.ca/calendar/view.php?view=day&time=#{regina_timestamp(date)}&course=#{offering['urc_course_id']}",
       'calendar_upcoming_url' => "https://urcourses.uregina.ca/calendar/view.php?view=upcoming&course=#{offering['urc_course_id']}",
     }
