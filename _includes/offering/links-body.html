@@ -1,10 +1,17 @@
 {%- assign off = site.data.teaching[jcrs_id][crs_sem].offering %}
 
-  <li>
-          {%- capture syll_url -%}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{%- endcapture -%}
+  {%- assign off = site.data.teaching[jcrs_id][crs_sem].offering %}
+
+        {%- capture syll_url -%}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{%- endcapture -%}
+        {%- assign has_syll = syll_url | file_exists? -%}
+        <li>
+          {%- if has_syll -%}
           <a href="{{ syll_url | relative_url }}" target="_blank">
             Syllabus (pdf)
           </a>
+          {%- else -%}
+          Syllabus (pdf): to be posted
+          {%- endif -%}
         </li>
         {%- if off.mdays -%}
         <li>

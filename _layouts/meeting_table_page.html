@@ -52,11 +52,17 @@ layout: default
   <h3>Preview</h3>
   <table class="table table-sm">
     <thead><tr><th>Meeting Nbr</th><th>Link</th><th>Day of Week</th></tr></thead>
-    <tbody>
+        <tbody>
     {%- for pair in gens %}
       <tr>
         <td>{{ pair[1].nn }}</td>
-        <td><a href="{{ pair[1].meeting_page_path | relative_url }}">{{ pair[1].slug }}</a></td>
+        <td>
+          {%- if pair[1].meeting_page_exists -%}
+            <a href="{{ pair[1].meeting_page_path | relative_url }}">{{ pair[1].slug }}</a>
+          {%- else -%}
+            {{ pair[1].slug }}
+          {%- endif -%}
+        </td>
         <td>{{ pair[1].weekday_short }}</td>
       </tr>
     {%- endfor %}
