@@ -1,12 +1,21 @@
 module Jekyll
   module DirExistsFilter
     def dir_exists?(dir_path)
-      # Get the absolute path to your Jekyll source directory
-      site_source = @context.registers[:site].config['source']
-      full_path = File.join(site_source, dir_path)
-      
-      # Return true if the directory physically exists on the disk
-      Dir.exist?(full_path)
+      Dir.exist?(source_path(dir_path))
+    end
+
+    # {{ '/assets/teaching/pdf/x.pdf' | file_exists? }} -> true/false
+    # Checks the SOURCE tree: "will this static file be copied to _site".
+    def file_exists?(file_path)
+      return false if file_path.nil? || file_path.to_s.empty?
+
+      File.file?(source_path(file_path))
+    end
+
+    private
+
+    def source_path(path)
+      File.join(@context.registers[:site].source, path.to_s)
     end
   end
 end
