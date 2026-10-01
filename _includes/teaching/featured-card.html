@@ -6,6 +6,11 @@
   during a term the current term shows (with a Today link) and the next term
   previews. A term is listed only if it actually has offerings, so no empty
   sections; the whole card is omitted when there is nothing to feature.
+
+  Each featured term carries a boolean `live`: false until the day after the
+  previous term's class_end. While not live, offerings are shown as plain text
+  (no link) so the "Coming Up" preview stays visible without exposing pages.
+  Course ids use "_" internally (CS-405_805); the label shows "+" (CS 405+805).
 {%- endcomment -%}
 {%- assign featured = site.data.teaching.all.featured_terms -%}
 {%- if featured and featured.size > 0 -%}
@@ -26,10 +31,14 @@
       {%- endif -%}
       {%- for o in ft.offerings -%}
       <li class="list-group-item">
-        {%- capture off_url -%}/teaching/{{ o.id }}/{{ ft.code }}{%- endcapture -%}
-        <a href="{{ off_url | relative_url }}">
-          {{ o.id | replace: "-", " " }} : {{ o.name }}
-        </a>
+        {%- if ft.live -%}
+          {%- capture off_url -%}/teaching/{{ o.id }}/{{ ft.code }}{%- endcapture -%}
+          <a href="{{ off_url | relative_url }}">
+            {{ o.id | replace: "-", " " | replace: "_", "+" }} : {{ o.name }}
+          </a>
+        {%- else -%}
+          {{ o.id | replace: "-", " " | replace: "_", "+" }} : {{ o.name }}
+        {%- endif -%}
       </li>
       {%- endfor -%}
     </ul>

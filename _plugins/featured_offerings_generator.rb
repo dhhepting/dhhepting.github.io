@@ -24,7 +24,10 @@
 #       'year'/'semester_name' onto these hashes; we keep references to the
 #       originals so those are visible to templates.
 #
-# WRITES  (all DERIVED — nothing here is hand-authored)
+# WRITES (all DERIVED — nothing here is hand-authored)
+# Each featured term also carries 'live' (Boolean): false until the day
+# after the previous term's class_end. all_semesters / featured_semesters
+# exclude non-live terms.
 #   site.data['teaching']['all']['current_term']     -> latest-STARTED semester
 #   site.data['teaching']['all']['in_session_term']  -> that term IFF today is
 #                                                        on/before term_end (nil
@@ -58,7 +61,7 @@ module Teaching
 
       today = Date.today # build clock == Regina -06:00 (no DST here)
       terms = select_terms(semesters, today)
-
+      live = release_map(semesters, today)
       all['current_term']    = terms[:current]
       all['in_session_term'] = terms[:in_session]
       all['upcoming_term']   = terms[:upcoming]
@@ -82,15 +85,17 @@ module Teaching
                         .uniq { |x| x['id'] }
                         .sort_by { |x| x['id'] }
         next if offs.empty? # never feature a term with nothing to link to
-        featured << { 'code' => c, 'kind' => kind, 'term' => term, 'offerings' => offs }
+                featured << { 'code' => c, 'kind' => kind, 'term' => term,
+                      'offerings' => offs, 'live' => live.fetch(c, true) }
       end
       all['featured_terms'] = featured
 
       # --- per-course injections -----------------------------------------
       courses.each do |course|
-        mine = by_course[code(course['id'])]
-        course['all_semesters']      = mine
-        course['featured_semesters'] = featured_for(mine, terms)
+        mine     = by_course[code(course['id'])]
+        released = mine.select { |c| live.fetch(c, true) }
+        course['all_semesters']      = released
+        course['featured_semesters'] = featured_for(released, terms)
       end
     end
 
@@ -100,7 +105,16 @@ module Teaching
     # "202630". Comparing the two silently fails. Coerce at EVERY boundary.
     def code(value) = value.to_s
     def to_date(value) = value.is_a?(Date) ? value : Date.parse(value.to_s)
-
+        # code (String) => true when that term's links should be live as of `today`.
+    # A term goes live the day after the PREVIOUS term's class_end.
+    def release_map(semesters, today)
+      sorted = semesters.sort_by { |s| code(s['semester']) }
+      sorted.each_with_index.to_h do |s, i|
+        prev = i.positive? ? sorted[i - 1] : nil
+        live = prev.nil? || (prev['class_end'] && today > to_date(prev['class_end']))
+        [code(s['semester']), live ? true : false]
+      end
+    end
     def select_terms(semesters, today)
       dated = semesters.map { |s|
         { orig: s, starts: require_term_start(s),
