@@ -48,10 +48,24 @@ if (!sharpGL || !frozenGL) {
 }
 
 // --- Shaders (one program per context; programs cannot be shared) ---------
+const pub = `${import.meta.env.BASE_URL}SVG_Zoomer/`;
+
+async function fetchText(url) {
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`Failed to load ${url}: ${r.status}`);
+  return r.text();
+}
+
 const [vertSrc, fragSrc] = await Promise.all([
-  fetch('./shaders/quad.vert.glsl').then((r) => r.text()),
-  fetch('./shaders/quad.frag.glsl').then((r) => r.text()),
+  fetchText(`${pub}shaders/quad.vert.glsl`),
+  fetchText(`${pub}shaders/quad.frag.glsl`),
 ]);
+// ...
+const rawSvg = await fetchText(`${pub}assets/dh.svg`);
+//const [vertSrc, fragSrc] = await Promise.all([
+//  fetch('./shaders/quad.vert.glsl').then((r) => r.text()),
+//  fetch('./shaders/quad.frag.glsl').then((r) => r.text()),
+//]);
 const sharpProgram = initShaders(sharpGL, vertSrc, fragSrc);
 const frozenProgram = initShaders(frozenGL, vertSrc, fragSrc);
 
@@ -66,7 +80,7 @@ for (const gl of [sharpGL, frozenGL]) {
 // --- Load the SVG as an <img> so the browser can rasterize the vector -----
 // The source viewBox is 220 x 220 with no width/height; we inject an intrinsic
 // size so every browser rasterizes crisply at whatever size we draw it.
-const rawSvg = await fetch('./assets/dh.svg').then((r) => r.text());
+//const rawSvg = await fetch('./assets/dh.svg').then((r) => r.text());
 const sizedSvg = rawSvg.replace(
   /<svg\b(?![^>]*\bwidth=)/,
   '<svg width="220" height="220"',
