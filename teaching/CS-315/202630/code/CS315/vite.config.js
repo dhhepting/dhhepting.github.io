@@ -15,6 +15,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         colourCube: resolve(import.meta.dirname, 'Samples/ColourCube/app.html'),
+        SVG_Zoomer: resolve(import.meta.dirname, 'Samples/SVG_Zoomer/app.html'),
+
       },
     },
   },

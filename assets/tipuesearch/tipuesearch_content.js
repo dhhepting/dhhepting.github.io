@@ -52,7 +52,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 01 • CS-405+805 (202510)",
     "text": "Mtg 1/26: Tue-07-Jan-2025 Outline Wiki Media Outline for Today Welcome Administration Happy Tuesday Attendance Class calendar for today Upcoming events Today Syllabus Textbook Assignments Software Exams For Next Meeting Read Chapter 1 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/01_Tue-07-Jan-2025.html"
+    "url": "/teaching/CS-405_805/202510/01_Tue-07-Jan-2025.html"
   },{
     "title": "Mtg 1 • CS-428+730 (202410)",
     "text": "Mtg 1/26: Tue-09-Jan-2024 Outline Wiki Media Outline for Today Welcome Administration Happy Tuesday Attendance Class calendar for today Upcoming events Response to Responses I am asking you to write a response to each meeting. This will be a place for me to respond to your responses to the previous meeting. Results from Last Meeting Most meetings I will ask you to interact with the class material on UR Courses and I will post the results here from the previous day. Today Introductions Making the most of zoom: rename yourself with the name you like to be called (followed by your uregina email id (mine is heptingd) turn on your camera (and from time to time) to say hello I will be recording our zoom meetings and then posting an anonymized transcript (of audio and chat) on my website Tour of UR Courses and my course website. UR Courses is divided into topics which reflect the different components of the course General Meetings Responses to Meetings Quizzes before Meetings Assignments Exams Participation Research Credit (Bonus) For Next Meeting Submit your response to this meeting before 11pm tonight Take quiz before the start of our next meeting Read Chapter 1 of textbook ACTION: Take quiz before next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -147,7 +147,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 02 • CS-405+805 (202510)",
     "text": "Mtg 2/26: Thu-09-Jan-2025 Outline Wiki Media Outline for Today Getting Started Administration Happy Thursday Attendance Class calendar for today Upcoming events Today Any questions or concerns from last day? Question about software Wiki scheduler Chapter 1 Bunny Summary Summary For Next Meeting Finish reading Chapter 1 Work on installing pbrt-v4 on your own computer and share your experience in the wiki Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/02_Thu-09-Jan-2025.html"
+    "url": "/teaching/CS-405_805/202510/02_Thu-09-Jan-2025.html"
   },{
     "title": "Mtg 2 • CS-428+730 (202410)",
     "text": "Mtg 2/26: Thu-11-Jan-2024 Outline Wiki Media Outline for Today Theme Administration Happy Thursday Attendance Class calendar for today Upcoming events Response to Responses Response to responses Results from Last Meeting Today TODAY Summary Summary For Next Meeting Submit your response to this meeting before 11pm tonight Read Chapter 1 of IDFE Watch this video ACTION: Take quiz before next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -237,7 +237,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 03 • CS-405+805 (202510)",
     "text": "Mtg 3/26: Tue-14-Jan-2025 Outline Wiki Media Outline for Today Monte Carlo Administration Happy Tuesday Attendance Class calendar for today Upcoming events Today Questions from Last Meeting? Wiki pages 1st meeting more than 1 person can contribute to the page https://docs.moodle.org/404/en/Wiki_activity Building pbrt-v4 https://en.wikipedia.org/wiki/Monte_Carlo_method Stanford rabbit For Next Meeting Read Chapter 2 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/03_Tue-14-Jan-2025.html"
+    "url": "/teaching/CS-405_805/202510/03_Tue-14-Jan-2025.html"
   },{
     "title": "Mtg 3 • CS-428+730 (202410)",
     "text": "Mtg 3/26: Tue-16-Jan-2024 Outline Wiki Media Outline for Today Class meeting cancelled due to family reasons Today See you Thursday, January 18 For Next Meeting Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -332,7 +332,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 04 • CS-405+805 (202510)",
     "text": "Mtg 4/26: Thu-16-Jan-2025 Outline Wiki Media Outline for Today Monte Carlo Administration Happy Thursday Attendance Class calendar for today Upcoming events Today Questions from Last Meeting? Export calendar events from UR Courses Wiki pages add navigation post your edited wiki page URL to class discussion forum https://docs.moodle.org/404/en/Wiki_activity Building pbrt-v4 – see https://urcourses.uregina.ca/mod/forum/discuss.php?d=1165196 We are focusing on the ideas rather than the details https://en.wikipedia.org/wiki/Numerical_integration https://en.wikipedia.org/wiki/Monte_Carlo_integration https://en.wikipedia.org/wiki/Monte_Carlo_method Stanford rabbit For Next Meeting Read Chapter 3 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/04_Thu-16-Jan-2025.html"
+    "url": "/teaching/CS-405_805/202510/04_Thu-16-Jan-2025.html"
   },{
     "title": "Mtg 4 • CS-428+730 (202410)",
     "text": "Mtg 4/26: Thu-18-Jan-2024 Outline Wiki Media Outline for Today Interaction Design Administration Happy Thursday Attendance Class calendar for today Upcoming events Response to Responses Response to responses Results from Last Meeting Today Interaction design is about shaping digital things for people’s use What did you think of the assigned materials? Let’s look at some examples of interfaces 10 Usability Heuristics Summary Summary For Next Meeting Submit your response to this meeting before 11pm tonight Read “The Designer’s Stance” Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -422,7 +422,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 05 • CS-405+805 (202510)",
     "text": "Mtg 5/26: Tue-21-Jan-2025 Outline Wiki Media Outline for Today Geometry and Transformations Administration Happy Tuesday Attendance Class calendar for today Upcoming events Today You might like this link for Immersive Linear Algebra Script to build pbrt for windows simple.pbrt Chapter 3 Geometry and Transformations For Next Meeting Continue reading Chapter 3 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/05_Tue-21-Jan-2025.html"
+    "url": "/teaching/CS-405_805/202510/05_Tue-21-Jan-2025.html"
   },{
     "title": "Mtg 5 • CS-428+730 (202410)",
     "text": "Mtg 5/26: Tue-23-Jan-2024 Outline Wiki Media Outline for Today Industrial Design and Interface Design Administration Happy Tuesday Attendance Class calendar for today Upcoming events Response to Responses Response to responses Results from Last Meeting Today Meet our TA who will be joining our Zoom meetings and having availability outside of class to supplement my office hours I am still behind on administrative tasks (e-mail) but this will be resolved soon Toasters Tire pressure warnings Case studies of famous interface issues: Therac, Apollo 13 Summary Summary For Next Meeting Submit your response to this meeting before 11pm tonight Read DoET Chapter 1 and IDFE Chapter 6 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -507,7 +507,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 06 • CS-405+805 (202510)",
     "text": "Mtg 6/26: Thu-23-Jan-2025 Outline Wiki Media Outline for Today Geometry and Transformations Administration Happy Thursday Attendance Class calendar for today Upcoming events Today Etymology of sine, cosine, and tangent For Next Meeting Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/06_Thu-23-Jan-2025.html"
+    "url": "/teaching/CS-405_805/202510/06_Thu-23-Jan-2025.html"
   },{
     "title": "Mtg 6 • CS-428+730 (202410)",
     "text": "Mtg 6/26: Thu-25-Jan-2024 Outline Wiki Media Outline for Today Industrial Design and Interface Design Administration Happy Thursday Attendance Class calendar for today Upcoming events Response to Responses Response to responses Results from Last Meeting Today Anything to discuss from last meeting? Nothing About Us Without Us IDEO Shopping Cart Videos mentioned during meeting: Dave Letterman’s Velcro Suit Stunt Shopping Cart Design Process Summary Summary For Next Meeting Submit your response to this meeting before 11pm tonight Read Psych Chapter 5 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -612,7 +612,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 07 • CS-405+805 (202510)",
     "text": "Mtg 7/26: Tue-28-Jan-2025 Outline Wiki Media Outline for Today Geometry and Transformations Administration Happy Tuesday Attendance Class calendar for today Upcoming events Today Spherical geometry Transformations Applying transformations Interactions For Next Meeting Read Chapter 4, Section 1 ; pbrt user’s guide ; pbrt file format Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/07_Tue-28-Jan-2025.html"
+    "url": "/teaching/CS-405_805/202510/07_Tue-28-Jan-2025.html"
   },{
     "title": "Mtg 7 • CS-428+730 (202410)",
     "text": "Mtg 7/26: Tue-30-Jan-2024 Outline Wiki Media Outline for Today Design Process Administration Happy Tuesday Attendance Class calendar for today Upcoming events Response to Responses Design is rewarding and fun Today An update on CSSS (Computer Science Student Society) from president Nabeera Siddiqi Norman Doors (VIDEO) Let us do some design – look at this Summary Summary For Next Meeting Submit your response to this meeting before noon tomorrow Read ID-Book Chapter 4 Watch this video Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -707,7 +707,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 08 • CS-405+805 (202510)",
     "text": "Mtg 8/26: Thu-30-Jan-2025 Outline Wiki Media Outline for Today pbrt + Radiometry, Spectra, and Colour Administration Happy Thursday Attendance Class calendar for today Upcoming events Today VIDEO: Matt Pharr with a code walkthrough of pbrt-4 Kroken Part 1 Kroken Part 2 – GPU build ; pbrt user’s guide ; pbrt file format Chapter 4, Section 1 For Next Meeting Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/08_Thu-30-Jan-2025.html"
+    "url": "/teaching/CS-405_805/202510/08_Thu-30-Jan-2025.html"
   },{
     "title": "Mtg 08 • CS-315+733 (202430)",
     "text": "Mtg 8/23: Wed-02-Oct-2024 Outline Wiki Media Outline for Today Geometric Objects and Transformations Administration Happy Wednesday Attendance Class calendar for today Upcoming events Today Happy 1st meeting of October will be grading for thoughtfulness of responses from today forward *October 11 will have 50th anniversary events related to Computer Science Pierre Lemire (BSc ‘87), CEO of Kent Imaging will give a presentation at 3:30 in the Education Auditorium for a lunchtime event, would you prefer sandwiches and wraps or pizza? Chapter 4 Code For Next Meeting Submit your response to this meeting before noon tomorrow Take the quiz before the start of our next meeting ACTION: Take quiz before next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -782,7 +782,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 09 • CS-405+805 (202510)",
     "text": "Mtg 9/26: Tue-04-Feb-2025 Outline Wiki Media Outline for Today Radiometry, Spectra, and Colour Administration Happy Tuesday Attendance Class calendar for today Upcoming events Today Radiometry, Spectra, and Color For Next Meeting Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/09_Tue-04-Feb-2025.html"
+    "url": "/teaching/CS-405_805/202510/09_Tue-04-Feb-2025.html"
   },{
     "title": "Mtg 9 • CS-428+730 (202410)",
     "text": "Mtg 9/26: Tue-06-Feb-2024 Outline Wiki Media Outline for Today Dealing with Gulfs Administration Happy Tuesday Attendance Class calendar for today Upcoming events Response to Responses Response to responses Results from Last Meeting 08_revisiting-course-org Today questionnaire for 428 students about future course offerings Seeking groups? Moodle groups reminds me of Apollo 13 Picture from my Ford Edge – what’s going on? Two UX Gulfs Summary Summary For Next Meeting Submit your response to this meeting before noon tomorrow Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -862,7 +862,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 10 • CS-405+805 (202510)",
     "text": "Mtg 10/26: Thu-06-Feb-2025 Outline Wiki Media Outline for Today Colour Administration Happy Thursday Attendance Class calendar for today Upcoming events Today Chromaticity Colour space CIE 1931 YCbCr Rec2020 For Next Meeting Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/10_Thu-06-Feb-2025.html"
+    "url": "/teaching/CS-405_805/202510/10_Thu-06-Feb-2025.html"
   },{
     "title": "Mtg 10 • CS-428+730 (202410)",
     "text": "Mtg 10/26: Thu-08-Feb-2024 Outline Wiki Media Outline for Today Empathy Administration Happy Thursday Attendance Class calendar for today Upcoming events Response to Responses Course organization concerns? Today Tesla recall My car climate controls revisited ‘Dual’ from a dictionary NNgroup Design Thinking 101 Design Council Double Diamond Summary Summary For Next Meeting Submit your response to this meeting before noon tomorrow Read ID-Book Chapter 3, DoET Chapter 4 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -967,7 +967,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 11 • CS-405+805 (202510)",
     "text": "Mtg 11/26: Tue-11-Feb-2025 Outline Wiki Media Outline for Today Cameras and Film Administration Happy Tuesday Attendance Class calendar for today Upcoming events Today Assignment due dates Ideas for exam questions that will give a fair assessment of your learning to date (to the end of Chapter 5) Chapter 5, sections 1 and 2 For Next Meeting Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/11_Tue-11-Feb-2025.html"
+    "url": "/teaching/CS-405_805/202510/11_Tue-11-Feb-2025.html"
   },{
     "title": "Mtg 11 • CS-428+730 (202410)",
     "text": "Mtg 11/26: Tue-13-Feb-2024 Outline Wiki Media Outline for Today Human interaction dynamics Administration Happy Tuesday Attendance Class calendar for today Upcoming events Response to Responses Response to responses Today Ordering flowers for delivery in Canada AI assistant not helpful Dark Patterns being used Parkade problems (see photo) Dark Patterns research paper Page in ACM DL pdf of paper Microsoft example? Answers to Quiz: Interaction types: instructing, conversing, manipulating, exploring, responding 3 ways of knowing what to do: constraints, discoverability, feedback Summary Summary For Next Meeting Submit your response to this meeting before noon tomorrow Read Dark Patterns paper (link above) Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -1037,7 +1037,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 12 • CS-405+805 (202510)",
     "text": "Mtg 12/26: Thu-13-Feb-2025 Outline Wiki Media Outline for Today Cameras and Film Administration Happy Thursday Attendance Class calendar for today Upcoming events Today Colour Filter Array For Next Meeting Read the first 2 sections of Chapter 6 Prepare for midterm Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/12_Thu-13-Feb-2025.html"
+    "url": "/teaching/CS-405_805/202510/12_Thu-13-Feb-2025.html"
   },{
     "title": "Mtg 12 • CS-428+730 (202410)",
     "text": "Mtg 12/26: Thu-15-Feb-2024 Outline Wiki Media Outline for Today Assignments Administration Happy Thursday Attendance Class calendar for today Upcoming events Response to Responses Responsibilities: for developer and person using system – should we design for most vulnerable potential users? AI not helpful. What about new Trivago ads Is Teleflora website typical? Why do we accept that? Slips and mistakes No matter how much ‘effort’, issues remain – is effort worthwhile? Today heuristics not followed: dark patterns, apathy? project group formation in the interface Keystroke Level Model for interface analysis project ideas Summary Enjoy the break! For Next Meeting Submit your response to this meeting before noon tomorrow Read ID-Book Chapter 6, Psych Chapter 10, IDFE Chapter 12 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -1157,7 +1157,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 13 • CS-405+805 (202510)",
     "text": "Mtg 13/26: Tue-25-Feb-2025 Outline Wiki Media Outline for Today Midterm prep and Chapter 6 Administration Happy Tuesday Attendance Class calendar for today Upcoming events Today Questions about pbrt and Assignment 1 Resources: Rendering Equation video Rendering Equation pbrt file format For Next Meeting Good luck on the midterm Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/13_Tue-25-Feb-2025.html"
+    "url": "/teaching/CS-405_805/202510/13_Tue-25-Feb-2025.html"
   },{
     "title": "Mtg 13 • CS-428+730 (202410)",
     "text": "Mtg 13/26: Tue-27-Feb-2024 Outline Wiki Media Outline for Today Moving from Administration Happy Tuesday Attendance Class calendar for today Upcoming events Response to Responses What to do with the groups interface? Possible project sobering discussions about risks of AI: Center for Humane Technology Today Last Week Tonight: Pig-butchering, aided by app stores (metatrader) Assignment discussion Keystroke Level Model KLM Calculator KLM example Summary Summary For Next Meeting Submit your response to this meeting before noon tomorrow Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -1222,7 +1222,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 14 • CS-405+805 (202510)",
     "text": "Mtg 14/26: Thu-27-Feb-2025 Outline Wiki Media Outline for Today Midterm (in class) Administration Happy Thursday Class calendar for today Upcoming events Today Midterm For Next Meeting Continuing with Chapter 6 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/14_Thu-27-Feb-2025.html"
+    "url": "/teaching/CS-405_805/202510/14_Thu-27-Feb-2025.html"
   },{
     "title": "Mtg 14 • CS-428+730 (202410)",
     "text": "Mtg 14/26: Thu-29-Feb-2024 Outline Wiki Media Outline for Today Theme Administration Happy Thursday Attendance Class calendar for today Upcoming events Response to Responses Response to responses Today TODAY Summary Summary For Next Meeting Submit your response to this meeting before noon tomorrow Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -1332,7 +1332,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 15 • CS-405+805 (202510)",
     "text": "Mtg 15/26: Tue-04-Mar-2025 Outline Wiki Media Outline for Today Shapes (Chapter 6), Ray Tracing Videos Administration Happy Tuesday Attendance Class calendar for today Upcoming events Today if you didn’t submit your Assignment 1 last week, you have until 23:59 today to submit (and receive a late penalty) exams will be graded before our next Tuesday meeting (watch for email from gradescope.com) and will be discussed then there is an opportunity to give me 2 kinds of feedback: your formative evaluation of the class so far (under the Exams topic on UR Courses) – this is anonymous – and your evaluation of the fairness of the midterm (under the Participation topic on UR Courses) – not anonymous, since it is counted towards participation Videos by Eric Haines: Part 1 Part 2 Part 3 Part 4 Part 5 Part 6 Part 7 For Next Meeting read the rest of Chapter 6 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/15_Tue-04-Mar-2025.html"
+    "url": "/teaching/CS-405_805/202510/15_Tue-04-Mar-2025.html"
   },{
     "title": "Mtg 15 • CS-428+730 (202410)",
     "text": "Mtg 15/26: Tue-05-Mar-2024 Outline Wiki Media Outline for Today Midterm Administration Happy Tuesday Attendance Class calendar for today Upcoming events Today Midterm Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -1392,7 +1392,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 16 • CS-405+805 (202510)",
     "text": "Mtg 16/26: Thu-06-Mar-2025 Outline Wiki Media Outline for Today Shapes Administration Happy Thursday Attendance Class calendar for today Upcoming events Response to Responses Response to responses Today TODAY Summary Summary For Next Meeting Submit your response to this meeting before 11pm tonight Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/16_Thu-06-Mar-2025.html"
+    "url": "/teaching/CS-405_805/202510/16_Thu-06-Mar-2025.html"
   },{
     "title": "Mtg 16 • CS-428+730 (202410)",
     "text": "Mtg 16/26: Thu-07-Mar-2024 Outline Wiki Media Outline for Today Attention, Project Administration Happy Thursday Attendance Class calendar for today Upcoming events Today did the broadcast messages to the zoom breakout rooms get your attention? introducing the project in 3 parts Summary Summary For Next Meeting Submit your response to this meeting before noon tomorrow Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -1502,7 +1502,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 17 • CS-405+805 (202510)",
     "text": "Mtg 17/26: Tue-11-Mar-2025 Outline Wiki Media Outline for Today Midterm review Administration Happy Tuesday Attendance Class calendar for today Upcoming events Today Going over the midterm exam For Next Meeting Read Chapter 8.1 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/17_Tue-11-Mar-2025.html"
+    "url": "/teaching/CS-405_805/202510/17_Tue-11-Mar-2025.html"
   },{
     "title": "Mtg 17 • CS-428+730 (202410)",
     "text": "Mtg 17/26: Tue-12-Mar-2024 Outline Wiki Media Outline for Today Attention, Project, Metaphors, Mental Models Administration Happy Tuesday Attendance Class calendar for today Upcoming events Today Attention, locus of attention Project and project groups Metaphors Mental models For Next Meeting Submit your response to this meeting before noon tomorrow Read ID-Book Chapter 2 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -1587,7 +1587,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 18 • CS-405+805 (202510)",
     "text": "Mtg 18/26: Thu-13-Mar-2025 Outline Wiki Media Outline for Today Sampling and Assignments Administration Happy Thursday Attendance Class calendar for today Upcoming events Today gaskets (and tetrahedra) Assignments 2, 3 (and alternative project) sampling For Next Meeting Read 8.2, 8.3, and 8.8 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/18_Thu-13-Mar-2025.html"
+    "url": "/teaching/CS-405_805/202510/18_Thu-13-Mar-2025.html"
   },{
     "title": "Mtg 18 • CS-428+730 (202410)",
     "text": "Mtg 18/26: Thu-14-Mar-2024 Outline Wiki Media Outline for Today Metaphors, Mental Models, and the Project Administration Happy Thursday Attendance Class calendar for today Upcoming events Response to Responses Interesting… Today Metaphors Mental Models the Project For Next Meeting Submit your response to this meeting before noon tomorrow Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -1722,7 +1722,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 19 • CS-405+805 (202510)",
     "text": "Mtg 19/26: Tue-18-Mar-2025 Outline Wiki Media Outline for Today Sampling and Assignments Administration Happy Tuesday Attendance Class calendar for today Upcoming events Today a bit more about gaskets For Next Meeting read Chapter 9.1 and 9.2 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/19_Tue-18-Mar-2025.html"
+    "url": "/teaching/CS-405_805/202510/19_Tue-18-Mar-2025.html"
   },{
     "title": "Mtg 19 • CS-428+730 (202410)",
     "text": "Mtg 19/26: Tue-19-Mar-2024 Outline Wiki Media Outline for Today Project Administration Happy Tuesday Attendance Class calendar for today Upcoming events Today questions about metaphors discussed last day? Declare… 1st assignment… example with shuffling groups Breakout rooms for project work For Next Meeting Submit your response to this meeting before noon tomorrow Begin reading Chapter 7 of ID-Book Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -1812,7 +1812,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 20 • CS-405+805 (202510)",
     "text": "Mtg 20/26: Thu-20-Mar-2025 Outline Wiki Media Outline for Today Reflection Models Administration Happy Thursday Attendance Class calendar for today Upcoming events Today please record attendance Quiz Video 1 Video 2 For Next Meeting Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/20_Thu-20-Mar-2025.html"
+    "url": "/teaching/CS-405_805/202510/20_Thu-20-Mar-2025.html"
   },{
     "title": "Mtg 20 • CS-428+730 (202410)",
     "text": "Mtg 20/26: Thu-21-Mar-2024 Outline Wiki Media Outline for Today Interfaces Administration Happy Thursday Attendance Class calendar for today Upcoming events Today Proctortrack onboarding quiz (and assignment) Pioneering and Future Interfaces Sketchpad DynaBook google search for other videos Mother of All Demos Put that there alternate multitouch interface design Apple Knowledge Navigator (1987) HP Cool Town (2000) Intel (2012) CMU (2018) Summary Summary For Next Meeting Submit your response to this meeting before noon tomorrow Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -1907,7 +1907,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 21 • CS-405+805 (202510)",
     "text": "Mtg 21/26: Tue-25-Mar-2025 Outline Wiki Media Outline for Today Reflection Models (no meeting) Administration Happy Tuesday Attendance Class calendar for today Upcoming events Today assignments 2 &amp; 3 (OR 4 – project) due in 2 weeks Menger Sponge SIGGRAPH 2015 shading course notes For Next Meeting Read Chapter 9.6-9.9 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/21_Tue-25-Mar-2025.html"
+    "url": "/teaching/CS-405_805/202510/21_Tue-25-Mar-2025.html"
   },{
     "title": "Mtg 21 • CS-428+730 (202410)",
     "text": "Mtg 21/26: Tue-26-Mar-2024 Outline Wiki Media Outline for Today Card sorting in a couple of ways, project, Proctortrack Administration Happy Tuesday Attendance Class calendar for today Upcoming events Response to Responses Videos were popular! Here’s one that I really enjoy and it is very relevant (think about how) exams (midterm and final) to be discussed on Thursday Today Card sorting for interaction design Card sorting as a metaphor for group creation (whiteboard) Questions? Breakout rooms (15 minutes) then regroup Summary Summary For Next Meeting Submit your response to this meeting before noon tomorrow Read Chapter 5 of ID-Book Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
@@ -1992,7 +1992,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 22 • CS-405+805 (202510)",
     "text": "Mtg 22/26: Thu-27-Mar-2025 Outline Wiki Media Outline for Today Reflection Models, Texture Mapping, Area Lights Administration Happy Thursday Attendance Class calendar for today Upcoming events Today QB21 QB22 Texture and materials (in Chapter) Point light example Area light example For Next Meeting Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/22_Thu-27-Mar-2025.html"
+    "url": "/teaching/CS-405_805/202510/22_Thu-27-Mar-2025.html"
   },{
     "title": "Mtg 22 • CS-428+730 (202410)",
     "text": "Mtg 22/26: Thu-28-Mar-2024 Outline Wiki Media Outline for Today Exams Administration Happy Thursday Attendance Class calendar for today Upcoming events Response to Responses Response to responses Today TODAY Summary Summary For Next Meeting Submit your response to this meeting before noon Monday Watch this video Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -2077,7 +2077,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 23 • CS-405+805 (202510)",
     "text": "Mtg 23/26: Tue-01-Apr-2025 Outline Wiki Media Outline for Today Textures Administration Happy Tuesday, Happy April Fool’s Day Attendance Class calendar for today Upcoming events Today QB23 procedural noise video Perlin noise video For Next Meeting Look at Chapter 11 Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/23_Tue-01-Apr-2025.html"
+    "url": "/teaching/CS-405_805/202510/23_Tue-01-Apr-2025.html"
   },{
     "title": "Mtg 23 • CS-428+730 (202410)",
     "text": "Mtg 23/26: Tue-02-Apr-2024 Outline Wiki Media Outline for Today Theme Administration Happy Tuesday Attendance Class calendar for today Upcoming events Response to Responses Response to responses Today TODAY Summary Summary For Next Meeting Submit your response to this meeting before noon tomorrow Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -2167,7 +2167,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 24 • CS-405+805 (202510)",
     "text": "Mtg 24/26: Thu-03-Apr-2025 Outline Wiki Media Outline for Today Volume Scattering Administration Happy Thursday Attendance Class calendar for today Upcoming events Today QB24 Null scattering Henyey–Greenstein Phase Function Physics and Math of Shading For Next Meeting Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/24_Thu-03-Apr-2025.html"
+    "url": "/teaching/CS-405_805/202510/24_Thu-03-Apr-2025.html"
   },{
     "title": "Mtg 24 • CS-428+730 (202410)",
     "text": "Mtg 24/26: Thu-04-Apr-2024 Outline Wiki Media Outline for Today Security and Privacy Administration Happy Thursday Attendance Class calendar for today Upcoming events Response to Responses How the other group would actually test our low fidelity prototypes, which are not actually prototypes, but drawings? aren’t they actually prototypes? I do not understand why there needs to be 2 people for the testing process. Why can’t the person testing write down the things that confuse them instead? I would like to know more about the collected data during the testing stage of the Materialize assignment. Do we have to record during testing, or are taking notes are enough? more about last assignment and final exam? Today Review of feedback about midterm exam would you like me to reopen it so that more people can reply? Another opportunity for feedback (5 responses so far, closes tomorrow night): Formative feedback for Dr. Hepting For those in 428, I encourage any students who are interested in HCI and designing/building user interfaces to take CS 490AP. Building an interface in May/June will be a good tie-in to evaluating one for those taking CS 490DG in July/August research credit questions? How do you feel about your security and privacy with UR Courses? How WEIRD is Usable Privacy and Security Research? Let’s spend 5 minutes in the paired breakout rooms (1 - 9, join the room the corresponding to your ‘paired groups for testing’ membership For Next Meeting Submit your response to this meeting before noon tomorrow Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -2257,7 +2257,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 25 • CS-405+805 (202510)",
     "text": "Mtg 25/26: Tue-08-Apr-2025 Outline Wiki Media Outline for Today Lights Administration Happy Tuesday Attendance Class calendar for today Upcoming events Today QB25 Chapter 12 For Next Meeting Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/25_Tue-08-Apr-2025.html"
+    "url": "/teaching/CS-405_805/202510/25_Tue-08-Apr-2025.html"
   },{
     "title": "Mtg 25 • CS-428+730 (202410)",
     "text": "Mtg 25/26: Tue-09-Apr-2024 Outline Wiki Media Outline for Today Usable Privacy and Security, Humane Interfaces Administration Happy Tuesday Attendance Class calendar for today Upcoming events Response to Responses Was a little difficult to understand the last concept about Usable Privacy and Security. Does it mean the website can be either highly usable or highly secure, and developer must find a compromise between the two? Results from Last Meeting Zoom Breakout Room broadcasting Preferred message: 2 (+2 score) Preferred voice: 11 (+24 score) No preference: 3 formative feedback for me Today Is Canada WEIRD? Tradeoffs Centre for Humane Technology Humane Interfaces (discussion of Raskin’s Laws) For Next Meeting Submit your response to this meeting before noon tomorrow Take quiz before the start of our next meeting Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -2332,7 +2332,7 @@ var tipuesearch = {"pages": [{
     "title": "Mtg 26 • CS-405+805 (202510)",
     "text": "Mtg 26/26: Thu-10-Apr-2025 Outline Wiki Media Outline for Today Review Administration Happy Thursday, Last class meeting Attendance Class calendar for today Upcoming events Today QB26 What I want from you for my birthday: do well on the final exam! For Next Meeting finish course work and prepare for the final – in 1 week from today Wiki Link to the UR Courses wiki page for this meeting Media Previous Next",
     "tags": "",
-    "url": "/teaching/CS-405+805/202510/26_Thu-10-Apr-2025.html"
+    "url": "/teaching/CS-405_805/202510/26_Thu-10-Apr-2025.html"
   },{
     "title": "Mtg 26 • CS-428+730 (202410)",
     "text": "Mtg 26/26: Thu-11-Apr-2024 Outline Wiki Media Outline for Today Review, Final Exam Discussion Administration Happy Thursday Attendance Class calendar for today Upcoming events Response to Responses “I wish we could have a better or more substantial conversation about the airline design flaw with the landing gear that resulted in a crash” Youtube Wikipedia marks last assignment in assignment groups final exam Today for CS 428 students: if you have taken CS 215 from Dr. Hoeber or heard about it from someone who did and you found it (or heard it was) difficult, the CS 490AP class in May/June won’t be difficult in the same way. It will be half design and half development. Please consider it. Any questions? we have a guest today to answer questions about proctortrack it is very important to complete the onboarding process Semester Summary: Videos: How to Build Your Creative Confidence Shopping Cart Design Process It’s not you. Bad doors are everywhere. 3 ways good design makes you happy Sketchpad DynaBook google search for other videos Mother of All Demos Put that there alternate multitouch interface design Apple Knowledge Navigator (1987) HP Cool Town (2000) Intel (2012) CMU (2018) Choice, happiness, and spaghetti sauce Web Resources: 10 Usability Heuristics The Designer’s Stance Apollo 13 Therac 25 Reimagining the Shopping Cart Nothing About Us Without Us Academic Schedule example The Two UX Gulfs: Evaluation and Execution Design Thinking 101 Framework for Innovation and the Double Diamond What makes a dark pattern… dark? Preventing User Errors: Avoiding Unconscious Slips Keystroke-Level Model Keystroke Level Model (KLM) Calculator KLM modelling Card Sorting: Uncover Users’ Mental Models for Better Information Architecture The Three Laws of Interaction Design In the News: Tesla’s latest screwup involves making the font size of its braking system too small Trivago’s AI-Powered Ad Campaign Gets Mixed Global Reaction For Next Meeting prepare for final exam on April 23 Wiki Link to the UR Courses wiki page for this meeting Media No Media",
@@ -2869,6 +2869,21 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/gw-marking.html"
   },{
+    "title": "CS 405+805 in Winter 2025",
+    "text": "CS 405+805 in Winter 2025 Weekly Schedule (Tentative) Office Hours Links Assignments Simple PBRT (due: 25-Feb-2025) Advanced PBRT (due: 11-Apr-2025) Project Alternative to Assignments 2 and 3 (due: 11-Apr-2025) Exams Weekly Schedule (Tentative) Office Hours and Semester Schedule --- layout: default --- # SCHEDULE STUB TimeMonTueWedThuFri 08:30–09:00 09:00–09:30 09:30–10:00 Research 10:00–10:30 CS-315CL-126 CS-315CL-126 10:30–11:00 11:00–11:30 11:30–12:00Office hoursOffice hoursOffice hours 12:00–12:30 12:30–13:00 Reserved 13:00–13:30 13:30–14:00 14:00–14:30 14:30–15:00 15:00–15:30 15:30–16:00 16:00–16:30 16:30–17:00 17:00–17:30 Class Office hours Research Reserved Links Syllabus (pdf) UR Courses Meetings Calendar file (meetings.ics) Website for textbook Immersive Math Assignments Simple PBRT () Marks: 6 Due Date: 25-Feb-2025 @ 23:59 Discuss Submit Simple PBRT Start with simple.pbrt (also in v4-fileformat page). Change the image size to 1280 x 720, add and place 2 more spheres into the scene (each with a different material). Run with the specified integrator and also with the wavefront integrator for different values of samples per pixel. Fully document your pbrt file with comments inline that describe all the statements used along with all parameters specified and default values for those parameters not specified Grading Grade penalties will be applied in the following situations for assignment submissions: on time but the written instructions for the submission were not followed: deduct 10% of the earned grade Within 24 hours of the due date and time): deduct 20% of the earned grade More than 24 and less than 48 hours late: deduct 40% of the earned grade until the cut-off date, after which no grade can be earned. More than 48 and less than 72 hours late: deduct 60% of the earned grade until the cut-off date, after which no grade can be earned. More than 72 and less than 96 hours late: deduct 80% of the earned grade until the cut-off date, after which no grade can be earned. More than 96 and less than 108 hours late: deduct 90% of the earned grade until the cut-off date, after which no grade can be earned. More than 108 hours late: deduct 100% of the earned grade until the cut-off date, after which no grade can be earned. This assignment is worth 6 marks, according to the following rubric: Rubric DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of creating rubrics. Your comments about the following rubric are welcome via email Criterion and Weight Exemplary Sufficient Developing Needs Improvement Describe/Document (3) Run/Analyse (3) Calculator Rubric Criteria Describe/Document (3) criteria_I01 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Run/Analyse (3) criteria_I01 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Penalties None (on-time and followed instructions) Instructions not followed Assignment submitted late, within 24 hours Assignment submitted late, within 48 hours Assignment submitted late, within 72 hours Assignment submitted late, within 96 hours Assignment submitted late, within 108 hours Assignment NOT submitted within 108 hours Output Evaluate Copy Output to Clipboard Clear Form Revisit Desktop Tetrahedron () Marks: 12 Due Date: 11-Apr-2025 @ 23:59 Discuss Submit Advanced PBRT () Marks: 12 Due Date: 11-Apr-2025 @ 23:59 Discuss Submit Advanced PBRT Pick a feature in pbrt v4 (see for example changes from v3, one that came up in our class discussions, or you may find inspiration in Exercises from the book labelled with a (2)) and explore its impact. For those in 805, please select a feature that is associated with a publication. Fully document your pbrt files with comments inline that describe all the statements used along with all parameters specified and default values for those parameters not specified Grading Grade penalties will be applied in the following situations for assignment submissions: on time but the written instructions for the submission were not followed: deduct 10% of the earned grade Within 24 hours of the due date and time): deduct 20% of the earned grade More than 24 and less than 48 hours late: deduct 40% of the earned grade until the cut-off date, after which no grade can be earned. More than 48 and less than 72 hours late: deduct 60% of the earned grade until the cut-off date, after which no grade can be earned. More than 72 and less than 96 hours late: deduct 80% of the earned grade until the cut-off date, after which no grade can be earned. More than 96 and less than 108 hours late: deduct 90% of the earned grade until the cut-off date, after which no grade can be earned. More than 108 hours late: deduct 100% of the earned grade until the cut-off date, after which no grade can be earned. This assignment is worth 12 marks, according to the following rubric: Rubric DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of creating rubrics. Your comments about the following rubric are welcome via email Criterion and Weight Exemplary Sufficient Developing Needs Improvement Rationale for Selection of Advanced Feature (2) Design/Document Exploration (4) Run/Analyse (6) Calculator Rubric Criteria Rationale for Selection of Advanced Feature (2) criteria_I03 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Design/Document Exploration (4) criteria_I03 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Run/Analyse (6) criteria_I03 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Penalties None (on-time and followed instructions) Instructions not followed Assignment submitted late, within 24 hours Assignment submitted late, within 48 hours Assignment submitted late, within 72 hours Assignment submitted late, within 96 hours Assignment submitted late, within 108 hours Assignment NOT submitted within 108 hours Output Evaluate Copy Output to Clipboard Clear Form Project Alternative to Assignments 2 and 3 () Marks: 24 Due Date: 11-Apr-2025 @ 23:59 Discuss Submit Project Alternative to Assignments 2 and 3 Choose one of the textbook exercises labelled with a (3). Grading Grade penalties will be applied in the following situations for assignment submissions: on time but the written instructions for the submission were not followed: deduct 10% of the earned grade Within 24 hours of the due date and time): deduct 20% of the earned grade More than 24 and less than 48 hours late: deduct 40% of the earned grade until the cut-off date, after which no grade can be earned. More than 48 and less than 72 hours late: deduct 60% of the earned grade until the cut-off date, after which no grade can be earned. More than 72 and less than 96 hours late: deduct 80% of the earned grade until the cut-off date, after which no grade can be earned. More than 96 and less than 108 hours late: deduct 90% of the earned grade until the cut-off date, after which no grade can be earned. More than 108 hours late: deduct 100% of the earned grade until the cut-off date, after which no grade can be earned. This assignment is worth 24 marks, according to the following rubric: Rubric DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of creating rubrics. Your comments about the following rubric are welcome via email Criterion and Weight Exemplary Sufficient Developing Needs Improvement Code (8) Walkthrough (8) Demo (8) Calculator Rubric Criteria Code (8) criteria_A23 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Walkthrough (8) criteria_A23 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Demo (8) criteria_A23 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Penalties None (on-time and followed instructions) Instructions not followed Assignment submitted late, within 24 hours Assignment submitted late, within 48 hours Assignment submitted late, within 72 hours Assignment submitted late, within 96 hours Assignment submitted late, within 108 hours Assignment NOT submitted within 108 hours Output Evaluate Copy Output to Clipboard Clear Form Exams",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202510/"
+  },{
+    "title": "CS 405_805 in Winter 2027",
+    "text": "CS 405_805 in Winter 2027 Weekly Schedule (Tentative) Office Hours Weekly Schedule (Tentative) Week of Meetings Topics Items of Note TueThu Jan&nbsp;4,&nbsp;2027 01 Introduction to course, graphics fundamentals Jan&nbsp;11,&nbsp;2027 02 03 Wiki, exams, more fundamentals Jan&nbsp;18,&nbsp;2027 04 05 Jan&nbsp;25,&nbsp;2027 06 07 programming and transformations Feb&nbsp;1,&nbsp;2027 08 09 Feb&nbsp;8,&nbsp;2027 10 11 Feb&nbsp;15,&nbsp;2027 Family Day; Winter Reading Week Feb&nbsp;22,&nbsp;2027 12 13 Mar&nbsp;1,&nbsp;2027 14 15 Mar&nbsp;8,&nbsp;2027 16 17 Mar&nbsp;15,&nbsp;2027 18 19 Mar&nbsp;22,&nbsp;2027 20 21 Good Friday Mar&nbsp;29,&nbsp;2027 22 23 Review Apr&nbsp;5,&nbsp;2027 24 25 Apr&nbsp;12,&nbsp;2027 Office Hours and Semester Schedule --- layout: default --- # SCHEDULE STUB TimeMonTueWedThuFri 08:30–09:00 09:00–09:30 09:30–10:00 Research 10:00–10:30 CS-315CL-126 CS-315CL-126 10:30–11:00 11:00–11:30 11:30–12:00Office hoursOffice hoursOffice hours 12:00–12:30 12:30–13:00 Reserved 13:00–13:30 13:30–14:00 14:00–14:30 14:30–15:00 15:00–15:30 15:30–16:00 16:00–16:30 16:30–17:00 17:00–17:30 Class Office hours Research Reserved",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/"
+  },{
+    "title": "CS 405_805",
+    "text": "CS 405_805 Computer Graphics Calendar Description Advanced topics in computer graphics, including special modelling techniques for natural phenomenon, advanced illumination models,and rendering algorithms Semesters 202710 202510",
+    "tags": "",
+    "url": "/teaching/CS-405_805/"
+  },{
     "title": "CS 828 in Fall 2010",
     "text": "",
     "tags": "",
@@ -3118,16 +3133,6 @@ var tipuesearch = {"pages": [{
     "text": "CS 305+828 Human Computer Communication Calendar Description Professor of Computer Science, University of Regina. Ph.D. from Simon Fraser University. Augmenting human abilities to embrace diversity. Semesters 201430 201330 201210",
     "tags": "",
     "url": "/teaching/CS-305+828/"
-  },{
-    "title": "CS 405+805 in Winter 2025",
-    "text": "CS 405+805 in Winter 2025 Weekly Schedule (Tentative) Office Hours Links Assignments Simple PBRT (due: 25-Feb-2025) Advanced PBRT (due: 11-Apr-2025) Project Alternative to Assignments 2 and 3 (due: 11-Apr-2025) Exams Weekly Schedule (Tentative) Office Hours and Semester Schedule --- layout: default --- # SCHEDULE STUB TimeMonTueWedThuFri 08:30–09:00 09:00–09:30 09:30–10:00 Research 10:00–10:30 CS-315CL-126 CS-315CL-126 10:30–11:00 11:00–11:30 11:30–12:00Office hoursOffice hoursOffice hours 12:00–12:30 12:30–13:00 Reserved 13:00–13:30 13:30–14:00 14:00–14:30 14:30–15:00 15:00–15:30 15:30–16:00 16:00–16:30 16:30–17:00 17:00–17:30 Class Office hours Research Reserved Links Syllabus (pdf) UR Courses Meetings Calendar file (meetings.ics) Website for textbook Immersive Math Assignments Simple PBRT () Marks: 6 Due Date: 25-Feb-2025 @ 23:59 Discuss Submit Simple PBRT Start with simple.pbrt (also in v4-fileformat page). Change the image size to 1280 x 720, add and place 2 more spheres into the scene (each with a different material). Run with the specified integrator and also with the wavefront integrator for different values of samples per pixel. Fully document your pbrt file with comments inline that describe all the statements used along with all parameters specified and default values for those parameters not specified Grading Grade penalties will be applied in the following situations for assignment submissions: on time but the written instructions for the submission were not followed: deduct 10% of the earned grade Within 24 hours of the due date and time): deduct 20% of the earned grade More than 24 and less than 48 hours late: deduct 40% of the earned grade until the cut-off date, after which no grade can be earned. More than 48 and less than 72 hours late: deduct 60% of the earned grade until the cut-off date, after which no grade can be earned. More than 72 and less than 96 hours late: deduct 80% of the earned grade until the cut-off date, after which no grade can be earned. More than 96 and less than 108 hours late: deduct 90% of the earned grade until the cut-off date, after which no grade can be earned. More than 108 hours late: deduct 100% of the earned grade until the cut-off date, after which no grade can be earned. This assignment is worth 6 marks, according to the following rubric: Rubric DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of creating rubrics. Your comments about the following rubric are welcome via email Criterion and Weight Exemplary Sufficient Developing Needs Improvement Describe/Document (3) Run/Analyse (3) Calculator Rubric Criteria Describe/Document (3) criteria_I01 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Run/Analyse (3) criteria_I01 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Penalties None (on-time and followed instructions) Instructions not followed Assignment submitted late, within 24 hours Assignment submitted late, within 48 hours Assignment submitted late, within 72 hours Assignment submitted late, within 96 hours Assignment submitted late, within 108 hours Assignment NOT submitted within 108 hours Output Evaluate Copy Output to Clipboard Clear Form Revisit Desktop Tetrahedron () Marks: 12 Due Date: 11-Apr-2025 @ 23:59 Discuss Submit Advanced PBRT () Marks: 12 Due Date: 11-Apr-2025 @ 23:59 Discuss Submit Advanced PBRT Pick a feature in pbrt v4 (see for example changes from v3, one that came up in our class discussions, or you may find inspiration in Exercises from the book labelled with a (2)) and explore its impact. For those in 805, please select a feature that is associated with a publication. Fully document your pbrt files with comments inline that describe all the statements used along with all parameters specified and default values for those parameters not specified Grading Grade penalties will be applied in the following situations for assignment submissions: on time but the written instructions for the submission were not followed: deduct 10% of the earned grade Within 24 hours of the due date and time): deduct 20% of the earned grade More than 24 and less than 48 hours late: deduct 40% of the earned grade until the cut-off date, after which no grade can be earned. More than 48 and less than 72 hours late: deduct 60% of the earned grade until the cut-off date, after which no grade can be earned. More than 72 and less than 96 hours late: deduct 80% of the earned grade until the cut-off date, after which no grade can be earned. More than 96 and less than 108 hours late: deduct 90% of the earned grade until the cut-off date, after which no grade can be earned. More than 108 hours late: deduct 100% of the earned grade until the cut-off date, after which no grade can be earned. This assignment is worth 12 marks, according to the following rubric: Rubric DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of creating rubrics. Your comments about the following rubric are welcome via email Criterion and Weight Exemplary Sufficient Developing Needs Improvement Rationale for Selection of Advanced Feature (2) Design/Document Exploration (4) Run/Analyse (6) Calculator Rubric Criteria Rationale for Selection of Advanced Feature (2) criteria_I03 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Design/Document Exploration (4) criteria_I03 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Run/Analyse (6) criteria_I03 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Penalties None (on-time and followed instructions) Instructions not followed Assignment submitted late, within 24 hours Assignment submitted late, within 48 hours Assignment submitted late, within 72 hours Assignment submitted late, within 96 hours Assignment submitted late, within 108 hours Assignment NOT submitted within 108 hours Output Evaluate Copy Output to Clipboard Clear Form Project Alternative to Assignments 2 and 3 () Marks: 24 Due Date: 11-Apr-2025 @ 23:59 Discuss Submit Project Alternative to Assignments 2 and 3 Choose one of the textbook exercises labelled with a (3). Grading Grade penalties will be applied in the following situations for assignment submissions: on time but the written instructions for the submission were not followed: deduct 10% of the earned grade Within 24 hours of the due date and time): deduct 20% of the earned grade More than 24 and less than 48 hours late: deduct 40% of the earned grade until the cut-off date, after which no grade can be earned. More than 48 and less than 72 hours late: deduct 60% of the earned grade until the cut-off date, after which no grade can be earned. More than 72 and less than 96 hours late: deduct 80% of the earned grade until the cut-off date, after which no grade can be earned. More than 96 and less than 108 hours late: deduct 90% of the earned grade until the cut-off date, after which no grade can be earned. More than 108 hours late: deduct 100% of the earned grade until the cut-off date, after which no grade can be earned. This assignment is worth 24 marks, according to the following rubric: Rubric DePaul Univerity’s Center for Teaching and Learning has a useful resource describing the process of creating rubrics. Your comments about the following rubric are welcome via email Criterion and Weight Exemplary Sufficient Developing Needs Improvement Code (8) Walkthrough (8) Demo (8) Calculator Rubric Criteria Code (8) criteria_A23 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Walkthrough (8) criteria_A23 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Demo (8) criteria_A23 Choose... Exemplary (+): Exemplary: Exemplary (-): Sufficient (+): Sufficient: Sufficient (-): Developing (+): Developing: Developing (-): Needs Improvement: Penalties None (on-time and followed instructions) Instructions not followed Assignment submitted late, within 24 hours Assignment submitted late, within 48 hours Assignment submitted late, within 72 hours Assignment submitted late, within 96 hours Assignment submitted late, within 108 hours Assignment NOT submitted within 108 hours Output Evaluate Copy Output to Clipboard Clear Form Exams 202510 Midterm",
-    "tags": "",
-    "url": "/teaching/CS-405+805/202510/"
-  },{
-    "title": "CS 405+805",
-    "text": "CS 405+805 Computer Graphics Calendar Description Advanced topics in computer graphics, including special modelling techniques for natural phenomenon, advanced illumination models,and rendering algorithms Semesters 202510",
-    "tags": "",
-    "url": "/teaching/CS-405+805/"
   },{
     "title": "CS 110 in Winter 2015",
     "text": "",
@@ -3474,6 +3479,16 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teaching/CS-325/"
   },{
+    "title": "CS 180 in Winter 2027",
+    "text": "CS 180 in Winter 2027 Weekly Schedule (Tentative) Office Hours Links Weekly Schedule (Tentative) Week of Meetings Topics Items of Note TueThu Jan&nbsp;4,&nbsp;2027 01 Introduction to course, graphics fundamentals Jan&nbsp;11,&nbsp;2027 02 03 Wiki, exams, more fundamentals Jan&nbsp;18,&nbsp;2027 04 05 Jan&nbsp;25,&nbsp;2027 06 07 programming and transformations Feb&nbsp;1,&nbsp;2027 08 09 Feb&nbsp;8,&nbsp;2027 10 11 Feb&nbsp;15,&nbsp;2027 Family Day; Winter Reading Week Feb&nbsp;22,&nbsp;2027 12 13 Mar&nbsp;1,&nbsp;2027 14 15 Mar&nbsp;8,&nbsp;2027 16 17 Mar&nbsp;15,&nbsp;2027 18 19 Mar&nbsp;22,&nbsp;2027 20 21 Good Friday Mar&nbsp;29,&nbsp;2027 22 23 Review Apr&nbsp;5,&nbsp;2027 24 25 Apr&nbsp;12,&nbsp;2027 Office Hours and Semester Schedule --- layout: default --- # SCHEDULE STUB TimeMonTueWedThuFri 08:30–09:00 09:00–09:30 09:30–10:00 Research 10:00–10:30 CS-315CL-126 CS-315CL-126 10:30–11:00 11:00–11:30 11:30–12:00Office hoursOffice hoursOffice hours 12:00–12:30 12:30–13:00 Reserved 13:00–13:30 13:30–14:00 14:00–14:30 14:30–15:00 15:00–15:30 15:30–16:00 16:00–16:30 16:30–17:00 17:00–17:30 Class Office hours Research Reserved Links Syllabus (pdf): to be postedCourse calendar (.ics) UR Courses Assignments",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/"
+  },{
+    "title": "CS 180",
+    "text": "CS 180 Human Centred Design Calendar Description HCD Semesters 202710",
+    "tags": "",
+    "url": "/teaching/CS-180/"
+  },{
     "title": "CS 215 in Fall 2011",
     "text": "",
     "tags": "",
@@ -3500,7 +3515,7 @@ var tipuesearch = {"pages": [{
     "url": "/teaching/CS-215/"
   },{
     "title": "Teaching",
-    "text": "Teaching Current &amp; Upcoming This Semester &mdash; Fall 2026 Today CS 315 : Introduction to Computer Graphics General Information Semester Schedule Computer Science Curriculum Teaching Philosophy Evaluation of Teaching Groupwork Participation Use of Wikipedia Zoom Courses Taught CS 280 : Risk and Reward in the Information Society 202610 202610 CS 315 : Introduction to Computer Graphics 202630 202630 CS 428 : Human Computer Communication 202610 202610",
+    "text": "Teaching Current &amp; Upcoming This Semester &mdash; Fall 2026 Today CS 315 : Introduction to Computer Graphics Coming Up &mdash; Winter 2027CS 180 : Human Centred DesignCS 405+805 : Computer Graphics General Information Semester Schedule Computer Science Curriculum Teaching Philosophy Evaluation of Teaching Groupwork Participation Use of Wikipedia Zoom Courses Taught CS 280 : Risk and Reward in the Information Society 202610 202610 CS 315 : Introduction to Computer Graphics 202630 202630 CS 428 : Human Computer Communication 202610 202610",
     "tags": "",
     "url": "/teaching/"
   },{
@@ -3530,7 +3545,7 @@ var tipuesearch = {"pages": [{
     "url": "/OpenData/"
   },{
     "title": "Sitemap",
-    "text": "Sitemap OpenData ODCS2025 Evaluation of Teaching About Biography Education Elsewhere on the Web Personal Interests Saskatchewan Roughriders Website News Projects Computer Science Alumni and Friends Blogging The Bus Project Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Math of Art Nature’s Numbers Free Knowledge Games Genealogy Interaction Design Multimedia Open Data Community Survey 2025 Open Source Software Participant Pool People A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Library Rough Sets UR50CS (50th Birthday Party for CS @ U of R) Party Visualization Research Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 205 201610 201710 201810 201910 202010 202110 CS 215 200710 200910 201110 201130 CS 230 200510 CS 280 200710 200710 201310 200710 201510 200710 201710 201910 202010 202110 202210 202410 202610 CS 305+828 201210 201330 201430 CS 305 200130 200230 200310 200630 200830 201030 201230 CS 315+733 202430 202530 CS 315 202630 CS 325 200230 200330 200430 200530 200630 201110 201230 201410 CS 330 200330 200430 200610 200930 201010 CS 325 CS 405+805 202510 CS 428+730 202410 CS 428+828 201630 201730 201830 201930 202030 202130 202230 Content Map Redesign Resources CS 428 202610 CS 325 CS 499+900 CS 499+900 201920 202010 202210 202230 CS 730 202210 CS 733 202230 202330 CS 325 200410 200610 200830 201030 CS 325 FILM 385AB 200230 200330 200430 200530 200630 201110 Curriculum 2013 CS Curriculum Evaluation Group Work GWM Group Work Notes Group Work Participation Philosophy Schedule Today Wikipedia Zoom Trouble HTTP Errors Forbidden Access Not Found Unexpected Condition",
+    "text": "Sitemap OpenData ODCS2025 Evaluation of Teaching About Biography Education Elsewhere on the Web Personal Interests Saskatchewan Roughriders Website News Projects Computer Science Alumni and Friends Blogging The Bus Project Challenging Bodies cogito Creativity CS Education Enviromatics Faces Food Fractals Calendars Exhibitions Gallery Math of Art Nature’s Numbers Free Knowledge Games Genealogy Interaction Design Multimedia Open Data Community Survey 2025 Open Source Software Participant Pool People A Picture’s Worth Newspaper Copy that People Must Read “One Look is Worth a Thousand Words” 10 March 1927: “Make a Cake for Bobby” Robots Library Rough Sets UR50CS (50th Birthday Party for CS @ U of R) Party Visualization Research Funding Inspirations Students Collected Works RSS Feeds Search Sitemap Teaching CS 110 201510 201810 CS 180 202710 CS 205 201610 201710 201810 201910 202010 202110 CS 215 200710 200910 201110 201130 CS 230 200510 CS 280 200710 200710 201310 200710 201510 200710 201710 201910 202010 202110 202210 202410 202610 CS 305+828 201210 201330 201430 CS 305 200130 200230 200310 200630 200830 201030 201230 CS 315+733 202430 202530 CS 315 202630 CS 325 200230 200330 200430 200530 200630 201110 201230 201410 CS 330 200330 200430 200610 200930 201010 CS 325 CS 405_805 202510 202710 CS 428+730 202410 CS 428+828 201630 201730 201830 201930 202030 202130 202230 Content Map Redesign Resources CS 428 202610 CS 325 CS 499+900 CS 499+900 201920 202010 202210 202230 CS 730 202210 CS 733 202230 202330 CS 325 200410 200610 200830 201030 CS 325 FILM 385AB 200230 200330 200430 200530 200630 201110 Curriculum 2013 CS Curriculum Evaluation Group Work GWM Group Work Notes Group Work Participation Philosophy Schedule Today Wikipedia Zoom Trouble HTTP Errors Forbidden Access Not Found Unexpected Condition",
     "tags": "",
     "url": "/search/sitemap/"
   },{
@@ -4209,6 +4224,131 @@ var tipuesearch = {"pages": [{
     "tags": "",
     "url": "/teach/philosophy.html"
   },{
+    "title": "Introduction to course, graphics fundamentals",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg01/"
+  },{
+    "title": "Wiki, exams, more fundamentals",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg02/"
+  },{
+    "title": "Meeting 03 — Thu 14 Jan 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg03/"
+  },{
+    "title": "Meeting 04 — Tue 19 Jan 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg04/"
+  },{
+    "title": "Meeting 05 — Thu 21 Jan 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg05/"
+  },{
+    "title": "Meeting 06 — Tue 26 Jan 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg06/"
+  },{
+    "title": "programming and transformations",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg07/"
+  },{
+    "title": "Meeting 08 — Tue 02 Feb 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg08/"
+  },{
+    "title": "Meeting 09 — Thu 04 Feb 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg09/"
+  },{
+    "title": "Meeting 10 — Tue 09 Feb 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg10/"
+  },{
+    "title": "Meeting 11 — Thu 11 Feb 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg11/"
+  },{
+    "title": "Meeting 12 — Tue 23 Feb 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg12/"
+  },{
+    "title": "Meeting 13 — Thu 25 Feb 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg13/"
+  },{
+    "title": "Meeting 14 — Tue 02 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg14/"
+  },{
+    "title": "Meeting 15 — Thu 04 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg15/"
+  },{
+    "title": "Meeting 16 — Tue 09 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg16/"
+  },{
+    "title": "Meeting 17 — Thu 11 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg17/"
+  },{
+    "title": "Meeting 18 — Tue 16 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg18/"
+  },{
+    "title": "Meeting 19 — Thu 18 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg19/"
+  },{
+    "title": "Meeting 20 — Tue 23 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg20/"
+  },{
+    "title": "Meeting 21 — Thu 25 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg21/"
+  },{
+    "title": "Meeting 22 — Tue 30 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg22/"
+  },{
+    "title": "Review",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg23/"
+  },{
+    "title": "Meeting 24 — Tue 06 Apr 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg24/"
+  },{
+    "title": "Meeting 25 — Thu 08 Apr 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-180/202710/Mtg25/"
+  },{
     "title": "New Course Orientation",
     "text": "",
     "tags": "",
@@ -4453,6 +4593,131 @@ var tipuesearch = {"pages": [{
     "text": "",
     "tags": "",
     "url": "/teaching/CS-315/202630/Mtg23/"
+  },{
+    "title": "Introduction to course, graphics fundamentals",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg01/"
+  },{
+    "title": "Wiki, exams, more fundamentals",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg02/"
+  },{
+    "title": "Meeting 03 — Thu 14 Jan 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg03/"
+  },{
+    "title": "Meeting 04 — Tue 19 Jan 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg04/"
+  },{
+    "title": "Meeting 05 — Thu 21 Jan 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg05/"
+  },{
+    "title": "Meeting 06 — Tue 26 Jan 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg06/"
+  },{
+    "title": "programming and transformations",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg07/"
+  },{
+    "title": "Meeting 08 — Tue 02 Feb 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg08/"
+  },{
+    "title": "Meeting 09 — Thu 04 Feb 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg09/"
+  },{
+    "title": "Meeting 10 — Tue 09 Feb 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg10/"
+  },{
+    "title": "Meeting 11 — Thu 11 Feb 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg11/"
+  },{
+    "title": "Meeting 12 — Tue 23 Feb 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg12/"
+  },{
+    "title": "Meeting 13 — Thu 25 Feb 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg13/"
+  },{
+    "title": "Meeting 14 — Tue 02 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg14/"
+  },{
+    "title": "Meeting 15 — Thu 04 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg15/"
+  },{
+    "title": "Meeting 16 — Tue 09 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg16/"
+  },{
+    "title": "Meeting 17 — Thu 11 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg17/"
+  },{
+    "title": "Meeting 18 — Tue 16 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg18/"
+  },{
+    "title": "Meeting 19 — Thu 18 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg19/"
+  },{
+    "title": "Meeting 20 — Tue 23 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg20/"
+  },{
+    "title": "Meeting 21 — Thu 25 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg21/"
+  },{
+    "title": "Meeting 22 — Tue 30 Mar 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg22/"
+  },{
+    "title": "Review",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg23/"
+  },{
+    "title": "Meeting 24 — Tue 06 Apr 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg24/"
+  },{
+    "title": "Meeting 25 — Thu 08 Apr 2027",
+    "text": "",
+    "tags": "",
+    "url": "/teaching/CS-405_805/202710/Mtg25/"
   },{
     "title": "New Course Orientation",
     "text": "",
