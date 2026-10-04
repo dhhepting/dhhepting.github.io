@@ -8,9 +8,10 @@
 # outline numbers; this module derives them from list position and nesting
 # depth (arabic / lower-alpha / lower-roman) so ACM errata renumbering never
 # touches the data. It also:
-#   * asserts CS-core entries precede KA-core entries (fail-loud: a stray
-#     KA entry mid-list would make the tier divider misfire silently);
-#   * marks the single CS->KA divider (`tier_break_before`);
+#   * asserts entries appear in curriculum-level order — core, then
+#     knowledge-area, then non-core (fail-loud: a stray entry mid-list would
+#     make the tier dividers misfire silently);
+#   * marks each tier divider (`tier_break_before`);
 #   * applies an `all | [ids]` selection as a `covered` flag per top-level
 #     entry (display policy — grey vs omit — is the caller's choice, not ours).
 #
@@ -30,6 +31,25 @@ module TLOResolver
   # ---- selection sentinel -------------------------------------------------
 
   ALL = "all"
+
+  # Curriculum tiers, in the order they must appear within a KU's lists.
+  CURRICULUM_LEVELS = %w[core knowledge-area non-core].freeze
+
+  # Read and validate an entry's `curriculum_level`. Gives a pointed message
+  # for the retired `core: CS | KA` key so a half-migrated file is obvious.
+  def curriculum_level_of(entry, where)
+    level = entry["curriculum_level"]
+    return level if CURRICULUM_LEVELS.include?(level)
+
+    if level.nil? && entry.key?("core")
+      raise ArgumentError,
+            "#{where}: retired `core:` key (#{entry['core'].inspect}); rename to " \
+            "`curriculum_level:` (CS -> core, KA -> knowledge-area)"
+    end
+    raise ArgumentError,
+          "#{where}: curriculum_level must be one of " \
+          "#{CURRICULUM_LEVELS.join(', ')}, got #{level.inspect}"
+  end
 
   # Normalise a selector value to either :all or an Array of ids.
   # Raises on anything else so a typo'd selector fails loud, not silent.
@@ -119,26 +139,27 @@ module TLOResolver
       end
     end
 
-    seen_ka = false
+    prev_rank  = -1
+    prev_level = nil
     entries.each_with_index.map do |e, i|
-      core = e["core"]
-      unless %w[CS KA].include?(core)
-        raise ArgumentError, "#{ku_name}/#{kind}/#{e['id']}: core must be CS or KA, got #{core.inspect}"
-      end
-      # Ordering invariant: once KA seen, no CS may follow.
-      if core == "CS" && seen_ka
+      level = curriculum_level_of(e, "#{ku_name}/#{kind}/#{e['id']}")
+      rank  = CURRICULUM_LEVELS.index(level)
+      # Ordering invariant: levels may only stay the same or step forward.
+      if rank < prev_rank
         raise ArgumentError,
-              "#{ku_name}/#{kind}: CS-core entry #{e['id'].inspect} appears after a KA-core entry; " \
-              "list order drives numbering and the tier divider, so CS must precede KA"
+              "#{ku_name}/#{kind}: #{level} entry #{e['id'].inspect} appears after a " \
+              "#{prev_level} entry; list order drives numbering and the tier dividers, " \
+              "so entries must run #{CURRICULUM_LEVELS.join(' -> ')}"
       end
-      tier_break = (core == "KA" && !seen_ka)
-      seen_ka ||= (core == "KA")
+      tier_break = !prev_level.nil? && level != prev_level
+      prev_rank  = rank
+      prev_level = level
 
       covered = selection == :all || selection.include?(e["id"])
       {
         "number"            => number_for(0, i + 1), # continuous across tiers
         "id"                => e["id"],
-        "core"              => core,
+        "curriculum_level"  => level,
         "text"              => e["text"],
         "covered"           => covered,
         "tier_break_before" => tier_break,
@@ -152,7 +173,7 @@ module TLOResolver
   # Pre-order flatten of a resolved list (topics or learning_outcomes) into a
   # flat array of rows the Liquid renderer walks with a single loop — no
   # recursion, no depth cap. Row kinds:
-  #   { "kind" => "tier_break" }                          <- CS->KA divider
+  #   { "kind" => "tier_break", "tier" => <new level> }   <- tier divider
   #   { "number","text","depth","covered","see_also",... } <- content row
   # depth 0 = top-level, 1 = items, 2 = items-of-items, ...
   # Nested items inherit their top-level entry's `covered` (grey the block).
@@ -160,30 +181,29 @@ module TLOResolver
   # covered_only:
   #   false (offering view) — show the whole KU; non-covered entries are greyed.
   #   true  (meeting view)  — show only covered entries; nothing greyed.
-  # The CS->KA divider is recomputed over the rows actually shown, so it appears
-  # only when both a CS-core and a KA-core entry are present.
+  # Dividers are recomputed over the rows actually shown: one is emitted
+  # wherever the curriculum level changes between consecutive shown entries
+  # (core -> knowledge-area, knowledge-area -> non-core, ...), and carries the
+  # level it introduces in "tier" so the template can label it.
   def flatten_for_render(entries, covered_only: false)
     shown = Array(entries)
     shown = shown.select { |e| e["covered"] } if covered_only
 
     rows = []
-    cs_shown = false
-    ka_started = false
+    prev_level = nil
     shown.each do |e|
-      if e["core"] == "KA" && !ka_started && cs_shown
-        rows << { "kind" => "tier_break" }
-      end
-      ka_started = true if e["core"] == "KA"
-      cs_shown = true if e["core"] == "CS"
+      level = e["curriculum_level"]
+      rows << { "kind" => "tier_break", "tier" => level } if prev_level && level != prev_level
+      prev_level = level
       rows << {
-        "kind"     => "row",
-        "number"   => e["number"],
-        "text"     => e["text"],
-        "depth"    => 0,
-        "covered"  => e["covered"],
-        "core"     => e["core"],
-        "id"       => e["id"],
-        "see_also" => nil
+        "kind"             => "row",
+        "number"           => e["number"],
+        "text"             => e["text"],
+        "depth"            => 0,
+        "covered"          => e["covered"],
+        "curriculum_level" => level,
+        "id"               => e["id"],
+        "see_also"         => nil
       }
       flatten_items(e["items"], 1, e["covered"], rows)
     end
