@@ -1,0 +1,70 @@
+# _data/teaching/all/curricula/CS2023/GIT/Image_Processing.yml
+ku: GIT-Image_Processing
+title: Image Processing
+description: >
+  Image Processing consists of the analysis and processing of images for
+  multiple purposes, but most frequently to improve image quality and to
+  manipulate imagery. It lies at the cornerstone of computer vision.
+see_also: [AI-Vision]
+
+topics:
+  - id: morphological
+    curriculum_level: knowledge-area
+    text: "Morphological operations"
+    items:
+      - text: "Connected components"
+      - text: "Dilation"
+      - text: "Erosion"
+      - text: "Computing region properties (area, perimeter, centroid, etc.)"
+  - id: color-histograms
+    curriculum_level: knowledge-area
+    text: "Color histograms"
+    items:
+      - text: "Representation"
+      - text: "Contrast enhancement through normalization"
+  - id: enhancement
+    curriculum_level: knowledge-area
+    text: "Image enhancement"
+    items:
+      - text: "Convolution"
+      - text: "Blur (e.g., Gaussian)"
+      - text: "Sharpen (e.g., Laplacian)"
+      - text: "Frequency filtering (e.g., low-pass, high-pass)"
+  - id: restoration
+    curriculum_level: knowledge-area
+    text: "Image restoration"
+    items:
+      - text: "Noise, degradation"
+      - text: "Inpainting and other completion algorithms"
+      - text: "Wiener filter"
+  - id: coding
+    curriculum_level: knowledge-area
+    text: "Image coding"
+    items:
+      - text: "Redundancy"
+      - text: "Compression (e.g., Huffman coding)"
+      - text: "Discrete Cosine Transform (DCT), wavelet transform, Fourier transforms"
+        see_also: [SPD-Interactive]
+      - text: "Nyquist Theorem"
+      - text: "Watermarks"
+  - id: deep-learning
+    curriculum_level: knowledge-area
+    text: "Connections to deep learning (e.g., Convolutional Neural Networks)"
+    see_also: [AI-ML]
+
+learning_outcomes:
+  - id: o01
+    curriculum_level: knowledge-area
+    text: "Write a program that uses dilation and erosion to smooth the edges of a binary image."
+  - id: o02
+    curriculum_level: knowledge-area
+    text: "Manipulating the hue of an image."
+  - id: o03
+    curriculum_level: knowledge-area
+    text: "Write a program that applies a high-pass filter to an image. (The advanced variation would be to filter an image using a high-pass filter in the frequency domain.)"
+  - id: o04
+    curriculum_level: knowledge-area
+    text: "Write a program that restores missing parts of an image using an in-paint algorithm (e.g., Poisson image editing)"
+  - id: o05
+    curriculum_level: knowledge-area
+    text: "Assess the results of selectively filtering an image in the frequency domain."

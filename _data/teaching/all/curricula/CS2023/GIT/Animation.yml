@@ -1,0 +1,69 @@
+# _data/teaching/all/curricula/CS2023/GIT/Animation.yml
+ku: GIT-Animation
+title: Computer Animation
+description: >
+  Computer Animation is concerned with the generation of moving imagery.
+
+topics:
+  - id: principles
+    curriculum_level: knowledge-area
+    text: "Principles of Animation: Squash and Stretch, Timing, Anticipation, Staging, Follow Through and Overlapping Action, Straight Ahead Action, and Pose-to-Pose Action, Slow In and Out, Arcs, Exaggeration, and Appeal"
+  - id: types
+    curriculum_level: knowledge-area
+    text: "Types of animation"
+    items:
+      - text: "2- and 3-dimensional animation"
+      - text: "Motion graphics"
+      - text: "Motion capture"
+      - text: "Motion graphics"   # duplicated in the source (items b and d)
+      - text: "Stop animation"
+  - id: keyframe
+    curriculum_level: knowledge-area
+    text: "Key-frame animation"
+    items:
+      - text: "Keyframe Interpolation Methods: Lerp/Slerp/Spline"
+  - id: kinematics
+    curriculum_level: knowledge-area
+    text: "Forward and inverse kinematics"
+    see_also: [SPD-Robot, AI-Robotics]
+  - id: skinning
+    curriculum_level: knowledge-area
+    text: "Skinning algorithms"
+    items:
+      - text: "Capturing"
+      - text: "Linear blend, dual quaternion"
+      - text: "Rigging"
+      - text: "Blend shapes"
+      - text: "Pose space deformation"
+  - id: motion-capture
+    curriculum_level: knowledge-area
+    text: "Motion capture"
+    items:
+      - text: "Set up and fundamentals"
+      - text: "Blending motion capture clips"
+      - text: "Blending motion capture and keyframe animation"
+      - text: "Ethical considerations"
+        see_also: [SEP-DEIA, SEP-Privacy]
+        items:
+          - text: "Avoidance of “default” captures - there is no typical human walk cycle."
+          - text: "Accessibility"
+
+learning_outcomes:
+  - id: o01
+    curriculum_level: knowledge-area
+    text: "Using a simple open-source character model and rig, describe visually why each of the principles of animation is fundamental to realistic animation."
+  - id: o02
+    curriculum_level: knowledge-area
+    text: "Compute the location and orientation of model parts using a forward kinematic approach."
+  - id: o03
+    curriculum_level: knowledge-area
+    text: "Compute the orientation of articulated parts of a model from a location and orientation using an inverse kinematic approach."
+  - id: o04
+    curriculum_level: knowledge-area
+    text: "Compare the tradeoffs in different representations of rotations."
+  - id: o05
+    curriculum_level: knowledge-area
+    text: "Write a script that implements the spline interpolation method for producing in-between positions and orientations."
+  - id: o06
+    curriculum_level: knowledge-area
+    text: "Deploy off-the-shelf animation software to construct, rig, and animate simple organic forms."

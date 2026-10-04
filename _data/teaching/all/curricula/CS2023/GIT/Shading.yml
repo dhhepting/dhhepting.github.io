@@ -1,0 +1,79 @@
+# _data/teaching/all/curricula/CS2023/GIT/Shading.yml
+ku: GIT-Shading
+title: Shading and Advanced Rendering
+description: >
+  This unit contains more in-depth coverage of rendering topics.
+
+topics:
+  - id: rendering-equation
+    curriculum_level: knowledge-area
+    text: "Solutions and approximations to the rendering equation, for example"
+    items:
+      - text: "Distribution ray tracing and path tracing"
+      - text: "Photon mapping"
+      - text: "Bidirectional path tracing"
+      - text: "Metropolis light transport"
+  - id: time-lens-frequency
+    curriculum_level: knowledge-area
+    text: "Time (motion blur), lens position (focus), and continuous frequency (color) and their impact on rendering"
+  - id: shadow-mapping
+    curriculum_level: knowledge-area
+    text: "Shadow mapping"
+  - id: occlusion-culling
+    curriculum_level: knowledge-area
+    text: "Occlusion culling"
+  - id: bsdf
+    curriculum_level: knowledge-area
+    text: "Bidirectional Scattering Distribution function (BSDF) theory and microfacets"
+  - id: subsurface-scattering
+    curriculum_level: knowledge-area
+    text: "Subsurface scattering"
+  - id: area-lights
+    curriculum_level: knowledge-area
+    text: "Area light sources"
+  - id: hierarchical-depth-buffering
+    curriculum_level: knowledge-area
+    text: "Hierarchical depth buffering"
+  - id: image-based-rendering
+    curriculum_level: knowledge-area
+    text: "Image-based rendering"
+  - id: npr
+    curriculum_level: knowledge-area
+    text: "Non-photorealistic rendering"
+  - id: realtime-rendering
+    curriculum_level: knowledge-area
+    text: "Realtime rendering"
+  - id: gpu-architecture
+    curriculum_level: knowledge-area
+    text: "GPU architecture"
+    see_also: [AR-Heterogeneity]
+  - id: human-visual-systems
+    curriculum_level: knowledge-area
+    text: "Human visual systems including adaptation to light, sensitivity to noise, and flicker fusion"
+    see_also: [HCI-Accessibility, SEP-DEIA]
+
+learning_outcomes:
+  - id: o01
+    curriculum_level: knowledge-area
+    text: "Describe how an algorithm estimates a solution to the rendering equation."
+  - id: o02
+    curriculum_level: knowledge-area
+    text: "Discuss the properties of a rendering algorithm (e.g., complete, consistent, and unbiased)."
+  - id: o03
+    curriculum_level: knowledge-area
+    text: "Analyze the bandwidth and computation demands of a simple shading algorithm."
+  - id: o04
+    curriculum_level: knowledge-area
+    text: "Implement a non-trivial shading algorithm (e.g., toon shading, cascaded shadow maps) under a rasterization API."
+  - id: o05
+    curriculum_level: knowledge-area
+    text: "State how a particular artistic technique might be implemented in a renderer."
+  - id: o06
+    curriculum_level: knowledge-area
+    text: "Describe how one might recognize the shading techniques used to create a particular image."
+  - id: o07
+    curriculum_level: knowledge-area
+    text: "Write a program that implements any of the specified graphics techniques using a primitive graphics system at the individual pixel level."
+  - id: o08
+    curriculum_level: knowledge-area
+    text: "Write a ray tracer for scenes using a simple (e.g., Phong's) Bidirectional Reflection Distribution Function (BRDF) plus reflection and refraction."

@@ -1,0 +1,91 @@
+# _data/teaching/all/curricula/CS2023/GIT/Simulation.yml
+ku: GIT-Simulation
+title: Simulation
+description: >
+  Simulation has strong ties to Computational Science. However, in the
+  graphics domain, simulation techniques are re-purposed to a different end.
+  Rather than creating predictive models, the goal instead is to achieve a
+  mixture of physical plausibility and artistic intention. To illustrate, the
+  goals of "model surface tension in a liquid" and "produce a crown splash"
+  are related, but different. Depending on the simulation goals, covered
+  topics may vary as shown.
+
+# Example topic mixes from the CS2023 overview (source table was flattened to
+# bullets in the PDF; duplicate entries removed, nesting reconstructed).
+examples:
+  - text: "Particle systems"
+    items:
+      - text: "Integration methods (Forward Euler, Midpoint, Leapfrog)"
+  - text: "Rigid Body Dynamics"
+    items:
+      - text: "Particle systems"
+      - text: "Collision Detection"
+        items:
+          - text: "Triangle/point"
+          - text: "Edge/edge"
+  - text: "Cloth"
+    items:
+      - text: "Particle systems"
+      - text: "Mass/spring networks"
+      - text: "Collision Detection"
+  - text: "Particle-Based Water"
+    items:
+      - text: "Integration methods"
+      - text: "Smoother Particle Hydrodynamics (SPH) Kernels"
+      - text: "Signed Distance Function-Based Collisions"
+  - text: "Grid-Based Smoke and Fire"
+    items:
+      - text: "Semi-Lagrangian Advection"
+      - text: "Pressure Projection"
+  - text: "Grid and Particle-Based Water"
+    items:
+      - text: "Particle-Based Water"
+      - text: "Grid-Based Smoke and Fire"
+
+topics:
+  - id: collision
+    curriculum_level: knowledge-area
+    text: "Collision detection and response"
+    items:
+      - text: "Signed Distance Fields"
+      - text: "Sphere/sphere"
+      - text: "Triangle/point"
+      - text: "Edge/edge"
+  - id: procedural-noise
+    curriculum_level: knowledge-area
+    text: "Procedural animation using noise"
+  - id: particle-systems
+    curriculum_level: knowledge-area
+    text: "Particle systems"
+    items:
+      - text: "Integration methods (e.g., forward Euler, midpoint, leapfrog)"
+      - text: "Mass/spring networks"
+      - text: "Position-based dynamics"
+      - text: "Rules (e.g., boids, crowds)"
+      - text: "Rigid bodies"
+  - id: grid-fluids
+    curriculum_level: knowledge-area
+    text: "Grid-based fluids"
+    items:
+      - text: "Semi-Lagrangian advection"
+      - text: "Pressure projection"
+  - id: heightfields
+    curriculum_level: knowledge-area
+    text: "Heightfields"
+    items:
+      - text: "Terrain: transport, erosion"
+      - text: "Water: ripple, shallow water."
+  - id: rule-based
+    curriculum_level: knowledge-area
+    text: "Rule-based systems (e.g., L-systems, space-colonizing systems, Game of Life)"
+
+learning_outcomes:
+  - id: o01
+    curriculum_level: knowledge-area
+    text: "Implement algorithms for physical modeling of particle dynamics using simple Newtonian mechanics (e.g., Witkin & Kass, snakes and worms, symplectic Euler, Stormer/Verlet, or midpoint Euler methods)"
+  - id: o02
+    curriculum_level: knowledge-area
+    text: "Contrast the basic ideas behind fluid simulation methods for modeling ballistic trajectories (e.g., for splashes, dust, fire, or smoke)."
+  - id: o03
+    curriculum_level: knowledge-area
+    text: "Implement a smoke solver with user interaction."

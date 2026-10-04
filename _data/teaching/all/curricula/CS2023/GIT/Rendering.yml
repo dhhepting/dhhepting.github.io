@@ -1,0 +1,86 @@
+# _data/teaching/all/curricula/CS2023/GIT/Rendering.yml
+ku: GIT-Rendering
+title: Applied Rendering and Techniques
+description: >
+  This unit includes basic rendering and fundamental graphics techniques that
+  nearly every undergraduate course in graphics will cover and that are
+  essential for further study in most graphics-related courses.
+see_also: [SPD-Game]
+
+topics:
+  - id: object-scene-modeling
+    curriculum_level: knowledge-area
+    text: "Object and scene modeling"
+    items:
+      - text: "Object representations: polygonal, parametric, etc."
+      - text: "Modeling transformations: affine and coordinate-system transformations"
+      - text: "Scene representations: scene graphs"
+  - id: camera-projection
+    curriculum_level: knowledge-area
+    text: "Camera and projection modeling"
+    items:
+      - text: "Pinhole cameras, similar triangles, and projection model"
+      - text: "Camera models"
+      - text: "Projective geometry"
+  - id: radiometry-light
+    curriculum_level: knowledge-area
+    text: "Radiometry and light models"
+    items:
+      - text: "Radiometry"
+      - text: "Rendering equation"
+      - text: "Rendering in nature – emission and scattering, etc."
+  - id: rendering
+    curriculum_level: knowledge-area
+    text: "Rendering"
+    items:
+      - text: "Simple triangle rasterization"
+      - text: "Rendering with a shader-based API"
+      - text: "Visibility and occlusion, including solutions to this problem (e.g., depth buffering, Painter's algorithm, and ray tracing)"
+      - text: "Texture mapping, including minification and magnification (e.g., trilinear MIP mapping)"
+      - text: "Application of spatial data structures to rendering."
+      - text: "Ray tracing"
+      - text: "Sampling and anti-aliasing"
+
+learning_outcomes:
+  - id: o01
+    curriculum_level: knowledge-area
+    text: "Describe and illustrate the light transport problem (i.e., light is emitted, scatters around the scene, and is measured by the eye)."
+  - id: o02
+    curriculum_level: knowledge-area
+    text: "Describe the basic rendering pipeline."
+  - id: o03
+    curriculum_level: knowledge-area
+    text: "Compare and contrast how forward and backwards rendering factor into the graphics pipeline."
+  - id: o04
+    curriculum_level: knowledge-area
+    text: "Create a program to display 2D shapes in a window."
+  - id: o05
+    curriculum_level: knowledge-area
+    text: "Create a program to display 3D models."
+  - id: o06
+    curriculum_level: knowledge-area
+    text: "Produce linear perspective from similar triangles by converting points (x, y, z) to points (x/z, y/z, 1)."
+  - id: o07
+    curriculum_level: knowledge-area
+    text: "Compute two-dimensional and 3-dimensional points by applying affine transformations."
+  - id: o08
+    curriculum_level: knowledge-area
+    text: "Indicate the changes required to extend 2D transformation operations to handle transformations in 3D."
+  - id: o09
+    curriculum_level: knowledge-area
+    text: "Define texture mapping, sampling, and anti-aliasing, and describe examples of each."
+  - id: o10
+    curriculum_level: knowledge-area
+    text: "Compare ray tracing and rasterization for the visibility problem."
+  - id: o11
+    curriculum_level: knowledge-area
+    text: "Construct a program that performs transformation and clipping operations on simple two-dimensional shapes."
+  - id: o12
+    curriculum_level: knowledge-area
+    text: "Implement a simple real-time renderer using a rasterization API (e.g., OpenGL, webGL) using vertex buffers and shaders."
+  - id: o13
+    curriculum_level: knowledge-area
+    text: "Compare and contrast the different rendering techniques."
+  - id: o14
+    curriculum_level: knowledge-area
+    text: "Compare and contrast the difference in transforming the camera vs the models."

@@ -2,34 +2,113 @@
 #
 # Knowledge-Area-level metadata for GIT. The leading underscore sorts it ahead
 # of the KU files and marks it as area meta, not a knowledge unit. One per KA.
-#
-# This is the home for the long preamble you captured in preamble_GIT — it is a
-# KA fact, authored once, not repeated in each KU. `overview` optionally holds
-# the "Overview of Knowledge Units" prose. `default_skill` records the KA's own
-# guidance (see below) rather than tagging every outcome.
 
 code: GIT
 name: "Graphics and Interactive Techniques"
 
 # CS2023 GIT states its core-topic skill level is mostly "Explain," rising to
 # "Apply"/"Develop" when a KU is taught as a full course. That is KA-level
-# guidance — so record it here, once, instead of per-outcome Bloom tags (that
-# was the CS2013 model, which GIT explicitly moved away from).
+# guidance, so it is recorded here once instead of per-outcome Bloom tags.
 default_skill: Explain
+
+# Per-topic / per-outcome tier used in the KU files:
+#   curriculum_level: core | knowledge-area | non-core
 
 preamble: >
   Computer graphics is the term used to describe the computer generation and
   manipulation of images and can be viewed as the science of enabling visual
-  communication through computation. Its application domains include animation,
-  CGI and VFX; engineering; machine learning; medical imaging; scientific,
-  information, and knowledge visualization; simulators; special effects; user
-  interfaces; and video games.
-  # ... paste the rest of the cleaned preamble_GIT prose here as one block ...
+  communication through computation. Its application domains include
+  animation, Computer Generated Imagery (CGI) and Visual Effects (VFX);
+  engineering; machine learning; medical imaging; scientific, information, and
+  knowledge visualization; simulators; special effects; user interfaces; and
+  video games. Traditionally, graphics at the undergraduate level focused on
+  rendering, linear algebra, physics, the graphics pipeline, interaction, and
+  phenomenological approaches. Today's graphics courses increasingly include
+  data science, physical computing, animation, and haptics. Thus, the
+  knowledge area (KA) expanded beyond core image-based computer graphics. At
+  the advanced level, undergraduate institutions are more likely to offer one
+  or several courses specializing in a specific graphics knowledge unit (KU)
+  or topic: e.g., gaming, animation, visualization, tangible or physical
+  computing, and immersive courses such as Augmented Reality (AR)/Virtual
+  Reality (VR)/eXtended Reality (XR). There is considerable connection with
+  other computer science knowledge areas (KAs): Algorithmic Foundations,
+  Architecture and Organization, Artificial Intelligence; Human-Computer
+  Interaction; Parallel and Distributed Computing; Specialized Platform
+  Development; Software Engineering; and Society, Ethics, and the Profession.
+
+  For students to become adept at the use and generation of computer graphics
+  and interactive techniques, many issues must be addressed, such as human
+  perception and cognition, data and image file formats, display
+  specifications and protocols, hardware interfaces, and application program
+  interfaces (APIs). Unlike other knowledge areas, knowledge units within
+  Graphics and Interactive Techniques may be included in a variety of elective
+  courses. Alternatively, graphics topics may be introduced in an applied
+  project in courses primarily covering human computer interaction, embedded
+  systems, web development, introductory programming courses, etc.
+  Undergraduate computer science students who study the knowledge units
+  specified below through a balance of theory and applied instruction will be
+  able to understand, evaluate, and/or implement the related graphics and
+  interactive techniques as users and developers. Because technology changes
+  rapidly, the Graphics and Interactive Techniques subcommittee attempted to
+  avoid being overly prescriptive. Any examples of APIs, programs, and
+  languages should be considered as appropriate examples in 2023. In effect,
+  this is a snapshot in time.
+
+  Graphics as a knowledge area has expanded and become pervasive since the
+  CS2013 report. AR/VR/XR, artificial intelligence, computer vision, data
+  science, machine learning, and interfaces driven by embedded sensors in
+  everything from cars to coffee makers use graphics and interactive
+  techniques. The now ubiquitous smartphone has made much of the world's
+  population regular users and creators of graphics, digital images, and the
+  interactive techniques to manipulate them. Animations, games,
+  visualizations, and immersive applications that ran on desktops in 2013, now
+  can run on mobile devices. The amount of stored digital data grew
+  exponentially since 2013, and both data and visualizations are now published
+  by myriad sources including news media and scientific organizations. Revenue
+  from mobile video games now exceeds that of music and movies combined [1].
+  CGI and VFX are employed in almost all films, animations, TV productions,
+  advertising, and business graphics. The number of people who create graphics
+  has skyrocketed, as have the number of applications and generative tools
+  used to produce graphics.
+
+  It is critical that students and faculty confront the ethical issues,
+  questions, and conundrums that have arisen and will continue to arise in and
+  because of applications in computer graphics. Today's headlines
+  unfortunately already provide examples of inequity and/or wrong-doing in
+  autonomous navigation, deepfakes, computational photography, generative
+  images, and facial recognition.
 
 overview: >
   The following knowledge units are included in Graphics and Interactive
-  Techniques. Apart from Applied Rendering and Techniques, which scaffolds the
-  typical undergraduate interactive computer graphics course, the other
-  knowledge units are more specialized and limited to roughly two weeks (6 hours)
-  of instruction.
-  # ... paste the rest of the "Overview of Knowledge Units" prose here ...
+  Techniques. Descriptions are included below where they are not explicitly
+  evident from the title. Graphics as a knowledge area is unique in that many
+  of its knowledge units can be, and are, taught as stand-alone courses where
+  implementation projects are critical to student mastery. Apart from Applied
+  Rendering and Techniques, which scaffolds the typical undergraduate
+  interactive computer graphics course, the other knowledge units are more
+  specialized. To be consistent with the design of CS2023, those knowledge
+  units are limited to two weeks of instruction, corresponding roughly to 6
+  hours of instruction. This limitation allows a two-week knowledge unit to be
+  added to a course. Due to that time restriction, we list their Core Topic
+  skill levels in most of the knowledge units as "Explain." However, if one of
+  the thematic knowledge units is implemented as a full-term course, our
+  expectation is that the skill levels will rise to "Apply" or "Develop,"
+  which is reflected in many of the practical illustrative learning outcomes.
+  This is not meant to be prescriptive but to encourage customization. How to
+  implement a knowledge unit is left to the discretion of the instructor. If
+  given a two-week constraint to teach one of the thematic knowledge units,
+  many of us would choose to limit the topics and include an applied project.
+  Our hope is that an inclusive list of topics will help faculty design a
+  course that best meets their and their department's pedagogical goals.
+
+changes_since_cs2013: >
+  In order to align CS2013's Graphics and Visualization areas with the ACM
+  Special Interest Group on Graphic and Interactive Techniques (SIGGRAPH) and
+  to reflect the natural expansion of the field to include haptic and physical
+  computing in addition to images, we have renamed it Graphics and Interactive
+  Techniques (GIT). To capture the expanded footprint of the knowledge area,
+  the following five knowledge units have been added to the original list
+  consisting of Fundamental Concepts, Visualization, Basic Rendering (renamed
+  Rendering), Geometric Modeling, Advanced Rendering (renamed Shading), and
+  Computer Animation: Immersion (MR, AR, VR); Interaction; Image Processing;
+  Tangible/Physical Computing; and Simulation.
