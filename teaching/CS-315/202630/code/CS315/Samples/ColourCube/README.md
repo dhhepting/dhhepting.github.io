@@ -46,12 +46,12 @@ diagonal would give a perfectly regular hexagon.
 ## Exercises (mode 4)
 
 Two optional extensions to the corner-on hexagon view are stubbed in
-`matrix.js` and wired into `main.js` behind flags (both default off, so the app
+`matrix.mjs` and wired into `main.mjs` behind flags (both default off, so the app
 runs unchanged until you switch one on). Suggested order:
 
 1. **`ortho(...)` — orthographic projection** (EXERCISE 1, no trig). Fill in the
    column-major matrix from the comment, then set `ORTHOGRAPHIC_HEXAGON = true`
-   at the top of `main.js`. Payoff: the hue hexagon becomes perfectly regular
+   at the top of `main.mjs`. Payoff: the hue hexagon becomes perfectly regular
    (all six corners equidistant, 60 deg apart) instead of perspective-skewed.
 2. **`rotationAxis(axis, rad)` — Rodrigues rotation** (EXERCISE 2). Fill in the
    3x3 block from the comment, then set `SPIN_HUE_WHEEL = true`. Payoff: the cube
@@ -69,7 +69,7 @@ naming the exercise; press M to cycle back to a working mode.
 - ES modules (`main.mjs`, `cube.mjs`, `gl-utils.mjs`, `matrix.mjs`), loaded via
   `<script type="module">`.
 - Shaders in separate `.glsl` files, fetched with `async` / `await`.
-- No MV.js — a small column-major `matrix.js` supplies the mat4 helpers,
+- No MV.mjs — a small column-major `matrix.mjs` supplies the mat4 helpers,
   including `perspective` and `lookAt`.
 - Controller / renderer split: `Cube` never touches the DOM; the controller
   owns the canvas, the render loop, mode state, key handling, and all cameras.
@@ -93,7 +93,7 @@ Open the printed URL (e.g. http://localhost:5173) to view the page.
 
 It is possible to publish this folder to run as a standalone using:
 ```
-npm build
+npm run build
 ```
 By modifying the entry point of the application in vite.config.js to point the index.html file of this folder as described here: https://vite.dev/config/shared-options#input
 eg.:
