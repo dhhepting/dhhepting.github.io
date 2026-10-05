@@ -28,7 +28,7 @@ function initShaders( gl, vertexShaderString, fragmentShaderString )
 function getShader(gl, shaderString, type) {
     const shader = gl.createShader(type);
     if (typeof(shaderString) != "string") {
-        throw new Error(`Could not find shader source: ${shaderId}`);
+        throw new Error(`Shader source must be a string, got ${typeof shaderString}`);
     }
     gl.shaderSource(shader, shaderString.replace(/^\s+|\s+$/g, '' ));
     gl.compileShader(shader);

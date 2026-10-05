@@ -3,7 +3,7 @@
 // the render loop, and tracks the current viewing mode. All DOM access lives
 // here; the renderer stays DOM-free.
 
-import { initShaders } from '../../Common/initShadersXHR.mjs';
+import { initShaders } from '../../Common/initShadersJS.mjs';
 import { Cube } from './cube.mjs';
 import * as mat4 from './matrix.mjs';
 
@@ -21,9 +21,22 @@ if (!gl) {
   throw new Error('WebGL2 is not available in this browser.');
 }
 
-// Load and compile both .glsl files, and link them as a shader program.
-const program = await initShaders(gl,'./shaders/cube.vert.glsl','./shaders/cube.frag.glsl');
+// --- Shaders: fetch the .glsl text, then compile and link ---
+const pub = import.meta.env
+  ? `${import.meta.env.BASE_URL}ColourCube/`                     // Vite: dev or build
+  : new URL('../../public/ColourCube/', import.meta.url).href;   // raw static copy
 
+async function fetchText(url) {
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`Failed to load ${url}: ${r.status}`);
+  return r.text();
+}
+
+const [vertSrc, fragSrc] = await Promise.all([
+  fetchText(`${pub}shaders/cube.vert.glsl`),
+  fetchText(`${pub}shaders/cube.frag.glsl`),
+]);
+const program = initShaders(gl, vertSrc, fragSrc);
 const cube = new Cube(gl, program);
 
 gl.enable(gl.DEPTH_TEST);
