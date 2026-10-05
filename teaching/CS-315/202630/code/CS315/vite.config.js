@@ -10,11 +10,12 @@ export default defineConfig({
   //   uregina:   /~hepting/teaching/CS-315/202630/code/CS315/dist/
   //   github.io: /teaching/CS-315/202630/code/CS315/dist/
   // Local dev and plain builds fall back to '/'.
-  base: process.env.VITE_BASE ?? '/',
+   //base: process.env.VITE_BASE ?? '/',
+  base: './',
   build: {
     rollupOptions: {
       input: {
-        colourCube: resolve(import.meta.dirname, 'Samples/ColourCube/app.html'),
+        ColourCube: resolve(import.meta.dirname, 'Samples/ColourCube/app.html'),
         SVG_Zoomer: resolve(import.meta.dirname, 'Samples/SVG_Zoomer/app.html'),
 
       },
