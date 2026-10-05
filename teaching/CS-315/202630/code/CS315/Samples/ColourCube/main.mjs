@@ -22,9 +22,11 @@ if (!gl) {
 }
 
 // --- Shaders: fetch the .glsl text, then compile and link ---
-const pub = import.meta.env
-  ? `${import.meta.env.BASE_URL}ColourCube/`                     // Vite: dev or build
-  : new URL('../../public/ColourCube/', import.meta.url).href;   // raw static copy
+// const pub = import.meta.env
+//  ? `${import.meta.env.BASE_URL}ColourCube/`                     // Vite: dev or build
+ // : new URL('../../public/ColourCube/', import.meta.url).href;   // raw static copy
+
+ const pub = './';   // shaders/ sits next to the page
 
 async function fetchText(url) {
   const r = await fetch(url);
