@@ -15,7 +15,7 @@
 //                        a raster has a fixed resolution and zooming cannot add
 //                        detail that was never captured.
 
-import { initShaders } from './initShadersJS.mjs';
+import { initShaders } from '../../Common/initShadersJS.mjs';
 import { Zoomer } from './zoomer.mjs';
 
 // --- Tunables -------------------------------------------------------------
@@ -48,7 +48,9 @@ if (!sharpGL || !frozenGL) {
 }
 
 // --- Shaders (one program per context; programs cannot be shared) ---------
-const pub = `${import.meta.env.BASE_URL}SVG_Zoomer/`;
+const pub = import.meta.env
+  ? `${import.meta.env.BASE_URL}SVG_Zoomer/`                    // Vite: dev or build
+  : new URL('../../public/SVG_Zoomer/', import.meta.url).href;  // raw static copy
 
 async function fetchText(url) {
   const r = await fetch(url);
@@ -56,16 +58,12 @@ async function fetchText(url) {
   return r.text();
 }
 
-const [vertSrc, fragSrc] = await Promise.all([
+const [vertSrc, fragSrc, rawSvg] = await Promise.all([
   fetchText(`${pub}shaders/quad.vert.glsl`),
   fetchText(`${pub}shaders/quad.frag.glsl`),
+  fetchText(`${pub}assets/dh.svg`),
 ]);
-// ...
-const rawSvg = await fetchText(`${pub}assets/dh.svg`);
-//const [vertSrc, fragSrc] = await Promise.all([
-//  fetch('./shaders/quad.vert.glsl').then((r) => r.text()),
-//  fetch('./shaders/quad.frag.glsl').then((r) => r.text()),
-//]);
+
 const sharpProgram = initShaders(sharpGL, vertSrc, fragSrc);
 const frozenProgram = initShaders(frozenGL, vertSrc, fragSrc);
 
@@ -80,7 +78,6 @@ for (const gl of [sharpGL, frozenGL]) {
 // --- Load the SVG as an <img> so the browser can rasterize the vector -----
 // The source viewBox is 220 x 220 with no width/height; we inject an intrinsic
 // size so every browser rasterizes crisply at whatever size we draw it.
-//const rawSvg = await fetch('./assets/dh.svg').then((r) => r.text());
 const sizedSvg = rawSvg.replace(
   /<svg\b(?![^>]*\bwidth=)/,
   '<svg width="220" height="220"',
