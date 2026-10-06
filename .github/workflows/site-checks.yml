@@ -1,7 +1,5 @@
 # .github/workflows/site-checks.yml
 # Runs the Rake test pipeline (data:validate → wiki:validate → build → test:html).
-# Replaces the earlier Python-based version (generate_config.py / test_links.py),
-# which predated the per-offering model and the html-proofer Ruby API move.
 
 name: Site checks
 
@@ -9,8 +7,12 @@ on:
   pull_request:
     branches: [ master ]
   push:
-    branches: [ master ]   # builds while you work on the branch
+    branches: [ master ]
   workflow_dispatch:                    # manual "Run workflow" button
+
+env:
+  # The one place the term-specific path lives in this file.
+  CS315_DIR: teaching/CS-315/202630/code/CS315
 
 jobs:
   build-and-check:
@@ -21,22 +23,20 @@ jobs:
       - name: Set up Node.js 24
         uses: actions/setup-node@v4
         with:
-          node-version: '24' # Forces the runner environment to Node 24
+          node-version: '24'
           cache: npm
-          cache-dependency-path: teaching/CS-315/202630/code/CS315/package-lock.json
+          cache-dependency-path: ${{ env.CS315_DIR }}/package-lock.json
 
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: .ruby-version   # single source of truth (same as deploy-uregina.yml)
           bundler-cache: true            # bundle install + gem cache, keyed on Gemfile.lock
 
-      # Build the CS315 Vite samples to static files in code/CS315/dist/ BEFORE
-      # Jekyll runs, so Jekyll copies dist/ into _site like any other static dir.
-      # VITE_BASE is the deployed URL path of dist/ on this host (github.io paths; html-proofer sees the built pages).
+      # Build the CS315 Vite samples to static files in dist/ BEFORE Jekyll
+      # runs, so Jekyll copies dist/ into _site like any other static dir.
+      # vite.config.js uses base: './', so html-proofer sees correct relative paths.
       - name: Build CS315 Vite samples
-        working-directory: teaching/CS-315/202630/code/CS315
-        env:
-          VITE_BASE: /teaching/CS-315/202630/code/CS315/dist/
+        working-directory: ${{ env.CS315_DIR }}
         run: |
           npm ci
           npx vite build

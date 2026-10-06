@@ -6,18 +6,21 @@ import { defineConfig } from 'vite';
 import { marked } from 'marked';
 
 export default defineConfig({
-  // Deployed subpath differs per host; each deploy workflow sets VITE_BASE.
-  //   uregina:   /~hepting/teaching/CS-315/202630/code/CS315/dist/
-  //   github.io: /teaching/CS-315/202630/code/CS315/dist/
-  // Local dev and plain builds fall back to '/'.
-   //base: process.env.VITE_BASE ?? '/',
+  // Relative base: asset URLs are resolved relative to each HTML file, so the
+  // same build works under /~hepting/... (uregina), github.io, and local dev
+  // without any per-host configuration.
   base: './',
   build: {
     rollupOptions: {
       input: {
         ColourCube: resolve(import.meta.dirname, 'Samples/ColourCube/app.html'),
         SVG_Zoomer: resolve(import.meta.dirname, 'Samples/SVG_Zoomer/app.html'),
-
+      },
+      output: {
+        // Jekyll silently skips files whose names start with '_' or '.', and
+        // Rollup can emit shared chunks like '_commonjsHelpers-*.js'. A fixed
+        // 'chunk-' prefix guarantees no chunk name can start with an underscore.
+        chunkFileNames: 'assets/chunk-[name]-[hash].js',
       },
     },
   },
@@ -32,7 +35,7 @@ export default defineConfig({
         const hasApp = fs.existsSync(targetDir + 'app.html');
         if (urlPath.endsWith('.md') && fs.existsSync(path.join(process.cwd(), urlPath))) {
           const md = fs.readFileSync(path.join(process.cwd(), urlPath), 'utf-8');
-          res.writeHead(200, { 'Content-Type': 'text/html' });
+          res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
           return res.end(`
             <!DOCTYPE html>
             <html lang="en">
@@ -50,7 +53,7 @@ export default defineConfig({
           if (fs.existsSync(targetDir) && fs.statSync(targetDir).isDirectory()) {
             const files = fs.readdirSync(targetDir).filter(x => fs.lstatSync(targetDir + x).isFile());
             const dirs  = fs.readdirSync(targetDir).filter(x => fs.lstatSync(targetDir + x).isDirectory());
-            res.writeHead(200, { 'Content-Type': 'text/html' });
+            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
 
             let pre = '';
             if (urlPath !== '/') { pre = '<li><a href="/">/</a></li><li><a href="..">..</a></li>'; }

@@ -10,39 +10,38 @@ on:
     - cron: "0 12 * * *"
 permissions:
   contents: write
+
+env:
+  # The one place the term-specific path lives in this file.
+  CS315_DIR: teaching/CS-315/202630/code/CS315
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Node.js 24
         uses: actions/setup-node@v4
         with:
-          node-version: '24' # Forces the runner environment to Node 24
+          node-version: '24'
           cache: npm
-          cache-dependency-path: teaching/CS-315/202630/code/CS315/package-lock.json
+          cache-dependency-path: ${{ env.CS315_DIR }}/package-lock.json
 
+      # bundler-cache: true runs `bundle install` and caches the gems, so no
+      # separate "gem install bundler" / "bundle install" steps are needed.
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: .ruby-version   # single source of truth
-          bundler-cache: true           # installs gems + caches them
+          bundler-cache: true
 
-      - name: Install Bundler
-        run: gem install bundler
-
-      - name: Install dependencies
-        run: bundle install --jobs 4 --retry 3
-
-      # Build the CS315 Vite samples to static files in code/CS315/dist/ BEFORE
-      # Jekyll runs, so Jekyll copies dist/ into _site like any other static dir.
-      # VITE_BASE is the deployed URL path of dist/ on this host (github.io).
+      # Build the CS315 Vite samples to static files in dist/ BEFORE Jekyll
+      # runs, so Jekyll copies dist/ into _site like any other static dir.
+      # vite.config.js uses base: './', so no per-host base path is needed.
       - name: Build CS315 Vite samples
-        working-directory: teaching/CS-315/202630/code/CS315
-        env:
-          VITE_BASE: /teaching/CS-315/202630/code/CS315/dist/
+        working-directory: ${{ env.CS315_DIR }}
         run: |
           npm ci
           npx vite build
@@ -52,6 +51,11 @@ jobs:
 
       - name: Generate static directory listings
         run: bundle exec rake code:listings
+
+      - name: Sanity-check the build
+        run: |
+          test -s _site/index.html || { echo "Build looks empty — refusing to deploy."; exit 1; }
+          test -s "_site/$CS315_DIR/dist/Samples/ColourCube/app.html" || { echo "Vite samples missing from _site — refusing to deploy."; exit 1; }
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3

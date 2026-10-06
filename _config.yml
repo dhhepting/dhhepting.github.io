@@ -56,6 +56,7 @@ defaults:
 email: daryl.hepting@uregina.ca
 encoding: utf-8
 exclude:
+- "**/node_modules"
 - lib
 - test
 - Rakefile
@@ -66,6 +67,8 @@ exclude:
 - scripts/
 - 0_nonweb/
 - 1_offweb/
+- "**/0_nonweb"
+- "**/1_offweb"
 - Gemfile
 - Gemfile.lock
 - about/0_nonweb/
@@ -105,26 +108,26 @@ tipue_search:
 # Deploy targets: environment-specific overrides.
 # Use `scripts/generate_config.py` to produce `_config_active.yml`
 # which merges the selected `deploy.targets.<name>` into the base config.
-deploy:
-  default: uregina
-  targets:
-    uregina:
-      url: https://www2.cs.uregina.ca
-      baseurl: /~hepting
-      webmaster_verifications:
-        google: "x1yg5SYk5hD2RE32QX-otdPrCyHgJfRhnidrzYgjONs"
-        yandex: "f4086326493c97ca"
-        bing: "B58E8EE8B63D2D6869CA610DC73CB57A"
-      include:
-        - '.htaccess'
-    github:
-      url: https://dhhepting.github.io
-      baseurl: ""
-      webmaster_verifications: {}
-    local:
-      url: http://localhost:4000
-      baseurl: ""
-      webmaster_verifications: {}
+# deploy:
+#   default: uregina
+#   targets:
+#     uregina:
+#       url: https://www2.cs.uregina.ca
+#       baseurl: /~hepting
+#       webmaster_verifications:
+#         google: "x1yg5SYk5hD2RE32QX-otdPrCyHgJfRhnidrzYgjONs"
+#         yandex: "f4086326493c97ca"
+#         bing: "B58E8EE8B63D2D6869CA610DC73CB57A"
+#       include:
+#         - '.htaccess'
+#     github:
+#       url: https://dhhepting.github.io
+#       baseurl: ""
+#       webmaster_verifications: {}
+#     local:
+#       url: http://localhost:4000
+#       baseurl: ""
+#       webmaster_verifications: {}
 title: D. H. Hepting, Ph.D.
 url: https://www2.cs.uregina.ca
 webmaster_verifications:

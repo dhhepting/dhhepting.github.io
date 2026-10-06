@@ -7,7 +7,7 @@ name: Deploy to U of R server
 
 on:
   push:
-    branches: [ master ]      # deploy automatically when main updates
+    branches: [ master ]      # deploy automatically when master updates
   workflow_dispatch:       # ...and give yourself a manual "Run workflow" button
   schedule:
     # 12:00 UTC == 06:00 Regina (fixed -06:00, no DST).
@@ -21,6 +21,10 @@ concurrency:
   group: deploy-uregina
   cancel-in-progress: true
 
+env:
+  # The one place the term-specific path lives in this file.
+  CS315_DIR: teaching/CS-315/202630/code/CS315
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -30,22 +34,20 @@ jobs:
       - name: Set up Node.js 24
         uses: actions/setup-node@v4
         with:
-          node-version: '24' # Forces the runner environment to Node 24
+          node-version: '24'
           cache: npm
-          cache-dependency-path: teaching/CS-315/202630/code/CS315/package-lock.json
+          cache-dependency-path: ${{ env.CS315_DIR }}/package-lock.json
 
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: .ruby-version   # single source of truth (see Phase 3 of the plan)
+          ruby-version: .ruby-version   # single source of truth
           bundler-cache: true            # installs gems from Gemfile.lock and caches them
 
-      # Build the CS315 Vite samples to static files in code/CS315/dist/ BEFORE
-      # Jekyll runs, so Jekyll copies dist/ into _site like any other static dir.
-      # VITE_BASE is the deployed URL path of dist/ on this host (uregina).
+      # Build the CS315 Vite samples to static files in dist/ BEFORE Jekyll
+      # runs, so Jekyll copies dist/ into _site like any other static dir.
+      # vite.config.js uses base: './', so no per-host base path is needed.
       - name: Build CS315 Vite samples
-        working-directory: teaching/CS-315/202630/code/CS315
-        env:
-          VITE_BASE: /~hepting/teaching/CS-315/202630/code/CS315/dist/
+        working-directory: ${{ env.CS315_DIR }}
         run: |
           npm ci
           npx vite build
@@ -60,9 +62,12 @@ jobs:
       # SAFETY GUARD. Your rsync uses --delete, which mirrors _site/ onto the
       # server: anything not in _site/ gets deleted on titan. If a build ever
       # silently produces an empty/broken _site/, --delete would wipe your live
-      # site. This line refuses to deploy unless a real index.html exists.
+      # site. These checks refuse to deploy unless the site root AND the Vite
+      # output exist.
       - name: Sanity-check the build
-        run: test -s _site/index.html || { echo "Build looks empty — refusing to deploy."; exit 1; }
+        run: |
+          test -s _site/index.html || { echo "Build looks empty — refusing to deploy."; exit 1; }
+          test -s "_site/$CS315_DIR/dist/Samples/ColourCube/app.html" || { echo "Vite samples missing from _site — refusing to deploy."; exit 1; }
 
       # Hand the runner the deploy key and teach it to trust titan.
       - name: Set up SSH
