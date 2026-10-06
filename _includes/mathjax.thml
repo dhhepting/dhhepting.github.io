@@ -1,0 +1,23 @@
+{%- comment -%}
+  MathJax v3 for Creole blocks. Typesets ONLY inside .creole-block, so stray
+  "$" or backslashes elsewhere on the page are never interpreted as math.
+  Include once per page, only when the page renders a creole block, e.g.
+    {% if page_has_creole %}{% include mathjax.html %}{% endif %}
+  Delimiters match the urcourses wiki convention: \( \), \[ \], $$ $$.
+{%- endcomment -%}
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    startup: { typeset: false }
+  };
+  window.addEventListener('load', function () {
+    var blocks = Array.from(document.querySelectorAll('.creole-block'));
+    if (blocks.length && window.MathJax && MathJax.startup) {
+      MathJax.startup.promise.then(function () { return MathJax.typesetPromise(blocks); });
+    }
+  });
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
