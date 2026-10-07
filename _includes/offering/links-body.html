@@ -13,7 +13,9 @@
 
 {%- if off.mdays -%}
   {%- capture ics_path -%}/teaching/{{ jcrs_id }}/{{ crs_sem }}/meetings.ics{%- endcapture -%}
-<li><a href="{{ ics_path | relative_url }}">Course calendar (.ics)</a></li>
+  <li><a href="{{ ics_path | relative_url }}">Course calendar (.ics)</a></li>
+{%- else -%}
+  ICS calendar file not available
 {%- endif -%}
 
 {%- if off.urc_course_id -%}
