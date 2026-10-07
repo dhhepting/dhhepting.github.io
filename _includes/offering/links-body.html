@@ -1,36 +1,37 @@
-{%- assign off = site.data.teaching[jcrs_id][crs_sem].offering %}
+{%- assign sem = site.data.teaching[jcrs_id][crs_sem] -%}
+{%- assign off = sem.offering -%}
 
-  {%- assign off = site.data.teaching[jcrs_id][crs_sem].offering %}
+{%- capture syll_path -%}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{%- endcapture -%}
+{%- assign syll_file = site.static_files | where: "path", syll_path | first -%}
+<li>
+  {%- if syll_file -%}
+    <a href="{{ syll_path | relative_url }}" target="_blank" rel="noopener">Syllabus (pdf)</a>
+  {%- else -%}
+    Syllabus (pdf): to be posted
+  {%- endif -%}
+</li>
 
-        {%- capture syll_url -%}/assets/teaching/pdf/{{ off_id }}_syllabus.pdf{%- endcapture -%}
-        {%- assign has_syll = syll_url | file_exists? -%}
-        <li>
-          {%- if has_syll -%}
-          <a href="{{ syll_url | relative_url }}" target="_blank">
-            Syllabus (pdf)
-          </a>
-          {%- else -%}
-          Syllabus (pdf): to be posted
-          {%- endif -%}
-        </li>
-        {%- if off.mdays -%}
-        <li>
-          {%- capture ics_url -%}/teaching/{{ jcrs_id }}/{{ crs_sem }}/meetings.ics{%- endcapture -%}
-          <a href="{{ ics_url | relative_url }}">Course calendar (.ics)</a>
-        </li>
-        {%- endif -%}
-        <li>
-          <a href="https://urcourses.uregina.ca/course/view.php?id={{ off.urc_course_id }}" target="_blank">
-            UR Courses
-          </a>
-        </li>
-{%- assign linkfile = site.data.teaching[jcrs_id][crs_sem].links %}
-{%- if linkfile -%}
-  {%- for ll in linkfile -%}
-  <li>
-    <a href="{{ ll.url }}">
-      {{ ll.desc }}
-    </a>
-  </li>
-  {% endfor %}
-{% endif %}
+{%- if off.mdays -%}
+  {%- capture ics_path -%}/teaching/{{ jcrs_id }}/{{ crs_sem }}/meetings.ics{%- endcapture -%}
+<li><a href="{{ ics_path | relative_url }}">Course calendar (.ics)</a></li>
+{%- endif -%}
+
+{%- if off.urc_course_id -%}
+<li>
+  <a href="https://urcourses.uregina.ca/course/view.php?id={{ off.urc_course_id }}" target="_blank" rel="noopener">UR Courses</a>
+</li>
+{%- endif -%}
+
+{%- for ll in sem.links -%}
+<li>
+  {%- if ll.url -%}
+    {%- if ll.url contains '://' -%}
+      <a href="{{ ll.url }}" target="_blank" rel="noopener">{{ ll.desc }}</a>
+    {%- else -%}
+      <a href="{{ ll.url | relative_url }}">{{ ll.desc }}</a>
+    {%- endif -%}
+  {%- else -%}
+    {{ ll.desc }}
+  {%- endif -%}
+</li>
+{%- endfor -%}
