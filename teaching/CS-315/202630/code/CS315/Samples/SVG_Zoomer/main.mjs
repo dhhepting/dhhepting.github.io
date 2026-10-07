@@ -47,16 +47,11 @@ if (!sharpGL || !frozenGL) {
   throw new Error('WebGL2 is not available in this browser.');
 }
 
-// --- Shaders (one program per context; programs cannot be shared) ---------
-// const pub = import.meta.env
-//   ? `${import.meta.env.BASE_URL}SVG_Zoomer/`                    // Vite: dev or build
-//   : new URL('../../public/SVG_Zoomer/', import.meta.url).href;  // raw static copy
-
-// const pub = './';   // shaders/ sits next to the page
 const pub = import.meta.env
-  ? './'                                                    // Vite dev/build: shaders sit beside the page
+  ? './'     // Vite dev/build: shaders sit beside the page
   : new URL(/* @vite-ignore */ '../../public/Samples/SVG_Zoomer/', import.meta.url).href;  // raw copy
-async function fetchText(url) {
+
+  async function fetchText(url) {
   const r = await fetch(url);
   if (!r.ok) throw new Error(`Failed to load ${url}: ${r.status}`);
   return r.text();
