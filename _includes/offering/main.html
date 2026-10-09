@@ -245,10 +245,14 @@
       <p></p>
       {%- endif -%}
 
+      <!-- crs={{ crs_sbj }}|{{ crs_nbr }}|{{ crs_sem }} show_exams={{ show_exams }}
+{% for f in site.static_files %}{% if f.extname == ".pdf" %}{{ f.path }}
+{% endif %}{% endfor %} -->
       {%- if show_exams -%}
       <h3 id="ssExams" class="bg-dark text-white">
         Exams
       </h3>
+      
         {%- include offering/exams-body.html -%}
       <p></p>
       {%- endif -%}

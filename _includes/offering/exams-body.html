@@ -1,80 +1,31 @@
-{% comment %}
-  {% include teaching/url.html %}
-{% endcomment %}
-{% assign crsvars = crs_nbr %}
-{%- assign sepnbrs = crs_nbr | split: "+" -%}
-{%- for n in sepnbrs %}
-  {% capture crsvars %}{{ crsvars }}#{{ n }}{% endcapture %}
-{% endfor %}
+{%- assign nbrs = crs_nbr | split: "+" -%}
+{%- assign pdfs = site.static_files
+    | where_exp: "f", "f.extname == '.pdf'"
+    | where_exp: "f", "f.path contains '/assets/teaching/pdf/'"
+    | where_exp: "f", "f.basename contains '_exam-'" -%}
 
-{%comment %}if off_now == true endcomm
-{% if 0 %}
-<h4>
-  In {{ crs_sem }}:
-</h4>
-  {%- assign planfile = site.data.teaching[jcrs_id][crs_sem]plan -%}
-  {%- for entry in planfile -%}
-    {%- if entry[0] == 'offering' -%}
-    <ul>
-      {%- if entry[1].midterm_exam -%}
-      <li>
-        Midterm:
-        {%- for me in entry[1].midterm_exam -%}
-        <a href="{{ entry[1].midterm_urc }}" target="_blank">
-          &nbsp;{{ me }}
-        </a>
-        {%- endfor -%}
-      </li>
-      {%- endif -%}
-      {%- if entry[1].final_exam -%}
-      <li>
-        Final: 
-        <a href="{{ entry[1].final_urc }}" target="_blank">
-          {{ entry[1].final_exam }}
-        </a>
-      </li>
-      {%- endif -%}
-    </ul>
-    {%- endif -%}
-    {%- break -%}
-  {%- endfor -%}
-{%- endif -%}
-{% endcomment%}
-
-{% assign prevexams = "" %}
-{% assign cv = crsvars | split: '#' %}
-{%- for n in cv %}
-  {% capture exam_url %}/assets/teaching/pdf/{{ crs_sbj }}-{{ n }}{% endcapture %}
-  {% for sp in site.static_files reversed %}
-    {% if sp.path contains exam_url and sp.path contains "exam" %}
-      {% capture prevexams %}{{ prevexams }}#{{ sp.path }}{% endcapture %}
-    {% endif %}
-  {% endfor %}
+{%- assign exam_files = "" | split: "" -%}
+{%- for n in nbrs -%}
+  {%- capture key -%}{{ crs_sbj }}-{{ n }}{%- endcapture -%}
+  {%- assign hits = pdfs | where_exp: "f", "f.basename contains key" -%}
+  {%- assign exam_files = exam_files | concat: hits -%}
 {%- endfor -%}
-{%- if prevexams.size > 0 -%}
-{%comment%}
+{%- assign exam_files = exam_files | uniq | sort: "basename" | reverse -%}
 
-<h4>
-  <!-- From previous offerings: -->
-  Previous exams
-</h4>
-{% endcomment%}
+{%- if off.final_exam -%}
+<p><strong>Final exam:</strong> {{ off.final_exam }}</p>
+{%- endif -%}
+
+{%- if exam_files.size > 0 -%}
+<h5>Previous exams</h5>
 <ul>
-  {% assign epaths = prevexams | split: '#' | uniq %}
-  {% for i in (0..epaths.size) %}
-    {%- if epaths[i].size > 0 -%}
-      {%- assign efn = epaths[i] | split: "/" | last | remove: ".pdf"-%}
-      {%- assign efn_parts = efn | split: "_" %}
-      {%- assign esem = efn_parts[0] | split: "-" %}
-      {%- assign etype = efn_parts[1] | split: "-" %}
-      {%- if 1 -%} {% comment %} esem[2] != crs_sem -%} {% endcomment%}
-  <li>
-    <a href="{{ epaths[i] | relative_url }}">
-      {{ esem[2] }} {{ etype[2] | capitalize }}
-    </a>
-  </li>
-      {%- endif -%}
-    {%- endif -%}
+  {%- for f in exam_files -%}
+    {%- assign parts = f.basename | split: "_" -%}
+    {%- assign sem   = parts[0] | split: "-" | last -%}
+    {%- assign kind  = parts[1] | split: "-" | last | capitalize -%}
+    <li><a href="{{ f.path | relative_url }}">{{ sem }} {{ kind }}</a></li>
   {%- endfor -%}
 </ul>
+{%- elsif off.final_exam == nil -%}
+<p><em>No exams posted.</em></p>
 {%- endif -%}

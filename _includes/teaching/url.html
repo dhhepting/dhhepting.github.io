@@ -1,69 +1,36 @@
+{%- assign url_parts = page.url | remove: ".html" | split: "/" -%}
+{%- for part in url_parts -%}
+  {%- if part == "teaching" -%}
+    {%- assign crs_idx = forloop.index -%}
+    {%- assign sem_idx = forloop.index | plus: 1 -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign crs_parts = url_parts[crs_idx] | split: "-" -%}
+{%- assign crs_sbj = crs_parts[0] -%}
+{%- assign crs_nbr = crs_parts[1] -%}
+{%- assign crs_sem = url_parts[sem_idx] -%}
+{%- assign crs_id = crs_sbj | append: "-" | append: crs_nbr -%}
+{%- assign jcrs_id = crs_id | replace: "+", "_" -%}
+{%- assign off_id = crs_id | append: "-" | append: crs_sem -%}
+{%- assign joff_id = off_id | replace: "+", "_" -%}
 
-  {% capture purl %}{{ page.url | remove: ".html" }}{% endcapture %}
-  {% assign url_parts = purl | split: '/' %}
-  {% for u in (0..url_parts.size) %}
-    {% if url_parts[u] == "teaching" %}
-      {% assign crs_idx = u | plus: 1 %}
-      {% assign sem_idx = u | plus: 2 %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-  {% assign crs_parts = url_parts[crs_idx] | split: '-' %}
-  {% assign crs_sbj = crs_parts[0] %}
-  {% assign crs_nbr = crs_parts[1] %}
-  {% assign crs_sem = url_parts[sem_idx] %}
-  {% capture crs_id %}{{crs_sbj}}-{{crs_nbr}}{% endcapture %}
-  {% capture jcrs_id %}{{crs_id | replace: "+", "_"}}{% endcapture %}
-  {% for c in site.data.teaching.offerings %}
-    {% if crs_id == c.id and crs_sem == c.semester %}
-      {% assign crs_urc = c.urc %}
-      {% comment %} URC: {{ crs_urc }}{% endcomment %}
-    {% endif %}
-  {% endfor %}
-  {% capture off_id %}{{crs_id}}-{{crs_sem}}{% endcapture %}
-  {% capture joff_id %}{{off_id | replace: "+", "_"}}{% endcapture %}
+{%- for c in site.data.teaching.offerings -%}
+  {%- if crs_id == c.id and crs_sem == c.semester -%}
+    {%- assign crs_urc = c.urc -%}{%- break -%}
+  {%- endif -%}
+{%- endfor -%}
 
-  {% assign today_Y = site.time | date: "%y" | plus: 0 %}
-  {% assign today_M = site.time | date: "%m" | plus: 0 %}
-  {% assign today_D = site.time | date: "%d" | plus: 0 %}
-
-  {% assign currsem = "" %}
-  {% for sem in site.data.teaching.semesters %}
-    {% assign sem_Y = sem.term-end | date: "%y" | plus: 0 %}
-    {% assign sem_M = sem.term-end | date: "%m" | plus: 0 %}
-    {% assign sem_D = sem.term-end | date: "%d" | plus: 0 %}
-    {% if today_Y == sem_Y %}
-      {% if today_M == sem_M %}
-        {% if today_D <= sem_D %}
-          {% assign currsem = sem.semester %}
-          {% break %}
-        {% endif %}
-      {% elsif today_M < sem_M %}
-        {% assign currsem = sem.semester %}
-        {% break %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-
-{% comment %}
-  {% capture today%}{{ "now" | date: "%Y-%m-%d" }}{% endcapture %}
-  {% assign tdate = today | split: '-' %}
-  {% assign sss = 0 %}
-  {% assign month = tdate[1] | plus: 0 %}
-  {% if month >= 1 and month <= 4 %}
-    {% assign sss = 10 %}
-  {% endif %}
-  {% if month >= 5 and month <= 8 %}
-    {% assign sss = 20 %}
-  {% endif %}
-  {% if month >= 9 and month <= 12 %}
-    {% assign sss = 30 %}
-  {% endif %}
-  {% capture now_sem %}{{ tdate[0] }}{{ sss }}{% endcapture %}
-{% endcomment %}
-  {% assign now_sem = currsem %}
-  {% if now_sem == crs_sem %}
-    {% assign off_now = true %}
-  {% else %}
-    {% assign off_now = false %}
-  {% endif %}
+{%- assign today_n = site.time | date: "%Y%m%d" | plus: 0 -%}
+{%- assign currsem = "" -%}
+{%- assign sems = site.data.teaching.all.semesters -%}
+{%- if sems -%}{%- assign sems = sems | sort: "term-end" -%}{%- endif -%}
+{%- for sem in sems -%}
+  {%- assign end_n = sem.term-end | date: "%Y%m%d" | plus: 0 -%}
+  {%- if end_n >= today_n -%}
+    {%- assign currsem = sem.semester -%}{%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign now_sem = currsem -%}
+{%- assign off_now = false -%}
+{%- if now_sem == crs_sem -%}{%- assign off_now = true -%}{%- endif -%}
