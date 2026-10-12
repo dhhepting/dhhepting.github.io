@@ -1,4 +1,4 @@
-import './style.css';
+import './assets/style.css';
 
 // import vertexSource from './shaders/triangle.vert?raw';
 // import colorSource from './shaders/color.frag?raw';
