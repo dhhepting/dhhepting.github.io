@@ -21,11 +21,6 @@ async function fetchText(url) {
   const r = await fetch(url);
   if (!r.ok) throw new Error(`Failed to load ${url}: ${r.status}`);
   return r.text();
-
-async function fetchText(url) {
-  const r = await fetch(url);
-  if (!r.ok) throw new Error(`Failed to load ${url}: ${r.status}`);
-  return r.text();
 }
 
 const [vertexSource, colorSource, barycentricSource, fragcoordSource] = await Promise.all([
