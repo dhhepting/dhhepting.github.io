@@ -1,9 +1,9 @@
 import './style.css';
 
-import vertexSource from './shaders/triangle.vert?raw';
-import colorSource from './shaders/color.frag?raw';
-import barycentricSource from './shaders/barycentric.frag?raw';
-import fragcoordSource from './shaders/fragcoord.frag?raw';
+// import vertexSource from './shaders/triangle.vert?raw';
+// import colorSource from './shaders/color.frag?raw';
+// import barycentricSource from './shaders/barycentric.frag?raw';
+// import fragcoordSource from './shaders/fragcoord.frag?raw';
 
 import { ShaderDemo } from './ShaderDemo.mjs';
 import { DISPLAY_SIZE, HANDLE_RADIUS, drawOverlay } from './overlay.mjs';
@@ -16,6 +16,19 @@ import {
 const pub = import.meta.env
   ? './'     // Vite dev/build: shaders sit beside the page
   : new URL(/* @vite-ignore */ '../../public/Samples/ShaderStages/', import.meta.url).href;  // raw copy
+
+async function fetchText(url) {
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`Failed to load ${url}: ${r.status}`);
+  return r.text();
+}
+
+const [vertexSource, colorSource, barycentricSource, fragcoordSource] = await Promise.all([
+  fetchText(`${pub}shaders/triangle.vert.glsl`),
+  fetchText(`${pub}shaders/color.frag.glsl`),
+  fetchText(`${pub}shaders/barycentric.frag.glsl`),
+  fetchText(`${pub}shaders/fragcoord.frag.glsl`),
+]);
 
 // ---- Fragment shader choices ------------------------------------------------
 const FRAGMENT_SHADERS = {
