@@ -1,4 +1,4 @@
-# Vertex and fragment shaders, working together (WebGL2)
+# ShaderStages (WebGL2): see vertex and fragment shaders working together
 
 Drag the three vertices, change the image size, and hover a pixel to follow one
 fragment from the vertex shader's outputs to the color the GPU wrote.
@@ -9,18 +9,16 @@ fragment from the vertex shader's outputs to the color the GPU wrote.
     npm run dev      # then open the printed localhost URL
     npm run build
 
-Shaders live in `src/shaders/*.vert|*.frag` and are imported as strings with
-Vite's `?raw` suffix, so there is no inline shader text in the JavaScript.
-ES modules need a server; opening `index.html` from `file://` will not work.
+Shaders live in `./shaders/*.vert.glsl|*.frag.glsl` and are fetched as strings, so there is no inline shader text in the JavaScript.
+ES modules need a server; opening `app.html` from `file://` will not work.
 
 ## Layout
 
-- `Common/MV.mjs`, `Common/initShadersJS.mjs`  course libraries, unchanged
-- `src/ShaderDemo.mjs`  DOM-free renderer (programs via `initShaders`, VAO, buffers, readback)
-- `src/main.mjs`        controller: DOM, pointer events, readouts
-- `src/overlay.mjs`     2D overlay: grid, handles, hovered-pixel weights
-- `src/math.mjs`        CPU mirror of vertex transform and rasterizer interpolation (uses MV.mjs)
-- `src/shaders/`        `triangle.vert`, `color.frag`, `barycentric.frag`, `fragcoord.frag`
+- `../../Common/MV.mjs`, `../../Common/initShadersJS.mjs`  course libraries, unchanged
+- `./ShaderDemo.mjs`  DOM-free renderer (programs via `initShaders`, VAO, buffers, readback)
+- `./main.mjs`        controller: DOM, pointer events, readouts
+- `./overlay.mjs`     2D overlay: grid, handles, hovered-pixel weights
+- `./math.mjs`        CPU mirror of vertex transform and rasterizer interpolation (uses MV.mjs)
+- `./shaders/`        `triangle.vert.glsl`, `color.frag.glsl`, `barycentric.frag.glsl`, `fragcoord.frag..glsl`
 
-To share one `Common/` between projects, move it up a level and change the
-`../Common/` imports.
+`../../Common/` is shared between projects.
