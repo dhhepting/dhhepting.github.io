@@ -1,10 +1,3 @@
-import './style.css';
-
-// import vertexSource from './shaders/triangle.vert?raw';
-// import colorSource from './shaders/color.frag?raw';
-// import barycentricSource from './shaders/barycentric.frag?raw';
-// import fragcoordSource from './shaders/fragcoord.frag?raw';
-
 import { ShaderDemo } from './ShaderDemo.mjs';
 import { DISPLAY_SIZE, HANDLE_RADIUS, drawOverlay } from './overlay.mjs';
 import { vec2, rotateZ } from '../../Common/MV.mjs';
