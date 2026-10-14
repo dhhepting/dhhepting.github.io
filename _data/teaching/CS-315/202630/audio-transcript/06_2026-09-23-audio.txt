@@ -1,0 +1,127 @@
+DH: Okay, so we have the meeting going there. Welcome to Meeting 6. of 3:15. This semester. 6 of 23 meetings.
+
+Looks like maybe it's a new screen.
+
+So I thought today I'd start by. Having a peek at some of the slides that come with the textbook. An interactive computer graphics. And then look at some of the code as well. And we'll see how we can modernize it. Because the code hasn't been changed for a long time. So they still use VAR. And some other. Anachronisms, I think.
+
+So if you're here, you don't need to join the Zoom meeting.
+
+Okay, so let's take a look at. The code examples. And we'll look at the basic structure. From the textbook and then we'll. We'll look at some… We'll talk about. Well, we won't talk about the… Talk about shaders, I guess.
+
+So any questions from the last day or the last two days?
+
+Okay, let's just go through them all.
+
+So this is generating… A Sierpinski triangle. Benoit Mandelbrot called it a Stravinsky gasket. I think because it wouldn't be a very good gasket to. It has too many holes in it. at different levels. So has anyone heard of the chaos game and fractals? Okay.
+
+[student]: Can you tell us what you know about it?
+
+DH: No? Okay, you've heard about it though. Okay.
+
+Let's look at the source before I get too far afield here. Okay, so there are 2 shaders here that we're dealing with. in… So we're creating a GL context. And then we compile shader programs. So we have a fragment shader and a vertex shader.
+
+You can think of fragments. as being potential pixels. So what we're doing here in the. Vertex shader, first of all. It's so that we've got. Input of a position. So a position. is an attribute. So it's connected to… or Javascript code for this. Can you hear me in the back okay? Okay. So that's kind of a naming convention. So remember the connection that we're using. So we're getting a four position. 4 vector for the. position of the vertex. So then we're down here, we're setting the point size. And the position. So that we take the position from the. and the value in the JavaScript that's connected.
+
+And then the fragment shader.
+
+We're passing out F color for a fragment color. So the fragment color here is set as what color? Right, right. Okay, yes, so it's. R is one. Green is 0, B is 0, and A is 1. So it's… opaque red.
+
+Okay, um… So I won't answer anybody else. So I'll just let the doorbell ring and say nobody's home.
+
+Okay.
+
+So this is the Annette. So we set up… We use a DOM call to get the canvas. And said, is it a JavaScript variable? And then we get a WebGL2 context from it. And then if WebGL2 isn't available, we flash an alert. So 1st we initialize. I'm surprised how loud people are going up the stairs. Okay, so… If we change one of these vertices, then. Then it would have a different shape. Of a triangle.
+
+So this is… We're getting U and V by. Adding the vertices.
+
+Anyway, so we get a starting point here. In this line. And then we add it to our array by doing a push. to the JavaScript array positions. And then… We do go through the length. Pardon me, we go through adding to the length. until we reach num positions, which is. 5,000. Which isn't nearly enough. to generate a good approximation.
+
+So in this case, we're going inside the loop. We're picking… We're picking J at random. So J is an index into the vertices. So we pick a vertex at random. Either zero, one, or two. We multiply by a half. And then we add that to the array. So this gives us an array of… of points. of 5,000 points. So the idea of the chaos game, it's a simple way to make an approximation to what's called a fractal shape. How many people are familiar with fractals? The word… How about Mandelbrot? No? Okay. And you probably wouldn't know Barnsley. He's the one who —. coined the… the chaos game. So the idea is. He described it as… If you have a… If I throw into the field. Thinking of the World Cup. That was over the last summer. When the ball gets thrown in, there might be… Some jostling for control, and then finally. The ball becomes the regular pattern. emerges as they're under the it's under the control of. The players. I don't like that analogy so much because. Anyway… be because we can. Pick a starting point as one of the. Fixed points are the transformations. And then… And then we don't have to worry about. a few… Getting rid of the first few of them. before the pattern emerges. But… The surprising thing about the chaos game is that. And picking transformations at random and applying them. that you get it to converge to a shape at all. Anyway… Okay, so now we have the data that we're going to use. That was the idea of doing the positions. And then… So we set up the viewport. So we're mapping the canvas. Onto the screen. You said a clear color of… Wait. So then we load the shaders and compile the program. So we're using the program defined by the shaders. We load the data into the GPU. There used to be a company called SGI. No, Saskatchewan Government Insurance. but Silicon Graphics Incorporated. And we had. We had physical workstations. In the graphics lab here. But… Moving away from workstations to commodity graphics cards. That's when Nvidia started. And so now Nvidia is known for AI chips. But they're really the graphics chips.
+
+Anyway. It's a little history there. So they have these. GPUs. So what we do is we create a buffer. And we bind the buffer. And we store the data. into the buffer and say that it's going to be used for static draw. So then this last bit is associating the shader variables with the data buffer. So we had a position. So we're defining position location. And then we're getting a pointer to the vertex attribute.
+
+Okay. Bless you.
+
+So we have them pointing at the same place. So the shader is pointing to the data. And then we… Enable the vertex attribute array. We're at the position location. and then we call render. It renders clear the color. and draw the arrays. Okay. So we're drawing points. from… Started point. Zero, and we go to the number of position. That we've stored, so we have 5,000. So this isn't an animation. But we could imagine we could add an interface to. Manipulate the vertices and see a change in. In time.
+
+Does that make sense?
+
+So we don't have any… information about viewing parameters. Why does this work?
+
+Why does this code work to present something on the screen?
+
+So it has to do with. to the default setup, so… The clip coordinates.
+
+So what we see is the region of space from minus 1. And last one.
+
+We can think of assistance. X, Y, and Z.
+
+That makes sense a lot as long as we have. coordinates that show up in this area. We will… Got something explained.
+
+X and Y. So which? Which direction is Z? It's positive, Zed. So this is positive Y, and this is positive X. Which is more correct. Positive this way. or positive this way.
+
+[student]: What's the difference?
+
+DH: Yeah? Go ahead. SPEAKER 1: But yeah. Thank you. Yeah. So I'm wondering, does it make a difference whether. Positive Z goes into the board or out from the board? Yeah, Cars. No, I think OpenGL is the CS negative coming towards the camera by default, but other OpenGL specifications do it. right hand system, left hand systems. And you know. You don't say Zed? Zed. Zed in, Zed out. Sorry. I have to hang on to our Canadian. Anyway, in this time of… Turmoil. Yeah, so you mentioned right-handed and left-handed coordinates. What I remember as a mnemonic is if we have. X. Cross Y. And then thumb points in the direction of positive z. So if we put Z going into the board. X cross Y. That's the left hand. And then we do X cross Y and… Some pointing out that's a right-handed system. So it's… It's not as big an issue as it once was. I feel left-handed and right-handed court systems. I think you just have to be… aware of using one or the other. Does that make sense? Okay, so the test. to experiment. We could… Modify… the vertices so that there's some of them are outside the minus one plus one range. And X, Y, and Z. Yeah, go ahead. Okay.
+
+So here we're doing actual triangles. and transforming them. He does something strange. As far as I'm concerned. and subdividing the triangles. Well, it's… Triangle subdivision isn't strange. It's actually… He used to generate terrains at one point. So if we take a triangle.
+
+So why is a triangle a useful primitive in graphics? As opposed to a quadrilateral. What property does the triangle have? that a quadrilateral might not have.
+
+So all the points would be coplanar in a triangle. I mean, the triangle defines a plane. But a quadrilateral could have one of them. One of the vertices not on the plane.
+
+In this case, we… We do, uh… Subdivision. And then we get smaller and smaller triangles. and see them. rendered here is written red. So is anyone familiar with Star Trek The Wrath of Khan, the movie? So… Benoit Mandelbrot told me. that he got… He was able to get his trip to that movie expense because he was doing research. about the triangle subdivision method used to generate the Genesis sequence in the movie.
+
+Okay.
+
+No, I think this one is, believe it or not, a 3D. Gasket. Or a tetrahedron. Pardon me. It's not a triangle, it's a tetrah.
+
+This is a little easier to see compared to the other one. So… Each face is a different color. Red, green, and blue.
+
+So what do you notice about this one? Compared to the other one with the points. in 3D. Is it easier to… perceive the 3 dimensional shape in this one.
+
+So if you're trying to create a parasympathologist, we need to decide. What's facing out? And what is hidden?
+
+I don't think we have any viewing specified here. Let me check. No, it's just the positions. So in this case, what's different? Between the vertex shader. The last one and the.
+
+And the last one we looked at. The color was assigned in… in the fragment shader. Here, it's… We get the vertex color. from the attribute color. So we've attached. So these are parameters we've attached to our. In our JavaScript program. And so we're passing. the attribute color. So that means. The color we've assigned to that vertex. Out to. used in the fragment shader. Does that make sense?
+
+So in WebGL2, this is the way to turn on a depth test. Something called a Z buffer.
+
+And here we're going through and assigning colors. Making the tetrahedron. With each side a different color.
+
+So otherwise it's basically the same. So if you wanted to look at. Pretend that we had… not pretend, but a model of a different view of the tetrahedron. We'd have to… Model the camera. And are there any questions? elements as well. So not only decide what's. Visible.
+
+So we need to… Create a… It means to move the camera and describe its behavior.
+
+So the nice thing is that these these can be. handled with. That's true. Transformation matrices. Put in sequence. So we'll go over that in more detail next. Meeting or two. But everything that we want to have occur is our picture that we're generating. needs to be handled in our programming. So when I take a picture of the board. How can I describe my… the viewing parameters that I'm. going to use.
+
+So then I took a landscape picture, and if I wanted to take a portrait. Or do some avant-garde. So the aging pictures of the blackboard. I could have a different. Viewing angle. So what do I need to specify? The position of the camera. And how it's looking at the scene. So if I think… and where the camera is. That's 1 point. And the board that I'm looking at. That's another. But then the direction that's pointing up is a —. It's a variable that… It's a degree of freedom there. So then I want to also specify. The up vector for the camera. Does that make sense? So I can rotate the camera. Once I have the my position and. and the position I'm looking at, then I can rotate this to. Lock into a particular view. Yeah. What do you mean by degree of freedom? Well… So you can imagine. a vector from. The opposite or from the loop. between the position I'm looking at on the board and the camera, that's one direction. That's one axis. So I need to specify three axes. So the way it's done is if I specify an up vector. For the camera, then. That gives me a second axis. And then I can do a cross product between those other two axes to get a third axis. Does that make sense?
+
+Here's a bit of interaction with.
+
+Lose a triangle.
+
+So you've seen the difference here is. So we have the vertices. We can apply different means to. To interpret them, so. Down here in render, draw arrays. We saw GL points for one of them. GL triangle. And here's a triangle fan. And then… There's also a triangle strip. So the idea is. We can save, we can economize. by specifying… A way to interpret the vertices. That saves the need to duplicate them. Because if we wanted to specify… Two triangles like we do here. We need 6 vertices. But here we're working with four.
+
+We make a fan. So this vertex. So our starting point, let me draw one triangle here. and then the second triangle next to it. So you only need to add one. on Vertex. The second triangle to be formed. Does that make sense? And a triangle strip.
+
+It's a subtle difference. They're drawing squares. As we get more complicated. and make more… The differences and different strengths are more obvious. we can economize on vertices of data. So that. That's important. We're not dealing with. Four for deceased, many of you. Four million. Okay.
+
+That's not it.
+
+My apologies for that.
+
+Do you have a choice of password or QR code? We already did this before.
+
+Okay.
+
+So you can't log into our courses. I can't log in right now, but I couldn't log in for the past 10 years. Okay.
+
+You're welcome.
+
+Oh.
+
+So it works.
+
+Okay, so… Thank you for today. We're out of time. Thanks for today. Let me know how the wiki stuff is going. Umm… So have a look at this material we didn't get through today. on… On the website. The things worked in for today's outline. We'll take a look for next time. Thanks. Have a good weekend. Take care.
