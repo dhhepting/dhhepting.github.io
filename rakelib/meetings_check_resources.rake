@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'yaml'
-require 'meeting_resources_checker'
+require 'lib/meeting_resources_checker'
 
 namespace :meetings do
   desc 'Warn about past meetings lacking photos or a cleaned transcript ' \
