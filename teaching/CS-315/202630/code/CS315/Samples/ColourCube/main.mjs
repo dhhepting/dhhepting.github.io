@@ -11,8 +11,8 @@ import * as mat4 from './matrix.mjs';
 // implemented the matching function; flip one on to try your work. Turning a
 // flag on before implementing its function will throw a clear error naming the
 // exercise (press M to cycle back to a working mode). ---
-const ORTHOGRAPHIC_HEXAGON = false; // EXERCISE 1: needs mat4.ortho
-const SPIN_HUE_WHEEL = false; // EXERCISE 2: needs mat4.rotationAxis
+const ORTHOGRAPHIC_HEXAGON = true; // EXERCISE 1: needs mat4.ortho
+const SPIN_HUE_WHEEL = true; // EXERCISE 2: needs mat4.rotationAxis
 
 const canvas = document.querySelector('#gl-canvas');
 const caption = document.querySelector('#caption');
@@ -60,7 +60,7 @@ let modeIndex = 0;
 function updateCaption() {
   if (!caption) return;
   caption.textContent =
-    `mode ${modeIndex + 1}/${MODES.length}: ${MODES[modeIndex].label}` +
+    `mode ${modeIndex + 1}/${MODES.length}: ${MODES[modeIndex].label}` + '  ortho: ' + ORTHOGRAPHIC_HEXAGON + ' spin:  ' + SPIN_HUE_WHEEL + '  '
     '   ·   press M or Space to cycle';
 }
 updateCaption();

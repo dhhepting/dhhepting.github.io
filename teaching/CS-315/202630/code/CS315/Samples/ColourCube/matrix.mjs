@@ -148,7 +148,29 @@ export function lookAt(eye, center, up) {
 // Note the -2/(f-n) sign on the z term.
 export function ortho(left, right, bottom, top, near, far) {
   // TODO: build and return the column-major matrix above.
-  throw new Error('ortho() not implemented yet — see EXERCISE 1 in matrix.js');
+  // throw new Error('ortho() not implemented yet — see EXERCISE 1 in matrix.js');
+  const m = new Float32Array(16);
+  // column 0
+  m[0] = 2.0 / (right - left); // [col * 4 + row] = 0 * 4 + 0 (0,0)
+  m[1] = 0; // [col * 4 + row] 0 * 4 + 1 (1,0) 
+  m[2] =  0; // [col * 4 + row] 0 * 4 + 2 (2,0)   
+  m[3] =  0; // [col * 4 + row] 0 * 4 + 3 (3,0) 
+  // column 1
+  m[4] =  0; // [col * 4 + row] 1 * 4 + 0 (0,1) 
+  m[5] =  2.0 / (top - bottom) ; // [col * 4 + row] 1 * 4 + 1 (1,1)
+  m[6] =  0; // [col * 4 + row] 1 * 4 + 2 (2,1)
+  m[7] =  0; // [col * 4 + row] 1 * 4 + 3 (3,1)
+  // column 2
+  m[8] =  0; // [col * 4 + row] 2 * 4 + 0 (0,2) 
+  m[9] =  0; // [col * 4 + row] 2 * 4 + 1 (1,2)
+  m[10] = -2.0 / (far - near); // [col * 4 + row] 2 * 4 + 2 (2,2)
+  m[11] =  0; // [col * 4 + row] 2 * 4 + 3 (3,2)
+  // column 3
+  m[12] = -(right + left) / (right - left);  // [col * 4 + row] 3 * 4 + 0 (0,3) 
+  m[13] = -(top + bottom) / (top - bottom);  // [col * 4 + row] 3 * 4 + 1 (1,3)
+  m[14] = -(far + near) / (far - near);  // [col * 4 + row] 3 * 4 + 2 (2,3) 
+  m[15] = 1; // [col * 4 + row] 3 * 4 + 3 (3,3) 
+  return m;
 }
 
 // EXERCISE 2 — Rotation by `rad` about an ARBITRARY axis (Rodrigues' formula).
@@ -176,5 +198,23 @@ export function rotationAxis(axis, rad) {
   const t = 1 - c;
   // TODO: build and return the column-major rotation matrix above.
   // (x, y, z, c, s, t are ready to use.)
+  const m = new Float32Array(16);
+  m[0] = t * x * x + c ;  // [col * 4 + row] = 0 * 4 + 0 (0,0)
+  m[1] = t * x * y + s * z; // [col * 4 + row] = 0 * 4 + 1 (1,0)
+  m[2] = t * x * z - s * y; // [col * 4 + row] = 0 * 4 + 2 (2,0)
+  m[3] = 0;  // [col * 4 + row] = 0 * 4 + 3 (3,0)
+  m[4] = t * x * y - s * z  ;  // [col * 4 + row] = 1 * 4 + 0 (0,1)
+  m[5] = t * y * y + c; // [col * 4 + row] = 1 * 4 + 1 (1,1)
+  m[6] = t * y * z + s * x; // [col * 4 + row] = 1 * 4 + 2 (2,1)
+  m[7] = 0;  // [col * 4 + row] = 1 * 4 + 3 (3,1)
+  m[8] = t * x * z + s * y;  // [col * 4 + row] = 2 * 4 + 0 (0,2)
+  m[9] = t * y * z - s * x; // [col * 4 + row] = 2 * 4 + 1 (1,2)
+  m[10] = t * z * z + c; // [col * 4 + row] = 2 * 4 + 2 (2,2)
+  m[11] = 0;  // [col * 4 + row] = 2 * 4 + 3 (3,2)
+  m[12] = 0;  // [col * 4 + row] = 3 * 4 + 0 (0,3)
+  m[13] = 0;  // [col * 4 + row] = 3 * 4 + 1 (1,3)
+  m[14] = 0;  // [col * 4 + row] = 3 * 4 + 2 (2,3)
+  m[15] = 1; // [col * 4 + row] = 3 * 4 + 3 (3,3)
+  return m;
   throw new Error('rotationAxis() not implemented yet — see EXERCISE 2 in matrix.js');
 }
