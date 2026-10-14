@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'yaml'
-require 'lib/meeting_resources_checker'
+require File.expand_path('lib/meeting_resources_checker') # rake runs from the Rakefile's directory
 
 namespace :meetings do
   desc 'Warn about past meetings lacking photos or a cleaned transcript ' \
