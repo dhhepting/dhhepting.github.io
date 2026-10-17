@@ -13,10 +13,18 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        ColourCube: resolve(import.meta.dirname, 'Samples/ColourCube/app.html'),
-        SVG_Zoomer: resolve(import.meta.dirname, 'Samples/SVG_Zoomer/app.html'),
-        ShaderStages: resolve(import.meta.dirname, 'Samples/ShaderStages/app.html'),
-
+        ColourCube: 
+	        resolve(import.meta.dirname,'Samples/ColourCube/app.html'),
+        SVG_Zoomer:
+          resolve(import.meta.dirname,'Samples/SVG_Zoomer/app.html'),
+        ShaderStages: 
+          resolve(import.meta.dirname,'Samples/ShaderStages/app.html'),
+        IndexedSquare: 
+          resolve(import.meta.dirname,'Samples/IndexedSquare/app.html'),
+        gasket1: 
+          resolve(import.meta.dirname,'8E_Textbook_Code/02/gasket1.html'),
+        gasket1v2: 
+          resolve(import.meta.dirname,'8E_Textbook_Code/02/gasket1v2.html'),
       },
       output: {
         // Jekyll silently skips files whose names start with '_' or '.', and
