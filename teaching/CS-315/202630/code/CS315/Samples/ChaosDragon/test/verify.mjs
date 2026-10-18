@@ -7,7 +7,7 @@ import { readFileSync } from 'node:fs';
 
 import {
   DRAGON, empathic, fromAffine, toAffine, mulPoint, makeChoices, chaosGame,
-  viewMatrix, worldAt,
+  viewMatrix, worldAt, colourBytes,
 } from '../ifs.mjs';
 import { ChaosGame, MAX_POINTS } from '../chaosgame.mjs';
 
@@ -103,6 +103,32 @@ check('matrix chaos game == the same game in complex arithmetic', () => {
   }
   console.log(`      worst difference over 5000 points: ${worst.toExponential(2)} (float32 storage)`);
   assert.ok(worst < 1e-6);
+});
+
+check('colourBytes: n=1 is plain last-map colouring (0 / 255)', () => {
+  const out = colourBytes(choices, 1000, 1, new Uint8Array(1000));
+  for (let i = 0; i < 1000; i++) assert.equal(out[i], choices[i] * 255);
+});
+
+check('colourBytes: address = last n choices, newest as most significant bit', () => {
+  for (const n of [2, 3, 5, 8]) {
+    const out = colourBytes(choices, 3000, n, new Uint8Array(3000));
+    const scale = 255 / (2 ** n - 1);
+    for (let i = 0; i < 3000; i++) {
+      let addr = 0;
+      for (let j = 0; j < n; j++) {           // j = 0 is the newest choice
+        const k = i - j >= 0 ? choices[i - j] : 0;
+        addr += k * 2 ** (n - 1 - j);
+      }
+      assert.equal(out[i], Math.round(addr * scale), `n=${n} i=${i}`);
+    }
+  }
+  console.log('      n = 2, 3, 5, 8 all match a direct digit-by-digit address');
+});
+
+check('colourBytes: n=3 uses all 8 addresses; same last-n choices -> same colour', () => {
+  const out = colourBytes(choices, N, 3, new Uint8Array(N));
+  assert.equal(new Set(out.subarray(10)).size, 8);
 });
 
 check('dragon bounding box is x in [-1/3, 7/6], y in [-1/3, 2/3]', () => {
@@ -264,6 +290,41 @@ check('worldAt on the renderer covers the window the sliders are scaled to', () 
   const [x0, y0] = game.worldAt(0, 0);
   const [x1, y1] = game.worldAt(1, 1);
   near(x0, -0.75); near(x1, 1.75); near(y0, -1.1); near(y1, 1.4);
+});
+
+check('setColourDepth re-uploads colours only: no position regeneration', () => {
+  const { gl, calls } = makeGL();
+  const game = new ChaosGame(gl, {});
+  game.setTransforms(T);
+  game.setCount(10000);
+  game.resize(400, 400, 1);
+  game.render();
+  calls.length = 0;
+  game.setColourDepth(4);
+  assert.equal(game.render(), true);
+  const isColours = (c) => c.name === 'bufferSubData' && c.args[2] instanceof Uint8Array && c.args[2].length === MAX_POINTS;
+  assert.equal(calls.filter(isColours).length, 1);
+  assert.equal(calls.filter((c) => c.name === 'bufferSubData' && c.args[2] instanceof Float32Array && c.args[2].length === 20000).length, 0);
+  // the colour attribute is normalised so bytes become t in 0..1
+  const ptr = calls.length; // (attributes are bound at construction; check there)
+  const probe = makeGL();
+  new ChaosGame(probe.gl, {});
+  const attrib1 = probe.calls.filter((c) => c.name === 'vertexAttribPointer' && c.args[0] === 1);
+  assert.equal(attrib1.length, 2);
+  attrib1.forEach((c) => assert.deepEqual([c.args[2], c.args[3]], ['UNSIGNED_BYTE', true]));
+});
+
+check('reroll regenerates positions too (the orbit follows the choices)', () => {
+  const { gl, calls } = makeGL();
+  const game = new ChaosGame(gl, {});
+  game.setTransforms(T);
+  game.setCount(10000);
+  game.resize(400, 400, 1);
+  game.render();
+  calls.length = 0;
+  game.reroll(5);
+  game.render();
+  assert.equal(calls.filter((c) => c.name === 'bufferSubData' && c.args[2] instanceof Float32Array && c.args[2].length === 20000).length, 1);
 });
 
 check('exactly two transformations are enforced', () => {

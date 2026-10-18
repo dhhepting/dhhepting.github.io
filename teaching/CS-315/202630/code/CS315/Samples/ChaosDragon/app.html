@@ -18,7 +18,7 @@
     fieldset { margin: 0 0 8px 0; border: 1px solid #c8c8c8; }
     legend { font-weight: 600; }
     .swatch { display: inline-block; width: 0.8em; height: 0.8em; border-radius: 50%; margin-right: 0.4em; vertical-align: baseline; }
-    label { display: grid; grid-template-columns: 7.5em 11em 4.5em; align-items: center; gap: 6px; margin: 2px 0; font-size: 0.9rem; }
+    label { display: grid; grid-template-columns: 9em 11em 7.5em; align-items: center; gap: 6px; margin: 2px 0; font-size: 0.9rem; }
     label.check { display: block; }
     output { font-variant-numeric: tabular-nums; }
     pre { margin: 6px 0 0 0; font-size: 0.78rem; line-height: 1.35; overflow-x: auto; }
@@ -67,6 +67,7 @@
             <legend>Points</legend>
             <label>count <input type="range" id="count" min="1000" max="400000" step="1000" value="100000"><output id="count-out"></output></label>
             <label>size (px) <input type="range" id="psize" min="1" max="4" step="0.5" value="1.5"><output id="psize-out"></output></label>
+            <label>colour by last n <input type="range" id="depth" min="1" max="8" step="1" value="1"><output id="depth-out"></output></label>
             <label class="check"><input type="checkbox" id="show-centres" checked> Show centres</label>
             <br>
             <button id="reroll">New random sequence</button>

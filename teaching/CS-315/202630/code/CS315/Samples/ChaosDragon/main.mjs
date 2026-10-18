@@ -7,7 +7,7 @@
 // Float64Array, because the chaos-game loop multiplies a point by a 3x3
 // matrix up to 400 000 times per frame.
 
-import { initShaders } from '../../Common/initShadersJS.mjs';
+import { initShaders } from '../Common/initShadersJS.mjs';
 import { ChaosGame, MAP_COLOURS } from './chaosgame.mjs';
 import { DRAGON, fromAffine, toAffine } from './ifs.mjs';
 
@@ -36,10 +36,6 @@ let dragging = -1;               // index of the centre being dragged, or -1
 const home = [[0, 0], [0, 0]];   // where each centre would sit if wander offset were zero
 
 // ------------------------------------------------------------------- setup
-const pub = import.meta.env
-  ? './'        // Vite dev/build: shaders sit beside the page
-  : new URL(/* @vite-ignore */ '../../public/Samples/DragonChaos/', import.meta.url).href;  // raw copy
-
 
 async function loadText(url) {
   const response = await fetch(url);
@@ -65,6 +61,8 @@ function cacheControls() {
     countOut: id('count-out'),
     psize: id('psize'),
     psizeOut: id('psize-out'),
+    depth: id('depth'),
+    depthOut: id('depth-out'),
     showCentres: id('show-centres'),
     reroll: id('reroll'),
     reset: id('reset'),
@@ -141,6 +139,8 @@ function syncSettingsOutputs() {
   ui.speedOut.textContent = Number(ui.speed.value).toFixed(2);
   ui.countOut.textContent = Number(ui.count.value).toLocaleString();
   ui.psizeOut.textContent = Number(ui.psize.value).toFixed(1);
+  const n = Number(ui.depth.value);
+  ui.depthOut.textContent = `${n} (${2 ** n} colours)`;
 }
 
 function updateStatus() {
@@ -243,6 +243,10 @@ function wireControls() {
   });
   ui.psize.addEventListener('input', () => {
     game.setPointSize(Number(ui.psize.value));
+    syncSettingsOutputs();
+  });
+  ui.depth.addEventListener('input', () => {
+    game.setColourDepth(Number(ui.depth.value));
     syncSettingsOutputs();
   });
   ui.showCentres.addEventListener('change', () => {
@@ -349,6 +353,7 @@ async function init() {
 
   game.setCount(Number(ui.count.value));
   game.setPointSize(Number(ui.psize.value));
+  game.setColourDepth(Number(ui.depth.value));
   game.setShowCentres(ui.showCentres.checked);
 
   setHome(0);

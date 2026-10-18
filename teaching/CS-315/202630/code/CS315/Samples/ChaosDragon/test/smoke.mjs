@@ -208,6 +208,19 @@ await check('Count, point size, Show centres and New random sequence reach the r
   assert.ok(calls.some((c) => c.name === 'bufferSubData' && c.args[2] instanceof Uint8Array));
 });
 
+await check('"colour by last n" slider reaches the renderer: re-uploads colours, reads out 2^n', () => {
+  assert.equal($('depth-out').textContent, '1 (2 colours)');
+  $('depth').value = '3';
+  $('depth').dispatchEvent(new window.Event('input'));
+  assert.equal($('depth-out').textContent, '3 (8 colours)');
+  calls.length = 0;
+  frame(1100);
+  const up = calls.find((c) => c.name === 'bufferSubData' && c.args[2] instanceof Uint8Array);
+  assert.ok(up, 'colour bytes uploaded');
+  assert.equal(new Set(up.args[2].subarray(10)).size, 8, 'eight distinct addresses');
+  assert.ok(!calls.some((c) => c.name === 'bufferSubData' && c.args[2] instanceof Float32Array && c.args[2].length > 8), 'positions not regenerated');
+});
+
 assert.deepEqual(alerts, [], 'no alerts raised during the run');
 console.log(`\n${passed} controller checks passed`);
 process.exit(0);

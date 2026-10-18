@@ -29,6 +29,12 @@ A map is described from its own centre c (its fixed point), with scale s and rot
 The brief's two matrices become c0 = (0, 0), c1 = (0.6, 0.2), s = 1/sqrt(2), theta = 45 and 135 degrees.
 Moving a centre keeps s and theta and recomputes the matrix, so the translation column follows.
 
+Colour: "colour by last n" colours each point by the string of its last n map choices
+(2^n colours). The newest choice is the most significant digit, so the big pieces of the
+dragon get distinct hues and the finer pieces vary within them. The colour is a byte per
+point, read by the shader as t in 0..1 and mixed between the two map colours; n = 1 is the
+plain two-colour view.
+
 Each point is `p' = A_k . (x, y, 1)^T`, with k drawn at random. The sequence of k is drawn once
 (seeded) and reused, so point i stays point i while a centre moves and the picture deforms
 instead of shimmering. Centre 0 is a fixed point of map 0, so it lies on the attractor and

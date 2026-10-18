@@ -8,6 +8,7 @@ import {
   empathic,
   chaosGame,
   makeChoices,
+  colourBytes,
   viewMatrix,
   worldAt,
 } from './ifs.mjs';
@@ -38,6 +39,9 @@ export class ChaosGame {
 
   #positions = new Float32Array(MAX_POINTS * 2);
   #choices;
+  #colours = new Uint8Array(MAX_POINTS);
+  #colourDepth = 1;
+  #colourDirty = true;
   #seed = 1;
 
   #transforms = [];
@@ -83,8 +87,8 @@ export class ChaosGame {
     gl.bindBuffer(gl.ARRAY_BUFFER, this.#mapBuffer);
     gl.bufferData(gl.ARRAY_BUFFER, MAX_POINTS, gl.DYNAMIC_DRAW);
     gl.enableVertexAttribArray(1);
-    // integer bytes 0/1 arrive in the shader as float 0.0/1.0
-    gl.vertexAttribPointer(1, 1, gl.UNSIGNED_BYTE, false, 0, 0);
+    // bytes 0..255 arrive in the shader as t = 0.0..1.0 (the colour address)
+    gl.vertexAttribPointer(1, 1, gl.UNSIGNED_BYTE, true, 0, 0);
 
     // --- the two centre handles
     this.#centreVao = gl.createVertexArray();
@@ -98,9 +102,9 @@ export class ChaosGame {
 
     this.#centreMapBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, this.#centreMapBuffer);
-    gl.bufferData(gl.ARRAY_BUFFER, new Uint8Array([0, 1]), gl.STATIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, new Uint8Array([0, 255]), gl.STATIC_DRAW);
     gl.enableVertexAttribArray(1);
-    gl.vertexAttribPointer(1, 1, gl.UNSIGNED_BYTE, false, 0, 0);
+    gl.vertexAttribPointer(1, 1, gl.UNSIGNED_BYTE, true, 0, 0);
 
     gl.bindVertexArray(null);
     gl.clearColor(1, 1, 1, 1);
@@ -158,7 +162,15 @@ export class ChaosGame {
   reroll(seed) {
     this.#seed = seed >>> 0;
     this.#choicesDirty = true;
-    this.#pointsDirty = true;
+    this.#colourDirty = true;
+    this.#pointsDirty = true;   // the orbit itself follows the choices
+    this.#frameDirty = true;
+  }
+
+  // Colour each point by its last n map choices (1..8): 2^n colours.
+  setColourDepth(n) {
+    this.#colourDepth = Math.max(1, Math.min(8, Math.floor(n)));
+    this.#colourDirty = true;
     this.#frameDirty = true;
   }
 
@@ -195,17 +207,25 @@ export class ChaosGame {
 
   // ------------------------------------------------------------- drawing
 
+  // The positions depend on the maps; the colours depend only on the choice
+  // sequence and the depth, so they are rebuilt far less often.
+  #updateChoicesAndColours() {
+    const gl = this.#gl;
+    if (this.#choicesDirty) {
+      this.#choices = makeChoices(MAX_POINTS, this.#transforms.length, this.#seed);
+      this.#choicesDirty = false;
+      this.#colourDirty = true;
+    }
+    if (this.#colourDirty) {
+      colourBytes(this.#choices, MAX_POINTS, this.#colourDepth, this.#colours);
+      gl.bindBuffer(gl.ARRAY_BUFFER, this.#mapBuffer);
+      gl.bufferSubData(gl.ARRAY_BUFFER, 0, this.#colours);
+      this.#colourDirty = false;
+    }
+  }
+
   #regenerate() {
     const gl = this.#gl;
-    const nMaps = this.#transforms.length;
-
-    if (this.#choicesDirty) {
-      this.#choices = makeChoices(MAX_POINTS, nMaps, this.#seed);
-      gl.bindBuffer(gl.ARRAY_BUFFER, this.#mapBuffer);
-      gl.bufferSubData(gl.ARRAY_BUFFER, 0, this.#choices);
-      this.#choicesDirty = false;
-    }
-
     const t0 = performance.now();
     // Centre 0 is the fixed point of map 0, hence a point of the attractor
     chaosGame(
@@ -229,6 +249,7 @@ export class ChaosGame {
   // Returns true if it drew a frame, false if nothing had changed.
   render() {
     const gl = this.#gl;
+    this.#updateChoicesAndColours();
     if (this.#pointsDirty) {
       this.#regenerate();
     }
