@@ -7,7 +7,7 @@
 // Float64Array, because the chaos-game loop multiplies a point by a 3x3
 // matrix up to 400 000 times per frame.
 
-import { initShaders } from '../Common/initShadersJS.mjs';
+import { initShaders } from '../../Common/initShadersJS.mjs';
 import { ChaosGame, MAP_COLOURS } from './chaosgame.mjs';
 import { DRAGON, fromAffine, toAffine } from './ifs.mjs';
 
@@ -36,6 +36,7 @@ let dragging = -1;               // index of the centre being dragged, or -1
 const home = [[0, 0], [0, 0]];   // where each centre would sit if wander offset were zero
 
 // ------------------------------------------------------------------- setup
+
 
 async function loadText(url) {
   const response = await fetch(url);
@@ -75,6 +76,11 @@ function cssColour([r, g, b]) {
 }
 
 // ---------------------------------------------------------- moving centres
+
+const pub = import.meta.env
+  ? './'        // Vite dev/build: shaders sit beside the page
+  : new URL(/* @vite-ignore */ '../../public/Samples/ChaosDragon/', import.meta.url).href;  // raw copy
+
 
 function wanderOffset(i) {
   const w = WANDER[i];
