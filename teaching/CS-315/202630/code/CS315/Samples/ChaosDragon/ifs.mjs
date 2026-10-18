@@ -176,6 +176,24 @@ export function chaosGame(mats, choices, count, start, outPos) {
   }
 }
 
+// Colour by the last n choices. The "address" of point i is the string of its
+// last n map choices; the most recent choice is the most significant bit, so
+// points in the same large piece of the picture share their leading digits
+// and get nearby colours. The address is stored as a byte scaled to 0..255
+// (read by the shader as a normalised attribute, i.e. t = address / (2^n - 1)).
+// Before n choices have been made the missing older choices count as 0.
+// n = 1 reproduces plain "colour by last map" (bytes 0 and 255).
+export function colourBytes(choices, count, n, out) {
+  const top = 1 << (n - 1);
+  const scale = 255 / ((1 << n) - 1);
+  let addr = 0;
+  for (let i = 0; i < count; i++) {
+    addr = (addr >> 1) | (choices[i] * top);
+    out[i] = Math.round(addr * scale);
+  }
+  return out;
+}
+
 // ------------------------------------------------------------------- view
 
 // The visible window is a square of half-size `half` about (cx, cy), grown
