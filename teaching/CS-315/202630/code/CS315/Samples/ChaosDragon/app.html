@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chaos Game: Dragon Curve and Mathematical Empathy</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; margin: 12px; color: #222; }
+    h1 { font-size: 1.15rem; margin: 0 0 4px 0; }
+    p.lede { margin: 0 0 8px 0; max-width: 62ch; font-size: 0.9rem; line-height: 1.4; }
+    table { border-collapse: collapse; }
+    td { vertical-align: top; padding: 8px; }
+    canvas { border: 1px solid #d0d0d0; display: block; background: #fff; touch-action: none; }
+    /* Square footprint that shrinks on narrow screens. aspect-ratio keeps it
+       square even though the renderer overwrites width/height (the backing
+       store, in device pixels) for HiDPI sharpness. */
+    #gl-canvas { width: min(640px, 92vw); aspect-ratio: 1 / 1; }
+    fieldset { margin: 0 0 8px 0; border: 1px solid #c8c8c8; }
+    legend { font-weight: 600; }
+    .swatch { display: inline-block; width: 0.8em; height: 0.8em; border-radius: 50%; margin-right: 0.4em; vertical-align: baseline; }
+    label { display: grid; grid-template-columns: 7.5em 11em 4.5em; align-items: center; gap: 6px; margin: 2px 0; font-size: 0.9rem; }
+    label.check { display: block; }
+    output { font-variant-numeric: tabular-nums; }
+    pre { margin: 6px 0 0 0; font-size: 0.78rem; line-height: 1.35; overflow-x: auto; }
+    button { margin-right: 6px; }
+    #status { font-size: 0.85rem; margin-top: 6px; color: #444; }
+  </style>
+</head>
+<body>
+  <h1>Chaos game: the dragon curve, seen from each map's own centre</h1>
+  <p class="lede">
+    Each point is the previous point multiplied by one of two 3&times;3 matrices, chosen at random.
+    Each matrix is built <em>from its centre</em>: step into the centre, scale and rotate, step back.
+    Drag a centre (on the canvas or with the sliders) and watch the attractor follow.
+  </p>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <canvas id="gl-canvas" width="640" height="640">
+            Your browser doesn't support the HTML5 canvas element.
+          </canvas>
+        </td>
+        <td>
+          <fieldset>
+            <legend><span class="swatch" id="swatch0"></span>Map 0 centre</legend>
+            <label>x <input type="range" id="c0x" step="0.001"><output id="c0x-out"></output></label>
+            <label>y <input type="range" id="c0y" step="0.001"><output id="c0y-out"></output></label>
+            <pre id="readout0"></pre>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="swatch" id="swatch1"></span>Map 1 centre</legend>
+            <label>x <input type="range" id="c1x" step="0.001"><output id="c1x-out"></output></label>
+            <label>y <input type="range" id="c1y" step="0.001"><output id="c1y-out"></output></label>
+            <pre id="readout1"></pre>
+          </fieldset>
+
+          <fieldset>
+            <legend>Wander</legend>
+            <label class="check"><input type="checkbox" id="wander"> Let the centres drift about where they are</label>
+            <label>amplitude <input type="range" id="amplitude" min="0" max="0.5" step="0.005" value="0.12"><output id="amplitude-out"></output></label>
+            <label>speed <input type="range" id="speed" min="0" max="3" step="0.05" value="0.6"><output id="speed-out"></output></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Points</legend>
+            <label>count <input type="range" id="count" min="1000" max="400000" step="1000" value="100000"><output id="count-out"></output></label>
+            <label>size (px) <input type="range" id="psize" min="1" max="4" step="0.5" value="1.5"><output id="psize-out"></output></label>
+            <label class="check"><input type="checkbox" id="show-centres" checked> Show centres</label>
+            <br>
+            <button id="reroll">New random sequence</button>
+            <button id="reset">Reset to dragon</button>
+            <div id="status"></div>
+          </fieldset>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script type="module" src="main.mjs"></script>
+</body>
+</html>
