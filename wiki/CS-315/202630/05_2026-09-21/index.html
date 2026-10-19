@@ -192,7 +192,7 @@
   </div>
 
   <div class="mb-3">
-    <span class="text-muted">Photos page not created yet — [[05_2026-09-21-photos]] will show red in Moodle until photos are added</span>
+    <a href="/wiki/CS-315/202630/05_2026-09-21-photos/">View/copy this meeting's photos (separate page)</a>
   </div>
 
   <h3>Name for this page</h3>
@@ -279,7 +279,20 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 </textarea>
     
   </div><h3>Photos and transcript page</h3>
-  <p class="text-muted">No photos in media.csv for this meeting yet — re-run sharemedia.py once they're uploaded.</p>
+  <p class="text-muted mb-1">Create the Moodle wiki page with this name, paste the photo block, then paste the cleaned transcript below it.</p>
+  <div class="input-group mb-3">
+    <input id="photos-text-page-name" type="text" class="form-control" readonly value="05_2026-09-21-photos-text">
+    <button type="button" class="btn btn-secondary" onclick="copyFrom('photos-text-page-name')">Copy</button>
+  </div>
+  <div class="mb-3">
+    <textarea id="photos-creole" class="form-control" rows="10" readonly>{{https://dl.dropboxusercontent.com/scl/fi/vygx9v7o30rg1n0anpy8b/05-1.ColourCube-screen.jpg?rlkey=o3uz1bkxj4tw4jkft3qqsaly3&amp;raw=1 | Mtg 05-1.ColourCube-screen: }}
+
+{{https://dl.dropboxusercontent.com/scl/fi/92f8finnf7i0sw3ffyfcx/05-2.SVG-Zoomer-screen.jpg?rlkey=zikv9a5ed6ggfeckj2o2myfro&amp;raw=1 | Mtg 05-2.SVG-Zoomer-screen: }}
+</textarea>
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-creole')">
+      Copy photo block
+    </button>
+  </div>
 
   <nav class="d-flex justify-content-between align-items-center my-3">
   <a class="btn btn-outline-secondary btn-sm" href="/wiki/CS-315/202630/04_2026-09-16/">&larr; Prev: 04_2026-09-16</a>

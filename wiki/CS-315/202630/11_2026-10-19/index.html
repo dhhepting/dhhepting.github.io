@@ -192,7 +192,7 @@
   </div>
 
   <div class="mb-3">
-    <span class="text-muted">Photos page not created yet — [[11_2026-10-19-photos]] will show red in Moodle until photos are added</span>
+    <a href="/wiki/CS-315/202630/11_2026-10-19-photos/">View/copy this meeting's photos (separate page)</a>
   </div>
 
   <h3>Name for this page</h3>
@@ -279,7 +279,28 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 </textarea>
     
   </div><h3>Photos and transcript page</h3>
-  <p class="text-muted">No photos in media.csv for this meeting yet — re-run sharemedia.py once they're uploaded.</p>
+  <p class="text-muted mb-1">Create the Moodle wiki page with this name, paste the photo block, then paste the cleaned transcript below it.</p>
+  <div class="input-group mb-3">
+    <input id="photos-text-page-name" type="text" class="form-control" readonly value="11_2026-10-19-photos-text">
+    <button type="button" class="btn btn-secondary" onclick="copyFrom('photos-text-page-name')">Copy</button>
+  </div>
+  <div class="mb-3">
+    <textarea id="photos-creole" class="form-control" rows="10" readonly>{{https://dl.dropboxusercontent.com/scl/fi/h1aii1u2fza168d91t3u8/11-1.jpg?rlkey=3fdcds58eotjwo0fvwkfpohdn&amp;raw=1 | Mtg 11-1: }}
+
+{{https://dl.dropboxusercontent.com/scl/fi/7wy54rjaefkh86fwmndew/11-2.jpg?rlkey=di3ipb4ezmf8hurs9t52hgbca&amp;raw=1 | Mtg 11-2: }}
+
+{{https://dl.dropboxusercontent.com/scl/fi/svcvxcb9855nqizxov0bp/11-3.jpg?rlkey=857c9sxe52zccsfuvsxzbd4fd&amp;raw=1 | Mtg 11-3: }}
+
+{{https://dl.dropboxusercontent.com/scl/fi/v7g119wgr10z4wb50tjuy/11-4.jpg?rlkey=b9gv1g3gejhfohleguk5useo4&amp;raw=1 | Mtg 11-4: }}
+
+{{https://dl.dropboxusercontent.com/scl/fi/78rzlpfpvv655nce0t6uv/11-5.jpg?rlkey=r7nt0fkg5hsfbafifhedovqqw&amp;raw=1 | Mtg 11-5: }}
+
+{{https://dl.dropboxusercontent.com/scl/fi/x67liu6n6fyvsknwhn4mm/11-6.jpg?rlkey=9lsco7vgzp3a6n908rn14fep3&amp;raw=1 | Mtg 11-6: }}
+</textarea>
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-creole')">
+      Copy photo block
+    </button>
+  </div>
 
   <nav class="d-flex justify-content-between align-items-center my-3">
   <a class="btn btn-outline-secondary btn-sm" href="/wiki/CS-315/202630/10_2026-10-14/">&larr; Prev: 10_2026-10-14</a>

@@ -1,48 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<meta charset="utf-8">
 <title>2D Sierpinski Gasket</title>
-
-<script id="fragment-shader" type="x-shader/x-fragment">
-#version 300 es
-precision mediump float;
-
-out vec4 fColor;
-
-void
-main()
-{
-    fColor = vec4(1.0, 0.0, 0.0, 1.0);
-}
-</script>
-
-<script id="vertex-shader" type="x-shader/x-vertex">
-#version 300 es
-
-in vec4 aPosition;
-
-void
-main()
-{
-	  gl_PointSize = 1.0;
-    gl_Position = aPosition;
-}
-</script>
-
-
-
-
-<script src="../Common/initShaders.js"></script>
-<script src="../../Common/MV.mjs"></script>
-<script src="../../Common/initShadersJS.mjs"></script>
-<script src="../../Common/MV.mjs"></script>
-<script src="gasket1.js"></script>
+  <script type="module" crossorigin src="../../assets/chunk-initShadersJS-gAdrPDqH.js"></script>
+  <script type="module" crossorigin src="../../assets/chunk-MV-DXkuiAOb.js"></script>
+  <script type="module" crossorigin src="../../assets/chunk-gasket1-DrM1dEBW.js"></script>
 </head>
 
 <body>
 <canvas id="gl-canvas" width="512" height="512">
 Oops ... your browser doesn't support the HTML5 canvas element
 </canvas>
+
+<!-- type="module" is what lets MV.mjs and initShadersJS.mjs load: they use export.
+     Module scripts are deferred, so the canvas above already exists when this runs. -->
 </body>
 </html>
