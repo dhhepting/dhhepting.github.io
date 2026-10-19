@@ -334,8 +334,8 @@ async function init() {
   }
 
   const [vertexSource, fragmentSource] = await Promise.all([
-    loadText(new URL('./shaders/chaos.vert', import.meta.url)),
-    loadText(new URL('./shaders/chaos.frag', import.meta.url)),
+    loadText(new URL('./shaders/chaos.vert.glsl', import.meta.url)),
+    loadText(new URL('./shaders/chaos.frag.glsl', import.meta.url)),
   ]);
   const program = initShaders(gl, vertexSource, fragmentSource);
 
