@@ -21,10 +21,12 @@ export default defineConfig({
           resolve(import.meta.dirname,'Samples/ShaderStages/app.html'),
         IndexedSquare: 
           resolve(import.meta.dirname,'Samples/IndexedSquare/app.html'),
+        DragonChaos: 
+          resolve(import.meta.dirname,'Samples/DragonChaos/app.html'),
         gasket1: 
           resolve(import.meta.dirname,'8E_Textbook_Code/02/gasket1.html'),
         gasket1v2: 
-          resolve(import.meta.dirname,'8E_Textbook_Code/02/gasket1v2.html'),
+          resolve(import.meta.dirname,'8E_Textbook_Code/02/gasket1.html'),
       },
       output: {
         // Jekyll silently skips files whose names start with '_' or '.', and
