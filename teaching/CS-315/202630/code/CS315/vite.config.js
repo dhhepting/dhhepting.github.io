@@ -22,7 +22,7 @@ export default defineConfig({
         IndexedSquare: 
           resolve(import.meta.dirname,'Samples/IndexedSquare/app.html'),
         DragonChaos: 
-          resolve(import.meta.dirname,'Samples/DragonChaos/app.html'),
+          resolve(import.meta.dirname,'Samples/ChaosDragon/app.html'),
         gasket1: 
           resolve(import.meta.dirname,'8E_Textbook_Code/02/gasket1.html'),
         gasket1v2: 
