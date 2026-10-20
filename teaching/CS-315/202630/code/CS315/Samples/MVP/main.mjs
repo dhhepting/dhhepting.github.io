@@ -8,8 +8,8 @@ import { VIEWS, buildScene } from './views.mjs';
 import { axes, wireCube } from './geometry.mjs';
 import { formatMatrix } from './matrixUtil.mjs';
 
-// ---- Student code (app.html?solution loads the instructor reference instead) ----
-const studentFile = new URLSearchParams(location.search).has('solution') ? './student.solution.mjs' : './student.mjs';
+const studentFile = './student.mjs';
+//= new URLSearchParams(location.search).has('solution') ? './student.solution.mjs' : './student.mjs'; 
 const student = await import(/* @vite-ignore */ studentFile);
 
 // ---- Shader sources: fetched next to this file, then handed to initShaders() ----

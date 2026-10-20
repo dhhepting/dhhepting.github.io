@@ -27,7 +27,7 @@ Drag and wheel on the small canvases to look around each space.</p>
 <h2 id="student-task-edit-studentmjs-only">Student task (edit <code>student.mjs</code> only)</h2>
 
 <ol>
-  <li>A more complicated model (<code>createModelMeshes</code>, <code>buildModelParts</code>)</li>
+  <li>A more complicated model [optional] (<code>createModelMeshes</code>, <code>buildModelParts</code>)</li>
   <li><code>buildViewLookAt</code></li>
   <li><code>buildViewEuler</code></li>
   <li><code>buildPerspective</code></li>
@@ -38,17 +38,12 @@ Drag and wheel on the small canvases to look around each space.</p>
 changes as a step is finished. If a function returns something that is not a finite<br />
 4x4 matrix, the page keeps the last good one and prints a warning.</p>
 
-<h2 id="instructor">Instructor</h2>
-
-<p><code>student.solution.mjs</code> has every function filled in. Try it with <code>app.html?solution</code>,<br />
-and delete it before distributing.</p>
-
 <h2 id="files">Files</h2>
 
 <ul>
   <li><code>app.html</code>, <code>assets/style.css</code></li>
   <li><code>main.mjs</code> controller: DOM, five contexts, frame loop</li>
-  <li><code>student.mjs</code> the exercise; <code>student.solution.mjs</code> the reference</li>
+  <li><code>student.mjs</code> the exercise;</li>
   <li><code>pipeline.mjs</code> composes M, V, P and P·V·M from the state</li>
   <li><code>views.mjs</code> what each canvas draws; <code>renderer.mjs</code> DOM-free renderer; <code>geometry.mjs</code> meshes</li>
   <li><code>state.mjs</code> state and camera animation; <code>ui.mjs</code> control table and panel</li>
@@ -56,10 +51,7 @@ and delete it before distributing.</p>
   <li><code>shaders/mvp.vert.glsl</code>, <code>shaders/mvp.frag.glsl</code></li>
 </ul>
 
-<h2 id="conventions-studentsolutionmjs">Conventions (student.solution.mjs)</h2>
-
-<p>Camera starts at the origin looking down -z, +y up. R = Ry(yaw)·Rx(pitch)·Rz(roll);<br />
-yaw turns left, pitch looks up. V = Rz(-roll)·Rx(-pitch)·Ry(-yaw)·T(-position).</p>
+<h2 id="v--rz-rollrx-pitchry-yawt-position">V = Rz(-roll)·Rx(-pitch)·Ry(-yaw)·T(-position).</h2>
 
 </body>
 </html>
