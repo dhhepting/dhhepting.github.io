@@ -16,7 +16,7 @@ Drag and wheel on the small canvases to look around each space.
 
 ## Student task (edit `student.mjs` only)
 
-1. A more complicated model (`createModelMeshes`, `buildModelParts`)
+1. A more complicated model [optional] (`createModelMeshes`, `buildModelParts`)
 2. `buildViewLookAt`
 3. `buildViewEuler`
 4. `buildPerspective`
@@ -26,23 +26,16 @@ Each stub returns the identity, so the page runs from the start and each canvas
 changes as a step is finished. If a function returns something that is not a finite
 4x4 matrix, the page keeps the last good one and prints a warning.
 
-## Instructor
-
-`student.solution.mjs` has every function filled in. Try it with `app.html?solution`,
-and delete it before distributing.
 
 ## Files
 
 - `app.html`, `assets/style.css`
 - `main.mjs` controller: DOM, five contexts, frame loop
-- `student.mjs` the exercise; `student.solution.mjs` the reference
+- `student.mjs` the exercise;
 - `pipeline.mjs` composes M, V, P and P·V·M from the state
 - `views.mjs` what each canvas draws; `renderer.mjs` DOM-free renderer; `geometry.mjs` meshes
 - `state.mjs` state and camera animation; `ui.mjs` control table and panel
 - `matrixUtil.mjs` scale, inverse, matrix formatting
 - `shaders/mvp.vert.glsl`, `shaders/mvp.frag.glsl`
 
-## Conventions (student.solution.mjs)
-
-Camera starts at the origin looking down -z, +y up. R = Ry(yaw)·Rx(pitch)·Rz(roll);
-yaw turns left, pitch looks up. V = Rz(-roll)·Rx(-pitch)·Ry(-yaw)·T(-position).
+## V = Rz(-roll)·Rx(-pitch)·Ry(-yaw)·T(-position).
