@@ -1,10 +1,14 @@
-{%- assign codelfile = site.data.teaching[jcrs_id][crs_sem]codelinks %}
-{%- if codelfile -%}
-  {%- for ll in codelfile -%}
-  <li>
-    <a href="{{ ll.url }}">
-      {{ ll.desc }}
-    </a>
-  </li>
-  {% endfor %}
-{% endif %}
+{%- assign sem = site.data.teaching[jcrs_id][crs_sem] -%}
+{%- for ll in sem.codelinks -%}
+<li>
+  {%- if ll.url -%}
+    {%- if ll.url contains '://' -%}
+      <a href="{{ ll.url }}" target="_blank" rel="noopener">{{ ll.desc }}</a>
+    {%- else -%}
+      <a href="{{ ll.url | relative_url }}">{{ ll.desc }}</a>
+    {%- endif -%}
+  {%- else -%}
+    {{ ll.desc }}
+  {%- endif -%}
+</li>
+{%- endfor -%}

@@ -158,7 +158,7 @@
               Feedback
           </a>
           <ul class="dropdown-menu">
-            {%- for fboh in site.data.teaching[crs_sem][jcrs_id]feedback -%}
+            {%- for fboh in site.data.teaching[jcrs_id][crs_sem].feedback -%}
               {% for i in fboh[1].information %}
                 {% if i.dataType == "dataCollection" %}
                 <li>
@@ -261,7 +261,7 @@
       <h3 id="ssFeedback" class="bg-dark text-white">
         Feedback
       </h3>
-      {%- for fboh in site.data.teaching[crs_sem][jcrs_id]feedback -%}
+      {%- for fboh in site.data.teaching[jcrs_id][crs_sem].feedback -%}
         {% for i in fboh[1].information %}
           {% if i.dataType == "dataCollection" %}
           <h5 id="ssFB_{{ fboh[0] }}">
