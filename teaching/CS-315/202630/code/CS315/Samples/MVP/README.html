@@ -10,10 +10,6 @@
 <body>
 <h1 id="mvp-building-the-model-view-projection-matrix-webgl2">MVP: building the model-view-projection matrix (WebGL2)</h1>
 
-<p>Put this folder in <code>Samples/MVP/</code>, beside <code>Common/</code> (it imports <code>../../Common/MV.mjs</code><br />
-and <code>../../Common/initShadersJS.mjs</code>). No build step: serve over http and open <code>app.html</code><br />
-(ES modules and <code>fetch()</code> do not work from <code>file://</code>).</p>
-
 <h2 id="what-the-page-shows">What the page shows</h2>
 
 <p>Five canvases draw the same model after each matrix has been applied:<br />
@@ -27,7 +23,7 @@ Drag and wheel on the small canvases to look around each space.</p>
 <h2 id="student-task-edit-studentmjs-only">Student task (edit <code>student.mjs</code> only)</h2>
 
 <ol>
-  <li>A more complicated model [optional] (<code>createModelMeshes</code>, <code>buildModelParts</code>)</li>
+  <li>A more complicated model [“more complicated” is optional], however you should add another colouredCube, attach them and move them to demonstrate that they are attached (<code>createModelMeshes</code>, <code>buildModelParts</code>). Also requires some additions to UI.</li>
   <li><code>buildViewLookAt</code></li>
   <li><code>buildViewEuler</code></li>
   <li><code>buildPerspective</code></li>
