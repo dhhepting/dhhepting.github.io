@@ -2,9 +2,17 @@
 #
 # lib/creole_photo_block.rb
 #
-# Builds the block of Creole image links that goes at the top of a
+# Builds the block of Creole photo entries that goes at the top of a
 # meeting's NN_YYYY-MM-DD-photos-text wiki page. The transcript text is
 # pasted in by hand below it.
+#
+# Each entry is the image plus a visible "Caption:" line for students to
+# fill in. The caption must be separate visible text: in Creole's
+# {{url | text}} the text after the pipe becomes the image's alt attribute,
+# which Moodle does not display. The alt text here is only a stable,
+# descriptive default ("Mtg 01-1 photo"); students never need to edit it.
+# The TODO placeholder is easy to spot and is what the wiki-page checker
+# (toc_links.py) looks for to flag captions nobody wrote.
 #
 # Pure function, no I/O. Input is one meeting's photos exactly as
 # MeetingPageFields.load_media returns them ({'label','thumb_url',
@@ -15,15 +23,30 @@
 module CreolePhotoBlock
   module_function
 
-  # One photo per paragraph, so Moodle stacks them vertically.
+  CAPTION_PLACEHOLDER = 'TODO: describe what is on the board'
+
+  # One entry per photo (image, blank line, caption line), entries separated
+  # by blank lines so Moodle stacks them vertically.
   def block(photos)
     raise ArgumentError, 'no photos for this meeting' if photos.nil? || photos.empty?
 
-    photos.map { |p| line(p) }.join("\n\n") + "\n"
+    photos.map { |p| entry(p) }.join("\n\n") + "\n"
   end
 
-  # {{https://…&raw=1 | Mtg 01-1: }}
+  # {{https://…&raw=1 | Mtg 01-1 photo }}
+  #
+  # **Caption:** //TODO: describe what is on the board//
+  def entry(photo)
+    "#{line(photo)}\n\n#{caption_line}"
+  end
+
+  # {{https://…&raw=1 | Mtg 01-1 photo }}
   def line(photo)
-    "{{#{photo.fetch('full_url')} | Mtg #{photo.fetch('label')}: }}"
+    "{{#{photo.fetch('full_url')} | Mtg #{photo.fetch('label')} photo }}"
+  end
+
+  # **Caption:** //TODO: describe what is on the board//
+  def caption_line
+    "**Caption:** //#{CAPTION_PLACEHOLDER}//"
   end
 end
