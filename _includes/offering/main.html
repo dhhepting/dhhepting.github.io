@@ -209,12 +209,10 @@
       {%- endif -%}
 
     {%- if show_code and has_code -%}
-      <h3 id="ssCode" class="bg-dark text-white">Code</h3>
-      <p>The code directory for this offering is available at:</p>
+      <h3 id="ssCode" class="bg-dark text-white">
+        Code
+      </h3>
       <ul>
-        <li>
-          <a href="{{ code_url | relative_url }}" target="_blank">Code Directory</a>
-        </li>
         {%- include offering/code-body.html -%}
       </ul>
     {%- endif -%}

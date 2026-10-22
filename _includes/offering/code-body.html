@@ -1,14 +1,19 @@
 {%- assign sem = site.data.teaching[jcrs_id][crs_sem] -%}
-{%- for ll in sem.codelinks -%}
 <li>
-  {%- if ll.url -%}
-    {%- if ll.url contains '://' -%}
-      <a href="{{ ll.url }}" target="_blank" rel="noopener">{{ ll.desc }}</a>
-    {%- else -%}
-      <a href="{{ ll.url | relative_url }}">{{ ll.desc }}</a>
-    {%- endif -%}
-  {%- else -%}
-    {{ ll.desc }}
-  {%- endif -%}
+  <a href="{{ code_url | relative_url }}" target="_blank">
+    Root code directory
+  </a>
 </li>
+{%- for ll in sem.codelinks -%}
+  <li>
+    {%- if ll.url -%}
+      {%- if ll.url contains '://' -%}
+        <a href="{{ ll.url }}" target="_blank" rel="noopener">{{ ll.desc }}</a>
+      {%- else -%}
+        <a href="{{ ll.url | relative_url }}">{{ ll.desc }}</a>
+      {%- endif -%}
+    {%- else -%}
+      {{ ll.desc }}
+    {%- endif -%}
+  </li>
 {%- endfor -%}
