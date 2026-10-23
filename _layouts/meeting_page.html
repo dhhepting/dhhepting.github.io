@@ -24,6 +24,23 @@ layout: default
 #     each into the wiki in one sitting. These never reach Moodle.
 ---
 {%- assign gen = site.data.teaching[page.course][page.semester].meeting_pages_generated[page.generated_from] %}
+{%- comment -%}
+  Jump bar for the WikiGroup Contributions sections. Moodle numbers headings
+  #toc-1, #toc-2, ... in page order, and three sections (Body of Knowledge,
+  Outline for Today, For Next Meeting) only exist when the meeting has that
+  content, so the numbers after them differ from meeting to meeting. Count the
+  headings before "= WikiGroup Contributions =": 9 fixed (title, Navigation,
+  Plan, Theme, Administration, Post-Meeting, Photos, Photos and Transcript,
+  WikiGroup itself) plus one per optional section present. Keep this in step
+  with the headings in creole_preamble below; toc_links.py checks the result.
+{%- endcomment -%}
+{%- assign wg = 9 %}
+{%- if gen.BOK %}{% assign wg = wg | plus: 1 %}{% endif %}
+{%- if gen.outline %}{% assign wg = wg | plus: 1 %}{% endif %}
+{%- if gen.for_next_meeting %}{% assign wg = wg | plus: 1 %}{% endif %}
+{%- capture nav_bar -%}
+[[#toc-3|↑ Top]] | [[#toc-{{ wg | plus: 1 }}|Edited Transcript]] | [[#toc-{{ wg | plus: 2 }}|Action Items]] | [[#toc-{{ wg | plus: 3 }}|Commentary]] | [[#toc-{{ wg | plus: 4 }}|Exam Questions]]
+{%- endcapture %}
 {%- capture creole_preamble -%}
 = {{ page.course }} Mtg {{ gen.meeting }}: {{ gen.date }} =
 == Navigation ==
@@ -68,43 +85,42 @@ layout: default
 {%- endif %}
 
 = Post-Meeting Resources =
-== Photos ==
-[[{{ gen.photos_wiki_page_name }}]]
-
 == Photos and Transcript ==
 [[{{ gen.photos_text_wiki_page_name }}]]
 
 {% raw %}= WikiGroup Contributions =
-Please **do all of your editing here in the wiki** — not in a document you paste in at the end. The wiki keeps a full page history, so working here is what lets your contributions be recognized.
-Only edit within this **WikiGroup Contributions** section.
+{% endraw %}{{ nav_bar }}
+{% raw %}Please **do all of your editing here in the wiki** — not in a document you paste in at the end. The wiki keeps a full page history, so working here is what lets your contributions be recognized.
 
-For Creole wiki syntax, please see the [[https://docs.moodle.org/502/en/Creole_format|Moodle Creole Format documentation]]
+
+For Creole wiki syntax, please see the **[[https://docs.moodle.org/502/en/Creole_format|Moodle Creole Format documentation]]**
 
 Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to sign your contributions.
 
 == Edited Transcript with Captioned Photos ==
-//**Instructions — delete this block once your section is written.**\\
+{% endraw %}{{ nav_bar }}
+{% raw %}//**Instructions — delete this block once your section is written.**\\
 **1.** Start by copying the photos-and-transcript page linked under "Post-Meeting Resources" above and paste it here. Tidy the transcript into readable prose (fix obvious errors, correct spelling, drop fillers, and remove comments not pertinent to the meeting).\\
-**2.** Move each photo, together with its **Caption:** line, from the top of this section to where it fits the discussion. Replace the TODO text on the Caption line with a description of what is on the board in that photo (the text after the pipe (|) in the image markup is only hidden alt text and will not appear on the page). If something in the photo(s) or the transcript is not clear, add your question as an action item for Dr. Hepting.\\
+**2.** Move each photo, together with its Caption line, from the top of this section to where it fits the discussion. Replace the TODO text on the Caption line with a description of what is on the board in that photo (the text after the pipe (|) in the image markup is only hidden alt text and will not appear on the page). If something in the photo(s) or the transcript is not clear, add your question as an action item for Dr. Hepting.\\
 **3.** Link mentioned and other helpful URLs.//
 
 **Contributors' PWPs:**
 
-
 == Action Items for Dr. Hepting ==
-//**Instructions — delete this block once your section is written.** List anything Dr. Hepting agreed to follow up on or questions that came up during your edits to the meeting record, one bullet each.//
+{% endraw %}{{ nav_bar }}
+{% raw %}//**Instructions — delete this block once your section is written.** List anything Dr. Hepting agreed to follow up on or questions that came up during your edits to the meeting record, one bullet each.//
 
 **Contributors' PWPs:**
-
 
 == Commentary and Discussion ==
-//**Instructions — delete this block once your section is written.** Add your group's reflections: what was confusing or surprising, how today connects to earlier meetings or other courses, and any questions worth raising next time. Two or three substantive points is plenty.//
+{% endraw %}{{ nav_bar }}
+{% raw %}//**Instructions — delete this block once your section is written.** Add your group's reflections: what was confusing or surprising, how today connects to earlier meetings or other courses, and any questions worth raising next time. Two or three substantive points is plenty.//
 
 **Contributors' PWPs:**
 
-
 == Fair Exam Questions (with Answers) About Today's Meeting ==
-//**Instructions — delete this block once your section is written.** Write two or three exam-style questions a fair exam could ask about today's material, each with an answer. Aim to test understanding.//
+{% endraw %}{{ nav_bar }}
+{% raw %}//**Instructions — delete this block once your section is written.** Write two or three exam-style questions a fair exam could ask about today's material, each with an answer. Aim to test understanding.//
 
 **Contributors' PWPs:**
 
@@ -113,6 +129,313 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 | Coordinate with members of WikiGroup | | |
 | WikiGroup members have added their PWPs to their WikiGroup wiki page | | |
 | Edited Transcript with Captioned Photos | | |
+
+| Action Items for Dr. Hepting | | |
+| Commentary and Discussion | | |
+| Fair Exam Questions (with Answers) About Today's Meeting | | |
+{% endraw %}
+{% endcapture %}
+{%- capture page_nav -%}
+<nav class="d-flex justify-content-between align-items-center my-3">
+  {% if gen.prev_page_path %}<a class="btn btn-outline-secondary btn-sm" href="{{ gen.prev_page_path | relative_url }}">&larr; Prev: {{ gen.prev_slug }}</a>{% else %}<span class="text-muted">&larr; (first meeting)</span>{% endif %}
+  <a class="btn btn-outline-primary btn-sm" href="{{ '/wiki/' | append: page.course | append: '/' | append: page.semester | append: '/table/' | relative_url }}">Index</a>
+  {% if gen.next_page_path %}<a class="btn btn-outline-secondary btn-sm" href="{{ gen.next_page_path | relative_url }}">Next: {{ gen.next_slug }} &rarr;</a>{% else %}<span class="text-muted">(last meeting) &rarr;</span>{% endif %}
+</nav>
+{%- endcapture -%}
+
+<div class="meeting-page">
+  <h1>{{ page.course }} Mtg {{ gen.meeting }}: {{ gen.date }}</h1>
+  <p class="text-muted">
+    {{ gen.weekday }} &middot; Theme: {{ gen.theme | default: "(not yet set)" }} &middot;
+    Wiki editors: Group {{ gen.wiki_ed_group }}
+  </p>
+
+  {{ page_nav }}
+
+  <div class="alert alert-info">
+    This whole page is generated from plan.yml and meetings.yml — Outline and For
+    Next Meeting come from plan.yml; WikiGroup Contributions ships as a template
+    students complete on Moodle. Regenerating is always safe. Paste it into the
+    wiki once per meeting; after that, student edits live on Moodle and are never
+    overwritten.
+  </div>
+
+  {%- if gen.BOK %}
+  <div class="mb-3">
+    <h3>Body of Knowledge</h3>
+    {%- for b in gen.BOK %}
+    <h4>{{ b.ka }} / {{ b.ku_title }}</h4>
+    <div class="row">
+      <div class="col-md-6">
+        {%- include offering/tlo-column.html heading="Topics" rows=b.topics_rows -%}
+      </div>
+      <div class="col-md-6">
+        {%- include offering/tlo-column.html heading="Learning Outcomes" rows=b.outcomes_rows -%}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+
+  <div class="mb-3">
+    {%- if gen.photos_page_path %}
+    <a href="{{ gen.photos_page_path | relative_url }}">View/copy this meeting's photos (separate page)</a>
+    {%- else %}
+    <span class="text-muted">Photos page not created yet — [[{{ gen.photos_wiki_page_name }}]] will show red in Moodle until photos are added</span>
+    {%- endif %}
+  </div>
+
+  <h3>Name for this page</h3>
+  <p class="text-muted mb-1">Paste this as the Moodle wiki page title, so the name matches the [[links]] that point here.</p>
+  <div class="input-group mb-3">
+    <input id="wiki-page-name" type="text" class="form-control" readonly value="{{ gen.slug }}">
+    <button type="button" class="btn btn-secondary" onclick="copyPageName()">Copy</button>
+  </div>
+
+  <h3>Copy this into the Moodle wiki page</h3>
+  <p class="text-muted mb-1">Whole page for the first paste. After that, pick one top-level section and paste it through Moodle's edit link for that section, so the rest of the page (including student edits) is left alone.</p>
+  <div id="section-picker" class="mb-2" role="radiogroup" aria-label="Part of the page to copy">
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyCreoleSource()">
+      Copy to clipboard
+    </button>
+  </div>
+  <div class="mb-3">
+    <textarea id="creole-source" class="form-control" rows="24" readonly>{% creole_source %}</textarea>
+    
+  </div>
+
+  {%- comment -%}
+    Post-meeting: the combined photos + transcript wiki page. HTML chrome
+    only, outside creole_preamble, so none of it reaches the meeting's own
+    Moodle paste. Paste the photo block first, then the cleaned transcript
+    below it by hand.
+  {%- endcomment -%}
+  <h3>Photos and transcript page</h3>
+  {%- if gen.photos_creole %}
+  <p class="text-muted mb-1">Create the Moodle wiki page with this name, paste the photo block, then paste the cleaned transcript below it.</p>
+  <div class="input-group mb-3">
+    <input id="photos-text-page-name" type="text" class="form-control" readonly value="{{ gen.photos_text_wiki_page_name }}">
+    <button type="button" class="btn btn-secondary" onclick="copyFrom('photos-text-page-name')">Copy</button>
+  </div>
+  <div class="mb-3">
+    <textarea id="photos-creole" class="form-control" rows="10" readonly>{{ gen.photos_creole | escape }}</textarea>
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-creole')">
+      Copy photo block
+    </button>
+  </div>
+  {%- else %}
+  <p class="text-muted">No photos in media.csv for this meeting yet — re-run sharemedia.py once they're uploaded.</p>
+  {%- endif %}
+
+  {{ page_nav }}
+</div>
+
+<script>
+  function copyPageName() {
+    const el = document.getElementById('wiki-page-name');
+    el.select();
+    navigator.clipboard.writeText(el.value).then(() => {
+      console.log('Wiki page name copied to clipboard');
+    });
+  }
+
+  function copyCreoleSource() {
+    const ta = document.getElementById('creole-source');
+    ta.select();
+    navigator.clipboard.writeText(ta.value).then(() => {
+      console.log('Creole source copied to clipboard');
+    });
+  }
+
+  // Split creole text at top-level "= Heading =" lines (a single "=",
+  // never "=="). Each section runs from its heading to just before the
+  // next one, heading included — Moodle's per-section edit box includes
+  // the heading line too, so a section replaces its edit box exactly.
+  function splitTopLevelSections(text) {
+    const sections = [];
+    for (const line of text.split('\n')) {
+      const m = line.match(/^=(?!=)\s*(.*?)\s*=*\s*$/);
+      if (m) sections.push({ title: m[1], lines: [line] });
+      else if (sections.length) sections[sections.length - 1].lines.push(line);
+    }
+    return sections.map(s => ({ title: s.title, text: s.lines.join('\n').trimEnd() + '\n' }));
+  }
+
+  // Radio buttons above the textarea: "Whole page" plus one per top-level
+  // section, built from the rendered text so new sections appear without
+  // touching this code. Choosing one swaps what the textarea shows; the
+  // existing Copy button copies whatever is shown.
+  (function buildSectionPicker() {
+    const ta = document.getElementById('creole-source');
+    const picker = document.getElementById('section-picker');
+    if (!ta || !picker) return;
+
+    const full = ta.value;
+    const choices = [{ title: 'Whole page', text: full }].concat(splitTopLevelSections(full));
+
+    choices.forEach((c, i) => {
+      const id = 'section-choice-' + i;
+      const wrap = document.createElement('div');
+      wrap.className = 'form-check form-check-inline';
+      wrap.innerHTML = '<input class="form-check-input" type="radio" name="section-choice">' +
+                       '<label class="form-check-label"></label>';
+      const input = wrap.querySelector('input');
+      const label = wrap.querySelector('label');
+      input.id = id;
+      input.checked = i === 0;
+      input.addEventListener('change', () => { ta.value = c.text; });
+      label.htmlFor = id;
+      label.textContent = c.title;
+      picker.appendChild(wrap);
+    });
+  })();
+
+  function copyFrom(id) {
+    const el = document.getElementById(id);
+    el.select();
+    navigator.clipboard.writeText(el.value).then(() => {
+      console.log(id + ' copied to clipboard');
+    });
+  }
+</script>
+
+---
+layout: default 
+# _layouts/meeting_page.html
+#
+# Layout for the meeting_pages collection. The ENTIRE page is generated:
+# creole_preamble (below) builds the full Moodle-paste text — four
+# sections (meeting title/Navigation, Plan for today, Post-meeting
+# resources, WikiGroup Contributions) — from
+# site.data.teaching[page.course][page.semester].meeting_pages_generated,
+# always current, regenerated on every build. The .creole files are
+# front-matter only (see lib/meeting_page_generator.rb); there is no
+# hand-authored body, so {% creole_source %} emits creole_preamble alone.
+#
+# Outline / For Next Meeting come from plan.yml; the WikiGroup
+# Contributions section ships as generated seed text the group edits on
+# Moodle. Frozen at paste: paste once per meeting; student edits then
+# live on the wiki and are never overwritten by regeneration.
+#
+# Two kinds of navigation live here, deliberately kept apart:
+#   * creole_preamble's "== Navigation ==" — slug [[links]] that DO get
+#     pasted into Moodle (via {% creole_source %}).
+#   * page_nav below — on-site links between the AUTHORING pages, in the
+#     HTML chrome only, so you can click through every meeting and paste
+#     each into the wiki in one sitting. These never reach Moodle.
+---
+{%- assign gen = site.data.teaching[page.course][page.semester].meeting_pages_generated[page.generated_from] %}
+{%- comment -%}
+  Jump bar for the WikiGroup Contributions sections. Moodle numbers headings
+  #toc-1, #toc-2, ... in page order, and three sections (Body of Knowledge,
+  Outline for Today, For Next Meeting) only exist when the meeting has that
+  content, so the numbers after them differ from meeting to meeting. Count the
+  headings before "= WikiGroup Contributions =": 9 fixed (title, Navigation,
+  Plan, Theme, Administration, Post-Meeting, Photos, Photos and Transcript,
+  WikiGroup itself) plus one per optional section present. Keep this in step
+  with the headings in creole_preamble below; toc_links.py checks the result.
+{%- endcomment -%}
+{%- assign wg = 9 %}
+{%- if gen.BOK %}{% assign wg = wg | plus: 1 %}{% endif %}
+{%- if gen.outline %}{% assign wg = wg | plus: 1 %}{% endif %}
+{%- if gen.for_next_meeting %}{% assign wg = wg | plus: 1 %}{% endif %}
+{%- capture nav_bar -%}
+[[#toc-3|↑ Top]] | [[#toc-{{ wg | plus: 1 }}|Edited Transcript]] | [[#toc-{{ wg | plus: 2 }}|Action Items]] | [[#toc-{{ wg | plus: 3 }}|Commentary]] | [[#toc-{{ wg | plus: 4 }}|Exam Questions]]
+{%- endcapture %}
+{%- capture creole_preamble -%}
+= {{ page.course }} Mtg {{ gen.meeting }}: {{ gen.date }} =
+== Navigation ==
+{% if gen.prev_slug %}[[{{ gen.prev_slug }} | Previous]] <-- {% endif %}[[Home]]{% if gen.next_slug %} --> [[{{ gen.next_slug }} | Next]]{% endif %}
+
+= Plan for Meeting =
+== Theme ==
+{{ gen.theme }}
+{%- if gen.BOK %}
+== Body of Knowledge ==
+{%- for b in gen.BOK %}
+* {{ b.ka }} / {{ b.ku_title }}
+{%- assign btops = "" %}
+{%- for r in b.topics_rows %}{% if r.kind == "row" and r.depth == 0 %}{% assign btops = btops | append: r.text | append: "; " %}{% endif %}{% endfor %}
+{%- if btops != "" %}
+** Topics: {{ btops | strip }}
+{%- endif %}
+{%- assign bouts = "" %}
+{%- for r in b.outcomes_rows %}{% if r.kind == "row" and r.depth == 0 %}{% assign bouts = bouts | append: r.text | append: "; " %}{% endif %}{% endfor %}
+{%- if bouts != "" %}
+** Outcomes: {{ bouts | strip }}
+{%- endif %}
+{%- endfor %}
+{%- endif %}
+== Administration ==
+* Today's Wiki Editors: [[{{ gen.wiki_ed_group }}]]
+* Happy {{ gen.weekday }}
+* ACTION: [[{{ gen.attendance_QR }} | Record your attendance]]
+* [[{{ gen.calendar_day_url }} | Class calendar for today]]
+* [[{{ gen.calendar_upcoming_url }} | Upcoming events ]]
+{%- if gen.outline %}
+== Outline for Today ==
+{%- for item in gen.outline %}
+* {% if item.url %}[[{{ item.url }} | {{ item.text }}]]{% else %}{{ item.text }}{% endif %}
+{%- endfor %}
+{%- endif %}
+{%- if gen.for_next_meeting %}
+== For Next Meeting ==
+{%- for item in gen.for_next_meeting %}
+* {% if item.url %}[[{{ item.url }} | {{ item.text }}]]{% else %}{{ item.text }}{% endif %}
+{%- endfor %}
+{%- endif %}
+
+= Post-Meeting Resources =
+== Photos and Transcript ==
+[[{{ gen.photos_text_wiki_page_name }}]]
+
+{% raw %}= WikiGroup Contributions =
+{% endraw %}{{ nav_bar }}
+{% raw %}Please **do all of your editing here in the wiki** — not in a document you paste in at the end. The wiki keeps a full page history, so working here is what lets your contributions be recognized.
+Only edit within this **WikiGroup Contributions** section. Do not add any headings to the wiki page, only use **bold text** to emphasize structure within the established headings.
+
+For Creole wiki syntax, please see the **[[https://docs.moodle.org/502/en/Creole_format|Moodle Creole Format documentation]]**
+
+Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to sign your contributions.
+
+== Edited Transcript with Captioned Photos ==
+{% endraw %}{{ nav_bar }}
+{% raw %}//**Instructions — delete this block once your section is written.**\\
+**1.** Start by copying the photos-and-transcript page linked under "Post-Meeting Resources" above and paste it here. Tidy the transcript into readable prose (fix obvious errors, correct spelling, drop fillers, and remove comments not pertinent to the meeting).\\
+**2.** Move each photo, together with its Caption line, from the top of this section to where it fits the discussion. Replace the TODO text on the Caption line with a description of what is on the board in that photo (the text after the pipe (|) in the image markup is only hidden alt text and will not appear on the page). If something in the photo(s) or the transcript is not clear, add your question as an action item for Dr. Hepting.\\
+**3.** Link mentioned and other helpful URLs.//
+
+**Contributors' PWPs:**
+
+
+== Action Items for Dr. Hepting ==
+{% endraw %}{{ nav_bar }}
+{% raw %}//**Instructions — delete this block once your section is written.** List anything Dr. Hepting agreed to follow up on or questions that came up during your edits to the meeting record, one bullet each.//
+
+**Contributors' PWPs:**
+
+
+== Commentary and Discussion ==
+{% endraw %}{{ nav_bar }}
+{% raw %}//**Instructions — delete this block once your section is written.** Add your group's reflections: what was confusing or surprising, how today connects to earlier meetings or other courses, and any questions worth raising next time. Two or three substantive points is plenty.//
+
+**Contributors' PWPs:**
+
+
+== Fair Exam Questions (with Answers) About Today's Meeting ==
+{% endraw %}{{ nav_bar }}
+{% raw %}//**Instructions — delete this block once your section is written.** Write two or three exam-style questions a fair exam could ask about today's material, each with an answer. Aim to test understanding.//
+
+**Contributors' PWPs:**
+
+=Progress Tracker
+|= Item |= Status |= Contributors' PWPs |
+| Coordinate with members of WikiGroup | | |
+| WikiGroup members have added their PWPs to their WikiGroup wiki page | | |
+| Edited Transcript with Captioned Photos | | |
+| --> Copied photos and transcript | | |
+| --> Place photos and add captions | | |
+| --> Link mentioned and other helpful URLs | | |
 | Action Items for Dr. Hepting | | |
 | Commentary and Discussion | | |
 | Fair Exam Questions (with Answers) About Today's Meeting | | |

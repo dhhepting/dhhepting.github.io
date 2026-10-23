@@ -28,15 +28,14 @@ layout: default
 {%- endfor %}
 
 === Copy a photo into your transcript ===
-Copy one block below (the photo and its Caption line, kept together) into your captioned-photograph section, then replace the TODO text with a description of what is on the board. The text after the pipe inside the image markup is hidden alt text, not a visible caption.
+Copy one block below (the photo and its Caption line, kept together) into your captioned-photograph section, then replace the TODO text with a description of what is depicted. The text after the pipe inside the image markup is hidden alt text, not a visible caption.
 {%- for p in gen.photos %}
 
 Mtg {{ p.label }}:
 {% raw %}{{{
-{{{% endraw %}{{ p.full_url }} | Mtg {{ p.label }} photo {% raw %}}}
-
-**Caption:** //TODO: describe what is on the board//
-}}}{% endraw %}
+{{{% endraw %}{{ p.full_url }} | Mtg {{ p.label }} photo {% raw %}}}{% endraw %}
+**Caption {{ p.label }}:** //TODO: describe what is depicted//
+{% raw %}}}}{% endraw %}
 {%- endfor %}
 {%- endcapture -%}
 

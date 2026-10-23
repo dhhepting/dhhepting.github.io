@@ -13,16 +13,22 @@ class CreolePhotoBlockTest < Minitest::Test
   ].freeze
 
   def blocks
-    CreolePhotoBlock.block(PHOTOS).chomp.split("\n\n")
+    CreolePhotoBlock.block(PHOTOS).chomp.split("\n\n") # one entry per photo
   end
 
-  def test_each_photo_is_an_image_line_followed_by_its_caption_line
-    lines = blocks
-    assert_equal 4, lines.size # image, caption, image, caption
-    lines.each_slice(2).with_index do |(img, cap), i|
+  def test_each_photo_is_an_image_line_followed_directly_by_its_own_caption_line
+    entries = blocks
+    assert_equal 2, entries.size
+    entries.each_with_index do |entry, i|
+      img, cap = entry.split("\n")
       assert_match(/\A\{\{#{Regexp.escape(PHOTOS[i]['full_url'])} \| .* \}\}\z/, img)
-      assert_equal CreolePhotoBlock.caption_line, cap
+      assert_equal CreolePhotoBlock.caption_line(PHOTOS[i]), cap
     end
+  end
+
+  def test_caption_names_its_photo
+    assert_equal '**Caption 01-1:** //TODO: describe what is depicted//', CreolePhotoBlock.caption_line(PHOTOS[0])
+    assert_equal '**Caption 01-1a:** //TODO: describe what is depicted//', CreolePhotoBlock.caption_line(PHOTOS[1])
   end
 
   # Text after the pipe is only the image's hidden alt attribute in Creole,
@@ -41,7 +47,6 @@ class CreolePhotoBlockTest < Minitest::Test
   # tools that check the wiki for unwritten captions look for a leading TODO
   def test_placeholder_starts_with_todo
     assert CreolePhotoBlock::CAPTION_PLACEHOLDER.start_with?('TODO')
-    assert_equal '**Caption:** //TODO: describe what is on the board//', CreolePhotoBlock.caption_line
   end
 
   def test_single_trailing_newline

@@ -6,7 +6,7 @@
 # meeting's NN_YYYY-MM-DD-photos-text wiki page. The transcript text is
 # pasted in by hand below it.
 #
-# Each entry is the image plus a visible "Caption:" line for students to
+# Each entry is the image plus a visible "Caption <label>:" line for students to
 # fill in. The caption must be separate visible text: in Creole's
 # {{url | text}} the text after the pipe becomes the image's alt attribute,
 # which Moodle does not display. The alt text here is only a stable,
@@ -25,8 +25,8 @@ module CreolePhotoBlock
 
   CAPTION_PLACEHOLDER = 'TODO: describe what is depicted'
 
-  # One entry per photo (image, blank line, caption line), entries separated
-  # by blank lines so Moodle stacks them vertically.
+  # One entry per photo (image line, then its caption line directly below),
+  # entries separated by blank lines so Moodle stacks them vertically.
   def block(photos)
     raise ArgumentError, 'no photos for this meeting' if photos.nil? || photos.empty?
 
@@ -34,10 +34,9 @@ module CreolePhotoBlock
   end
 
   # {{https://…&raw=1 | Mtg 01-1 photo }}
-  #
-  # **Caption:** //TODO: describe what is on the board//
+  # **Caption 01-1:** //TODO: describe what is depicted//
   def entry(photo)
-    "#{line(photo)}\n#{caption_line}"
+    "#{line(photo)}\n#{caption_line(photo)}"
   end
 
   # {{https://…&raw=1 | Mtg 01-1 photo }}
@@ -45,8 +44,8 @@ module CreolePhotoBlock
     "{{#{photo.fetch('full_url')} | Mtg #{photo.fetch('label')} photo }}"
   end
 
-  # **Caption:** //TODO: describe what is on the board//
-  def caption_line
-    "**Caption: #{photo.fetch('label')}** //#{CAPTION_PLACEHOLDER}//"
+  # **Caption 01-1:** //TODO: describe what is depicted//
+  def caption_line(photo)
+    "**Caption #{photo.fetch('label')}:** //#{CAPTION_PLACEHOLDER}//"
   end
 end
