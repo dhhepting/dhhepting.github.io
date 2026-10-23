@@ -227,42 +227,41 @@
 == For Next Meeting ==
 
 = Post-Meeting Resources =
-== Photos ==
-[[15_2026-11-02-photos]]
-
 == Photos and Transcript ==
 [[15_2026-11-02-photos-text]]
 
 = WikiGroup Contributions =
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
 Please **do all of your editing here in the wiki** — not in a document you paste in at the end. The wiki keeps a full page history, so working here is what lets your contributions be recognized.
-Only edit within this **WikiGroup Contributions** section.
 
-For Creole wiki syntax, please see the [[https://docs.moodle.org/502/en/Creole_format|Moodle Creole Format documentation]]
+
+For Creole wiki syntax, please see the **[[https://docs.moodle.org/502/en/Creole_format|Moodle Creole Format documentation]]**
 
 Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to sign your contributions.
 
 == Edited Transcript with Captioned Photos ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
 //**Instructions — delete this block once your section is written.**\\
 **1.** Start by copying the photos-and-transcript page linked under &quot;Post-Meeting Resources&quot; above and paste it here. Tidy the transcript into readable prose (fix obvious errors, correct spelling, drop fillers, and remove comments not pertinent to the meeting).\\
-**2.** Move each photo, together with its **Caption:** line, from the top of this section to where it fits the discussion. Replace the TODO text on the Caption line with a description of what is on the board in that photo (the text after the pipe (|) in the image markup is only hidden alt text and will not appear on the page). If something in the photo(s) or the transcript is not clear, add your question as an action item for Dr. Hepting.\\
+**2.** Move each photo, together with its Caption line, from the top of this section to where it fits the discussion. Replace the TODO text on the Caption line with a description of what is on the board in that photo (the text after the pipe (|) in the image markup is only hidden alt text and will not appear on the page). If something in the photo(s) or the transcript is not clear, add your question as an action item for Dr. Hepting.\\
 **3.** Link mentioned and other helpful URLs.//
 
 **Contributors&#39; PWPs:**
 
-
 == Action Items for Dr. Hepting ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
 //**Instructions — delete this block once your section is written.** List anything Dr. Hepting agreed to follow up on or questions that came up during your edits to the meeting record, one bullet each.//
 
 **Contributors&#39; PWPs:**
 
-
 == Commentary and Discussion ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
 //**Instructions — delete this block once your section is written.** Add your group&#39;s reflections: what was confusing or surprising, how today connects to earlier meetings or other courses, and any questions worth raising next time. Two or three substantive points is plenty.//
 
 **Contributors&#39; PWPs:**
 
-
 == Fair Exam Questions (with Answers) About Today&#39;s Meeting ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
 //**Instructions — delete this block once your section is written.** Write two or three exam-style questions a fair exam could ask about today&#39;s material, each with an answer. Aim to test understanding.//
 
 **Contributors&#39; PWPs:**
@@ -272,6 +271,355 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 | Coordinate with members of WikiGroup | | |
 | WikiGroup members have added their PWPs to their WikiGroup wiki page | | |
 | Edited Transcript with Captioned Photos | | |
+
+| Action Items for Dr. Hepting | | |
+| Commentary and Discussion | | |
+| Fair Exam Questions (with Answers) About Today&#39;s Meeting | | |
+
+</textarea>
+    
+  </div><h3>Photos and transcript page</h3>
+  <p class="text-muted">No photos in media.csv for this meeting yet — re-run sharemedia.py once they're uploaded.</p>
+
+  <nav class="d-flex justify-content-between align-items-center my-3">
+  <a class="btn btn-outline-secondary btn-sm" href="/wiki/CS-315/202630/14_2026-10-28/">&larr; Prev: 14_2026-10-28</a>
+  <a class="btn btn-outline-primary btn-sm" href="/wiki/CS-315/202630/table/">Index</a>
+  <a class="btn btn-outline-secondary btn-sm" href="/wiki/CS-315/202630/16_2026-11-04/">Next: 16_2026-11-04 &rarr;</a>
+</nav>
+</div>
+
+<script>
+  function copyPageName() {
+    const el = document.getElementById('wiki-page-name');
+    el.select();
+    navigator.clipboard.writeText(el.value).then(() => {
+      console.log('Wiki page name copied to clipboard');
+    });
+  }
+
+  function copyCreoleSource() {
+    const ta = document.getElementById('creole-source');
+    ta.select();
+    navigator.clipboard.writeText(ta.value).then(() => {
+      console.log('Creole source copied to clipboard');
+    });
+  }
+
+  // Split creole text at top-level "= Heading =" lines (a single "=",
+  // never "=="). Each section runs from its heading to just before the
+  // next one, heading included — Moodle's per-section edit box includes
+  // the heading line too, so a section replaces its edit box exactly.
+  function splitTopLevelSections(text) {
+    const sections = [];
+    for (const line of text.split('\n')) {
+      const m = line.match(/^=(?!=)\s*(.*?)\s*=*\s*$/);
+      if (m) sections.push({ title: m[1], lines: [line] });
+      else if (sections.length) sections[sections.length - 1].lines.push(line);
+    }
+    return sections.map(s => ({ title: s.title, text: s.lines.join('\n').trimEnd() + '\n' }));
+  }
+
+  // Radio buttons above the textarea: "Whole page" plus one per top-level
+  // section, built from the rendered text so new sections appear without
+  // touching this code. Choosing one swaps what the textarea shows; the
+  // existing Copy button copies whatever is shown.
+  (function buildSectionPicker() {
+    const ta = document.getElementById('creole-source');
+    const picker = document.getElementById('section-picker');
+    if (!ta || !picker) return;
+
+    const full = ta.value;
+    const choices = [{ title: 'Whole page', text: full }].concat(splitTopLevelSections(full));
+
+    choices.forEach((c, i) => {
+      const id = 'section-choice-' + i;
+      const wrap = document.createElement('div');
+      wrap.className = 'form-check form-check-inline';
+      wrap.innerHTML = '<input class="form-check-input" type="radio" name="section-choice">' +
+                       '<label class="form-check-label"></label>';
+      const input = wrap.querySelector('input');
+      const label = wrap.querySelector('label');
+      input.id = id;
+      input.checked = i === 0;
+      input.addEventListener('change', () => { ta.value = c.text; });
+      label.htmlFor = id;
+      label.textContent = c.title;
+      picker.appendChild(wrap);
+    });
+  })();
+
+  function copyFrom(id) {
+    const el = document.getElementById(id);
+    el.select();
+    navigator.clipboard.writeText(el.value).then(() => {
+      console.log(id + ' copied to clipboard');
+    });
+  }
+</script>
+
+---
+layout: default 
+# _layouts/meeting_page.html
+#
+# Layout for the meeting_pages collection. The ENTIRE page is generated:
+# creole_preamble (below) builds the full Moodle-paste text — four
+# sections (meeting title/Navigation, Plan for today, Post-meeting
+# resources, WikiGroup Contributions) — from
+# site.data.teaching[page.course][page.semester].meeting_pages_generated,
+# always current, regenerated on every build. The .creole files are
+# front-matter only (see lib/meeting_page_generator.rb); there is no
+# hand-authored body, so = CS-315 Mtg 15: 2026-11-02 =
+== Navigation ==
+[[14_2026-10-28 | Previous]] &lt;-- [[Home]] --&gt; [[16_2026-11-04 | Next]]
+
+= Plan for Meeting =
+== Theme ==
+
+== Administration ==
+* Today&#39;s Wiki Editors: [[WG-C]]
+* Happy Monday
+* ACTION: [[https://urcourses.uregina.ca/mod/attendance/password.php?session=275014 | Record your attendance]]
+* [[https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1793599200&amp;course=42149 | Class calendar for today]]
+* [[https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=42149 | Upcoming events ]]
+== Outline for Today ==
+== For Next Meeting ==
+
+= Post-Meeting Resources =
+== Photos and Transcript ==
+[[15_2026-11-02-photos-text]]
+
+= WikiGroup Contributions =
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
+Please **do all of your editing here in the wiki** — not in a document you paste in at the end. The wiki keeps a full page history, so working here is what lets your contributions be recognized.
+
+
+For Creole wiki syntax, please see the **[[https://docs.moodle.org/502/en/Creole_format|Moodle Creole Format documentation]]**
+
+Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to sign your contributions.
+
+== Edited Transcript with Captioned Photos ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
+//**Instructions — delete this block once your section is written.**\\
+**1.** Start by copying the photos-and-transcript page linked under &quot;Post-Meeting Resources&quot; above and paste it here. Tidy the transcript into readable prose (fix obvious errors, correct spelling, drop fillers, and remove comments not pertinent to the meeting).\\
+**2.** Move each photo, together with its Caption line, from the top of this section to where it fits the discussion. Replace the TODO text on the Caption line with a description of what is on the board in that photo (the text after the pipe (|) in the image markup is only hidden alt text and will not appear on the page). If something in the photo(s) or the transcript is not clear, add your question as an action item for Dr. Hepting.\\
+**3.** Link mentioned and other helpful URLs.//
+
+**Contributors&#39; PWPs:**
+
+== Action Items for Dr. Hepting ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
+//**Instructions — delete this block once your section is written.** List anything Dr. Hepting agreed to follow up on or questions that came up during your edits to the meeting record, one bullet each.//
+
+**Contributors&#39; PWPs:**
+
+== Commentary and Discussion ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
+//**Instructions — delete this block once your section is written.** Add your group&#39;s reflections: what was confusing or surprising, how today connects to earlier meetings or other courses, and any questions worth raising next time. Two or three substantive points is plenty.//
+
+**Contributors&#39; PWPs:**
+
+== Fair Exam Questions (with Answers) About Today&#39;s Meeting ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
+//**Instructions — delete this block once your section is written.** Write two or three exam-style questions a fair exam could ask about today&#39;s material, each with an answer. Aim to test understanding.//
+
+**Contributors&#39; PWPs:**
+
+=Progress Tracker
+|= Item |= Status |= Contributors&#39; PWPs |
+| Coordinate with members of WikiGroup | | |
+| WikiGroup members have added their PWPs to their WikiGroup wiki page | | |
+| Edited Transcript with Captioned Photos | | |
+
+| Action Items for Dr. Hepting | | |
+| Commentary and Discussion | | |
+| Fair Exam Questions (with Answers) About Today&#39;s Meeting | | |
+
+ emits creole_preamble alone.
+#
+# Outline / For Next Meeting come from plan.yml; the WikiGroup
+# Contributions section ships as generated seed text the group edits on
+# Moodle. Frozen at paste: paste once per meeting; student edits then
+# live on the wiki and are never overwritten by regeneration.
+#
+# Two kinds of navigation live here, deliberately kept apart:
+#   * creole_preamble's "== Navigation ==" — slug [[links]] that DO get
+#     pasted into Moodle (via = CS-315 Mtg 15: 2026-11-02 =
+== Navigation ==
+[[14_2026-10-28 | Previous]] &lt;-- [[Home]] --&gt; [[16_2026-11-04 | Next]]
+
+= Plan for Meeting =
+== Theme ==
+
+== Administration ==
+* Today&#39;s Wiki Editors: [[WG-C]]
+* Happy Monday
+* ACTION: [[https://urcourses.uregina.ca/mod/attendance/password.php?session=275014 | Record your attendance]]
+* [[https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1793599200&amp;course=42149 | Class calendar for today]]
+* [[https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=42149 | Upcoming events ]]
+== Outline for Today ==
+== For Next Meeting ==
+
+= Post-Meeting Resources =
+== Photos and Transcript ==
+[[15_2026-11-02-photos-text]]
+
+= WikiGroup Contributions =
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
+Please **do all of your editing here in the wiki** — not in a document you paste in at the end. The wiki keeps a full page history, so working here is what lets your contributions be recognized.
+
+
+For Creole wiki syntax, please see the **[[https://docs.moodle.org/502/en/Creole_format|Moodle Creole Format documentation]]**
+
+Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to sign your contributions.
+
+== Edited Transcript with Captioned Photos ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
+//**Instructions — delete this block once your section is written.**\\
+**1.** Start by copying the photos-and-transcript page linked under &quot;Post-Meeting Resources&quot; above and paste it here. Tidy the transcript into readable prose (fix obvious errors, correct spelling, drop fillers, and remove comments not pertinent to the meeting).\\
+**2.** Move each photo, together with its Caption line, from the top of this section to where it fits the discussion. Replace the TODO text on the Caption line with a description of what is on the board in that photo (the text after the pipe (|) in the image markup is only hidden alt text and will not appear on the page). If something in the photo(s) or the transcript is not clear, add your question as an action item for Dr. Hepting.\\
+**3.** Link mentioned and other helpful URLs.//
+
+**Contributors&#39; PWPs:**
+
+== Action Items for Dr. Hepting ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
+//**Instructions — delete this block once your section is written.** List anything Dr. Hepting agreed to follow up on or questions that came up during your edits to the meeting record, one bullet each.//
+
+**Contributors&#39; PWPs:**
+
+== Commentary and Discussion ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
+//**Instructions — delete this block once your section is written.** Add your group&#39;s reflections: what was confusing or surprising, how today connects to earlier meetings or other courses, and any questions worth raising next time. Two or three substantive points is plenty.//
+
+**Contributors&#39; PWPs:**
+
+== Fair Exam Questions (with Answers) About Today&#39;s Meeting ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
+//**Instructions — delete this block once your section is written.** Write two or three exam-style questions a fair exam could ask about today&#39;s material, each with an answer. Aim to test understanding.//
+
+**Contributors&#39; PWPs:**
+
+=Progress Tracker
+|= Item |= Status |= Contributors&#39; PWPs |
+| Coordinate with members of WikiGroup | | |
+| WikiGroup members have added their PWPs to their WikiGroup wiki page | | |
+| Edited Transcript with Captioned Photos | | |
+
+| Action Items for Dr. Hepting | | |
+| Commentary and Discussion | | |
+| Fair Exam Questions (with Answers) About Today&#39;s Meeting | | |
+
+).
+#   * page_nav below — on-site links between the AUTHORING pages, in the
+#     HTML chrome only, so you can click through every meeting and paste
+#     each into the wiki in one sitting. These never reach Moodle.
+---<div class="meeting-page">
+  <h1>CS-315 Mtg 15: 2026-11-02</h1>
+  <p class="text-muted">
+    Monday &middot; Theme: (not yet set) &middot;
+    Wiki editors: Group WG-C
+  </p>
+
+  <nav class="d-flex justify-content-between align-items-center my-3">
+  <a class="btn btn-outline-secondary btn-sm" href="/wiki/CS-315/202630/14_2026-10-28/">&larr; Prev: 14_2026-10-28</a>
+  <a class="btn btn-outline-primary btn-sm" href="/wiki/CS-315/202630/table/">Index</a>
+  <a class="btn btn-outline-secondary btn-sm" href="/wiki/CS-315/202630/16_2026-11-04/">Next: 16_2026-11-04 &rarr;</a>
+</nav>
+
+  <div class="alert alert-info">
+    This whole page is generated from plan.yml and meetings.yml — Outline and For
+    Next Meeting come from plan.yml; WikiGroup Contributions ships as a template
+    students complete on Moodle. Regenerating is always safe. Paste it into the
+    wiki once per meeting; after that, student edits live on Moodle and are never
+    overwritten.
+  </div>
+
+  <div class="mb-3">
+    <span class="text-muted">Photos page not created yet — [[15_2026-11-02-photos]] will show red in Moodle until photos are added</span>
+  </div>
+
+  <h3>Name for this page</h3>
+  <p class="text-muted mb-1">Paste this as the Moodle wiki page title, so the name matches the [[links]] that point here.</p>
+  <div class="input-group mb-3">
+    <input id="wiki-page-name" type="text" class="form-control" readonly value="15_2026-11-02">
+    <button type="button" class="btn btn-secondary" onclick="copyPageName()">Copy</button>
+  </div>
+
+  <h3>Copy this into the Moodle wiki page</h3>
+  <p class="text-muted mb-1">Whole page for the first paste. After that, pick one top-level section and paste it through Moodle's edit link for that section, so the rest of the page (including student edits) is left alone.</p>
+  <div id="section-picker" class="mb-2" role="radiogroup" aria-label="Part of the page to copy">
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyCreoleSource()">
+      Copy to clipboard
+    </button>
+  </div>
+  <div class="mb-3">
+    <textarea id="creole-source" class="form-control" rows="24" readonly>= CS-315 Mtg 15: 2026-11-02 =
+== Navigation ==
+[[14_2026-10-28 | Previous]] &lt;-- [[Home]] --&gt; [[16_2026-11-04 | Next]]
+
+= Plan for Meeting =
+== Theme ==
+
+== Administration ==
+* Today&#39;s Wiki Editors: [[WG-C]]
+* Happy Monday
+* ACTION: [[https://urcourses.uregina.ca/mod/attendance/password.php?session=275014 | Record your attendance]]
+* [[https://urcourses.uregina.ca/calendar/view.php?view=day&amp;time=1793599200&amp;course=42149 | Class calendar for today]]
+* [[https://urcourses.uregina.ca/calendar/view.php?view=upcoming&amp;course=42149 | Upcoming events ]]
+== Outline for Today ==
+== For Next Meeting ==
+
+= Post-Meeting Resources =
+== Photos and Transcript ==
+[[15_2026-11-02-photos-text]]
+
+= WikiGroup Contributions =
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
+Please **do all of your editing here in the wiki** — not in a document you paste in at the end. The wiki keeps a full page history, so working here is what lets your contributions be recognized.
+Only edit within this **WikiGroup Contributions** section. Do not add any headings to the wiki page, only use **bold text** to emphasize structure within the established headings.
+
+For Creole wiki syntax, please see the **[[https://docs.moodle.org/502/en/Creole_format|Moodle Creole Format documentation]]**
+
+Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to sign your contributions.
+
+== Edited Transcript with Captioned Photos ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
+//**Instructions — delete this block once your section is written.**\\
+**1.** Start by copying the photos-and-transcript page linked under &quot;Post-Meeting Resources&quot; above and paste it here. Tidy the transcript into readable prose (fix obvious errors, correct spelling, drop fillers, and remove comments not pertinent to the meeting).\\
+**2.** Move each photo, together with its Caption line, from the top of this section to where it fits the discussion. Replace the TODO text on the Caption line with a description of what is on the board in that photo (the text after the pipe (|) in the image markup is only hidden alt text and will not appear on the page). If something in the photo(s) or the transcript is not clear, add your question as an action item for Dr. Hepting.\\
+**3.** Link mentioned and other helpful URLs.//
+
+**Contributors&#39; PWPs:**
+
+
+== Action Items for Dr. Hepting ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
+//**Instructions — delete this block once your section is written.** List anything Dr. Hepting agreed to follow up on or questions that came up during your edits to the meeting record, one bullet each.//
+
+**Contributors&#39; PWPs:**
+
+
+== Commentary and Discussion ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
+//**Instructions — delete this block once your section is written.** Add your group&#39;s reflections: what was confusing or surprising, how today connects to earlier meetings or other courses, and any questions worth raising next time. Two or three substantive points is plenty.//
+
+**Contributors&#39; PWPs:**
+
+
+== Fair Exam Questions (with Answers) About Today&#39;s Meeting ==
+[[#toc-3|↑ Top]] | [[#toc-12|Edited Transcript]] | [[#toc-13|Action Items]] | [[#toc-14|Commentary]] | [[#toc-15|Exam Questions]]
+//**Instructions — delete this block once your section is written.** Write two or three exam-style questions a fair exam could ask about today&#39;s material, each with an answer. Aim to test understanding.//
+
+**Contributors&#39; PWPs:**
+
+=Progress Tracker
+|= Item |= Status |= Contributors&#39; PWPs |
+| Coordinate with members of WikiGroup | | |
+| WikiGroup members have added their PWPs to their WikiGroup wiki page | | |
+| Edited Transcript with Captioned Photos | | |
+| --&gt; Copied photos and transcript | | |
+| --&gt; Place photos and add captions | | |
+| --&gt; Link mentioned and other helpful URLs | | |
 | Action Items for Dr. Hepting | | |
 | Commentary and Discussion | | |
 | Fair Exam Questions (with Answers) About Today&#39;s Meeting | | |
