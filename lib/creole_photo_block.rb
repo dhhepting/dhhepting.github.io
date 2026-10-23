@@ -23,7 +23,7 @@
 module CreolePhotoBlock
   module_function
 
-  CAPTION_PLACEHOLDER = 'TODO: describe what is on the board'
+  CAPTION_PLACEHOLDER = 'TODO: describe what is depicted'
 
   # One entry per photo (image, blank line, caption line), entries separated
   # by blank lines so Moodle stacks them vertically.
@@ -37,7 +37,7 @@ module CreolePhotoBlock
   #
   # **Caption:** //TODO: describe what is on the board//
   def entry(photo)
-    "#{line(photo)}\n\n#{caption_line}"
+    "#{line(photo)}\n#{caption_line}"
   end
 
   # {{https://…&raw=1 | Mtg 01-1 photo }}
@@ -47,6 +47,6 @@ module CreolePhotoBlock
 
   # **Caption:** //TODO: describe what is on the board//
   def caption_line
-    "**Caption:** //#{CAPTION_PLACEHOLDER}//"
+    "**Caption: #{photo.fetch('label')}** //#{CAPTION_PLACEHOLDER}//"
   end
 end
