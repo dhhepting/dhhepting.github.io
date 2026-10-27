@@ -1,0 +1,155 @@
+DH: Okay, so our recording has started, so we're unmuting. 13. So I hope we'll be able to check the… Midterm, discuss the midterm marks. On Wednesday. Any thoughts about the midterm? I don't think at all.
+
+Augustine Adu-Mensah: Yeah.
+
+DH: Okay, we'll leave it there.
+
+The plan is to discuss the midterm. on Wednesday. 28th of October. Let me just ask one question related to the midterm. How many vertices are there in a triangle? Three. Yes, three.
+
+So the way that what that means is we have to use a three instead of a two.
+
+Does that make sense? Relinquishing.
+
+Augustine Adu-Mensah: Yes, please.
+
+DH: Yeah, problems in sense. Bounce. And you should close that door. Let's focus on… That's better. So some people wrote the expression is 2 to the fourth. Because I said four transformations, a history of four. So that part was OK. Yeah, I didn't even know what I was doing, and I got it right. I think it should. I didn't see any threes. My quick. A quick overview of question one.
+
+Does that make sense? Three to the fourth? There's the expression for the number of colors. Okay, Evander is… She nodding his head. How about the rest of you will? Does that make sense, Will? The three to the fourth. Okay. Hopefully, it's because I'm playing preparation, and I just hope it was right. So I'm happy. I think I need to invite them. Well, I'm not saying it didn't. Okay.
+
+Wait, don't do this.
+
+Yeah, I've updated instructions. But they're not here. I'm still working out. The issues with the wiki. Let's do attendance. Oh, great.
+
+Let me correct this page first.
+
+Augustine Adu-Mensah: Athena's is not showing here.
+
+DH: That's okay. I will fix that in a second, okay?
+
+Augustine Adu-Mensah: Okay, please.
+
+DH: Let's see if it works now. There we go.
+
+Augustine Adu-Mensah: Yes, please, it's work. Thank you.
+
+DH: You're welcome.
+
+Okay.
+
+I didn't link the video, but let me… Show you where that would be.
+
+It's Ray Tracing Essentials Part 6, The Rendering Equation. So this is what… comes up as an example with Blinn's Law. Let me see if this is going to work for us.
+
+And this, and this, and this, and this talk is about the rendering equation.
+
+[Rendering Equation Video -- https://youtu.be/AODo_RjJoUA?si=X6lfX8jJJ7ddpEg3]
+
+DH: So what'd you think of that? It's kind of ivy, but for the most part, it's calm. So I'm kind of going over my head. Yeah. All right, see you soon.
+
+So a question, has anyone heard of Max Headroom? Because that's what the video sounded like. Let me see if I can.
+
+I won't play the whole thing, but I'll give you an idea. Oh, great.
+
+That's good, good, good, good. And what you're about to witness is one of the most sinister-sounding intros to a trailer to one of the greatest epics ever produced in the history of television. There's more. Because of this, we are going to see it as well. Yes, it. Yes, it. Yes. Namely… the maximum zero. Sorry. And afterwards, that is directly following, I want to talk to you about something a little bit bigger, namely, Mad Max syndrome. So sit back. Relax and enjoy. Life hell.
+
+So he did… I don't remember all the story, but I'll put it. We can find a link for it. I'll include this link. And maybe some other ones too.
+
+So the idea of showing you the rendering equation video, and maybe you can watch it on your own. It's a fairly simple. I mean, there are some simple parts to it. So we're not dealing with the bi-directional. Reflection distribution function. And those things, but… So we're going to approximate them. for our rasterization. Code in Webgl. 2.
+
+Well, it's not just simplified for WebGL to be. and start with the rendering equation, and then. Make this rasterization. algorithms. We started with rasterization. And then from there I developed. The rendering equation.
+
+Do we have an ambient? Terrible, please. Describe the background, the lighting. That would be Haddle.
+
+Talk to our champion. Late sources. So they're not in a position they're just playing the scene. a point light sources.
+
+The point light sources are located in a point in space. So they can admit in all directions.
+
+It's a lot of length. Which is basically a point blank source with a cone around it. also have. Light sources. directional light sources.
+
+All light comes from a direction.
+
+When it comes to a production, not a point. What's something that we could model with? directional or just applied source.
+
+Three letters. Yeah, the sun. Okay. I'm just gonna be here. No? So there's a direction. Oh, yeah, I have something. So let's… How do we, how can we tell direction from a point? A direction vector from a plane. Wow. Other than the W is the mulch, I'm assuming. You know.
+
+How we get zero for W is subtracting two points to get a direction. Or that's one way to think about it. So we do that. And that was W equals 1 minus W equals 1. So then that w equals 0. So that's the way we can tell. That would be a vector or a point.
+
+Does that make sense? Okay.
+
+It's like a certain number of x, y, and z per how much w it is. So if w is equal to 0, then it's like it has a —. a certain number of X per 0 of W. Really, that is basically. I'll have to think about that.
+
+So I wanted to show you an example. Related to assignment two.
+
+So that's an example of. what I had suggested for. The model in assignment two. So instead of having constant colors. We have a more advanced. model here.
+
+Augustine Adu-Mensah: please, I have a question.
+
+DH: Yes.
+
+Augustine Adu-Mensah: with assignment 2, the link is not working. I try accessing it, and it keeps on showing not found. On the website. So it means, like, we can assess it.
+
+DH: So which link can you? Can you post in the chat with which link you're having problems with?
+
+Augustine Adu-Mensah: Okay, please.
+
+DH: Are you posting that, Augie?
+
+Augustine Adu-Mensah: Oh, I just checked, it works now. Yeah, sorry about that.
+
+DH: Oh, okay.
+
+Augustine Adu-Mensah: Thank you.
+
+DH: All right. You're welcome.
+
+Does that make sense?
+
+Augustine Adu-Mensah: Yes, who's…
+
+DH: So you can do that. Sorry, go ahead, Augie.
+
+Augustine Adu-Mensah: No, you said it doesn't make sense, and I said yes.
+
+DH: Sorry, I don't… I don't know why Siri involved itself. Yeah, so I asked if it made sense. Did you have a comment or a question about that?
+
+Augustine Adu-Mensah: No, please.
+
+DH: Okay.
+
+Okay. So this is the vertex shader for that example. So we're reading in. So what? What? Let's ask… for audience participation here. What's happening in this vertex shader? Deep input session taking me in. Yeah. I'm not sure what's up, actually. So the normal… Find that. Have that information so we get the. Well, so… Lambert's Coast Sidewalk. So if the light is lined up to normal. It gets full intensity.
+
+Let me share my screen.
+
+Stop looking at that. You have the position that's stored in every single vertex, but why would you have a normal stored in every single vertex? And it's like. at the normal kind of like. I don't know. Ah, moving division happens. We'll look at the way that normal is. Initialized in a minute. So remember, we can have multiple, we could have the same normal for each face. of the cube.
+
+Yeah, we're copying class. Okay, so I mean, just because we have an attribute. variable in the shader doesn't mean that. They're all… Unique perverted for each vertex. Yeah, okay. We could have the colors. Be the same. And so we just get a… A flat, shaded… Yeah, it just kind of throws me off because normally when you think about normals, you think about it from the middle of a plane or something like that. So I was thinking about it from the middle of a triangle. But I guess it makes some sense if you have it on. each vertice here that you just have that average between. I don't… Yeah, okay, so that's… Let's look at that a little bit later. So we have position. So the cubes position. And then. We're getting that from our JavaScript code. We're also getting a normal vector. which we'll look at. So what's the difference between in and out? Vec three and Vec four in uniform, mat four. I don't know. when in use send something into the. You just seem to take straight into the vertex sheet of that. It takes like. the thing going into the pipeline by then. with uniform. I'm pretty sure that's just an area that you specify that it'll stay the same once you put it in. Ah, it's coming up. Yeah, so… In. I guess a better way to say it is, it is curved for a text, but then uniform it is. Once you specify that, it'll see that way for a bit, until you change it. data uniform set independently. So we'll look at that. Well, I'm not sure that I want to look at it in detail today. Okay, so.
+
+So then we have an out. sense here.
+
+So what is happening in in. So in this case, we're passing out a normal. Should we change the name fee? for vertex normal. So then there's a comment here. The model is rotation only, no non-uniform scaling. So MAT3 model view is a valid normal matrix.
+
+So when we have non-uniform scaling. The angles… If we just use the… the… Model view matrix. We wouldn't get accurate surface normals. So there's if we have. Non-uniform scaling. Say we did 0.5 and 0.7 in X and Y. 9.9, it said. That would be non-uniform scaling, so we would have… We would do an extra transformation, preserve the surface normals. So we get vertex normal by applying. model, and then the view matrix and multiplying that by the normal. That's… Coming in from the JavaScript. And then GL position. What's happening there? What's the difference? Between the multiplication in. The V normal line and the GL position line.
+
+We're adding the objection. So we're taking the position. Starting with… that was passed in from the Javascript, and then we applied the model matrix, view matrix, and the projection matrix. And that gives us the point. That will be… Used in. In the vertex, in the fragment shader. Does that make sense?
+
+Where is that coming from?
+
+Okay, so what… What's going on here? So in… So we're getting… view normal from the vertex. Shader. That's the end.
+
+Out back four is the fragment color.
+
+What's going on? And. in the main routine. So… We're going to normalize the normal vector. So we have… We know that it's a valid normal, but it may not be. of length one. So that's —. That's the normalizing part. Okay. So second line, we're defining a light source.
+
+What is going on in line three there? Float diffuse. Okay.
+
+It is mainly from one side of the angle.
+
+Go read the person's name. If you will bow. Thank you. What's that? Whatever. Yes.
+
+So we're calculating… The dot product. of N. And L. And we set it to be max of that and zero. That's it. This. Yes. Because if it's… If the angle is greater than 90. It'll be a negative value, and it would mean that the light isn't hitting. the surface. So that's why we. Should we have a max zero? Or one of the terms of the max is zero. Okay, so that. Could be a better name. And now the fragment color is… are… It's uniform color in RGB. So… We have first a term for ambient. And then… And. internal or diffuse. And. We're appending the value of alpha. That makes sense. So I think I can do this. Let's change… ambient to zero.
+
+Mm-hmm.
+
+Oh, goodness, I'm sorry. I was having such fun. Animating the cube. So. Thank you very much for today. See you Wednesday. Take care. And I have office hours. Today, tomorrow, and Wednesday. Okay, thanks again. See you Wednesday.
+
+Okay, bye.

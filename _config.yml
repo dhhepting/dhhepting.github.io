@@ -10,6 +10,22 @@ baseurl: /~hepting
 anchors:
   tlo: topics_learning_outcomes
 
+changes:
+  enabled: true
+  repo_url: https://github.com/dhhepting/dhhepting.github.io
+#     site_url: https://example.org  # optional; default is `url` + `baseurl`.
+#                                    # Root of THIS host's site, baseurl included:
+#                                    # feed readers need absolute URLs.
+  limit: 50                      # entries per feed
+  only: []                       # path prefixes to include; [] = everything
+  exclude: [_assignments,_question_bank/]     # path prefixes never to publish
+  feeds:
+  - path: changes.xml
+    title: Site changes
+  - path: teaching/CS-315/202630/changes.xml   # example; adjust
+    title: CS-315 changes
+    only: [teaching/CS-315/202630/]
+
 collections:
   wiki_starts:
     output: true
