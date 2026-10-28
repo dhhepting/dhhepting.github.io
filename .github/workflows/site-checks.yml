@@ -18,11 +18,11 @@ jobs:
   build-and-check:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v5
-      with:
-        fetch-depth: 0
-      - run: bundle exec rake changes:check
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0   # full history: the changes feed needs real last-modified times
+
       - name: Set up Node.js 24
         uses: actions/setup-node@v4
         with:
@@ -30,10 +30,15 @@ jobs:
           cache: npm
           cache-dependency-path: ${{ env.CS315_DIR }}/package-lock.json
 
-      - uses: ruby/setup-ruby@v1
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: .ruby-version   # single source of truth (same as deploy-uregina.yml)
           bundler-cache: true            # bundle install + gem cache, keyed on Gemfile.lock
+
+      # Fail fast if the checkout is shallow, before the slower steps run.
+      - name: Check for full git history
+        run: bundle exec rake changes:check
 
       # Build the CS315 Vite samples to static files in dist/ BEFORE Jekyll
       # runs, so Jekyll copies dist/ into _site like any other static dir.
