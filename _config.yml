@@ -10,10 +10,51 @@ baseurl: /~hepting
 anchors:
   tlo: topics_learning_outcomes
 
+# Paste into _config.yml (or _config_github.yml).  Everything except repo_url
+# is optional.
+
+changes:
+  repo_url: https://github.com/dhhepting/dhhepting.github.io
+
+  limit: 50          # entries per feed
+  max_files: 15      # files listed per feed entry, then "...and N more files"   (item 5)
+  page_limit: 100    # rows in the /changes/ table                                (item 5)
+
+  # Commits that should not move dates or appear in feeds: bulk reformats,
+  # mass renames.  Find candidates with:  bundle exec rake 'changes:bulk[50]'
+  ignore_revs: .changes-ignore-revs                                              # (item 4)
+
+  # Never published: directory prefixes or globs.  A glob matches a path or any
+  # parent directory; a glob without "/" matches names at any depth.
+  exclude:                                                                       # (item 2)
+    - _question_bank/
+    - teaching/CS-315/202630/code/CS315/dist/
+    - teaching/CS-315/202630/code/CS315/public/
+    - '*.swp'
+
+  # "Pages matching `page` are built from the files in `from`, so they change when
+  # those do."  `page` is a regexp for the whole source path; its named groups
+  # fill in %{name} in `from`.  (Not `on:` -- YAML turns that key into `true`.)
+  # CHECK THE `from` PATHS against your repo first:
+  #   git ls-files | grep -E 'offering\.yml|plan\.yml'
+  depends:                                                                       # (item 3)
+    - page: 'teaching/(?<course>[^/]+)/(?<term>\d{6})/index\.md'
+      from:
+        - '_data/teaching/%{course}/%{term}/'
+
+  feeds:                                                                         # (item 1)
+    - path: changes.xml
+      title: Site changes
+    - path: teaching/CS-315/202630/changes.xml
+      title: CS-315 changes
+      only:
+        - teaching/CS-315/202630/
+        - _meeting_pages/CS-315/202630/
 changes:
   enabled: true
   repo_url: https://github.com/dhhepting/dhhepting.github.io
-#     site_url: https://example.org  # optional; default is `url` + `baseurl`.
+  # site_url for uregina.ca
+  #site_url: https://www2.cs.uregina.ca/~hepting # optional; default is `url` + `baseurl`.
 #                                    # Root of THIS host's site, baseurl included:
 #                                    # feed readers need absolute URLs.
   limit: 50                      # entries per feed

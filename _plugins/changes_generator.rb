@@ -4,27 +4,34 @@ require_relative '../lib/change_log'
 
 # Thin Jekyll wrapper around lib/change_log.rb (all logic lives there).
 #
-# Opt-in via _config.yml:
+# Opt-in via _config.yml.  Only repo_url is required:
 #
 #   changes:
 #     enabled: true                  # false or absent section = do nothing
 #     repo_url: https://github.com/dhhepting/dhhepting.github.io
-#     site_url: https://example.org  # optional; default is `url` + `baseurl`.
-#                                    # Root of THIS host's site, baseurl included:
-#                                    # feed readers need absolute URLs.
+#     site_url: https://example.org  # default: `url` + `baseurl`.  Root of THIS
+#                                    # host's site; feed readers need absolute URLs.
 #     limit: 50                      # entries per feed
-#     only: []                       # path prefixes to include; [] = everything
-#     exclude: [_question_bank/]     # path prefixes never to publish
+#     max_files: 15                  # files listed per feed entry, then "...and N more"
+#     page_limit: 100                # rows in the /changes/ table
+#     ignore_revs: .changes-ignore-revs   # bulk commits (see `rake changes:bulk`)
+#     only: []                       # patterns to include; [] = everything
+#     exclude:                       # patterns never to publish: prefixes or globs
+#       - _question_bank/
+#       - '*.swp'
+#     depends:                       # a page also changes when these files do
+#       - page: 'teaching/(?<course>[^/]+)/(?<term>\d{6})/index\.md'
+#         from: ['_data/teaching/%{course}/%{term}/']
 #     feeds:
 #       - path: changes.xml
 #         title: Site changes
-#       - path: teaching/CS-315/202630/changes.xml   # example; adjust
+#       - path: teaching/CS-315/202630/changes.xml
 #         title: CS-315 changes
-#         only: [teaching/CS-315/202630/]
+#         only: [teaching/CS-315/202630/, _meeting_pages/CS-315/202630/]
 #
 # Produces:
 #   * one Atom feed per entry in `feeds` (one entry per commit, diff linked)
-#   * site.data['changes']['pages'] : rows for the /changes/ page template
+#   * site.data['changes'] = { 'pages', 'total', 'summary' } for changes.md
 module Jekyll
   class ChangesGenerator < Generator
     safe true
@@ -36,20 +43,24 @@ module Jekyll
 
       repo_url = require_setting(cfg, 'repo_url')
       site_url = (cfg['site_url'] || default_site_url(site)).chomp('/')
-      limit    = cfg.fetch('limit', 50)
+      only     = Array(cfg['only'])
+      ignore   = read_ignore_revs(site, cfg)
+      rules    = ChangeLog.rules(cfg['depends'])
 
-      commits = ChangeLog.commits(repo: site.source,
-                                  only: Array(cfg['only']),
-                                  except: Array(cfg['exclude']))
-      urls = source_urls(site)
+      # `only` narrows what is published, never what pages can depend on, so
+      # history is read without it; `exclude` applies everywhere.
+      history = ChangeLog.commits(repo: site.source, except: Array(cfg['exclude']), ignore_revs: ignore)
 
-      site.data['changes'] = {
-        'pages' => ChangeLog.page_rows(ChangeLog.last_changes(commits), urls, repo_url)
-      }
+      urls, titles = source_info(site)
+      urls = urls.select { |path, _| only.empty? || ChangeLog.matches_any?(path, only) }
+      changes, via = ChangeLog.apply_dependencies(ChangeLog.last_changes(history), history, rules, urls.keys)
+      site.data['changes'] = ChangeLog.page_table(changes, urls, repo_url, titles: titles, via: via,
+                                                                          limit: cfg.fetch('page_limit', 100))
 
+      published = ChangeLog.select(history.reject(&:ignored), only: only)
       absolute = urls.transform_values { |u| "#{site_url}#{u}" }
       Array(cfg['feeds'] || [{ 'path' => 'changes.xml', 'title' => 'Site changes' }]).each do |feed|
-        add_feed(site, feed, commits, absolute, site_url, repo_url, limit)
+        add_feed(site, feed, published, absolute, site_url, repo_url, cfg)
       end
     rescue ChangeLog::Error => e
       raise Jekyll::Errors::FatalException, "changes: #{e.message}"
@@ -57,7 +68,7 @@ module Jekyll
 
     private
 
-    def add_feed(site, feed, commits, absolute_urls, site_url, repo_url, limit)
+    def add_feed(site, feed, commits, absolute_urls, site_url, repo_url, cfg)
       feed_path = feed.fetch('path')
       scoped = ChangeLog.select(commits, only: Array(feed['only']))
       xml = ChangeLog.atom(commits: scoped,
@@ -66,7 +77,8 @@ module Jekyll
                            site_url: site_url,
                            repo_url: repo_url,
                            page_urls: absolute_urls,
-                           limit: limit)
+                           limit: cfg.fetch('limit', 50),
+                           max_files: cfg.fetch('max_files', 15))
 
       dir = File.dirname(feed_path)
       page = PageWithoutAFile.new(site, site.source, dir == '.' ? '' : dir, File.basename(feed_path))
@@ -77,16 +89,33 @@ module Jekyll
       site.pages << page
     end
 
-    # { source path (relative to site.source) => page url (no baseurl) } for
-    # every HTML page and collection document.  Generated pages that have no
-    # source file simply never appear in git's output and are dropped later.
-    def source_urls(site)
+    # [{ source path => page url }, { source path => title }] for every HTML
+    # page and collection document.  Generated pages that have no source file
+    # simply never appear in git's output and are dropped later.
+    def source_info(site)
       urls = {}
-      site.pages.each { |p| urls[p.path] = p.url if p.output_ext == '.html' }
-      site.collections.each_value do |collection|
-        collection.docs.each { |d| urls[d.relative_path] = d.url if d.output_ext == '.html' }
+      titles = {}
+      site.pages.each do |page|
+        next unless page.output_ext == '.html'
+
+        urls[page.path] = page.url
+        titles[page.path] = page.data['title']
       end
-      urls
+      site.collections.each_value do |collection|
+        collection.docs.each do |doc|
+          next unless doc.output_ext == '.html'
+
+          urls[doc.relative_path] = doc.url
+          titles[doc.relative_path] = doc.data['title']
+        end
+      end
+      [urls, titles]
+    end
+
+    def read_ignore_revs(site, cfg)
+      return [] unless cfg['ignore_revs']
+
+      ChangeLog.read_ignore_revs(File.join(site.source, cfg['ignore_revs']))
     end
 
     def default_site_url(site)
