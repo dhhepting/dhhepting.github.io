@@ -192,7 +192,7 @@
   </div>
 
   <div class="mb-3">
-    <span class="text-muted">Photos page not created yet — [[14_2026-10-28-photos]] will show red in Moodle until photos are added</span>
+    <a href="/wiki/CS-315/202630/14_2026-10-28-photos/">View/copy this meeting's photos (separate page)</a>
   </div>
 
   <h3>Name for this page</h3>
@@ -281,7 +281,31 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 </textarea>
     
   </div><h3>Photos and transcript page</h3>
-  <p class="text-muted">No photos in media.csv for this meeting yet — re-run sharemedia.py once they're uploaded.</p>
+  <p class="text-muted mb-1">Create the Moodle wiki page with this name, paste the photo block, then paste the cleaned transcript below it.</p>
+  <div class="input-group mb-3">
+    <input id="photos-text-page-name" type="text" class="form-control" readonly value="14_2026-10-28-photos-text">
+    <button type="button" class="btn btn-secondary" onclick="copyFrom('photos-text-page-name')">Copy</button>
+  </div>
+  <div class="mb-3">
+    <textarea id="photos-creole" class="form-control" rows="10" readonly>{{https://dl.dropboxusercontent.com/scl/fi/6rmazbxfmaumscq31dzwj/14-1.jpg?rlkey=o1rqmm21apbb7vetlzwswad9c&amp;raw=1 | Mtg 14-1 photo }}
+**Caption 14-1:** //TODO: describe what is depicted//
+
+{{https://dl.dropboxusercontent.com/scl/fi/afh6hm67lges91p58k38j/14-2.jpg?rlkey=f6l8mt1td8l1e3xmtdwhs7wx5&amp;raw=1 | Mtg 14-2 photo }}
+**Caption 14-2:** //TODO: describe what is depicted//
+
+{{https://dl.dropboxusercontent.com/scl/fi/2ntajh0gbc0p49vvyzlad/14-3.jpg?rlkey=3eg99wu7dz9uwz96uu963t3ge&amp;raw=1 | Mtg 14-3 photo }}
+**Caption 14-3:** //TODO: describe what is depicted//
+
+{{https://dl.dropboxusercontent.com/scl/fi/jx1xgm2ezyxqmww6f5xx8/14-4.jpg?rlkey=3nfi73lfs55eqhmvm06judz9s&amp;raw=1 | Mtg 14-4 photo }}
+**Caption 14-4:** //TODO: describe what is depicted//
+
+{{https://dl.dropboxusercontent.com/scl/fi/562e9d6w7f7ckas8f12yv/14-5.jpg?rlkey=8drsefwqn4dknrbm2ucu7mkyq&amp;raw=1 | Mtg 14-5 photo }}
+**Caption 14-5:** //TODO: describe what is depicted//
+</textarea>
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-creole')">
+      Copy photo block
+    </button>
+  </div>
 
   <nav class="d-flex justify-content-between align-items-center my-3">
   <a class="btn btn-outline-secondary btn-sm" href="/wiki/CS-315/202630/13_2026-10-26/">&larr; Prev: 13_2026-10-26</a>
