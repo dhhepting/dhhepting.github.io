@@ -83,14 +83,14 @@ class ChangesGeneratorTest < Minitest::Test
                      .merge(overrides) }
   end
 
-  def site(cfg = config)
+  def site(cfg = config, extra_pages: [])
     pages = [FakePage.new('index.md', '/', '.html', { 'title' => 'Home' }),
              FakePage.new('teaching/CS-1/T1/index.md', '/teaching/CS-1/T1/', '.html', { 'title' => 'CS-1 Term 1' }),
              FakePage.new('style.css', '/style.css', '.css', {}),
              FakePage.new('generated/no-source.html', '/generated/', '.html', {})]
     docs = FakeCollection.new([FakeDoc.new('_meeting_pages/CS-1/T1/01.creole', '/meetings/1/', '.html',
                                            { 'title' => 'Meeting 1' })])
-    FakeSite.new(@repo, cfg, pages, { 'meeting_pages' => docs }, {})
+    FakeSite.new(@repo, cfg, pages + extra_pages, { 'meeting_pages' => docs }, {})
   end
 
   def generate(site)
@@ -183,6 +183,90 @@ class ChangesGeneratorTest < Minitest::Test
     data = generate(site(config('only' => ['teaching/']))).data['changes']
     assert_equal ['teaching/CS-1/T1/index.md'], data['pages'].map { |r| r['path'] }
     assert_includes data['pages'].first['change'], '_data/teaching/CS-1/T1/plan.yml' # outside `only`, still counted
+  end
+
+  # --- per-feed HTML pages ----------------------------------------------------
+
+  def config_with_page(**feed_overrides)
+    cfg = config
+    cfg['changes']['feeds'][1].merge!('page' => true, **feed_overrides)
+    cfg
+  end
+
+  def test_feed_with_page_true_also_writes_an_html_page_next_to_it
+    site = generate(site(config_with_page))
+    page = feed_page(site, 'teaching/CS-1/T1/changes/index.html')
+
+    refute_nil page
+    assert_equal 'teaching/CS-1/T1/changes', page.dir
+    assert_equal 'index.html', page.name
+    assert_equal 'CS-1', page.data['title']
+    assert_includes page.content, '{% include changes-table.html data=page.changes %}'
+    assert_includes page.content, '{{ page.changes.feed | relative_url }}'
+    refute page.data.key?('layout'), 'left to the site front-matter defaults'
+    assert_nil feed_page(site, 'changes/index.html'), 'a feed without `page:` gets none'
+  end
+
+  def test_page_table_is_scoped_to_the_feed
+    site = generate(site(config_with_page))
+    table = feed_page(site, 'teaching/CS-1/T1/changes/index.html').data['changes']
+
+    assert_equal '/teaching/CS-1/T1/changes.xml', table['feed']
+    assert_equal ['_meeting_pages/CS-1/T1/01.creole', 'teaching/CS-1/T1/index.md'], table['pages'].map { |r| r['path'] }
+    assert_equal 2, table['total']
+    assert_equal 3, site.data['changes']['total'], 'the site-wide table is unaffected'
+  end
+
+  def test_scoped_rows_keep_dependency_dates
+    table = feed_page(generate(site(config_with_page)), 'teaching/CS-1/T1/changes/index.html').data['changes']
+    index = table['pages'].find { |r| r['path'] == 'teaching/CS-1/T1/index.md' }
+    assert_includes index['change'], '(via _data/teaching/CS-1/T1/plan.yml)'
+  end
+
+  def test_page_limit_and_layout_can_be_set_per_feed
+    page = feed_page(generate(site(config_with_page('page_limit' => 1, 'layout' => 'wide'))),
+                     'teaching/CS-1/T1/changes/index.html')
+    assert_equal 1, page.data['changes']['pages'].size
+    assert_equal 2, page.data['changes']['total']
+    assert_equal 'wide', page.data['layout']
+  end
+
+  def test_site_wide_page_layout_is_the_fallback
+    cfg = config_with_page
+    cfg['changes']['page_layout'] = 'default'
+    page = feed_page(generate(site(cfg)), 'teaching/CS-1/T1/changes/index.html')
+    assert_equal 'default', page.data['layout']
+  end
+
+  def test_page_can_be_put_in_any_directory
+    page = feed_page(generate(site(config_with_page('page' => '/where/else/'))), 'where/else/index.html')
+    refute_nil page
+    assert_equal 'where/else', page.dir
+  end
+
+  def test_feed_points_at_its_page_as_the_human_readable_alternate
+    site = generate(site(config_with_page))
+    scoped = feed_page(site, 'teaching/CS-1/T1/changes.xml').content
+    all = feed_page(site, 'changes.xml').content
+    assert_includes scoped, 'rel="alternate" type="text/html" href="https://example.org/teaching/CS-1/T1/changes/"'
+    assert_includes all, 'rel="alternate" type="text/html" href="https://example.org"'
+  end
+
+  def test_a_generated_page_may_not_overwrite_an_existing_page
+    existing = FakePage.new('changes.md', '/changes/', '.html', {})
+    cfg = config
+    cfg['changes']['feeds'][0]['page'] = true # changes.xml -> /changes/
+    error = assert_raises(Jekyll::Errors::InvalidConfigurationError) { generate(site(cfg, extra_pages: [existing])) }
+    assert_includes error.message, '/changes/'
+  end
+
+  def test_page_true_needs_an_xml_feed_path_and_a_page_directory_must_not_be_empty
+    cfg = config
+    cfg['changes']['feeds'][0] = { 'path' => 'feed.atom', 'page' => true }
+    assert_raises(Jekyll::Errors::InvalidConfigurationError) { generate(site(cfg)) }
+
+    cfg['changes']['feeds'][0] = { 'path' => 'changes.xml', 'page' => '/' }
+    assert_raises(Jekyll::Errors::InvalidConfigurationError) { generate(site(cfg)) }
   end
 
   # --- on/off and errors ------------------------------------------------------
