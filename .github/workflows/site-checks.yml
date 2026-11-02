@@ -1,5 +1,6 @@
 # .github/workflows/site-checks.yml
-# Runs the Rake test pipeline (data:validate → wiki:validate → build → test:html).
+# Runs the full Rake pipeline (`rake`): yaml:duplicate_keys → structure:validate →
+# wiki:validate → meetings:check_all → test:unit → build → code:listings → test:html.
 
 name: Site checks
 
@@ -9,6 +10,14 @@ on:
   push:
     branches: [ master ]
   workflow_dispatch:                    # manual "Run workflow" button
+
+permissions:
+  contents: read
+
+# A newer push to the same ref makes the older check run pointless.
+concurrency:
+  group: site-checks-${{ github.ref }}
+  cancel-in-progress: true
 
 env:
   # The one place the term-specific path lives in this file.
@@ -52,8 +61,7 @@ jobs:
           npm ci
           npx vite build
 
-      # `rake` with no args runs the default task:
-      #   data:validate  wiki:validate  build  test:html
+      # `rake` with no args runs the default task (see the Rakefile header):
       # cheapest checks first, aborting on the first failure.
       - name: Run the full check pipeline
         run: bundle exec rake

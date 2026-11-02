@@ -11,6 +11,11 @@ on:
 permissions:
   contents: write
 
+# Never let two deploys race on the gh-pages branch; queue instead of cancel.
+concurrency:
+  group: deploy-gh-pages
+  cancel-in-progress: false
+
 env:
   # The one place the term-specific path lives in this file.
   CS315_DIR: teaching/CS-315/202630/code/CS315
@@ -43,6 +48,11 @@ jobs:
       - name: Check for full git history
         run: bundle exec rake changes:check
 
+      # Cheap source checks (seconds), before the slow steps.  The full pipeline,
+      # including html-proofer, runs in site-checks.yml.
+      - name: Validate sources and run unit tests
+        run: bundle exec rake yaml:duplicate_keys structure:validate test:unit
+
       # Build the CS315 Vite samples to static files in dist/ BEFORE Jekyll
       # runs, so Jekyll copies dist/ into _site like any other static dir.
       # vite.config.js uses base: './', so no per-host base path is needed.
@@ -62,6 +72,11 @@ jobs:
         run: |
           test -s _site/index.html || { echo "Build looks empty — refusing to deploy."; exit 1; }
           test -s "_site/$CS315_DIR/dist/Samples/ColourCube/app.html" || { echo "Vite samples missing from _site — refusing to deploy."; exit 1; }
+          # The changes feature fails silently, so check its output explicitly.
+          test -s _site/changes/index.html || { echo "changes page missing — refusing to deploy."; exit 1; }
+          test -s _site/changes.xml || { echo "changes feed missing — refusing to deploy."; exit 1; }
+          test -s "_site/${CS315_DIR%/code/CS315}/changes/index.html" || { echo "CS-315 changes page missing — refusing to deploy."; exit 1; }
+          grep -q 'https://dhhepting.github.io/' _site/changes.xml || { echo "feed URLs have the wrong host — refusing to deploy."; exit 1; }
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
