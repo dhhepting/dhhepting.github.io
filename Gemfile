@@ -24,9 +24,9 @@ source "https://rubygems.org"
 gem "jekyll", "~> 4.4"
 gem 'nokogiri', '~> 1.15', '>= 1.15.4'
 gem 'racc', '~> 1.7', '>= 1.7.1'
-gem 'async', '~> 2.6', '>= 2.6.4'
+gem 'async', '~> 2.46'
 gem 'io-event', '~> 1.3', '>= 1.3.2'
-gem 'html-proofer', '~> 5.0', '>= 5.0.8'
+gem 'html-proofer', '~> 5.2'
 
 group :jekyll_plugins do
    gem 'jekyll-seo-tag'
