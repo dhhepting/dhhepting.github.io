@@ -10,6 +10,7 @@
 # dependency of jekyll (it usually is).
 
 require 'minitest/autorun'
+require 'jekyll'   # the plugin subclasses Jekyll::Generator
 require_relative '../_plugins/meeting_grid'
 
 class MeetingGridTest < Minitest::Test

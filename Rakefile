@@ -2,21 +2,32 @@
 #
 # Rakefile
 #
-# `rake` (no args) runs everything, cheapest checks first:
-#   1. rake data:validate  — fast, no Jekyll build. Checks _data/teaching
-#      shape directly (catches things like the missing `mdays` bug in
-#      under a second).
-#   2. rake build          — `jekyll build --trace`, fails loudly on any
-#      Liquid/Ruby error, including ones our plugin now raises on
-#      purpose (see _plugins/meeting_grid.rb).
-#   3. rake test:html      — runs html-proofer against the built _site/,
-#      catching broken internal links and mismatched anchor IDs (like
-#      the ssTopics/ssTLO_* mismatch we noticed in main.html).
+# `rake` (no args) is what CI runs.  Cheapest checks first, so failures are fast:
+#   1. yaml:duplicate_keys — repeated YAML keys (the last copy silently wins)
+#   2. structure:validate  — every structural validator, one combined report
+#   3. wiki:validate, meetings:check_all — source-level checks
+#   4. test:unit           — unit tests for lib/ and plugin logic (no Jekyll build;
+#                            defined in rakelib/test_unit.rake)
+#   5. build               — changes:check (full git history), then `jekyll build --trace`
+#   6. code:listings, test:html — post-build checks on _site/
 #
-# Run just one tier while iterating, e.g.: `rake data:validate`
+# Run just one tier while iterating, e.g.: `rake structure:validate`
 
 require 'yaml'
-task default: %w[yaml:duplicate_keys data:validate wiki:validate meetings:check_all build code:listings test:html]
+require 'date'
+
+# data:validate is not listed: structure:validate already runs the same
+# TeachingDataValidator.  The task stays available on its own.
+task default: %w[
+  yaml:duplicate_keys
+  structure:validate
+  wiki:validate
+  meetings:check_all
+  test:unit
+  build
+  code:listings
+  test:html
+]
 
 namespace :meetings do
   desc 'Regenerate all meeting-page .creole files for ONE offering (usage: rake meetings:pages[CS-315,202630]). Front-matter only, fully generated — the whole page is composed at build time from plan.yml/meetings.yml. Overwrites in full every run (no drift-detection); migrate any hand-authored body into plan.yml FIRST — stripped bodies are reported. Kept OUT of :build so offerings not yet migrated are never clobbered. Review + commit the result.'
@@ -74,15 +85,24 @@ require_relative "lib/semester_validator"        # SemesterDataValidator (new)
 require_relative "lib/teaching_data_validator"   # existing
 require_relative "lib/offering_index_validator"  # existing
 require_relative "lib/courses_validator"         # new
-require_relative "lib/busy_block_validator"
-sems = Psych.safe_load_file("_data/teaching/all/semesters.yml", permitted_classes: [Date])
-BusyBlockValidator.validate!(sems)   # raises with all offending entries listed
+require_relative "lib/busy_block_validator"     # BusyBlockValidator (raises; wrapped below)
 
 namespace :structure do
   # One list = the single place to register structural validators. Add future
   # ones here (e.g. an LFS size-threshold check) and they join the run for free.
   VALIDATORS = [
     ["semesters",      -> { SemesterDataValidator.new("_data/teaching/all/semesters.yml").run }],
+    # BusyBlockValidator.validate! raises (listing every offending entry) instead
+    # of returning errors, so adapt it to the same [] / [errors] shape.
+    ["busy blocks",    lambda {
+      sems = Psych.safe_load_file("_data/teaching/all/semesters.yml", permitted_classes: [Date])
+      begin
+        BusyBlockValidator.validate!(sems)
+        []
+      rescue StandardError => e
+        e.message.lines.map(&:strip).reject(&:empty?)
+      end
+    }],
     ["teaching data",  -> { TeachingDataValidator.new("_data/teaching").run }],
     ["offering index", -> { OfferingIndexValidator.new("teaching").run }],
     ["courses",        -> { CoursesValidator.new("_data/teaching/all").run }],
@@ -100,9 +120,6 @@ namespace :structure do
     end
   end
 end
-
-# CI runs `bundle exec rake`; make sure structure:validate is in your default:
-#   task default: %w[structure:validate build test:html]
 
 namespace :wiki do
   desc 'Validate every .creole wiki-seed file parses cleanly and has required front matter'
@@ -134,7 +151,7 @@ namespace :wiki do
 end
 
 desc 'Build the Jekyll site, failing loudly on any Liquid/Ruby error'
-task build: %w[photos:sync_all table:sync_all] do
+task build: %w[changes:check photos:sync_all table:sync_all] do
   # Cleans _site/ and .jekyll-cache/ first — without this, output from a
   # different command (e.g. `urserve`'s `jekyll serve`, which can bake in
   # a completely different site.url depending on Jekyll version) could
@@ -158,7 +175,7 @@ end
 namespace :build do
   %w[github uregina].each do |target|
     desc "Build the site for the #{target} deploy target"
-    task target => %w[photos:sync_all table:sync_all] do
+    task target => %w[changes:check photos:sync_all table:sync_all] do
       sh "bundle exec jekyll clean --destination _site_#{target}"
       sh "bundle exec jekyll build --trace " \
          "--config _config.yml,_config_#{target}.yml " \
@@ -234,10 +251,7 @@ namespace :test do
     abort
   end
 
-  desc 'Run unit tests against plugin logic directly (no Jekyll build needed)'
-  task :unit do
-    sh 'bundle exec ruby -Ilib -Itest test/meeting_grid_test.rb'
-  end
+  # test:unit (all of test/**/*_test.rb) is defined in rakelib/test_unit.rake.
 end
 
 # namespace :meetings do

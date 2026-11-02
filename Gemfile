@@ -36,3 +36,5 @@ end
 
 
 gem "creole", "~> 0.5.0"
+
+gem "minitest", "~> 5.25", group: :test
