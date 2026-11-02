@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Model, view, projection</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header>
+    <h1>Building the model-view-projection matrix</h1>
+    <p>A vertex travels model space → world → eye → clip space → image. Each canvas shows one stop on that trip.</p>
+  </header>
+
+  <p id="error" role="alert"></p>
+
+  <main>
+    <aside id="panel" aria-label="Controls"></aside>
+
+    <section id="views">
+      <figure class="final">
+        <canvas id="view-final"></canvas>
+        <figcaption><strong>Final image.</strong> P·V·M applied; the GPU divides by w and fills the canvas.</figcaption>
+      </figure>
+      <figure>
+        <canvas id="view-model"></canvas>
+        <figcaption><strong>1. Model space.</strong> Vertices as written, before M. Drag to orbit, wheel to zoom.</figcaption>
+      </figure>
+      <figure>
+        <canvas id="view-world"></canvas>
+        <figcaption><strong>2. World space.</strong> After M. The amber box is the camera’s view volume.</figcaption>
+      </figure>
+      <figure>
+        <canvas id="view-eye"></canvas>
+        <figcaption><strong>3. Eye space.</strong> After V·M. The camera sits at the origin looking down −z.</figcaption>
+      </figure>
+      <figure>
+        <canvas id="view-ndc"></canvas>
+        <figcaption><strong>4. Normalized device coordinates.</strong> After P·V·M and ÷w. Everything inside the cube is drawn.</figcaption>
+      </figure>
+    </section>
+
+    <section id="matrices" aria-label="Matrices">
+      <pre id="warnings" hidden></pre>
+      <div class="matrix"><h2>M</h2><pre id="mat-M"></pre></div>
+      <div class="matrix"><h2>V</h2><pre id="mat-V"></pre></div>
+      <div class="matrix"><h2>P</h2><pre id="mat-P"></pre></div>
+      <div class="matrix"><h2>P·V·M</h2><pre id="mat-PVM"></pre></div>
+    </section>
+  </main>
+
+  <script type="module" src="main.mjs"></script>
+</body>
+</html>

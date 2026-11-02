@@ -36,6 +36,9 @@ jobs:
           ruby-version: .ruby-version   # single source of truth (same as deploy-uregina.yml)
           bundler-cache: true            # bundle install + gem cache, keyed on Gemfile.lock
 
+      - name: Check YAML for duplicate keys
+        run: bundle exec rake yaml:duplicate_keys
+        
       # Fail fast if the checkout is shallow, before the slower steps run.
       - name: Check for full git history
         run: bundle exec rake changes:check

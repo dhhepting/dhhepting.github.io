@@ -16,8 +16,7 @@
 # Run just one tier while iterating, e.g.: `rake data:validate`
 
 require 'yaml'
-
-task default: %w[data:validate wiki:validate meetings:check_all build code:listings test:html]
+task default: %w[yaml:duplicate_keys data:validate wiki:validate meetings:check_all build code:listings test:html]
 
 namespace :meetings do
   desc 'Regenerate all meeting-page .creole files for ONE offering (usage: rake meetings:pages[CS-315,202630]). Front-matter only, fully generated — the whole page is composed at build time from plan.yml/meetings.yml. Overwrites in full every run (no drift-detection); migrate any hand-authored body into plan.yml FIRST — stripped bodies are reported. Kept OUT of :build so offerings not yet migrated are never clobbered. Review + commit the result.'
