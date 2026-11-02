@@ -2,15 +2,7 @@
 
 # Rake loads rakelib/*.rake automatically, so no Rakefile edit is needed.
 
-require 'rake/testtask'
-
 root = File.expand_path('..', __dir__)
-
-Rake::TestTask.new('test:change_log') do |t|
-  t.libs << 'lib' << 'test'
-  t.test_files = FileList['test/change_log_test.rb', 'test/changes_generator_test.rb']
-  t.warning = true
-end
 
 namespace :changes do
   desc 'Fail unless git history is complete (run in CI before `jekyll build`)'
