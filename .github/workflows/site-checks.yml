@@ -30,8 +30,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
         with:
-          fetch-depth: 0   # full history: the changes feed needs real last-modified times
-
+          fetch-depth: 0
+          filter: blob:none   # full commit/tree history; file contents only for the checked-out commit
+          
       - name: Set up Node.js 24
         uses: actions/setup-node@v4
         with:
