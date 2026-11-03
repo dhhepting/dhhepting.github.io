@@ -79,9 +79,8 @@ jobs:
           grep -q 'https://dhhepting.github.io/' _site/changes.xml || { echo "feed URLs have the wrong host — refusing to deploy."; exit 1; }
 
       - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./_site
-          # keep_history: true
