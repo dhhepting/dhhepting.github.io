@@ -36,7 +36,7 @@ jobs:
         with:
           fetch-depth: 0
           filter: blob:none   # full commit/tree history; file contents only for the commit being built
-          
+
       - name: Set up Node.js 24
         uses: actions/setup-node@v4
         with:
@@ -94,15 +94,33 @@ jobs:
       - name: Set up SSH
         env:
           TITAN_SSH_KEY: ${{ secrets.TITAN_SSH_KEY }}
+          TITAN_KNOWN_HOSTS: ${{ vars.TITAN_KNOWN_HOSTS }}
         run: |
           mkdir -p ~/.ssh
           printf '%s\n' "$TITAN_SSH_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -T 15 titan.cs.uregina.ca >> ~/.ssh/known_hosts
+          printf '%s\n' "$TITAN_KNOWN_HOSTS" > ~/.ssh/known_hosts
+        #   - name: Set up SSH
+        # env:
+        #   TITAN_SSH_KEY: ${{ secrets.TITAN_SSH_KEY }}
+        # run: |
+        #   mkdir -p ~/.ssh
+        #   printf '%s\n' "$TITAN_SSH_KEY" > ~/.ssh/id_ed25519
+        #   chmod 600 ~/.ssh/id_ed25519
+        #   ssh-keyscan -T 15 titan.cs.uregina.ca >> ~/.ssh/known_hosts
 
       # Your urbuild rsync line, with -e added so rsync uses the deploy key.
       - name: Deploy with rsync
         run: |
-          rsync -avzh --delete --checksum --stats \
-            -e "ssh -i ~/.ssh/id_ed25519 -o ConnectTimeout=20 -o ServerAliveInterval=15 -o ServerAliveCountMax=4" \
-            _site/ hepting@titan.cs.uregina.ca:public_html
+          for attempt in 1 2 3; do
+            rsync -avzh --delete --checksum --stats \
+              -e "ssh -i ~/.ssh/id_ed25519 -o ConnectTimeout=20 -o ServerAliveInterval=15 -o ServerAliveCountMax=4" \
+              _site/ hepting@titan.cs.uregina.ca:public_html && exit 0
+            echo "rsync attempt $attempt failed; retrying in 60s"; sleep 60
+          done
+          exit 1
+      # - name: Deploy with rsync
+      #   run: |
+      #     rsync -avzh --delete --checksum --stats \
+      #       -e "ssh -i ~/.ssh/id_ed25519 -o ConnectTimeout=20 -o ServerAliveInterval=15 -o ServerAliveCountMax=4" \
+      #       _site/ hepting@titan.cs.uregina.ca:public_html
