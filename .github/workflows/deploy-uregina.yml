@@ -29,6 +29,7 @@ env:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-24.04
+    timeout-minutes: 20 # adjust to tighten
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -96,11 +97,11 @@ jobs:
           mkdir -p ~/.ssh
           printf '%s\n' "$TITAN_SSH_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan titan.cs.uregina.ca >> ~/.ssh/known_hosts
+          ssh-keyscan -T 15 titan.cs.uregina.ca >> ~/.ssh/known_hosts
 
       # Your urbuild rsync line, with -e added so rsync uses the deploy key.
       - name: Deploy with rsync
         run: |
-          rsync -avzh --delete \
-            -e "ssh -i ~/.ssh/id_ed25519" \
+          rsync -avzh --delete --checksum --stats \
+            -e "ssh -i ~/.ssh/id_ed25519 -o ConnectTimeout=20 -o ServerAliveInterval=15 -o ServerAliveCountMax=4" \
             _site/ hepting@titan.cs.uregina.ca:public_html

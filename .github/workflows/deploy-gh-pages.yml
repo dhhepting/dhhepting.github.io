@@ -23,6 +23,8 @@ env:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-24.04
+    timeout-minutes: 20      # about 3x a normal run; adjust once you know your usual duration
+
     steps:
       - name: Checkout
         uses: actions/checkout@v5
