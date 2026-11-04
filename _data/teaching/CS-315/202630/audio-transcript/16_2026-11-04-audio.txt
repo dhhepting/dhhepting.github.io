@@ -1,0 +1,113 @@
+DH: Didn't I join the meeting already?
+
+I wonder if that's gonna cause some… Strange feedback problems. So anyone pay attention to the election results yesterday? I noticed that on my iPhone calendar, it didn't tell me that it was US selection. It just said Election Day. I guess that's what happens when we live next to the States. Details about separating US and Canada aren't so important to the Americans. Anyway… So here we are at meeting 16.
+
+What did we talk about last day?
+
+We've been developing a model of illumination or shading. Lighting and shading. So anyone like to? summarize our discussion so far.
+
+So we have three terms. Three quantities.
+
+They start with an A, a D, and an S. Yeah. Ambient, diffused, and speculative. Yeah.
+
+So this is… This is like the background light.
+
+So we can specify a red, green, and blue. Colors for the light and also a coefficient or a weight. the importance of that contribution. That light source contribution to the scene. So is Ambient located anywhere in the scene? In particular, is it like a point light source? So no, it's not. It's just… present in the scene, so we don't calculate. Reflection. from the ambient light source, because it's just. There, in the… in the scene. So specular and diffuse. terms. They deal with… Something that begins with R. I spy with my little eye something that begins with R. Function. Yes.
+
+So what's the difference between a diffuse reflector and. Or something that's primarily a diffuse surface reflecting. And one that's a specular. One that has specular highlights.
+
+So what's another time that we use. Diffuse. I was going to say we could defuse a bomb. That's a different spelling. We could have an essential oil diffuser. Is that something on your radar? So what happens when they diffuse something into the scene when we steep? We steep tea by putting a bag in the water. The hot water. It spreads out. It's distributed.
+
+So we can observe. We get differences if we're pointing at the point light source. So it's brighter there. But it's not just at… The direction of the light. We get… Values for all the other directions as well.
+
+And what about specular reflection?
+
+So what if we have —. A very shiny surface. What do we notice about it? Are those reflections of the lights against the wall? Are they specular highlights? or diffuse.
+
+Yeah, it's primarily diffuse. If we look at the… at those pod lights. Can you see? Reflections on them. Thank you. The lows are sharper. So it's a more shiny surface. So the specular… Reflection has a greater impact.
+
+This. Done. Is everyone done with the attendance?
+
+So when we talk about lighting and shading, we want to —. make… our models. and their images appear three-dimensional. So there are different types of light material interactions. We've covered them a bit. Build a simple reflection model, the Phong model that can be used with real-time graphics hardware. Thanks. So can you see the difference between the top? That's… Looks more like a circle. Does this look more like a sphere? Does it have cues that make it look more like a sphere?
+
+So the explanation. Or… This looking more like a sphere is because there's a variation of color. That mimics… how we'd see the object if it was a real thing in a scene lit. With a point light source. Is there a question? Yep. Okay. So, to consider the interactions, what are the light sources, what are the material properties, what are the… what's the location of the viewer? And what is the surface orientation? So we can… Think about… The transport of light in the scene scattered. So if there's.
+
+The light source here. There's a point light source. and some hits surface A and some hit surface B. And there's the exchange. Some of that info. Intensity. The first hit A will hit B. And then bounce around. And then some of the intensity that hit. B will hit A. Did I say those two differently? I think I did. So, we see the… The scattering of light in the scene. So we've talked a little bit about the render equation. Just in terms of. some very basics that we don't want to get into here. So the rendering equation is recursive. So we follow late. Along the paths that it takes. and we can stop when the energy is below a certain threshold. So we can't solve it. And analytically, in general. If we do ray tracing with. Perfectly reflecting spheres. I'm… I'm going to try to find.
+
+An image that Eric Haynes did.
+
+That gives you an idea. It's not the image I was thinking of, but. Here's the… Spheres are transformed. So we see the fractal structure that —. It comes from… The self-similarity in the construction. He did one for SIGGRAPH in. '89, I think, when the conference was in Boston. So we did T for 2 to the power n. So the teapot is… An iconic piece of computer graphics. history. It's a model that. was… Scanned. or digitized.
+
+At the University of Utah, I believe. It's interesting because the bottom of the teapot. wasn't digitized. So when we encounter teapots today. There might be a… Oh. An artifact noticeable from the fat. from the lack of knowledge. Data points. Let me try and find… A picture of that.
+
+Okay.
+
+Anyway, so when you think about the teapot. Talk about the teapot and computer graphics. That's the teapot.
+
+So the other thing about the rendering equation is that it's. global. It includes shadows and multiple scattering from object to object. So we can see that. In this scene.
+
+Some of the interactions that are possible. So we see the lake at the top going directly to the viewer. And bouncing off the cylinder. coming to the viewer. Bouncing off. Off the queue. And then this year. is translucent. So it's. Maybe glass or something like that. So there's a reflection ray. That comes… Comes from the light source, and. bounces towards the viewer and the dotted line. It's the. path that goes through the material. Based on… how we've… Oh, we specified the material. So we can have multiple reflections. And shadows. So many interesting effects.
+
+So for doing global illumination. How do we… Keep track of… The impact… On the… The objects made up of triangles. So. The process with the Z buffer is. we're dealing with. that fragment of. Deciding… The color of… That fragment. by examining. a series of. Triangles independently.
+
+So if we think about light material interaction. Light that strikes an object is partially absorbed and partially scattered or reflected. The amount reflected determines the color and brightness of the object. The reflective light is scattered in a manner that depends on the smoothness and orientation of the object. of the surface, object surface.
+
+So if we're being physically based. It's not just late at a particular point. So the number of coins. So that makes… approximation of a light source. more difficult because it's really an area lake. So… we're dealing with… a point in space for the light, the point light sources that we model.
+
+So we've talked about point light sources with. We have them with a position and with a color in red, green, and blue. If they're directional or a distant source. We treat them as infinitely far away, so the rays coming from the light source. or parallel. So we didn't talk too much about spotlights. But it's… The mechanism is… To restrict light from an ideal point source.
+
+That picture makes sense.
+
+So we can have different surface types. The smoother a surface, the more reflected light is concentrated in the direction. A perfect mirror would. Reflect the light.
+
+So what? things that we've talked about on the other side. Briefly. Too rough and smooth. Now… This one is spanking room.
+
+So the Phong model —. takes the components, diffuse specular and ambient, and uses 4 vectors. One is to the light source. One is to the viewer. Then we have the normal for the surface. And then the direction of a perfect reflector. So that means… Those are… Equal angles. between L and N and N and R. And… So they're on the same plane.
+
+Thanks a lot. My restart of the computer solved this problem.
+
+So when we have the rough surfaces. So, we can think of… A perfect diffuse reflector, so the light is scattered equally in all directions. The amount of light reflected is proportional to the vertical component of the incoming light. So the reflected light is. varies according to cos theta.
+
+So we can compute coseta as L dot N. If the vectors are normalized. Then we have… constants or coefficients for R, G, and B.
+
+So… We don't have a lot of surfaces that are just diffuse or just specular reflectors. So the highlight comes. When the specular highlight comes from.
+
+When we're… In the neighborhood of that perfect reflection.
+
+So Fong's work. will be… The reflected intensity varied as.
+
+Yes. times the incoming intensity. Then the shine is coefficient. And the shininess coefficient. There's an exponent there. Items. The range of. or narrows. The interaction. or selects. Gives more weight. to reflect the vectors that are close to the perfect reflection. So values of alpha between 100 and 200 correspond to metals. Values between 5 and 10. Give services that look like plastic.
+
+So in a bit more detail. Ambient light is meant… Catch. All the effects that… Our model doesn't account for.
+
+So we have a coefficient. that specifies the contribution. And then… We have a term for intensity of the ambient light. So we'll do the same for diffuse and specular reflectors. So we talked about distance and attenuation. The light from a point source. that impact that contribution on a surface is inversely proportional. to square the distance between the. So we can add a factor. Oh, God. Form. to diffuse and specular terms. Because with ambient, we're not… We don't have a position for the light. It's just there.
+
+So here's the key takeaway.
+
+Doesn't have a physical justification. When you say it doesn't have physical justification, you just mean, like, there's… it was just an arbitrary choice to… like render the light in this way. Yeah, well, it's not completely arbitrary. There's some. Some simplifications that are applied. So it's a model that's maybe easier to work with than the physical. based approach. So we can't get all the effects from it. But it does pretty well.
+
+So we have nine coefficients for each point light source. The intensity. for RG&B in diffuse, specular, and ambient. and we have 9 absorption coefficients. Okay… For ambient, diffuse, and specular in RGNB. and the shininess coefficient alpha.
+
+So when we're calculating the intensity of a point on the screen. Should we have… All right. K for diffuse times intensity for diffuse. And this… Is the… cosine… Which means… It's strongest when. The late direction… is the same as the normal. Then we have a specular term. Here we're looking at the angle between. The viewer and the perfect reflector. Raise to the… Power of Alpha, and then… We add in the ambient term.
+
+So the Fong reflectance model. is expensive because it requires the calculation of the new. reflection vector and view vector for each vertex. So, Glenn suggested… an approximation using the halfway vector. That's more efficient.
+
+So H is norm. Is the normalized vector halfway between L and V?
+
+So there's the… Expression, the calculated L plus V equals zero. divided by… The length of L plus V. Okay.
+
+So instead of v.r, we do n.h. Oh, here's some teapots.
+
+Thank you.
+
+Okay… Okay, I'm going. to attempt.
+
+So I did a variation on. The shaded cube in chapter six's sample. The textbook code… So that's… Pervertax shading. And… This is her fragment shading. I will create a version that shows them side by side. What can you notice about. The difference… Between them. Okay, so remember this one.
+
+And there we have it. The other one.
+
+So what was the problem? that we wanted to address.
+
+And then we're doing the intensity calculations at the vertices only. We are… Possibly missing… the points that are getting the most. intensity from the specular reflection. And I see I'm out of time. Does that make sense?
+
+So look at… The shaders between shaded sphere one and two. I will… Put them. in the resources for this meeting. Does that make sense? Okay, thank you very much for today. Take care and have a wonderful reading week.
