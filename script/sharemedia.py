@@ -38,13 +38,30 @@ off_id = off_crs + "-" + off_sem
 # Get Dropbox OAuth2 access token from environment variable
 # See <https://blogs.dropbox.com/developers/2014/05/generate-an-access-token [...]
 # for how to generate one for an account.
-#command = ['bash', '-c', 'source /Users/hepting/.bashrc && env | grep DB_ACCESS_TOKEN']
-command = ['zsh', '-c', 'source /Users/hepting/.zshrc && env | grep DB_ACCESS_TOKEN']
-proc = subprocess.Popen(command, stdout = subprocess.PIPE)
-for line in proc.stdout:
-  kvs = line.decode("utf-8").strip().split("=")
-  os.environ[kvs[0]] = kvs[1]
-TOKEN = os.environ['DB_ACCESS_TOKEN']
+
+import stat
+
+def load_dropbox_token():
+    """Return DB_ACCESS_TOKEN from the environment, else from ~/.secrets."""
+    token = os.environ.get("DB_ACCESS_TOKEN", "").strip()
+    if token:
+        return token
+    path = os.path.expanduser("~/.secrets")
+    try:
+        if os.stat(path).st_mode & (stat.S_IRWXG | stat.S_IRWXO):
+            sys.exit(f"ERROR: {path} is accessible by others; run: chmod 600 {path}")
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                m = re.match(
+                    r'\s*(?:export\s+)?DB_ACCESS_TOKEN=["\']?([^"\'\s]+)["\']?\s*$', line)
+                if m:
+                    return m.group(1)
+    except FileNotFoundError:
+        pass
+    sys.exit("ERROR: DB_ACCESS_TOKEN not found in environment or ~/.secrets")
+
+TOKEN = load_dropbox_token()
+
 # Check that access token is valid
 if (len(TOKEN) == 0):
   sys.exit("ERROR: Access token not found.")
