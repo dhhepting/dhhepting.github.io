@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>shadedCubeHalfway</title>
+</head>
+<body>
+<div>
+<button id="ButtonX">Rotate X</button>
+<button id="ButtonY">Rotate Y</button>
+<button id="ButtonZ">Rotate Z</button>
+<button id="ButtonT">Toggle Rotation</button>
+</div>
+<p>
+<label><input type="checkbox" id="Halfway" checked>
+Halfway vector H = normalize(L + E) (Blinn-Phong); unchecked: reflection vector R (Phong)</label>
+<br>
+<label><input type="checkbox" id="Compensate">
+Blinn exponent x4 (about the same highlight size as Phong)</label>
+<br>
+<label>Shininess <input type="range" id="Shininess" min="1" max="200" step="1">
+<output id="ShininessOut"></output></label>
+</p>
+<p>
+<label><input type="checkbox" id="Orbit" checked> Orbit light</label>
+<label>Azimuth <input type="range" id="Azimuth" min="0" max="359" step="1">
+<output id="AzimuthOut"></output></label>
+<label>Elevation <input type="range" id="Elevation" min="-80" max="80" step="1">
+<output id="ElevationOut"></output></label>
+<label>Distance <input type="range" id="Distance" min="1.5" max="3.5" step="0.1">
+<output id="DistanceOut"></output></label>
+</p>
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+<script type="module" src="shadedCubeHalfway.mjs"></script>
+</body>
+</html>
