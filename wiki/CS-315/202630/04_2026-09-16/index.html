@@ -285,13 +285,13 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 </textarea>
     
   </div><h3>Photos and transcript page</h3>
-  <p class="text-muted mb-1">Create the Moodle wiki page with this name, paste the photo block, then paste the cleaned transcript below it.</p>
+  <p class="text-muted mb-1">Create the Moodle wiki page with this name, then paste the text below into it. The transcript is included when <code>audio-transcript/04_2026-09-16-audio.txt</code> exists in the repo.</p>
   <div class="input-group mb-3">
     <input id="photos-text-page-name" type="text" class="form-control" readonly value="04_2026-09-16-photos-text">
     <button type="button" class="btn btn-secondary" onclick="copyFrom('photos-text-page-name')">Copy</button>
   </div>
   <div class="mb-3">
-    <textarea id="photos-creole" class="form-control" rows="10" readonly>{{https://dl.dropboxusercontent.com/scl/fi/i3pd2oyp0yo3s7uwvmv6j/04-1.jpg?rlkey=fgbh5c39tbxt2h2w1o8lsf7j1&amp;raw=1 | Mtg 04-1 photo }}
+    <textarea id="photos-text-creole" class="form-control" rows="16" readonly>{{https://dl.dropboxusercontent.com/scl/fi/i3pd2oyp0yo3s7uwvmv6j/04-1.jpg?rlkey=fgbh5c39tbxt2h2w1o8lsf7j1&amp;raw=1 | Mtg 04-1 photo }}
 **Caption 04-1:** //TODO: describe what is depicted//
 
 {{https://dl.dropboxusercontent.com/scl/fi/rxfoo89jquzlqg59o947h/04-2.jpg?rlkey=n5vid89e8k9ih2r5lvw722fxd&amp;raw=1 | Mtg 04-2 photo }}
@@ -306,8 +306,8 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 {{https://dl.dropboxusercontent.com/scl/fi/kyjaco5wrufv1j5bp0zx8/04-5.jpg?rlkey=vuo84cyuok97xlh3vo9sq7fzg&amp;raw=1 | Mtg 04-5 photo }}
 **Caption 04-5:** //TODO: describe what is depicted//
 </textarea>
-    <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-creole')">
-      Copy photo block
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-text-creole')">
+      Copy photos and transcript
     </button>
   </div>
 
