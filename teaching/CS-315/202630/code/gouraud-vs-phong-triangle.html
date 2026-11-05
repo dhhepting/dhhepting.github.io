@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gouraud vs Phong shading: a highlight between the vertices</title>
+<style>
+    :root {
+        --ink: #1c2128; --muted: #596270; --page: #eef0f3; --panel: #fff; --line: #d4d9e0;
+        --stage: #22272f; --stage-ink: #e8ebf0; --left: #1b8a8f; --right: #d9822b; --focus: #2457c5;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--page); color: var(--ink); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 1100px; margin: 0 auto; padding: 1.25rem 1.25rem 4rem; }
+    h1 { font-size: 1.7rem; line-height: 1.2; margin: 0.2rem 0 0.4rem; font-weight: 650; }
+    h2 { font-size: 1.15rem; margin: 1.8rem 0 0.4rem; font-weight: 650; }
+    .lede { max-width: 75ch; margin: 0 0 1rem; color: #323a45; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+    .stage { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+    .pane { margin: 0; background: var(--stage); color: var(--stage-ink); border-top: 4px solid #6b7480; border-radius: 4px; overflow: hidden; }
+    .pane.left { border-top-color: var(--left); }
+    .pane.right { border-top-color: var(--right); }
+    .pane figcaption { padding: 0.6rem 0.75rem 0.5rem; display: grid; gap: 0.1rem; }
+    .pane figcaption strong { font-size: 1.05rem; }
+    .pane figcaption span { font-size: 0.85rem; color: #aab2bf; }
+    .wrap { position: relative; }
+    .wrap canvas { display: block; width: 100%; height: auto; aspect-ratio: 1; touch-action: none; cursor: crosshair; }
+    .tag { position: absolute; transform: translate(-50%, -50%); font: 700 0.95rem/1 system-ui, sans-serif; color: #1c2128; background: rgba(255,255,255,0.85); padding: 0.2rem 0.4rem; border-radius: 3px; pointer-events: none; }
+
+    .controls { margin-top: 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0.75rem; }
+    fieldset { margin: 0; padding: 0.6rem 0.85rem 0.85rem; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; min-width: 0; }
+    legend { padding: 0 0.3rem; font-weight: 650; font-size: 0.92rem; }
+    .presets { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.4rem; }
+    .presets button { padding: 0.45rem 0.8rem; font: inherit; font-size: 0.92rem; color: var(--ink); background: #f3f5f8; border: 1px solid var(--line); border-radius: 4px; cursor: pointer; }
+    .presets button[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .ctl { display: grid; grid-template-columns: 1fr auto; gap: 0.1rem 0.6rem; align-items: center; margin-top: 0.55rem; }
+    .ctl .lab { grid-column: 1 / -1; font-size: 0.9rem; }
+    .ctl input[type=range] { width: 100%; }
+    .ctl output { font: 0.85rem ui-monospace, Menlo, Consolas, monospace; min-width: 3.4em; text-align: right; }
+    .ctl.check { grid-template-columns: auto 1fr; }
+    .ctl.check .lab { grid-column: 2; grid-row: 1; }
+    .hint { grid-column: 1 / -1; font-size: 0.8rem; color: var(--muted); }
+
+    table { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--line); }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-top: 1px solid var(--line); font-size: 0.93rem; }
+    thead th { border-top: 0; }
+    thead th.l { border-bottom: 4px solid var(--left); }
+    thead th.r { border-bottom: 4px solid var(--right); }
+    td.num { font-family: ui-monospace, Menlo, Consolas, monospace; }
+    .bar { height: 8px; background: #e4e8ee; border-radius: 2px; margin-top: 0.25rem; }
+    .bar span { display: block; height: 100%; border-radius: 2px; }
+    .bar .l { background: var(--left); } .bar .r { background: var(--right); }
+    .verdict { margin: 0.6rem 0 0; font-weight: 600; max-width: 80ch; }
+    .notes { max-width: 78ch; }
+    .notes li { margin: 0.35rem 0; }
+    .fatal { color: #a12020; font-weight: 600; }
+    @media (max-width: 700px) { .stage { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<main>
+    <h1>Gouraud vs Phong shading</h1>
+    <p class="lede">Both canvases draw the same triangle with the same light and the same lighting equation. The only difference is <em>where</em> the equation is evaluated:
+        <strong>Gouraud</strong> (left) lights the three vertices and blends the three colours across the triangle; <strong>Phong</strong> (right) blends the surface <em>normal</em> and lights every pixel.
+        The vertex normals tilt outward, as on a curved surface, so a specular highlight can fall in the middle of the triangle, where no vertex can see it.</p>
+
+    <div id="fatal" class="fatal" hidden></div>
+
+    <section class="stage" aria-label="The two renderings">
+        <figure class="pane left">
+            <figcaption><strong>Gouraud: per-vertex shading</strong><span>the lighting equation runs 3 times (once per vertex); colours are interpolated</span></figcaption>
+            <div class="wrap"><canvas id="cv-gouraud" aria-label="Triangle shaded per vertex"></canvas></div>
+        </figure>
+        <figure class="pane right">
+            <figcaption><strong>Phong: per-fragment shading</strong><span>the lighting equation runs at every pixel; position and normal are interpolated</span></figcaption>
+            <div class="wrap"><canvas id="cv-phong" aria-label="Triangle shaded per fragment"></canvas></div>
+        </figure>
+    </section>
+
+    <section class="controls" aria-label="Controls">
+        <fieldset>
+            <legend>Light position (drag on either canvas to move it freely)</legend>
+            <div class="presets" id="presets" role="group" aria-label="Light position presets">
+                <button type="button" data-mode="A">Above vertex A</button>
+                <button type="button" data-mode="B">Above vertex B</button>
+                <button type="button" data-mode="C">Above vertex C</button>
+                <button type="button" data-mode="centre">Above the centre</button>
+            </div>
+            <label class="ctl"><span class="lab">Where the presets put the light</span>
+                <select id="placement" style="grid-column:1 / -1;width:100%;padding:0.25rem;font:inherit">
+                    <option value="mirror">So the highlight lands exactly on that point</option>
+                    <option value="above">Straight above that point, towards the viewer (+z)</option>
+                </select>
+                <span class="hint">The vertex normals tilt outward, so “straight above” a vertex is not where its highlight would be seen. The first option puts the light at the mirror position for this viewer; for the centre the two options coincide.</span></label>
+            <label class="ctl"><span class="lab">Distance of the light from the point</span><input id="height" type="range" min="0.2" max="2.5" step="0.05"><output id="height-out"></output></label>
+            <label class="ctl"><span class="lab">Light x</span><input id="lx" type="range" min="-3" max="3" step="0.05"><output id="lx-out"></output></label>
+            <label class="ctl"><span class="lab">Light y</span><input id="ly" type="range" min="-3" max="3" step="0.05"><output id="ly-out"></output></label>
+            <label class="ctl"><span class="lab">Light z (towards the viewer)</span><input id="lz" type="range" min="-2" max="2.6" step="0.05"><output id="lz-out"></output></label>
+        </fieldset>
+        <fieldset>
+            <legend>Surface and material</legend>
+            <label class="ctl"><span class="lab">Shininess</span><input id="shin" type="range" min="1" max="300" step="1"><output id="shin-out"></output>
+                <span class="hint">Higher means a smaller highlight, which is easier to fall between vertices.</span></label>
+            <label class="ctl"><span class="lab">Surface curvature (how far the vertex normals tilt outward)</span><input id="curv" type="range" min="0" max="1.5" step="0.05"><output id="curv-out"></output>
+                <span class="hint">0 is a flat triangle: all three normals point at the viewer.</span></label>
+            <label class="ctl check"><input id="edges" type="checkbox"><span class="lab">Show triangle edges</span></label>
+            <label class="ctl check"><input id="labels" type="checkbox"><span class="lab">Show vertex labels</span></label>
+        </fieldset>
+    </section>
+
+    <h2>The numbers behind the pictures</h2>
+    <p style="margin:0 0 0.5rem;color:var(--muted);font-size:0.93rem">Specular term (0 to 1) of the lighting equation, computed on the CPU with the same formula the shaders use.</p>
+    <table>
+        <thead><tr><th>Where</th><th class="l">Gouraud</th><th class="r">Phong</th></tr></thead>
+        <tbody id="readout"></tbody>
+    </table>
+    <p class="verdict" id="verdict" aria-live="polite"></p>
+
+    <section class="notes">
+        <h2>How to read it</h2>
+        <ul>
+            <li><strong>Above the centre.</strong> The light sits over the middle of the triangle. Phong shows a bright spot there. At the three vertices the highlight is nearly zero, so Gouraud has nothing bright to interpolate and misses the highlight completely.</li>
+            <li><strong>Above a vertex.</strong> With the default placement the highlight lands exactly on that vertex. Both models show it there, because the vertex is where Gouraud evaluates the equation. Gouraud smears it into a linear fade toward the other two corners, so the centre reads about a third as bright (the average of the vertex values) even though the true highlight is nowhere near the centre; Phong keeps a tight spot. Switch the placement to “straight above” to see that a light directly over a vertex does not put the highlight on it, because the normal there is tilted.</li>
+            <li><strong>Between the two.</strong> Drag the light slowly from a vertex toward the centre and watch the Gouraud highlight fade away while the Phong highlight travels with the light.</li>
+            <li><strong>Curvature.</strong> With curvature 0 the surface is flat and the two pictures are much closer. The normals changing across the triangle is what Gouraud cannot represent.</li>
+        </ul>
+        <p style="color:var(--muted);font-size:0.9rem">Both shaders compute L, E and H from the eye-space position (not from interpolated vectors), so the left and right pictures differ only in where the equation runs.</p>
+    </section>
+</main>
+
+<script>
+(() => {
+    'use strict';
+
+    // ---------------------------------------------------------------- shaders
+    const LIGHTING = `
+    uniform vec3 uLight;        // eye coordinates
+    uniform vec3 uAmbient;
+    uniform vec3 uDiffuse;
+    uniform vec3 uSpecular;
+    uniform float uShininess;
+
+    vec3 shade(vec3 pos, vec3 normal) {
+        vec3 N = normalize(normal);
+        vec3 L = normalize(uLight - pos);
+        vec3 E = normalize(-pos);
+        vec3 H = normalize(L + E);
+        float Kd = max(dot(L, N), 0.0);
+        float Ks = dot(L, N) > 0.0 ? pow(max(dot(N, H), 0.0), uShininess) : 0.0;
+        return uAmbient + Kd * uDiffuse + Ks * uSpecular;
+    }`;
+
+    // Gouraud: the lighting equation runs in the VERTEX shader.
+    const GOURAUD_VERT = `#version 300 es
+    in vec3 aPosition;
+    in vec3 aNormal;
+    uniform mat4 uModelView;
+    uniform mat4 uProjection;
+    ${LIGHTING}
+    out vec3 vColor;
+    void main() {
+        vec3 pos = (uModelView * vec4(aPosition, 1.0)).xyz;
+        vColor = shade(pos, mat3(uModelView) * aNormal);
+        gl_Position = uProjection * vec4(pos, 1.0);
+    }`;
+    const GOURAUD_FRAG = `#version 300 es
+    precision highp float;
+    in vec3 vColor;
+    out vec4 fColor;
+    void main() { fColor = vec4(vColor, 1.0); }`;
+
+    // Phong: position and normal are interpolated; the equation runs in the FRAGMENT shader.
+    const PHONG_VERT = `#version 300 es
+    in vec3 aPosition;
+    in vec3 aNormal;
+    uniform mat4 uModelView;
+    uniform mat4 uProjection;
+    out vec3 vPos;
+    out vec3 vNormal;
+    void main() {
+        vec3 pos = (uModelView * vec4(aPosition, 1.0)).xyz;
+        vPos = pos;
+        vNormal = mat3(uModelView) * aNormal;
+        gl_Position = uProjection * vec4(pos, 1.0);
+    }`;
+    const PHONG_FRAG = `#version 300 es
+    precision highp float;
+    in vec3 vPos;
+    in vec3 vNormal;
+    ${LIGHTING}
+    out vec4 fColor;
+    void main() { fColor = vec4(shade(vPos, vNormal), 1.0); }`;
+
+    // Flat colour: triangle edges and the light marker.
+    const FLAT_VERT = `#version 300 es
+    in vec3 aPosition;
+    uniform mat4 uModelView;
+    uniform mat4 uProjection;
+    uniform float uPointSize;
+    void main() {
+        gl_Position = uProjection * uModelView * vec4(aPosition, 1.0);
+        gl_PointSize = uPointSize;
+    }`;
+    const FLAT_FRAG = `#version 300 es
+    precision mediump float;
+    uniform vec4 uColor;
+    uniform float uRound;
+    out vec4 fColor;
+    void main() {
+        if (uRound > 0.5) {
+            vec2 d = gl_PointCoord - 0.5;
+            if (dot(d, d) > 0.25) discard;
+        }
+        fColor = uColor;
+    }`;
+
+    // ------------------------------------------------------------ small maths
+    const SIZE = 560, FOVY = 40, DIST = 3.0, NEAR = 0.1, FAR = 20;
+    const v3 = {
+        add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
+        sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
+        mul: (a, s) => [a[0] * s, a[1] * s, a[2] * s],
+        dot: (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2],
+        len: (a) => Math.hypot(a[0], a[1], a[2]),
+        norm(a) { const l = Math.hypot(a[0], a[1], a[2]); return [a[0] / l, a[1] / l, a[2] / l]; },
+    };
+    const perspective = (fovyDeg, aspect, near, far) => {
+        const f = 1 / Math.tan((fovyDeg * Math.PI) / 360);
+        // column-major
+        return new Float32Array([f / aspect, 0, 0, 0, 0, f, 0, 0, 0, 0, (far + near) / (near - far), -1, 0, 0, (2 * far * near) / (near - far), 0]);
+    };
+    // The triangle sits at the origin and the camera at z = +DIST looking down -z:
+    // the model-view matrix is a translation by (0, 0, -DIST).
+    const MODELVIEW = new Float32Array([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -DIST, 1]);
+    const PROJECTION = perspective(FOVY, 1, NEAR, FAR);
+    const toEye = (p) => [p[0], p[1], p[2] - DIST];
+
+    // ----------------------------------------------------------------- scene
+    const VERTEX_NAMES = ['A', 'B', 'C'];
+    const BASE = [[0, 1, 0], [-Math.sqrt(3) / 2, -0.5, 0], [Math.sqrt(3) / 2, -0.5, 0]];   // equilateral, circumradius 1
+    const MATERIAL = { ambient: [0.05, 0.1, 0.22], diffuse: [0.2, 0.45, 0.9], specular: [1, 1, 1] };
+
+    const state = { mode: 'centre', placement: 'mirror', height: 0.8, shininess: 100, curvature: 0.9, light: [0, 0, 0.8], showEdges: true, showLabels: true };
+
+    const normalsFor = (k) => BASE.map((p) => v3.norm([p[0] * k, p[1] * k, 1]));   // tilt outward from the centre
+    const centroid = () => [0, 0, 0];
+    const anchorPoints = () => ({ A: BASE[0], B: BASE[1], C: BASE[2], centre: centroid() });
+    const anchorNormals = () => {
+        const n = normalsFor(state.curvature);
+        return { A: n[0], B: n[1], C: n[2], centre: v3.norm(v3.add(v3.add(n[0], n[1]), n[2])) };
+    };
+    const EYE_WORLD = [0, 0, DIST];
+    // Direction from a surface point to the light that puts the specular peak exactly on that point
+    // for this viewer: the viewer direction E reflected about the normal N, L = 2(N.E)N - E.
+    const mirrorDirection = (point, normal) => {
+        const E = v3.norm(v3.sub(EYE_WORLD, point));
+        return v3.norm(v3.sub(v3.mul(normal, 2 * v3.dot(normal, E)), E));
+    };
+    const presetLight = (mode) => {
+        const point = anchorPoints()[mode];
+        const direction = state.placement === 'above' ? [0, 0, 1] : mirrorDirection(point, anchorNormals()[mode]);
+        return v3.add(point, v3.mul(direction, state.height));
+    };
+    const currentLight = () => (state.mode === 'free' ? state.light : presetLight(state.mode));
+
+    // The specular term, exactly as in the shaders (CPU copy, used only for the readout).
+    const specularAt = (posWorld, normal, lightWorld) => {
+        const pos = toEye(posWorld), light = toEye(lightWorld);
+        const N = v3.norm(normal), L = v3.norm(v3.sub(light, pos)), E = v3.norm(v3.mul(pos, -1));
+        const H = v3.norm(v3.add(L, E));
+        if (v3.dot(L, N) <= 0) return 0;
+        return Math.pow(Math.max(v3.dot(N, H), 0), state.shininess);
+    };
+
+    // -------------------------------------------------------------- GL panes
+    const compile = (gl, type, source) => {
+        const shader = gl.createShader(type);
+        gl.shaderSource(shader, source.trim());
+        gl.compileShader(shader);
+        if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) throw new Error(`Shader failed to compile: ${gl.getShaderInfoLog(shader)}`);
+        return shader;
+    };
+    const link = (gl, vert, frag) => {
+        const program = gl.createProgram();
+        gl.attachShader(program, compile(gl, gl.VERTEX_SHADER, vert));
+        gl.attachShader(program, compile(gl, gl.FRAGMENT_SHADER, frag));
+        gl.linkProgram(program);
+        if (!gl.getProgramParameter(program, gl.LINK_STATUS)) throw new Error(`Program failed to link: ${gl.getProgramInfoLog(program)}`);
+        return program;
+    };
+    const uniforms = (gl, program, names) => Object.fromEntries(names.map((n) => [n, gl.getUniformLocation(program, n)]));
+
+    class Pane {
+        constructor(canvas, vert, frag) {
+            this.canvas = canvas;
+            canvas.width = SIZE; canvas.height = SIZE;
+            const gl = canvas.getContext('webgl2', { antialias: true });
+            if (!gl) throw new Error('WebGL2 is not available in this browser.');
+            this.gl = gl;
+
+            this.lit = link(gl, vert, frag);
+            this.litU = uniforms(gl, this.lit, ['uModelView', 'uProjection', 'uLight', 'uAmbient', 'uDiffuse', 'uSpecular', 'uShininess']);
+            this.flat = link(gl, FLAT_VERT, FLAT_FRAG);
+            this.flatU = uniforms(gl, this.flat, ['uModelView', 'uProjection', 'uPointSize', 'uColor', 'uRound']);
+
+            // Lit triangle: attribute locations fixed so one VAO serves the lit program.
+            this.vaoLit = gl.createVertexArray();
+            gl.bindVertexArray(this.vaoLit);
+            this.posBuf = gl.createBuffer();
+            this.nrmBuf = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, this.posBuf);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(BASE.flat()), gl.STATIC_DRAW);
+            const aPos = gl.getAttribLocation(this.lit, 'aPosition');
+            gl.enableVertexAttribArray(aPos); gl.vertexAttribPointer(aPos, 3, gl.FLOAT, false, 0, 0);
+            gl.bindBuffer(gl.ARRAY_BUFFER, this.nrmBuf);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(9), gl.DYNAMIC_DRAW);
+            const aNrm = gl.getAttribLocation(this.lit, 'aNormal');
+            gl.enableVertexAttribArray(aNrm); gl.vertexAttribPointer(aNrm, 3, gl.FLOAT, false, 0, 0);
+
+            // Flat geometry: the triangle outline (static) and the light marker (one moving point).
+            this.vaoEdges = gl.createVertexArray();
+            gl.bindVertexArray(this.vaoEdges);
+            const edgeBuf = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, edgeBuf);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(BASE.flat()), gl.STATIC_DRAW);
+            const aE = gl.getAttribLocation(this.flat, 'aPosition');
+            gl.enableVertexAttribArray(aE); gl.vertexAttribPointer(aE, 3, gl.FLOAT, false, 0, 0);
+
+            this.vaoMarker = gl.createVertexArray();
+            gl.bindVertexArray(this.vaoMarker);
+            this.markerBuf = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, this.markerBuf);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(3), gl.DYNAMIC_DRAW);
+            gl.enableVertexAttribArray(aE); gl.vertexAttribPointer(aE, 3, gl.FLOAT, false, 0, 0);
+            gl.bindVertexArray(null);
+
+            gl.viewport(0, 0, SIZE, SIZE);
+            gl.clearColor(0.93, 0.94, 0.96, 1);
+        }
+
+        draw(light, normals) {
+            const { gl } = this;
+            gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+            gl.bindBuffer(gl.ARRAY_BUFFER, this.nrmBuf);
+            gl.bufferSubData(gl.ARRAY_BUFFER, 0, new Float32Array(normals.flat()));
+
+            gl.useProgram(this.lit);
+            gl.uniformMatrix4fv(this.litU.uModelView, false, MODELVIEW);
+            gl.uniformMatrix4fv(this.litU.uProjection, false, PROJECTION);
+            gl.uniform3fv(this.litU.uLight, toEye(light));
+            gl.uniform3fv(this.litU.uAmbient, MATERIAL.ambient);
+            gl.uniform3fv(this.litU.uDiffuse, MATERIAL.diffuse);
+            gl.uniform3fv(this.litU.uSpecular, MATERIAL.specular);
+            gl.uniform1f(this.litU.uShininess, state.shininess);
+            gl.bindVertexArray(this.vaoLit);
+            gl.drawArrays(gl.TRIANGLES, 0, 3);
+
+            gl.useProgram(this.flat);
+            gl.uniformMatrix4fv(this.flatU.uModelView, false, MODELVIEW);
+            gl.uniformMatrix4fv(this.flatU.uProjection, false, PROJECTION);
+            if (state.showEdges) {
+                gl.uniform1f(this.flatU.uPointSize, 1);
+                gl.uniform1f(this.flatU.uRound, 0);
+                gl.uniform4f(this.flatU.uColor, 0.1, 0.12, 0.16, 1);
+                gl.bindVertexArray(this.vaoEdges);
+                gl.drawArrays(gl.LINE_LOOP, 0, 3);
+            }
+
+            // Light marker: a dark ring with a yellow centre, drawn last so it is never hidden.
+            gl.bindVertexArray(this.vaoMarker);
+            gl.bindBuffer(gl.ARRAY_BUFFER, this.markerBuf);
+            gl.bufferSubData(gl.ARRAY_BUFFER, 0, new Float32Array(light));
+            gl.uniform1f(this.flatU.uRound, 1);
+            gl.uniform1f(this.flatU.uPointSize, 18);
+            gl.uniform4f(this.flatU.uColor, 0.1, 0.12, 0.16, 1);
+            gl.drawArrays(gl.POINTS, 0, 1);
+            gl.uniform1f(this.flatU.uPointSize, 12);
+            gl.uniform4f(this.flatU.uColor, 1, 0.9, 0.2, 1);
+            gl.drawArrays(gl.POINTS, 0, 1);
+            gl.bindVertexArray(null);
+        }
+    }
+
+    // -------------------------------------------------------------------- UI
+    const $ = (id) => document.getElementById(id);
+    let panes;
+
+    const fmt = (x) => x.toFixed(3);
+    const row = (label, g, p, strong = false) => {
+        const cell = (v, cls) => `<td class="num"><span>${fmt(v)}</span><div class="bar"><span class="${cls}" style="width:${Math.min(100, v * 100).toFixed(1)}%"></span></div></td>`;
+        return `<tr><th scope="row" style="font-weight:${strong ? 700 : 500}">${label}</th>${cell(g, 'l')}${cell(p, 'r')}</tr>`;
+    };
+
+    function updateReadout(light, normals) {
+        const ks = BASE.map((p, i) => specularAt(p, normals[i], light));
+        const gouraudCentre = (ks[0] + ks[1] + ks[2]) / 3;       // the centre has barycentric weights 1/3 each
+        const phongCentre = specularAt(centroid(), v3.add(v3.add(normals[0], normals[1]), normals[2]), light);
+
+        // Brightest specular anywhere on the triangle. Gouraud blends linearly, so its maximum is at a vertex.
+        let phongMax = 0;
+        const steps = 60;
+        for (let i = 0; i <= steps; i += 1) {
+            for (let j = 0; j <= steps - i; j += 1) {
+                const a = i / steps, b = j / steps, c = 1 - a - b;
+                const pos = v3.add(v3.add(v3.mul(BASE[0], a), v3.mul(BASE[1], b)), v3.mul(BASE[2], c));
+                const nrm = v3.add(v3.add(v3.mul(normals[0], a), v3.mul(normals[1], b)), v3.mul(normals[2], c));
+                phongMax = Math.max(phongMax, specularAt(pos, nrm, light));
+            }
+        }
+        const gouraudMax = Math.max(...ks);
+
+        $('readout').innerHTML =
+            VERTEX_NAMES.map((name, i) => row(`At vertex ${name}`, ks[i], ks[i])).join('') +
+            row('At the centre of the triangle', gouraudCentre, phongCentre, true) +
+            row('Brightest point on the triangle', gouraudMax, phongMax, true);
+
+        const missed = phongMax - gouraudMax;
+        $('verdict').textContent = missed > 0.1
+            ? `Phong finds a highlight of ${fmt(phongMax)} that Gouraud cannot show: the brightest vertex only reaches ${fmt(gouraudMax)}. The highlight falls between the vertices, where Gouraud only has the three vertex values to blend.`
+            : `Here the highlight is at, or close to, a vertex, so the two models agree (Gouraud ${fmt(gouraudMax)}, Phong ${fmt(phongMax)}). Move the light toward the middle of the triangle.`;
+    }
+
+    function updateLabels() {
+        const clip = (p) => {
+            const e = toEye(p), f = 1 / Math.tan((FOVY * Math.PI) / 360);
+            return [(f * e[0]) / -e[2], (f * e[1]) / -e[2]];
+        };
+        document.querySelectorAll('.tag').forEach((node) => { node.hidden = !state.showLabels; });
+        if (!state.showLabels) return;
+        document.querySelectorAll('.wrap').forEach((wrap) => {
+            [...wrap.querySelectorAll('.tag')].forEach((node, i) => {
+                const [x, y] = clip(BASE[i]);
+                const push = 1.12;   // nudge outward so the label does not cover the vertex
+                node.style.left = `${(x * push * 0.5 + 0.5) * 100}%`;
+                node.style.top = `${(1 - (y * push * 0.5 + 0.5)) * 100}%`;
+            });
+        });
+    }
+
+    function syncControls(light) {
+        document.querySelectorAll('#presets button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.mode === state.mode)));
+        const set = (id, value, digits) => { $(id).value = value; $(`${id}-out`).textContent = Number(value).toFixed(digits); };
+        $('placement').value = state.placement; set('height', state.height, 2); set('shin', state.shininess, 0); set('curv', state.curvature, 2);
+        set('lx', light[0], 2); set('ly', light[1], 2); set('lz', light[2], 2);
+        $('edges').checked = state.showEdges; $('labels').checked = state.showLabels;
+    }
+
+    function render() {
+        const light = currentLight();
+        const normals = normalsFor(state.curvature);
+        panes.forEach((pane) => pane.draw(light, normals));
+        syncControls(light);
+        updateLabels();
+        updateReadout(light, normals);
+    }
+
+    function goFree() { if (state.mode !== 'free') { state.light = currentLight().slice(); state.mode = 'free'; } }
+
+    function attachControls() {
+        document.querySelectorAll('#presets button').forEach((b) => b.addEventListener('click', () => { state.mode = b.dataset.mode; render(); }));
+        $('placement').addEventListener('change', (e) => { state.placement = e.target.value; if (state.mode === 'free') state.mode = 'centre'; render(); });
+        $('height').addEventListener('input', (e) => { state.height = Number(e.target.value); if (state.mode === 'free') state.mode = 'centre'; render(); });
+        $('shin').addEventListener('input', (e) => { state.shininess = Number(e.target.value); render(); });
+        $('curv').addEventListener('input', (e) => { state.curvature = Number(e.target.value); render(); });
+        for (const [id, axis] of [['lx', 0], ['ly', 1], ['lz', 2]]) {
+            $(id).addEventListener('input', (e) => { goFree(); state.light[axis] = Number(e.target.value); render(); });
+        }
+        $('edges').addEventListener('change', (e) => { state.showEdges = e.target.checked; render(); });
+        $('labels').addEventListener('change', (e) => { state.showLabels = e.target.checked; render(); });
+
+        // Dragging on either canvas moves the light in the plane at its current height.
+        for (const pane of panes) {
+            const canvas = pane.canvas;
+            const move = (event) => {
+                const rect = canvas.getBoundingClientRect();
+                const ndcX = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+                const ndcY = 1 - ((event.clientY - rect.top) / rect.height) * 2;
+                goFree();
+                const depth = DIST - state.light[2];                    // distance from the camera to the light's plane
+                const half = Math.tan((FOVY * Math.PI) / 360) * depth;
+                state.light[0] = Math.max(-3, Math.min(3, ndcX * half));
+                state.light[1] = Math.max(-3, Math.min(3, ndcY * half));
+                render();
+            };
+            let dragging = false;
+            canvas.addEventListener('pointerdown', (e) => { dragging = true; canvas.setPointerCapture(e.pointerId); move(e); });
+            canvas.addEventListener('pointermove', (e) => { if (dragging) move(e); });
+            const stop = () => { dragging = false; };
+            canvas.addEventListener('pointerup', stop);
+            canvas.addEventListener('pointercancel', stop);
+        }
+    }
+
+    function addTags() {
+        document.querySelectorAll('.wrap').forEach((wrap) => {
+            VERTEX_NAMES.forEach((name) => {
+                const tag = document.createElement('span');
+                tag.className = 'tag'; tag.textContent = name;
+                wrap.append(tag);
+            });
+        });
+    }
+
+    try {
+        panes = [
+            new Pane($('cv-gouraud'), GOURAUD_VERT, GOURAUD_FRAG),
+            new Pane($('cv-phong'), PHONG_VERT, PHONG_FRAG),
+        ];
+        addTags();
+        attachControls();
+        render();
+    } catch (error) {
+        console.error(error);
+        const box = $('fatal');
+        box.hidden = false;
+        box.textContent = `Could not start: ${error.message}`;
+    }
+})();
+</script>
+</body>
+</html>
