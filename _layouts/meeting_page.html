@@ -209,24 +209,26 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
   {%- comment -%}
     Post-meeting: the combined photos + transcript wiki page. HTML chrome
     only, outside creole_preamble, so none of it reaches the meeting's own
-    Moodle paste. Paste the photo block first, then the cleaned transcript
-    below it by hand.
+    Moodle paste. gen.photos_text_creole is the WHOLE page: photo block, then
+    the cleaned transcript from audio-transcript/<slug>-audio.txt (Creole-
+    escaped by PhotosTextPage). Either half may be absent; the field is nil
+    only when both are.
   {%- endcomment -%}
   <h3>Photos and transcript page</h3>
-  {%- if gen.photos_creole %}
-  <p class="text-muted mb-1">Create the Moodle wiki page with this name, paste the photo block, then paste the cleaned transcript below it.</p>
+  {%- if gen.photos_text_creole %}
+  <p class="text-muted mb-1">Create the Moodle wiki page with this name, then paste the text below into it. The transcript is included when <code>audio-transcript/{{ gen.slug }}-audio.txt</code> exists in the repo.</p>
   <div class="input-group mb-3">
     <input id="photos-text-page-name" type="text" class="form-control" readonly value="{{ gen.photos_text_wiki_page_name }}">
     <button type="button" class="btn btn-secondary" onclick="copyFrom('photos-text-page-name')">Copy</button>
   </div>
   <div class="mb-3">
-    <textarea id="photos-creole" class="form-control" rows="10" readonly>{{ gen.photos_creole | escape }}</textarea>
-    <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-creole')">
-      Copy photo block
+    <textarea id="photos-text-creole" class="form-control" rows="16" readonly>{{ gen.photos_text_creole | escape }}</textarea>
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-text-creole')">
+      Copy photos and transcript
     </button>
   </div>
   {%- else %}
-  <p class="text-muted">No photos in media.csv for this meeting yet — re-run sharemedia.py once they're uploaded.</p>
+  <p class="text-muted">No photos in media.csv and no <code>audio-transcript/{{ gen.slug }}-audio.txt</code> for this meeting yet.</p>
   {%- endif %}
 
   {{ page_nav }}

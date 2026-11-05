@@ -24,6 +24,7 @@ require_relative 'tlo_resolver'
 require_relative 'meeting_calendar'   # add
 require_relative 'plan_content_validator'
 require_relative 'creole_photo_block'
+require_relative 'photos_text_page'
 
 module MeetingPageFields
   module_function
@@ -33,10 +34,11 @@ module MeetingPageFields
   # `standard` + `canonical_lookup` come from the caller so BOK resolves through
   # the shared TLOResolver (same engine as the offering section and MtgNN page).
   def compute(crs_id, crs_sem, offering, meetings, index, meeting_plan,
-              standard = nil, canonical_lookup = nil, photos = [])
+              standard = nil, canonical_lookup = nil, photos = [], transcript = nil)
     mtg = meetings[index]
     date = parse_date(mtg['date'])
     has_photos = !(photos.nil? || photos.empty?)
+    has_transcript = !(transcript.nil? || transcript.strip.empty?)
     slug = meeting_slug(mtg)
     attendance_session = mtg['attendance_session']
 
@@ -91,6 +93,12 @@ module MeetingPageFields
       # so the layout presence-gates the copy box. Layout chrome only —
       # never part of the text pasted into the meeting's own wiki page.
       'photos_creole' => has_photos ? CreolePhotoBlock.block(photos) : nil,
+      # The WHOLE -photos-text wiki page, ready to paste: photo block, then the
+      # cleaned transcript (from audio-transcript/<slug>-audio.txt, loaded by
+      # the caller via TranscriptLoader and Creole-escaped by PhotosTextPage).
+      # Either half may be absent; nil only when both are, so the layout
+      # presence-gates the copy box. Supersedes photos_creole for that page.
+      'photos_text_creole' => has_photos || has_transcript ? PhotosTextPage.compose(photos: photos, transcript: transcript) : nil,
       'meeting_page_path' => "/wiki/#{crs_id}/#{crs_sem}/#{slug}/",
       # prev/next kept as DATES for any existing consumer, plus the SLUG
       # form the wiki nav links must use (the Moodle page is named by slug,

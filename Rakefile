@@ -405,6 +405,8 @@ task "test:html" => "code:listings"
 
 require_relative 'lib/creole_photo_block'
 require_relative 'lib/meeting_page_fields'
+require_relative 'lib/photos_text_page'
+require_relative 'lib/transcript_loader'
 
 namespace :wiki do
   desc 'Print Creole photo block: rake wiki:photos[CS-315,202630,01]'
@@ -417,5 +419,25 @@ namespace :wiki do
                                          meetings.map { |m| m['meeting'] })
     puts "#{MeetingPageFields.meeting_slug(mtg)}-photos-text", ''
     print CreolePhotoBlock.block(media[mtg['meeting']] || [])
+  end
+
+  desc 'Print the whole -photos-text wiki page (photos + cleaned transcript): rake wiki:photos_text[CS-315,202630,01]'
+  task :photos_text, [:course, :semester, :meeting] do |_t, args|
+    dir = File.join('_data/teaching', args.fetch(:course), args.fetch(:semester))
+    meetings = YAML.load_file(File.join(dir, 'meetings.yml'))
+    mtg = meetings.find { |m| m['meeting'].to_i == args.fetch(:meeting).to_i } or
+      abort "no meeting #{args[:meeting]} in #{dir}/meetings.yml"
+    slug = MeetingPageFields.meeting_slug(mtg)
+    media = MeetingPageFields.load_media(File.join(dir, 'media.csv'),
+                                         meetings.map { |m| m['meeting'] })
+    photos = media[mtg['meeting']] || []
+    transcript = TranscriptLoader.load(dir, slug)
+    warn "warning: no photos for #{slug}" if photos.empty?
+    warn "warning: no transcript at #{TranscriptLoader.path(dir, slug)}" if transcript.nil?
+    page = PhotosTextPage.compose(photos: photos, transcript: transcript)
+    puts "#{slug}-photos-text", ''
+    print page
+  rescue ArgumentError => e
+    abort "#{slug}: #{e.message}"
   end
 end
