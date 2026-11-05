@@ -11,7 +11,7 @@ export default defineConfig({
   // without any per-host configuration.
   base: './',
   build: {
-    rollupOptions: {
+    rolldownOptions: {
       input: {
         ColourCube: 
 	        resolve(import.meta.dirname,'Samples/ColourCube/app.html'),
