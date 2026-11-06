@@ -308,6 +308,132 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 
 {{https://dl.dropboxusercontent.com/scl/fi/66dqsl4njmc6xoipt59jz/07-4.jpg?rlkey=v0yh7pnah5bsrcdimmkatv816&amp;raw=1 | Mtg 07-4 photo }}
 **Caption 07-4:** //TODO: describe what is depicted//
+
+----
+
+**Transcript**
+
+DH: Good morning.
+
+Okay. So here we are at Meeting 7. So the first thing I want to —. Tell you about as I have to. Have a meeting. Yeah, I&#39;m building that. Oh, starts at 11. But after class until 1, so I won&#39;t be able to make the office hours today. So maybe tomorrow have office hours.
+
+7:30 to 1:30.
+
+Or you know how to find me anyway, right?
+
+So let&#39;s do attendance.
+
+And that&#39;s not the right one.
+
+Bless you.
+
+Okay, there&#39;s the non-rotating. QR code and the password P7P8A1.
+
+So I didn&#39;t… Get the Simon one onto the. Assignment page. I apologize for that, but.
+
+So that&#39;s… You can download… The zip file for this.
+
+Inside the code directory there&#39;s CS315 and samples and then colorq.zip. Does that make sense? Does that agree with what we talked about last time?
+
+So let me… Navigate to that. So you can see it. I think I can close this window.
+
+Maybe I shouldn&#39;t have done that.
+
+Okay, so there&#39;s the download file. where I indicated it would be. Okay. Does that make sense?
+
+So I thought about having it due a week from today or two weeks from today. Last Monday when we when I. Describe it to you. You could have it do on this. So the fifth, we could do the seventh maybe. So I&#39;ll give two days next week to talk about it. Would that be a help?
+
+Okay, so just to mention here about the wiki. I have rewritten the home page.
+
+And I&#39;ve… illustrate a model of how the. The group pages for your groups are going to be set up or are set up. So it&#39;s just a matter for you to add. Your PWP, your personal wiki page, you&#39;re under members. And then there are links to the meetings to which you&#39;re assigned. So I&#39;ve… Made a teaching Wiki group for me and our TA Zeal. And then I&#39;ve assigned to us. Meeting 1 in 23. So you get a. A page like that, so you can navigate back to home. And we get the links to the meetings.
+
+So let me know what you think if this is a more… Clear. Description of what&#39;s going on.
+
+I had some things. planned for today, and I had them typed out, but there&#39;s a… I had a syntax error that I couldn&#39;t track down. Before. coming here. So.
+
+Let&#39;s go back to our… Previous meeting.
+
+So we&#39;re doing… Shader-based WebGL, which is integrated with HTML5. Code runs in latest browsers. As we&#39;ve talked about already, the code in the 8th edition on that website is not. is not… current best practice for JavaScript. So we&#39;re trying. Modernize it a bit. By using modules. And… eliminating, replacing VARs with. Let&#39;s let and const.
+
+So OpenGL was the standard. For many years. developed by Silicon Graphics. And then… WebGL 2.0 is based on OpenGL embedded systems. OpenGL ES. 3.0. And so we&#39;re dealing with. Shaders. Which give us the… The most access to. The GPU… functionalities.
+
+You have something to share? Was it us?
+
+Okay, so… I&#39;ll leave those slides for you to look at. So one thing we talked, we mentioned the other day, which didn&#39;t follow up on was.
+
+Nyquist Shannon. Has anyone heard about Nyquist before? Okay, so we can talk about a sampling rate.
+
+Let&#39;s use audio as an example. How many people here are familiar with. CDs. I guess I&#39;m not quite that old yet. Anyway. So a CD samples.
+
+We take samples at 44 kilohertz. And if we&#39;re being this Nyquist-Shannon sampling rate. What does that tell us about the range of human hearing? That question makes sense.
+
+Okay, so we want to move on. In order to reconstruct the signal. Thank you. At a certain level, we need to sample it twice that. That&#39;s it, no. So… How high can people hear? What range of frequencies? are audible to people. Interesting. Yes. It&#39;s about half this, so.
+
+Then people can hear it. Higher frequencies, but… It will be… reconstruct, they won&#39;t be accurately reconstructed because. So some people who have very sensitive hearing will. Here, let&#39;s see. Let&#39;s see. But here are the limitations of. The CD audio format. Does that make sense?
+
+So in terms of images.
+
+Thank you. So… We&#39;re sampling here. Right in the center of the square. It&#39;s equidistant. X and Y position. So that circle —. It&#39;s registered.
+
+So on the left one. All right, we see the… Register the dot. The circle. The upper left. Quadrant. Now imagine this circle in the right side. It&#39;s the same size as the one in the left. is positioned. Differently. So none of those four samples hit it so it doesn&#39;t appear on the screen.
+
+So we need to sample it twice more.
+
+Does that make sense?
+
+So… More modern examples in the color cube. Cool. You&#39;ll see a mention of VAO. Do you want to see it in Angel&#39;s sample? code. That&#39;s a WebGL2 feature, I believe. It&#39;s a way to organize information about. the things that are associated with vertex. Courtesies. Like colors. And positions. And other details.
+
+So… the benefit of the Gpu. Architecture is we can send. information to the GPU and buffers. And then… And then it&#39;s a matter of. Programming the shaders to work with those buffers. Or if we want to transform. The points in the buffer. Then we can do the transformation in the shaders. And we saved the… The cost of pushing the… The points back. We&#39;re regenerating the points.
+
+So we talked the other day about. the cameras specifying a camera position. In terms of. where the eye point is, where the look at point is, and the up vector, so we can specify a corn system. Do you remember that?
+
+Haven&#39;t seen these. Three blue, one brown videos. I thought maybe we&#39;ll take a look at one of them that deals with. the change of basis.
+
+[3Blue1Brown Change of basis video played in class; omitted]
+
+DH: Well, I&#39;m sorry for the audio issues.
+
+So who likes those three blue, one brown videos? Without the audio. remix.
+
+So when we&#39;re dealing with two dimensional transformations, we can think of. form like that. So what&#39;s a term to describe this matrix 1 0 0 1?
+
+Anyone think of a word starting with I?
+
+[student]: Identity matrix?
+
+DH: Yeah.
+
+You can also think of this as a rotation matrix. That takes… Yes. Vector X, or 1, 0. 2, 1, 0, and the Y. Gotcha. 0 1 2 0 1.
+
+But it&#39;s also rotation zero degrees.
+
+So can we use matrices for everything? when we&#39;re talking about 2 dimensions. Is a 2 by 2 matrix sufficient to. Let us work with… Only matrices in describing the the math, the transformations.
+
+Any questions about my question? So let&#39;s say we have. this matrix.
+
+Then we want to translate.
+
+So if we only use the 2 by 2 matrix. and the two by one vector to describe translations.
+
+And. we can&#39;t combine the translation and the rotation in the matrix.
+
+You come across homogeneous coordinates before? There he is. 3D transformations.
+
+So the 2D transformations use a 3 by 3 matrix. So we have our transfer rotation. Otherwise known as identity.
+
+Then we add. Zero is here. One there. We can do the T and the S here.
+
+Instead of just x, y, we have x. Y and W. Then you get the point. divided two by W. Does that make sense?
+
+So let&#39;s think about some mathematical empathy here.
+
+Well, we&#39;re almost out of time. So here&#39;s something to think about for next day. Do you remember there&#39;s no class on Wednesday? I will give you… quiz again today. It&#39;ll be due on… Monday next week.
+
+So rotate 90 degrees, 0.24.
+
+Does that make sense, that question?
+
+2, 3, 1, 2, 4. to be the center of the rotation. Thank you. Because if we don&#39;t just specifying the rotation matrix, then the origin is the center of the rotation. Does that make sense? Okay, thank you for today. We have no office hours today. We&#39;ll do them. I&#39;ll be available more tomorrow. Okay, thanks again. Take care. See you on Monday.
 </textarea>
     <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-text-creole')">
       Copy photos and transcript
