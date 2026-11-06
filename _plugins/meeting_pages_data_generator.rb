@@ -24,6 +24,7 @@
 
 require 'yaml'
 require_relative '../lib/meeting_page_fields'
+require_relative '../lib/transcript_loader'
 
 class MeetingPagesDataGenerator < Jekyll::Generator
   priority :high
@@ -49,9 +50,13 @@ class MeetingPagesDataGenerator < Jekyll::Generator
 
       generated = {}
       meetings.each_with_index do |mtg, i|
+        # Cleaned transcript from audio-transcript/<slug>-audio.txt, or nil.
+        # Read straight off disk (Jekyll's _data loader ignores .txt), the same
+        # way media.csv is, so the file is never a second copy in site.data.
+        transcript = TranscriptLoader.load(offering_dir, MeetingPageFields.meeting_slug(mtg))
         generated[mtg['meeting']] = MeetingPageFields.compute(
           crs_id, crs_sem, offering, meetings, i, meeting_plans[mtg['meeting']] || {},
-          standard, canonical_lookup, media[mtg['meeting']] || []
+          standard, canonical_lookup, media[mtg['meeting']] || [], transcript
         )
       end
 
