@@ -27,6 +27,7 @@ window.onload = function init() {
     canvas = document.getElementById( "gl-canvas" );
 
     gl = canvas.getContext('webgl2');
+    window.gl = gl;  // geometry.js is a classic script and reads the global gl
     if (!gl) { alert( "WebGL 2.0 isn't available" ); }
 
     gl.viewport( 0, 0, canvas.width, canvas.height );
