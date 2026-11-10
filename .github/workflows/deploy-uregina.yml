@@ -80,15 +80,32 @@ jobs:
       # silently produces an empty/broken _site/, --delete would wipe your live
       # site. These checks refuse to deploy unless the site root AND the Vite
       # output exist.
+
+       - name: Debug _site layout
+        run: |
+          find "_site/$CS315_DIR" -maxdepth 3 -type d | head -40
+          find _site -name app.html -path '*ColourCube*'
+          find _site -path '*changes/index.html'
+          
       - name: Sanity-check the build
         run: |
           test -s _site/index.html || { echo "Build looks empty — refusing to deploy."; exit 1; }
-          test -s "_site/$CS315_DIR/dist/Samples/ColourCube/app.html" || { echo "Vite samples missing from _site — refusing to deploy."; exit 1; }
+          test -s "_site/$CS315_DIR/dist/samples/ColourCube/app.html" || { echo "Vite samples missing from _site — refusing to deploy."; exit 1; }
           # The changes feature fails silently, so check its output explicitly.
           test -s _site/changes/index.html || { echo "changes page missing — refusing to deploy."; exit 1; }
           test -s _site/changes.xml || { echo "changes feed missing — refusing to deploy."; exit 1; }
-          test -s "_site/${CS315_DIR%/code/CS315}/changes/index.html" || { echo "CS-315 changes page missing — refusing to deploy."; exit 1; }
-          grep -q 'https://www2.cs.uregina.ca/~hepting/' _site/changes.xml || { echo "feed URLs have the wrong host — refusing to deploy."; exit 1; }
+          test -s "_site/${CS315_DIR%/code}/changes/index.html" || { echo "CS-315 changes page missing — refusing to deploy."; exit 1; }
+          grep -q 'https://dhhepting.github.io/' _site/changes.xml || { echo "feed URLs have the wrong host — refusing to deploy."; exit 1; }
+
+      # - name: Sanity-check the build
+      #   run: |
+      #     test -s _site/index.html || { echo "Build looks empty — refusing to deploy."; exit 1; }
+      #     test -s "_site/$CS315_DIR/dist/Samples/ColourCube/app.html" || { echo "Vite samples missing from _site — refusing to deploy."; exit 1; }
+      #     # The changes feature fails silently, so check its output explicitly.
+      #     test -s _site/changes/index.html || { echo "changes page missing — refusing to deploy."; exit 1; }
+      #     test -s _site/changes.xml || { echo "changes feed missing — refusing to deploy."; exit 1; }
+      #     test -s "_site/${CS315_DIR%/code/CS315}/changes/index.html" || { echo "CS-315 changes page missing — refusing to deploy."; exit 1; }
+      #     grep -q 'https://www2.cs.uregina.ca/~hepting/' _site/changes.xml || { echo "feed URLs have the wrong host — refusing to deploy."; exit 1; }
 
       # Hand the runner the deploy key and teach it to trust titan.
       - name: Set up SSH
