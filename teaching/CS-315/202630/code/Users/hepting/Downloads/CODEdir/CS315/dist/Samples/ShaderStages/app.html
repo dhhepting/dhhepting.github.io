@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How vertex and fragment shaders work together</title>
+  <script type="module" crossorigin src="../../assets/ShaderStages-CD2qUYjd.js"></script>
+  <link rel="modulepreload" crossorigin href="../../assets/chunk-initShadersJS-gAdrPDqH.js">
+  <link rel="stylesheet" crossorigin href="../../assets/ShaderStages-BqP3lrpf.css">
+</head>
+<body>
+  <header class="page-head">
+    <h1>From three vertices to every pixel</h1>
+    <p>
+      The vertex shader runs once per vertex. The rasterizer then works out which pixels the
+      triangle covers and blends each vertex's outputs for them. The fragment shader runs once
+      for every one of those pixels. Drag the vertices, shrink the image, and hover a pixel.
+    </p>
+  </header>
+
+  <p id="unsupported" class="error" hidden>This browser does not support WebGL2.</p>
+
+  <main class="layout">
+    <section class="stage" aria-label="Triangle">
+      <div class="canvas-stack">
+        <canvas id="gl" aria-label="Rendered triangle"></canvas>
+        <canvas id="overlay" aria-label="Vertex handles and pixel inspector"></canvas>
+      </div>
+      <div class="controls">
+        <label>Fragment shader
+          <select id="fragment-select"></select>
+        </label>
+        <label>Image size
+          <input id="resolution" type="range" min="4" max="48" step="1" value="12">
+          <output id="resolution-value"></output>
+        </label>
+        <label>Vertex shader rotation
+          <input id="angle" type="range" min="-180" max="180" step="1" value="0">
+          <output id="angle-value">0°</output>
+        </label>
+        <fieldset>
+          <legend>Vertex colors (a_color)</legend>
+          <input id="color-0" type="color" aria-label="Vertex 0 color">
+          <input id="color-1" type="color" aria-label="Vertex 1 color">
+          <input id="color-2" type="color" aria-label="Vertex 2 color">
+        </fieldset>
+        <label class="check"><input id="show-grid" type="checkbox" checked> Show pixel grid</label>
+        <label class="check"><input id="show-weights" type="checkbox" checked> Show blend weights on hover</label>
+        <button id="reset" type="button">Reset</button>
+      </div>
+    </section>
+
+    <section class="pipeline">
+      <article class="step">
+        <h2>Vertex shader</h2>
+        <p>Runs 3 times, once per vertex. Each run turns the vertex's attributes into a clip-space position.</p>
+        <table>
+          <thead><tr><th>Run</th><th>a_position</th><th>a_color</th><th>gl_Position.xy</th></tr></thead>
+          <tbody id="vertex-rows"></tbody>
+        </table>
+        <pre><code id="vertex-source"></code></pre>
+      </article>
+
+      <article class="step">
+        <h2>Rasterizer</h2>
+        <p>
+          Finds the pixels whose centers fall inside the triangle and blends the vertex shader's
+          <code>out</code> values for each. Fragments created:
+          <strong id="fragment-count"></strong>.
+        </p>
+      </article>
+
+      <article class="step">
+        <h2>Fragment shader</h2>
+        <p>Runs once per covered pixel. The values it receives are blended, not copied from a vertex.</p>
+        <div id="inspector" class="inspector"></div>
+        <pre><code id="fragment-source"></code></pre>
+      </article>
+    </section>
+  </main>
+
+</body>
+</html>

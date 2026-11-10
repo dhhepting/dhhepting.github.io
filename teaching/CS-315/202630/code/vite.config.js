@@ -1,3 +1,4 @@
+
 import { defineConfig } from 'vite';
 import { globSync } from 'node:fs';           // Node 22+; otherwise use fast-glob
 import { resolve, basename } from 'node:path';
@@ -5,7 +6,8 @@ import { resolve, basename } from 'node:path';
 const textbook = globSync('textbook/[0-9][0-9]/*.html')
   .filter(f => basename(f) !== 'index.html');      // keep Jekyll listings out
 
-const apps = globSync('{samples,compare}/**/app.html');
+// const apps = globSync('{samples,compare}/**/app.html');
+const apps = globSync('samples/**/app.html');
 
 const input = Object.fromEntries(
   [...textbook, ...apps].map(f => [
@@ -23,3 +25,4 @@ export default defineConfig({
     rollupOptions: { input },
   },
 });
+

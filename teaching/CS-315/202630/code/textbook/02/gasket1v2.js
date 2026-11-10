@@ -5,7 +5,7 @@ var positions = [];
 
 var numPositions = 5000;
 
-window.onload = function init()
+window.onload = async function init()
 {
    var canvas = document.getElementById("gl-canvas");
    gl = canvas.getContext('webgl2');
@@ -54,7 +54,7 @@ window.onload = function init()
     gl.clearColor(1.0, 1.0, 1.0, 1.0);
 
     //  Load shaders and initialize attribute buffers
-    var program = initShaders(gl, "shaders/vshader21.glsl",
+    var program = await initShaders(gl, "shaders/vshader21.glsl",
                                "shaders/fshader21.glsl");
     gl.useProgram(program);
 

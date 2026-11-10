@@ -27,7 +27,7 @@ var vb = vec4(0.0, 0.942809, 0.333333, 1);
 var vc = vec4(-0.816497, -0.471405, 0.333333, 1);
 var vd = vec4(0.816497, -0.471405, 0.333333,1);
 
-var progrm;
+var program, texture;
 
 var ctm;
 
@@ -140,13 +140,13 @@ window.onload = function init() {
     document.getElementById("Button6").onclick = function(){
         numTimesToSubdivide++;
         index = 0;
-        pointsArray = [];
+        positionsArray = [];
         init();
     };
     document.getElementById("Button7").onclick = function(){
         if(numTimesToSubdivide) numTimesToSubdivide--;
         index = 0;
-        pointsArray = [];
+        positionsArray = [];
         init();
     };
 

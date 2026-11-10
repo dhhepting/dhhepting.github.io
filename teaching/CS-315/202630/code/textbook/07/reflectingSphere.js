@@ -187,7 +187,7 @@ window.onload = function init() {
     document.getElementById("Button6").onclick = function(){
         numTimesToSubdivide++;
         index = 0;
-        pointsArray = [];
+        positionsArray = [];
         normalsArray = [];
         init();
     };

@@ -8,7 +8,7 @@ window.onload = function init()
 {
     var canvas = document.getElementById( "gl-canvas" );
 
-    gl = canvas.getContext('webgl1');
+    gl = canvas.getContext('webgl');
     if (!gl) { alert( "WebGL 1.0 isn't available" ); }
 
     //
