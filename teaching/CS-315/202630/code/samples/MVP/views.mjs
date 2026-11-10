@@ -4,7 +4,7 @@
 // can watch the vertices travel: model space -> world -> eye -> clip/NDC -> image.
 // The amber box is the camera's view volume (the NDC cube, carried back into
 // each space with an inverse), so you can see what the camera can see.
-import { mult, mat4, vec3, lookAt, perspective } from '../../Common/MV.mjs';
+import { mult, mat4, vec3, lookAt, perspective } from '../../common/MV.mjs';
 
 export const VIEWS = [
   {

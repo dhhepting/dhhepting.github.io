@@ -1,4 +1,4 @@
-import { initShaders } from '../../Common/initShadersJS.mjs';
+import { initShaders } from '../../common/initShadersJS.mjs';
 
 async function fetchText(url) {
     const response = await fetch(url);

@@ -7,7 +7,7 @@
 // Float64Array, because the chaos-game loop multiplies a point by a 3x3
 // matrix up to 400 000 times per frame.
 
-import { initShaders } from '../../Common/initShadersJS.mjs';
+import { initShaders } from '../../common/initShadersJS.mjs';
 import { ChaosGame, MAP_COLOURS } from './chaosgame.mjs';
 import { DRAGON, fromAffine, toAffine } from './ifs.mjs';
 

@@ -1,5 +1,5 @@
-import { initShaders } from '../../Common/initShadersJS.mjs';
-import { flatten, mat4 } from '../../Common/MV.mjs';
+import { initShaders } from '../../common/initShadersJS.mjs';
+import { flatten, mat4 } from '../../common/MV.mjs';
 
 /**
  * DOM-free renderer: draws one triangle with a shared vertex shader and a

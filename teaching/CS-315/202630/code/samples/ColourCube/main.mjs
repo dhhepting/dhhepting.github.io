@@ -3,7 +3,7 @@
 // the render loop, and tracks the current viewing mode. All DOM access lives
 // here; the renderer stays DOM-free.
 
-import { initShaders } from '../../Common/initShadersJS.mjs';
+import { initShaders } from '../../common/initShadersJS.mjs';
 import { Cube } from './cube.mjs';
 import * as mat4 from './matrix.mjs';
 

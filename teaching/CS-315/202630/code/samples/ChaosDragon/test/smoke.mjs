@@ -1,7 +1,7 @@
 // node test/smoke.mjs      (needs:  npm install jsdom)
 //
 // Runs the REAL main.mjs against app.html in jsdom, with:
-//   * the REAL ../Common/initShadersJS.mjs (so run it inside your CS315 tree)
+//   * the REAL ../common/initShadersJS.mjs (so run it inside your CS315 tree)
 //   * a recording mock of WebGL2 (jsdom has no GPU)
 //   * fetch() reading shaders/ from disk
 // then drives the controls the way a person would.

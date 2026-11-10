@@ -5,7 +5,7 @@
 // and matrixUtil.mjs (rotateX/Y/Z, scaleMatrix). The page shows what each matrix does as you fill these in.
 // Until a function returns a real matrix it returns the identity, so the page runs
 // from the start and each canvas changes as you finish a step.
-import { mat4, translate, mult } from '../../Common/MV.mjs';
+import { mat4, translate, mult } from '../../common/MV.mjs';
 import { colouredCube } from './geometry.mjs';
 import { scaleMatrix, rotateX, rotateY, rotateZ } from './matrixUtil.mjs';
 

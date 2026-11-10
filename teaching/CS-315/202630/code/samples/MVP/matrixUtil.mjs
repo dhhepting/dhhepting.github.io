@@ -1,6 +1,6 @@
 // Small helpers that sit beside Common/MV.mjs.
 // Matrices follow MV.mjs: an array of four rows, with m.matrix === true.
-import { mat4 } from '../../Common/MV.mjs';
+import { mat4 } from '../../common/MV.mjs';
 
 export function scaleMatrix(x, y, z) {
   return mat4(

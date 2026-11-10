@@ -1,7 +1,7 @@
 // DOM-free renderer for one WebGL2 context. It knows nothing about cameras or
 // the page: give it an observer matrix and a list of { mesh, matrix } draws.
-import { flatten } from '../../Common/MV.mjs';
-import { initShaders } from '../../Common/initShadersJS.mjs';
+import { flatten } from '../../common/MV.mjs';
+import { initShaders } from '../../common/initShadersJS.mjs';
 
 export class SceneRenderer {
   #gl;

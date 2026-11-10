@@ -1,6 +1,6 @@
 // Composes M, V and P from the interface state, using the student's functions.
 // DOM-free. This is where "model-view-projection" is spelled out.
-import { mult, mat4, vec3 } from '../../Common/MV.mjs';
+import { mult, mat4, vec3 } from '../../common/MV.mjs';
 import { inverse4, isMatrix4 } from './matrixUtil.mjs';
 
 export function createPipeline(student) {

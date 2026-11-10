@@ -1,6 +1,6 @@
 import { ShaderDemo } from './ShaderDemo.mjs';
 import { DISPLAY_SIZE, HANDLE_RADIUS, drawOverlay } from './overlay.mjs';
-import { vec2, rotateZ } from '../../Common/MV.mjs';
+import { vec2, rotateZ } from '../../common/MV.mjs';
 import {
   transform, clipToDisplay, displayToClip, pixelCenterToClip,
   barycentric, isInside, expectedOutput, toByte, hexToRgb, rgbToHex,

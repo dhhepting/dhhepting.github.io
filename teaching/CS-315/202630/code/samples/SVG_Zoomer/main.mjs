@@ -15,7 +15,7 @@
 //                        a raster has a fixed resolution and zooming cannot add
 //                        detail that was never captured.
 
-import { initShaders } from '../../Common/initShadersJS.mjs';
+import { initShaders } from '../../common/initShadersJS.mjs';
 import { Zoomer } from './zoomer.mjs';
 
 // --- Tunables -------------------------------------------------------------

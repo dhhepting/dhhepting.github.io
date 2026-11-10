@@ -5,7 +5,7 @@ from `shaders/`, program built with `Common/initShadersJS.mjs`.
 
 ## Run
 
-Put this folder next to your `Common/` folder (it imports `../Common/initShadersJS.mjs`),
+Put this folder next to your `Common/` folder (it imports `../common/initShadersJS.mjs`),
 serve the tree over http (modules do not load from `file://`), open `app.html`.
 
 ## Files

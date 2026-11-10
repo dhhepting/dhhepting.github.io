@@ -14,11 +14,11 @@ ES modules need a server; opening `app.html` from `file://` will not work.
 
 ## Layout
 
-- `../../Common/MV.mjs`, `../../Common/initShadersJS.mjs`  course libraries, unchanged
+- `../../common/MV.mjs`, `../../common/initShadersJS.mjs`  course libraries, unchanged
 - `./ShaderDemo.mjs`  DOM-free renderer (programs via `initShaders`, VAO, buffers, readback)
 - `./main.mjs`        controller: DOM, pointer events, readouts
 - `./overlay.mjs`     2D overlay: grid, handles, hovered-pixel weights
 - `./math.mjs`        CPU mirror of vertex transform and rasterizer interpolation (uses MV.mjs)
 - `./shaders/`        `triangle.vert.glsl`, `color.frag.glsl`, `barycentric.frag.glsl`, `fragcoord.frag..glsl`
 
-`../../Common/` is shared between projects.
+`../../common/` is shared between projects.

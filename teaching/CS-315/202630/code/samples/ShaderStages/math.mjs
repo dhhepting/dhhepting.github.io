@@ -2,7 +2,7 @@
 // show its work and check the GPU's answer. Vectors and matrices come from
 // Common/MV.mjs.
 
-import { vec2, vec3, vec4, mult, add } from '../../Common/MV.mjs';
+import { vec2, vec3, vec4, mult, add } from '../../common/MV.mjs';
 
 /** What triangle.vert does to a vertex: u_matrix * vec4(p, 0, 1), xy only. */
 export function transform(matrix, p) {
