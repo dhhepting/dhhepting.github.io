@@ -22,7 +22,7 @@ source "https://rubygems.org"
   gem "webrick"
 
 gem "jekyll", "~> 4.4"
-gem 'nokogiri', '~> 1.15', '>= 1.15.4'
+gem 'nokogiri', '~> 1.19'
 gem 'racc', '~> 1.7', '>= 1.7.1'
 gem 'async', '~> 2.6', '>= 2.6.4'
 gem 'io-event', '~> 1.3', '>= 1.3.2'
