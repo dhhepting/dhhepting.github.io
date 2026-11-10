@@ -1,0 +1,1 @@
+import"../../modulepreload-polyfill-P2Xu9kJm.js";import"../../globals-Da-GDost.js";import"../../vertices-B0zTvRIT.js";import{t as e}from"../../teapot4-D55mJU3Z.js";e();

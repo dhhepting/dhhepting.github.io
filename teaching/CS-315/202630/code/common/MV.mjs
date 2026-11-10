@@ -885,7 +885,7 @@ export function rotateX(theta) {
  * @param {number} theta 
  * @returns {mat4} 
  */
-function rotateY(theta) {
+export function rotateY(theta) {
   let c = Math.cos(radians(theta));
   let s = Math.sin(radians(theta));
   let ry = mat4(c, 0.0, s, 0.0,
@@ -929,7 +929,7 @@ export function scale(x, y, z) {
     // should use mult
     if (isVector(arguments[1])) {
       console.warn("Legacy code - use mult to scale vectors instead");
-      result = new Array(arguments[1].length);
+      const result = new Array(arguments[1].length);
       result.type = arguments[1].type;
       for (let i = 0; i < arguments[1].length; i++)
         result[i] = arguments[0] * arguments[1][i];

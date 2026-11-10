@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+#version 300 es
+
+out vec3 R;
+in vec4 aPosition;
+in vec3 aNormal;
+
+uniform mat4 uModelViewMatrix;
+uniform mat4 uProjectionMatrix;
+uniform mat3 uNormalMatrix;
+
+void main()
+{
+    gl_Position = uProjectionMatrix*uModelViewMatrix*aPosition;
+    vec3 eyePos  = (uModelViewMatrix*aPosition).xyz;
+    vec3 N = normalize(uNormalMatrix*aNormal);
+    R = reflect(eyePos, N);
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+#version 300 es
+
+precision mediump float;
+
+in vec3 R;
+out vec4 fColor;
+
+uniform samplerCube uTexMap;
+
+void main()
+{
+    vec4 texColor = texture(uTexMap, R);
+
+    fColor = texColor;
+}
+</script>
+
+<p> </p>
+<button id = "Button2">Increase theta</button>
+<button id = "Button3">Decrease theta</button>
+<button id = "Button4">Increase phi</button>
+<button id = "Button5">Decrease phi</button>
+<p> </p>
+
+
+<script type="module" crossorigin src="../../assets/textbook/07/reflectingCube-DOCbLzRO.js"></script>
+<link rel="modulepreload" crossorigin href="../../assets/rolldown-runtime-B0fFmPBj.js">
+<link rel="modulepreload" crossorigin href="../../assets/modulepreload-polyfill-P2Xu9kJm.js">
+<link rel="modulepreload" crossorigin href="../../assets/MV-C6AbAtQY.js">
+<link rel="modulepreload" crossorigin href="../../assets/globals-Da-GDost.js">
+
+<body>
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+</body>
+</html>

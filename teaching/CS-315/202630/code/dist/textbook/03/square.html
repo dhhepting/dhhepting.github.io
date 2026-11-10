@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+#version 300 es
+
+in vec4 aPosition;
+in vec4 aColor;
+
+out vec4 vColor;
+
+void
+main()
+{
+    gl_Position = aPosition;
+    vColor = aColor;
+    gl_PointSize = 10.0;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+#version 300 es
+precision mediump float;
+
+in vec4 vColor;
+out vec4 fColor;
+
+void
+main()
+{
+    fColor = vColor;
+}
+</script>
+
+
+<script type="module" crossorigin src="../../assets/textbook/03/square-B8LEhWOY.js"></script>
+<link rel="modulepreload" crossorigin href="../../assets/rolldown-runtime-B0fFmPBj.js">
+<link rel="modulepreload" crossorigin href="../../assets/modulepreload-polyfill-P2Xu9kJm.js">
+<link rel="modulepreload" crossorigin href="../../assets/MV-C6AbAtQY.js">
+<link rel="modulepreload" crossorigin href="../../assets/globals-Da-GDost.js">
+
+<body>
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+</body>
+</html>

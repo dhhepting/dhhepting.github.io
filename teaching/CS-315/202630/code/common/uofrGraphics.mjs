@@ -79,7 +79,7 @@
 //  Other Utility Functions:
 //      flatten4x4
 
-import * as MV from "../Common/MV.mjs";
+import * as MV from "../common/MV.mjs";
 
 // uofrGraphics object constructor
 // I am not a javascript programmer.
