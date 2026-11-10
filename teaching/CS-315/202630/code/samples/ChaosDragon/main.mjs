@@ -79,7 +79,7 @@ function cssColour([r, g, b]) {
 
 const pub = import.meta.env
   ? './'        // Vite dev/build: shaders sit beside the page
-  : new URL(/* @vite-ignore */ '../../public/Samples/ChaosDragon/', import.meta.url).href;  // raw copy
+  : new URL(/* @vite-ignore */ '../../public/samples/ChaosDragon/', import.meta.url).href;  // raw copy
 
 
 function wanderOffset(i) {

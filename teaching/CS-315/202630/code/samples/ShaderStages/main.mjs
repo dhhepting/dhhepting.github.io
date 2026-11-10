@@ -8,7 +8,7 @@ import {
 
 const pub = import.meta.env
   ? './'     // Vite dev/build: shaders sit beside the page
-  : new URL(/* @vite-ignore */ '../../public/Samples/ShaderStages/', import.meta.url).href;  // raw copy
+  : new URL(/* @vite-ignore */ '../../public/samples/ShaderStages/', import.meta.url).href;  // raw copy
 
 async function fetchText(url) {
   const r = await fetch(url);
