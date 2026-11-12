@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bump map explorer</title>
+<style>
+    :root {
+        --ink: #1c2128; --muted: #596270; --page: #eef0f3; --panel: #fff; --line: #d4d9e0;
+        --stage: #22272f; --stage-ink: #e8ebf0; --accent: #1b8a8f; --focus: #2457c5;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--page); color: var(--ink); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 1200px; margin: 0 auto; padding: 1.25rem 1.25rem 4rem; }
+    h1 { font-size: 1.7rem; line-height: 1.2; margin: 0.2rem 0 0.4rem; font-weight: 650; }
+    h2 { font-size: 1.15rem; margin: 1.8rem 0 0.4rem; font-weight: 650; }
+    code { font: 0.9em ui-monospace, Menlo, Consolas, monospace; }
+    .lede { max-width: 80ch; margin: 0 0 1rem; color: #323a45; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+    .workspace { display: grid; grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr); gap: 0.75rem; align-items: start; }
+    .stage { margin: 0; background: var(--stage); border-top: 4px solid var(--accent); border-radius: 4px; overflow: hidden; }
+    .stage canvas { display: block; width: 100%; height: auto; aspect-ratio: 1; touch-action: none; cursor: grab; background: #fff; }
+    .stage figcaption { padding: 0.5rem 0.75rem; font-size: 0.85rem; color: #aab2bf; }
+    .side { display: grid; gap: 0.75rem; }
+    .preview { margin: 0; background: var(--stage); color: var(--stage-ink); border-radius: 4px; overflow: hidden; }
+    .preview figcaption { padding: 0.4rem 0.75rem; font-size: 0.85rem; }
+    .preview canvas { display: block; width: 100%; height: auto; aspect-ratio: 1; image-rendering: pixelated; background: #000; }
+    .status { margin: 0; padding: 0.6rem 0.75rem; background: #fff4e0; border: 1px solid #e7c98f; border-radius: 4px; font-size: 0.88rem; }
+
+    .controls { margin-top: 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 0.75rem; }
+    fieldset { margin: 0; padding: 0.6rem 0.85rem 0.85rem; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; min-width: 0; }
+    legend { padding: 0 0.3rem; font-weight: 650; font-size: 0.92rem; }
+    .ctl { display: grid; grid-template-columns: 1fr auto; gap: 0.1rem 0.6rem; align-items: center; margin-top: 0.55rem; }
+    .ctl .lab { grid-column: 1 / -1; font-size: 0.9rem; }
+    .ctl input[type=range] { width: 100%; }
+    .ctl select { grid-column: 1 / -1; width: 100%; padding: 0.25rem; font: inherit; }
+    .ctl output { font: 0.85rem ui-monospace, Menlo, Consolas, monospace; min-width: 3.4em; text-align: right; }
+    .ctl.check { grid-template-columns: auto 1fr; }
+    .ctl.check .lab { grid-column: 2; grid-row: 1; }
+    .ctl.check .hint { grid-column: 2; }
+    .ctl.color { grid-template-columns: 1fr auto; }
+    .hint { grid-column: 1 / -1; font-size: 0.8rem; color: var(--muted); }
+    .sub { margin-top: 0.4rem; padding-top: 0.2rem; border-top: 1px dashed var(--line); }
+    button { padding: 0.4rem 0.8rem; font: inherit; font-size: 0.9rem; color: var(--ink); background: #f3f5f8; border: 1px solid var(--line); border-radius: 4px; cursor: pointer; margin-top: 0.7rem; }
+    #LodLegend { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem; }
+    .swatch { display: inline-block; min-width: 1.7rem; padding: 0.1rem 0.35rem; text-align: center; font: 0.8rem ui-monospace, Menlo, Consolas, monospace; color: #111; border: 1px solid #0003; border-radius: 3px; }
+
+    .notes { max-width: 80ch; }
+    .notes li { margin: 0.4rem 0; }
+    .fatal { color: #a12020; font-weight: 600; }
+    @media (max-width: 800px) { .workspace { grid-template-columns: minmax(0, 1fr); } .side { grid-template-columns: repeat(2, minmax(0, 1fr)); } .status { grid-column: 1 / -1; } }
+</style>
+</head>
+<body>
+<main>
+    <h1>Bump map explorer</h1>
+    <p class="lede">Bump mapping perturbs the surface normal using a texture, so a flat quad is lit as if it were rough. The texture holds a tangent-space normal in RGB (and the height in alpha); the vertex shader puts the light and view vectors into the same tangent space, and the fragment shader does the lighting there. This page combines the <code>bumpMap</code> and <code>bumpMap2</code> samples and lets you swap the height field, the way it becomes a normal map, the texture parameters, the camera and the light.</p>
+
+    <div id="fatal" class="fatal" hidden></div>
+
+    <section class="workspace" aria-label="The surface">
+        <figure class="stage">
+            <canvas id="gl-canvas" width="768" height="768" aria-label="Bump-mapped quad">
+                Oops ... your browser doesn't support the HTML5 canvas element
+            </canvas>
+            <figcaption>Drag to orbit the camera · shift-drag to move the light · scroll to zoom</figcaption>
+        </figure>
+        <div class="side">
+            <figure class="preview">
+                <figcaption>Height map (the A channel)</figcaption>
+                <canvas id="HeightPreview" width="256" height="256" aria-label="Height map"></canvas>
+            </figure>
+            <figure class="preview">
+                <figcaption>Normal map (the RGB channels)</figcaption>
+                <canvas id="NormalPreview" width="256" height="256" aria-label="Normal map"></canvas>
+            </figure>
+            <p class="status" id="TextureStatus" role="status" hidden></p>
+        </div>
+    </section>
+
+    <section class="controls" aria-label="Controls">
+        <fieldset>
+            <legend>Texture: the height field</legend>
+            <label class="ctl"><span class="lab">Height field</span>
+                <select id="Source"></select></label>
+            <div id="SourceParams" class="sub"></div>
+            <label class="ctl"><span class="lab">Texture size (texels per side)</span>
+                <select id="TextureSize">
+                    <option value="64">64</option><option value="128">128</option>
+                    <option value="256">256</option><option value="512">512</option>
+                </select></label>
+            <label class="ctl"><span class="lab">Bump height (relative to the surface width)</span>
+                <input id="Bump" type="range" min="0" max="1" step="0.001"><output id="BumpOut"></output>
+                <span class="hint">The slope of the surface is this times the slope of the height field. Changing it rebuilds the normal map.</span></label>
+            <label class="ctl"><span class="lab">How normals are computed from heights</span>
+                <select id="NormalMethod">
+                    <option value="forward">Forward difference (the textbook samples)</option>
+                    <option value="central">Central difference</option>
+                    <option value="sobel">Sobel (3 × 3)</option>
+                </select></label>
+            <label class="ctl"><span class="lab">At the texture's edges</span>
+                <select id="EdgeMode">
+                    <option value="wrap">Wrap around (tileable)</option>
+                    <option value="clamp">Clamp to the edge</option>
+                </select></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Texture parameters</legend>
+            <label class="ctl"><span class="lab">Minification filter (texture shrunk: far away or at a grazing angle)</span>
+                <select id="MinFilter">
+                    <option value="NEAREST">NEAREST</option>
+                    <option value="LINEAR">LINEAR</option>
+                    <option value="NEAREST_MIPMAP_NEAREST">NEAREST_MIPMAP_NEAREST</option>
+                    <option value="LINEAR_MIPMAP_NEAREST">LINEAR_MIPMAP_NEAREST</option>
+                    <option value="NEAREST_MIPMAP_LINEAR">NEAREST_MIPMAP_LINEAR</option>
+                    <option value="LINEAR_MIPMAP_LINEAR">LINEAR_MIPMAP_LINEAR</option>
+                </select></label>
+            <label class="ctl"><span class="lab">Magnification filter (texture stretched)</span>
+                <select id="MagFilter"><option value="NEAREST">NEAREST</option><option value="LINEAR">LINEAR</option></select></label>
+            <label class="ctl check"><input id="Mipmaps" type="checkbox"><span class="lab">Generate mipmaps</span>
+                <span class="hint">With a mipmap filter selected and this off, the texture is incomplete.</span></label>
+            <label class="ctl"><span class="lab">Coarsest mip level allowed</span>
+                <input id="MaxLevel" type="range" min="0" max="8" step="1"><output id="MaxLevelOut"></output></label>
+            <label class="ctl"><span class="lab">LOD bias (positive blurs, negative sharpens)</span>
+                <input id="LodBias" type="range" min="-2" max="4" step="0.1"><output id="LodBiasOut"></output></label>
+            <label class="ctl"><span class="lab">Maximum anisotropy</span>
+                <input id="Anisotropy" type="range" min="1" max="16" step="1"><output id="AnisotropyOut"></output></label>
+            <label class="ctl"><span class="lab">Wrap in s</span>
+                <select id="WrapS"><option value="REPEAT">REPEAT</option><option value="MIRRORED_REPEAT">MIRRORED_REPEAT</option><option value="CLAMP_TO_EDGE">CLAMP_TO_EDGE</option></select></label>
+            <label class="ctl"><span class="lab">Wrap in t</span>
+                <select id="WrapT"><option value="REPEAT">REPEAT</option><option value="MIRRORED_REPEAT">MIRRORED_REPEAT</option><option value="CLAMP_TO_EDGE">CLAMP_TO_EDGE</option></select></label>
+            <label class="ctl"><span class="lab">Repeat the texture across the surface</span>
+                <input id="Repeat" type="range" min="1" max="8" step="1"><output id="RepeatOut"></output></label>
+            <button type="button" id="ButtonResetTexture">Reset texture parameters</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>View</legend>
+            <label class="ctl"><span class="lab">Show</span>
+                <select id="ViewMode">
+                    <option value="0">Bump-mapped lighting</option>
+                    <option value="1">Flat surface, same lighting (no bump)</option>
+                    <option value="2">The normal map itself</option>
+                    <option value="3">The height map itself</option>
+                    <option value="4">Lighting, tinted by the mip level used</option>
+                </select>
+                <span class="hint">The tint is an estimate from the screen-space derivatives of the texture coordinate; the hardware may also adjust for anisotropy.</span></label>
+            <div id="LodLegend" hidden aria-label="Mip level colours"></div>
+            <label class="ctl"><span class="lab">Projection</span>
+                <select id="Projection"><option value="perspective">Perspective</option><option value="ortho">Orthographic (as in the samples)</option></select></label>
+            <label class="ctl"><span class="lab">Distance</span><input id="Radius" type="range" min="1" max="8" step="0.05"><output id="RadiusOut"></output></label>
+            <label class="ctl"><span class="lab">Camera azimuth</span><input id="CameraAzimuth" type="range" min="0" max="360" step="1"><output id="CameraAzimuthOut"></output></label>
+            <label class="ctl"><span class="lab">Camera elevation (low angles show filtering and anisotropy)</span><input id="CameraElevation" type="range" min="5" max="89" step="1"><output id="CameraElevationOut"></output></label>
+            <label class="ctl check"><input id="OrbitCamera" type="checkbox"><span class="lab">Orbit the camera</span></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Lighting</legend>
+            <label class="ctl"><span class="lab">Light</span>
+                <select id="LightType"><option value="point">Point light</option><option value="directional">Directional light</option></select></label>
+            <label class="ctl"><span class="lab">Light azimuth</span><input id="LightAzimuth" type="range" min="0" max="360" step="1"><output id="LightAzimuthOut"></output></label>
+            <label class="ctl"><span class="lab">Light elevation (low = raking light, shows the bumps best)</span><input id="LightElevation" type="range" min="2" max="89" step="1"><output id="LightElevationOut"></output></label>
+            <label class="ctl"><span class="lab">Light distance (point light)</span><input id="LightDistance" type="range" min="0.3" max="5" step="0.05"><output id="LightDistanceOut"></output></label>
+            <label class="ctl check"><input id="OrbitLight" type="checkbox"><span class="lab">Orbit the light</span></label>
+            <label class="ctl"><span class="lab">Ambient</span><input id="Ambient" type="range" min="0" max="1" step="0.01"><output id="AmbientOut"></output></label>
+            <label class="ctl"><span class="lab">Specular strength</span><input id="SpecularStrength" type="range" min="0" max="1" step="0.01"><output id="SpecularStrengthOut"></output></label>
+            <label class="ctl"><span class="lab">Shininess</span><input id="Shininess" type="range" min="1" max="200" step="1"><output id="ShininessOut"></output></label>
+            <label class="ctl color"><span class="lab">Surface colour</span><input id="SurfaceColor" type="color"></label>
+        </fieldset>
+    </section>
+
+    <section class="notes">
+        <h2>Things to try</h2>
+        <ul>
+            <li><strong>Where the bumps come from.</strong> Pick <em>The normal map itself</em> and then <em>Flat surface</em>. The quad is flat in every view; only the normals differ.</li>
+            <li><strong>Light angle.</strong> Lower the light's elevation. A raking light shows relief that a head-on light hides. A light below the horizon of the surface lights nothing: the fragment shader zeroes it, which the samples did not do.</li>
+            <li><strong>Normal calculation.</strong> Use the raised square at 64 texels and look at its edges. The forward difference makes each edge one texel wide and shifted by half a texel: the left and top edges land just outside the square, the right and bottom edges just inside. The central difference makes edges two texels wide, centred on the true edge. Sobel averages over a 3 × 3 neighbourhood, which smooths noisy height fields.</li>
+            <li><strong>Filtering.</strong> Choose the checkerboard, repeat it 8 times, lower the camera elevation and switch the minification filter between NEAREST and LINEAR_MIPMAP_LINEAR. Turn on the mip-level tint to see which levels are used, and try anisotropy.</li>
+            <li><strong>Mipmapped normal maps.</strong> <code>generateMipmap</code> averages the encoded normals. The shader renormalizes, but an average of many different normals points in a compromise direction and is shorter than unit length before normalizing, so fine relief fades with distance. That is the right behaviour for a rough surface seen from afar, and it is an approximation.</li>
+            <li><strong>Incomplete textures.</strong> Choose a mipmap filter and untick <em>Generate mipmaps</em>. WebGL treats the texture as incomplete and samples black, and the page says so.</li>
+            <li><strong>Perlin noise.</strong> The lattice wraps, so the noise tiles without seams; set the wrap mode to <code>REPEAT</code> and repeat 4 times to check, then switch to <code>MIRRORED_REPEAT</code> or <code>CLAMP_TO_EDGE</code>.</li>
+        </ul>
+        <p style="color:var(--muted);font-size:0.9rem">Notes on the data: your Honolulu height data is read as 256 × 256 values from 0 to 951 and scaled to 0–1. <code>bumpMap2.js</code> read one row past the end of that array (an undefined value, so NaN normals in the last row); here the edges are wrapped or clamped instead. The normal map is stored as 8-bit RGBA, as in the samples; large bump heights on smooth fields show some banding.</p>
+    </section>
+</main>
+
+<script type="module" src="./bumpMapExplorer.mjs"></script>
+</body>
+</html>
