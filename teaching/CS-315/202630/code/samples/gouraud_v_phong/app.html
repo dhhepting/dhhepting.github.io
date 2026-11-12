@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gouraud vs Phong shading: a highlight between the vertices</title>
+<style>
+    :root {
+        --ink: #1c2128; --muted: #596270; --page: #eef0f3; --panel: #fff; --line: #d4d9e0;
+        --stage: #22272f; --stage-ink: #e8ebf0; --left: #1b8a8f; --right: #d9822b; --focus: #2457c5;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--page); color: var(--ink); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 1100px; margin: 0 auto; padding: 1.25rem 1.25rem 4rem; }
+    h1 { font-size: 1.7rem; line-height: 1.2; margin: 0.2rem 0 0.4rem; font-weight: 650; }
+    h2 { font-size: 1.15rem; margin: 1.8rem 0 0.4rem; font-weight: 650; }
+    code { font: 0.9em ui-monospace, Menlo, Consolas, monospace; }
+    .lede { max-width: 75ch; margin: 0 0 1rem; color: #323a45; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+    .stage { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+    .pane { margin: 0; background: var(--stage); color: var(--stage-ink); border-top: 4px solid #6b7480; border-radius: 4px; overflow: hidden; }
+    .pane.left { border-top-color: var(--left); }
+    .pane.right { border-top-color: var(--right); }
+    .pane figcaption { padding: 0.6rem 0.75rem 0.5rem; display: grid; gap: 0.1rem; }
+    .pane figcaption strong { font-size: 1.05rem; }
+    .pane figcaption span { font-size: 0.85rem; color: #aab2bf; }
+    .wrap { position: relative; }
+    .wrap canvas { display: block; width: 100%; height: auto; aspect-ratio: 1; touch-action: none; cursor: crosshair; background: #fff; }
+    .tag { position: absolute; transform: translate(-50%, -50%); font: 700 0.95rem/1 system-ui, sans-serif; color: #1c2128; background: rgba(255,255,255,0.85); padding: 0.2rem 0.4rem; border-radius: 3px; pointer-events: none; }
+
+    .controls { margin-top: 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0.75rem; }
+    fieldset { margin: 0; padding: 0.6rem 0.85rem 0.85rem; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; min-width: 0; }
+    legend { padding: 0 0.3rem; font-weight: 650; font-size: 0.92rem; }
+    .presets { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.4rem; }
+    .presets button { padding: 0.45rem 0.8rem; font: inherit; font-size: 0.92rem; color: var(--ink); background: #f3f5f8; border: 1px solid var(--line); border-radius: 4px; cursor: pointer; }
+    .presets button[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .ctl { display: grid; grid-template-columns: 1fr auto; gap: 0.1rem 0.6rem; align-items: center; margin-top: 0.55rem; }
+    .ctl .lab { grid-column: 1 / -1; font-size: 0.9rem; }
+    .ctl input[type=range] { width: 100%; }
+    .ctl select { grid-column: 1 / -1; width: 100%; padding: 0.25rem; font: inherit; }
+    .ctl output { font: 0.85rem ui-monospace, Menlo, Consolas, monospace; min-width: 3.4em; text-align: right; }
+    .ctl.check { grid-template-columns: auto 1fr; }
+    .ctl.check .lab { grid-column: 2; grid-row: 1; }
+    .ctl.check .hint { grid-column: 2; }
+    .hint { grid-column: 1 / -1; font-size: 0.8rem; color: var(--muted); }
+
+    table { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--line); }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-top: 1px solid var(--line); font-size: 0.93rem; }
+    thead th { border-top: 0; }
+    thead th.l { border-bottom: 4px solid var(--left); }
+    thead th.r { border-bottom: 4px solid var(--right); }
+    td.num { font-family: ui-monospace, Menlo, Consolas, monospace; }
+    .bar { height: 8px; background: #e4e8ee; border-radius: 2px; margin-top: 0.25rem; }
+    .bar span { display: block; height: 100%; border-radius: 2px; }
+    .bar .l { background: var(--left); } .bar .r { background: var(--right); }
+    .verdict { margin: 0.6rem 0 0; font-weight: 600; max-width: 80ch; }
+    .notes { max-width: 78ch; }
+    .notes li { margin: 0.35rem 0; }
+    .fatal { color: #a12020; font-weight: 600; }
+    @media (max-width: 700px) { .stage { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<main>
+    <h1>Gouraud vs Phong shading</h1>
+    <p class="lede">Both canvases draw the same triangle with the same light and the same lighting equation. The only difference is <em>where</em> the equation is evaluated:
+        <strong>Gouraud</strong> (left, <code>perVertexLighting.vert</code>) lights the three vertices and blends the three colours across the triangle; <strong>Phong</strong> (right, <code>perFragmentLighting</code>) blends the surface <em>normal</em> and lights every pixel.
+        The vertex normals tilt outward, as on a curved surface, so a specular highlight can fall in the middle of the triangle, where no vertex can see it.</p>
+
+    <div id="fatal" class="fatal" hidden></div>
+
+    <section class="stage" aria-label="The two renderings">
+        <figure class="pane left">
+            <figcaption><strong>Gouraud: per-vertex shading</strong><span>the lighting equation runs 3 times (once per vertex); colours are interpolated</span></figcaption>
+            <div class="wrap"><canvas id="gl-canvas-gouraud" aria-label="Triangle shaded per vertex"></canvas></div>
+        </figure>
+        <figure class="pane right">
+            <figcaption><strong>Phong: per-fragment shading</strong><span>the lighting equation runs at every pixel; N, L and E are interpolated</span></figcaption>
+            <div class="wrap"><canvas id="gl-canvas-phong" aria-label="Triangle shaded per fragment"></canvas></div>
+        </figure>
+    </section>
+
+    <section class="controls" aria-label="Controls">
+        <fieldset>
+            <legend>Light position (drag on either canvas to move it freely)</legend>
+            <div class="presets" role="group" aria-label="Light position presets">
+                <button type="button" id="ButtonA">Above vertex A</button>
+                <button type="button" id="ButtonB">Above vertex B</button>
+                <button type="button" id="ButtonC">Above vertex C</button>
+                <button type="button" id="ButtonCentre">Above the centre</button>
+            </div>
+            <label class="ctl"><span class="lab">Where the presets put the light</span>
+                <select id="Placement">
+                    <option value="mirror">So the highlight lands exactly on that point</option>
+                    <option value="above">Straight above that point, towards the viewer (+z)</option>
+                </select>
+                <span class="hint">The vertex normals tilt outward, so “straight above” a vertex is not where its highlight would be seen. The first option puts the light at the mirror position for this viewer; for the centre the two options coincide.</span></label>
+            <label class="ctl"><span class="lab">Distance of the light from the point</span><input id="Distance" type="range" min="0.2" max="2.5" step="0.05"><output id="DistanceOut"></output></label>
+            <label class="ctl"><span class="lab">Light x</span><input id="LightX" type="range" min="-3" max="3" step="0.05"><output id="LightXOut"></output></label>
+            <label class="ctl"><span class="lab">Light y</span><input id="LightY" type="range" min="-3" max="3" step="0.05"><output id="LightYOut"></output></label>
+            <label class="ctl"><span class="lab">Light z (towards the viewer)</span><input id="LightZ" type="range" min="-2" max="2.6" step="0.05"><output id="LightZOut"></output></label>
+        </fieldset>
+        <fieldset>
+            <legend>Surface, material and shaders</legend>
+            <label class="ctl"><span class="lab">Shininess</span><input id="Shininess" type="range" min="1" max="300" step="1"><output id="ShininessOut"></output>
+                <span class="hint">Higher means a smaller highlight, which is easier to fall between vertices.</span></label>
+            <label class="ctl"><span class="lab">Surface curvature (how far the vertex normals tilt outward)</span><input id="Curvature" type="range" min="0" max="1.5" step="0.05"><output id="CurvatureOut"></output>
+                <span class="hint">0 is a flat triangle: all three normals point at the viewer.</span></label>
+            <label class="ctl check"><input id="Renormalize" type="checkbox"><span class="lab">Phong canvas: renormalize N, L and E in the fragment shader</span>
+                <span class="hint">On: <code>perFragmentLightingNormalized.frag</code>, a copy of your <code>perFragmentLighting.frag</code> with three <code>normalize</code> calls added. Off: your shader as written. Interpolated unit vectors come out shorter than 1, and here the normals tilt far enough apart that <code>pow(N·H, shininess)</code> collapses and the highlight disappears.</span></label>
+            <label class="ctl check"><input id="Edges" type="checkbox"><span class="lab">Show triangle edges</span></label>
+            <label class="ctl check"><input id="Labels" type="checkbox"><span class="lab">Show vertex labels</span></label>
+        </fieldset>
+    </section>
+
+    <h2>The numbers behind the pictures</h2>
+    <p style="margin:0 0 0.5rem;color:var(--muted);font-size:0.93rem">Specular term (0 to 1), computed on the CPU with the same arithmetic the shaders use.</p>
+    <table>
+        <thead><tr><th>Where</th><th class="l">Gouraud</th><th class="r">Phong</th></tr></thead>
+        <tbody id="readout"></tbody>
+    </table>
+    <p class="verdict" id="verdict" aria-live="polite"></p>
+
+    <section class="notes">
+        <h2>How to read it</h2>
+        <ul>
+            <li><strong>Above the centre.</strong> The light sits over the middle of the triangle. Phong shows a bright spot there. At the three vertices the highlight is nearly zero, so Gouraud has nothing bright to interpolate and misses the highlight completely.</li>
+            <li><strong>Above a vertex.</strong> With the default placement the highlight lands exactly on that vertex. Both models show it there, because the vertex is where Gouraud evaluates the equation. Gouraud smears it into a linear fade toward the other two corners, so the centre reads about a third as bright (the average of the vertex values) even though the true highlight is nowhere near the centre; Phong keeps a tight spot. Switch the placement to “straight above” to see that a light directly over a vertex does not put the highlight on it, because the normal there is tilted.</li>
+            <li><strong>Between the two.</strong> Drag the light slowly from a vertex toward the centre and watch the Gouraud highlight fade away while the Phong highlight travels with the light.</li>
+            <li><strong>Curvature.</strong> With curvature 0 the surface is flat and the two pictures are much closer. The normals changing across the triangle is what Gouraud cannot represent.</li>
+        </ul>
+    </section>
+</main>
+
+<script type="module" src="./main.mjs"></script>
+</body>
+</html>
