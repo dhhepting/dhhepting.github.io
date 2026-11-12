@@ -1,5 +1,5 @@
-import { vec3, vec4, mult, lookAt, perspective, normalMatrix, flatten } from '../../Common/MV.mjs';
-import { initShaders } from '../../Common/initShadersJS.mjs';
+import { vec3, vec4, mult, lookAt, perspective, normalMatrix, flatten } from '../../common/MV.mjs';
+import { initShaders } from '../../common/initShadersJS.mjs';
 
 // Shader files are fetched (not imported with ?raw) so that this page also works
 // when it is served as-is, without a bundler.
