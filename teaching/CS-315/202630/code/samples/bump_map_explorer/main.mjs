@@ -1,7 +1,8 @@
-import { vec2, vec3, vec4, mult, lookAt, ortho, perspective, normalMatrix, flatten } from '../../common/MV.mjs';
+import { vec2, vec3, vec4, lookAt, ortho, perspective, normalMatrix, flatten } from '../../common/MV.mjs';
 import { initShaders } from '../../common/initShadersJS.mjs';
 
-import { SOURCES, defaultParams, generateHeights, normalsFromHeights } from './heightFields.mjs';
+import { SOURCES, defaultParams, generateHeights, generateAlbedo, normalsFromHeights } from './heightFields.mjs';
+import { EXAMPLES, GROUPS, exampleById } from './examples.mjs';
 
 // Shader files are fetched (not imported with ?raw) so that this page also works
 // when it is served as-is, without a bundler.
@@ -13,7 +14,6 @@ const shaderURLs = {
 let canvas;
 let gl;
 let program;
-let texture = null;
 let anisotropyExt = null;
 let maxAnisotropy = 1;
 
@@ -53,99 +53,134 @@ const levelTint = [
 ];
 
 // --------------------------------------------------------------------- state
+//
+// Choosing an example resets the state to these values and then applies the
+// example's preset (examples.mjs).
 
-// the texture itself
-let source = "honolulu";
-let textureSize = 256;
-let bump = SOURCES[source].bump;
-let normalMethod = "forward";
-let edgeMode = "wrap";
+const baseState = {
+    // the texture
+    textureSize: 256, bump: 0.05, normalMethod: "central", edgeMode: "wrap",
+    // texture parameters
+    minFilter: "LINEAR_MIPMAP_LINEAR", magFilter: "LINEAR", wrapS: "REPEAT", wrapT: "REPEAT",
+    generateMipmaps: true, maxLevel: 12, lodBias: 0.0, anisotropy: 1, repeat: 1,
+    // view
+    viewMode: 0, projection: "perspective", radius: 2.2, cameraAzimuth: 0.0, cameraElevation: 50.0, orbitCamera: false,
+    // light and material
+    lightType: "point", lightAzimuth: 40.0, lightElevation: 35.0, lightDistance: 1.5, orbitLight: false,
+    ambient: 0.2, specularStrength: 0.25, shininess: 40.0, surfaceColor: [0.7, 0.7, 0.7],
+    // shading techniques
+    material: "lit", useColorMap: true, relief: 0, reliefSteps: 32, normalSource: 0, toksvig: false, convention: 0,
+    splitMode: 0, splitX: 0.5,
+    // water
+    waterScale1: 2.0, waterScale2: 5.5, waterLayer2: 0.6, waterSpeed: 1.0, waterAnimate: true,
+    waterFresnel: 5.0, waterDepth: 0.6, waterDistortion: 0.03,
+};
+
+let state = { ...baseState, surfaceColor: [...baseState.surfaceColor] };
+let exampleId = "honolulu";
 const sourceParams = {};
 
-// texture parameters
-const textureDefaults = {
-    minFilter: "LINEAR_MIPMAP_LINEAR",
-    magFilter: "LINEAR",
-    wrapS: "REPEAT",
-    wrapT: "REPEAT",
-    generateMipmaps: true,
-    maxLevel: 12,
-    lodBias: 0.0,
-    anisotropy: 1,
-    repeat: 1,
-};
-let { minFilter, magFilter, wrapS, wrapT, generateMipmaps, maxLevel, lodBias, anisotropy, repeat } = textureDefaults;
-
-// viewing
-let viewMode = 0;
-let projection = "perspective";
-let radius = 2.2;
-let cameraAzimuth = 0.0;
-let cameraElevation = 50.0;
-let orbitCamera = false;
-
-// lighting
-let lightType = "point";
-let lightAzimuth = 40.0;
-let lightElevation = 35.0;
-let lightDistance = 1.5;
-let orbitLight = true;
-let ambient = 0.2;
-let specularStrength = 0.25;
-let shininess = 40.0;
-let surfaceColor = [0.7, 0.7, 0.7];
+const materialIndex = { lit: 0, metal: 1, water: 2 };
 
 // what needs doing before the next frame
-let heightsDirty = true;       // regenerate the height field (and everything after it)
-let normalsDirty = true;       // recompute the normal map and upload the texture
+let heightsDirty = true;       // regenerate the height field, colour map and everything after them
+let normalsDirty = true;       // recompute the normal map and upload the textures
 let parametersDirty = true;    // re-apply the texture parameters
 let needsRedraw = true;
 
 let heights = null;
-let pixels = null;
+let normalPixels = null;
+let colorPixels = null;
+let normalTexture = null;
+let colorTexture = null;
 let lastTime = null;
+let time = 0.0;
 
 const $ = (id) => document.getElementById(id);
 const log2 = (n) => Math.round(Math.log2(n));
+const currentExample = () => exampleById(exampleId);
 
 // ------------------------------------------------------------------- texture
 
-function uploadTexture() {
-    if (texture) gl.deleteTexture(texture);
-    texture = gl.createTexture();
+// The text example rasterizes with a 2D canvas: white letters on black, fitted to the width.
+function rasterizeText(text, n) {
+    const surface = document.createElement("canvas");
+    surface.width = n;
+    surface.height = n;
+    const context = surface.getContext("2d");
 
-    gl.activeTexture(gl.TEXTURE0);
+    context.fillStyle = "#000";
+    context.fillRect(0, 0, n, n);
+    context.fillStyle = "#fff";
+    context.textAlign = "center";
+    context.textBaseline = "middle";
+
+    let size = n * 0.5;
+    context.font = `bold ${size}px sans-serif`;
+    const width = Math.max(context.measureText(text || " ").width, 1);
+    size = Math.min(size * (0.86 * n) / width, n * 0.7);
+    context.font = `bold ${size}px sans-serif`;
+    context.fillText(text, n / 2, n / 2 + size * 0.04);
+
+    const data = context.getImageData(0, 0, n, n).data;
+    const values = new Float32Array(n * n);
+    for (let row = 0; row < n; row++) {
+        for (let column = 0; column < n; column++) {
+            values[(n - 1 - row) * n + column] = data[4 * (row * n + column)] / 255;   // canvas row 0 is the top; texture row 0 is v = 0
+        }
+    }
+    return values;
+}
+
+function makeTexture(unit, size, pixels) {
+    const texture = gl.createTexture();
+    gl.activeTexture(gl.TEXTURE0 + unit);
     gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA8, size, size, 0, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+    if (state.generateMipmaps) gl.generateMipmap(gl.TEXTURE_2D);
+    return texture;
+}
 
-    // RGB = the tangent-space normal, A = the height
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA8, textureSize, textureSize, 0, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
-    if (generateMipmaps) gl.generateMipmap(gl.TEXTURE_2D);
+function uploadTextures() {
+    if (normalTexture) gl.deleteTexture(normalTexture);
+    if (colorTexture) gl.deleteTexture(colorTexture);
+
+    // unit 0: RGB = the tangent-space normal, A = the height
+    normalTexture = makeTexture(0, state.textureSize, normalPixels);
+
+    // unit 1: the colour map; a 1 x 1 white texture stands in when the example has none
+    if (colorPixels) {
+        colorTexture = makeTexture(1, state.textureSize, colorPixels);
+    } else {
+        colorTexture = gl.createTexture();
+        gl.activeTexture(gl.TEXTURE1);
+        gl.bindTexture(gl.TEXTURE_2D, colorTexture);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA8, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, new Uint8Array([255, 255, 255, 255]));
+    }
 
     gl.uniform1i(loc.uTexMap, 0);
-    gl.uniform1f(loc.uTexSize, textureSize);
-
+    gl.uniform1i(loc.uColorMap, 1);
     parametersDirty = true;
 }
 
 function applyTextureParameters() {
-    gl.activeTexture(gl.TEXTURE0);
-    gl.bindTexture(gl.TEXTURE_2D, texture);
+    for (const [unit, texture, isReal] of [[0, normalTexture, true], [1, colorTexture, Boolean(colorPixels)]]) {
+        gl.activeTexture(gl.TEXTURE0 + unit);
+        gl.bindTexture(gl.TEXTURE_2D, texture);
 
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl[minFilter]);
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl[magFilter]);
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl[wrapS]);
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl[wrapT]);
+        // the 1 x 1 stand-in has no mip chain, so it always samples level 0
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, isReal ? gl[state.minFilter] : gl.NEAREST);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, isReal ? gl[state.magFilter] : gl.NEAREST);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl[state.wrapS]);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl[state.wrapT]);
 
-    // how many mip levels may be used (only meaningful if they were generated)
-    if (generateMipmaps) {
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAX_LEVEL, Math.min(maxLevel, log2(textureSize)));
+        if (isReal && state.generateMipmaps) {
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAX_LEVEL, Math.min(state.maxLevel, log2(state.textureSize)));
+        }
+        if (isReal && anisotropyExt) {
+            gl.texParameterf(gl.TEXTURE_2D, anisotropyExt.TEXTURE_MAX_ANISOTROPY_EXT, state.anisotropy);
+        }
     }
-    if (anisotropyExt) {
-        gl.texParameterf(gl.TEXTURE_2D, anisotropyExt.TEXTURE_MAX_ANISOTROPY_EXT, anisotropy);
-    }
-
-    gl.uniform1f(loc.uLodBias, lodBias);
-    gl.uniform1f(loc.uTexScale, repeat);
 
     updateStatus();
     parametersDirty = false;
@@ -153,15 +188,19 @@ function applyTextureParameters() {
 }
 
 function rebuildTexture() {
+    const example = currentExample();
     if (heightsDirty) {
-        if (!sourceParams[source]) sourceParams[source] = defaultParams(source);
-        heights = generateHeights(source, textureSize, sourceParams[source]);
+        const params = sourceParams[exampleId];
+        heights = generateHeights(example.source, state.textureSize, params, { rasterizeText });
+        colorPixels = generateAlbedo(example.source, state.textureSize, heights, params);
         normalsDirty = true;
         heightsDirty = false;
     }
     if (normalsDirty) {
-        pixels = normalsFromHeights(heights, textureSize, { bump, method: normalMethod, edges: edgeMode });
-        uploadTexture();
+        normalPixels = normalsFromHeights(heights, state.textureSize, {
+            bump: state.bump, method: state.normalMethod, edges: state.edgeMode,
+        });
+        uploadTextures();
         drawPreviews();
         normalsDirty = false;
         needsRedraw = true;
@@ -170,50 +209,64 @@ function rebuildTexture() {
 
 const previewContexts = {};
 
-function drawPreviews() {
-    const n = textureSize;
-    for (const [id, show] of [["HeightPreview", "height"], ["NormalPreview", "normal"]]) {
-        const preview = $(id);
-        preview.width = n;
-        preview.height = n;
-        previewContexts[id] ??= preview.getContext("2d");
-        const context = previewContexts[id];
-        const image = context.createImageData(n, n);
+function drawPreview(id, size, pixelAt) {
+    const preview = $(id);
+    preview.width = size;
+    preview.height = size;
+    previewContexts[id] ??= preview.getContext("2d");
+    const context = previewContexts[id];
+    const image = context.createImageData(size, size);
 
-        for (let i = 0; i < n; i++) {
-            const row = n - 1 - i;          // row 0 of the texture is the bottom (t = 0)
-            for (let j = 0; j < n; j++) {
-                const k = 4 * (i * n + j);
-                const o = 4 * (row * n + j);
-                if (show === "height") {
-                    image.data[o] = image.data[o + 1] = image.data[o + 2] = pixels[k + 3];
-                } else {
-                    image.data[o] = pixels[k];
-                    image.data[o + 1] = pixels[k + 1];
-                    image.data[o + 2] = pixels[k + 2];
-                }
-                image.data[o + 3] = 255;
-            }
+    for (let i = 0; i < size; i++) {
+        const row = size - 1 - i;           // row 0 of the texture is the bottom (t = 0)
+        for (let j = 0; j < size; j++) {
+            const [r, g, b] = pixelAt(4 * (i * size + j));
+            const o = 4 * (row * size + j);
+            image.data[o] = r;
+            image.data[o + 1] = g;
+            image.data[o + 2] = b;
+            image.data[o + 3] = 255;
         }
-        context.putImageData(image, 0, 0);
     }
+    context.putImageData(image, 0, 0);
 }
+
+function drawPreviews() {
+    const n = state.textureSize;
+    drawPreview("HeightPreview", n, (k) => [normalPixels[k + 3], normalPixels[k + 3], normalPixels[k + 3]]);
+    drawPreview("NormalPreview", n, (k) => [normalPixels[k], normalPixels[k + 1], normalPixels[k + 2]]);
+    $("ColorPreviewFigure").hidden = !colorPixels;
+    if (colorPixels) drawPreview("ColorPreview", n, (k) => [colorPixels[k], colorPixels[k + 1], colorPixels[k + 2]]);
+}
+
+const splitDescriptions = {
+    1: "Left of the divider: bump mapping only. Right: the selected parallax mode.",
+    2: "Left of the divider: the stored normal map. Right: normals from derivatives of the height.",
+    3: "Left of the divider: no Toksvig correction. Right: with it.",
+};
 
 function updateStatus() {
     const messages = [];
 
-    if (/MIPMAP/.test(minFilter) && !generateMipmaps) {
+    if (/MIPMAP/.test(state.minFilter) && !state.generateMipmaps) {
         messages.push("Incomplete texture: the minification filter needs mipmaps, but none were generated. " +
             "WebGL then samples (0, 0, 0, 1), so the surface is lit as if its normal pointed one way.");
     }
-    if (!/MIPMAP/.test(minFilter) && generateMipmaps) {
+    if (!/MIPMAP/.test(state.minFilter) && state.generateMipmaps) {
         messages.push("Mipmaps exist but the minification filter does not use them.");
     }
     if (!anisotropyExt) {
         messages.push("Anisotropic filtering (EXT_texture_filter_anisotropic) is not available in this browser.");
     }
-    if (repeat > 1 && (wrapS === "CLAMP_TO_EDGE" || wrapT === "CLAMP_TO_EDGE")) {
+    if (state.repeat > 1 && (state.wrapS === "CLAMP_TO_EDGE" || state.wrapT === "CLAMP_TO_EDGE")) {
         messages.push("With repeat above 1, clamping smears the edge texels across the surface.");
+    }
+    if (state.splitMode > 0) messages.push(splitDescriptions[state.splitMode]);
+    if (state.material === "water" && (state.relief > 0 || state.normalSource === 1)) {
+        messages.push("Parallax and derivative normals are not applied to water, which blends two copies of the normal map.");
+    }
+    if (state.normalSource === 1 && state.convention !== 0) {
+        messages.push("The derivative method builds the normal from the geometry, so the normal-map convention has no effect on it.");
     }
 
     $("TextureStatus").textContent = messages.join(" ");
@@ -225,21 +278,23 @@ function updateStatus() {
 const toRadians = (degrees) => degrees * Math.PI / 180.0;
 
 function cameraEye() {
-    const az = toRadians(cameraAzimuth);
-    const el = toRadians(cameraElevation);
-    return vec3(at[0] + radius * Math.cos(el) * Math.sin(az),
-        at[1] + radius * Math.sin(el),
-        at[2] + radius * Math.cos(el) * Math.cos(az));
+    const az = toRadians(state.cameraAzimuth);
+    const el = toRadians(state.cameraElevation);
+    return vec3(at[0] + state.radius * Math.cos(el) * Math.sin(az),
+        at[1] + state.radius * Math.sin(el),
+        at[2] + state.radius * Math.cos(el) * Math.cos(az));
 }
 
 function lightPosition() {
-    const az = toRadians(lightAzimuth);
-    const el = toRadians(lightElevation);
+    const az = toRadians(state.lightAzimuth);
+    const el = toRadians(state.lightElevation);
     const direction = [Math.cos(el) * Math.sin(az), Math.sin(el), Math.cos(el) * Math.cos(az)];
-    if (lightType === "directional") return vec4(direction[0], direction[1], direction[2], 0.0);
-    return vec4(at[0] + lightDistance * direction[0], at[1] + lightDistance * direction[1],
-        at[2] + lightDistance * direction[2], 1.0);
+    if (state.lightType === "directional") return vec4(direction[0], direction[1], direction[2], 0.0);
+    return vec4(at[0] + state.lightDistance * direction[0], at[1] + state.lightDistance * direction[1],
+        at[2] + state.lightDistance * direction[2], 1.0);
 }
+
+const animating = () => state.orbitCamera || state.orbitLight || (state.material === "water" && state.waterAnimate);
 
 function render(now) {
     requestAnimationFrame(render);
@@ -247,9 +302,10 @@ function render(now) {
     const dt = (lastTime === null) ? 0.0 : Math.max(0.0, Math.min(0.1, (now - lastTime) / 1000.0));
     lastTime = now;
 
-    if (orbitCamera || orbitLight) {
-        if (orbitCamera) cameraAzimuth = (((cameraAzimuth + dt * 15.0) % 360.0) + 360.0) % 360.0;
-        if (orbitLight) lightAzimuth = (((lightAzimuth + dt * 40.0) % 360.0) + 360.0) % 360.0;
+    if (animating()) {
+        if (state.orbitCamera) state.cameraAzimuth = (((state.cameraAzimuth + dt * 15.0) % 360.0) + 360.0) % 360.0;
+        if (state.orbitLight) state.lightAzimuth = (((state.lightAzimuth + dt * 40.0) % 360.0) + 360.0) % 360.0;
+        if (state.material === "water" && state.waterAnimate) time += dt;
         syncControls();
         needsRedraw = true;
     }
@@ -269,70 +325,109 @@ function drawScene() {
     const modelViewMatrix = lookAt(cameraEye(), at, up);
 
     // an orthographic view that shows the same extent as the perspective one at the focus distance
-    const half = radius * Math.tan(toRadians(fovy) / 2.0);
-    const projectionMatrix = (projection === "perspective")
+    const half = state.radius * Math.tan(toRadians(fovy) / 2.0);
+    const projectionMatrix = (state.projection === "perspective")
         ? perspective(fovy, 1.0, 0.1, 50.0)
         : ortho(-half, half, -half, half, -50.0, 50.0);
 
     const nMatrix = normalMatrix(modelViewMatrix, true);
-
-    const ambientProduct = vec4(ambient * surfaceColor[0], ambient * surfaceColor[1], ambient * surfaceColor[2], 1.0);
-    const diffuseProduct = vec4(surfaceColor[0], surfaceColor[1], surfaceColor[2], 1.0);
-    const specularProduct = vec4(specularStrength, specularStrength, specularStrength, 1.0);
+    const hasColor = Boolean(colorPixels) && state.useColorMap;
 
     gl.uniformMatrix4fv(loc.uModelViewMatrix, false, flatten(modelViewMatrix));
     gl.uniformMatrix4fv(loc.uProjectionMatrix, false, flatten(projectionMatrix));
     gl.uniformMatrix3fv(loc.uNormalMatrix, false, flatten(nMatrix));
     gl.uniform4fv(loc.uLightPosition, lightPosition());
-    gl.uniform4fv(loc.uAmbientProduct, ambientProduct);
-    gl.uniform4fv(loc.uDiffuseProduct, diffuseProduct);
-    gl.uniform4fv(loc.uSpecularProduct, specularProduct);
-    gl.uniform1f(loc.uShininess, shininess);
-    gl.uniform1i(loc.uView, viewMode);
+    gl.uniform1f(loc.uTexScale, state.repeat);
+
+    gl.uniform1i(loc.uUseColor, hasColor ? 1 : 0);
+    gl.uniform3fv(loc.uSurfaceColor, state.surfaceColor);
+    gl.uniform1f(loc.uAmbient, state.ambient);
+    gl.uniform1f(loc.uSpecularStrength, state.specularStrength);
+    gl.uniform1f(loc.uShininess, state.shininess);
+    gl.uniform1i(loc.uMaterial, materialIndex[state.material]);
+    gl.uniform1i(loc.uView, state.viewMode);
+    gl.uniform1f(loc.uTexSize, state.textureSize);
+    gl.uniform1f(loc.uLodBias, state.lodBias);
+    gl.uniform1f(loc.uBumpHeight, state.bump);
+
+    gl.uniform1i(loc.uRelief, state.relief);
+    gl.uniform1i(loc.uReliefSteps, state.reliefSteps);
+    gl.uniform1i(loc.uNormalSource, state.normalSource);
+    gl.uniform1i(loc.uToksvig, state.toksvig ? 1 : 0);
+    gl.uniform1i(loc.uConvention, state.convention);
+    gl.uniform1i(loc.uSplitMode, state.splitMode);
+    gl.uniform1f(loc.uSplitX, state.splitX * canvas.width);
+
+    gl.uniform1f(loc.uTime, time);
+    gl.uniform1f(loc.uWaterScale1, state.waterScale1);
+    gl.uniform1f(loc.uWaterScale2, state.waterScale2);
+    gl.uniform1f(loc.uWaterLayer2, state.waterLayer2);
+    gl.uniform1f(loc.uWaterFresnel, state.waterFresnel);
+    gl.uniform1f(loc.uWaterDepth, state.waterDepth);
+    gl.uniform1f(loc.uWaterDistortion, state.waterDistortion);
+    gl.uniform2fv(loc.uWaterFlow1, [0.03 * state.waterSpeed, 0.02 * state.waterSpeed]);     // layer velocities, in texture repeats per second
+    gl.uniform2fv(loc.uWaterFlow2, [-0.02 * state.waterSpeed, 0.04 * state.waterSpeed]);
 
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 }
 
 // ------------------------------------------------------------------------ UI
 //
-// Each entry ties a control's id to a variable. "dirty" says what has to be
-// redone when it changes.
+// Each entry ties a control's id to a key of the state. "dirty" says what has to
+// be redone when it changes.
 
 const rangeControls = {
-    Bump:             { get: () => bump,             set: (v) => { bump = v; },             digits: 3, dirty: "normals" },
-    Repeat:           { get: () => repeat,           set: (v) => { repeat = v; },           digits: 0, dirty: "parameters" },
-    MaxLevel:         { get: () => maxLevel,         set: (v) => { maxLevel = v; },         digits: 0, dirty: "parameters" },
-    LodBias:          { get: () => lodBias,          set: (v) => { lodBias = v; },          digits: 1, dirty: "parameters" },
-    Anisotropy:       { get: () => anisotropy,       set: (v) => { anisotropy = v; },       digits: 0, dirty: "parameters" },
-    Radius:           { get: () => radius,           set: (v) => { radius = v; },           digits: 2, dirty: "redraw" },
-    CameraAzimuth:    { get: () => cameraAzimuth,    set: (v) => { cameraAzimuth = v; },    digits: 0, dirty: "redraw" },
-    CameraElevation:  { get: () => cameraElevation,  set: (v) => { cameraElevation = v; },  digits: 0, dirty: "redraw" },
-    LightAzimuth:     { get: () => lightAzimuth,     set: (v) => { lightAzimuth = v; },     digits: 0, dirty: "redraw" },
-    LightElevation:   { get: () => lightElevation,   set: (v) => { lightElevation = v; },   digits: 0, dirty: "redraw" },
-    LightDistance:    { get: () => lightDistance,    set: (v) => { lightDistance = v; },    digits: 2, dirty: "redraw" },
-    Ambient:          { get: () => ambient,          set: (v) => { ambient = v; },          digits: 2, dirty: "redraw" },
-    SpecularStrength: { get: () => specularStrength, set: (v) => { specularStrength = v; }, digits: 2, dirty: "redraw" },
-    Shininess:        { get: () => shininess,        set: (v) => { shininess = v; },        digits: 0, dirty: "redraw" },
+    Bump:             { key: "bump",             digits: 3, dirty: "normals" },
+    Repeat:           { key: "repeat",           digits: 0, dirty: "redraw" },
+    MaxLevel:         { key: "maxLevel",         digits: 0, dirty: "parameters" },
+    LodBias:          { key: "lodBias",          digits: 1, dirty: "redraw" },
+    Anisotropy:       { key: "anisotropy",       digits: 0, dirty: "parameters" },
+    Radius:           { key: "radius",           digits: 2, dirty: "redraw" },
+    CameraAzimuth:    { key: "cameraAzimuth",    digits: 0, dirty: "redraw" },
+    CameraElevation:  { key: "cameraElevation",  digits: 0, dirty: "redraw" },
+    LightAzimuth:     { key: "lightAzimuth",     digits: 0, dirty: "redraw" },
+    LightElevation:   { key: "lightElevation",   digits: 0, dirty: "redraw" },
+    LightDistance:    { key: "lightDistance",    digits: 2, dirty: "redraw" },
+    Ambient:          { key: "ambient",          digits: 2, dirty: "redraw" },
+    SpecularStrength: { key: "specularStrength", digits: 2, dirty: "redraw" },
+    Shininess:        { key: "shininess",        digits: 0, dirty: "redraw" },
+    ReliefSteps:      { key: "reliefSteps",      digits: 0, dirty: "redraw" },
+    SplitX:           { key: "splitX",           digits: 2, dirty: "redraw" },
+    WaterScale1:      { key: "waterScale1",      digits: 1, dirty: "redraw" },
+    WaterScale2:      { key: "waterScale2",      digits: 1, dirty: "redraw" },
+    WaterLayer2:      { key: "waterLayer2",      digits: 2, dirty: "redraw" },
+    WaterSpeed:       { key: "waterSpeed",       digits: 1, dirty: "redraw" },
+    WaterFresnel:     { key: "waterFresnel",     digits: 1, dirty: "redraw" },
+    WaterDepth:       { key: "waterDepth",       digits: 2, dirty: "redraw" },
+    WaterDistortion:  { key: "waterDistortion",  digits: 3, dirty: "redraw" },
 };
 
+// numeric: the select's values are numbers (indexes the shader uses)
 const selectControls = {
-    Source:       { get: () => source,          set: (v) => { chooseSource(v); },                       dirty: "none" },
-    TextureSize:  { get: () => textureSize,     set: (v) => { textureSize = Number(v); updateMaxLevel(); }, dirty: "heights" },
-    NormalMethod: { get: () => normalMethod,    set: (v) => { normalMethod = v; },                      dirty: "normals" },
-    EdgeMode:     { get: () => edgeMode,        set: (v) => { edgeMode = v; },                          dirty: "normals" },
-    MinFilter:    { get: () => minFilter,       set: (v) => { minFilter = v; },                         dirty: "parameters" },
-    MagFilter:    { get: () => magFilter,       set: (v) => { magFilter = v; },                         dirty: "parameters" },
-    WrapS:        { get: () => wrapS,           set: (v) => { wrapS = v; },                             dirty: "parameters" },
-    WrapT:        { get: () => wrapT,           set: (v) => { wrapT = v; },                             dirty: "parameters" },
-    ViewMode:     { get: () => String(viewMode), set: (v) => { viewMode = Number(v); updateLegend(); }, dirty: "redraw" },
-    Projection:   { get: () => projection,      set: (v) => { projection = v; },                        dirty: "redraw" },
-    LightType:    { get: () => lightType,       set: (v) => { lightType = v; },                         dirty: "redraw" },
+    TextureSize:  { key: "textureSize",  numeric: true,  dirty: "heights" },
+    NormalMethod: { key: "normalMethod",                 dirty: "normals" },
+    EdgeMode:     { key: "edgeMode",                     dirty: "normals" },
+    MinFilter:    { key: "minFilter",                    dirty: "parameters" },
+    MagFilter:    { key: "magFilter",                    dirty: "parameters" },
+    WrapS:        { key: "wrapS",                        dirty: "parameters" },
+    WrapT:        { key: "wrapT",                        dirty: "parameters" },
+    ViewMode:     { key: "viewMode",     numeric: true,  dirty: "redraw" },
+    Projection:   { key: "projection",                   dirty: "redraw" },
+    LightType:    { key: "lightType",                    dirty: "redraw" },
+    Material:     { key: "material",                     dirty: "redraw" },
+    Relief:       { key: "relief",       numeric: true,  dirty: "redraw" },
+    NormalSource: { key: "normalSource", numeric: true,  dirty: "redraw" },
+    Convention:   { key: "convention",   numeric: true,  dirty: "redraw" },
+    SplitMode:    { key: "splitMode",    numeric: true,  dirty: "redraw" },
 };
 
 const checkControls = {
-    Mipmaps:     { get: () => generateMipmaps, set: (v) => { generateMipmaps = v; }, dirty: "normals" },
-    OrbitCamera: { get: () => orbitCamera,     set: (v) => { orbitCamera = v; },     dirty: "redraw" },
-    OrbitLight:  { get: () => orbitLight,      set: (v) => { orbitLight = v; },      dirty: "redraw" },
+    Mipmaps:      { key: "generateMipmaps", dirty: "normals" },
+    OrbitCamera:  { key: "orbitCamera",     dirty: "redraw" },
+    OrbitLight:   { key: "orbitLight",      dirty: "redraw" },
+    UseColorMap:  { key: "useColorMap",     dirty: "redraw" },
+    Toksvig:      { key: "toksvig",         dirty: "redraw" },
+    WaterAnimate: { key: "waterAnimate",    dirty: "redraw" },
 };
 
 function markDirty(kind) {
@@ -356,32 +451,37 @@ function setOutput(id, value, digits) {
 
 function syncControls() {
     for (const [id, control] of Object.entries(rangeControls)) {
-        $(id).value = control.get();
-        setOutput(id, control.get(), control.digits);
+        $(id).value = state[control.key];
+        setOutput(id, state[control.key], control.digits);
     }
-    for (const [id, control] of Object.entries(selectControls)) $(id).value = control.get();
-    for (const [id, control] of Object.entries(checkControls)) $(id).checked = control.get();
-    $("SurfaceColor").value = rgbToHex(surfaceColor);
+    for (const [id, control] of Object.entries(selectControls)) $(id).value = String(state[control.key]);
+    for (const [id, control] of Object.entries(checkControls)) $(id).checked = Boolean(state[control.key]);
+    $("SurfaceColor").value = rgbToHex(state.surfaceColor);
+    $("Example").value = exampleId;
 
-    // minification filters that use mipmaps are meaningless without them: say so, but let the user pick
-    $("MaxLevel").disabled = !generateMipmaps;
+    const water = state.material === "water";
+    $("WaterControls").hidden = !water;
+    $("MaxLevel").disabled = !state.generateMipmaps;
     $("Anisotropy").disabled = !anisotropyExt;
+    $("ReliefSteps").disabled = state.relief !== 2;
+    $("SplitX").disabled = state.splitMode === 0;
+    $("UseColorMap").disabled = !colorPixels;
 }
 
 function updateMaxLevel() {
-    const levels = log2(textureSize);
+    const levels = log2(state.textureSize);
     $("MaxLevel").max = levels;
-    maxLevel = Math.min(maxLevel, levels);
+    state.maxLevel = Math.min(state.maxLevel, levels);
     updateLegend();
 }
 
 function updateLegend() {
     const legend = $("LodLegend");
     legend.replaceChildren();
-    legend.hidden = (viewMode !== 4);
-    if (viewMode !== 4) return;
+    legend.hidden = (state.viewMode !== 4);
+    if (state.viewMode !== 4) return;
 
-    for (let level = 0; level <= log2(textureSize); level++) {
+    for (let level = 0; level <= log2(state.textureSize); level++) {
         const swatch = document.createElement("span");
         swatch.className = "swatch";
         swatch.style.background = rgbToHex(levelTint[Math.min(level, levelTint.length - 1)]);
@@ -390,18 +490,28 @@ function updateLegend() {
     }
 }
 
-function chooseSource(id) {
-    source = id;
-    if (!sourceParams[source]) sourceParams[source] = defaultParams(source);
-    bump = SOURCES[source].bump;
+function chooseExample(id) {
+    exampleId = id;
+    const example = currentExample();
+
+    state = { ...baseState, surfaceColor: [...baseState.surfaceColor], ...example.preset };
+    if (example.preset.surfaceColor) state.surfaceColor = [...example.preset.surfaceColor];
+    sourceParams[id] = { ...defaultParams(example.source), ...(example.params ?? {}) };
+    time = 0.0;
+
+    $("ExampleLook").textContent = example.look;
     buildSourceParams();
+    updateMaxLevel();
+    markDirty("heights");
+    parametersDirty = true;
 }
 
 function buildSourceParams() {
     const container = $("SourceParams");
     container.replaceChildren();
 
-    for (const spec of SOURCES[source].params) {
+    const store = sourceParams[exampleId];
+    for (const spec of SOURCES[currentExample().source].params) {
         const label = document.createElement("label");
         label.className = "ctl";
         const name = document.createElement("span");
@@ -409,7 +519,6 @@ function buildSourceParams() {
         name.textContent = spec.label;
         label.append(name);
 
-        const store = sourceParams[source];
         if (spec.type === "select") {
             const select = document.createElement("select");
             select.id = `Param_${spec.id}`;
@@ -422,6 +531,15 @@ function buildSourceParams() {
             select.value = store[spec.id];
             select.onchange = () => { store[spec.id] = select.value; markDirty("heights"); };
             label.append(select);
+        } else if (spec.type === "text") {
+            const input = document.createElement("input");
+            input.type = "text";
+            input.id = `Param_${spec.id}`;
+            input.maxLength = spec.maxLength ?? 16;
+            input.value = store[spec.id];
+            input.style.gridColumn = "1 / -1";
+            input.oninput = () => { store[spec.id] = input.value; markDirty("heights"); };
+            label.append(input);
         } else {
             const input = document.createElement("input");
             input.type = "range";
@@ -431,7 +549,7 @@ function buildSourceParams() {
             input.step = spec.step;
             input.value = store[spec.id];
             const output = document.createElement("output");
-            const digits = spec.step < 1 ? 2 : 0;
+            const digits = spec.step < 0.01 ? 3 : spec.step < 1 ? 2 : 0;
             output.textContent = Number(store[spec.id]).toFixed(digits);
             input.oninput = () => {
                 store[spec.id] = Number(input.value);
@@ -442,42 +560,76 @@ function buildSourceParams() {
         }
         container.append(label);
     }
-    container.hidden = SOURCES[source].params.length === 0;
+    container.hidden = SOURCES[currentExample().source].params.length === 0;
+}
+
+function buildExampleMenu() {
+    const menu = $("Example");
+    for (const group of GROUPS) {
+        const optgroup = document.createElement("optgroup");
+        optgroup.label = group;
+        for (const example of EXAMPLES.filter((e) => e.group === group)) {
+            const option = document.createElement("option");
+            option.value = example.id;
+            option.textContent = example.label;
+            optgroup.append(option);
+        }
+        menu.append(optgroup);
+    }
+}
+
+// coupling between controls
+function afterChange(id) {
+    if (id === "SplitMode" && state.splitMode === 1 && state.relief === 0) state.relief = 2;   // the compare needs a relief mode to show
+    if (id === "TextureSize") updateMaxLevel();
+    if (id === "ViewMode") updateLegend();
 }
 
 function attachControls() {
     for (const [id, control] of Object.entries(rangeControls)) {
         $(id).oninput = (e) => {
-            control.set(Number(e.target.value));
+            state[control.key] = Number(e.target.value);
             setOutput(id, e.target.value, control.digits);
             markDirty(control.dirty);
+            afterChange(id);
+            if (control.dirty === "parameters") syncControls();
         };
     }
 
     for (const [id, control] of Object.entries(selectControls)) {
         $(id).onchange = (e) => {
-            control.set(e.target.value);
-            // choosing a source, or a new size, regenerates the field
-            markDirty(id === "Source" ? "heights" : control.dirty);
+            state[control.key] = control.numeric ? Number(e.target.value) : e.target.value;
+            markDirty(control.dirty);
+            afterChange(id);
             syncControls();
+            updateStatus();
         };
     }
 
     for (const [id, control] of Object.entries(checkControls)) {
         $(id).onchange = (e) => {
-            control.set(e.target.checked);
+            state[control.key] = e.target.checked;
             markDirty(control.dirty);
-            syncControls();          // e.g. the mip-level slider is disabled without mipmaps
+            afterChange(id);
+            syncControls();      // e.g. the mip-level slider is disabled without mipmaps
         };
     }
 
-    $("SurfaceColor").oninput = (e) => { surfaceColor = hexToRgb(e.target.value); needsRedraw = true; };
+    $("Example").onchange = (e) => {
+        chooseExample(e.target.value);
+        syncControls();
+    };
+
+    $("SurfaceColor").oninput = (e) => { state.surfaceColor = hexToRgb(e.target.value); needsRedraw = true; };
 
     $("ButtonResetTexture").onclick = () => {
-        ({ minFilter, magFilter, wrapS, wrapT, generateMipmaps, maxLevel, lodBias, anisotropy, repeat } = textureDefaults);
+        for (const key of ["minFilter", "magFilter", "wrapS", "wrapT", "generateMipmaps", "maxLevel", "lodBias", "anisotropy", "repeat"]) {
+            state[key] = baseState[key];
+        }
         updateMaxLevel();
         syncControls();
         markDirty("normals");      // mipmaps may have been switched back on, which needs a new upload
+        parametersDirty = true;
     };
 
     // Drag to orbit the camera, shift-drag to move the light, scroll to zoom.
@@ -496,11 +648,11 @@ function attachControls() {
         last = { x: e.clientX, y: e.clientY };
 
         if (e.shiftKey) {
-            lightAzimuth = (((lightAzimuth - dx) % 360.0) + 360.0) % 360.0;
-            lightElevation = Math.max(2.0, Math.min(89.0, lightElevation + dy));
+            state.lightAzimuth = (((state.lightAzimuth - dx) % 360.0) + 360.0) % 360.0;
+            state.lightElevation = Math.max(2.0, Math.min(89.0, state.lightElevation + dy));
         } else {
-            cameraAzimuth = (((cameraAzimuth - dx) % 360.0) + 360.0) % 360.0;
-            cameraElevation = Math.max(5.0, Math.min(89.0, cameraElevation + dy));
+            state.cameraAzimuth = (((state.cameraAzimuth - dx) % 360.0) + 360.0) % 360.0;
+            state.cameraElevation = Math.max(5.0, Math.min(89.0, state.cameraElevation + dy));
         }
         syncControls();
         needsRedraw = true;
@@ -509,7 +661,7 @@ function attachControls() {
     canvas.onpointercancel = () => { dragging = false; };
     canvas.onwheel = (e) => {
         e.preventDefault();
-        radius = Math.max(1.0, Math.min(8.0, radius * (1.0 + e.deltaY * 0.001)));
+        state.radius = Math.max(1.0, Math.min(8.0, state.radius * (1.0 + e.deltaY * 0.001)));
         syncControls();
         needsRedraw = true;
     };
@@ -563,8 +715,11 @@ async function init() {
         gl.enableVertexAttribArray(texCoordLoc);
 
         for (const name of ["uModelViewMatrix", "uProjectionMatrix", "uNormalMatrix", "uNormal", "uObjTangent",
-            "uLightPosition", "uTexScale", "uTexMap", "uTexSize", "uLodBias", "uAmbientProduct",
-            "uDiffuseProduct", "uSpecularProduct", "uShininess", "uView"]) {
+            "uLightPosition", "uTexScale", "uTexMap", "uColorMap", "uUseColor", "uSurfaceColor", "uAmbient",
+            "uSpecularStrength", "uShininess", "uMaterial", "uView", "uTexSize", "uLodBias", "uBumpHeight",
+            "uRelief", "uReliefSteps", "uNormalSource", "uToksvig", "uConvention", "uSplitMode", "uSplitX", "uTime",
+            "uWaterScale1", "uWaterScale2", "uWaterLayer2", "uWaterFresnel", "uWaterDepth", "uWaterDistortion",
+            "uWaterFlow1", "uWaterFlow2"]) {
             loc[name] = gl.getUniformLocation(program, name);
         }
 
@@ -577,16 +732,8 @@ async function init() {
             $("Anisotropy").max = maxAnisotropy;
         }
 
-        // fill the source menu
-        for (const [id, spec] of Object.entries(SOURCES)) {
-            const option = document.createElement("option");
-            option.value = id;
-            option.textContent = spec.label;
-            $("Source").append(option);
-        }
-
-        chooseSource(source);
-        updateMaxLevel();
+        buildExampleMenu();
+        chooseExample(exampleId);
         attachControls();
         syncControls();
 
