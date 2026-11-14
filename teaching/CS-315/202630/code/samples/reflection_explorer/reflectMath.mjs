@@ -1,6 +1,6 @@
 // The explorer's pure logic: matrices, orbiting objects, and which settings each
 // half of a split view uses. No DOM, no GL.
-import { lookAt, vec3, rotate, mult } from '../../Common/MV.mjs';
+import { lookAt, vec3, rotate, mult } from '../../common/MV.mjs';
 import { FACE_RENDER_VIEWS } from './environments.mjs';
 
 export const SHADE_INDEX = { mirror: 0, litEnv: 1, plastic: 2, glossy: 3, glass: 4 };
