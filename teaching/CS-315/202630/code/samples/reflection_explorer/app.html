@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reflection and environment map explorer</title>
+<style>
+    :root {
+        --ink: #1c2128; --muted: #596270; --page: #eef0f3; --panel: #fff; --line: #d4d9e0;
+        --stage: #22272f; --stage-ink: #e8ebf0; --accent: #1b8a8f; --focus: #2457c5;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body { margin: 0; background: var(--page); color: var(--ink); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 1240px; margin: 0 auto; padding: 1.25rem 1.25rem 4rem; }
+    h1 { font-size: 1.7rem; line-height: 1.2; margin: 0.2rem 0 0.4rem; font-weight: 650; }
+    h2 { font-size: 1.15rem; margin: 1.8rem 0 0.4rem; font-weight: 650; }
+    code { font: 0.9em ui-monospace, Menlo, Consolas, monospace; }
+    .lede { max-width: 82ch; margin: 0 0 1rem; color: #323a45; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+    .workspace { display: grid; grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr); gap: 0.75rem; align-items: start; }
+    .stage { margin: 0; background: var(--stage); border-top: 4px solid var(--accent); border-radius: 4px; overflow: hidden; }
+    .stage canvas { display: block; width: 100%; height: auto; aspect-ratio: 1; touch-action: none; cursor: grab; background: #fff; }
+    .stage figcaption { padding: 0.5rem 0.75rem; font-size: 0.85rem; color: #aab2bf; }
+    .side { display: grid; gap: 0.6rem; }
+    .preview { margin: 0; background: var(--stage); color: var(--stage-ink); border-radius: 4px; overflow: hidden; }
+    .preview figcaption { padding: 0.3rem 0.6rem; font-size: 0.78rem; }
+    .preview canvas { display: block; width: 100%; height: auto; }
+    .status { margin: 0; padding: 0.6rem 0.75rem; background: #eaf3f4; border: 1px solid #b9d6d8; border-radius: 4px; font-size: 0.88rem; }
+
+    .controls { margin-top: 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 0.75rem; }
+    fieldset { margin: 0; padding: 0.6rem 0.85rem 0.85rem; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; min-width: 0; }
+    legend { padding: 0 0.3rem; font-weight: 650; font-size: 0.92rem; }
+    .ctl { display: grid; grid-template-columns: 1fr auto; gap: 0.1rem 0.6rem; align-items: center; margin-top: 0.55rem; }
+    .ctl .lab { grid-column: 1 / -1; font-size: 0.9rem; }
+    .ctl input[type=range] { width: 100%; }
+    .ctl select { grid-column: 1 / -1; width: 100%; padding: 0.25rem; font: inherit; }
+    .ctl output { font: 0.85rem ui-monospace, Menlo, Consolas, monospace; min-width: 3.4em; text-align: right; }
+    .ctl.check { grid-template-columns: auto 1fr; }
+    .ctl.check .lab { grid-column: 2; grid-row: 1; }
+    .ctl.check .hint { grid-column: 2; }
+    .ctl.color { grid-template-columns: 1fr auto; }
+    .hint { grid-column: 1 / -1; font-size: 0.8rem; color: var(--muted); }
+    .look { margin: 0.2rem 0 0; font-size: 0.9rem; color: #323a45; }
+
+    .notes { max-width: 82ch; }
+    .notes li { margin: 0.4rem 0; }
+    .fatal { color: #a12020; font-weight: 600; }
+    @media (max-width: 800px) { .workspace { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<main>
+    <h1>Reflection and environment map explorer</h1>
+    <p class="lede">A reflection map looks a cube map up in the direction a view ray would take after bouncing off the surface. This page combines the five textbook samples (<code>reflectionMap</code>, <code>reflectionMap1</code>, <code>reflectionMap2</code>, <code>reflectingCube</code>, <code>reflectingSphere</code>) and extends them with richer environments, materials, a dynamic environment, and a split-screen compare that draws the same object twice with one setting changed.</p>
+
+    <div id="fatal" class="fatal" hidden></div>
+
+    <section class="workspace" aria-label="The object">
+        <figure class="stage">
+            <canvas id="gl-canvas" width="768" height="768" aria-label="Reflecting object">
+                Oops ... your browser doesn't support the HTML5 canvas element
+            </canvas>
+            <figcaption>Drag to orbit the camera · scroll to zoom</figcaption>
+        </figure>
+        <div class="side">
+            <figure class="preview">
+                <figcaption>Static environment, each face as seen from inside the cube</figcaption>
+                <canvas id="EnvPreview" width="384" height="288" aria-label="Unfolded environment cube"></canvas>
+            </figure>
+            <p class="status" id="Status" role="status" hidden></p>
+        </div>
+    </section>
+
+    <section class="controls" aria-label="Controls">
+        <fieldset>
+            <legend>Example and comparison</legend>
+            <label class="ctl"><span class="lab">Example</span><select id="Example"></select></label>
+            <p class="look" id="ExampleLook"></p>
+            <label class="ctl"><span class="lab">Compare (a split view: one setting differs between the halves)</span>
+                <select id="Compare"></select></label>
+            <label class="ctl"><span class="lab">Divider position</span>
+                <input id="SplitX" type="range" min="0.05" max="0.95" step="0.01"><output id="SplitXOut"></output></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Object</legend>
+            <label class="ctl"><span class="lab">Shape</span>
+                <select id="Shape">
+                    <option value="sphere">Sphere (subdivided tetrahedron)</option>
+                    <option value="cube">Cube (flat faces)</option>
+                    <option value="torus">Torus</option>
+                    <option value="plane">Flat mirror</option>
+                </select></label>
+            <label class="ctl"><span class="lab">Sphere subdivisions</span>
+                <input id="Subdivisions" type="range" min="0" max="6" step="1"><output id="SubdivisionsOut"></output></label>
+            <label class="ctl"><span class="lab">Rotation about x</span>
+                <input id="RotX" type="range" min="-180" max="180" step="1"><output id="RotXOut"></output></label>
+            <label class="ctl"><span class="lab">Rotation about y</span>
+                <input id="RotY" type="range" min="-180" max="180" step="1"><output id="RotYOut"></output></label>
+            <label class="ctl"><span class="lab">Rotation about z</span>
+                <input id="RotZ" type="range" min="-180" max="180" step="1"><output id="RotZOut"></output></label>
+            <label class="ctl check"><input id="Spin" type="checkbox"><span class="lab">Spin the object</span></label>
+            <label class="ctl"><span class="lab">Spin about</span>
+                <select id="SpinAxis"><option value="x">x</option><option value="y">y</option><option value="z">z</option></select></label>
+            <label class="ctl"><span class="lab">Spin speed (degrees per second)</span>
+                <input id="SpinSpeed" type="range" min="0" max="180" step="1"><output id="SpinSpeedOut"></output></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Material</legend>
+            <label class="ctl"><span class="lab">Material</span>
+                <select id="Material">
+                    <option value="mirror">Mirror (reflectionMap)</option>
+                    <option value="litEnv">Lit surface × environment (reflectingSphere)</option>
+                    <option value="plastic">Plastic: lit surface + Fresnel reflection</option>
+                    <option value="glossy">Glossy metal: blurred reflection</option>
+                    <option value="glass">Glass: refraction with dispersion</option>
+                </select></label>
+            <label class="ctl color"><span class="lab">Colour (surface, metal tint, or glass tint)</span><input id="Tint" type="color"></label>
+            <label class="ctl"><span class="lab">Plastic: reflectance head-on</span>
+                <input id="Reflectivity" type="range" min="0" max="1" step="0.01"><output id="ReflectivityOut"></output></label>
+            <label class="ctl"><span class="lab">Glossy: roughness (the mip level read)</span>
+                <input id="Roughness" type="range" min="0" max="1" step="0.01"><output id="RoughnessOut"></output></label>
+            <label class="ctl"><span class="lab">Glass: index of refraction (green)</span>
+                <input id="Ior" type="range" min="1.01" max="2.5" step="0.01"><output id="IorOut"></output></label>
+            <label class="ctl"><span class="lab">Glass: dispersion (index difference, red to blue)</span>
+                <input id="Dispersion" type="range" min="0" max="0.1" step="0.002"><output id="DispersionOut"></output></label>
+            <label class="ctl"><span class="lab">Shininess (lit surfaces)</span>
+                <input id="Shininess" type="range" min="1" max="300" step="1"><output id="ShininessOut"></output></label>
+            <label class="ctl"><span class="lab">Ambient (lit surfaces)</span>
+                <input id="Ambient" type="range" min="0" max="1" step="0.01"><output id="AmbientOut"></output></label>
+            <label class="ctl check"><input id="LightFixed" type="checkbox"><span class="lab">Light fixed to the camera, (1, 1, 1, 0) in eye coordinates as in reflectingSphere</span></label>
+            <label class="ctl"><span class="lab">Light azimuth (world-fixed light)</span>
+                <input id="LightAzimuth" type="range" min="0" max="360" step="1"><output id="LightAzimuthOut"></output></label>
+            <label class="ctl"><span class="lab">Light elevation (world-fixed light)</span>
+                <input id="LightElevation" type="range" min="2" max="89" step="1"><output id="LightElevationOut"></output></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Environment</legend>
+            <label class="ctl"><span class="lab">Static environment (a cube map built in JavaScript)</span>
+                <select id="Environment"></select></label>
+            <label class="ctl"><span class="lab">Texels per face</span>
+                <select id="EnvSize"><option value="32">32</option><option value="64">64</option><option value="128">128</option><option value="256">256</option><option value="512">512</option></select></label>
+            <label class="ctl"><span class="lab">Filter</span>
+                <select id="EnvFilter">
+                    <option value="NEAREST">NEAREST (as the samples)</option>
+                    <option value="LINEAR">LINEAR</option>
+                    <option value="LINEAR_MIPMAP_LINEAR">LINEAR_MIPMAP_LINEAR</option>
+                </select></label>
+            <label class="ctl"><span class="lab">Rotate the environment about y</span>
+                <input id="EnvRotation" type="range" min="-180" max="180" step="1"><output id="EnvRotationOut"></output></label>
+            <label class="ctl"><span class="lab">Reflect</span>
+                <select id="EnvSource">
+                    <option value="static">The static environment</option>
+                    <option value="dynamic">A dynamic environment, re-rendered every frame</option>
+                </select></label>
+            <label class="ctl"><span class="lab">Dynamic environment: texels per face</span>
+                <select id="DynamicSize"><option value="64">64</option><option value="128">128</option><option value="256">256</option><option value="512">512</option></select></label>
+            <label class="ctl check"><input id="ShowObjects" type="checkbox"><span class="lab">Show the orbiting spheres</span>
+                <span class="hint">They are in the scene whatever the environment, but only a dynamic environment reflects them. Unticked, they are removed from the scene and from the dynamic environment.</span></label>
+            <label class="ctl"><span class="lab">Orbiting spheres: speed</span>
+                <input id="ObjectSpeed" type="range" min="0" max="4" step="0.1"><output id="ObjectSpeedOut"></output></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Reflection vector</legend>
+            <label class="ctl"><span class="lab">Expressed in</span>
+                <select id="Space">
+                    <option value="eye">Eye coordinates (the orbiting-camera samples)</option>
+                    <option value="world">World coordinates (where the cube map is)</option>
+                </select></label>
+            <label class="ctl"><span class="lab">Computed</span>
+                <select id="Where">
+                    <option value="vertex">Per vertex, then interpolated (the samples)</option>
+                    <option value="fragment">Per fragment</option>
+                </select></label>
+            <label class="ctl check"><input id="EyeNormalized" type="checkbox"><span class="lab">Normalize the eye vector first (reflectionMap2; per vertex only)</span></label>
+            <label class="ctl"><span class="lab">Normal matrix</span>
+                <select id="NormalMatrix">
+                    <option value="correct">Correct: the inverse transpose of the model-view matrix</option>
+                    <option value="sample">As reflectionMap2.js uploads it (transposed)</option>
+                </select></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>View</legend>
+            <label class="ctl"><span class="lab">Show</span>
+                <select id="ViewMode">
+                    <option value="0">Shaded</option>
+                    <option value="1">The lookup direction as a colour</option>
+                    <option value="2">The eye-space normal as a colour</option>
+                    <option value="3">The cube-map face that is hit (the samples' six colours)</option>
+                </select></label>
+            <label class="ctl check"><input id="Skybox" type="checkbox"><span class="lab">Draw the environment as the background</span></label>
+            <label class="ctl"><span class="lab">Projection</span>
+                <select id="Projection"><option value="perspective">Perspective</option><option value="ortho">Orthographic (as in the samples)</option></select></label>
+            <label class="ctl"><span class="lab">Distance</span><input id="Radius" type="range" min="1.5" max="12" step="0.05"><output id="RadiusOut"></output></label>
+            <label class="ctl"><span class="lab">Camera azimuth</span><input id="CameraAzimuth" type="range" min="0" max="360" step="1"><output id="CameraAzimuthOut"></output></label>
+            <label class="ctl"><span class="lab">Camera elevation</span><input id="CameraElevation" type="range" min="-85" max="85" step="1"><output id="CameraElevationOut"></output></label>
+            <label class="ctl check"><input id="OrbitCamera" type="checkbox"><span class="lab">Orbit the camera</span></label>
+        </fieldset>
+    </section>
+
+    <section class="notes">
+        <h2>Notes on what the samples do and what is approximated</h2>
+        <ul>
+            <li><strong>Eye space vs world space.</strong> <code>reflectingCube.js</code> and <code>reflectingSphere.js</code> orbit the camera but look the cube map up with a reflection vector in eye coordinates. For a camera at the origin looking down −z (the fixed camera of <code>reflectionMap.js</code>) that is harmless; once the camera moves, the centre of a reflecting sphere always reflects (0, 0, 1), the +Z face, whatever the camera does, so the environment is glued to the camera. Rotating the vector into world coordinates (<code>uViewRotationInverse</code>) fixes it.</li>
+            <li><strong>The normal matrix of reflectionMap2.js.</strong> The sample uploads <code>transpose(normalMatrix(modelView))</code>. The normal matrix of a rotation is the rotation itself, so the transpose is its inverse: normals rotate the wrong way, 19° off at 10° of rotation and 57° off at 30°. The other samples use the correct matrix.</li>
+            <li><strong>Raw vs normalized eye vector.</strong> Reflection is linear in the eye vector, so on a flat face interpolating the per-vertex vectors computed from the <em>raw</em> eye vector (<code>reflectionMap1</code>) is exactly the per-pixel answer. Normalizing first (<code>reflectionMap2</code>) breaks the linearity and makes it approximate.</li>
+            <li><strong>Per vertex vs per fragment.</strong> On a smooth surface, per-vertex vectors cut corners: on a sphere the mean error against the per-pixel vector is about 116° at subdivision level 0, 9° at level 2 and 0.1° at level 5.</li>
+            <li><strong>Orthographic projection.</strong> The samples draw through <code>ortho()</code> but compute the reflection for an eye at a point. This page defaults to perspective, which the maths assumes.</li>
+            <li><strong>Cube-map conventions.</strong> Faces and texel orientation follow the OpenGL ES 3.0 cube-map selection table. Painted environments are drawn as seen from inside and resampled into texel order, and the unfolded preview shows them the same way. The dynamic environment renders each face with the usual look-at and up vectors, which match the table.</li>
+            <li><strong>Glossy reflections</strong> read a coarser mip level of the cube map, which averages the environment. That is a plausible blur, not a prefiltered specular map, so it does not respond correctly to the viewing angle.</li>
+            <li><strong>Glass</strong> refracts once, at the front surface; a real glass ball bends the light again leaving it, and absorbs and internally reflects along the way. Dispersion shifts the index of each colour channel separately.</li>
+            <li><strong>The dynamic environment</strong> is re-rendered from the centre of the object, so it is exact only there: reflections of nearby objects are slightly wrong at the object's surface. It costs six extra renders of the scene per frame.</li>
+        </ul>
+    </section>
+</main>
+
+<script type="module" src="./main.mjs"></script>
+</body>
+</html>
