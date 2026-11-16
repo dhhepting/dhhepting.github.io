@@ -1,4 +1,4 @@
-import { initShaders } from '../../Common/initShadersJS.mjs';
+import { initShaders } from '../../common/initShadersJS.mjs';
 
 import { SEEDS, RULES, RULE_INDEX, checkerboardFactor, toBytes, makeParticles, moveParticles } from './seeds.mjs';
 import { FORMATS, COMPARES, simConfigs, boundaryForStep, EXAMPLES, GROUPS, exampleById } from './examples.mjs';

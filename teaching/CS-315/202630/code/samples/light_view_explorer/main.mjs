@@ -1,5 +1,5 @@
-import { mat4, flatten } from '../../Common/MV.mjs';
-import { initShaders } from '../../Common/initShadersJS.mjs';
+import { mat4, flatten } from '../../common/MV.mjs';
+import { initShaders } from '../../common/initShadersJS.mjs';
 
 import { buildScene, cubeModel, lightPosition, lightMatrices, projectorMatrices, cameraMatrices, makeSlide, windowDepth } from './lightMath.mjs';
 import { COMPARES, configsFor, STORAGE_INDEX, PROJECTOR_INDEX, EXAMPLES, GROUPS, exampleById } from './examples.mjs';

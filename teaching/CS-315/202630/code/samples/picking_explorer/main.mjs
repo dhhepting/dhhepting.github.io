@@ -1,5 +1,5 @@
-import { mult, normalMatrix, flatten, mat4 } from '../../Common/MV.mjs';
-import { initShaders } from '../../Common/initShadersJS.mjs';
+import { mult, normalMatrix, flatten, mat4 } from '../../common/MV.mjs';
+import { initShaders } from '../../common/initShadersJS.mjs';
 
 import {
     buildCube, FACE_NAMES, PICK_COLOUR_NAMES, sampleDecode, PICKCUBE2_NAMES, faceFromPickColour,
