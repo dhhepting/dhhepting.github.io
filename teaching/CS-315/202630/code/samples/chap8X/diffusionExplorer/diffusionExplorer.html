@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diffusion with framebuffer objects</title>
+<style>
+    :root { --ink: #1c2128; --muted: #596270; --page: #eef0f3; --panel: #fff; --line: #d4d9e0; --stage: #22272f; --accent: #1b8a8f; --focus: #2457c5; }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body { margin: 0; background: var(--page); color: var(--ink); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 1240px; margin: 0 auto; padding: 1.25rem 1.25rem 4rem; }
+    h1 { font-size: 1.7rem; line-height: 1.2; margin: 0.2rem 0 0.4rem; font-weight: 650; }
+    h2 { font-size: 1.15rem; margin: 1.8rem 0 0.4rem; font-weight: 650; }
+    code { font: 0.9em ui-monospace, Menlo, Consolas, monospace; }
+    .lede { max-width: 82ch; margin: 0 0 1rem; color: #323a45; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+    .workspace { display: grid; grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr); gap: 0.75rem; align-items: start; }
+    .stage { margin: 0; background: var(--stage); border-top: 4px solid var(--accent); border-radius: 4px; overflow: hidden; }
+    .stage canvas { display: block; width: 100%; height: auto; touch-action: none; cursor: crosshair; background: #000; }
+    .stage figcaption { padding: 0.5rem 0.75rem; font-size: 0.85rem; color: #aab2bf; }
+    .side { display: grid; gap: 0.6rem; }
+    .panel { margin: 0; padding: 0.6rem 0.75rem; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; font-size: 0.86rem; }
+    .panel canvas { display: block; width: 100%; height: auto; }
+    .status { margin: 0; padding: 0.6rem 0.75rem; background: #eaf3f4; border: 1px solid #b9d6d8; border-radius: 4px; font-size: 0.88rem; }
+    .mono { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.8rem; }
+    .legend span { display: inline-block; margin-right: 0.8rem; }
+    .legend i { display: inline-block; width: 1.2em; height: 0.25em; vertical-align: middle; margin-right: 0.3em; }
+    .controls { margin-top: 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 0.75rem; }
+    fieldset { margin: 0; padding: 0.6rem 0.85rem 0.85rem; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; min-width: 0; }
+    legend { padding: 0 0.3rem; font-weight: 650; font-size: 0.92rem; }
+    .ctl { display: grid; grid-template-columns: 1fr auto; gap: 0.1rem 0.6rem; align-items: center; margin-top: 0.55rem; }
+    .ctl .lab { grid-column: 1 / -1; font-size: 0.9rem; }
+    .ctl input[type=range] { width: 100%; }
+    .ctl select { grid-column: 1 / -1; width: 100%; padding: 0.25rem; font: inherit; }
+    .ctl output { font: 0.85rem ui-monospace, Menlo, Consolas, monospace; min-width: 3.4em; text-align: right; }
+    .ctl.check { grid-template-columns: auto 1fr; }
+    .ctl.check .lab { grid-column: 2; grid-row: 1; }
+    .ctl.color { grid-template-columns: 1fr auto; }
+    .look { margin: 0.2rem 0 0; font-size: 0.9rem; color: #323a45; }
+    .buttons { display: flex; gap: 0.5rem; margin-top: 0.7rem; }
+    button { padding: 0.4rem 0.8rem; font: inherit; font-size: 0.9rem; color: var(--ink); background: #f3f5f8; border: 1px solid var(--line); border-radius: 4px; cursor: pointer; }
+    button:disabled { opacity: 0.5; cursor: default; }
+    .notes { max-width: 82ch; }
+    .notes li { margin: 0.4rem 0; }
+    .fatal { color: #a12020; font-weight: 600; }
+    @media (max-width: 800px) { .workspace { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<main>
+    <h1>Diffusion with framebuffer objects</h1>
+    <p class="lede">Each step draws a full-screen triangle into one texture while reading the other, then the two swap roles: the ping-pong of <code>render3</code>, <code>render4</code>, <code>render5</code> and <code>particleDiffusion</code>. This page combines them with the image filters of <code>hatImage1</code>, <code>hawaiiImage</code> and <code>hawaiiIsobel</code>, and can run two simulations side by side that differ in one setting.</p>
+
+    <div id="fatal" class="fatal" hidden></div>
+
+    <section class="workspace" aria-label="The simulation">
+        <figure class="stage">
+            <canvas id="gl-canvas" width="768" height="768" aria-label="Simulation state">
+                Oops ... your browser doesn't support the HTML5 canvas element
+            </canvas>
+            <figcaption>Drag to paint · point to read a texel</figcaption>
+        </figure>
+        <div class="side">
+            <div class="panel">
+                <canvas id="Chart" width="360" height="140" aria-label="Mean value over time"></canvas>
+                <div class="legend"><span><i style="background:#1b8a8f"></i>left (or only)</span><span><i style="background:#c2551d"></i>right</span></div>
+                <div id="ChartRange" class="mono"></div>
+            </div>
+            <p class="panel mono" id="Readout"></p>
+            <p class="panel mono" id="Probe">Point at the simulation to read a texel.</p>
+            <p class="status" id="Status" role="status" hidden></p>
+        </div>
+    </section>
+
+    <section class="controls" aria-label="Controls">
+        <fieldset>
+            <legend>Example and comparison</legend>
+            <label class="ctl"><span class="lab">Example</span><select id="Example"></select></label>
+            <p class="look" id="ExampleLook"></p>
+            <label class="ctl"><span class="lab">Compare two simulations that differ in</span><select id="Compare"></select></label>
+            <div class="buttons">
+                <button type="button" id="ButtonReset">Restart</button>
+                <button type="button" id="ButtonStep">One step</button>
+            </div>
+            <label class="ctl check"><input id="Running" type="checkbox"><span class="lab">Run</span></label>
+            <label class="ctl"><span class="lab">Steps per frame</span><input id="StepsPerFrame" type="range" min="1" max="50" step="1"><output id="StepsPerFrameOut"></output></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Simulation</legend>
+            <label class="ctl"><span class="lab">Starting image</span><select id="Seed"></select></label>
+            <label class="ctl"><span class="lab">Texels per side</span>
+                <select id="Size"><option value="64">64</option><option value="128">128</option><option value="256">256</option><option value="512">512</option><option value="1024">1024</option></select></label>
+            <label class="ctl"><span class="lab">Update rule</span><select id="Rule"></select></label>
+            <label class="ctl"><span class="lab">Rate r (heat step)</span><input id="Rate" type="range" min="0" max="0.6" step="0.005"><output id="RateOut"></output></label>
+            <label class="ctl"><span class="lab">Decay per step (1 = none)</span><input id="Decay" type="range" min="0.9" max="1" step="0.001"><output id="DecayOut"></output></label>
+            <label class="ctl"><span class="lab">Texture format</span><select id="Format"></select></label>
+            <label class="ctl"><span class="lab">At the edges</span>
+                <select id="Boundary">
+                    <option value="clamp">Clamp to the edge</option>
+                    <option value="repeat">Wrap around</option>
+                    <option value="alternate">Alternate, as render3 and render4 do</option>
+                </select></label>
+            <label class="ctl"><span class="lab">Gray-Scott feed rate</span><input id="Feed" type="range" min="0.005" max="0.1" step="0.0005"><output id="FeedOut"></output></label>
+            <label class="ctl"><span class="lab">Gray-Scott kill rate</span><input id="Kill" type="range" min="0.03" max="0.075" step="0.0005"><output id="KillOut"></output></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Particles and painting</legend>
+            <label class="ctl check"><input id="Particles" type="checkbox"><span class="lab">Random walkers (particleDiffusion)</span></label>
+            <label class="ctl"><span class="lab">Number of walkers</span><input id="ParticleCount" type="range" min="10" max="5000" step="10"><output id="ParticleCountOut"></output></label>
+            <label class="ctl"><span class="lab">Point size (pixels at 1024 texels)</span><input id="ParticleSize" type="range" min="1" max="20" step="1"><output id="ParticleSizeOut"></output></label>
+            <label class="ctl"><span class="lab">Step size (clip units)</span><input id="ParticleStep" type="range" min="0.001" max="0.05" step="0.001"><output id="ParticleStepOut"></output></label>
+            <label class="ctl"><span class="lab">Brush size</span><input id="BrushSize" type="range" min="1" max="60" step="1"><output id="BrushSizeOut"></output></label>
+            <label class="ctl color"><span class="lab">Brush colour (Gray-Scott paints V)</span><input id="BrushColour" type="color"></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Display</legend>
+            <label class="ctl"><span class="lab">Show</span>
+                <select id="View">
+                    <option value="stored">The colours as stored</option>
+                    <option value="grey">One channel, grey</option>
+                    <option value="heat">One channel, colour map</option>
+                    <option value="falseColour">False colour (hatImage1)</option>
+                    <option value="edges">Edge strength</option>
+                    <option value="grayScott">Gray-Scott: V</option>
+                </select></label>
+            <label class="ctl"><span class="lab">Channel (for one-channel views and the chart)</span>
+                <select id="Channel"><option value="0">Red</option><option value="1">Green</option><option value="2">Blue</option></select></label>
+            <label class="ctl"><span class="lab">Edge kernel</span>
+                <select id="Kernel">
+                    <option value="0">Central differences × 10 (hawaiiImage)</option>
+                    <option value="1">(1, 3, 1), not normalized (hawaiiIsobel)</option>
+                    <option value="2">Sobel (1, 2, 1) / 8</option>
+                    <option value="3">Scharr (3, 10, 3) / 32</option>
+                </select></label>
+            <label class="ctl"><span class="lab">Gain</span><input id="Gain" type="range" min="0.5" max="100" step="0.5"><output id="GainOut"></output></label>
+        </fieldset>
+    </section>
+
+    <section class="notes">
+        <h2>What the samples do, and what this page changes</h2>
+        <ul>
+            <li><strong>The 4-neighbour average never uses the centre.</strong> On a grid, a texel's 4 neighbours all have the other parity of i + j, so the even and odd texels trade values every step and never mix: a single lit texel stays on one parity at a time. In the heat step u + r(sum − 4u), the checkerboard pattern is multiplied by 1 − 8r, which is −1 for the average (r = 1/4) and −3 for render5's r = 1/2. Stable smoothing needs r &lt; 1/4.</li>
+            <li><strong>render5 at r = 0.5 is unstable.</strong> In RGBA8 the growth is clamped to [0, 1], so it shows up as stripes of alternating 0 and 1 spreading from every edge, not as an overflow.</li>
+            <li><strong>8 bits.</strong> Every step rounds to 1/255: diffusion stalls once neighbours differ by less than that, and the total changes. In a CPU simulation of a 16 × 16 white square on a 64 × 64 grid, 2000 stable steps took the total from 256 to 189 in 8 bits and kept it at 256 in floats; the 8 bits vs half float comparison shows the same drift live.</li>
+            <li><strong>Wrap modes.</strong> render3 and render4 set <code>CLAMP_TO_EDGE</code> only on <code>texture2</code>; <code>texture1</code> keeps <code>REPEAT</code>, and the two alternate as the source. This page reads with <code>texelFetch</code> and applies the edge rule in the shader, so it is explicit.</li>
+            <li><strong>The displayed image is one step ahead.</strong> render3–render5 draw the screen with the diffusion shader too, so what you see is the state after one more step, not the state. Here the display pass only shows.</li>
+            <li><strong>particleDiffusion</strong> sets <code>uTexture</code>, but the shader's sampler is <code>uTextureMap</code> (it works because samplers default to unit 0), calls <code>vertexAttribPointer</code> with an undefined location, and uses green (0, 9, 0).</li>
+            <li><strong>Edge kernels.</strong> hawaiiIsobel's weights are (1, 3, 1); Sobel's are (1, 2, 1). Neither sample normalizes, so a full step reads 5 (hawaiiIsobel) and saturates.</li>
+            <li><strong>Reading back.</strong> The probe calls <code>readPixels</code> directly, which makes the CPU wait until the GPU has finished drawing (Chrome logs this as a "GPU stall"). The chart instead reads into a pixel-pack buffer, sets a fence, and copies the data out on a later frame, once the fence has passed: a WebGL2 way to read back without stalling.</li>
+        </ul>
+    </section>
+</main>
+
+<script type="module" src="./diffusionExplorer.mjs"></script>
+</body>
+</html>
