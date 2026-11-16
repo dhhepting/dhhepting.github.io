@@ -2,7 +2,7 @@
 // vertex, ID encodings, a CPU ray cast to check the GPU against, the pick matrix, and
 // the two ways of turning a mouse event into a pixel. No DOM, no GL.
 
-import { vec3, vec4, mat4, mult, translate, scale, rotateX, rotateZ, rotate, lookAt, perspective, inverse } from '../../Common/MV.mjs';
+import { vec3, vec4, mat4, mult, translate, scale, rotateX, rotateZ, rotate, lookAt, perspective, inverse } from '../../common/MV.mjs';
 
 // ---------------------------------------------------------------- the cube of pickCube*.js
 

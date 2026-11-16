@@ -3,7 +3,7 @@
 // projectiveTexture.js, depth packing, and a CPU shadow test to check the GPU against.
 // No DOM, no GL.
 
-import { vec3, mat4, mult, translate, scale, rotateX, rotateZ, rotate, lookAt, perspective, ortho, normalize } from '../../Common/MV.mjs';
+import { vec3, mat4, mult, translate, scale, rotateX, rotateZ, rotate, lookAt, perspective, ortho, normalize } from '../../common/MV.mjs';
 
 // ---------------------------------------------------------------- geometry
 
