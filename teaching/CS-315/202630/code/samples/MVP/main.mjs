@@ -8,9 +8,9 @@ import { VIEWS, buildScene } from './views.mjs';
 import { axes, wireCube } from './geometry.mjs';
 import { formatMatrix } from './matrixUtil.mjs';
 
-const studentFile = './student.mjs';
-//= new URLSearchParams(location.search).has('solution') ? './student.solution.mjs' : './student.mjs'; 
-const student = await import(/* @vite-ignore */ studentFile);
+// Static import (not a runtime import()) so Vite sees and bundles student.mjs for dist/.
+// Raw-file and `vite` dev behave the same as before.
+import * as student from './student.mjs';
 
 // ---- Shader sources: fetched next to this file, then handed to initShaders() ----
 const shaderUrls = {
