@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golf ball: dimple bump map on a sphere (WebGL2)</title>
+<style>
+    :root { --ink:#1c2128; --muted:#596270; --page:#eef0f3; --panel:#fff; --line:#d4d9e0; --accent:#1b8a8f; --focus:#2457c5; }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body { margin:0; background:var(--page); color:var(--ink); font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+    main { max-width:1200px; margin:0 auto; padding:1rem 1rem 3rem; }
+    h1 { font-size:1.5rem; margin:0.2rem 0 0.3rem; font-weight:650; }
+    .lede { max-width:80ch; margin:0 0 0.8rem; color:#323a45; }
+    :focus-visible { outline:3px solid var(--focus); outline-offset:2px; }
+    .workspace { display:grid; grid-template-columns:minmax(0,2fr) minmax(250px,1fr); gap:0.75rem; align-items:start; }
+    .stage { margin:0; background:#b8d0e8; border-top:4px solid var(--accent); border-radius:4px; overflow:hidden; }
+    .stage canvas { display:block; width:100%; height:auto; aspect-ratio:4/3; touch-action:none; cursor:grab; }
+    .stage figcaption { padding:0.4rem 0.75rem; font-size:0.82rem; color:#2c3947; background:#dbe6f1; }
+    .side { display:grid; gap:0.6rem; }
+    fieldset { margin:0; padding:0.5rem 0.8rem 0.8rem; background:var(--panel); border:1px solid var(--line); border-radius:4px; min-width:0; }
+    legend { padding:0 0.3rem; font-weight:650; font-size:0.9rem; }
+    .ctl { display:grid; grid-template-columns:1fr auto; gap:0.1rem 0.6rem; align-items:center; margin-top:0.5rem; }
+    .ctl .lab { grid-column:1 / -1; font-size:0.88rem; }
+    .ctl input[type=range] { width:100%; }
+    .ctl select { grid-column:1 / -1; width:100%; padding:0.25rem; font:inherit; }
+    .ctl output { font:0.82rem ui-monospace,Menlo,Consolas,monospace; min-width:3.4em; text-align:right; }
+    .ctl.check { grid-template-columns:auto 1fr; }
+    .ctl.check .lab { grid-column:2; grid-row:1; }
+    .previews { display:grid; grid-template-columns:1fr 1fr; gap:0.4rem; }
+    .preview { margin:0; background:#22272f; color:#e8ebf0; border-radius:4px; overflow:hidden; }
+    .preview figcaption { padding:0.25rem 0.5rem; font-size:0.75rem; }
+    .preview canvas { display:block; width:100%; height:auto; aspect-ratio:2/1; image-rendering:pixelated; background:#000; }
+    .notes { max-width:80ch; margin-top:1rem; font-size:0.9rem; }
+    .notes li { margin:0.35rem 0; }
+    .fatal { color:#a12020; font-weight:600; }
+    @media (max-width:800px) { .workspace { grid-template-columns:minmax(0,1fr); } }
+</style>
+</head>
+<body>
+<main>
+    <h1>Golf ball: a dimple bump map on a sphere</h1>
+    <p class="lede">The golf-ball dimple height field from the bump map explorer is turned into a tangent-space normal map (RGB) with the height in alpha. The sphere can be lit with those normals alone (bump mapping), or its vertices can also be pushed in by the height map (displacement mapping). The dimple field can be laid out in rings fitted to the sphere, or naively as one uniform lattice in (u, v).</p>
+    <div id="fatal" class="fatal" hidden></div>
+
+    <section class="workspace">
+        <figure class="stage">
+            <canvas id="gl" width="960" height="720" aria-label="Golf ball"></canvas>
+            <figcaption>Drag to orbit · scroll to zoom · the ball spins under a fixed light</figcaption>
+        </figure>
+        <div class="side">
+            <fieldset>
+                <legend>Dimples</legend>
+                <label class="ctl"><span class="lab">Layout of the dimple field</span>
+                    <select id="Layout"><option value="rings">Rings: dimples per ring fitted to the sphere</option><option value="naive">Naive: one uniform lattice in (u, v)</option></select></label>
+                <label class="ctl"><span class="lab">Dimples around the equator (<span id="CountText"></span>)</span>
+                    <input id="Across" type="range" min="8" max="44" step="1"><output id="AcrossOut"></output></label>
+                <label class="ctl"><span class="lab">Dimple depth (fraction of the ball's radius)</span>
+                    <input id="Depth" type="range" min="0" max="0.06" step="0.001"><output id="DepthOut"></output></label>
+                <label class="ctl"><span class="lab">Texture size (width × height, texels)</span>
+                    <select id="Size"><option value="512">512 × 256</option><option value="1024">1024 × 512</option><option value="2048">2048 × 1024</option></select></label>
+                <label class="ctl check"><input id="Tint" type="checkbox"><span class="lab">Tint the dimples by ring (north to south)</span></label>
+                <label class="ctl"><span class="lab">Displacement map (real geometry, a denser mesh)</span>
+                    <select id="Disp"><option value="0">Off: a smooth sphere</option><option value="1">Displace the vertices, plus the normal map</option><option value="2">Displace the vertices only (normals from the mesh)</option></select></label>
+                <label class="ctl check"><input id="BumpOn" type="checkbox"><span class="lab">Apply the normal map (ignored for "vertices only")</span></label>
+                <label class="ctl check"><input id="Spin" type="checkbox"><span class="lab">Spin the ball</span></label>
+            </fieldset>
+            <fieldset>
+                <legend>Light and material</legend>
+                <label class="ctl"><span class="lab">Light azimuth</span>
+                    <input id="LightAz" type="range" min="0" max="360" step="1"><output id="LightAzOut"></output></label>
+                <label class="ctl"><span class="lab">Light elevation</span>
+                    <input id="LightEl" type="range" min="5" max="89" step="1"><output id="LightElOut"></output></label>
+                <label class="ctl"><span class="lab">Specular strength</span>
+                    <input id="Spec" type="range" min="0" max="1" step="0.01"><output id="SpecOut"></output></label>
+                <label class="ctl"><span class="lab">Shininess</span>
+                    <input id="Shin" type="range" min="4" max="300" step="1"><output id="ShinOut"></output></label>
+                <label class="ctl"><span class="lab">Show</span>
+                    <select id="View"><option value="0">Shaded ball</option><option value="1">Normal map on the ball</option><option value="2">Height map on the ball</option></select></label>
+            </fieldset>
+            <div class="previews">
+                <figure class="preview"><figcaption>Height map (alpha)</figcaption><canvas id="HeightPreview" width="256" height="128"></canvas></figure>
+                <figure class="preview"><figcaption>Normal map (RGB)</figcaption><canvas id="NormalPreview" width="256" height="128"></canvas></figure>
+                <figure class="preview"><figcaption>Rings (one colour each)</figcaption><canvas id="RingPreview" width="256" height="128"></canvas></figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="notes">
+        <ul>
+            <li><strong>Mapping.</strong> u is longitude and v is latitude (v = 0 at the north pole), so one texture covers the whole ball. The tangent frame comes straight from the sphere: T points east, N is the surface normal and B = N × T points south, so v increases along B and the frame is right-handed, as in the explorer.</li>
+            <li><strong>Rings vs naive.</strong> The explorer's dimples sit on one hexagonal lattice in (u, v). On a sphere that lattice is stretched 2:1 east–west (u covers 2π, v only π) and squeezed together toward the poles, so the dimples become ellipses that shrink to slivers. Rings fixes this: each ring of dimples has a number of dimples proportional to the sine of its latitude, so the dimples stay about the same size everywhere. Tint the dimples by ring to see the structure. The profile is the explorer's cap, sqrt(1 − d²), in both.</li>
+            <li><strong>Displacement.</strong> The vertex shader reads the height from the texture and moves each vertex of a 512 × 256 mesh inward along the normal by depth × (1 − height). Unlike bump mapping this changes the silhouette: lower the camera and zoom in, and raise the depth to see the dimpled edge. "Vertices only" derives the normals from height differences at the mesh spacing, so the shading is limited by the mesh, which is why the normal map is still useful on top of displacement.</li>
+            <li><strong>Normals.</strong> Slopes are computed from the height differences in physical units (the east–west texel is 2π sin θ / width wide, the north–south one π / height), so the dimple shading is the same at every latitude. Edges wrap in u and clamp in v.</li>
+            <li><strong>Shading.</strong> Diffuse and Blinn-Phong specular in tangent space, a cheap occlusion term from the stored height, a faint sky reflection, and a Toksvig-style widening of the highlight where mip filtering has shortened the normal.</li>
+            <li><strong>Limits.</strong> With displacement off the edge of the ball stays a smooth circle, because bump mapping changes only the lighting.</li>
+        </ul>
+    </section>
+</main>
+
+<script>
+"use strict";
+
+//<GEN>
+// ---------------------------------------------------------------- height field
+// Dimples on a sphere, stored as a W x H (2:1) equirectangular height map.
+// Rows run from the north pole (v = 0) to the south pole; heights are 1 on the
+// ball and fall to 0 at the bottom of a dimple.
+const clampv = (x, lo, hi) => Math.min(hi, Math.max(lo, x));
+
+function dimpleLayout(across, layout) {
+    if (layout === "naive") {
+        // The explorer's lattice used as-is: one hexagonal lattice in (u, v), circles in (u, v).
+        const a = 2 * Math.round(across / 2);                  // even, so the offset rows meet at the seam
+        const rows = 2 * Math.round(a / Math.sqrt(3));
+        return { layout, across: a, rows, cols: new Array(rows).fill(a) };
+    }
+    const ySize = across / 2;                                  // v range in cell units (one cell = 2*pi/across of arc)
+    const rows = Math.max(2, Math.round(ySize / (Math.sqrt(3) / 2)));
+    const cols = [];
+    for (let r = 0; r < rows; r++) {
+        const sinTheta = Math.sin(Math.PI * (r + 0.5) / rows);
+        cols.push(Math.max(1, Math.round(across * sinTheta)));
+    }
+    return { layout, across, ySize, rows, cols };
+}
+
+// Returns { heights, rings, rows, count }: rings[k] is the ring (row) of the dimple that owns texel k, or -1.
+function dimpleHeights(W, H, across, layout) {
+    const L = dimpleLayout(across, layout);
+    const { rows, cols } = L;
+    const heights = new Float32Array(W * H);
+    const rings = new Int16Array(W * H).fill(-1);
+
+    if (layout === "naive") {
+        const a = L.across, radius = 0.46 / a;
+        for (let i = 0; i < H; i++) {
+            const v = (i + 0.5) / H;
+            for (let j = 0; j < W; j++) {
+                const u = (j + 0.5) / W;
+                let depth = 0.0, ring = -1;
+                const r0 = Math.floor(v * rows);
+                for (let r = r0 - 1; r <= r0 + 1; r++) {
+                    const offset = (((r % 2) + 2) % 2) === 1 ? 0.5 : 0.0;
+                    const k0 = Math.floor(u * a - offset);
+                    for (let dk = -1; dk <= 1; dk++) {
+                        const d = Math.hypot(u - (k0 + dk + 0.5 + offset) / a, v - (r + 0.5) / rows) / radius;
+                        if (d < 1.0) {
+                            const s = Math.sqrt(1.0 - d * d);
+                            if (s > depth) { depth = s; ring = ((r % rows) + rows) % rows; }
+                        }
+                    }
+                }
+                heights[i * W + j] = 1.0 - depth;
+                rings[i * W + j] = ring;
+            }
+        }
+    } else {
+        const R = 0.46;                                        // dimple radius in cell units, as in the explorer
+        const { ySize } = L;
+        for (let i = 0; i < H; i++) {
+            const v = (i + 0.5) / H;
+            const sinTheta = Math.sin(Math.PI * v);
+            const rowGuess = Math.round(v * rows - 0.5);
+            for (let j = 0; j < W; j++) {
+                const u = (j + 0.5) / W;
+                let depth = 0.0, ring = -1;
+                for (let r = Math.max(0, rowGuess - 1); r <= Math.min(rows - 1, rowGuess + 1); r++) {
+                    const n = cols[r];
+                    const offset = (r & 1) ? 0.5 : 0.0;
+                    const dy = (v - (r + 0.5) / rows) * ySize;
+                    let kStart, kEnd;
+                    if (n <= 3) { kStart = 0; kEnd = n - 1; }
+                    else { kStart = Math.floor(u * n - offset) - 1; kEnd = kStart + 3; }
+                    for (let k = kStart; k <= kEnd; k++) {
+                        let du = u - (k + 0.5 + offset) / n;
+                        du -= Math.round(du);                   // wrap around the ball
+                        const d = Math.hypot(du * across * sinTheta, dy) / R;
+                        if (d < 1.0) {
+                            const s = Math.sqrt(1.0 - d * d);
+                            if (s > depth) { depth = s; ring = r; }
+                        }
+                    }
+                }
+                heights[i * W + j] = 1.0 - depth;
+                rings[i * W + j] = ring;
+            }
+        }
+    }
+    return { heights: smooth121(heights, W, H), rings, rows, count: cols.reduce((a, b) => a + b, 0) };
+}
+
+// A colour per ring, from the north pole to the south pole. RGBA8: A = 255 inside a dimple, 0 outside.
+function ringColours(rings, W, H, rows) {
+    const hsl = (h, s, l) => {
+        const f = (n) => { const k = (n + h * 12) % 12; return l - s * Math.min(l, 1 - l) * Math.max(-1, Math.min(k - 3, 9 - k, 1)); };
+        return [f(0), f(8), f(4)].map((c) => Math.round(255 * c));
+    };
+    const palette = Array.from({ length: rows }, (_, r) => hsl(0.85 * r / Math.max(1, rows - 1), 0.8, 0.55));
+    const pixels = new Uint8Array(W * H * 4);
+    for (let k = 0; k < W * H; k++) {
+        const r = rings[k];
+        const c = r >= 0 ? palette[r] : [255, 255, 255];
+        pixels[4 * k] = c[0]; pixels[4 * k + 1] = c[1]; pixels[4 * k + 2] = c[2]; pixels[4 * k + 3] = r >= 0 ? 255 : 0;
+    }
+    return pixels;
+}
+
+// One [1 2 1] / 4 pass in each direction (wrap in u, clamp in v): the cap profile
+// is vertical at the rim, and this keeps a one-texel step from aliasing.
+function smooth121(src, W, H) {
+    const tmp = new Float32Array(W * H), out = new Float32Array(W * H);
+    for (let i = 0; i < H; i++) {
+        for (let j = 0; j < W; j++) {
+            tmp[i * W + j] = 0.25 * src[i * W + (j + W - 1) % W] + 0.5 * src[i * W + j] + 0.25 * src[i * W + (j + 1) % W];
+        }
+    }
+    for (let i = 0; i < H; i++) {
+        const a = Math.max(i - 1, 0), b = Math.min(i + 1, H - 1);
+        for (let j = 0; j < W; j++) out[i * W + j] = 0.25 * tmp[a * W + j] + 0.5 * tmp[i * W + j] + 0.25 * tmp[b * W + j];
+    }
+    return out;
+}
+
+// RGBA8: RGB = tangent-space normal packed as 0.5 N + 0.5, A = height.
+// depth = dimple depth as a fraction of the sphere's radius (radius 1).
+function normalsFromHeights(heights, W, H, depth) {
+    const pixels = new Uint8Array(W * H * 4);
+    const at = (i, j) => heights[clampv(i, 0, H - 1) * W + (((j % W) + W) % W)];
+    for (let i = 0; i < H; i++) {
+        const sinTheta = Math.max(0.02, Math.sin(Math.PI * (i + 0.5) / H));
+        const texelU = 2.0 * Math.PI * sinTheta / W;            // arc length of a texel along u
+        const texelV = Math.PI / H;                              // ... and along v
+        for (let j = 0; j < W; j++) {
+            const dhdu = (at(i, j + 1) - at(i, j - 1)) / 2.0 / texelU;
+            const dhdv = (at(i + 1, j) - at(i - 1, j)) / 2.0 / texelV;
+            const nx = -depth * dhdu;
+            const ny = -depth * dhdv;
+            const len = Math.sqrt(nx * nx + ny * ny + 1.0);
+            const k = 4 * (i * W + j);
+            pixels[k] = Math.round(255 * (0.5 * nx / len + 0.5));
+            pixels[k + 1] = Math.round(255 * (0.5 * ny / len + 0.5));
+            pixels[k + 2] = Math.round(255 * (0.5 / len + 0.5));
+            pixels[k + 3] = Math.round(255 * heights[i * W + j]);
+        }
+    }
+    return pixels;
+}
+//</GEN>
+
+// ---------------------------------------------------------------------- shaders
+const vertexSource = `#version 300 es
+in vec3 aPosition;
+in vec2 aTexCoord;
+uniform mat4 uModel;
+uniform mat4 uViewProj;
+uniform int uMode;            // 0 = ball, 1 = ground
+uniform int uDisp;            // 0 = off, 1 = displace, 2 = displace and take the normals from the mesh
+uniform float uDepth;         // dimple depth, as a fraction of the radius
+uniform vec2 uStep;           // texture-coordinate spacing of the mesh vertices
+uniform sampler2D uTex;
+out vec3 vWorld;
+out vec3 vN;
+out vec3 vT;
+out vec3 vB;
+out vec2 vUV;
+void main() {
+    vec3 p = aPosition;
+    if (uMode == 0) {
+        // On a unit sphere the position is the normal. T = d p / d phi (east), B = N x T (south, the direction of increasing v).
+        vec3 T = vec3(-p.z, 0.0, p.x);
+        float tl = length(T);
+        T = tl > 1e-4 ? T / tl : vec3(1.0, 0.0, 0.0);
+        vec3 B = cross(p, T);
+        vec3 pos = p;
+        vec3 nrm = p;
+        if (uDisp > 0) {
+            float h = textureLod(uTex, aTexCoord, 0.0).a;
+            pos = p * (1.0 - uDepth * (1.0 - h));
+            if (uDisp == 2) {
+                float sinT = max(sqrt(max(1.0 - p.y * p.y, 0.0)), 0.02);
+                float hu = textureLod(uTex, aTexCoord + vec2(uStep.x, 0.0), 0.0).a - textureLod(uTex, aTexCoord - vec2(uStep.x, 0.0), 0.0).a;
+                float hv = textureLod(uTex, aTexCoord + vec2(0.0, uStep.y), 0.0).a - textureLod(uTex, aTexCoord - vec2(0.0, uStep.y), 0.0).a;
+                float dhdu = hu / (2.0 * uStep.x * 6.2831853 * sinT);
+                float dhdv = hv / (2.0 * uStep.y * 3.1415927);
+                nrm = normalize(p - uDepth * (dhdu * T + dhdv * B));      // (-depth dh/du) T + (-depth dh/dv) B + N
+            }
+        }
+        mat3 R = mat3(uModel);
+        vN = R * nrm;
+        vT = R * T;
+        vB = R * B;
+        vWorld = (uModel * vec4(pos, 1.0)).xyz;
+    } else {
+        vWorld = p;
+        vN = vec3(0.0, 1.0, 0.0);
+        vT = vec3(1.0, 0.0, 0.0);
+        vB = vec3(0.0, 0.0, 1.0);
+    }
+    vUV = aTexCoord;
+    gl_Position = uViewProj * vec4(vWorld, 1.0);
+}`;
+
+const fragmentSource = `#version 300 es
+precision highp float;
+precision highp int;
+precision highp sampler2D;
+uniform sampler2D uTex;
+uniform sampler2D uRing;
+uniform float uTint;
+uniform vec3 uEye;
+uniform vec3 uLightDir;
+uniform int uMode;
+uniform int uView;
+uniform int uDisp;
+uniform float uDepth;
+uniform vec2 uStep;
+uniform float uBumpOn;
+uniform float uSpecular;
+uniform float uShininess;
+in vec3 vWorld;
+in vec3 vN;
+in vec3 vT;
+in vec3 vB;
+in vec2 vUV;
+out vec4 outColor;
+
+const vec3 horizon = vec3(0.72, 0.82, 0.92);
+
+vec3 sky(vec3 d) {
+    float t = clamp(d.y * 0.5 + 0.5, 0.0, 1.0);
+    vec3 low = vec3(0.30, 0.38, 0.24);          // grass bounce
+    vec3 mid = vec3(0.62, 0.74, 0.88);
+    vec3 high = vec3(0.30, 0.50, 0.85);
+    return t < 0.5 ? mix(low, mid, t * 2.0) : mix(mid, high, (t - 0.5) * 2.0);
+}
+
+void main() {
+    vec3 L = normalize(uLightDir);
+    vec3 V = normalize(uEye - vWorld);
+
+    if (uMode == 1) {
+        // ground: grass with a soft shadow of the ball
+        vec2 c = -L.xz / max(L.y, 0.15);          // the ball's centre is 1 above the ground
+        float shadow = 1.0 - smoothstep(0.55, 1.7, length(vWorld.xz - c));
+        float contact = exp(-dot(vWorld.xz, vWorld.xz) * 2.5);
+        vec3 grass = vec3(0.12, 0.30, 0.10) * (0.8 + 0.4 * L.y);
+        vec3 col = grass * (1.0 - 0.55 * shadow - 0.35 * contact);
+        float fog = smoothstep(5.0, 22.0, length(uEye - vWorld));
+        col = mix(col, pow(horizon, vec3(2.2)), fog);
+        outColor = vec4(pow(col, vec3(1.0 / 2.2)), 1.0);
+        return;
+    }
+
+    vec4 t = texture(uTex, vUV);
+    vec3 N = normalize(vN);
+
+    if (uView == 2) { outColor = vec4(vec3(t.a), 1.0); return; }
+
+    vec3 stored = t.rgb * 2.0 - 1.0;
+    float len = length(stored);                   // < 1 where mip filtering averaged different normals
+    vec3 tn = (uBumpOn > 0.5) ? stored / max(len, 1e-4) : vec3(0.0, 0.0, 1.0);
+    mat3 TBN = mat3(normalize(vT), normalize(vB), N);
+    vec3 n = normalize(TBN * tn);
+
+    if (uView == 1) { outColor = vec4(t.rgb, 1.0); return; }
+
+    // Toksvig: widen the highlight by the normal length lost to filtering
+    float ft = len / (len + uShininess * (1.0 - len));
+    float shin = (uBumpOn > 0.5) ? max(uShininess * ft, 1.0) : uShininess;
+
+    float geo = smoothstep(-0.05, 0.25, dot(N, L));            // the light cannot reach round the back
+    float diff = max(dot(n, L), 0.0) * geo;
+    float ao = (uBumpOn > 0.5) ? mix(0.7, 1.0, t.a) : 1.0;     // dimple floors see less sky
+
+    vec4 ringColour = texture(uRing, vUV);
+    vec3 base = mix(vec3(0.80, 0.80, 0.77), ringColour.rgb * 0.85, uTint * ringColour.a);
+    vec3 ambient = sky(n) * 0.45 * ao;
+    vec3 H = normalize(L + V);
+    float spec = pow(max(dot(n, H), 0.0), shin) * uSpecular * geo * ao;
+    float fres = 0.04 + 0.96 * pow(1.0 - max(dot(n, V), 0.0), 5.0);
+    vec3 refl = sky(reflect(-V, n)) * fres * 0.5 * ao;
+
+    vec3 col = base * (ambient + vec3(1.0, 0.97, 0.90) * 0.8 * diff) + vec3(spec) + refl;
+    col = col / (1.0 + 0.15 * col);                            // gentle shoulder
+    outColor = vec4(pow(col, vec3(1.0 / 2.2)), 1.0);
+}`;
+
+// ------------------------------------------------------------------------ maths
+const m4 = {
+    perspective(fovy, aspect, near, far) {
+        const f = 1 / Math.tan(fovy / 2), o = new Float32Array(16);
+        o[0] = f / aspect; o[5] = f; o[10] = (far + near) / (near - far); o[11] = -1; o[14] = 2 * far * near / (near - far);
+        return o;
+    },
+    lookAt(eye, target, up) {
+        const sub = (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]];
+        const norm = (a) => { const l = Math.hypot(...a); return [a[0] / l, a[1] / l, a[2] / l]; };
+        const cross = (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
+        const dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+        const z = norm(sub(eye, target)), x = norm(cross(up, z)), y = cross(z, x);
+        return new Float32Array([x[0], y[0], z[0], 0, x[1], y[1], z[1], 0, x[2], y[2], z[2], 0,
+            -dot(x, eye), -dot(y, eye), -dot(z, eye), 1]);
+    },
+    mul(a, b) {
+        const o = new Float32Array(16);
+        for (let c = 0; c < 4; c++) for (let r = 0; r < 4; r++) {
+            let s = 0;
+            for (let k = 0; k < 4; k++) s += a[k * 4 + r] * b[c * 4 + k];
+            o[c * 4 + r] = s;
+        }
+        return o;
+    },
+    rotY(a) { const c = Math.cos(a), s = Math.sin(a); return new Float32Array([c, 0, -s, 0, 0, 1, 0, 0, s, 0, c, 0, 0, 0, 0, 1]); },
+    rotX(a) { const c = Math.cos(a), s = Math.sin(a); return new Float32Array([1, 0, 0, 0, 0, c, s, 0, 0, -s, c, 0, 0, 0, 0, 1]); },
+};
+
+// ------------------------------------------------------------------------ state
+const state = {
+    layout: "rings", across: 30, depth: 0.015, size: 1024, bump: true, tint: false, disp: 0, spin: true,
+    lightAz: 40, lightEl: 40, spec: 0.6, shin: 90, view: 0,
+    camAz: 0, camEl: 14, dist: 4.6, spinAngle: 0.0,
+};
+
+const $ = (id) => document.getElementById(id);
+const rad = (d) => d * Math.PI / 180;
+
+let gl, program, loc = {}, ballVAO, ballCount, ballHiVAO, ballHiCount, ballHiStep, groundVAO, texture = null, ringTexture = null, anisotropy = null;
+let heights = null, heightsDirty = true, normalsDirty = true;
+
+function compile(type, source) {
+    const shader = gl.createShader(type);
+    gl.shaderSource(shader, source);
+    gl.compileShader(shader);
+    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(shader));
+    return shader;
+}
+
+function makeVAO(positions, texcoords, indices) {
+    const vao = gl.createVertexArray();
+    gl.bindVertexArray(vao);
+    const pb = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, pb);
+    gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW);
+    const pl = gl.getAttribLocation(program, "aPosition");
+    gl.enableVertexAttribArray(pl);
+    gl.vertexAttribPointer(pl, 3, gl.FLOAT, false, 0, 0);
+    const tb = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, tb);
+    gl.bufferData(gl.ARRAY_BUFFER, texcoords, gl.STATIC_DRAW);
+    const tl = gl.getAttribLocation(program, "aTexCoord");
+    gl.enableVertexAttribArray(tl);
+    gl.vertexAttribPointer(tl, 2, gl.FLOAT, false, 0, 0);
+    const ib = gl.createBuffer();
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, ib);
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indices, gl.STATIC_DRAW);
+    gl.bindVertexArray(null);
+    return vao;
+}
+
+// A unit sphere; the seam column is duplicated so that u runs 0..1 without a jump.
+function buildSphere(slices, stacks) {
+    const positions = [], uvs = [], indices = [];
+    for (let i = 0; i <= stacks; i++) {
+        const theta = Math.PI * i / stacks;
+        for (let j = 0; j <= slices; j++) {
+            const phi = 2 * Math.PI * j / slices;
+            positions.push(Math.sin(theta) * Math.cos(phi), Math.cos(theta), Math.sin(theta) * Math.sin(phi));
+            uvs.push(j / slices, i / stacks);
+        }
+    }
+    for (let i = 0; i < stacks; i++) {
+        for (let j = 0; j < slices; j++) {
+            const a = i * (slices + 1) + j, b = a + slices + 1;
+            indices.push(a, b, a + 1, a + 1, b, b + 1);
+        }
+    }
+    return { positions: new Float32Array(positions), uvs: new Float32Array(uvs), indices: new Uint32Array(indices) };
+}
+
+function uploadTexture(pixels, W, H) {
+    if (texture) gl.deleteTexture(texture);
+    texture = gl.createTexture();
+    gl.activeTexture(gl.TEXTURE0);
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA8, W, H, 0, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+    gl.generateMipmap(gl.TEXTURE_2D);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    if (anisotropy) gl.texParameterf(gl.TEXTURE_2D, anisotropy.TEXTURE_MAX_ANISOTROPY_EXT,
+        Math.min(16, gl.getParameter(anisotropy.MAX_TEXTURE_MAX_ANISOTROPY_EXT)));
+}
+
+function uploadRingTexture(pixels, W, H) {
+    if (ringTexture) gl.deleteTexture(ringTexture);
+    ringTexture = gl.createTexture();
+    gl.activeTexture(gl.TEXTURE1);
+    gl.bindTexture(gl.TEXTURE_2D, ringTexture);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA8, W, H, 0, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+    gl.generateMipmap(gl.TEXTURE_2D);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+}
+
+function drawPreview(id, W, H, pixelAt) {
+    const canvas = $(id);
+    canvas.width = W; canvas.height = H;
+    const ctx = canvas.getContext("2d");
+    const image = ctx.createImageData(W, H);
+    for (let k = 0; k < W * H; k++) {
+        const [r, g, b] = pixelAt(k);
+        image.data[4 * k] = r; image.data[4 * k + 1] = g; image.data[4 * k + 2] = b; image.data[4 * k + 3] = 255;
+    }
+    ctx.putImageData(image, 0, 0);
+}
+
+function rebuild() {
+    const W = state.size, H = state.size / 2;
+    if (heightsDirty) {
+        const field = dimpleHeights(W, H, state.across, state.layout);
+        heights = field.heights;
+        const ringPixels = ringColours(field.rings, W, H, field.rows);
+        uploadRingTexture(ringPixels, W, H);
+        drawPreview("RingPreview", W, H, (k) => [ringPixels[4 * k], ringPixels[4 * k + 1], ringPixels[4 * k + 2]]);
+        heightsDirty = false;
+        normalsDirty = true;
+    }
+    if (normalsDirty) {
+        const pixels = normalsFromHeights(heights, W, H, state.depth);
+        uploadTexture(pixels, W, H);
+        drawPreview("HeightPreview", W, H, (k) => { const a = pixels[4 * k + 3]; return [a, a, a]; });
+        drawPreview("NormalPreview", W, H, (k) => [pixels[4 * k], pixels[4 * k + 1], pixels[4 * k + 2]]);
+        normalsDirty = false;
+    }
+}
+
+function resizeCanvas() {
+    const canvas = $("gl");
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const w = Math.max(320, Math.round(canvas.clientWidth * dpr));
+    const h = Math.round(w * 3 / 4);
+    if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
+}
+
+let last = null;
+function frame(now) {
+    requestAnimationFrame(frame);
+    const dt = last === null ? 0 : Math.min(0.1, (now - last) / 1000);
+    last = now;
+    if (state.spin) state.spinAngle += dt * 0.6;
+
+    // the maps are rebuilt in the frame loop so that a slider drag is coalesced into one rebuild per frame
+    rebuild();
+    resizeCanvas();
+    const canvas = $("gl");
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    gl.clearColor(0.72, 0.82, 0.92, 1.0);
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+    const az = rad(state.camAz), el = rad(state.camEl);
+    const eye = [state.dist * Math.cos(el) * Math.sin(az), state.dist * Math.sin(el), state.dist * Math.cos(el) * Math.cos(az)];
+    const view = m4.lookAt(eye, [0, -0.15, 0], [0, 1, 0]);
+    const proj = m4.perspective(rad(35), canvas.width / canvas.height, 0.1, 100);
+    const viewProj = m4.mul(proj, view);
+    const model = m4.mul(m4.rotX(rad(18)), m4.rotY(state.spinAngle));
+
+    const la = rad(state.lightAz), le = rad(state.lightEl);
+    gl.useProgram(program);
+    gl.uniformMatrix4fv(loc.uViewProj, false, viewProj);
+    gl.uniformMatrix4fv(loc.uModel, false, model);
+    gl.uniform3fv(loc.uEye, eye);
+    gl.uniform3f(loc.uLightDir, Math.cos(le) * Math.sin(la), Math.sin(le), Math.cos(le) * Math.cos(la));
+    gl.uniform1f(loc.uBumpOn, (state.bump && state.disp !== 2) ? 1 : 0);
+    gl.uniform1f(loc.uTint, state.tint ? 1 : 0);
+    gl.uniform1i(loc.uDisp, state.disp);
+    gl.uniform1f(loc.uDepth, state.depth);
+    gl.uniform2f(loc.uStep, ...(state.disp > 0 ? ballHiStep : [1 / 192, 1 / 96]));
+    gl.uniform1f(loc.uSpecular, state.spec);
+    gl.uniform1f(loc.uShininess, state.shin);
+    gl.uniform1i(loc.uView, state.view);
+    gl.activeTexture(gl.TEXTURE0);
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.uniform1i(loc.uTex, 0);
+    gl.activeTexture(gl.TEXTURE1);
+    gl.bindTexture(gl.TEXTURE_2D, ringTexture);
+    gl.uniform1i(loc.uRing, 1);
+    gl.activeTexture(gl.TEXTURE0);
+
+    gl.uniform1i(loc.uMode, 1);
+    gl.bindVertexArray(groundVAO);
+    gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_INT, 0);
+
+    gl.uniform1i(loc.uMode, 0);
+    if (state.disp > 0) {
+        gl.bindVertexArray(ballHiVAO);
+        gl.drawElements(gl.TRIANGLES, ballHiCount, gl.UNSIGNED_INT, 0);
+    } else {
+        gl.bindVertexArray(ballVAO);
+        gl.drawElements(gl.TRIANGLES, ballCount, gl.UNSIGNED_INT, 0);
+    }
+}
+
+// --------------------------------------------------------------------------- UI
+const ranges = {
+    Across: ["across", 0, "heights"], Depth: ["depth", 3, "normals"],
+    LightAz: ["lightAz", 0], LightEl: ["lightEl", 0], Spec: ["spec", 2], Shin: ["shin", 0],
+};
+
+function layoutText() {
+    const L = dimpleLayout(state.across, state.layout);
+    return `${L.cols.reduce((a, b) => a + b, 0)} dimples in ${L.rows} rings` + (L.across !== state.across ? `, ${L.across} per ring` : "");
+}
+
+function syncUI() {
+    for (const [id, [key, digits]] of Object.entries(ranges)) {
+        $(id).value = state[key];
+        $(id + "Out").textContent = Number(state[key]).toFixed(digits);
+    }
+    $("CountText").textContent = layoutText();
+    $("Layout").value = state.layout;
+    $("Tint").checked = state.tint;
+    $("Disp").value = String(state.disp);
+    $("Size").value = String(state.size);
+    $("BumpOn").checked = state.bump;
+    $("Spin").checked = state.spin;
+    $("View").value = String(state.view);
+}
+
+function attachUI() {
+    for (const [id, [key, digits, dirty]] of Object.entries(ranges)) {
+        $(id).oninput = (e) => {
+            state[key] = Number(e.target.value);
+            $(id + "Out").textContent = state[key].toFixed(digits);
+            if (dirty === "heights") { heightsDirty = true; normalsDirty = true; $("CountText").textContent = layoutText(); }
+            if (dirty === "normals") normalsDirty = true;
+        };
+    }
+    $("Layout").onchange = (e) => { state.layout = e.target.value; heightsDirty = true; normalsDirty = true; $("CountText").textContent = layoutText(); };
+    $("Tint").onchange = (e) => { state.tint = e.target.checked; };
+    $("Disp").onchange = (e) => { state.disp = Number(e.target.value); };
+    $("Size").onchange = (e) => { state.size = Number(e.target.value); heightsDirty = true; normalsDirty = true; };
+    $("BumpOn").onchange = (e) => { state.bump = e.target.checked; };
+    $("Spin").onchange = (e) => { state.spin = e.target.checked; };
+    $("View").onchange = (e) => { state.view = Number(e.target.value); };
+
+    const canvas = $("gl");
+    let dragging = false, lastPos = null;
+    canvas.onpointerdown = (e) => { dragging = true; lastPos = [e.clientX, e.clientY]; canvas.setPointerCapture(e.pointerId); canvas.style.cursor = "grabbing"; };
+    canvas.onpointermove = (e) => {
+        if (!dragging) return;
+        state.camAz = (((state.camAz - (e.clientX - lastPos[0]) * 0.4) % 360) + 360) % 360;
+        state.camEl = Math.max(3, Math.min(89, state.camEl + (e.clientY - lastPos[1]) * 0.4));
+        lastPos = [e.clientX, e.clientY];
+    };
+    canvas.onpointerup = canvas.onpointercancel = () => { dragging = false; canvas.style.cursor = "grab"; };
+    canvas.onwheel = (e) => {
+        e.preventDefault();
+        state.dist = Math.max(1.8, Math.min(10, state.dist * (1 + e.deltaY * 0.001)));
+    };
+}
+
+// -------------------------------------------------------------------------- main
+function init() {
+    try {
+        const canvas = $("gl");
+        gl = canvas.getContext("webgl2", { antialias: true });
+        if (!gl) throw new Error("WebGL 2 is not available in this browser.");
+
+        program = gl.createProgram();
+        gl.attachShader(program, compile(gl.VERTEX_SHADER, vertexSource));
+        gl.attachShader(program, compile(gl.FRAGMENT_SHADER, fragmentSource));
+        gl.linkProgram(program);
+        if (!gl.getProgramParameter(program, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(program));
+        gl.useProgram(program);
+
+        for (const name of ["uModel", "uViewProj", "uMode", "uTex", "uRing", "uEye", "uLightDir", "uView", "uBumpOn", "uSpecular", "uShininess",
+            "uDisp", "uDepth", "uStep", "uTint"]) {
+            loc[name] = gl.getUniformLocation(program, name);
+        }
+        anisotropy = gl.getExtension("EXT_texture_filter_anisotropic");
+
+        const sphere = buildSphere(192, 96);
+        ballVAO = makeVAO(sphere.positions, sphere.uvs, sphere.indices);
+        ballCount = sphere.indices.length;
+        const dense = buildSphere(512, 256);                     // for displacement: several vertices across a dimple
+        ballHiVAO = makeVAO(dense.positions, dense.uvs, dense.indices);
+        ballHiCount = dense.indices.length;
+        ballHiStep = [1 / 512, 1 / 256];
+
+        const S = 60, Y = -1.0;
+        groundVAO = makeVAO(new Float32Array([-S, Y, -S, S, Y, -S, -S, Y, S, S, Y, S]),
+            new Float32Array([0, 0, 1, 0, 0, 1, 1, 1]), new Uint32Array([0, 2, 1, 1, 2, 3]));
+
+        gl.enable(gl.DEPTH_TEST);
+        syncUI();
+        attachUI();
+        requestAnimationFrame(frame);
+    } catch (error) {
+        console.error(error);
+        $("fatal").hidden = false;
+        $("fatal").textContent = "Could not start: " + error.message;
+    }
+}
+
+if (typeof document !== "undefined" && document.getElementById("gl")) init();
+</script>
+</body>
+</html>
