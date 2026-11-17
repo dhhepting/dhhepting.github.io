@@ -3,8 +3,7 @@ import { defineConfig } from 'vite';
 import { globSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-const apps = globSync('samples/**/app.html');
-
+const apps = globSync('samples/**/app.html', { cwd: __dirname });
 const input = Object.fromEntries(
   apps.map(f => [
     f.replace(/\.html$/, ''),
