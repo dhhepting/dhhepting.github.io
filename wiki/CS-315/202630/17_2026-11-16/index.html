@@ -282,7 +282,154 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 </textarea>
     
   </div><h3>Photos and transcript page</h3>
-  <p class="text-muted">No photos in media.csv and no <code>audio-transcript/17_2026-11-16-audio.txt</code> for this meeting yet.</p>
+  <p class="text-muted mb-1">Create the Moodle wiki page with this name, then paste the text below into it. The transcript is included when <code>audio-transcript/17_2026-11-16-audio.txt</code> exists in the repo.</p>
+  <div class="input-group mb-3">
+    <input id="photos-text-page-name" type="text" class="form-control" readonly value="17_2026-11-16-photos-text">
+    <button type="button" class="btn btn-secondary" onclick="copyFrom('photos-text-page-name')">Copy</button>
+  </div>
+  <div class="mb-3">
+    <textarea id="photos-text-creole" class="form-control" rows="16" readonly>**Transcript**
+
+DH: My address is… Warmly with my long sleeve shirt and my vest because my furnace was out at home. So it&#39;s very cool. I hope it&#39;s going to be repaired. Today, I hope it stays nice. If it&#39;s not going to be repaired today. Anyway, here we are at… Meeting 17. 23 in CS 315.
+
+So I have an example.
+
+The difference between per vertex and per fragment. So… What comes to mind is differences between those two approaches.
+
+So if we have a triangle. what we… How many calculations are we? Or how many sets of calculations are we doing? you know, per vertex. Lighting approach. Good morning.
+
+Zoom one. So the question is, how many… Groups of calculations are we doing in per vertex lighting? So it&#39;s one. Choose. before. Eight. Thank you. Yes. Doing a calculation for each vertex, you know. Yeah, so we have three. Groups of calculations.
+
+So how does that change when we do a per fragment lighting approach?
+
+How do we determine the number of fragments compared to the number of vertices? So we have a single triangle. How many fragments are there?
+
+Wanted to share your comment? Oh, I just didn&#39;t think about practice as anything more than just coloring stuff in pretty much. I&#39;m assuming that&#39;s. Okay, so let&#39;s go with that. How much stuff is there to color in? Yep.
+
+More important than three? I&#39;m sorry. That&#39;s the comment. Yeah, I think it would probably depend on how close the angle is to the screen.
+
+Okay, go ahead. They depend on the size of the triangle relative to the screen.
+
+Be a little more precise with her. Definition of screen there. So in our WebGL, two programs means what? Yeah, the canvas, but then we also have, uh… Viewport. Hmm. Okay.
+
+Or it could be sort of slower than me. 64 by 64. Or it could be… 1024 by 1024. Or… Not a square. And not that size. So it depends. Left for each. Each pixel in the screen, that&#39;s a potential fragment. We assign values, so. Does that make sense?
+
+So I have the… I&#39;ve been rearranging the… the code directory.
+
+So the textbook link. It is the… code by chapters from the textbook. And you can run it. by clicking on the HTML file.
+
+So that&#39;s… So I saved copies of the original HTML. I did some modifications here. So I&#39;ll clean that up and I&#39;ll update the links there.
+
+So… Which is, what do we, what&#39;s… Which shading do we associate with Garot and which with Fon?
+
+So with Girol, we… Do the calculations for vertex. And then interpolate the intensities. Across the… Triangle.
+
+So the idea is we&#39;re not. In, in gross shame, we&#39;re doing the company. calculation at the corners, the vertices A, B, and C. And then… On shaving, we&#39;re doing… The tribulation. of… Surface. Parameters to the normal. It&#39;s primarily the normal, but I&#39;m interested in your spectral highlights. So we&#39;re doing the interpolation of normal so we can get a. More precise calculation. Help the specter highlight. So you can see there&#39;s a highlight in the center of the triangle here. It&#39;s not one. in the pro vertex.
+
+So does this picture make sense?
+
+Why is… the left triangle overall brighter than. Then the right triangle. Well, because it&#39;s interpolated across the vertices from the bottom to the top. Mm-hmm. Over there, it&#39;s pretty much just like… Kind of just like a sponge. Yeah, so we&#39;re looking at… So the spot comes from. Vertex A being shiny. Let&#39;s adjust some parameters here. And if we make it shinier. Just turn the light on.
+
+I get a little bit more variation there. Just being broad and in general, it&#39;s just going to be way easier and fun. Yeah, it&#39;s less expensive because we&#39;re not. Doing calculations perverted per per potential. Pixel. But it also means you probably need to have a lot more geometry on your models for it to actually. Done. Yes, that&#39;s a good point. But even if we have more geometry, the phong shading, the per fragment shading will look still better. So what happens? So we&#39;ve turned up shininess here. And the shininess is… That&#39;s an exponent in the lighting equation. So what if we turn it down?
+
+If we can manipulate the normals a bit. You can see.
+
+This is our flat triangle here.
+
+Does that make sense? Having a bigger flashlight and then the flashlight&#39;s able to use them as previously. Yeah, so. Let&#39;s look back at the center.
+
+Okay, does that make sense?
+
+I remember the idea of looking at… Looking where the lake is. Everyone&#39;s keys. You can look at a vertex A, B, or C. Slide is there. Then we&#39;ll… You can see in the vicinity of these vertices. But if the light is not at a vertex. Ben. If our keys were lost at not at a vertex, then we. Don&#39;t see them. Is that better?
+
+Okay… Let&#39;s do attendance.
+
+An update on my fairness, my fairness. It needs to be replaced. So I guess it&#39;s better when it&#39;s zero out instead of minus 40. So then the beginning of October was like, oh, gosh, it&#39;s going to be one of these years. Thank God it&#39;s off button. Okay.
+
+So let&#39;s begin our look at chapter seven. with bump mapping.
+
+What if we have millions of triangles? I don&#39;t want to spend a lot of time. We want to be efficient on how we use our processing power. the question is, how can we add some detail to our model? So if we start with a queue. For us here. How can we make that more interesting? I&#39;m pretty sure there is a trick that people do to fake having additional geometry. Like, for example, with a cobblestone road or something like that, you wouldn&#39;t actually want to have, like, a whole bunch of geometry, so you would just use textures, and you would use… I don&#39;t know. I&#39;m pretty sure height maps and other things like that. So I guess that&#39;s one strategy. That&#39;s a few strategies put together there. I don&#39;t know. Yeah, so… We don&#39;t want to ask. So let&#39;s qualify this without adding geometry.
+
+So if you want to represent. Forest, you might just have… And shove. a bunch of oligons that have. that have the textures of trees, because if you look at it from far away, then it&#39;s not really noticeable. Yeah. Yes, so cutting geometry. So we&#39;ll talk about texture mapping in… More detail on the next. Your meetings.
+
+So what happens if we modify the normals? So this is a little, this example is a little bit hard to see from the textbook, but let&#39;s. See what they do here, okay? And again, I&#39;ve… So here&#39;s the vertex shader.
+
+So here we&#39;re creating the —. The data, well… Creating the detail. So the text size is 256. And then we&#39;re going. from I to zero to… 256.
+
+So we&#39;re creating… 256 arrays of data. And then we&#39;re done. Doing.
+
+Then we&#39;re initializing the data to zero for each spot. And then we&#39;re going through and. Shifting the… We&#39;re assigning one to… the inner square. So we go from one third, one quarter to three quarters. We&#39;re changing that data to one.
+
+Can you see that on the screen? That difference between the zeros and the ones.
+
+So then we&#39;re calculating. The bump map normals. from the data.
+
+So we have the normals that we&#39;re going to modify. And then we scale to texture coordinates. Then we have a normal texture array. So this is… Creating the array. from normal ST, which was calculated. here with the bump map normals.
+
+So then we set up the texture.
+
+Then we… Set up the… the coordinates.
+
+So we go 0, 1, 2, 3, 4, 5. and back to zero.
+
+Just more clear. That&#39;s the same data.
+
+Here&#39;s the textbook version. So this is bump map two.
+
+So we&#39;re not adding to the geometry here. We&#39;re only adding… We&#39;re modifying the normals. based on, in this case, the image data. And the 1st one was a con. There&#39;s a constructed… pattern.
+
+Let&#39;s look at the data file.
+
+There&#39;s nothing complicated about having… An image or a height field. It&#39;s more complicated trying to keep track of which is which.
+
+So it&#39;s pretty straightforward. We&#39;ve defined the… the size of the image and then we record. values for each row and column. So it&#39;s 8 bits, so we go from 0 to 255. This is the range. And that&#39;s all there is to that. Data of the Honolulu. Coastline. So instead of making up the data, we&#39;re reading it in from. the raw data that we get from that. Honolulu 256 pile. And then we do the normal calculation. So the X is… Based on… The difference between I and I plus one. and the Y coordinate is based on. There&#39;s between J and J plus one. And then Z is set to one. Scale to texture coordinates.
+
+So here&#39;s our scaled. coordinates. And then we create the normal texture array.
+
+By multiplying normal ST. Ijk by 255. So that puts it back from the range of 0 to one to. 0 to 255.
+
+And here we have… the mesh… which is defined by these four vertices. 0, 0, 0, 0, or 1, 0, 0. 1 0 1. And 001. So it&#39;s a fairly simple. Background. So we have 2. We&#39;re going to have 2 triangles put together.
+
+So here we&#39;re using a triangle strip to draw those two triangles from the four vertices.
+
+So you can tell me if this one looks like water. This is the… example. I remember. Thank you.
+
+Here&#39;s a bit more of a, more clearly a bump. And the bump map.
+
+What&#39;s the paradox then?
+
+We&#39;ll talk about parallel. and some of these other options here at our next meeting. Okay.
+
+So would you believe these are golf ball dimples?
+
+Would that actually be something personal on an actual model, though?
+
+So what do you mean noticeable? Or, I mean, like, I was kind of thinking about this stuff of pillars and whatnot. Like, if you have a cylindrical pillar, and you try to do this technique, then… on the sides of it than when I kind of just be flat. So the idea of the texture coordinates describes how we&#39;re mapping. the texture. onto the surface. So usually we&#39;re just… We&#39;re often in our examples, we&#39;re just doing. S and T from zero to one. So the square maps to a square. But there are other there are other shapes. So if we&#39;re doing a sphere. If we&#39;re trying to map. this texture onto a sphere, then… It becomes a little more… There are a few more concerns, because. What do you do with? the polls. So this way, that&#39;s just perpendicular to you. You won&#39;t really be able to see the actual bumps. Because, well, there aren&#39;t really bumps. Yeah, there&#39;s not really bumps because if you were to have it up. Just the silhouette, then it would just be a sphere circle. Yeah, the silhouette is an issue. It comes up a few times. Okay, so… An action item for next week. Next meeting is a golf ball. with dimples. So you can. I welcome you to explore that. and we&#39;ll look at it. Look at some other. We&#39;ll look at some code that. can deal with that.
+
+Is this, uh… A fabric weave or an episode of, still from an episode of Star Trek. Does it seem like, uh… The fabric.
+
+Now does that look like corrugated metal?
+
+Yeah, so the… the specular. Reflections. really help it.
+
+So here are some other textures from Chapter 7, The Code.
+
+There&#39;s a combination of. Two.
+
+So we can see it looking at it on the edge. There&#39;s. No detail there. But looking from the top. It&#39;s somewhat convincing surface. Geometry detail.
+
+What do you think? Seems kind of trippy. That&#39;s about it.
+
+Okay, so for our next meeting, we&#39;ll go through. The shader… the shaders for. the texture mapping examples or the bump map examples. And… We&#39;ll discuss making a golf ball with dimples. and other bub mapping parameters. So just to comment, if you&#39;re. If you have questions about the quiz marks. Send me a note. The weekly quiz marks. Just to be clear. So if you have questions, let me know. We can discuss them. And I have an office hour today at 11:30 and tomorrow and Wednesday. Anyway, any other questions? So there&#39;s an assignment due. And I&#39;ll have the next one. posted for before next meeting. Okay. Thank you for today. Take care, everyone.
+
+I have a question. Are we going to be dealing with shadows? Or I&#39;m also kind of wondering, we already dealt with shadows. No, we&#39;ll talk about shadow maps. Okay.
+
+Thanks. You too.
+</textarea>
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-text-creole')">
+      Copy photos and transcript
+    </button>
+  </div>
 
   <nav class="d-flex justify-content-between align-items-center my-3">
   <a class="btn btn-outline-secondary btn-sm" href="/wiki/CS-315/202630/16_2026-11-04/">&larr; Prev: 16_2026-11-04</a>
