@@ -3,30 +3,25 @@ layout: default
 title: Code README
 breadcrumb: Code README
 ---
---
 # Code directory README
 
-There are 2 main directories inside the code directory.
+## common/
 
-## code/textbook
+* shared ES modules (MV.mjs, initShaders*.mjs, ...)
+* an updated but not the current(the most recent of the threeJS code that uses the same interfaces as the textbook-classic examples in Chapter 9) release of threeJS: three-r124.min.js
 
-This directory contains the minimally-modernized JavaScript code to allow it to be served from this website. Subdirectories 02, 03, .., 11 correspond the chapters with code examples.
+## samples/
 
-## code/samples
+* course-authored demos: ES modules, built by Vite
 
-This directory contains samples inspired by the textbook and in-class discussions. Each program is in its own subdirectory with an `app.html` entry point, calling `main.mjs` (and possibly others)
+## standalone/
 
-### code/common
-The textbook/Common directory has been replaced with ../common, which contains:
+* single-file demos: no imports, open directly
 
-- globals.mjs
-- MV.mjs
-- initShadersHTML.mjs
-- three-r124.min.js
-- initShadersJS.mjs
-- uofrGraphics.mjs
-- initShadersXHR.mjs
-- vertices.mjs
+## textbook-classic/
+
+* textbook code as published on [interactivecomputergraphics.com](https://interactivecomputergraphics.com/8E/Code/) with minimal changes: classic scripts, no build
+* subdirectories 02, 03, .., 11 correspond to the chapters with code examples
 
 ## Module index
 
