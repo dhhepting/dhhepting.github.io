@@ -457,6 +457,39 @@
   </tbody>
 </table>
 
+<h3 id="samplesdiffusion-cube"><code class="language-plaintext highlighter-rouge">samples/diffusion-cube/</code></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="./samples/diffusion-cube/gl-utils.mjs"><code class="language-plaintext highlighter-rouge">gl-utils.mjs</code></a></td>
+      <td>Small WebGL2 helpers.</td>
+    </tr>
+    <tr>
+      <td><a href="./samples/diffusion-cube/main.mjs"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
+      <td>Controller: the only module that touches the DOM.</td>
+    </tr>
+    <tr>
+      <td><a href="./samples/diffusion-cube/math.mjs"><code class="language-plaintext highlighter-rouge">math.mjs</code></a></td>
+      <td>Minimal column-major mat4 helpers (same layout WebGL expects).</td>
+    </tr>
+    <tr>
+      <td><a href="./samples/diffusion-cube/scene.mjs"><code class="language-plaintext highlighter-rouge">scene.mjs</code></a></td>
+      <td>Cube + sphere meshes that sample the simulation’s trail texture.</td>
+    </tr>
+    <tr>
+      <td><a href="./samples/diffusion-cube/sim.mjs"><code class="language-plaintext highlighter-rouge">sim.mjs</code></a></td>
+      <td>GPU particle diffusion with ping-pong textures.</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="samplesgouraud_v_phong"><code class="language-plaintext highlighter-rouge">samples/gouraud_v_phong/</code></h3>
 
 <table>
@@ -669,6 +702,23 @@
     <tr>
       <td><a href="./samples/SVG_Zoomer/zoomer.mjs"><code class="language-plaintext highlighter-rouge">zoomer.mjs</code></a></td>
       <td>A DOM-free renderer that draws one texture across a full-canvas quad and can magnify it toward a focus point.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3><code class="language-plaintext highlighter-rouge">./</code></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="./vite.config.mjs"><code class="language-plaintext highlighter-rouge">vite.config.mjs</code></a></td>
+      <td>build config: bundles every samples/**/app.html into dist/ with relative URLs.</td>
     </tr>
   </tbody>
 </table>
