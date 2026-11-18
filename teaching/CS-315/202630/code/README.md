@@ -102,6 +102,16 @@ breadcrumb: Code README
 | [`main.mjs`](./samples/diffusion_explorer/main.mjs) | *(no header comment)* |
 | [`seeds.mjs`](./samples/diffusion_explorer/seeds.mjs) | Starting images for the diffusion explorer, a CPU reference for every update rule in shaders/step.frag, and the measurements the page reports. |
 
+### `samples/diffusion-cube/`
+
+| File | Description |
+| --- | --- |
+| [`gl-utils.mjs`](./samples/diffusion-cube/gl-utils.mjs) | Small WebGL2 helpers. |
+| [`main.mjs`](./samples/diffusion-cube/main.mjs) | Controller: the only module that touches the DOM. |
+| [`math.mjs`](./samples/diffusion-cube/math.mjs) | Minimal column-major mat4 helpers (same layout WebGL expects). |
+| [`scene.mjs`](./samples/diffusion-cube/scene.mjs) | Cube + sphere meshes that sample the simulation's trail texture. |
+| [`sim.mjs`](./samples/diffusion-cube/sim.mjs) | GPU particle diffusion with ping-pong textures. |
+
 ### `samples/gouraud_v_phong/`
 
 | File | Description |
@@ -169,5 +179,11 @@ breadcrumb: Code README
 | --- | --- |
 | [`main.mjs`](./samples/SVG_Zoomer/main.mjs) | Controller for the vector-vs-raster zoom demo. |
 | [`zoomer.mjs`](./samples/SVG_Zoomer/zoomer.mjs) | A DOM-free renderer that draws one texture across a full-canvas quad and can magnify it toward a focus point. |
+
+### `./`
+
+| File | Description |
+| --- | --- |
+| [`vite.config.mjs`](./vite.config.mjs) | build config: bundles every samples/**/app.html into dist/ with relative URLs. |
 
 <!-- END:mjs-index -->
