@@ -39,54 +39,26 @@ breadcrumb: Code README
 | [`uofrGraphics.mjs`](./common/uofrGraphics.mjs) | *(no header comment)* |
 | [`vertices.mjs`](./common/vertices.mjs) | Control vertices of the patches forming the Utah teapot |
 
-### `experimental/modular/bump_map_explorer/`
+### `experimental/modular/bump-map-explorer/`
 
-*Source for `bump_map_explorer` (read-only copies): [browse all files](./dist/downloads/bump_map_explorer/index.html) · [download .zip](./dist/downloads/bump_map_explorer.zip)*
-
-| File | Description |
-| --- | --- |
-| [`examples.mjs`](./dist/downloads/bump_map_explorer/experimental/modular/bump_map_explorer/examples.mjs.txt) | The explorer's menu. |
-| [`heightFields.mjs`](./dist/downloads/bump_map_explorer/experimental/modular/bump_map_explorer/heightFields.mjs.txt) | *(no header comment)* |
-| [`honolulu256.mjs`](./dist/downloads/bump_map_explorer/experimental/modular/bump_map_explorer/honolulu256.mjs.txt) | *(no header comment)* |
-| [`main.mjs`](./dist/downloads/bump_map_explorer/experimental/modular/bump_map_explorer/main.mjs.txt) | *(no header comment)* |
-
-### `experimental/modular/ChaosDragon/`
-
-*Source for `ChaosDragon` (read-only copies): [browse all files](./dist/downloads/ChaosDragon/index.html) · [download .zip](./dist/downloads/ChaosDragon.zip)*
+*Source for `bump-map-explorer` (read-only copies): [browse all files](./dist/downloads/bump-map-explorer/index.html) · [download .zip](./dist/downloads/bump-map-explorer.zip)*
 
 | File | Description |
 | --- | --- |
-| [`chaosgame.mjs`](./dist/downloads/ChaosDragon/experimental/modular/ChaosDragon/chaosgame.mjs.txt) | DOM-free renderer for a two-map chaos game. |
-| [`ifs.mjs`](./dist/downloads/ChaosDragon/experimental/modular/ChaosDragon/ifs.mjs.txt) | the mathematics of the chaos game. |
-| [`main.mjs`](./dist/downloads/ChaosDragon/experimental/modular/ChaosDragon/main.mjs.txt) | the controller. |
+| [`examples.mjs`](./dist/downloads/bump-map-explorer/experimental/modular/bump-map-explorer/examples.mjs.txt) | The explorer's menu. |
+| [`heightFields.mjs`](./dist/downloads/bump-map-explorer/experimental/modular/bump-map-explorer/heightFields.mjs.txt) | *(no header comment)* |
+| [`honolulu256.mjs`](./dist/downloads/bump-map-explorer/experimental/modular/bump-map-explorer/honolulu256.mjs.txt) | *(no header comment)* |
+| [`main.mjs`](./dist/downloads/bump-map-explorer/experimental/modular/bump-map-explorer/main.mjs.txt) | *(no header comment)* |
 
-### `experimental/modular/ChaosDragon/test/`
+### `experimental/modular/colour-cube/`
 
-| File | Description |
-| --- | --- |
-| [`smoke.mjs`](./dist/downloads/ChaosDragon/experimental/modular/ChaosDragon/test/smoke.mjs.txt) | node test/smoke.mjs      (needs:  npm install jsdom) Runs the REAL main.mjs against app.html in jsdom, with: * the REAL ../common/initShadersJS.mjs (so run i... |
-| [`verify.mjs`](./dist/downloads/ChaosDragon/experimental/modular/ChaosDragon/test/verify.mjs.txt) | node test/verify.mjs Maths checks plus a ChaosGame run against a recording mock of WebGL2. |
-
-### `experimental/modular/ColourCube/`
-
-*Source for `ColourCube` (read-only copies): [browse all files](./dist/downloads/ColourCube/index.html) · [download .zip](./dist/downloads/ColourCube.zip)*
+*Source for `colour-cube` (read-only copies): [browse all files](./dist/downloads/colour-cube/index.html) · [download .zip](./dist/downloads/colour-cube.zip)*
 
 | File | Description |
 | --- | --- |
-| [`cube.mjs`](./dist/downloads/ColourCube/experimental/modular/ColourCube/cube.mjs.txt) | A DOM-free renderer for a unit colour cube. |
-| [`main.mjs`](./dist/downloads/ColourCube/experimental/modular/ColourCube/main.mjs.txt) | Controller: owns the canvas and GL context, loads the shader files, drives the render loop, and tracks the current viewing mode. |
-| [`matrix.mjs`](./dist/downloads/ColourCube/experimental/modular/ColourCube/matrix.mjs.txt) | A tiny, dependency-free set of 4x4 matrix helpers. |
-
-### `experimental/modular/diffusion_explorer/`
-
-*Source for `diffusion_explorer` (read-only copies): [browse all files](./dist/downloads/diffusion_explorer/index.html) · [download .zip](./dist/downloads/diffusion_explorer.zip)*
-
-| File | Description |
-| --- | --- |
-| [`examples.mjs`](./dist/downloads/diffusion_explorer/experimental/modular/diffusion_explorer/examples.mjs.txt) | The diffusion explorer's menu, and how a side-by-side comparison splits the settings between its two simulations. |
-| [`honolulu256.mjs`](./dist/downloads/diffusion_explorer/experimental/modular/diffusion_explorer/honolulu256.mjs.txt) | Honolulu elevation data from the textbook's honolulu256.js, as an ES module. |
-| [`main.mjs`](./dist/downloads/diffusion_explorer/experimental/modular/diffusion_explorer/main.mjs.txt) | *(no header comment)* |
-| [`seeds.mjs`](./dist/downloads/diffusion_explorer/experimental/modular/diffusion_explorer/seeds.mjs.txt) | Starting images for the diffusion explorer, a CPU reference for every update rule in shaders/step.frag, and the measurements the page reports. |
+| [`cube.mjs`](./dist/downloads/colour-cube/experimental/modular/colour-cube/cube.mjs.txt) | A DOM-free renderer for a unit colour cube. |
+| [`main.mjs`](./dist/downloads/colour-cube/experimental/modular/colour-cube/main.mjs.txt) | Controller: owns the canvas and GL context, loads the shader files, drives the render loop, and tracks the current viewing mode. |
+| [`matrix.mjs`](./dist/downloads/colour-cube/experimental/modular/colour-cube/matrix.mjs.txt) | A tiny, dependency-free set of 4x4 matrix helpers. |
 
 ### `experimental/modular/diffusion-cube/`
 
@@ -100,31 +72,59 @@ breadcrumb: Code README
 | [`scene.mjs`](./dist/downloads/diffusion-cube/experimental/modular/diffusion-cube/scene.mjs.txt) | Cube + sphere meshes that sample the simulation's trail texture. |
 | [`sim.mjs`](./dist/downloads/diffusion-cube/experimental/modular/diffusion-cube/sim.mjs.txt) | GPU particle diffusion with ping-pong textures. |
 
-### `experimental/modular/gouraud_v_phong/`
+### `experimental/modular/diffusion-explorer/`
 
-*Source for `gouraud_v_phong` (read-only copies): [browse all files](./dist/downloads/gouraud_v_phong/index.html) · [download .zip](./dist/downloads/gouraud_v_phong.zip)*
-
-| File | Description |
-| --- | --- |
-| [`main.mjs`](./dist/downloads/gouraud_v_phong/experimental/modular/gouraud_v_phong/main.mjs.txt) | *(no header comment)* |
-
-### `experimental/modular/IndexedSquare/`
-
-*Source for `IndexedSquare` (read-only copies): [browse all files](./dist/downloads/IndexedSquare/index.html) · [download .zip](./dist/downloads/IndexedSquare.zip)*
+*Source for `diffusion-explorer` (read-only copies): [browse all files](./dist/downloads/diffusion-explorer/index.html) · [download .zip](./dist/downloads/diffusion-explorer.zip)*
 
 | File | Description |
 | --- | --- |
-| [`main.mjs`](./dist/downloads/IndexedSquare/experimental/modular/IndexedSquare/main.mjs.txt) | *(no header comment)* |
+| [`examples.mjs`](./dist/downloads/diffusion-explorer/experimental/modular/diffusion-explorer/examples.mjs.txt) | The diffusion explorer's menu, and how a side-by-side comparison splits the settings between its two simulations. |
+| [`honolulu256.mjs`](./dist/downloads/diffusion-explorer/experimental/modular/diffusion-explorer/honolulu256.mjs.txt) | Honolulu elevation data from the textbook's honolulu256.js, as an ES module. |
+| [`main.mjs`](./dist/downloads/diffusion-explorer/experimental/modular/diffusion-explorer/main.mjs.txt) | *(no header comment)* |
+| [`seeds.mjs`](./dist/downloads/diffusion-explorer/experimental/modular/diffusion-explorer/seeds.mjs.txt) | Starting images for the diffusion explorer, a CPU reference for every update rule in shaders/step.frag, and the measurements the page reports. |
 
-### `experimental/modular/light_view_explorer/`
+### `experimental/modular/dragon-curve-chaos/`
 
-*Source for `light_view_explorer` (read-only copies): [browse all files](./dist/downloads/light_view_explorer/index.html) · [download .zip](./dist/downloads/light_view_explorer.zip)*
+*Source for `dragon-curve-chaos` (read-only copies): [browse all files](./dist/downloads/dragon-curve-chaos/index.html) · [download .zip](./dist/downloads/dragon-curve-chaos.zip)*
 
 | File | Description |
 | --- | --- |
-| [`examples.mjs`](./dist/downloads/light_view_explorer/experimental/modular/light_view_explorer/examples.mjs.txt) | The light-view explorer's menu and comparisons. |
-| [`lightMath.mjs`](./dist/downloads/light_view_explorer/experimental/modular/light_view_explorer/lightMath.mjs.txt) | The light-view explorer's pure logic: the scene of shadowMap.js (a cube, a triangle) plus a floor, the light's and the projector's matrices, the slide of pro... |
-| [`main.mjs`](./dist/downloads/light_view_explorer/experimental/modular/light_view_explorer/main.mjs.txt) | *(no header comment)* |
+| [`chaosgame.mjs`](./dist/downloads/dragon-curve-chaos/experimental/modular/dragon-curve-chaos/chaosgame.mjs.txt) | DOM-free renderer for a two-map chaos game. |
+| [`ifs.mjs`](./dist/downloads/dragon-curve-chaos/experimental/modular/dragon-curve-chaos/ifs.mjs.txt) | the mathematics of the chaos game. |
+| [`main.mjs`](./dist/downloads/dragon-curve-chaos/experimental/modular/dragon-curve-chaos/main.mjs.txt) | the controller. |
+
+### `experimental/modular/dragon-curve-chaos/test/`
+
+| File | Description |
+| --- | --- |
+| [`smoke.mjs`](./dist/downloads/dragon-curve-chaos/experimental/modular/dragon-curve-chaos/test/smoke.mjs.txt) | node test/smoke.mjs      (needs:  npm install jsdom) Runs the REAL main.mjs against app.html in jsdom, with: * the REAL ../common/initShadersJS.mjs (so run i... |
+| [`verify.mjs`](./dist/downloads/dragon-curve-chaos/experimental/modular/dragon-curve-chaos/test/verify.mjs.txt) | node test/verify.mjs Maths checks plus a ChaosGame run against a recording mock of WebGL2. |
+
+### `experimental/modular/gouraud-v-phong/`
+
+*Source for `gouraud-v-phong` (read-only copies): [browse all files](./dist/downloads/gouraud-v-phong/index.html) · [download .zip](./dist/downloads/gouraud-v-phong.zip)*
+
+| File | Description |
+| --- | --- |
+| [`main.mjs`](./dist/downloads/gouraud-v-phong/experimental/modular/gouraud-v-phong/main.mjs.txt) | *(no header comment)* |
+
+### `experimental/modular/indexed-square/`
+
+*Source for `indexed-square` (read-only copies): [browse all files](./dist/downloads/indexed-square/index.html) · [download .zip](./dist/downloads/indexed-square.zip)*
+
+| File | Description |
+| --- | --- |
+| [`main.mjs`](./dist/downloads/indexed-square/experimental/modular/indexed-square/main.mjs.txt) | *(no header comment)* |
+
+### `experimental/modular/light-view-explorer/`
+
+*Source for `light-view-explorer` (read-only copies): [browse all files](./dist/downloads/light-view-explorer/index.html) · [download .zip](./dist/downloads/light-view-explorer.zip)*
+
+| File | Description |
+| --- | --- |
+| [`examples.mjs`](./dist/downloads/light-view-explorer/experimental/modular/light-view-explorer/examples.mjs.txt) | The light-view explorer's menu and comparisons. |
+| [`lightMath.mjs`](./dist/downloads/light-view-explorer/experimental/modular/light-view-explorer/lightMath.mjs.txt) | The light-view explorer's pure logic: the scene of shadowMap.js (a cube, a triangle) plus a floor, the light's and the projector's matrices, the slide of pro... |
+| [`main.mjs`](./dist/downloads/light-view-explorer/experimental/modular/light-view-explorer/main.mjs.txt) | *(no header comment)* |
 
 ### `experimental/modular/MVP/`
 
@@ -175,13 +175,13 @@ breadcrumb: Code README
 | [`overlay.mjs`](./dist/downloads/ShaderStages/experimental/modular/ShaderStages/overlay.mjs.txt) | *(no header comment)* |
 | [`ShaderDemo.mjs`](./dist/downloads/ShaderStages/experimental/modular/ShaderStages/ShaderDemo.mjs.txt) | *(no header comment)* |
 
-### `experimental/modular/SVG_Zoomer/`
+### `experimental/modular/svg-zoomer/`
 
-*Source for `SVG_Zoomer` (read-only copies): [browse all files](./dist/downloads/SVG_Zoomer/index.html) · [download .zip](./dist/downloads/SVG_Zoomer.zip)*
+*Source for `svg-zoomer` (read-only copies): [browse all files](./dist/downloads/svg-zoomer/index.html) · [download .zip](./dist/downloads/svg-zoomer.zip)*
 
 | File | Description |
 | --- | --- |
-| [`main.mjs`](./dist/downloads/SVG_Zoomer/experimental/modular/SVG_Zoomer/main.mjs.txt) | Controller for the vector-vs-raster zoom demo. |
-| [`zoomer.mjs`](./dist/downloads/SVG_Zoomer/experimental/modular/SVG_Zoomer/zoomer.mjs.txt) | A DOM-free renderer that draws one texture across a full-canvas quad and can magnify it toward a focus point. |
+| [`main.mjs`](./dist/downloads/svg-zoomer/experimental/modular/svg-zoomer/main.mjs.txt) | Controller for the vector-vs-raster zoom demo. |
+| [`zoomer.mjs`](./dist/downloads/svg-zoomer/experimental/modular/svg-zoomer/zoomer.mjs.txt) | A DOM-free renderer that draws one texture across a full-canvas quad and can magnify it toward a focus point. |
 
 <!-- END:mjs-index -->
