@@ -1,11 +1,15 @@
 // vite.config.mjs -- build config: bundles every experimental/modular/**/app.html into dist/ with relative URLs,
 // copies the shader files each app fetches at run time, and writes a source zip per app to dist/downloads/.
-// vite.config.mjs
+
+const [major] = process.versions.node.split('.').map(Number);
+if (major < 22) throw new Error(`Node >= 22 required (this is ${process.versions.node}); fs.globSync is not available`);
+
 import { defineConfig } from 'vite';
 import { globSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import { sourceZips } from './source-zips.mjs';
+
 
 // Directory containing this file (Node >= 20.11); replaces CommonJS __dirname.
 const root = import.meta.dirname;
@@ -37,7 +41,7 @@ export default defineConfig({
   ],
   build: {
     outDir: process.env.VITE_OUT ?? 'dist',
-    emptyOutDir: false,  // don't wipe Jekyll's output if pointed at _site
+    emptyOutDir: !process.env.VITE_OUT,   // clean dist/ on every build; never wipe a custom outDir like Jekyll's _site
     rollupOptions: { input },
   },
 });
