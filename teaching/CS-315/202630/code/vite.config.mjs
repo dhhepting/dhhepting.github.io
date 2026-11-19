@@ -1,9 +1,11 @@
-// vite.config.mjs -- build config: bundles every samples/**/app.html into dist/ with relative URLs.
+// vite.config.mjs -- build config: bundles every experimental/modular/**/app.html into dist/ with relative URLs,
+// copies the shader files each app fetches at run time, and writes a source zip per app to dist/downloads/.
 // vite.config.mjs
 import { defineConfig } from 'vite';
 import { globSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
+import { sourceZips } from './source-zips.mjs';
 
 // Directory containing this file (Node >= 20.11); replaces CommonJS __dirname.
 const root = import.meta.dirname;
@@ -26,9 +28,12 @@ export default defineConfig({
   base: './',            // per-HTML relative URLs, works under any prefix
   plugins: [
     viteStaticCopy({
-      targets: [{ src: 'experimental/modular/**/*.{vert,frag,glsl}', dest: '.' }],
+      // shaders are fetched at run time, so they must sit beside each built page: same path as in the source tree
+      targets: [{ src: 'experimental/**/*.{vert,frag,glsl}', dest: '.' }],
       watch: { reloadPageOnChange: true }, // option name may differ by plugin version
     }),
+    // dist/downloads/<AppName>.zip -- source for each app, as a download rather than runnable modules
+    sourceZips({ apps, base: 'experimental/modular', root }),
   ],
   build: {
     outDir: process.env.VITE_OUT ?? 'dist',
