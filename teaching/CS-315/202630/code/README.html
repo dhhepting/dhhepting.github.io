@@ -338,80 +338,6 @@
   </tbody>
 </table>
 
-<h3 id="experimentalbuiltchap6compare"><code class="language-plaintext highlighter-rouge">experimental/built/Chap6Compare/</code></h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>File</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="./experimental/built/Chap6Compare/cube-phong-vs-blinnphong.mjs"><code class="language-plaintext highlighter-rouge">cube-phong-vs-blinnphong.mjs</code></a></td>
-      <td>shadedCubeHalfway, run twice with its own shader unmodified: uUseHalfway = false (Phong, R .</td>
-    </tr>
-    <tr>
-      <td><a href="./experimental/built/Chap6Compare/eyespace-vs-objectspace.mjs"><code class="language-plaintext highlighter-rouge">eyespace-vs-objectspace.mjs</code></a></td>
-      <td>shadedSphereEyeSpace vs shadedSphereObjectSpace: the same per-vertex lighting (vertex normals), computed in two different coordinate systems.</td>
-    </tr>
-    <tr>
-      <td><a href="./experimental/built/Chap6Compare/sphere1-vs-sphere2.mjs"><code class="language-plaintext highlighter-rouge">sphere1-vs-sphere2.mjs</code></a></td>
-      <td>shadedSphere1 (per-vertex) vs shadedSphere2 (per-fragment).</td>
-    </tr>
-    <tr>
-      <td><a href="./experimental/built/Chap6Compare/sphere3-vs-sphere4.mjs"><code class="language-plaintext highlighter-rouge">sphere3-vs-sphere4.mjs</code></a></td>
-      <td>shadedSphere3 (per-vertex) vs shadedSphere4 (per-fragment).</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="experimentalbuiltchap6comparelib"><code class="language-plaintext highlighter-rouge">experimental/built/Chap6Compare/lib/</code></h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>File</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="./experimental/built/Chap6Compare/lib/common.mjs"><code class="language-plaintext highlighter-rouge">common.mjs</code></a></td>
-      <td>Single adapter to the course’s shared Common/ modules, with the same relative depth your chapter samples use (they import ‘../../Common/…’ from <chapter>/&lt;...</chapter></td>
-    </tr>
-    <tr>
-      <td><a href="./experimental/built/Chap6Compare/lib/CompareApp.mjs"><code class="language-plaintext highlighter-rouge">CompareApp.mjs</code></a></td>
-      <td>Two-canvas comparison harness.</td>
-    </tr>
-    <tr>
-      <td><a href="./experimental/built/Chap6Compare/lib/costModel.mjs"><code class="language-plaintext highlighter-rouge">costModel.mjs</code></a></td>
-      <td>Informal cost model: count the expensive operations in each shader stage by reading the shader source itself, weight them, and multiply by how many times the…</td>
-    </tr>
-    <tr>
-      <td><a href="./experimental/built/Chap6Compare/lib/frameMath.mjs"><code class="language-plaintext highlighter-rouge">frameMath.mjs</code></a></td>
-      <td>Per-frame maths for the two scenes (sphere, cube).</td>
-    </tr>
-    <tr>
-      <td><a href="./experimental/built/Chap6Compare/lib/LitMeshPane.mjs"><code class="language-plaintext highlighter-rouge">LitMeshPane.mjs</code></a></td>
-      <td>One canvas + one WebGL2 context + one lit-mesh program.</td>
-    </tr>
-    <tr>
-      <td><a href="./experimental/built/Chap6Compare/lib/meshes.mjs"><code class="language-plaintext highlighter-rouge">meshes.mjs</code></a></td>
-      <td>Mesh generators (typed arrays, non-indexed triangles).</td>
-    </tr>
-    <tr>
-      <td><a href="./experimental/built/Chap6Compare/lib/scenes.mjs"><code class="language-plaintext highlighter-rouge">scenes.mjs</code></a></td>
-      <td>A scene bundles everything that differs between the sphere demos and the cube demo: default state, controls, animation, mesh and per-frame uniforms.</td>
-    </tr>
-    <tr>
-      <td><a href="./experimental/built/Chap6Compare/lib/shaderSources.mjs"><code class="language-plaintext highlighter-rouge">shaderSources.mjs</code></a></td>
-      <td>Loads the shader files with fetch(), so the pages work from any web server (a plain static host, Vite dev, or a Vite build).</td>
-    </tr>
-  </tbody>
-</table>
-
 <h3 id="experimentalbuiltcolour-cube"><code class="language-plaintext highlighter-rouge">experimental/built/colour-cube/</code></h3>
 
 <table>
@@ -690,6 +616,80 @@
     <tr>
       <td><a href="./experimental/built/shader-stages/ShaderDemo.mjs"><code class="language-plaintext highlighter-rouge">ShaderDemo.mjs</code></a></td>
       <td><em>(no header comment)</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="experimentalbuiltshading-comparisons"><code class="language-plaintext highlighter-rouge">experimental/built/shading-comparisons/</code></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="./experimental/built/shading-comparisons/cube-phong-vs-blinnphong.mjs"><code class="language-plaintext highlighter-rouge">cube-phong-vs-blinnphong.mjs</code></a></td>
+      <td>shadedCubeHalfway, run twice with its own shader unmodified: uUseHalfway = false (Phong, R .</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/shading-comparisons/eyespace-vs-objectspace.mjs"><code class="language-plaintext highlighter-rouge">eyespace-vs-objectspace.mjs</code></a></td>
+      <td>shadedSphereEyeSpace vs shadedSphereObjectSpace: the same per-vertex lighting (vertex normals), computed in two different coordinate systems.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/shading-comparisons/sphere1-vs-sphere2.mjs"><code class="language-plaintext highlighter-rouge">sphere1-vs-sphere2.mjs</code></a></td>
+      <td>shadedSphere1 (per-vertex) vs shadedSphere2 (per-fragment).</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/shading-comparisons/sphere3-vs-sphere4.mjs"><code class="language-plaintext highlighter-rouge">sphere3-vs-sphere4.mjs</code></a></td>
+      <td>shadedSphere3 (per-vertex) vs shadedSphere4 (per-fragment).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="experimentalbuiltshading-comparisonslib"><code class="language-plaintext highlighter-rouge">experimental/built/shading-comparisons/lib/</code></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="./experimental/built/shading-comparisons/lib/common.mjs"><code class="language-plaintext highlighter-rouge">common.mjs</code></a></td>
+      <td>Single adapter to the shared common/ modules.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/shading-comparisons/lib/CompareApp.mjs"><code class="language-plaintext highlighter-rouge">CompareApp.mjs</code></a></td>
+      <td>Two-canvas comparison harness.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/shading-comparisons/lib/costModel.mjs"><code class="language-plaintext highlighter-rouge">costModel.mjs</code></a></td>
+      <td>Informal cost model: count the expensive operations in each shader stage by reading the shader source itself, weight them, and multiply by how many times the…</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/shading-comparisons/lib/frameMath.mjs"><code class="language-plaintext highlighter-rouge">frameMath.mjs</code></a></td>
+      <td>Per-frame maths for the two scenes (sphere, cube).</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/shading-comparisons/lib/LitMeshPane.mjs"><code class="language-plaintext highlighter-rouge">LitMeshPane.mjs</code></a></td>
+      <td>One canvas + one WebGL2 context + one lit-mesh program.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/shading-comparisons/lib/meshes.mjs"><code class="language-plaintext highlighter-rouge">meshes.mjs</code></a></td>
+      <td>Mesh generators (typed arrays, non-indexed triangles).</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/shading-comparisons/lib/scenes.mjs"><code class="language-plaintext highlighter-rouge">scenes.mjs</code></a></td>
+      <td>A scene bundles everything that differs between the sphere demos and the cube demo: default state, controls, animation, mesh and per-frame uniforms.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/shading-comparisons/lib/shaderSources.mjs"><code class="language-plaintext highlighter-rouge">shaderSources.mjs</code></a></td>
+      <td>Loads the shader files with fetch(), so the pages work from any web server (a plain static host, Vite dev, or a Vite build).</td>
     </tr>
   </tbody>
 </table>

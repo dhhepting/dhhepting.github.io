@@ -10,19 +10,9 @@ an informal cost comparison. Built on your Chapter 6 sources.
 | `eyespace-vs-objectspace.html` | shadedSphereEyeSpace | shadedSphereObjectSpace |
 | `cube-phong-vs-blinnphong.html` | shadedCubeHalfway as Phong, (R·E)^n | shadedCubeHalfway as modified Blinn-Phong, (N·H)^n′ |
 
-`index.html` lists them.
+`app.html` lists them.
 
-## Where it goes
-
-Same depth as your chapter samples, which import `../../Common/...`:
-
-    <course root>/
-      Common/                 MV.mjs, initShadersJS.mjs   (yours, unchanged)
-      <chapter>/Chap6Compare/ this project
-
-Files in `lib/` are one folder deeper, so `lib/common.mjs` imports
-`../../../Common/...`. That is the only file that names `Common/`.
-Run it from any web server (a static host, Vite dev, or a Vite build): shaders are loaded with `fetch`, so no bundler is required.
+lib/common.mjs is the single adapter to the shared common/ modules. Every other file in lib/ imports MV.mjs and initShadersJS.mjs through here, so this is the only file that names the path to common/ (four levels up from lib/: lib -> shading-comparisons -> built -> experimental -> code).
 
 ## Layout
 

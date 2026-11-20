@@ -45,20 +45,9 @@ an informal cost comparison. Built on your Chapter 6 sources.</p>
   </tbody>
 </table>
 
-<p><code>index.html</code> lists them.</p>
+<p><code>app.html</code> lists them.</p>
 
-<h2 id="where-it-goes">Where it goes</h2>
-
-<p>Same depth as your chapter samples, which import <code>../../Common/...</code>:</p>
-
-<pre><code>&lt;course root&gt;/
-  Common/                 MV.mjs, initShadersJS.mjs   (yours, unchanged)
-  &lt;chapter&gt;/Chap6Compare/ this project
-</code></pre>
-
-<p>Files in <code>lib/</code> are one folder deeper, so <code>lib/common.mjs</code> imports<br />
-<code>../../../Common/...</code>. That is the only file that names <code>Common/</code>.<br />
-Run it from any web server (a static host, Vite dev, or a Vite build): shaders are loaded with <code>fetch</code>, so no bundler is required.</p>
+<p>lib/common.mjs is the single adapter to the shared common/ modules. Every other file in lib/ imports MV.mjs and initShadersJS.mjs through here, so this is the only file that names the path to common/ (four levels up from lib/: lib -&gt; shading-comparisons -&gt; built -&gt; experimental -&gt; code).</p>
 
 <h2 id="layout">Layout</h2>
 
