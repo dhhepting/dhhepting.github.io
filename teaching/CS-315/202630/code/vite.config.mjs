@@ -1,4 +1,4 @@
-// vite.config.mjs -- build config: bundles every experimental/modular/**/app.html into dist/ with relative URLs,
+// vite.config.mjs -- build config: bundles every experimental/built/**/app.html into dist/ with relative URLs,
 // copies the shader files each app fetches at run time, and writes a source zip per app to dist/downloads/.
 
 const [major] = process.versions.node.split('.').map(Number);
@@ -14,13 +14,13 @@ import { sourceZips } from './source-zips.mjs';
 // Directory containing this file (Node >= 20.11); replaces CommonJS __dirname.
 const root = import.meta.dirname;
 
-// Every experimental/modular/**/app.html becomes a build entry. cwd is pinned so the glob
+// Every experimental/built/**/app.html becomes a build entry. cwd is pinned so the glob
 // works no matter where `vite` is launched from. Needs Node >= 22 (fs.globSync).
-const apps = globSync('experimental/modular/**/app.html', { cwd: root });
+const apps = globSync('experimental/built/**/app.html', { cwd: root });
 
 const input = Object.fromEntries(
   apps.map(f => [
-    f.replace(/\.html$/, ''),   // entry key = output path, e.g. experimental/modular/MVP/app
+    f.replace(/\.html$/, ''),   // entry key = output path, e.g. experimental/built/MVP/app
     resolve(root, f),
   ])
 );
@@ -37,7 +37,7 @@ export default defineConfig({
       watch: { reloadPageOnChange: true }, // option name may differ by plugin version
     }),
     // dist/downloads/<AppName>.zip -- source for each app, as a download rather than runnable modules
-    sourceZips({ apps, base: 'experimental/modular', root }),
+    sourceZips({ apps, base: 'experimental/built', root }),
   ],
   build: {
     outDir: process.env.VITE_OUT ?? 'dist',
