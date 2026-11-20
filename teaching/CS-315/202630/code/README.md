@@ -17,18 +17,18 @@ breadcrumb: Code README
 ## experimental/built/
 
 * ES modules, built by Vite
-* run from [/dist/experimental/built/](/teaching/CS-315/202630/code/dist/experimental/built/)
+* run from [/dist/experimental/built/](./dist/experimental/built/)
 
 ## experimental/standalone/
 
 * single-file demos: no imports, open directly
-* run from [/experimental/standalone/](/teaching/CS-315/202630/code/experimental/standalone/)
-
+* run from [/experimental/standalone/](./experimental/standalone/)
+  
 ## textbook-classic/
 
 * textbook code as published on [interactivecomputergraphics.com](https://interactivecomputergraphics.com/8E/Code/) with minimal changes: classic-style scripts, no build
 * subdirectories 02, 03, .., 11 correspond to the chapters with code examples
-* run from the <file.html> in the associated directory
+* run from the <file.html> in the chosen directory (source can be viewed through your browser, all files used will be linked to the <file.html> and can be followed from there)
 
 ## Module index
 
