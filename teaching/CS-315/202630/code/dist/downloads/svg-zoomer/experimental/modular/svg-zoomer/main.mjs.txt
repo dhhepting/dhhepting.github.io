@@ -47,20 +47,20 @@ if (!sharpGL || !frozenGL) {
   throw new Error('WebGL2 is not available in this browser.');
 }
 
-const pub = import.meta.env
-  ? './'     // Vite dev/build: shaders sit beside the page
-  : new URL(/* @vite-ignore */ '../../public/samples/SVG_Zoomer/', import.meta.url).href;  // raw copy
-
-  async function fetchText(url) {
+async function fetchText(url) {
   const r = await fetch(url);
   if (!r.ok) throw new Error(`Failed to load ${url}: ${r.status}`);
   return r.text();
 }
 
+// `new URL('<literal>', import.meta.url)` resolves beside this module when the
+// files are served raw, and Vite recognizes the exact pattern at build time:
+// it copies each file into dist/ and rewrites the URL. It must be a string
+// literal (no template or variable) for Vite to see it.
 const [vertSrc, fragSrc, rawSvg] = await Promise.all([
-  fetchText(`${pub}shaders/quad.vert.glsl`),
-  fetchText(`${pub}shaders/quad.frag.glsl`),
-  fetchText(`${pub}assets/dh.svg`),
+  fetchText(new URL('./shaders/quad.vert.glsl', import.meta.url)),
+  fetchText(new URL('./shaders/quad.frag.glsl', import.meta.url)),
+  fetchText(new URL('./assets/dh.svg', import.meta.url)),
 ]);
 
 const sharpProgram = initShaders(sharpGL, vertSrc, fragSrc);
