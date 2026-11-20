@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Picking with framebuffer objects</title>
+<style>
+    :root { --ink: #1c2128; --muted: #596270; --page: #eef0f3; --panel: #fff; --line: #d4d9e0; --stage: #22272f; --accent: #1b8a8f; --focus: #2457c5; }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body { margin: 0; background: var(--page); color: var(--ink); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 1240px; margin: 0 auto; padding: 1.25rem 1.25rem 4rem; }
+    h1 { font-size: 1.7rem; line-height: 1.2; margin: 0.2rem 0 0.4rem; font-weight: 650; }
+    h2 { font-size: 1.15rem; margin: 1.8rem 0 0.4rem; font-weight: 650; }
+    code { font: 0.9em ui-monospace, Menlo, Consolas, monospace; }
+    .lede { max-width: 82ch; margin: 0 0 1rem; color: #323a45; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+    .workspace { display: grid; grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr); gap: 0.75rem; align-items: start; }
+    .stage { margin: 0; background: var(--stage); border-top: 4px solid var(--accent); border-radius: 4px; overflow: hidden; }
+    .stage canvas { display: block; width: 100%; height: auto; touch-action: none; cursor: crosshair; background: #808080; }
+    .stage figcaption { padding: 0.5rem 0.75rem; font-size: 0.85rem; color: #aab2bf; }
+    .side { display: grid; gap: 0.6rem; }
+    .panel { margin: 0; padding: 0.6rem 0.75rem; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; font-size: 0.86rem; }
+    .panel canvas { display: block; width: 100%; height: auto; }
+    .status { margin: 0; padding: 0.6rem 0.75rem; background: #eaf3f4; border: 1px solid #b9d6d8; border-radius: 4px; font-size: 0.88rem; }
+    .mono { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.8rem; }
+    .legend span { display: inline-block; margin-right: 0.8rem; }
+    .legend i { display: inline-block; width: 1.2em; height: 0.25em; vertical-align: middle; margin-right: 0.3em; }
+    .controls { margin-top: 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 0.75rem; }
+    fieldset { margin: 0; padding: 0.6rem 0.85rem 0.85rem; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; min-width: 0; }
+    legend { padding: 0 0.3rem; font-weight: 650; font-size: 0.92rem; }
+    .ctl { display: grid; grid-template-columns: 1fr auto; gap: 0.1rem 0.6rem; align-items: center; margin-top: 0.55rem; }
+    .ctl .lab { grid-column: 1 / -1; font-size: 0.9rem; }
+    .ctl input[type=range] { width: 100%; }
+    .ctl select { grid-column: 1 / -1; width: 100%; padding: 0.25rem; font: inherit; }
+    .ctl output { font: 0.85rem ui-monospace, Menlo, Consolas, monospace; min-width: 3.4em; text-align: right; }
+    .ctl.check { grid-template-columns: auto 1fr; }
+    .ctl.check .lab { grid-column: 2; grid-row: 1; }
+    .ctl.color { grid-template-columns: 1fr auto; }
+    .look { margin: 0.2rem 0 0; font-size: 0.9rem; color: #323a45; }
+    .buttons { display: flex; gap: 0.5rem; margin-top: 0.7rem; }
+    button { padding: 0.4rem 0.8rem; font: inherit; font-size: 0.9rem; color: var(--ink); background: #f3f5f8; border: 1px solid var(--line); border-radius: 4px; cursor: pointer; }
+    button:disabled { opacity: 0.5; cursor: default; }
+    .canvasWrap { position: relative; }
+    .canvasWrap #Overlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; background: transparent; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    th, td { text-align: left; padding: 0.3rem 0.4rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { font-weight: 650; }
+    td.bad { color: #b3261e; font-weight: 650; }
+    .notes { max-width: 82ch; }
+    .notes li { margin: 0.4rem 0; }
+    .fatal { color: #a12020; font-weight: 600; }
+    @media (max-width: 800px) { .workspace { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<main>
+    <h1>Picking with framebuffer objects</h1>
+    <p class="lede">To find what is under the mouse, draw the scene again off-screen with every object (or face) in a colour that identifies it, and read back the one pixel under the mouse. This page combines <code>pickCube</code> to <code>pickCube6</code>, and on every pick runs each way of doing it side by side, checked against a ray cast on the CPU.</p>
+
+    <div id="fatal" class="fatal" hidden></div>
+
+    <section class="workspace" aria-label="The scene">
+        <figure class="stage">
+            <div class="canvasWrap">
+                <canvas id="gl-canvas" width="768" height="576" aria-label="Scene to pick from">
+                    Oops ... your browser doesn't support the HTML5 canvas element
+                </canvas>
+                <canvas id="Overlay" width="768" height="576" aria-hidden="true"></canvas>
+            </div>
+            <figcaption>Click to pick · drag to orbit</figcaption>
+        </figure>
+        <div class="side">
+            <p class="look" id="ExampleLook"></p>
+            <p class="panel mono" id="Offset"></p>
+        </div>
+    </section>
+
+    <section class="panel" aria-label="Results" style="margin-top:0.75rem">
+        <table>
+            <thead><tr><th>Method</th><th>Pixel read</th><th>Result</th><th>Agrees with the ray cast</th><th>ms</th></tr></thead>
+            <tbody id="Results"></tbody>
+        </table>
+    </section>
+
+    <section class="controls" aria-label="Controls">
+        <fieldset>
+            <legend>Example</legend>
+            <label class="ctl"><span class="lab">Example</span><select id="Example"></select></label>
+            <label class="ctl"><span class="lab">Scene</span><select id="Scene"></select></label>
+            <label class="ctl check"><input id="Rotate" type="checkbox"><span class="lab">Rotate</span></label>
+            <div class="buttons">
+                <button type="button" id="ButtonX">Rotate X</button>
+                <button type="button" id="ButtonY">Rotate Y</button>
+                <button type="button" id="ButtonZ">Rotate Z</button>
+            </div>
+            <label class="ctl"><span class="lab">Spin speed (degrees per second, several cubes)</span><input id="SpinSpeed" type="range" min="0" max="90" step="1"><output id="SpinSpeedOut"></output></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>How to pick</legend>
+            <label class="ctl"><span class="lab">What the pick pass writes (the method that highlights)</span><select id="Method"></select></label>
+            <label class="ctl"><span class="lab">When the ids are drawn</span>
+                <select id="Strategy">
+                    <option value="separate">In a separate pass after the click (the samples)</option>
+                    <option value="mrt">In the main pass, as a second render target</option>
+                </select></label>
+            <label class="ctl check"><input id="Depth" type="checkbox"><span class="lab">Depth buffer in the pick framebuffer (the samples have none)</span></label>
+            <label class="ctl"><span class="lab">Pick framebuffer size</span>
+                <select id="Region">
+                    <option value="full">The size of the canvas (the samples)</option>
+                    <option value="pixel">1 × 1, with a pick matrix</option>
+                </select></label>
+            <label class="ctl"><span class="lab">Mouse position to pixel</span>
+                <select id="Coords">
+                    <option value="canvas">Relative to the canvas, scaled to its buffer</option>
+                    <option value="sample">clientX, canvas.height − clientY (the samples)</option>
+                </select></label>
+            <label class="ctl"><span class="lab">Pick</span>
+                <select id="When"><option value="click">On a click</option><option value="hover">Continuously, under the mouse</option></select></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>View</legend>
+            <label class="ctl"><span class="lab">Show</span>
+                <select id="View"><option value="scene">The scene</option><option value="pickBuffer">The pick buffer (ids as colours)</option></select></label>
+            <label class="ctl"><span class="lab">Camera azimuth</span><input id="Azimuth" type="range" min="0" max="360" step="1"><output id="AzimuthOut"></output></label>
+            <label class="ctl"><span class="lab">Camera elevation</span><input id="Elevation" type="range" min="-80" max="80" step="1"><output id="ElevationOut"></output></label>
+            <label class="ctl"><span class="lab">Distance</span><input id="Distance" type="range" min="2" max="12" step="0.1"><output id="DistanceOut"></output></label>
+        </fieldset>
+    </section>
+
+    <section class="notes">
+        <h2>What the samples do, and what this page changes</h2>
+        <ul>
+            <li><strong>Window coordinates.</strong> <code>x = event.clientX; y = canvas.height − event.clientY</code> measures from the window, not the canvas. On the samples' bare pages the canvas starts 8 px in, so every pick is read 8 px right of and 8 px above the click; anything that moves or scales the canvas (scrolling, CSS) makes it worse. Use <code>getBoundingClientRect()</code> and scale by <code>canvas.width / rect.width</code>.</li>
+            <li><strong>No depth buffer.</strong> The pick framebuffer has only a colour attachment, so the last object drawn wins. A single convex cube with back faces culled never overlaps itself, which is why the samples work.</li>
+            <li><strong>pickCube2's face names</strong> do not match <code>colorCube()</code>: front is called "right", right "top", top "front", back "left", left "back"; only bottom is right. pickCube3 names faces by their drawn colour, which is consistent.</li>
+            <li><strong>pickCube5</strong>'s handler is <code>function()</code> with no parameter and uses the global <code>event</code>; <strong>pickCube6</strong> sets a uniform named <code>"i"</code> that does not exist (harmless, because the click handler resets <code>uColorIndex</code> to 0 itself).</li>
+            <li><strong>Colours are ids.</strong> Six colours can only name six faces. An id per object and face fits in the 24 bits of an RGBA8 colour, or exactly in an R32UI integer target.</li>
+            <li><strong>Cheaper picking.</strong> A 1 × 1 framebuffer with a pick matrix draws only the pixel that is read. Writing ids to a second render target in the main pass avoids the extra pass altogether, at the cost of an id write every frame.</li>
+            <li><strong>Reading a pixel waits for the GPU.</strong> The times in the table include that wait.</li>
+        </ul>
+    </section>
+</main>
+
+<script type="module" src="./main.mjs"></script>
+</body>
+</html>

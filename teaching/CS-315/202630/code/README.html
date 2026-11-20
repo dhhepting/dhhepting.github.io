@@ -187,16 +187,22 @@
 
 <ul>
   <li>shared ES modules (MV.mjs, initShaders*.mjs, …)</li>
-  <li>an updated but not the current(the most recent of the threeJS code that uses the same interfaces as the textbook-classic examples in Chapter 9) release of threeJS: three-r124.min.js</li>
+  <li>the most recent version of the threeJS code that is compatible with textbook examples in Chapter 9: three-r124.min.js</li>
 </ul>
 
-<h2 id="samples">samples/</h2>
+<h2 id="experimental">experimental</h2>
 
 <ul>
-  <li>course-authored demos: ES modules, built by Vite</li>
+  <li>programs written with help from claude.ai</li>
 </ul>
 
-<h2 id="standalone">standalone/</h2>
+<h2 id="experimentalbuilt">experimental/built/</h2>
+
+<ul>
+  <li>ES modules, built by Vite</li>
+</ul>
+
+<h2 id="experimentalstandalone">experimental/standalone/</h2>
 
 <ul>
   <li>single-file demos: no imports, open directly</li>
@@ -205,7 +211,7 @@
 <h2 id="textbook-classic">textbook-classic/</h2>
 
 <ul>
-  <li>textbook code as published on <a href="https://interactivecomputergraphics.com/8E/Code/">interactivecomputergraphics.com</a> with minimal changes: classic scripts, no build</li>
+  <li>textbook code as published on <a href="https://interactivecomputergraphics.com/8E/Code/">interactivecomputergraphics.com</a> with minimal changes: classic-style scripts, no build</li>
   <li>subdirectories 02, 03, .., 11 correspond to the chapters with code examples</li>
 </ul>
 
@@ -254,9 +260,7 @@
   </tbody>
 </table>
 
-<h3 id="experimentalmodularbump-map-explorer"><code class="language-plaintext highlighter-rouge">experimental/modular/bump-map-explorer/</code></h3>
-
-<p><em>Source for <code class="language-plaintext highlighter-rouge">bump-map-explorer</code> (read-only copies): <a href="./dist/downloads/bump-map-explorer/index.html">browse all files</a> · <a href="./dist/downloads/bump-map-explorer.zip">download .zip</a></em></p>
+<h3 id="experimentalbuiltbump-map-explorer"><code class="language-plaintext highlighter-rouge">experimental/built/bump-map-explorer/</code></h3>
 
 <table>
   <thead>
@@ -267,27 +271,25 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="./dist/downloads/bump-map-explorer/experimental/modular/bump-map-explorer/examples.mjs.txt"><code class="language-plaintext highlighter-rouge">examples.mjs</code></a></td>
+      <td><a href="./experimental/built/bump-map-explorer/examples.mjs"><code class="language-plaintext highlighter-rouge">examples.mjs</code></a></td>
       <td>The explorer’s menu.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/bump-map-explorer/experimental/modular/bump-map-explorer/heightFields.mjs.txt"><code class="language-plaintext highlighter-rouge">heightFields.mjs</code></a></td>
+      <td><a href="./experimental/built/bump-map-explorer/heightFields.mjs"><code class="language-plaintext highlighter-rouge">heightFields.mjs</code></a></td>
       <td><em>(no header comment)</em></td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/bump-map-explorer/experimental/modular/bump-map-explorer/honolulu256.mjs.txt"><code class="language-plaintext highlighter-rouge">honolulu256.mjs</code></a></td>
+      <td><a href="./experimental/built/bump-map-explorer/honolulu256.mjs"><code class="language-plaintext highlighter-rouge">honolulu256.mjs</code></a></td>
       <td><em>(no header comment)</em></td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/bump-map-explorer/experimental/modular/bump-map-explorer/main.mjs.txt"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
+      <td><a href="./experimental/built/bump-map-explorer/main.mjs"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
       <td><em>(no header comment)</em></td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="experimentalmodularcolour-cube"><code class="language-plaintext highlighter-rouge">experimental/modular/colour-cube/</code></h3>
-
-<p><em>Source for <code class="language-plaintext highlighter-rouge">colour-cube</code> (read-only copies): <a href="./dist/downloads/colour-cube/index.html">browse all files</a> · <a href="./dist/downloads/colour-cube.zip">download .zip</a></em></p>
+<h3 id="experimentalbuiltchaos-dragon"><code class="language-plaintext highlighter-rouge">experimental/built/chaos-dragon/</code></h3>
 
 <table>
   <thead>
@@ -298,114 +300,21 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="./dist/downloads/colour-cube/experimental/modular/colour-cube/cube.mjs.txt"><code class="language-plaintext highlighter-rouge">cube.mjs</code></a></td>
-      <td>A DOM-free renderer for a unit colour cube.</td>
-    </tr>
-    <tr>
-      <td><a href="./dist/downloads/colour-cube/experimental/modular/colour-cube/main.mjs.txt"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
-      <td>Controller: owns the canvas and GL context, loads the shader files, drives the render loop, and tracks the current viewing mode.</td>
-    </tr>
-    <tr>
-      <td><a href="./dist/downloads/colour-cube/experimental/modular/colour-cube/matrix.mjs.txt"><code class="language-plaintext highlighter-rouge">matrix.mjs</code></a></td>
-      <td>A tiny, dependency-free set of 4x4 matrix helpers.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="experimentalmodulardiffusion-cube"><code class="language-plaintext highlighter-rouge">experimental/modular/diffusion-cube/</code></h3>
-
-<p><em>Source for <code class="language-plaintext highlighter-rouge">diffusion-cube</code> (read-only copies): <a href="./dist/downloads/diffusion-cube/index.html">browse all files</a> · <a href="./dist/downloads/diffusion-cube.zip">download .zip</a></em></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>File</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="./dist/downloads/diffusion-cube/experimental/modular/diffusion-cube/gl-utils.mjs.txt"><code class="language-plaintext highlighter-rouge">gl-utils.mjs</code></a></td>
-      <td>Small WebGL2 helpers.</td>
-    </tr>
-    <tr>
-      <td><a href="./dist/downloads/diffusion-cube/experimental/modular/diffusion-cube/main.mjs.txt"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
-      <td>Controller: the only module that touches the DOM.</td>
-    </tr>
-    <tr>
-      <td><a href="./dist/downloads/diffusion-cube/experimental/modular/diffusion-cube/math.mjs.txt"><code class="language-plaintext highlighter-rouge">math.mjs</code></a></td>
-      <td>Minimal column-major mat4 helpers (same layout WebGL expects).</td>
-    </tr>
-    <tr>
-      <td><a href="./dist/downloads/diffusion-cube/experimental/modular/diffusion-cube/scene.mjs.txt"><code class="language-plaintext highlighter-rouge">scene.mjs</code></a></td>
-      <td>Cube + sphere meshes that sample the simulation’s trail texture.</td>
-    </tr>
-    <tr>
-      <td><a href="./dist/downloads/diffusion-cube/experimental/modular/diffusion-cube/sim.mjs.txt"><code class="language-plaintext highlighter-rouge">sim.mjs</code></a></td>
-      <td>GPU particle diffusion with ping-pong textures.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="experimentalmodulardiffusion-explorer"><code class="language-plaintext highlighter-rouge">experimental/modular/diffusion-explorer/</code></h3>
-
-<p><em>Source for <code class="language-plaintext highlighter-rouge">diffusion-explorer</code> (read-only copies): <a href="./dist/downloads/diffusion-explorer/index.html">browse all files</a> · <a href="./dist/downloads/diffusion-explorer.zip">download .zip</a></em></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>File</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="./dist/downloads/diffusion-explorer/experimental/modular/diffusion-explorer/examples.mjs.txt"><code class="language-plaintext highlighter-rouge">examples.mjs</code></a></td>
-      <td>The diffusion explorer’s menu, and how a side-by-side comparison splits the settings between its two simulations.</td>
-    </tr>
-    <tr>
-      <td><a href="./dist/downloads/diffusion-explorer/experimental/modular/diffusion-explorer/honolulu256.mjs.txt"><code class="language-plaintext highlighter-rouge">honolulu256.mjs</code></a></td>
-      <td>Honolulu elevation data from the textbook’s honolulu256.js, as an ES module.</td>
-    </tr>
-    <tr>
-      <td><a href="./dist/downloads/diffusion-explorer/experimental/modular/diffusion-explorer/main.mjs.txt"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
-      <td><em>(no header comment)</em></td>
-    </tr>
-    <tr>
-      <td><a href="./dist/downloads/diffusion-explorer/experimental/modular/diffusion-explorer/seeds.mjs.txt"><code class="language-plaintext highlighter-rouge">seeds.mjs</code></a></td>
-      <td>Starting images for the diffusion explorer, a CPU reference for every update rule in shaders/step.frag, and the measurements the page reports.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="experimentalmodulardragon-curve-chaos"><code class="language-plaintext highlighter-rouge">experimental/modular/dragon-curve-chaos/</code></h3>
-
-<p><em>Source for <code class="language-plaintext highlighter-rouge">dragon-curve-chaos</code> (read-only copies): <a href="./dist/downloads/dragon-curve-chaos/index.html">browse all files</a> · <a href="./dist/downloads/dragon-curve-chaos.zip">download .zip</a></em></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>File</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="./dist/downloads/dragon-curve-chaos/experimental/modular/dragon-curve-chaos/chaosgame.mjs.txt"><code class="language-plaintext highlighter-rouge">chaosgame.mjs</code></a></td>
+      <td><a href="./experimental/built/chaos-dragon/chaosgame.mjs"><code class="language-plaintext highlighter-rouge">chaosgame.mjs</code></a></td>
       <td>DOM-free renderer for a two-map chaos game.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/dragon-curve-chaos/experimental/modular/dragon-curve-chaos/ifs.mjs.txt"><code class="language-plaintext highlighter-rouge">ifs.mjs</code></a></td>
+      <td><a href="./experimental/built/chaos-dragon/ifs.mjs"><code class="language-plaintext highlighter-rouge">ifs.mjs</code></a></td>
       <td>the mathematics of the chaos game.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/dragon-curve-chaos/experimental/modular/dragon-curve-chaos/main.mjs.txt"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
+      <td><a href="./experimental/built/chaos-dragon/main.mjs"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
       <td>the controller.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="experimentalmodulardragon-curve-chaostest"><code class="language-plaintext highlighter-rouge">experimental/modular/dragon-curve-chaos/test/</code></h3>
+<h3 id="experimentalbuiltchaos-dragontest"><code class="language-plaintext highlighter-rouge">experimental/built/chaos-dragon/test/</code></h3>
 
 <table>
   <thead>
@@ -416,19 +325,17 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="./dist/downloads/dragon-curve-chaos/experimental/modular/dragon-curve-chaos/test/smoke.mjs.txt"><code class="language-plaintext highlighter-rouge">smoke.mjs</code></a></td>
+      <td><a href="./experimental/built/chaos-dragon/test/smoke.mjs"><code class="language-plaintext highlighter-rouge">smoke.mjs</code></a></td>
       <td>node test/smoke.mjs      (needs:  npm install jsdom) Runs the REAL main.mjs against app.html in jsdom, with: * the REAL ../common/initShadersJS.mjs (so run i…</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/dragon-curve-chaos/experimental/modular/dragon-curve-chaos/test/verify.mjs.txt"><code class="language-plaintext highlighter-rouge">verify.mjs</code></a></td>
+      <td><a href="./experimental/built/chaos-dragon/test/verify.mjs"><code class="language-plaintext highlighter-rouge">verify.mjs</code></a></td>
       <td>node test/verify.mjs Maths checks plus a ChaosGame run against a recording mock of WebGL2.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="experimentalmodulargouraud-v-phong"><code class="language-plaintext highlighter-rouge">experimental/modular/gouraud-v-phong/</code></h3>
-
-<p><em>Source for <code class="language-plaintext highlighter-rouge">gouraud-v-phong</code> (read-only copies): <a href="./dist/downloads/gouraud-v-phong/index.html">browse all files</a> · <a href="./dist/downloads/gouraud-v-phong.zip">download .zip</a></em></p>
+<h3 id="experimentalbuiltchap6compare"><code class="language-plaintext highlighter-rouge">experimental/built/Chap6Compare/</code></h3>
 
 <table>
   <thead>
@@ -439,15 +346,174 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="./dist/downloads/gouraud-v-phong/experimental/modular/gouraud-v-phong/main.mjs.txt"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
+      <td><a href="./experimental/built/Chap6Compare/cube-phong-vs-blinnphong.mjs"><code class="language-plaintext highlighter-rouge">cube-phong-vs-blinnphong.mjs</code></a></td>
+      <td>shadedCubeHalfway, run twice with its own shader unmodified: uUseHalfway = false (Phong, R .</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/Chap6Compare/eyespace-vs-objectspace.mjs"><code class="language-plaintext highlighter-rouge">eyespace-vs-objectspace.mjs</code></a></td>
+      <td>shadedSphereEyeSpace vs shadedSphereObjectSpace: the same per-vertex lighting (vertex normals), computed in two different coordinate systems.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/Chap6Compare/sphere1-vs-sphere2.mjs"><code class="language-plaintext highlighter-rouge">sphere1-vs-sphere2.mjs</code></a></td>
+      <td>shadedSphere1 (per-vertex) vs shadedSphere2 (per-fragment).</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/Chap6Compare/sphere3-vs-sphere4.mjs"><code class="language-plaintext highlighter-rouge">sphere3-vs-sphere4.mjs</code></a></td>
+      <td>shadedSphere3 (per-vertex) vs shadedSphere4 (per-fragment).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="experimentalbuiltchap6comparelib"><code class="language-plaintext highlighter-rouge">experimental/built/Chap6Compare/lib/</code></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="./experimental/built/Chap6Compare/lib/common.mjs"><code class="language-plaintext highlighter-rouge">common.mjs</code></a></td>
+      <td>Single adapter to the course’s shared Common/ modules, with the same relative depth your chapter samples use (they import ‘../../Common/…’ from <chapter>/&lt;...</chapter></td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/Chap6Compare/lib/CompareApp.mjs"><code class="language-plaintext highlighter-rouge">CompareApp.mjs</code></a></td>
+      <td>Two-canvas comparison harness.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/Chap6Compare/lib/costModel.mjs"><code class="language-plaintext highlighter-rouge">costModel.mjs</code></a></td>
+      <td>Informal cost model: count the expensive operations in each shader stage by reading the shader source itself, weight them, and multiply by how many times the…</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/Chap6Compare/lib/frameMath.mjs"><code class="language-plaintext highlighter-rouge">frameMath.mjs</code></a></td>
+      <td>Per-frame maths for the two scenes (sphere, cube).</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/Chap6Compare/lib/LitMeshPane.mjs"><code class="language-plaintext highlighter-rouge">LitMeshPane.mjs</code></a></td>
+      <td>One canvas + one WebGL2 context + one lit-mesh program.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/Chap6Compare/lib/meshes.mjs"><code class="language-plaintext highlighter-rouge">meshes.mjs</code></a></td>
+      <td>Mesh generators (typed arrays, non-indexed triangles).</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/Chap6Compare/lib/scenes.mjs"><code class="language-plaintext highlighter-rouge">scenes.mjs</code></a></td>
+      <td>A scene bundles everything that differs between the sphere demos and the cube demo: default state, controls, animation, mesh and per-frame uniforms.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/Chap6Compare/lib/shaderSources.mjs"><code class="language-plaintext highlighter-rouge">shaderSources.mjs</code></a></td>
+      <td>Loads the shader files with fetch(), so the pages work from any web server (a plain static host, Vite dev, or a Vite build).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="experimentalbuiltcolour-cube"><code class="language-plaintext highlighter-rouge">experimental/built/colour-cube/</code></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="./experimental/built/colour-cube/cube.mjs"><code class="language-plaintext highlighter-rouge">cube.mjs</code></a></td>
+      <td>A DOM-free renderer for a unit colour cube.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/colour-cube/main.mjs"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
+      <td>Controller: owns the canvas and GL context, loads the shader files, drives the render loop, and tracks the current viewing mode.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/colour-cube/matrix.mjs"><code class="language-plaintext highlighter-rouge">matrix.mjs</code></a></td>
+      <td>A tiny, dependency-free set of 4x4 matrix helpers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="experimentalbuiltdiffusion-cube"><code class="language-plaintext highlighter-rouge">experimental/built/diffusion-cube/</code></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="./experimental/built/diffusion-cube/gl-utils.mjs"><code class="language-plaintext highlighter-rouge">gl-utils.mjs</code></a></td>
+      <td>Small WebGL2 helpers.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/diffusion-cube/main.mjs"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
+      <td>Controller: the only module that touches the DOM.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/diffusion-cube/math.mjs"><code class="language-plaintext highlighter-rouge">math.mjs</code></a></td>
+      <td>Minimal column-major mat4 helpers (same layout WebGL expects).</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/diffusion-cube/scene.mjs"><code class="language-plaintext highlighter-rouge">scene.mjs</code></a></td>
+      <td>Cube + sphere meshes that sample the simulation’s trail texture.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/diffusion-cube/sim.mjs"><code class="language-plaintext highlighter-rouge">sim.mjs</code></a></td>
+      <td>GPU particle diffusion with ping-pong textures.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="experimentalbuiltdiffusion-explorer"><code class="language-plaintext highlighter-rouge">experimental/built/diffusion-explorer/</code></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="./experimental/built/diffusion-explorer/examples.mjs"><code class="language-plaintext highlighter-rouge">examples.mjs</code></a></td>
+      <td>The diffusion explorer’s menu, and how a side-by-side comparison splits the settings between its two simulations.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/diffusion-explorer/honolulu256.mjs"><code class="language-plaintext highlighter-rouge">honolulu256.mjs</code></a></td>
+      <td>Honolulu elevation data from the textbook’s honolulu256.js, as an ES module.</td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/diffusion-explorer/main.mjs"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
+      <td><em>(no header comment)</em></td>
+    </tr>
+    <tr>
+      <td><a href="./experimental/built/diffusion-explorer/seeds.mjs"><code class="language-plaintext highlighter-rouge">seeds.mjs</code></a></td>
+      <td>Starting images for the diffusion explorer, a CPU reference for every update rule in shaders/step.frag, and the measurements the page reports.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="experimentalbuiltgouraud-v-phong"><code class="language-plaintext highlighter-rouge">experimental/built/gouraud-v-phong/</code></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="./experimental/built/gouraud-v-phong/main.mjs"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
       <td><em>(no header comment)</em></td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="experimentalmodularindexed-square"><code class="language-plaintext highlighter-rouge">experimental/modular/indexed-square/</code></h3>
-
-<p><em>Source for <code class="language-plaintext highlighter-rouge">indexed-square</code> (read-only copies): <a href="./dist/downloads/indexed-square/index.html">browse all files</a> · <a href="./dist/downloads/indexed-square.zip">download .zip</a></em></p>
+<h3 id="experimentalbuiltindexed-square"><code class="language-plaintext highlighter-rouge">experimental/built/indexed-square/</code></h3>
 
 <table>
   <thead>
@@ -458,15 +524,13 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="./dist/downloads/indexed-square/experimental/modular/indexed-square/main.mjs.txt"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
+      <td><a href="./experimental/built/indexed-square/main.mjs"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
       <td><em>(no header comment)</em></td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="experimentalmodularlight-view-explorer"><code class="language-plaintext highlighter-rouge">experimental/modular/light-view-explorer/</code></h3>
-
-<p><em>Source for <code class="language-plaintext highlighter-rouge">light-view-explorer</code> (read-only copies): <a href="./dist/downloads/light-view-explorer/index.html">browse all files</a> · <a href="./dist/downloads/light-view-explorer.zip">download .zip</a></em></p>
+<h3 id="experimentalbuiltlight-view-explorer"><code class="language-plaintext highlighter-rouge">experimental/built/light-view-explorer/</code></h3>
 
 <table>
   <thead>
@@ -477,23 +541,21 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="./dist/downloads/light-view-explorer/experimental/modular/light-view-explorer/examples.mjs.txt"><code class="language-plaintext highlighter-rouge">examples.mjs</code></a></td>
+      <td><a href="./experimental/built/light-view-explorer/examples.mjs"><code class="language-plaintext highlighter-rouge">examples.mjs</code></a></td>
       <td>The light-view explorer’s menu and comparisons.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/light-view-explorer/experimental/modular/light-view-explorer/lightMath.mjs.txt"><code class="language-plaintext highlighter-rouge">lightMath.mjs</code></a></td>
+      <td><a href="./experimental/built/light-view-explorer/lightMath.mjs"><code class="language-plaintext highlighter-rouge">lightMath.mjs</code></a></td>
       <td>The light-view explorer’s pure logic: the scene of shadowMap.js (a cube, a triangle) plus a floor, the light’s and the projector’s matrices, the slide of pro…</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/light-view-explorer/experimental/modular/light-view-explorer/main.mjs.txt"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
+      <td><a href="./experimental/built/light-view-explorer/main.mjs"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
       <td><em>(no header comment)</em></td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="experimentalmodularmvp"><code class="language-plaintext highlighter-rouge">experimental/modular/MVP/</code></h3>
-
-<p><em>Source for <code class="language-plaintext highlighter-rouge">MVP</code> (read-only copies): <a href="./dist/downloads/MVP/index.html">browse all files</a> · <a href="./dist/downloads/MVP.zip">download .zip</a></em></p>
+<h3 id="experimentalbuiltmodel-view-projection"><code class="language-plaintext highlighter-rouge">experimental/built/model-view-projection/</code></h3>
 
 <table>
   <thead>
@@ -504,47 +566,45 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="./dist/downloads/MVP/experimental/modular/MVP/geometry.mjs.txt"><code class="language-plaintext highlighter-rouge">geometry.mjs</code></a></td>
+      <td><a href="./experimental/built/model-view-projection/geometry.mjs"><code class="language-plaintext highlighter-rouge">geometry.mjs</code></a></td>
       <td>DOM-free mesh builders.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/MVP/experimental/modular/MVP/main.mjs.txt"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
+      <td><a href="./experimental/built/model-view-projection/main.mjs"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
       <td>Controller: owns the DOM, the five WebGL2 contexts and the frame loop.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/MVP/experimental/modular/MVP/matrixUtil.mjs.txt"><code class="language-plaintext highlighter-rouge">matrixUtil.mjs</code></a></td>
+      <td><a href="./experimental/built/model-view-projection/matrixUtil.mjs"><code class="language-plaintext highlighter-rouge">matrixUtil.mjs</code></a></td>
       <td>Small helpers that sit beside Common/MV.mjs.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/MVP/experimental/modular/MVP/pipeline.mjs.txt"><code class="language-plaintext highlighter-rouge">pipeline.mjs</code></a></td>
+      <td><a href="./experimental/built/model-view-projection/pipeline.mjs"><code class="language-plaintext highlighter-rouge">pipeline.mjs</code></a></td>
       <td>Composes M, V and P from the interface state, using the student’s functions.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/MVP/experimental/modular/MVP/renderer.mjs.txt"><code class="language-plaintext highlighter-rouge">renderer.mjs</code></a></td>
+      <td><a href="./experimental/built/model-view-projection/renderer.mjs"><code class="language-plaintext highlighter-rouge">renderer.mjs</code></a></td>
       <td>DOM-free renderer for one WebGL2 context.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/MVP/experimental/modular/MVP/state.mjs.txt"><code class="language-plaintext highlighter-rouge">state.mjs</code></a></td>
+      <td><a href="./experimental/built/model-view-projection/state.mjs"><code class="language-plaintext highlighter-rouge">state.mjs</code></a></td>
       <td>All interface state lives in one plain object.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/MVP/experimental/modular/MVP/student.mjs.txt"><code class="language-plaintext highlighter-rouge">student.mjs</code></a></td>
+      <td><a href="./experimental/built/model-view-projection/student.mjs"><code class="language-plaintext highlighter-rouge">student.mjs</code></a></td>
       <td>STUDENT FILE: this is the only file you need to edit.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/MVP/experimental/modular/MVP/ui.mjs.txt"><code class="language-plaintext highlighter-rouge">ui.mjs</code></a></td>
+      <td><a href="./experimental/built/model-view-projection/ui.mjs"><code class="language-plaintext highlighter-rouge">ui.mjs</code></a></td>
       <td>The interface: one table describes every control; buildPanel() makes the DOM from it and syncControls() keeps it in step with the state object.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/MVP/experimental/modular/MVP/views.mjs.txt"><code class="language-plaintext highlighter-rouge">views.mjs</code></a></td>
+      <td><a href="./experimental/built/model-view-projection/views.mjs"><code class="language-plaintext highlighter-rouge">views.mjs</code></a></td>
       <td>What each canvas shows.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="experimentalmodularpicking_explorer"><code class="language-plaintext highlighter-rouge">experimental/modular/picking_explorer/</code></h3>
-
-<p><em>Source for <code class="language-plaintext highlighter-rouge">picking_explorer</code> (read-only copies): <a href="./dist/downloads/picking_explorer/index.html">browse all files</a> · <a href="./dist/downloads/picking_explorer.zip">download .zip</a></em></p>
+<h3 id="experimentalbuiltpicking-explorer"><code class="language-plaintext highlighter-rouge">experimental/built/picking-explorer/</code></h3>
 
 <table>
   <thead>
@@ -555,23 +615,21 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="./dist/downloads/picking_explorer/experimental/modular/picking_explorer/examples.mjs.txt"><code class="language-plaintext highlighter-rouge">examples.mjs</code></a></td>
+      <td><a href="./experimental/built/picking-explorer/examples.mjs"><code class="language-plaintext highlighter-rouge">examples.mjs</code></a></td>
       <td>The picking explorer’s menu.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/picking_explorer/experimental/modular/picking_explorer/main.mjs.txt"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
+      <td><a href="./experimental/built/picking-explorer/main.mjs"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
       <td><em>(no header comment)</em></td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/picking_explorer/experimental/modular/picking_explorer/pickMath.mjs.txt"><code class="language-plaintext highlighter-rouge">pickMath.mjs</code></a></td>
+      <td><a href="./experimental/built/picking-explorer/pickMath.mjs"><code class="language-plaintext highlighter-rouge">pickMath.mjs</code></a></td>
       <td>The picking explorer’s pure logic: the scenes, the cube mesh with a face index per vertex, ID encodings, a CPU ray cast to check the GPU against, the pick ma…</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="experimentalmodularreflection_explorer"><code class="language-plaintext highlighter-rouge">experimental/modular/reflection_explorer/</code></h3>
-
-<p><em>Source for <code class="language-plaintext highlighter-rouge">reflection_explorer</code> (read-only copies): <a href="./dist/downloads/reflection_explorer/index.html">browse all files</a> · <a href="./dist/downloads/reflection_explorer.zip">download .zip</a></em></p>
+<h3 id="experimentalbuiltreflection-explorer"><code class="language-plaintext highlighter-rouge">experimental/built/reflection-explorer/</code></h3>
 
 <table>
   <thead>
@@ -582,31 +640,29 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="./dist/downloads/reflection_explorer/experimental/modular/reflection_explorer/environments.mjs.txt"><code class="language-plaintext highlighter-rouge">environments.mjs</code></a></td>
+      <td><a href="./experimental/built/reflection-explorer/environments.mjs"><code class="language-plaintext highlighter-rouge">environments.mjs</code></a></td>
       <td>Procedural cube-map environments, and the cube-map face conventions they depend on.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/reflection_explorer/experimental/modular/reflection_explorer/examples.mjs.txt"><code class="language-plaintext highlighter-rouge">examples.mjs</code></a></td>
+      <td><a href="./experimental/built/reflection-explorer/examples.mjs"><code class="language-plaintext highlighter-rouge">examples.mjs</code></a></td>
       <td>The explorer’s menu.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/reflection_explorer/experimental/modular/reflection_explorer/main.mjs.txt"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
+      <td><a href="./experimental/built/reflection-explorer/main.mjs"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
       <td><em>(no header comment)</em></td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/reflection_explorer/experimental/modular/reflection_explorer/meshes.mjs.txt"><code class="language-plaintext highlighter-rouge">meshes.mjs</code></a></td>
+      <td><a href="./experimental/built/reflection-explorer/meshes.mjs"><code class="language-plaintext highlighter-rouge">meshes.mjs</code></a></td>
       <td>Mesh generators: non-indexed triangles, positions and unit normals as vec3.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/reflection_explorer/experimental/modular/reflection_explorer/reflectMath.mjs.txt"><code class="language-plaintext highlighter-rouge">reflectMath.mjs</code></a></td>
+      <td><a href="./experimental/built/reflection-explorer/reflectMath.mjs"><code class="language-plaintext highlighter-rouge">reflectMath.mjs</code></a></td>
       <td>The explorer’s pure logic: matrices, orbiting objects, and which settings each half of a split view uses.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="experimentalmodularshaderstages"><code class="language-plaintext highlighter-rouge">experimental/modular/ShaderStages/</code></h3>
-
-<p><em>Source for <code class="language-plaintext highlighter-rouge">ShaderStages</code> (read-only copies): <a href="./dist/downloads/ShaderStages/index.html">browse all files</a> · <a href="./dist/downloads/ShaderStages.zip">download .zip</a></em></p>
+<h3 id="experimentalbuiltshader-stages"><code class="language-plaintext highlighter-rouge">experimental/built/shader-stages/</code></h3>
 
 <table>
   <thead>
@@ -617,27 +673,25 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="./dist/downloads/ShaderStages/experimental/modular/ShaderStages/main.mjs.txt"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
+      <td><a href="./experimental/built/shader-stages/main.mjs"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
       <td><em>(no header comment)</em></td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/ShaderStages/experimental/modular/ShaderStages/math.mjs.txt"><code class="language-plaintext highlighter-rouge">math.mjs</code></a></td>
+      <td><a href="./experimental/built/shader-stages/math.mjs"><code class="language-plaintext highlighter-rouge">math.mjs</code></a></td>
       <td>Pure helpers (no DOM, no GL).</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/ShaderStages/experimental/modular/ShaderStages/overlay.mjs.txt"><code class="language-plaintext highlighter-rouge">overlay.mjs</code></a></td>
+      <td><a href="./experimental/built/shader-stages/overlay.mjs"><code class="language-plaintext highlighter-rouge">overlay.mjs</code></a></td>
       <td><em>(no header comment)</em></td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/ShaderStages/experimental/modular/ShaderStages/ShaderDemo.mjs.txt"><code class="language-plaintext highlighter-rouge">ShaderDemo.mjs</code></a></td>
+      <td><a href="./experimental/built/shader-stages/ShaderDemo.mjs"><code class="language-plaintext highlighter-rouge">ShaderDemo.mjs</code></a></td>
       <td><em>(no header comment)</em></td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="experimentalmodularsvg-zoomer"><code class="language-plaintext highlighter-rouge">experimental/modular/svg-zoomer/</code></h3>
-
-<p><em>Source for <code class="language-plaintext highlighter-rouge">svg-zoomer</code> (read-only copies): <a href="./dist/downloads/svg-zoomer/index.html">browse all files</a> · <a href="./dist/downloads/svg-zoomer.zip">download .zip</a></em></p>
+<h3 id="experimentalbuiltsvg-zoomer"><code class="language-plaintext highlighter-rouge">experimental/built/svg-zoomer/</code></h3>
 
 <table>
   <thead>
@@ -648,11 +702,11 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="./dist/downloads/svg-zoomer/experimental/modular/svg-zoomer/main.mjs.txt"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
+      <td><a href="./experimental/built/svg-zoomer/main.mjs"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
       <td>Controller for the vector-vs-raster zoom demo.</td>
     </tr>
     <tr>
-      <td><a href="./dist/downloads/svg-zoomer/experimental/modular/svg-zoomer/zoomer.mjs.txt"><code class="language-plaintext highlighter-rouge">zoomer.mjs</code></a></td>
+      <td><a href="./experimental/built/svg-zoomer/zoomer.mjs"><code class="language-plaintext highlighter-rouge">zoomer.mjs</code></a></td>
       <td>A DOM-free renderer that draws one texture across a full-canvas quad and can magnify it toward a focus point.</td>
     </tr>
   </tbody>
