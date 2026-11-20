@@ -1,5 +1,6 @@
-// vite.config.mjs -- build config: bundles every experimental/built/**/app.html into dist/ with relative URLs,
-// copies the shader files each app fetches at run time, and writes a source zip per app to dist/downloads/.
+// vite.config.mjs -- build config: bundles every page in experimental/built/**/ (app.html plus any
+// extra .html pages beside it) into dist/ with relative URLs, copies the shader files each app
+// fetches at run time, and writes a source zip per app to dist/downloads/.
 
 const [major] = process.versions.node.split('.').map(Number);
 if (major < 22) throw new Error(`Node >= 22 required (this is ${process.versions.node}); fs.globSync is not available`);
@@ -14,12 +15,16 @@ import { sourceZips } from './source-zips.mjs';
 // Directory containing this file (Node >= 20.11); replaces CommonJS __dirname.
 const root = import.meta.dirname;
 
-// Every experimental/built/**/app.html becomes a build entry. cwd is pinned so the glob
-// works no matter where `vite` is launched from. Needs Node >= 22 (fs.globSync).
+// One entry page per app (app.html): used for the source zips, which are one per app folder.
+// cwd is pinned so the glob works no matter where `vite` is launched from. Needs Node >= 22.
 const apps = globSync('experimental/built/**/app.html', { cwd: root });
 
+// Every page of every app (app.html and any others beside it, e.g. sphere1-vs-sphere2.html).
+// Vite only builds HTML files listed as inputs, so all of them must be here.
+const pages = globSync('experimental/built/**/*.html', { cwd: root });
+
 const input = Object.fromEntries(
-  apps.map(f => [
+  pages.map(f => [
     f.replace(/\.html$/, ''),   // entry key = output path, e.g. experimental/built/MVP/app
     resolve(root, f),
   ])
@@ -45,4 +50,3 @@ export default defineConfig({
     rollupOptions: { input },
   },
 });
-

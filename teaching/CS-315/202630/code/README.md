@@ -70,28 +70,6 @@ breadcrumb: Code README
 | [`smoke.mjs`](./experimental/built/chaos-dragon/test/smoke.mjs) | node test/smoke.mjs      (needs:  npm install jsdom) Runs the REAL main.mjs against app.html in jsdom, with: * the REAL ../common/initShadersJS.mjs (so run i... |
 | [`verify.mjs`](./experimental/built/chaos-dragon/test/verify.mjs) | node test/verify.mjs Maths checks plus a ChaosGame run against a recording mock of WebGL2. |
 
-### `experimental/built/Chap6Compare/`
-
-| File | Description |
-| --- | --- |
-| [`cube-phong-vs-blinnphong.mjs`](./experimental/built/Chap6Compare/cube-phong-vs-blinnphong.mjs) | shadedCubeHalfway, run twice with its own shader unmodified: uUseHalfway = false (Phong, R . |
-| [`eyespace-vs-objectspace.mjs`](./experimental/built/Chap6Compare/eyespace-vs-objectspace.mjs) | shadedSphereEyeSpace vs shadedSphereObjectSpace: the same per-vertex lighting (vertex normals), computed in two different coordinate systems. |
-| [`sphere1-vs-sphere2.mjs`](./experimental/built/Chap6Compare/sphere1-vs-sphere2.mjs) | shadedSphere1 (per-vertex) vs shadedSphere2 (per-fragment). |
-| [`sphere3-vs-sphere4.mjs`](./experimental/built/Chap6Compare/sphere3-vs-sphere4.mjs) | shadedSphere3 (per-vertex) vs shadedSphere4 (per-fragment). |
-
-### `experimental/built/Chap6Compare/lib/`
-
-| File | Description |
-| --- | --- |
-| [`common.mjs`](./experimental/built/Chap6Compare/lib/common.mjs) | Single adapter to the course's shared Common/ modules, with the same relative depth your chapter samples use (they import '../../Common/...' from <chapter>/<... |
-| [`CompareApp.mjs`](./experimental/built/Chap6Compare/lib/CompareApp.mjs) | Two-canvas comparison harness. |
-| [`costModel.mjs`](./experimental/built/Chap6Compare/lib/costModel.mjs) | Informal cost model: count the expensive operations in each shader stage by reading the shader source itself, weight them, and multiply by how many times the... |
-| [`frameMath.mjs`](./experimental/built/Chap6Compare/lib/frameMath.mjs) | Per-frame maths for the two scenes (sphere, cube). |
-| [`LitMeshPane.mjs`](./experimental/built/Chap6Compare/lib/LitMeshPane.mjs) | One canvas + one WebGL2 context + one lit-mesh program. |
-| [`meshes.mjs`](./experimental/built/Chap6Compare/lib/meshes.mjs) | Mesh generators (typed arrays, non-indexed triangles). |
-| [`scenes.mjs`](./experimental/built/Chap6Compare/lib/scenes.mjs) | A scene bundles everything that differs between the sphere demos and the cube demo: default state, controls, animation, mesh and per-frame uniforms. |
-| [`shaderSources.mjs`](./experimental/built/Chap6Compare/lib/shaderSources.mjs) | Loads the shader files with fetch(), so the pages work from any web server (a plain static host, Vite dev, or a Vite build). |
-
 ### `experimental/built/colour-cube/`
 
 | File | Description |
@@ -179,6 +157,28 @@ breadcrumb: Code README
 | [`math.mjs`](./experimental/built/shader-stages/math.mjs) | Pure helpers (no DOM, no GL). |
 | [`overlay.mjs`](./experimental/built/shader-stages/overlay.mjs) | *(no header comment)* |
 | [`ShaderDemo.mjs`](./experimental/built/shader-stages/ShaderDemo.mjs) | *(no header comment)* |
+
+### `experimental/built/shading-comparisons/`
+
+| File | Description |
+| --- | --- |
+| [`cube-phong-vs-blinnphong.mjs`](./experimental/built/shading-comparisons/cube-phong-vs-blinnphong.mjs) | shadedCubeHalfway, run twice with its own shader unmodified: uUseHalfway = false (Phong, R . |
+| [`eyespace-vs-objectspace.mjs`](./experimental/built/shading-comparisons/eyespace-vs-objectspace.mjs) | shadedSphereEyeSpace vs shadedSphereObjectSpace: the same per-vertex lighting (vertex normals), computed in two different coordinate systems. |
+| [`sphere1-vs-sphere2.mjs`](./experimental/built/shading-comparisons/sphere1-vs-sphere2.mjs) | shadedSphere1 (per-vertex) vs shadedSphere2 (per-fragment). |
+| [`sphere3-vs-sphere4.mjs`](./experimental/built/shading-comparisons/sphere3-vs-sphere4.mjs) | shadedSphere3 (per-vertex) vs shadedSphere4 (per-fragment). |
+
+### `experimental/built/shading-comparisons/lib/`
+
+| File | Description |
+| --- | --- |
+| [`common.mjs`](./experimental/built/shading-comparisons/lib/common.mjs) | Single adapter to the shared common/ modules. |
+| [`CompareApp.mjs`](./experimental/built/shading-comparisons/lib/CompareApp.mjs) | Two-canvas comparison harness. |
+| [`costModel.mjs`](./experimental/built/shading-comparisons/lib/costModel.mjs) | Informal cost model: count the expensive operations in each shader stage by reading the shader source itself, weight them, and multiply by how many times the... |
+| [`frameMath.mjs`](./experimental/built/shading-comparisons/lib/frameMath.mjs) | Per-frame maths for the two scenes (sphere, cube). |
+| [`LitMeshPane.mjs`](./experimental/built/shading-comparisons/lib/LitMeshPane.mjs) | One canvas + one WebGL2 context + one lit-mesh program. |
+| [`meshes.mjs`](./experimental/built/shading-comparisons/lib/meshes.mjs) | Mesh generators (typed arrays, non-indexed triangles). |
+| [`scenes.mjs`](./experimental/built/shading-comparisons/lib/scenes.mjs) | A scene bundles everything that differs between the sphere demos and the cube demo: default state, controls, animation, mesh and per-frame uniforms. |
+| [`shaderSources.mjs`](./experimental/built/shading-comparisons/lib/shaderSources.mjs) | Loads the shader files with fetch(), so the pages work from any web server (a plain static host, Vite dev, or a Vite build). |
 
 ### `experimental/built/svg-zoomer/`
 

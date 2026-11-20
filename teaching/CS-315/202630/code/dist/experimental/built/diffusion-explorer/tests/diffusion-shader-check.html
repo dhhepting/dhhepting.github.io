@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Diffusion shader check</title>
+<style>body{color:#1c2128;margin:1.5rem;font:15px/1.5 system-ui,sans-serif}table{border-collapse:collapse;font:13px ui-monospace,Menlo,monospace}td,th{text-align:left;border-bottom:1px solid #ddd;padding:.2rem .6rem}.bad{color:#b3261e;font-weight:700}</style>  <script type="module" crossorigin src="../../../../assets/experimental/built/diffusion-explorer/tests/diffusion-shader-check-TdiqKv1g.js"></script>
+  <link rel="modulepreload" crossorigin href="../../../../assets/modulepreload-polyfill-P2Xu9kJm.js">
+  <link rel="modulepreload" crossorigin href="../../../../assets/initShadersJS-BssXODEH.js">
+  <link rel="modulepreload" crossorigin href="../../../../assets/seeds-BKVnnA8c.js">
+</head>
+<body><h1>Diffusion shader check</h1>
+<p>Runs <code>diffusionExplorer/shaders/step.frag</code> on this computer's GPU for every rule, texture format and edge rule, and compares the result texel by texel with the CPU reference in <code>seeds.mjs</code>. Tolerances: RGBA32F 1e-5, RGBA16F 4e-3, RGBA8 one step of 1/255. render5's unstable rate (0.5) is checked on one step only in 16 and 8 bits: it multiplies any rounding difference by up to 3 per step.</p>
+<p id="summary">Running...</p><table id="out"></table><canvas id="c" width="8" height="8" hidden></canvas></body></html>
