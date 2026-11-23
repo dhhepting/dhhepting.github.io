@@ -192,7 +192,7 @@
   </div>
 
   <div class="mb-3">
-    <span class="text-muted">Photos page not created yet — [[18_2026-11-18-photos]] will show red in Moodle until photos are added</span>
+    <a href="/wiki/CS-315/202630/18_2026-11-18-photos/">View/copy this meeting's photos (separate page)</a>
   </div>
 
   <h3>Name for this page</h3>
@@ -281,7 +281,22 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 </textarea>
     
   </div><h3>Photos and transcript page</h3>
-  <p class="text-muted">No photos in media.csv and no <code>audio-transcript/18_2026-11-18-audio.txt</code> for this meeting yet.</p>
+  <p class="text-muted mb-1">Create the Moodle wiki page with this name, then paste the text below into it. The transcript is included when <code>audio-transcript/18_2026-11-18-audio.txt</code> exists in the repo.</p>
+  <div class="input-group mb-3">
+    <input id="photos-text-page-name" type="text" class="form-control" readonly value="18_2026-11-18-photos-text">
+    <button type="button" class="btn btn-secondary" onclick="copyFrom('photos-text-page-name')">Copy</button>
+  </div>
+  <div class="mb-3">
+    <textarea id="photos-text-creole" class="form-control" rows="16" readonly>{{https://dl.dropboxusercontent.com/scl/fi/j5i89ln27fqw5rzppb7ij/18-1.jpg?rlkey=510c6n4pcih4b1k1a8lpded4d&amp;raw=1 | Mtg 18-1 photo }}
+**Caption 18-1:** //TODO: describe what is depicted//
+
+{{https://dl.dropboxusercontent.com/scl/fi/5p4xi6d5os7b6misy3ye8/18-2.jpg?rlkey=izovasp60oh5a1mt5m98osdpr&amp;raw=1 | Mtg 18-2 photo }}
+**Caption 18-2:** //TODO: describe what is depicted//
+</textarea>
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-text-creole')">
+      Copy photos and transcript
+    </button>
+  </div>
 
   <nav class="d-flex justify-content-between align-items-center my-3">
   <a class="btn btn-outline-secondary btn-sm" href="/wiki/CS-315/202630/17_2026-11-16/">&larr; Prev: 17_2026-11-16</a>
