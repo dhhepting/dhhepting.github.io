@@ -32,6 +32,31 @@ const escapeHtml = (s) =>
    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const toPosix = (p) => p.split(path.sep).join('/');
 
+// Per-directory visibility rules. A listing only SHOWS what a rule allows; the
+// hidden files stay on disk and stay fetchable (the listed .html pages still
+// load their sibling .js, shaders, etc.) -- they are just not advertised.
+// `dir` is tested against the directory's path relative to ROOT, with
+// forward slashes; the first matching rule wins. A subdirectory is listed only
+// if something visible lives somewhere beneath it.
+const FILTERS = [
+  { // textbook-classic chapter dirs 02..11 (and below): pages + READMEs only
+    dir: /(^|\/)textbook-classic\/(0[2-9]|1[01])(\/|$)/,
+    keep: (name) => name.endsWith('.html') || /^README/i.test(name),
+  },
+];
+const filterFor = (dir) => {
+  const rel = toPosix(path.relative(ROOT, dir));
+  return FILTERS.find((f) => f.dir.test(rel))?.keep ?? null;
+};
+// Does `dir` contain anything the filter would show, at any depth?
+function hasVisible(dir, keep) {
+  return fs.readdirSync(dir, { withFileTypes: true })
+    .filter((e) => !EXCLUDE.has(e.name))
+    .some((e) => e.isDirectory()
+      ? hasVisible(path.join(dir, e.name), keep)
+      : e.name !== 'index.html' && keep(e.name));
+}
+
 // A directory "has its own index" (an app/page we must not clobber) unless the
 // index.html present is one WE generated (identified by MARKER).
 function hasOwnIndex(dir) {
@@ -59,13 +84,16 @@ function renderedTwin(dir, name) {
 function renderListing(dir) {
   const entries = fs.readdirSync(dir, { withFileTypes: true })
     .filter((e) => !EXCLUDE.has(e.name));
-  const dirs = entries.filter((e) => e.isDirectory()).map((e) => e.name).sort();
+  const keep = filterFor(dir);
+  const dirs = entries.filter((e) => e.isDirectory())
+    .filter((e) => !keep || hasVisible(path.join(dir, e.name), keep))
+    .map((e) => e.name).sort();
   const allFiles = entries.filter((e) => e.isFile()).map((e) => e.name)
     .filter((n) => n !== 'index.html');
   // Generated .html twins of .md files are reached through the .md entry
   // (below), so don't list them a second time.
   const twins = new Set(allFiles.map((n) => renderedTwin(dir, n)).filter(Boolean));
-  const files = allFiles.filter((n) => !twins.has(n)).sort();
+  const files = allFiles.filter((n) => !twins.has(n) && (!keep || keep(n))).sort();
 
   const rel = toPosix(path.relative(ROOT, dir));
   const title = rel === '' ? '/' : '/' + rel + '/';
