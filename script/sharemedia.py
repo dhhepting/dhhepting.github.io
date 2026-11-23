@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
-import sys, os, datetime, subprocess, re
+import sys, os, csv, datetime, re, stat
 import dropbox
-from dropbox.files import WriteMode
 from dropbox.exceptions import ApiError, AuthError
 
 print(datetime.datetime.now())
@@ -10,10 +9,18 @@ print(datetime.datetime.now(),file=sys.stderr)
 # arguments to this script:
 # - the absolute path to the website's local root directory
 # - the course/semester (in that form): i.e. CS-428+828/201830
-# - the absolute path to the local Dropbox directory
+# - (optional) a meet number whose media.csv entries are cross-checked
+#   against the files found in Dropbox
+#
+# Credentials (environment variables, or ~/.secrets with chmod 600):
+# - DB_APP_KEY and DB_REFRESH_TOKEN   (preferred; access tokens are refreshed
+#   automatically -- see the setup note at the end of this file)
+# - DB_ACCESS_TOKEN                   (fallback; expires after ~4 hours)
+# Optional:
+# - DROPBOX_LOCAL_DIR                 (local Dropbox folder; default ~/Dropbox)
 if (len(sys.argv) not in (3,4)):
   print (sys.argv[0],"must be invoked with \"<path-to-site-directory> <course>/<semester> [meet_to_check]\"")
-  sys.exit()
+  sys.exit(1)
 
 print("OFFERING: ", sys.argv[2])
 # get site directory, make sure it ends with "/"
@@ -21,7 +28,6 @@ sitedir = (sys.argv[1])
 print("SITE DIR: ", sitedir)
 if (not sitedir.endswith("/")):
   sitedir += "/"
-#datadir = sitedir + "_data/teaching/media/"
 datadir = sitedir + '_data/teaching/' + sys.argv[2] + '/'
 print("DATA DIR: ", datadir)
 
@@ -30,56 +36,160 @@ offdir = (sys.argv[2]).split('/')
 print('split:',offdir)
 if (len(offdir) != 2):
   print (sys.argv[0],"must be invoked with \"<path-to-site-directory> <course>/<semester>\"")
-  sys.exit()
+  sys.exit(1)
 off_crs = offdir[0]
 off_sem = offdir[1]
 off_id = off_crs + "-" + off_sem
 
-# Get Dropbox OAuth2 access token from environment variable
-# See <https://blogs.dropbox.com/developers/2014/05/generate-an-access-token [...]
-# for how to generate one for an account.
 
-import stat
+# ---------------------------------------------------------------------------
+# Dropbox credentials
+# ---------------------------------------------------------------------------
 
-def load_dropbox_token():
-    """Return DB_ACCESS_TOKEN from the environment, else from ~/.secrets."""
-    token = os.environ.get("DB_ACCESS_TOKEN", "").strip()
-    if token:
-        return token
+SECRET_NAMES = ("DB_APP_KEY", "DB_REFRESH_TOKEN", "DB_ACCESS_TOKEN")
+
+def load_secrets(names=SECRET_NAMES):
+    """Return {name: value} for the credentials found in ~/.secrets and/or
+    the environment. The environment wins, but a warning is printed when it
+    silently disagrees with the file (a stale exported variable is a classic
+    way to keep using an old token). Values are never printed."""
+    from_file = {}
     path = os.path.expanduser("~/.secrets")
     try:
         if os.stat(path).st_mode & (stat.S_IRWXG | stat.S_IRWXO):
             sys.exit(f"ERROR: {path} is accessible by others; run: chmod 600 {path}")
         with open(path, encoding="utf-8") as f:
-            for line in f:
+            for lineno, line in enumerate(f, 1):
+                # NAME=value, also tolerating spaces around "=", an "export "
+                # prefix, optional quotes and a trailing "# comment"
                 m = re.match(
-                    r'\s*(?:export\s+)?DB_ACCESS_TOKEN=["\']?([^"\'\s]+)["\']?\s*$', line)
-                if m:
-                    return m.group(1)
+                    r'\s*(?:export\s+)?(\w+)\s*=\s*(["\']?)([^"\'\s#]+)\2\s*(?:#.*)?$', line)
+                if m and m.group(1) in names:
+                    from_file[m.group(1)] = m.group(3)
+                elif not m and any(n in line for n in names):
+                    print(f"WARNING: {path} line {lineno} mentions a credential "
+                          "name but is not in NAME=value form; ignored.",
+                          file=sys.stderr)
     except FileNotFoundError:
         pass
-    sys.exit("ERROR: DB_ACCESS_TOKEN not found in environment or ~/.secrets")
+    vals = dict(from_file)
+    for n in names:
+        v = os.environ.get(n, "").strip()
+        if v:
+            if n in from_file and from_file[n] != v:
+                print(f"WARNING: {n} in the environment differs from {path}; "
+                      "using the environment value.", file=sys.stderr)
+            vals[n] = v
+    return vals
 
-TOKEN = load_dropbox_token()
 
-# Check that access token is valid
-if (len(TOKEN) == 0):
-  sys.exit("ERROR: Access token not found.")
-else:
-  # Create an instance of a Dropbox class, which can make requests to the API.
-  dbx = dropbox.Dropbox(TOKEN)
-  # Check that the access token is valid
-  try:
-    dbx.users_get_current_account()
-  except AuthError as err:
-    sys.exit("ERROR: Invalid access token; try re-generating an "
-      "access token from the app console on the web.")
+def connect_to_dropbox():
+    """Return an authenticated dropbox.Dropbox client, or exit with a message
+    that says what is actually wrong."""
+    secrets = load_secrets()
+    app_key = secrets.get("DB_APP_KEY")
+    refresh = secrets.get("DB_REFRESH_TOKEN")
+    bare = secrets.get("DB_ACCESS_TOKEN")
 
-# Dropbox access token is valid at this point
+    if app_key and refresh:
+        # Short-lived access tokens are obtained and renewed by the SDK.
+        client = dropbox.Dropbox(oauth2_refresh_token=refresh, app_key=app_key)
+        refreshing = True
+    elif bare:
+        print("WARNING: using a bare DB_ACCESS_TOKEN. Dropbox access tokens "
+              "expire after about 4 hours; set DB_APP_KEY and DB_REFRESH_TOKEN "
+              "instead.", file=sys.stderr)
+        client = dropbox.Dropbox(bare)
+        refreshing = False
+    else:
+        found = [n for n in SECRET_NAMES if n in secrets]
+        sys.exit("ERROR: no usable Dropbox credentials. Found: "
+                 + (", ".join(found) or "none")
+                 + ". Need DB_APP_KEY and DB_REFRESH_TOKEN (preferred) or "
+                 "DB_ACCESS_TOKEN, in the environment or in ~/.secrets.")
 
-# walk through that directory and get sharing link for each file
-# replace dropbox.com with dropboxcontent in URL
-dbmedia_dir = "/Users/hepting/Dropbox/teaching/" + "m-" + off_id + "/"
+    try:
+        if refreshing:
+            client.check_and_refresh_access_token()
+        client.users_get_current_account()
+    except AuthError as err:
+        e = err.error
+        if e.is_expired_access_token():
+            if refreshing:
+                sys.exit("ERROR: access token expired and could not be refreshed; "
+                         "check DB_APP_KEY / DB_REFRESH_TOKEN.")
+            sys.exit("ERROR: the access token has expired. Use DB_APP_KEY and "
+                     "DB_REFRESH_TOKEN so it refreshes itself (see setup note at "
+                     "the end of this script), or generate a new token in the "
+                     "app console as a stopgap.")
+        if e.is_invalid_access_token():
+            sys.exit("ERROR: Dropbox rejected the credentials as invalid "
+                     "(revoked or mistyped); re-authorize the app.")
+        if e.is_missing_scope():
+            sys.exit(f"ERROR: the app is missing a required permission: {e}")
+        sys.exit(f"ERROR: Dropbox authentication failed: {e}")
+    except Exception as err:
+        sys.exit(f"ERROR: could not authenticate with Dropbox "
+                 f"({type(err).__name__}: {err})")
+    return client
+
+
+dbx = connect_to_dropbox()
+
+# Dropbox credentials are valid at this point
+
+
+# ---------------------------------------------------------------------------
+# Shared links
+# ---------------------------------------------------------------------------
+
+def get_shared_url(client, dropbox_path):
+    """Return a sharing URL for dropbox_path (relative to the Dropbox root,
+    with a leading "/"), creating the link if it does not yet exist.
+    Needs the sharing.write permission."""
+    try:
+        url = client.sharing_create_shared_link_with_settings(dropbox_path).url
+    except ApiError as err:
+        exists = getattr(err.error, "is_shared_link_already_exists", None)
+        if exists is not None and exists():
+            links = client.sharing_list_shared_links(
+                path=dropbox_path, direct_only=True).links
+            if links:
+                url = links[0].url
+            else:
+                raise
+        else:
+            raise
+    # replace www.dropbox with dl.dropboxusercontent in URL
+    return url.replace('www.dropbox', 'dl.dropboxusercontent')
+
+
+def meet_of(filename):
+    """Two-digit meet number from a media filename such as '02-1.jpg' or
+    '2_intro.mp4'; '00' if the name does not start with a number."""
+    base = str(filename).split(".")[0].replace("_", "-").replace(" ", "-")
+    try:
+        return str(int(base.split("-")[0])).zfill(2)
+    except Exception:
+        return "00"
+
+
+def read_media_csv(path):
+    """Return a list of (meet, file, url) rows from media.csv (header skipped)."""
+    rows = []
+    with open(path, 'r', encoding='utf-8', newline='') as mf:
+        reader = csv.reader(mf)
+        next(reader, None)
+        for row in reader:
+            if len(row) >= 3:
+                # tolerate an unquoted comma inside the URL
+                rows.append((row[0].strip(), row[1], ','.join(row[2:]).strip()))
+    return rows
+
+
+# walk through the media directory and get a sharing link for each file
+dropbox_root = os.environ.get("DROPBOX_LOCAL_DIR") or os.path.expanduser("~/Dropbox")
+dbmedia_dir = os.path.join(dropbox_root, "teaching", "m-" + off_id) + "/"
 filedict = {}
 # path to local media.csv in site data (normalize + in path)
 dbmedia_csv = datadir.replace("+","_") + "media.csv"
@@ -87,115 +197,74 @@ dbmedia_csv = datadir.replace("+","_") + "media.csv"
 existing = {}
 if os.path.exists(dbmedia_csv):
   try:
-    with open(dbmedia_csv, 'r', encoding='utf-8') as mf:
-      # skip header, parse lines: meet,file,URL
-      first = True
-      for line in mf:
-        if first:
-          first = False
-          continue
-        parts = line.rstrip('\n').split(',')
-        if len(parts) >= 3:
-          fname = parts[1]
-          url = ','.join(parts[2:]).strip()
-          if url:
-            existing[fname] = url
+    for _meet, fname, url in read_media_csv(dbmedia_csv):
+      if url:
+        existing[fname] = url
   except Exception as e:
     print(f"Warning: failed to read existing media.csv: {e}")
 for root, subdirs, files in os.walk(dbmedia_dir):
-    print(dbmedia_dir)
+    print(root)
     for filename in files:
         if (filename != ".DS_Store"):
             file_path = os.path.join(root, filename)
-            db_path = os.path.join(dbmedia_dir, filename)
-            dbp = db_path[len("Users/hepting/Dropbox/"):]
+            # path as the Dropbox API wants it: relative to the Dropbox root,
+            # leading "/", always "/"-separated (correct for subdirectories too)
+            dbp = "/" + os.path.relpath(file_path, dropbox_root).replace(os.sep, "/")
             try:
                 print(dbp)
-                # reuse existing URL if present
-                if filename in existing and existing[filename]:
+                # reuse existing URL if present (no API call needed)
+                if existing.get(filename):
                     filedict[filename] = existing[filename]
-                else:
-                    # try simple normalization fallbacks: underscore <-> hyphen
-                    alt = None
-                    if "_" in filename:
-                      alt = filename.replace("_","-")
-                    elif "-" in filename:
-                      alt = filename.replace("-","_")
-                    if alt and alt in existing and existing[alt]:
-                      # reuse the existing URL for the alternate name
-                      filedict[filename] = existing[alt]
-                      existing[filename] = existing[alt]
-                      continue
-                    # try removing spaces or replacing spaces with hyphen
-                    if " " in filename:
-                      alt2 = filename.replace(" ", "-")
-                      if alt2 in existing and existing[alt2]:
-                        filedict[filename] = existing[alt2]
-                        existing[filename] = existing[alt2]
-                        continue
-                    # fall through to create a new shared link
-                    
-                share = dbx.sharing_create_shared_link(dbp)
-                shared_url = (share.url).replace('www.dropbox','dl.dropboxusercontent')
+                    continue
+                # try simple normalization fallbacks: underscore <-> hyphen
+                alt = None
+                if "_" in filename:
+                  alt = filename.replace("_","-")
+                elif "-" in filename:
+                  alt = filename.replace("-","_")
+                if alt and existing.get(alt):
+                  # reuse the existing URL for the alternate name
+                  filedict[filename] = existing[alt]
+                  existing[filename] = existing[alt]
+                  continue
+                # try replacing spaces with hyphen
+                if " " in filename:
+                  alt2 = filename.replace(" ", "-")
+                  if existing.get(alt2):
+                    filedict[filename] = existing[alt2]
+                    existing[filename] = existing[alt2]
+                    continue
+                # nothing known: create (or look up) a shared link
+                shared_url = get_shared_url(dbx, dbp)
                 filedict[filename] = shared_url
                 # add to existing map so new entries are preserved
                 existing[filename] = shared_url
             except ApiError as err:
-                print(err)
+                print(f"{filename}: {err}")
 
 
 # write sharing link details to csv file in _data directory of site
-with open(dbmedia_csv, "w", encoding='utf-8') as data_file:
-  data_file.write("meet,file,URL\n")
+with open(dbmedia_csv, "w", encoding='utf-8', newline='') as data_file:
+  writer = csv.writer(data_file, lineterminator="\n")
+  writer.writerow(["meet", "file", "URL"])
   # Use the keys from the combined `existing`/filedict map so we include preserved URLs
   # Sort by filename (column 2) for predictable ordering
   for w in sorted(existing.keys()):
-    try:
-      # Normalize filename start: treat underscores and spaces like hyphens
-      base = str(w).split(".")[0]
-      base = base.replace("_","-")
-      base = base.replace(" ", "-")
-      if "-" in base:
-        parts = base.split("-")
-        meet_candidate = parts[0]
-      else:
-        meet_candidate = base
-      try:
-        meetval = str(int(meet_candidate)).zfill(2)
-      except Exception:
-        meetval = "00"
-    except Exception:
-      meetval = "00"
-    url = existing.get(w, '')
-    data_str = f"{meetval},{w},{url}\n"
-    print(data_str.strip())
-    data_file.write(data_str)
+    row = [meet_of(w), w, existing.get(w, '')]
+    print(",".join(row))
+    writer.writerow(row)
 
 
-def _collect_dropbox_files_for_meet(meet, db_dir):
-  """Return set of filenames in db_dir that look like they belong to meet.
-  We match filenames starting with either zero-padded meet (e.g. '02-') or
-  the integer meet without padding (e.g. '2-'), to be robust."""
-  # Build a regex that matches filenames that start with the meet number
-  # allowing zero-padding and separators like '-' or '_', e.g. '20-5.jpg'
+def _filter_filenames_for_meet_from_names(meet, names):
+  """Filter an iterable of filenames, returning those that belong to meet.
+  Matches filenames starting with the meet number, optionally zero-padded,
+  followed by '-' or '_' (e.g. '02-1.jpg', '2_intro.mp4', '20-5.jpg')."""
   try:
-    meet_int = int(meet)
+    meet_str = str(int(meet))
   except Exception:
-    meet_int = None
-  if meet_int is None:
     meet_str = str(meet)
-  else:
-    meet_str = str(meet_int)
-  # Match start of filename, optional zero padding, then separator '-' or '_'
   pattern = re.compile(rf'^0*{re.escape(meet_str)}(?:[-_]).*', re.IGNORECASE)
-  found = set()
-  for root, subdirs, files in os.walk(db_dir):
-    for fn in files:
-      if fn == ".DS_Store":
-        continue
-      if pattern.match(fn):
-        found.add(fn)
-  return found
+  return {fn for fn in names if fn != ".DS_Store" and pattern.match(fn)}
 
 
 def _collect_media_csv_for_meet(meet, csvpath):
@@ -204,49 +273,19 @@ def _collect_media_csv_for_meet(meet, csvpath):
   if not os.path.exists(csvpath):
     return want
   try:
-    with open(csvpath, 'r', encoding='utf-8') as mf:
-      first = True
-      for line in mf:
-        if first:
-          first = False
-          continue
-        parts = line.rstrip('\n').split(',')
-        if len(parts) >= 2:
-          meetcol = parts[0].strip()
-          fname = parts[1].strip()
-          if not meetcol:
-            continue
-          try:
-            if int(meetcol) == int(meet):
-              want.add(fname)
-          except Exception:
-            # fallback to string compare (allow padded vs non-padded)
-            if meetcol == str(meet) or meetcol == str(meet).zfill(2):
-              want.add(fname)
+    for meetcol, fname, _url in read_media_csv(csvpath):
+      if not meetcol:
+        continue
+      try:
+        if int(meetcol) == int(meet):
+          want.add(fname)
+      except Exception:
+        # fallback to string compare (allow padded vs non-padded)
+        if meetcol == str(meet) or meetcol == str(meet).zfill(2):
+          want.add(fname)
   except Exception as e:
     print(f"Warning: failed to read media.csv for meet check: {e}")
   return want
-
-
-def _filter_filenames_for_meet_from_names(meet, names):
-  """Filter an iterable of filenames, returning those that belong to meet.
-  This uses the same regex logic as the os.walk-based collector but works
-  from an explicit list of filenames (e.g., keys from `existing` or
-  `filedict`)."""
-  import re
-  try:
-    meet_int = int(meet)
-  except Exception:
-    meet_int = None
-  meet_str = str(meet_int) if meet_int is not None else str(meet)
-  pattern = re.compile(rf'^0*{re.escape(meet_str)}(?:[-_]).*', re.IGNORECASE)
-  found = set()
-  for fn in names:
-    if fn == ".DS_Store":
-      continue
-    if pattern.match(fn):
-      found.add(fn)
-  return found
 
 
 # Optional: check that media.csv entries for a given meet match files in Dropbox
@@ -276,3 +315,26 @@ if len(sys.argv) == 4:
       print("  ", f)
   else:
     print("No extra files in media.csv (media.csv -> Dropbox)")
+
+# ---------------------------------------------------------------------------
+# One-time setup note: getting DB_APP_KEY and DB_REFRESH_TOKEN
+#
+# 1. In the Dropbox app console, open the app's Permissions tab and enable
+#    account_info.read and sharing.write (and files.metadata.read if you add
+#    file listing later); click Submit.
+# 2. Run once, anywhere:
+#
+#      from dropbox import DropboxOAuth2FlowNoRedirect
+#      flow = DropboxOAuth2FlowNoRedirect("<APP_KEY>", use_pkce=True,
+#                                         token_access_type="offline")
+#      print("Visit:", flow.start())
+#      print("DB_REFRESH_TOKEN =", flow.finish(input("Code: ").strip()).refresh_token)
+#
+# 3. Put these two lines in ~/.secrets and run: chmod 600 ~/.secrets
+#
+#      DB_APP_KEY=<APP_KEY>
+#      DB_REFRESH_TOKEN=<the refresh token printed above>
+#
+# If you change the app's permissions later, repeat steps 2-3; an existing
+# refresh token keeps the scopes it was issued with.
+# ---------------------------------------------------------------------------
