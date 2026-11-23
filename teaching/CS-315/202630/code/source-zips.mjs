@@ -112,8 +112,8 @@ and shader files, which browsers only allow over http.)
 
 /**
  * @param {object}   opts
- * @param {string[]} opts.apps  app entry pages, relative to root (e.g. 'experimental/modular/ShaderStages/app.html')
- * @param {string}   opts.base  folder the app names are taken relative to (e.g. 'experimental/modular')
+ * @param {string[]} opts.apps  app entry pages, relative to root (e.g. 'experimental/built/ShaderStages/app.html')
+ * @param {string}   opts.base  folder the app names are taken relative to (e.g. 'experimental/built')
  * @param {string}   opts.root  project root
  * @param {string}  [opts.dir]  subfolder of outDir for the zips (default 'downloads')
  * @param {boolean} [opts.txtMirror] also write browsable .txt copies and index pages (default true)

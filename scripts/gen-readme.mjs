@@ -5,7 +5,7 @@
 //   node gen-readme.mjs <dir> --check   exit 1 if README.md is out of date (for CI / hooks)
 //   node gen-readme.mjs <dir> --stdout  print the generated block only
 //   add --all to list every .mjs, ignoring the Jekyll configuration
-//   --apps-base=<dir>   where the modular apps live (default experimental/modular)
+//   --apps-base=<dir>   where the built apps live (default experimental/built)
 //   --downloads=<dir>   where the build puts source downloads (default dist/downloads)
 //
 // Only the text between the BEGIN/END markers is replaced; everything else in
@@ -138,7 +138,7 @@ async function loadFilter(startDir) {
 const { served, source: jekyllSource } = await loadFilter(root);
 const skipped = new Map();                                 // excluded path -> number of .mjs files it hides
 
-const appsBase = resolve(root, opt('apps-base', 'experimental/modular'));
+const appsBase = resolve(root, opt('apps-base', 'experimental/built'));
 const downloads = opt('downloads', 'dist/downloads');
 const apps = new Map();                                    // app name -> { dir, count }
 

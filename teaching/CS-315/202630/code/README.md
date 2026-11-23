@@ -48,143 +48,171 @@ breadcrumb: Code README
 
 ### `experimental/built/bump-map-explorer/`
 
+*Source for `bump-map-explorer` (read-only copies): [browse all files](./dist/downloads/bump-map-explorer/index.html) · [download .zip](./dist/downloads/bump-map-explorer.zip)*
+
 | File | Description |
 | --- | --- |
-| [`examples.mjs`](./experimental/built/bump-map-explorer/examples.mjs) | The explorer's menu. |
-| [`heightFields.mjs`](./experimental/built/bump-map-explorer/heightFields.mjs) | *(no header comment)* |
-| [`honolulu256.mjs`](./experimental/built/bump-map-explorer/honolulu256.mjs) | *(no header comment)* |
-| [`main.mjs`](./experimental/built/bump-map-explorer/main.mjs) | *(no header comment)* |
+| [`examples.mjs`](./dist/downloads/bump-map-explorer/experimental/built/bump-map-explorer/examples.mjs.txt) | The explorer's menu. |
+| [`heightFields.mjs`](./dist/downloads/bump-map-explorer/experimental/built/bump-map-explorer/heightFields.mjs.txt) | *(no header comment)* |
+| [`honolulu256.mjs`](./dist/downloads/bump-map-explorer/experimental/built/bump-map-explorer/honolulu256.mjs.txt) | *(no header comment)* |
+| [`main.mjs`](./dist/downloads/bump-map-explorer/experimental/built/bump-map-explorer/main.mjs.txt) | *(no header comment)* |
 
 ### `experimental/built/chaos-dragon/`
 
+*Source for `chaos-dragon` (read-only copies): [browse all files](./dist/downloads/chaos-dragon/index.html) · [download .zip](./dist/downloads/chaos-dragon.zip)*
+
 | File | Description |
 | --- | --- |
-| [`chaosgame.mjs`](./experimental/built/chaos-dragon/chaosgame.mjs) | DOM-free renderer for a two-map chaos game. |
-| [`ifs.mjs`](./experimental/built/chaos-dragon/ifs.mjs) | the mathematics of the chaos game. |
-| [`main.mjs`](./experimental/built/chaos-dragon/main.mjs) | the controller. |
+| [`chaosgame.mjs`](./dist/downloads/chaos-dragon/experimental/built/chaos-dragon/chaosgame.mjs.txt) | DOM-free renderer for a two-map chaos game. |
+| [`ifs.mjs`](./dist/downloads/chaos-dragon/experimental/built/chaos-dragon/ifs.mjs.txt) | the mathematics of the chaos game. |
+| [`main.mjs`](./dist/downloads/chaos-dragon/experimental/built/chaos-dragon/main.mjs.txt) | the controller. |
 
 ### `experimental/built/chaos-dragon/test/`
 
 | File | Description |
 | --- | --- |
-| [`smoke.mjs`](./experimental/built/chaos-dragon/test/smoke.mjs) | node test/smoke.mjs      (needs:  npm install jsdom) Runs the REAL main.mjs against app.html in jsdom, with: * the REAL ../common/initShadersJS.mjs (so run i... |
-| [`verify.mjs`](./experimental/built/chaos-dragon/test/verify.mjs) | node test/verify.mjs Maths checks plus a ChaosGame run against a recording mock of WebGL2. |
+| [`smoke.mjs`](./dist/downloads/chaos-dragon/experimental/built/chaos-dragon/test/smoke.mjs.txt) | node test/smoke.mjs      (needs:  npm install jsdom) Runs the REAL main.mjs against app.html in jsdom, with: * the REAL ../common/initShadersJS.mjs (so run i... |
+| [`verify.mjs`](./dist/downloads/chaos-dragon/experimental/built/chaos-dragon/test/verify.mjs.txt) | node test/verify.mjs Maths checks plus a ChaosGame run against a recording mock of WebGL2. |
 
 ### `experimental/built/colour-cube/`
 
+*Source for `colour-cube` (read-only copies): [browse all files](./dist/downloads/colour-cube/index.html) · [download .zip](./dist/downloads/colour-cube.zip)*
+
 | File | Description |
 | --- | --- |
-| [`cube.mjs`](./experimental/built/colour-cube/cube.mjs) | A DOM-free renderer for a unit colour cube. |
-| [`main.mjs`](./experimental/built/colour-cube/main.mjs) | Controller: owns the canvas and GL context, loads the shader files, drives the render loop, and tracks the current viewing mode. |
-| [`matrix.mjs`](./experimental/built/colour-cube/matrix.mjs) | A tiny, dependency-free set of 4x4 matrix helpers. |
+| [`cube.mjs`](./dist/downloads/colour-cube/experimental/built/colour-cube/cube.mjs.txt) | A DOM-free renderer for a unit colour cube. |
+| [`main.mjs`](./dist/downloads/colour-cube/experimental/built/colour-cube/main.mjs.txt) | Controller: owns the canvas and GL context, loads the shader files, drives the render loop, and tracks the current viewing mode. |
+| [`matrix.mjs`](./dist/downloads/colour-cube/experimental/built/colour-cube/matrix.mjs.txt) | A tiny, dependency-free set of 4x4 matrix helpers. |
 
 ### `experimental/built/diffusion-cube/`
 
+*Source for `diffusion-cube` (read-only copies): [browse all files](./dist/downloads/diffusion-cube/index.html) · [download .zip](./dist/downloads/diffusion-cube.zip)*
+
 | File | Description |
 | --- | --- |
-| [`gl-utils.mjs`](./experimental/built/diffusion-cube/gl-utils.mjs) | Small WebGL2 helpers. |
-| [`main.mjs`](./experimental/built/diffusion-cube/main.mjs) | Controller: the only module that touches the DOM. |
-| [`math.mjs`](./experimental/built/diffusion-cube/math.mjs) | Minimal column-major mat4 helpers (same layout WebGL expects). |
-| [`scene.mjs`](./experimental/built/diffusion-cube/scene.mjs) | Cube + sphere meshes that sample the simulation's trail texture. |
-| [`sim.mjs`](./experimental/built/diffusion-cube/sim.mjs) | GPU particle diffusion with ping-pong textures. |
+| [`gl-utils.mjs`](./dist/downloads/diffusion-cube/experimental/built/diffusion-cube/gl-utils.mjs.txt) | Small WebGL2 helpers. |
+| [`main.mjs`](./dist/downloads/diffusion-cube/experimental/built/diffusion-cube/main.mjs.txt) | Controller: the only module that touches the DOM. |
+| [`math.mjs`](./dist/downloads/diffusion-cube/experimental/built/diffusion-cube/math.mjs.txt) | Minimal column-major mat4 helpers (same layout WebGL expects). |
+| [`scene.mjs`](./dist/downloads/diffusion-cube/experimental/built/diffusion-cube/scene.mjs.txt) | Cube + sphere meshes that sample the simulation's trail texture. |
+| [`sim.mjs`](./dist/downloads/diffusion-cube/experimental/built/diffusion-cube/sim.mjs.txt) | GPU particle diffusion with ping-pong textures. |
 
 ### `experimental/built/diffusion-explorer/`
 
+*Source for `diffusion-explorer` (read-only copies): [browse all files](./dist/downloads/diffusion-explorer/index.html) · [download .zip](./dist/downloads/diffusion-explorer.zip)*
+
 | File | Description |
 | --- | --- |
-| [`examples.mjs`](./experimental/built/diffusion-explorer/examples.mjs) | The diffusion explorer's menu, and how a side-by-side comparison splits the settings between its two simulations. |
-| [`honolulu256.mjs`](./experimental/built/diffusion-explorer/honolulu256.mjs) | Honolulu elevation data from the textbook's honolulu256.js, as an ES module. |
-| [`main.mjs`](./experimental/built/diffusion-explorer/main.mjs) | *(no header comment)* |
-| [`seeds.mjs`](./experimental/built/diffusion-explorer/seeds.mjs) | Starting images for the diffusion explorer, a CPU reference for every update rule in shaders/step.frag, and the measurements the page reports. |
+| [`examples.mjs`](./dist/downloads/diffusion-explorer/experimental/built/diffusion-explorer/examples.mjs.txt) | The diffusion explorer's menu, and how a side-by-side comparison splits the settings between its two simulations. |
+| [`honolulu256.mjs`](./dist/downloads/diffusion-explorer/experimental/built/diffusion-explorer/honolulu256.mjs.txt) | Honolulu elevation data from the textbook's honolulu256.js, as an ES module. |
+| [`main.mjs`](./dist/downloads/diffusion-explorer/experimental/built/diffusion-explorer/main.mjs.txt) | *(no header comment)* |
+| [`seeds.mjs`](./dist/downloads/diffusion-explorer/experimental/built/diffusion-explorer/seeds.mjs.txt) | Starting images for the diffusion explorer, a CPU reference for every update rule in shaders/step.frag, and the measurements the page reports. |
 
 ### `experimental/built/gouraud-v-phong/`
 
+*Source for `gouraud-v-phong` (read-only copies): [browse all files](./dist/downloads/gouraud-v-phong/index.html) · [download .zip](./dist/downloads/gouraud-v-phong.zip)*
+
 | File | Description |
 | --- | --- |
-| [`main.mjs`](./experimental/built/gouraud-v-phong/main.mjs) | *(no header comment)* |
+| [`main.mjs`](./dist/downloads/gouraud-v-phong/experimental/built/gouraud-v-phong/main.mjs.txt) | *(no header comment)* |
 
 ### `experimental/built/indexed-square/`
 
+*Source for `indexed-square` (read-only copies): [browse all files](./dist/downloads/indexed-square/index.html) · [download .zip](./dist/downloads/indexed-square.zip)*
+
 | File | Description |
 | --- | --- |
-| [`main.mjs`](./experimental/built/indexed-square/main.mjs) | *(no header comment)* |
+| [`main.mjs`](./dist/downloads/indexed-square/experimental/built/indexed-square/main.mjs.txt) | *(no header comment)* |
 
 ### `experimental/built/light-view-explorer/`
 
+*Source for `light-view-explorer` (read-only copies): [browse all files](./dist/downloads/light-view-explorer/index.html) · [download .zip](./dist/downloads/light-view-explorer.zip)*
+
 | File | Description |
 | --- | --- |
-| [`examples.mjs`](./experimental/built/light-view-explorer/examples.mjs) | The light-view explorer's menu and comparisons. |
-| [`lightMath.mjs`](./experimental/built/light-view-explorer/lightMath.mjs) | The light-view explorer's pure logic: the scene of shadowMap.js (a cube, a triangle) plus a floor, the light's and the projector's matrices, the slide of pro... |
-| [`main.mjs`](./experimental/built/light-view-explorer/main.mjs) | *(no header comment)* |
+| [`examples.mjs`](./dist/downloads/light-view-explorer/experimental/built/light-view-explorer/examples.mjs.txt) | The light-view explorer's menu and comparisons. |
+| [`lightMath.mjs`](./dist/downloads/light-view-explorer/experimental/built/light-view-explorer/lightMath.mjs.txt) | The light-view explorer's pure logic: the scene of shadowMap.js (a cube, a triangle) plus a floor, the light's and the projector's matrices, the slide of pro... |
+| [`main.mjs`](./dist/downloads/light-view-explorer/experimental/built/light-view-explorer/main.mjs.txt) | *(no header comment)* |
 
 ### `experimental/built/model-view-projection/`
 
+*Source for `model-view-projection` (read-only copies): [browse all files](./dist/downloads/model-view-projection/index.html) · [download .zip](./dist/downloads/model-view-projection.zip)*
+
 | File | Description |
 | --- | --- |
-| [`geometry.mjs`](./experimental/built/model-view-projection/geometry.mjs) | DOM-free mesh builders. |
-| [`main.mjs`](./experimental/built/model-view-projection/main.mjs) | Controller: owns the DOM, the five WebGL2 contexts and the frame loop. |
-| [`matrixUtil.mjs`](./experimental/built/model-view-projection/matrixUtil.mjs) | Small helpers that sit beside Common/MV.mjs. |
-| [`pipeline.mjs`](./experimental/built/model-view-projection/pipeline.mjs) | Composes M, V and P from the interface state, using the student's functions. |
-| [`renderer.mjs`](./experimental/built/model-view-projection/renderer.mjs) | DOM-free renderer for one WebGL2 context. |
-| [`state.mjs`](./experimental/built/model-view-projection/state.mjs) | All interface state lives in one plain object. |
-| [`student.mjs`](./experimental/built/model-view-projection/student.mjs) | STUDENT FILE: this is the only file you need to edit. |
-| [`ui.mjs`](./experimental/built/model-view-projection/ui.mjs) | The interface: one table describes every control; buildPanel() makes the DOM from it and syncControls() keeps it in step with the state object. |
-| [`views.mjs`](./experimental/built/model-view-projection/views.mjs) | What each canvas shows. |
+| [`geometry.mjs`](./dist/downloads/model-view-projection/experimental/built/model-view-projection/geometry.mjs.txt) | DOM-free mesh builders. |
+| [`main.mjs`](./dist/downloads/model-view-projection/experimental/built/model-view-projection/main.mjs.txt) | Controller: owns the DOM, the five WebGL2 contexts and the frame loop. |
+| [`matrixUtil.mjs`](./dist/downloads/model-view-projection/experimental/built/model-view-projection/matrixUtil.mjs.txt) | Small helpers that sit beside Common/MV.mjs. |
+| [`pipeline.mjs`](./dist/downloads/model-view-projection/experimental/built/model-view-projection/pipeline.mjs.txt) | Composes M, V and P from the interface state, using the student's functions. |
+| [`renderer.mjs`](./dist/downloads/model-view-projection/experimental/built/model-view-projection/renderer.mjs.txt) | DOM-free renderer for one WebGL2 context. |
+| [`state.mjs`](./dist/downloads/model-view-projection/experimental/built/model-view-projection/state.mjs.txt) | All interface state lives in one plain object. |
+| [`student.mjs`](./dist/downloads/model-view-projection/experimental/built/model-view-projection/student.mjs.txt) | STUDENT FILE: this is the only file you need to edit. |
+| [`ui.mjs`](./dist/downloads/model-view-projection/experimental/built/model-view-projection/ui.mjs.txt) | The interface: one table describes every control; buildPanel() makes the DOM from it and syncControls() keeps it in step with the state object. |
+| [`views.mjs`](./dist/downloads/model-view-projection/experimental/built/model-view-projection/views.mjs.txt) | What each canvas shows. |
 
 ### `experimental/built/picking-explorer/`
 
+*Source for `picking-explorer` (read-only copies): [browse all files](./dist/downloads/picking-explorer/index.html) · [download .zip](./dist/downloads/picking-explorer.zip)*
+
 | File | Description |
 | --- | --- |
-| [`examples.mjs`](./experimental/built/picking-explorer/examples.mjs) | The picking explorer's menu. |
-| [`main.mjs`](./experimental/built/picking-explorer/main.mjs) | *(no header comment)* |
-| [`pickMath.mjs`](./experimental/built/picking-explorer/pickMath.mjs) | The picking explorer's pure logic: the scenes, the cube mesh with a face index per vertex, ID encodings, a CPU ray cast to check the GPU against, the pick ma... |
+| [`examples.mjs`](./dist/downloads/picking-explorer/experimental/built/picking-explorer/examples.mjs.txt) | The picking explorer's menu. |
+| [`main.mjs`](./dist/downloads/picking-explorer/experimental/built/picking-explorer/main.mjs.txt) | *(no header comment)* |
+| [`pickMath.mjs`](./dist/downloads/picking-explorer/experimental/built/picking-explorer/pickMath.mjs.txt) | The picking explorer's pure logic: the scenes, the cube mesh with a face index per vertex, ID encodings, a CPU ray cast to check the GPU against, the pick ma... |
 
 ### `experimental/built/reflection-explorer/`
 
+*Source for `reflection-explorer` (read-only copies): [browse all files](./dist/downloads/reflection-explorer/index.html) · [download .zip](./dist/downloads/reflection-explorer.zip)*
+
 | File | Description |
 | --- | --- |
-| [`environments.mjs`](./experimental/built/reflection-explorer/environments.mjs) | Procedural cube-map environments, and the cube-map face conventions they depend on. |
-| [`examples.mjs`](./experimental/built/reflection-explorer/examples.mjs) | The explorer's menu. |
-| [`main.mjs`](./experimental/built/reflection-explorer/main.mjs) | *(no header comment)* |
-| [`meshes.mjs`](./experimental/built/reflection-explorer/meshes.mjs) | Mesh generators: non-indexed triangles, positions and unit normals as vec3. |
-| [`reflectMath.mjs`](./experimental/built/reflection-explorer/reflectMath.mjs) | The explorer's pure logic: matrices, orbiting objects, and which settings each half of a split view uses. |
+| [`environments.mjs`](./dist/downloads/reflection-explorer/experimental/built/reflection-explorer/environments.mjs.txt) | Procedural cube-map environments, and the cube-map face conventions they depend on. |
+| [`examples.mjs`](./dist/downloads/reflection-explorer/experimental/built/reflection-explorer/examples.mjs.txt) | The explorer's menu. |
+| [`main.mjs`](./dist/downloads/reflection-explorer/experimental/built/reflection-explorer/main.mjs.txt) | *(no header comment)* |
+| [`meshes.mjs`](./dist/downloads/reflection-explorer/experimental/built/reflection-explorer/meshes.mjs.txt) | Mesh generators: non-indexed triangles, positions and unit normals as vec3. |
+| [`reflectMath.mjs`](./dist/downloads/reflection-explorer/experimental/built/reflection-explorer/reflectMath.mjs.txt) | The explorer's pure logic: matrices, orbiting objects, and which settings each half of a split view uses. |
 
 ### `experimental/built/shader-stages/`
 
+*Source for `shader-stages` (read-only copies): [browse all files](./dist/downloads/shader-stages/index.html) · [download .zip](./dist/downloads/shader-stages.zip)*
+
 | File | Description |
 | --- | --- |
-| [`main.mjs`](./experimental/built/shader-stages/main.mjs) | *(no header comment)* |
-| [`math.mjs`](./experimental/built/shader-stages/math.mjs) | Pure helpers (no DOM, no GL). |
-| [`overlay.mjs`](./experimental/built/shader-stages/overlay.mjs) | *(no header comment)* |
-| [`ShaderDemo.mjs`](./experimental/built/shader-stages/ShaderDemo.mjs) | *(no header comment)* |
+| [`main.mjs`](./dist/downloads/shader-stages/experimental/built/shader-stages/main.mjs.txt) | *(no header comment)* |
+| [`math.mjs`](./dist/downloads/shader-stages/experimental/built/shader-stages/math.mjs.txt) | Pure helpers (no DOM, no GL). |
+| [`overlay.mjs`](./dist/downloads/shader-stages/experimental/built/shader-stages/overlay.mjs.txt) | *(no header comment)* |
+| [`ShaderDemo.mjs`](./dist/downloads/shader-stages/experimental/built/shader-stages/ShaderDemo.mjs.txt) | *(no header comment)* |
 
 ### `experimental/built/shading-comparisons/`
 
+*Source for `shading-comparisons` (read-only copies): [browse all files](./dist/downloads/shading-comparisons/index.html) · [download .zip](./dist/downloads/shading-comparisons.zip)*
+
 | File | Description |
 | --- | --- |
-| [`cube-phong-vs-blinnphong.mjs`](./experimental/built/shading-comparisons/cube-phong-vs-blinnphong.mjs) | shadedCubeHalfway, run twice with its own shader unmodified: uUseHalfway = false (Phong, R . |
-| [`eyespace-vs-objectspace.mjs`](./experimental/built/shading-comparisons/eyespace-vs-objectspace.mjs) | shadedSphereEyeSpace vs shadedSphereObjectSpace: the same per-vertex lighting (vertex normals), computed in two different coordinate systems. |
-| [`sphere1-vs-sphere2.mjs`](./experimental/built/shading-comparisons/sphere1-vs-sphere2.mjs) | shadedSphere1 (per-vertex) vs shadedSphere2 (per-fragment). |
-| [`sphere3-vs-sphere4.mjs`](./experimental/built/shading-comparisons/sphere3-vs-sphere4.mjs) | shadedSphere3 (per-vertex) vs shadedSphere4 (per-fragment). |
+| [`cube-phong-vs-blinnphong.mjs`](./dist/downloads/shading-comparisons/experimental/built/shading-comparisons/cube-phong-vs-blinnphong.mjs.txt) | shadedCubeHalfway, run twice with its own shader unmodified: uUseHalfway = false (Phong, R . |
+| [`eyespace-vs-objectspace.mjs`](./dist/downloads/shading-comparisons/experimental/built/shading-comparisons/eyespace-vs-objectspace.mjs.txt) | shadedSphereEyeSpace vs shadedSphereObjectSpace: the same per-vertex lighting (vertex normals), computed in two different coordinate systems. |
+| [`sphere1-vs-sphere2.mjs`](./dist/downloads/shading-comparisons/experimental/built/shading-comparisons/sphere1-vs-sphere2.mjs.txt) | shadedSphere1 (per-vertex) vs shadedSphere2 (per-fragment). |
+| [`sphere3-vs-sphere4.mjs`](./dist/downloads/shading-comparisons/experimental/built/shading-comparisons/sphere3-vs-sphere4.mjs.txt) | shadedSphere3 (per-vertex) vs shadedSphere4 (per-fragment). |
 
 ### `experimental/built/shading-comparisons/lib/`
 
 | File | Description |
 | --- | --- |
-| [`common.mjs`](./experimental/built/shading-comparisons/lib/common.mjs) | Single adapter to the shared common/ modules. |
-| [`CompareApp.mjs`](./experimental/built/shading-comparisons/lib/CompareApp.mjs) | Two-canvas comparison harness. |
-| [`costModel.mjs`](./experimental/built/shading-comparisons/lib/costModel.mjs) | Informal cost model: count the expensive operations in each shader stage by reading the shader source itself, weight them, and multiply by how many times the... |
-| [`frameMath.mjs`](./experimental/built/shading-comparisons/lib/frameMath.mjs) | Per-frame maths for the two scenes (sphere, cube). |
-| [`LitMeshPane.mjs`](./experimental/built/shading-comparisons/lib/LitMeshPane.mjs) | One canvas + one WebGL2 context + one lit-mesh program. |
-| [`meshes.mjs`](./experimental/built/shading-comparisons/lib/meshes.mjs) | Mesh generators (typed arrays, non-indexed triangles). |
-| [`scenes.mjs`](./experimental/built/shading-comparisons/lib/scenes.mjs) | A scene bundles everything that differs between the sphere demos and the cube demo: default state, controls, animation, mesh and per-frame uniforms. |
-| [`shaderSources.mjs`](./experimental/built/shading-comparisons/lib/shaderSources.mjs) | Loads the shader files with fetch(), so the pages work from any web server (a plain static host, Vite dev, or a Vite build). |
+| [`common.mjs`](./dist/downloads/shading-comparisons/experimental/built/shading-comparisons/lib/common.mjs.txt) | Single adapter to the shared common/ modules. |
+| [`CompareApp.mjs`](./dist/downloads/shading-comparisons/experimental/built/shading-comparisons/lib/CompareApp.mjs.txt) | Two-canvas comparison harness. |
+| [`costModel.mjs`](./dist/downloads/shading-comparisons/experimental/built/shading-comparisons/lib/costModel.mjs.txt) | Informal cost model: count the expensive operations in each shader stage by reading the shader source itself, weight them, and multiply by how many times the... |
+| [`frameMath.mjs`](./dist/downloads/shading-comparisons/experimental/built/shading-comparisons/lib/frameMath.mjs.txt) | Per-frame maths for the two scenes (sphere, cube). |
+| [`LitMeshPane.mjs`](./dist/downloads/shading-comparisons/experimental/built/shading-comparisons/lib/LitMeshPane.mjs.txt) | One canvas + one WebGL2 context + one lit-mesh program. |
+| [`meshes.mjs`](./dist/downloads/shading-comparisons/experimental/built/shading-comparisons/lib/meshes.mjs.txt) | Mesh generators (typed arrays, non-indexed triangles). |
+| [`scenes.mjs`](./dist/downloads/shading-comparisons/experimental/built/shading-comparisons/lib/scenes.mjs.txt) | A scene bundles everything that differs between the sphere demos and the cube demo: default state, controls, animation, mesh and per-frame uniforms. |
+| [`shaderSources.mjs`](./dist/downloads/shading-comparisons/experimental/built/shading-comparisons/lib/shaderSources.mjs.txt) | Loads the shader files with fetch(), so the pages work from any web server (a plain static host, Vite dev, or a Vite build). |
 
 ### `experimental/built/svg-zoomer/`
 
+*Source for `svg-zoomer` (read-only copies): [browse all files](./dist/downloads/svg-zoomer/index.html) · [download .zip](./dist/downloads/svg-zoomer.zip)*
+
 | File | Description |
 | --- | --- |
-| [`main.mjs`](./experimental/built/svg-zoomer/main.mjs) | Controller for the vector-vs-raster zoom demo. |
-| [`zoomer.mjs`](./experimental/built/svg-zoomer/zoomer.mjs) | A DOM-free renderer that draws one texture across a full-canvas quad and can magnify it toward a focus point. |
+| [`main.mjs`](./dist/downloads/svg-zoomer/experimental/built/svg-zoomer/main.mjs.txt) | Controller for the vector-vs-raster zoom demo. |
+| [`zoomer.mjs`](./dist/downloads/svg-zoomer/experimental/built/svg-zoomer/zoomer.mjs.txt) | A DOM-free renderer that draws one texture across a full-canvas quad and can magnify it toward a focus point. |
 
 <!-- END:mjs-index -->
