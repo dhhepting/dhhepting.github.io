@@ -1,14 +1,17 @@
-import { mult, translate, scalem, rotateX, rotateY, rotateZ, lookAt, perspective, ortho,
-         radians, flatten, vec3 } from "../../../common/MV.mjs";
-import { initShaders } from '../../../common/initShadersJS.mjs';xd
-import { add3, sub3, mul3, cross3, norm3 } from "./vec.mjs";
+import { mult, translate, scale, rotate, rotateX, rotateZ, radians, flatten, vec3 } from '../../../common/MV.mjs';
+import { initShaders } from '../../../common/initShadersJS.mjs';
+import { mul3, add3, sub3, SCENE_CENTRE, projectorMatrices, cameraMatrices } from "./projectorMath.mjs";
 import { TEX_SIZE, newTexCanvas, TEXTURE_MAKERS } from "./textures.mjs";
 import { makeCube, makeSphere, makeTorus, makeFloor } from "./meshes.mjs";
 
-import sceneVert from "./shaders/scene.vert?raw";
-import sceneFrag from "./shaders/scene.frag?raw";
-import flatVert from "./shaders/flat.vert?raw";
-import flatFrag from "./shaders/flat.frag?raw";
+// Shader files are fetched (not imported with ?raw) so that this page also works
+// when it is served as-is, without a bundler.
+const shaderURLs = {
+    sceneVert: new URL('./shaders/scene.vert', import.meta.url),
+    sceneFrag: new URL('./shaders/scene.frag', import.meta.url),
+    flatVert: new URL('./shaders/flat.vert', import.meta.url),
+    flatFrag: new URL('./shaders/flat.frag', import.meta.url),
+};
 
 // ---------------------------------------------------------------------------
 // Projective texture mapping -- the enriched version
@@ -34,7 +37,6 @@ import flatFrag from "./shaders/flat.frag?raw";
 // ---------------------------------------------------------------------------
 
 const SHADOW_SIZE = 2048;                // size of the shadow (depth) map
-const SCENE_CENTRE = [0.0, -0.3, 0.0];   // what the projector and camera look at
 const FLOOR_Y = -1.3;
 
 let canvas;
@@ -51,7 +53,6 @@ const textures = [];                    // { name, canvas, button }
 let projTexture;                         // texture unit 0: the slide
 let shadowTexture, shadowFBO;            // texture unit 1: depth seen by the projector
 let anisoExt = null;
-let biasMatrix;                          // built in init (needs MV.js)
 
 // cube rotation axis and angle (as in the original)
 const xAxis = 0;
@@ -212,7 +213,17 @@ function locate(program, names) {
     return out;
 }
 
-function init() {
+async function loadShaderSources() {
+    const entries = await Promise.all(Object.entries(shaderURLs).map(async ([key, url]) => {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`Could not load ${url}: ${response.status}`);
+        return [key, await response.text()];
+    }));
+    return Object.fromEntries(entries);
+}
+
+async function init() {
+    const sources = await loadShaderSources();
     canvas = document.getElementById("gl-canvas");
 
     gl = canvas.getContext("webgl2");
@@ -224,13 +235,12 @@ function init() {
     gl.enable(gl.DEPTH_TEST);
     anisoExt = gl.getExtension("EXT_texture_filter_anisotropic");
 
-    biasMatrix = mult(translate(0.5, 0.5, 0.5), scalem(0.5, 0.5, 0.5));
-
+    
     //
     //  Load shaders and look up their uniforms
     //
-    sceneProgram = initShaders(gl, sceneVert, sceneFrag);
-    flatProgram = initShaders(gl, flatVert, flatFrag);
+    sceneProgram = initShaders(gl, sources.sceneVert, sources.sceneFrag);
+    flatProgram = initShaders(gl, sources.flatVert, sources.flatFrag);
 
     sceneLoc = locate(sceneProgram, [
         "uModelMatrix", "uViewMatrix", "uProjectionMatrix", "uTextureMatrix",
@@ -386,44 +396,16 @@ function hexToRgb(hex) {
 
 // view and projection matrices for the light, plus the matrix that
 // takes a world-space point to (s, t, depth, q) texture coordinates
-function computeLight() {
-    const az = radians(params.azimuth);
-    const el = radians(params.elevation);
-    const d = params.distance;
-    const pos = [SCENE_CENTRE[0] + d * Math.cos(el) * Math.cos(az),
-                 SCENE_CENTRE[1] + d * Math.sin(el),
-                 SCENE_CENTRE[2] + d * Math.cos(el) * Math.sin(az)];
-
-    const fwd = norm3(sub3(SCENE_CENTRE, pos));
-    const right0 = norm3(cross3(fwd, [0, 1, 0]));
-    const up0 = cross3(right0, fwd);
-    const r = radians(params.roll);                       // roll = turn the slide in the projector
-    const up = add3(mul3(up0, Math.cos(r)), mul3(right0, Math.sin(r)));
-    const right = norm3(cross3(fwd, up));
-
-    const near = 0.5;
-    const far = d + 8.0;
-    const perspectiveLight = params.projection === "perspective";
-    const half = Math.tan(radians(params.fov / 2));
-    const proj = perspectiveLight
-        ? perspective(params.fov, 1.0, near, far)
-        : ortho(-d * half, d * half, -d * half, d * half, near, far);
-
-    const view = lookAt(vec3(...pos), vec3(...SCENE_CENTRE), vec3(...up));
-    const textureMatrix = mult(biasMatrix, mult(proj, view));      // still to be multiplied by the model matrix
-
-    return { pos, fwd, right, up, half, near, far, perspectiveLight, view, proj, textureMatrix };
-}
 
 function sceneObjects() {
-    const R = mult(rotateX(theta[xAxis]), mult(rotateY(theta[yAxis]), rotateZ(theta[zAxis])));
+    const R = mult(rotateX(theta[xAxis]), mult(rotate(theta[yAxis], vec3(0, 1, 0)), rotateZ(theta[zAxis])));
     const colours = MATERIALS[params.material];
-    const place = (x, y, z, s) => mult(translate(x, y, z), mult(R, scalem(s, s, s)));
+    const place = (x, y, z, s) => mult(translate(x, y, z), mult(R, scale(s, s, s)));
 
     const objects = [];
     if (params.floor) {
         objects.push({ mesh: meshes.floor, albedo: colours[3], surface: 1,
-                       model: mult(translate(0, FLOOR_Y, 0), scalem(6, 1, 6)) });
+                       model: mult(translate(0, FLOOR_Y, 0), scale(6, 1, 6)) });
     }
     if (params.scene === "cube")   objects.push({ mesh: meshes.cube,   albedo: colours[0], surface: 0, model: place(0, 0, 0, 1.5) });
     if (params.scene === "sphere") objects.push({ mesh: meshes.sphere, albedo: colours[1], surface: 0, model: place(0, 0, 0, 1.6) });
@@ -474,16 +456,6 @@ function shadowPass(light, objects) {
     gl.bindFramebuffer(gl.FRAMEBUFFER, null);
 }
 
-function cameraMatrices() {
-    const yaw = radians(camera.yaw);
-    const pitch = radians(camera.pitch);
-    const eye = [SCENE_CENTRE[0] + camera.dist * Math.cos(pitch) * Math.sin(yaw),
-                 SCENE_CENTRE[1] + camera.dist * Math.sin(pitch),
-                 SCENE_CENTRE[2] + camera.dist * Math.cos(pitch) * Math.cos(yaw)];
-    const view = lookAt(vec3(...eye), vec3(...SCENE_CENTRE), vec3(0, 1, 0));
-    const proj = perspective(40, canvas.width / canvas.height, 0.1, 60);
-    return { eye, view, proj };
-}
 
 function scenePass(light, objects, cam) {
     gl.viewport(0, 0, canvas.width, canvas.height);
@@ -572,9 +544,9 @@ function drawLightGizmos(light, cam) {
 function render() {
     animate();
 
-    const light = computeLight();
+    const light = projectorMatrices(params);
     const objects = sceneObjects();
-    const cam = cameraMatrices();
+    const cam = cameraMatrices(camera, canvas.width / canvas.height);
 
     if (params.shadows) shadowPass(light, objects);
     scenePass(light, objects, cam);
@@ -583,4 +555,9 @@ function render() {
     requestAnimationFrame(render);
 }
 
-init();
+init().catch((error) => {
+    console.error(error);
+    const fatal = document.getElementById("fatal");
+    fatal.hidden = false;
+    fatal.textContent = `Could not start: ${error.message}`;
+});

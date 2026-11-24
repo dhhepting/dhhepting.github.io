@@ -1,6 +1,4 @@
-"use strict";
-
-import { add3, sub3, norm3, cross3 } from "./vec.mjs";
+import { add3, sub3, norm3, cross3 } from "./projectorMath.mjs";
 
 // Each generator returns triangle lists: { positions, normals } (flat arrays of xyz)
 

@@ -1,5 +1,3 @@
-"use strict";
-
 export const TEX_SIZE = 512;                    // size of each projected texture
 
 // ---------------------------------------------------------------------------
