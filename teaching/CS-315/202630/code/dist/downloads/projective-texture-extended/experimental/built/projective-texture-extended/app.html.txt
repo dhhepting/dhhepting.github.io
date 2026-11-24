@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projective texture mapping</title>
+<style>
+    :root { --ink: #1c2128; --muted: #596270; --page: #eef0f3; --panel: #fff; --line: #d4d9e0; --stage: #22272f; --accent: #1b8a8f; --focus: #2457c5; }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body { margin: 0; background: var(--page); color: var(--ink); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 1240px; margin: 0 auto; padding: 1.25rem 1.25rem 4rem; }
+    h1 { font-size: 1.7rem; line-height: 1.2; margin: 0.2rem 0 0.4rem; font-weight: 650; }
+    h2 { font-size: 1.15rem; margin: 1.8rem 0 0.4rem; font-weight: 650; }
+    code { font: 0.9em ui-monospace, Menlo, Consolas, monospace; }
+    .lede { max-width: 82ch; margin: 0 0 1rem; color: #323a45; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+    .workspace { display: grid; grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr); gap: 0.75rem; align-items: start; }
+    .stage { margin: 0; background: var(--stage); border-top: 4px solid var(--accent); border-radius: 4px; overflow: hidden; }
+    .stage canvas { display: block; width: 100%; height: auto; touch-action: none; cursor: grab; background: #12141b; }
+    .stage figcaption { padding: 0.5rem 0.75rem; font-size: 0.85rem; color: #aab2bf; }
+    .side { display: grid; gap: 0.6rem; }
+    .panel { margin: 0; padding: 0.6rem 0.75rem; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; font-size: 0.86rem; }
+    .panel canvas { display: block; width: 100%; height: auto; }
+    .status { margin: 0; padding: 0.6rem 0.75rem; background: #eaf3f4; border: 1px solid #b9d6d8; border-radius: 4px; font-size: 0.88rem; }
+    .mono { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.8rem; }
+    .legend span { display: inline-block; margin-right: 0.8rem; }
+    .legend i { display: inline-block; width: 1.2em; height: 0.25em; vertical-align: middle; margin-right: 0.3em; }
+    .controls { margin-top: 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 0.75rem; }
+    fieldset { margin: 0; padding: 0.6rem 0.85rem 0.85rem; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; min-width: 0; }
+    legend { padding: 0 0.3rem; font-weight: 650; font-size: 0.92rem; }
+    .ctl { display: grid; grid-template-columns: 1fr auto; gap: 0.1rem 0.6rem; align-items: center; margin-top: 0.55rem; }
+    .ctl .lab { grid-column: 1 / -1; font-size: 0.9rem; }
+    .ctl input[type=range] { width: 100%; }
+    .ctl select { grid-column: 1 / -1; width: 100%; padding: 0.25rem; font: inherit; }
+    .ctl output { font: 0.85rem ui-monospace, Menlo, Consolas, monospace; min-width: 3.4em; text-align: right; }
+    .ctl.check { grid-template-columns: auto 1fr; }
+    .ctl.check .lab { grid-column: 2; grid-row: 1; }
+    .ctl.color { grid-template-columns: 1fr auto; }
+    .look { margin: 0.2rem 0 0; font-size: 0.9rem; color: #323a45; }
+    .buttons { display: flex; gap: 0.5rem; margin-top: 0.7rem; }
+    button { padding: 0.4rem 0.8rem; font: inherit; font-size: 0.9rem; color: var(--ink); background: #f3f5f8; border: 1px solid var(--line); border-radius: 4px; cursor: pointer; }
+    button:disabled { opacity: 0.5; cursor: default; }
+    .canvasWrap { position: relative; }
+    .canvasWrap #Overlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; background: transparent; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    th, td { text-align: left; padding: 0.3rem 0.4rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { font-weight: 650; }
+    td.bad { color: #b3261e; font-weight: 650; }
+    .notes { max-width: 82ch; }
+    .notes li { margin: 0.4rem 0; }
+    .fatal { color: #a12020; font-weight: 600; }
+    .thumbs { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+    button.thumb { padding: 0; width: 52px; height: 52px; overflow: hidden; background: #000; }
+    button.thumb canvas { display: block; width: 100%; height: 100%; }
+    button.thumb.on { outline: 3px solid var(--accent); outline-offset: 1px; }
+    button.on { background: #d9eeef; border-color: var(--accent); }
+    .ctl input[type=color] { grid-column: 1 / -1; width: 100%; height: 1.8rem; padding: 0; }
+    .buttons { flex-wrap: wrap; }
+    @media (max-width: 800px) { .workspace { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<main>
+    <h1>Projective texture mapping</h1>
+    <p class="lede">A slide projector is a camera that shines its picture instead of recording one. Each vertex goes through the light's view and projection matrices and a bias, which gives the <code>(s, t, depth, q)</code> coordinate that <code>textureProj</code> divides by <code>q</code>. This page extends <code>projectiveTexture</code> with a choice of textures, colour, a floor and several objects to catch the slide, and shadows from a depth map rendered from the same projector.</p>
+
+    <div id="fatal" class="fatal" hidden></div>
+
+    <section class="workspace" aria-label="The scene">
+        <figure class="stage">
+            <canvas id="gl-canvas" width="768" height="768" aria-label="Scene with a projected texture">
+                Oops ... your browser doesn't support the HTML5 canvas element
+            </canvas>
+            <figcaption>Drag to orbit, scroll to zoom · the yellow wireframe is the projector's view volume</figcaption>
+        </figure>
+        <div class="side">
+            <p class="look">Projected texture: <strong id="TextureName"></strong></p>
+            <div id="TextureChoices" class="thumbs" role="group" aria-label="Textures to project"></div>
+            <div class="buttons">
+                <button type="button" id="ButtonUpload">Project your own image&hellip;</button>
+                <input id="TextureFile" type="file" accept="image/*" hidden>
+            </div>
+            <div class="buttons">
+                <button type="button" id="ButtonX">Rotate X</button>
+                <button type="button" id="ButtonY">Rotate Y</button>
+                <button type="button" id="ButtonZ">Rotate Z</button>
+                <button type="button" id="ButtonT">Toggle Cube Rotation</button>
+                <button type="button" id="ButtonL">Toggle Light Rotation</button>
+                <button type="button" id="ButtonReset">Reset everything</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="controls" aria-label="Controls">
+        <fieldset>
+            <legend>The slide</legend>
+            <label class="ctl"><span class="lab">Combine with surface</span><select id="Blend" data-param="blend" data-number><option value="0">Spotlight (slide is the light)</option><option value="1">Decal (slide paints the surface)</option><option value="2">Multiply (slide tints the surface)</option><option value="3">Additive (slide adds light)</option></select></label>
+            <label class="ctl"><span class="lab">Strength</span><input id="Strength" type="range" data-param="strength" min="0" max="2" step="0.05" data-digits="2"><output></output></label>
+            <label class="ctl color"><span class="lab">Light tint</span><input id="Tint" type="color" data-param="tint"></label>
+            <label class="ctl"><span class="lab">Outside the image</span><select id="Wrap" data-param="wrap" data-number><option value="0">Nothing (no light)</option><option value="1">Clamp to edge</option><option value="2">Repeat</option><option value="3">Mirror</option></select></label>
+            <label class="ctl"><span class="lab">Texture filtering</span><select id="Filter" data-param="filter"><option value="nearest">Nearest</option><option value="linear">Linear</option><option value="mipmap">Mipmap + anisotropic</option></select></label>
+            <label class="ctl check"><input id="Circular" type="checkbox" data-param="circular"><span class="lab">Circular aperture</span></label>
+            <label class="ctl"><span class="lab">Aperture edge softness</span><input id="Softness" type="range" data-param="softness" min="0.02" max="1" step="0.01" data-digits="2"><output></output></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Projector</legend>
+            <label class="ctl"><span class="lab">Projection</span><select id="Projection" data-param="projection"><option value="perspective">Perspective (slide projector)</option><option value="orthographic">Orthographic (parallel rays)</option></select></label>
+            <label class="ctl"><span class="lab">Field of view</span><input id="Fov" type="range" data-param="fov" min="10" max="110" step="1" data-unit="&deg;"><output></output></label>
+            <label class="ctl"><span class="lab">Azimuth</span><input id="Azimuth" type="range" data-param="azimuth" min="0" max="360" step="1" data-unit="&deg;"><output></output></label>
+            <label class="ctl"><span class="lab">Elevation</span><input id="Elevation" type="range" data-param="elevation" min="10" max="85" step="1" data-unit="&deg;"><output></output></label>
+            <label class="ctl"><span class="lab">Distance</span><input id="Distance" type="range" data-param="distance" min="3" max="9" step="0.1" data-digits="1"><output></output></label>
+            <label class="ctl"><span class="lab">Roll</span><input id="Roll" type="range" data-param="roll" min="-180" max="180" step="1" data-unit="&deg;"><output></output></label>
+            <label class="ctl check"><input id="Spin" type="checkbox" data-param="spin"><span class="lab">Spin the slide</span></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Scene and shadows</legend>
+            <label class="ctl"><span class="lab">Objects</span><select id="Scene" data-param="scene"><option value="all">Cube, sphere and torus</option><option value="cube">Cube</option><option value="sphere">Sphere</option><option value="torus">Torus</option></select></label>
+            <label class="ctl"><span class="lab">Surface colours</span><select id="Material" data-param="material"><option value="pastel">Pastel</option><option value="saturated">Saturated</option><option value="white">White clay</option><option value="black">Black (as in the original)</option></select></label>
+            <label class="ctl"><span class="lab">Ambient light</span><input id="Ambient" type="range" data-param="ambient" min="0" max="0.6" step="0.01" data-digits="2"><output></output></label>
+            <label class="ctl check"><input id="Floor" type="checkbox" data-param="floor"><span class="lab">Floor</span></label>
+            <label class="ctl check"><input id="Shadows" type="checkbox" data-param="shadows"><span class="lab">Shadows</span></label>
+            <label class="ctl"><span class="lab">Shadow edge softness</span><input id="ShadowSoftness" type="range" data-param="shadowSoftness" min="0.5" max="4" step="0.1" data-digits="1"><output></output></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Display</legend>
+            <label class="ctl check"><input id="ShowFrustum" type="checkbox" data-param="showFrustum"><span class="lab">Show projector frustum</span></label>
+            <label class="ctl check"><input id="ShowLight" type="checkbox" data-param="showLight"><span class="lab">Show light position</span></label>
+            <label class="ctl"><span class="lab">View</span><select id="View" data-param="debug" data-number><option value="0">Normal</option><option value="1">Texture coordinates (s red, t green, behind the projector blue)</option><option value="2">Shadow factor</option></select></label>
+        </fieldset>
+    </section>
+
+    <section class="notes">
+        <h2>What this page changes from projectiveTexture.js</h2>
+        <ul>
+            <li><strong>The projection.</strong> The original computes <code>0.5*clip.xyz + 0.5</code> and hands it to <code>textureProj</code>, which divides by the third component, not by <code>w</code>. Here the vertex shader computes <code>Bias * P_light * V_light * Model * position</code> and <code>textureProj</code> divides by <code>q = w</code>. Points behind the projector have <code>q &lt; 0</code> and are switched off; otherwise they would receive a mirrored copy of the slide.</li>
+            <li><strong>The projector's position.</strong> The original puts the projector at <code>normalize(lightPosition)</code>, 1 unit from the origin, while its facing test uses the light's real position. Here one position is used for both.</li>
+            <li><strong>The sampler.</strong> The original sets <code>uTexture</code> but the shader reads <code>uTextureMap</code>; it works only because unit 0 is the default. Here both names agree.</li>
+            <li><strong>Shadows</strong> use a <code>DEPTH_COMPONENT24</code> texture and a <code>sampler2DShadow</code>, with the same texture coordinate as the slide: the shadow map is itself a projective texture.</li>
+            <li><strong>rotateY.</strong> The page uses <code>rotate(angle, vec3(0, 1, 0))</code> rather than <code>rotateY</code>, as the light-view explorer does.</li>
+        </ul>
+    </section>
+</main>
+
+<script type="module" src="./main.mjs"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Code README
+title: CS-315-202630 Code README
 breadcrumb: Code README
 ---
 # Code directory README
@@ -10,19 +10,15 @@ breadcrumb: Code README
 * shared ES modules (MV.mjs, initShaders*.mjs, ...)
 * the most recent version of the threeJS code that is compatible with textbook examples in Chapter 9: three-r124.min.js
   
-## experimental
+## dist/
+
+* serves app's built by Vite
+  
+## experimental/
 
 * programs written with help from claude.ai
-
-## experimental/built/
-
-* ES modules, built by Vite
-* run from [/dist/experimental/built/](./dist/experimental/built/)
-
-## experimental/standalone/
-
-* single-file demos: no imports, open directly
-* run from [/experimental/standalone/](./experimental/standalone/)
+** ES modules, built by Vite -- run from [/dist/experimental/built/](./dist/experimental/built/)
+* single-file demos: no imports, open directly and run from [/experimental/standalone/](./experimental/standalone/)
   
 ## textbook-classic/
 
@@ -158,6 +154,17 @@ breadcrumb: Code README
 | [`examples.mjs`](./dist/downloads/picking-explorer/experimental/built/picking-explorer/examples.mjs.txt) | The picking explorer's menu. |
 | [`main.mjs`](./dist/downloads/picking-explorer/experimental/built/picking-explorer/main.mjs.txt) | *(no header comment)* |
 | [`pickMath.mjs`](./dist/downloads/picking-explorer/experimental/built/picking-explorer/pickMath.mjs.txt) | The picking explorer's pure logic: the scenes, the cube mesh with a face index per vertex, ID encodings, a CPU ray cast to check the GPU against, the pick ma... |
+
+### `experimental/built/projective-texture-extended/`
+
+*Source for `projective-texture-extended` (read-only copies): [browse all files](./dist/downloads/projective-texture-extended/index.html) · [download .zip](./dist/downloads/projective-texture-extended.zip)*
+
+| File | Description |
+| --- | --- |
+| [`main.mjs`](./dist/downloads/projective-texture-extended/experimental/built/projective-texture-extended/main.mjs.txt) | *(no header comment)* |
+| [`meshes.mjs`](./dist/downloads/projective-texture-extended/experimental/built/projective-texture-extended/meshes.mjs.txt) | *(no header comment)* |
+| [`projectorMath.mjs`](./dist/downloads/projective-texture-extended/experimental/built/projective-texture-extended/projectorMath.mjs.txt) | The projector's pure logic: vector helpers, the light's and the camera's matrices. |
+| [`textures.mjs`](./dist/downloads/projective-texture-extended/experimental/built/projective-texture-extended/textures.mjs.txt) | *(no header comment)* |
 
 ### `experimental/built/reflection-explorer/`
 
