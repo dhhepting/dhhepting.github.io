@@ -1,0 +1,103 @@
+DH: All right, for the delay getting started.
+
+How's everyone doing today? You happy about the snow?
+
+My wife and I did an impromptu trip to Winnipeg this weekend. So I was really not enjoying the snow. Around Winnipeg in the morning. Yesterday morning. Saw a few semis jackknifed off the road. But happily, we made it through okay.
+
+Okay, so we're at meeting. 19 of 23 today.
+
+Let's talk about assigning four.
+
+You gave an extension for assignment three, Adam. I didn't announce it very well.
+
+Okay.
+
+Let's go to our meeting page today.
+
+So basically, Assignment 4 will ask you to. Put the particle diffusion texture. from the sample onto a cube. and add bump mapping and lighting. Okay. So let me go to the code directory. Actually, let me go to the… announcement about the. Assignment.
+
+No, that helps. If I put the right URL in my message. Anyone notice that I forgot the Cs.
+
+Okay, that gives you a list of… The README tells you what's in the code directory. I didn't. I didn't publish the… I didn't… I still have it in draft with the addition of the downloads directory. in disk, so disk downloads. Gives you a list of the… The sources… for those experimental built programs.
+
+So dissed, experimental, and then built. are the ones that are built with Vite. I've made the names more standardized. All lowercase and hyphens instead of camel case. or underscores. So shading. shader stages instead of shader. stages with capitals. It's all lowercase with a hyphen. It's a 3rd from the bottom. And MVP is expanded to model view projection. And color queue. It's written out in lowercase with a hyphen. As is Chaos Dragon. There's the same code that were there before. Oh, yes, in SVG Zoomer, I changed that as well, the name as well.
+
+I should have. On my to-do list is to hide the… JavaScript files, so you only see the HTML files in the list where you can. Random. But so to look for assignment for. Have a look at. Texture cube one. Okay.
+
+Let's look at Texture Cube 2 as well.
+
+Texture cube three, two.
+
+And four.
+
+There's a few more. Let's try that.
+
+OK, so the idea from the texture cube gives you examples of how to apply textures to the faces of a cube.
+
+The other one that I recommend looking at is the bump mapping. Excuse me. So you can see the light moving around. Highlighting the edge of the. Cute square within the square.
+
+Here's the particle diffusion. texture which is made by. Bouncing between two. Textures. Two. Rain buffers. So we… You do the diffusion in one frame buffer. And we do the… Article edition. And another one. We draw the points in. And… And then flip between them. So once we draw them in and if. Then we diffuse it, then we flip the buffers so that. We're drawing into the… We're drawing in over the diffused. texture from the previous step. So I promised to give you a better documented version of this code. I'll do that today.
+
+Okay, does that make sense? Further requirements of the assignment? Any questions that come up now?
+
+Let's do attendance now.
+
+Thank you. Bless you.
+
+I tried to get the wikis up to date. Today, but I ran into a technical difficulty that I'll fix. This afternoon. So meeting 16 was done. Very well.
+
+So… It'll be better once I take a picture and post it. And you don't have to get a magnifying glass out to read it. So for assignment four. Oh, 7. Or this is textbook classic.
+
+So chapter seven, texture cube and bump mapping. And then chapter eight, the particle to fusion. off-screen buffer used for texture generation. duration. So I'm committing again to post a documented version of that code. So the wiki 17 and 18 will be fixed today. And I just wanted to highlight the meeting 16. That's a good example of what to do. The only note that I have really is. People doing that, the group doing 16. only included. to the Wiki group contribution section, and they removed the others. So please preserve. Existing sections. And just modify the Wikigroup contribution section. Does that make sense?
+
+So here's a link to… Perspective projection mapping.
+
+So that… Maybe it's good to give you a general idea of what's going on with it. But the code is using… Okay. different library that makes it hard to match up with. Code from the textbook and. Other code that you may see. So we'll look at the textbook version.
+
+Here's a… Demo that's interesting. I think.
+
+Is that big enough for everybody? So we can move the camera around. And we can move the texture around.
+
+We can control the shape. That's a projection.
+
+So we're using it. for the shadow maps. We're using a depth attachment. So that's another way to use. The frame buffer. Object.
+
+You may have seen layout location equals. 0, 1, 2, 3, and so forth. And some examples here. So this is… A way to ensure that the attributes occupy the same spots. Between different… Protects attribute objects. So we can… Make things go a lot more smoothly. Okay.
+
+So we get the idea of… of shadow. And the sphere in the cube. are out of the shadow. In some ways here.
+
+So here we see the shadow.
+
+And we see shadows here.
+
+So this is a… A better shadow.
+
+So these are the. Two code examples in the textbook. About projective texture and shadow maps.
+
+Okay, let's look at the shaders. We have for input. The position and the normal. And we're outputting the vector. Vertex projected texture coordinates. The light direction and the vertex. Normal. We have uniforms for the model view matrix and the projection matrix. and the normal matrix.
+
+As well as the light view matrix, the light projection matrix, and the light position. The first line, we're transforming our position. by the model view matrix. So we're getting it to position in the eye coordinates.
+
+Then the object life position is. The light projection matrix. Times. the light view matrix times. the position in the eye coordinates. Then the projected texture coordinates are 0.5 times. The light position in X, Y, and Z. plus 0.5. Light direction. And, uh… the vertex normal, we take the normal matrix, multiply it by the. Attribute normal. And then we get the GL position as the projection matrix times. The eye coordinate position. So we only transform it. Part way. to do the calculations. And the fragment shader we have. Input the V normal. The pro… The projected texture coordinates, the V-like direction. And the fragment color is the output. So we have a uniform sampler. 2D for the texture map. And then the spotlight color is the texture. Texture projection. With arguments of the texture map, the uniform texture map, and the vertex projected texture coordinates. So the base color is… Black.
+
+So… We set up. It's a checkerboard pattern. for the texture. and we set values outside the circle. So the texture. is inside the circle and outside the circle, it's going to be black. This is just doing… to set up according to the comment.
+
+So we have… Image one. And image two.
+
+So we're converting. The uniform… We're converting floats to unsigned bytes for the texture. That's what image two is. Here are the cube vertices. Cool. So we're doing a configure texture.
+
+Here we're setting up the cube. T1 and T2 are vectors. So we're computing the normal as the cross of T1 and T2.
+
+Then we're setting up the vertices for the cube. And we're populating the normals array as well.
+
+We have more than one shader here. The first vertex shader is used to compute the view from the camera. So that's what we're setting here. A positions multiplied by the uniform instance matrix. Then the model view matrix and the projection matrix. The fragment shader outputs the fragment depth in RGB components.
+
+Then in the shader, vertex shader two.
+
+Here we're dealing with… The position. projection matrix times, model view matrix times, instance matrix times. The attribute position. and the vertex view light position is the U uniform light projection matrix times the. light view matrix times the instance matrix times a position. And then we're passing through the attribute color. to the vertex color. Then we're getting… Shadow color. Set to black.
+
+You get. The shadow coordinate. Get the depth from the texture map.
+
+And then we see which it is for getting the cube color or. The shadow color.
+
+They're somewhat straightforward. We're out of time. Are there any questions? I would like you to look at the experimental. Code. And also the textbook code. And… See if… What you would like? to see written in code as examples. Does that make sense? Some suggestions for… More examples, I guess. That's what I was thinking of. and which code segments. would be good for the final exam questions. Oh. welcome your input about that. Thank you very much for today. Have a great rest of your Monday and see you on Wednesday.
