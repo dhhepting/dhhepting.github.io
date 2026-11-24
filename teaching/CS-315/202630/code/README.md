@@ -17,7 +17,7 @@ breadcrumb: Code README
 ## experimental/
 
 * programs written with help from claude.ai
-** ES modules, built by Vite -- run from [/dist/experimental/built/](./dist/experimental/built/)
+* ES modules, built by Vite -- run from [/dist/experimental/built/](./dist/experimental/built/) and view source from [/dist/downloads/](./dist/downloads/)
 * single-file demos: no imports, open directly and run from [/experimental/standalone/](./experimental/standalone/)
   
 ## textbook-classic/
