@@ -292,6 +292,150 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 
 {{https://dl.dropboxusercontent.com/scl/fi/5p4xi6d5os7b6misy3ye8/18-2.jpg?rlkey=izovasp60oh5a1mt5m98osdpr&amp;raw=1 | Mtg 18-2 photo }}
 **Caption 18-2:** //TODO: describe what is depicted//
+
+----
+
+**Transcript**
+
+DH: Oh.
+
+Okay. Can you hear me all right?
+
+It feels like it&#39;s going to snow today. Those balmy mid-teen temperatures are maybe. Going away for a few months. So my furnace is being replaced a week from today. So I hope it doesn&#39;t get too cold in the meantime.
+
+I want to talk about assignments for a bit to begin with. And maybe a second one was… Too easy? What about assignment two?
+
+Okay, so if you don&#39;t have an opinion about assignment two, what about assignment three? So what should we do with assignment four? 4, 3. Pardon me? That&#39;s difficult to breathe. Yes. I&#39;m for that. So I&#39;m wondering. Because I&#39;d like to focus on textures. And lighting.
+
+Child talk with… Mr. Clark. And I&#39;ll post something today. for assignment four. Okay, I apologize. I took… Bits of an earlier assignment. And combined it with assignment two and I. I didn&#39;t, I wasn&#39;t aware. I thought… in big picture terms and not small details that. Came up to trip. If you, uh… So that&#39;s on me and I apologize. I&#39;ll do better for this last assignment.
+
+I will say that 7th floor will be posted later today and will be less difficult. And assignment three.
+
+Your input? And it is welcome.
+
+We started talking about mountain mapping last year. Okay. What&#39;s the idea of that? It&#39;s a it&#39;s a special. piece of texture mapping.
+
+Why is it a valuable approach? Okay. Yeah. It looked like it adds geometry without actually adding anything. Yeah, that&#39;s it.
+
+And it&#39;s the appearance of detail.
+
+Yeah, that&#39;s fine. Modifying the normals. in the surface. Based on the height map.
+
+So the normals are… If we have a flat surface. The level of two triangles.
+
+Change normal direction.
+
+So regarding the code directory, I think it&#39;s best to stick with. The textbook versions. They should all run from the website.
+
+I&#39;ve made a few changes to the code.
+
+I&#39;ve been guilty of… The favoring the flashy interfaces. that I can get from… Using modern, more modern tools. But I would say that&#39;s… Let&#39;s keep an eye on this. source code in the textbook directory.
+
+Bless you.
+
+Okay, so we have, in this case, the vertex shader. So we have it. two dimensional vector. With the texture coordinates. So that&#39;s you and V. Then we have an input of the position. A position, so… We have… the input attribute for the texture coordinates for the position. Then we have three outputs. vectors. So we have the late vector and texture space coordinates. The view vector and texture space coordinates. And then the… the modified. Texture coordinates. And we have uniforms for the normal. Late position. model view matrix, projection matrix. Normal matrix. So when do we have to use? a normal matrix. to construct a special normal matrix. When the scaling is non-uniform.
+
+So let&#39;s continue with this. So in our main for the shader, we have the GL, the position. as the projection matrix times the model view matrix times a position. And then we pass through the texture coordinate from a texture coordinate assigned to VTEC coordinate. And then eye position. In leg position.
+
+So we just don&#39;t apply. the projection matrix here, right? And we take. X, Y, and Z, so we leave. W alone. And then we take… Get the eye light position. by multiplying the… model view matrix times the uniform light position. And we&#39;re getting the X, Y, and Z coordinates of that.
+
+So then… We can… We compute the normal, the tangent, and the bitangent. I think bi-tangent is more correct than bi-normal.
+
+Anyway, so we have the normal for the surface.
+
+So we&#39;re getting the uniform tangent. times the normal matrix. We normalize that. That gives us a tangent. Direction. And we have normal vec normal direction and. Described by N. And then the vector b for the bitangent is the cross of n and t. So that gives us… the texture space coordinates. It&#39;s that type of space per fragment. This is per vertex. This is where the calculation is being done.
+
+So the light is… It&#39;s a dot product of T. And the eye position. or the… Eyelid position minus the eye position.
+
+So the output from the vertex shader is. L, the light vector and texture space coordinates, and V. The view vector in texture space coordinates and then. We pass through the texture coordinates. We assign ATEC. Chord to Vita Chord.
+
+Then we have the input. versions of the output from the vertex shader. And we have a uniform texture map sampler. in 2D. And then the diffuse product and the out vector is the fragment color. Thank you.
+
+So in. Looks up the texture. At the texture coordinates. And… Here we normalize. The vector. Okay.
+
+And we normalize the light vector as well.
+
+So here we&#39;re calculating the. the diffuse coefficient. We do the dot of N and L. Max of that product and zero, so we don&#39;t get any negative values. And then the fragment color is KD. or diffuse coefficient times the diffuse product XYZ.
+
+So this is defining that. Square inside the square.
+
+Here we&#39;re using that texture data that we created.
+
+So the mesh here is just the two triangles put together. 0, 1, 2, then 2, 3, 0.
+
+So that&#39;s Honolulu, apparently.
+
+So a similar setup. is the other one. For the shaders.
+
+Instead of computing the data, we have the raw data structure here.
+
+So last day we talked about parallax and. Displacement maps. So parallax. This may be a virtual displacement. So if we add, if we&#39;re doing a displacement map. We&#39;re adding geometry. So that&#39;s much more expensive. But it can create. Well, a richer model. But there&#39;s a trade-off because it&#39;ll take… More time to render it. So… Parallax is like a virtual displacement. That operates in the fragment shader. Varies, uh… We&#39;ve offset the texture coordinates. Based on the… Viewing position. So it&#39;s… It&#39;s much cheaper and… Doesn&#39;t require additional geometry.
+
+So we talked about doing a golf ball yesterday. Our last meeting.
+
+I was playing a little bit with this. Does that look like a golf ball?
+
+Does it look more like a golf ball now?
+
+So we can see. That the silhouette is smooth still?
+
+So I did… A bit of, I tried a bit of displacement here. Does that look different? Let&#39;s… Go back to the ball.
+
+Does that give more of an impression of dimples on a golf ball?
+
+Is that… More convincing without lighting? Anyway… Reminds me I didn&#39;t do attendance.
+
+So we can do… Interactive. textures by employing a frame buffer object. So this is an example from chapter eight.
+
+So we have two frame buffer objects. You&#39;re right into one. And then we move. We read from one right into the other one and then we flip.
+
+So let&#39;s look at that code a little bit. So vertex shader one and two. Because we have two different things going on. So the 1st one. We get the position from the attribute value. And we also get the tech coordinate. And then in the second one. We get the other position. and the point size. And then we. Set the point size. Here. And we… Change the position to that.
+
+And then in the fragment. Shader one. We have, uh… the sampler for the texture map. uniform distance, uniform scale, and that determines how. We&#39;re going to draw the texture.
+
+So we&#39;re getting the coordinates from the texture coordinate. variable and then we. Get the fragment color. By looking at the texture. And varying the texture. at these four points. X plus U distance, Y plus U distance, X minus U distance. and Y minus U distance, and then we divide that all by the scale factor. And then for the second fragment shader. We take. uniform color and assigned to fragment color, so it just passes through. So here&#39;s the JavaScript.
+
+So we create texture one. And texture two.
+
+So we have two different programs. We have Vertex Shader 1. And fragment shader one. And then the second program. Not the best use of variable names, I think, in this case. Put program one and program two. Okay.
+
+So we set up a new frame buffer. We… Get the texture set up.
+
+And then we&#39;re drawing. The points at random. So then we switch to use program two.
+
+Then. So we set up… The point size and color, then we switch to program. One. And we update the… the points.
+
+And then we switch to program two here. And… Let&#39;s go into the render function. So again. I have a better version of this program. I&#39;ll post it. So based on flag, we&#39;re deciding which texture to use.
+
+And then we run the programs. Reuse program two.
+
+So we draw the first half of the points in one color. And then the other half of the points in the other color. So we&#39;re going back and forth between. The textures… What do you think about having part of this as part of assignment four?
+
+Okay.
+
+So I want to talk a little. Build road interaction using frame buffer objects. So how can we do that? Make use of an off-screen buffer to. Allow interaction. with an object on the screen. Yeah. Whatever change you want to make, if you load it in a separate frame buffer and hold that there, it&#39;ll be super smooth, quick to, like… Between whatever animation or effect you want to create. Yeah, that… So that&#39;s sometimes called double buffering or. It&#39;s it&#39;s handled with the. No, I&#39;m not. Refresh. I don&#39;t mean… Let me go back to the… Request animation frame.
+
+So let me show you an example from the text.
+
+I think this might be printing to the console.
+
+Okay, here&#39;s some output.
+
+So we can use the off-screen frame buffer. To have a simple version of that. Colors… This… This one has… Some highlights, so it&#39;s difficult to match. A particular color with a face. So the idea is in a… off screen buffer. We have a simple picture, and then we can test for. this… The primary colors, red, green, blue, cyan, magenta, yellow.
+
+So here we&#39;re dealing with top, left, right, bottom.
+
+Here it&#39;s giving a frames per second. So it looks like it&#39;s… I want to say 59. 53. Maybe… Anyway.
+
+So we&#39;ll leave projective textures and shadow maps. for next day.
+
+Okay, so we&#39;re… Looking at Chapter 8. So we&#39;re going to look up until Chapter 9. So we&#39;ll do a few things from Chapter 9 as well.
+
+And I think what I should do with that code directory is not call them samples. Maybe I&#39;ll call it experimental. So I&#39;ll make them — I&#39;ll keep them available. But I&#39;ll restructure them a bit. Any questions or concerns?
+
+Shall we end it there? for the days that I went over. Thank you for today. Take care. Have a good weekend. See you on Monday. And I have office hours if you want to come and chat. But it&#39;s been. For the spiral network perspective. where I got to is I have, um, a camera that basically goes like this to a point, and when it gets there, it reverses back down. Is that kind of what you&#39;re looking for for the camera view? Yeah, that&#39;s fine. Okay. I just wasn&#39;t sure. Yeah, exactly like for this spiral. But. That should work. Yes. Okay. Okay, thank you. You&#39;re welcome. Please go for it. You don&#39;t.
+
+Good to be good. Thanks, you too.
 </textarea>
     <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-text-creole')">
       Copy photos and transcript
