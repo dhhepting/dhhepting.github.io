@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Shadow map (experimental)</title>
+
+<style>
+  fieldset { display: inline-block; vertical-align: top; }
+  label { display: block; }
+  output { display: inline-block; min-width: 3.5em; text-align: right; }
+</style>
+
+<script id="vertex-shader-1" type="x-shader/x-vertex">#version 300 es
+
+// first vertex shader: renders the scene from the light's point of view
+
+layout(location = 0) in vec4 aPosition;
+
+uniform mat4 uInstanceMatrix;
+uniform mat4 uProjectionMatrix;
+uniform mat4 uModelViewMatrix;
+
+void main()
+{
+    gl_Position = uProjectionMatrix*uModelViewMatrix*uInstanceMatrix*aPosition;
+}
+</script>
+
+<script id="fragment-shader-1" type="x-shader/x-fragment">#version 300 es
+
+// fragment shader outputs fragment depth in rgb components.
+
+precision highp float;
+
+out vec4 fColor;
+
+void
+main()
+{
+    fColor = vec4(gl_FragCoord.z, gl_FragCoord.z, gl_FragCoord.z, 1.0);
+}
+</script>
+
+<script id="vertex-shader-2" type="x-shader/x-vertex">#version 300 es
+
+// fixed attribute locations, so that both programs agree (see shadow-map.mjs)
+layout(location = 0) in vec4 aPosition;
+layout(location = 1) in vec4 aColor;
+
+uniform mat4 uInstanceMatrix;
+uniform mat4 uProjectionMatrix;
+uniform mat4 uModelViewMatrix;
+
+uniform mat4 uLightProjectionMatrix;
+uniform mat4 uLightViewMatrix;
+
+out vec4 vColor;
+out vec4 vLightViewPosition;
+
+void main()
+{
+    // shader computes position both from camera and light source
+
+    gl_Position = uProjectionMatrix*uModelViewMatrix*uInstanceMatrix*aPosition;
+    vLightViewPosition = uLightProjectionMatrix*uLightViewMatrix*uInstanceMatrix*aPosition;
+    vColor = aColor;
+}
+</script>
+
+<script id="fragment-shader-2" type="x-shader/x-fragment">#version 300 es
+
+// highp (was mediump): the depth comparison below needs the precision.
+precision highp float;
+
+in vec4 vColor;
+in vec4 vLightViewPosition;
+out vec4 fColor;
+
+uniform sampler2D uTextureMap;
+
+void main()
+{
+    vec4 shadowColor = vec4(0.0, 0.0, 0.0, 1.0); //black
+
+    // rescale depths from [-1, 1] to texture coords in range [0, 1]
+    // convert from (x, y, z, w) values to (x/w, y/w, z/w)
+
+    vec3 shadowCoord = 0.5*vLightViewPosition.xyz/vLightViewPosition.w + 0.5;
+
+    // get depth from texture map
+
+    float depth = texture(uTextureMap, shadowCoord.xy).x;
+
+    // compare depth from camera with depth of fragment in camera space
+    // add small factor to control some of the aliasing
+
+    if (shadowCoord.z < depth + 0.005) fColor = vColor;
+    else fColor = shadowColor;
+
+    // use line below to display depth map
+    // fColor = vec4(depth, depth, depth, 1.0);
+}
+</script>
+
+<script type="module">
+// Experimental modernized version of shadowMap.js.
+//
+// Shadow map example: two objects, a rotatable cube and a triangle, lit by a
+// point light behind the triangle. Pass 1 renders depth from the light into a
+// texture; pass 2 renders from the camera and compares depths.
+//
+// Changes from the original (behaviour is otherwise the same):
+//   - Framebuffer and renderbuffer are created ONCE in init(). The original
+//     created a new pair every frame and never deleted them (a GPU memory
+//     leak), and could pop up its "not complete" alert every frame.
+//   - The sampler uniform is looked up as "uTextureMap", the name the shader
+//     declares (the original asked for "texture", which does not exist, so
+//     the uniform1i call silently did nothing and only worked because the
+//     default texture unit is 0).
+//   - Clear colour is set explicitly each frame. Originally frame 1 cleared the
+//     depth texture to grey and later frames to white.
+//   - Sliders move the light and the camera (both orbit the origin, see
+//     initViewControls). The starting positions are the original ones.
+//   - ES module, var -> const/let,
+//     addEventListener, no window.onload.
+//
+// Standalone: the few MV.js helpers it needs (and a shader compile helper) are
+// inlined at the bottom of this script, so this file has no dependencies.
+
+const NUM_CUBE_VERTICES = 36;
+const NUM_TRIANGLE_VERTICES = 3;
+const SHADOW_SIZE = 1024;
+
+// Light and camera positions; both look at the origin. They start at the
+// original positions and the sliders replace them with positions on a sphere
+// around the origin.
+const DEFAULT_LIGHT_POSITION = vec3(1.0, 3.0, 5.0);
+const DEFAULT_CAMERA_POSITION = vec3(0.0, 1.0, 1.0);
+let lightPosition = DEFAULT_LIGHT_POSITION;
+let cameraPosition = DEFAULT_CAMERA_POSITION;
+
+let gl;
+let program1;
+let program2;
+let shadowTexture;
+let framebuffer;
+
+// cube rotation: axis indices, per-axis angles and on/off flag
+const X_AXIS = 0;
+const Y_AXIS = 1;
+const Z_AXIS = 2;
+let axis = X_AXIS;
+const theta = [0, 45, 0];
+let flag = false;
+
+const positionsArray = [];
+const colorsArray = [];
+
+// object vertex and color data
+
+const cubeVertices = [
+    vec4(-0.5, -0.5, 0.5, 1.2),
+    vec4(-0.5, 0.5, 0.5, 1.2),
+    vec4(0.5, 0.5, 0.5, 1.2),
+    vec4(0.5, -0.5, 0.5, 1.2),
+    vec4(-0.5, -0.5, -0.5, 1.2),
+    vec4(-0.5, 0.5, -0.5, 1.2),
+    vec4(0.5, 0.5, -0.5, 1.2),
+    vec4(0.5, -0.5, -0.5, 1.2),
+];
+
+const cubeColors = [
+    vec4(1.0, 0.0, 0.0, 1.0),  // red
+    vec4(1.0, 1.0, 0.0, 1.0),  // yellow
+    vec4(0.0, 1.0, 0.0, 1.0),  // green
+    vec4(0.0, 0.0, 1.0, 1.0),  // blue
+    vec4(1.0, 0.0, 1.0, 1.0),  // magenta
+    vec4(0.0, 1.0, 1.0, 1.0),  // cyan
+];
+
+const triangleVertices = [
+    vec4(0.0, 1.0, 1.0, 1.0),
+    vec4(0.25, 0.5, 1.0, 1.0),
+    vec4(-0.25, 0.5, 1.0, 1.0),
+];
+
+const triangleColor = vec4(0.5, 0.5, 0.0, 1.0);
+
+// functions to generate buffer data for objects
+
+function quad(a, b, c, d) {
+    for (const v of [a, b, c, a, c, d]) {
+        positionsArray.push(cubeVertices[v]);
+        colorsArray.push(cubeColors[a]);
+    }
+}
+
+function colorCube() {
+    quad(0, 1, 5, 4);
+    quad(1, 0, 3, 2);
+    quad(2, 3, 7, 6);
+    quad(3, 0, 4, 7);
+    quad(4, 5, 6, 7);
+    quad(5, 1, 2, 6);
+}
+
+function triangle(a, b, c) {
+    for (const v of [a, b, c]) {
+        positionsArray.push(triangleVertices[v]);
+        colorsArray.push(triangleColor);
+    }
+}
+
+function createShadowTarget() {
+    // Empty texture that pass 1 renders depth into
+    shadowTexture = gl.createTexture();
+    gl.activeTexture(gl.TEXTURE0);
+    gl.bindTexture(gl.TEXTURE_2D, shadowTexture);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, SHADOW_SIZE, SHADOW_SIZE, 0,
+        gl.RGBA, gl.UNSIGNED_BYTE, null);
+    // (no generateMipmap: the texture is sampled with NEAREST, so it has no mip levels,
+    //  and generateMipmap on an empty texture makes Firefox warn about lazy initialization)
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+
+    // Framebuffer: colour = the texture, depth = a renderbuffer
+    framebuffer = gl.createFramebuffer();
+    gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
+
+    const renderbuffer = gl.createRenderbuffer();
+    gl.bindRenderbuffer(gl.RENDERBUFFER, renderbuffer);
+    gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT16, SHADOW_SIZE, SHADOW_SIZE);
+
+    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, shadowTexture, 0);
+    gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, renderbuffer);
+
+    const status = gl.checkFramebufferStatus(gl.FRAMEBUFFER);
+    const complete = status === gl.FRAMEBUFFER_COMPLETE;
+
+    gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+    gl.bindRenderbuffer(gl.RENDERBUFFER, null);
+    return complete;
+}
+
+// A position on a sphere of the given radius around the origin.
+// Azimuth is measured from +z toward +x, elevation up from the xz-plane (degrees).
+function orbitPosition(azimuth, elevation, distance) {
+    const az = radians(azimuth);
+    const el = radians(elevation);
+    return vec3(distance * Math.cos(el) * Math.sin(az),
+                distance * Math.sin(el),
+                distance * Math.cos(el) * Math.cos(az));
+}
+
+// The inverse: [azimuth, elevation, distance] of a position (angles in degrees).
+function orbitAngles(position) {
+    const distance = Math.hypot(position[0], position[1], position[2]);
+    return [Math.atan2(position[0], position[2]) * 180 / Math.PI,
+            Math.asin(position[1] / distance) * 180 / Math.PI,
+            distance];
+}
+
+// Sliders for the light and the camera. Both always look at the origin.
+//   - The light's perspective projection (near 3, far 10) is fixed, so the
+//     distance slider is limited to keep the objects between those planes.
+//   - The camera is orthographic, so its distance would change nothing you can
+//     see; it keeps its original distance and only its direction is adjustable.
+//   - Elevation is limited to +/-85 degrees so "up" never lines up with the
+//     direction of view; lookAt's result is garbage (or NaN) when it does.
+function initViewControls() {
+    const LIGHT_SLIDERS = ['lightAzimuth', 'lightElevation', 'lightDistance'];
+    const CAMERA_SLIDERS = ['cameraAzimuth', 'cameraElevation'];
+    const cameraDistance = Math.hypot(...DEFAULT_CAMERA_POSITION);
+
+    const slider = (id) => document.getElementById(id);
+    const value = (id) => Number(slider(id).value);
+
+    const showValues = () => {
+        for (const id of [...LIGHT_SLIDERS, ...CAMERA_SLIDERS]) {
+            document.getElementById(id + 'Value').textContent = slider(id).value;
+        }
+    };
+    const setSliders = (ids, position) => {
+        const angles = orbitAngles(position);
+        ids.forEach((id, i) => { slider(id).value = angles[i]; });
+    };
+
+    for (const id of LIGHT_SLIDERS) {
+        slider(id).addEventListener('input', () => {
+            lightPosition = orbitPosition(value('lightAzimuth'), value('lightElevation'), value('lightDistance'));
+            showValues();
+        });
+    }
+    for (const id of CAMERA_SLIDERS) {
+        slider(id).addEventListener('input', () => {
+            cameraPosition = orbitPosition(value('cameraAzimuth'), value('cameraElevation'), cameraDistance);
+            showValues();
+        });
+    }
+
+    const reset = () => {
+        lightPosition = DEFAULT_LIGHT_POSITION;
+        cameraPosition = DEFAULT_CAMERA_POSITION;
+        setSliders(LIGHT_SLIDERS, lightPosition);
+        setSliders(CAMERA_SLIDERS, cameraPosition);
+        showValues();
+    };
+    document.getElementById('ButtonReset').addEventListener('click', reset);
+    reset();
+}
+
+function init() {
+    const canvas = document.getElementById('gl-canvas');
+
+    gl = canvas.getContext('webgl2');
+    if (!gl) {
+        alert("WebGL 2.0 isn't available");
+        return;
+    }
+
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    gl.enable(gl.DEPTH_TEST);
+
+    if (!createShadowTarget()) {
+        alert('Frame Buffer Not Complete');
+        return;
+    }
+
+    // Buttons
+    document.getElementById('ButtonX').addEventListener('click', () => { axis = X_AXIS; });
+    document.getElementById('ButtonY').addEventListener('click', () => { axis = Y_AXIS; });
+    document.getElementById('ButtonZ').addEventListener('click', () => { axis = Z_AXIS; });
+    document.getElementById('ButtonT').addEventListener('click', () => { flag = !flag; });
+
+    initViewControls();
+
+    // generate cube and triangle data
+    colorCube();
+    triangle(0, 1, 2);
+
+    //  Load shaders and initialize attribute buffers
+    program1 = initShaders(gl, shaderSource('vertex-shader-1'), shaderSource('fragment-shader-1'));
+    program2 = initShaders(gl, shaderSource('vertex-shader-2'), shaderSource('fragment-shader-2'));
+
+    const vBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, vBuffer);
+    gl.bufferData(gl.ARRAY_BUFFER, flatten(positionsArray), gl.STATIC_DRAW);
+
+    const positionLoc = gl.getAttribLocation(program1, 'aPosition');
+    gl.vertexAttribPointer(positionLoc, 4, gl.FLOAT, false, 0, 0);
+    gl.enableVertexAttribArray(positionLoc);
+
+    const buffer1 = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer1);
+    gl.bufferData(gl.ARRAY_BUFFER, flatten(positionsArray), gl.STATIC_DRAW);
+
+    const shaderPositionLoc = gl.getAttribLocation(program2, 'aPosition');
+    gl.vertexAttribPointer(shaderPositionLoc, 4, gl.FLOAT, false, 0, 0);
+    gl.enableVertexAttribArray(shaderPositionLoc);
+
+    const buffer2 = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer2);
+    gl.bufferData(gl.ARRAY_BUFFER, flatten(colorsArray), gl.STATIC_DRAW);
+
+    const shaderColorLoc = gl.getAttribLocation(program2, 'aColor');
+    gl.vertexAttribPointer(shaderColorLoc, 4, gl.FLOAT, false, 0, 0);
+    gl.enableVertexAttribArray(shaderColorLoc);
+
+    render();
+}
+
+function render() {
+    // Pass 1: render the objects from the light's perspective into the
+    // texture so we can save the distances from the light.
+
+    gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
+    gl.viewport(0, 0, SHADOW_SIZE, SHADOW_SIZE);
+    gl.clearColor(1.0, 1.0, 1.0, 1.0);
+    gl.useProgram(program1);
+
+    // light projection and modelview matrices
+
+    const fovy = 45.0;
+    const near = 3.0;
+    const far = 10.0;
+    const aspect = 1.0;
+
+    const lightProjectionMatrix = perspective(fovy, aspect, near, far);
+
+    const lightAt = vec3(0.0, 0.0, 0.0);
+    const lightUp = vec3(0.0, 1.0, 0.0);
+
+    const lightViewMatrix = lookAt(lightPosition, lightAt, lightUp);
+
+    gl.uniformMatrix4fv(gl.getUniformLocation(program1,
+        'uProjectionMatrix'), false, flatten(lightProjectionMatrix));
+
+    gl.uniformMatrix4fv(gl.getUniformLocation(program1,
+        'uModelViewMatrix'), false, flatten(lightViewMatrix));
+
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+    // update cube rotation matrix (its instance transformation) then render cube
+
+    if (flag) theta[axis] += 0.5;
+
+    let cubeInstanceMatrix = mat4();
+    cubeInstanceMatrix = mult(cubeInstanceMatrix, rotateX(theta[X_AXIS]));
+    cubeInstanceMatrix = mult(cubeInstanceMatrix, rotateY(theta[Y_AXIS]));
+    cubeInstanceMatrix = mult(cubeInstanceMatrix, rotateZ(theta[Z_AXIS]));
+    gl.uniformMatrix4fv(gl.getUniformLocation(program1,
+        'uInstanceMatrix'), false, flatten(cubeInstanceMatrix));
+
+    gl.drawArrays(gl.TRIANGLES, 0, NUM_CUBE_VERTICES);
+
+    // don't rotate triangle and render it
+
+    const triangleInstanceMatrix = mat4();
+
+    gl.uniformMatrix4fv(gl.getUniformLocation(program1,
+        'uInstanceMatrix'), false, flatten(triangleInstanceMatrix));
+
+    gl.drawArrays(gl.TRIANGLES, NUM_CUBE_VERTICES, NUM_TRIANGLE_VERTICES);
+
+    // Pass 2: render from the camera's viewpoint, comparing against the
+    // light's depths. Needs the matrices for both views.
+
+    gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+    gl.useProgram(program2);
+
+    gl.activeTexture(gl.TEXTURE0);
+    gl.bindTexture(gl.TEXTURE_2D, shadowTexture);
+    gl.uniform1i(gl.getUniformLocation(program2, 'uTextureMap'), 0);
+
+    gl.viewport(0, 0, SHADOW_SIZE, SHADOW_SIZE);
+
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+    gl.uniformMatrix4fv(gl.getUniformLocation(program2,
+        'uLightProjectionMatrix'), false, flatten(lightProjectionMatrix));
+
+    gl.uniformMatrix4fv(gl.getUniformLocation(program2,
+        'uLightViewMatrix'), false, flatten(lightViewMatrix));
+
+    // modelView and projection matrices for the camera viewport
+
+    const projectionMatrix = ortho(-1, 1, -1, 1, -5, 5);
+
+    gl.uniformMatrix4fv(gl.getUniformLocation(program2,
+        'uProjectionMatrix'), false, flatten(projectionMatrix));
+
+    const cameraAt = vec3(0, 0, 0);
+    const cameraUp = vec3(0, 1, 0);
+
+    const cameraViewMatrix = lookAt(cameraPosition, cameraAt, cameraUp);
+
+    gl.uniformMatrix4fv(gl.getUniformLocation(program2,
+        'uModelViewMatrix'), false, flatten(cameraViewMatrix));
+
+    gl.uniformMatrix4fv(gl.getUniformLocation(program2,
+        'uInstanceMatrix'), false, flatten(cubeInstanceMatrix));
+    gl.drawArrays(gl.TRIANGLES, 0, NUM_CUBE_VERTICES);
+
+    gl.uniformMatrix4fv(gl.getUniformLocation(program2,
+        'uInstanceMatrix'), false, flatten(triangleInstanceMatrix));
+    gl.drawArrays(gl.TRIANGLES, NUM_CUBE_VERTICES, NUM_TRIANGLE_VERTICES);
+
+    requestAnimationFrame(render);
+}
+
+// Module scripts are deferred, so the DOM is already parsed here.
+init();
+
+// ===========================================================================
+// Inlined helpers (this page has no other dependencies)
+// ===========================================================================
+
+// ---- begin mv subset ------------------------------------------------------
+// The functions this page uses from the course's common/MV.mjs (Alex Clarke's
+// revision of Angel's MV.js). The function bodies are copied unchanged; only
+// the `export` keywords are removed and the unused functions left out.
+
+function radians(degrees) {
+  return degrees * Math.PI / 180.0;
+}
+
+function isVector(v) {
+  if (typeof (v) == "object" && 'type' in v) // prevent hard to debug warning if v not from library
+    if (v.type == "vec2" || v.type == "vec3" || v.type == "vec4") return true;
+  return false;
+}
+
+function isMatrix(v) {
+  if (typeof (v) == "object" && 'type' in v) // prevent hard to debug warning if v not from library
+    if (v.type == "mat2" || v.type == "mat3" || v.type == "mat4") return true;
+  return false;
+}
+
+function vec2() {
+  let out = new Array(2);
+  out.type = 'vec2';
+
+  switch (arguments.length) {
+    case 0:
+      out[0] = 0.0;
+      out[1] = 0.0;
+      break;
+    case 1:
+      //Alex: incorrect bracketing of isVector() argument list
+      //      fixed broken rejection of copy of vec2 and vec3... WHY????
+      //      also added conversion of single scalar to vector
+      if (isVector(arguments[0])) {
+        out[0] = arguments[0][0];
+        out[1] = arguments[0][1];
+      } else if (typeof (arguments[0] === 'number')) {
+        out[0] = arguments[0];
+        out[1] = arguments[0];
+      } else {
+        throw new Error("vec2: Single argument constructor must receive a vec2, vec3, vec4 or number")
+      }
+
+      break;
+
+    case 2:
+      if (typeof (arguments[0] === 'number' && typeof (arguments[1] === 'number'))) {
+        out[0] = arguments[0];
+        out[1] = arguments[1];
+      } else {
+        throw new Error("vec2: Two argument constructor must receive two numbers");
+      }
+      break;
+    default:
+      throw new Error("vec2: Too many arguments");
+  }
+  return out;
+}
+
+function vec3() {
+  let out = new Array(3);
+  out.type = 'vec3';
+
+  switch (arguments.length) {
+    case 0:
+      out[0] = 0.0;
+      out[1] = 0.0;
+      out[2] = 0.0;
+      return out;
+    case 1:
+      // Alex: Allow vec3 constructor to convert other combinations of 
+      //      vector types scalars to vec3
+      if (arguments[0].type == "vec3" || arguments[0].type == "vec4") {
+        out[0] = arguments[0][0];
+        out[1] = arguments[0][1];
+        out[2] = arguments[0][2];
+        return out;
+      } else if (arguments[0].type == "vec2") {
+        out[0] = arguments[0][0];
+        out[1] = arguments[0][1];
+        out[2] = 0;
+
+      } else if (typeof (arguments[0]) === 'number') {
+        out[0] = arguments[0];
+        out[1] = arguments[0];
+        out[2] = arguments[0];
+      } else {
+        throw new Error("vec3: one argument constructor must provide a vec3 or vec4")
+      }
+    case 2:
+      if (arguments[0].type == "vec2" && !isVector(arguments[1])) {
+        out[0] = arguments[0][0];
+        out[1] = arguments[0][1];
+        out[2] = arguments[0][2];
+        return out;
+      } else {
+        throw new Error("vec3: two argument constructor must provide vec2, scalar")
+      }
+
+
+    case 3:
+      if (typeof (arguments[0] === 'number' && typeof (arguments[1] === 'number') && typeof (arguments[2] === 'number'))) {
+        out[0] = arguments[0];
+        out[1] = arguments[1];
+        out[2] = arguments[2];
+      }
+      else {
+        throw new Error("vec3: Three argument constructor must provide three numbers");
+      }
+      return out;
+    default:
+      throw new Error("vec3: Too many arguments");
+  }
+
+  return out;
+}
+
+function vec4() {
+  let out = new Array(4);
+  out.type = 'vec4';
+  switch (arguments.length) {
+
+    case 0:
+
+      out[0] = 0.0;
+      out[1] = 0.0;
+      out[2] = 0.0;
+      out[3] = 0.0;
+      return out;
+
+    case 1:
+      if (isVector(arguments[0])) {
+        if (arguments[0].type == "vec4") {
+          out[0] = arguments[0][0];
+          out[1] = arguments[0][1];
+          out[2] = arguments[0][2];
+          out[3] = arguments[0][3];
+          return out;
+        } //fixed mis-nested if/else - vec3 is a type of vector!
+        else if (arguments[0].type == "vec3") {
+          out[0] = arguments[0][0];
+          out[1] = arguments[0][1];
+          out[2] = arguments[0][2];
+          out[3] = 1.0;
+          return out;
+        }
+        else { //vec2
+          //Alex: the original code here would (and did!) crash because
+          //      it tries to find z and w components on types that may not have them!
+          out[0] = arguments[0][0];
+          out[1] = arguments[0][1];
+          out[2] = 0.0;
+          out[3] = 1.0;
+          return out;
+        }
+      } else if (typeof (arguments[0]) === 'number') {
+        out[0] = arguments[0];
+        out[1] = arguments[0];
+        out[2] = arguments[0];
+        out[3] = 1.0;
+        return out;
+      } else if ((arguments[0] instanceof Array || argument[0] instanceof Float32Array) && arguments[0].length == 4) {
+        //Alex: the textbook code that would have handled non-vec* type arrays used to assume the argument had correct length/type
+        //      this is slightly more robust
+        out[0] = arguments[0][0];
+        out[1] = arguments[0][1];
+        out[2] = arguments[0][2];
+        out[3] = arguments[0][3];
+        return out;
+      } else {
+        throw new Error("vec4: single argument constructor must provide one of vec2, vec3, vec4, Array of length 3, Float32Array of length 4 or single scalar")
+      }
+
+
+    case 2:
+      //Alex: 
+      // Original only had this (needed for easy quaternion multiplication)
+      // Added a version to append a number to the end of a vec3 to promote it to a vec4
+      // usually to add homogeneous coordinate, eg:
+      // let 3DVector = vec3(4,5,6);
+      // let 4DVector = vec4(3DVector,1); // 4DVector is [4,5,6,1]
+      if (typeof (arguments[0]) == 'number' && arguments[1].type == 'vec3') {
+        out[0] = arguments[0];
+        out[1] = arguments[1][0];
+        out[2] = arguments[1][1];
+        out[3] = arguments[1][2];
+        return out;
+      } else if (arguments[0].type == 'vec3' && typeof (arguments[1]) == 'number') {
+        out[0] = arguments[0][0];
+        out[1] = arguments[0][1];
+        out[2] = arguments[0][2];
+        out[3] = arguments[1];
+        return out;
+      } else {
+        throw new Error("vec4: two argument constructor must provide (vec3, scalar)")
+      }
+
+
+    case 4:
+
+      //Alex: original if here was pure garbage. Why check for single argument in 4 argument code?
+      //Alex: for speed only typecheck first argument
+      if (typeof (arguments[0]) == 'number') {
+        out[0] = arguments[0];
+        out[1] = arguments[1];
+        out[2] = arguments[2];
+        out[3] = arguments[3];
+        return out;
+      }
+
+    // case 3 was pure nonsense - covered in case 1
+    default:
+      throw new Error("vec4: wrong arguments");
+  }
+}
+
+function mat2() {
+  let out = new Array(2);
+  out[0] = new Array(2);
+  out[1] = new Array(2);
+
+  switch (arguments.length) {
+    case 0:
+      out[0][0] = out[3] = 1.0;
+      out[1] = out[2] = 0.0;
+      break;
+    case 1:
+      if (arguments[0].type == 'mat2') {
+        out[0][0] = arguments[0][0][0];
+        out[0][1] = arguments[0][0][1];
+        out[1][0] = arguments[0][1][0];
+        out[1][1] = arguments[0][1][1];
+      } else if (arguments[0].length == 4) {
+        out[0][0] = arguments[0][0];
+        out[0][1] = arguments[0][1];
+        out[1][0] = arguments[0][2];
+        out[1][1] = arguments[0][3];
+      } else {
+        throw new Error("mat2: single argument constructor requires same size matrix as argument")
+      }
+
+      break;
+
+    case 4:
+      //for speed, only typecheck first argument
+      if (typeof (arguments[0]) == 'number') {
+        out[0][0] = arguments[0];
+        out[0][1] = arguments[1];
+        out[1][0] = arguments[2];
+        out[1][1] = arguments[3];
+      }
+      break;
+    default:
+      throw new Error("mat2: wrong arguments");
+  }
+  out.type = 'mat2';
+
+  return out;
+}
+
+function mat3() {
+  // v = _argumentsToArray( arguments );
+
+  let out = new Array(3);
+  out[0] = new Array(3);
+  out[1] = new Array(3);
+  out[2] = new Array(3);
+
+  switch (arguments.length) {
+    case 0:
+      out[0][0] = out[1][1] = out[2][2] = 1.0;
+      out[0][1] = out[0][2] = out[1][0] = out[1][2] = out[2][0] = out[2][1] = 0.0;
+      break;
+    case 1:
+      // Alex: Original looped i at both levels... duh
+      //       also code failed if attempting to copy a mat3()
+      // Author added fix in 2022
+      if (arguments[0].type == 'mat3') {
+        for (let i = 0; i < 3; i++) {
+          for (let j = 0; j < 3; j++) {
+            out[i][j] = arguments[0][i][j];
+          }
+        }
+        break;
+      } else if (arguments[0].length == 9) {
+        for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) {
+          out[i][j] = arguments[0][3 * i + j];
+        }
+        break;
+      }
+      else {
+        throw new Error("mat3: single argument to copy constructor must be mat3 or 9 element array")
+      }
+
+    case 9:
+      for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) {
+        out[i][j] = arguments[3 * i + j];
+      }
+      break;
+    default:
+      throw new Error("mat3: wrong arguments");
+  }
+  out.type = 'mat3';
+
+  return out;
+}
+
+function mat4() {
+  //let v = _argumentsToArray( arguments );
+  let out = new Array(4);
+  out[0] = new Array(4);
+  out[1] = new Array(4);
+  out[2] = new Array(4);
+  out[3] = new Array(4);
+
+  switch (arguments.length) {
+    case 0:
+      out[0][0] = out[1][1] = out[2][2] = out[3][3] = 1.0;
+      out[0][1] = out[0][2] = out[0][3] = out[1][0] = out[1][2] = out[1][3] = out[2][0] = out[2][1]
+        = out[2][3] = out[3][0] = out[3][1] = out[3][2] = 0.0;
+
+      break;
+
+    case 1:
+      // Alex: Original looped i at both levels... duh
+      //       Author added fix in 2022
+      //       Original treated mat44 as 1D array... would work in C++ but
+      //       shouldn't work in Javascript and it didn't. Kept old code for
+      //       use with 1D, 16 element array
+      if (arguments[0].type == "mat4") {
+        for (let i = 0; i < 4; i++)
+          for (let j = 0; j < 4; j++)
+            out[i][j] = arguments[0][i][j];
+      } else if (arguments[0].length == 16) {
+        for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) {
+          out[i][j] = arguments[0][4 * i + j];
+        }
+      } else {
+        throw new Error("mat4: single argument to copy constructor must be mat4 or 16 element array")
+      }
+      break;
+
+    case 4:
+      for (let i = 0; i < 4; i++) {
+        //Alex: made type checking more robust
+        if (arguments[i].type != "vec4")
+          throw new Error("mat4: argument" + i + " not a vec4 in 4 argument constructor")
+        for (let j = 0; j < 4; j++)
+          out[i][j] = arguments[i][j];
+      }
+      break;
+    case 16:
+      for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) {
+        out[i][j] = arguments[4 * i + j];
+      }
+      break;
+    default:
+      throw new Error("mat4: incorrect arguments. Must provideone of: \n\t - no argument (for identity matrix)\n\t - one 1D array or mat4\n\t - 4 vec4\n\t - 16 scalars")
+  }
+  out.type = 'mat4';
+
+  return out;
+}
+
+function equal(u, v) {
+  if (!((isMatrix(u) || isVector(u)) && (isMatrix(v) || isVector(v))))
+    throw new Error("equal(): at least one input not a vec or mat");
+  if (u.type != v.type)
+    throw new Error("equal(): types different");
+
+  if (isMatrix(u)) {
+    for (let i = 0; i < u.length; ++i) for (let j = 0; j < u.length; ++j)
+      if (u[i][j] !== v[i][j]) return false;
+    return true;
+  }
+
+  if (isVector(u)) {
+    for (let i = 0; i < u.length; ++i)
+      if (u[i] !== v[i]) return false;
+    return true;
+  }
+}
+
+function subtract(u, v) {
+  if (!((isMatrix(u) || isVector(u)) && (isMatrix(v) || isVector(v))))
+    throw new Error("subtract(): at least one input not a vec or mat");
+  if (u.type != v.type) {
+    throw new Error("subtract(): trying to subtract different types");
+  }
+  let result;
+  if (isVector(u)) {
+    if (u.type == 'vec2') result = vec2();
+    if (u.type == 'vec3') result = vec3();
+    if (u.type == 'vec4') result = vec4();
+    result.type = u.type;
+    for (let i = 0; i < u.length; i++) {
+      result[i] = u[i] - v[i];
+    }
+    return result;
+  }
+  if (isMatrix(u)) {
+    if (u.type == 'mat2') result = mat2();
+    if (u.type == 'mat3') result = mat3();
+    if (u.type == 'mat4') result = mat4();
+    for (let i = 0; i < u.length; i++) for (let j = 0; j < u.length; j++) {
+      result[i][j] = u[i][j] - v[i][j];
+    }
+    return result;
+  }
+}
+
+function mult(u, v) {
+  let result; //Alex: result was not declared in original, 
+  if (typeof (u) == "number") {
+
+    if (isVector(v)) {
+      result = new Array(v.length);
+      result.type = v.type;
+      for (let i = 0; i < v.length; i++) {
+        result[i] = u * v[i];
+      }
+      return result;
+    }
+    if (isMatrix(v)) { //Alex: sanity test omitted in original
+      if (v.type = 'mat2') result = mat2();
+      if (v.type = 'mat3') result = mat3();
+      if (v.type = 'mat4') result = mat4();
+      //Alex: Code to scale matrices not provided in original
+      for (let i = 0; i < v.length; i++) {
+        for (let j = 0; j < v.length; j++) {
+          result[i][j] = u * v[i][j];
+        }
+      }
+      return result;
+    }
+  }
+
+  if (u.type == 'mat2' && v.type == 'vec2') {
+    result = vec2();
+    for (let i = 0; i < 2; i++) {
+      result[i] = 0.0;
+      for (let k = 0; k < 2; k++) result[i] += u[i][k] * v[k];
+    }
+    return result;
+  }
+
+  if (u.type == 'mat3' && v.type == 'vec3') {
+    result = vec3();
+    for (let i = 0; i < 3; i++) {
+      result[i] = 0.0;
+      for (let k = 0; k < 3; k++) result[i] += u[i][k] * v[k];
+    }
+    return result;
+  }
+
+  if (u.type == 'mat4' && v.type == 'vec4') {
+    result = vec4();
+    for (let i = 0; i < 4; i++) {
+      result[i] = 0.0;
+      for (let k = 0; k < 4; k++) result[i] += u[i][k] * v[k];
+    }
+    return result;
+  }
+
+  if (u.type == 'mat2' && v.type == 'mat2') {
+    result = mat2();
+    for (let i = 0; i < 2; i++) for (j = 0; j < 2; j++) {
+      result[i][j] = 0.0;
+      for (let k = 0; k < 2; k++) result[i][j] += u[i][k] * v[k][j];
+    }
+    return result;
+  }
+
+  if (u.type == 'mat3' && v.type == 'mat3') {
+    result = mat3();
+    for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) {
+      result[i][j] = 0.0;
+      for (let k = 0; k < 3; k++) result[i][j] += u[i][k] * v[k][j];
+    }
+    return result;
+  }
+
+  if (u.type == 'mat4' && v.type == 'mat4') {
+    result = mat4();
+    for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) {
+      result[i][j] = 0.0;
+      for (let k = 0; k < 4; k++) result[i][j] += u[i][k] * v[k][j];
+    }
+    return result;
+  }
+
+  if (u.type == 'vec3' && v.type == 'vec3') {
+    let result = vec3(u[0] * v[0], u[1] * v[1], u[2] * v[2]);
+    return result;
+  }
+
+  if (u.type == 'vec4' && v.type == 'vec4') {
+    let result = vec4(u[0] * v[0], u[1] * v[1], u[2] * v[2], u[3] * v[3]);
+    return result;
+  }
+  if (u.type == 'vec2' && v.type == 'vec2') { //Alex: vec2 path not provided in original
+    let result = vec3(u[0] * v[0], u[1] * v[1], u[2] * v[2]);
+    return result;
+  }
+
+  throw new Error("mult(): trying to mult incompatible types");
+}
+
+function rotateX(theta) {
+  let c = Math.cos(radians(theta));
+  let s = Math.sin(radians(theta));
+  let rx = mat4(1.0, 0.0, 0.0, 0.0,
+    0.0, c, -s, 0.0,
+    0.0, s, c, 0.0,
+    0.0, 0.0, 0.0, 1.0);
+  return rx;
+}
+
+function rotateY(theta) {
+  let c = Math.cos(radians(theta));
+  let s = Math.sin(radians(theta));
+  let ry = mat4(c, 0.0, s, 0.0,
+    0.0, 1.0, 0.0, 0.0,
+    -s, 0.0, c, 0.0,
+    0.0, 0.0, 0.0, 1.0);
+  return ry;
+}
+
+function rotateZ(theta) {
+  let c = Math.cos(radians(theta));
+  let s = Math.sin(radians(theta));
+  let rz = mat4(c, -s, 0.0, 0.0,
+    s, c, 0.0, 0.0,
+    0.0, 0.0, 1.0, 0.0,
+    0.0, 0.0, 0.0, 1.0);
+  return rz;
+}
+
+function dot(u, v) {
+  if (!isVector(u) || !isVector(v)) { //Alex: checking both arguments library function instead of checking type on one only
+    throw new Error("dot(): at least one argument is not a vector from this library");
+  }
+  if (u.type != v.type) {
+    throw new Error("dot(): argument types are not the same");
+  }
+
+  let sum = 0.0;
+  for (let i = 0; i < u.length; i++) {
+    sum += u[i] * v[i];
+  }
+  return sum;
+}
+
+function negate(u) {
+  if (!isVector(u)) { //Alex: checking both arguments library function instead of checking type 
+    throw new Error("negate(): not a vector ");
+  }
+  let result = new Array(u.length);
+  result.type = u.type;
+  for (let i = 0; i < u.length; ++i) {
+    result[i] = -u[i];
+  }
+  return result;
+}
+
+function cross(u, v) {
+  if (isVector(u) && isVector(v)) {
+    if (u.type == 'vec3' && v.type == 'vec3') {
+      let result = vec3(
+        u[1] * v[2] - u[2] * v[1],
+        u[2] * v[0] - u[0] * v[2],
+        u[0] * v[1] - u[1] * v[0]
+      );
+      return result;
+    }
+    //Alex: require both arguments be vec4 - original code only checked
+    //      second argument... twice. Duh!
+    if (u.type == 'vec4' && v.type == 'vec4') {
+      let result = vec3(
+        u[1] * v[2] - u[2] * v[1],
+        u[2] * v[0] - u[0] * v[2],
+        u[0] * v[1] - u[1] * v[0]
+      );
+      return result;
+    }
+  }
+  throw new Error("cross: types aren't matched vec3 or vec4");
+}
+
+function length(u) {
+  return Math.sqrt(dot(u, u));
+}
+
+function normalize(u, excludeLastComponent = false) {
+  // Alex: switched type test to isVector 
+  //       - custom test provided by original misses vec2 and crashes if u is
+  //         not a textbook type!
+  if (isVector(u)) {
+    switch (u.type) {
+      case 'vec2':
+        let len = Math.sqrt(u[0] * u[0] + u[1] * u[1]);
+        let result = vec2(u[0] / len, u[1] / len);
+        return result;
+        break;
+      case 'vec3':
+        if (excludeLastComponent) {
+          let len = Math.sqrt(u[0] * u[0] + u[1] * u[1]);
+          let result = vec3(u[0] / len, u[1] / len, u[2]);
+          return result;
+          break;
+        } else {
+          let len = Math.sqrt(u[0] * u[0] + u[1] * u[1] + u[2] * u[2]);
+          let result = vec3(u[0] / len, u[1] / len, u[2] / len);
+          return result;
+          break;
+        }
+      case 'vec4':
+        if (excludeLastComponent) {
+          let len = Math.sqrt(u[0] * u[0] + u[1] * u[1] + u[2] * u[2]);
+          let result = vec4(u[0] / len, u[1] / len, u[2] / len, u[3]);
+          return result;
+          break;
+        } else {
+          let len = Math.sqrt(u[0] * u[0] + u[1] * u[1] + u[2] * u[2] + u[3] * u[3]);
+          let result = vec4(u[0] / len, u[1] / len, u[2] / len, u[3] / len);
+          return result;
+          break;
+        }
+    }
+  }
+  throw new Error("normalize(): not a recognized vector type")
+}
+
+function lookAt(eye, at, up) {
+  if (eye.type != 'vec3') {
+    throw new Error("lookAt(): first parameter [eye] must be an a vec3");
+  }
+
+  if (at.type != 'vec3') {
+    throw new Error("lookAt(): first parameter [at] must be an a vec3");
+  }
+
+  if (up.type != 'vec3') {
+    throw new Error("lookAt(): first parameter [up] must be an a vec3");
+  }
+
+  if (equal(eye, at)) {
+    return mat4();
+  }
+
+  let v = normalize(subtract(at, eye));  // view direction vector
+  let n = normalize(cross(v, up));       // perpendicular vector
+  let u = normalize(cross(n, v));        // "new" up vector
+  v = negate(v);
+
+  let result = mat4(
+    n[0], n[1], n[2], -dot(n, eye),
+    u[0], u[1], u[2], -dot(u, eye),
+    v[0], v[1], v[2], -dot(v, eye),
+    0.0, 0.0, 0.0, 1.0
+  );
+
+  return result;
+}
+
+function ortho(left, right, bottom, top, near, far) {
+  if (arguments.length != 6) { throw new Error("ortho(): wrong number of arguments"); }
+  if (left == right) { throw new Error("ortho(): left and right are equal"); }
+  if (bottom == top) { throw new Error("ortho(): bottom and top are equal"); }
+  if (near == far) { throw new Error("ortho(): near and far are equal"); }
+
+  let w = right - left;
+  let h = top - bottom;
+  let d = far - near;
+
+  let result = mat4();
+
+  result[0][0] = 2.0 / w;
+  result[1][1] = 2.0 / h;
+  result[2][2] = -2.0 / d;
+
+  result[0][3] = -(left + right) / w;
+  result[1][3] = -(top + bottom) / h;
+  result[2][3] = -(near + far) / d;
+  result[3][3] = 1.0;
+
+  return result;
+}
+
+function perspective(fovy, aspect, near, far) {
+  if (arguments.length != 4) { throw new Error("perspective(): wrong number of arguments"); }
+
+  let f = 1.0 / Math.tan(radians(fovy) / 2);
+  let d = far - near;
+
+  let result = mat4();
+  result[0][0] = f / aspect;
+  result[1][1] = f;
+  result[2][2] = -(near + far) / d;
+  result[2][3] = -2 * near * far / d;
+  result[3][2] = -1;
+  result[3][3] = 0.0;
+
+  return result;
+}
+
+function flatten(v) {
+  // Alex: At least one sample, 07/texture3D3.html, tries to flatten a scalar.
+  //       That sample does not include flatten.js which has a fix.
+  //       Fixing the scalar problem only reveals other problems with the slide x control in that sample.
+  //       So I'm adding a throw to signal that the code may have deeper problems than a conversion can fix.
+  //       Sigh.
+  if (!Array.isArray(v)) { throw new Error("flatten(): argument is not an array, vector or matrix and cannot be flattened") }
+
+  if (isVector(v)) {
+    let floats = new Float32Array(v.length)
+    for (let i = 0; i < v.length; i++) floats[i] = v[i];
+    return floats;
+  }
+
+  if (isMatrix(v)) {
+
+    let floats = new Float32Array(v.length * v.length);
+    for (let i = 0; i < v.length; i++) for (let j = 0; j < v.length; j++) {
+      floats[i * v.length + j] = v[j][i];
+    }
+    return floats;
+  }
+
+  if (typeof (v[0]) == 'number') {
+    let floats = new Float32Array(v.length);
+
+    for (let i = 0; i < v.length; i++)
+      floats[i] = v[i];
+
+    return floats;
+  }
+
+  let floats = new Float32Array(v.length * v[0].length);
+
+  for (let i = 0; i < v.length; i++) for (let j = 0; j < v[0].length; j++) {
+    floats[i * v[0].length + j] = v[i][j];
+  }
+  return floats;
+}
+
+// ---- end mv subset --------------------------------------------------------
+
+
+// ---- begin shader loader --------------------------------------------------
+// From the course's common/initShadersJS.mjs (unchanged apart from `export`):
+// builds a program from two GLSL source strings.
+
+function initShaders( gl, vertexShaderString, fragmentShaderString )
+{
+    const program = gl.createProgram();
+    let vertexShader;
+    vertexShader = getShader(gl, vertexShaderString, gl.VERTEX_SHADER);
+    const fragmentShader = getShader(gl, fragmentShaderString, gl.FRAGMENT_SHADER);
+
+    gl.attachShader( program, vertexShader );
+    gl.attachShader( program, fragmentShader );
+    gl.linkProgram( program );
+
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+        throw new Error(`Program failed to link: ${gl.getProgramInfoLog(program)}`);
+    }
+
+    return program;
+}
+
+function getShader(gl, shaderString, type) {
+    const shader = gl.createShader(type);
+    if (typeof(shaderString) != "string") {
+        throw new Error(`Could not find shader source: ${shaderId}`);
+    }
+    gl.shaderSource(shader, shaderString.replace(/^\s+|\s+$/g, '' ));
+    gl.compileShader(shader);
+    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+        throw new Error(`Shader failed to compile: ${gl.getShaderInfoLog(shader)}`);
+    }
+
+    return shader;
+}
+
+// ---- end shader loader ----------------------------------------------------
+
+// GLSL source text of one of the shader script elements in this page.
+function shaderSource(id) {
+    const element = document.getElementById(id);
+    if (!element) throw new Error(`No shader element with id "${id}"`);
+    return element.textContent;
+}
+</script>
+</head>
+
+<body>
+<canvas id="gl-canvas" width="1024" height="1024">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+<div>
+<button id="ButtonX">Rotate X</button>
+<button id="ButtonY">Rotate Y</button>
+<button id="ButtonZ">Rotate Z</button>
+<button id="ButtonT">Toggle Cube Rotation</button>
+</div>
+<div>
+<fieldset>
+<legend>Light (orbits the origin)</legend>
+<label>azimuth <input id="lightAzimuth" type="range" min="-180" max="180" step="0.1" value="11.3">
+ <output id="lightAzimuthValue">11.3</output>&deg;</label>
+<label>elevation <input id="lightElevation" type="range" min="-85" max="85" step="0.1" value="30.5">
+ <output id="lightElevationValue">30.5</output>&deg;</label>
+<label>distance <input id="lightDistance" type="range" min="4.5" max="8.5" step="0.01" value="5.92">
+ <output id="lightDistanceValue">5.92</output></label>
+</fieldset>
+<fieldset>
+<legend>Camera (orbits the origin)</legend>
+<label>azimuth <input id="cameraAzimuth" type="range" min="-180" max="180" step="0.5" value="0">
+ <output id="cameraAzimuthValue">0</output>&deg;</label>
+<label>elevation <input id="cameraElevation" type="range" min="-85" max="85" step="0.5" value="45">
+ <output id="cameraElevationValue">45</output>&deg;</label>
+</fieldset>
+<button id="ButtonReset">Reset light and camera</button>
+</div>
+</body>
+</html>
