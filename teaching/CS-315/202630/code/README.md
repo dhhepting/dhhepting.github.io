@@ -63,12 +63,45 @@ breadcrumb: Code README
 | [`ifs.mjs`](./dist/downloads/chaos-dragon/experimental/built/chaos-dragon/ifs.mjs.txt) | the mathematics of the chaos game. |
 | [`main.mjs`](./dist/downloads/chaos-dragon/experimental/built/chaos-dragon/main.mjs.txt) | the controller. |
 
+### `experimental/built/chaos-dragon-instanced/`
+
+*Source for `chaos-dragon-instanced` (read-only copies): [browse all files](./dist/downloads/chaos-dragon-instanced/index.html) · [download .zip](./dist/downloads/chaos-dragon-instanced.zip)*
+
+| File | Description |
+| --- | --- |
+| [`chaosgame.mjs`](./dist/downloads/chaos-dragon-instanced/experimental/built/chaos-dragon-instanced/chaosgame.mjs.txt) | DOM-free renderer for a two-map chaos game, drawn by INSTANCING. |
+| [`ifs.mjs`](./dist/downloads/chaos-dragon-instanced/experimental/built/chaos-dragon-instanced/ifs.mjs.txt) | the mathematics of the chaos game. |
+| [`main.mjs`](./dist/downloads/chaos-dragon-instanced/experimental/built/chaos-dragon-instanced/main.mjs.txt) | the controller. |
+
+### `experimental/built/chaos-dragon-instanced/test/`
+
+| File | Description |
+| --- | --- |
+| [`verify-instancing.mjs`](./dist/downloads/chaos-dragon-instanced/experimental/built/chaos-dragon-instanced/test/verify-instancing.mjs.txt) | node test/verify-instancing.mjs  -- no dependencies |
+
 ### `experimental/built/chaos-dragon/test/`
 
 | File | Description |
 | --- | --- |
 | [`smoke.mjs`](./dist/downloads/chaos-dragon/experimental/built/chaos-dragon/test/smoke.mjs.txt) | node test/smoke.mjs      (needs:  npm install jsdom) Runs the REAL main.mjs against app.html in jsdom, with: * the REAL ../common/initShadersJS.mjs (so run i... |
 | [`verify.mjs`](./dist/downloads/chaos-dragon/experimental/built/chaos-dragon/test/verify.mjs.txt) | node test/verify.mjs Maths checks plus a ChaosGame run against a recording mock of WebGL2. |
+
+### `experimental/built/chaos-svd-instanced/`
+
+*Source for `chaos-svd-instanced` (read-only copies): [browse all files](./dist/downloads/chaos-svd-instanced/index.html) · [download .zip](./dist/downloads/chaos-svd-instanced.zip)*
+
+| File | Description |
+| --- | --- |
+| [`chaosgame.mjs`](./dist/downloads/chaos-svd-instanced/experimental/built/chaos-svd-instanced/chaosgame.mjs.txt) | DOM-free renderer for a two-map chaos game, drawn by INSTANCING. |
+| [`explorer.mjs`](./dist/downloads/chaos-svd-instanced/experimental/built/chaos-svd-instanced/explorer.mjs.txt) | automated exploration of the two maps. |
+| [`ifs.mjs`](./dist/downloads/chaos-svd-instanced/experimental/built/chaos-svd-instanced/ifs.mjs.txt) | the mathematics of the chaos game. |
+| [`main.mjs`](./dist/downloads/chaos-svd-instanced/experimental/built/chaos-svd-instanced/main.mjs.txt) | the controller. |
+
+### `experimental/built/chaos-svd-instanced/test/`
+
+| File | Description |
+| --- | --- |
+| [`verify-svd.mjs`](./dist/downloads/chaos-svd-instanced/experimental/built/chaos-svd-instanced/test/verify-svd.mjs.txt) | node test/verify-svd.mjs  -- no dependencies |
 
 ### `experimental/built/colour-cube/`
 
