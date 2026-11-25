@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chaos Game: SVD maps, instanced</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; margin: 12px; color: #222; }
+    h1 { font-size: 1.15rem; margin: 0 0 4px 0; }
+    p.lede { margin: 0 0 8px 0; max-width: 78ch; font-size: 0.9rem; line-height: 1.4; }
+    table { border-collapse: collapse; }
+    td { vertical-align: top; padding: 8px; }
+    canvas { border: 1px solid #d0d0d0; display: block; background: #fff; touch-action: none; }
+    #gl-canvas { width: min(640px, 92vw); aspect-ratio: 1 / 1; }
+    fieldset { margin: 0 0 8px 0; border: 1px solid #c8c8c8; }
+    legend { font-weight: 600; }
+    .swatch { display: inline-block; width: 0.8em; height: 0.8em; border-radius: 50%; margin-right: 0.4em; vertical-align: baseline; }
+    label { display: grid; grid-template-columns: 9em 11em 8.5em; align-items: center; gap: 6px; margin: 2px 0; font-size: 0.9rem; }
+    label.check { display: block; }
+    label.inline { display: inline; margin-right: 12px; }
+    output { font-variant-numeric: tabular-nums; }
+    pre { margin: 6px 0 0 0; font-size: 0.78rem; line-height: 1.35; overflow-x: auto; }
+    button { margin-right: 6px; }
+    #status { font-size: 0.85rem; margin-top: 6px; color: #444; }
+    #controls { display: grid; grid-template-columns: auto auto; gap: 0 12px; align-items: start; }
+  </style>
+</head>
+<body>
+  <h1>Chaos game with SVD-described maps, instanced on the GPU</h1>
+  <p class="lede">
+    Two maps, each pivoted on its own centre c with its linear part written as an SVD,
+    <code>A = T(c) &middot; R(u) &middot; diag(s<sub>0</sub>, s<sub>1</sub>) &middot; R(&minus;v) &middot; T(&minus;c)</code>,
+    with 0 &lt; s<sub>i</sub> &lt; 1 so the maps contract. The chaos game runs once on the CPU; the GPU then
+    draws those points for each of 2<sup>n</sup> instances, instance <code>0110</code> using T<sub>0</sub>&middot;T<sub>1</sub>&middot;T<sub>1</sub>&middot;T<sub>0</sub>.
+    Switch on <em>Explore</em> to let centres, rotations and scales wander.
+  </p>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <canvas id="gl-canvas" width="640" height="640">
+            Your browser doesn't support the HTML5 canvas element.
+          </canvas>
+          <div id="status"></div>
+        </td>
+        <td>
+          <fieldset>
+            <legend>Explore</legend>
+            <label class="check"><input type="checkbox" id="explore"> Explore automatically (random walk through the 12 parameters)</label>
+            <label>seconds per leg <input type="range" id="leg" min="0.5" max="10" step="0.1" value="3"><output id="leg-out"></output></label>
+            <label>step size <input type="range" id="adventure" min="0" max="1" step="0.01" value="0.35"><output id="adventure-out"></output></label>
+            <label>scale min <input type="range" id="smin" min="0.05" max="0.95" step="0.01" value="0.15"><output id="smin-out"></output></label>
+            <label>scale max <input type="range" id="smax" min="0.05" max="0.95" step="0.01" value="0.85"><output id="smax-out"></output></label>
+            <div>
+              vary:
+              <label class="inline"><input type="checkbox" id="ex-centres" checked> centres</label>
+              <label class="inline"><input type="checkbox" id="ex-angles" checked> rotations</label>
+              <label class="inline"><input type="checkbox" id="ex-scales" checked> scales</label>
+            </div>
+            <br>
+            <button id="jump">Jump to random</button>
+            <button id="reset">Reset to dragon</button>
+          </fieldset>
+
+          <fieldset>
+            <legend>Points and instances</legend>
+            <label>count <input type="range" id="count" min="1000" max="400000" step="1000" value="30000"><output id="count-out"></output></label>
+            <label>size (px) <input type="range" id="psize" min="1" max="4" step="0.5" value="1.5"><output id="psize-out"></output></label>
+            <label>instance digits n <input type="range" id="levels" min="0" max="6" step="1" value="4"><output id="levels-out"></output></label>
+            <label>colour by last n <input type="range" id="depth" min="1" max="8" step="1" value="1"><output id="depth-out"></output></label>
+            <label class="check"><input type="checkbox" id="by-instance" checked> Colour by instance</label>
+            <label class="check"><input type="checkbox" id="show-centres" checked> Show centres</label>
+            <label class="check"><input type="checkbox" id="autofit" checked> Keep the attractor in view</label>
+            <button id="reroll">New random sequence</button>
+          </fieldset>
+        </td>
+        <td>
+          <div id="maps"></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script type="module" src="main.mjs"></script>
+</body>
+</html>
