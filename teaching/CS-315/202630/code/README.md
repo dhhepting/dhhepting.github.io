@@ -23,7 +23,7 @@ breadcrumb: Code README
 ## textbook-classic/
 
 * textbook code as published on [interactivecomputergraphics.com](https://interactivecomputergraphics.com/8E/Code/) with minimal changes: classic-style scripts, no build
-* subdirectories 02, 03, .., 11 correspond to the chapters with code examples
+* see [/textbook-classic/](./textbook-classic/) and subdirectories 02, 03, .., 11 correspond to the chapters with code examples
 * run from the <file.html> in the chosen directory (source can be viewed through your browser, all files used will be linked to the <file.html> and can be followed from there)
 
 ## Module index
