@@ -1,5 +1,5 @@
 // Pure model data: no DOM, no GL calls.
-import { mat4, rotateY } from '../Common/MV.mjs';
+import { mat4, rotateY } from '../../../common/MV.mjs';
 
 export const CUBE_VERTEX_COUNT = 36;
 

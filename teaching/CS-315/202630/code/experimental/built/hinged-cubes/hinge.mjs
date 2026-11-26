@@ -1,10 +1,12 @@
 // WebGL2 renderer for two cubes joined along a shared edge. DOM-free:
 // dependency flows controller -> renderer only.
 import { lookAt, perspective, flatten, vec3 } from '../../../common/MV.mjs';
-import { initShadersJS } from '../../../common/initShadersJS.mjs';
-import vertexSource from 'shaders/hinge.vert?raw';
-import fragmentSource from 'shaders/hinge.frag?raw';
-import { buildCube, hingeModels, CUBE_VERTEX_COUNT } from 'geometry.mjs';
+import { initShaders } from '../../../common/initShadersJS.mjs';
+import { buildCube, hingeModels, CUBE_VERTEX_COUNT } from './geometry.mjs';
+
+const loadText = async (url) => (await fetch(url)).text();
+const vertexSource = await loadText(new URL('./shaders/hinge.vert', import.meta.url));
+const fragmentSource = await loadText(new URL('./shaders/hinge.frag', import.meta.url));
 
 const COLOR_A = [0.25, 0.55, 0.95, 1.0];
 const COLOR_B = [0.95, 0.60, 0.20, 1.0];
