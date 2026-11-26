@@ -19,7 +19,7 @@ export class Hinge {
     this.pitch = 25;      // degrees
     this.distance = 5;
 
-    const program = initShadersJS(gl, vertexSource, fragmentSource);
+    const program = initShaders(gl, vertexSource, fragmentSource);
     this.program = program;
     this.loc = {
       position: gl.getAttribLocation(program, 'aPosition'),

@@ -144,6 +144,16 @@ breadcrumb: Code README
 | --- | --- |
 | [`main.mjs`](./dist/downloads/gouraud-v-phong/experimental/built/gouraud-v-phong/main.mjs.txt) | *(no header comment)* |
 
+### `experimental/built/hinged-cubes/`
+
+*Source for `hinged-cubes` (read-only copies): [browse all files](./dist/downloads/hinged-cubes/index.html) · [download .zip](./dist/downloads/hinged-cubes.zip)*
+
+| File | Description |
+| --- | --- |
+| [`geometry.mjs`](./dist/downloads/hinged-cubes/experimental/built/hinged-cubes/geometry.mjs.txt) | Pure model data: no DOM, no GL calls. |
+| [`hinge.mjs`](./dist/downloads/hinged-cubes/experimental/built/hinged-cubes/hinge.mjs.txt) | WebGL2 renderer for two cubes joined along a shared edge. |
+| [`main.mjs`](./dist/downloads/hinged-cubes/experimental/built/hinged-cubes/main.mjs.txt) | Controller: owns the DOM, the animation loop and input; the renderer never touches the DOM. |
+
 ### `experimental/built/indexed-square/`
 
 *Source for `indexed-square` (read-only copies): [browse all files](./dist/downloads/indexed-square/index.html) · [download .zip](./dist/downloads/indexed-square.zip)*
