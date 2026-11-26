@@ -192,7 +192,7 @@
   </div>
 
   <div class="mb-3">
-    <span class="text-muted">Photos page not created yet — [[20_2026-11-25-photos]] will show red in Moodle until photos are added</span>
+    <a href="/wiki/CS-315/202630/20_2026-11-25-photos/">View/copy this meeting's photos (separate page)</a>
   </div>
 
   <h3>Name for this page</h3>
@@ -283,7 +283,150 @@ Make sure that you use your [[Personal Wiki Page|Personal Wiki Page (PWP)]] to s
 </textarea>
     
   </div><h3>Photos and transcript page</h3>
-  <p class="text-muted">No photos in media.csv and no <code>audio-transcript/20_2026-11-25-audio.txt</code> for this meeting yet.</p>
+  <p class="text-muted mb-1">Create the Moodle wiki page with this name, then paste the text below into it. The transcript is included when <code>audio-transcript/20_2026-11-25-audio.txt</code> exists in the repo.</p>
+  <div class="input-group mb-3">
+    <input id="photos-text-page-name" type="text" class="form-control" readonly value="20_2026-11-25-photos-text">
+    <button type="button" class="btn btn-secondary" onclick="copyFrom('photos-text-page-name')">Copy</button>
+  </div>
+  <div class="mb-3">
+    <textarea id="photos-text-creole" class="form-control" rows="16" readonly>{{https://dl.dropboxusercontent.com/scl/fi/t8h9xvjcrzuovo3jshnu3/20-1.jpg?rlkey=v0e16rncuu9qcfi0x61vz4rpa&amp;raw=1 | Mtg 20-1 photo }}
+**Caption 20-1:** //TODO: describe what is depicted//
+
+{{https://dl.dropboxusercontent.com/scl/fi/bd15zvjht2iz4ajyetkji/20-2.jpg?rlkey=3x0cj3575ct9rzldj89ltfwyu&amp;raw=1 | Mtg 20-2 photo }}
+**Caption 20-2:** //TODO: describe what is depicted//
+
+----
+
+**Transcript**
+
+DH: Okay, so we&#39;re welcome today. It&#39;s meeting 20 of 23. So three more meetings after today.
+
+I was looking at the survey I asked you to complete yesterday. About whether you can see shadows with that code.
+
+So we had 10 responses.
+
+Eight said, yes, I could see the shadow. No… Right. Who couldn&#39;t see the shadow and I couldn&#39;t see the shadow on mine, so we&#39;ll make it. 3, 2, 3. Any ideas why that shadow wasn&#39;t appearing in some cases?
+
+I think there might be a loose wire. Can I connect my adapter here?
+
+So here&#39;s the most up to date read me. So the other directories we can see in the code directory, there&#39;s the common. which includes. the modular version of MV from the textbook. Some of the init shaders. Adapted by Alex for the… Well, he did the MV and the init shaders. And then we have your graphics. and a few other files. and also has the most recent. version of 3JS code that&#39;s compatible with the textbook examples in Chapter 9. So it&#39;s not the most recent 3JS release, but it&#39;s the one that has the same interface as. to Chapter 9 examples. So then experimental. Programs written with help from Claude AI. And so there&#39;s. 2 that are. There&#39;s 1 section that&#39;s has been built with feet. And you can also view the. View the source here. and download a zip file.
+
+Here are the executables, so they&#39;re all… Apps. Click on the app. to see the output.
+
+And then a textbook classic. I should have put a link in there for the. Textbook classic files.
+
+Let&#39;s go to the root here. So here&#39;s shadow map on my computer.
+
+So what did we talk about yesterday? Our last meeting. There&#39;s a… There&#39;s a possible. Coordination issue. Not in regards to this, but. So we did talk about, I think, the location. assigned to each. attributes and. Variable. Shane.
+
+I thought about being cute and naming it as Groundhog Day. We&#39;re incorporating Groundhog into the name somehow. Because of the… Groundhog. Sees its shadow, there&#39;s going to be more winter.
+
+Okay. So that one doesn&#39;t work, but I&#39;ll show you one that does work and then we&#39;ll look at that.
+
+Okay, so there&#39;s also, aside from built, there&#39;s some that are standalone files. And I have that shadow map. Slightly revised. But here you see the shadow. So let&#39;s look at the code here.
+
+So what we&#39;ve done here is we&#39;ve added layout location equals 0. For the A position. And then in fragment or.
+
+The vertex shader, too, we&#39;ve… assigned location 0 again to. A position and the A color gets location one. So this is an example of where… It didn&#39;t do the reasonable thing and keep. The loader didn&#39;t… It changed a position. From location 0 in. Or it didn&#39;t, it wasn&#39;t consistent with the positions in. Vertex Shader 1 and 2. So that meant no shadow. So that&#39;s a good thing, good practice to get into to specify locations. for the variables. Does that make sense?
+
+Okay, so there&#39;s… There&#39;s one for locations. And then… Here&#39;s the one from the textbook.
+
+Okay, before I forget.
+
+The thing I was going to, before I forget, it said my furnace is being installed today. So I&#39;m gonna… I have my office hours available over Zoom. I won&#39;t be here on campus. I&#39;m going to leave right after class. Okay. Okay.
+
+So see if there&#39;s. If anyone who wants to talk to me in my office hour, maybe we&#39;ll extend it. We go from here to here. Anyway, let me know if you want to get in touch with me.
+
+Okay, so shall we go through that code again?
+
+So another… observation is that. We have a precision. Specifier here. So when we&#39;re dealing with… Please don&#39;t. Distances, it&#39;s better to use the high precision. Then medium precision. to the fragment color here in the first fragment shader. is getting the… the depth value. for each of the X, Y, or RGB. Components.
+
+Here we have the layout locations to. Make sure they agree.
+
+So when we&#39;re doing the —. Fragment two shader, fragment shader two. We get. the shadow coordinate.
+
+Then we get the depth. Associated with that because we&#39;re looking up the texture map which has. The Z value is in RGB. So we added a delta here. So either we&#39;re getting… The actual color of the cube. Or else we&#39;re getting the shadow color, which is black. So we&#39;re comparing. The shadow cord said. It&#39;s less in depth plus epsilon.
+
+And here&#39;s another. Look at this.
+
+So you can see there&#39;s a shadow from the cube on the floor as well here.
+
+So in this case, we&#39;re looking at the. Whether… Are you taking the… fragment color from the. from the model. So that&#39;s where they&#39;re white. And the black is where we have the shadow.
+
+So here&#39;s a similar concept of projective texture.
+
+So the shadow map. Is like the projective texture. In the sense that we&#39;re… Looking at the light. And we&#39;re projecting from the light into the scene. Whereas… The projective texture is… Not just calculating. That&#39;s it. What&#39;s in shadow and what&#39;s not. It&#39;s projecting. texture into the scene or onto objects in the scene. So it&#39;s like a slide projector.
+
+Take a moment to do attendance now.
+
+So I want to show you. How we can use instancing of transformations to make. Something more complicated. In the case of these fractals, we can generate them at a high. higher resolution, more points. without much more cost. So this is the original one that I showed you. So we can drag the center around, centers around. We still have always get the same dragging curve, just orientation and scaling it. I should be more careful with the word scaling there. So we&#39;re not changing the scaling in the… Fractal definition of scaling. We&#39;re zooming in or zooming out. based on the location of the centers. If we put them close together. We&#39;re zooming out. And if we pull them further apart, then we&#39;re zooming in. And you can see as we zoom in. the limitations of the number of points we&#39;re using. So we used 100,000 points there.
+
+So we&#39;re still a bit short here filling in the spaces. But anyway, that&#39;s… That&#39;s the straightforward version where computing points and sending them to the GPU. and drawing them.
+
+So here we&#39;re doing 30,000. Points.
+
+And we&#39;re using 4 instances, 4. 4 digits. So. We got from 0000 to 1111. determining the 4 transformations. So we turn on coloring by instance so you can see. We have 16 instances. So we start with the same 30,000 points. But then we apply. the different… Reply an instance matrix. So we.
+
+We got 16 transformations this way.
+
+She had a storm.
+
+That makes sense. Okay, so we can go up to 64 here, I think. And we can turn on. It&#39;s a motion.
+
+So does that look better than the first one?
+
+So an advantage in terms of resolution here is that. The points generated. The original 30,000 points that were generated. are now scaled. Bye.
+
+We start out by doing… Square root. Okay. I divide two. Which is this snapper? And then we&#39;re applying fourth transformation. So we. So the scaling factor of this transformation. and each instance. It&#39;s 0.7071 to the fourth. So the… The points, even though there&#39;s much fewer, many fewer points. You don&#39;t see the problem with the… the gaps, because. They&#39;re compressed. They&#39;re scaled by this factor. Does that make sense? Let&#39;s see if we zoom in here.
+
+Yeah. Still looking pretty good, I think.
+
+So here&#39;s a version. That doesn&#39;t keep the same transfer, doesn&#39;t keep the same transformations.
+
+So we use a singular value decomposition to take the matrix. Break it into two rotations and a scaling.
+
+Yes, we&#39;re doing 2 by 2 matrices. Thank you.
+
+So we&#39;re taking the top left 2 by 2 portion of the of the 3 by 3 matrix. So the three by three matrix is the homogeneous coordinates. that incorporates translation as well as DIY. Transformations, scaling, shear. rotation.
+
+So the advantage of doing this is… This room, you don&#39;t have to. Think about a composition, composing things with. Shears and scales and rotations. You don&#39;t have to write it. The details. and it also protects us from having. It&#39;s a product of yields and shears. Patience. No. Not so much the rotations, but the scales and shears. Dang. not contracted anymore. So the fractal part is. You need the transformations to be contracted, so scaling. Used to be… greater than zero and less than one. So if we do this… singular value composition that we have. That&#39;s right. Direct access to that scaling. So you can see here. We&#39;re doing the mathematical empathy part by. centering the transformation. And San Jose. So we start with… Translate minus C. And end with translating to C. And in the middle here, we have… Two rotations, B transpose. S is the scaling factors, which can be non-uniform. So it means scaling 0 0 doesn&#39;t have to be. The same with scaling one one. And then here&#39;s the second rotation matrix. So if we don&#39;t have, if we have uniform scaling, we don&#39;t need to have the 2 separate 2 separate rotations.
+
+Does that make sense?
+
+So what do you think? Oh, here, let&#39;s turn up the number of instances.
+
+So that&#39;s a bit… Point cloud-ish. Instead of, uh… Giving you the… You&#39;re just coloring by transformations.
+
+So we can see the bang for the buck here. in terms of. 30,000 points generated once. Drawn in 64 instances gives us 1.9 million. points.
+
+Any thoughts about this?
+
+Anyway… I just wanted to go over my… Write up for assignment four.
+
+So this is the code from the textbook.
+
+And here&#39;s Mr. For more readable. You can decide whether that&#39;s true. But I varied the parameters a little bit here, changed the colors a bit. What&#39;s that? Yes. So I encourage you to. Added a little bit of. A user interface to. Change some parameters.
+
+So I said.
+
+I said the other day to look at Texture Cube 1. That&#39;s with the picture of the tiger. But maybe this is a good one to look at as well because it has a generated texture.
+
+So I will paste the link here. A little animation gives you an idea of what. And the final product might look like.
+
+Any thoughts about the code directory reorganization? Does it read me clear?
+
+Okay. Any thoughts about. The question I asked at the end of last meeting about. What are some good? What would be good? Exam question code. What would… be concepts you&#39;d like. To explore. Encode. So I will make a… Feedback. item for that. So we&#39;ll. We&#39;ll deal with those things. Next week. So what&#39;d you think of the fractals? You won&#39;t offend me personally if you say you didn&#39;t like it.
+
+That&#39;s a little bit like a version or the visual version of the ambient. Music. that I talked about the other day.
+
+Okay, so if you want to share something with me. Outside of the high pressure environment here in the class. You can send me a note. I would appreciate it. Drop by and talk to me. So remember, I&#39;ve got Zoom from noon to 2 today. And I won&#39;t be in my office because I&#39;m… being at home because my furnace is being upgraded. Well, it was broken and now we&#39;re getting a new one. Anyway. Okay. Thank you for today. I will have a quiz. A weekly quiz for you today. as well. Okay, thanks again. Take care. Have a good weekend. See you on Monday.
+
+It may have been a bus, so I didn&#39;t have the mic to work on. I will convince. You&#39;re welcome.
+</textarea>
+    <button type="button" class="btn btn-secondary mt-2" onclick="copyFrom('photos-text-creole')">
+      Copy photos and transcript
+    </button>
+  </div>
 
   <nav class="d-flex justify-content-between align-items-center my-3">
   <a class="btn btn-outline-secondary btn-sm" href="/wiki/CS-315/202630/19_2026-11-23/">&larr; Prev: 19_2026-11-23</a>
