@@ -1,0 +1,65 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #222;
+}
+
+body {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 1120px;
+}
+
+h1 { margin: 0 0 0.25rem; font-size: 1.5rem; }
+h2 { margin: 0 0 0.5rem; font-size: 1.1rem; }
+header p { margin: 0 0 1rem; color: #555; }
+
+#error {
+  padding: 0.5rem 0.75rem;
+  background: #fdecea;
+  border: 1px solid #e74c3c;
+  color: #922;
+}
+
+.views {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+figure {
+  margin: 0;
+  flex: 1 1 320px;
+  max-width: 512px;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  border: 1px solid #ccc;
+  background: #fff;
+  touch-action: none;
+}
+
+figcaption { padding-top: 0.4rem; font-size: 0.9rem; }
+.options { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin-top: 0.25rem; }
+.parity { margin-top: 0.25rem; color: #555; }
+
+.panel { margin-top: 1rem; }
+.buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; }
+.animate { display: block; margin-bottom: 0.75rem; }
+
+#sliders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.35rem 1.5rem;
+}
+
+.slider-row {
+  display: grid;
+  grid-template-columns: 8.5em 1fr 3.5em;
+  align-items: center;
+  gap: 0.5rem;
+}
+.slider-row output { text-align: right; font-variant-numeric: tabular-nums; }

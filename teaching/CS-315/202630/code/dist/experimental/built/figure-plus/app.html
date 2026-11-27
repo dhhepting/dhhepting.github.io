@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hierarchical figure: textbook DIY framework and three.js</title>
+  <link rel="icon" href="data:," />
+  <script type="module" crossorigin src="../../../assets/experimental/built/figure-plus/app-FOwAJxqH.js"></script>
+  <link rel="modulepreload" crossorigin href="../../../assets/modulepreload-polyfill-P2Xu9kJm.js">
+  <link rel="stylesheet" crossorigin href="../../../assets/app-Dygt1yzB.css">
+</head>
+<body>
+  <header>
+    <h1>Hierarchical figure</h1>
+    <p>
+      Left: the textbook's hand-written framework (MV-style matrices, a left-child / right-sibling
+      tree, a matrix stack, raw WebGL2). Right: the very same figure in three.js. One set of sliders
+      drives both.
+    </p>
+  </header>
+
+  <p id="error" role="alert" hidden></p>
+
+  <main class="views">
+    <figure>
+      <canvas id="gl-canvas" width="512" height="512">
+        Oops ... your browser doesn't support the HTML5 canvas element
+      </canvas>
+      <figcaption>
+        <strong>DIY WebGL2</strong> (orthographic, as in the book)
+        <div class="options">
+          <label><input type="checkbox" id="part-colours" checked /> part colours</label>
+          <label><input type="checkbox" id="outlines" checked /> outlines</label>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <canvas id="three-canvas" width="512" height="512"></canvas>
+      <figcaption>
+        <strong>three.js</strong> (perspective, drag to orbit, scroll to zoom)
+        <div class="options">
+          <label><input type="radio" name="three-mode" value="diy" checked /> posed by the book's matrices</label>
+          <label><input type="radio" name="three-mode" value="native" /> posed by three.js Matrix4</label>
+        </div>
+        <div class="parity">max |Δ| between the two sets of world matrices: <code id="parity">…</code></div>
+      </figcaption>
+    </figure>
+  </main>
+
+  <section class="panel">
+    <h2>Pose</h2>
+    <div id="poses" class="buttons"></div>
+    <label class="animate"><input type="checkbox" id="animate" /> animate (walk cycle)</label>
+    <div id="sliders"></div>
+  </section>
+
+</body>
+</html>
