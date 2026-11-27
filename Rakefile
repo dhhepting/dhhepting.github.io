@@ -8,13 +8,21 @@
 #   3. wiki:validate, meetings:check_all — source-level checks
 #   4. test:unit           — unit tests for lib/ and plugin logic (no Jekyll build;
 #                            defined in rakelib/test_unit.rake)
-#   5. build               — changes:check (full git history), then `jekyll build --trace`
+#   5. build               — changes:check (full git history), vite:all (npm: READMEs +
+#                            Vite build into dist/), then `jekyll build --trace`
 #   6. code:listings, test:html — post-build checks on _site/
 #
 # Run just one tier while iterating, e.g.: `rake structure:validate`
 
 require 'yaml'
 require 'date'
+
+# The one place the term-specific code path lives in this file.  The workflows
+# set the same CS315_DIR env var, so ENV wins if present; keep the default in
+# step with the workflows when a new term starts.  Must stay exactly four
+# levels below the repo root: package.json's `readme` script reaches
+# ../../../../scripts/gen-readme.mjs.
+CS315_DIR = ENV.fetch('CS315_DIR', 'teaching/CS-315/202630/code')
 
 # data:validate is not listed: structure:validate already runs the same
 # TeachingDataValidator.  The task stays available on its own.
@@ -150,8 +158,45 @@ namespace :wiki do
   end
 end
 
+# npm-side work for the CS-315 code directory.  Jekyll copies README.md files
+# and dist/ into _site like any other static content, so everything here must
+# finish BEFORE `jekyll build`.  vite.config uses base: './', so no per-host
+# base path is needed and one dist/ serves both deploy targets.
+namespace :vite do
+  desc 'npm ci when node_modules is missing or older than package-lock.json'
+  task :deps do
+    lock  = File.join(CS315_DIR, 'package-lock.json')
+    stamp = File.join(CS315_DIR, 'node_modules', '.package-lock.json')
+    next if File.exist?(stamp) && File.mtime(stamp) >= File.mtime(lock)
+
+    sh 'npm', 'ci', chdir: CS315_DIR
+  end
+
+  desc 'npm run readme (scripts/gen-readme.mjs over the source tree)'
+  task readme: :deps do
+    sh 'npm', 'run', 'readme', chdir: CS315_DIR
+  end
+
+  desc 'npm run build (Vite -> dist/)'
+  task build: :deps do
+    sh 'npm', 'run', 'build', chdir: CS315_DIR
+  end
+
+  # readme first: vite-plugin-static-copy may copy README.md files into dist/.
+  desc 'Everything Jekyll needs from npm, in order (readme, then build)'
+  task all: %i[readme build]
+
+  # Only useful if the generated READMEs are committed.  Not wired into
+  # `default`; to enforce it in CI, add `vite:readme_check` before `build`
+  # in the default task list.
+  desc 'Fail if committed READMEs differ from a fresh generation'
+  task readme_check: :readme do
+    sh 'git', 'diff', '--exit-code', '--', CS315_DIR
+  end
+end
+
 desc 'Build the Jekyll site, failing loudly on any Liquid/Ruby error'
-task build: %w[changes:check photos:sync_all table:sync_all] do
+task build: %w[changes:check photos:sync_all table:sync_all vite:all] do
   # Cleans _site/ and .jekyll-cache/ first — without this, output from a
   # different command (e.g. `urserve`'s `jekyll serve`, which can bake in
   # a completely different site.url depending on Jekyll version) could
@@ -175,7 +220,7 @@ end
 namespace :build do
   %w[github uregina].each do |target|
     desc "Build the site for the #{target} deploy target"
-    task target => %w[changes:check photos:sync_all table:sync_all] do
+    task target => %w[changes:check photos:sync_all table:sync_all vite:all] do
       sh "bundle exec jekyll clean --destination _site_#{target}"
       sh "bundle exec jekyll build --trace " \
          "--config _config.yml,_config_#{target}.yml " \
@@ -412,7 +457,7 @@ def write_listings(site)
   abort "code:listings — #{css} missing from build" unless File.file?(css)
 
   # [root inside the site, required?]
-  [["#{site}/teaching/CS-315/202630/code", false], # only present when the offering has code: true
+  [["#{site}/#{CS315_DIR}", false], # only present when the offering has code: true
    ["#{site}/wiki",                        true],  # always built; missing means the build is wrong
   ].each do |root, required|
     unless File.directory?(root)

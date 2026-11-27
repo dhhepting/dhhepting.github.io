@@ -136,6 +136,32 @@ breadcrumb: Code README
 | [`main.mjs`](./dist/downloads/diffusion-explorer/experimental/built/diffusion-explorer/main.mjs.txt) | *(no header comment)* |
 | [`seeds.mjs`](./dist/downloads/diffusion-explorer/experimental/built/diffusion-explorer/seeds.mjs.txt) | Starting images for the diffusion explorer, a CPU reference for every update rule in shaders/step.frag, and the measurements the page reports. |
 
+### `experimental/built/figure-plus/`
+
+*Source for `figure-plus` (read-only copies): [browse all files](./dist/downloads/figure-plus/index.html) · [download .zip](./dist/downloads/figure-plus.zip)*
+
+| File | Description |
+| --- | --- |
+| [`controls.mjs`](./dist/downloads/figure-plus/experimental/built/figure-plus/controls.mjs.txt) | builds the joint sliders from JOINT_CONTROLS (instead of eleven hand-copied <div>s) and keeps them in sync with theta[] in both directions. |
+| [`diy-renderer.mjs`](./dist/downloads/figure-plus/experimental/built/figure-plus/diy-renderer.mjs.txt) | the textbook's raw WebGL2 drawing code for the figure: one cube vertex buffer, one model-view uniform updated per body part, 6 TRIANGLE_FANs per cube. |
+| [`figure-model.mjs`](./dist/downloads/figure-plus/experimental/built/figure-plus/figure-model.mjs.txt) | the textbook's hierarchical figure, with no WebGL and no DOM. |
+| [`main.mjs`](./dist/downloads/figure-plus/experimental/built/figure-plus/main.mjs.txt) | wires the model, the DIY WebGL2 renderer, the three.js view and the controls together. |
+| [`native-transforms.mjs`](./dist/downloads/figure-plus/experimental/built/figure-plus/native-transforms.mjs.txt) | the figure's joint matrices computed with three.js's own Matrix4 (no MV.js involved), from the declarative JOINT_SPEC. |
+| [`three-view.mjs`](./dist/downloads/figure-plus/experimental/built/figure-plus/three-view.mjs.txt) | the same figure shown in a three.js scene. |
+
+### `experimental/built/figure-plus/lib/`
+
+| File | Description |
+| --- | --- |
+| [`init-shaders.mjs`](./dist/downloads/figure-plus/experimental/built/figure-plus/lib/init-shaders.mjs.txt) | compile + link a WebGL2 program from shader *source strings* (the same idea as Common/initShadersJS.mjs: no <script> tags, no DOM lookups). |
+| [`mv.mjs`](./dist/downloads/figure-plus/experimental/built/figure-plus/lib/mv.mjs.txt) | the subset of the textbook's MV.js that the figure example uses, as a real ES module (no globals). |
+
+### `experimental/built/figure-plus/tests/`
+
+| File | Description |
+| --- | --- |
+| [`parity.mjs`](./dist/downloads/figure-plus/experimental/built/figure-plus/tests/parity.mjs.txt) | tests/parity.mjs -- does the textbook's DIY maths agree with three.js's? |
+
 ### `experimental/built/gouraud-v-phong/`
 
 *Source for `gouraud-v-phong` (read-only copies): [browse all files](./dist/downloads/gouraud-v-phong/index.html) · [download .zip](./dist/downloads/gouraud-v-phong.zip)*

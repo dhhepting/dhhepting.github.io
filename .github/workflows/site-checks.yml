@@ -53,16 +53,9 @@ jobs:
       - name: Check for full git history
         run: bundle exec rake changes:check
 
-      # Build the CS315 Vite samples to static files in dist/ BEFORE Jekyll
-      # runs, so Jekyll copies dist/ into _site like any other static dir.
-      # vite.config.js uses base: './', so html-proofer sees correct relative paths.
-      - name: Build CS315 Vite samples
-        working-directory: ${{ env.CS315_DIR }}
-        run: |
-          npm ci
-          npx vite build
-
       # `rake` with no args runs the default task (see the Rakefile header):
-      # cheapest checks first, aborting on the first failure.
+      # cheapest checks first, aborting on the first failure.  Its `build` step
+      # runs vite:all (npm ci, READMEs, Vite build into dist/) before Jekyll, so
+      # no separate npm step is needed here.
       - name: Run the full check pipeline
         run: bundle exec rake

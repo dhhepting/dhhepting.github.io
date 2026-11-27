@@ -59,14 +59,13 @@ jobs:
       - name: Validate sources and run unit tests
         run: bundle exec rake yaml:duplicate_keys structure:validate test:unit
 
-      # Build the CS315 Vite experimental/built apps to static files in dist/ BEFORE Jekyll
-      # runs, so Jekyll copies dist/ into _site like any other static dir.
+      # Generate the CS315 READMEs and build the Vite experimental/built apps to
+      # static files in dist/ BEFORE Jekyll runs, so Jekyll copies both into _site
+      # like any other static content.  The Rakefile owns the npm steps
+      # (vite:deps runs `npm ci`).
       # vite.config.js uses base: './', so no per-host base path is needed.
-      - name: Build CS315 Vite samples
-        working-directory: ${{ env.CS315_DIR }}
-        run: |
-          npm ci
-          npx vite build
+      - name: Build CS315 READMEs and Vite samples
+        run: bundle exec rake vite:all
 
       # This is your urbuild build line, unchanged.
       - name: Build site
