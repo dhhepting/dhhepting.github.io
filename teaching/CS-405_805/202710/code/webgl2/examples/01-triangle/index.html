@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>01 – Triangle (WebGL2)</title>
+<style>
+  body { margin: 0; }
+  canvas { width: 100vw; height: 100vh; display: block; background: #222; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script type="module">
+import { createGL, createProgram, resizeToDisplay } from "../../lib/gl-utils.js";
+
+const vs = `#version 300 es
+in vec2 aPos;
+in vec3 aColor;
+out vec3 vColor;
+void main() { vColor = aColor; gl_Position = vec4(aPos, 0.0, 1.0); }`;
+
+const fs = `#version 300 es
+precision highp float;
+in vec3 vColor;
+out vec4 outColor;
+void main() { outColor = vec4(vColor, 1.0); }`;
+
+const canvas = document.getElementById("c");
+const gl = createGL(canvas);
+const prog = createProgram(gl, vs, fs);
+
+// x, y, r, g, b
+const data = new Float32Array([
+   0.0,  0.7, 1, 0, 0,
+  -0.7, -0.6, 0, 1, 0,
+   0.7, -0.6, 0, 0, 1,
+]);
+
+const vao = gl.createVertexArray();
+gl.bindVertexArray(vao);
+const buf = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+
+const loc = n => gl.getAttribLocation(prog, n);
+gl.enableVertexAttribArray(loc("aPos"));
+gl.vertexAttribPointer(loc("aPos"), 2, gl.FLOAT, false, 20, 0);
+gl.enableVertexAttribArray(loc("aColor"));
+gl.vertexAttribPointer(loc("aColor"), 3, gl.FLOAT, false, 20, 8);
+
+function draw() {
+  resizeToDisplay(canvas);
+  gl.viewport(0, 0, canvas.width, canvas.height);
+  gl.clearColor(0.13, 0.13, 0.13, 1);
+  gl.clear(gl.COLOR_BUFFER_BIT);
+  gl.useProgram(prog);
+  gl.bindVertexArray(vao);
+  gl.drawArrays(gl.TRIANGLES, 0, 3);
+  requestAnimationFrame(draw);
+}
+draw();
+</script>
+</body>
+</html>
