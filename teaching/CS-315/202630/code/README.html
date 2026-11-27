@@ -521,6 +521,83 @@
   </tbody>
 </table>
 
+<h3 id="experimentalbuiltfigure-plus"><code class="language-plaintext highlighter-rouge">experimental/built/figure-plus/</code></h3>
+
+<p><em>Source for <code class="language-plaintext highlighter-rouge">figure-plus</code> (read-only copies): <a href="./dist/downloads/figure-plus/index.html">browse all files</a> · <a href="./dist/downloads/figure-plus.zip">download .zip</a></em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="./dist/downloads/figure-plus/experimental/built/figure-plus/controls.mjs.txt"><code class="language-plaintext highlighter-rouge">controls.mjs</code></a></td>
+      <td>builds the joint sliders from JOINT_CONTROLS (instead of eleven hand-copied &lt;div&gt;s) and keeps them in sync with theta[] in both directions.</td>
+    </tr>
+    <tr>
+      <td><a href="./dist/downloads/figure-plus/experimental/built/figure-plus/diy-renderer.mjs.txt"><code class="language-plaintext highlighter-rouge">diy-renderer.mjs</code></a></td>
+      <td>the textbook’s raw WebGL2 drawing code for the figure: one cube vertex buffer, one model-view uniform updated per body part, 6 TRIANGLE_FANs per cube.</td>
+    </tr>
+    <tr>
+      <td><a href="./dist/downloads/figure-plus/experimental/built/figure-plus/figure-model.mjs.txt"><code class="language-plaintext highlighter-rouge">figure-model.mjs</code></a></td>
+      <td>the textbook’s hierarchical figure, with no WebGL and no DOM.</td>
+    </tr>
+    <tr>
+      <td><a href="./dist/downloads/figure-plus/experimental/built/figure-plus/main.mjs.txt"><code class="language-plaintext highlighter-rouge">main.mjs</code></a></td>
+      <td>wires the model, the DIY WebGL2 renderer, the three.js view and the controls together.</td>
+    </tr>
+    <tr>
+      <td><a href="./dist/downloads/figure-plus/experimental/built/figure-plus/native-transforms.mjs.txt"><code class="language-plaintext highlighter-rouge">native-transforms.mjs</code></a></td>
+      <td>the figure’s joint matrices computed with three.js’s own Matrix4 (no MV.js involved), from the declarative JOINT_SPEC.</td>
+    </tr>
+    <tr>
+      <td><a href="./dist/downloads/figure-plus/experimental/built/figure-plus/three-view.mjs.txt"><code class="language-plaintext highlighter-rouge">three-view.mjs</code></a></td>
+      <td>the same figure shown in a three.js scene.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="experimentalbuiltfigure-pluslib"><code class="language-plaintext highlighter-rouge">experimental/built/figure-plus/lib/</code></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="./dist/downloads/figure-plus/experimental/built/figure-plus/lib/init-shaders.mjs.txt"><code class="language-plaintext highlighter-rouge">init-shaders.mjs</code></a></td>
+      <td>compile + link a WebGL2 program from shader <em>source strings</em> (the same idea as Common/initShadersJS.mjs: no <script> tags, no DOM lookups).</script></td>
+    </tr>
+    <tr>
+      <td><a href="./dist/downloads/figure-plus/experimental/built/figure-plus/lib/mv.mjs.txt"><code class="language-plaintext highlighter-rouge">mv.mjs</code></a></td>
+      <td>the subset of the textbook’s MV.js that the figure example uses, as a real ES module (no globals).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="experimentalbuiltfigure-plustests"><code class="language-plaintext highlighter-rouge">experimental/built/figure-plus/tests/</code></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="./dist/downloads/figure-plus/experimental/built/figure-plus/tests/parity.mjs.txt"><code class="language-plaintext highlighter-rouge">parity.mjs</code></a></td>
+      <td>tests/parity.mjs – does the textbook’s DIY maths agree with three.js’s?</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="experimentalbuiltgouraud-v-phong"><code class="language-plaintext highlighter-rouge">experimental/built/gouraud-v-phong/</code></h3>
 
 <p><em>Source for <code class="language-plaintext highlighter-rouge">gouraud-v-phong</code> (read-only copies): <a href="./dist/downloads/gouraud-v-phong/index.html">browse all files</a> · <a href="./dist/downloads/gouraud-v-phong.zip">download .zip</a></em></p>
